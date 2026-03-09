@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TOMAQUET — Liga Fantasy</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0e1a; --surface: #111827; --surface2: #1a2236; --border: #1e2d45;
+    --accent: #f59e0b; --accent2: #3b82f6; --green: #10b981; --red: #ef4444;
+    --text: #e2e8f0; --muted: #64748b; --guitlla: #f59e0b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+  header { background: linear-gradient(135deg,#0a0e1a 0%,#1a1030 50%,#0a0e1a 100%); border-bottom: 2px solid var(--accent); padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+  .logo { font-family: 'Bebas Neue', sans-serif; font-size: 2.2rem; letter-spacing: 4px; color: var(--accent); }
+  .logo span { color: var(--text); font-size: 1rem; letter-spacing: 2px; display: block; margin-top: -6px; }
+  .jornada-badge { background: var(--accent); color: #000; font-weight: 700; padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; letter-spacing: 1px; }
+  .update-bar { background: var(--surface2); border-bottom: 1px solid var(--border); padding: 8px 32px; font-size: 0.75rem; color: var(--muted); display: flex; justify-content: space-between; }
+  .update-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); display: inline-block; margin-right: 6px; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1}50%{opacity:0.3} }
+  nav { display: flex; gap: 4px; padding: 16px 32px; background: var(--surface); border-bottom: 1px solid var(--border); overflow-x: auto; }
+  nav button { background: none; border: none; color: var(--muted); font-family: 'DM Sans', sans-serif; font-size: 0.875rem; font-weight: 500; padding: 8px 18px; border-radius: 8px; cursor: pointer; white-space: nowrap; transition: all 0.2s; }
+  nav button:hover { color: var(--text); background: var(--surface2); }
+  nav button.active { color: var(--accent); background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.3); }
+  main { padding: 24px 32px; max-width: 1400px; margin: 0 auto; }
+  .section { display: none; }
+  .section.active { display: block; }
+  .grid-3 { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 16px; margin-bottom: 24px; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+  .card-title { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--muted); margin-bottom: 8px; }
+  .card-value { font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem; color: var(--accent); letter-spacing: 2px; }
+  .card-sub { font-size: 0.8rem; color: var(--muted); margin-top: 4px; }
+  .table-wrap { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 24px; }
+  .table-header { padding: 16px 20px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+  .table-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; letter-spacing: 2px; color: var(--accent); }
+  table { width: 100%; border-collapse: collapse; }
+  th { padding: 10px 14px; text-align: left; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); border-bottom: 1px solid var(--border); background: var(--surface2); }
+  td { padding: 11px 14px; font-size: 0.875rem; border-bottom: 1px solid rgba(30,45,69,0.5); }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: rgba(255,255,255,0.02); }
+  .pos-badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 700; }
+  .pos-1 { background: rgba(59,130,246,0.2); color: #60a5fa; }
+  .pos-2 { background: rgba(16,185,129,0.2); color: #34d399; }
+  .pos-3 { background: rgba(245,158,11,0.2); color: #fbbf24; }
+  .pos-4 { background: rgba(239,68,68,0.2); color: #f87171; }
+  .media-high { color: var(--green); font-weight: 700; }
+  .media-mid { color: var(--accent); font-weight: 600; }
+  .rank-1 { color: #ffd700; font-family: 'Bebas Neue'; font-size: 1.1rem; }
+  .rank-2 { color: #c0c0c0; font-family: 'Bebas Neue'; font-size: 1.1rem; }
+  .rank-3 { color: #cd7f32; font-family: 'Bebas Neue'; font-size: 1.1rem; }
+  .rank-q { color: var(--green); font-family: 'Bebas Neue'; font-size: 1.1rem; }
+  .rank-e { color: var(--red); font-family: 'Bebas Neue'; font-size: 1.1rem; }
+  .guitlla-row td:first-child { border-left: 3px solid var(--guitlla); }
+  .guitlla-row td { background: rgba(245,158,11,0.04); }
+  .groups-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .comp-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+  .comp-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  .comp-head { padding: 16px; background: var(--surface2); text-align: center; }
+  .comp-name { font-family: 'Bebas Neue'; font-size: 1.5rem; letter-spacing: 2px; color: var(--accent); }
+  .comp-body { padding: 16px; }
+  .comp-stat { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 0.875rem; }
+  .comp-stat:last-child { border-bottom: none; }
+  .comp-label { color: var(--muted); }
+  .comp-val { font-weight: 600; }
+  .comp-best { color: var(--green); }
+  .bar-wrap { margin-top: 4px; height: 4px; background: var(--border); border-radius: 2px; }
+  .bar-fill { height: 4px; border-radius: 2px; background: var(--accent); }
+  .loading-wrap { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px 20px; gap: 20px; }
+  .spinner { width: 48px; height: 48px; border: 4px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.8s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .loading-text { color: var(--muted); font-size: 0.9rem; letter-spacing: 1px; }
+  .error-wrap { background: rgba(239,68,68,0.1); border: 1px solid var(--red); border-radius: 12px; padding: 24px; text-align: center; color: var(--red); margin: 24px 0; }
+  .search-bar { background: var(--surface); border: 1px solid var(--border); color: var(--text); padding: 10px 16px; border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; width: 100%; max-width: 320px; outline: none; }
+  select { background: var(--surface); border: 1px solid var(--border); color: var(--text); padding: 8px 12px; border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; cursor: pointer; outline: none; }
+  @media(max-width:768px) { .groups-grid,.comp-grid { grid-template-columns: 1fr; } main,nav,header { padding: 16px; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div><div class="logo">TOMAQUET<span>Liga Fantasy · Temporada 25/26</span></div></div>
+  <div class="jornada-badge" id="jornada-badge">⚽ Cargando...</div>
+</header>
+
+<div class="update-bar">
+  <span><span class="update-dot"></span>Datos en tiempo real desde Biwenger</span>
+  <span id="last-update">Actualizando...</span>
+</div>
+
+<nav>
+  <button class="active" onclick="showSection('general',this)">🏆 General</button>
+  <button onclick="showSection('grupos',this)">⚽ Grupos</button>
+  <button onclick="showSection('jugadores',this)">👤 Jugadores</button>
+  <button onclick="showSection('guitlla',this)">🦊 Mi Equipo</button>
+  <button onclick="showSection('comparador',this)">⚖️ Comparador</button>
+</nav>
+
+<main>
+  <div id="loading-state" class="loading-wrap">
+    <div class="spinner"></div>
+    <div class="loading-text">Conectando con Biwenger...</div>
+  </div>
+  <div id="error-state" class="error-wrap" style="display:none">
+    <div style="font-size:1.5rem;margin-bottom:8px">⚠️</div>
+    <div id="error-message">Error al cargar datos</div>
+    <button onclick="loadData()" style="margin-top:12px;background:var(--red);border:none;color:#fff;padding:8px 20px;border-radius:8px;cursor:pointer;font-family:inherit;">Reintentar</button>
+  </div>
+  <div id="content" style="display:none">
+
+    <div id="general" class="section active">
+      <div class="grid-3" id="general-cards"></div>
+      <div class="table-wrap">
+        <div class="table-header"><div class="table-title">Clasificación General</div><div id="general-count" style="font-size:0.8rem;color:var(--muted)"></div></div>
+        <table><thead><tr><th>POS</th><th>EQUIPO</th><th>PTS ↓</th><th>VALOR</th><th>JUG</th><th>EFI</th></tr></thead>
+        <tbody id="general-tbody"></tbody></table>
+      </div>
+    </div>
+
+    <div id="grupos" class="section">
+      <div class="groups-grid">
+        <div class="table-wrap">
+          <div class="table-header"><div class="table-title">🔵 Grupo A</div><div style="font-size:0.75rem;color:var(--muted)">Top 4 clasifican</div></div>
+          <table><thead><tr><th>POS</th><th>EQUIPO</th><th>PJ</th><th>PG</th><th>PP</th><th>PTS</th></tr></thead>
+          <tbody id="grupo-a-tbody"></tbody></table>
+        </div>
+        <div class="table-wrap">
+          <div class="table-header"><div class="table-title">🟢 Grupo B</div><div style="font-size:0.75rem;color:var(--muted)">Top 4 clasifican</div></div>
+          <table><thead><tr><th>POS</th><th>EQUIPO</th><th>PJ</th><th>PG</th><th>PP</th><th>PTS</th></tr></thead>
+          <tbody id="grupo-b-tbody"></tbody></table>
+        </div>
+      </div>
+    </div>
+
+    <div id="jugadores" class="section">
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px;align-items:center;">
+        <input class="search-bar" type="text" placeholder="🔍 Buscar jugador..." oninput="filterPlayers()" id="player-search">
+        <select onchange="filterPlayers()" id="pos-filter">
+          <option value="">Todas las posiciones</option>
+          <option value="1">Portero</option><option value="2">Defensa</option>
+          <option value="3">Centrocampista</option><option value="4">Delantero</option>
+        </select>
+        <select onchange="sortPlayersBy(this.value)">
+          <option value="points">Ordenar: Puntos</option>
+          <option value="price">Ordenar: Valor</option>
+        </select>
+      </div>
+      <div class="table-wrap">
+        <div class="table-header"><div class="table-title">Todos los Jugadores</div><div id="player-count" style="font-size:0.8rem;color:var(--muted)"></div></div>
+        <table><thead><tr><th>JUGADOR</th><th>POS</th><th>CLUB</th><th>PTS</th><th>VALOR</th><th>LOCAL</th><th>VISIT.</th></tr></thead>
+        <tbody id="players-tbody"></tbody></table>
+      </div>
+    </div>
+
+    <div id="guitlla" class="section">
+      <div class="grid-3" id="myteam-cards"></div>
+      <div class="table-wrap">
+        <div class="table-header"><div class="table-title">🦊 Mi Plantilla</div></div>
+        <table><thead><tr><th>JUGADOR</th><th>POS</th><th>CLUB</th><th>PTS</th><th>VALOR</th><th>LOCAL</th><th>VISIT.</th></tr></thead>
+        <tbody id="myteam-tbody"></tbody></table>
+      </div>
+    </div>
+
+    <div id="comparador" class="section">
+      <div style="margin-bottom:20px;">
+        <div style="font-size:0.75rem;color:var(--muted);letter-spacing:2px;margin-bottom:12px;">SELECCIONA JUGADORES A COMPARAR</div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <select onchange="updateComparador()" id="comp1" style="flex:1;min-width:150px;"></select>
+          <select onchange="updateComparador()" id="comp2" style="flex:1;min-width:150px;"></select>
+          <select onchange="updateComparador()" id="comp3" style="flex:1;min-width:150px;"></select>
+        </div>
+      </div>
+      <div class="comp-grid" id="comp-cards"></div>
+    </div>
+
+  </div>
+</main>
+
+<script>
+const POS_NAMES = {1:'PT',2:'DF',3:'MC',4:'DL'};
+let ALL_PLAYERS = [], LEAGUE_DATA = {}, MY_PLAYERS = [], MY_TEAM_NAME = '';
+
+function showSection(id,btn) {
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+function rankClass(p){return p===1?'rank-1':p===2?'rank-2':p===3?'rank-3':p<=4?'rank-q':'rank-e';}
+function posBadge(id){return `<span class="pos-badge pos-${id}">${POS_NAMES[id]||'?'}</span>`;}
+function formatPrice(p){if(p>=1000000)return(p/1000000).toFixed(2)+'M€';if(p>=1000)return(p/1000).toFixed(0)+'K€';return p+'€';}
+
+async function loadData() {
+  document.getElementById('loading-state').style.display='flex';
+  document.getElementById('error-state').style.display='none';
+  document.getElementById('content').style.display='none';
+  try {
+    const res = await fetch('/.netlify/functions/biwenger');
+    if(!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    if(data.error) throw new Error(data.error);
+    processData(data);
+    document.getElementById('loading-state').style.display='none';
+    document.getElementById('content').style.display='block';
+    document.getElementById('last-update').textContent='Última actualización: '+new Date().toLocaleTimeString('es-ES');
+  } catch(err) {
+    document.getElementById('loading-state').style.display='none';
+    document.getElementById('error-state').style.display='block';
+    document.getElementById('error-message').textContent='Error: '+err.message;
+  }
+}
+
+function processData(data) {
+  const league = data.league?.data || data.league || {};
+  const account = data.account?.data || data.account || {};
+  const players = data.players?.data || data.players || [];
+  LEAGUE_DATA = league;
+  ALL_PLAYERS = Array.isArray(players)?players:Object.values(players);
+  MY_PLAYERS = account.players || [];
+  MY_TEAM_NAME = league.me?.teamName || account.teamName || '';
+  const round = league.currentRound || '?';
+  document.getElementById('jornada-badge').textContent=`⚽ J${round}`;
+  renderGeneral(league.standings||[]);
+  renderGroups(league);
+  renderPlayers(ALL_PLAYERS);
+  renderMyTeam(MY_PLAYERS, account);
+  initComparador();
+}
+
+function renderGeneral(standings) {
+  standings.sort((a,b)=>b.points-a.points);
+  document.getElementById('general-count').textContent=standings.length+' equipos';
+  const leader=standings[0]||{};
+  const mine=standings.find(s=>s.teamName===MY_TEAM_NAME)||{};
+  const myPos=standings.findIndex(s=>s.teamName===MY_TEAM_NAME)+1;
+  document.getElementById('general-cards').innerHTML=`
+    <div class="card"><div class="card-title">🥇 Líder</div><div class="card-value">${leader.teamName||'—'}</div><div class="card-sub">${(leader.points||0).toLocaleString()} pts</div></div>
+    <div class="card" style="border-color:rgba(245,158,11,0.4)"><div class="card-title">🦊 Tu posición</div><div class="card-value" style="color:var(--guitlla)">${myPos||'—'}º</div><div class="card-sub">${(mine.points||0).toLocaleString()} pts</div></div>
+    <div class="card"><div class="card-title">📊 Diferencia</div><div class="card-value" style="color:var(--red)">${mine.points&&leader.points?mine.points-leader.points:'—'}</div><div class="card-sub">respecto al líder</div></div>`;
+  document.getElementById('general-tbody').innerHTML=standings.map((t,i)=>{
+    const pos=i+1,isMe=t.teamName===MY_TEAM_NAME;
+    const eff=t.teamValue?(t.points/(t.teamValue/1000000)).toFixed(1):'—';
+    return `<tr ${isMe?'class="guitlla-row"':''}>
+      <td class="${rankClass(pos)}">${pos}</td>
+      <td style="font-weight:${isMe?700:400};color:${isMe?'var(--guitlla)':'inherit'}">${t.teamName||'—'}</td>
+      <td style="font-weight:700">${(t.points||0).toLocaleString()}</td>
+      <td>${t.teamValue?formatPrice(t.teamValue):'—'}</td>
+      <td>${t.players||'—'}</td>
+      <td>${eff}</td></tr>`;
+  }).join('');
+}
+
+function renderGroups(league) {
+  const tournaments=league.tournaments||[];
+  ['grupo-a-tbody','grupo-b-tbody'].forEach((id,idx)=>{
+    const t=tournaments[idx];
+    if(!t){document.getElementById(id).innerHTML='<tr><td colspan="6" style="color:var(--muted);text-align:center;padding:20px;">Sin datos</td></tr>';return;}
+    const st=(t.standings||[]).sort((a,b)=>b.points-a.points);
+    document.getElementById(id).innerHTML=st.map((s,i)=>{
+      const pos=i+1,isMe=s.teamName===MY_TEAM_NAME,pj=(s.won||0)+(s.lost||0);
+      return `<tr ${isMe?'class="guitlla-row"':''}>
+        <td class="${rankClass(pos)}">${pos}</td>
+        <td style="font-weight:${isMe?700:400};color:${isMe?'var(--guitlla)':pos<=4?'var(--green)':'var(--red)'}">${s.teamName||'—'}</td>
+        <td>${pj}</td><td>${s.won||0}</td><td>${s.lost||0}</td><td style="font-weight:700">${s.points||0}</td></tr>`;
+    }).join('');
+  });
+}
+
+function renderPlayers(players) {
+  document.getElementById('player-count').textContent=players.length+' jugadores';
+  document.getElementById('players-tbody').innerHTML=players.map(p=>`<tr>
+    <td style="font-weight:600">${p.name||'—'}</td>
+    <td>${posBadge(p.position)}</td>
+    <td style="color:var(--muted)">${p.teamName||'—'}</td>
+    <td style="font-weight:700">${p.points||0}</td>
+    <td>${formatPrice(p.price||0)}</td>
+    <td>${p.playedHome||0}</td><td>${p.playedAway||0}</td></tr>`).join('');
+}
+
+function filterPlayers(){
+  const s=document.getElementById('player-search').value.toLowerCase();
+  const pos=document.getElementById('pos-filter').value;
+  renderPlayers(ALL_PLAYERS.filter(p=>(!s||(p.name||'').toLowerCase().includes(s))&&(!pos||String(p.position)===pos)));
+}
+function sortPlayersBy(k){renderPlayers([...ALL_PLAYERS].sort((a,b)=>(b[k]||0)-(a[k]||0)));}
+
+function renderMyTeam(players,account){
+  const sorted=[...players].sort((a,b)=>(b.points||0)-(a.points||0));
+  const totalPts=sorted.reduce((s,p)=>s+(p.points||0),0);
+  const totalVal=sorted.reduce((s,p)=>s+(p.price||0),0);
+  document.getElementById('myteam-cards').innerHTML=`
+    <div class="card" style="border-color:rgba(245,158,11,0.4)"><div class="card-title">Total Puntos</div><div class="card-value">${totalPts.toLocaleString()}</div><div class="card-sub">${sorted.length} jugadores</div></div>
+    <div class="card"><div class="card-title">Valor Plantilla</div><div class="card-value" style="color:var(--accent2)">${formatPrice(totalVal)}</div></div>
+    <div class="card"><div class="card-title">Presupuesto</div><div class="card-value" style="color:var(--green)">${formatPrice(account.balance||0)}</div><div class="card-sub">disponible</div></div>`;
+  document.getElementById('myteam-tbody').innerHTML=sorted.map(p=>`<tr>
+    <td style="font-weight:600;color:var(--guitlla)">${p.name||'—'}</td>
+    <td>${posBadge(p.position)}</td>
+    <td style="color:var(--muted)">${p.teamName||'—'}</td>
+    <td style="font-weight:700">${p.points||0}</td>
+    <td>${formatPrice(p.price||0)}</td>
+    <td>${p.playedHome||0}</td><td>${p.playedAway||0}</td></tr>`).join('');
+}
+
+function initComparador(){
+  const opts=ALL_PLAYERS.map(p=>`<option value="${p.id}">${p.name}</option>`).join('');
+  ['comp1','comp2','comp3'].forEach((id,i)=>{
+    document.getElementById(id).innerHTML=opts;
+    if(ALL_PLAYERS[i])document.getElementById(id).value=ALL_PLAYERS[i].id;
+  });
+  updateComparador();
+}
+
+function updateComparador(){
+  const ids=['comp1','comp2','comp3'].map(id=>document.getElementById(id).value);
+  const players=ids.map(id=>ALL_PLAYERS.find(p=>String(p.id)===String(id))).filter(Boolean);
+  const stats=[
+    {label:'Puntos',key:'points',higher:true},
+    {label:'Valor',key:'price',higher:false,fmt:v=>formatPrice(v)},
+    {label:'Local',key:'playedHome',higher:true},
+    {label:'Visitante',key:'playedAway',higher:true},
+  ];
+  document.getElementById('comp-cards').innerHTML=players.map(p=>{
+    const rows=stats.map(s=>{
+      const vals=players.map(pp=>pp[s.key]||0);
+      const best=s.higher?Math.max(...vals):Math.min(...vals);
+      const v=p[s.key]||0,isBest=v===best,maxV=Math.max(...vals);
+      const pct=maxV>0?(v/maxV*100).toFixed(0):0;
+      return `<div class="comp-stat"><span class="comp-label">${s.label}</span><div><span class="comp-val ${isBest?'comp-best':''}">${s.fmt?s.fmt(v):v}</span><div class="bar-wrap"><div class="bar-fill" style="width:${pct}%"></div></div></div></div>`;
+    }).join('');
+    return `<div class="comp-card"><div class="comp-head"><div class="comp-name">${p.name}</div><div style="margin-top:4px">${posBadge(p.position)}</div></div><div class="comp-body">${rows}</div></div>`;
+  }).join('');
+}
+
+loadData();
+setInterval(loadData, 5*60*1000);
+</script>
+</body>
+</html>
