@@ -22,9 +22,9 @@ function parsePlayers(html) {
   for (let i = 1; i < blocks.length; i++) {
     const block = blocks[i];
     const nameMatch = block.match(/alt="([^"]+)"/);
-    const posMatch = block.match(/label-posicion[^>]+>([A-Z\/]+)</);
+    const posMatch = block.match(/label-danger[^>]*>\s*([A-Z\/]+)\s*</);
     const pointsMatch = block.match(/label-primary">(\d+)<\/span>/);
-    const priceMatch = block.match(/([\d]+\.[\d]{3})\s*€/) || block.match(/([\d]+)\s*€/);
+    const priceMatch = block.match(/(\d[\d.]+)\s*€/) || block.match(/precio[^>]*>([\d.]+)/i);
     const clubMatch = block.match(/title="([^"]+)"\s+class="escudo/);
 
     if (nameMatch && nameMatch[1] !== 'escudo') {
