@@ -16,47 +16,11 @@ async function getComuniatePlayers() {
   return res.text();
 }
 
-function parsePlayers(html) {
-  const players = [];
-  const blocks = html.split('ficha_jugador');
-  for (let i = 1; i < blocks.length; i++) {
-    const block = blocks[i];
-    const nameMatch = block.match(/titulo_ficha_jugador">([^<]+)<\/span>/);
-    const priceMatch = block.match(/<small>([\d.,]+)€<\/small>/);
-    const posMatch = block.match(/label-danger[^>]*>\s*([A-Z\/]+)\s*</);
-    const pointsMatch = block.match(/label-primary">(\d+)<\/span>/);
-    const injuredMatch = block.match(/estados\/lesionado/);
-    const sanctionMatch = block.match(/estados\/sancionado/);
-
-    if (nameMatch) {
-      const priceRaw = priceMatch ? priceMatch[1].replace(/\./g, '').replace(',', '.') : '0';
-      players.push({
-        name: nameMatch[1].trim(),
-        price: parseInt(priceRaw) || 0,
-        position: posMatch ? posMatch[1] : '?',
-        points: pointsMatch ? parseInt(pointsMatch[1]) : 0,
-        injured: !!injuredMatch,
-        sanctioned: !!sanctionMatch
-      });
-    }
-  }
-  return players;
-}
-
 exports.handler = async function() {
-  try {
-    const html = await getComuniatePlayers();
-    const players = parsePlayers(html);
-    return {
-      statusCode: 200,
-      headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
-      body: JSON.stringify({ players, source: 'comuniate', timestamp: new Date().toISOString() })
-    };
-  } catch (err) {
-    return {
-      statusCode: 500,
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ players, source: 'comuniate', timestamp: new Date().toISOString(), debug: html.substring(0, 2000) })
-    };
-  }
+  const html = await getComuniatePlayers();
+  return {
+    statusCode: 200,
+    headers: { 'Content-Type': 'text/plain', 'Access-Control-Allow-Origin': '*' },
+    body: html.substring(0, 3000)
+  };
 };
