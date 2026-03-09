@@ -21,20 +21,22 @@ function parsePlayers(html) {
   const blocks = html.split('ficha_jugador');
   for (let i = 1; i < blocks.length; i++) {
     const block = blocks[i];
-    const nameMatch = block.match(/alt="([^"]+)"/);
+    const nameMatch = block.match(/titulo_ficha_jugador">([^<]+)<\/span>/);
+    const priceMatch = block.match(/<small>([\d.,]+)€<\/small>/);
     const posMatch = block.match(/label-danger[^>]*>\s*([A-Z\/]+)\s*</);
     const pointsMatch = block.match(/label-primary">(\d+)<\/span>/);
-    const priceMatch = block.match(/(\d[\d.]+)\s*€/) || block.match(/precio[^>]*>([\d.]+)/i);
-    const clubMatch = block.match(/title="([^"]+)"\s+class="escudo/);
+    const injuredMatch = block.match(/estados\/lesionado/);
+    const sanctionMatch = block.match(/estados\/sancionado/);
 
-    if (nameMatch && nameMatch[1] !== 'escudo') {
-      const priceRaw = priceMatch ? priceMatch[1].replace(/\./g, '') : '0';
+    if (nameMatch) {
+      const priceRaw = priceMatch ? priceMatch[1].replace(/\./g, '').replace(',', '.') : '0';
       players.push({
-        name: nameMatch[1],
+        name: nameMatch[1].trim(),
         price: parseInt(priceRaw) || 0,
         position: posMatch ? posMatch[1] : '?',
         points: pointsMatch ? parseInt(pointsMatch[1]) : 0,
-        club: clubMatch ? clubMatch[1] : '—'
+        injured: !!injuredMatch,
+        sanctioned: !!sanctionMatch
       });
     }
   }
