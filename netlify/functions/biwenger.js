@@ -56,7 +56,7 @@ exports.handler = async function() {
     return {
       statusCode: 500,
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ error: err.message })
+      body: JSON.stringify({ players, source: 'comuniate', timestamp: new Date().toISOString(), debug: html.substring(0, 2000) })
     };
   }
 };
