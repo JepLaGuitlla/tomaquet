@@ -1,8 +1,8 @@
-async function getComuniatePlayers() {
+async function getPage(pagina) {
   const params = new URLSearchParams({
     operacion: '1', nombre: '', id_equipo: '0',
     posicion: '0', 'precio-min': '0', 'precio-max': '29000000',
-    modo: 'biwenger', limite: '0', ordenar: '0'
+    modo: 'biwenger', limite: '0', ordenar: '0', pagina: String(pagina)
   });
   const res = await fetch('https://www.comuniate.com/ajax/jugadores/comunio_jugadores.php', {
     method: 'POST',
@@ -14,52 +14,62 @@ async function getComuniatePlayers() {
     body: params.toString()
   });
   const buffer = await res.arrayBuffer();
-  const decoder = new TextDecoder('latin1');
-  return decoder.decode(buffer);
+  return new TextDecoder('latin1').decode(buffer);
 }
 
-function fixEncoding(str) {
-  try { return decodeURIComponent(escape(str)); } catch(e) { return str; }
-}
-
-function parsePlayers(html) {
+function parsePage(html) {
   const players = [];
-  const parts = html.split(/<div class=" ficha_jugador/);
-  for (let i = 1; i < parts.length; i++) {
-    const block = parts[i];
-    const nameMatch = block.match(/titulo_ficha_jugador">([^<]+)</);
-    const priceMatch = block.match(/<small>([\d.]+)/);
-    const posMatch = block.match(/label-danger">([A-Z]+)/);
-    const pointsMatch = block.match(/label-primary">(\d+)</);
-    const homeMatch = block.match(/fa-home[^<]*<\/i>\s*(\d+)/);
-    const awayMatch = block.match(/fa-plane[^<]*<\/i>\s*(\d+)/);
-    const injured = /estados\/lesionado/.test(block);
-    const sanctioned = /estados\/sancionado/.test(block);
-
-    if (nameMatch) {
-      players.push({
-        name: fixEncoding(nameMatch[1].trim()),
-        price: priceMatch ? parseInt(priceMatch[1].replace(/\./g, '')) : 0,
-        position: posMatch ? posMatch[1].trim() : '?',
-        points: pointsMatch ? parseInt(pointsMatch[1]) : 0,
-        playedHome: homeMatch ? parseInt(homeMatch[1]) : 0,
-        playedAway: awayMatch ? parseInt(awayMatch[1]) : 0,
-        injured,
-        sanctioned
-      });
+  const lines = html.split('\n');
+  let i = 0;
+  while (i < lines.length) {
+    const line = lines[i].trim();
+    // Posicion
+    const posMatch = line.match(/^(DL|DF|PT|MD|MC)\s*$/);
+    if (posMatch) {
+      const pos = posMatch[1];
+      // Puntos en next non-empty line
+      let pts = 0;
+      let j = i + 1;
+      while (j < lines.length && !lines[j].trim()) j++;
+      const ptsMatch = lines[j] && lines[j].trim().match(/^(\d+)$/);
+      if (ptsMatch) pts = parseInt(ptsMatch[1]);
+      // Name from markdown link
+      let name = '', price = 0, club = '—', injured = false, sanctioned = false;
+      let home = 0, away = 0;
+      for (let k = i; k < Math.min(i + 30, lines.length); k++) {
+        const l = lines[k].trim();
+        const nameMatch = l.match(/^\[([^\]]+)\]\(https:\/\/www\.comuniate\.com\/jugadores\//);
+        if (nameMatch && !name) name = nameMatch[1];
+        const priceMatch = l.match(/^([\d.]+)€$/);
+        if (priceMatch) price = parseInt(priceMatch[1].replace(/\./g, ''));
+        const clubMatch = l.match(/!\[([^\]]+)\]\(https:\/\/www\.comuniate\.com\/intranet\/equipos/);
+        if (clubMatch) club = clubMatch[1];
+        if (l.includes('lesionado')) injured = true;
+        if (l.includes('sancionado')) sanctioned = true;
+        const homeMatch = l.match(/\\s*(\\d+)\\s*\\\\s*(\\d+)/);
+      }
+      if (name) {
+        players.push({ name, position: pos, points: pts, price, club, injured, sanctioned });
+      }
     }
+    i++;
   }
   return players;
 }
 
 exports.handler = async function() {
   try {
-    const html = await getComuniatePlayers();
-    const players = parsePlayers(html);
+    const allPlayers = [];
+    for (let p = 1; p <= 22; p++) {
+      const html = await getPage(p);
+      const players = parsePage(html);
+      allPlayers.push(...players);
+      if (players.length === 0) break;
+    }
     return {
       statusCode: 200,
       headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
-      body: JSON.stringify({ players, source: 'comuniate', timestamp: new Date().toISOString() })
+      body: JSON.stringify({ players: allPlayers, total: allPlayers.length, source: 'comuniate', timestamp: new Date().toISOString() })
     };
   } catch (err) {
     return {
