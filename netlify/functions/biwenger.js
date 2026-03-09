@@ -9,8 +9,7 @@ async function getComuniatePlayers() {
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
       'Referer': 'https://www.comuniate.com/jugadores/comunio',
-      'User-Agent': 'Mozilla/5.0',
-      'Accept-Charset': 'utf-8'
+      'User-Agent': 'Mozilla/5.0'
     },
     body: params.toString()
   });
@@ -19,33 +18,34 @@ async function getComuniatePlayers() {
   return decoder.decode(buffer);
 }
 
+function fixEncoding(str) {
+  try { return decodeURIComponent(escape(str)); } catch(e) { return str; }
+}
+
 function parsePlayers(html) {
   const players = [];
-  const blocks = html.split('ficha_jugador');
-  for (let i = 1; i < blocks.length; i++) {
-    const block = blocks[i];
-    const nameMatch = block.match(/class="titulo_ficha_jugador">([^<]+)<\/span>/);
-    const priceMatch = block.match(/<small>([\d.]+)[^<]*<\/small>/);
-    const posMatch = block.match(/label-danger">\s*([A-Z]+)\s*/);
-    const pointsMatch = block.match(/label-primary">(\d+)<\/span>/);
-    const clubMatch = block.match(/alt="([^"]+)">\s*<\/div>\s*<\/a>/);
-    const injuredMatch = block.match(/estados\/lesionado/);
-    const sanctionMatch = block.match(/estados\/sancionado/);
-    const homeMatch = block.match(/fa-home[^>]*><\/i>\s*([\d]+)/);
-    const awayMatch = block.match(/fa-plane[^>]*><\/i>\s*([\d]+)/);
+  const parts = html.split(/<div class=" ficha_jugador/);
+  for (let i = 1; i < parts.length; i++) {
+    const block = parts[i];
+    const nameMatch = block.match(/titulo_ficha_jugador">([^<]+)</);
+    const priceMatch = block.match(/<small>([\d.]+)/);
+    const posMatch = block.match(/label-danger">([A-Z]+)/);
+    const pointsMatch = block.match(/label-primary">(\d+)</);
+    const homeMatch = block.match(/fa-home[^<]*<\/i>\s*(\d+)/);
+    const awayMatch = block.match(/fa-plane[^<]*<\/i>\s*(\d+)/);
+    const injured = /estados\/lesionado/.test(block);
+    const sanctioned = /estados\/sancionado/.test(block);
 
     if (nameMatch) {
-      const priceRaw = priceMatch ? priceMatch[1].replace(/\./g, '') : '0';
       players.push({
-        name: nameMatch[1].trim(),
-        price: parseInt(priceRaw) || 0,
+        name: fixEncoding(nameMatch[1].trim()),
+        price: priceMatch ? parseInt(priceMatch[1].replace(/\./g, '')) : 0,
         position: posMatch ? posMatch[1].trim() : '?',
         points: pointsMatch ? parseInt(pointsMatch[1]) : 0,
-        club: clubMatch ? clubMatch[1].trim() : '—',
-        injured: !!injuredMatch,
-        sanctioned: !!sanctionMatch,
         playedHome: homeMatch ? parseInt(homeMatch[1]) : 0,
-        playedAway: awayMatch ? parseInt(awayMatch[1]) : 0
+        playedAway: awayMatch ? parseInt(awayMatch[1]) : 0,
+        injured,
+        sanctioned
       });
     }
   }
