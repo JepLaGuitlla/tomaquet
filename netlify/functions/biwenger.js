@@ -18,29 +18,23 @@ async function getComuniatePlayers() {
 
 function parsePlayers(html) {
   const players = [];
-  const blocks = html.split('class="ficha_jugador');
+  const blocks = html.split('ficha_jugador');
   for (let i = 1; i < blocks.length; i++) {
     const block = blocks[i];
     const nameMatch = block.match(/alt="([^"]+)"/);
-    const priceMatch = block.match(/(\d+\.?\d*)\s*€/);
-    const posMatch = block.match(/pos-(?:badge-)?(DL|MC|DF|PT|MC\/DL|MCDL)/i) || 
-                     block.match(/"(DL|MC|DF|PT)"/i) ||
-                     block.match(/>(DL|MC|DF|PT|MC\/DL)<\/span>/i);
-    const pointsMatch = block.match(/puntos[^>]*>(\d+)</i) ||
-                        block.match(/>(\d{2,3})<\/div>/);
-    const clubMatch = block.match(/equipo[^"]*"[^>]*>([^<]+)</i) ||
-                      block.match(/alt="[^"]*"\s+title="([^"]+)"/);
+    const posMatch = block.match(/label-posicion[^>]+>([A-Z\/]+)</);
+    const pointsMatch = block.match(/label-primary">(\d+)<\/span>/);
+    const priceMatch = block.match(/([\d]+\.[\d]{3})\s*€/) || block.match(/([\d]+)\s*€/);
+    const clubMatch = block.match(/title="([^"]+)"\s+class="escudo/);
 
     if (nameMatch && nameMatch[1] !== 'escudo') {
       const priceRaw = priceMatch ? priceMatch[1].replace(/\./g, '') : '0';
       players.push({
         name: nameMatch[1],
         price: parseInt(priceRaw) || 0,
-        position: posMatch ? posMatch[1].toUpperCase() : '?',
+        position: posMatch ? posMatch[1] : '?',
         points: pointsMatch ? parseInt(pointsMatch[1]) : 0,
-        club: clubMatch ? clubMatch[1].trim() : '—',
-        playedHome: 0,
-        playedAway: 0
+        club: clubMatch ? clubMatch[1] : '—'
       });
     }
   }
@@ -51,14 +45,10 @@ exports.handler = async function() {
   try {
     const html = await getComuniatePlayers();
     const players = parsePlayers(html);
-    
-    // Also return raw sample for debugging
-    const sample = html.substring(0, 500);
-    
     return {
       statusCode: 200,
       headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
-      body: JSON.stringify({ players, source: 'comuniate', timestamp: new Date().toISOString(), debug_sample: sample })
+      body: JSON.stringify({ players, source: 'comuniate', timestamp: new Date().toISOString() })
     };
   } catch (err) {
     return {
