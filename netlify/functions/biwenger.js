@@ -1,5 +1,3 @@
-const LEAGUE_ID = "44700";
-
 async function getComuniatePlayers() {
   const params = new URLSearchParams({
     operacion: '1', nombre: '', id_equipo: '0',
@@ -8,7 +6,11 @@ async function getComuniatePlayers() {
   });
   const res = await fetch('https://www.comuniate.com/ajax/jugadores/comunio_jugadores.php', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'Referer': 'https://www.comuniate.com/jugadores/comunio' },
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'Referer': 'https://www.comuniate.com/jugadores/comunio',
+      'User-Agent': 'Mozilla/5.0'
+    },
     body: params.toString()
   });
   return res.text();
@@ -16,24 +18,29 @@ async function getComuniatePlayers() {
 
 function parsePlayers(html) {
   const players = [];
-  const regex = /ficha_jugador[^"]*"[^>]*>[\s\S]*?<span[^>]*>(.*?)<\/span>[\s\S]*?(\d+[\.,]\d+)[\s\S]*?<\/div>/g;
-  const nameRegex = /alt="([^"]+)"/g;
-  const priceRegex = /(\d+[\.,]\d+)\.?\d*\s*€/g;
-  const posRegex = /badge-(DL|MC|DF|PT|MC\/DL)/g;
-  const pointsRegex = /\b(\d{2,3})\b/g;
-  const blocks = html.split('ficha_jugador');
+  const blocks = html.split('class="ficha_jugador');
   for (let i = 1; i < blocks.length; i++) {
     const block = blocks[i];
     const nameMatch = block.match(/alt="([^"]+)"/);
-    const priceMatch = block.match(/([\d]+\.[\d]+|[\d]+,[\d]+)\s*€/);
-    const posMatch = block.match(/badge-(DL|MC|DF|PT|MC\/DL)/);
-    const pointsMatch = block.match(/>(\d{2,3})<\/div>/);
-    if (nameMatch) {
+    const priceMatch = block.match(/(\d+\.?\d*)\s*€/);
+    const posMatch = block.match(/pos-(?:badge-)?(DL|MC|DF|PT|MC\/DL|MCDL)/i) || 
+                     block.match(/"(DL|MC|DF|PT)"/i) ||
+                     block.match(/>(DL|MC|DF|PT|MC\/DL)<\/span>/i);
+    const pointsMatch = block.match(/puntos[^>]*>(\d+)</i) ||
+                        block.match(/>(\d{2,3})<\/div>/);
+    const clubMatch = block.match(/equipo[^"]*"[^>]*>([^<]+)</i) ||
+                      block.match(/alt="[^"]*"\s+title="([^"]+)"/);
+
+    if (nameMatch && nameMatch[1] !== 'escudo') {
+      const priceRaw = priceMatch ? priceMatch[1].replace(/\./g, '') : '0';
       players.push({
         name: nameMatch[1],
-        price: priceMatch ? priceMatch[1].replace('.', '').replace(',', '.') : '0',
-        position: posMatch ? posMatch[1] : '?',
-        points: pointsMatch ? parseInt(pointsMatch[1]) : 0
+        price: parseInt(priceRaw) || 0,
+        position: posMatch ? posMatch[1].toUpperCase() : '?',
+        points: pointsMatch ? parseInt(pointsMatch[1]) : 0,
+        club: clubMatch ? clubMatch[1].trim() : '—',
+        playedHome: 0,
+        playedAway: 0
       });
     }
   }
@@ -44,10 +51,14 @@ exports.handler = async function() {
   try {
     const html = await getComuniatePlayers();
     const players = parsePlayers(html);
+    
+    // Also return raw sample for debugging
+    const sample = html.substring(0, 500);
+    
     return {
       statusCode: 200,
       headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
-      body: JSON.stringify({ players, source: 'comuniate', timestamp: new Date().toISOString() })
+      body: JSON.stringify({ players, source: 'comuniate', timestamp: new Date().toISOString(), debug_sample: sample })
     };
   } catch (err) {
     return {
