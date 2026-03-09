@@ -3,7 +3,7 @@ const BIWENGER_PASSWORD = "Marmoles12";
 const BASE_URL = "https://biwenger.as.com/api/v2";
 
 async function login() {
-  const res = await fetch(`${BASE_URL}/user/login`, {
+  const res = await fetch(`${BASE_URL}/auth`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ email: BIWENGER_EMAIL, password: BIWENGER_PASSWORD })
