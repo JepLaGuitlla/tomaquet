@@ -196,22 +196,27 @@ body.liga-tomaquet{--accent:#e63329;--accent2:#c0261d;--accent-dim:rgba(230,51,4
 body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,0.08);}
 
 /* ── ESTUDIO DE MERCADO ─── */
-.mercado-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:1.2rem;}
-.mercado-card{background:var(--bg2);border:1px solid var(--border);border-radius:4px;overflow:hidden;}
-.mercado-card-header{padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
-.mercado-card-title{display:flex;align-items:center;gap:8px;font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--text3);}
-.mercado-card-icon{font-size:0.9rem;}
-.mercado-list{overflow:hidden;transition:max-height 0.35s ease;}
-.mercado-list.collapsed{max-height:440px;}
-.mercado-list.expanded{max-height:9999px;}
-.mercado-search{padding:6px 12px;border-bottom:1px solid var(--border);}
-.mercado-search input{width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:3px;padding:6px 10px;color:var(--text);font-family:'IBM Plex Mono',monospace;font-size:0.75rem;outline:none;}
+.mercado-grid{display:flex;flex-direction:column;gap:1.5rem;}
+.mercado-card{background:#fff;border:1px solid var(--border);border-radius:8px;overflow:hidden;}
+.mercado-card-header{padding:12px 18px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;position:sticky;top:56px;background:#fff;z-index:10;box-shadow:0 1px 4px rgba(0,0,0,0.05);}
+.mercado-card-title{display:flex;align-items:center;gap:8px;font-family:'Barlow Condensed',sans-serif;font-size:0.85rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--text);}
+.mercado-card-icon{font-size:1rem;}
+.mercado-card-actions{display:flex;align-items:center;gap:8px;}
+.mercado-list{overflow:hidden;transition:max-height 0.3s ease;}
+.mercado-list.collapsed{max-height:600px;}
+.mercado-list.expanded{max-height:99999px;}
+.mercado-search{padding:8px 14px;border-bottom:1px solid var(--border);background:var(--bg2);}
+.mercado-search input{width:100%;background:#fff;border:1px solid var(--border2);border-radius:6px;padding:7px 12px;color:var(--text);font-family:'IBM Plex Mono',monospace;font-size:0.78rem;outline:none;transition:border-color 0.15s;}
 .mercado-search input:focus{border-color:var(--accent);}
-.mercado-toggle{width:100%;background:var(--bg3);border:none;border-top:1px solid var(--border);padding:9px;font-family:'IBM Plex Mono',monospace;font-size:0.65rem;color:var(--text3);cursor:pointer;letter-spacing:1.5px;text-transform:uppercase;transition:all 0.15s;}
-.mercado-toggle:hover{color:var(--accent);background:var(--bg4);}
-.mercado-row{display:grid;grid-template-columns:24px 22px 1fr auto;align-items:center;gap:8px;padding:8px 14px;border-bottom:1px solid rgba(26,37,53,0.5);}
+.mercado-toggle{width:100%;background:var(--bg2);border:none;border-top:2px solid var(--border);padding:10px;font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:600;letter-spacing:2px;color:var(--text3);cursor:pointer;text-transform:uppercase;transition:all 0.15s;display:flex;align-items:center;justify-content:center;gap:6px;position:sticky;bottom:0;z-index:5;}
+.mercado-toggle:hover{color:var(--accent);background:var(--accent-dim);}
+/* Fila jugador — layout completo */
+.mercado-row{display:grid;grid-template-columns:28px 24px 1fr repeat(5,70px) 80px;align-items:center;gap:6px;padding:8px 14px;border-bottom:1px solid var(--border);transition:background 0.1s;}
 .mercado-row:last-child{border-bottom:none;}
-.mercado-row:hover{background:rgba(163,230,53,0.02);}
+.mercado-row:hover{background:var(--accent-dim);}
+.mercado-th{display:grid;grid-template-columns:28px 24px 1fr repeat(5,70px) 80px;gap:6px;padding:6px 14px;background:var(--bg3);border-bottom:1px solid var(--border2);}
+.mercado-th span{font-family:'IBM Plex Mono',monospace;font-size:0.56rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px;text-align:right;}
+.mercado-th span:nth-child(3){text-align:left;}
 .mercado-num{font-family:'IBM Plex Mono',monospace;font-size:0.68rem;color:var(--text3);text-align:center;}
 .mercado-num.top{color:var(--accent);font-weight:600;}
 .mercado-info{min-width:0;}
@@ -1636,27 +1641,36 @@ function buildMercadoHTML(rankings) {
   grid.className = 'mercado-grid';
   grid.innerHTML = rankings.map(r => {
     if (!mercadoState[r.id]) mercadoState[r.id] = { expanded: false, q: '' };
+    const accentColor = r.color==='green'?'var(--green)':r.color==='red'?'var(--red)':r.color==='blue'?'var(--blue)':'var(--accent)';
     return `
     <div class="mercado-card" id="mcard-${r.id}">
       <div class="mercado-card-header">
         <div class="mercado-card-title">
           <span class="mercado-card-icon">${r.icon}</span>
           ${r.title}
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:0.62rem;font-weight:400;color:var(--text3);letter-spacing:0;text-transform:none" id="mcount-${r.id}"></span>
         </div>
-        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.6rem;color:var(--text3)" id="mcount-${r.id}"></span>
+        <div class="mercado-card-actions">
+          <input type="text" placeholder="🔍 buscar..." id="msearch-${r.id}" style="border:1px solid var(--border2);border-radius:5px;padding:5px 10px;font-size:0.75rem;outline:none;color:var(--text);width:160px" oninput="filterMercadoCard('${r.id}')" value="${mercadoState[r.id].q}">
+        </div>
       </div>
-      <div class="mercado-search">
-        <input type="text" placeholder="/ buscar jugador..." id="msearch-${r.id}"
-          oninput="filterMercadoCard('${r.id}')" value="${mercadoState[r.id].q}">
+      <div class="mercado-th">
+        <span>#</span><span>Pos</span><span>Jugador</span>
+        <span style="text-align:right">Precio</span>
+        <span style="text-align:right">Pts</span>
+        <span style="text-align:right">Media</span>
+        <span style="text-align:right">PJ</span>
+        <span style="text-align:right">Tendencia</span>
+        <span style="text-align:right;color:${accentColor}">${r.title}</span>
       </div>
       <div class="mercado-list ${mercadoState[r.id].expanded ? 'expanded' : 'collapsed'}" id="mlist-${r.id}"></div>
       <button class="mercado-toggle" id="mtoggle-${r.id}" onclick="toggleMercadoCard('${r.id}')">
-        ${mercadoState[r.id].expanded ? '▲ Ver menos' : '▼ Ver todos'}
+        <span id="mtoggle-icon-${r.id}">${mercadoState[r.id].expanded ? '▲' : '▼'}</span>
+        <span id="mtoggle-text-${r.id}">${mercadoState[r.id].expanded ? 'VER MENOS' : 'VER TODOS'}</span>
       </button>
     </div>`;
   }).join('');
 
-  // Guardar referencia a rankings y poblar cada card
   grid._rankings = rankings;
   rankings.forEach(r => populateMercadoCard(r));
 }
@@ -1672,61 +1686,85 @@ function populateMercadoCard(r) {
     ? r.players.filter(p => p.name.toLowerCase().includes(q) || (p.club||'').toLowerCase().includes(q))
     : r.players;
 
-  const shown   = state.expanded ? filtered : filtered.slice(0, 10);
-  const maxVal  = filtered[0] ? (filtered[0]._val || filtered[0].score || filtered[0].pts || Math.abs(filtered[0].trend) || 1) : 1;
-  const valColor = r.color === 'green' ? 'var(--green)' : r.color === 'red' ? 'var(--red)' : r.color === 'blue' ? 'var(--blue)' : 'var(--accent)';
-  const barColor = valColor;
+  const shown    = state.expanded ? filtered : filtered.slice(0, 10);
+  const valColor = r.color==='green'?'var(--green)':r.color==='red'?'var(--red)':r.color==='blue'?'var(--blue)':'var(--accent)';
 
-  counter.textContent = filtered.length + ' jugadores';
+  if (counter) counter.textContent = '· ' + filtered.length + ' jugadores';
 
   if (!filtered.length) {
-    list.innerHTML = '<div style="padding:16px 14px;font-family:\'IBM Plex Mono\',monospace;font-size:0.72rem;color:var(--text3)">Sin datos disponibles</div>';
+        list.innerHTML = `<div style="padding:16px 14px;font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:var(--text3)">Sin datos disponibles</div>`;
     return;
   }
 
   list.innerHTML = shown.map((p, i) => {
     const pos      = (p.position || p.pos || '').split('/')[0];
-    const posColor = PC[pos] || '#555';
-    const rawVal   = p._val || p.score || p.pts || Math.abs(p.trend) || 0;
-    const pct      = maxVal > 0 ? Math.round((Math.abs(rawVal) / Math.abs(maxVal)) * 100) : 0;
-    const numCls   = i < 3 ? 'top' : '';
-    return `
-      <div class="mercado-row">
-        <div class="mercado-num ${numCls}">${i + 1}</div>
-        <div class="rank-pos-dot" style="background:${posColor};width:20px;height:20px;font-size:7px">${pos||'?'}</div>
-        <div class="mercado-info">
-          <div class="mercado-name">${p.name}</div>
-          <div class="mercado-sub">${r.subFn(p)}</div>
-        </div>
-        <div class="mercado-val" style="color:${valColor}">${r.valFn(p)}</div>
+    const posColor = PC[pos] || '#888';
+    const pj       = (p.playedHome||0) + (p.playedAway||0);
+    const media    = p.media || (pj > 0 ? (p.pts/pj) : 0);
+    const trendFmt = p.trend > 0 ? `<span style="color:var(--green)">+${fmt(p.trend/1000)}K</span>`
+                   : p.trend < 0 ? `<span style="color:var(--red)">${fmt(p.trend/1000)}K</span>`
+                   : '<span style="color:var(--text3)">—</span>';
+    const numStyle = i===0?'color:var(--accent);font-weight:700':i<3?'color:var(--text2);font-weight:600':'color:var(--text3)';
+
+    // Últimas 5 jornadas (solo para ranking racha, en los demás sale el club)
+    let subInfo = '';
+    if (r.id === 'racha') {
+      const form = (p.jForm || []).slice(0,5);
+      subInfo = form.map(v => {
+        if (v===null||v===undefined) return '<span style="color:var(--border2)">—</span>';
+        const c = v>=10?'var(--green)':v>=5?'var(--pt)':v>0?'var(--text2)':'var(--red)';
+        return `<span style="color:${c};font-weight:600">${v}</span>`;
+      }).join('<span style="color:var(--border2);margin:0 1px">·</span>');
+    } else {
+      subInfo = `<span style="color:var(--text3);font-size:0.72rem">${p.club||'—'}</span>`;
+    }
+
+    return `<div class="mercado-row">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;text-align:center;${numStyle}">${i+1}</div>
+      <div class="rank-pos-dot" style="background:${posColor};width:22px;height:22px;font-size:7px;flex-shrink:0">${pos||'?'}</div>
+      <div style="min-width:0">
+        <div style="font-size:0.85rem;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${p.name}</div>
+        <div style="font-size:0.68rem;margin-top:2px">${subInfo}</div>
       </div>
-      <div class="mercado-bar-wrap">
-        <div class="mercado-bar-bg"><div class="mercado-bar-fill" style="width:${pct}%;background:${barColor}"></div></div>
-      </div>`;
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;text-align:right;color:var(--text2)">${fmt(p.price/1000000)}M€</div>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;text-align:right;color:var(--text)">${p.pts||0}</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;text-align:right;color:var(--text2)">${media>0?media.toFixed(1):'—'}</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;text-align:right;color:var(--text3)">${pj||'—'}</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;text-align:right">${trendFmt}</div>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;text-align:right;color:${valColor}">${r.valFn(p)}</div>
+    </div>`;
   }).join('');
 
-  const toggle = document.getElementById('mtoggle-' + r.id);
+  const toggle     = document.getElementById('mtoggle-' + r.id);
+  const toggleIcon = document.getElementById('mtoggle-icon-' + r.id);
+  const toggleText = document.getElementById('mtoggle-text-' + r.id);
   if (toggle) {
     if (filtered.length <= 10) {
       toggle.style.display = 'none';
     } else {
-      toggle.style.display = 'block';
-      toggle.textContent = state.expanded
-        ? `▲ Ver menos (${filtered.length - 10} ocultos)`
-        : `▼ Ver todos (${filtered.length} jugadores)`;
+      toggle.style.display = 'flex';
+      if (toggleIcon) toggleIcon.textContent = state.expanded ? '▲' : '▼';
+      if (toggleText) toggleText.textContent = state.expanded
+        ? 'VER MENOS'
+        : `VER TODOS (${filtered.length} jugadores)`;
     }
   }
 }
 
 function toggleMercadoCard(id) {
-  mercadoState[id].expanded = !mercadoState[id].expanded;
-  const list   = document.getElementById('mlist-' + id);
-  const toggle = document.getElementById('mtoggle-' + id);
+  const wasExpanded = mercadoState[id].expanded;
+  mercadoState[id].expanded = !wasExpanded;
+  const list = document.getElementById('mlist-' + id);
   if (list) list.className = 'mercado-list ' + (mercadoState[id].expanded ? 'expanded' : 'collapsed');
   const grid = document.getElementById('mercadoGrid');
   if (grid && grid._rankings) {
     const r = grid._rankings.find(r => r.id === id);
     if (r) populateMercadoCard(r);
+  }
+  // Al cerrar, scroll al header de esta card para no perder la posición
+  if (wasExpanded) {
+    const header = document.querySelector('#mcard-' + id + ' .mercado-card-header');
+    if (header) setTimeout(() => header.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
   }
 }
 
