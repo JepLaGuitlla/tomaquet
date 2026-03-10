@@ -1,958 +1,2335 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TOMAQUET — Estudio de Mercado v3</title>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<title>TOMAQUET — War Room Fantasy</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@300;400;500&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
---bg: #f5f4f1;
---white: #ffffff;
---black: #0d0d0d;
---g600: #555;
---g400: #999;
---g300: #bbb;
---g200: #e0ddd8;
---g100: #eeebe6;
---g50: #f8f6f2;
---accent: #e63329;
---accent2: #c0261d;
---adim: rgba(230,51,41,0.07);
+  --bg:#ffffff;--bg2:#f8f8f8;--bg3:#f0f0f0;--bg4:#e8e8e8;
+  --border:#e0e0e0;--border2:#d0d0d0;
+  --accent:#e63329;--accent2:#c0261d;--accent-dim:rgba(230,51,41,0.08);
+  --text:#111111;--text2:#555555;--text3:#999999;
+  --pt:#d97706;--df:#1d6fce;--mc:#16a34a;--dl:#e63329;--md:#7c3aed;
+  --green:#16a34a;--red:#e63329;--blue:#1d6fce;--lime:#e63329;
+  --field-line:rgba(0,0,0,0.15);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
 
-–c-top: #1a56db;
-–c-good: #0e9f6e;
-–c-mid: #c27803;
-–c-low: #e3342f;
+/* noise overlay eliminado */
 
-–pos-pt: #6366f1;
-–pos-df: #16a34a;
-–pos-mc: #d97706;
-–pos-dl: #e63329;
-–pos-md: #8b5cf6;
-}
+body{background:var(--bg);color:var(--text);font-family:'Barlow',sans-serif;min-height:100vh;overflow-x:hidden;font-weight:400;}
 
-- { margin:0; padding:0; box-sizing:border-box; }
+/* ── HEADER ─── */
+header{background:#fff;border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;z-index:100;box-shadow:0 1px 8px rgba(0,0,0,0.07);}
+header::after{display:none;}
+.header-inner{max-width:1440px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px;}
+.logo{display:flex;align-items:baseline;gap:10px;}
+.logo-mark{font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;font-weight:800;color:var(--accent);letter-spacing:4px;text-transform:uppercase;}
+.logo-sep{width:1px;height:14px;background:var(--border2);margin:0 4px;}
+.logo-sub{font-family:'IBM Plex Mono',monospace;font-size:0.65rem;color:var(--text3);letter-spacing:2px;text-transform:uppercase;}
+.status-badge{display:flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:0.65rem;color:var(--accent);letter-spacing:1px;text-transform:uppercase;}
+.status-dot{width:6px;height:6px;background:var(--accent);border-radius:50%;box-shadow:0 0 8px var(--accent);animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(0.8)}}
 
-body {
-background: var(–bg);
-color: var(–black);
-font-family: ‘Barlow’, sans-serif;
-font-size: 13px;
-line-height: 1.4;
--webkit-font-smoothing: antialiased;
-}
+/* ── NAV ─── */
+.nav-wrap{border-bottom:2px solid var(--border);background:#fff;}
+nav{max-width:1440px;margin:0 auto;padding:0 2rem;display:flex;gap:0;}
+.nav-btn{font-family:'Barlow Condensed',sans-serif;font-size:0.8rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text3);background:none;border:none;padding:12px 20px;cursor:pointer;border-bottom:2px solid transparent;transition:all 0.2s;position:relative;}
+.nav-btn:hover{color:var(--text2);}
+.nav-btn.active{color:var(--accent);border-bottom-color:var(--accent);}
+.nav-btn.active::before{content:'';position:absolute;bottom:-1px;left:50%;transform:translateX(-50%);width:4px;height:4px;background:var(--accent);border-radius:50%;box-shadow:0 0 6px var(--accent);}
 
-/* ── SCROLLBAR ── */
-::-webkit-scrollbar { width: 4px; height: 4px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: var(–g200); border-radius: 2px; }
+/* ── MAIN ─── */
+main{max-width:1440px;margin:0 auto;padding:1.5rem 2rem;}
+.section{display:none;animation:fadeIn 0.2s ease;}.section.active{display:block;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
 
-/* ── HEADER ── */
-.header {
-background: var(–white);
-border-bottom: 1px solid var(–g200);
-padding: 0 24px;
-display: flex;
-align-items: center;
-justify-content: space-between;
-height: 48px;
-position: sticky;
-top: 0;
-z-index: 100;
-box-shadow: 0 1px 6px rgba(0,0,0,0.04);
-}
+/* ── LOADING ─── */
+.loading{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:80px;gap:16px;color:var(--text3);}
+.spinner{width:32px;height:32px;border:2px solid var(--border2);border-top-color:var(--accent);border-radius:50%;animation:spin 0.7s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg)}}
 
-.logo {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-size: 1.1rem;
-font-weight: 800;
-letter-spacing: 3px;
-text-transform: uppercase;
-color: var(–accent);
-display: flex;
-align-items: center;
-gap: 10px;
-}
-.logo-sep { width: 1px; height: 12px; background: var(–g200); }
-.logo-sub {
-font-family: ‘IBM Plex Mono’, monospace;
-font-size: 0.58rem;
-color: var(–g400);
-letter-spacing: 1.5px;
-text-transform: uppercase;
-font-weight: 500;
-}
+/* ── SECTION TITLES ─── */
+.section-title{font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;font-weight:600;color:var(--text3);letter-spacing:3px;text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:10px;}
+.section-title::before{content:'//';color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:0.65rem;}
+.section-title::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--border2),transparent);}
 
-.header-right { display: flex; align-items: center; gap: 12px; }
-.live-dot {
-width: 6px; height: 6px;
-background: var(–accent);
-border-radius: 50%;
-box-shadow: 0 0 8px var(–accent);
-animation: pulse 2s ease-in-out infinite;
-}
-@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
-.live-label {
-font-family: ‘IBM Plex Mono’, monospace;
-font-size: 0.6rem;
-color: var(–accent);
-letter-spacing: 1px;
-text-transform: uppercase;
-display: flex;
-align-items: center;
-gap: 6px;
-}
-.proto-badge {
-background: #fef3c7;
-border: 1px solid #fcd34d;
-color: #92400e;
-font-family: ‘IBM Plex Mono’, monospace;
-font-size: 0.56rem;
-font-weight: 600;
-letter-spacing: 1px;
-text-transform: uppercase;
-padding: 3px 8px;
-border-radius: 3px;
-}
+/* ── STATS BAR ─── */
+.stats-bar{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:var(--border);border-radius:4px;overflow:hidden;margin-bottom:1.5rem;}
+.stat-card{background:var(--bg2);padding:1rem 1.2rem;position:relative;overflow:hidden;}
+.stat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),transparent);opacity:0;}
+.stat-card:hover::before{opacity:1;}
+.stat-label{font-family:'IBM Plex Mono',monospace;font-size:0.58rem;color:var(--text3);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:6px;}
+.stat-value{font-family:'Barlow Condensed',sans-serif;font-size:1.9rem;font-weight:700;color:var(--text);letter-spacing:1px;line-height:1;}
+.stat-sub{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;color:var(--text3);margin-top:4px;}
 
-/* ── MAIN ── */
-main {
-max-width: 1380px;
-margin: 0 auto;
-padding: 1.4rem 1.5rem;
-}
+/* ── FILTERS ─── */
+.filters{display:flex;gap:8px;margin-bottom:1.2rem;flex-wrap:wrap;align-items:center;}
+.search-box{flex:1;min-width:200px;background:var(--bg2);border:1px solid var(--border2);border-radius:3px;padding:9px 14px;color:var(--text);font-family:'IBM Plex Mono',monospace;font-size:0.8rem;outline:none;transition:border-color 0.2s;}
+.search-box:focus{border-color:var(--accent);}
+.search-box::placeholder{color:var(--text3);}
+.filter-btn{background:var(--bg2);border:1px solid var(--border2);border-radius:3px;padding:9px 14px;color:var(--text3);font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all 0.15s;white-space:nowrap;}
+.filter-btn:hover{color:var(--text);border-color:var(--text3);}
+.filter-btn.active{background:var(--accent-dim);border-color:var(--accent);color:var(--accent);}
+.sort-select{background:var(--bg2);border:1px solid var(--border2);border-radius:3px;padding:9px 14px;color:var(--text2);font-family:'IBM Plex Mono',monospace;font-size:0.75rem;cursor:pointer;outline:none;}
+.sort-select:focus{border-color:var(--accent);}
 
-/* ── CONTROLS BAR ── */
-.controls {
-background: var(–white);
-border: 1px solid var(–g200);
-border-radius: 6px;
-padding: 10px 14px;
-margin-bottom: 12px;
-display: flex;
-align-items: center;
-gap: 10px;
-flex-wrap: wrap;
-}
+/* ── TABLE ─── */
+.table-wrap{background:var(--bg2);border-radius:4px;overflow:hidden;border:1px solid var(--border);}
+.table-header{display:grid;grid-template-columns:40px 2fr 80px 1fr 100px 100px 80px 80px 80px;padding:10px 16px;background:var(--bg3);border-bottom:1px solid var(--border2);}
+.th{font-family:'IBM Plex Mono',monospace;font-size:0.58rem;color:var(--text3);text-transform:uppercase;letter-spacing:1.5px;font-weight:500;cursor:pointer;user-select:none;transition:color 0.15s;}
+.th:hover{color:var(--accent);}
+.player-row{display:grid;grid-template-columns:40px 2fr 80px 1fr 100px 100px 80px 80px 80px;padding:9px 16px;border-bottom:1px solid rgba(26,37,53,0.8);transition:background 0.12s;align-items:center;}
+.player-row:hover{background:rgba(230,51,41,0.04);}
+.player-row:last-child{border-bottom:none;}
+.rank{font-family:'IBM Plex Mono',monospace;font-size:0.7rem;color:var(--text3);font-weight:400;text-align:center;}
+.rank-1{color:var(--lime);font-weight:600;}.rank-2{color:#94a3b8;}.rank-3{color:#cd7f32;}
+.player-name{font-size:0.88rem;font-weight:500;color:var(--text);word-break:break-word;line-height:1.3;}
+.player-club{font-family:'IBM Plex Mono',monospace;font-size:0.65rem;color:var(--text3);}
+.injured-icon{font-size:0.6rem;background:rgba(248,113,113,0.15);color:var(--red);border-radius:2px;padding:1px 5px;font-family:'IBM Plex Mono',monospace;letter-spacing:1px;}
+.sanction-icon{font-size:0.6rem;background:rgba(163,230,53,0.1);color:var(--lime);border-radius:2px;padding:1px 5px;font-family:'IBM Plex Mono',monospace;}
+.pos-badge{width:32px;height:32px;border-radius:2px;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;color:white;flex-shrink:0;clip-path:polygon(0 0,calc(100% - 4px) 0,100% 4px,100% 100%,4px 100%,0 calc(100% - 4px));}
+.pos-multi{display:flex;flex-direction:column;align-items:stretch;}
+.pos-multi span{flex:1;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;color:white;}
+.price{font-family:'IBM Plex Mono',monospace;font-size:0.82rem;font-weight:500;color:var(--text);}
+.trend{font-family:'IBM Plex Mono',monospace;font-size:0.75rem;font-weight:500;}
+.trend.up{color:var(--green);}.trend.down{color:var(--red);}.trend.neutral{color:var(--text3);}
+.points{font-family:'Barlow Condensed',sans-serif;font-size:1.3rem;font-weight:700;color:var(--lime);letter-spacing:1px;}
+.roi{font-family:'IBM Plex Mono',monospace;font-size:0.78rem;font-weight:500;}
+.roi.high{color:var(--green);}.roi.mid{color:var(--lime);}.roi.low{color:var(--text3);}
+.played{font-family:'IBM Plex Mono',monospace;font-size:0.78rem;color:var(--text2);text-align:center;}
+.error-msg{background:rgba(248,113,113,0.08);border:1px solid rgba(248,113,113,0.25);border-radius:4px;padding:14px 18px;color:#fca5a5;font-family:'IBM Plex Mono',monospace;font-size:0.8rem;margin:1rem 0;}
 
-.search-box {
-flex: 1;
-min-width: 180px;
-background: var(–g50);
-border: 1px solid var(–g200);
-border-radius: 4px;
-padding: 7px 12px;
-font-family: ‘IBM Plex Mono’, monospace;
-font-size: 0.75rem;
-color: var(–black);
-outline: none;
-transition: border-color 0.15s;
-}
-.search-box::placeholder { color: var(–g400); }
-.search-box:focus { border-color: var(–accent); background: var(–white); }
+/* ── PAGINATION ─── */
+.pagination{display:flex;justify-content:center;align-items:center;gap:4px;margin-top:1.2rem;flex-wrap:wrap;}
+.page-btn{background:var(--bg2);border:1px solid var(--border2);border-radius:3px;padding:6px 12px;color:var(--text3);font-family:'IBM Plex Mono',monospace;font-size:0.72rem;cursor:pointer;transition:all 0.15s;}
+.page-btn:hover{border-color:var(--accent);color:var(--accent);}
+.page-btn.active{background:var(--accent-dim);border-color:var(--accent);color:var(--accent);font-weight:600;}
+.page-info{font-family:'IBM Plex Mono',monospace;font-size:0.7rem;color:var(--text3);padding:0 6px;}
+.player-count{font-family:'IBM Plex Mono',monospace;font-size:0.65rem;color:var(--text3);font-weight:400;letter-spacing:0;text-transform:none;}
 
-.filter-group {
-display: flex;
-gap: 3px;
-background: var(–g50);
-border: 1px solid var(–g200);
-border-radius: 4px;
-padding: 2px;
-}
-.fbtn {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-size: 0.72rem;
-font-weight: 700;
-letter-spacing: 1.5px;
-text-transform: uppercase;
-padding: 5px 10px;
-border: none;
-border-radius: 3px;
-cursor: pointer;
-background: transparent;
-color: var(–g400);
-transition: all 0.12s;
-}
-.fbtn:hover { color: var(–black); }
-.fbtn.active { background: var(–accent); color: white; }
-.fbtn.active.pt { background: var(–pos-pt); }
-.fbtn.active.df { background: var(–pos-df); }
-.fbtn.active.mc { background: var(–pos-mc); }
-.fbtn.active.dl { background: var(–pos-dl); }
+/* ── INICIO ─── */
+.inicio-layout{display:grid;grid-template-columns:1fr 360px;gap:1.5rem;align-items:start;}
+@media(max-width:1100px){.inicio-layout{grid-template-columns:1fr;}}
 
-.sort-sel {
-background: var(–g50);
-border: 1px solid var(–g200);
-border-radius: 4px;
-padding: 6px 10px;
-font-family: ‘IBM Plex Mono’, monospace;
-font-size: 0.7rem;
-color: var(–g600);
-cursor: pointer;
-outline: none;
-}
-.sort-sel:focus { border-color: var(–accent); }
+/* Jornada Banner */
+.jornada-banner{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:2rem;background:var(--bg2);border:1px solid var(--border2);border-left:3px solid var(--accent);border-radius:4px;padding:1rem 1.5rem;margin-bottom:1.5rem;position:relative;overflow:hidden;}
+.jornada-banner::after{content:'';position:absolute;right:0;top:0;bottom:0;width:200px;background:linear-gradient(90deg,transparent,rgba(163,230,53,0.03));}
+.jornada-round{font-family:'Barlow Condensed',sans-serif;}
+.jornada-round .label{font-family:'IBM Plex Mono',monospace;font-size:0.58rem;color:var(--text3);letter-spacing:2px;text-transform:uppercase;margin-bottom:2px;}
+.jornada-round .num{font-size:3rem;font-weight:800;color:var(--accent);line-height:1;letter-spacing:2px;}
+.jornada-round .sub{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;color:var(--text3);letter-spacing:1px;text-transform:uppercase;}
+.jornada-divider{width:1px;height:48px;background:var(--border2);}
+.jornada-kpis{display:flex;gap:2.5rem;}
+.jornada-kpi .label{font-family:'IBM Plex Mono',monospace;font-size:0.58rem;color:var(--text3);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:3px;}
+.jornada-kpi .val{font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;font-weight:700;color:var(--text);letter-spacing:1px;}
+.jornada-kpi .val.highlight{color:var(--accent);}
 
-.count-label {
-font-family: ‘IBM Plex Mono’, monospace;
-font-size: 0.62rem;
-color: var(–g400);
-margin-left: auto;
-white-space: nowrap;
-}
+/* News */
+/* ── NOTICIAS ── */
+.news-block{background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden;}
+.news-block-header{padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
+.news-block-title{font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--text2);}
+.news-block-title::before{content:'// ';color:var(--accent);font-family:'IBM Plex Mono',monospace;}
+.news-source-tabs{display:flex;gap:4px;}
+.nsrc-btn{background:transparent;border:1px solid var(--border2);border-radius:4px;padding:4px 10px;color:var(--text3);font-family:'IBM Plex Mono',monospace;font-size:0.6rem;font-weight:500;cursor:pointer;transition:all 0.15s;text-transform:uppercase;letter-spacing:1px;}
+.nsrc-btn:hover{color:var(--accent);border-color:var(--accent);}
+.nsrc-btn.active{background:var(--accent-dim);border-color:var(--accent);color:var(--accent);}
+/* Tarjeta destacada (primera noticia) */
+.news-featured{display:block;text-decoration:none;position:relative;overflow:hidden;border-bottom:1px solid var(--border);}
+.news-featured img{width:100%;height:200px;object-fit:cover;display:block;}
+.news-featured-overlay{position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.82));}
+.news-featured-tag{display:inline-block;background:var(--accent);color:#fff;font-family:'IBM Plex Mono',monospace;font-size:0.55rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 8px;border-radius:3px;margin-bottom:6px;}
+.news-featured-title{font-family:'Barlow Condensed',sans-serif;font-size:1.15rem;font-weight:700;color:#fff;line-height:1.25;}
+.news-featured-meta{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;color:rgba(255,255,255,0.6);margin-top:5px;}
+/* Sin imagen featured */
+.news-featured-noimg{display:block;text-decoration:none;padding:14px 16px;border-bottom:1px solid var(--border);background:var(--accent-dim);}
+.news-featured-noimg .news-featured-title{font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:700;color:var(--text);line-height:1.3;}
+/* Lista de noticias pequeñas */
+.news-list{max-height:520px;overflow-y:auto;}
+.news-list::-webkit-scrollbar{width:3px;}.news-list::-webkit-scrollbar-thumb{background:var(--border2);}
+.news-item{display:flex;gap:10px;padding:10px 14px;border-bottom:1px solid var(--border);text-decoration:none;transition:background 0.12s;align-items:flex-start;}
+.news-item:hover{background:var(--accent-dim);}
+.news-item:last-child{border-bottom:none;}
+.news-item-thumb{width:64px;height:48px;object-fit:cover;border-radius:4px;flex-shrink:0;background:var(--bg3);}
+.news-item-thumb-placeholder{width:64px;height:48px;border-radius:4px;flex-shrink:0;background:var(--bg3);display:flex;align-items:center;justify-content:center;font-size:1.2rem;}
+.news-item-body{flex:1;min-width:0;}
+.news-item-title{font-size:0.82rem;font-weight:600;color:var(--text);line-height:1.35;margin-bottom:4px;}
+.news-item-meta{font-family:'IBM Plex Mono',monospace;font-size:0.58rem;color:var(--text3);display:flex;align-items:center;gap:6px;}
+.news-source-tag{display:inline-block;padding:2px 6px;border-radius:3px;font-size:0.55rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;}
+.src-jp{background:rgba(230,51,41,0.1);color:var(--accent);}
+.src-as{background:rgba(230,51,41,0.1);color:var(--accent);}
+.src-cm{background:rgba(29,111,206,0.12);color:var(--blue);}
+.src-rv{background:rgba(22,163,74,0.1);color:var(--green);}
+.news-loading{padding:32px;text-align:center;color:var(--text3);font-family:'IBM Plex Mono',monospace;font-size:0.72rem;}
+.news-error{padding:16px;color:var(--text3);font-family:'IBM Plex Mono',monospace;font-size:0.75rem;}
 
-/* ── LEYENDA ── */
-.legend {
-background: var(–white);
-border: 1px solid var(–g200);
-border-radius: 6px;
-padding: 10px 14px;
-margin-bottom: 12px;
-display: flex;
-align-items: flex-start;
-gap: 2rem;
-flex-wrap: wrap;
-}
-.legend-col { display: flex; flex-direction: column; gap: 5px; }
-.leg-title {
-font-family: ‘IBM Plex Mono’, monospace;
-font-size: 0.52rem;
-font-weight: 600;
-letter-spacing: 1.5px;
-text-transform: uppercase;
-color: var(–g400);
-}
-.leg-scale { display: flex; border-radius: 3px; overflow: hidden; }
-.ls {
-height: 16px;
-min-width: 40px;
-display: flex;
-align-items: center;
-justify-content: center;
-font-family: ‘Barlow Condensed’, sans-serif;
-font-size: 0.52rem;
-font-weight: 800;
-letter-spacing: 0.8px;
-text-transform: uppercase;
-color: white;
-}
-.ls-r { background: var(–c-low); }
-.ls-y { background: var(–c-mid); }
-.ls-g { background: var(–c-good); }
-.ls-b { background: var(–c-top); }
-.leg-items { display: flex; gap: 8px; flex-wrap: wrap; }
-.li { display: flex; align-items: center; gap: 3px; font-size: 0.58rem; color: var(–g400); }
-.ldot { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
-.leg-sep { width: 1px; background: var(–g200); align-self: stretch; }
+/* Rankings */
+.rankings-col{display:flex;flex-direction:column;gap:1rem;}
+.rank-widget{background:var(--bg2);border:1px solid var(--border);border-radius:4px;overflow:hidden;}
+.rank-widget-header{padding:10px 14px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px;}
+.rank-widget-icon{font-size:0.85rem;line-height:1;}
+.rank-widget-title{font-family:'Barlow Condensed',sans-serif;font-size:0.65rem;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--text3);}
+.rank-row{display:flex;align-items:center;gap:8px;padding:8px 14px;border-bottom:1px solid rgba(26,37,53,0.5);}
+.rank-row:last-child{border-bottom:none;}
+.rank-row:hover{background:rgba(163,230,53,0.02);}
+.rank-num{font-family:'IBM Plex Mono',monospace;font-size:0.7rem;color:var(--text3);width:16px;text-align:center;flex-shrink:0;}
+.rank-num.gold{color:var(--accent);}
+.rank-player-info{flex:1;min-width:0;}
+.rank-player-name{font-size:0.82rem;font-weight:500;color:var(--text);word-break:break-word;}
+.rank-player-club{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;color:var(--text3);}
+.rank-val{font-family:'IBM Plex Mono',monospace;font-size:0.8rem;font-weight:500;flex-shrink:0;}
+.rank-val.green{color:var(--green);}.rank-val.red{color:var(--red);}.rank-val.amber{color:var(--lime);}.rank-val.blue{color:var(--blue);}
+.rank-pos-dot{width:22px;height:22px;border-radius:2px;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-size:7px;font-weight:700;color:white;flex-shrink:0;clip-path:polygon(0 0,calc(100% - 3px) 0,100% 3px,100% 100%,3px 100%,0 calc(100% - 3px));}
+.rank-bar-bg{flex:1;background:var(--bg3);border-radius:1px;height:3px;overflow:hidden;max-width:50px;}
+.rank-bar-fill{height:100%;border-radius:1px;background:var(--accent);transition:width 0.5s ease;}
 
-/* ── TABLA CABECERA ── */
-.col-head {
-display: grid;
-grid-template-columns: 28px 22px minmax(180px,260px) 92px 82px 80px 80px 80px 80px 70px;
-padding: 6px 12px 8px 8px;
-border-bottom: 2px solid var(–g200);
-margin-bottom: 4px;
-position: sticky;
-top: 48px;
-background: var(–bg);
-z-index: 10;
-box-shadow: 0 4px 8px -2px var(–bg);
-}
-.ch {
-font-family: ‘IBM Plex Mono’, monospace;
-font-size: 0.48rem;
-font-weight: 600;
-letter-spacing: 1px;
-text-transform: uppercase;
-color: var(–g400);
-text-align: center;
-padding: 0 3px;
-line-height: 1.5;
-cursor: pointer;
-user-select: none;
-transition: color 0.15s;
-}
-.ch:hover { color: var(–accent); }
-.ch.left { text-align: left; padding-left: 10px; }
-.ch.active-sort { color: var(–accent); }
-.ch .sort-arrow { color: var(–accent); margin-left: 2px; }
+/* ── LEAGUE TOGGLE ─── */
+.liga-toggle{display:flex;gap:3px;background:var(--bg3);border:1px solid var(--border2);border-radius:3px;padding:3px;}
+.liga-btn{font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;background:transparent;border:none;padding:5px 12px;color:var(--text3);cursor:pointer;border-radius:2px;transition:all 0.15s;white-space:nowrap;}
+.liga-btn:hover{color:var(--text2);}
+.liga-btn.active{background:var(--accent);color:#fff;}
+/* Liga colors */
+body.liga-tomaquet{--accent:#e63329;--accent2:#c0261d;--accent-dim:rgba(230,51,41,0.08);}
+body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,0.08);}
 
-/* ── PLAYER CARD ── */
-.pc {
-background: var(–white);
-border: 1px solid var(–g200);
-border-radius: 5px;
-overflow: hidden;
-margin-bottom: 3px;
-transition: border-color 0.12s, box-shadow 0.12s, transform 0.1s;
-animation: fadeIn 0.2s ease both;
-}
-@keyframes fadeIn {
-from { opacity: 0; transform: translateY(3px); }
-to { opacity: 1; transform: translateY(0); }
-}
-.pc:hover {
-border-color: var(–g300);
-box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-}
-.pc.guitlla {
-border-left: 3px solid var(–accent);
-}
+/* ── ESTUDIO DE MERCADO ─── */
+.mercado-grid{display:flex;flex-direction:column;gap:1.5rem;}
+.mercado-card{background:#fff;border:1px solid var(--border);border-radius:8px;overflow:hidden;}
+.mercado-card-header{padding:12px 18px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;background:#fff;}
+.mercado-card-title{display:flex;align-items:center;gap:8px;font-family:'Barlow Condensed',sans-serif;font-size:0.85rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--text);}
+.mercado-card-icon{font-size:1rem;}
+.mercado-card-actions{display:flex;align-items:center;gap:8px;}
+.mercado-list{overflow:hidden;transition:max-height 0.3s ease;}
+.mercado-list.collapsed{max-height:600px;}
+.mercado-list.expanded{max-height:99999px;}
+.mercado-search{padding:8px 14px;border-bottom:1px solid var(--border);background:var(--bg2);}
+.mercado-search input{width:100%;background:#fff;border:1px solid var(--border2);border-radius:6px;padding:7px 12px;color:var(--text);font-family:'IBM Plex Mono',monospace;font-size:0.78rem;outline:none;transition:border-color 0.15s;}
+.mercado-search input:focus{border-color:var(--accent);}
+.mercado-toggle{width:100%;background:var(--bg2);border:none;border-top:2px solid var(--border);padding:10px;font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:600;letter-spacing:2px;color:var(--text3);cursor:pointer;text-transform:uppercase;transition:all 0.15s;display:flex;align-items:center;justify-content:center;gap:6px;}
+.mercado-toggle:hover{color:var(--accent);background:var(--accent-dim);}
+.mercado-fab{position:fixed;bottom:28px;right:28px;z-index:9999;background:var(--accent);color:#fff;border:none;border-radius:100px;padding:12px 22px;font-family:'Barlow Condensed',sans-serif;font-size:0.8rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 20px rgba(230,51,41,0.4);display:none;align-items:center;gap:8px;transition:transform 0.15s,box-shadow 0.15s;}
+.mercado-fab:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(230,51,41,0.5);}
+.mercado-fab.visible{display:flex;}
+/* Fila jugador — layout completo */
+.mercado-row{display:grid;grid-template-columns:28px 24px 1fr repeat(5,70px) 80px;align-items:center;gap:6px;padding:8px 14px;border-bottom:1px solid var(--border);transition:background 0.1s;}
+.mercado-row:last-child{border-bottom:none;}
+.mercado-row:hover{background:var(--accent-dim);}
+.mercado-th{display:grid;grid-template-columns:28px 24px 1fr repeat(5,70px) 80px;gap:6px;padding:6px 14px;background:var(--bg3);border-bottom:1px solid var(--border2);}
+.mercado-th span{font-family:'IBM Plex Mono',monospace;font-size:0.56rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px;text-align:right;}
+.mercado-th span:nth-child(3){text-align:left;}
+.mercado-num{font-family:'IBM Plex Mono',monospace;font-size:0.68rem;color:var(--text3);text-align:center;}
+.mercado-num.top{color:var(--accent);font-weight:600;}
+.mercado-info{min-width:0;}
+.mercado-name{font-size:0.84rem;font-weight:500;color:var(--text);word-break:break-word;line-height:1.2;}
+.mercado-sub{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;color:var(--text3);margin-top:2px;}
+.mercado-val{font-family:'IBM Plex Mono',monospace;font-size:0.82rem;font-weight:600;text-align:right;white-space:nowrap;}
+.mercado-bar-wrap{grid-column:1/-1;padding:0 14px 6px;margin-top:-4px;}
+.mercado-bar-bg{background:var(--bg3);border-radius:1px;height:2px;width:100%;}
+.mercado-bar-fill{height:100%;border-radius:1px;transition:width 0.4s ease;}
+.standings-table{width:100%;border-collapse:collapse;}
+.standings-grid{display:grid;grid-template-columns:44px minmax(140px,2fr) 70px 80px 55px 70px 85px 90px;align-items:center;padding:9px 16px;gap:0;}
+.standings-header{background:var(--bg3);border-bottom:1px solid var(--border2);}
+.standings-row{border-bottom:1px solid rgba(26,37,53,0.6);transition:background 0.12s;}
+.standings-row:hover{background:rgba(230,51,41,0.04);}
+.standings-row:last-child{border-bottom:none;}
+.s-rank{font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:var(--text3);text-align:center;}
+.s-rank.gold{color:var(--lime);font-weight:600;}
+.s-rank.silver{color:#94a3b8;}
+.s-rank.bronze{color:#cd7f32;}
+.s-name{font-size:0.88rem;font-weight:500;color:var(--text);padding-left:4px;word-break:break-word;line-height:1.3;}
+.s-pts{font-family:'Barlow Condensed',sans-serif;font-size:1.15rem;font-weight:700;color:var(--text);text-align:right;padding-right:8px;}
+.s-num{font-family:'IBM Plex Mono',monospace;font-size:0.78rem;color:var(--text2);text-align:right;padding-right:8px;}
+.s-diff{font-family:'IBM Plex Mono',monospace;font-size:0.78rem;font-weight:500;text-align:right;padding-right:8px;}
+.miequipo-layout{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:start;}
+@media(max-width:900px){.miequipo-layout{grid-template-columns:1fr;}}
+.formation-tabs{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:1rem;}
+.ftab{background:var(--bg2);border:1px solid var(--border2);border-radius:3px;padding:6px 12px;color:var(--text3);font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all 0.15s;}
+.ftab:hover{border-color:var(--accent);color:var(--accent);}
+.ftab.active{background:var(--accent-dim);border-color:var(--accent);color:var(--accent);}
+.field-wrap{position:relative;width:100%;max-width:400px;margin:0 auto;}
+.field{background:linear-gradient(180deg,#2d6a1f 0%,#327520 8%,#2d6a1f 16%,#327520 24%,#2d6a1f 32%,#327520 40%,#2d6a1f 48%,#327520 56%,#2d6a1f 64%,#327520 72%,#2d6a1f 80%,#327520 88%,#2d6a1f 96%);border:1px solid rgba(0,0,0,0.15);border-radius:4px;aspect-ratio:0.65;position:relative;overflow:hidden;}
+.field::before{content:'';position:absolute;top:50%;left:5%;width:90%;height:1px;background:var(--field-line);}
+.field::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:20%;padding-bottom:20%;border:1px solid var(--field-line);border-radius:50%;}
+.field-center-dot{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:5px;height:5px;background:var(--field-line);border-radius:50%;z-index:1;}
+.field-penalty-top{position:absolute;top:0;left:20%;width:60%;height:14%;border:1px solid var(--field-line);border-top:none;}
+.field-penalty-bot{position:absolute;bottom:0;left:20%;width:60%;height:14%;border:1px solid var(--field-line);border-bottom:none;}
+.field-goal-top{position:absolute;top:0;left:37%;width:26%;height:5%;border:1px solid var(--field-line);border-top:none;}
+.field-goal-bot{position:absolute;bottom:0;left:37%;width:26%;height:5%;border:1px solid var(--field-line);border-bottom:none;}
+.player-slot{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer;z-index:10;}
+.player-circle{width:40px;height:40px;border-radius:2px;clip-path:polygon(0 0,calc(100% - 5px) 0,100% 5px,100% 100%,5px 100%,0 calc(100% - 5px));border:none;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:8px;font-weight:500;color:white;transition:all 0.2s;}
+.player-circle:hover{transform:scale(1.1);filter:brightness(1.2);}
+.player-circle.empty{background:rgba(255,255,255,0.05);border:1px dashed rgba(255,255,255,0.15);border-radius:2px;clip-path:none;color:var(--text3);}
+.player-name-tag{background:rgba(0,0,0,0.75);border:none;border-radius:2px;padding:2px 5px;font-family:'IBM Plex Mono',monospace;font-size:8px;color:#fff;white-space:nowrap;text-align:center;}
+.player-pts-tag{font-family:'IBM Plex Mono',monospace;font-size:7px;color:var(--lime);}
+.badge-sell{font-family:'IBM Plex Mono',monospace;font-size:6px;background:var(--red);color:white;border-radius:2px;padding:1px 4px;font-weight:600;letter-spacing:1px;}
+.badge-warn{font-family:'IBM Plex Mono',monospace;font-size:6px;background:var(--lime);color:#000;border-radius:2px;padding:1px 4px;font-weight:600;}
+.team-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border-radius:4px;overflow:hidden;margin-bottom:1.2rem;}
+.ts-card{background:var(--bg2);padding:0.8rem 1rem;}
+.ts-label{font-family:'IBM Plex Mono',monospace;font-size:0.55rem;color:var(--text3);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:4px;}
+.ts-value{font-family:'Barlow Condensed',sans-serif;font-size:1.4rem;font-weight:700;color:var(--text);letter-spacing:1px;}
+.ts-sub{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;color:var(--text3);}
+.me-table{background:var(--bg2);border-radius:4px;overflow:hidden;border:1px solid var(--border);}
+.me-header,.me-row{display:grid;grid-template-columns:28px 1.6fr 55px 65px 55px 55px 70px;padding:8px 12px;align-items:center;}
+.me-header{background:var(--bg3);border-bottom:1px solid var(--border2);}
+.me-row{border-bottom:1px solid rgba(26,37,53,0.5);transition:background 0.12s;}
+.me-row:hover{background:rgba(163,230,53,0.02);}
+.me-row:last-child{border-bottom:none;}
+.me-pos{width:26px;height:26px;border-radius:2px;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-size:8px;font-weight:700;color:white;clip-path:polygon(0 0,calc(100% - 3px) 0,100% 3px,100% 100%,3px 100%,0 calc(100% - 3px));}
+.tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:0.58rem;padding:2px 5px;border-radius:2px;font-weight:500;letter-spacing:1px;}
+.tag-sell{background:rgba(248,113,113,0.1);color:var(--red);border:1px solid rgba(248,113,113,0.2);}
+.tag-warn{background:rgba(163,230,53,0.1);color:var(--lime);border:1px solid rgba(163,230,53,0.2);}
+.tag-ok{background:rgba(74,222,128,0.08);color:var(--green);border:1px solid rgba(74,222,128,0.15);}
 
-.pc-row {
-display: grid;
-grid-template-columns: 28px 22px minmax(180px,260px) 92px 82px 80px 80px 80px 80px 70px;
-align-items: stretch;
-min-height: 54px;
-}
+/* ── MODAL ─── */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.8);backdrop-filter:blur(4px);z-index:1000;align-items:center;justify-content:center;padding:1rem;}
+.modal-overlay.open{display:flex;}
+.modal{background:var(--bg2);border:1px solid var(--border2);border-radius:4px;width:100%;max-width:420px;max-height:80vh;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 20px 60px rgba(0,0,0,0.6);}
+.modal-header{padding:1rem 1.2rem;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
+.modal-title{font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--accent);}
+.modal-close{background:none;border:none;color:var(--text3);font-size:1.2rem;cursor:pointer;transition:color 0.15s;}
+.modal-close:hover{color:var(--text);}
+.modal-search{padding:0.6rem 1rem;border-bottom:1px solid var(--border);}
+.modal-search input{width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:3px;padding:8px 12px;color:var(--text);font-family:'IBM Plex Mono',monospace;font-size:0.8rem;outline:none;}
+.modal-search input:focus{border-color:var(--accent);}
+.modal-list{overflow-y:auto;flex:1;}
+.modal-list::-webkit-scrollbar{width:3px;}.modal-list::-webkit-scrollbar-thumb{background:var(--border2);}
+.modal-player{display:flex;align-items:center;gap:10px;padding:8px 1.2rem;cursor:pointer;border-bottom:1px solid rgba(26,37,53,0.4);transition:background 0.1s;}
+.modal-player:hover{background:rgba(163,230,53,0.04);}
+.modal-player-pos{width:26px;height:26px;border-radius:2px;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-size:8px;font-weight:700;color:var(--text2);flex-shrink:0;background:var(--bg3);border:1px solid var(--border2);}
+.modal-player-info{flex:1;}
+.modal-player-name{font-size:0.84rem;font-weight:500;color:var(--text);word-break:break-word;line-height:1.3;}
+.modal-player-club{font-family:'IBM Plex Mono',monospace;font-size:0.62rem;color:var(--text3);}
+.modal-player-pts{font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;color:var(--lime);}
+.modal-player-price{font-family:'IBM Plex Mono',monospace;font-size:0.62rem;color:var(--text3);}
+.modal-remove{background:rgba(248,113,113,0.06);border:1px solid rgba(248,113,113,0.2);border-radius:3px;padding:9px;color:var(--red);font-family:'IBM Plex Mono',monospace;font-size:0.75rem;letter-spacing:1px;cursor:pointer;margin:0.6rem;width:calc(100% - 1.2rem);transition:all 0.15s;}
+.modal-remove:hover{background:rgba(248,113,113,0.12);}
 
-/* Rank */
-.pc-rk {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-size: 0.8rem;
-font-weight: 700;
-color: var(–g400);
-display: flex;
-align-items: center;
-justify-content: center;
-}
-.pc-rk.top3 { color: var(–accent); font-size: 0.9rem; }
+/* ══════════════════════════════════════════
+   ANÁLISIS LIGA
+══════════════════════════════════════════ */
+.liga-layout{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;}
+@media(max-width:900px){.liga-layout{grid-template-columns:1fr;}}
+.liga-full{grid-column:1/-1;}
 
-/* Pos badge */
-.pc-pos {
-width: 18px;
-height: 18px;
-border-radius: 2px;
-margin: auto 0 auto 2px;
-font-family: ‘Barlow Condensed’, sans-serif;
-font-size: 0.48rem;
-font-weight: 800;
-display: flex;
-align-items: center;
-justify-content: center;
-color: white;
-flex-shrink: 0;
-letter-spacing: 0.3px;
-}
+.form-badge{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:4px;font-family:'IBM Plex Mono',monospace;font-size:0.65rem;font-weight:700;color:#fff;flex-shrink:0;}
+.form-W{background:#16a34a;}.form-D{background:#d97706;}.form-L{background:#e63329;}
 
-/* ── CELDA NOMBRE ── */
-.pc-id {
-padding: 7px 10px;
-border-right: 1px solid var(–g100);
-display: flex;
-flex-direction: column;
-justify-content: center;
-gap: 4px;
-overflow: hidden;
-}
-.pc-name {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-size: 0.9rem;
-font-weight: 800;
-letter-spacing: 0.3px;
-color: var(–black);
-text-transform: uppercase;
-white-space: nowrap;
-overflow: hidden;
-text-overflow: ellipsis;
-line-height: 1;
-}
-.pc-club {
-font-size: 0.56rem;
-color: var(–g400);
-font-weight: 500;
-white-space: nowrap;
-overflow: hidden;
-text-overflow: ellipsis;
-}
-.guitlla-tag {
-display: inline-block;
-font-family: ‘IBM Plex Mono’, monospace;
-font-size: 0.48rem;
-font-weight: 600;
-background: var(–adim);
-color: var(–accent);
-border: 1px solid rgba(230,51,41,0.2);
-border-radius: 2px;
-padding: 1px 4px;
-letter-spacing: 0.5px;
-margin-left: 4px;
-}
+.team-card{background:#fff;border:1px solid var(--border);border-radius:8px;overflow:hidden;transition:box-shadow 0.15s;}
+.team-card:hover{box-shadow:0 4px 16px rgba(0,0,0,0.08);}
+.team-card-header{display:flex;align-items:center;gap:12px;padding:12px 14px;border-bottom:1px solid var(--border);}
+.team-crest{width:36px;height:36px;object-fit:contain;}
+.team-card-name{font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;color:var(--text);}
+.team-card-pos{font-family:'IBM Plex Mono',monospace;font-size:0.65rem;color:var(--text3);}
+.team-card-body{padding:10px 14px;display:grid;grid-template-columns:repeat(4,1fr);gap:6px;}
+.team-stat{text-align:center;}
+.team-stat-val{font-family:'Barlow Condensed',sans-serif;font-size:1.3rem;font-weight:700;color:var(--text);}
+.team-stat-lbl{font-family:'IBM Plex Mono',monospace;font-size:0.55rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px;}
+.team-form{display:flex;gap:3px;padding:8px 14px;border-top:1px solid var(--border);}
 
-/* ── JORNADAS ── */
-.jrow {
-display: flex;
-gap: 4px;
-align-items: center;
-}
-.jlabel {
-font-family: ‘IBM Plex Mono’, monospace;
-font-size: 0.44rem;
-font-weight: 600;
-letter-spacing: 0.8px;
-text-transform: uppercase;
-color: var(–g400);
-margin-right: 1px;
-flex-shrink: 0;
-}
-.jp {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-size: 0.82rem;
-font-weight: 800;
-line-height: 1;
-min-width: 17px;
-text-align: center;
-}
-.ja { color: var(–g300); }
-.jn { color: var(–c-low); }
-.jy { color: var(–c-mid); }
-.jg { color: var(–c-good); }
-.jb { color: var(–c-top); }
+.fixture-row{display:flex;align-items:center;gap:10px;padding:9px 14px;border-bottom:1px solid var(--border);}
+.fixture-row:last-child{border-bottom:none;}
+.fixture-teams{flex:1;font-size:0.85rem;font-weight:500;color:var(--text);}
+.fixture-score{font-family:'IBM Plex Mono',monospace;font-size:0.85rem;font-weight:700;color:var(--text);min-width:40px;text-align:center;}
+.fixture-date{font-family:'IBM Plex Mono',monospace;font-size:0.62rem;color:var(--text3);min-width:50px;text-align:right;}
+.fixture-status{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;padding:2px 6px;border-radius:3px;font-weight:600;}
+.fixture-live{background:rgba(230,51,41,0.1);color:var(--accent);}
+.fixture-fin{background:var(--bg3);color:var(--text3);}
+.fixture-prox{background:rgba(29,111,206,0.1);color:var(--blue);}
 
-/* ── CELDA STAT ── */
-.pc-st {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-padding: 5px 4px;
-border-right: 1px solid var(–g100);
-gap: 2px;
-position: relative;
-transition: background 0.1s;
-cursor: default;
-}
-.pc-st:last-child { border-right: none; }
-.pc-st:hover { background: var(–g50); }
+.diff-badge{display:inline-block;padding:3px 8px;border-radius:4px;font-family:'IBM Plex Mono',monospace;font-size:0.65rem;font-weight:700;}
+.diff-1,.diff-2{background:rgba(22,163,74,0.12);color:#16a34a;}
+.diff-3{background:rgba(217,119,6,0.12);color:#d97706;}
+.diff-4,.diff-5{background:rgba(230,51,41,0.12);color:#e63329;}
 
-.stat-divider {
-width: 22px;
-height: 1px;
-background: var(–g200);
-flex-shrink: 0;
-}
+.panel{background:#fff;border:1px solid var(--border);border-radius:8px;overflow:hidden;}
+.panel-header{padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
+.panel-title{font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--text2);}
+.panel-title::before{content:'// ';color:var(--accent);font-family:'IBM Plex Mono',monospace;}
 
-/* Número principal */
-.sv {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-size: 0.95rem;
-font-weight: 800;
-line-height: 1;
-letter-spacing: -0.2px;
-text-align: center;
-}
-/* Número secundario */
-.sv2 {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-size: 0.62rem;
-font-weight: 700;
-line-height: 1;
-text-align: center;
-color: var(–g400);
-}
-.sv2-lbl {
-font-family: ‘IBM Plex Mono’, monospace;
-font-size: 0.4rem;
-font-weight: 600;
-letter-spacing: 0.8px;
-text-transform: uppercase;
-color: var(–g300);
-text-align: center;
-}
+.tabla-liga{width:100%;border-collapse:collapse;}
+.tabla-liga th{font-family:'IBM Plex Mono',monospace;font-size:0.58rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px;padding:8px 10px;background:var(--bg3);border-bottom:1px solid var(--border);text-align:right;}
+.tabla-liga th:nth-child(1),.tabla-liga th:nth-child(2){text-align:left;}
+.tabla-liga td{padding:8px 10px;border-bottom:1px solid var(--border);font-size:0.82rem;color:var(--text);text-align:right;vertical-align:middle;}
+.tabla-liga td:nth-child(2){text-align:left;font-weight:600;}
+.tabla-liga tr:hover td{background:var(--accent-dim);}
+.tabla-liga tr:last-child td{border-bottom:none;}
+.pos-num{font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:var(--text3);width:24px;}
+.pos-champ{color:#1d6fce;font-weight:700;}
+.pos-europa{color:#16a34a;font-weight:600;}
+.pos-conf{color:#d97706;}
+.pos-rel{color:#e63329;}
+.crest-sm{width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;}
 
-/* Colores */
-.ct { color: var(–c-top); }
-.cg { color: var(–c-good); }
-.cm { color: var(–c-mid); }
-.cl { color: var(–c-low); }
-.cn { color: var(–g400); }
+.rec-card{background:#fff;border:1px solid var(--border);border-radius:8px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start;}
+.rec-icon{font-size:1.4rem;flex-shrink:0;}
+.rec-title{font-family:'Barlow Condensed',sans-serif;font-size:0.95rem;font-weight:700;color:var(--text);margin-bottom:2px;}
+.rec-body{font-size:0.8rem;color:var(--text2);line-height:1.4;}
+.rec-badge{display:inline-block;margin-top:6px;padding:3px 8px;border-radius:4px;font-family:'IBM Plex Mono',monospace;font-size:0.62rem;font-weight:700;}
+.rec-buy{background:rgba(22,163,74,0.1);color:#16a34a;}
+.rec-sell{background:rgba(230,51,41,0.1);color:#e63329;}
+.rec-watch{background:rgba(29,111,206,0.1);color:#1d6fce;}
 
-/* ── EMPTY STATE ── */
-.empty-state {
-text-align: center;
-padding: 60px 20px;
-color: var(–g400);
-font-family: ‘IBM Plex Mono’, monospace;
-font-size: 0.72rem;
-letter-spacing: 1px;
-}
-.empty-state .empty-icon { font-size: 2rem; margin-bottom: 10px; opacity: 0.4; }
-
-/* ── PAGINATION ── */
-.pager {
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 4px;
-margin-top: 14px;
-padding-bottom: 2rem;
-}
-.pbtn {
-background: var(–white);
-border: 1px solid var(–g200);
-border-radius: 3px;
-padding: 6px 12px;
-font-family: ‘IBM Plex Mono’, monospace;
-font-size: 0.68rem;
-color: var(–g400);
-cursor: pointer;
-transition: all 0.12s;
-}
-.pbtn:hover { border-color: var(–accent); color: var(–accent); }
-.pbtn.active { background: var(–adim); border-color: var(–accent); color: var(–accent); font-weight: 600; }
-.pinfo {
-font-family: ‘IBM Plex Mono’, monospace;
-font-size: 0.62rem;
-color: var(–g400);
-padding: 0 6px;
-}
-
-/* ── NOTA ── */
-.note {
-background: var(–white);
-border: 1px solid var(–g200);
-border-left: 3px solid var(–accent);
-border-radius: 0 4px 4px 0;
-padding: 8px 12px;
-font-size: 0.68rem;
-color: var(–g600);
-line-height: 1.8;
-margin-bottom: 12px;
-}
-
-/* ── RESPONSIVE SCROLL ── */
-.table-scroll { overflow-x: auto; }
+.liga-loading{display:flex;align-items:center;justify-content:center;padding:60px;gap:12px;color:var(--text3);font-family:'IBM Plex Mono',monospace;font-size:0.8rem;}
 </style>
-
 </head>
-<body>
+<body class="liga-tomaquet">
 
-<div class="header">
-<div class="logo">
-🍅 TOMAQUET
-<div class="logo-sep"></div>
-<span class="logo-sub">Estudio de Mercado · v3</span>
-</div>
-<div class="header-right">
-<div class="live-label">
-<div class="live-dot"></div>
-J27 · LaLiga 25/26
-</div>
-<span class="proto-badge">⚠ Prototipo v3</span>
-</div>
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <div class="logo-mark" id="logoMark">🍅 TOMAQUET</div>
+      <div class="logo-sep"></div>
+      <div class="logo-sub">War Room · LaLiga 25/26</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px">
+      <div class="liga-toggle">
+        <button class="liga-btn active" data-liga="tomaquet" onclick="switchLiga('tomaquet')">🍅 TOMAQUET</button>
+        <button class="liga-btn" data-liga="promesas" onclick="switchLiga('promesas')">⛰️ EN BAS</button>
+      </div>
+      <div class="status-badge">
+        <div class="status-dot"></div>
+        <span id="statusText">INITIALIZING</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="nav-wrap">
+  <nav>
+    <button class="nav-btn active" onclick="showSection('inicio',this)">INICIO</button>
+    <button class="nav-btn" onclick="showSection('jugadores',this)">JUGADORES</button>
+    <button class="nav-btn" onclick="showSection('mercado',this)">ESTUDIO DE MERCADO 🔍</button>
+    <button class="nav-btn" onclick="showSection('general',this)">GENERAL</button>
+    <button class="nav-btn" onclick="showSection('grupos',this)">SA CAPRITXOSA</button>
+    <button class="nav-btn" onclick="showSection('miequipo',this)">MI EQUIPO</button>
+    <button class="nav-btn" onclick="showSection('liga',this)">⚡ ANÁLISIS LIGA</button>
+  </nav>
 </div>
 
 <main>
 
-<!-- LEYENDA -->
+<div id="inicio" class="section active">
 
-<div class="legend">
-<div class="legend-col">
-<div class="leg-title">Posición en ranking por stat</div>
-<div class="leg-scale">
-<div class="ls ls-r">Peor</div>
-<div class="ls ls-y">Bajo</div>
-<div class="ls ls-g">Bueno</div>
-<div class="ls ls-b">Top</div>
-</div>
-<div class="leg-items">
-<div class="li"><div class="ldot" style="background:var(--c-low)"></div>Peor 25%</div>
-<div class="li"><div class="ldot" style="background:var(--c-mid)"></div>25–50%</div>
-<div class="li"><div class="ldot" style="background:var(--c-good)"></div>50–75%</div>
-<div class="li"><div class="ldot" style="background:var(--c-top)"></div>Top 25%</div>
-</div>
-</div>
-<div class="leg-sep"></div>
-<div class="legend-col">
-<div class="leg-title">Jornadas — escala absoluta</div>
-<div class="leg-scale">
-<div class="ls ls-r">&lt;0</div>
-<div class="ls ls-y">1–5</div>
-<div class="ls ls-g">6–9</div>
-<div class="ls ls-b">10+</div>
-</div>
-<div class="leg-items">
-<div class="li"><div class="ldot" style="background:var(--c-low)"></div>Negativo</div>
-<div class="li"><div class="ldot" style="background:var(--c-mid)"></div>1 a 5</div>
-<div class="li"><div class="ldot" style="background:var(--c-good)"></div>6 a 9</div>
-<div class="li"><div class="ldot" style="background:var(--c-top)"></div>10 o más</div>
-</div>
-</div>
-<div class="leg-sep"></div>
-<div class="legend-col">
-<div class="leg-title">Cada columna tiene 2 niveles</div>
-<div style="display:flex;flex-direction:column;align-items:center;border:1px solid var(--g200);border-radius:3px;padding:5px 14px;gap:1px;background:var(--g50);">
-<div style="font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:800;color:var(--c-top);line-height:1;">217</div>
-<div style="width:18px;height:1px;background:var(--g200);margin:2px 0;"></div>
-<div style="font-family:'Barlow Condensed',sans-serif;font-size:0.6rem;font-weight:700;color:var(--c-good);line-height:1;">9.9</div>
-<div style="font-family:'IBM Plex Mono',monospace;font-size:0.4rem;letter-spacing:1px;text-transform:uppercase;color:var(--g400);">media</div>
-</div>
-</div>
-<div class="legend-col">
-<div class="leg-title">Marcadores</div>
-<div class="leg-items" style="flex-direction:column;">
-<div class="li" style="gap:6px"><div style="width:3px;height:14px;background:var(--accent);border-radius:1px;flex-shrink:0;"></div>Jugadores de Guitlla🦊</div>
-</div>
-</div>
-</div>
+  <div class="jornada-banner">
+    <div class="jornada-round">
+      <div class="label">Jornada</div>
+      <div class="num">J27</div>
+      <div class="sub">LaLiga 2025/26</div>
+    </div>
+    <div class="jornada-divider"></div>
+    <div class="jornada-kpis" id="bannerContent">
+      <div class="jornada-kpi"><div class="label">Posición</div><div class="val highlight">3º</div></div>
+      <div class="jornada-kpi"><div class="label">Mis puntos</div><div class="val">1.264</div></div>
+      <div class="jornada-kpi"><div class="label">Líder</div><div class="val">1.439</div></div>
+      <div class="jornada-kpi"><div class="label">Diferencia</div><div class="val" style="color:var(--red)">-175</div></div>
+    </div>
+  </div>
 
-<div class="note">
-<strong>Prototipo v3</strong> — Datos reales del ADVANCED_STATS. Columna <em>Pts</em> + media · <em>Local</em> + media · <em>Visita</em> + media · <em>ROI</em> + eficiencia. Las últimas 5 jornadas van bajo el nombre con colores absolutos. El borde rojo izquierdo indica jugadores de tu equipo.
-</div>
+  <div class="inicio-layout">
+    <div>
+      <div class="section-title">Últimas noticias</div>
+      <div class="news-block">
+        <div class="news-block-header">
+          <div class="news-block-title">Actualidad Fantasy</div>
+          <div class="news-source-tabs">
+            <button class="nsrc-btn active" onclick="filterNews('all',this)">ALL</button>
+            <button class="nsrc-btn" onclick="filterNews('jp',this)">JP</button>
+            <button class="nsrc-btn" onclick="filterNews('as',this)">AS</button>
+            <button class="nsrc-btn" onclick="filterNews('cm',this)">COM</button>
+            <button class="nsrc-btn" onclick="filterNews('rv',this)">RLV</button>
+          </div>
+        </div>
+        <div class="news-list" id="newsList">
+          <div class="news-loading">
+            <div class="spinner" style="width:24px;height:24px;margin:0 auto 10px"></div>
+            LOADING FEEDS...
+          </div>
+        </div>
+      </div>
+    </div>
 
-<!-- CONTROLS -->
-
-<div class="controls">
-<input type="text" class="search-box" id="searchInput" placeholder="/ buscar jugador o club..." oninput="applyAll()">
-<div class="filter-group">
-<button class="fbtn active" onclick="setPos('',this)">Todos</button>
-<button class="fbtn pt" onclick="setPos('PT',this)">PT</button>
-<button class="fbtn df" onclick="setPos('DF',this)">DF</button>
-<button class="fbtn mc" onclick="setPos('MC',this)">MC</button>
-<button class="fbtn dl" onclick="setPos('DL',this)">DL</button>
-</div>
-<select class="sort-sel" id="sortSel" onchange="applyAll()">
-<option value="pts_desc">↓ Puntos</option>
-<option value="pts_asc">↑ Puntos</option>
-<option value="price_desc">↓ Precio</option>
-<option value="price_asc">↑ Precio</option>
-<option value="roi_desc">↓ ROI</option>
-<option value="media_desc">↓ Media</option>
-<option value="trend_desc">↓ Subida</option>
-<option value="trend_asc">↑ Bajada</option>
-</select>
-<label style="display:flex;align-items:center;gap:6px;font-size:0.65rem;color:var(--g600);cursor:pointer;">
-<input type="checkbox" id="onlyGuitlla" onchange="applyAll()" style="accent-color:var(--accent);">
-Solo Guitlla🦊
-</label>
-<span class="count-label" id="countLabel">— jugadores</span>
+    <div class="rankings-col">
+      <div class="rank-widget">
+        <div class="rank-widget-header"><div class="rank-widget-icon">🔥</div><div class="rank-widget-title">En racha</div></div>
+        <div id="rankRacha"></div>
+      </div>
+      <div class="rank-widget">
+        <div class="rank-widget-header"><div class="rank-widget-icon">↑</div><div class="rank-widget-title">Más suben</div></div>
+        <div id="rankSuben"></div>
+      </div>
+      <div class="rank-widget">
+        <div class="rank-widget-header"><div class="rank-widget-icon">↓</div><div class="rank-widget-title">Más bajan</div></div>
+        <div id="rankBajan"></div>
+      </div>
+      <div class="rank-widget">
+        <div class="rank-widget-header"><div class="rank-widget-icon">★</div><div class="rank-widget-title">Top puntuadores</div></div>
+        <div id="rankGoleadores"></div>
+      </div>
+      <div class="rank-widget">
+        <div class="rank-widget-header"><div class="rank-widget-icon">⚡</div><div class="rank-widget-title">Jugadores eficientes</div></div>
+        <div id="rankUndervalued"></div>
+      </div>
+      <div class="rank-widget">
+        <div class="rank-widget-header"><div class="rank-widget-icon">🏷️</div><div class="rank-widget-title">Chollos fantasy</div></div>
+        <div id="rankChollos"></div>
+      </div>
+    </div>
+  </div>
 </div>
 
-<!-- TABLA -->
-
-<div class="col-head">
-<div class="ch">#</div>
-<div class="ch"></div>
-<div class="ch left">Jugador · Últimas 5J</div>
-<div class="ch" onclick="setSortClick('price_desc')" id="ch-price" style="cursor:pointer">Precio<br><span style="opacity:.65">Tend.</span></div>
-<div class="ch" onclick="setSortClick('pts_desc')" id="ch-pts" style="cursor:pointer">Pts<br><span style="opacity:.65">Media</span></div>
-<div class="ch">Local<br><span style="opacity:.65">M.Local</span></div>
-<div class="ch">Visita<br><span style="opacity:.65">M.Visit.</span></div>
-<div class="ch" onclick="setSortClick('roi_desc')" id="ch-roi" style="cursor:pointer">ROI<br><span style="opacity:.65">Efic.</span></div>
-<div class="ch">Cláusula<br><span style="opacity:.65">Factor</span></div>
-<div class="ch" style="color:var(--g300);font-style:italic;font-size:.44rem">Extra<br><span style="opacity:.6">próx. rival</span></div>
+<div id="jugadores" class="section">
+  <div id="jugadores-loading" class="loading"><div class="spinner"></div><span style="font-family:'IBM Plex Mono',monospace;font-size:0.72rem;letter-spacing:2px">LOADING PLAYERS...</span></div>
+  <div id="jugadores-content" style="display:none">
+    <div class="stats-bar" id="statsBar"></div>
+    <div class="filters">
+      <input type="text" class="search-box" id="searchInput" placeholder="/ search player..." oninput="filterPlayers()">
+      <button class="filter-btn active" onclick="filterPos('',this)">ALL</button>
+      <button class="filter-btn" onclick="filterPos('PT',this)">PT</button>
+      <button class="filter-btn" onclick="filterPos('DF',this)">DF</button>
+      <button class="filter-btn" onclick="filterPos('MC',this)">MC</button>
+      <button class="filter-btn" onclick="filterPos('MD',this)">MD</button>
+      <button class="filter-btn" onclick="filterPos('DL',this)">DL</button>
+      <select class="sort-select" id="sortSelect" onchange="sortPlayers()">
+        <option value="points_desc">↓ PUNTOS</option>
+        <option value="points_asc">↑ PUNTOS</option>
+        <option value="price_desc">↓ VALOR</option>
+        <option value="price_asc">↑ VALOR</option>
+        <option value="roi_desc">↓ ROI</option>
+        <option value="trend_desc">↓ TENDENCIA</option>
+      </select>
+    </div>
+    <div class="section-title">Todos los jugadores <span class="player-count" id="playerCount"></span></div>
+    <div class="table-wrap">
+      <div class="table-header">
+        <div class="th">#</div><div class="th">JUGADOR</div><div class="th">POS</div><div class="th">CLUB</div>
+        <div class="th" onclick="setSortAndRender('points_desc')">PTS ↕</div>
+        <div class="th" onclick="setSortAndRender('price_desc')">VALOR ↕</div>
+        <div class="th" onclick="setSortAndRender('roi_desc')">ROI ↕</div>
+        <div class="th">LOCAL</div><div class="th">VISIT.</div>
+      </div>
+      <div id="playersList"></div>
+    </div>
+    <div class="pagination" id="pagination"></div>
+  </div>
 </div>
-<div class="table-scroll">
-<div id="playerList"></div>
+
+<div id="general" class="section">
+  <div class="section-title">Clasificación general</div>
+  <div class="table-wrap">
+    <div class="standings-grid standings-header">
+      <div class="th">#</div>
+      <div class="th" style="padding-left:4px">EQUIPO</div>
+      <div class="th" style="text-align:right;padding-right:8px">PTS</div>
+      <div class="th" style="text-align:right;padding-right:8px">VALOR</div>
+      <div class="th" style="text-align:right;padding-right:8px">JUG.</div>
+      <div class="th" style="text-align:right;padding-right:8px">PTS/JUG</div>
+      <div class="th" style="text-align:right;padding-right:8px">VS LÍDER</div>
+      <div class="th" style="text-align:right;padding-right:8px">VS SIG.</div>
+    </div>
+    <div id="generalList"></div>
+  </div>
 </div>
 
-<div class="pager" id="pager"></div>
+<div id="grupos" class="section">
+  <div class="section-title">Sa Capritxosa — J21–J27</div>
+  <div id="gruposList"></div>
+</div>
 
+<div id="mercado" class="section">
+  <div class="section-title">Estudio de Mercado 🔍</div>
+  <div id="mercadoGrid"></div>
+</div>
+
+<div id="miequipo" class="section">
+  <div class="section-title">Mi equipo — Guitlla</div>
+  <div class="team-summary" id="teamSummary"></div>
+  <div class="miequipo-layout">
+    <div>
+      <div class="formation-tabs" id="formationTabs"></div>
+      <div class="field-wrap">
+        <div class="field" id="field">
+          <div class="field-center-dot"></div>
+          <div class="field-penalty-top"></div>
+          <div class="field-penalty-bot"></div>
+          <div class="field-goal-top"></div>
+          <div class="field-goal-bot"></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="section-title">Plantilla</div>
+      <div class="me-table">
+        <div class="me-header">
+          <div class="th">POS</div><div class="th">JUGADOR</div><div class="th">VALOR</div>
+          <div class="th">TEND.</div><div class="th">PTS</div><div class="th">MEDIA</div><div class="th">ESTADO</div>
+        </div>
+        <div id="meTableBody"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="liga" class="section">
+  <div class="section-title">Análisis de Liga</div>
+
+  <div id="ligaLoading" class="liga-loading">
+    <div class="spinner"></div> Cargando datos de La Liga…
+  </div>
+
+  <div id="ligaContent" style="display:none">
+
+    <!-- Clasificación + próxima jornada -->
+    <div class="liga-layout" style="margin-bottom:1.2rem">
+
+      <!-- Clasificación -->
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-title">Clasificación La Liga</div>
+          <span id="ligaJornada" style="font-family:'IBM Plex Mono',monospace;font-size:0.65rem;color:var(--text3)"></span>
+        </div>
+        <div style="overflow-x:auto">
+          <table class="tabla-liga" id="tablaLiga"></table>
+        </div>
+      </div>
+
+      <!-- Panel derecho: próximos partidos + forma -->
+      <div style="display:flex;flex-direction:column;gap:1rem">
+
+        <div class="panel">
+          <div class="panel-header">
+            <div class="panel-title">Próxima Jornada</div>
+          </div>
+          <div id="proximaJornada"></div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-header">
+            <div class="panel-title">Últimos Resultados</div>
+          </div>
+          <div id="ultimosResultados"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Tarjetas de equipos con forma -->
+    <div class="panel liga-full" style="margin-bottom:1.2rem">
+      <div class="panel-header">
+        <div class="panel-title">Forma de los Equipos (Últimas 5)</div>
+        <div style="display:flex;gap:6px">
+          <input id="teamSearch" placeholder="Buscar equipo…" style="border:1px solid var(--border);border-radius:4px;padding:5px 10px;font-size:0.78rem;outline:none;color:var(--text)" oninput="filterTeamCards(this.value)">
+        </div>
+      </div>
+      <div id="equiposGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1px;background:var(--border);padding:0"></div>
+    </div>
+
+    <!-- Recomendaciones fantasy -->
+    <div class="panel liga-full">
+      <div class="panel-header">
+        <div class="panel-title">Recomendaciones Fantasy — Próxima Jornada</div>
+      </div>
+      <div id="recomendaciones" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem;padding:16px"></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Botón flotante cerrar ranking -->
+<button class="mercado-fab" id="mercadoFab" onclick="closeMercadoFab()">▲ CERRAR LISTA</button>
 </main>
 
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title" id="modalTitle">SELECT PLAYER</div>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-search"><input type="text" id="modalSearch" placeholder="/ search..." oninput="filterModal()"></div>
+    <div class="modal-list" id="modalList"></div>
+    <button class="modal-remove" id="modalRemove" onclick="removePlayer()">REMOVE PLAYER</button>
+  </div>
+</div>
+
 <script>
-// ── DATOS AVANZADOS (ADVANCED_STATS del index) ──
-const GUITLLA_NAMES = new Set([
-'Unai Simón','Remiro','Ratiu','Jon Pacheco','Trent','Unai Núñez',
-'Ounahi','Selton Sánchez','Yamal','Ez Abde','Viñas','Roony',
-'Paco Cortés','Raúl Moro','Ángel Pérez'
-]);
+// ══════════════════════════════════════════
+// BASE DE DATOS AVANZADA (Numbers — J26)
+// Se fusiona con datos Biwenger por nombre
+// ══════════════════════════════════════════
+const ADVANCED_STATS = {
+  'Mbappe': {pts:237,valor:27.56,factor:3.32,roi:8.6,eficiencia:88.57,pj:23,media:10.3,ptsLocal:97,mediaLocal:9.7,ptsVisita:140,mediaVisita:10.8,j1:6,j2:8,j3:0,j4:0,j5:0,valorReal:2.59},
+  'Yamal': {pts:217,valor:27.09,factor:3.04,roi:8.01,eficiencia:79.3,pj:22,media:9.9,ptsLocal:113,mediaLocal:10.3,ptsVisita:104,mediaVisita:9.5,j1:15,j2:13,j3:3,j4:4,j5:21,valorReal:2.65},
+  'Pedri': {pts:149,valor:21.01,factor:2.32,roi:7.09,eficiencia:58.86,pj:18,media:8.3,ptsLocal:87,mediaLocal:9.7,ptsVisita:62,mediaVisita:6.9,j1:0,j2:0,j3:0,j4:5,j5:11,valorReal:3.07},
+  'Ounahi': {pts:94,valor:6.29,factor:3.83,roi:14.94,eficiencia:116.57,pj:12,media:7.8,ptsLocal:51,mediaLocal:8.5,ptsVisita:43,mediaVisita:7.2,j1:0,j2:0,j3:6,j4:8,j5:0,valorReal:3.88},
+  'Raphinha': {pts:132,valor:22.59,factor:3.06,roi:5.84,eficiencia:45.58,pj:17,media:7.8,ptsLocal:87,mediaLocal:9.7,ptsVisita:45,mediaVisita:5.6,j1:4,j2:0,j3:5,j4:7,j5:3,valorReal:1.92},
+  'Gerard Moreno': {pts:92,valor:9.32,factor:3.5,roi:9.87,eficiencia:76.01,pj:12,media:7.7,ptsLocal:43,mediaLocal:7.2,ptsVisita:49,mediaVisita:8.2,j1:0,j2:0,j3:0,j4:0,j5:0,valorReal:2.83},
+  'Joan García': {pts:145,valor:12.3,factor:1.59,roi:11.79,eficiencia:86.06,pj:20,media:7.3,ptsLocal:71,mediaLocal:7.1,ptsVisita:74,mediaVisita:7.4,j1:6,j2:8,j3:11,j4:6,j5:6,valorReal:7.45},
+  'Vinicius Jr': {pts:177,valor:20.21,factor:2.04,roi:8.76,eficiencia:62.18,pj:25,media:7.1,ptsLocal:98,mediaLocal:7.5,ptsVisita:79,mediaVisita:6.6,j1:11,j2:0,j3:17,j4:12,j5:6,valorReal:4.31},
+  'Gavi': {pts:14,valor:3.14,factor:1.98,roi:4.46,eficiencia:null,pj:2,media:7,ptsLocal:0,mediaLocal:0,ptsVisita:14,mediaVisita:7,j1:0,j2:0,j3:0,j4:0,j5:0,valorReal:2.25},
+  'Muriqi': {pts:175,valor:16.06,factor:2.1,roi:10.9,eficiencia:76.28,pj:25,media:7,ptsLocal:106,mediaLocal:8.8,ptsVisita:69,mediaVisita:5.3,j1:11,j2:2,j3:9,j4:-1,j5:2,valorReal:5.19},
+  'Oyarzabal': {pts:159,valor:16.99,factor:2.89,roi:9.36,eficiencia:64.57,pj:23,media:6.9,ptsLocal:104,mediaLocal:9.5,ptsVisita:55,mediaVisita:4.6,j1:5,j2:12,j3:6,j4:4,j5:3,valorReal:3.24},
+  'Ez Abde': {pts:117,valor:12.42,factor:2.28,roi:9.42,eficiencia:65,pj:17,media:6.9,ptsLocal:59,mediaLocal:6.6,ptsVisita:58,mediaVisita:7.3,j1:5,j2:6,j3:11,j4:5,j5:8,valorReal:4.15},
+  'Militao': {pts:87,valor:3.59,factor:null,roi:24.23,eficiencia:162.37,pj:13,media:6.7,ptsLocal:51,mediaLocal:7.3,ptsVisita:36,mediaVisita:6,j1:0,j2:0,j3:0,j4:0,j5:0,valorReal:null},
+  'Pablo Campos': {pts:13,valor:0.35,factor:null,roi:37.14,eficiencia:null,pj:2,media:6.5,ptsLocal:9,mediaLocal:9,ptsVisita:4,mediaVisita:4,j1:0,j2:0,j3:0,j4:0,j5:0,valorReal:null},
+  'Álvaro Fidalgo': {pts:26,valor:4.76,factor:null,roi:5.46,eficiencia:null,pj:4,media:6.5,ptsLocal:16,mediaLocal:8,ptsVisita:10,mediaVisita:5,j1:5,j2:5,j3:5,j4:11,j5:0,valorReal:null},
+  'Pubill': {pts:71,valor:7.45,factor:1.94,roi:9.53,eficiencia:61.95,pj:11,media:6.5,ptsLocal:48,mediaLocal:6.9,ptsVisita:23,mediaVisita:5.8,j1:3,j2:0,j3:0,j4:8,j5:0,valorReal:4.94},
+  'Fermín': {pts:129,valor:15.12,factor:3.09,roi:8.53,eficiencia:55.46,pj:20,media:6.5,ptsLocal:94,mediaLocal:9.4,ptsVisita:35,mediaVisita:3.5,j1:2,j2:7,j3:-1,j4:13,j5:12,valorReal:2.79},
+  'Carlos Romero': {pts:153,valor:9.16,factor:2.96,roi:16.7,eficiencia:106.9,pj:24,media:6.4,ptsLocal:75,mediaLocal:6.3,ptsVisita:78,mediaVisita:6.5,j1:0,j2:4,j3:-3,j4:12,j5:0,valorReal:5.66},
+  'Dani Olmo': {pts:132,valor:14.66,factor:3.24,roi:9,eficiencia:56.73,pj:21,media:6.3,ptsLocal:93,mediaLocal:8.5,ptsVisita:39,mediaVisita:3.9,j1:4,j2:9,j3:5,j4:3,j5:1,valorReal:2.79},
+  'Eric García': {pts:163,valor:13.12,factor:2.13,roi:12.42,eficiencia:78.27,pj:26,media:6.3,ptsLocal:95,mediaLocal:7.3,ptsVisita:68,mediaVisita:5.2,j1:7,j2:10,j3:2,j4:9,j5:9,valorReal:5.86},
+  'Dituro': {pts:62,valor:0.94,factor:null,roi:65.96,eficiencia:408.94,pj:10,media:6.2,ptsLocal:37,mediaLocal:6.2,ptsVisita:25,mediaVisita:6.3,j1:4,j2:10,j3:7,j4:0,j5:0,valorReal:null},
+  'Escandell': {pts:154,valor:7.1,factor:2.83,roi:21.69,eficiencia:134.48,pj:25,media:6.2,ptsLocal:94,mediaLocal:7.2,ptsVisita:60,mediaVisita:5,j1:5,j2:8,j3:1,j4:1,j5:3,valorReal:null},
+  'Fornals': {pts:160,valor:14.21,factor:null,roi:11.26,eficiencia:69.81,pj:26,media:6.2,ptsLocal:84,mediaLocal:6.5,ptsVisita:76,mediaVisita:5.8,j1:12,j2:3,j3:6,j4:2,j5:1,valorReal:null},
+  'De Frutos': {pts:141,valor:9.16,factor:1.92,roi:15.39,eficiencia:93.9,pj:23,media:6.1,ptsLocal:75,mediaLocal:6.3,ptsVisita:66,mediaVisita:6,j1:2,j2:10,j3:3,j4:3,j5:10,valorReal:7.99},
+  'Febas': {pts:153,valor:11.22,factor:2.71,roi:13.64,eficiencia:83.18,pj:25,media:6.1,ptsLocal:108,mediaLocal:8.3,ptsVisita:45,mediaVisita:3.8,j1:0,j2:5,j3:9,j4:4,j5:8,valorReal:5.01},
+  'Moleiro': {pts:148,valor:13.56,factor:2.95,roi:10.91,eficiencia:64.4,pj:25,media:5.9,ptsLocal:94,mediaLocal:7.2,ptsVisita:54,mediaVisita:4.5,j1:15,j2:0,j3:1,j4:3,j5:1,valorReal:3.69},
+  'Antony': {pts:124,valor:14.32,factor:2.52,roi:8.66,eficiencia:51.09,pj:21,media:5.9,ptsLocal:69,mediaLocal:6.3,ptsVisita:55,mediaVisita:5.5,j1:3,j2:10,j3:7,j4:5,j5:11,valorReal:3.43},
+  'Mikautadze': {pts:124,valor:10.78,factor:2.3,roi:11.5,eficiencia:67.87,pj:21,media:5.9,ptsLocal:62,mediaLocal:6.2,ptsVisita:62,mediaVisita:5.6,j1:15,j2:9,j3:13,j4:2,j5:4,valorReal:5},
+  'De Jong': {pts:111,valor:9.19,factor:null,roi:12.08,eficiencia:70.05,pj:19,media:5.8,ptsLocal:49,mediaLocal:7,ptsVisita:62,mediaVisita:5.2,j1:-8,j2:1,j3:14,j4:0,j5:0,valorReal:null},
+  'Bellingham': {pts:105,valor:11.08,factor:null,roi:9.48,eficiencia:54.96,pj:18,media:5.8,ptsLocal:53,mediaLocal:5.9,ptsVisita:52,mediaVisita:5.8,j1:2,j2:0,j3:0,j4:0,j5:0,valorReal:null},
+  'Odriozola': {pts:29,valor:0.17,factor:null,roi:170.59,eficiencia:null,pj:5,media:5.8,ptsLocal:14,mediaLocal:3.5,ptsVisita:15,mediaVisita:15,j1:0,j2:5,j3:0,j4:0,j5:0,valorReal:null},
+  'Pape Gueye': {pts:116,valor:7.41,factor:3.2,roi:15.65,eficiencia:90.8,pj:20,media:5.8,ptsLocal:67,mediaLocal:7.4,ptsVisita:49,mediaVisita:4.5,j1:4,j2:4,j3:7,j4:11,j5:10,valorReal:4.89},
+  'Borja Iglesias': {pts:133,valor:8.32,factor:2.84,roi:15.99,eficiencia:92.72,pj:23,media:5.8,ptsLocal:78,mediaLocal:6.5,ptsVisita:55,mediaVisita:5,j1:2,j2:9,j3:7,j4:7,j5:6,valorReal:5.65},
+  'Germán Valera': {pts:144,valor:9.89,factor:1.52,roi:14.56,eficiencia:84.45,pj:25,media:5.8,ptsLocal:103,mediaLocal:7.4,ptsVisita:41,mediaVisita:3.7,j1:4,j2:3,j3:8,j4:6,j5:4,valorReal:9.62},
+  'Ryan': {pts:136,valor:3.73,factor:2.43,roi:36.46,eficiencia:207.83,pj:24,media:5.7,ptsLocal:61,mediaLocal:5.1,ptsVisita:75,mediaVisita:6.3,j1:4,j2:1,j3:5,j4:6,j5:9,valorReal:15.09},
+  'Szczesny': {pts:34,valor:0.63,factor:null,roi:53.97,eficiencia:null,pj:6,media:5.7,ptsLocal:16,mediaLocal:5.3,ptsVisita:18,mediaVisita:6,j1:0,j2:0,j3:0,j4:0,j5:0,valorReal:null},
+  'Budimir': {pts:141,valor:14,factor:2.96,roi:10.07,eficiencia:56.4,pj:25,media:5.6,ptsLocal:95,mediaLocal:7.9,ptsVisita:46,mediaVisita:3.5,j1:10,j2:11,j3:3,j4:10,j5:2,valorReal:3.38},
+  'Kike Salas': {pts:84,valor:3.97,factor:1.97,roi:21.16,eficiencia:118.49,pj:15,media:5.6,ptsLocal:52,mediaLocal:6.5,ptsVisita:32,mediaVisita:4.6,j1:1,j2:16,j3:6,j4:6,j5:7,valorReal:10.73},
+  'Arda Güler': {pts:145,valor:14.23,factor:2.87,roi:10.19,eficiencia:57.06,pj:26,media:5.6,ptsLocal:71,mediaLocal:5.5,ptsVisita:74,mediaVisita:5.7,j1:7,j2:3,j3:3,j4:4,j5:5,valorReal:3.57},
+  'Cucho': {pts:117,valor:10.32,factor:2.02,roi:11.34,eficiencia:63.49,pj:21,media:5.6,ptsLocal:60,mediaLocal:5.5,ptsVisita:57,mediaVisita:5.7,j1:0,j2:0,j3:0,j4:3,j5:1,valorReal:5.64},
+  'Expósito': {pts:138,valor:6.98,factor:2.09,roi:19.77,eficiencia:108.74,pj:25,media:5.5,ptsLocal:71,mediaLocal:5.9,ptsVisita:67,mediaVisita:5.2,j1:6,j2:1,j3:3,j4:12,j5:4,valorReal:9.45},
+  'Amrabat': {pts:44,valor:1.48,factor:1.66,roi:29.73,eficiencia:null,pj:8,media:5.5,ptsLocal:31,mediaLocal:6.2,ptsVisita:13,mediaVisita:4.3,j1:0,j2:0,j3:0,j4:0,j5:0,valorReal:17.86},
+  'Álvaro Carreras': {pts:126,valor:8.53,factor:2.2,roi:14.77,eficiencia:81.24,pj:23,media:5.5,ptsLocal:73,mediaLocal:6.6,ptsVisita:53,mediaVisita:4.4,j1:15,j2:7,j3:3,j4:4,j5:4,valorReal:6.74},
+  'Sergio Herrera': {pts:142,valor:5.04,factor:2.42,roi:28.17,eficiencia:154.96,pj:26,media:5.5,ptsLocal:56,mediaLocal:4.7,ptsVisita:86,mediaVisita:6.1,j1:6,j2:10,j3:7,j4:0,j5:0,valorReal:11.74},
+  'Kubo': {pts:98,valor:4.31,factor:null,roi:22.74,eficiencia:122.78,pj:18,media:5.4,ptsLocal:47,mediaLocal:5.2,ptsVisita:51,mediaVisita:5.7,j1:0,j2:0,j3:0,j4:0,j5:0,valorReal:null},
+  'Luis Milla': {pts:136,valor:11.83,factor:2.05,roi:11.5,eficiencia:62.08,pj:25,media:5.4,ptsLocal:68,mediaLocal:5.7,ptsVisita:68,mediaVisita:5.2,j1:7,j2:7,j3:7,j4:2,j5:6,valorReal:5.58},
+  'Eric Bailly': {pts:38,valor:0.42,factor:null,roi:90.48,eficiencia:null,pj:7,media:5.4,ptsLocal:22,mediaLocal:4.4,ptsVisita:16,mediaVisita:8,j1:0,j2:0,j3:0,j4:4,j5:12,valorReal:null},
+  'Valverde': {pts:135,valor:14.76,factor:2.12,roi:9.15,eficiencia:49.39,pj:25,media:5.4,ptsLocal:83,mediaLocal:6.9,ptsVisita:52,mediaVisita:4,j1:8,j2:5,j3:13,j4:5,j5:5,valorReal:4.31},
+  'Iker Benito': {pts:27,valor:0.23,factor:null,roi:117.39,eficiencia:null,pj:5,media:5.4,ptsLocal:20,mediaLocal:6.7,ptsVisita:7,mediaVisita:3.5,j1:0,j2:0,j3:0,j4:0,j5:0,valorReal:null},
+  'Tchouameni': {pts:124,valor:10.57,factor:2.28,roi:11.73,eficiencia:63.35,pj:23,media:5.4,ptsLocal:72,mediaLocal:5.5,ptsVisita:52,mediaVisita:5.2,j1:3,j2:8,j3:7,j4:6,j5:4,valorReal:5.15},
+  'Álvaro Rodríguez': {pts:124,valor:5.14,factor:null,roi:24.12,eficiencia:130.27,pj:23,media:5.4,ptsLocal:71,mediaLocal:6.5,ptsVisita:53,mediaVisita:4.4,j1:11,j2:4,j3:3,j4:2,j5:2,valorReal:null},
+  'Lewandowski': {pts:113,valor:11.12,factor:1.71,roi:10.16,eficiencia:54.87,pj:21,media:5.4,ptsLocal:64,mediaLocal:5.8,ptsVisita:49,mediaVisita:4.9,j1:4,j2:11,j3:0,j4:1,j5:9,valorReal:5.97},
+  'Samú Costa': {pts:123,valor:5.73,factor:3.07,roi:21.47,eficiencia:113.77,pj:23,media:5.3,ptsLocal:52,mediaLocal:5.2,ptsVisita:71,mediaVisita:5.5,j1:15,j2:3,j3:2,j4:5,j5:2,valorReal:6.93},
+  'Koke': {pts:128,valor:4.37,factor:null,roi:29.29,eficiencia:155.24,pj:24,media:5.3,ptsLocal:67,mediaLocal:5.6,ptsVisita:61,mediaVisita:5.1,j1:4,j2:5,j3:0,j4:3,j5:3,valorReal:null},
+  'Ferran Torres': {pts:128,valor:11.6,factor:3.88,roi:11.03,eficiencia:58.48,pj:24,media:5.3,ptsLocal:72,mediaLocal:6.5,ptsVisita:56,mediaVisita:4.3,j1:9,j2:2,j3:0,j4:-1,j5:-1,valorReal:2.83},
+  'Pépé': {pts:133,valor:7.08,factor:null,roi:18.79,eficiencia:99.56,pj:25,media:5.3,ptsLocal:82,mediaLocal:6.3,ptsVisita:51,mediaVisita:4.3,j1:15,j2:1,j3:6,j4:4,j5:4,valorReal:null},
+  'Rubén Vargas': {pts:69,valor:2.41,factor:null,roi:28.63,eficiencia:151.74,pj:13,media:5.3,ptsLocal:38,mediaLocal:5.4,ptsVisita:31,mediaVisita:5.2,j1:0,j2:0,j3:0,j4:0,j5:0,valorReal:null},
+  'Lo Celso': {pts:90,valor:2.76,factor:null,roi:32.61,eficiencia:172.83,pj:17,media:5.3,ptsLocal:48,mediaLocal:6,ptsVisita:42,mediaVisita:4.7,j1:0,j2:0,j3:0,j4:0,j5:0,valorReal:null},
+  'Barrios': {pts:111,valor:7.1,factor:3.26,roi:15.63,eficiencia:82.86,pj:21,media:5.3,ptsLocal:64,mediaLocal:6.4,ptsVisita:47,mediaVisita:4.3,j1:2,j2:0,j3:0,j4:0,j5:0,valorReal:4.82},
+  'Miguel Román': {pts:95,valor:3.21,factor:2.49,roi:29.6,eficiencia:156.85,pj:18,media:5.3,ptsLocal:42,mediaLocal:5.3,ptsVisita:53,mediaVisita:5.3,j1:6,j2:9,j3:4,j4:3,j5:6,valorReal:11.94},
+  'Rashford': {pts:116,valor:8.05,factor:null,roi:14.41,eficiencia:76.37,pj:22,media:5.3,ptsLocal:57,mediaLocal:5.7,ptsVisita:59,mediaVisita:4.9,j1:11,j2:6,j3:0,j4:6,j5:0,valorReal:null},
+  'Óskarsson': {pts:47,valor:2.13,factor:null,roi:22.07,eficiencia:null,pj:9,media:5.2,ptsLocal:38,mediaLocal:7.6,ptsVisita:9,mediaVisita:2.3,j1:3,j2:8,j3:2,j4:17,j5:0,valorReal:null},
+  'Barrenetxea': {pts:104,valor:3.7,factor:1.86,roi:28.11,eficiencia:146.16,pj:20,media:5.2,ptsLocal:60,mediaLocal:5.5,ptsVisita:44,mediaVisita:4.9,j1:0,j2:0,j3:0,j4:0,j5:5,valorReal:15.11},
+  'Bergström': {pts:26,valor:0.38,factor:null,roi:68.42,eficiencia:null,pj:5,media:5.2,ptsLocal:8,mediaLocal:4,ptsVisita:18,mediaVisita:6,j1:0,j2:0,j3:0,j4:0,j5:0,valorReal:null},
+  'Arambarri': {pts:135,valor:7.92,factor:3.07,roi:17.05,eficiencia:88.64,pj:26,media:5.2,ptsLocal:69,mediaLocal:5.3,ptsVisita:66,mediaVisita:5.1,j1:3,j2:10,j3:9,j4:2,j5:8,valorReal:5.56},
+  'Víctor Muñoz': {pts:135,valor:7.58,factor:2.6,roi:17.81,eficiencia:92.61,pj:26,media:5.2,ptsLocal:86,mediaLocal:7.2,ptsVisita:49,mediaVisita:3.5,j1:11,j2:5,j3:-1,j4:7,j5:3,valorReal:6.87},
+  'Odysseas': {pts:114,valor:2.84,factor:2.19,roi:40.14,eficiencia:208.73,pj:22,media:5.2,ptsLocal:59,mediaLocal:5.4,ptsVisita:55,mediaVisita:5,j1:1,j2:2,j3:7,j4:2,j5:2,valorReal:18.42},
+  'Luis Vázquez': {pts:31,valor:3.3,factor:3.49,roi:9.39,eficiencia:null,pj:6,media:5.2,ptsLocal:10,mediaLocal:3.3,ptsVisita:21,mediaVisita:7,j1:2,j2:10,j3:5,j4:3,j5:2,valorReal:2.71},
+  'Unai Simón': {pts:116,valor:2.92,factor:15.28,roi:39.73,eficiencia:154.11,pj:26,media:4.5,ptsLocal:60,mediaLocal:4.6,ptsVisita:56,mediaVisita:4.3,j1:null,j2:null,j3:null,j4:null,j5:null,valorReal:1.54,pos:'PT',inGuitlla:true},
+  'Remiro': {pts:106,valor:2.63,factor:15.5,roi:40.3,eficiencia:155.89,pj:26,media:4.1,ptsLocal:49,mediaLocal:3.8,ptsVisita:57,mediaVisita:4.4,j1:null,j2:null,j3:null,j4:null,j5:null,valorReal:1.56,pos:'PT',inGuitlla:true},
+  'Ratiu': {pts:105,valor:4.64,factor:9.84,roi:22.63,eficiencia:99.14,pj:23,media:4.6,ptsLocal:61,mediaLocal:5.3,ptsVisita:44,mediaVisita:3.8,j1:null,j2:null,j3:null,j4:null,j5:null,valorReal:0.99,pos:'DF',inGuitlla:true},
+  'Jon Pacheco': {pts:81,valor:1.5,factor:28.42,roi:54,eficiencia:286.67,pj:19,media:4.3,ptsLocal:39,mediaLocal:4.1,ptsVisita:42,mediaVisita:4.4,j1:null,j2:null,j3:null,j4:null,j5:null,valorReal:2.87,pos:'DF',inGuitlla:true},
+  'Trent': {pts:35,valor:4.85,factor:6.01,roi:7.22,eficiencia:59.79,pj:12,media:2.9,ptsLocal:18,mediaLocal:3,ptsVisita:17,mediaVisita:2.8,j1:null,j2:null,j3:null,j4:null,j5:null,valorReal:0.6,pos:'DF',inGuitlla:true},
+  'Unai Núñez': {pts:20,valor:2.99,factor:16.72,roi:6.69,eficiencia:167.22,pj:4,media:5,ptsLocal:12,mediaLocal:6,ptsVisita:8,mediaVisita:4,j1:null,j2:null,j3:null,j4:null,j5:null,valorReal:1.67,pos:'DF',inGuitlla:true},
+  'Ounahi': {pts:94,valor:6.55,factor:11.96,roi:14.35,eficiencia:119.08,pj:12,media:7.8,ptsLocal:51,mediaLocal:8.5,ptsVisita:43,mediaVisita:7.2,j1:null,j2:null,j3:null,j4:null,j5:null,valorReal:1.19,pos:'MC',inGuitlla:true},
+  'Selton Sánchez': {pts:11,valor:0.15,factor:122.22,roi:73.33,eficiencia:1200,pj:6,media:1.8,ptsLocal:7,mediaLocal:2.3,ptsVisita:4,mediaVisita:1.3,j1:null,j2:null,j3:null,j4:null,j5:null,valorReal:12,pos:'MC',inGuitlla:true},
+  'Yamal': {pts:217,valor:27.17,factor:3.63,roi:7.99,eficiencia:36.44,pj:22,media:9.9,ptsLocal:113,mediaLocal:10.3,ptsVisita:104,mediaVisita:9.5,j1:null,j2:null,j3:null,j4:null,j5:null,valorReal:0.36,pos:'DL',inGuitlla:true},
+  'Ez Abde': {pts:117,valor:12.67,factor:5.43,roi:9.23,eficiencia:54.46,pj:17,media:6.9,ptsLocal:59,mediaLocal:6.9,ptsVisita:58,mediaVisita:6.8,j1:null,j2:null,j3:null,j4:null,j5:null,valorReal:0.54,pos:'DL',inGuitlla:true},
+  'Viñas': {pts:110,valor:3.63,factor:13.77,roi:30.3,eficiencia:137.74,pj:22,media:5,ptsLocal:53,mediaLocal:4.8,ptsVisita:57,mediaVisita:5.2,j1:null,j2:null,j3:null,j4:null,j5:null,valorReal:1.38,pos:'DL',inGuitlla:true},
+  'Roony': {pts:51,valor:0.57,factor:59.65,roi:89.47,eficiencia:596.49,pj:15,media:3.4,ptsLocal:31,mediaLocal:4.1,ptsVisita:20,mediaVisita:2.7,j1:null,j2:null,j3:null,j4:null,j5:null,valorReal:5.96,pos:'DL',inGuitlla:true},
+  'Paco Cortés': {pts:19,valor:0.15,factor:158.33,roi:126.67,eficiencia:1600,pj:8,media:2.4,ptsLocal:15,mediaLocal:3.8,ptsVisita:4,mediaVisita:1,j1:null,j2:null,j3:null,j4:null,j5:null,valorReal:16,pos:'DL',inGuitlla:true},
+  'Raúl Moro': {pts:16,valor:3.22,factor:9.94,roi:4.97,eficiencia:99.38,pj:5,media:3.2,ptsLocal:5,mediaLocal:2,ptsVisita:11,mediaVisita:4.4,j1:null,j2:null,j3:null,j4:null,j5:null,valorReal:0.99,pos:'DL',inGuitlla:true},
+  'Ángel Pérez': {pts:13,valor:0.19,factor:171.05,roi:68.42,eficiencia:1736.84,pj:4,media:3.3,ptsLocal:6,mediaLocal:3,ptsVisita:7,mediaVisita:3.5,j1:null,j2:null,j3:null,j4:null,j5:null,valorReal:17.37,pos:'DL',inGuitlla:true},
+};
 
-const POS_COLORS = { PT:'#6366f1', DF:'#16a34a', MC:'#d97706', DL:'#e63329', MD:'#8b5cf6' };
+// ── Normalización de datos Biwenger ──────────────────────────────
+// Todo se calcula desde los datos crudos de Biwenger.
+// ADVANCED_STATS NO se usa aquí — sus cifras están desactualizadas.
+// El Numbers solo sirve como referencia estructural de qué calcular.
+function mergeStats(basePlayers) {
+  return basePlayers.map(p => {
+    const price  = p.price  || 0;
+    const pts    = p.pts    || p.points || 0;
+    const pj     = p.playedHome + p.playedAway || p.pj || 0;
+    const media  = pj > 0 ? Math.round((pts / pj) * 10) / 10 : null;
+    const roi    = price > 0 ? Math.round((pts / (price / 1000000)) * 10) / 10 : null;
+    const eficiencia = price > 0 ? Math.round((pts / (price / 1000000)) * 100) / 100 : null;
+    return {
+      ...p,
+      pts,
+      price,
+      pj,
+      media,
+      roi,
+      eficiencia,
+      // jForm: vendrá de la API cuando tengamos el endpoint de jornadas
+      jForm: p.jForm || [],
+    };
+  });
+}
 
-const RAW_PLAYERS = [
-{ name:'Mbappe', pos:'DL', club:'Real Madrid', pts:237, valor:27.56, roi:8.6, efic:88.57, pj:23, media:10.3, ptsL:97, mL:9.7, ptsV:140, mV:10.8, j:[6,8,0,0,0], trend:0, clausula:null, factor:3.32 },
-{ name:'Yamal', pos:'DL', club:'Barcelona', pts:217, valor:27.09, roi:8.01, efic:79.3, pj:22, media:9.9, ptsL:113, mL:10.3, ptsV:104, mV:9.5, j:[15,13,3,4,21], trend:80000, clausula:null, factor:3.04 },
-{ name:'Pedri', pos:'MC', club:'Barcelona', pts:149, valor:21.01, roi:7.09, efic:58.86, pj:18, media:8.3, ptsL:87, mL:9.7, ptsV:62, mV:6.9, j:[0,0,0,5,11], trend:0, clausula:null, factor:2.32 },
-{ name:'Ounahi', pos:'MC', club:'Marsella', pts:94, valor:6.29, roi:14.94, efic:116.57,pj:12, media:7.8, ptsL:51, mL:8.5, ptsV:43, mV:7.2, j:[0,0,6,8,0], trend:100000, clausula:null, factor:3.83 },
-{ name:'Raphinha', pos:'DL', club:'Barcelona', pts:132, valor:22.59, roi:5.84, efic:45.58, pj:17, media:7.8, ptsL:87, mL:9.7, ptsV:45, mV:5.6, j:[4,0,5,7,3], trend:0, clausula:null, factor:3.06 },
-{ name:'Gerard Moreno', pos:'DL', club:'Villarreal', pts:92, valor:9.32, roi:9.87, efic:76.01, pj:12, media:7.7, ptsL:43, mL:7.2, ptsV:49, mV:8.2, j:[0,0,0,0,0], trend:0, clausula:null, factor:3.50 },
-{ name:'Joan García', pos:'PT', club:'Espanyol', pts:145, valor:12.3, roi:11.79, efic:86.06, pj:20, media:7.3, ptsL:71, mL:7.1, ptsV:74, mV:7.4, j:[6,8,11,6,6], trend:0, clausula:7.45, factor:1.59 },
-{ name:'Vinicius Jr', pos:'DL', club:'Real Madrid', pts:177, valor:20.21, roi:8.76, efic:62.18, pj:25, media:7.1, ptsL:98, mL:7.5, ptsV:79, mV:6.6, j:[11,0,17,12,6], trend:0, clausula:null, factor:2.04 },
-{ name:'Muriqi', pos:'DL', club:'Mallorca', pts:175, valor:16.06, roi:10.9, efic:76.28, pj:25, media:7.0, ptsL:106, mL:8.8, ptsV:69, mV:5.3, j:[11,2,9,-1,2], trend:0, clausula:null, factor:2.10 },
-{ name:'Oyarzabal', pos:'DL', club:'Real Sociedad',pts:159, valor:16.99, roi:9.36, efic:64.57, pj:23, media:6.9, ptsL:104, mL:9.5, ptsV:55, mV:4.6, j:[5,12,6,4,3], trend:0, clausula:null, factor:2.89 },
-{ name:'Ez Abde', pos:'DL', club:'Betis', pts:117, valor:12.42, roi:9.42, efic:65.0, pj:17, media:6.9, ptsL:59, mL:6.6, ptsV:58, mV:7.3, j:[5,6,11,5,8], trend:90000, clausula:null, factor:2.28 },
-{ name:'Militao', pos:'DF', club:'Real Madrid', pts:87, valor:3.59, roi:24.23, efic:162.37,pj:13, media:6.7, ptsL:51, mL:7.3, ptsV:36, mV:6.0, j:[0,0,0,0,0], trend:0, clausula:null, factor:null },
-{ name:'Fermín', pos:'MC', club:'Barcelona', pts:129, valor:15.12, roi:8.53, efic:55.46, pj:20, media:6.5, ptsL:94, mL:9.4, ptsV:35, mV:3.5, j:[2,7,-1,13,12], trend:0, clausula:null, factor:3.09 },
-{ name:'Carlos Romero', pos:'DF', club:'Osasuna', pts:153, valor:9.16, roi:16.7, efic:106.9, pj:24, media:6.4, ptsL:75, mL:6.3, ptsV:78, mV:6.5, j:[0,4,-3,12,0], trend:0, clausula:5.66, factor:2.96 },
-{ name:'Dani Olmo', pos:'MC', club:'Barcelona', pts:132, valor:14.66, roi:9.0, efic:56.73, pj:21, media:6.3, ptsL:93, mL:8.5, ptsV:39, mV:3.9, j:[4,9,5,3,1], trend:0, clausula:null, factor:3.24 },
-{ name:'Eric García', pos:'DF', club:'Barcelona', pts:163, valor:13.12, roi:12.42, efic:78.27, pj:26, media:6.3, ptsL:95, mL:7.3, ptsV:68, mV:5.2, j:[7,10,2,9,9], trend:0, clausula:5.86, factor:2.13 },
-{ name:'Fornals', pos:'MC', club:'Betis', pts:160, valor:14.21, roi:11.26, efic:69.81, pj:26, media:6.2, ptsL:84, mL:6.5, ptsV:76, mV:5.8, j:[12,3,6,2,1], trend:0, clausula:null, factor:null },
-{ name:'De Frutos', pos:'DL', club:'Villarreal', pts:141, valor:9.16, roi:15.39, efic:93.9, pj:23, media:6.1, ptsL:75, mL:6.3, ptsV:66, mV:6.0, j:[2,10,3,3,10], trend:0, clausula:7.99, factor:1.92 },
-{ name:'Febas', pos:'MC', club:'Deportivo', pts:153, valor:11.22, roi:13.64, efic:83.18, pj:25, media:6.1, ptsL:108, mL:8.3, ptsV:45, mV:3.8, j:[0,5,9,4,8], trend:0, clausula:5.01, factor:2.71 },
-{ name:'Moleiro', pos:'MC', club:'Las Palmas', pts:148, valor:13.56, roi:10.91, efic:64.4, pj:25, media:5.9, ptsL:94, mL:7.2, ptsV:54, mV:4.5, j:[15,0,1,3,1], trend:0, clausula:3.69, factor:2.95 },
-{ name:'Antony', pos:'DL', club:'Betis', pts:124, valor:14.32, roi:8.66, efic:51.09, pj:21, media:5.9, ptsL:69, mL:6.3, ptsV:55, mV:5.5, j:[3,10,7,5,11], trend:0, clausula:3.43, factor:2.52 },
-{ name:'Mikautadze', pos:'DL', club:'Villarreal', pts:124, valor:10.78, roi:11.5, efic:67.87, pj:21, media:5.9, ptsL:62, mL:6.2, ptsV:62, mV:5.6, j:[15,9,13,2,4], trend:130000, clausula:5.0, factor:2.30 },
-{ name:'Valverde', pos:'MC', club:'Real Madrid', pts:135, valor:14.76, roi:9.15, efic:49.39, pj:25, media:5.4, ptsL:83, mL:6.9, ptsV:52, mV:4.0, j:[8,5,13,5,5], trend:0, clausula:4.31, factor:2.12 },
-{ name:'Tchouameni', pos:'MC', club:'Real Madrid', pts:124, valor:10.57, roi:11.73, efic:63.35, pj:23, media:5.4, ptsL:72, mL:5.5, ptsV:52, mV:5.2, j:[3,8,7,6,4], trend:120000, clausula:5.15, factor:2.28 },
-{ name:'Lewandowski', pos:'DL', club:'Barcelona', pts:113, valor:11.12, roi:10.16, efic:54.87, pj:21, media:5.4, ptsL:64, mL:5.8, ptsV:49, mV:4.9, j:[4,11,0,1,9], trend:0, clausula:5.97, factor:1.71 },
-{ name:'Pape Gueye', pos:'MC', club:'Sevilla', pts:116, valor:7.41, roi:15.65, efic:90.8, pj:20, media:5.8, ptsL:67, mL:7.4, ptsV:49, mV:4.5, j:[4,4,7,11,10], trend:0, clausula:4.89, factor:3.20 },
-{ name:'Borja Iglesias', pos:'DL', club:'Betis', pts:133, valor:8.32, roi:15.99, efic:92.72, pj:23, media:5.8, ptsL:78, mL:6.5, ptsV:55, mV:5.0, j:[2,9,7,7,6], trend:0, clausula:5.65, factor:2.84 },
-{ name:'Germán Valera', pos:'DL', club:'Almería', pts:144, valor:9.89, roi:14.56, efic:84.45, pj:25, media:5.8, ptsL:103, mL:7.4, ptsV:41, mV:3.7, j:[4,3,8,6,4], trend:0, clausula:9.62, factor:1.52 },
-{ name:'Arda Güler', pos:'MC', club:'Real Madrid', pts:145, valor:14.23, roi:10.19, efic:57.06, pj:26, media:5.6, ptsL:71, mL:5.5, ptsV:74, mV:5.7, j:[7,3,3,4,5], trend:0, clausula:3.57, factor:2.87 },
-{ name:'Budimir', pos:'DL', club:'Osasuna', pts:141, valor:14.0, roi:10.07, efic:56.4, pj:25, media:5.6, ptsL:95, mL:7.9, ptsV:46, mV:3.5, j:[10,11,3,10,2], trend:0, clausula:3.38, factor:2.96 },
-{ name:'Kike Salas', pos:'DF', club:'Sevilla', pts:84, valor:3.97, roi:21.16, efic:118.49,pj:15, media:5.6, ptsL:52, mL:6.5, ptsV:32, mV:4.6, j:[1,16,6,6,7], trend:0, clausula:10.73,factor:1.97 },
-{ name:'Cucho', pos:'DL', club:'Rayo', pts:117, valor:10.32, roi:11.34, efic:63.49, pj:21, media:5.6, ptsL:60, mL:5.5, ptsV:57, mV:5.7, j:[0,0,0,3,1], trend:0, clausula:5.64, factor:2.02 },
-{ name:'Expósito', pos:'MC', club:'Valladolid', pts:138, valor:6.98, roi:19.77, efic:108.74,pj:25, media:5.5, ptsL:71, mL:5.9, ptsV:67, mV:5.2, j:[6,1,3,12,4], trend:0, clausula:9.45, factor:2.09 },
-{ name:'Álvaro Carreras', pos:'DF', club:'Real Madrid', pts:126, valor:8.53, roi:14.77, efic:81.24, pj:23, media:5.5, ptsL:73, mL:6.6, ptsV:53, mV:4.4, j:[15,7,3,4,4], trend:20000, clausula:6.74, factor:2.20 },
-{ name:'Sergio Herrera', pos:'PT', club:'Osasuna', pts:142, valor:5.04, roi:28.17, efic:154.96,pj:26, media:5.5, ptsL:56, mL:4.7, ptsV:86, mV:6.1, j:[6,10,7,0,0], trend:0, clausula:11.74,factor:2.42 },
-{ name:'Arambarri', pos:'MC', club:'Getafe', pts:135, valor:7.92, roi:17.05, efic:88.64, pj:26, media:5.2, ptsL:69, mL:5.3, ptsV:66, mV:5.1, j:[3,10,9,2,8], trend:0, clausula:5.56, factor:3.07 },
-{ name:'Víctor Muñoz', pos:'MC', club:'Getafe', pts:135, valor:7.58, roi:17.81, efic:92.61, pj:26, media:5.2, ptsL:86, mL:7.2, ptsV:49, mV:3.5, j:[11,5,-1,7,3], trend:0, clausula:6.87, factor:2.60 },
-{ name:'Ryan', pos:'PT', club:'Betis', pts:136, valor:3.73, roi:36.46, efic:207.83,pj:24, media:5.7, ptsL:61, mL:5.1, ptsV:75, mV:6.3, j:[4,1,5,6,9], trend:0, clausula:15.09,factor:2.43 },
-{ name:'Bellingham', pos:'MC', club:'Real Madrid', pts:105, valor:11.08, roi:9.48, efic:54.96, pj:18, media:5.8, ptsL:53, mL:5.9, ptsV:52, mV:5.8, j:[2,0,0,0,0], trend:0, clausula:null, factor:null },
-{ name:'Rashford', pos:'DL', club:'Alavés', pts:116, valor:8.05, roi:14.41, efic:76.37, pj:22, media:5.3, ptsL:57, mL:5.7, ptsV:59, mV:4.9, j:[11,6,0,6,0], trend:0, clausula:null, factor:null },
-{ name:'Unai Simón', pos:'PT', club:'Athletic', pts:116, valor:2.92, roi:39.73, efic:154.11,pj:26, media:4.5, ptsL:60, mL:4.6, ptsV:56, mV:4.3, j:[5,8,7,6,6], trend:10000, clausula:1.54, factor:15.28 },
-{ name:'Remiro', pos:'PT', club:'Real Sociedad',pts:106, valor:2.63, roi:40.3, efic:155.89,pj:26, media:4.1, ptsL:49, mL:3.8, ptsV:57, mV:4.4, j:[5,3,4,2,2], trend:20000, clausula:1.56, factor:15.50 },
-{ name:'Ratiu', pos:'DF', club:'Rayo', pts:105, valor:4.64, roi:22.63, efic:99.14, pj:23, media:4.6, ptsL:61, mL:5.3, ptsV:44, mV:3.8, j:[3,8,1,1,3], trend:80000, clausula:0.99, factor:9.84 },
-{ name:'Jon Pacheco', pos:'DF', club:'Alavés', pts:81, valor:1.50, roi:54.0, efic:286.67,pj:19, media:4.3, ptsL:39, mL:4.1, ptsV:42, mV:4.4, j:[0,4,6,4,8], trend:-30000, clausula:2.87, factor:28.42 },
-{ name:'Trent', pos:'DF', club:'Real Madrid', pts:35, valor:4.85, roi:7.22, efic:59.79, pj:12, media:2.9, ptsL:18, mL:3.0, ptsV:17, mV:2.8, j:[null,3,9,-2,0], trend:-25000, clausula:0.60, factor:6.01 },
-{ name:'Viñas', pos:'DL', club:'Girona', pts:110, valor:3.63, roi:30.3, efic:137.74,pj:22, media:5.0, ptsL:53, mL:4.8, ptsV:57, mV:5.2, j:[4,6,3,5,2], trend:30000, clausula:1.38, factor:13.77 },
-{ name:'Escandell', pos:'PT', club:'Girona', pts:154, valor:7.1, roi:21.69, efic:134.48,pj:25, media:6.2, ptsL:94, mL:7.2, ptsV:60, mV:5.0, j:[5,8,1,1,3], trend:0, clausula:null, factor:2.83 },
-{ name:'Koke', pos:'MC', club:'Atlético', pts:128, valor:4.37, roi:29.29, efic:155.24,pj:24, media:5.3, ptsL:67, mL:5.6, ptsV:61, mV:5.1, j:[4,5,0,3,3], trend:0, clausula:null, factor:null },
-{ name:'Samú Costa', pos:'MC', club:'Málaga', pts:123, valor:5.73, roi:21.47, efic:113.77,pj:23, media:5.3, ptsL:52, mL:5.2, ptsV:71, mV:5.5, j:[15,3,2,5,2], trend:0, clausula:6.93, factor:3.07 },
-{ name:'Ferran Torres', pos:'DL', club:'Barcelona', pts:128, valor:11.6, roi:11.03, efic:58.48, pj:24, media:5.3, ptsL:72, mL:6.5, ptsV:56, mV:4.3, j:[9,2,0,-1,-1], trend:0, clausula:2.83, factor:3.88 },
-{ name:'Luis Milla', pos:'MC', club:'Levante', pts:136, valor:11.83, roi:11.5, efic:62.08, pj:25, media:5.4, ptsL:68, mL:5.7, ptsV:68, mV:5.2, j:[7,7,7,2,6], trend:0, clausula:5.58, factor:2.05 },
-{ name:'Barrenetxea', pos:'DL', club:'Real Sociedad',pts:104, valor:3.70, roi:28.11, efic:146.16,pj:20, media:5.2, ptsL:60, mL:5.5, ptsV:44, mV:4.9, j:[0,0,0,0,5], trend:0, clausula:15.11,factor:1.86 },
-{ name:'Miguel Román', pos:'DF', club:'Rayo', pts:95, valor:3.21, roi:29.6, efic:156.85,pj:18, media:5.3, ptsL:42, mL:5.3, ptsV:53, mV:5.3, j:[6,9,4,3,6], trend:0, clausula:11.94,factor:2.49 },
-{ name:'Odysseas', pos:'PT', club:'Villarreal', pts:114, valor:2.84, roi:40.14, efic:208.73,pj:22, media:5.2, ptsL:59, mL:5.4, ptsV:55, mV:5.0, j:[1,2,7,2,2], trend:0, clausula:18.42,factor:2.19 },
-{ name:'Pubill', pos:'DF', club:'Almería', pts:71, valor:7.45, roi:9.53, efic:61.95, pj:11, media:6.5, ptsL:48, mL:6.9, ptsV:23, mV:5.8, j:[3,0,0,8,0], trend:-230000,clausula:4.94, factor:1.94 },
+// Helper legacy — mantiene compatibilidad con llamadas existentes
+function enrichPlayer(p) {
+  return mergeStats([p])[0];
+}
+
+// ── Badges de estado basados en datos avanzados ───────────────────
+// Devuelve un array de badges para un jugador dado.
+// Se usan en Mi Equipo (campo visual y tabla).
+function getPlayerBadges(p) {
+  const badges = [];
+  const jForm = p.jForm || [p.j1,p.j2,p.j3,p.j4,p.j5];
+  const validJ = jForm.filter(v => v !== null && v !== undefined);
+  const sumForm = validJ.reduce((a,b) => a + (b||0), 0);
+  const avgForm = validJ.length ? sumForm / validJ.length : 0;
+
+  // En racha: suma últimas 5 > 40 y media > 6
+  if (validJ.length >= 3 && sumForm >= 40 && avgForm >= 6)
+    badges.push({ label:'RACHA', cls:'tag-ok' });
+
+  // ROI alto: por encima de 15
+  if (p.roi && p.roi >= 15)
+    badges.push({ label:'ROI+', cls:'tag-ok' });
+
+  // Forma baja: dos o más jornadas con 0 o negativo
+  const badJ = validJ.filter(v => v <= 0).length;
+  if (validJ.length >= 2 && badJ >= 2)
+    badges.push({ label:'BAJA FORMA', cls:'tag-sell' });
+
+  // Alerta: status del jugador (lesión/sanción del array GUITLLA)
+  if (p.status === 'sell')  badges.push({ label:'VENDER', cls:'tag-sell' });
+  if (p.status === 'warn')  badges.push({ label:'DUDA', cls:'tag-warn' });
+
+  return badges;
+}
+
+function renderBadges(badges) {
+  if (!badges.length) return '<span class="tag tag-ok">OK</span>';
+  return badges.map(b => `<span class="tag ${b.cls}">${b.label}</span>`).join(' ');
+}
+
+// ══════════════════════════════════════════
+// SISTEMA DE LIGAS
+// ══════════════════════════════════════════
+const LIGAS = {
+
+  tomaquet: {
+    id: 'tomaquet',
+    nombre: '🍅 TOMAQUET',
+    acento: '#a3e635',
+    acentoDim: 'rgba(163,230,53,0.1)',
+    miEquipo: 'Guitlla 🦊',
+    standings: [
+      {pos:1,name:'Albertini',        pts:1439, value:97.57,  players:16, ptsPer:89.9, diff:0},
+      {pos:2,name:'LeMola Team',      pts:1341, value:88.3,   players:17, ptsPer:78.9, diff:-98},
+      {pos:3,name:'Guitlla 🦊',       pts:1264, value:70.27,  players:14, ptsPer:90.3, diff:-175},
+      {pos:4,name:'CA CABA JUNIORS',  pts:1249, value:85.42,  players:19, ptsPer:65.7, diff:-190},
+      {pos:5,name:'Soulans Rangers',  pts:1238, value:104.63, players:13, ptsPer:95.2, diff:-201},
+      {pos:6,name:'Zaza Pachulia',    pts:1205, value:84.66,  players:14, ptsPer:86.1, diff:-234},
+      {pos:7,name:'NACECH1',          pts:1189, value:56.79,  players:16, ptsPer:74.3, diff:-250},
+      {pos:8,name:'INDOMABLE FC',     pts:1188, value:79.68,  players:16, ptsPer:74.2, diff:-251},
+      {pos:9,name:'The Black Team',   pts:1092, value:47.09,  players:20, ptsPer:54.6, diff:-347},
+      {pos:10,name:'CIGALERU',        pts:1070, value:53.69,  players:13, ptsPer:82.3, diff:-369},
+      {pos:11,name:'Morankus FC',     pts:1070, value:42.29,  players:14, ptsPer:76.4, diff:-369},
+      {pos:12,name:'Trileros FC',     pts:1054, value:41.45,  players:12, ptsPer:87.8, diff:-385},
+      {pos:13,name:'Tata Martini',    pts:1037, value:45.5,   players:15, ptsPer:69.1, diff:-402},
+      {pos:14,name:'Hufflepuff',      pts:995,  value:52.68,  players:16, ptsPer:62.2, diff:-444},
+    ],
+    groups: [
+      {name:'Grupo A', teams:[
+        {pos:1, name:'NACECH1',       pts:15, w:5, d:0, l:1, gf:303, gc:264, dg:+39},
+        {pos:2, name:'Albertini',     pts:12, w:4, d:0, l:2, gf:311, gc:222, dg:+89},
+        {pos:3, name:'LeMola Team',   pts:12, w:4, d:0, l:2, gf:318, gc:272, dg:+46},
+        {pos:4, name:'INDOMABLE FC',  pts:12, w:4, d:0, l:2, gf:301, gc:300, dg:+1},
+        {pos:5, name:'Trileros FC',   pts:9,  w:3, d:0, l:3, gf:276, gc:324, dg:-48},
+        {pos:6, name:'Tata Martini',  pts:3,  w:1, d:0, l:5, gf:255, gc:298, dg:-43},
+        {pos:7, name:'Hufflepuff',    pts:0,  w:0, d:0, l:6, gf:224, gc:308, dg:-84},
+      ], tiebreaker:'Desempate 2º–4º: Albertini, LeMola Team e INDOMABLE FC terminaron los tres a 12 pts. Sub-tabla entre ellos: 3 pts cada uno. Se aplicó diferencia de goles en dicha sub-tabla — Albertini +41, LeMola Team −16, INDOMABLE FC −25.'},
+      {name:'Grupo B', teams:[
+        {pos:1, name:'Morankus FC',      pts:12, w:4, d:0, l:2, gf:270, gc:217, dg:+53},
+        {pos:2, name:'Soulands Rangers', pts:12, w:4, d:0, l:2, gf:269, gc:277, dg:-8},
+        {pos:3, name:'Guitlla 🦊',       pts:9,  w:3, d:0, l:3, gf:304, gc:279, dg:+25},
+        {pos:4, name:'CA CABA JUNIORS',  pts:9,  w:3, d:0, l:3, gf:275, gc:301, dg:-26},
+        {pos:5, name:'Zaza Pachulia',    pts:9,  w:3, d:0, l:3, gf:305, gc:261, dg:+44},
+        {pos:6, name:'The Black Team',   pts:6,  w:2, d:0, l:4, gf:284, gc:298, dg:-14},
+        {pos:7, name:'CIGALERU',         pts:6,  w:2, d:0, l:4, gf:234, gc:308, dg:-74},
+      ], tiebreaker:'Desempate 1º–2º: enfrentamiento directo Soulands 31–52 Morankus → Morankus 1º. Desempate 3º–5º: sub-tabla Guitlla 6pts (ganó a CA CABA 70–48 y a Zaza 55–40), CA CABA 3pts, Zaza 0pts. Desempate 6º–7º: The Black Team 48–38 CIGALERU.'},
+    ],
+    quarterfinals: [
+      {id:'CF1', home:'NACECH1',          homeRef:'1ºA', away:'CA CABA JUNIORS', awayRef:'4ºB'},
+      {id:'CF2', home:'Morankus FC',      homeRef:'1ºB', away:'INDOMABLE FC',    awayRef:'4ºA'},
+      {id:'CF3', home:'Albertini',        homeRef:'2ºA', away:'Guitlla 🦊',      awayRef:'3ºB'},
+      {id:'CF4', home:'Soulands Rangers', homeRef:'2ºB', away:'LeMola Team',     awayRef:'3ºA'},
+    ],
+    equipo: [
+      {name:'Unai Simón',     position:'PT',    club:'Athletic',      pts:120, price:2900000,  trend:10000,  status:'ok'},
+      {name:'Remiro',         position:'PT',    club:'Real Sociedad', pts:114, price:2610000,  trend:20000,  status:'ok'},
+      {name:'Ratiu',          position:'DF',    club:'Rayo',          pts:109, price:4880000,  trend:80000,  status:'ok'},
+      {name:'Rafa Marín',     position:'DF',    club:'Alavés',        pts:83,  price:1660000,  trend:0,      status:'ok'},
+      {name:'Jon Pacheco',    position:'DF',    club:'Alavés',        pts:79,  price:1440000,  trend:-30000, status:'warn'},
+      {name:'Unai Núñez',     position:'DF',    club:'Valencia',      pts:24,  price:3100000,  trend:20000,  status:'ok'},
+      {name:'Luiz Felipe',    position:'DF',    club:'Villarreal',    pts:23,  price:250000,   trend:0,      status:'ok'},
+      {name:'Soler',          position:'MC',    club:'Real Sociedad', pts:103, price:4650000,  trend:150000, status:'ok'},
+      {name:'Ounahi',         position:'MC',    club:'Girona',        pts:97,  price:6930000,  trend:100000, status:'ok'},
+      {name:'Selton Sánchez', position:'MC',    club:'Athletic',      pts:14,  price:150000,   trend:0,      status:'ok'},
+      {name:'Yamal',          position:'DL',    club:'Barcelona',     pts:228, price:27360000, trend:40000,  status:'ok'},
+      {name:'Ez Abde',        position:'DL/MC', club:'Betis',         pts:119, price:13060000, trend:90000,  status:'ok'},
+      {name:'Viñas',          position:'DL/MC', club:'Girona',        pts:110, price:3730000,  trend:30000,  status:'ok'},
+      {name:'Roony',          position:'DL',    club:'Barcelona',     pts:51,  price:560000,   trend:-10000, status:'ok'},
+      {name:'Paco Cortés',    position:'DL',    club:'Leganés',       pts:22,  price:150000,   trend:0,      status:'ok'},
+      {name:'Raúl Moro',      position:'DL/MC', club:'Osasuna',       pts:21,  price:3140000,  trend:-20000, status:'ok'},
+      {name:'Ángel Pérez',    position:'DL/MC', club:'Alavés',        pts:19,  price:200000,   trend:10000,  status:'ok'},
+    ],
+    banner: { jornada:'J27', pos:'3º', pts:'1.264', lider:'1.439', diff:'-175' },
+  },
+
+  promesas: {
+    id: 'promesas',
+    nombre: '⛰️ EN BAS',
+    acento: '#38bdf8',
+    acentoDim: 'rgba(56,189,248,0.1)',
+    miEquipo: 'Guitlla 🦊',
+    standings: [
+      {pos:1,  name:'MarK Lenders',               pts:1307, value:70.91,  players:16, ptsPer:81.7,  diff:0},
+      {pos:2,  name:'The GOAT club',               pts:1240, value:97.84,  players:13, ptsPer:95.4,  diff:-67},
+      {pos:3,  name:'Xevi borrat',                 pts:1231, value:85.54,  players:20, ptsPer:61.6,  diff:-76},
+      {pos:4,  name:'Guitlla 🦊',                  pts:1214, value:87.37,  players:17, ptsPer:71.4,  diff:-93},
+      {pos:5,  name:'Valors FC',                   pts:1200, value:56.82,  players:16, ptsPer:75.0,  diff:-107},
+      {pos:6,  name:'FC Borça',                    pts:1168, value:67.66,  players:17, ptsPer:68.7,  diff:-139},
+      {pos:7,  name:'Norimaki FC',                 pts:1160, value:71.19,  players:15, ptsPer:77.3,  diff:-147},
+      {pos:8,  name:'Petraques',                   pts:1112, value:54.85,  players:17, ptsPer:65.4,  diff:-195},
+      {pos:9,  name:'Aiveen Teaam',                pts:1087, value:53.89,  players:15, ptsPer:72.5,  diff:-220},
+      {pos:10, name:'Sergi Sala Duran',             pts:1061, value:63.73,  players:14, ptsPer:75.8,  diff:-246},
+      {pos:11, name:'Fiorenzola',                  pts:1042, value:50.74,  players:13, ptsPer:80.2,  diff:-265},
+      {pos:12, name:'Kings Team',                  pts:1024, value:28.32,  players:16, ptsPer:64.0,  diff:-283},
+      {pos:13, name:'Lamine i els 7 nans 🥂',      pts:1023, value:38.84,  players:13, ptsPer:78.7,  diff:-284},
+      {pos:14, name:'UE Trincadors',               pts:1006, value:48.09,  players:17, ptsPer:59.2,  diff:-301},
+      {pos:15, name:'Janwandowski',                pts:982,  value:36.26,  players:18, ptsPer:54.6,  diff:-325},
+      {pos:16, name:'Sant Pere Atlètic',           pts:982,  value:36.10,  players:13, ptsPer:75.5,  diff:-325},
+      {pos:17, name:'Mindundis',                   pts:953,  value:45.86,  players:18, ptsPer:52.9,  diff:-354},
+      {pos:18, name:'Aquest any he trepitjat merda !!', pts:952, value:35.85, players:17, ptsPer:56.0, diff:-355},
+      {pos:19, name:'Tots som Olost',              pts:932,  value:43.34,  players:15, ptsPer:62.1,  diff:-375},
+      {pos:20, name:'Eric Duran',                  pts:929,  value:57.73,  players:19, ptsPer:46.3,  diff:-378},
+    ],
+    groups: [],
+    quarterfinals: [],
+    equipo: [
+      {name:'Leo Román',        position:'PT',    club:'Girona',       pts:108, price:2940000,  trend:-30000,  status:'ok'},
+      {name:'Álvaro Carreras',  position:'DF',    club:'Real Madrid',  pts:126, price:8430000,  trend:20000,   status:'ok'},
+      {name:'Cubarsí',          position:'DF',    club:'Barcelona',    pts:100, price:6990000,  trend:70000,   status:'ok'},
+      {name:'David Carmo',      position:'DF',    club:'Getafe',       pts:75,  price:780000,   trend:-10000,  status:'ok'},
+      {name:'Pubill',           position:'DF',    club:'Almería',      pts:71,  price:6950000,  trend:-230000, status:'ok'},
+      {name:'Herrando',         position:'DF',    club:'Valladolid',   pts:68,  price:780000,   trend:-10000,  status:'ok'},
+      {name:'Kambwala',         position:'DF',    club:'Villarreal',   pts:0,   price:150000,   trend:0,       status:'warn'},
+      {name:'Tchouameni',       position:'MC',    club:'Real Madrid',  pts:138, price:11030000, trend:120000,  status:'ok'},
+      {name:'Marc Bernal',      position:'MC',    club:'Barcelona',    pts:73,  price:5270000,  trend:270000,  status:'warn'},
+      {name:'Unai López',       position:'MC',    club:'Levante',      pts:69,  price:640000,   trend:0,       status:'warn'},
+      {name:'Filip Ugrinic',    position:'MC',    club:'Osasuna',      pts:65,  price:1540000,  trend:0,       status:'ok'},
+      {name:'Selton Sánchez',   position:'MC',    club:'Athletic',     pts:14,  price:150000,   trend:0,       status:'ok'},
+      {name:'Mbappé',           position:'DL',    club:'Real Madrid',  pts:237, price:26320000, trend:-140000, status:'warn'},
+      {name:'Mikautadze',       position:'DL',    club:'Villarreal',   pts:129, price:11410000, trend:130000,  status:'ok'},
+      {name:'Rubén Vargas',     position:'DL',    club:'Sevilla',      pts:69,  price:3130000,  trend:180000,  status:'ok'},
+      {name:'Thiago Fernández', position:'DL',    club:'Valencia',     pts:22,  price:710000,   trend:-10000,  status:'ok'},
+      {name:'Paco Cortés',      position:'DL',    club:'Leganés',      pts:22,  price:150000,   trend:0,       status:'ok'},
+    ],
+    banner: { jornada:'J27', pos:'4º', pts:'1.214', lider:'1.307', diff:'-93' },
+  },
+
+};
+
+// Liga activa — cambiar con switchLiga()
+let LIGA_ACTIVA = LIGAS.tomaquet;
+
+// Aliases dinámicos usados por las funciones de render
+function getStandings()     { return LIGA_ACTIVA.standings; }
+function getGroups()        { return LIGA_ACTIVA.groups; }
+function getQuarterfinals() { return LIGA_ACTIVA.quarterfinals; }
+function getEquipo()        { return LIGA_ACTIVA.equipo; }
+function getMiEquipoName()  { return LIGA_ACTIVA.miEquipo; }
+
+function switchLiga(id) {
+  if (!LIGAS[id] || LIGA_ACTIVA.id === id) return;
+  LIGA_ACTIVA = LIGAS[id];
+
+  // Cambiar color de acento globalmente
+  document.documentElement.style.setProperty('--accent', LIGA_ACTIVA.acento);
+  document.documentElement.style.setProperty('--accent2', LIGA_ACTIVA.acento);
+  document.documentElement.style.setProperty('--lime', LIGA_ACTIVA.acento);
+  document.documentElement.style.setProperty('--accent-dim', LIGA_ACTIVA.acentoDim);
+
+  // Actualizar toggle UI
+  document.querySelectorAll('.liga-btn').forEach(b => b.classList.toggle('active', b.dataset.liga === id));
+  // Clase en body para color de liga
+  document.body.className = document.body.className.replace(/liga-\S+/g,'').trim();
+  document.body.classList.add(id === 'tomaquet' ? 'liga-tomaquet' : 'liga-enbas');
+
+  // Actualizar logo
+  document.getElementById('logoMark').textContent = LIGA_ACTIVA.nombre;
+
+  // Re-render secciones dependientes de la liga
+  renderGeneral();
+  renderGrupos();
+  renderBanner();
+  autoPlace();
+  renderMiEquipo();
+}
+
+function renderBanner() {
+  const b = LIGA_ACTIVA.banner;
+  const el = document.getElementById('bannerContent');
+  if (!el) return;
+  el.innerHTML = `
+    <div class="jornada-kpi"><div class="label">Posición</div><div class="val highlight">${b.pos}</div></div>
+    <div class="jornada-kpi"><div class="label">Mis puntos</div><div class="val">${b.pts}</div></div>
+    <div class="jornada-kpi"><div class="label">Líder</div><div class="val">${b.lider}</div></div>
+    <div class="jornada-kpi"><div class="label">Diferencia</div><div class="val" style="color:var(--red)">${b.diff}</div></div>`;
+}
+
+const GUITLLA = LIGAS.tomaquet.equipo; // alias legacy para compatibilidad
+const PC={PT:'#f59e0b',DF:'#3b82f6',MC:'#22c55e',DL:'#ef4444',MD:'#8b5cf6'};
+const FORMATIONS={
+  '4-3-3':[{pos:'PT',count:1},{pos:'DF',count:4},{pos:'MC',count:3},{pos:'DL',count:3}],
+  '4-4-2':[{pos:'PT',count:1},{pos:'DF',count:4},{pos:'MC',count:4},{pos:'DL',count:2}],
+  '3-5-2':[{pos:'PT',count:1},{pos:'DF',count:3},{pos:'MC',count:5},{pos:'DL',count:2}],
+  '4-5-1':[{pos:'PT',count:1},{pos:'DF',count:4},{pos:'MC',count:5},{pos:'DL',count:1}],
+  '3-4-3':[{pos:'PT',count:1},{pos:'DF',count:3},{pos:'MC',count:4},{pos:'DL',count:3}],
+  '5-3-2':[{pos:'PT',count:1},{pos:'DF',count:5},{pos:'MC',count:3},{pos:'DL',count:2}],
+};
+
+// ══════════════════════════════════════════
+// RSS CONFIG
+// ══════════════════════════════════════════
+const RSS_SOURCES = [
+  { id: 'jp', label: 'Jornada Perfecta', rss: 'https://www.jornadaperfecta.com/feed/', cls: 'src-jp' },
+  { id: 'as', label: 'AS Fantasy',       rss: 'https://fantasy.as.com/feed/',          cls: 'src-as' },
+  { id: 'cm', label: 'Comuniate',         rss: 'https://www.comuniate.com/feed/',       cls: 'src-cm' },
+  { id: 'rv', label: 'Relevo Fantasy',    rss: 'https://www.relevo.com/rss/noticias/',  cls: 'src-rv' },
 ];
 
-// ── PERCENTILES (para colorear según ranking) ──
-function percentileRank(arr, val) {
-if (!arr.length || val === null || val === undefined) return 50;
-const sorted = [...arr].sort((a,b) => a - b);
-const below = sorted.filter(x => x < val).length;
-return Math.round((below / (sorted.length - 1)) * 100);
+// rss2json: servicio gratuito que convierte RSS a JSON con imagen incluida, sin CORS
+function rss2jsonUrl(rssUrl) {
+  return `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}&count=10`;
 }
 
-function getColor(pct) {
-if (pct >= 75) return 'ct';
-if (pct >= 50) return 'cg';
-if (pct >= 25) return 'cm';
-return 'cl';
+let allNews = [];
+let activeNewsFilter = 'all';
+
+function parseRSS(xmlStr) {
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(xmlStr, 'text/xml');
+  const items = Array.from(doc.querySelectorAll('item'));
+  return items.slice(0, 12).map(item => {
+    // Extraer imagen: media:content, enclosure, o primera img del HTML de description
+    let img = '';
+    const media = item.getElementsByTagNameNS('*','content')[0] || item.querySelector('enclosure');
+    if (media) {
+      img = media.getAttribute('url') || '';
+    }
+    if (!img) {
+      // buscar dentro del HTML de description
+      const desc = item.querySelector('description')?.textContent || '';
+      const m = desc.match(/src=["']([^"']+\.(?:jpg|jpeg|png|webp))/i);
+      if (m) img = m[1];
+    }
+    if (!img) {
+      // thumbnail de WordPress
+      const thumb = item.querySelector('thumbnail');
+      if (thumb) img = thumb.getAttribute('url') || thumb.textContent || '';
+    }
+    return {
+      title: item.querySelector('title')?.textContent?.replace(/<![CDATA[|]]>/g,'').replace(/<!\[CDATA\[|\]\]>/g,'').trim() || '',
+      link:  item.querySelector('link')?.textContent?.trim() || '#',
+      date:  item.querySelector('pubDate')?.textContent?.trim() || '',
+      img
+    };
+  });
 }
 
-// Pre-compute percentile arrays
-const ptsArr = RAW_PLAYERS.map(p => p.pts);
-const roiArr = RAW_PLAYERS.map(p => p.roi);
-const mediaArr = RAW_PLAYERS.map(p => p.media);
-const ptsLArr = RAW_PLAYERS.map(p => p.ptsL);
-const ptsVArr = RAW_PLAYERS.map(p => p.ptsV);
-const valorArr = RAW_PLAYERS.map(p => p.valor);
-
-// ── ESTADO ──
-let activePos = '';
-let currentPage = 1;
-const PAGE_SIZE = 25;
-let sortedFiltered = [];
-
-// ── FORMATO ──
-function fmtM(v) {
-if (v === null || v === undefined) return '—';
-return v.toFixed(2) + 'M€';
-}
-function fmtTrend(t) {
-if (!t) return { txt: '→', cls: 'cn' };
-const k = Math.round(t / 1000);
-if (t > 0) return { txt: '▲+' + k + 'k', cls: 'cg' };
-return { txt: '▼' + k + 'k', cls: 'cl' };
-}
-function jClass(v) {
-if (v === null || v === undefined) return 'ja';
-if (v < 0) return 'jn';
-if (v <= 5) return 'jy';
-if (v <= 9) return 'jg';
-return 'jb';
+function timeAgo(dateStr) {
+  if (!dateStr) return '';
+  try {
+    const d = new Date(dateStr);
+    const diff = Math.floor((Date.now() - d.getTime()) / 60000);
+    if (diff < 60) return diff + 'm';
+    if (diff < 1440) return Math.floor(diff/60) + 'h';
+    return Math.floor(diff/1440) + 'd';
+  } catch(e) { return ''; }
 }
 
-// ── RENDER ──
-function renderPlayers(list) {
-const container = document.getElementById('playerList');
-if (!list.length) {
-container.innerHTML = '<div class="empty-state"><div class="empty-icon">🔍</div>No hay jugadores con esos filtros</div>';
-document.getElementById('countLabel').textContent = '0 jugadores';
-document.getElementById('pager').innerHTML = '';
-return;
-}
-document.getElementById('countLabel').textContent = list.length + ' jugadores';
+async function loadNews() {
+  const list = document.getElementById('newsList');
+  allNews = [];
 
-const start = (currentPage - 1) * PAGE_SIZE;
-const page = list.slice(start, start + PAGE_SIZE);
+  const fetches = RSS_SOURCES.map(async src => {
+    // Estrategia 1: rss2json (JSON limpio, sin CORS, incluye imagen)
+    try {
+      const res = await fetch(rss2jsonUrl(src.rss), { signal: AbortSignal.timeout(8000) });
+      if (res.ok) {
+        const json = await res.json();
+        if (json.status === 'ok' && json.items?.length) {
+          const items = json.items.map(item => ({
+            title: item.title || '',
+            link:  item.link  || '#',
+            date:  item.pubDate || '',
+            img:   item.thumbnail || item.enclosure?.link || '',
+          }));
+          items.forEach(item => { item.srcId = src.id; item.srcLabel = src.label; item.srcCls = src.cls; });
+          allNews.push(...items);
+          return; // éxito, salir
+        }
+      }
+    } catch(e) { /* fallo, probar proxy */ }
 
-container.innerHTML = page.map((p, i) => {
-const rank = start + i + 1;
-const isGuitlla = GUITLLA_NAMES.has(p.name);
-const posColor = POS_COLORS[p.pos] || '#888';
+    // Estrategia 2: proxy CORS + parseRSS manual (fallback)
+    const proxies = [
+      'https://api.allorigins.win/get?url=',
+      'https://corsproxy.io/?url=',
+    ];
+    for (const proxy of proxies) {
+      try {
+        const url = proxy + encodeURIComponent(src.rss);
+        const res = await fetch(url, { signal: AbortSignal.timeout(7000) });
+        if (!res.ok) continue;
+        const json = await res.json();
+        const xmlStr = json.contents || json.data || (typeof json === 'string' ? json : '');
+        if (!xmlStr) continue;
+        const items = parseRSS(xmlStr);
+        items.forEach(item => { item.srcId = src.id; item.srcLabel = src.label; item.srcCls = src.cls; });
+        allNews.push(...items);
+        break;
+      } catch(e) { /* probar siguiente */ }
+    }
+  });
 
-// Percentiles
-const ptsPct = percentileRank(ptsArr, p.pts);
-const roiPct = percentileRank(roiArr, p.roi);
-const mediaPct = percentileRank(mediaArr, p.media);
-const ptsLPct = percentileRank(ptsLArr, p.ptsL);
-const ptsVPct = percentileRank(ptsVArr, p.ptsV);
-const valorPct = percentileRank(valorArr, p.valor);
+  await Promise.allSettled(fetches);
 
-const mL = p.ptsL > 0 ? (p.ptsL / Math.ceil(p.pj / 2)).toFixed(1) : '—';
-const mV = p.ptsV > 0 ? (p.ptsV / Math.floor(p.pj / 2)).toFixed(1) : '—';
+  // Sort by date descending
+  allNews.sort((a, b) => {
+    try { return new Date(b.date) - new Date(a.date); } catch(e) { return 0; }
+  });
 
-const trend = fmtTrend(p.trend);
-
-// Jornadas
-const jornadas = (p.j || []).map((v, ji) =>
-`<span class="jp ${jClass(v)}">${v === null || v === undefined ? '—' : v}</span>`
-).join('');
-
-// Cláusula
-const clausulaMain = p.clausula ? fmtM(p.clausula) : '—';
-const factorTxt = p.factor ? p.factor.toFixed(1) + 'x' : '—';
-const clausulaPct = p.clausula ? (p.clausula > 5 ? 'cg' : p.clausula > 2 ? 'cm' : 'cl') : 'cn';
-
-return `
-<div class="pc ${isGuitlla ? 'guitlla' : ''}" style="animation-delay:${(i * 15)}ms">
-<div class="pc-row">
-<div class="pc-rk ${rank <= 3 ? 'top3' : ''}">${rank}</div>
-<div class="pc-pos" style="background:${posColor}">${p.pos}</div>
-
-<div class="pc-id">
-<div>
-<span class="pc-name">${p.name}</span>${isGuitlla ? '<span class="guitlla-tag">🦊</span>' : ''}
-</div>
-<div class="pc-club">${p.club}</div>
-<div class="jrow">
-<span class="jlabel">J22→J26</span>
-${jornadas}
-</div>
-</div>
-
-<!-- Precio / Tendencia -->
-<div class="pc-st">
-<div class="sv ${getColor(valorPct)}">${fmtM(p.valor)}</div>
-<div class="stat-divider"></div>
-<div class="sv2 ${trend.cls}">${trend.txt}</div>
-</div>
-
-<!-- Pts / Media -->
-<div class="pc-st">
-<div class="sv ${getColor(ptsPct)}">${p.pts}</div>
-<div class="stat-divider"></div>
-<div class="sv2 ${getColor(mediaPct)}">${p.media.toFixed(1)}</div>
-<div class="sv2-lbl">media</div>
-</div>
-
-<!-- Local / Media Local -->
-<div class="pc-st">
-<div class="sv ${getColor(ptsLPct)}">${p.ptsL}</div>
-<div class="stat-divider"></div>
-<div class="sv2 ${getColor(ptsLPct)}">${mL}</div>
-<div class="sv2-lbl">m.loc</div>
-</div>
-
-<!-- Visita / Media Visita -->
-<div class="pc-st">
-<div class="sv ${getColor(ptsVPct)}">${p.ptsV}</div>
-<div class="stat-divider"></div>
-<div class="sv2 ${getColor(ptsVPct)}">${mV}</div>
-<div class="sv2-lbl">m.vis</div>
-</div>
-
-<!-- ROI / Eficiencia -->
-<div class="pc-st">
-<div class="sv ${getColor(roiPct)}">${p.roi.toFixed(1)}</div>
-<div class="stat-divider"></div>
-<div class="sv2 ${getColor(roiPct)}">${p.efic.toFixed(1)}</div>
-<div class="sv2-lbl">efic.</div>
-</div>
-
-<!-- Cláusula / Factor -->
-<div class="pc-st">
-<div class="sv ${clausulaPct}" style="font-size:.72rem;">${clausulaMain}</div>
-<div class="stat-divider"></div>
-<div class="sv2 cn">${factorTxt}</div>
-<div class="sv2-lbl">factor</div>
-</div>
-
-<!-- EXTRA — slot libre para stat avanzada futura -->
-<div class="pc-st" style="background:repeating-linear-gradient(45deg,transparent,transparent 5px,rgba(0,0,0,0.015) 5px,rgba(0,0,0,0.015) 10px);">
-<div class="sv2-lbl" style="color:var(--g200);letter-spacing:.5px;">próx.<br>rival</div>
-</div>
-
-</div>
-</div>`;
-}).join('');
-
-renderPager(list.length);
+  renderNews();
 }
 
-function renderPager(total) {
-const tp = Math.ceil(total / PAGE_SIZE);
-const pager = document.getElementById('pager');
-if (tp <= 1) { pager.innerHTML = ''; return; }
-let h = '';
-if (currentPage > 1) h += `<button class="pbtn" onclick="goPage(${currentPage-1})">← Ant.</button>`;
-h += `<span class="pinfo">Pág. ${currentPage} / ${tp} · ${total} jugadores</span>`;
-if (currentPage < tp) h += `<button class="pbtn" onclick="goPage(${currentPage+1})">Sig. →</button>`;
-pager.innerHTML = h;
+function filterNews(srcId, btn) {
+  activeNewsFilter = srcId;
+  document.querySelectorAll('.nsrc-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderNews();
 }
 
-function goPage(p) {
-currentPage = p;
-renderPlayers(sortedFiltered);
-window.scrollTo({ top: 0, behavior: 'smooth' });
+function renderNews() {
+  const container = document.getElementById('newsList');
+  const items = activeNewsFilter === 'all'
+    ? allNews
+    : allNews.filter(n => n.srcId === activeNewsFilter);
+
+  if (!items.length) {
+    container.innerHTML = '<div class="news-error">⏳ Cargando noticias… (si persiste, comprueba conexión)</div>';
+    return;
+  }
+
+  const [first, ...rest] = items;
+
+  // Tarjeta destacada
+  const featured = first.img
+    ? `<a class="news-featured" href="${first.link}" target="_blank" rel="noopener">
+        <img src="${first.img}" alt="" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-featured-overlay">
+          <div class="news-featured-tag">${first.srcLabel}</div>
+          <div class="news-featured-title">${first.title}</div>
+          <div class="news-featured-meta">${timeAgo(first.date)}</div>
+        </div>
+      </a>`
+    : `<a class="news-featured-noimg" href="${first.link}" target="_blank" rel="noopener">
+        <div class="news-source-tag ${first.srcCls}" style="margin-bottom:6px">${first.srcLabel}</div>
+        <div class="news-featured-title">${first.title}</div>
+        <div class="news-item-meta" style="margin-top:6px">${timeAgo(first.date)}</div>
+      </a>`;
+
+  // Lista resto
+  const listHtml = rest.map(n => {
+    const thumb = n.img
+      ? `<img class="news-item-thumb" src="${n.img}" alt="" loading="lazy" onerror="this.parentNode.querySelector('.news-item-thumb').replaceWith(Object.assign(document.createElement('div'),{className:'news-item-thumb-placeholder',textContent:'📰'}))">`
+      : `<div class="news-item-thumb-placeholder">📰</div>`;
+    return `<a class="news-item" href="${n.link}" target="_blank" rel="noopener">
+      ${thumb}
+      <div class="news-item-body">
+        <div class="news-item-title">${n.title}</div>
+        <div class="news-item-meta">
+          <span class="news-source-tag ${n.srcCls}">${n.srcLabel}</span>
+          <span>${timeAgo(n.date)}</span>
+        </div>
+      </div>
+    </a>`;
+  }).join('');
+
+  container.innerHTML = featured + listHtml;
 }
 
-// ── FILTROS Y ORDEN ──
-function setPos(pos, btn) {
-activePos = pos;
-document.querySelectorAll('.fbtn').forEach(b => b.classList.remove('active'));
-btn.classList.add('active');
-currentPage = 1;
-applyAll();
+// ══════════════════════════════════════════
+// RANKINGS INICIO (se poblan con datos de la API o estáticos)
+// ══════════════════════════════════════════
+function getUndervaluedPlayers(players){
+  return [...players]
+    .filter(p => p.pts > 40 && p.price > 0)
+    .map(p => ({...p, efficiency: p.pts / (p.price / 1000000)}))
+    .sort((a,b) => b.efficiency - a.efficiency)
+    .slice(0,5);
 }
 
-function setSortClick(val) {
-document.getElementById('sortSel').value = val;
-currentPage = 1;
-applyAll();
+// ── calcularEficientes — fórmula ponderada: media, roi y percentil posición ──
+// Score = (media × 0.5) + (pts/precioM × 0.3) + (pts/maxPtsPos × 0.2)
+function calcularEficientes(players) {
+  const MIN_PJ  = 8;
+  const MIN_PTS = 60;
+  const candidatos = players.filter(p => p.price > 0 && p.pts >= MIN_PTS && p.pj >= MIN_PJ);
+  const maxPorPos = {};
+  candidatos.forEach(p => {
+    const pos = (p.position || p.pos || '').split('/')[0];
+    if (!maxPorPos[pos] || p.pts > maxPorPos[pos]) maxPorPos[pos] = p.pts;
+  });
+  return candidatos
+    .map(p => {
+      const precioM = p.price / 1000000;
+      const media   = p.media || (p.pts / p.pj);
+      const pos     = (p.position || p.pos || '').split('/')[0];
+      const maxPos  = maxPorPos[pos] || p.pts;
+      const score   = (media * 0.5) + ((p.pts / precioM) * 0.3) + ((p.pts / maxPos) * 100 * 0.2);
+      return { ...p, media, score };
+    })
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 10);
 }
 
-function applyAll() {
-const q = document.getElementById('searchInput').value.toLowerCase().trim();
-const sortVal = document.getElementById('sortSel').value;
-const onlyGuit = document.getElementById('onlyGuitlla').checked;
+// ── calcularChollos — jugadores baratos que rinden por encima de lo esperado ──
+// Filtro duro: precio máximo 5M€, mínimo 6 partidos, mínimo 40 puntos
+// Score = (pts_totales × 0.5) + (media × 0.3) + (inverso_precio_normalizado × 0.2)
+// El tercer factor premia activamente que el jugador sea barato
+function calcularChollos(players) {
+  const MAX_PRECIO_M = 5;
+  const MIN_PJ       = 6;
+  const MIN_PTS      = 40;
+  const candidatos = players.filter(p =>
+    p.price > 0 &&
+    (p.price / 1000000) <= MAX_PRECIO_M &&
+    p.pts >= MIN_PTS &&
+    p.pj >= MIN_PJ
+  );
+  if (!candidatos.length) return [];
+  // Normalizar inverso del precio: el más barato obtiene 100, el más caro 0
+  const precios = candidatos.map(p => p.price / 1000000);
+  const minPrecio = Math.min(...precios);
+  const maxPrecio = Math.max(...precios);
+  const rangoPrecio = maxPrecio - minPrecio || 1;
+  return candidatos
+    .map(p => {
+      const precioM  = p.price / 1000000;
+      const media    = p.media || (p.pts / p.pj);
+      // Inverso normalizado: jugador más barato = 100, más caro = 0
+      const barato   = ((maxPrecio - precioM) / rangoPrecio) * 100;
+      const score    = (p.pts * 0.5) + (media * 0.3) + (barato * 0.2);
+      return { ...p, media, score, barato };
+    })
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 10);
+}
 
-let list = RAW_PLAYERS.filter(p => {
-const posOk = !activePos || p.pos === activePos;
-const textOk = !q || p.name.toLowerCase().includes(q) || p.club.toLowerCase().includes(q);
-const guitOk = !onlyGuit || GUITLLA_NAMES.has(p.name);
-return posOk && textOk && guitOk;
+// ── Rankings alimentados por ADVANCED_STATS ──────────────────────
+function buildRankRow(name, pos, club, valLabel, colorCls, pct) {
+  // Si pos no es PT/DF/MC/DL/MD, buscar en allPlayers
+  if (pos && !PC[pos]) {
+    const found = allPlayers.find(p => p.name === name);
+    if (found) pos = (found.position || '').split('/')[0];
+  }
+  const posColor = PC[pos] || '#888';
+  const barColor = colorCls==='green'?'var(--green)':colorCls==='red'?'var(--red)':colorCls==='amber'?'var(--accent)':'var(--blue)';
+  return `
+    <div class="rank-row">
+      <div class="rank-pos-dot" style="background:${posColor}">${(pos||'?').split('/')[0]}</div>
+      <div class="rank-player-info">
+        <div class="rank-player-name">${name}</div>
+        <div class="rank-player-club">${club||'—'}</div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:3px">
+        <div class="rank-val ${colorCls}">${valLabel}</div>
+        <div class="rank-bar-bg"><div class="rank-bar-fill" style="width:${pct}%;background:${barColor}"></div></div>
+      </div>
+    </div>`;
+}
+
+function initRankings() {
+  // Rankings alimentados exclusivamente por allPlayers (datos reales de Biwenger)
+  // Esta función ya no usa ADVANCED_STATS — todo pasa por renderRankings()
+  if (allPlayers.length) renderRankings(allPlayers);
+}
+
+
+function renderRankings(players) {
+  const pos = p => p.position || p.pos || '';
+
+  // 🔥 EN RACHA — suma de jForm (últimas 5 jornadas) con puntos > 0
+  const rachaList = [...players]
+    .map(p => {
+      const form = (p.jForm || []).filter(v => v !== null && v !== undefined);
+      const sum  = form.reduce((s, v) => s + (v > 0 ? v : 0), 0);
+      const pts5 = form.filter(v => v > 0);
+      const media5 = pts5.length ? (sum / pts5.length).toFixed(1) : null;
+      return { ...p, rachaSum: sum, media5 };
+    })
+    .filter(p => p.rachaSum > 0)
+    .sort((a, b) => b.rachaSum - a.rachaSum)
+    .slice(0, 5);
+
+  if (rachaList.length) {
+    const rachaMax = rachaList[0].rachaSum;
+    // Mostrar las 5 jornadas + media debajo del nombre
+    document.getElementById('rankRacha').innerHTML = rachaList.map(p => {
+      const formDots = (p.jForm || []).slice(0, 5).map(v => {
+        if (v === null || v === undefined) return '<span style="color:var(--text3)">—</span>';
+        const c = v >= 10 ? 'var(--green)' : v >= 5 ? 'var(--pt)' : v > 0 ? 'var(--text2)' : 'var(--red)';
+        return `<span style="color:${c};font-weight:600">${v}</span>`;
+      }).join('<span style="color:var(--border2);margin:0 2px">·</span>');
+      const sub = `<span style="font-size:0.6rem;color:var(--text3)">${formDots}${p.media5 ? ` &nbsp;⌀${p.media5}` : ''}</span>`;
+      return buildRankRow(p.name, pos(p), sub, `${p.rachaSum}p`, 'amber', Math.round(p.rachaSum/rachaMax*100));
+    }).join('');
+  }
+
+  // 📈 MÁS SUBEN — tendencia de precio positiva
+  const suben = [...players].filter(p => p.trend > 0).sort((a,b) => b.trend - a.trend).slice(0, 5);
+  if (suben.length) {
+    const subenMax = suben[0].trend;
+    document.getElementById('rankSuben').innerHTML =
+      suben.map(p => buildRankRow(p.name, pos(p), fmt(p.price/1000000)+'M€', `+${fmt(p.trend/1000)}K`, 'green', Math.round(p.trend/subenMax*100))).join('');
+  }
+
+  // 📉 MÁS BAJAN — tendencia de precio negativa
+  const bajan = [...players].filter(p => p.trend < 0).sort((a,b) => a.trend - b.trend).slice(0, 5);
+  if (bajan.length) {
+    const bajanMax = Math.abs(bajan[0].trend);
+    document.getElementById('rankBajan').innerHTML =
+      bajan.map(p => buildRankRow(p.name, pos(p), fmt(p.price/1000000)+'M€', `${fmt(p.trend/1000)}K`, 'red', Math.round(Math.abs(p.trend)/bajanMax*100))).join('');
+  }
+
+  // ⭐ TOP GOLEADORES — por puntos totales
+  const topPts = [...players].filter(p => p.pts > 0).sort((a,b) => b.pts - a.pts).slice(0, 5);
+  if (topPts.length) {
+    const ptsMax = topPts[0].pts;
+    document.getElementById('rankGoleadores').innerHTML =
+      topPts.map(p => {
+        const pj = (p.playedHome || 0) + (p.playedAway || 0);
+        const media = pj > 0 ? (p.pts / pj).toFixed(1) : '—';
+        return buildRankRow(p.name, pos(p), `${fmt(p.price/1000000)}M€ · ⌀${media}`, `${p.pts}p`, 'blue', Math.round(p.pts/ptsMax*100));
+      }).join('');
+  }
+
+  // ⚡ EFICIENTES
+  const eficientes = calcularEficientes(players);
+  if (eficientes.length) {
+    const efMax = eficientes[0].score;
+    document.getElementById('rankUndervalued').innerHTML =
+      eficientes.slice(0,5).map(p => buildRankRow(
+        p.name, pos(p),
+        `${(p.price/1000000).toFixed(2)}M€ · ⌀${p.media.toFixed(1)}`,
+        `${p.score.toFixed(1)}`, 'blue', Math.round(p.score/efMax*100)
+      )).join('');
+  }
+
+  // 🏷️ CHOLLOS
+  const chollos = calcularChollos(players);
+  if (chollos.length) {
+    const chollosMax = chollos[0].score;
+    document.getElementById('rankChollos').innerHTML =
+      chollos.slice(0,5).map(p => buildRankRow(
+        p.name, pos(p),
+        `${(p.price/1000000).toFixed(2)}M€ · ⌀${p.media.toFixed(1)}`,
+        `${p.score.toFixed(1)}`, 'amber', Math.round(p.score/chollosMax*100)
+      )).join('');
+  }
+
+  // Actualizar Estudio de Mercado completo
+  renderMercado(players);
+}
+
+function rankRow(p, i, val, colorCls, type, maxVal) {
+  const pct = maxVal > 0 ? Math.round((Math.abs(val) / Math.abs(maxVal)) * 100) : 0;
+  const posColor = PC[p.position] || '#666';
+  let displayVal = '';
+  if (type === 'trend') {
+    displayVal = (val > 0 ? '+' : '') + fmt(val);
+  } else {
+    displayVal = val + (type === 'pts' ? 'p' : '');
+  }
+  return `
+    <div class="rank-row">
+      <div class="rank-num ${i===0?'gold':''}">${i+1}</div>
+      <div class="rank-pos-dot" style="background:${posCircleBg(p.position)}">${p.position.split('/')[0]||'?'}</div>
+      <div class="rank-player-info">
+        <div class="rank-player-name">${p.name}</div>
+        <div class="rank-player-club">${p.club||p.teamName||'—'}</div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px">
+        <div class="rank-val ${colorCls}">${displayVal}</div>
+        <div class="rank-bar-bg" style="width:60px"><div class="rank-bar-fill" style="width:${pct}%;background:var(--${colorCls==='amber'?'accent':colorCls==='blue'?'df':colorCls==='green'?'green':'red'})"></div></div>
+      </div>
+    </div>`;
+}
+
+// ══════════════════════════════════════════
+// JUGADORES
+// ══════════════════════════════════════════
+let allPlayers=[],filteredPlayers=[],currentPos='',currentSort='points_desc',currentPage=1;
+const PAGE_SIZE=50;
+let cf='4-3-3',lineup={},marketPlayers=[],currentSlot=null;
+
+document.addEventListener('DOMContentLoaded',()=>{
+  renderGeneral();
+  renderGrupos();
+  renderMercado();
+  autoPlace();
+  renderMiEquipo();
+  loadPlayers(); // initRankings se llama al final de loadPlayers con datos reales
+  loadNews();
 });
 
-// Sort
-const [key, dir] = sortVal.split('_');
-list.sort((a, b) => {
-let va, vb;
-if (key === 'price') { va = a.valor; vb = b.valor; }
-else if (key === 'roi') { va = a.roi; vb = b.roi; }
-else if (key === 'media') { va = a.media; vb = b.media; }
-else if (key === 'trend') { va = a.trend; vb = b.trend; }
-else { va = a.pts; vb = b.pts; }
-return dir === 'desc' ? vb - va : va - vb;
-});
+async function loadPlayers(){
+  document.getElementById('jugadores-loading').style.display='flex';
+  document.getElementById('jugadores-content').style.display='none';
+  try{
+    // Lee data.json generado diariamente por GitHub Actions
+    const res=await fetch('./data.json');
+    if(!res.ok) throw new Error('data.json no encontrado (status '+res.status+')');
+    const data=await res.json();
 
-// Highlight active sort header
-document.querySelectorAll('.ch').forEach(c => c.classList.remove('active-sort'));
-const chMap = { pts:'ch-pts', price:'ch-price', roi:'ch-roi' };
-if (chMap[key]) document.getElementById(chMap[key])?.classList.add('active-sort');
+    // data.json tiene formato: { updatedAt, players: [...], league: {...} }
+    let players = [];
+    if(data.players && Array.isArray(data.players)){
+      players = data.players.map(p => ({
+        id:         p.id,
+        name:       p.name,
+        position:   mapPosition(p.position),
+        price:      p.price      || 0,
+        pts:        p.points     || 0,
+        trend:      p.trend      || 0,
+        playedHome: p.playedHome || 0,
+        playedAway: p.playedAway || 0,
+        club:       p.teamName   || '',
+        status:     p.status     || 'ok',
+        jForm:      p.jForm      || [],
+      }));
+    }
 
-sortedFiltered = list;
-renderPlayers(list);
+    if(!players.length) throw new Error('Sin jugadores en data.json');
+
+    allPlayers = mergeStats(players);
+    marketPlayers = allPlayers;
+    filteredPlayers=[...allPlayers];
+    sortAndRender();
+    document.getElementById('jugadores-loading').style.display='none';
+    document.getElementById('jugadores-content').style.display='block';
+
+    // Mostrar cuándo se actualizaron los datos por última vez
+    const when = data.updatedAt ? new Date(data.updatedAt).toLocaleDateString('es-ES') : '?';
+    document.getElementById('statusText').textContent=allPlayers.length+' jugadores · actualizado '+when;
+    renderStats();
+    renderRankings(allPlayers);
+    initRankings(); // ahora allPlayers está cargado, pos correctas
+  }catch(e){
+    document.getElementById('jugadores-loading').innerHTML='<div class="error-msg">❌ Error cargando jugadores: '+e.message+'</div>';
+    document.getElementById('statusText').textContent='Error';
+    // Fallback: rankings con datos estáticos de Guitlla
+    renderRankings(getEquipo().map(enrichPlayer));
+    initRankings();
+  }
 }
 
-// ── INIT ──
-applyAll();
+function mapPosition(pos){
+  const m={1:'PT',2:'DF',3:'MC',4:'DL',5:'MD'};
+  return m[pos]||pos||'?';
+}
+
+function renderStats(){
+  const t=allPlayers.length;
+  const avg=(allPlayers.reduce((s,p)=>s+(p.pts||0),0)/t).toFixed(0);
+  const mx=Math.max(...allPlayers.map(p=>p.pts||0));
+  document.getElementById('statsBar').innerHTML=
+    '<div class="stat-card"><div class="stat-label">Jugadores</div><div class="stat-value">'+t+'</div><div class="stat-sub">en el mercado</div></div>'+
+    '<div class="stat-card"><div class="stat-label">Puntos máx</div><div class="stat-value">'+mx+'</div><div class="stat-sub">mejor puntuación</div></div>'+
+    '<div class="stat-card"><div class="stat-label">Media pts</div><div class="stat-value">'+avg+'</div><div class="stat-sub">promedio liga</div></div>';
+}
+
+function filterPos(pos,btn){currentPos=pos;currentPage=1;document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');applyFilters();}
+function filterPlayers(){currentPage=1;applyFilters();}
+function applyFilters(){
+  const q=document.getElementById('searchInput').value.toLowerCase();
+  filteredPlayers=allPlayers.filter(p=>(!currentPos||p.position.includes(currentPos))&&(!q||p.name.toLowerCase().includes(q)||(p.club||'').toLowerCase().includes(q)));
+  sortAndRender();
+}
+function setSortAndRender(val){document.getElementById('sortSelect').value=val;currentSort=val;sortAndRender();}
+function sortPlayers(){currentSort=document.getElementById('sortSelect').value;currentPage=1;sortAndRender();}
+function sortAndRender(){
+  const[key,dir]=currentSort.split('_');
+  filteredPlayers.sort((a,b)=>{
+    const va=key==='roi'?a.roi:key==='trend'?a.trend:key==='price'?a.price:a.pts||0;
+    const vb=key==='roi'?b.roi:key==='trend'?b.trend:key==='price'?b.price:b.pts||0;
+    return dir==='desc'?vb-va:va-vb;
+  });
+  renderPlayers();
+}
+
+function renderPlayers(){
+  document.getElementById('playerCount').textContent=filteredPlayers.length+' jugadores';
+  const start=(currentPage-1)*PAGE_SIZE;
+  document.getElementById('playersList').innerHTML=filteredPlayers.slice(start,start+PAGE_SIZE).map((p,i)=>{
+    const r=start+i+1,rc=r===1?'rank-1':r===2?'rank-2':r===3?'rank-3':'';
+    return '<div class="player-row"><div class="rank '+rc+'">'+r+'</div>'+
+      '<div><div class="player-name">'+p.name+(p.injured?' <span class="injured-icon">LES</span>':'')+(p.sanctioned?' <span class="sanction-icon">SAN</span>':'')+'</div><div class="player-club">'+(p.club||'—')+'</div></div>'+
+      '<div>'+posBadge(p.position)+'</div>'+
+      '<div class="player-club" style="font-size:0.85rem">'+(p.club||'—')+'</div>'+
+      '<div class="points">'+(p.pts||'—')+'</div>'+
+      '<div><div class="price">'+fmt(p.price)+'</div><div style="margin-top:2px">'+fmtTrend(p.trend)+'</div></div>'+
+      '<div class="roi '+roiClass(p.roi)+'">'+(p.roi>0?p.roi+'x':'—')+'</div>'+
+      '<div class="played">'+(p.playedHome||'—')+'</div>'+
+      '<div class="played">'+(p.playedAway||'—')+'</div></div>';
+  }).join('')||'<div style="padding:40px;text-align:center;color:var(--text3)">Sin jugadores</div>';
+  renderPagination(filteredPlayers.length);
+}
+
+function renderPagination(total){
+  const tp=Math.ceil(total/PAGE_SIZE);
+  if(tp<=1){document.getElementById('pagination').innerHTML='';return;}
+  let h=currentPage>1?'<button class="page-btn" onclick="goPage('+(currentPage-1)+')">←</button>':'';
+  for(let p=1;p<=tp;p++){
+    if(p===1||p===tp||Math.abs(p-currentPage)<=2)h+='<button class="page-btn '+(p===currentPage?'active':'')+'" onclick="goPage('+p+')">'+p+'</button>';
+    else if(Math.abs(p-currentPage)===3)h+='<span class="page-info">...</span>';
+  }
+  if(currentPage<tp)h+='<button class="page-btn" onclick="goPage('+(currentPage+1)+')">→</button>';
+  document.getElementById('pagination').innerHTML=h;
+}
+function goPage(p){currentPage=p;renderPlayers();window.scrollTo({top:0,behavior:'smooth'});}
+
+
+// ══════════════════════════════════════════
+// ESTUDIO DE MERCADO
+// ══════════════════════════════════════════
+
+// Definición de los 6 rankings del mercado
+// Cada entrada tiene: id, icono, título, color de valor, función que devuelve {players, valFn, labelFn}
+function getMercadoRankings(players) {
+  const enriched = players.map(p => ({
+    ...p,
+    media: p.media || (p.pj > 0 ? Math.round((p.pts / p.pj) * 10) / 10 : 0)
+  }));
+
+  const maxPorPos = {};
+  enriched.forEach(p => {
+    const pos = (p.position || '').split('/')[0];
+    if (!maxPorPos[pos] || p.pts > maxPorPos[pos]) maxPorPos[pos] = p.pts;
+  });
+
+  // Eficientes: score ponderado
+  const eficientes = enriched
+    .filter(p => p.price > 0 && p.pts >= 60 && p.pj >= 8)
+    .map(p => {
+      const pos   = (p.position || '').split('/')[0];
+      const score = (p.media * 0.5) + ((p.pts / (p.price/1000000)) * 0.3) + ((p.pts / (maxPorPos[pos]||p.pts)) * 100 * 0.2);
+      return { ...p, score };
+    })
+    .sort((a,b) => b.score - a.score);
+
+  // Chollos: máx 5M€, score con peso en baratura
+  const chollosCandidatos = enriched.filter(p => p.price > 0 && (p.price/1000000) <= 5 && p.pts >= 40 && p.pj >= 6);
+  const precios = chollosCandidatos.map(p => p.price/1000000);
+  const minP = Math.min(...precios, 0), maxP = Math.max(...precios, 1), rangoP = maxP - minP || 1;
+  const chollos = chollosCandidatos
+    .map(p => ({ ...p, score: (p.pts * 0.5) + (p.media * 0.3) + (((maxP - p.price/1000000) / rangoP) * 100 * 0.2) }))
+    .sort((a,b) => b.score - a.score);
+
+  return [
+    {
+      id: 'racha', icon: '🔥', title: 'En racha', color: 'amber',
+      players: enriched.filter(p => (p.jForm||[]).length >= 3).map(p => ({
+        ...p, _val: (p.jForm||[]).slice(0,5).reduce((a,b)=>a+(b||0),0)
+      })).sort((a,b) => b._val - a._val),
+      valFn: p => p._val + 'p últimas',
+      subFn: p => fmt(p.price) + (p.media ? ` · ⌀${p.media}` : ''),
+    },
+    {
+      id: 'suben', icon: '📈', title: 'Más suben', color: 'green',
+      players: enriched.filter(p => p.trend > 0).sort((a,b) => b.trend - a.trend),
+      valFn: p => '+' + fmt(p.trend),
+      subFn: p => fmt(p.price) + (p.media ? ` · ⌀${p.media}` : ''),
+    },
+    {
+      id: 'bajan', icon: '📉', title: 'Más bajan', color: 'red',
+      players: enriched.filter(p => p.trend < 0).sort((a,b) => a.trend - b.trend),
+      valFn: p => fmt(p.trend),
+      subFn: p => fmt(p.price) + (p.media ? ` · ⌀${p.media}` : ''),
+    },
+    {
+      id: 'top', icon: '⭐', title: 'Top puntuadores', color: 'blue',
+      players: [...enriched].sort((a,b) => b.pts - a.pts),
+      valFn: p => p.pts + ' pts',
+      subFn: p => fmt(p.price) + (p.media ? ` · ⌀${p.media}` : ''),
+    },
+    {
+      id: 'eficientes', icon: '⚡', title: 'Jugadores eficientes', color: 'blue',
+      players: eficientes,
+      valFn: p => p.score.toFixed(1),
+      subFn: p => fmt(p.price) + (p.media ? ` · ⌀${p.media}` : ''),
+    },
+    {
+      id: 'chollos', icon: '🏷️', title: 'Chollos fantasy', color: 'amber',
+      players: chollos,
+      valFn: p => p.score.toFixed(1),
+      subFn: p => fmt(p.price) + (p.media ? ` · ⌀${p.media}` : ''),
+    },
+  ];
+}
+
+// Estado de expansión y búsqueda por card
+const mercadoState = {};
+
+function renderMercado(players) {
+  const src = players && players.length ? players : allPlayers;
+  const rankings = src.length ? getMercadoRankings(src) : null;
+
+  // Si no hay datos Biwenger, mostrar estado de espera con datos de ADVANCED_STATS como preview
+  if (!rankings) {
+    const staticRankings = getStaticMercadoRankings();
+    buildMercadoHTML(staticRankings);
+    return;
+  }
+  buildMercadoHTML(rankings);
+}
+
+function getStaticMercadoRankings() {
+  // Genera rankings desde ADVANCED_STATS para el estado sin API
+  const entries = Object.entries(ADVANCED_STATS).filter(([,s]) => !s.inGuitlla);
+  const toPlayer = ([name,s]) => ({
+    name, position: s.pos||'', club: '—', pts: s.pts||0,
+    price: (s.valor||0)*1000000, trend: 0, pj: s.pj||0,
+    media: s.media||0, jForm: [s.j1,s.j2,s.j3,s.j4,s.j5].filter(v=>v!=null),
+    score: 0, _val: 0,
+  });
+  const all = entries.map(toPlayer);
+  const maxPorPos = {};
+  all.forEach(p => { const pos=(p.position||'').split('/')[0]; if(!maxPorPos[pos]||p.pts>maxPorPos[pos]) maxPorPos[pos]=p.pts; });
+
+  const racha = all.map(p=>({...p,_val:(p.jForm||[]).reduce((a,b)=>a+(b||0),0)})).sort((a,b)=>b._val-a._val).filter(p=>p._val>0);
+  const top   = [...all].sort((a,b)=>b.pts-a.pts);
+  const ef    = all.filter(p=>p.price>0&&p.pts>=60&&p.pj>=8).map(p=>{
+    const pos=(p.position||'').split('/')[0];
+    const score=(p.media*0.5)+((p.pts/(p.price/1000000))*0.3)+((p.pts/(maxPorPos[pos]||p.pts))*100*0.2);
+    return {...p,score};
+  }).sort((a,b)=>b.score-a.score);
+  const chC = all.filter(p=>p.price>0&&(p.price/1000000)<=5&&p.pts>=40&&p.pj>=6);
+  const ps=chC.map(p=>p.price/1000000),minP=Math.min(...ps,0),maxPr=Math.max(...ps,1),r=maxPr-minP||1;
+  const ch  = chC.map(p=>({...p,score:(p.pts*0.5)+(p.media*0.3)+(((maxPr-p.price/1000000)/r)*100*0.2)})).sort((a,b)=>b.score-a.score);
+
+  return [
+    { id:'racha',     icon:'🔥', title:'En racha',           color:'amber', players:racha,  valFn:p=>p._val+'p',         subFn:p=>fmt(p.price)+(p.media?` · ⌀${p.media}`:'') },
+    { id:'suben',     icon:'📈', title:'Más suben',           color:'green', players:[],     valFn:p=>'—',                subFn:p=>'Sin datos API' },
+    { id:'bajan',     icon:'📉', title:'Más bajan',           color:'red',   players:[],     valFn:p=>'—',                subFn:p=>'Sin datos API' },
+    { id:'top',       icon:'⭐', title:'Top puntuadores',     color:'blue',  players:top,    valFn:p=>p.pts+' pts',       subFn:p=>fmt(p.price)+(p.media?` · ⌀${p.media}`:'') },
+    { id:'eficientes',icon:'⚡', title:'Jugadores eficientes',color:'blue',  players:ef,     valFn:p=>p.score.toFixed(1), subFn:p=>fmt(p.price)+(p.media?` · ⌀${p.media}`:'') },
+    { id:'chollos',   icon:'🏷️', title:'Chollos fantasy',     color:'amber', players:ch,     valFn:p=>p.score.toFixed(1), subFn:p=>fmt(p.price)+(p.media?` · ⌀${p.media}`:'') },
+  ];
+}
+
+function buildMercadoHTML(rankings) {
+  const grid = document.getElementById('mercadoGrid');
+  if (!grid) return;
+  grid.className = 'mercado-grid';
+  grid.innerHTML = rankings.map(r => {
+    if (!mercadoState[r.id]) mercadoState[r.id] = { expanded: false, q: '' };
+    const accentColor = r.color==='green'?'var(--green)':r.color==='red'?'var(--red)':r.color==='blue'?'var(--blue)':'var(--accent)';
+    return `
+    <div class="mercado-card" id="mcard-${r.id}">
+      <div class="mercado-card-header">
+        <div class="mercado-card-title">
+          <span class="mercado-card-icon">${r.icon}</span>
+          ${r.title}
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:0.62rem;font-weight:400;color:var(--text3);letter-spacing:0;text-transform:none" id="mcount-${r.id}"></span>
+        </div>
+        <div class="mercado-card-actions">
+          <input type="text" placeholder="🔍 buscar..." id="msearch-${r.id}" style="border:1px solid var(--border2);border-radius:5px;padding:5px 10px;font-size:0.75rem;outline:none;color:var(--text);width:160px" oninput="filterMercadoCard('${r.id}')" value="${mercadoState[r.id].q}">
+        </div>
+      </div>
+      <div class="mercado-th">
+        <span>#</span><span>Pos</span><span>Jugador</span>
+        <span style="text-align:right">Precio</span>
+        <span style="text-align:right">Pts</span>
+        <span style="text-align:right">Media</span>
+        <span style="text-align:right">PJ</span>
+        <span style="text-align:right">Tendencia</span>
+        <span style="text-align:right;color:${accentColor}">${r.title}</span>
+      </div>
+      <div class="mercado-list ${mercadoState[r.id].expanded ? 'expanded' : 'collapsed'}" id="mlist-${r.id}"></div>
+      <button class="mercado-toggle" id="mtoggle-${r.id}" onclick="toggleMercadoCard('${r.id}')">
+        <span id="mtoggle-icon-${r.id}">${mercadoState[r.id].expanded ? '▲' : '▼'}</span>
+        <span id="mtoggle-text-${r.id}">${mercadoState[r.id].expanded ? 'VER MENOS' : 'VER TODOS'}</span>
+      </button>
+    </div>`;
+  }).join('');
+
+  grid._rankings = rankings;
+  rankings.forEach(r => populateMercadoCard(r));
+}
+
+function populateMercadoCard(r) {
+  const state   = mercadoState[r.id];
+  const q       = (state.q || '').toLowerCase();
+  const list    = document.getElementById('mlist-' + r.id);
+  const counter = document.getElementById('mcount-' + r.id);
+  if (!list) return;
+
+  const filtered = q
+    ? r.players.filter(p => p.name.toLowerCase().includes(q) || (p.club||'').toLowerCase().includes(q))
+    : r.players;
+
+  const shown    = state.expanded ? filtered : filtered.slice(0, 10);
+  const valColor = r.color==='green'?'var(--green)':r.color==='red'?'var(--red)':r.color==='blue'?'var(--blue)':'var(--accent)';
+
+  if (counter) counter.textContent = '· ' + filtered.length + ' jugadores';
+
+  if (!filtered.length) {
+        list.innerHTML = `<div style="padding:16px 14px;font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:var(--text3)">Sin datos disponibles</div>`;
+    return;
+  }
+
+  list.innerHTML = shown.map((p, i) => {
+    const pos      = (p.position || p.pos || '').split('/')[0];
+    const posColor = PC[pos] || '#888';
+    const pj       = (p.playedHome||0) + (p.playedAway||0);
+    const media    = p.media || (pj > 0 ? (p.pts/pj) : 0);
+    const trendFmt = p.trend > 0 ? `<span style="color:var(--green)">+${fmt(p.trend/1000)}K</span>`
+                   : p.trend < 0 ? `<span style="color:var(--red)">${fmt(p.trend/1000)}K</span>`
+                   : '<span style="color:var(--text3)">—</span>';
+    const numStyle = i===0?'color:var(--accent);font-weight:700':i<3?'color:var(--text2);font-weight:600':'color:var(--text3)';
+
+    // Últimas 5 jornadas (solo para ranking racha, en los demás sale el club)
+    let subInfo = '';
+    if (r.id === 'racha') {
+      const form = (p.jForm || []).slice(0,5);
+      subInfo = form.map(v => {
+        if (v===null||v===undefined) return '<span style="color:var(--border2)">—</span>';
+        const c = v>=10?'var(--green)':v>=5?'var(--pt)':v>0?'var(--text2)':'var(--red)';
+        return `<span style="color:${c};font-weight:600">${v}</span>`;
+      }).join('<span style="color:var(--border2);margin:0 1px">·</span>');
+    } else {
+      subInfo = `<span style="color:var(--text3);font-size:0.72rem">${p.club||'—'}</span>`;
+    }
+
+    return `<div class="mercado-row">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;text-align:center;${numStyle}">${i+1}</div>
+      <div class="rank-pos-dot" style="background:${posColor};width:22px;height:22px;font-size:7px;flex-shrink:0">${pos||'?'}</div>
+      <div style="min-width:0">
+        <div style="font-size:0.85rem;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${p.name}</div>
+        <div style="font-size:0.68rem;margin-top:2px">${subInfo}</div>
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;text-align:right;color:var(--text2)">${fmt(p.price/1000000)}M€</div>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;text-align:right;color:var(--text)">${p.pts||0}</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;text-align:right;color:var(--text2)">${media>0?media.toFixed(1):'—'}</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;text-align:right;color:var(--text3)">${pj||'—'}</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;text-align:right">${trendFmt}</div>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;text-align:right;color:${valColor}">${r.valFn(p)}</div>
+    </div>`;
+  }).join('');
+
+  const toggle     = document.getElementById('mtoggle-' + r.id);
+  const toggleIcon = document.getElementById('mtoggle-icon-' + r.id);
+  const toggleText = document.getElementById('mtoggle-text-' + r.id);
+  if (toggle) {
+    if (filtered.length <= 10) {
+      toggle.style.display = 'none';
+    } else {
+      toggle.style.display = 'flex';
+      if (toggleIcon) toggleIcon.textContent = state.expanded ? '▲' : '▼';
+      if (toggleText) toggleText.textContent = state.expanded
+        ? 'VER MENOS'
+        : `VER TODOS (${filtered.length} jugadores)`;
+    }
+  }
+}
+
+let _fabActiveCard = null;
+
+function toggleMercadoCard(id) {
+  const wasExpanded = mercadoState[id].expanded;
+  mercadoState[id].expanded = !wasExpanded;
+  const list = document.getElementById('mlist-' + id);
+  if (list) list.className = 'mercado-list ' + (mercadoState[id].expanded ? 'expanded' : 'collapsed');
+  const grid = document.getElementById('mercadoGrid');
+  if (grid && grid._rankings) {
+    const r = grid._rankings.find(r => r.id === id);
+    if (r) populateMercadoCard(r);
+  }
+  // Mostrar/ocultar FAB
+  const fab = document.getElementById('mercadoFab');
+  if (!wasExpanded) {
+    // Se acaba de expandir — mostrar FAB
+    _fabActiveCard = id;
+    if (fab) fab.classList.add('visible');
+  } else {
+    // Se acaba de cerrar — ocultar FAB y volver al header
+    _fabActiveCard = null;
+    if (fab) fab.classList.remove('visible');
+    const header = document.querySelector('#mcard-' + id + ' .mercado-card-header');
+    if (header) setTimeout(() => header.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
+  }
+}
+
+function closeMercadoFab() {
+  if (_fabActiveCard) toggleMercadoCard(_fabActiveCard);
+}
+
+function filterMercadoCard(id) {
+  mercadoState[id].q = document.getElementById('msearch-' + id).value;
+  const grid = document.getElementById('mercadoGrid');
+  if (grid && grid._rankings) {
+    const r = grid._rankings.find(r => r.id === id);
+    if (r) populateMercadoCard(r);
+  }
+}
+
+// ══════════════════════════════════════════
+// GENERAL & GRUPOS
+// ══════════════════════════════════════════
+function renderGeneral(){
+  const standings = getStandings().slice().sort((a,b)=>b.pts-a.pts).map((t,i)=>({...t,pos:i+1,diff:i===0?0:t.pts-getStandings()[0].pts}));
+  if (!standings.length) {
+    document.getElementById('generalList').innerHTML='<div style="padding:2rem;text-align:center;font-family:\'IBM Plex Mono\',monospace;font-size:0.75rem;color:var(--text3)">// Datos pendientes para esta liga</div>';
+    return;
+  }
+  document.getElementById('generalList').innerHTML=standings.map((t,i)=>{
+    const isMe = t.name.includes(getMiEquipoName().replace(' 🦊','').trim()) || t.name === getMiEquipoName();
+    const rankCls = t.pos===1?'gold':t.pos===2?'silver':t.pos===3?'bronze':'';
+    const diffTxt = t.diff===0 ? '—' : String(t.diff);
+    const diffColor = t.diff===0 ? 'color:var(--green)' : 'color:var(--red)';
+    const next = standings[i+1];
+    const vsSig = next ? t.pts - next.pts : null;
+    const vsTxt = vsSig===null ? '—' : '+'+vsSig;
+    const vsColor = vsSig===null ? 'color:var(--text3)' : vsSig<=5 ? 'color:var(--red)' : 'color:var(--green)';
+    const rowBg = isMe ? 'background:rgba(163,230,53,0.04);border-left:2px solid var(--accent)' : '';
+    return `<div class="standings-grid standings-row" style="${rowBg}">
+      <div class="s-rank ${rankCls}">${t.pos}</div>
+      <div class="s-name" style="${isMe?'color:var(--accent);font-weight:600':''}">${t.name}</div>
+      <div class="s-pts">${t.pts}</div>
+      <div class="s-num">${t.value}M€</div>
+      <div class="s-num">${t.players}</div>
+      <div class="s-num">${t.ptsPer}</div>
+      <div class="s-diff" style="${diffColor}">${diffTxt}</div>
+      <div class="s-diff" style="${vsColor}">${vsTxt}</div>
+    </div>`;
+  }).join('');
+}
+
+function renderGrupos(){
+  const qualColors = ['rank-1','rank-2','rank-2',''];
+  const groupsHtml = getGroups().map(g => {
+    const rows = g.teams.map((t,i) => {
+      const isMe = t.name.includes('Guitlla');
+      const qual = i < 2; // top 2 clasifican
+      const dgColor = t.dg > 0 ? 'color:var(--green)' : t.dg < 0 ? 'color:var(--red)' : 'color:var(--text3)';
+      const dgTxt = (t.dg > 0 ? '+' : '') + t.dg;
+      return `<div class="player-row" style="grid-template-columns:32px 2fr 55px 80px 60px 60px 70px${isMe?';background:rgba(163,230,53,0.04)':''}${qual?';border-left:2px solid var(--accent)':''}">
+        <div class="rank ${i===0?'rank-1':i===1?'rank-2':''}">${t.pos}</div>
+        <div class="player-name" style="${isMe?'color:var(--lime);font-weight:600':''}">${t.name}</div>
+        <div class="points" style="font-size:1rem">${t.pts}</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;color:var(--text2)">${t.w}G ${t.d}E ${t.l}P</div>
+        <div class="played">${t.gf}</div>
+        <div class="played">${t.gc}</div>
+        <div class="played" style="${dgColor};font-family:'IBM Plex Mono',monospace;font-size:0.78rem;font-weight:600">${dgTxt}</div>
+      </div>`;
+    }).join('');
+
+    const tbHtml = g.tiebreaker ? `
+      <div style="padding:10px 14px;font-family:'IBM Plex Mono',monospace;font-size:0.65rem;color:var(--text3);border-top:1px solid var(--border);line-height:1.6;background:var(--bg3)">
+        <span style="color:var(--accent)">// DESEMPATE</span> ${g.tiebreaker}
+      </div>` : '';
+
+    return `<div style="margin-bottom:1.5rem">
+      <div class="section-title">${g.name}</div>
+      <div class="table-wrap">
+        <div style="display:grid;grid-template-columns:32px 2fr 55px 80px 60px 60px 70px;padding:9px 14px;background:var(--bg3);border-bottom:1px solid var(--border2)">
+          <div class="th">#</div><div class="th">EQUIPO</div><div class="th">PTS</div>
+          <div class="th">RECORD</div><div class="th">GF</div><div class="th">GC</div><div class="th">DG</div>
+        </div>
+        ${rows}
+        ${tbHtml}
+      </div>
+    </div>`;
+  }).join('');
+
+  // Cruces de cuartos
+  const qfHtml = `
+    <div style="margin-top:0.5rem">
+      <div class="section-title">Cuartos de final</div>
+      <div class="table-wrap">
+        ${getQuarterfinals().map(cf => {
+          const isGuitlla = cf.home.includes('Guitlla') || cf.away.includes('Guitlla');
+          return `<div class="player-row" style="grid-template-columns:60px 1fr 40px 1fr${isGuitlla?';background:rgba(163,230,53,0.04)':''}">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;color:var(--accent);font-weight:600">${cf.id}</div>
+            <div>
+              <div style="font-size:0.88rem;font-weight:600;${cf.home.includes('Guitlla')?'color:var(--lime)':''}">${cf.home}</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6rem;color:var(--text3)">${cf.homeRef}</div>
+            </div>
+            <div style="font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;color:var(--text3);text-align:center">VS</div>
+            <div>
+              <div style="font-size:0.88rem;font-weight:600;${cf.away.includes('Guitlla')?'color:var(--lime)':''}">${cf.away}</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6rem;color:var(--text3)">${cf.awayRef}</div>
+            </div>
+          </div>`;
+        }).join('')}
+      </div>
+    </div>`;
+
+  document.getElementById('gruposList').innerHTML = groupsHtml + qfHtml;
+}
+
+// ══════════════════════════════════════════
+// MI EQUIPO
+// ══════════════════════════════════════════
+function hasPos(p,pos){return p.position.split('/').includes(pos);}
+function autoPlace(){
+  lineup={};
+  const byPos={PT:[...getEquipo().filter(p=>hasPos(p,'PT'))],DF:[...getEquipo().filter(p=>hasPos(p,'DF'))],MC:[...getEquipo().filter(p=>hasPos(p,'MC'))],DL:[...getEquipo().filter(p=>hasPos(p,'DL'))]};
+  Object.keys(byPos).forEach(k=>byPos[k].sort((a,b)=>b.pts-a.pts));
+  const used=new Set();
+  FORMATIONS[cf].forEach((row,ri)=>{
+    const pool=(byPos[row.pos]||[]).filter(p=>!used.has(p.name));
+    for(let i=0;i<row.count;i++){
+      if(pool[i]){lineup[row.pos+'_'+ri+'_'+i]=pool[i];used.add(pool[i].name);}
+    }
+  });
+}
+
+function renderMiEquipo(){renderSummary();renderTabs();renderField();renderMeTable();}
+
+function renderSummary(){
+  const tv=getEquipo().reduce((s,p)=>s+(p.price||0),0);
+  const toSell=getEquipo().filter(p=>p.status==='sell').length;
+  const toWarn=getEquipo().filter(p=>p.status==='warn').length;
+  document.getElementById('teamSummary').innerHTML=
+    '<div class="ts-card"><div class="ts-label">Posición</div><div class="ts-value">3º</div><div class="ts-sub">de 14</div></div>'+
+    '<div class="ts-card"><div class="ts-label">Puntos J26</div><div class="ts-value">1.278</div><div class="ts-sub">acumulados</div></div>'+
+    '<div class="ts-card"><div class="ts-label">Valor plantilla</div><div class="ts-value">'+fmt(tv)+'</div><div class="ts-sub">mercado</div></div>'+
+    '<div class="ts-card"><div class="ts-label">Jugadores</div><div class="ts-value">'+getEquipo().length+'</div><div class="ts-sub">en plantilla</div></div>'+
+    '<div class="ts-card"><div class="ts-label">Vender</div><div class="ts-value" style="color:var(--red)">'+toSell+'</div><div class="ts-sub">urgente</div></div>'+
+    '<div class="ts-card"><div class="ts-label">Vigilar</div><div class="ts-value" style="color:var(--accent)">'+toWarn+'</div><div class="ts-sub">jugadores</div></div>';
+}
+
+function renderTabs(){
+  document.getElementById('formationTabs').innerHTML=Object.keys(FORMATIONS).map(f=>
+    '<button class="ftab '+(f===cf?'active':'')+'" onclick="setFormation(\''+f+'\')">'+f+'</button>'
+  ).join('');
+}
+function setFormation(f){cf=f;autoPlace();renderTabs();renderField();}
+
+function posCircleBg(position){
+  if(!position) return '#555';
+  const parts=position.split('/').filter(Boolean);
+  if(parts.length===1) return PC[parts[0]]||'#555';
+  // Divide circle with conic-gradient for 2 or 3 positions
+  const seg=360/parts.length;
+  const stops=parts.map((p,i)=>{
+    const c=PC[p]||'#555';
+    const from=Math.round(i*seg);
+    const to=Math.round((i+1)*seg);
+    return `${c} ${from}deg ${to}deg`;
+  }).join(',');
+  return `conic-gradient(${stops})`;
+}
+
+function renderField(){
+  const field=document.getElementById('field');
+  field.querySelectorAll('.player-slot').forEach(el=>el.remove());
+  FORMATIONS[cf].forEach((row,ri)=>{
+    const yPct=ri===0?92:ri===FORMATIONS[cf].length-1?8:92-(ri/(FORMATIONS[cf].length-1))*84;
+    for(let i=0;i<row.count;i++){
+      const xPct=row.count===1?50:10+(i/(row.count-1))*80;
+      const sid=row.pos+'_'+ri+'_'+i;
+      const p=lineup[sid];
+      const slot=document.createElement('div');slot.className='player-slot';
+      slot.style.left=xPct+'%';slot.style.top=yPct+'%';
+      slot.onclick=()=>openModal(sid,row.pos);
+      const circle=document.createElement('div');
+      circle.className='player-circle'+(p?'':' empty');
+      circle.style.background=p?(PC[row.pos]||'#555'):'';
+      circle.textContent=p?p.position:'+';
+      circle.style.fontSize=p&&p.position.includes('/')?'7px':'9px';
+      const nt=document.createElement('div');nt.className='player-name-tag';
+      nt.textContent=p?p.name:row.pos;
+      slot.appendChild(circle);slot.appendChild(nt);
+      if(p){
+        const pt=document.createElement('div');pt.className='player-pts-tag';pt.textContent=(p.pts||0)+'pts';slot.appendChild(pt);
+        if(p.status==='sell'){const b=document.createElement('div');b.className='badge-sell';b.textContent='VENDER';slot.appendChild(b);}
+        else if(p.status==='warn'){const b=document.createElement('div');b.className='badge-warn';b.textContent='⚠️';slot.appendChild(b);}
+      }
+      field.appendChild(slot);
+    }
+  });
+}
+
+function renderMeTable(){
+  document.getElementById('meTableBody').innerHTML=getEquipo().map(p=>{
+    const ep = enrichPlayer(p);
+    const media = ep.media ? ep.media.toFixed(1) : (p.pts/26).toFixed(1);
+    const tc=p.trend>0?'color:var(--green)':p.trend<0?'color:var(--red)':'color:var(--text3)';
+    const ts=p.trend>0?'+'+fmt(p.trend):p.trend<0?fmt(p.trend):'—';
+    const badges = getPlayerBadges(ep);
+    return '<div class="me-row">'+
+      '<div class="me-pos" style="background:'+(PC[p.position.split('/')[0]]||'#666')+';font-size:'+(p.position.includes('/')?'6px':'8px')+'">'+p.position+'</div>'+
+      '<div><div style="font-size:0.84rem;font-weight:500;word-break:break-word;line-height:1.3">'+p.name+'</div><div style="font-size:0.69rem;color:var(--text3)">'+p.club+'</div></div>'+
+      '<div style="font-size:0.8rem;font-weight:600">'+fmt(p.price)+'</div>'+
+      '<div style="'+tc+';font-size:0.76rem;font-weight:600">'+ts+'</div>'+
+      '<div style="font-family:\'Barlow Condensed\',sans-serif;font-size:1.1rem;color:var(--accent)">'+p.pts+'</div>'+
+      '<div style="font-size:0.78rem;color:var(--text2)">'+media+'</div>'+
+      '<div>'+renderBadges(badges)+'</div></div>';
+  }).join('');
+}
+
+function initials(n){const p=n.trim().split(' ');return p.length===1?n.substring(0,3).toUpperCase():(p[0][0]+(p[p.length-1][0]||'')).toUpperCase();}
+
+let currentSlotPos=null;
+function openModal(sid,pos){
+  currentSlot=sid;
+  currentSlotPos=pos;
+  document.getElementById('modalTitle').textContent='SELECCIONAR '+pos;
+  document.getElementById('modalSearch').value='';
+  document.getElementById('modalRemove').style.display=lineup[sid]?'block':'none';
+  filterModal();
+  document.getElementById('modalOverlay').classList.add('open');
+  setTimeout(()=>document.getElementById('modalSearch').focus(),100);
+}
+function closeModal(){document.getElementById('modalOverlay').classList.remove('open');currentSlot=null;currentSlotPos=null;}
+function filterModal(){
+  const q=document.getElementById('modalSearch').value.toLowerCase();
+  const pool=marketPlayers.length?[...getEquipo(),...marketPlayers.filter(m=>!getEquipo().find(g=>g.name.toLowerCase()===m.name.toLowerCase()))]:getEquipo();
+  // Filtrar por posición del slot (respetando multiposición) + búsqueda texto
+  const filtered=pool.filter(p=>{
+    const posOk=!currentSlotPos||p.position.split('/').includes(currentSlotPos);
+    const textOk=!q||p.name.toLowerCase().includes(q)||(p.club||'').toLowerCase().includes(q);
+    return posOk&&textOk;
+  });
+  document.getElementById('modalList').innerHTML=filtered.slice(0,60).map(p=>
+    '<div class="modal-player" onclick=\'selectPlayer('+JSON.stringify(p)+')\'>'+
+    '<div class="modal-player-pos" style="background:var(--bg3);border:1px solid var(--border);color:var(--text2);font-size:7px">'+(p.position||'?')+'</div>'+
+    '<div class="modal-player-info"><div class="modal-player-name">'+p.name+'</div><div class="modal-player-club">'+(p.club||'—')+'</div></div>'+
+    '<div style="text-align:right"><div class="modal-player-pts">'+(p.pts||0)+'</div><div class="modal-player-price">'+fmt(p.price)+'</div></div></div>'
+  ).join('')||'<div style="padding:20px;text-align:center;color:var(--text3)">Sin jugadores con posición '+currentSlotPos+'</div>';
+}
+function selectPlayer(p){lineup[currentSlot]=p;closeModal();renderField();}
+function removePlayer(){delete lineup[currentSlot];closeModal();renderField();}
+
+// ══════════════════════════════════════════
+// UTILS
+// ══════════════════════════════════════════
+function fmt(v){if(!v&&v!==0)return'—';const a=Math.abs(v),s=v<0?'-':'';if(a>=1000000)return s+(a/1000000).toFixed(2)+'M€';if(a>=1000)return s+(a/1000).toFixed(0)+'K€';return s+a+'€';}
+function fmtTrend(v){if(!v||v===0)return'<span class="trend neutral">—</span>';if(v>0)return'<span class="trend up">+'+fmt(v)+'</span>';return'<span class="trend down">'+fmt(v)+'</span>';}
+function roiClass(r){return r>=15?'high':r>=8?'mid':'low';}
+function posBadge(pos){
+  if(!pos||pos==='?')return'<div class="pos-badge" style="background:var(--border);font-size:9px;color:var(--text3)">?</div>';
+  const colors={PT:'var(--pt)',DF:'var(--df)',MC:'var(--mc)',DL:'var(--dl)',MD:'var(--md)'};
+  const parts=pos.split('/').filter(p=>p);
+  if(parts.length===1)return'<div class="pos-badge" style="background:'+(colors[parts[0]]||'var(--text3)')+'">'+parts[0]+'</div>';
+  const gs=parts.map((p,i)=>{const c=colors[p]||'#666';return c+' '+(i/parts.length*100).toFixed(0)+'%,'+c+' '+((i+1)/parts.length*100).toFixed(0)+'%';}).join(',');
+  return'<div class="pos-badge pos-multi" style="background:linear-gradient(180deg,'+gs+')">'+parts.map(p=>'<span>'+p+'</span>').join('')+'</div>';
+}
+function showSection(id,btn){
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+document.getElementById('modalOverlay').addEventListener('click',e=>{if(e.target===document.getElementById('modalOverlay'))closeModal();});
+
+// ══════════════════════════════════════════
+// ANÁLISIS LIGA — football-data.org v4 (PD = La Liga)
+// ══════════════════════════════════════════
+// Datos de La Liga vienen de data.json (generado por GitHub Actions)
+
+let ligaData   = {};
+let ligaLoaded = false;
+
+async function loadLiga() {
+  if (ligaLoaded) return;
+  document.getElementById('ligaLoading').style.display = 'flex';
+  document.getElementById('ligaContent').style.display = 'none';
+  try {
+    // Los datos vienen de data.json (generado por GitHub Actions cada día)
+    // Sin CORS, sin esperas, carga instantánea
+    const res  = await fetch('./data.json');
+    const data = await res.json();
+    const ll   = data.laliga;
+
+    if (!ll) throw new Error('Datos de La Liga no disponibles en data.json. Ejecuta el workflow manualmente en GitHub Actions.');
+
+    ligaData.standings     = ll.table        || [];
+    ligaData.nextMatches   = ll.nextMatches  || [];
+    ligaData.recentResults = ll.recentResults|| [];
+    ligaData.season        = ll.matchday     || '?';
+    ligaData.forms         = ll.forms        || {};
+
+    renderTablaLiga();
+    renderProximaJornada();
+    renderUltimosResultados();
+    renderEquiposGrid();
+    renderRecomendaciones();
+
+    ligaLoaded = true;
+    document.getElementById('ligaLoading').style.display = 'none';
+    document.getElementById('ligaContent').style.display = 'block';
+  } catch(e) {
+    document.getElementById('ligaLoading').innerHTML =
+      `<div style="color:var(--red);font-family:'IBM Plex Mono',monospace;font-size:0.8rem;padding:20px;text-align:center">
+        ❌ ${e.message}<br><br>
+        <span style="color:var(--text3)">Ve a GitHub → Actions → Run workflow para actualizar data.json</span>
+      </div>`;
+  }
+}
+
+function calcTeamForms() {
+  ligaData.forms = {};
+  const sorted = [...ligaData.recent].sort((a,b) => new Date(b.utcDate)-new Date(a.utcDate));
+  sorted.forEach(m => {
+    const hg = m.score?.fullTime?.home;
+    const ag = m.score?.fullTime?.away;
+    if (hg === null || hg === undefined) return;
+    [m.homeTeam, m.awayTeam].forEach((team, idx) => {
+      if (!ligaData.forms[team.id]) ligaData.forms[team.id] = { name: team.name, crest: team.crest, results: [], gf:0, ga:0 };
+      const f = ligaData.forms[team.id];
+      if (f.results.length < 5) {
+        const scored  = idx === 0 ? hg : ag;
+        const concede = idx === 0 ? ag : hg;
+        const res = scored > concede ? 'W' : scored < concede ? 'L' : 'D';
+        f.results.push(res);
+        f.gf += scored;
+        f.ga += concede;
+      }
+    });
+  });
+}
+
+function formScore(results) {
+  return results.reduce((s,r) => s + (r==='W'?3:r==='D'?1:0), 0);
+}
+
+function formBadges(results) {
+  return results.map(r => `<span class="form-badge form-${r}">${r}</span>`).join('');
+}
+
+function difficultyOf(teamId, isHome) {
+  // dificultad 1-5 basada en posición del rival en la tabla
+  const rival = ligaData.standings.find(t => t.team.id === teamId);
+  if (!rival) return 3;
+  const pos = rival.position;
+  // Local tiene ventaja → ajuste
+  let diff = Math.ceil(pos / 4); // 1-4→1, 5-8→2, 9-12→3, 13-16→4, 17-20→5
+  if (!isHome) diff = Math.max(1, diff - 1); // jugar en casa facilita
+  return Math.min(5, Math.max(1, diff));
+}
+
+// ── TABLA CLASIFICACIÓN ──────────────────────────────────────────
+function renderTablaLiga() {
+  const t = ligaData.standings;
+  document.getElementById('ligaJornada').textContent = `Jornada ${ligaData.season}`;
+  const rows = t.map(team => {
+    const p = team.position;
+    let posColor = 'var(--text3)';
+    if (p <= 4)  posColor = 'var(--blue)';
+    else if (p === 5) posColor = 'var(--green)';
+    else if (p >= 18) posColor = 'var(--red)';
+    const diff = team.goalDifference;
+    const diffStr = diff > 0 ? `+${diff}` : String(diff);
+    const form = ligaData.forms[team.team.id];
+    const fHtml = form ? formBadges(form.results) : '';
+    return `<tr>
+      <td style="font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:${posColor};font-weight:700;padding-left:14px">${p}</td>
+      <td style="text-align:left;padding-left:6px">
+        <img class="crest-sm" src="${team.team.crest}" onerror="this.style.display='none'">
+        ${team.team.shortName || team.team.name}
+      </td>
+      <td>${team.playedGames}</td>
+      <td style="color:var(--green)">${team.won}</td>
+      <td style="color:var(--text3)">${team.draw}</td>
+      <td style="color:var(--red)">${team.lost}</td>
+      <td>${team.goalsFor}:${team.goalsAgainst}</td>
+      <td style="color:${diff>0?'var(--green)':diff<0?'var(--red)':'var(--text3)'}">${diffStr}</td>
+      <td style="font-weight:800;color:var(--accent);font-family:'Barlow Condensed',sans-serif;font-size:1.1rem">${team.points}</td>
+      <td style="padding-right:14px"><div style="display:flex;gap:2px;justify-content:flex-end">${fHtml}</div></td>
+    </tr>`;
+  }).join('');
+
+  document.getElementById('tablaLiga').innerHTML = `
+    <thead><tr style="background:var(--bg3)">
+      <th style="text-align:left;padding-left:14px">#</th>
+      <th style="text-align:left">Equipo</th>
+      <th>PJ</th><th>G</th><th>E</th><th>P</th>
+      <th>GF:GC</th><th>DG</th><th>Pts</th>
+      <th style="text-align:right;padding-right:14px">Forma</th>
+    </tr></thead>
+    <tbody>${rows}</tbody>`;
+}
+
+// ── PRÓXIMA JORNADA ──────────────────────────────────────────────
+function renderProximaJornada() {
+  const matches = ligaData.nextMatches || [];
+  if (!matches.length) {
+    document.getElementById('proximaJornada').innerHTML = '<div style="padding:14px;color:var(--text3);font-size:0.8rem">No hay partidos programados</div>';
+    return;
+  }
+  document.getElementById('proximaJornada').innerHTML = matches.map(m => {
+    const date    = new Date(m.date);
+    const dateStr = date.toLocaleDateString('es-ES', { weekday:'short', day:'numeric', month:'short' });
+    const timeStr = date.toLocaleTimeString('es-ES', { hour:'2-digit', minute:'2-digit' });
+    return `<div class="fixture-row">
+      <img class="crest-sm" src="${m.home.crest}" onerror="this.style.display='none'">
+      <div class="fixture-teams">
+        <span style="font-weight:600">${m.home.short||m.home.name}</span>
+        <span style="color:var(--text3);font-size:0.75rem;margin:0 4px">vs</span>
+        ${m.away.short||m.away.name}
+      </div>
+      <img class="crest-sm" src="${m.away.crest}" onerror="this.style.display='none'">
+      <div class="fixture-date">${dateStr}<br>${timeStr}</div>
+    </div>`;
+  }).join('');
+}
+
+// ── ÚLTIMOS RESULTADOS ───────────────────────────────────────────
+function renderUltimosResultados() {
+  const last = ligaData.recentResults || [];
+  if (!last.length) { document.getElementById('ultimosResultados').innerHTML = '<div style="padding:14px;color:var(--text3);font-size:0.8rem">Sin resultados</div>'; return; }
+  document.getElementById('ultimosResultados').innerHTML = last.map(m => {
+    const hg   = m.score?.home ?? '-';
+    const ag   = m.score?.away ?? '-';
+    const date = new Date(m.date).toLocaleDateString('es-ES', { day:'numeric', month:'short' });
+    return `<div class="fixture-row">
+      <img class="crest-sm" src="${m.home.crest}" onerror="this.style.display='none'">
+      <div class="fixture-teams">
+        ${m.home.short||m.home.name}
+        <span style="color:var(--text3);font-size:0.75rem;margin:0 4px">—</span>
+        ${m.away.short||m.away.name}
+      </div>
+      <img class="crest-sm" src="${m.away.crest}" onerror="this.style.display='none'">
+      <div class="fixture-score">${hg} — ${ag}</div>
+      <div class="fixture-date">${date}</div>
+    </div>`;
+  }).join('');
+}
+
+// ── TARJETAS EQUIPOS ─────────────────────────────────────────────
+function renderEquiposGrid(filter) {
+  const teams = ligaData.standings;
+  const filtered = filter
+    ? teams.filter(t => (t.team.name+t.team.shortName).toLowerCase().includes(filter.toLowerCase()))
+    : teams;
+
+  document.getElementById('equiposGrid').innerHTML = filtered.map(team => {
+    const form = ligaData.forms[team.team.id] || { results: [], gf: 0, ga: 0 };
+    const score = formScore(form.results);
+    const scoreColor = score >= 10 ? 'var(--green)' : score >= 6 ? 'var(--pt)' : 'var(--red)';
+    return `<div class="team-card" style="border-radius:0;border:none;border-right:1px solid var(--border);border-bottom:1px solid var(--border)">
+      <div class="team-card-header">
+        <img class="team-crest" src="${team.team.crest}" onerror="this.style.display='none'">
+        <div>
+          <div class="team-card-name">${team.team.shortName||team.team.name}</div>
+          <div class="team-card-pos">${team.position}º · ${team.points} pts</div>
+        </div>
+        <div style="margin-left:auto;font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;font-weight:800;color:${scoreColor}">${score}/15</div>
+      </div>
+      <div class="team-form">${formBadges(form.results)}</div>
+      <div class="team-card-body">
+        <div class="team-stat"><div class="team-stat-val">${team.won}</div><div class="team-stat-lbl">V</div></div>
+        <div class="team-stat"><div class="team-stat-val">${team.draw}</div><div class="team-stat-lbl">E</div></div>
+        <div class="team-stat"><div class="team-stat-val">${team.lost}</div><div class="team-stat-lbl">D</div></div>
+        <div class="team-stat"><div class="team-stat-val">${team.goalsFor}</div><div class="team-stat-lbl">GF</div></div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function filterTeamCards(val) {
+  renderEquiposGrid(val);
+}
+
+// ── RECOMENDACIONES FANTASY ──────────────────────────────────────
+function renderRecomendaciones() {
+  const recs = [];
+  const nextMatches = ligaData.nextMatches || [];
+  if (!nextMatches.length) return;
+
+  nextMatches.forEach(m => {
+    const homeForm  = ligaData.forms[m.home.id];
+    const awayForm  = ligaData.forms[m.away.id];
+    const homeScore = homeForm ? formScore(homeForm.results) : 5;
+    const awayScore = awayForm ? formScore(awayForm.results) : 5;
+    const homeName  = m.home.short || m.home.name;
+    const awayName  = m.away.short || m.away.name;
+
+    if (homeScore >= 9 && awayScore <= 4) {
+      recs.push({ icon:'🔥', title:`Atacantes del ${homeName}`,
+        body:`Recibe a ${awayName} con ventaja local. Forma ${homeScore}/15 vs rival en racha negativa ${awayScore}/15.`,
+        badge:'COMPRAR', cls:'rec-buy' });
+    }
+    if (awayScore >= 9 && homeScore <= 4) {
+      recs.push({ icon:'📈', title:`Atacantes del ${awayName}`,
+        body:`Visitan a ${homeName} en gran forma (${awayScore}/15). El local flojea (${homeScore}/15).`,
+        badge:'COMPRAR', cls:'rec-buy' });
+    }
+    const homeGA = homeForm?.ga ?? 99;
+    if (homeGA <= 2 && homeScore >= 7) {
+      recs.push({ icon:'🧤', title:`Portero/Defensas del ${homeName}`,
+        body:`Solo ${homeGA} goles encajados en sus últimas 5 jornadas.`,
+        badge:'VIGILAR', cls:'rec-watch' });
+    }
+    if (homeScore <= 3 && awayScore >= 9) {
+      recs.push({ icon:'⚠️', title:`Evitar jugadores del ${homeName}`,
+        body:`Reciben a ${awayName} en racha. Forma muy pobre ${homeScore}/15.`,
+        badge:'VENDER', cls:'rec-sell' });
+    }
+  });
+
+  // Si hay jugadores propios en riesgo (cruzar con allPlayers)
+  if (allPlayers.length) {
+    const myTeam = getEquipo();
+    myTeam.forEach(p => {
+      const teamName = (p.club || '').toLowerCase();
+      const standing = ligaData.standings.find(t =>
+        t.team.name.toLowerCase().includes(teamName) ||
+        teamName.includes((t.team.shortName||'').toLowerCase())
+      );
+      if (standing && standing.position >= 16) {
+        recs.push({
+          icon: '📉',
+          title: `${p.name} — equipo en descenso`,
+          body: `${standing.team.shortName} está en zona de descenso (${standing.position}º). Considera si merece sitio en tu once.`,
+          badge: 'REVISAR', cls: 'rec-sell'
+        });
+      }
+    });
+  }
+
+  if (!recs.length) {
+    document.getElementById('recomendaciones').innerHTML =
+      '<div style="padding:16px;color:var(--text3);font-size:0.8rem;grid-column:1/-1">No hay recomendaciones destacadas esta jornada.</div>';
+    return;
+  }
+
+  document.getElementById('recomendaciones').innerHTML = recs.slice(0, 8).map(r => `
+    <div class="rec-card">
+      <div class="rec-icon">${r.icon}</div>
+      <div>
+        <div class="rec-title">${r.title}</div>
+        <div class="rec-body">${r.body}</div>
+        <span class="rec-badge ${r.cls}">${r.badge}</span>
+      </div>
+    </div>`).join('');
+}
 </script>
 
 </body>
