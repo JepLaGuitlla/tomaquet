@@ -7,32 +7,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@300;400;500&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg:#060a10;--bg2:#0a0f1a;--bg3:#0f1622;--bg4:#141d2e;
-  --border:#1a2535;--border2:#243347;
-  --accent:#a3e635;--accent2:#84cc16;--accent-dim:rgba(163,230,53,0.1);
-  --text:#dde4f0;--text2:#7a8fa8;--text3:#3d5068;
-  --pt:#f59e0b;--df:#3b82f6;--mc:#22c55e;--dl:#ef4444;--md:#8b5cf6;
-  --green:#4ade80;--red:#f87171;--blue:#60a5fa;--lime:#a3e635;
-  --field-line:rgba(255,255,255,0.12);
+  --bg:#ffffff;--bg2:#f8f8f8;--bg3:#f0f0f0;--bg4:#e8e8e8;
+  --border:#e0e0e0;--border2:#d0d0d0;
+  --accent:#e63329;--accent2:#c0261d;--accent-dim:rgba(230,51,41,0.08);
+  --text:#111111;--text2:#555555;--text3:#999999;
+  --pt:#d97706;--df:#1d6fce;--mc:#16a34a;--dl:#e63329;--md:#7c3aed;
+  --green:#16a34a;--red:#e63329;--blue:#1d6fce;--lime:#e63329;
+  --field-line:rgba(0,0,0,0.15);
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 
-/* NOISE TEXTURE OVERLAY */
-body::before{
-  content:'';
-  position:fixed;
-  inset:0;
-  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-  pointer-events:none;
-  z-index:9999;
-  opacity:0.4;
-}
+/* noise overlay eliminado */
 
 body{background:var(--bg);color:var(--text);font-family:'Barlow',sans-serif;min-height:100vh;overflow-x:hidden;font-weight:400;}
 
 /* ── HEADER ─── */
-header{background:var(--bg);border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);}
-header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0.4;}
+header{background:#fff;border-bottom:1px solid var(--border);padding:0 2rem;position:sticky;top:0;z-index:100;box-shadow:0 1px 8px rgba(0,0,0,0.07);}
+header::after{display:none;}
 .header-inner{max-width:1440px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px;}
 .logo{display:flex;align-items:baseline;gap:10px;}
 .logo-mark{font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;font-weight:800;color:var(--accent);letter-spacing:4px;text-transform:uppercase;}
@@ -43,7 +34,7 @@ header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;ba
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(0.8)}}
 
 /* ── NAV ─── */
-.nav-wrap{border-bottom:1px solid var(--border);background:var(--bg);}
+.nav-wrap{border-bottom:2px solid var(--border);background:#fff;}
 nav{max-width:1440px;margin:0 auto;padding:0 2rem;display:flex;gap:0;}
 .nav-btn{font-family:'Barlow Condensed',sans-serif;font-size:0.8rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text3);background:none;border:none;padding:12px 20px;cursor:pointer;border-bottom:2px solid transparent;transition:all 0.2s;position:relative;}
 .nav-btn:hover{color:var(--text2);}
@@ -91,7 +82,7 @@ main{max-width:1440px;margin:0 auto;padding:1.5rem 2rem;}
 .th{font-family:'IBM Plex Mono',monospace;font-size:0.58rem;color:var(--text3);text-transform:uppercase;letter-spacing:1.5px;font-weight:500;cursor:pointer;user-select:none;transition:color 0.15s;}
 .th:hover{color:var(--accent);}
 .player-row{display:grid;grid-template-columns:40px 2fr 80px 1fr 100px 100px 80px 80px 80px;padding:9px 16px;border-bottom:1px solid rgba(26,37,53,0.8);transition:background 0.12s;align-items:center;}
-.player-row:hover{background:rgba(163,230,53,0.03);}
+.player-row:hover{background:rgba(230,51,41,0.04);}
 .player-row:last-child{border-bottom:none;}
 .rank{font-family:'IBM Plex Mono',monospace;font-size:0.7rem;color:var(--text3);font-weight:400;text-align:center;}
 .rank-1{color:var(--lime);font-weight:600;}.rank-2{color:#94a3b8;}.rank-3{color:#cd7f32;}
@@ -186,7 +177,10 @@ main{max-width:1440px;margin:0 auto;padding:1.5rem 2rem;}
 .liga-toggle{display:flex;gap:3px;background:var(--bg3);border:1px solid var(--border2);border-radius:3px;padding:3px;}
 .liga-btn{font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;background:transparent;border:none;padding:5px 12px;color:var(--text3);cursor:pointer;border-radius:2px;transition:all 0.15s;white-space:nowrap;}
 .liga-btn:hover{color:var(--text2);}
-.liga-btn.active{background:var(--accent);color:#000;}
+.liga-btn.active{background:var(--accent);color:#fff;}
+/* Liga colors */
+body.liga-tomaquet{--accent:#e63329;--accent2:#c0261d;--accent-dim:rgba(230,51,41,0.08);}
+body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,0.08);}
 
 /* ── ESTUDIO DE MERCADO ─── */
 .mercado-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:1.2rem;}
@@ -218,7 +212,7 @@ main{max-width:1440px;margin:0 auto;padding:1.5rem 2rem;}
 .standings-grid{display:grid;grid-template-columns:44px minmax(140px,2fr) 70px 80px 55px 70px 85px 90px;align-items:center;padding:9px 16px;gap:0;}
 .standings-header{background:var(--bg3);border-bottom:1px solid var(--border2);}
 .standings-row{border-bottom:1px solid rgba(26,37,53,0.6);transition:background 0.12s;}
-.standings-row:hover{background:rgba(163,230,53,0.03);}
+.standings-row:hover{background:rgba(230,51,41,0.04);}
 .standings-row:last-child{border-bottom:none;}
 .s-rank{font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:var(--text3);text-align:center;}
 .s-rank.gold{color:var(--lime);font-weight:600;}
@@ -235,7 +229,7 @@ main{max-width:1440px;margin:0 auto;padding:1.5rem 2rem;}
 .ftab:hover{border-color:var(--accent);color:var(--accent);}
 .ftab.active{background:var(--accent-dim);border-color:var(--accent);color:var(--accent);}
 .field-wrap{position:relative;width:100%;max-width:400px;margin:0 auto;}
-.field{background:linear-gradient(180deg,#0d2416 0%,#102a1a 8%,#0d2416 16%,#102a1a 24%,#0d2416 32%,#102a1a 40%,#0d2416 48%,#102a1a 56%,#0d2416 64%,#102a1a 72%,#0d2416 80%,#102a1a 88%,#0d2416 96%);border:1px solid rgba(163,230,53,0.2);border-radius:4px;aspect-ratio:0.65;position:relative;overflow:hidden;}
+.field{background:linear-gradient(180deg,#2d6a1f 0%,#327520 8%,#2d6a1f 16%,#327520 24%,#2d6a1f 32%,#327520 40%,#2d6a1f 48%,#327520 56%,#2d6a1f 64%,#327520 72%,#2d6a1f 80%,#327520 88%,#2d6a1f 96%);border:1px solid rgba(0,0,0,0.15);border-radius:4px;aspect-ratio:0.65;position:relative;overflow:hidden;}
 .field::before{content:'';position:absolute;top:50%;left:5%;width:90%;height:1px;background:var(--field-line);}
 .field::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:20%;padding-bottom:20%;border:1px solid var(--field-line);border-radius:50%;}
 .field-center-dot{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:5px;height:5px;background:var(--field-line);border-radius:50%;z-index:1;}
@@ -247,7 +241,7 @@ main{max-width:1440px;margin:0 auto;padding:1.5rem 2rem;}
 .player-circle{width:40px;height:40px;border-radius:2px;clip-path:polygon(0 0,calc(100% - 5px) 0,100% 5px,100% 100%,5px 100%,0 calc(100% - 5px));border:none;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:8px;font-weight:500;color:white;transition:all 0.2s;}
 .player-circle:hover{transform:scale(1.1);filter:brightness(1.2);}
 .player-circle.empty{background:rgba(255,255,255,0.05);border:1px dashed rgba(255,255,255,0.15);border-radius:2px;clip-path:none;color:var(--text3);}
-.player-name-tag{background:rgba(6,10,16,0.9);border:1px solid var(--border2);border-radius:2px;padding:2px 5px;font-family:'IBM Plex Mono',monospace;font-size:8px;color:var(--text);white-space:nowrap;text-align:center;}
+.player-name-tag{background:rgba(0,0,0,0.75);border:none;border-radius:2px;padding:2px 5px;font-family:'IBM Plex Mono',monospace;font-size:8px;color:#fff;white-space:nowrap;text-align:center;}
 .player-pts-tag{font-family:'IBM Plex Mono',monospace;font-size:7px;color:var(--lime);}
 .badge-sell{font-family:'IBM Plex Mono',monospace;font-size:6px;background:var(--red);color:white;border-radius:2px;padding:1px 4px;font-weight:600;letter-spacing:1px;}
 .badge-warn{font-family:'IBM Plex Mono',monospace;font-size:6px;background:var(--lime);color:#000;border-radius:2px;padding:1px 4px;font-weight:600;}
@@ -293,7 +287,7 @@ main{max-width:1440px;margin:0 auto;padding:1.5rem 2rem;}
 .modal-remove:hover{background:rgba(248,113,113,0.12);}
 </style>
 </head>
-<body>
+<body class="liga-tomaquet">
 
 <header>
   <div class="header-inner">
@@ -811,6 +805,9 @@ function switchLiga(id) {
 
   // Actualizar toggle UI
   document.querySelectorAll('.liga-btn').forEach(b => b.classList.toggle('active', b.dataset.liga === id));
+  // Clase en body para color de liga
+  document.body.className = document.body.className.replace(/liga-\S+/g,'').trim();
+  document.body.classList.add(id === 'tomaquet' ? 'liga-tomaquet' : 'liga-enbas');
 
   // Actualizar logo
   document.getElementById('logoMark').textContent = LIGA_ACTIVA.nombre;
@@ -849,26 +846,10 @@ const FORMATIONS={
 // RSS CONFIG
 // ══════════════════════════════════════════
 const RSS_SOURCES = [
-  {
-    id: 'jp', label: 'Jornada Perfecta',
-    url: 'https://api.allorigins.win/get?url=' + encodeURIComponent('https://www.jornadaperfecta.com/feed/'),
-    cls: 'src-jp'
-  },
-  {
-    id: 'as', label: 'AS Fantasy',
-    url: 'https://api.allorigins.win/get?url=' + encodeURIComponent('https://fantasy.as.com/feed/'),
-    cls: 'src-as'
-  },
-  {
-    id: 'cm', label: 'Comuniate',
-    url: 'https://api.allorigins.win/get?url=' + encodeURIComponent('https://www.comuniate.com/feed/'),
-    cls: 'src-cm'
-  },
-  {
-    id: 'rv', label: 'Relevo Fantasy',
-    url: 'https://api.allorigins.win/get?url=' + encodeURIComponent('https://www.relevo.com/rss/noticias/'),
-    cls: 'src-rv'
-  }
+  { id: 'jp', label: 'Jornada Perfecta', rss: 'https://www.jornadaperfecta.com/feed/', cls: 'src-jp' },
+  { id: 'as', label: 'AS Fantasy',       rss: 'https://fantasy.as.com/feed/',          cls: 'src-as' },
+  { id: 'cm', label: 'Comuniate',         rss: 'https://www.comuniate.com/feed/',       cls: 'src-cm' },
+  { id: 'rv', label: 'Relevo Fantasy',    rss: 'https://www.relevo.com/rss/noticias/',  cls: 'src-rv' },
 ];
 
 let allNews = [];
@@ -902,14 +883,25 @@ async function loadNews() {
   allNews = [];
 
   const fetches = RSS_SOURCES.map(async src => {
-    try {
-      const res = await fetch(src.url, { signal: AbortSignal.timeout(6000) });
-      const json = await res.json();
-      const items = parseRSS(json.contents || '');
-      items.forEach(item => { item.srcId = src.id; item.srcLabel = src.label; item.srcCls = src.cls; });
-      allNews.push(...items);
-    } catch(e) {
-      // source failed silently
+    const proxies = [
+      'https://api.allorigins.win/get?url=',
+      'https://corsproxy.io/?url=',
+    ];
+    for (const proxy of proxies) {
+      try {
+        const url = proxy + encodeURIComponent(src.rss);
+        const res = await fetch(url, { signal: AbortSignal.timeout(7000) });
+        if (!res.ok) continue;
+        const json = await res.json();
+        const xmlStr = json.contents || json.data || (typeof json === 'string' ? json : '');
+        if (!xmlStr) continue;
+        const items = parseRSS(xmlStr);
+        items.forEach(item => { item.srcId = src.id; item.srcLabel = src.label; item.srcCls = src.cls; });
+        allNews.push(...items);
+        break; // proxy funcionó, salir
+      } catch(e) {
+        // probar siguiente proxy
+      }
     }
   });
 
@@ -1025,7 +1017,12 @@ function calcularChollos(players) {
 
 // ── Rankings alimentados por ADVANCED_STATS ──────────────────────
 function buildRankRow(name, pos, club, valLabel, colorCls, pct) {
-  const posColor = PC[pos] || '#555';
+  // Si pos no es PT/DF/MC/DL/MD, buscar en allPlayers
+  if (pos && !PC[pos]) {
+    const found = allPlayers.find(p => p.name === name);
+    if (found) pos = (found.position || '').split('/')[0];
+  }
+  const posColor = PC[pos] || '#888';
   const barColor = colorCls==='green'?'var(--green)':colorCls==='red'?'var(--red)':colorCls==='amber'?'var(--accent)':'var(--blue)';
   return `
     <div class="rank-row">
