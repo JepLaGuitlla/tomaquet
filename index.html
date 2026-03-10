@@ -298,6 +298,73 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
 .modal-player-price{font-family:'IBM Plex Mono',monospace;font-size:0.62rem;color:var(--text3);}
 .modal-remove{background:rgba(248,113,113,0.06);border:1px solid rgba(248,113,113,0.2);border-radius:3px;padding:9px;color:var(--red);font-family:'IBM Plex Mono',monospace;font-size:0.75rem;letter-spacing:1px;cursor:pointer;margin:0.6rem;width:calc(100% - 1.2rem);transition:all 0.15s;}
 .modal-remove:hover{background:rgba(248,113,113,0.12);}
+
+/* ══════════════════════════════════════════
+   ANÁLISIS LIGA
+══════════════════════════════════════════ */
+.liga-layout{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;}
+@media(max-width:900px){.liga-layout{grid-template-columns:1fr;}}
+.liga-full{grid-column:1/-1;}
+
+.form-badge{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:4px;font-family:'IBM Plex Mono',monospace;font-size:0.65rem;font-weight:700;color:#fff;flex-shrink:0;}
+.form-W{background:#16a34a;}.form-D{background:#d97706;}.form-L{background:#e63329;}
+
+.team-card{background:#fff;border:1px solid var(--border);border-radius:8px;overflow:hidden;transition:box-shadow 0.15s;}
+.team-card:hover{box-shadow:0 4px 16px rgba(0,0,0,0.08);}
+.team-card-header{display:flex;align-items:center;gap:12px;padding:12px 14px;border-bottom:1px solid var(--border);}
+.team-crest{width:36px;height:36px;object-fit:contain;}
+.team-card-name{font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;color:var(--text);}
+.team-card-pos{font-family:'IBM Plex Mono',monospace;font-size:0.65rem;color:var(--text3);}
+.team-card-body{padding:10px 14px;display:grid;grid-template-columns:repeat(4,1fr);gap:6px;}
+.team-stat{text-align:center;}
+.team-stat-val{font-family:'Barlow Condensed',sans-serif;font-size:1.3rem;font-weight:700;color:var(--text);}
+.team-stat-lbl{font-family:'IBM Plex Mono',monospace;font-size:0.55rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px;}
+.team-form{display:flex;gap:3px;padding:8px 14px;border-top:1px solid var(--border);}
+
+.fixture-row{display:flex;align-items:center;gap:10px;padding:9px 14px;border-bottom:1px solid var(--border);}
+.fixture-row:last-child{border-bottom:none;}
+.fixture-teams{flex:1;font-size:0.85rem;font-weight:500;color:var(--text);}
+.fixture-score{font-family:'IBM Plex Mono',monospace;font-size:0.85rem;font-weight:700;color:var(--text);min-width:40px;text-align:center;}
+.fixture-date{font-family:'IBM Plex Mono',monospace;font-size:0.62rem;color:var(--text3);min-width:50px;text-align:right;}
+.fixture-status{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;padding:2px 6px;border-radius:3px;font-weight:600;}
+.fixture-live{background:rgba(230,51,41,0.1);color:var(--accent);}
+.fixture-fin{background:var(--bg3);color:var(--text3);}
+.fixture-prox{background:rgba(29,111,206,0.1);color:var(--blue);}
+
+.diff-badge{display:inline-block;padding:3px 8px;border-radius:4px;font-family:'IBM Plex Mono',monospace;font-size:0.65rem;font-weight:700;}
+.diff-1,.diff-2{background:rgba(22,163,74,0.12);color:#16a34a;}
+.diff-3{background:rgba(217,119,6,0.12);color:#d97706;}
+.diff-4,.diff-5{background:rgba(230,51,41,0.12);color:#e63329;}
+
+.panel{background:#fff;border:1px solid var(--border);border-radius:8px;overflow:hidden;}
+.panel-header{padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
+.panel-title{font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--text2);}
+.panel-title::before{content:'// ';color:var(--accent);font-family:'IBM Plex Mono',monospace;}
+
+.tabla-liga{width:100%;border-collapse:collapse;}
+.tabla-liga th{font-family:'IBM Plex Mono',monospace;font-size:0.58rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px;padding:8px 10px;background:var(--bg3);border-bottom:1px solid var(--border);text-align:right;}
+.tabla-liga th:nth-child(1),.tabla-liga th:nth-child(2){text-align:left;}
+.tabla-liga td{padding:8px 10px;border-bottom:1px solid var(--border);font-size:0.82rem;color:var(--text);text-align:right;vertical-align:middle;}
+.tabla-liga td:nth-child(2){text-align:left;font-weight:600;}
+.tabla-liga tr:hover td{background:var(--accent-dim);}
+.tabla-liga tr:last-child td{border-bottom:none;}
+.pos-num{font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:var(--text3);width:24px;}
+.pos-champ{color:#1d6fce;font-weight:700;}
+.pos-europa{color:#16a34a;font-weight:600;}
+.pos-conf{color:#d97706;}
+.pos-rel{color:#e63329;}
+.crest-sm{width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;}
+
+.rec-card{background:#fff;border:1px solid var(--border);border-radius:8px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start;}
+.rec-icon{font-size:1.4rem;flex-shrink:0;}
+.rec-title{font-family:'Barlow Condensed',sans-serif;font-size:0.95rem;font-weight:700;color:var(--text);margin-bottom:2px;}
+.rec-body{font-size:0.8rem;color:var(--text2);line-height:1.4;}
+.rec-badge{display:inline-block;margin-top:6px;padding:3px 8px;border-radius:4px;font-family:'IBM Plex Mono',monospace;font-size:0.62rem;font-weight:700;}
+.rec-buy{background:rgba(22,163,74,0.1);color:#16a34a;}
+.rec-sell{background:rgba(230,51,41,0.1);color:#e63329;}
+.rec-watch{background:rgba(29,111,206,0.1);color:#1d6fce;}
+
+.liga-loading{display:flex;align-items:center;justify-content:center;padding:60px;gap:12px;color:var(--text3);font-family:'IBM Plex Mono',monospace;font-size:0.8rem;}
 </style>
 </head>
 <body class="liga-tomaquet">
@@ -330,6 +397,7 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
     <button class="nav-btn" onclick="showSection('general',this)">GENERAL</button>
     <button class="nav-btn" onclick="showSection('grupos',this)">SA CAPRITXOSA</button>
     <button class="nav-btn" onclick="showSection('miequipo',this)">MI EQUIPO</button>
+    <button class="nav-btn" onclick="showSection('liga',this)">⚡ ANÁLISIS LIGA</button>
   </nav>
 </div>
 
@@ -493,6 +561,72 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
         <div id="meTableBody"></div>
       </div>
     </div>
+  </div>
+</div>
+
+
+<div id="liga" class="section">
+  <div class="section-title">Análisis de Liga</div>
+
+  <div id="ligaLoading" class="liga-loading">
+    <div class="spinner"></div> Cargando datos de La Liga…
+  </div>
+
+  <div id="ligaContent" style="display:none">
+
+    <!-- Clasificación + próxima jornada -->
+    <div class="liga-layout" style="margin-bottom:1.2rem">
+
+      <!-- Clasificación -->
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-title">Clasificación La Liga</div>
+          <span id="ligaJornada" style="font-family:'IBM Plex Mono',monospace;font-size:0.65rem;color:var(--text3)"></span>
+        </div>
+        <div style="overflow-x:auto">
+          <table class="tabla-liga" id="tablaLiga"></table>
+        </div>
+      </div>
+
+      <!-- Panel derecho: próximos partidos + forma -->
+      <div style="display:flex;flex-direction:column;gap:1rem">
+
+        <div class="panel">
+          <div class="panel-header">
+            <div class="panel-title">Próxima Jornada</div>
+          </div>
+          <div id="proximaJornada"></div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-header">
+            <div class="panel-title">Últimos Resultados</div>
+          </div>
+          <div id="ultimosResultados"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Tarjetas de equipos con forma -->
+    <div class="panel liga-full" style="margin-bottom:1.2rem">
+      <div class="panel-header">
+        <div class="panel-title">Forma de los Equipos (Últimas 5)</div>
+        <div style="display:flex;gap:6px">
+          <input id="teamSearch" placeholder="Buscar equipo…" style="border:1px solid var(--border);border-radius:4px;padding:5px 10px;font-size:0.78rem;outline:none;color:var(--text)" oninput="filterTeamCards(this.value)">
+        </div>
+      </div>
+      <div id="equiposGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1px;background:var(--border);padding:0"></div>
+    </div>
+
+    <!-- Recomendaciones fantasy -->
+    <div class="panel liga-full">
+      <div class="panel-header">
+        <div class="panel-title">Recomendaciones Fantasy — Próxima Jornada</div>
+      </div>
+      <div id="recomendaciones" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem;padding:16px"></div>
+    </div>
+
   </div>
 </div>
 
@@ -865,6 +999,11 @@ const RSS_SOURCES = [
   { id: 'rv', label: 'Relevo Fantasy',    rss: 'https://www.relevo.com/rss/noticias/',  cls: 'src-rv' },
 ];
 
+// rss2json: servicio gratuito que convierte RSS a JSON con imagen incluida, sin CORS
+function rss2jsonUrl(rssUrl) {
+  return `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}&count=10`;
+}
+
 let allNews = [];
 let activeNewsFilter = 'all';
 
@@ -915,6 +1054,26 @@ async function loadNews() {
   allNews = [];
 
   const fetches = RSS_SOURCES.map(async src => {
+    // Estrategia 1: rss2json (JSON limpio, sin CORS, incluye imagen)
+    try {
+      const res = await fetch(rss2jsonUrl(src.rss), { signal: AbortSignal.timeout(8000) });
+      if (res.ok) {
+        const json = await res.json();
+        if (json.status === 'ok' && json.items?.length) {
+          const items = json.items.map(item => ({
+            title: item.title || '',
+            link:  item.link  || '#',
+            date:  item.pubDate || '',
+            img:   item.thumbnail || item.enclosure?.link || '',
+          }));
+          items.forEach(item => { item.srcId = src.id; item.srcLabel = src.label; item.srcCls = src.cls; });
+          allNews.push(...items);
+          return; // éxito, salir
+        }
+      }
+    } catch(e) { /* fallo, probar proxy */ }
+
+    // Estrategia 2: proxy CORS + parseRSS manual (fallback)
     const proxies = [
       'https://api.allorigins.win/get?url=',
       'https://corsproxy.io/?url=',
@@ -930,10 +1089,8 @@ async function loadNews() {
         const items = parseRSS(xmlStr);
         items.forEach(item => { item.srcId = src.id; item.srcLabel = src.label; item.srcCls = src.cls; });
         allNews.push(...items);
-        break; // proxy funcionó, salir
-      } catch(e) {
-        // probar siguiente proxy
-      }
+        break;
+      } catch(e) { /* probar siguiente */ }
     }
   });
 
@@ -1097,9 +1254,18 @@ function buildRankRow(name, pos, club, valLabel, colorCls, pct) {
 function initRankings() {
   const entries = Object.entries(ADVANCED_STATS).filter(([,s]) => !s.inGuitlla);
 
+  // Helper: buscar pos en allPlayers (que ya tiene mapPosition aplicado)
+  function resolvePos(name, fallback) {
+    if (allPlayers.length) {
+      const found = allPlayers.find(p => p.name === name || p.name.toLowerCase() === name.toLowerCase());
+      if (found && found.position) return found.position.split('/')[0];
+    }
+    return fallback || '';
+  }
+
   // 🔥 En racha — suma de últimas 5 jornadas
   const racha = entries
-    .map(([name,s]) => ({ name, pos:s.pos||'', sum:(s.j1||0)+(s.j2||0)+(s.j3||0)+(s.j4||0)+(s.j5||0) }))
+    .map(([name,s]) => ({ name, pos: resolvePos(name, s.pos||''), sum:(s.j1||0)+(s.j2||0)+(s.j3||0)+(s.j4||0)+(s.j5||0) }))
     .filter(p => p.sum > 0)
     .sort((a,b) => b.sum - a.sum)
     .slice(0, 5);
@@ -1111,7 +1277,7 @@ function initRankings() {
   // 📈 Más suben — ROI alto como proxy de jugadores en alza
   const suben = entries
     .filter(([,s]) => s.roi && s.valor)
-    .map(([name,s]) => ({ name, pos:s.pos||'', roi:s.roi, valor:s.valor }))
+    .map(([name,s]) => ({ name, pos: resolvePos(name, s.pos||''), roi:s.roi, valor:s.valor }))
     .sort((a,b) => b.roi - a.roi)
     .slice(0, 5);
   const subenMax = suben[0]?.roi || 1;
@@ -1122,7 +1288,7 @@ function initRankings() {
   // 📉 Más bajan — factor clave bajo y valor alto (sobrevalorados)
   const bajan = entries
     .filter(([,s]) => s.factor && s.valor && s.valor > 5)
-    .map(([name,s]) => ({ name, pos:s.pos||'', factor:s.factor, valor:s.valor }))
+    .map(([name,s]) => ({ name, pos: resolvePos(name, s.pos||''), factor:s.factor, valor:s.valor }))
     .sort((a,b) => a.factor - b.factor)
     .slice(0, 5);
   const bajanMax = bajan[0] ? Math.abs(bajan[0].factor) || 1 : 1;
@@ -1133,7 +1299,7 @@ function initRankings() {
   // ⭐ Top puntuadores — por pts totales
   const topPts = entries
     .filter(([,s]) => s.pts)
-    .map(([name,s]) => ({ name, pos:s.pos||'', pts:s.pts, media:s.media }))
+    .map(([name,s]) => ({ name, pos: resolvePos(name, s.pos||''), pts:s.pts, media:s.media }))
     .sort((a,b) => b.pts - a.pts)
     .slice(0, 5);
   const ptsMax = topPts[0]?.pts || 1;
@@ -1257,9 +1423,8 @@ document.addEventListener('DOMContentLoaded',()=>{
   renderMercado();
   autoPlace();
   renderMiEquipo();
-  loadPlayers();
+  loadPlayers(); // initRankings se llama al final de loadPlayers con datos reales
   loadNews();
-  initRankings();
 });
 
 async function loadPlayers(){
@@ -1303,11 +1468,13 @@ async function loadPlayers(){
     document.getElementById('statusText').textContent=allPlayers.length+' jugadores · actualizado '+when;
     renderStats();
     renderRankings(allPlayers);
+    initRankings(); // ahora allPlayers está cargado, pos correctas
   }catch(e){
     document.getElementById('jugadores-loading').innerHTML='<div class="error-msg">❌ Error cargando jugadores: '+e.message+'</div>';
     document.getElementById('statusText').textContent='Error';
     // Fallback: rankings con datos estáticos de Guitlla
     renderRankings(getEquipo().map(enrichPlayer));
+    initRankings();
   }
 }
 
@@ -1865,6 +2032,312 @@ function showSection(id,btn){
   btn.classList.add('active');
 }
 document.getElementById('modalOverlay').addEventListener('click',e=>{if(e.target===document.getElementById('modalOverlay'))closeModal();});
+
+// ══════════════════════════════════════════
+// ANÁLISIS LIGA — football-data.org v4 (PD = La Liga)
+// ══════════════════════════════════════════
+const FD_TOKEN = '00308a91cfc84b248611ecc22550c9de';
+const FD_BASE  = 'https://api.football-data.org/v4';
+const FD_H     = { 'X-Auth-Token': FD_TOKEN };
+
+let ligaData   = {};
+let ligaLoaded = false;
+
+async function loadLiga() {
+  if (ligaLoaded) return;
+  document.getElementById('ligaLoading').style.display = 'flex';
+  document.getElementById('ligaContent').style.display = 'none';
+  try {
+    const [sRes, mRes, rRes] = await Promise.all([
+      fetch(`${FD_BASE}/competitions/PD/standings`,                             { headers: FD_H }),
+      fetch(`${FD_BASE}/competitions/PD/matches?status=SCHEDULED&limit=30`,    { headers: FD_H }),
+      fetch(`${FD_BASE}/competitions/PD/matches?status=FINISHED&limit=50`,     { headers: FD_H }),
+    ]);
+    const [sJson, mJson, rJson] = await Promise.all([sRes.json(), mRes.json(), rRes.json()]);
+
+    ligaData.standings = sJson.standings?.[0]?.table || [];
+    ligaData.scheduled = mJson.matches || [];
+    ligaData.recent    = rJson.matches  || [];
+    ligaData.season    = sJson.season?.currentMatchday || '?';
+
+    calcTeamForms();
+    renderTablaLiga();
+    renderProximaJornada();
+    renderUltimosResultados();
+    renderEquiposGrid();
+    renderRecomendaciones();
+
+    ligaLoaded = true;
+    document.getElementById('ligaLoading').style.display = 'none';
+    document.getElementById('ligaContent').style.display = 'block';
+  } catch(e) {
+    document.getElementById('ligaLoading').innerHTML =
+      `<div style="color:var(--red);font-family:monospace;padding:20px">❌ Error: ${e.message}</div>`;
+  }
+}
+
+function calcTeamForms() {
+  ligaData.forms = {};
+  const sorted = [...ligaData.recent].sort((a,b) => new Date(b.utcDate)-new Date(a.utcDate));
+  sorted.forEach(m => {
+    const hg = m.score?.fullTime?.home;
+    const ag = m.score?.fullTime?.away;
+    if (hg === null || hg === undefined) return;
+    [m.homeTeam, m.awayTeam].forEach((team, idx) => {
+      if (!ligaData.forms[team.id]) ligaData.forms[team.id] = { name: team.name, crest: team.crest, results: [], gf:0, ga:0 };
+      const f = ligaData.forms[team.id];
+      if (f.results.length < 5) {
+        const scored  = idx === 0 ? hg : ag;
+        const concede = idx === 0 ? ag : hg;
+        const res = scored > concede ? 'W' : scored < concede ? 'L' : 'D';
+        f.results.push(res);
+        f.gf += scored;
+        f.ga += concede;
+      }
+    });
+  });
+}
+
+function formScore(results) {
+  return results.reduce((s,r) => s + (r==='W'?3:r==='D'?1:0), 0);
+}
+
+function formBadges(results) {
+  return results.map(r => `<span class="form-badge form-${r}">${r}</span>`).join('');
+}
+
+function difficultyOf(teamId, isHome) {
+  // dificultad 1-5 basada en posición del rival en la tabla
+  const rival = ligaData.standings.find(t => t.team.id === teamId);
+  if (!rival) return 3;
+  const pos = rival.position;
+  // Local tiene ventaja → ajuste
+  let diff = Math.ceil(pos / 4); // 1-4→1, 5-8→2, 9-12→3, 13-16→4, 17-20→5
+  if (!isHome) diff = Math.max(1, diff - 1); // jugar en casa facilita
+  return Math.min(5, Math.max(1, diff));
+}
+
+// ── TABLA CLASIFICACIÓN ──────────────────────────────────────────
+function renderTablaLiga() {
+  const t = ligaData.standings;
+  document.getElementById('ligaJornada').textContent = `Jornada ${ligaData.season}`;
+  const rows = t.map(team => {
+    const p = team.position;
+    let posColor = 'var(--text3)';
+    if (p <= 4)  posColor = 'var(--blue)';
+    else if (p === 5) posColor = 'var(--green)';
+    else if (p >= 18) posColor = 'var(--red)';
+    const diff = team.goalDifference;
+    const diffStr = diff > 0 ? `+${diff}` : String(diff);
+    const form = ligaData.forms[team.team.id];
+    const fHtml = form ? formBadges(form.results) : '';
+    return `<tr>
+      <td style="font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:${posColor};font-weight:700;padding-left:14px">${p}</td>
+      <td style="text-align:left;padding-left:6px">
+        <img class="crest-sm" src="${team.team.crest}" onerror="this.style.display='none'">
+        ${team.team.shortName || team.team.name}
+      </td>
+      <td>${team.playedGames}</td>
+      <td style="color:var(--green)">${team.won}</td>
+      <td style="color:var(--text3)">${team.draw}</td>
+      <td style="color:var(--red)">${team.lost}</td>
+      <td>${team.goalsFor}:${team.goalsAgainst}</td>
+      <td style="color:${diff>0?'var(--green)':diff<0?'var(--red)':'var(--text3)'}">${diffStr}</td>
+      <td style="font-weight:800;color:var(--accent);font-family:'Barlow Condensed',sans-serif;font-size:1.1rem">${team.points}</td>
+      <td style="padding-right:14px"><div style="display:flex;gap:2px;justify-content:flex-end">${fHtml}</div></td>
+    </tr>`;
+  }).join('');
+
+  document.getElementById('tablaLiga').innerHTML = `
+    <thead><tr style="background:var(--bg3)">
+      <th style="text-align:left;padding-left:14px">#</th>
+      <th style="text-align:left">Equipo</th>
+      <th>PJ</th><th>G</th><th>E</th><th>P</th>
+      <th>GF:GC</th><th>DG</th><th>Pts</th>
+      <th style="text-align:right;padding-right:14px">Forma</th>
+    </tr></thead>
+    <tbody>${rows}</tbody>`;
+}
+
+// ── PRÓXIMA JORNADA ──────────────────────────────────────────────
+function renderProximaJornada() {
+  // Coger los partidos de la próxima jornada (matchday más bajo entre scheduled)
+  const matches = ligaData.scheduled;
+  if (!matches.length) {
+    document.getElementById('proximaJornada').innerHTML = '<div style="padding:14px;color:var(--text3);font-size:0.8rem">No hay partidos programados</div>';
+    return;
+  }
+  const nextMD = Math.min(...matches.map(m => m.matchday).filter(Boolean));
+  const nextMatches = matches.filter(m => m.matchday === nextMD).slice(0, 10);
+
+  document.getElementById('proximaJornada').innerHTML = nextMatches.map(m => {
+    const date = new Date(m.utcDate);
+    const dateStr = date.toLocaleDateString('es-ES', { weekday:'short', day:'numeric', month:'short' });
+    const timeStr = date.toLocaleTimeString('es-ES', { hour:'2-digit', minute:'2-digit' });
+    const diffH = difficultyOf(m.homeTeam.id, false); // dificultad para el local
+    const diffA = difficultyOf(m.awayTeam.id, true);  // dificultad para el visitante
+    return `<div class="fixture-row">
+      <img class="crest-sm" src="${m.homeTeam.crest}" onerror="this.style.display='none'">
+      <div class="fixture-teams">
+        <span style="font-weight:600">${m.homeTeam.shortName||m.homeTeam.name}</span>
+        <span style="color:var(--text3);font-size:0.75rem;margin:0 4px">vs</span>
+        ${m.awayTeam.shortName||m.awayTeam.name}
+      </div>
+      <img class="crest-sm" src="${m.awayTeam.crest}" onerror="this.style.display='none'">
+      <div class="fixture-date">${dateStr}<br>${timeStr}</div>
+    </div>`;
+  }).join('');
+}
+
+// ── ÚLTIMOS RESULTADOS ───────────────────────────────────────────
+function renderUltimosResultados() {
+  const last = [...ligaData.recent]
+    .sort((a,b) => new Date(b.utcDate)-new Date(a.utcDate))
+    .slice(0, 8);
+  document.getElementById('ultimosResultados').innerHTML = last.map(m => {
+    const hg = m.score?.fullTime?.home ?? '-';
+    const ag = m.score?.fullTime?.away ?? '-';
+    const date = new Date(m.utcDate).toLocaleDateString('es-ES', { day:'numeric', month:'short' });
+    return `<div class="fixture-row">
+      <img class="crest-sm" src="${m.homeTeam.crest}" onerror="this.style.display='none'">
+      <div class="fixture-teams">
+        ${m.homeTeam.shortName||m.homeTeam.name}
+        <span style="color:var(--text3);font-size:0.75rem;margin:0 4px">—</span>
+        ${m.awayTeam.shortName||m.awayTeam.name}
+      </div>
+      <img class="crest-sm" src="${m.awayTeam.crest}" onerror="this.style.display='none'">
+      <div class="fixture-score">${hg} — ${ag}</div>
+      <div class="fixture-date">${date}</div>
+    </div>`;
+  }).join('');
+}
+
+// ── TARJETAS EQUIPOS ─────────────────────────────────────────────
+function renderEquiposGrid(filter) {
+  const teams = ligaData.standings;
+  const filtered = filter
+    ? teams.filter(t => (t.team.name+t.team.shortName).toLowerCase().includes(filter.toLowerCase()))
+    : teams;
+
+  document.getElementById('equiposGrid').innerHTML = filtered.map(team => {
+    const form = ligaData.forms[team.team.id] || { results: [], gf: 0, ga: 0 };
+    const score = formScore(form.results);
+    const scoreColor = score >= 10 ? 'var(--green)' : score >= 6 ? 'var(--pt)' : 'var(--red)';
+    return `<div class="team-card" style="border-radius:0;border:none;border-right:1px solid var(--border);border-bottom:1px solid var(--border)">
+      <div class="team-card-header">
+        <img class="team-crest" src="${team.team.crest}" onerror="this.style.display='none'">
+        <div>
+          <div class="team-card-name">${team.team.shortName||team.team.name}</div>
+          <div class="team-card-pos">${team.position}º · ${team.points} pts</div>
+        </div>
+        <div style="margin-left:auto;font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;font-weight:800;color:${scoreColor}">${score}/15</div>
+      </div>
+      <div class="team-form">${formBadges(form.results)}</div>
+      <div class="team-card-body">
+        <div class="team-stat"><div class="team-stat-val">${team.won}</div><div class="team-stat-lbl">V</div></div>
+        <div class="team-stat"><div class="team-stat-val">${team.draw}</div><div class="team-stat-lbl">E</div></div>
+        <div class="team-stat"><div class="team-stat-val">${team.lost}</div><div class="team-stat-lbl">D</div></div>
+        <div class="team-stat"><div class="team-stat-val">${team.goalsFor}</div><div class="team-stat-lbl">GF</div></div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function filterTeamCards(val) {
+  renderEquiposGrid(val);
+}
+
+// ── RECOMENDACIONES FANTASY ──────────────────────────────────────
+function renderRecomendaciones() {
+  const recs = [];
+  const matches = ligaData.scheduled;
+  if (!matches.length) return;
+
+  const nextMD = Math.min(...matches.map(m => m.matchday).filter(Boolean));
+  const nextMatches = matches.filter(m => m.matchday === nextMD);
+
+  nextMatches.forEach(m => {
+    const homeForm = ligaData.forms[m.homeTeam.id];
+    const awayForm = ligaData.forms[m.awayTeam.id];
+    const homeScore = homeForm ? formScore(homeForm.results) : 5;
+    const awayScore = awayForm ? formScore(awayForm.results) : 5;
+
+    // Equipo local en buena forma vs rival en mala forma → COMPRAR atacantes locales
+    if (homeScore >= 9 && awayScore <= 4) {
+      recs.push({
+        icon: '🔥',
+        title: `Atacantes del ${m.homeTeam.shortName||m.homeTeam.name}`,
+        body: `Recibe a ${m.awayTeam.shortName||m.awayTeam.name} con ventaja local. Forma excelente (${homeScore}/15) vs rival en racha negativa (${awayScore}/15).`,
+        badge: 'COMPRAR', cls: 'rec-buy'
+      });
+    }
+    // Visitante en buena forma vs local débil
+    if (awayScore >= 9 && homeScore <= 4) {
+      recs.push({
+        icon: '📈',
+        title: `Atacantes del ${m.awayTeam.shortName||m.awayTeam.name}`,
+        body: `Visitan a ${m.homeTeam.shortName||m.homeTeam.name} con gran forma (${awayScore}/15). El local está en mala racha (${homeScore}/15).`,
+        badge: 'COMPRAR', cls: 'rec-buy'
+      });
+    }
+    // Porteros/defensas de equipos con buena forma defensiva
+    const homeGA = homeForm?.ga ?? 99;
+    if (homeGA <= 2 && homeScore >= 7) {
+      recs.push({
+        icon: '🧤',
+        title: `Portero/Defensas del ${m.homeTeam.shortName||m.homeTeam.name}`,
+        body: `Solo ${homeGA} goles encajados en sus últimos 5 partidos y buen rendimiento general.`,
+        badge: 'VIGILAR', cls: 'rec-watch'
+      });
+    }
+    // Evitar jugadores de equipos en muy mala forma
+    if (homeScore <= 3 && awayScore >= 9) {
+      recs.push({
+        icon: '⚠️',
+        title: `Evitar jugadores del ${m.homeTeam.shortName||m.homeTeam.name}`,
+        body: `Reciben a ${m.awayTeam.shortName||m.awayTeam.name} en racha. Forma muy pobre (${homeScore}/15).`,
+        badge: 'VENDER', cls: 'rec-sell'
+      });
+    }
+  });
+
+  // Si hay jugadores propios en riesgo (cruzar con allPlayers)
+  if (allPlayers.length) {
+    const myTeam = getEquipo();
+    myTeam.forEach(p => {
+      const teamName = (p.club || '').toLowerCase();
+      const standing = ligaData.standings.find(t =>
+        t.team.name.toLowerCase().includes(teamName) ||
+        teamName.includes((t.team.shortName||'').toLowerCase())
+      );
+      if (standing && standing.position >= 16) {
+        recs.push({
+          icon: '📉',
+          title: `${p.name} — equipo en descenso`,
+          body: `${standing.team.shortName} está en zona de descenso (${standing.position}º). Considera si merece sitio en tu once.`,
+          badge: 'REVISAR', cls: 'rec-sell'
+        });
+      }
+    });
+  }
+
+  if (!recs.length) {
+    document.getElementById('recomendaciones').innerHTML =
+      '<div style="padding:16px;color:var(--text3);font-size:0.8rem;grid-column:1/-1">No hay recomendaciones destacadas esta jornada.</div>';
+    return;
+  }
+
+  document.getElementById('recomendaciones').innerHTML = recs.slice(0, 8).map(r => `
+    <div class="rec-card">
+      <div class="rec-icon">${r.icon}</div>
+      <div>
+        <div class="rec-title">${r.title}</div>
+        <div class="rec-body">${r.body}</div>
+        <span class="rec-badge ${r.cls}">${r.badge}</span>
+      </div>
+    </div>`).join('');
+}
 </script>
+
 </body>
 </html>
