@@ -74,13 +74,13 @@ async function login() {
   return token;
 }
 
-// ─── 2. JUGADORES de la liga ──────────────────────────────────────────────────
+// ─── 2. JUGADORES via endpoint /user ─────────────────────────────────────────
 async function fetchPlayers(token) {
-  console.log('📥 Descargando jugadores de la liga...');
+  console.log('📥 Descargando jugadores...');
 
   const res = await request({
     hostname: 'biwenger.as.com',
-    path: `/api/v2/leagues/${LEAGUE_ID}/players?fields=*,fitness,team&score=2`,
+    path: '/api/v2/user?fields=*,lineup(type,playersID,reservesID,captain,striker,coach,date),players(id,owner),market,offers,-trophies',
     method: 'GET',
     headers: {
       ...COMMON_HEADERS,
@@ -88,22 +88,28 @@ async function fetchPlayers(token) {
     }
   });
 
-  console.log('Status jugadores:', res.status);
-  console.log('Respuesta (500 chars):', JSON.stringify(res.body).substring(0, 500));
+  console.log('Status user:', res.status);
+  console.log('Respuesta (800 chars):', JSON.stringify(res.body).substring(0, 800));
 
-  if (res.status !== 200) {
-    console.error('❌ Error al obtener jugadores. Status:', res.status);
+  if (res.status !== 200 && res.status !== 304) {
+    console.error('❌ Error al obtener datos. Status:', res.status);
     process.exit(1);
   }
 
-  const raw = res.body?.data;
-  if (!raw) {
+  const data = res.body?.data;
+  if (!data) {
     console.error('❌ Sin datos en la respuesta');
     process.exit(1);
   }
 
-  // Puede venir como objeto {id: player} o como array
-  const arr = Array.isArray(raw) ? raw : Object.values(raw);
+  // Los jugadores vienen en data.players
+  const rawPlayers = data.players;
+  if (!rawPlayers) {
+    console.error('❌ Sin jugadores. Keys disponibles:', Object.keys(data));
+    process.exit(1);
+  }
+
+  const arr = Array.isArray(rawPlayers) ? rawPlayers : Object.values(rawPlayers);
   console.log(`✅ ${arr.length} jugadores descargados`);
   console.log('Ejemplo primer jugador:', JSON.stringify(arr[0]).substring(0, 300));
 
