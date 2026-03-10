@@ -19,10 +19,25 @@ function request(options, body = null) {
       let data = '';
       res.on('data', chunk => data += chunk);
       res.on('end', () => {
+        resolve({ status: res.statusCode, raw: data, headers: res.headers });
+      });
+    });
+    req.on('error', reject);
+    if (body) req.write(body);
+    req.end();
+  });
+}
+
+function requestJSON(options, body = null) {
+  return new Promise((resolve, reject) => {
+    const req = https.request(options, (res) => {
+      let data = '';
+      res.on('data', chunk => data += chunk);
+      res.on('end', () => {
         try {
-          resolve({ status: res.statusCode, body: JSON.parse(data), headers: res.headers });
+          resolve({ status: res.statusCode, body: JSON.parse(data) });
         } catch (e) {
-          resolve({ status: res.statusCode, body: data, headers: res.headers });
+          resolve({ status: res.statusCode, body: data });
         }
       });
     });
@@ -34,7 +49,7 @@ function request(options, body = null) {
 
 const COMMON_HEADERS = {
   'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-  'Accept': 'application/json, text/plain, */*',
+  'Accept': '*/*',
   'Accept-Language': 'es-ES,es;q=0.9',
   'Origin': 'https://biwenger.as.com',
   'Referer': 'https://biwenger.as.com/',
@@ -48,7 +63,7 @@ async function login() {
   console.log('🔐 Haciendo login en Biwenger...');
   const payload = JSON.stringify({ email: EMAIL, password: PASSWORD });
 
-  const res = await request({
+  const res = await requestJSON({
     hostname: 'biwenger.as.com',
     path: '/api/v2/auth/login',
     method: 'POST',
@@ -60,13 +75,13 @@ async function login() {
   }, payload);
 
   if (res.status !== 200) {
-    console.error('❌ Login fallido. Status:', res.status, JSON.stringify(res.body));
+    console.error('❌ Login fallido. Status:', res.status);
     process.exit(1);
   }
 
   const token = res.body?.data?.token || res.body?.token;
   if (!token) {
-    console.error('❌ No se encontró token:', JSON.stringify(res.body));
+    console.error('❌ No se encontró token');
     process.exit(1);
   }
 
@@ -74,38 +89,45 @@ async function login() {
   return token;
 }
 
-// ─── 2. JUGADORES via endpoint /user ─────────────────────────────────────────
-async function fetchPlayers(token) {
-  console.log('📥 Descargando jugadores...');
+// ─── 2. TODOS LOS JUGADORES via JSONP ────────────────────────────────────────
+async function fetchPlayers() {
+  console.log('📥 Descargando todos los jugadores de LaLiga...');
 
+  const cbName = 'jsonp_cb';
   const res = await request({
-    hostname: 'biwenger.as.com',
-    path: '/api/v2/user?fields=*,lineup(type,playersID,reservesID,captain,striker,coach,date),players(id,owner),market,offers,-trophies',
+    hostname: 'cf.biwenger.com',
+    path: `/api/v2/competitions/la-liga/data?lang=es&score=5&callback=${cbName}`,
     method: 'GET',
     headers: {
-      ...COMMON_HEADERS,
-      'Authorization': `Bearer ${token}`,
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+      'Accept': '*/*',
+      'Accept-Language': 'es-ES,es;q=0.9',
+      'Referer': 'https://biwenger.as.com/',
     }
   });
 
-  console.log('Status user:', res.status);
-  console.log('Respuesta (800 chars):', JSON.stringify(res.body).substring(0, 800));
+  console.log('Status jugadores:', res.status);
+  console.log('Primeros 200 chars:', res.raw.substring(0, 200));
 
-  if (res.status !== 200 && res.status !== 304) {
-    console.error('❌ Error al obtener datos. Status:', res.status);
+  if (res.status !== 200) {
+    console.error('❌ Error al obtener jugadores. Status:', res.status);
     process.exit(1);
   }
 
-  const data = res.body?.data;
-  if (!data) {
-    console.error('❌ Sin datos en la respuesta');
+  // La respuesta es JSONP: jsonp_cb({...}) — hay que extraer el JSON
+  const match = res.raw.match(/^[^(]+\(([\s\S]*)\)\s*;?\s*$/);
+  if (!match) {
+    console.error('❌ No se pudo parsear la respuesta JSONP');
+    console.log('Respuesta completa (500 chars):', res.raw.substring(0, 500));
     process.exit(1);
   }
 
-  // Los jugadores vienen en data.players
-  const rawPlayers = data.players;
+  const parsed = JSON.parse(match[1]);
+  const rawPlayers = parsed?.data?.players;
+
   if (!rawPlayers) {
-    console.error('❌ Sin jugadores. Keys disponibles:', Object.keys(data));
+    console.error('❌ Sin jugadores en la respuesta');
+    console.log('Keys disponibles:', Object.keys(parsed?.data || {}));
     process.exit(1);
   }
 
@@ -132,7 +154,7 @@ async function fetchPlayers(token) {
 async function fetchLeague(token) {
   console.log('🏆 Descargando datos de la liga...');
 
-  const res = await request({
+  const res = await requestJSON({
     hostname: 'biwenger.as.com',
     path: `/api/v2/leagues/${LEAGUE_ID}?fields=*,standings,teams`,
     method: 'GET',
@@ -155,7 +177,7 @@ async function fetchLeague(token) {
 async function main() {
   try {
     const token   = await login();
-    const players = await fetchPlayers(token);
+    const players = await fetchPlayers();   // No necesita token, es pública
     const league  = await fetchLeague(token);
 
     const output = {
