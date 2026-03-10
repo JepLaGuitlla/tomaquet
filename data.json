@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-10T07:57:26.232Z",
+  "updatedAt": "2026-03-10T10:45:33.507Z",
   "players": [
     {
       "id": 11,
@@ -10245,5 +10245,962 @@
       ]
     }
   ],
-  "league": null
+  "league": null,
+  "laliga": {
+    "matchday": 27,
+    "table": [
+      {
+        "position": 1,
+        "team": {
+          "id": 81,
+          "name": "FC Barcelona",
+          "shortName": "Barça",
+          "tla": "FCB",
+          "crest": "https://crests.football-data.org/81.png"
+        },
+        "playedGames": 27,
+        "form": null,
+        "won": 22,
+        "draw": 1,
+        "lost": 4,
+        "points": 67,
+        "goalsFor": 72,
+        "goalsAgainst": 26,
+        "goalDifference": 46
+      },
+      {
+        "position": 2,
+        "team": {
+          "id": 86,
+          "name": "Real Madrid CF",
+          "shortName": "Real Madrid",
+          "tla": "RMA",
+          "crest": "https://crests.football-data.org/86.png"
+        },
+        "playedGames": 27,
+        "form": null,
+        "won": 20,
+        "draw": 3,
+        "lost": 4,
+        "points": 63,
+        "goalsFor": 56,
+        "goalsAgainst": 23,
+        "goalDifference": 33
+      },
+      {
+        "position": 3,
+        "team": {
+          "id": 78,
+          "name": "Club Atlético de Madrid",
+          "shortName": "Atleti",
+          "tla": "ATL",
+          "crest": "https://crests.football-data.org/78.png"
+        },
+        "playedGames": 27,
+        "form": null,
+        "won": 16,
+        "draw": 6,
+        "lost": 5,
+        "points": 54,
+        "goalsFor": 46,
+        "goalsAgainst": 25,
+        "goalDifference": 21
+      },
+      {
+        "position": 4,
+        "team": {
+          "id": 94,
+          "name": "Villarreal CF",
+          "shortName": "Villarreal",
+          "tla": "VIL",
+          "crest": "https://crests.football-data.org/94.png"
+        },
+        "playedGames": 27,
+        "form": null,
+        "won": 17,
+        "draw": 3,
+        "lost": 7,
+        "points": 54,
+        "goalsFor": 50,
+        "goalsAgainst": 32,
+        "goalDifference": 18
+      },
+      {
+        "position": 5,
+        "team": {
+          "id": 90,
+          "name": "Real Betis Balompié",
+          "shortName": "Real Betis",
+          "tla": "BET",
+          "crest": "https://crests.football-data.org/90.png"
+        },
+        "playedGames": 27,
+        "form": null,
+        "won": 11,
+        "draw": 10,
+        "lost": 6,
+        "points": 43,
+        "goalsFor": 42,
+        "goalsAgainst": 34,
+        "goalDifference": 8
+      },
+      {
+        "position": 6,
+        "team": {
+          "id": 558,
+          "name": "RC Celta de Vigo",
+          "shortName": "Celta",
+          "tla": "CEL",
+          "crest": "https://crests.football-data.org/558.png"
+        },
+        "playedGames": 27,
+        "form": null,
+        "won": 10,
+        "draw": 10,
+        "lost": 7,
+        "points": 40,
+        "goalsFor": 37,
+        "goalsAgainst": 30,
+        "goalDifference": 7
+      },
+      {
+        "position": 7,
+        "team": {
+          "id": 80,
+          "name": "RCD Espanyol de Barcelona",
+          "shortName": "Espanyol",
+          "tla": "ESP",
+          "crest": "https://crests.football-data.org/80.png"
+        },
+        "playedGames": 27,
+        "form": null,
+        "won": 10,
+        "draw": 7,
+        "lost": 10,
+        "points": 37,
+        "goalsFor": 34,
+        "goalsAgainst": 40,
+        "goalDifference": -6
+      },
+      {
+        "position": 8,
+        "team": {
+          "id": 92,
+          "name": "Real Sociedad de Fútbol",
+          "shortName": "Real Sociedad",
+          "tla": "RSO",
+          "crest": "https://crests.football-data.org/92.png"
+        },
+        "playedGames": 27,
+        "form": null,
+        "won": 9,
+        "draw": 8,
+        "lost": 10,
+        "points": 35,
+        "goalsFor": 40,
+        "goalsAgainst": 41,
+        "goalDifference": -1
+      },
+      {
+        "position": 9,
+        "team": {
+          "id": 82,
+          "name": "Getafe CF",
+          "shortName": "Getafe",
+          "tla": "GET",
+          "crest": "https://crests.football-data.org/82.png"
+        },
+        "playedGames": 27,
+        "form": null,
+        "won": 10,
+        "draw": 5,
+        "lost": 12,
+        "points": 35,
+        "goalsFor": 23,
+        "goalsAgainst": 29,
+        "goalDifference": -6
+      },
+      {
+        "position": 10,
+        "team": {
+          "id": 77,
+          "name": "Athletic Club",
+          "shortName": "Athletic",
+          "tla": "ATH",
+          "crest": "https://crests.football-data.org/77.png"
+        },
+        "playedGames": 27,
+        "form": null,
+        "won": 10,
+        "draw": 5,
+        "lost": 12,
+        "points": 35,
+        "goalsFor": 30,
+        "goalsAgainst": 37,
+        "goalDifference": -7
+      },
+      {
+        "position": 11,
+        "team": {
+          "id": 79,
+          "name": "CA Osasuna",
+          "shortName": "Osasuna",
+          "tla": "OSA",
+          "crest": "https://crests.football-data.org/79.png"
+        },
+        "playedGames": 27,
+        "form": null,
+        "won": 9,
+        "draw": 7,
+        "lost": 11,
+        "points": 34,
+        "goalsFor": 32,
+        "goalsAgainst": 32,
+        "goalDifference": 0
+      },
+      {
+        "position": 12,
+        "team": {
+          "id": 95,
+          "name": "Valencia CF",
+          "shortName": "Valencia",
+          "tla": "VAL",
+          "crest": "https://crests.football-data.org/95.png"
+        },
+        "playedGames": 27,
+        "form": null,
+        "won": 8,
+        "draw": 8,
+        "lost": 11,
+        "points": 32,
+        "goalsFor": 30,
+        "goalsAgainst": 41,
+        "goalDifference": -11
+      },
+      {
+        "position": 13,
+        "team": {
+          "id": 87,
+          "name": "Rayo Vallecano de Madrid",
+          "shortName": "Rayo Vallecano",
+          "tla": "RAY",
+          "crest": "https://crests.football-data.org/87.png"
+        },
+        "playedGames": 27,
+        "form": null,
+        "won": 7,
+        "draw": 10,
+        "lost": 10,
+        "points": 31,
+        "goalsFor": 27,
+        "goalsAgainst": 33,
+        "goalDifference": -6
+      },
+      {
+        "position": 14,
+        "team": {
+          "id": 559,
+          "name": "Sevilla FC",
+          "shortName": "Sevilla FC",
+          "tla": "SEV",
+          "crest": "https://crests.football-data.org/559.png"
+        },
+        "playedGames": 27,
+        "form": null,
+        "won": 8,
+        "draw": 7,
+        "lost": 12,
+        "points": 31,
+        "goalsFor": 35,
+        "goalsAgainst": 42,
+        "goalDifference": -7
+      },
+      {
+        "position": 15,
+        "team": {
+          "id": 298,
+          "name": "Girona FC",
+          "shortName": "Girona",
+          "tla": "GIR",
+          "crest": "https://crests.football-data.org/298.png"
+        },
+        "playedGames": 27,
+        "form": null,
+        "won": 7,
+        "draw": 10,
+        "lost": 10,
+        "points": 31,
+        "goalsFor": 28,
+        "goalsAgainst": 43,
+        "goalDifference": -15
+      },
+      {
+        "position": 16,
+        "team": {
+          "id": 263,
+          "name": "Deportivo Alavés",
+          "shortName": "Alavés",
+          "tla": "ALA",
+          "crest": "https://crests.football-data.org/263.png"
+        },
+        "playedGames": 27,
+        "form": null,
+        "won": 7,
+        "draw": 6,
+        "lost": 14,
+        "points": 27,
+        "goalsFor": 25,
+        "goalsAgainst": 37,
+        "goalDifference": -12
+      },
+      {
+        "position": 17,
+        "team": {
+          "id": 285,
+          "name": "Elche CF",
+          "shortName": "Elche",
+          "tla": "ELC",
+          "crest": "https://crests.football-data.org/285.png"
+        },
+        "playedGames": 27,
+        "form": null,
+        "won": 5,
+        "draw": 11,
+        "lost": 11,
+        "points": 26,
+        "goalsFor": 35,
+        "goalsAgainst": 41,
+        "goalDifference": -6
+      },
+      {
+        "position": 18,
+        "team": {
+          "id": 89,
+          "name": "RCD Mallorca",
+          "shortName": "Mallorca",
+          "tla": "MAL",
+          "crest": "https://crests.football-data.org/89.png"
+        },
+        "playedGames": 27,
+        "form": null,
+        "won": 6,
+        "draw": 7,
+        "lost": 14,
+        "points": 25,
+        "goalsFor": 31,
+        "goalsAgainst": 44,
+        "goalDifference": -13
+      },
+      {
+        "position": 19,
+        "team": {
+          "id": 88,
+          "name": "Levante UD",
+          "shortName": "Levante",
+          "tla": "LEV",
+          "crest": "https://crests.football-data.org/88.png"
+        },
+        "playedGames": 27,
+        "form": null,
+        "won": 5,
+        "draw": 7,
+        "lost": 15,
+        "points": 22,
+        "goalsFor": 29,
+        "goalsAgainst": 45,
+        "goalDifference": -16
+      },
+      {
+        "position": 20,
+        "team": {
+          "id": 1048,
+          "name": "Real Oviedo",
+          "shortName": "Real Oviedo",
+          "tla": "OVI",
+          "crest": "https://crests.football-data.org/1048.png"
+        },
+        "playedGames": 27,
+        "form": null,
+        "won": 3,
+        "draw": 9,
+        "lost": 15,
+        "points": 18,
+        "goalsFor": 17,
+        "goalsAgainst": 44,
+        "goalDifference": -27
+      }
+    ],
+    "forms": {
+      "77": {
+        "results": [
+          "L",
+          "D",
+          "W",
+          "W",
+          "W"
+        ],
+        "gf": 9,
+        "ga": 6,
+        "crest": "https://crests.football-data.org/77.png",
+        "name": "Athletic Club"
+      },
+      "78": {
+        "results": [
+          "W",
+          "W",
+          "W",
+          "L",
+          "L"
+        ],
+        "gf": 8,
+        "ga": 8,
+        "crest": "https://crests.football-data.org/78.png",
+        "name": "Club Atlético de Madrid"
+      },
+      "79": {
+        "results": [
+          "D",
+          "L",
+          "W",
+          "D",
+          "W"
+        ],
+        "gf": 6,
+        "ga": 5,
+        "crest": "https://crests.football-data.org/79.png",
+        "name": "CA Osasuna"
+      },
+      "80": {
+        "results": [
+          "D",
+          "D",
+          "L",
+          "D",
+          "L"
+        ],
+        "gf": 8,
+        "ga": 13,
+        "crest": "https://crests.football-data.org/80.png",
+        "name": "RCD Espanyol de Barcelona"
+      },
+      "81": {
+        "results": [
+          "W",
+          "W",
+          "W",
+          "L",
+          "W"
+        ],
+        "gf": 12,
+        "ga": 3,
+        "crest": "https://crests.football-data.org/81.png",
+        "name": "FC Barcelona"
+      },
+      "82": {
+        "results": [
+          "W",
+          "W",
+          "L",
+          "W",
+          "W"
+        ],
+        "gf": 7,
+        "ga": 2,
+        "crest": "https://crests.football-data.org/82.png",
+        "name": "Getafe CF"
+      },
+      "86": {
+        "results": [
+          "W",
+          "L",
+          "L",
+          "W",
+          "W"
+        ],
+        "gf": 9,
+        "ga": 5,
+        "crest": "https://crests.football-data.org/86.png",
+        "name": "Real Madrid CF"
+      },
+      "87": {
+        "results": [
+          "D",
+          "W",
+          "D",
+          "D",
+          "W"
+        ],
+        "gf": 9,
+        "ga": 3,
+        "crest": "https://crests.football-data.org/87.png",
+        "name": "Rayo Vallecano de Madrid"
+      },
+      "88": {
+        "results": [
+          "D",
+          "W",
+          "L",
+          "L",
+          "L"
+        ],
+        "gf": 3,
+        "ga": 7,
+        "crest": "https://crests.football-data.org/88.png",
+        "name": "Levante UD"
+      },
+      "89": {
+        "results": [
+          "D",
+          "L",
+          "L",
+          "L",
+          "L"
+        ],
+        "gf": 3,
+        "ga": 10,
+        "crest": "https://crests.football-data.org/89.png",
+        "name": "RCD Mallorca"
+      },
+      "90": {
+        "results": [
+          "L",
+          "D",
+          "D",
+          "W",
+          "W"
+        ],
+        "gf": 6,
+        "ga": 6,
+        "crest": "https://crests.football-data.org/90.png",
+        "name": "Real Betis Balompié"
+      },
+      "92": {
+        "results": [
+          "L",
+          "W",
+          "D",
+          "L",
+          "W"
+        ],
+        "gf": 10,
+        "ga": 11,
+        "crest": "https://crests.football-data.org/92.png",
+        "name": "Real Sociedad de Fútbol"
+      },
+      "94": {
+        "results": [
+          "W",
+          "L",
+          "W",
+          "W",
+          "L"
+        ],
+        "gf": 7,
+        "ga": 8,
+        "crest": "https://crests.football-data.org/94.png",
+        "name": "Villarreal CF"
+      },
+      "95": {
+        "results": [
+          "W",
+          "W",
+          "L",
+          "W",
+          "L"
+        ],
+        "gf": 7,
+        "ga": 6,
+        "crest": "https://crests.football-data.org/95.png",
+        "name": "Valencia CF"
+      },
+      "263": {
+        "results": [
+          "L",
+          "L",
+          "D",
+          "D",
+          "L"
+        ],
+        "gf": 5,
+        "ga": 10,
+        "crest": "https://crests.football-data.org/263.png",
+        "name": "Deportivo Alavés"
+      },
+      "285": {
+        "results": [
+          "L",
+          "D",
+          "L",
+          "D",
+          "L"
+        ],
+        "gf": 5,
+        "ga": 9,
+        "crest": "https://crests.football-data.org/285.png",
+        "name": "Elche CF"
+      },
+      "298": {
+        "results": [
+          "D",
+          "L",
+          "D",
+          "W",
+          "D"
+        ],
+        "gf": 7,
+        "ga": 7,
+        "crest": "https://crests.football-data.org/298.png",
+        "name": "Girona FC"
+      },
+      "558": {
+        "results": [
+          "L",
+          "W",
+          "W",
+          "D",
+          "L"
+        ],
+        "gf": 8,
+        "ga": 7,
+        "crest": "https://crests.football-data.org/558.png",
+        "name": "RC Celta de Vigo"
+      },
+      "559": {
+        "results": [
+          "D",
+          "D",
+          "W",
+          "D",
+          "D"
+        ],
+        "gf": 6,
+        "ga": 5,
+        "crest": "https://crests.football-data.org/559.png",
+        "name": "Sevilla FC"
+      },
+      "1048": {
+        "results": [
+          "D",
+          "L",
+          "L",
+          "D",
+          "L"
+        ],
+        "gf": 5,
+        "ga": 10,
+        "crest": "https://crests.football-data.org/1048.png",
+        "name": "Real Oviedo"
+      }
+    },
+    "nextMatches": [
+      {
+        "id": 544481,
+        "matchday": 28,
+        "date": "2026-03-13T20:00:00Z",
+        "home": {
+          "id": 263,
+          "name": "Deportivo Alavés",
+          "short": "Alavés",
+          "crest": "https://crests.football-data.org/263.png"
+        },
+        "away": {
+          "id": 94,
+          "name": "Villarreal CF",
+          "short": "Villarreal",
+          "crest": "https://crests.football-data.org/94.png"
+        }
+      },
+      {
+        "id": 544486,
+        "matchday": 28,
+        "date": "2026-03-14T13:00:00Z",
+        "home": {
+          "id": 298,
+          "name": "Girona FC",
+          "short": "Girona",
+          "crest": "https://crests.football-data.org/298.png"
+        },
+        "away": {
+          "id": 77,
+          "name": "Athletic Club",
+          "short": "Athletic",
+          "crest": "https://crests.football-data.org/77.png"
+        }
+      },
+      {
+        "id": 544482,
+        "matchday": 28,
+        "date": "2026-03-14T15:15:00Z",
+        "home": {
+          "id": 78,
+          "name": "Club Atlético de Madrid",
+          "short": "Atleti",
+          "crest": "https://crests.football-data.org/78.png"
+        },
+        "away": {
+          "id": 82,
+          "name": "Getafe CF",
+          "short": "Getafe",
+          "crest": "https://crests.football-data.org/82.png"
+        }
+      },
+      {
+        "id": 544485,
+        "matchday": 28,
+        "date": "2026-03-14T17:30:00Z",
+        "home": {
+          "id": 1048,
+          "name": "Real Oviedo",
+          "short": "Real Oviedo",
+          "crest": "https://crests.football-data.org/1048.png"
+        },
+        "away": {
+          "id": 95,
+          "name": "Valencia CF",
+          "short": "Valencia",
+          "crest": "https://crests.football-data.org/95.png"
+        }
+      },
+      {
+        "id": 544487,
+        "matchday": 28,
+        "date": "2026-03-14T20:00:00Z",
+        "home": {
+          "id": 86,
+          "name": "Real Madrid CF",
+          "short": "Real Madrid",
+          "crest": "https://crests.football-data.org/86.png"
+        },
+        "away": {
+          "id": 285,
+          "name": "Elche CF",
+          "short": "Elche",
+          "crest": "https://crests.football-data.org/285.png"
+        }
+      },
+      {
+        "id": 544488,
+        "matchday": 28,
+        "date": "2026-03-15T13:00:00Z",
+        "home": {
+          "id": 89,
+          "name": "RCD Mallorca",
+          "short": "Mallorca",
+          "crest": "https://crests.football-data.org/89.png"
+        },
+        "away": {
+          "id": 80,
+          "name": "RCD Espanyol de Barcelona",
+          "short": "Espanyol",
+          "crest": "https://crests.football-data.org/80.png"
+        }
+      },
+      {
+        "id": 544483,
+        "matchday": 28,
+        "date": "2026-03-15T15:15:00Z",
+        "home": {
+          "id": 81,
+          "name": "FC Barcelona",
+          "short": "Barça",
+          "crest": "https://crests.football-data.org/81.png"
+        },
+        "away": {
+          "id": 559,
+          "name": "Sevilla FC",
+          "short": "Sevilla FC",
+          "crest": "https://crests.football-data.org/559.png"
+        }
+      },
+      {
+        "id": 544484,
+        "matchday": 28,
+        "date": "2026-03-15T17:30:00Z",
+        "home": {
+          "id": 90,
+          "name": "Real Betis Balompié",
+          "short": "Real Betis",
+          "crest": "https://crests.football-data.org/90.png"
+        },
+        "away": {
+          "id": 558,
+          "name": "RC Celta de Vigo",
+          "short": "Celta",
+          "crest": "https://crests.football-data.org/558.png"
+        }
+      },
+      {
+        "id": 544490,
+        "matchday": 28,
+        "date": "2026-03-15T20:00:00Z",
+        "home": {
+          "id": 92,
+          "name": "Real Sociedad de Fútbol",
+          "short": "Real Sociedad",
+          "crest": "https://crests.football-data.org/92.png"
+        },
+        "away": {
+          "id": 79,
+          "name": "CA Osasuna",
+          "short": "Osasuna",
+          "crest": "https://crests.football-data.org/79.png"
+        }
+      },
+      {
+        "id": 544489,
+        "matchday": 28,
+        "date": "2026-03-16T20:00:00Z",
+        "home": {
+          "id": 87,
+          "name": "Rayo Vallecano de Madrid",
+          "short": "Rayo Vallecano",
+          "crest": "https://crests.football-data.org/87.png"
+        },
+        "away": {
+          "id": 88,
+          "name": "Levante UD",
+          "short": "Levante",
+          "crest": "https://crests.football-data.org/88.png"
+        }
+      }
+    ],
+    "recentResults": [
+      {
+        "date": "2026-03-09T20:00:00Z",
+        "home": {
+          "name": "RCD Espanyol de Barcelona",
+          "short": "Espanyol",
+          "crest": "https://crests.football-data.org/80.png"
+        },
+        "away": {
+          "name": "Real Oviedo",
+          "short": "Real Oviedo",
+          "crest": "https://crests.football-data.org/1048.png"
+        },
+        "score": {
+          "home": 1,
+          "away": 1
+        }
+      },
+      {
+        "date": "2026-03-08T20:00:00Z",
+        "home": {
+          "name": "Valencia CF",
+          "short": "Valencia",
+          "crest": "https://crests.football-data.org/95.png"
+        },
+        "away": {
+          "name": "Deportivo Alavés",
+          "short": "Alavés",
+          "crest": "https://crests.football-data.org/263.png"
+        },
+        "score": {
+          "home": 3,
+          "away": 2
+        }
+      },
+      {
+        "date": "2026-03-08T17:30:00Z",
+        "home": {
+          "name": "Sevilla FC",
+          "short": "Sevilla FC",
+          "crest": "https://crests.football-data.org/559.png"
+        },
+        "away": {
+          "name": "Rayo Vallecano de Madrid",
+          "short": "Rayo Vallecano",
+          "crest": "https://crests.football-data.org/87.png"
+        },
+        "score": {
+          "home": 1,
+          "away": 1
+        }
+      },
+      {
+        "date": "2026-03-08T15:15:00Z",
+        "home": {
+          "name": "Getafe CF",
+          "short": "Getafe",
+          "crest": "https://crests.football-data.org/82.png"
+        },
+        "away": {
+          "name": "Real Betis Balompié",
+          "short": "Real Betis",
+          "crest": "https://crests.football-data.org/90.png"
+        },
+        "score": {
+          "home": 2,
+          "away": 0
+        }
+      },
+      {
+        "date": "2026-03-08T13:00:00Z",
+        "home": {
+          "name": "Villarreal CF",
+          "short": "Villarreal",
+          "crest": "https://crests.football-data.org/94.png"
+        },
+        "away": {
+          "name": "Elche CF",
+          "short": "Elche",
+          "crest": "https://crests.football-data.org/285.png"
+        },
+        "score": {
+          "home": 2,
+          "away": 1
+        }
+      },
+      {
+        "date": "2026-03-07T20:00:00Z",
+        "home": {
+          "name": "Athletic Club",
+          "short": "Athletic",
+          "crest": "https://crests.football-data.org/77.png"
+        },
+        "away": {
+          "name": "FC Barcelona",
+          "short": "Barça",
+          "crest": "https://crests.football-data.org/81.png"
+        },
+        "score": {
+          "home": 0,
+          "away": 1
+        }
+      },
+      {
+        "date": "2026-03-07T17:30:00Z",
+        "home": {
+          "name": "Club Atlético de Madrid",
+          "short": "Atleti",
+          "crest": "https://crests.football-data.org/78.png"
+        },
+        "away": {
+          "name": "Real Sociedad de Fútbol",
+          "short": "Real Sociedad",
+          "crest": "https://crests.football-data.org/92.png"
+        },
+        "score": {
+          "home": 3,
+          "away": 2
+        }
+      },
+      {
+        "date": "2026-03-07T15:15:00Z",
+        "home": {
+          "name": "Levante UD",
+          "short": "Levante",
+          "crest": "https://crests.football-data.org/88.png"
+        },
+        "away": {
+          "name": "Girona FC",
+          "short": "Girona",
+          "crest": "https://crests.football-data.org/298.png"
+        },
+        "score": {
+          "home": 1,
+          "away": 1
+        }
+      }
+    ]
+  }
 }
