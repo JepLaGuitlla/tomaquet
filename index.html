@@ -2036,9 +2036,7 @@ document.getElementById('modalOverlay').addEventListener('click',e=>{if(e.target
 // ══════════════════════════════════════════
 // ANÁLISIS LIGA — football-data.org v4 (PD = La Liga)
 // ══════════════════════════════════════════
-const FD_TOKEN = '00308a91cfc84b248611ecc22550c9de';
-const FD_BASE  = 'https://api.football-data.org/v4';
-const FD_H     = { 'X-Auth-Token': FD_TOKEN };
+// Datos de La Liga vienen de data.json (generado por GitHub Actions)
 
 let ligaData   = {};
 let ligaLoaded = false;
@@ -2048,19 +2046,20 @@ async function loadLiga() {
   document.getElementById('ligaLoading').style.display = 'flex';
   document.getElementById('ligaContent').style.display = 'none';
   try {
-    const [sRes, mRes, rRes] = await Promise.all([
-      fetch(`${FD_BASE}/competitions/PD/standings`,                             { headers: FD_H }),
-      fetch(`${FD_BASE}/competitions/PD/matches?status=SCHEDULED&limit=30`,    { headers: FD_H }),
-      fetch(`${FD_BASE}/competitions/PD/matches?status=FINISHED&limit=50`,     { headers: FD_H }),
-    ]);
-    const [sJson, mJson, rJson] = await Promise.all([sRes.json(), mRes.json(), rRes.json()]);
+    // Los datos vienen de data.json (generado por GitHub Actions cada día)
+    // Sin CORS, sin esperas, carga instantánea
+    const res  = await fetch('./data.json');
+    const data = await res.json();
+    const ll   = data.laliga;
 
-    ligaData.standings = sJson.standings?.[0]?.table || [];
-    ligaData.scheduled = mJson.matches || [];
-    ligaData.recent    = rJson.matches  || [];
-    ligaData.season    = sJson.season?.currentMatchday || '?';
+    if (!ll) throw new Error('Datos de La Liga no disponibles en data.json. Ejecuta el workflow manualmente en GitHub Actions.');
 
-    calcTeamForms();
+    ligaData.standings     = ll.table        || [];
+    ligaData.nextMatches   = ll.nextMatches  || [];
+    ligaData.recentResults = ll.recentResults|| [];
+    ligaData.season        = ll.matchday     || '?';
+    ligaData.forms         = ll.forms        || {};
+
     renderTablaLiga();
     renderProximaJornada();
     renderUltimosResultados();
@@ -2072,7 +2071,10 @@ async function loadLiga() {
     document.getElementById('ligaContent').style.display = 'block';
   } catch(e) {
     document.getElementById('ligaLoading').innerHTML =
-      `<div style="color:var(--red);font-family:monospace;padding:20px">❌ Error: ${e.message}</div>`;
+      `<div style="color:var(--red);font-family:'IBM Plex Mono',monospace;font-size:0.8rem;padding:20px;text-align:center">
+        ❌ ${e.message}<br><br>
+        <span style="color:var(--text3)">Ve a GitHub → Actions → Run workflow para actualizar data.json</span>
+      </div>`;
   }
 }
 
@@ -2161,29 +2163,23 @@ function renderTablaLiga() {
 
 // ── PRÓXIMA JORNADA ──────────────────────────────────────────────
 function renderProximaJornada() {
-  // Coger los partidos de la próxima jornada (matchday más bajo entre scheduled)
-  const matches = ligaData.scheduled;
+  const matches = ligaData.nextMatches || [];
   if (!matches.length) {
     document.getElementById('proximaJornada').innerHTML = '<div style="padding:14px;color:var(--text3);font-size:0.8rem">No hay partidos programados</div>';
     return;
   }
-  const nextMD = Math.min(...matches.map(m => m.matchday).filter(Boolean));
-  const nextMatches = matches.filter(m => m.matchday === nextMD).slice(0, 10);
-
-  document.getElementById('proximaJornada').innerHTML = nextMatches.map(m => {
-    const date = new Date(m.utcDate);
+  document.getElementById('proximaJornada').innerHTML = matches.map(m => {
+    const date    = new Date(m.date);
     const dateStr = date.toLocaleDateString('es-ES', { weekday:'short', day:'numeric', month:'short' });
     const timeStr = date.toLocaleTimeString('es-ES', { hour:'2-digit', minute:'2-digit' });
-    const diffH = difficultyOf(m.homeTeam.id, false); // dificultad para el local
-    const diffA = difficultyOf(m.awayTeam.id, true);  // dificultad para el visitante
     return `<div class="fixture-row">
-      <img class="crest-sm" src="${m.homeTeam.crest}" onerror="this.style.display='none'">
+      <img class="crest-sm" src="${m.home.crest}" onerror="this.style.display='none'">
       <div class="fixture-teams">
-        <span style="font-weight:600">${m.homeTeam.shortName||m.homeTeam.name}</span>
+        <span style="font-weight:600">${m.home.short||m.home.name}</span>
         <span style="color:var(--text3);font-size:0.75rem;margin:0 4px">vs</span>
-        ${m.awayTeam.shortName||m.awayTeam.name}
+        ${m.away.short||m.away.name}
       </div>
-      <img class="crest-sm" src="${m.awayTeam.crest}" onerror="this.style.display='none'">
+      <img class="crest-sm" src="${m.away.crest}" onerror="this.style.display='none'">
       <div class="fixture-date">${dateStr}<br>${timeStr}</div>
     </div>`;
   }).join('');
@@ -2191,21 +2187,20 @@ function renderProximaJornada() {
 
 // ── ÚLTIMOS RESULTADOS ───────────────────────────────────────────
 function renderUltimosResultados() {
-  const last = [...ligaData.recent]
-    .sort((a,b) => new Date(b.utcDate)-new Date(a.utcDate))
-    .slice(0, 8);
+  const last = ligaData.recentResults || [];
+  if (!last.length) { document.getElementById('ultimosResultados').innerHTML = '<div style="padding:14px;color:var(--text3);font-size:0.8rem">Sin resultados</div>'; return; }
   document.getElementById('ultimosResultados').innerHTML = last.map(m => {
-    const hg = m.score?.fullTime?.home ?? '-';
-    const ag = m.score?.fullTime?.away ?? '-';
-    const date = new Date(m.utcDate).toLocaleDateString('es-ES', { day:'numeric', month:'short' });
+    const hg   = m.score?.home ?? '-';
+    const ag   = m.score?.away ?? '-';
+    const date = new Date(m.date).toLocaleDateString('es-ES', { day:'numeric', month:'short' });
     return `<div class="fixture-row">
-      <img class="crest-sm" src="${m.homeTeam.crest}" onerror="this.style.display='none'">
+      <img class="crest-sm" src="${m.home.crest}" onerror="this.style.display='none'">
       <div class="fixture-teams">
-        ${m.homeTeam.shortName||m.homeTeam.name}
+        ${m.home.short||m.home.name}
         <span style="color:var(--text3);font-size:0.75rem;margin:0 4px">—</span>
-        ${m.awayTeam.shortName||m.awayTeam.name}
+        ${m.away.short||m.away.name}
       </div>
-      <img class="crest-sm" src="${m.awayTeam.crest}" onerror="this.style.display='none'">
+      <img class="crest-sm" src="${m.away.crest}" onerror="this.style.display='none'">
       <div class="fixture-score">${hg} — ${ag}</div>
       <div class="fixture-date">${date}</div>
     </div>`;
@@ -2250,54 +2245,37 @@ function filterTeamCards(val) {
 // ── RECOMENDACIONES FANTASY ──────────────────────────────────────
 function renderRecomendaciones() {
   const recs = [];
-  const matches = ligaData.scheduled;
-  if (!matches.length) return;
-
-  const nextMD = Math.min(...matches.map(m => m.matchday).filter(Boolean));
-  const nextMatches = matches.filter(m => m.matchday === nextMD);
+  const nextMatches = ligaData.nextMatches || [];
+  if (!nextMatches.length) return;
 
   nextMatches.forEach(m => {
-    const homeForm = ligaData.forms[m.homeTeam.id];
-    const awayForm = ligaData.forms[m.awayTeam.id];
+    const homeForm  = ligaData.forms[m.home.id];
+    const awayForm  = ligaData.forms[m.away.id];
     const homeScore = homeForm ? formScore(homeForm.results) : 5;
     const awayScore = awayForm ? formScore(awayForm.results) : 5;
+    const homeName  = m.home.short || m.home.name;
+    const awayName  = m.away.short || m.away.name;
 
-    // Equipo local en buena forma vs rival en mala forma → COMPRAR atacantes locales
     if (homeScore >= 9 && awayScore <= 4) {
-      recs.push({
-        icon: '🔥',
-        title: `Atacantes del ${m.homeTeam.shortName||m.homeTeam.name}`,
-        body: `Recibe a ${m.awayTeam.shortName||m.awayTeam.name} con ventaja local. Forma excelente (${homeScore}/15) vs rival en racha negativa (${awayScore}/15).`,
-        badge: 'COMPRAR', cls: 'rec-buy'
-      });
+      recs.push({ icon:'🔥', title:`Atacantes del ${homeName}`,
+        body:`Recibe a ${awayName} con ventaja local. Forma ${homeScore}/15 vs rival en racha negativa ${awayScore}/15.`,
+        badge:'COMPRAR', cls:'rec-buy' });
     }
-    // Visitante en buena forma vs local débil
     if (awayScore >= 9 && homeScore <= 4) {
-      recs.push({
-        icon: '📈',
-        title: `Atacantes del ${m.awayTeam.shortName||m.awayTeam.name}`,
-        body: `Visitan a ${m.homeTeam.shortName||m.homeTeam.name} con gran forma (${awayScore}/15). El local está en mala racha (${homeScore}/15).`,
-        badge: 'COMPRAR', cls: 'rec-buy'
-      });
+      recs.push({ icon:'📈', title:`Atacantes del ${awayName}`,
+        body:`Visitan a ${homeName} en gran forma (${awayScore}/15). El local flojea (${homeScore}/15).`,
+        badge:'COMPRAR', cls:'rec-buy' });
     }
-    // Porteros/defensas de equipos con buena forma defensiva
     const homeGA = homeForm?.ga ?? 99;
     if (homeGA <= 2 && homeScore >= 7) {
-      recs.push({
-        icon: '🧤',
-        title: `Portero/Defensas del ${m.homeTeam.shortName||m.homeTeam.name}`,
-        body: `Solo ${homeGA} goles encajados en sus últimos 5 partidos y buen rendimiento general.`,
-        badge: 'VIGILAR', cls: 'rec-watch'
-      });
+      recs.push({ icon:'🧤', title:`Portero/Defensas del ${homeName}`,
+        body:`Solo ${homeGA} goles encajados en sus últimas 5 jornadas.`,
+        badge:'VIGILAR', cls:'rec-watch' });
     }
-    // Evitar jugadores de equipos en muy mala forma
     if (homeScore <= 3 && awayScore >= 9) {
-      recs.push({
-        icon: '⚠️',
-        title: `Evitar jugadores del ${m.homeTeam.shortName||m.homeTeam.name}`,
-        body: `Reciben a ${m.awayTeam.shortName||m.awayTeam.name} en racha. Forma muy pobre (${homeScore}/15).`,
-        badge: 'VENDER', cls: 'rec-sell'
-      });
+      recs.push({ icon:'⚠️', title:`Evitar jugadores del ${homeName}`,
+        body:`Reciben a ${awayName} en racha. Forma muy pobre ${homeScore}/15.`,
+        badge:'VENDER', cls:'rec-sell' });
     }
   });
 
