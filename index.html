@@ -128,29 +128,42 @@ main{max-width:1440px;margin:0 auto;padding:1.5rem 2rem;}
 .jornada-kpi .val.highlight{color:var(--accent);}
 
 /* News */
-.news-block{background:var(--bg2);border:1px solid var(--border);border-radius:4px;overflow:hidden;}
+/* ── NOTICIAS ── */
+.news-block{background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden;}
 .news-block-header{padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
-.news-block-title{font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--text3);}
+.news-block-title{font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--text2);}
 .news-block-title::before{content:'// ';color:var(--accent);font-family:'IBM Plex Mono',monospace;}
 .news-source-tabs{display:flex;gap:4px;}
-.nsrc-btn{background:transparent;border:1px solid var(--border2);border-radius:2px;padding:3px 8px;color:var(--text3);font-family:'IBM Plex Mono',monospace;font-size:0.6rem;font-weight:500;cursor:pointer;transition:all 0.15s;text-transform:uppercase;letter-spacing:1px;}
-.nsrc-btn:hover{color:var(--text2);border-color:var(--text3);}
+.nsrc-btn{background:transparent;border:1px solid var(--border2);border-radius:4px;padding:4px 10px;color:var(--text3);font-family:'IBM Plex Mono',monospace;font-size:0.6rem;font-weight:500;cursor:pointer;transition:all 0.15s;text-transform:uppercase;letter-spacing:1px;}
+.nsrc-btn:hover{color:var(--accent);border-color:var(--accent);}
 .nsrc-btn.active{background:var(--accent-dim);border-color:var(--accent);color:var(--accent);}
-.news-list{max-height:580px;overflow-y:auto;}
-.news-list::-webkit-scrollbar{width:3px;}.news-list::-webkit-scrollbar-track{background:transparent;}.news-list::-webkit-scrollbar-thumb{background:var(--border2);}
-.news-item{display:flex;gap:12px;padding:12px 16px;border-bottom:1px solid rgba(26,37,53,0.6);cursor:pointer;transition:background 0.12s;text-decoration:none;}
-.news-item:hover{background:rgba(163,230,53,0.03);}
+/* Tarjeta destacada (primera noticia) */
+.news-featured{display:block;text-decoration:none;position:relative;overflow:hidden;border-bottom:1px solid var(--border);}
+.news-featured img{width:100%;height:200px;object-fit:cover;display:block;}
+.news-featured-overlay{position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.82));}
+.news-featured-tag{display:inline-block;background:var(--accent);color:#fff;font-family:'IBM Plex Mono',monospace;font-size:0.55rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 8px;border-radius:3px;margin-bottom:6px;}
+.news-featured-title{font-family:'Barlow Condensed',sans-serif;font-size:1.15rem;font-weight:700;color:#fff;line-height:1.25;}
+.news-featured-meta{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;color:rgba(255,255,255,0.6);margin-top:5px;}
+/* Sin imagen featured */
+.news-featured-noimg{display:block;text-decoration:none;padding:14px 16px;border-bottom:1px solid var(--border);background:var(--accent-dim);}
+.news-featured-noimg .news-featured-title{font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:700;color:var(--text);line-height:1.3;}
+/* Lista de noticias pequeñas */
+.news-list{max-height:520px;overflow-y:auto;}
+.news-list::-webkit-scrollbar{width:3px;}.news-list::-webkit-scrollbar-thumb{background:var(--border2);}
+.news-item{display:flex;gap:10px;padding:10px 14px;border-bottom:1px solid var(--border);text-decoration:none;transition:background 0.12s;align-items:flex-start;}
+.news-item:hover{background:var(--accent-dim);}
 .news-item:last-child{border-bottom:none;}
-.news-dot{width:5px;height:5px;background:var(--accent);border-radius:50%;margin-top:7px;flex-shrink:0;box-shadow:0 0 4px var(--accent);}
-.news-content{flex:1;}
-.news-title{font-size:0.84rem;font-weight:500;color:var(--text);line-height:1.4;margin-bottom:5px;}
-.news-meta{font-family:'IBM Plex Mono',monospace;font-size:0.62rem;color:var(--text3);display:flex;align-items:center;gap:6px;}
-.news-source-tag{display:inline-block;padding:1px 5px;border-radius:2px;font-size:0.58rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;}
-.src-jp{background:rgba(163,230,53,0.1);color:var(--lime);}
-.src-as{background:rgba(248,113,113,0.1);color:var(--red);}
-.src-cm{background:rgba(96,165,250,0.1);color:var(--blue);}
-.src-rv{background:rgba(74,222,128,0.1);color:var(--green);}
-.news-loading{padding:32px;text-align:center;color:var(--text3);font-family:'IBM Plex Mono',monospace;font-size:0.72rem;letter-spacing:1px;}
+.news-item-thumb{width:64px;height:48px;object-fit:cover;border-radius:4px;flex-shrink:0;background:var(--bg3);}
+.news-item-thumb-placeholder{width:64px;height:48px;border-radius:4px;flex-shrink:0;background:var(--bg3);display:flex;align-items:center;justify-content:center;font-size:1.2rem;}
+.news-item-body{flex:1;min-width:0;}
+.news-item-title{font-size:0.82rem;font-weight:600;color:var(--text);line-height:1.35;margin-bottom:4px;}
+.news-item-meta{font-family:'IBM Plex Mono',monospace;font-size:0.58rem;color:var(--text3);display:flex;align-items:center;gap:6px;}
+.news-source-tag{display:inline-block;padding:2px 6px;border-radius:3px;font-size:0.55rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;}
+.src-jp{background:rgba(230,51,41,0.1);color:var(--accent);}
+.src-as{background:rgba(230,51,41,0.1);color:var(--accent);}
+.src-cm{background:rgba(29,111,206,0.12);color:var(--blue);}
+.src-rv{background:rgba(22,163,74,0.1);color:var(--green);}
+.news-loading{padding:32px;text-align:center;color:var(--text3);font-family:'IBM Plex Mono',monospace;font-size:0.72rem;}
 .news-error{padding:16px;color:var(--text3);font-family:'IBM Plex Mono',monospace;font-size:0.75rem;}
 
 /* Rankings */
@@ -859,12 +872,31 @@ function parseRSS(xmlStr) {
   const parser = new DOMParser();
   const doc = parser.parseFromString(xmlStr, 'text/xml');
   const items = Array.from(doc.querySelectorAll('item'));
-  return items.slice(0, 8).map(item => ({
-    title: item.querySelector('title')?.textContent?.replace(/<!\[CDATA\[|\]\]>/g,'').trim() || '',
-    link: item.querySelector('link')?.textContent?.trim() || '#',
-    date: item.querySelector('pubDate')?.textContent?.trim() || '',
-    desc: item.querySelector('description')?.textContent?.replace(/<[^>]+>/g,'').replace(/<!\[CDATA\[|\]\]>/g,'').trim().substring(0,120) || ''
-  }));
+  return items.slice(0, 12).map(item => {
+    // Extraer imagen: media:content, enclosure, o primera img del HTML de description
+    let img = '';
+    const media = item.getElementsByTagNameNS('*','content')[0] || item.querySelector('enclosure');
+    if (media) {
+      img = media.getAttribute('url') || '';
+    }
+    if (!img) {
+      // buscar dentro del HTML de description
+      const desc = item.querySelector('description')?.textContent || '';
+      const m = desc.match(/src=["']([^"']+\.(?:jpg|jpeg|png|webp))/i);
+      if (m) img = m[1];
+    }
+    if (!img) {
+      // thumbnail de WordPress
+      const thumb = item.querySelector('thumbnail');
+      if (thumb) img = thumb.getAttribute('url') || thumb.textContent || '';
+    }
+    return {
+      title: item.querySelector('title')?.textContent?.replace(/<![CDATA[|]]>/g,'').replace(/<!\[CDATA\[|\]\]>/g,'').trim() || '',
+      link:  item.querySelector('link')?.textContent?.trim() || '#',
+      date:  item.querySelector('pubDate')?.textContent?.trim() || '',
+      img
+    };
+  });
 }
 
 function timeAgo(dateStr) {
@@ -923,28 +955,52 @@ function filterNews(srcId, btn) {
 }
 
 function renderNews() {
-  const list = document.getElementById('newsList');
+  const container = document.getElementById('newsList');
   const items = activeNewsFilter === 'all'
     ? allNews
     : allNews.filter(n => n.srcId === activeNewsFilter);
 
   if (!items.length) {
-    list.innerHTML = '<div class="news-error">No hay noticias disponibles en este momento. Comprueba tu conexión.</div>';
+    container.innerHTML = '<div class="news-error">⏳ Cargando noticias… (si persiste, comprueba conexión)</div>';
     return;
   }
 
-  list.innerHTML = items.map(n => `
-    <a class="news-item" href="${n.link}" target="_blank" rel="noopener">
-      <div class="news-dot"></div>
-      <div class="news-content">
-        <div class="news-title">${n.title}</div>
-        <div class="news-meta">
+  const [first, ...rest] = items;
+
+  // Tarjeta destacada
+  const featured = first.img
+    ? `<a class="news-featured" href="${first.link}" target="_blank" rel="noopener">
+        <img src="${first.img}" alt="" loading="lazy" onerror="this.style.display='none'">
+        <div class="news-featured-overlay">
+          <div class="news-featured-tag">${first.srcLabel}</div>
+          <div class="news-featured-title">${first.title}</div>
+          <div class="news-featured-meta">${timeAgo(first.date)}</div>
+        </div>
+      </a>`
+    : `<a class="news-featured-noimg" href="${first.link}" target="_blank" rel="noopener">
+        <div class="news-source-tag ${first.srcCls}" style="margin-bottom:6px">${first.srcLabel}</div>
+        <div class="news-featured-title">${first.title}</div>
+        <div class="news-item-meta" style="margin-top:6px">${timeAgo(first.date)}</div>
+      </a>`;
+
+  // Lista resto
+  const listHtml = rest.map(n => {
+    const thumb = n.img
+      ? `<img class="news-item-thumb" src="${n.img}" alt="" loading="lazy" onerror="this.parentNode.querySelector('.news-item-thumb').replaceWith(Object.assign(document.createElement('div'),{className:'news-item-thumb-placeholder',textContent:'📰'}))">`
+      : `<div class="news-item-thumb-placeholder">📰</div>`;
+    return `<a class="news-item" href="${n.link}" target="_blank" rel="noopener">
+      ${thumb}
+      <div class="news-item-body">
+        <div class="news-item-title">${n.title}</div>
+        <div class="news-item-meta">
           <span class="news-source-tag ${n.srcCls}">${n.srcLabel}</span>
-          ${timeAgo(n.date) ? '<span>' + timeAgo(n.date) + '</span>' : ''}
+          <span>${timeAgo(n.date)}</span>
         </div>
       </div>
-    </a>
-  `).join('');
+    </a>`;
+  }).join('');
+
+  container.innerHTML = featured + listHtml;
 }
 
 // ══════════════════════════════════════════
