@@ -48,93 +48,97 @@ async function login() {
     }
   }, payload);
 
+  // Mostrar respuesta completa para depuración
+  console.log('Respuesta login completa:', JSON.stringify(res.body).substring(0, 800));
+
   if (res.status !== 200) {
-    console.error('❌ Login fallido. Status:', res.status, JSON.stringify(res.body));
+    console.error('❌ Login fallido. Status:', res.status);
     process.exit(1);
   }
 
   const token = res.body?.data?.token || res.body?.token;
   if (!token) {
-    console.error('❌ No se encontró token:', JSON.stringify(res.body));
+    console.error('❌ No se encontró token');
     process.exit(1);
   }
 
-  // Extraer también el userId de la respuesta
-  const userId = res.body?.data?.user?.id || res.body?.data?.id || '';
-  console.log('✅ Login correcto, userId:', userId);
-  return { token, userId };
+  console.log('✅ Login correcto');
+  return token;
 }
 
-// ─── 2. JUGADORES ────────────────────────────────────────────────────────────
-async function fetchPlayers(token, userId) {
-  console.log('📥 Descargando jugadores...');
+// ─── 2. JUGADORES via endpoint público de LaLiga ─────────────────────────────
+async function fetchPlayers(token) {
+  console.log('📥 Descargando jugadores LaLiga...');
 
-  const headers = {
-    'Authorization': `Bearer ${token}`,
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-    'Origin': 'https://biwenger.as.com',
-    'Referer': 'https://biwenger.as.com/',
-    'x-league': LEAGUE_ID,
-  };
-  if (userId) headers['x-user'] = String(userId);
-
+  // Este endpoint es público y no necesita x-user ni x-league
   const res = await request({
-    hostname: 'biwenger.as.com',
-    path: `/api/v2/leagues/${LEAGUE_ID}/players?fields=*,fitness,team&score=2`,
+    hostname: 'cf.biwenger.com',
+    path: '/api/v2/competitions/la-liga/data?lang=es&score=2&fields=*,team,fitness',
     method: 'GET',
-    headers,
+    headers: {
+      'Authorization': `Bearer ${token}`,
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+      'Accept': 'application/json, text/plain, */*',
+      'Accept-Language': 'es-ES,es;q=0.9',
+      'Origin': 'https://biwenger.as.com',
+      'Referer': 'https://biwenger.as.com/',
+      'sec-fetch-dest': 'empty',
+      'sec-fetch-mode': 'cors',
+      'sec-fetch-site': 'cross-site',
+    }
   });
 
   console.log('Status jugadores:', res.status);
   console.log('Respuesta (500 chars):', JSON.stringify(res.body).substring(0, 500));
 
   if (res.status !== 200) {
-    console.error('❌ Error al obtener jugadores');
+    console.error('❌ Error al obtener jugadores. Status:', res.status);
     process.exit(1);
   }
 
-  const raw = res.body?.data;
-  if (!raw) {
-    console.error('❌ Sin datos en la respuesta');
+  const rawPlayers = res.body?.data?.players;
+  if (!rawPlayers) {
+    console.error('❌ Sin jugadores en la respuesta');
+    console.log('Keys disponibles:', Object.keys(res.body?.data || {}));
     process.exit(1);
   }
 
-  const arr = Array.isArray(raw) ? raw : Object.values(raw);
+  const arr = Array.isArray(rawPlayers) ? rawPlayers : Object.values(rawPlayers);
   console.log(`✅ ${arr.length} jugadores descargados`);
+
   return arr.map(p => ({
     id:         p.id,
     name:       p.name,
     position:   p.position,
-    price:      p.price      || 0,
-    points:     p.points     || 0,
-    trend:      p.priceIncrement || 0,
-    playedHome: p.playedHome || 0,
-    playedAway: p.playedAway || 0,
-    teamName:   p.teamName   || p.team?.name || '',
+    price:      p.price         || 0,
+    points:     p.points        || 0,
+    trend:      p.priceIncrement|| 0,
+    playedHome: p.playedHome    || 0,
+    playedAway: p.playedAway    || 0,
+    teamName:   p.teamName      || p.team?.name || '',
     status:     p.fitness?.[0]?.status || 'ok',
     jForm:      (p.fitness || []).slice(0, 5).map(f => f.points ?? null),
   }));
 }
 
 // ─── 3. DATOS DE LIGA ────────────────────────────────────────────────────────
-async function fetchLeague(token, userId) {
+async function fetchLeague(token) {
   console.log('🏆 Descargando datos de la liga...');
-
-  const headers = {
-    'Authorization': `Bearer ${token}`,
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-    'Origin': 'https://biwenger.as.com',
-    'Referer': 'https://biwenger.as.com/',
-    'x-league': LEAGUE_ID,
-  };
-  if (userId) headers['x-user'] = String(userId);
 
   const res = await request({
     hostname: 'biwenger.as.com',
     path: `/api/v2/leagues/${LEAGUE_ID}?fields=*,standings,teams`,
     method: 'GET',
-    headers,
+    headers: {
+      'Authorization': `Bearer ${token}`,
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+      'Accept': 'application/json',
+      'Origin': 'https://biwenger.as.com',
+      'Referer': 'https://biwenger.as.com/',
+    }
   });
+
+  console.log('Status liga:', res.status);
 
   if (res.status !== 200) {
     console.warn('⚠️ No se pudieron obtener datos de liga. Status:', res.status);
@@ -148,9 +152,9 @@ async function fetchLeague(token, userId) {
 // ─── MAIN ────────────────────────────────────────────────────────────────────
 async function main() {
   try {
-    const { token, userId } = await login();
-    const players = await fetchPlayers(token, userId);
-    const league  = await fetchLeague(token, userId);
+    const token   = await login();
+    const players = await fetchPlayers(token);
+    const league  = await fetchLeague(token);
 
     const output = {
       updatedAt: new Date().toISOString(),
