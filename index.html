@@ -1252,136 +1252,94 @@ function buildRankRow(name, pos, club, valLabel, colorCls, pct) {
 }
 
 function initRankings() {
-  const entries = Object.entries(ADVANCED_STATS).filter(([,s]) => !s.inGuitlla);
-
-  // Helper: buscar pos en allPlayers (que ya tiene mapPosition aplicado)
-  function resolvePos(name, fallback) {
-    if (allPlayers.length) {
-      const found = allPlayers.find(p => p.name === name || p.name.toLowerCase() === name.toLowerCase());
-      if (found && found.position) return found.position.split('/')[0];
-    }
-    return fallback || '';
-  }
-
-  // 🔥 En racha — suma de últimas 5 jornadas
-  const racha = entries
-    .map(([name,s]) => ({ name, pos: resolvePos(name, s.pos||''), sum:(s.j1||0)+(s.j2||0)+(s.j3||0)+(s.j4||0)+(s.j5||0) }))
-    .filter(p => p.sum > 0)
-    .sort((a,b) => b.sum - a.sum)
-    .slice(0, 5);
-  const rachaMax = racha[0]?.sum || 1;
-  document.getElementById('rankRacha').innerHTML =
-    racha.map(p => buildRankRow(p.name, p.pos, null, `${p.sum}p`, 'amber', Math.round(p.sum/rachaMax*100))).join('') ||
-    '<div style="padding:12px 14px;font-size:0.75rem;color:var(--text3)">Sin datos</div>';
-
-  // 📈 Más suben — ROI alto como proxy de jugadores en alza
-  const suben = entries
-    .filter(([,s]) => s.roi && s.valor)
-    .map(([name,s]) => ({ name, pos: resolvePos(name, s.pos||''), roi:s.roi, valor:s.valor }))
-    .sort((a,b) => b.roi - a.roi)
-    .slice(0, 5);
-  const subenMax = suben[0]?.roi || 1;
-  document.getElementById('rankSuben').innerHTML =
-    suben.map(p => buildRankRow(p.name, p.pos, `${p.valor}M€`, `ROI ${p.roi.toFixed(1)}`, 'green', Math.round(p.roi/subenMax*100))).join('') ||
-    '<div style="padding:12px 14px;font-size:0.75rem;color:var(--text3)">Sin datos</div>';
-
-  // 📉 Más bajan — factor clave bajo y valor alto (sobrevalorados)
-  const bajan = entries
-    .filter(([,s]) => s.factor && s.valor && s.valor > 5)
-    .map(([name,s]) => ({ name, pos: resolvePos(name, s.pos||''), factor:s.factor, valor:s.valor }))
-    .sort((a,b) => a.factor - b.factor)
-    .slice(0, 5);
-  const bajanMax = bajan[0] ? Math.abs(bajan[0].factor) || 1 : 1;
-  document.getElementById('rankBajan').innerHTML =
-    bajan.map(p => buildRankRow(p.name, p.pos, `${p.valor}M€`, `F ${p.factor.toFixed(2)}`, 'red', Math.round((1/p.factor)*100 > 100 ? 100 : (1/p.factor)*100))).join('') ||
-    '<div style="padding:12px 14px;font-size:0.75rem;color:var(--text3)">Sin datos</div>';
-
-  // ⭐ Top puntuadores — por pts totales
-  const topPts = entries
-    .filter(([,s]) => s.pts)
-    .map(([name,s]) => ({ name, pos: resolvePos(name, s.pos||''), pts:s.pts, media:s.media }))
-    .sort((a,b) => b.pts - a.pts)
-    .slice(0, 5);
-  const ptsMax = topPts[0]?.pts || 1;
-  document.getElementById('rankGoleadores').innerHTML =
-    topPts.map(p => buildRankRow(p.name, p.pos, p.media ? `⭐ ${p.media}` : null, `${p.pts}p`, 'blue', Math.round(p.pts/ptsMax*100))).join('') ||
-    '<div style="padding:12px 14px;font-size:0.75rem;color:var(--text3)">Sin datos</div>';
-
-
-  // ⚡ Jugadores eficientes (fallback ADVANCED_STATS)
-  const efEntries = entries
-    .filter(([,s]) => s.pts >= 60 && s.pj >= 8 && s.valor > 0)
-    .map(([name,s]) => {
-      const media = s.media || (s.pts / s.pj);
-      return { name, pos: s.pos||'', pts: s.pts, precio: s.valor, media, pj: s.pj };
-    });
-  const maxPorPosEf = {};
-  efEntries.forEach(p => { if (!maxPorPosEf[p.pos] || p.pts > maxPorPosEf[p.pos]) maxPorPosEf[p.pos] = p.pts; });
-  const eficientes = efEntries
-    .map(p => ({
-      ...p,
-      score: (p.media * 0.5) + ((p.pts / p.precio) * 0.3) + ((p.pts / (maxPorPosEf[p.pos]||p.pts)) * 100 * 0.2)
-    }))
-    .sort((a,b) => b.score - a.score).slice(0, 10);
-  const efMax = eficientes[0]?.score || 1;
-  document.getElementById('rankUndervalued').innerHTML =
-    eficientes.map(p => buildRankRow(p.name, p.pos, `${p.precio.toFixed(2)}M€ · ⌀${p.media.toFixed(1)}`, `${p.score.toFixed(1)}`, 'blue', Math.round(p.score/efMax*100))).join('') ||
-    '<div style="padding:12px 14px;font-size:0.75rem;color:var(--text3)">Sin datos</div>';
-
-  // 🏷️ Chollos (fallback ADVANCED_STATS) — baratos que rinden por encima de lo esperado
-  const chollosEntries = entries
-    .filter(([,s]) => s.pts >= 40 && s.pj >= 6 && s.valor > 0 && s.valor <= 5)
-    .map(([name,s]) => ({ name, pos: s.pos||'', pts: s.pts, precio: s.valor, media: s.media||(s.pts/s.pj), pj: s.pj, price: s.valor*1000000 }));
-  if (chollosEntries.length) {
-    const precios = chollosEntries.map(p => p.precio);
-    const minP = Math.min(...precios), maxP = Math.max(...precios), rangoP = maxP - minP || 1;
-    const chollosSorted = chollosEntries
-      .map(p => ({ ...p, score: (p.pts * 0.5) + (p.media * 0.3) + (((maxP - p.precio) / rangoP) * 100 * 0.2) }))
-      .sort((a,b) => b.score - a.score).slice(0, 10);
-    const chollosMax = chollosSorted[0]?.score || 1;
-    document.getElementById('rankChollos').innerHTML =
-      chollosSorted.map(p => buildRankRow(p.name, p.pos, `${p.precio.toFixed(2)}M€ · ⌀${p.media.toFixed(1)}`, `${p.score.toFixed(1)}`, 'amber', Math.round(p.score/chollosMax*100))).join('');
-  } else {
-    document.getElementById('rankChollos').innerHTML = '<div style="padding:12px 14px;font-size:0.75rem;color:var(--text3)">Sin datos</div>';
-  }
+  // Rankings alimentados exclusivamente por allPlayers (datos reales de Biwenger)
+  // Esta función ya no usa ADVANCED_STATS — todo pasa por renderRankings()
+  if (allPlayers.length) renderRankings(allPlayers);
 }
 
+
 function renderRankings(players) {
-  // Actualizar suben/bajan en Inicio con tendencias reales
-  const suben = [...players].filter(p=>p.trend>0).sort((a,b)=>b.trend-a.trend).slice(0,5);
+  const pos = p => p.position || p.pos || '';
+
+  // 🔥 EN RACHA — suma de jForm (últimas 5 jornadas) con puntos > 0
+  const rachaList = [...players]
+    .map(p => {
+      const form = (p.jForm || []).filter(v => v !== null && v !== undefined);
+      const sum  = form.reduce((s, v) => s + (v > 0 ? v : 0), 0);
+      const pts5 = form.filter(v => v > 0);
+      const media5 = pts5.length ? (sum / pts5.length).toFixed(1) : null;
+      return { ...p, rachaSum: sum, media5 };
+    })
+    .filter(p => p.rachaSum > 0)
+    .sort((a, b) => b.rachaSum - a.rachaSum)
+    .slice(0, 5);
+
+  if (rachaList.length) {
+    const rachaMax = rachaList[0].rachaSum;
+    // Mostrar las 5 jornadas + media debajo del nombre
+    document.getElementById('rankRacha').innerHTML = rachaList.map(p => {
+      const formDots = (p.jForm || []).slice(0, 5).map(v => {
+        if (v === null || v === undefined) return '<span style="color:var(--text3)">—</span>';
+        const c = v >= 10 ? 'var(--green)' : v >= 5 ? 'var(--pt)' : v > 0 ? 'var(--text2)' : 'var(--red)';
+        return `<span style="color:${c};font-weight:600">${v}</span>`;
+      }).join('<span style="color:var(--border2);margin:0 2px">·</span>');
+      const sub = `<span style="font-size:0.6rem;color:var(--text3)">${formDots}${p.media5 ? ` &nbsp;⌀${p.media5}` : ''}</span>`;
+      return buildRankRow(p.name, pos(p), sub, `${p.rachaSum}p`, 'amber', Math.round(p.rachaSum/rachaMax*100));
+    }).join('');
+  }
+
+  // 📈 MÁS SUBEN — tendencia de precio positiva
+  const suben = [...players].filter(p => p.trend > 0).sort((a,b) => b.trend - a.trend).slice(0, 5);
   if (suben.length) {
     const subenMax = suben[0].trend;
     document.getElementById('rankSuben').innerHTML =
-      suben.map(p => buildRankRow(p.name, p.position||p.pos||'', fmt(p.trend/1000)+'K€', `+${fmt(p.trend/1000)}K`, 'green', Math.round(p.trend/subenMax*100))).join('');
+      suben.map(p => buildRankRow(p.name, pos(p), fmt(p.price/1000000)+'M€', `+${fmt(p.trend/1000)}K`, 'green', Math.round(p.trend/subenMax*100))).join('');
   }
-  const bajan = [...players].filter(p=>p.trend<0).sort((a,b)=>a.trend-b.trend).slice(0,5);
+
+  // 📉 MÁS BAJAN — tendencia de precio negativa
+  const bajan = [...players].filter(p => p.trend < 0).sort((a,b) => a.trend - b.trend).slice(0, 5);
   if (bajan.length) {
     const bajanMax = Math.abs(bajan[0].trend);
     document.getElementById('rankBajan').innerHTML =
-      bajan.map(p => buildRankRow(p.name, p.position||p.pos||'', fmt(p.trend/1000)+'K€', `${fmt(p.trend/1000)}K`, 'red', Math.round(Math.abs(p.trend)/bajanMax*100))).join('');
+      bajan.map(p => buildRankRow(p.name, pos(p), fmt(p.price/1000000)+'M€', `${fmt(p.trend/1000)}K`, 'red', Math.round(Math.abs(p.trend)/bajanMax*100))).join('');
   }
-  // Actualizar eficientes en Inicio
+
+  // ⭐ TOP GOLEADORES — por puntos totales
+  const topPts = [...players].filter(p => p.pts > 0).sort((a,b) => b.pts - a.pts).slice(0, 5);
+  if (topPts.length) {
+    const ptsMax = topPts[0].pts;
+    document.getElementById('rankGoleadores').innerHTML =
+      topPts.map(p => {
+        const pj = (p.playedHome || 0) + (p.playedAway || 0);
+        const media = pj > 0 ? (p.pts / pj).toFixed(1) : '—';
+        return buildRankRow(p.name, pos(p), `${fmt(p.price/1000000)}M€ · ⌀${media}`, `${p.pts}p`, 'blue', Math.round(p.pts/ptsMax*100));
+      }).join('');
+  }
+
+  // ⚡ EFICIENTES
   const eficientes = calcularEficientes(players);
   if (eficientes.length) {
     const efMax = eficientes[0].score;
     document.getElementById('rankUndervalued').innerHTML =
       eficientes.slice(0,5).map(p => buildRankRow(
-        p.name, p.position||p.pos||'',
+        p.name, pos(p),
         `${(p.price/1000000).toFixed(2)}M€ · ⌀${p.media.toFixed(1)}`,
         `${p.score.toFixed(1)}`, 'blue', Math.round(p.score/efMax*100)
       )).join('');
   }
-  // Actualizar chollos en Inicio
+
+  // 🏷️ CHOLLOS
   const chollos = calcularChollos(players);
   if (chollos.length) {
     const chollosMax = chollos[0].score;
     document.getElementById('rankChollos').innerHTML =
       chollos.slice(0,5).map(p => buildRankRow(
-        p.name, p.position||p.pos||'',
+        p.name, pos(p),
         `${(p.price/1000000).toFixed(2)}M€ · ⌀${p.media.toFixed(1)}`,
         `${p.score.toFixed(1)}`, 'amber', Math.round(p.score/chollosMax*100)
       )).join('');
   }
+
   // Actualizar Estudio de Mercado completo
   renderMercado(players);
 }
