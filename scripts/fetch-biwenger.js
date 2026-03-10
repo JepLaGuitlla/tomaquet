@@ -1,21 +1,17 @@
 // scripts/fetch-biwenger.js
-// Se ejecuta cada día via GitHub Actions.
-// Lee credenciales desde variables de entorno (GitHub Secrets).
-// Guarda el resultado en data.json en la raíz del repositorio.
-
 const https = require('https');
 const fs    = require('fs');
 
 const EMAIL     = process.env.BIWENGER_EMAIL;
 const PASSWORD  = process.env.BIWENGER_PASSWORD;
 const LEAGUE_ID = process.env.BIWENGER_LEAGUE_ID || '44700';
+const USER_ID   = '170210';
 
 if (!EMAIL || !PASSWORD) {
   console.error('❌ Faltan Secrets en GitHub');
   process.exit(1);
 }
 
-// ─── Utilidad: fetch con https nativo (sin dependencias externas) ────────────
 function request(options, body = null) {
   return new Promise((resolve, reject) => {
     const req = https.request(options, (res) => {
@@ -47,19 +43,20 @@ async function login() {
     headers: {
       'Content-Type': 'application/json',
       'Content-Length': Buffer.byteLength(payload),
-      'User-Agent': 'Mozilla/5.0',
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+      'Origin': 'https://biwenger.as.com',
+      'Referer': 'https://biwenger.as.com/',
     }
   }, payload);
 
   if (res.status !== 200) {
-    console.error('❌ Login fallido. Status:', res.status);
-    console.error('Respuesta:', JSON.stringify(res.body));
+    console.error('❌ Login fallido. Status:', res.status, JSON.stringify(res.body));
     process.exit(1);
   }
 
   const token = res.body?.data?.token || res.body?.token;
   if (!token) {
-    console.error('❌ No se encontró token en la respuesta:', JSON.stringify(res.body));
+    console.error('❌ No se encontró token:', JSON.stringify(res.body));
     process.exit(1);
   }
 
@@ -67,52 +64,106 @@ async function login() {
   return token;
 }
 
-// ─── 2. DATOS DE JUGADORES (no requiere auth, es pública) ───────────────────
+// ─── 2. JUGADORES via endpoint de liga (usa el token) ───────────────────────
 async function fetchPlayers(token) {
-  console.log('📥 Descargando jugadores de LaLiga...');
+  console.log('📥 Descargando jugadores...');
 
+  // Usamos el endpoint de la liga que sí acepta el token
   const res = await request({
-    hostname: 'cf.biwenger.com',
-    path: '/api/v2/competitions/la-liga/data?lang=es&score=2',
+    hostname: 'biwenger.as.com',
+    path: `/api/v2/leagues/${LEAGUE_ID}/players?fields=*,fitness,team&score=2`,
     method: 'GET',
     headers: {
       'Authorization': `Bearer ${token}`,
-      'User-Agent': 'Mozilla/5.0',
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+      'Origin': 'https://biwenger.as.com',
+      'Referer': 'https://biwenger.as.com/',
+      'x-user': USER_ID,
+      'x-league': LEAGUE_ID,
     }
   });
 
+  console.log('Status jugadores:', res.status);
+
   if (res.status !== 200) {
-    console.error('❌ Error al obtener jugadores. Status:', res.status);
-    process.exit(1);
+    // Intentar endpoint alternativo
+    console.log('⚠️ Intentando endpoint alternativo...');
+    return await fetchPlayersAlt(token);
   }
 
-  const players = res.body?.data?.players;
-  if (!players) {
-    console.error('❌ No se encontraron jugadores en la respuesta');
-    process.exit(1);
+  const raw = res.body?.data;
+  if (!raw) {
+    console.log('⚠️ Sin datos, intentando alternativo...');
+    return await fetchPlayersAlt(token);
   }
 
-  // Convertir de objeto {id: datos} a array
-  const arr = Object.values(players).map(p => ({
-    id:          p.id,
-    name:        p.name,
-    position:    p.position,
-    price:       p.price       || 0,
-    points:      p.points      || 0,
-    trend:       p.priceIncrement || 0,
-    playedHome:  p.playedHome  || 0,
-    playedAway:  p.playedAway  || 0,
-    teamName:    p.teamName    || p.team?.name || '',
-    status:      p.fitness?.[0]?.status || 'ok',
-    // Últimas 5 jornadas si están disponibles
-    jForm:       (p.fitness || []).slice(0, 5).map(f => f.points ?? null),
-  }));
-
+  const arr = Array.isArray(raw) ? raw : Object.values(raw);
   console.log(`✅ ${arr.length} jugadores descargados`);
-  return arr;
+  return arr.map(p => ({
+    id:         p.id,
+    name:       p.name,
+    position:   p.position,
+    price:      p.price      || 0,
+    points:     p.points     || 0,
+    trend:      p.priceIncrement || 0,
+    playedHome: p.playedHome || 0,
+    playedAway: p.playedAway || 0,
+    teamName:   p.teamName   || p.team?.name || '',
+    status:     p.fitness?.[0]?.status || 'ok',
+    jForm:      (p.fitness || []).slice(0, 5).map(f => f.points ?? null),
+  }));
 }
 
-// ─── 3. DATOS DE LA LIGA (clasificación, etc.) ──────────────────────────────
+// ─── 2b. Endpoint alternativo de jugadores ───────────────────────────────────
+async function fetchPlayersAlt(token) {
+  console.log('📥 Descargando jugadores (endpoint alternativo)...');
+
+  const res = await request({
+    hostname: 'biwenger.as.com',
+    path: `/api/v2/market?fields=*,fitness,team&score=2`,
+    method: 'GET',
+    headers: {
+      'Authorization': `Bearer ${token}`,
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+      'Origin': 'https://biwenger.as.com',
+      'Referer': 'https://biwenger.as.com/',
+      'x-user': USER_ID,
+      'x-league': LEAGUE_ID,
+    }
+  });
+
+  console.log('Status alternativo:', res.status);
+  console.log('Respuesta (primeros 500 chars):', JSON.stringify(res.body).substring(0, 500));
+
+  if (res.status !== 200) {
+    console.error('❌ Ambos endpoints fallaron');
+    process.exit(1);
+  }
+
+  const raw = res.body?.data;
+  if (!raw) {
+    console.error('❌ Sin datos en endpoint alternativo');
+    process.exit(1);
+  }
+
+  const arr = Array.isArray(raw) ? raw : Object.values(raw);
+  console.log(`✅ ${arr.length} jugadores descargados`);
+  return arr.map(p => ({
+    id:         p.id,
+    name:       p.name,
+    position:   p.position,
+    price:      p.price      || 0,
+    points:     p.points     || 0,
+    trend:      p.priceIncrement || 0,
+    playedHome: p.playedHome || 0,
+    playedAway: p.playedAway || 0,
+    teamName:   p.teamName   || p.team?.name || '',
+    status:     p.fitness?.[0]?.status || 'ok',
+    jForm:      (p.fitness || []).slice(0, 5).map(f => f.points ?? null),
+  }));
+}
+
+// ─── 3. DATOS DE LIGA ────────────────────────────────────────────────────────
 async function fetchLeague(token) {
   console.log('🏆 Descargando datos de la liga...');
 
@@ -122,7 +173,11 @@ async function fetchLeague(token) {
     method: 'GET',
     headers: {
       'Authorization': `Bearer ${token}`,
-      'User-Agent': 'Mozilla/5.0',
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+      'Origin': 'https://biwenger.as.com',
+      'Referer': 'https://biwenger.as.com/',
+      'x-user': USER_ID,
+      'x-league': LEAGUE_ID,
     }
   });
 
@@ -138,7 +193,7 @@ async function fetchLeague(token) {
 // ─── MAIN ────────────────────────────────────────────────────────────────────
 async function main() {
   try {
-    const token  = await login();
+    const token   = await login();
     const players = await fetchPlayers(token);
     const league  = await fetchLeague(token);
 
@@ -150,7 +205,7 @@ async function main() {
 
     fs.writeFileSync('data.json', JSON.stringify(output, null, 2), 'utf8');
     console.log('💾 data.json guardado correctamente');
-    console.log(`📊 Resumen: ${players.length} jugadores, liga: ${league ? 'OK' : 'no disponible'}`);
+    console.log(`📊 ${players.length} jugadores, liga: ${league ? 'OK' : 'no disponible'}`);
 
   } catch (err) {
     console.error('❌ Error inesperado:', err.message);
