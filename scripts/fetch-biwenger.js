@@ -146,7 +146,7 @@ async function fetchPlayers() {
     playedAway: p.playedAway     || 0,
     teamName:   p.teamName       || p.team?.name || '',
     status:     p.fitness?.[0]?.status || 'ok',
-    jForm:      (p.fitness || []).slice(0, 5).map(f => f.points ?? null),
+    jForm:      (p.fitness || []).slice(0, 5).map(f => typeof f === 'number' ? f : (f?.points ?? null)),
   }));
 }
 
