@@ -74,13 +74,13 @@ async function login() {
   return token;
 }
 
-// ─── 2. JUGADORES ────────────────────────────────────────────────────────────
+// ─── 2. JUGADORES de la liga ──────────────────────────────────────────────────
 async function fetchPlayers(token) {
-  console.log('📥 Descargando jugadores...');
+  console.log('📥 Descargando jugadores de la liga...');
 
   const res = await request({
     hostname: 'biwenger.as.com',
-    path: '/api/v2/market?fields=*,fitness,team&score=2',
+    path: `/api/v2/leagues/${LEAGUE_ID}/players?fields=*,fitness,team&score=2`,
     method: 'GET',
     headers: {
       ...COMMON_HEADERS,
@@ -102,8 +102,10 @@ async function fetchPlayers(token) {
     process.exit(1);
   }
 
+  // Puede venir como objeto {id: player} o como array
   const arr = Array.isArray(raw) ? raw : Object.values(raw);
   console.log(`✅ ${arr.length} jugadores descargados`);
+  console.log('Ejemplo primer jugador:', JSON.stringify(arr[0]).substring(0, 300));
 
   return arr.map(p => ({
     id:         p.id,
@@ -133,8 +135,6 @@ async function fetchLeague(token) {
       'Authorization': `Bearer ${token}`,
     }
   });
-
-  console.log('Status liga:', res.status);
 
   if (res.status !== 200) {
     console.warn('⚠️ No se pudieron obtener datos de liga. Status:', res.status);
