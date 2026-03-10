@@ -4,7 +4,9 @@ const fs    = require('fs');
 
 const EMAIL     = process.env.BIWENGER_EMAIL;
 const PASSWORD  = process.env.BIWENGER_PASSWORD;
-const LEAGUE_ID = process.env.BIWENGER_LEAGUE_ID || '44700';
+const LEAGUE_ID = '44700';
+const USER_ID   = '6541195';
+const VERSION   = '630';
 
 if (!EMAIL || !PASSWORD) {
   console.error('❌ Faltan Secrets en GitHub');
@@ -30,6 +32,17 @@ function request(options, body = null) {
   });
 }
 
+const COMMON_HEADERS = {
+  'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+  'Accept': 'application/json, text/plain, */*',
+  'Accept-Language': 'es-ES,es;q=0.9',
+  'Origin': 'https://biwenger.as.com',
+  'Referer': 'https://biwenger.as.com/',
+  'x-league': LEAGUE_ID,
+  'x-user': USER_ID,
+  'x-version': VERSION,
+};
+
 // ─── 1. LOGIN ────────────────────────────────────────────────────────────────
 async function login() {
   console.log('🔐 Haciendo login en Biwenger...');
@@ -40,25 +53,20 @@ async function login() {
     path: '/api/v2/auth/login',
     method: 'POST',
     headers: {
+      ...COMMON_HEADERS,
       'Content-Type': 'application/json',
       'Content-Length': Buffer.byteLength(payload),
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-      'Origin': 'https://biwenger.as.com',
-      'Referer': 'https://biwenger.as.com/',
     }
   }, payload);
 
-  // Mostrar respuesta completa para depuración
-  console.log('Respuesta login completa:', JSON.stringify(res.body).substring(0, 800));
-
   if (res.status !== 200) {
-    console.error('❌ Login fallido. Status:', res.status);
+    console.error('❌ Login fallido. Status:', res.status, JSON.stringify(res.body));
     process.exit(1);
   }
 
   const token = res.body?.data?.token || res.body?.token;
   if (!token) {
-    console.error('❌ No se encontró token');
+    console.error('❌ No se encontró token:', JSON.stringify(res.body));
     process.exit(1);
   }
 
@@ -66,25 +74,17 @@ async function login() {
   return token;
 }
 
-// ─── 2. JUGADORES via endpoint público de LaLiga ─────────────────────────────
+// ─── 2. JUGADORES ────────────────────────────────────────────────────────────
 async function fetchPlayers(token) {
-  console.log('📥 Descargando jugadores LaLiga...');
+  console.log('📥 Descargando jugadores...');
 
-  // Este endpoint es público y no necesita x-user ni x-league
   const res = await request({
-    hostname: 'cf.biwenger.com',
-    path: '/api/v2/competitions/la-liga/data?lang=es&score=2&fields=*,team,fitness',
+    hostname: 'biwenger.as.com',
+    path: '/api/v2/market?fields=*,fitness,team&score=2',
     method: 'GET',
     headers: {
+      ...COMMON_HEADERS,
       'Authorization': `Bearer ${token}`,
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-      'Accept': 'application/json, text/plain, */*',
-      'Accept-Language': 'es-ES,es;q=0.9',
-      'Origin': 'https://biwenger.as.com',
-      'Referer': 'https://biwenger.as.com/',
-      'sec-fetch-dest': 'empty',
-      'sec-fetch-mode': 'cors',
-      'sec-fetch-site': 'cross-site',
     }
   });
 
@@ -96,26 +96,25 @@ async function fetchPlayers(token) {
     process.exit(1);
   }
 
-  const rawPlayers = res.body?.data?.players;
-  if (!rawPlayers) {
-    console.error('❌ Sin jugadores en la respuesta');
-    console.log('Keys disponibles:', Object.keys(res.body?.data || {}));
+  const raw = res.body?.data;
+  if (!raw) {
+    console.error('❌ Sin datos en la respuesta');
     process.exit(1);
   }
 
-  const arr = Array.isArray(rawPlayers) ? rawPlayers : Object.values(rawPlayers);
+  const arr = Array.isArray(raw) ? raw : Object.values(raw);
   console.log(`✅ ${arr.length} jugadores descargados`);
 
   return arr.map(p => ({
     id:         p.id,
     name:       p.name,
     position:   p.position,
-    price:      p.price         || 0,
-    points:     p.points        || 0,
-    trend:      p.priceIncrement|| 0,
-    playedHome: p.playedHome    || 0,
-    playedAway: p.playedAway    || 0,
-    teamName:   p.teamName      || p.team?.name || '',
+    price:      p.price          || 0,
+    points:     p.points         || 0,
+    trend:      p.priceIncrement || 0,
+    playedHome: p.playedHome     || 0,
+    playedAway: p.playedAway     || 0,
+    teamName:   p.teamName       || p.team?.name || '',
     status:     p.fitness?.[0]?.status || 'ok',
     jForm:      (p.fitness || []).slice(0, 5).map(f => f.points ?? null),
   }));
@@ -130,11 +129,8 @@ async function fetchLeague(token) {
     path: `/api/v2/leagues/${LEAGUE_ID}?fields=*,standings,teams`,
     method: 'GET',
     headers: {
+      ...COMMON_HEADERS,
       'Authorization': `Bearer ${token}`,
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-      'Accept': 'application/json',
-      'Origin': 'https://biwenger.as.com',
-      'Referer': 'https://biwenger.as.com/',
     }
   });
 
