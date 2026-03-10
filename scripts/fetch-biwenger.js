@@ -5,7 +5,6 @@ const fs    = require('fs');
 const EMAIL     = process.env.BIWENGER_EMAIL;
 const PASSWORD  = process.env.BIWENGER_PASSWORD;
 const LEAGUE_ID = process.env.BIWENGER_LEAGUE_ID || '44700';
-const USER_ID   = '170210';
 
 if (!EMAIL || !PASSWORD) {
   console.error('❌ Faltan Secrets en GitHub');
@@ -60,89 +59,43 @@ async function login() {
     process.exit(1);
   }
 
-  console.log('✅ Login correcto, token obtenido');
-  return token;
+  // Extraer también el userId de la respuesta
+  const userId = res.body?.data?.user?.id || res.body?.data?.id || '';
+  console.log('✅ Login correcto, userId:', userId);
+  return { token, userId };
 }
 
-// ─── 2. JUGADORES via endpoint de liga (usa el token) ───────────────────────
-async function fetchPlayers(token) {
+// ─── 2. JUGADORES ────────────────────────────────────────────────────────────
+async function fetchPlayers(token, userId) {
   console.log('📥 Descargando jugadores...');
 
-  // Usamos el endpoint de la liga que sí acepta el token
+  const headers = {
+    'Authorization': `Bearer ${token}`,
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+    'Origin': 'https://biwenger.as.com',
+    'Referer': 'https://biwenger.as.com/',
+    'x-league': LEAGUE_ID,
+  };
+  if (userId) headers['x-user'] = String(userId);
+
   const res = await request({
     hostname: 'biwenger.as.com',
     path: `/api/v2/leagues/${LEAGUE_ID}/players?fields=*,fitness,team&score=2`,
     method: 'GET',
-    headers: {
-      'Authorization': `Bearer ${token}`,
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-      'Origin': 'https://biwenger.as.com',
-      'Referer': 'https://biwenger.as.com/',
-      'x-user': USER_ID,
-      'x-league': LEAGUE_ID,
-    }
+    headers,
   });
 
   console.log('Status jugadores:', res.status);
+  console.log('Respuesta (500 chars):', JSON.stringify(res.body).substring(0, 500));
 
   if (res.status !== 200) {
-    // Intentar endpoint alternativo
-    console.log('⚠️ Intentando endpoint alternativo...');
-    return await fetchPlayersAlt(token);
-  }
-
-  const raw = res.body?.data;
-  if (!raw) {
-    console.log('⚠️ Sin datos, intentando alternativo...');
-    return await fetchPlayersAlt(token);
-  }
-
-  const arr = Array.isArray(raw) ? raw : Object.values(raw);
-  console.log(`✅ ${arr.length} jugadores descargados`);
-  return arr.map(p => ({
-    id:         p.id,
-    name:       p.name,
-    position:   p.position,
-    price:      p.price      || 0,
-    points:     p.points     || 0,
-    trend:      p.priceIncrement || 0,
-    playedHome: p.playedHome || 0,
-    playedAway: p.playedAway || 0,
-    teamName:   p.teamName   || p.team?.name || '',
-    status:     p.fitness?.[0]?.status || 'ok',
-    jForm:      (p.fitness || []).slice(0, 5).map(f => f.points ?? null),
-  }));
-}
-
-// ─── 2b. Endpoint alternativo de jugadores ───────────────────────────────────
-async function fetchPlayersAlt(token) {
-  console.log('📥 Descargando jugadores (endpoint alternativo)...');
-
-  const res = await request({
-    hostname: 'biwenger.as.com',
-    path: `/api/v2/market?fields=*,fitness,team&score=2`,
-    method: 'GET',
-    headers: {
-      'Authorization': `Bearer ${token}`,
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-      'Origin': 'https://biwenger.as.com',
-      'Referer': 'https://biwenger.as.com/',
-      'x-user': USER_ID,
-      'x-league': LEAGUE_ID,
-    }
-  });
-
-  console.log('Status alternativo:', res.status);
-  console.log('Respuesta (primeros 500 chars):', JSON.stringify(res.body).substring(0, 500));
-
-  if (res.status !== 200) {
-    console.error('❌ Ambos endpoints fallaron');
+    console.error('❌ Error al obtener jugadores');
     process.exit(1);
   }
 
   const raw = res.body?.data;
   if (!raw) {
-    console.error('❌ Sin datos en endpoint alternativo');
+    console.error('❌ Sin datos en la respuesta');
     process.exit(1);
   }
 
@@ -164,21 +117,23 @@ async function fetchPlayersAlt(token) {
 }
 
 // ─── 3. DATOS DE LIGA ────────────────────────────────────────────────────────
-async function fetchLeague(token) {
+async function fetchLeague(token, userId) {
   console.log('🏆 Descargando datos de la liga...');
+
+  const headers = {
+    'Authorization': `Bearer ${token}`,
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+    'Origin': 'https://biwenger.as.com',
+    'Referer': 'https://biwenger.as.com/',
+    'x-league': LEAGUE_ID,
+  };
+  if (userId) headers['x-user'] = String(userId);
 
   const res = await request({
     hostname: 'biwenger.as.com',
     path: `/api/v2/leagues/${LEAGUE_ID}?fields=*,standings,teams`,
     method: 'GET',
-    headers: {
-      'Authorization': `Bearer ${token}`,
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-      'Origin': 'https://biwenger.as.com',
-      'Referer': 'https://biwenger.as.com/',
-      'x-user': USER_ID,
-      'x-league': LEAGUE_ID,
-    }
+    headers,
   });
 
   if (res.status !== 200) {
@@ -193,9 +148,9 @@ async function fetchLeague(token) {
 // ─── MAIN ────────────────────────────────────────────────────────────────────
 async function main() {
   try {
-    const token   = await login();
-    const players = await fetchPlayers(token);
-    const league  = await fetchLeague(token);
+    const { token, userId } = await login();
+    const players = await fetchPlayers(token, userId);
+    const league  = await fetchLeague(token, userId);
 
     const output = {
       updatedAt: new Date().toISOString(),
