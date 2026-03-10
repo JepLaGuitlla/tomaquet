@@ -198,7 +198,7 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
 /* ── ESTUDIO DE MERCADO ─── */
 .mercado-grid{display:flex;flex-direction:column;gap:1.5rem;}
 .mercado-card{background:#fff;border:1px solid var(--border);border-radius:8px;overflow:hidden;}
-.mercado-card-header{padding:12px 18px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;position:sticky;top:56px;background:#fff;z-index:10;box-shadow:0 1px 4px rgba(0,0,0,0.05);}
+.mercado-card-header{padding:12px 18px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;background:#fff;}
 .mercado-card-title{display:flex;align-items:center;gap:8px;font-family:'Barlow Condensed',sans-serif;font-size:0.85rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--text);}
 .mercado-card-icon{font-size:1rem;}
 .mercado-card-actions{display:flex;align-items:center;gap:8px;}
@@ -208,8 +208,11 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
 .mercado-search{padding:8px 14px;border-bottom:1px solid var(--border);background:var(--bg2);}
 .mercado-search input{width:100%;background:#fff;border:1px solid var(--border2);border-radius:6px;padding:7px 12px;color:var(--text);font-family:'IBM Plex Mono',monospace;font-size:0.78rem;outline:none;transition:border-color 0.15s;}
 .mercado-search input:focus{border-color:var(--accent);}
-.mercado-toggle{width:100%;background:var(--bg2);border:none;border-top:2px solid var(--border);padding:10px;font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:600;letter-spacing:2px;color:var(--text3);cursor:pointer;text-transform:uppercase;transition:all 0.15s;display:flex;align-items:center;justify-content:center;gap:6px;position:sticky;bottom:0;z-index:5;}
+.mercado-toggle{width:100%;background:var(--bg2);border:none;border-top:2px solid var(--border);padding:10px;font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:600;letter-spacing:2px;color:var(--text3);cursor:pointer;text-transform:uppercase;transition:all 0.15s;display:flex;align-items:center;justify-content:center;gap:6px;}
 .mercado-toggle:hover{color:var(--accent);background:var(--accent-dim);}
+.mercado-fab{position:fixed;bottom:28px;right:28px;z-index:9999;background:var(--accent);color:#fff;border:none;border-radius:100px;padding:12px 22px;font-family:'Barlow Condensed',sans-serif;font-size:0.8rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 20px rgba(230,51,41,0.4);display:none;align-items:center;gap:8px;transition:transform 0.15s,box-shadow 0.15s;}
+.mercado-fab:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(230,51,41,0.5);}
+.mercado-fab.visible{display:flex;}
 /* Fila jugador — layout completo */
 .mercado-row{display:grid;grid-template-columns:28px 24px 1fr repeat(5,70px) 80px;align-items:center;gap:6px;padding:8px 14px;border-bottom:1px solid var(--border);transition:background 0.1s;}
 .mercado-row:last-child{border-bottom:none;}
@@ -635,6 +638,8 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
   </div>
 </div>
 
+<!-- Botón flotante cerrar ranking -->
+<button class="mercado-fab" id="mercadoFab" onclick="closeMercadoFab()">▲ CERRAR LISTA</button>
 </main>
 
 <div class="modal-overlay" id="modalOverlay">
@@ -1751,6 +1756,8 @@ function populateMercadoCard(r) {
   }
 }
 
+let _fabActiveCard = null;
+
 function toggleMercadoCard(id) {
   const wasExpanded = mercadoState[id].expanded;
   mercadoState[id].expanded = !wasExpanded;
@@ -1761,11 +1768,23 @@ function toggleMercadoCard(id) {
     const r = grid._rankings.find(r => r.id === id);
     if (r) populateMercadoCard(r);
   }
-  // Al cerrar, scroll al header de esta card para no perder la posición
-  if (wasExpanded) {
+  // Mostrar/ocultar FAB
+  const fab = document.getElementById('mercadoFab');
+  if (!wasExpanded) {
+    // Se acaba de expandir — mostrar FAB
+    _fabActiveCard = id;
+    if (fab) fab.classList.add('visible');
+  } else {
+    // Se acaba de cerrar — ocultar FAB y volver al header
+    _fabActiveCard = null;
+    if (fab) fab.classList.remove('visible');
     const header = document.querySelector('#mcard-' + id + ' .mercado-card-header');
     if (header) setTimeout(() => header.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
   }
+}
+
+function closeMercadoFab() {
+  if (_fabActiveCard) toggleMercadoCard(_fabActiveCard);
 }
 
 function filterMercadoCard(id) {
