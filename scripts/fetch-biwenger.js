@@ -151,31 +151,44 @@ async function fetchLeague(token) {
     'Authorization': `Bearer ${token}`,
   };
 
-  const withXHeaders = {
-    ...authOnly,
-    'x-league':  LEAGUE_ID,
-    'x-user':    USER_ID,
-    'x-version': '670',
-  };
+  // /user/leagues da "Invalid ID" → existe pero necesita parámetro
+  // Probar con POST (Biwenger puede haber migrado GET→POST) y rutas alternativas
+  const payload = JSON.stringify({ leagueId: parseInt(LEAGUE_ID) });
+  const payloadStr = JSON.stringify({ id: parseInt(LEAGUE_ID) });
 
   const tests = [
-    { label: 'GET /leagues/ID — solo auth',        path: `/api/v2/leagues/${LEAGUE_ID}`,                         headers: authOnly,     method: 'GET'  },
-    { label: 'GET /leagues/ID — con x-headers',    path: `/api/v2/leagues/${LEAGUE_ID}`,                         headers: withXHeaders, method: 'GET'  },
-    { label: 'GET /user/leagues — sin x-headers',  path: `/api/v2/user/leagues`,                                 headers: authOnly,     method: 'GET'  },
-    { label: 'GET /leagues sin ID',                path: `/api/v2/leagues`,                                      headers: authOnly,     method: 'GET'  },
-    { label: 'GET /leagues/ID/rounds',             path: `/api/v2/leagues/${LEAGUE_ID}/rounds`,                  headers: authOnly,     method: 'GET'  },
-    { label: 'GET /leagues/ID/standings',          path: `/api/v2/leagues/${LEAGUE_ID}/standings`,               headers: authOnly,     method: 'GET'  },
-    { label: 'GET /leagues/ID v1',                 path: `/api/v1/leagues/${LEAGUE_ID}`,                         headers: authOnly,     method: 'GET'  },
+    // POST con body
+    { label: 'POST /leagues — body {leagueId}',     path: `/api/v2/leagues`,                         method: 'POST', headers: {...authOnly,'Content-Type':'application/json','Content-Length':Buffer.byteLength(payload)},    body: payload    },
+    { label: 'POST /leagues/ID — body {}',          path: `/api/v2/leagues/${LEAGUE_ID}`,             method: 'POST', headers: {...authOnly,'Content-Type':'application/json','Content-Length':2},                             body: '{}'       },
+    // /user/leagues con ID en query
+    { label: 'GET /user/leagues?id=ID',             path: `/api/v2/user/leagues?id=${LEAGUE_ID}`,     method: 'GET',  headers: authOnly },
+    { label: 'GET /user/leagues?leagueId=ID',       path: `/api/v2/user/leagues?leagueId=${LEAGUE_ID}`, method: 'GET', headers: authOnly },
+    // Rutas con /me al final
+    { label: 'GET /leagues/ID/me',                  path: `/api/v2/leagues/${LEAGUE_ID}/me`,          method: 'GET',  headers: authOnly },
+    // Con x-league en header (quizás ahí espera el ID)
+    { label: 'GET /user/leagues — x-league header', path: `/api/v2/user/leagues`,                     method: 'GET',  headers: {...authOnly, 'x-league': LEAGUE_ID} },
+    // Ruta /competitions estilo nueva API
+    { label: 'GET /competitions/ID',               path: `/api/v2/competitions/${LEAGUE_ID}`,         method: 'GET',  headers: authOnly },
+    // Ruta sin versión
+    { label: 'GET /api/leagues/ID',                path: `/api/leagues/${LEAGUE_ID}`,                  method: 'GET',  headers: authOnly },
   ];
 
   for (const t of tests) {
-    const res = await requestJSON({ hostname: 'biwenger.as.com', path: t.path, method: t.method, headers: t.headers });
-    console.log(`  [${res.status}] ${t.label}`);
-    if (res.status !== 200) console.log(`         → ${JSON.stringify(res.body).slice(0,120)}`);
-    if (res.status === 200) {
-      console.log('✅ Datos de liga descargados');
-      console.log('  body preview:', JSON.stringify(res.body).slice(0, 200));
-      return res.body?.data || null;
+    const res = await requestJSON({ hostname: 'biwenger.as.com', path: t.path, method: t.method, headers: t.headers, ...(t.body ? {body: t.body} : {}) });
+    // requestJSON no acepta body directamente — hacer la llamada manual
+    const res2 = await new Promise((resolve) => {
+      const req = https.request({ hostname: 'biwenger.as.com', path: t.path, method: t.method, headers: t.headers }, (r) => {
+        let d = ''; r.on('data', c => d += c); r.on('end', () => { try { resolve({status:r.statusCode,body:JSON.parse(d)}); } catch { resolve({status:r.statusCode,body:d}); } });
+      });
+      req.on('error', () => resolve({status:0,body:{}}));
+      if (t.body) req.write(t.body);
+      req.end();
+    });
+    console.log(`  [${res2.status}] ${t.label}`);
+    console.log(`         → ${JSON.stringify(res2.body).slice(0,150)}`);
+    if (res2.status === 200) {
+      console.log('✅ Ruta encontrada!');
+      return res2.body?.data || null;
     }
   }
 
