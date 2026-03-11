@@ -145,7 +145,44 @@ async function fetchPlayers() {
 async function fetchLeague(token) {
   console.log('🏆 Descargando datos de liga (Biwenger)...');
 
-  // Intentar varias rutas conocidas de la API de Biwenger
+  // Diagnóstico: loguear respuesta completa del primer intento
+  const diagRes = await requestJSON({
+    hostname: 'biwenger.as.com',
+    path:     `/api/v2/leagues/${LEAGUE_ID}`,
+    method:   'GET',
+    headers:  { ...COMMON_HEADERS, 'Authorization': `Bearer ${token}` }
+  });
+  console.log('  🔍 DIAGNÓSTICO fetchLeague:');
+  console.log('     status:', diagRes.status);
+  console.log('     body:', JSON.stringify(diagRes.body).slice(0, 300));
+
+  // Intentar también sin x-league/x-user en headers
+  const diagRes2 = await requestJSON({
+    hostname: 'biwenger.as.com',
+    path:     `/api/v2/leagues/${LEAGUE_ID}`,
+    method:   'GET',
+    headers:  {
+      'User-Agent':      COMMON_HEADERS['User-Agent'],
+      'Accept':          '*/*',
+      'Authorization':   `Bearer ${token}`,
+      'Content-Type':    'application/json',
+    }
+  });
+  console.log('  🔍 DIAGNÓSTICO sin x-headers:');
+  console.log('     status:', diagRes2.status);
+  console.log('     body:', JSON.stringify(diagRes2.body).slice(0, 300));
+
+  // Intentar endpoint /account para ver si el token funciona
+  const diagRes3 = await requestJSON({
+    hostname: 'biwenger.as.com',
+    path:     `/api/v2/account`,
+    method:   'GET',
+    headers:  { ...COMMON_HEADERS, 'Authorization': `Bearer ${token}` }
+  });
+  console.log('  🔍 DIAGNÓSTICO /account:');
+  console.log('     status:', diagRes3.status);
+  console.log('     body:', JSON.stringify(diagRes3.body).slice(0, 300));
+
   const paths = [
     `/api/v2/leagues/${LEAGUE_ID}`,
     `/api/v2/leagues/${LEAGUE_ID}?fields=id,name,standings,competition`,
