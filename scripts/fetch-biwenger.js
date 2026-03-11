@@ -2,12 +2,17 @@
 const https = require('https');
 const fs    = require('fs');
 
-const EMAIL     = process.env.BIWENGER_EMAIL;
-const PASSWORD  = process.env.BIWENGER_PASSWORD;
-const LEAGUE_ID = '44700';
-const USER_ID   = '6541195';
-const VERSION   = '630';
-const FD_TOKEN  = '00308a91cfc84b248611ecc22550c9de'; // football-data.org
+const EMAIL          = process.env.BIWENGER_EMAIL;
+const PASSWORD       = process.env.BIWENGER_PASSWORD;
+const LEAGUE_ID      = '44700';
+const USER_ID        = '6541195';
+const VERSION        = '630';
+const FD_TOKEN       = '00308a91cfc84b248611ecc22550c9de'; // football-data.org
+const AF_KEY         = process.env.API_FOOTBALL_KEY;       // 🔑 nuevo secret en GitHub
+
+// LaLiga IDs para API-Football
+const AF_LEAGUE_ID   = 140;   // La Liga
+const AF_SEASON      = 2025;  // Temporada 2025/26
 
 // Feeds RSS de noticias fantasy
 const RSS_SOURCES = [
@@ -18,8 +23,18 @@ const RSS_SOURCES = [
 ];
 
 if (!EMAIL || !PASSWORD) {
-  console.error('❌ Faltan Secrets en GitHub');
+  console.error('❌ Faltan Secrets en GitHub: BIWENGER_EMAIL / BIWENGER_PASSWORD');
   process.exit(1);
+}
+if (!AF_KEY) {
+  console.error('❌ Falta el Secret: API_FOOTBALL_KEY');
+  process.exit(1);
+}
+
+// ─── HELPERS ────────────────────────────────────────────────────────────────
+
+function sleep(ms) {
+  return new Promise(r => setTimeout(r, ms));
 }
 
 function request(options, body = null) {
@@ -27,9 +42,7 @@ function request(options, body = null) {
     const req = https.request(options, (res) => {
       let data = '';
       res.on('data', chunk => data += chunk);
-      res.on('end', () => {
-        resolve({ status: res.statusCode, raw: data, headers: res.headers });
-      });
+      res.on('end', () => resolve({ status: res.statusCode, raw: data, headers: res.headers }));
     });
     req.on('error', reject);
     if (body) req.write(body);
@@ -43,11 +56,8 @@ function requestJSON(options, body = null) {
       let data = '';
       res.on('data', chunk => data += chunk);
       res.on('end', () => {
-        try {
-          resolve({ status: res.statusCode, body: JSON.parse(data) });
-        } catch (e) {
-          resolve({ status: res.statusCode, body: data });
-        }
+        try   { resolve({ status: res.statusCode, body: JSON.parse(data) }); }
+        catch { resolve({ status: res.statusCode, body: data }); }
       });
     });
     req.on('error', reject);
@@ -57,82 +67,68 @@ function requestJSON(options, body = null) {
 }
 
 const COMMON_HEADERS = {
-  'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-  'Accept': '*/*',
+  'User-Agent':      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+  'Accept':          '*/*',
   'Accept-Language': 'es-ES,es;q=0.9',
-  'Origin': 'https://biwenger.as.com',
-  'Referer': 'https://biwenger.as.com/',
-  'x-league': LEAGUE_ID,
-  'x-user': USER_ID,
-  'x-version': VERSION,
+  'Origin':          'https://biwenger.as.com',
+  'Referer':         'https://biwenger.as.com/',
+  'x-league':        LEAGUE_ID,
+  'x-user':          USER_ID,
+  'x-version':       VERSION,
 };
 
 // ─── 1. LOGIN ────────────────────────────────────────────────────────────────
+
 async function login() {
-  console.log('🔐 Haciendo login en Biwenger...');
+  console.log('🔐 Login en Biwenger...');
   const payload = JSON.stringify({ email: EMAIL, password: PASSWORD });
 
   const res = await requestJSON({
     hostname: 'biwenger.as.com',
-    path: '/api/v2/auth/login',
-    method: 'POST',
-    headers: {
+    path:     '/api/v2/auth/login',
+    method:   'POST',
+    headers:  {
       ...COMMON_HEADERS,
-      'Content-Type': 'application/json',
+      'Content-Type':   'application/json',
       'Content-Length': Buffer.byteLength(payload),
     }
   }, payload);
 
-  if (res.status !== 200) {
-    console.error('❌ Login fallido. Status:', res.status);
-    process.exit(1);
-  }
+  if (res.status !== 200) { console.error('❌ Login fallido. Status:', res.status); process.exit(1); }
 
   const token = res.body?.data?.token || res.body?.token;
-  if (!token) {
-    console.error('❌ No se encontró token');
-    process.exit(1);
-  }
+  if (!token) { console.error('❌ No se encontró token'); process.exit(1); }
 
   console.log('✅ Login correcto');
   return token;
 }
 
-// ─── 2. TODOS LOS JUGADORES via JSONP ────────────────────────────────────────
+// ─── 2. JUGADORES (Biwenger JSONP) ──────────────────────────────────────────
+
 async function fetchPlayers() {
-  console.log('📥 Descargando todos los jugadores de LaLiga...');
+  console.log('📥 Descargando jugadores de LaLiga (Biwenger)...');
 
   const cbName = 'jsonp_cb';
   const res = await request({
     hostname: 'cf.biwenger.com',
-    path: `/api/v2/competitions/la-liga/data?lang=es&score=5&callback=${cbName}`,
-    method: 'GET',
-    headers: {
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-      'Accept': '*/*',
+    path:     `/api/v2/competitions/la-liga/data?lang=es&score=5&callback=${cbName}`,
+    method:   'GET',
+    headers:  {
+      'User-Agent':      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+      'Accept':          '*/*',
       'Accept-Language': 'es-ES,es;q=0.9',
-      'Referer': 'https://biwenger.as.com/',
+      'Referer':         'https://biwenger.as.com/',
     }
   });
 
-  if (res.status !== 200) {
-    console.error('❌ Error al obtener jugadores. Status:', res.status);
-    process.exit(1);
-  }
+  if (res.status !== 200) { console.error('❌ Error jugadores. Status:', res.status); process.exit(1); }
 
   const match = res.raw.match(/^[^(]+\(([\s\S]*)\)\s*;?\s*$/);
-  if (!match) {
-    console.error('❌ No se pudo parsear la respuesta JSONP');
-    process.exit(1);
-  }
+  if (!match) { console.error('❌ No se pudo parsear JSONP'); process.exit(1); }
 
-  const parsed = JSON.parse(match[1]);
+  const parsed     = JSON.parse(match[1]);
   const rawPlayers = parsed?.data?.players;
-
-  if (!rawPlayers) {
-    console.error('❌ Sin jugadores en la respuesta');
-    process.exit(1);
-  }
+  if (!rawPlayers) { console.error('❌ Sin jugadores en la respuesta'); process.exit(1); }
 
   const arr = Array.isArray(rawPlayers) ? rawPlayers : Object.values(rawPlayers);
   console.log(`✅ ${arr.length} jugadores descargados`);
@@ -153,52 +149,41 @@ async function fetchPlayers() {
   }));
 }
 
-// ─── 3. DATOS DE LIGA ────────────────────────────────────────────────────────
+// ─── 3. DATOS DE LIGA (Biwenger) ─────────────────────────────────────────────
+
 async function fetchLeague(token) {
-  console.log('🏆 Descargando datos de la liga...');
+  console.log('🏆 Descargando datos de liga (Biwenger)...');
 
   const res = await requestJSON({
     hostname: 'biwenger.as.com',
-    path: `/api/v2/leagues/${LEAGUE_ID}?fields=*,standings,teams`,
-    method: 'GET',
-    headers: {
-      ...COMMON_HEADERS,
-      'Authorization': `Bearer ${token}`,
-    }
+    path:     `/api/v2/leagues/${LEAGUE_ID}?fields=*,standings,teams`,
+    method:   'GET',
+    headers:  { ...COMMON_HEADERS, 'Authorization': `Bearer ${token}` }
   });
 
-  if (res.status !== 200) {
-    console.warn('⚠️ No se pudieron obtener datos de liga. Status:', res.status);
-    return null;
-  }
+  if (res.status !== 200) { console.warn('⚠️ No se pudieron obtener datos de liga. Status:', res.status); return null; }
 
   console.log('✅ Datos de liga descargados');
   return res.body?.data || null;
 }
 
-// ─── 4. TODOS LOS EQUIPOS DE LA LIGA (quién tiene cada jugador) ──────────────
+// ─── 4. TODOS LOS EQUIPOS DE LA LIGA ────────────────────────────────────────
+
 async function fetchAllTeams(token) {
   console.log('👥 Descargando equipos de todos los participantes...');
 
   const res = await requestJSON({
     hostname: 'biwenger.as.com',
-    path: `/api/v2/leagues/${LEAGUE_ID}/teams?fields=*,players`,
-    method: 'GET',
-    headers: {
-      ...COMMON_HEADERS,
-      'Authorization': `Bearer ${token}`,
-    }
+    path:     `/api/v2/leagues/${LEAGUE_ID}/teams?fields=*,players`,
+    method:   'GET',
+    headers:  { ...COMMON_HEADERS, 'Authorization': `Bearer ${token}` }
   });
 
-  if (res.status !== 200) {
-    console.warn('⚠️ No se pudieron obtener equipos. Status:', res.status);
-    return null;
-  }
+  if (res.status !== 200) { console.warn('⚠️ No se pudieron obtener equipos. Status:', res.status); return null; }
 
   const teams = res.body?.data || [];
   console.log(`✅ ${teams.length} equipos descargados`);
 
-  // Devuelve array de equipos con sus jugadores (solo IDs para no duplicar datos)
   return teams.map(t => ({
     id:      t.id,
     name:    t.name,
@@ -209,37 +194,28 @@ async function fetchAllTeams(token) {
       id:       p.id,
       name:     p.name,
       position: p.position,
-      price:    p.price || 0,
-      points:   p.points || 0,
+      price:    p.price   || 0,
+      points:   p.points  || 0,
     })),
   }));
 }
 
-// ─── 5. MI EQUIPO (Guitlla) ──────────────────────────────────────────────────
+// ─── 5. MI EQUIPO (Guitlla) ───────────────────────────────────────────────────
+
 async function fetchMyTeam(token) {
   console.log('🦊 Descargando mi equipo (Guitlla)...');
 
-  // Primero obtenemos el ID del equipo del usuario en la liga
   const res = await requestJSON({
     hostname: 'biwenger.as.com',
-    path: `/api/v2/leagues/${LEAGUE_ID}/user?fields=*,team,players`,
-    method: 'GET',
-    headers: {
-      ...COMMON_HEADERS,
-      'Authorization': `Bearer ${token}`,
-    }
+    path:     `/api/v2/leagues/${LEAGUE_ID}/user?fields=*,team,players`,
+    method:   'GET',
+    headers:  { ...COMMON_HEADERS, 'Authorization': `Bearer ${token}` }
   });
 
-  if (res.status !== 200) {
-    console.warn('⚠️ No se pudo obtener mi equipo. Status:', res.status);
-    return null;
-  }
+  if (res.status !== 200) { console.warn('⚠️ No se pudo obtener mi equipo. Status:', res.status); return null; }
 
   const data = res.body?.data;
-  if (!data) {
-    console.warn('⚠️ Sin datos de mi equipo');
-    return null;
-  }
+  if (!data) { console.warn('⚠️ Sin datos de mi equipo'); return null; }
 
   const players = data.team?.players || data.players || [];
   console.log(`✅ Mi equipo: ${players.length} jugadores`);
@@ -253,33 +229,34 @@ async function fetchMyTeam(token) {
       id:       p.id,
       name:     p.name,
       position: p.position,
-      price:    p.price || 0,
-      points:   p.points || 0,
-      trend:    p.priceIncrement || 0,
+      price:    p.price            || 0,
+      points:   p.points           || 0,
+      trend:    p.priceIncrement   || 0,
       status:   p.fitness?.[0]?.status || 'ok',
       jForm:    (p.fitness || []).slice(0, 5).map(f => typeof f === 'number' ? f : (f?.points ?? null)),
-      clausula: p.clause || null,
+      clausula: p.clause           || null,
     })),
   };
 }
 
-// ─── 6. LA LIGA (football-data.org) ─────────────────────────────────────────
+// ─── 6. LA LIGA (football-data.org) ──────────────────────────────────────────
+
 async function fetchLaLiga() {
   console.log('⚽ Descargando datos de La Liga (football-data.org)...');
 
-  async function fdGet(path) {
+  function fdGet(path) {
     return new Promise((resolve) => {
       const req = https.request({
         hostname: 'api.football-data.org',
-        path: `/v4${path}`,
-        method: 'GET',
-        headers: { 'X-Auth-Token': FD_TOKEN }
+        path:     `/v4${path}`,
+        method:   'GET',
+        headers:  { 'X-Auth-Token': FD_TOKEN }
       }, (res) => {
         let data = '';
         res.on('data', c => data += c);
         res.on('end', () => {
-          try { resolve({ ok: res.statusCode === 200, body: JSON.parse(data) }); }
-          catch(e) { resolve({ ok: false, body: {} }); }
+          try   { resolve({ ok: res.statusCode === 200, body: JSON.parse(data) }); }
+          catch { resolve({ ok: false, body: {} }); }
         });
       });
       req.on('error', () => resolve({ ok: false, body: {} }));
@@ -289,15 +266,12 @@ async function fetchLaLiga() {
 
   try {
     const standings = await fdGet('/competitions/PD/standings');
-    await new Promise(r => setTimeout(r, 700));
+    await sleep(700);
     const scheduled = await fdGet('/competitions/PD/matches?status=SCHEDULED&limit=30');
-    await new Promise(r => setTimeout(r, 700));
+    await sleep(700);
     const finished  = await fdGet('/competitions/PD/matches?status=FINISHED&limit=50');
 
-    if (!standings.ok) {
-      console.warn('⚠️ No se pudo obtener clasificación.');
-      return null;
-    }
+    if (!standings.ok) { console.warn('⚠️ No se pudo obtener clasificación.'); return null; }
 
     const table    = standings.body?.standings?.[0]?.table || [];
     const matchday = standings.body?.season?.currentMatchday || null;
@@ -312,7 +286,7 @@ async function fetchLaLiga() {
       if (hg === null || hg === undefined) return;
       [m.homeTeam, m.awayTeam].forEach((team, idx) => {
         if (!forms[team.id]) forms[team.id] = { results: [], gf: 0, ga: 0, crest: team.crest, name: team.name };
-        const f = forms[team.id];
+        const f       = forms[team.id];
         if (f.results.length < 5) {
           const scored  = idx === 0 ? hg : ag;
           const concede = idx === 0 ? ag : hg;
@@ -324,23 +298,23 @@ async function fetchLaLiga() {
     });
 
     const allScheduled = scheduled.body?.matches || [];
-    const nextMD = allScheduled.length
+    const nextMD       = allScheduled.length
       ? Math.min(...allScheduled.map(m => m.matchday).filter(Boolean))
       : null;
-    const nextMatches = nextMD
+    const nextMatches  = nextMD
       ? allScheduled.filter(m => m.matchday === nextMD).map(m => ({
-          id: m.id,
+          id:       m.id,
           matchday: m.matchday,
-          date: m.utcDate,
-          home: { id: m.homeTeam.id, name: m.homeTeam.name, short: m.homeTeam.shortName, crest: m.homeTeam.crest },
-          away: { id: m.awayTeam.id, name: m.awayTeam.name, short: m.awayTeam.shortName, crest: m.awayTeam.crest },
+          date:     m.utcDate,
+          home:     { id: m.homeTeam.id, name: m.homeTeam.name, short: m.homeTeam.shortName, crest: m.homeTeam.crest },
+          away:     { id: m.awayTeam.id, name: m.awayTeam.name, short: m.awayTeam.shortName, crest: m.awayTeam.crest },
         }))
       : [];
 
     const recentResults = sortedMatches.slice(0, 8).map(m => ({
-      date: m.utcDate,
-      home: { name: m.homeTeam.name, short: m.homeTeam.shortName, crest: m.homeTeam.crest },
-      away: { name: m.awayTeam.name, short: m.awayTeam.shortName, crest: m.awayTeam.crest },
+      date:  m.utcDate,
+      home:  { name: m.homeTeam.name, short: m.homeTeam.shortName, crest: m.homeTeam.crest },
+      away:  { name: m.awayTeam.name, short: m.awayTeam.shortName, crest: m.awayTeam.crest },
       score: { home: m.score?.fullTime?.home, away: m.score?.fullTime?.away }
     }));
 
@@ -353,7 +327,8 @@ async function fetchLaLiga() {
   }
 }
 
-// ─── 7. NOTICIAS RSS (sin CORS, desde Node) ──────────────────────────────────
+// ─── 7. NOTICIAS RSS ─────────────────────────────────────────────────────────
+
 async function fetchNews() {
   console.log('📰 Descargando noticias RSS...');
   const allNews = [];
@@ -363,26 +338,22 @@ async function fetchNews() {
       const url = new URL(src.url);
       const res = await request({
         hostname: url.hostname,
-        path: url.pathname + (url.search || ''),
-        method: 'GET',
-        headers: {
+        path:     url.pathname + (url.search || ''),
+        method:   'GET',
+        headers:  {
           'User-Agent': 'Mozilla/5.0 (compatible; RSS reader)',
-          'Accept': 'application/rss+xml, application/xml, text/xml, */*',
+          'Accept':     'application/rss+xml, application/xml, text/xml, */*',
         }
       });
 
-      if (res.status !== 200) {
-        console.warn(`⚠️ RSS ${src.id} status ${res.status}`);
-        continue;
-      }
+      if (res.status !== 200) { console.warn(`⚠️ RSS ${src.id} status ${res.status}`); continue; }
 
-      // Parse XML manual (sin dependencias externas)
-      const xml = res.raw;
+      const xml   = res.raw;
       const items = xml.match(/<item[\s\S]*?<\/item>/g) || [];
       console.log(`  ${src.id}: ${items.length} noticias`);
 
       items.slice(0, 10).forEach(item => {
-        const getTag = (tag) => {
+        const getTag  = (tag) => {
           const m = item.match(new RegExp(`<${tag}[^>]*>(?:<!\\[CDATA\\[)?([\\s\\S]*?)(?:\\]\\]>)?<\\/${tag}>`, 'i'));
           return m ? m[1].trim() : '';
         };
@@ -398,16 +369,7 @@ async function fetchNews() {
                       getAttr('media:content', 'url') ||
                       (item.match(/<img[^>]+src=["']([^"']+)["']/i) || [])[1] || '';
 
-        if (title && link) {
-          allNews.push({
-            title,
-            link,
-            date,
-            img,
-            srcId:    src.id,
-            srcLabel: src.label,
-          });
-        }
+        if (title && link) allNews.push({ title, link, date, img, srcId: src.id, srcLabel: src.label });
       });
 
     } catch(e) {
@@ -415,45 +377,45 @@ async function fetchNews() {
     }
   }
 
-  // Ordenar por fecha descendente
-  allNews.sort((a, b) => {
-    try { return new Date(b.date) - new Date(a.date); } catch(e) { return 0; }
-  });
-
-  console.log(`✅ ${allNews.length} noticias descargadas en total`);
+  allNews.sort((a, b) => { try { return new Date(b.date) - new Date(a.date); } catch { return 0; } });
+  console.log(`✅ ${allNews.length} noticias descargadas`);
   return allNews;
 }
 
-// ─── 8. SOFASCORE — ESTADÍSTICAS REALES DE JUGADORES ─────────────────────────
-async function fetchSofascoreStats() {
-  console.log('📊 Descargando estadísticas de Sofascore...');
+// ─── 8. STATS DE JUGADORES — API-FOOTBALL ────────────────────────────────────
+//
+//  Estrategia de requests (plan free: 100/día):
+//
+//    1 request  → /teams?league=140&season=2025         (lista de los 20 equipos)
+//   20 requests → /players?league=140&season=2025&team=X  (1 por equipo, ~25 jugadores c/u)
+//   ─────────────────────────────────────────────────────
+//   21 requests en total · Delay de 2s entre equipos · Sin riesgo de colapsar el cupo
+//
+//  Campos disponibles por jugador: goals, assists, minutes, appearances,
+//  yellowCards, redCards, rating, saves, cleanSheets, shotsOnTarget,
+//  dribbles, tackles, passes, duels, fouls...
 
-  const SS_BASE = 'www.sofascore.com';
-  const TOURNAMENT_ID = 8; // LaLiga
-  const DELAY = 1200; // ms entre llamadas para no triggear Cloudflare
+async function fetchApiFootballStats() {
+  console.log('📊 Descargando estadísticas de jugadores (API-Football)...');
 
-  const ssHeaders = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-    'Accept': 'application/json',
-    'Accept-Language': 'es-ES,es;q=0.9',
-    'Referer': 'https://www.sofascore.com/football/spain/laliga/statistics',
-    'Origin': 'https://www.sofascore.com',
-    'Cache-Control': 'no-cache',
-  };
+  const DELAY = 2000; // 2s entre requests — sin prisa, con margen
 
-  function ssGet(path) {
+  function afGet(path) {
     return new Promise((resolve) => {
       const req = https.request({
-        hostname: SS_BASE,
-        path: `/api/v1${path}`,
-        method: 'GET',
-        headers: ssHeaders,
+        hostname: 'v3.football.api-sports.io',
+        path,
+        method:   'GET',
+        headers:  {
+          'x-rapidapi-key':  AF_KEY,
+          'x-rapidapi-host': 'v3.football.api-sports.io',
+        }
       }, (res) => {
         let data = '';
         res.on('data', c => data += c);
         res.on('end', () => {
-          try { resolve({ ok: res.statusCode === 200, body: JSON.parse(data), status: res.statusCode }); }
-          catch(e) { resolve({ ok: false, body: {}, status: res.statusCode }); }
+          try   { resolve({ ok: res.statusCode === 200, body: JSON.parse(data), status: res.statusCode }); }
+          catch { resolve({ ok: false, body: {}, status: res.statusCode }); }
         });
       });
       req.on('error', () => resolve({ ok: false, body: {}, status: 0 }));
@@ -461,125 +423,180 @@ async function fetchSofascoreStats() {
     });
   }
 
-  function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
-
   try {
-    // 1. Obtener season ID actual de LaLiga
-    const seasonsRes = await ssGet(`/unique-tournament/${TOURNAMENT_ID}/seasons`);
-    if (!seasonsRes.ok) {
-      console.warn('⚠️ Sofascore: no se pudo obtener seasons. Status:', seasonsRes.status);
+    // ── PASO 1: obtener los 20 equipos de LaLiga ──────────────────────────────
+    console.log('  → Obteniendo equipos de LaLiga...');
+    const teamsRes = await afGet(`/teams?league=${AF_LEAGUE_ID}&season=${AF_SEASON}`);
+
+    if (!teamsRes.ok) {
+      console.warn(`⚠️ API-Football: no se pudieron obtener equipos. Status: ${teamsRes.status}`);
+      // Si la key no está configurada o falla, devolvemos null sin romper el script
       return null;
     }
 
-    const seasons = seasonsRes.body?.seasons || [];
-    // El primero suele ser el más reciente
-    const currentSeason = seasons[0];
-    if (!currentSeason) {
-      console.warn('⚠️ Sofascore: no hay seasons disponibles');
+    const teams = teamsRes.body?.response || [];
+    if (!teams.length) {
+      console.warn('⚠️ API-Football: sin equipos en la respuesta');
       return null;
     }
 
-    const seasonId = currentSeason.id;
-    console.log(`  Season: ${currentSeason.name} (ID: ${seasonId})`);
+    console.log(`  → ${teams.length} equipos encontrados`);
     await sleep(DELAY);
 
-    // 2. Descargar stats por páginas (100 jugadores por página)
-    const STATS_FIELDS = 'goals,assists,yellowCards,redCards,minutesPlayed,appearances,accuratePasses,rating,saves,cleanSheets,goalsPrevented,successfulDribbles,tackles,interceptions,shotsOnTarget,totalShots,matchesStarted,substituteIn';
-    const allStats = [];
-    let offset = 0;
-    const limit = 100;
-    let hasMore = true;
+    // ── PASO 2: descargar jugadores de cada equipo (1 request por equipo) ─────
+    const allPlayers = [];
 
-    while (hasMore) {
-      const path = `/unique-tournament/${TOURNAMENT_ID}/season/${seasonId}/statistics/player?limit=${limit}&offset=${offset}&order=-rating&fields=${STATS_FIELDS}&filters=position.in.G~D~M~F`;
-      const res = await ssGet(path);
+    for (let i = 0; i < teams.length; i++) {
+      const team   = teams[i];
+      const teamId = team.team.id;
+      const teamNm = team.team.name;
+
+      console.log(`  → [${i + 1}/${teams.length}] ${teamNm}...`);
+
+      // La API devuelve ~25 jugadores por equipo en una sola página
+      const res = await afGet(`/players?league=${AF_LEAGUE_ID}&season=${AF_SEASON}&team=${teamId}`);
 
       if (!res.ok) {
-        console.warn(`⚠️ Sofascore stats offset ${offset}: status ${res.status}`);
-        break;
+        console.warn(`    ⚠️ Error equipo ${teamNm}. Status: ${res.status}`);
+        // Continuamos con el siguiente equipo en vez de abortar
+        await sleep(DELAY);
+        continue;
       }
 
-      const results = res.body?.results || [];
-      if (!results.length) { hasMore = false; break; }
+      const players = res.body?.response || [];
 
-      results.forEach(r => {
-        const p = r.player || {};
-        const t = r.team || {};
-        allStats.push({
-          sfId:         p.id,
-          name:         p.name || '',
-          shortName:    p.shortName || p.name || '',
-          position:     p.position || '',
-          teamName:     t.name || '',
-          // Stats principales
-          rating:       r.rating        || null,
-          appearances:  r.appearances   || 0,
-          started:      r.matchesStarted || 0,
-          minutes:      r.minutesPlayed  || 0,
-          goals:        r.goals          || 0,
-          assists:      r.assists        || 0,
-          yellowCards:  r.yellowCards    || 0,
-          redCards:     r.redCards       || 0,
+      players.forEach(entry => {
+        const p    = entry.player   || {};
+        const stat = (entry.statistics || [])[0] || {};
+        const games   = stat.games      || {};
+        const goals   = stat.goals      || {};
+        const passes  = stat.passes     || {};
+        const tackles = stat.tackles    || {};
+        const duels   = stat.duels      || {};
+        const dribbles = stat.dribbles  || {};
+        const fouls   = stat.fouls      || {};
+        const cards   = stat.cards      || {};
+        const shots   = stat.shots      || {};
+        const penalty = stat.penalty    || {};
+
+        const appearances  = games.appearences || 0;   // sí, tiene typo en la API
+        const minutesPlayed = games.minutes    || 0;
+        const goalsScored  = goals.total       || 0;
+
+        allPlayers.push({
+          afId:          p.id,
+          name:          p.name         || '',
+          firstname:     p.firstname    || '',
+          lastname:      p.lastname     || '',
+          nationality:   p.nationality  || '',
+          age:           p.age          || null,
+          position:      games.position || '',
+          teamName:      teamNm,
+          teamId,
+
+          // Participación
+          appearances,
+          lineups:       games.lineups  || 0,
+          minutes:       minutesPlayed,
+          rating:        games.rating   ? parseFloat(games.rating) : null,
+
+          // Ataque
+          goals:         goalsScored,
+          assists:       goals.assists  || 0,
+          shotsTotal:    shots.total    || 0,
+          shotsOnTarget: shots.on       || 0,
+
+          // Pases
+          passesTotal:   passes.total   || 0,
+          passesKey:     passes.key     || 0,
+          passAccuracy:  passes.accuracy || null,
+
+          // Defensa
+          tacklesTotal:  tackles.total  || 0,
+          interceptions: tackles.interceptions || 0,
+          duelsTotal:    duels.total    || 0,
+          duelsWon:      duels.won      || 0,
+
+          // Regates
+          dribblesAttempted: dribbles.attempts || 0,
+          dribblesSuccess:   dribbles.success  || 0,
+
+          // Disciplina
+          yellowCards:   cards.yellow   || 0,
+          yellowRed:     cards.yellowred || 0,  // segunda amarilla
+          redCards:      cards.red       || 0,
+          foulsCommitted: fouls.committed || 0,
+          foulsDrawn:    fouls.drawn     || 0,
+
           // Porteros
-          saves:        r.saves          || 0,
-          cleanSheets:  r.cleanSheets    || 0,
-          goalsPrevented: r.goalsPrevented || null,
-          // Extras
-          shotsOnTarget:  r.shotsOnTarget  || 0,
-          totalShots:     r.totalShots     || 0,
-          dribbles:       r.successfulDribbles || 0,
-          tackles:        r.tackles        || 0,
+          saves:        goals.saves     || 0,
+          goalsConceded: goals.conceded || 0,
+          penaltySaved: penalty.saved   || 0,
+
           // Calculados
-          minutesPerGoal: (r.goals && r.minutesPlayed) ? Math.round(r.minutesPlayed / r.goals) : null,
-          subsIn:         (r.appearances || 0) - (r.matchesStarted || 0),
+          minutesPerGoal: (goalsScored && minutesPlayed) ? Math.round(minutesPlayed / goalsScored) : null,
+          subsIn:         (appearances || 0) - (games.lineups || 0),
         });
       });
 
-      console.log(`  Sofascore: ${allStats.length} jugadores cargados (offset ${offset})`);
-      offset += limit;
+      console.log(`    ✓ ${players.length} jugadores`);
 
-      // Si devuelve menos de limit, ya no hay más
-      if (results.length < limit) hasMore = false;
-      else await sleep(DELAY);
+      // Pausa entre equipos — 2s para no saturar
+      if (i < teams.length - 1) await sleep(DELAY);
     }
 
-    console.log(`✅ Sofascore: ${allStats.length} jugadores con estadísticas`);
-    return { seasonId, seasonName: currentSeason.name, players: allStats };
+    console.log(`✅ API-Football: ${allPlayers.length} jugadores con estadísticas (${teams.length} equipos)`);
+    return {
+      source:     'api-football',
+      league:     'LaLiga',
+      leagueId:   AF_LEAGUE_ID,
+      season:     AF_SEASON,
+      updatedAt:  new Date().toISOString(),
+      players:    allPlayers,
+    };
 
   } catch(e) {
-    console.warn('⚠️ Error en Sofascore:', e.message);
+    console.warn('⚠️ Error en API-Football:', e.message);
     return null;
   }
 }
 
 // ─── MAIN ────────────────────────────────────────────────────────────────────
+
 async function main() {
   try {
-    const token    = await login();
-    const players  = await fetchPlayers();
-    const league   = await fetchLeague(token);
-    const allTeams = await fetchAllTeams(token);
-    const myTeam   = await fetchMyTeam(token);
-    const laliga   = await fetchLaLiga();
-    const news     = await fetchNews();
-    const sofascore = await fetchSofascoreStats();
+    console.log('🚀 Iniciando fetch — La Pausa Fantasy\n');
+
+    const token      = await login();
+    const players    = await fetchPlayers();
+    const league     = await fetchLeague(token);
+    const allTeams   = await fetchAllTeams(token);
+    const myTeam     = await fetchMyTeam(token);
+    const laliga     = await fetchLaLiga();
+    const news       = await fetchNews();
+    const apiFootball = await fetchApiFootballStats();   // reemplaza sofascore
 
     const output = {
-      updatedAt: new Date().toISOString(),
+      updatedAt:   new Date().toISOString(),
       players,
       league,
       allTeams,
       myTeam,
       laliga,
       news,
-      sofascore,
+      apiFootball,  // antes era "sofascore"
     };
 
     fs.writeFileSync('data.json', JSON.stringify(output, null, 2), 'utf8');
-    console.log('💾 data.json guardado correctamente');
-    console.log(`📊 ${players.length} jugadores | equipos: ${allTeams?.length || 0} | mi equipo: ${myTeam?.players?.length || 0} | noticias: ${news.length} | sofascore: ${sofascore?.players?.length || 0} stats`);
 
-  } catch (err) {
+    console.log('\n💾 data.json guardado correctamente');
+    console.log(`📊 Jugadores Biwenger: ${players.length}`);
+    console.log(`👥 Equipos fantasy:    ${allTeams?.length || 0}`);
+    console.log(`🦊 Mi equipo:          ${myTeam?.players?.length || 0} jugadores`);
+    console.log(`📰 Noticias:           ${news.length}`);
+    console.log(`⚽ Stats jugadores:    ${apiFootball?.players?.length || 0} (API-Football)`);
+
+  } catch(err) {
     console.error('❌ Error inesperado:', err.message);
     process.exit(1);
   }
