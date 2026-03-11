@@ -324,7 +324,7 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
 .modal-player:hover{background:rgba(163,230,53,0.04);}
 .modal-player-pos{width:26px;height:26px;border-radius:2px;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-size:8px;font-weight:700;color:var(--text2);flex-shrink:0;background:var(--bg3);border:1px solid var(--border2);}
 .modal-player-info{flex:1;}
-.modal-player-name{font-size:0.84rem;font-weight:500;color:var(--text);word-break:break-word;line-height:1.3;}
+.modal-player-name{font-family:'Barlow Condensed',sans-serif;font-size:0.9rem;font-weight:700;color:var(--text);text-transform:uppercase;letter-spacing:0.3px;word-break:break-word;line-height:1.3;}
 .modal-player-club{font-family:'IBM Plex Mono',monospace;font-size:0.62rem;color:var(--text3);}
 .modal-player-pts{font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;color:var(--lime);}
 .modal-player-price{font-family:'IBM Plex Mono',monospace;font-size:0.62rem;color:var(--text3);}
@@ -1318,7 +1318,7 @@ function renderPlayers(){
       '<div style="min-width:0"><div class="player-name" style="font-size:0.82rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">'+p.name+'</div><div class="player-club">'+(p.club||'\u2014')+'</div></div>'+
       '<div style="text-align:right;font-family:\'Barlow Condensed\',sans-serif;font-size:1.1rem;font-weight:700;color:var(--lime)">'+(p.pts||'\u2014')+'</div>'+
       '<div style="text-align:right;font-family:\'IBM Plex Mono\',monospace;font-size:0.66rem;color:var(--text3)">'+fmt(p.price)+'</div>'+
-      '<div style="text-align:center;font-family:\'IBM Plex Mono\',monospace;font-family:'IBM Plex Mono',monospace;font-size:0.72rem;font-weight:500;'+ratingCol+'">'+rating+'</div>'+
+      '<div style="text-align:center;font-family:\'IBM Plex Mono\',monospace;font-size:0.72rem;font-weight:500;'+ratingCol+'">'+rating+'</div>'+
       '<div style="text-align:center;font-family:\'Barlow Condensed\',sans-serif;font-size:0.88rem;font-weight:600">'+goles+'</div>'+
       '<div style="text-align:center;font-family:\'Barlow Condensed\',sans-serif;font-size:0.88rem;font-weight:600">'+asis+'</div>'+
       '<div style="text-align:center;font-family:\'IBM Plex Mono\',monospace;font-size:0.66rem;color:var(--text3)">'+am+'</div>'+
@@ -1610,7 +1610,7 @@ function renderMeTable(){
     const tc=p.trend>0?'color:var(--green)':p.trend<0?'color:var(--red)':'color:var(--text3)';
     const ts=p.trend>0?'+'+fmt(p.trend):p.trend<0?fmt(p.trend):'—';
     const badges=getPlayerBadges(ep);
-    return `<div class="me-row"><div class="me-pos" style="background:${PC[p.position.split('/')[0]]||'#666'};font-size:${p.position.includes('/')?'6px':'8px'}">${p.position}</div><div><div style="font-family:'Barlow Condensed',sans-serif;font-size:0.9rem;font-weight:700;text-transform:uppercase;letter-spacing:0.3px;line-height:1.2">${p.name}</div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.58rem;color:var(--text3)">${p.club}</div></div><div style="font-size:0.8rem;font-weight:600">${fmt(p.price)}</div><div style="${tc};font-size:0.76rem;font-weight:600">${ts}</div><div style="font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;font-weight:800;color:var(--accent);line-height:1">${p.pts}</div><div style="font-size:0.78rem;color:var(--text2)">${media}</div><div>${renderBadges(badges)}</div></div>`;
+    return `<div class="me-row"><div class="me-pos" style="background:${PC[p.position.split('/')[0]]||'#666'};font-size:${p.position.includes('/')?'6px':'8px'}">${p.position}</div><div><div style="font-family:'Barlow Condensed',sans-serif;font-size:0.9rem;font-weight:700;text-transform:uppercase;letter-spacing:0.3px;line-height:1.2">${p.name}</div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.58rem;color:var(--text3)">${p.club}</div></div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.78rem;font-weight:500;color:var(--text)">${fmt(p.price)}</div><div style="${tc};font-size:0.76rem;font-weight:600">${ts}</div><div style="font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;font-weight:800;color:var(--accent);line-height:1">${p.pts}</div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:var(--text3)">${media}</div><div>${renderBadges(badges)}</div></div>`;
   }).join('');
 }
 
