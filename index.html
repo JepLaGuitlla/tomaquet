@@ -2128,9 +2128,11 @@ function renderProximaJornada(){
   document.getElementById('proximaJornada').innerHTML=matches.map(m=>{const date=new Date(m.date);const dateStr=date.toLocaleDateString('es-ES',{weekday:'short',day:'numeric',month:'short'});const timeStr=date.toLocaleTimeString('es-ES',{hour:'2-digit',minute:'2-digit'});return`<div class="fixture-row"><img class="crest-sm" src="${m.home.crest}" onerror="this.style.display='none'"><div class="fixture-teams"><span style="color:var(--accent)">${m.home.short||m.home.name}</span><span style="color:var(--text3);font-size:0.75rem;margin:0 4px">vs</span>${m.away.short||m.away.name}</div><img class="crest-sm" src="${m.away.crest}" onerror="this.style.display='none'"><div class="fixture-date">${dateStr}<br>${timeStr}</div></div>`;}).join('');
 }
 function renderUltimosResultados(){
+  const el=document.getElementById('ultimosResultados');
+  if(!el) return;
   const last=ligaData.recentResults||[];
-  if(!last.length){document.getElementById('ultimosResultados').innerHTML='<div style="padding:14px;color:var(--text3);font-size:0.8rem">Sin resultados</div>';return;}
-  document.getElementById('ultimosResultados').innerHTML=last.map(m=>{const hg=m.score?.home??'-';const ag=m.score?.away??'-';const date=new Date(m.date).toLocaleDateString('es-ES',{day:'numeric',month:'short'});return`<div class="fixture-row"><img class="crest-sm" src="${m.home.crest}" onerror="this.style.display='none'"><div class="fixture-teams">${m.home.short||m.home.name}<span style="color:var(--text3);font-size:0.75rem;margin:0 4px">—</span>${m.away.short||m.away.name}</div><img class="crest-sm" src="${m.away.crest}" onerror="this.style.display='none'"><div class="fixture-score">${hg} — ${ag}</div><div class="fixture-date">${date}</div></div>`;}).join('');
+  if(!last.length){el.innerHTML='<div style="padding:14px;color:var(--text3);font-size:0.8rem">Sin resultados</div>';return;}
+  el.innerHTML=last.map(m=>{const hg=m.score?.home??'-';const ag=m.score?.away??'-';const date=new Date(m.date).toLocaleDateString('es-ES',{day:'numeric',month:'short'});return`<div class="fixture-row"><img class="crest-sm" src="${m.home.crest}" onerror="this.style.display='none'"><div class="fixture-teams">${m.home.short||m.home.name}<span style="color:var(--text3);font-size:0.75rem;margin:0 4px">—</span>${m.away.short||m.away.name}</div><img class="crest-sm" src="${m.away.crest}" onerror="this.style.display='none'"><div class="fixture-score">${hg} — ${ag}</div><div class="fixture-date">${date}</div></div>`;}).join('');
 }
 function renderEquiposGrid(filter){
   const teams=ligaData.standings;const filtered=filter?teams.filter(t=>(t.team.name+t.team.shortName).toLowerCase().includes(filter.toLowerCase())):teams;
