@@ -1520,50 +1520,49 @@ function mergeStatsIntoPlayers(statsData){
 
   // Indexar por múltiples variantes del nombre para maximizar el cruce
   statsData.players.forEach(s=>{
+    // football-data devuelve {name, team, goals, assists, appearances, penalties}
+    // Normalizar campo teamName para el cruce de equipo
+    if(!s.teamName) s.teamName = (typeof s.team==='object' ? s.team?.name : s.team) || '';
+
     const fullName  = normName(s.name);
-    const lastName  = normName(s.lastname || '');
-    const firstName = normName(s.firstname || '');
-    // Última palabra del nombre completo (ej: "joao felix sequeira" → "sequeira")
-    const lastWord  = fullName.split(' ').slice(-1)[0];
-    // Primera + última palabra (ej: "joao sequeira")
-    const firstLast = fullName.split(' ').filter((_,i,a)=>i===0||i===a.length-1).join(' ');
+    const words     = fullName.split(' ');
+    const lastWord  = words.slice(-1)[0];
+    const firstLast = words.filter((_,i,a)=>i===0||i===a.length-1).join(' ');
+    const firstTwo  = words.slice(0,2).join(' ');
 
     playerStatsIndex[fullName]  = s;
-    if(lastName)    playerStatsIndex[lastName]  = s;
-    if(firstLast)   playerStatsIndex[firstLast] = s;
-    if(lastWord)    playerStatsIndex[lastWord]  = s;
-    if(firstName && lastName) playerStatsIndex[firstName+' '+lastName] = s;
+    if(lastWord)  playerStatsIndex[lastWord]  = s;
+    if(firstLast) playerStatsIndex[firstLast] = s;
+    if(firstTwo && firstTwo!==fullName) playerStatsIndex[firstTwo] = s;
   });
 
   let matched = 0;
   allPlayers.forEach(p=>{
-    const bwName     = normName(p.name);
-    const bwLastWord = bwName.split(' ').slice(-1)[0];
-    const bwFirstWord = bwName.split(' ')[0];
-    const bwTeam     = normName(p.teamName || '');
+    const bwName      = normName(p.name);
+    const bwWords     = bwName.split(' ');
+    const bwLastWord  = bwWords.slice(-1)[0];
+    const bwFirstWord = bwWords[0];
+    const bwTeam      = normName(p.teamName || '');
 
     const candidates = [
       playerStatsIndex[bwName],
       playerStatsIndex[bwLastWord],
       playerStatsIndex[bwFirstWord],
-      playerStatsIndex[bwName.split(' ').slice(0,2).join(' ')],
+      playerStatsIndex[bwWords.slice(0,2).join(' ')],
     ].filter(Boolean);
 
     // Preferir candidato cuyo equipo coincida con Biwenger
     let sf = candidates.find(c => bwTeam && normName(c.teamName||'').includes(bwTeam.split(' ')[0]));
-    // Si no hay match de equipo, usar el primero disponible
     if (!sf) sf = candidates[0];
 
     if(sf){
-      sf.started       = sf.lineups         || 0;
-      sf.dribbles      = sf.dribblesSuccess  || 0;
-      sf.tackles       = sf.tacklesTotal     || 0;
-      sf.minutesPerGoal= (sf.goals && sf.minutes) ? Math.round(sf.minutes / sf.goals) : null;
+      sf.minutesPerGoal = (sf.goals && sf.minutes) ? Math.round(sf.minutes / sf.goals) : null;
       p.sf = sf;
       matched++;
     }
   });
-  console.log('\u{1F4CA} API-Football: '+matched+'/'+allPlayers.length+' jugadores cruzados ('+Object.keys(playerStatsIndex).length+' entradas)');
+  const src = statsData.source || 'stats';
+  console.log('\u{1F4CA} '+src+': '+matched+'/'+allPlayers.length+' jugadores cruzados ('+Object.keys(playerStatsIndex).length+' entradas)');
 }
 
 function getSfVal(p, key){ return p.sf ? (p.sf[key] ?? null) : null; }
@@ -2078,48 +2077,28 @@ function renderJugPanel(p){
   const trend = p.trend||p.priceIncrement||0;
   const trendHtml = trend>0?`<span style="color:var(--c-good)">▲ +${fmt(trend)}</span>`:trend<0?`<span style="color:var(--c-low)">▼ ${fmt(trend)}</span>`:'<span style="color:var(--text3)">—</span>';
 
-  // Bloque Sofascore
+  // Bloque stats reales
   let sfHtml = '';
   if(sf){
-    const rat = sf.rating ? sf.rating.toFixed(1) : '—';
-    const ratCol = sf.rating ? (sf.rating>=7.5?'var(--c-good)':sf.rating>=6.5?'var(--text)':'var(--c-low)') : 'var(--text3)';
     const mpg = sf.minutesPerGoal ? sf.minutesPerGoal+"'" : '—';
-    const subs = (sf.appearances||0)-(sf.started||0);
+    const pen = sf.penalties || 0;
+    const hasCard = (sf.yellowCards||0)+(sf.redCards||0) > 0;
 
     sfHtml = `
     <div class="jp-section">
-      <div class="jp-section-title">Estadísticas reales — FBref</div>
+      <div class="jp-section-title">Estadísticas reales — LaLiga 2025/26</div>
       <div class="jp-grid" style="margin-bottom:8px">
-        <div class="jp-stat"><div class="jp-stat-val" style="color:${ratCol}">${rat}</div><div class="jp-stat-lbl">Rating</div></div>
         <div class="jp-stat"><div class="jp-stat-val">${sf.appearances||0}</div><div class="jp-stat-lbl">PJ</div></div>
-        <div class="jp-stat"><div class="jp-stat-val">${sf.minutes||0}</div><div class="jp-stat-lbl">Minutos</div></div>
-        <div class="jp-stat"><div class="jp-stat-val">${sf.started||0}</div><div class="jp-stat-lbl">Titular</div></div>
-        <div class="jp-stat"><div class="jp-stat-val">${subs}</div><div class="jp-stat-lbl">Suplente</div></div>
+        <div class="jp-stat"><div class="jp-stat-val" style="color:var(--c-good)">${sf.goals||0}</div><div class="jp-stat-lbl">Goles</div></div>
+        <div class="jp-stat"><div class="jp-stat-val" style="color:var(--c-top)">${sf.assists||0}</div><div class="jp-stat-lbl">Asistencias</div></div>
         <div class="jp-stat"><div class="jp-stat-val">${mpg}</div><div class="jp-stat-lbl">Min/Gol</div></div>
       </div>
-      <div style="border-top:1px solid var(--border);padding-top:10px;margin-bottom:8px">
-        <div class="jp-section-title" style="margin-bottom:6px">Ataque</div>
-        <div class="jp-grid">
-          <div class="jp-stat"><div class="jp-stat-val" style="color:var(--c-good)">${sf.goals||0}</div><div class="jp-stat-lbl">Goles</div></div>
-          <div class="jp-stat"><div class="jp-stat-val" style="color:var(--c-top)">${sf.assists||0}</div><div class="jp-stat-lbl">Asistencias</div></div>
-          <div class="jp-stat"><div class="jp-stat-val">${sf.shotsOnTarget||0}</div><div class="jp-stat-lbl">Remates</div></div>
-          <div class="jp-stat"><div class="jp-stat-val">${sf.dribbles||0}</div><div class="jp-stat-lbl">Regates</div></div>
-          <div class="jp-stat"><div class="jp-stat-val">${sf.tackles||0}</div><div class="jp-stat-lbl">Recuperac.</div></div>
-          <div class="jp-stat"><div class="jp-stat-val">${sf.interceptions||0}</div><div class="jp-stat-lbl">Intercep.</div></div>
-        </div>
-      </div>
-      <div style="border-top:1px solid var(--border);padding-top:10px${sf.saves>0?';margin-bottom:8px':''}">
+      ${pen>0||hasCard?`<div style="border-top:1px solid var(--border);padding-top:10px">
         <div class="jp-section-title" style="margin-bottom:6px">Disciplina</div>
-        <div class="jp-grid-2">
-          <div class="jp-stat"><div class="jp-stat-val" style="color:#f59e0b">${sf.yellowCards||0}</div><div class="jp-stat-lbl">Amarillas</div></div>
-          <div class="jp-stat"><div class="jp-stat-val" style="color:var(--c-low)">${sf.redCards||0}</div><div class="jp-stat-lbl">Rojas</div></div>
-        </div>
-      </div>
-      ${sf.saves>0?`<div style="border-top:1px solid var(--border);padding-top:10px">
-        <div class="jp-section-title" style="margin-bottom:6px">Portero</div>
-        <div class="jp-grid-2">
-          <div class="jp-stat"><div class="jp-stat-val" style="color:var(--c-top)">${sf.saves||0}</div><div class="jp-stat-lbl">Paradas</div></div>
-          <div class="jp-stat"><div class="jp-stat-val" style="color:var(--c-good)">${sf.cleanSheets||0}</div><div class="jp-stat-lbl">Portería 0</div></div>
+        <div class="jp-grid">
+          ${pen>0?`<div class="jp-stat"><div class="jp-stat-val">${pen}</div><div class="jp-stat-lbl">Penaltis</div></div>`:''}
+          ${hasCard?`<div class="jp-stat"><div class="jp-stat-val" style="color:#f59e0b">${sf.yellowCards||0}</div><div class="jp-stat-lbl">Amarillas</div></div>`:''}
+          ${hasCard?`<div class="jp-stat"><div class="jp-stat-val" style="color:var(--c-low)">${sf.redCards||0}</div><div class="jp-stat-lbl">Rojas</div></div>`:''}
         </div>
       </div>`:''}
     </div>`;
