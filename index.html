@@ -36,12 +36,14 @@ header::after{display:none;}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(0.8)}}
 
 /* ── NAV ─── */
-.nav-wrap{border-bottom:2px solid var(--border);background:#fff;}
-nav{max-width:1440px;margin:0 auto;padding:0 2rem;display:flex;gap:0;}
-.nav-btn{font-family:'Figtree',sans-serif;font-family:'Figtree',sans-serif;font-size:0.72rem;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--text3);background:none;border:none;padding:12px 20px;cursor:pointer;border-bottom:2px solid transparent;transition:all 0.2s;position:relative;}
+.nav-wrap{border-bottom:2px solid var(--border);background:#fff;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+.nav-wrap::-webkit-scrollbar{display:none;}
+nav{max-width:1440px;margin:0 auto;padding:0 2rem;display:flex;gap:0;white-space:nowrap;width:max-content;min-width:100%;}
+.nav-btn{font-family:'Figtree',sans-serif;font-size:0.68rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);background:none;border:none;padding:0 18px;height:44px;cursor:pointer;border-bottom:2px solid transparent;transition:all 0.2s;position:relative;white-space:nowrap;display:flex;align-items:center;gap:5px;}
 .nav-btn:hover{color:var(--text2);}
 .nav-btn.active{color:var(--accent);border-bottom-color:var(--accent);}
 .nav-btn.active::before{content:'';position:absolute;bottom:-1px;left:50%;transform:translateX(-50%);width:4px;height:4px;background:var(--accent);border-radius:50%;box-shadow:0 0 6px var(--accent);}
+.nav-icon{font-size:0.85rem;line-height:1;}
 
 /* ── MAIN ─── */
 main{max-width:1440px;margin:0 auto;padding:1.5rem 2rem;}
@@ -484,14 +486,13 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
 
 <div class="nav-wrap">
   <nav>
-    <button class="nav-btn active" onclick="showSection('inicio',this)">INICIO</button>
-    <button class="nav-btn" onclick="showSection('jugadores',this)">JUGADORES</button>
-    <button class="nav-btn" onclick="showSection('mercado',this)">ESTUDIO DE MERCADO 🔍</button>
-    <button class="nav-btn" onclick="showSection('general',this)">GENERAL</button>
-    <button class="nav-btn" onclick="showSection('grupos',this)">SA CAPRITXOSA</button>
-    <button class="nav-btn" onclick="showSection('miequipo',this)">MI EQUIPO</button>
-    <button class="nav-btn" onclick="showSection('liga',this)">⚡ ANÁLISIS LIGA</button>
-    <button class="nav-btn" onclick="showSection('factorpausa',this)">☕ FACTOR PAUSA</button>
+    <button class="nav-btn active" onclick="showSection('inicio',this)"><span class="nav-icon">🏠</span>Inicio</button>
+    <button class="nav-btn" onclick="showSection('mercado',this)"><span class="nav-icon">🔍</span>Mercado</button>
+    <button class="nav-btn" onclick="showSection('miequipo',this)"><span class="nav-icon">🦊</span>Mi Equipo</button>
+    <button class="nav-btn" onclick="showSection('liga-fantasy',this)"><span class="nav-icon">🏆</span>Liga</button>
+    <button class="nav-btn" onclick="showSection('grupos',this)"><span class="nav-icon">⚔️</span>Capritxosa</button>
+    <button class="nav-btn" onclick="showSection('analisis',this)"><span class="nav-icon">⚡</span>Análisis</button>
+    <button class="nav-btn" onclick="showSection('factorpausa',this)"><span class="nav-icon">☕</span>Factor Pausa</button>
   </nav>
 </div>
 
@@ -644,7 +645,7 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
   </div>
 </div>
 
-<div id="general" class="section">
+<div id="liga-fantasy" class="section">
   <div class="section-title">Clasificación general</div>
   <div class="table-wrap">
     <div class="standings-grid standings-header">
@@ -788,7 +789,7 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
   </div>
 </div>
 
-<div id="liga" class="section">
+<div id="analisis" class="section">
   <div class="section-title">Análisis de Liga</div>
   <div id="ligaLoading" class="liga-loading">
     <div class="spinner"></div> Cargando datos de La Liga…
@@ -812,6 +813,14 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
         <div class="panel">
           <div class="panel-header"><div class="panel-title">Últimos Resultados</div></div>
           <div id="ultimosResultados"></div>
+        </div>
+        <!-- WIDGET JUGADORES -->
+        <div class="panel">
+          <div class="panel-header" style="justify-content:space-between">
+            <div class="panel-title">Top Goleadores Fantasy</div>
+            <button onclick="openJugadoresModal()" style="background:none;border:1px solid var(--border2);border-radius:3px;font-family:'Figtree',sans-serif;font-size:0.6rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--text3);padding:3px 8px;cursor:pointer;" onmouseover="this.style.color='var(--accent)';this.style.borderColor='var(--accent)'" onmouseout="this.style.color='var(--text3)';this.style.borderColor='var(--border2)'">Ver todos →</button>
+          </div>
+          <div id="widgetJugadores" style="max-height:320px;overflow-y:auto"></div>
         </div>
       </div>
     </div>
@@ -1568,6 +1577,7 @@ function mergeStatsIntoPlayers(statsData){
   // Recalcular percentiles con los nuevos datos y re-renderizar
   buildJugPcts(allPlayers);
   sortAndRender();
+  renderWidgetJugadores();
 }
 
 function getSfVal(p, key){ return p.sf ? (p.sf[key] ?? null) : null; }
@@ -1965,7 +1975,99 @@ function fmt(v){if(!v&&v!==0)return'—';const a=Math.abs(v),s=v<0?'-':'';if(a>=
 function fmtTrend(v){if(!v||v===0)return'<span class="trend neutral">—</span>';if(v>0)return'<span class="trend up">+'+fmt(v)+'</span>';return'<span class="trend down">'+fmt(v)+'</span>';}
 function roiClass(r){return r>=15?'high':r>=8?'mid':'low';}
 function posBadge(pos){if(!pos||pos==='?')return'<div class="pos-badge" style="background:var(--border);font-size:9px;color:var(--text3)">?</div>';const colors={PT:'var(--pt)',DF:'var(--df)',MC:'var(--mc)',DL:'var(--dl)',MD:'var(--md)'};const parts=pos.split('/').filter(p=>p);if(parts.length===1)return`<div class="pos-badge" style="background:${colors[parts[0]]||'var(--text3)'}">${parts[0]}</div>`;const gs=parts.map((p,i)=>{const c=colors[p]||'#666';return c+' '+(i/parts.length*100).toFixed(0)+'%,'+c+' '+((i+1)/parts.length*100).toFixed(0)+'%';}).join(',');return`<div class="pos-badge pos-multi" style="background:linear-gradient(180deg,${gs})">${parts.map(p=>`<span>${p}</span>`).join('')}</div>`;}
-function showSection(id,btn){document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));document.getElementById(id).classList.add('active');btn.classList.add('active');if(id==='liga')loadLiga();}
+function showSection(id,btn){document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));document.getElementById(id).classList.add('active');btn.classList.add('active');if(id==='analisis')loadLiga();}
+
+// ── WIDGET JUGADORES (en sección Análisis) ────────────────────────────────
+function renderWidgetJugadores(){
+  const el = document.getElementById('widgetJugadores');
+  if(!el) return;
+  const PosC = {PT:'#d97706',DF:'#1d6fce',MC:'#16a34a',DL:'#e63329',MD:'#8b5cf6'};
+  const sorted = [...allPlayers]
+    .filter(p => p.sf && (p.sf.goals||0) > 0)
+    .sort((a,b) => (b.sf.goals||0)-(a.sf.goals||0))
+    .slice(0,20);
+  if(!sorted.length){el.innerHTML='<div style="padding:16px;text-align:center;color:var(--text3);font-size:0.72rem">Sin datos de goles</div>';return;}
+  el.innerHTML = sorted.map((p,i)=>{
+    const pos = p.position.split('/')[0];
+    const posCol = PosC[pos]||'#555';
+    const gol = p.sf.goals||0;
+    const ast = p.sf.assists||0;
+    const golCol = gol>=15?'var(--c-top)':gol>=10?'var(--c-good)':gol>=5?'var(--c-mid)':'var(--text)';
+    return `<div style="display:flex;align-items:center;gap:8px;padding:7px 14px;border-bottom:1px solid var(--border);cursor:pointer" onclick="openJugPanel(allPlayers.find(x=>x.id===${p.id})||allPlayers[${allPlayers.indexOf(p)}])" onmouseover="this.style.background='var(--accent-dim)'" onmouseout="this.style.background=''">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6rem;color:var(--text3);width:16px;text-align:right">${i+1}</div>
+      <div style="width:18px;height:18px;border-radius:2px;background:${posCol};display:flex;align-items:center;justify-content:center;font-size:0.5rem;font-weight:800;color:#fff;flex-shrink:0">${pos}</div>
+      <div style="flex:1;min-width:0;font-family:'Figtree',sans-serif;font-size:0.82rem;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${p.name}</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:0.88rem;font-weight:700;color:${golCol};min-width:20px;text-align:right">${gol}</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:var(--c-top);min-width:16px;text-align:right">${ast>0?ast:'—'}</div>
+    </div>`;
+  }).join('')+'<div style="display:flex;gap:12px;padding:8px 14px;border-top:1px solid var(--border);font-family:Figtree,sans-serif;font-size:0.55rem;color:var(--text3)"><span style="margin-left:auto">GOL</span><span>AST</span></div>';
+}
+
+// ── MODAL VOLANTE JUGADORES ───────────────────────────────────────────────
+function openJugadoresModal(){
+  let overlay = document.getElementById('jugadoresModalOverlay');
+  if(!overlay){
+    overlay = document.createElement('div');
+    overlay.id = 'jugadoresModalOverlay';
+    overlay.style.cssText = 'display:none;position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:250;backdrop-filter:blur(2px)';
+    overlay.innerHTML = `<div style="position:absolute;right:0;top:0;bottom:0;width:480px;max-width:95vw;background:var(--bg);border-left:1px solid var(--border);display:flex;flex-direction:column;animation:slideIn 0.2s ease">
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:var(--bg3);border-bottom:1px solid var(--border);flex-shrink:0">
+        <div style="font-family:Figtree,sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text2)">// Jugadores — LaLiga 25/26</div>
+        <button onclick="document.getElementById('jugadoresModalOverlay').style.display='none'" style="background:none;border:1px solid var(--border2);border-radius:3px;font-family:Figtree,sans-serif;font-size:0.65rem;padding:4px 10px;cursor:pointer;color:var(--text3)">× Cerrar</button>
+      </div>
+      <div style="padding:10px 14px;border-bottom:1px solid var(--border);flex-shrink:0;display:flex;gap:8px;align-items:center">
+        <input id="jugModalSearch" placeholder="Buscar jugador…" oninput="renderJugModal()" style="flex:1;border:1px solid var(--border);border-radius:4px;padding:6px 10px;font-size:0.78rem;outline:none;color:var(--text)">
+        <select id="jugModalSort" onchange="renderJugModal()" style="border:1px solid var(--border);border-radius:4px;padding:6px 8px;font-size:0.72rem;color:var(--text);background:var(--bg)">
+          <option value="goals">↓ Goles</option>
+          <option value="assists">↓ Asistencias</option>
+          <option value="pts">↓ Puntos</option>
+          <option value="appearances">↓ PJ</option>
+        </select>
+      </div>
+      <div id="jugModalList" style="flex:1;overflow-y:auto"></div>
+    </div>`;
+    overlay.addEventListener('click', e=>{ if(e.target===overlay) overlay.style.display='none'; });
+    document.body.appendChild(overlay);
+  }
+  overlay.style.display='block';
+  renderJugModal();
+}
+
+function renderJugModal(){
+  const q = (document.getElementById('jugModalSearch')?.value||'').toLowerCase();
+  const sortKey = document.getElementById('jugModalSort')?.value||'goals';
+  const PosC = {PT:'#d97706',DF:'#1d6fce',MC:'#16a34a',DL:'#e63329',MD:'#8b5cf6'};
+  let list = [...allPlayers];
+  if(q) list = list.filter(p=>(p.name||'').toLowerCase().includes(q)||(p.teamName||'').toLowerCase().includes(q));
+  list.sort((a,b)=>{
+    if(sortKey==='pts') return (b.pts||0)-(a.pts||0);
+    const av = a.sf?.[sortKey]??-1, bv = b.sf?.[sortKey]??-1;
+    return bv-av;
+  });
+  const el = document.getElementById('jugModalList');
+  if(!el) return;
+  el.innerHTML = list.map((p,i)=>{
+    const pos = p.position.split('/')[0];
+    const posCol = PosC[pos]||'#555';
+    const gol = p.sf?.goals??null;
+    const ast = p.sf?.assists??null;
+    const pj  = p.sf?.appearances??null;
+    const golCol = gol===null?'var(--text3)':gol>=15?'var(--c-top)':gol>=10?'var(--c-good)':gol>=5?'var(--c-mid)':'var(--text)';
+    return `<div style="display:flex;align-items:center;gap:8px;padding:8px 16px;border-bottom:1px solid var(--border);cursor:pointer" onclick="openJugPanel(allPlayers[${allPlayers.indexOf(p)}])" onmouseover="this.style.background='var(--accent-dim)'" onmouseout="this.style.background=''">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6rem;color:var(--text3);width:20px;text-align:right">${i+1}</div>
+      <div style="width:20px;height:20px;border-radius:2px;background:${posCol};display:flex;align-items:center;justify-content:center;font-size:0.52rem;font-weight:800;color:#fff;flex-shrink:0">${pos}</div>
+      <div style="flex:1;min-width:0">
+        <div style="font-family:'Figtree',sans-serif;font-size:0.85rem;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${p.name}</div>
+        <div style="font-family:'Figtree',sans-serif;font-size:0.6rem;color:var(--text3)">${p.teamName||'—'}</div>
+      </div>
+      <div style="text-align:right;display:flex;gap:12px;align-items:center">
+        <div style="text-align:center"><div style="font-family:'IBM Plex Mono',monospace;font-size:0.88rem;font-weight:700;color:${golCol}">${gol??'—'}</div><div style="font-size:0.5rem;color:var(--text3)">GOL</div></div>
+        <div style="text-align:center"><div style="font-family:'IBM Plex Mono',monospace;font-size:0.82rem;color:var(--c-top)">${ast??'—'}</div><div style="font-size:0.5rem;color:var(--text3)">AST</div></div>
+        <div style="text-align:center"><div style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:var(--text3)">${pj??'—'}</div><div style="font-size:0.5rem;color:var(--text3)">PJ</div></div>
+      </div>
+    </div>`;
+  }).join('') || '<div style="padding:40px;text-align:center;color:var(--text3);font-size:0.8rem">Sin resultados</div>';
+}
 document.getElementById('modalOverlay').addEventListener('click',e=>{if(e.target===document.getElementById('modalOverlay'))closeModal();});
 
 // ══════════════════════════════════════════
