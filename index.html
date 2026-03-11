@@ -1456,7 +1456,7 @@ async function loadPlayers(){
     document.getElementById('statusText').textContent=allPlayers.length+' jugadores · actualizado '+when;
     renderStats(); renderRankings(allPlayers); initRankings();
     // Cargar estadísticas Sofascore
-    if(data.sofascore) mergeSofascoreIntoPlayers(data.sofascore);
+    if(data.apiFootball) mergeSofascoreIntoPlayers(data.apiFootball);
 
     // Cargar mi equipo real desde Biwenger
     if(data.myTeam && data.myTeam.players && data.myTeam.players.length){
@@ -1504,22 +1504,32 @@ function filterPlayers(){currentPage=1;applyFilters();}
 function applyFilters(){const q=document.getElementById('searchInput').value.toLowerCase();filteredPlayers=allPlayers.filter(p=>(!currentPos||p.position.includes(currentPos))&&(!q||p.name.toLowerCase().includes(q)||(p.club||'').toLowerCase().includes(q)));sortAndRender();}
 function setSortAndRender(val){document.getElementById('sortSelect').value=val;currentSort=val;sortAndRender();}
 function sortPlayers(){currentSort=document.getElementById('sortSelect').value;currentPage=1;sortAndRender();}
-// sofascore data store
+// api-football data store
 let sofascoreStats = {};
 
 function normName(n){ return (n||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]/g,' ').trim(); }
 
-function mergeSofascoreIntoPlayers(sfData){
-  if(!sfData || !sfData.players) return;
-  sfData.players.forEach(s=>{
+function mergeSofascoreIntoPlayers(afData){
+  if(!afData || !afData.players) return;
+  afData.players.forEach(s=>{
     sofascoreStats[normName(s.name)] = s;
-    if(s.shortName) sofascoreStats[normName(s.shortName)] = s;
+    // API-Football: indexar también por apellido solo para mejorar el cruce con Biwenger
+    if(s.lastname)  sofascoreStats[normName(s.lastname)]  = s;
+    if(s.firstname && s.lastname) sofascoreStats[normName(s.firstname+' '+s.lastname)] = s;
   });
   allPlayers.forEach(p=>{
     const sf = sofascoreStats[normName(p.name)] || sofascoreStats[normName(p.name.split(' ').slice(-1)[0])];
-    if(sf) p.sf = sf;
+    if(sf){
+      // Normalizar campos API-Football → nombres que usa el frontend
+      sf.started       = sf.started       ?? sf.lineups         ?? 0;
+      sf.dribbles      = sf.dribbles      ?? sf.dribblesSuccess  ?? 0;
+      sf.tackles       = sf.tackles       ?? sf.tacklesTotal     ?? 0;
+      sf.interceptions = sf.interceptions ?? 0;
+      sf.minutesPerGoal= (sf.goals && sf.minutes) ? Math.round(sf.minutes / sf.goals) : null;
+      p.sf = sf;
+    }
   });
-  console.log('\u{1F4CA} Sofascore: '+Object.keys(sofascoreStats).length+' entradas cargadas');
+  console.log('\u{1F4CA} API-Football: '+Object.keys(sofascoreStats).length+' entradas cargadas');
 }
 
 function getSfVal(p, key){ return p.sf ? (p.sf[key] ?? null) : null; }
@@ -2044,7 +2054,7 @@ function renderJugPanel(p){
 
     sfHtml = `
     <div class="jp-section">
-      <div class="jp-section-title">Estadísticas reales — Sofascore</div>
+      <div class="jp-section-title">Estadísticas reales — API-Football</div>
       <div class="jp-grid" style="margin-bottom:8px">
         <div class="jp-stat"><div class="jp-stat-val" style="color:${ratCol}">${rat}</div><div class="jp-stat-lbl">Rating</div></div>
         <div class="jp-stat"><div class="jp-stat-val">${sf.appearances||0}</div><div class="jp-stat-lbl">PJ</div></div>
@@ -2080,7 +2090,7 @@ function renderJugPanel(p){
       </div>`:''}
     </div>`;
   } else {
-    sfHtml = `<div class="jp-section"><div style="padding:16px;text-align:center;color:var(--text3);font-family:Figtree,sans-serif;font-size:0.68rem;">Sin datos Sofascore<br><span style="opacity:0.5;font-size:0.58rem">Se activarán tras la próxima actualización</span></div></div>`;
+    sfHtml = `<div class="jp-section"><div style="padding:16px;text-align:center;color:var(--text3);font-family:Figtree,sans-serif;font-size:0.68rem;">Sin estadísticas<br><span style="opacity:0.5;font-size:0.58rem">Se actualizan cada día</span></div></div>`;
   }
 
   document.getElementById('jugPanelBody').innerHTML = `
