@@ -424,6 +424,134 @@ async function fetchNews() {
   return allNews;
 }
 
+// ─── 8. SOFASCORE — ESTADÍSTICAS REALES DE JUGADORES ─────────────────────────
+async function fetchSofascoreStats() {
+  console.log('📊 Descargando estadísticas de Sofascore...');
+
+  const SS_BASE = 'www.sofascore.com';
+  const TOURNAMENT_ID = 8; // LaLiga
+  const DELAY = 1200; // ms entre llamadas para no triggear Cloudflare
+
+  const ssHeaders = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+    'Accept': 'application/json',
+    'Accept-Language': 'es-ES,es;q=0.9',
+    'Referer': 'https://www.sofascore.com/football/spain/laliga/statistics',
+    'Origin': 'https://www.sofascore.com',
+    'Cache-Control': 'no-cache',
+  };
+
+  function ssGet(path) {
+    return new Promise((resolve) => {
+      const req = https.request({
+        hostname: SS_BASE,
+        path: `/api/v1${path}`,
+        method: 'GET',
+        headers: ssHeaders,
+      }, (res) => {
+        let data = '';
+        res.on('data', c => data += c);
+        res.on('end', () => {
+          try { resolve({ ok: res.statusCode === 200, body: JSON.parse(data), status: res.statusCode }); }
+          catch(e) { resolve({ ok: false, body: {}, status: res.statusCode }); }
+        });
+      });
+      req.on('error', () => resolve({ ok: false, body: {}, status: 0 }));
+      req.end();
+    });
+  }
+
+  function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+  try {
+    // 1. Obtener season ID actual de LaLiga
+    const seasonsRes = await ssGet(`/unique-tournament/${TOURNAMENT_ID}/seasons`);
+    if (!seasonsRes.ok) {
+      console.warn('⚠️ Sofascore: no se pudo obtener seasons. Status:', seasonsRes.status);
+      return null;
+    }
+
+    const seasons = seasonsRes.body?.seasons || [];
+    // El primero suele ser el más reciente
+    const currentSeason = seasons[0];
+    if (!currentSeason) {
+      console.warn('⚠️ Sofascore: no hay seasons disponibles');
+      return null;
+    }
+
+    const seasonId = currentSeason.id;
+    console.log(`  Season: ${currentSeason.name} (ID: ${seasonId})`);
+    await sleep(DELAY);
+
+    // 2. Descargar stats por páginas (100 jugadores por página)
+    const STATS_FIELDS = 'goals,assists,yellowCards,redCards,minutesPlayed,appearances,accuratePasses,rating,saves,cleanSheets,goalsPrevented,successfulDribbles,tackles,interceptions,shotsOnTarget,totalShots,matchesStarted,substituteIn';
+    const allStats = [];
+    let offset = 0;
+    const limit = 100;
+    let hasMore = true;
+
+    while (hasMore) {
+      const path = `/unique-tournament/${TOURNAMENT_ID}/season/${seasonId}/statistics/player?limit=${limit}&offset=${offset}&order=-rating&fields=${STATS_FIELDS}&filters=position.in.G~D~M~F`;
+      const res = await ssGet(path);
+
+      if (!res.ok) {
+        console.warn(`⚠️ Sofascore stats offset ${offset}: status ${res.status}`);
+        break;
+      }
+
+      const results = res.body?.results || [];
+      if (!results.length) { hasMore = false; break; }
+
+      results.forEach(r => {
+        const p = r.player || {};
+        const t = r.team || {};
+        allStats.push({
+          sfId:         p.id,
+          name:         p.name || '',
+          shortName:    p.shortName || p.name || '',
+          position:     p.position || '',
+          teamName:     t.name || '',
+          // Stats principales
+          rating:       r.rating        || null,
+          appearances:  r.appearances   || 0,
+          started:      r.matchesStarted || 0,
+          minutes:      r.minutesPlayed  || 0,
+          goals:        r.goals          || 0,
+          assists:      r.assists        || 0,
+          yellowCards:  r.yellowCards    || 0,
+          redCards:     r.redCards       || 0,
+          // Porteros
+          saves:        r.saves          || 0,
+          cleanSheets:  r.cleanSheets    || 0,
+          goalsPrevented: r.goalsPrevented || null,
+          // Extras
+          shotsOnTarget:  r.shotsOnTarget  || 0,
+          totalShots:     r.totalShots     || 0,
+          dribbles:       r.successfulDribbles || 0,
+          tackles:        r.tackles        || 0,
+          // Calculados
+          minutesPerGoal: (r.goals && r.minutesPlayed) ? Math.round(r.minutesPlayed / r.goals) : null,
+          subsIn:         (r.appearances || 0) - (r.matchesStarted || 0),
+        });
+      });
+
+      console.log(`  Sofascore: ${allStats.length} jugadores cargados (offset ${offset})`);
+      offset += limit;
+
+      // Si devuelve menos de limit, ya no hay más
+      if (results.length < limit) hasMore = false;
+      else await sleep(DELAY);
+    }
+
+    console.log(`✅ Sofascore: ${allStats.length} jugadores con estadísticas`);
+    return { seasonId, seasonName: currentSeason.name, players: allStats };
+
+  } catch(e) {
+    console.warn('⚠️ Error en Sofascore:', e.message);
+    return null;
+  }
+}
+
 // ─── MAIN ────────────────────────────────────────────────────────────────────
 async function main() {
   try {
@@ -434,6 +562,7 @@ async function main() {
     const myTeam   = await fetchMyTeam(token);
     const laliga   = await fetchLaLiga();
     const news     = await fetchNews();
+    const sofascore = await fetchSofascoreStats();
 
     const output = {
       updatedAt: new Date().toISOString(),
@@ -443,11 +572,12 @@ async function main() {
       myTeam,
       laliga,
       news,
+      sofascore,
     };
 
     fs.writeFileSync('data.json', JSON.stringify(output, null, 2), 'utf8');
     console.log('💾 data.json guardado correctamente');
-    console.log(`📊 ${players.length} jugadores | equipos: ${allTeams?.length || 0} | mi equipo: ${myTeam?.players?.length || 0} jugadores | noticias: ${news.length}`);
+    console.log(`📊 ${players.length} jugadores | equipos: ${allTeams?.length || 0} | mi equipo: ${myTeam?.players?.length || 0} | noticias: ${news.length} | sofascore: ${sofascore?.players?.length || 0} stats`);
 
   } catch (err) {
     console.error('❌ Error inesperado:', err.message);
