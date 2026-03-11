@@ -83,7 +83,7 @@ main{max-width:1440px;margin:0 auto;padding:1.5rem 2rem;}
 .table-header{display:grid;grid-template-columns:40px 2fr 80px 1fr 100px 100px 80px 80px 80px;padding:10px 16px;background:var(--bg3);border-bottom:1px solid var(--border2);}
 .th{font-family:'IBM Plex Mono',monospace;font-size:0.58rem;color:var(--text3);text-transform:uppercase;letter-spacing:1.5px;font-weight:500;cursor:pointer;user-select:none;transition:color 0.15s;}
 .th:hover{color:var(--accent);}
-.player-row{display:grid;grid-template-columns:28px 24px minmax(140px,1fr) 70px 60px 60px 54px 54px 54px 54px;padding:7px 10px;border-bottom:1px solid var(--border);transition:background 0.12s;align-items:center;cursor:pointer;min-width:640px;}
+.player-row{display:grid;grid-template-columns:28px 24px minmax(140px,1fr) 60px 70px 54px 54px 50px;padding:7px 10px;border-bottom:1px solid var(--border);transition:background 0.12s;align-items:center;cursor:pointer;min-width:580px;}
 .player-row:hover{background:var(--accent-dim);}
 .player-row.selected{background:var(--accent-dim);border-left:2px solid var(--accent);}
 .player-row:last-child{border-bottom:none;}
@@ -587,11 +587,10 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
           <option value="trend_desc">↓ Tendencia</option>
         </optgroup>
         <optgroup label="— Estadísticas reales —">
-          <option value="sf_rating_desc">↓ Rating Sofascore</option>
-          <option value="sf_goals_desc">↓ Goles</option>
+          <option value="sf_rating_desc">↓ Rating</option>
+          <option value="sf_goals_desc" selected>↓ Goles</option>
           <option value="sf_assists_desc">↓ Asistencias</option>
-          <option value="sf_minutes_desc">↓ Minutos</option>
-          <option value="sf_saves_desc">↓ Paradas</option>
+          <option value="sf_appearances_desc">↓ Partidos jugados</option>
         </optgroup>
       </select>
       <span style="font-family:'Figtree',sans-serif;font-size:0.66rem;color:var(--text3);margin-left:auto;" id="playerCount"></span>
@@ -600,7 +599,7 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
     <!-- LEYENDA COLUMNAS -->
     <div class="mv3-legend" style="margin-bottom:10px;">
       <div class="mv3-leg-col">
-        <div class="mv3-leg-title">Posición en ranking por stat</div>
+        <div class="mv3-leg-title">Color por percentil (solo jugadores con datos)</div>
         <div class="mv3-leg-scale">
           <div class="mv3-ls mv3-ls-r">Peor</div><div class="mv3-ls mv3-ls-y">Bajo</div>
           <div class="mv3-ls mv3-ls-g">Bueno</div><div class="mv3-ls mv3-ls-b">Top</div>
@@ -614,24 +613,26 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
       </div>
       <div class="mv3-leg-sep"></div>
       <div class="mv3-leg-col">
-        <div class="mv3-leg-title">Columnas coloreadas</div>
+        <div class="mv3-leg-title">Columnas</div>
         <div class="mv3-leg-items">
           <div class="mv3-li"><div class="mv3-ldot" style="background:var(--accent)"></div><span onclick="setSortAndRender('points_desc')" style="cursor:pointer">PTS — Puntos Biwenger</span></div>
-          <div class="mv3-li"><div class="mv3-ldot" style="background:var(--blue)"></div><span onclick="setSortAndRender('price_desc')" style="cursor:pointer">VALOR — Precio (excl. ≤400k)</span></div>
-          <div class="mv3-li"><div class="mv3-ldot" style="background:var(--c-top)"></div><span onclick="setSortAndRender('sf_rating_desc')" style="cursor:pointer">RAT — Rating Sofascore</span></div>
-          <div class="mv3-li"><div class="mv3-ldot" style="background:var(--green)"></div><span onclick="setSortAndRender('sf_goals_desc')" style="cursor:pointer">GOL — Goles</span></div>
-          <div class="mv3-li"><div class="mv3-ldot" style="background:var(--c-mid)"></div><span onclick="setSortAndRender('sf_assists_desc')" style="cursor:pointer">AST — Asistencias</span></div>
+          <div class="mv3-li"><div class="mv3-ldot" style="background:var(--blue)"></div><span onclick="setSortAndRender('price_desc')" style="cursor:pointer">VALOR — Precio de mercado</span></div>
+          <div class="mv3-li"><div class="mv3-ldot" style="background:var(--green)"></div><span onclick="setSortAndRender('sf_goals_desc')" style="cursor:pointer">GOL — Goles (LaLiga 25/26)</span></div>
+          <div class="mv3-li"><div class="mv3-ldot" style="background:var(--c-mid)"></div><span onclick="setSortAndRender('sf_assists_desc')" style="cursor:pointer">AST — Asistencias (LaLiga 25/26)</span></div>
+          <div class="mv3-li"><div class="mv3-ldot" style="background:var(--text3)"></div><span onclick="setSortAndRender('sf_appearances_desc')" style="cursor:pointer">PJ — Partidos jugados</span></div>
         </div>
       </div>
-      <div class="mv3-leg-sep"></div>
-      <div class="mv3-leg-col">
-        <div class="mv3-leg-title">Tarjetas (invertido)</div>
-        <div class="mv3-leg-items">
-          <div class="mv3-li"><div class="mv3-ldot" style="background:#f59e0b"></div>AM — Amarillas</div>
-          <div class="mv3-li"><div class="mv3-ldot" style="background:#ef4444"></div>TJ — Rojas / expulsado</div>
-          <div class="mv3-li"><div class="mv3-ldot" style="background:var(--c-low)"></div>Más tarjetas = más rojo</div>
-        </div>
-      </div>
+    </div>
+
+    <!-- CABECERA TABLA -->
+    <div class="player-row" style="cursor:default;background:var(--bg2);border-bottom:2px solid var(--border2);font-family:'IBM Plex Mono',monospace;font-size:0.6rem;font-weight:600;color:var(--text3);letter-spacing:0.5px;text-transform:uppercase;padding:5px 10px;">
+      <div></div><div></div>
+      <div>Jugador</div>
+      <div style="text-align:right">PTS</div>
+      <div style="text-align:right">Valor</div>
+      <div style="text-align:center;cursor:pointer" onclick="setSortAndRender('sf_goals_desc')">GOL</div>
+      <div style="text-align:center;cursor:pointer" onclick="setSortAndRender('sf_assists_desc')">AST</div>
+      <div style="text-align:center;cursor:pointer" onclick="setSortAndRender('sf_appearances_desc')">PJ</div>
     </div>
 
     <!-- TABLA COMPLETA -->
@@ -1422,7 +1423,7 @@ function renderRankings(players) {
 // ══════════════════════════════════════════
 // JUGADORES
 // ══════════════════════════════════════════
-let allPlayers=[],filteredPlayers=[],currentPos='',currentSort='points_desc',currentPage=1;
+let allPlayers=[],filteredPlayers=[],currentPos='',currentSort='sf_goals_desc',currentPage=1;
 const PAGE_SIZE=50;
 let cf='4-3-3',lineup={},marketPlayers=[],currentSlot=null;
 let myTeamData=null; // datos reales de mi equipo desde Biwenger
@@ -1574,11 +1575,9 @@ function buildJugPcts(players) {
   jugPcts = {
     pts:   vals(players.map(p => p.pts||0)),
     price: vals(players.filter(p => (p.price||0) > 400000).map(p => p.price)),
-    rat:   vals(players.map(p => getSfVal(p,'rating'))),
     gol:   vals(players.map(p => getSfVal(p,'goals'))),
     ast:   vals(players.map(p => getSfVal(p,'assists'))),
-    am:    vals(players.map(p => getSfVal(p,'yellowCards'))),
-    tj:    vals(players.map(p => getSfVal(p,'redCards'))),
+    pj:    vals(players.map(p => getSfVal(p,'appearances'))),
   };
 }
 function jugPctRank(arr, val) {
@@ -1626,44 +1625,33 @@ function renderPlayers(){
     // valores raw
     const ptsV   = p.pts || 0;
     const priceV = p.price || 0;
-    const ratV   = sf?.rating ?? null;
-    const golV   = sf?.goals  ?? null;
-    const astV   = sf?.assists ?? null;
-    const amV    = sf?.yellowCards ?? null;
-    const tjV    = sf?.redCards ?? null;
-    // percentiles (excluye 0s; precio excluye ≤400k)
+    const golV   = sf?.goals       ?? null;
+    const astV   = sf?.assists     ?? null;
+    const pjV    = sf?.appearances ?? null;
+    // percentiles (solo sobre jugadores con datos)
     const ptsPct   = jugPctRank(jugPcts.pts,   ptsV > 0 ? ptsV : null);
     const pricePct = priceV > 400000 ? jugPctRank(jugPcts.price, priceV) : null;
-    const ratPct   = jugPctRank(jugPcts.rat,   ratV);
-    const golPct   = jugPctRank(jugPcts.gol,   golV);
-    const astPct   = jugPctRank(jugPcts.ast,   astV);
-    const amPct    = jugPctRank(jugPcts.am,    amV);
-    const tjPct    = jugPctRank(jugPcts.tj,    tjV);
-    // colores (tarjetas invertidas: más = peor)
-    const ptsCol   = jugColor(ptsPct,   false);
-    const priceCol = jugColor(pricePct, false);
-    const ratCol   = jugColor(ratPct,   false);
-    const golCol   = jugColor(golPct,   false);
-    const astCol   = jugColor(astPct,   false);
-    const amCol    = jugColor(amPct,    true);
-    const tjCol    = jugColor(tjPct,    true);
+    const golPct   = golV !== null ? jugPctRank(jugPcts.gol, golV) : null;
+    const astPct   = astV !== null ? jugPctRank(jugPcts.ast, astV) : null;
+    // colores — '—' siempre en gris, nunca rojo
+    const ptsCol   = jugColor(ptsPct,  false);
+    const priceCol = jugColor(pricePct,false);
+    const golCol   = golV !== null ? jugColor(golPct, false) : 'color:var(--text3)';
+    const astCol   = astV !== null ? jugColor(astPct, false) : 'color:var(--text3)';
+    const pjCol    = 'color:var(--text3)';
     // display
-    const rating  = ratV !== null ? ratV.toFixed(1) : '\u2014';
-    const goles   = golV !== null ? golV : '\u2014';
-    const asis    = astV !== null ? astV : '\u2014';
-    const amTxt   = amV  !== null ? amV  : '\u2014';
-    const tjTxt   = tjV  !== null ? tjV  : '\u2014';
+    const goles  = golV !== null ? golV : '—';
+    const asis   = astV !== null ? astV : '—';
+    const pjTxt  = pjV  !== null ? pjV  : '—';
     return '<div class="player-row" style="cursor:pointer" onclick="openJugPanel(filteredPlayers['+i+'])">'+
       '<div class="rank '+rc+'" style="font-size:0.7rem">'+r+'</div>'+
       '<div style="width:22px;height:22px;border-radius:3px;background:'+posCol+';display:flex;align-items:center;justify-content:center;font-family:Figtree,sans-serif;font-size:0.56rem;font-weight:800;color:#fff;flex-shrink:0">'+p.position.split('/')[0]+'</div>'+
-      '<div style="min-width:0"><div class="player-name" style="font-size:0.82rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">'+p.name+'</div><div class="player-club">'+(p.club||'\u2014')+'</div></div>'+
-      '<div style="text-align:right;font-family:\'IBM Plex Mono\',monospace;font-size:0.9rem;font-weight:700;'+ptsCol+'">'+(ptsV||'\u2014')+'</div>'+
+      '<div style="min-width:0"><div class="player-name" style="font-size:0.82rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">'+p.name+'</div><div class="player-club">'+(p.teamName||'—')+'</div></div>'+
+      '<div style="text-align:right;font-family:\'IBM Plex Mono\',monospace;font-size:0.9rem;font-weight:700;'+ptsCol+'">'+(ptsV||'—')+'</div>'+
       '<div style="text-align:right;font-family:\'IBM Plex Mono\',monospace;font-size:0.72rem;'+priceCol+'">'+fmt(priceV)+'</div>'+
-      '<div style="text-align:center;font-family:\'IBM Plex Mono\',monospace;font-size:0.78rem;font-weight:600;'+ratCol+'">'+rating+'</div>'+
       '<div style="text-align:center;font-family:\'IBM Plex Mono\',monospace;font-size:0.88rem;font-weight:600;'+golCol+'">'+goles+'</div>'+
       '<div style="text-align:center;font-family:\'IBM Plex Mono\',monospace;font-size:0.88rem;font-weight:600;'+astCol+'">'+asis+'</div>'+
-      '<div style="text-align:center;font-family:\'IBM Plex Mono\',monospace;font-size:0.78rem;'+amCol+'">'+amTxt+'</div>'+
-      '<div style="text-align:center;font-family:\'IBM Plex Mono\',monospace;font-size:0.78rem;'+tjCol+'">'+tjTxt+'</div>'+
+      '<div style="text-align:center;font-family:\'IBM Plex Mono\',monospace;font-size:0.78rem;'+pjCol+'">'+pjTxt+'</div>'+
     '</div>';
   }).join('') || '<div style="padding:40px;text-align:center;color:var(--text3)">Sin jugadores</div>';
 }
