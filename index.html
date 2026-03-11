@@ -806,21 +806,17 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
         </div>
       </div>
       <div style="display:flex;flex-direction:column;gap:1rem">
+        <!-- WIDGET TOP GOLEADORES / ASISTENCIAS -->
+        <div class="panel">
+          <div class="panel-header" style="justify-content:space-between">
+            <div class="panel-title">Top Goleadores / Asistencias</div>
+            <button onclick="openJugadoresModal()" style="background:none;border:1px solid var(--border2);border-radius:3px;font-family:'Figtree',sans-serif;font-size:0.6rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--text3);padding:3px 8px;cursor:pointer;" onmouseover="this.style.color='var(--accent)';this.style.borderColor='var(--accent)'" onmouseout="this.style.color='var(--text3)';this.style.borderColor='var(--border2)'">Ver todos →</button>
+          </div>
+          <div id="widgetJugadores" style="overflow-y:auto"></div>
+        </div>
         <div class="panel">
           <div class="panel-header"><div class="panel-title">Próxima Jornada</div></div>
           <div id="proximaJornada"></div>
-        </div>
-        <div class="panel">
-          <div class="panel-header"><div class="panel-title">Últimos Resultados</div></div>
-          <div id="ultimosResultados"></div>
-        </div>
-        <!-- WIDGET JUGADORES -->
-        <div class="panel">
-          <div class="panel-header" style="justify-content:space-between">
-            <div class="panel-title">Top Goleadores Fantasy</div>
-            <button onclick="openJugadoresModal()" style="background:none;border:1px solid var(--border2);border-radius:3px;font-family:'Figtree',sans-serif;font-size:0.6rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--text3);padding:3px 8px;cursor:pointer;" onmouseover="this.style.color='var(--accent)';this.style.borderColor='var(--accent)'" onmouseout="this.style.color='var(--text3)';this.style.borderColor='var(--border2)'">Ver todos →</button>
-          </div>
-          <div id="widgetJugadores" style="max-height:320px;overflow-y:auto"></div>
         </div>
       </div>
     </div>
@@ -1984,23 +1980,47 @@ function renderWidgetJugadores(){
   const PosC = {PT:'#d97706',DF:'#1d6fce',MC:'#16a34a',DL:'#e63329',MD:'#8b5cf6'};
   const sorted = [...allPlayers]
     .filter(p => p.sf && (p.sf.goals||0) > 0)
-    .sort((a,b) => (b.sf.goals||0)-(a.sf.goals||0))
-    .slice(0,20);
-  if(!sorted.length){el.innerHTML='<div style="padding:16px;text-align:center;color:var(--text3);font-size:0.72rem">Sin datos de goles</div>';return;}
+    .sort((a,b) => (b.sf.goals||0)-(a.sf.goals||0) || (b.sf.assists||0)-(a.sf.assists||0))
+    .slice(0,25);
+  if(!sorted.length){
+    el.innerHTML='<div style="padding:16px;text-align:center;color:var(--text3);font-size:0.72rem">Sin datos de goles</div>';
+    return;
+  }
+  // Calcular percentiles dentro del widget (solo jugadores con datos)
+  function widgetPctColor(val, vals) {
+    const nonZero = vals.filter(v => v > 0).sort((a,b)=>a-b);
+    if (!nonZero.length || val === 0) return 'var(--text3)';
+    const rank = nonZero.filter(v => v <= val).length / nonZero.length * 100;
+    if (rank >= 75) return 'var(--c-top)';
+    if (rank >= 50) return 'var(--c-good)';
+    if (rank >= 25) return 'var(--c-mid)';
+    return 'var(--c-low)';
+  }
+  const allGols = sorted.map(p => p.sf.goals || 0);
+  const allAsts = sorted.map(p => p.sf.assists || 0);
+
   el.innerHTML = sorted.map((p,i)=>{
     const pos = p.position.split('/')[0];
     const posCol = PosC[pos]||'#555';
-    const gol = p.sf.goals||0;
-    const ast = p.sf.assists||0;
-    const golCol = gol>=15?'var(--c-top)':gol>=10?'var(--c-good)':gol>=5?'var(--c-mid)':'var(--text)';
-    return `<div style="display:flex;align-items:center;gap:8px;padding:7px 14px;border-bottom:1px solid var(--border);cursor:pointer" onclick="openJugPanel(allPlayers.find(x=>x.id===${p.id})||allPlayers[${allPlayers.indexOf(p)}])" onmouseover="this.style.background='var(--accent-dim)'" onmouseout="this.style.background=''">
-      <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6rem;color:var(--text3);width:16px;text-align:right">${i+1}</div>
+    const gol = p.sf.goals || 0;
+    const ast = p.sf.assists || 0;
+    const golCol = widgetPctColor(gol, allGols);
+    const astCol = ast === 0 ? 'var(--text3)' : widgetPctColor(ast, allAsts);
+
+    return `<div style="display:flex;align-items:center;gap:8px;padding:6px 14px;border-bottom:1px solid var(--border);cursor:pointer;transition:background 0.1s" onclick="openJugPanel(allPlayers[${allPlayers.indexOf(p)}])" onmouseover="this.style.background='var(--accent-dim)'" onmouseout="this.style.background=''">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:0.58rem;color:var(--text3);width:16px;text-align:right;flex-shrink:0">${i+1}</div>
       <div style="width:18px;height:18px;border-radius:2px;background:${posCol};display:flex;align-items:center;justify-content:center;font-size:0.5rem;font-weight:800;color:#fff;flex-shrink:0">${pos}</div>
-      <div style="flex:1;min-width:0;font-family:'Figtree',sans-serif;font-size:0.82rem;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${p.name}</div>
-      <div style="font-family:'IBM Plex Mono',monospace;font-size:0.88rem;font-weight:700;color:${golCol};min-width:20px;text-align:right">${gol}</div>
-      <div style="font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:var(--c-top);min-width:16px;text-align:right">${ast>0?ast:'—'}</div>
+      <div style="flex:1;min-width:0;font-family:'Figtree',sans-serif;font-size:0.82rem;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--text)">${p.name}</div>
+      <div style="display:flex;align-items:baseline;gap:5px;flex-shrink:0">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:1rem;font-weight:700;color:${golCol};line-height:1">${gol}</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;font-weight:500;color:${astCol};line-height:1">${ast > 0 ? '+'+ast : '·'}</span>
+      </div>
     </div>`;
-  }).join('')+'<div style="display:flex;gap:12px;padding:8px 14px;border-top:1px solid var(--border);font-family:Figtree,sans-serif;font-size:0.55rem;color:var(--text3)"><span style="margin-left:auto">GOL</span><span>AST</span></div>';
+  }).join('')
+  + `<div style="display:flex;justify-content:flex-end;gap:14px;padding:6px 14px;border-top:1px solid var(--border)">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:0.55rem;color:var(--text3);letter-spacing:0.5px">GOL</span>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:0.55rem;color:var(--text3);letter-spacing:0.5px">+AST</span>
+    </div>`;
 }
 
 // ── MODAL VOLANTE JUGADORES ───────────────────────────────────────────────
