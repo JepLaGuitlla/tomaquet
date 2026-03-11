@@ -8,11 +8,6 @@ const LEAGUE_ID      = '44700';
 const USER_ID        = '6541195';
 const VERSION        = '630';
 const FD_TOKEN       = '00308a91cfc84b248611ecc22550c9de'; // football-data.org
-const AF_KEY         = process.env.API_FOOTBALL_KEY;       // 🔑 nuevo secret en GitHub
-
-// LaLiga IDs para API-Football
-const AF_LEAGUE_ID   = 140;   // La Liga
-const AF_SEASON      = 2024;  // Temporada 2025/26 (API-Football usa año de inicio)
 
 // Feeds RSS de noticias fantasy
 const RSS_SOURCES = [
@@ -24,10 +19,6 @@ const RSS_SOURCES = [
 
 if (!EMAIL || !PASSWORD) {
   console.error('❌ Faltan Secrets en GitHub: BIWENGER_EMAIL / BIWENGER_PASSWORD');
-  process.exit(1);
-}
-if (!AF_KEY) {
-  console.error('❌ Falta el Secret: API_FOOTBALL_KEY');
   process.exit(1);
 }
 
@@ -382,184 +373,159 @@ async function fetchNews() {
   return allNews;
 }
 
-// ─── 8. STATS DE JUGADORES — API-FOOTBALL ────────────────────────────────────
+// ─── 8. STATS DE JUGADORES — FBREF ───────────────────────────────────────────
 //
-//  Estrategia de requests (plan free: 100/día):
-//
-//    1 request  → /teams?league=140&season=2025         (lista de los 20 equipos)
-//   20 requests → /players?league=140&season=2025&team=X  (1 por equipo, ~25 jugadores c/u)
-//   ─────────────────────────────────────────────────────
-//   21 requests en total · Delay de 2s entre equipos · Sin riesgo de colapsar el cupo
-//
-//  Campos disponibles por jugador: goals, assists, minutes, appearances,
-//  yellowCards, redCards, rating, saves, cleanSheets, shotsOnTarget,
-//  dribbles, tackles, passes, duels, fouls...
+//  Una sola request a fbref.com/en/comps/12/stats/La-Liga-Stats
+//  Tabla HTML con ~500 jugadores de LaLiga. Sin API key, sin límites.
+//  Datos de Opta/StatsBomb: PJ, min, goles, asistencias, xG, xA, tarjetas...
 
-async function fetchApiFootballStats() {
-  console.log('📊 Descargando estadísticas de jugadores (API-Football)...');
+async function fetchFbrefStats() {
+  console.log('📊 Descargando estadísticas de jugadores (FBref)...');
 
-  const DELAY = 2000; // 2s entre requests — sin prisa, con margen
-
-  function afGet(path) {
-    return new Promise((resolve) => {
-      const req = https.request({
-        hostname: 'v3.football.api-sports.io',
-        path,
-        method:   'GET',
-        headers:  {
-          'x-rapidapi-key':  AF_KEY,
-          'x-rapidapi-host': 'v3.football.api-sports.io',
-        }
-      }, (res) => {
-        let data = '';
-        res.on('data', c => data += c);
-        res.on('end', () => {
-          try   { resolve({ ok: res.statusCode === 200, body: JSON.parse(data), status: res.statusCode }); }
-          catch { resolve({ ok: false, body: {}, status: res.statusCode }); }
-        });
-      });
-      req.on('error', () => resolve({ ok: false, body: {}, status: 0 }));
-      req.end();
-    });
-  }
-
-  try {
-    // ── PASO 1: obtener los 20 equipos de LaLiga ──────────────────────────────
-    console.log('  → Obteniendo equipos de LaLiga...');
-    const teamsRes = await afGet(`/teams?league=${AF_LEAGUE_ID}&season=${AF_SEASON}`);
-
-    if (!teamsRes.ok) {
-      console.warn(`⚠️ API-Football: no se pudieron obtener equipos. Status: ${teamsRes.status}`);
-      // Si la key no está configurada o falla, devolvemos null sin romper el script
-      return null;
-    }
-
-    const teams = teamsRes.body?.response || [];
-    if (!teams.length) {
-      console.warn('⚠️ API-Football: sin equipos en la respuesta');
-      return null;
-    }
-
-    console.log(`  → ${teams.length} equipos encontrados`);
-    await sleep(DELAY);
-
-    // ── PASO 2: descargar jugadores de cada equipo (1 request por equipo) ─────
-    const allPlayers = [];
-
-    for (let i = 0; i < teams.length; i++) {
-      const team   = teams[i];
-      const teamId = team.team.id;
-      const teamNm = team.team.name;
-
-      console.log(`  → [${i + 1}/${teams.length}] ${teamNm}...`);
-
-      // La API devuelve ~25 jugadores por equipo en una sola página
-      const res = await afGet(`/players?league=${AF_LEAGUE_ID}&season=${AF_SEASON}&team=${teamId}`);
-
-      if (!res.ok) {
-        console.warn(`    ⚠️ Error equipo ${teamNm}. Status: ${res.status}`);
-        // Continuamos con el siguiente equipo en vez de abortar
-        await sleep(DELAY);
-        continue;
+  return new Promise((resolve) => {
+    const req = https.request({
+      hostname: 'fbref.com',
+      path:     '/en/comps/12/stats/La-Liga-Stats',
+      method:   'GET',
+      headers:  {
+        'User-Agent':      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36',
+        'Accept':          'text/html,application/xhtml+xml',
+        'Accept-Language': 'en-US,en;q=0.9',
+        'Accept-Encoding': 'identity',
+        'Referer':         'https://fbref.com/',
+      }
+    }, (res) => {
+      // FBref puede redirigir
+      if (res.statusCode === 301 || res.statusCode === 302) {
+        const loc = res.headers.location;
+        console.log('  → Redirigiendo a:', loc);
+        resolve(fetchFbrefRedirect(loc));
+        return;
       }
 
-      const players = res.body?.response || [];
+      let html = '';
+      res.on('data', c => html += c);
+      res.on('end', () => resolve(parseFbrefHtml(html)));
+    });
+    req.on('error', (e) => { console.warn('⚠️ Error FBref:', e.message); resolve(null); });
+    req.end();
+  });
+}
 
-      players.forEach(entry => {
-        const p    = entry.player   || {};
-        const stat = (entry.statistics || [])[0] || {};
-        const games   = stat.games      || {};
-        const goals   = stat.goals      || {};
-        const passes  = stat.passes     || {};
-        const tackles = stat.tackles    || {};
-        const duels   = stat.duels      || {};
-        const dribbles = stat.dribbles  || {};
-        const fouls   = stat.fouls      || {};
-        const cards   = stat.cards      || {};
-        const shots   = stat.shots      || {};
-        const penalty = stat.penalty    || {};
+function fetchFbrefRedirect(url) {
+  return new Promise((resolve) => {
+    const parsed = new URL(url.startsWith('http') ? url : 'https://fbref.com' + url);
+    const req = https.request({
+      hostname: parsed.hostname,
+      path:     parsed.pathname + parsed.search,
+      method:   'GET',
+      headers:  {
+        'User-Agent':      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36',
+        'Accept':          'text/html,application/xhtml+xml',
+        'Accept-Language': 'en-US,en;q=0.9',
+        'Accept-Encoding': 'identity',
+      }
+    }, (res) => {
+      let html = '';
+      res.on('data', c => html += c);
+      res.on('end', () => resolve(parseFbrefHtml(html)));
+    });
+    req.on('error', (e) => { console.warn('⚠️ Error FBref redirect:', e.message); resolve(null); });
+    req.end();
+  });
+}
 
-        const appearances  = games.appearences || 0;   // sí, tiene typo en la API
-        const minutesPlayed = games.minutes    || 0;
-        const goalsScored  = goals.total       || 0;
-
-        allPlayers.push({
-          afId:          p.id,
-          name:          p.name         || '',
-          firstname:     p.firstname    || '',
-          lastname:      p.lastname     || '',
-          nationality:   p.nationality  || '',
-          age:           p.age          || null,
-          position:      games.position || '',
-          teamName:      teamNm,
-          teamId,
-
-          // Participación
-          appearances,
-          lineups:       games.lineups  || 0,
-          minutes:       minutesPlayed,
-          rating:        games.rating   ? parseFloat(games.rating) : null,
-
-          // Ataque
-          goals:         goalsScored,
-          assists:       goals.assists  || 0,
-          shotsTotal:    shots.total    || 0,
-          shotsOnTarget: shots.on       || 0,
-
-          // Pases
-          passesTotal:   passes.total   || 0,
-          passesKey:     passes.key     || 0,
-          passAccuracy:  passes.accuracy || null,
-
-          // Defensa
-          tacklesTotal:  tackles.total  || 0,
-          interceptions: tackles.interceptions || 0,
-          duelsTotal:    duels.total    || 0,
-          duelsWon:      duels.won      || 0,
-
-          // Regates
-          dribblesAttempted: dribbles.attempts || 0,
-          dribblesSuccess:   dribbles.success  || 0,
-
-          // Disciplina
-          yellowCards:   cards.yellow   || 0,
-          yellowRed:     cards.yellowred || 0,  // segunda amarilla
-          redCards:      cards.red       || 0,
-          foulsCommitted: fouls.committed || 0,
-          foulsDrawn:    fouls.drawn     || 0,
-
-          // Porteros
-          saves:        goals.saves     || 0,
-          goalsConceded: goals.conceded || 0,
-          penaltySaved: penalty.saved   || 0,
-
-          // Calculados
-          minutesPerGoal: (goalsScored && minutesPlayed) ? Math.round(minutesPlayed / goalsScored) : null,
-          subsIn:         (appearances || 0) - (games.lineups || 0),
-        });
-      });
-
-      console.log(`    ✓ ${players.length} jugadores`);
-
-      // Pausa entre equipos — 2s para no saturar
-      if (i < teams.length - 1) await sleep(DELAY);
-    }
-
-    console.log(`✅ API-Football: ${allPlayers.length} jugadores con estadísticas (${teams.length} equipos)`);
-    return {
-      source:     'api-football',
-      league:     'LaLiga',
-      leagueId:   AF_LEAGUE_ID,
-      season:     AF_SEASON,
-      updatedAt:  new Date().toISOString(),
-      players:    allPlayers,
-    };
-
-  } catch(e) {
-    console.warn('⚠️ Error en API-Football:', e.message);
+function parseFbrefHtml(html) {
+  if (!html || html.length < 1000) {
+    console.warn('⚠️ FBref: respuesta vacía o demasiado corta');
     return null;
   }
+
+  // La tabla principal es stats_standard — buscar todas las filas <tr>
+  // Las filas de datos tienen data-row-index o simplemente <td> con data-stat
+  const players = [];
+
+  // Extraer filas de la tabla stats_standard (LaLiga)
+  // FBref usa: <td data-stat="player"><a href="...">Nombre</a></td>
+  const tableIdx = html.indexOf('id="stats_standard');
+  if (tableIdx === -1) {
+    console.warn('⚠️ FBref: no se encontró la tabla stats_standard');
+    return null;
+  }
+  const tableEnd = html.indexOf('</table>', tableIdx);
+  const table    = html.slice(tableIdx, tableEnd + 8);
+
+  // Extraer filas <tr> manualmente
+  const rows = [];
+  let pos2 = 0;
+  while (true) {
+    const trStart = table.indexOf('<tr', pos2);
+    if (trStart === -1) break;
+    const trEnd = table.indexOf('</tr>', trStart);
+    if (trEnd === -1) break;
+    rows.push(table.slice(trStart, trEnd + 5));
+    pos2 = trEnd + 5;
+  }
+
+  rows.forEach(row => {
+    // Saltar cabeceras y separadores
+    if (row.includes('class="thead"') || row.includes('class="spacer"')) return;
+
+    function getStat(stat) {
+      const m = row.match(new RegExp('data-stat="' + stat + '"[^>]*>(?:<[^>]+>)?([^<]*)', 'i'));
+      return m ? m[1].trim() : '';
+    }
+
+    const name   = getStat('player');
+    const team   = getStat('team');
+    const pos    = getStat('position');
+    const nation = getStat('nationality');
+    const age    = getStat('age');
+
+    if (!name || name === 'Player') return; // saltar cabeceras
+
+    const mp      = parseInt(getStat('games'))            || 0;
+    const starts  = parseInt(getStat('games_starts'))     || 0;
+    const minutes = parseInt(getStat('minutes').replace(',','')) || 0;
+    const goals   = parseInt(getStat('goals'))            || 0;
+    const assists = parseInt(getStat('assists'))          || 0;
+    const xg      = parseFloat(getStat('xg'))             || 0;
+    const xag     = parseFloat(getStat('xg_assist'))      || 0;
+    const yellow  = parseInt(getStat('cards_yellow'))     || 0;
+    const red     = parseInt(getStat('cards_red'))        || 0;
+    const shots   = parseInt(getStat('shots_on_target'))  || 0;
+    const prgC    = parseInt(getStat('progressive_carries')) || 0;
+    const prgP    = parseInt(getStat('progressive_passes'))  || 0;
+
+    players.push({
+      name, team, pos, nation,
+      age:     age ? parseInt(age) : null,
+      mp, starts, minutes,
+      goals, assists,
+      xg, xag,
+      yellowCards: yellow,
+      redCards:    red,
+      shotsOnTarget: shots,
+      progressiveCarries: prgC,
+      progressivePasses:  prgP,
+      minutesPerGoal: (goals && minutes) ? Math.round(minutes / goals) : null,
+    });
+  });
+
+  if (!players.length) {
+    console.warn('⚠️ FBref: no se parseó ningún jugador');
+    return null;
+  }
+
+  console.log('✅ FBref: ' + players.length + ' jugadores descargados');
+  return {
+    source:    'fbref',
+    league:    'LaLiga',
+    updatedAt: new Date().toISOString(),
+    players,
+  };
 }
+
 
 // ─── MAIN ────────────────────────────────────────────────────────────────────
 
@@ -574,7 +540,8 @@ async function main() {
     const myTeam     = await fetchMyTeam(token);
     const laliga     = await fetchLaLiga();
     const news       = await fetchNews();
-    const apiFootball = await fetchApiFootballStats();   // reemplaza sofascore
+
+    const playerStats = await fetchFbrefStats();
 
     const output = {
       updatedAt:   new Date().toISOString(),
@@ -584,7 +551,7 @@ async function main() {
       myTeam,
       laliga,
       news,
-      apiFootball,  // antes era "sofascore"
+      playerStats,
     };
 
     fs.writeFileSync('data.json', JSON.stringify(output, null, 2), 'utf8');
@@ -594,7 +561,7 @@ async function main() {
     console.log(`👥 Equipos fantasy:    ${allTeams?.length || 0}`);
     console.log(`🦊 Mi equipo:          ${myTeam?.players?.length || 0} jugadores`);
     console.log(`📰 Noticias:           ${news.length}`);
-    console.log(`⚽ Stats jugadores:    ${apiFootball?.players?.length || 0} (API-Football)`);
+    console.log(`⚽ Stats jugadores:    ${playerStats?.players?.length || 0} (FBref)`);
 
   } catch(err) {
     console.error('❌ Error inesperado:', err.message);
