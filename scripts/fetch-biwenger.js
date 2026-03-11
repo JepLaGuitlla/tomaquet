@@ -6,7 +6,7 @@ const EMAIL          = process.env.BIWENGER_EMAIL;
 const PASSWORD       = process.env.BIWENGER_PASSWORD;
 const LEAGUE_ID      = '44700';
 const USER_ID        = '6541195';
-const VERSION        = '630';
+const VERSION        = '670';
 const FD_TOKEN       = '00308a91cfc84b248611ecc22550c9de'; // football-data.org
 
 // Feeds RSS de noticias fantasy
@@ -145,17 +145,29 @@ async function fetchPlayers() {
 async function fetchLeague(token) {
   console.log('🏆 Descargando datos de liga (Biwenger)...');
 
-  const res = await requestJSON({
-    hostname: 'biwenger.as.com',
-    path:     `/api/v2/leagues/${LEAGUE_ID}?fields=*,standings,teams`,
-    method:   'GET',
-    headers:  { ...COMMON_HEADERS, 'Authorization': `Bearer ${token}` }
-  });
+  // Intentar varias rutas conocidas de la API de Biwenger
+  const paths = [
+    `/api/v2/leagues/${LEAGUE_ID}`,
+    `/api/v2/leagues/${LEAGUE_ID}?fields=id,name,standings,competition`,
+    `/api/v2/leagues/${LEAGUE_ID}?fields=*`,
+  ];
 
-  if (res.status !== 200) { console.warn('⚠️ No se pudieron obtener datos de liga. Status:', res.status); return null; }
+  for (const path of paths) {
+    const res = await requestJSON({
+      hostname: 'biwenger.as.com',
+      path,
+      method:   'GET',
+      headers:  { ...COMMON_HEADERS, 'Authorization': `Bearer ${token}` }
+    });
+    console.log(`  fetchLeague ${path} → ${res.status}`);
+    if (res.status === 200) {
+      console.log('✅ Datos de liga descargados');
+      return res.body?.data || null;
+    }
+  }
 
-  console.log('✅ Datos de liga descargados');
-  return res.body?.data || null;
+  console.warn('⚠️ No se pudieron obtener datos de liga (todos los paths fallaron)');
+  return null;
 }
 
 // ─── 4. TODOS LOS EQUIPOS DE LA LIGA ────────────────────────────────────────
@@ -163,32 +175,42 @@ async function fetchLeague(token) {
 async function fetchAllTeams(token) {
   console.log('👥 Descargando equipos de todos los participantes...');
 
-  const res = await requestJSON({
-    hostname: 'biwenger.as.com',
-    path:     `/api/v2/leagues/${LEAGUE_ID}/teams?fields=*,players`,
-    method:   'GET',
-    headers:  { ...COMMON_HEADERS, 'Authorization': `Bearer ${token}` }
-  });
+  const paths = [
+    `/api/v2/leagues/${LEAGUE_ID}/teams`,
+    `/api/v2/leagues/${LEAGUE_ID}/teams?fields=id,name,points,teamValue,players`,
+    `/api/v2/leagues/${LEAGUE_ID}/teams?fields=*,players`,
+  ];
 
-  if (res.status !== 200) { console.warn('⚠️ No se pudieron obtener equipos. Status:', res.status); return null; }
+  for (const path of paths) {
+    const res = await requestJSON({
+      hostname: 'biwenger.as.com',
+      path,
+      method:   'GET',
+      headers:  { ...COMMON_HEADERS, 'Authorization': `Bearer ${token}` }
+    });
+    console.log(`  fetchAllTeams ${path} → ${res.status}`);
+    if (res.status === 200) {
+      const teams = res.body?.data || [];
+      console.log(`✅ ${teams.length} equipos descargados`);
+      return teams.map(t => ({
+        id:      t.id,
+        name:    t.name,
+        manager: t.manager?.name || t.name,
+        points:  t.points || 0,
+        value:   t.teamValue || 0,
+        players: (t.players || []).map(p => ({
+          id:       p.id,
+          name:     p.name,
+          position: p.position,
+          price:    p.price   || 0,
+          points:   p.points  || 0,
+        })),
+      }));
+    }
+  }
 
-  const teams = res.body?.data || [];
-  console.log(`✅ ${teams.length} equipos descargados`);
-
-  return teams.map(t => ({
-    id:      t.id,
-    name:    t.name,
-    manager: t.manager?.name || t.name,
-    points:  t.points || 0,
-    value:   t.teamValue || 0,
-    players: (t.players || []).map(p => ({
-      id:       p.id,
-      name:     p.name,
-      position: p.position,
-      price:    p.price   || 0,
-      points:   p.points  || 0,
-    })),
-  }));
+  console.warn('⚠️ No se pudieron obtener equipos (todos los paths fallaron)');
+  return null;
 }
 
 // ─── 5. MI EQUIPO (Guitlla) ───────────────────────────────────────────────────
@@ -196,38 +218,49 @@ async function fetchAllTeams(token) {
 async function fetchMyTeam(token) {
   console.log('🦊 Descargando mi equipo (Guitlla)...');
 
-  const res = await requestJSON({
-    hostname: 'biwenger.as.com',
-    path:     `/api/v2/leagues/${LEAGUE_ID}/user?fields=*,team,players`,
-    method:   'GET',
-    headers:  { ...COMMON_HEADERS, 'Authorization': `Bearer ${token}` }
-  });
+  // Biwenger tiene distintas rutas según versión: /user, /me, /user?fields=...
+  const paths = [
+    `/api/v2/leagues/${LEAGUE_ID}/me`,
+    `/api/v2/leagues/${LEAGUE_ID}/user`,
+    `/api/v2/leagues/${LEAGUE_ID}/user?fields=id,team,players`,
+    `/api/v2/leagues/${LEAGUE_ID}/user?fields=*,team,players`,
+  ];
 
-  if (res.status !== 200) { console.warn('⚠️ No se pudo obtener mi equipo. Status:', res.status); return null; }
+  for (const path of paths) {
+    const res = await requestJSON({
+      hostname: 'biwenger.as.com',
+      path,
+      method:   'GET',
+      headers:  { ...COMMON_HEADERS, 'Authorization': `Bearer ${token}` }
+    });
+    console.log(`  fetchMyTeam ${path} → ${res.status}`);
+    if (res.status === 200) {
+      const data = res.body?.data;
+      if (!data) continue;
+      const players = data.team?.players || data.players || [];
+      console.log(`✅ Mi equipo: ${players.length} jugadores`);
+      return {
+        teamId:  data.team?.id || null,
+        name:    data.team?.name || 'Guitlla',
+        points:  data.team?.points || 0,
+        value:   data.team?.teamValue || 0,
+        players: players.map(p => ({
+          id:       p.id,
+          name:     p.name,
+          position: p.position,
+          price:    p.price            || 0,
+          points:   p.points           || 0,
+          trend:    p.priceIncrement   || 0,
+          status:   p.fitness?.[0]?.status || 'ok',
+          jForm:    (p.fitness || []).slice(0, 5).map(f => typeof f === 'number' ? f : (f?.points ?? null)),
+          clausula: p.clause           || null,
+        })),
+      };
+    }
+  }
 
-  const data = res.body?.data;
-  if (!data) { console.warn('⚠️ Sin datos de mi equipo'); return null; }
-
-  const players = data.team?.players || data.players || [];
-  console.log(`✅ Mi equipo: ${players.length} jugadores`);
-
-  return {
-    teamId:  data.team?.id || null,
-    name:    data.team?.name || 'Guitlla',
-    points:  data.team?.points || 0,
-    value:   data.team?.teamValue || 0,
-    players: players.map(p => ({
-      id:       p.id,
-      name:     p.name,
-      position: p.position,
-      price:    p.price            || 0,
-      points:   p.points           || 0,
-      trend:    p.priceIncrement   || 0,
-      status:   p.fitness?.[0]?.status || 'ok',
-      jForm:    (p.fitness || []).slice(0, 5).map(f => typeof f === 'number' ? f : (f?.points ?? null)),
-      clausula: p.clause           || null,
-    })),
-  };
+  console.warn('⚠️ No se pudo obtener mi equipo (todos los paths fallaron)');
+  return null;
 }
 
 // ─── 6. LA LIGA (football-data.org) ──────────────────────────────────────────
