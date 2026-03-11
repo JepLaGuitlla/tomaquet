@@ -1511,25 +1511,46 @@ function normName(n){ return (n||'').toLowerCase().normalize('NFD').replace(/[\u
 
 function mergeSofascoreIntoPlayers(afData){
   if(!afData || !afData.players) return;
+
+  // Indexar por múltiples variantes del nombre para maximizar el cruce
   afData.players.forEach(s=>{
-    sofascoreStats[normName(s.name)] = s;
-    // API-Football: indexar también por apellido solo para mejorar el cruce con Biwenger
-    if(s.lastname)  sofascoreStats[normName(s.lastname)]  = s;
-    if(s.firstname && s.lastname) sofascoreStats[normName(s.firstname+' '+s.lastname)] = s;
+    const fullName  = normName(s.name);
+    const lastName  = normName(s.lastname || '');
+    const firstName = normName(s.firstname || '');
+    // Última palabra del nombre completo (ej: "joao felix sequeira" → "sequeira")
+    const lastWord  = fullName.split(' ').slice(-1)[0];
+    // Primera + última palabra (ej: "joao sequeira")
+    const firstLast = fullName.split(' ').filter((_,i,a)=>i===0||i===a.length-1).join(' ');
+
+    sofascoreStats[fullName]  = s;
+    if(lastName)    sofascoreStats[lastName]  = s;
+    if(firstLast)   sofascoreStats[firstLast] = s;
+    if(lastWord)    sofascoreStats[lastWord]  = s;
+    if(firstName && lastName) sofascoreStats[firstName+' '+lastName] = s;
   });
+
+  let matched = 0;
   allPlayers.forEach(p=>{
-    const sf = sofascoreStats[normName(p.name)] || sofascoreStats[normName(p.name.split(' ').slice(-1)[0])];
+    const bwName    = normName(p.name);
+    const bwLastWord = bwName.split(' ').slice(-1)[0];
+    const bwFirstWord = bwName.split(' ')[0];
+
+    const sf = sofascoreStats[bwName]
+            || sofascoreStats[bwLastWord]
+            || sofascoreStats[bwFirstWord]
+            || sofascoreStats[bwName.split(' ').slice(0,2).join(' ')];
+
     if(sf){
-      // Normalizar campos API-Football → nombres que usa el frontend
-      sf.started       = sf.started       ?? sf.lineups         ?? 0;
-      sf.dribbles      = sf.dribbles      ?? sf.dribblesSuccess  ?? 0;
-      sf.tackles       = sf.tackles       ?? sf.tacklesTotal     ?? 0;
-      sf.interceptions = sf.interceptions ?? 0;
+      // Normalizar campos API-Football → nombres internos del frontend
+      sf.started       = sf.lineups         || 0;
+      sf.dribbles      = sf.dribblesSuccess  || 0;
+      sf.tackles       = sf.tacklesTotal     || 0;
       sf.minutesPerGoal= (sf.goals && sf.minutes) ? Math.round(sf.minutes / sf.goals) : null;
       p.sf = sf;
+      matched++;
     }
   });
-  console.log('\u{1F4CA} API-Football: '+Object.keys(sofascoreStats).length+' entradas cargadas');
+  console.log('\u{1F4CA} API-Football: '+matched+'/'+allPlayers.length+' jugadores cruzados ('+Object.keys(sofascoreStats).length+' entradas)');
 }
 
 function getSfVal(p, key){ return p.sf ? (p.sf[key] ?? null) : null; }
