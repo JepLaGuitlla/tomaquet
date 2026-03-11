@@ -1450,14 +1450,15 @@ async function loadPlayers(){
     allPlayers=mergeStats(players);
     marketPlayers=allPlayers;
     filteredPlayers=[...allPlayers];
+    // Cargar estadísticas ANTES de ordenar y calcular percentiles
+    if(data.playerStats) mergeStatsIntoPlayers(data.playerStats);
+    buildJugPcts(allPlayers);
     sortAndRender();
     document.getElementById('jugadores-loading').style.display='none';
     document.getElementById('jugadores-content').style.display='block';
     const when=data.updatedAt?new Date(data.updatedAt).toLocaleDateString('es-ES'):'?';
     document.getElementById('statusText').textContent=allPlayers.length+' jugadores · actualizado '+when;
     renderStats(); renderRankings(allPlayers); initRankings();
-    // Cargar estadísticas Sofascore
-    if(data.playerStats) mergeStatsIntoPlayers(data.playerStats);
 
     // Cargar mi equipo real desde Biwenger
     if(data.myTeam && data.myTeam.players && data.myTeam.players.length){
@@ -1564,6 +1565,9 @@ function mergeStatsIntoPlayers(statsData){
   });
   const src = statsData.source || 'stats';
   console.log('\u{1F4CA} '+src+': '+matched+'/'+allPlayers.length+' jugadores cruzados ('+Object.keys(playerStatsIndex).length+' entradas)');
+  // Recalcular percentiles con los nuevos datos y re-renderizar
+  buildJugPcts(allPlayers);
+  sortAndRender();
 }
 
 function getSfVal(p, key){ return p.sf ? (p.sf[key] ?? null) : null; }
