@@ -373,131 +373,67 @@ async function fetchNews() {
   return allNews;
 }
 
-// ─── 8. STATS DE JUGADORES — ESPN API ────────────────────────────────────────
+// ─── 8. STATS DE JUGADORES — FOOTBALL-DATA.ORG ───────────────────────────────
 //
-//  site.api.espn.com es completamente público, sin auth, sin Cloudflare.
-//  Endpoint de scorers LaLiga: /apis/v2/sports/soccer/esp.1/scoreboard
-//  Para stats de jugadores usamos el endpoint de season stats por equipo.
-//  LaLiga = league slug "esp.1", season 2025.
-
-const ESPN_TEAMS = [
-  { id: '83',  name: 'Barcelona'        },
-  { id: '86',  name: 'Real Madrid'      },
-  { id: '1068',name: 'Atletico Madrid'  },
-  { id: '243', name: 'Athletic Club'    },
-  { id: '94',  name: 'Villarreal'       },
-  { id: '92',  name: 'Real Sociedad'    },
-  { id: '89',  name: 'Sevilla'          },
-  { id: '93',  name: 'Athletic Bilbao'  },
-  { id: '95',  name: 'Valencia'         },
-  { id: '97',  name: 'Espanyol'         },
-  { id: '9812',name: 'Girona'           },
-  { id: '85',  name: 'Real Betis'       },
-  { id: '96',  name: 'Osasuna'          },
-  { id: '90',  name: 'Getafe'           },
-  { id: '91',  name: 'Rayo Vallecano'   },
-  { id: '87',  name: 'Celta Vigo'       },
-  { id: '88',  name: 'Deportivo Alaves' },
-  { id: '84',  name: 'Mallorca'         },
-  { id: '101', name: 'Leganes'          },
-  { id: '102', name: 'Las Palmas'       },
-];
+//  Mismo token que ya usamos para la clasificación — ya funciona desde GH Actions.
+//  /v4/competitions/PD/scorers?limit=100  →  top 100 goleadores LaLiga 2025/26
+//  Una sola request. Sin equipos adicionales. Sin límites extra.
 
 async function fetchPlayerStats() {
-  console.log('\u{1F4CA} Descargando estadísticas de jugadores (ESPN API 2025/26)...');
+  console.log('\u{1F4CA} Descargando estadísticas de jugadores (football-data.org)...');
 
-  function espnGet(path) {
-    return new Promise((resolve) => {
-      const req = https.request({
-        hostname: 'site.api.espn.com',
-        path,
-        method:   'GET',
-        timeout:  8000,
-        headers:  {
-          'User-Agent': 'Mozilla/5.0 (compatible; LaPausaFantasy/1.0)',
-          'Accept':     'application/json',
+  return new Promise((resolve) => {
+    const req = https.request({
+      hostname: 'api.football-data.org',
+      path:     '/v4/competitions/PD/scorers?limit=100',
+      method:   'GET',
+      timeout:  10000,
+      headers:  { 'X-Auth-Token': FD_TOKEN }
+    }, (res) => {
+      let data = '';
+      res.on('data', c => data += c);
+      res.on('end', () => {
+        if (res.statusCode !== 200) {
+          console.warn('\u26A0\uFE0F football-data scorers status:', res.statusCode);
+          resolve(null);
+          return;
         }
-      }, (res) => {
-        let data = '';
-        res.on('data', c => data += c);
-        res.on('end', () => {
-          try   { resolve({ ok: res.statusCode < 400, status: res.statusCode, body: JSON.parse(data) }); }
-          catch { resolve({ ok: false, status: res.statusCode, body: null }); }
-        });
+        try {
+          const body    = JSON.parse(data);
+          const scorers = body?.scorers || [];
+
+          const players = scorers.map(s => ({
+            id:          String(s.player?.id || ''),
+            name:        s.player?.name || '',
+            team:        s.team?.name   || s.team?.shortName || '',
+            position:    s.player?.position || '',
+            nationality: s.player?.nationality || '',
+            appearances: parseInt(s.playedMatches) || 0,
+            goals:       parseInt(s.goals)         || 0,
+            assists:     parseInt(s.assists)        || 0,
+            penalties:   parseInt(s.penalties)      || 0,
+            minutesPerGoal: (s.goals && s.playedMatches)
+              ? Math.round((s.playedMatches * 90) / s.goals) : null,
+          }));
+
+          console.log('\u2705 football-data scorers: ' + players.length + ' jugadores');
+          resolve({
+            source:    'football-data',
+            league:    'LaLiga',
+            season:    '2025/26',
+            updatedAt: new Date().toISOString(),
+            players,
+          });
+        } catch(e) {
+          console.warn('\u26A0\uFE0F Error parseando scorers:', e.message);
+          resolve(null);
+        }
       });
-      req.on('timeout', () => { req.destroy(); resolve({ ok: false, status: 0, body: null, timedOut: true }); });
-      req.on('error', (e) => { console.warn('    ESPN req error:', e.message); resolve({ ok: false, status: 0, body: null }); });
-      req.end();
     });
-  }
-
-  try {
-    const allPlayers = [];
-
-    for (const team of ESPN_TEAMS) {
-      const path = `/apis/v2/sports/soccer/esp.1/teams/${team.id}/roster?season=2025`;
-      const res  = await espnGet(path);
-
-      if (!res.ok || !res.body) {
-        const reason = res.timedOut ? 'TIMEOUT' : `status ${res.status}`;
-        console.warn(`  ⚠️ ESPN roster ${team.name}: ${reason}`);
-        await sleep(300);
-        continue;
-      }
-
-      const athletes = res.body?.athletes || [];
-      // ESPN devuelve por posición: [{position, items:[...]}]
-      const players = Array.isArray(athletes[0]?.items) 
-        ? athletes.flatMap(g => g.items || [])
-        : athletes;
-
-      players.forEach(a => {
-        const stats = a.statistics?.splits?.categories || [];
-        const general = stats.find(c => c.name === 'general' || c.name === 'stat') || stats[0] || {};
-        const statMap  = {};
-        (general.stats || []).forEach(s => { statMap[s.name] = s.value; });
-
-        allPlayers.push({
-          id:          String(a.id || ''),
-          name:        a.displayName || a.fullName || a.name || '',
-          team:        team.name,
-          position:    a.position?.abbreviation || a.position?.name || '',
-          appearances: parseInt(statMap.gamesPlayed || statMap.appearances) || 0,
-          minutes:     parseInt(statMap.minutesPlayed || statMap.minutes)   || 0,
-          goals:       parseInt(statMap.goals)        || 0,
-          assists:     parseInt(statMap.goalAssists || statMap.assists) || 0,
-          yellowCards: parseInt(statMap.yellowCards)  || 0,
-          redCards:    parseInt(statMap.redCards)     || 0,
-          saves:       parseInt(statMap.saves)        || 0,
-        });
-      });
-
-      console.log(`  \u2192 ${team.name}: ${players.length} jugadores`);
-      await sleep(200);
-    }
-
-    if (!allPlayers.length) {
-      console.warn('\u26A0\uFE0F ESPN API: sin jugadores');
-      return null;
-    }
-
-    allPlayers.forEach(p => {
-      p.minutesPerGoal = (p.goals && p.minutes) ? Math.round(p.minutes / p.goals) : null;
-    });
-
-    console.log('\u2705 ESPN API: ' + allPlayers.length + ' jugadores descargados');
-    return {
-      source:    'espn',
-      league:    'LaLiga',
-      season:    '2025/26',
-      updatedAt: new Date().toISOString(),
-      players:   allPlayers,
-    };
-
-  } catch(e) {
-    console.warn('\u26A0\uFE0F Error ESPN API:', e.message);
-    return null;
-  }
+    req.on('timeout', () => { req.destroy(); console.warn('\u26A0\uFE0F Timeout scorers'); resolve(null); });
+    req.on('error',   (e) => { console.warn('\u26A0\uFE0F Error scorers:', e.message); resolve(null); });
+    req.end();
+  });
 }
 
 // ─── MAIN ────────────────────────────────────────────────────────────────────
@@ -534,7 +470,7 @@ async function main() {
     console.log(`👥 Equipos fantasy:    ${allTeams?.length || 0}`);
     console.log(`🦊 Mi equipo:          ${myTeam?.players?.length || 0} jugadores`);
     console.log(`📰 Noticias:           ${news.length}`);
-    console.log(`⚽ Stats jugadores:    ${playerStats?.players?.length || 0} (ESPN)`);
+    console.log(`⚽ Stats jugadores:    ${playerStats?.players?.length || 0} (football-data)`);
 
   } catch(err) {
     console.error('❌ Error inesperado:', err.message);
