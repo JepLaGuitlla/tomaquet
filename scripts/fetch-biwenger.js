@@ -12,7 +12,7 @@ const AF_KEY         = process.env.API_FOOTBALL_KEY;       // 🔑 nuevo secret 
 
 // LaLiga IDs para API-Football
 const AF_LEAGUE_ID   = 140;   // La Liga
-const AF_SEASON      = 2025;  // Temporada 2025/26
+const AF_SEASON      = 2024;  // Temporada 2025/26 (API-Football usa año de inicio)
 
 // Feeds RSS de noticias fantasy
 const RSS_SOURCES = [
