@@ -373,164 +373,113 @@ async function fetchNews() {
   return allNews;
 }
 
-// ─── 8. STATS DE JUGADORES — FBREF ───────────────────────────────────────────
+// ─── 8. STATS DE JUGADORES — UNDERSTAT ─────────────────────────────────────────────
 //
-//  Una sola request a fbref.com/en/comps/12/stats/La-Liga-Stats
-//  Tabla HTML con ~500 jugadores de LaLiga. Sin API key, sin límites.
-//  Datos de Opta/StatsBomb: PJ, min, goles, asistencias, xG, xA, tarjetas...
+//  Una sola request a understat.com/league/La_liga (temporada actual 2025/26)
+//  Los datos estan embebidos en el HTML como JSON en una variable JS.
+//  Sin API key, sin limites, sin Cloudflare.
+//  Campos: goles, asistencias, xG, xA, minutos, partidos, equipo, posicion.
 
-async function fetchFbrefStats() {
-  console.log('📊 Descargando estadísticas de jugadores (FBref)...');
+async function fetchPlayerStats() {
+  console.log('📊 Descargando estadisticas de jugadores (Understat 2025/26)...');
 
   return new Promise((resolve) => {
     const req = https.request({
-      hostname: 'fbref.com',
-      path:     '/en/comps/12/stats/La-Liga-Stats',
+      hostname: 'understat.com',
+      path:     '/league/La_liga',
       method:   'GET',
       headers:  {
         'User-Agent':      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36',
-        'Accept':          'text/html,application/xhtml+xml',
-        'Accept-Language': 'en-US,en;q=0.9',
+        'Accept':          'text/html,application/xhtml+xml,*/*',
+        'Accept-Language': 'es-ES,es;q=0.9',
         'Accept-Encoding': 'identity',
-        'Referer':         'https://fbref.com/',
       }
     }, (res) => {
-      // FBref puede redirigir
-      if (res.statusCode === 301 || res.statusCode === 302) {
-        const loc = res.headers.location;
-        console.log('  → Redirigiendo a:', loc);
-        resolve(fetchFbrefRedirect(loc));
-        return;
-      }
-
+      console.log('  → Understat status:', res.statusCode);
       let html = '';
       res.on('data', c => html += c);
-      res.on('end', () => resolve(parseFbrefHtml(html)));
+      res.on('end', () => resolve(parseUnderstatHtml(html)));
     });
-    req.on('error', (e) => { console.warn('⚠️ Error FBref:', e.message); resolve(null); });
+    req.on('error', (e) => { console.warn('⚠️ Error Understat:', e.message); resolve(null); });
     req.end();
   });
 }
 
-function fetchFbrefRedirect(url) {
-  return new Promise((resolve) => {
-    const parsed = new URL(url.startsWith('http') ? url : 'https://fbref.com' + url);
-    const req = https.request({
-      hostname: parsed.hostname,
-      path:     parsed.pathname + parsed.search,
-      method:   'GET',
-      headers:  {
-        'User-Agent':      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36',
-        'Accept':          'text/html,application/xhtml+xml',
-        'Accept-Language': 'en-US,en;q=0.9',
-        'Accept-Encoding': 'identity',
-      }
-    }, (res) => {
-      let html = '';
-      res.on('data', c => html += c);
-      res.on('end', () => resolve(parseFbrefHtml(html)));
-    });
-    req.on('error', (e) => { console.warn('⚠️ Error FBref redirect:', e.message); resolve(null); });
-    req.end();
-  });
-}
-
-function parseFbrefHtml(html) {
+function parseUnderstatHtml(html) {
   if (!html || html.length < 1000) {
-    console.warn('⚠️ FBref: respuesta vacía o demasiado corta');
+    console.warn('⚠️ Understat: respuesta vacia');
     return null;
   }
 
-  // La tabla principal es stats_standard — buscar todas las filas <tr>
-  // Las filas de datos tienen data-row-index o simplemente <td> con data-stat
-  const players = [];
-
-  // Extraer filas de la tabla stats_standard (LaLiga)
-  // FBref usa: <td data-stat="player"><a href="...">Nombre</a></td>
-  // FBref: la tabla de LaLiga es stats_standard_12 (comp_id=12)
-  // Buscar primero el ID específico, luego el genérico como fallback
-  let tableIdx = html.indexOf('id="stats_standard_12"');
-  if (tableIdx === -1) tableIdx = html.indexOf('id="stats_standard');
-  if (tableIdx === -1) {
-    // Diagnóstico: mostrar qué IDs hay disponibles
-    const allIds = [...html.matchAll(/id="([^"]{0,40})"/g)].map(m => m[1]).filter(id => id.includes('stat') || id.includes('player'));
-    console.warn('⚠️ FBref: no se encontró la tabla. IDs disponibles:', allIds.slice(0, 15).join(', '));
-    return null;
-  }
-  const tableEnd = html.indexOf('</table>', tableIdx);
-  const table    = html.slice(tableIdx, tableEnd + 8);
-
-  // Extraer filas <tr> manualmente
-  const rows = [];
-  let pos2 = 0;
-  while (true) {
-    const trStart = table.indexOf('<tr', pos2);
-    if (trStart === -1) break;
-    const trEnd = table.indexOf('</tr>', trStart);
-    if (trEnd === -1) break;
-    rows.push(table.slice(trStart, trEnd + 5));
-    pos2 = trEnd + 5;
-  }
-
-  rows.forEach(row => {
-    // Saltar cabeceras y separadores
-    if (row.includes('class="thead"') || row.includes('class="spacer"')) return;
-
-    function getStat(stat) {
-      const m = row.match(new RegExp('data-stat="' + stat + '"[^>]*>(?:<[^>]+>)?([^<]*)', 'i'));
-      return m ? m[1].trim() : '';
-    }
-
-    const name   = getStat('player');
-    const team   = getStat('team');
-    const pos    = getStat('position');
-    const nation = getStat('nationality');
-    const age    = getStat('age');
-
-    if (!name || name === 'Player') return; // saltar cabeceras
-
-    const mp      = parseInt(getStat('games'))            || 0;
-    const starts  = parseInt(getStat('games_starts'))     || 0;
-    const minutes = parseInt(getStat('minutes').replace(',','')) || 0;
-    const goals   = parseInt(getStat('goals'))            || 0;
-    const assists = parseInt(getStat('assists'))          || 0;
-    const xg      = parseFloat(getStat('xg'))             || 0;
-    const xag     = parseFloat(getStat('xg_assist'))      || 0;
-    const yellow  = parseInt(getStat('cards_yellow'))     || 0;
-    const red     = parseInt(getStat('cards_red'))        || 0;
-    const shots   = parseInt(getStat('shots_on_target'))  || 0;
-    const prgC    = parseInt(getStat('progressive_carries')) || 0;
-    const prgP    = parseInt(getStat('progressive_passes'))  || 0;
-
-    players.push({
-      name, team, pos, nation,
-      age:     age ? parseInt(age) : null,
-      mp, starts, minutes,
-      goals, assists,
-      xg, xag,
-      yellowCards: yellow,
-      redCards:    red,
-      shotsOnTarget: shots,
-      progressiveCarries: prgC,
-      progressivePasses:  prgP,
-      minutesPerGoal: (goals && minutes) ? Math.round(minutes / goals) : null,
-    });
-  });
-
-  if (!players.length) {
-    console.warn('⚠️ FBref: no se parseó ningún jugador');
+  // Understat embebe los datos como: var playersData = JSON.parse('...')
+  // o directamente como objeto JS en el HTML
+  const marker = 'playersData';
+  const idx = html.indexOf(marker);
+  if (idx === -1) {
+    console.warn('⚠️ Understat: no se encontro playersData en el HTML (length:', html.length, ')');
     return null;
   }
 
-  console.log('✅ FBref: ' + players.length + ' jugadores descargados');
+  // El formato es: var playersData = JSON.parse('[[...]]')
+  // Extraer el contenido entre la primera ' y la última ' antes del )
+  const jsonStart = html.indexOf("JSON.parse('", idx);
+  if (jsonStart === -1) {
+    console.warn('⚠️ Understat: formato inesperado de playersData');
+    return null;
+  }
+  const dataStart = jsonStart + 12; // longitud de "JSON.parse('"
+  const dataEnd   = html.lastIndexOf("')", dataStart + 500000);
+  if (dataEnd === -1) {
+    console.warn('⚠️ Understat: no se encontro el cierre del JSON');
+    return null;
+  }
+
+  const raw_str = html.slice(dataStart, dataEnd);
+  try {
+    const raw = JSON.parse(raw_str);
+    return processUnderstatData(raw);
+  } catch(e) {
+    console.warn('⚠️ Understat: error parseando JSON:', e.message);
+    return null;
+  }
+}
+
+function processUnderstatData(raw) {
+  if (!Array.isArray(raw) || !raw.length) {
+    console.warn('⚠️ Understat: datos vacios o formato inesperado');
+    return null;
+  }
+
+  const players = raw.map(p => ({
+    id:        p.id,
+    name:      p.player_name || p.name || '',
+    team:      p.team_title  || p.team || '',
+    position:  p.position    || '',
+    appearances: parseInt(p.games)   || 0,
+    minutes:   parseInt(p.time)      || 0,
+    goals:     parseInt(p.goals)     || 0,
+    assists:   parseInt(p.assists)   || 0,
+    xg:        parseFloat(p.xG)      || 0,
+    xag:       parseFloat(p.xA)      || 0,
+    shots:     parseInt(p.shots)     || 0,
+    keyPasses: parseInt(p.key_passes)|| 0,
+    yellowCards: parseInt(p.yellow_cards) || 0,
+    redCards:    parseInt(p.red_cards)    || 0,
+    npg:       parseInt(p.npg)       || 0,
+    npxg:      parseFloat(p.npxG)    || 0,
+    minutesPerGoal: (parseInt(p.goals) && parseInt(p.time))
+      ? Math.round(parseInt(p.time) / parseInt(p.goals)) : null,
+  }));
+
+  console.log('✅ Understat: ' + players.length + ' jugadores descargados');
   return {
-    source:    'fbref',
+    source:    'understat',
     league:    'LaLiga',
+    season:    '2025/26',
     updatedAt: new Date().toISOString(),
     players,
   };
 }
-
 
 // ─── MAIN ────────────────────────────────────────────────────────────────────
 
@@ -546,7 +495,7 @@ async function main() {
     const laliga     = await fetchLaLiga();
     const news       = await fetchNews();
 
-    const playerStats = await fetchFbrefStats();
+    const playerStats = await fetchPlayerStats();
 
     const output = {
       updatedAt:   new Date().toISOString(),
@@ -566,7 +515,7 @@ async function main() {
     console.log(`👥 Equipos fantasy:    ${allTeams?.length || 0}`);
     console.log(`🦊 Mi equipo:          ${myTeam?.players?.length || 0} jugadores`);
     console.log(`📰 Noticias:           ${news.length}`);
-    console.log(`⚽ Stats jugadores:    ${playerStats?.players?.length || 0} (FBref)`);
+    console.log(`⚽ Stats jugadores:    ${playerStats?.players?.length || 0} (Understat)`);
 
   } catch(err) {
     console.error('❌ Error inesperado:', err.message);
