@@ -599,27 +599,36 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
     <!-- LEYENDA COLUMNAS -->
     <div class="mv3-legend" style="margin-bottom:10px;">
       <div class="mv3-leg-col">
-        <div class="mv3-leg-title">Biwenger</div>
+        <div class="mv3-leg-title">Posición en ranking por stat</div>
+        <div class="mv3-leg-scale">
+          <div class="mv3-ls mv3-ls-r">Peor</div><div class="mv3-ls mv3-ls-y">Bajo</div>
+          <div class="mv3-ls mv3-ls-g">Bueno</div><div class="mv3-ls mv3-ls-b">Top</div>
+        </div>
         <div class="mv3-leg-items">
-          <div class="mv3-li"><div class="mv3-ldot" style="background:var(--accent)"></div><span onclick="setSortAndRender('points_desc')" style="cursor:pointer">PTS — Puntos acumulados</span></div>
-          <div class="mv3-li"><div class="mv3-ldot" style="background:var(--blue)"></div><span onclick="setSortAndRender('price_desc')" style="cursor:pointer">VALOR — Precio de mercado</span></div>
+          <div class="mv3-li"><div class="mv3-ldot" style="background:var(--c-low)"></div>Peor 25%</div>
+          <div class="mv3-li"><div class="mv3-ldot" style="background:var(--c-mid)"></div>25–50%</div>
+          <div class="mv3-li"><div class="mv3-ldot" style="background:var(--c-good)"></div>50–75%</div>
+          <div class="mv3-li"><div class="mv3-ldot" style="background:var(--c-top)"></div>Top 25%</div>
         </div>
       </div>
       <div class="mv3-leg-sep"></div>
       <div class="mv3-leg-col">
-        <div class="mv3-leg-title">Sofascore</div>
+        <div class="mv3-leg-title">Columnas coloreadas</div>
         <div class="mv3-leg-items">
-          <div class="mv3-li"><div class="mv3-ldot" style="background:var(--c-top)"></div><span onclick="setSortAndRender('sf_rating_desc')" style="cursor:pointer">RAT — Rating medio</span></div>
+          <div class="mv3-li"><div class="mv3-ldot" style="background:var(--accent)"></div><span onclick="setSortAndRender('points_desc')" style="cursor:pointer">PTS — Puntos Biwenger</span></div>
+          <div class="mv3-li"><div class="mv3-ldot" style="background:var(--blue)"></div><span onclick="setSortAndRender('price_desc')" style="cursor:pointer">VALOR — Precio (excl. ≤400k)</span></div>
+          <div class="mv3-li"><div class="mv3-ldot" style="background:var(--c-top)"></div><span onclick="setSortAndRender('sf_rating_desc')" style="cursor:pointer">RAT — Rating Sofascore</span></div>
           <div class="mv3-li"><div class="mv3-ldot" style="background:var(--green)"></div><span onclick="setSortAndRender('sf_goals_desc')" style="cursor:pointer">GOL — Goles</span></div>
           <div class="mv3-li"><div class="mv3-ldot" style="background:var(--c-mid)"></div><span onclick="setSortAndRender('sf_assists_desc')" style="cursor:pointer">AST — Asistencias</span></div>
         </div>
       </div>
       <div class="mv3-leg-sep"></div>
       <div class="mv3-leg-col">
-        <div class="mv3-leg-title">Tarjetas</div>
+        <div class="mv3-leg-title">Tarjetas (invertido)</div>
         <div class="mv3-leg-items">
           <div class="mv3-li"><div class="mv3-ldot" style="background:#f59e0b"></div>AM — Amarillas</div>
-          <div class="mv3-li"><div class="mv3-ldot" style="background:#ef4444"></div>TJ — Tarjeta roja / expulsado</div>
+          <div class="mv3-li"><div class="mv3-ldot" style="background:#ef4444"></div>TJ — Rojas / expulsado</div>
+          <div class="mv3-li"><div class="mv3-ldot" style="background:var(--c-low)"></div>Más tarjetas = más rojo</div>
         </div>
       </div>
     </div>
@@ -1298,6 +1307,34 @@ function mergeSofascoreIntoPlayers(sfData){
 
 function getSfVal(p, key){ return p.sf ? (p.sf[key] ?? null) : null; }
 
+// ── PERCENTILES JUGADORES ──
+let jugPcts = {};
+function buildJugPcts(players) {
+  function vals(arr) { return arr.filter(v => v !== null && v !== undefined && v > 0); }
+  jugPcts = {
+    pts:   vals(players.map(p => p.pts||0)),
+    price: vals(players.filter(p => (p.price||0) > 400000).map(p => p.price)),
+    rat:   vals(players.map(p => getSfVal(p,'rating'))),
+    gol:   vals(players.map(p => getSfVal(p,'goals'))),
+    ast:   vals(players.map(p => getSfVal(p,'assists'))),
+    am:    vals(players.map(p => getSfVal(p,'yellowCards'))),
+    tj:    vals(players.map(p => getSfVal(p,'redCards'))),
+  };
+}
+function jugPctRank(arr, val) {
+  if (!arr || !arr.length || val === null || val === undefined) return null;
+  const s = [...arr].sort((a,b)=>a-b);
+  return Math.round((s.filter(x=>x<val).length / Math.max(s.length-1,1))*100);
+}
+function jugColor(pct, invert) {
+  if (pct === null) return 'color:var(--c-low)'; // valor 0 o excluido → rojo
+  const p = invert ? 100-pct : pct;
+  if (p >= 75) return 'color:var(--c-top)';
+  if (p >= 50) return 'color:var(--c-good)';
+  if (p >= 25) return 'color:var(--c-mid)';
+  return 'color:var(--c-low)';
+}
+
 function sortAndRender(){
   const val = currentSort;
   filteredPlayers.sort((a,b)=>{
@@ -1320,32 +1357,55 @@ let selectedPlayerId = null;
 
 function renderPlayers(){
   document.getElementById('playerCount').textContent = filteredPlayers.length+' jugadores';
-  const PosC = {PT:'#6366f1',DF:'#16a34a',MC:'#d97706',DL:'#e63329',MD:'#8b5cf6'};
+  const PosC = {PT:'#d97706',DF:'#1d6fce',MC:'#16a34a',DL:'#e63329',MD:'#8b5cf6'};
   document.getElementById('playersList').innerHTML = filteredPlayers.map((p,i)=>{
     const r = i+1;
     const rc = r===1?'rank-1':r===2?'rank-2':r===3?'rank-3':'';
     const posCol = PosC[p.position.split('/')[0]] || '#555';
     const sf = p.sf;
-    const rating = sf?.rating ? sf.rating.toFixed(1) : '\u2014';
-    const ratingCol = sf?.rating ? (sf.rating>=7.5?'color:var(--green)':sf.rating>=6.5?'color:var(--text2)':'color:var(--red)') : 'color:var(--text3)';
-    const goles = sf?.goals ?? '\u2014';
-    const asis  = sf?.assists ?? '\u2014';
-    const am    = sf?.minutesPerGoal ? sf.minutesPerGoal+'\u2032' : '\u2014';
-    const tj    = sf ? '<span style="color:#f59e0b">'+(sf.yellowCards||0)+'</span>'+(sf.redCards?'<span style="color:var(--red);margin-left:2px">'+sf.redCards+'</span>':'') : '\u2014';
+    // valores raw
+    const ptsV   = p.pts || 0;
+    const priceV = p.price || 0;
+    const ratV   = sf?.rating ?? null;
+    const golV   = sf?.goals  ?? null;
+    const astV   = sf?.assists ?? null;
+    const amV    = sf?.yellowCards ?? null;
+    const tjV    = sf?.redCards ?? null;
+    // percentiles (excluye 0s; precio excluye ≤400k)
+    const ptsPct   = jugPctRank(jugPcts.pts,   ptsV > 0 ? ptsV : null);
+    const pricePct = priceV > 400000 ? jugPctRank(jugPcts.price, priceV) : null;
+    const ratPct   = jugPctRank(jugPcts.rat,   ratV);
+    const golPct   = jugPctRank(jugPcts.gol,   golV);
+    const astPct   = jugPctRank(jugPcts.ast,   astV);
+    const amPct    = jugPctRank(jugPcts.am,    amV);
+    const tjPct    = jugPctRank(jugPcts.tj,    tjV);
+    // colores (tarjetas invertidas: más = peor)
+    const ptsCol   = jugColor(ptsPct,   false);
+    const priceCol = jugColor(pricePct, false);
+    const ratCol   = jugColor(ratPct,   false);
+    const golCol   = jugColor(golPct,   false);
+    const astCol   = jugColor(astPct,   false);
+    const amCol    = jugColor(amPct,    true);
+    const tjCol    = jugColor(tjPct,    true);
+    // display
+    const rating  = ratV !== null ? ratV.toFixed(1) : '\u2014';
+    const goles   = golV !== null ? golV : '\u2014';
+    const asis    = astV !== null ? astV : '\u2014';
+    const amTxt   = amV  !== null ? amV  : '\u2014';
+    const tjTxt   = tjV  !== null ? tjV  : '\u2014';
     return '<div class="player-row" style="cursor:pointer" onclick="openJugPanel(filteredPlayers['+i+'])">'+
       '<div class="rank '+rc+'" style="font-size:0.7rem">'+r+'</div>'+
       '<div style="width:22px;height:22px;border-radius:3px;background:'+posCol+';display:flex;align-items:center;justify-content:center;font-family:Figtree,sans-serif;font-size:0.56rem;font-weight:800;color:#fff;flex-shrink:0">'+p.position.split('/')[0]+'</div>'+
       '<div style="min-width:0"><div class="player-name" style="font-size:0.82rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">'+p.name+'</div><div class="player-club">'+(p.club||'\u2014')+'</div></div>'+
-      '<div style="text-align:right;font-family:Figtree,sans-serif;font-size:1.1rem;font-weight:700;color:var(--lime)">'+(p.pts||'\u2014')+'</div>'+
-      '<div style="text-align:right;font-family:Figtree,sans-serif;font-size:0.66rem;color:var(--text3)">'+fmt(p.price)+'</div>'+
-      '<div style="text-align:center;font-family:Figtree,sans-serif;font-size:0.72rem;font-weight:500;'+ratingCol+'">'+rating+'</div>'+
-      '<div style="text-align:center;font-family:Figtree,sans-serif;font-size:0.88rem;font-weight:600">'+goles+'</div>'+
-      '<div style="text-align:center;font-family:Figtree,sans-serif;font-size:0.88rem;font-weight:600">'+asis+'</div>'+
-      '<div style="text-align:center;font-family:Figtree,sans-serif;font-size:0.66rem;color:var(--text3)">'+am+'</div>'+
-      '<div style="text-align:center;font-family:Figtree,sans-serif;font-size:0.7rem">'+tj+'</div>'+
+      '<div style="text-align:right;font-family:\'IBM Plex Mono\',monospace;font-size:0.9rem;font-weight:700;'+ptsCol+'">'+(ptsV||'\u2014')+'</div>'+
+      '<div style="text-align:right;font-family:\'IBM Plex Mono\',monospace;font-size:0.72rem;'+priceCol+'">'+fmt(priceV)+'</div>'+
+      '<div style="text-align:center;font-family:\'IBM Plex Mono\',monospace;font-size:0.78rem;font-weight:600;'+ratCol+'">'+rating+'</div>'+
+      '<div style="text-align:center;font-family:\'IBM Plex Mono\',monospace;font-size:0.88rem;font-weight:600;'+golCol+'">'+goles+'</div>'+
+      '<div style="text-align:center;font-family:\'IBM Plex Mono\',monospace;font-size:0.88rem;font-weight:600;'+astCol+'">'+asis+'</div>'+
+      '<div style="text-align:center;font-family:\'IBM Plex Mono\',monospace;font-size:0.78rem;'+amCol+'">'+amTxt+'</div>'+
+      '<div style="text-align:center;font-family:\'IBM Plex Mono\',monospace;font-size:0.78rem;'+tjCol+'">'+tjTxt+'</div>'+
     '</div>';
   }).join('') || '<div style="padding:40px;text-align:center;color:var(--text3)">Sin jugadores</div>';
-  // sin paginación — lista completa
 }
 
 function selectJugador(p){ openJugPanel(p); }
@@ -1373,7 +1433,7 @@ function refreshGuitllaSet(){
     MV3_GUITLLA = new Set(myTeamData.map(p=>p.name));
   }
 }
-const MV3_POS_COLORS = {PT:'#6366f1',DF:'#16a34a',MC:'#d97706',DL:'#e63329',MD:'#8b5cf6'};
+const MV3_POS_COLORS = {PT:'#d97706',DF:'#1d6fce',MC:'#16a34a',DL:'#e63329',MD:'#8b5cf6'};
 let mv3Players=[], mv3ActivePos='', mv3Page=1, mv3Sorted=[];
 const MV3_PAGE = 25;
 let mv3Pcts = {};
