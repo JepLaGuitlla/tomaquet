@@ -9,6 +9,14 @@ const USER_ID   = '6541195';
 const VERSION   = '630';
 const FD_TOKEN  = '00308a91cfc84b248611ecc22550c9de'; // football-data.org
 
+// Feeds RSS de noticias fantasy
+const RSS_SOURCES = [
+  { id:'jp', label:'Jornada Perfecta', url:'https://www.jornadaperfecta.com/feed/' },
+  { id:'as', label:'AS Fantasy',       url:'https://fantasy.as.com/feed/' },
+  { id:'cm', label:'Comuniate',        url:'https://www.comuniate.com/feed/' },
+  { id:'rv', label:'Relevo Fantasy',   url:'https://www.relevo.com/rss/noticias/' },
+];
+
 if (!EMAIL || !PASSWORD) {
   console.error('❌ Faltan Secrets en GitHub');
   process.exit(1);
@@ -107,19 +115,14 @@ async function fetchPlayers() {
     }
   });
 
-  console.log('Status jugadores:', res.status);
-  console.log('Primeros 200 chars:', res.raw.substring(0, 200));
-
   if (res.status !== 200) {
     console.error('❌ Error al obtener jugadores. Status:', res.status);
     process.exit(1);
   }
 
-  // La respuesta es JSONP: jsonp_cb({...}) — hay que extraer el JSON
   const match = res.raw.match(/^[^(]+\(([\s\S]*)\)\s*;?\s*$/);
   if (!match) {
     console.error('❌ No se pudo parsear la respuesta JSONP');
-    console.log('Respuesta completa (500 chars):', res.raw.substring(0, 500));
     process.exit(1);
   }
 
@@ -128,13 +131,11 @@ async function fetchPlayers() {
 
   if (!rawPlayers) {
     console.error('❌ Sin jugadores en la respuesta');
-    console.log('Keys disponibles:', Object.keys(parsed?.data || {}));
     process.exit(1);
   }
 
   const arr = Array.isArray(rawPlayers) ? rawPlayers : Object.values(rawPlayers);
   console.log(`✅ ${arr.length} jugadores descargados`);
-  console.log('Ejemplo primer jugador:', JSON.stringify(arr[0]).substring(0, 300));
 
   return arr.map(p => ({
     id:         p.id,
@@ -148,6 +149,7 @@ async function fetchPlayers() {
     teamName:   p.teamName       || p.team?.name || '',
     status:     p.fitness?.[0]?.status || 'ok',
     jForm:      (p.fitness || []).slice(0, 5).map(f => typeof f === 'number' ? f : (f?.points ?? null)),
+    clausula:   p.clause         || null,
   }));
 }
 
@@ -174,7 +176,94 @@ async function fetchLeague(token) {
   return res.body?.data || null;
 }
 
-// ─── 4. LA LIGA (football-data.org) ─────────────────────────────────────────
+// ─── 4. TODOS LOS EQUIPOS DE LA LIGA (quién tiene cada jugador) ──────────────
+async function fetchAllTeams(token) {
+  console.log('👥 Descargando equipos de todos los participantes...');
+
+  const res = await requestJSON({
+    hostname: 'biwenger.as.com',
+    path: `/api/v2/leagues/${LEAGUE_ID}/teams?fields=*,players`,
+    method: 'GET',
+    headers: {
+      ...COMMON_HEADERS,
+      'Authorization': `Bearer ${token}`,
+    }
+  });
+
+  if (res.status !== 200) {
+    console.warn('⚠️ No se pudieron obtener equipos. Status:', res.status);
+    return null;
+  }
+
+  const teams = res.body?.data || [];
+  console.log(`✅ ${teams.length} equipos descargados`);
+
+  // Devuelve array de equipos con sus jugadores (solo IDs para no duplicar datos)
+  return teams.map(t => ({
+    id:      t.id,
+    name:    t.name,
+    manager: t.manager?.name || t.name,
+    points:  t.points || 0,
+    value:   t.teamValue || 0,
+    players: (t.players || []).map(p => ({
+      id:       p.id,
+      name:     p.name,
+      position: p.position,
+      price:    p.price || 0,
+      points:   p.points || 0,
+    })),
+  }));
+}
+
+// ─── 5. MI EQUIPO (Guitlla) ──────────────────────────────────────────────────
+async function fetchMyTeam(token) {
+  console.log('🦊 Descargando mi equipo (Guitlla)...');
+
+  // Primero obtenemos el ID del equipo del usuario en la liga
+  const res = await requestJSON({
+    hostname: 'biwenger.as.com',
+    path: `/api/v2/leagues/${LEAGUE_ID}/user?fields=*,team,players`,
+    method: 'GET',
+    headers: {
+      ...COMMON_HEADERS,
+      'Authorization': `Bearer ${token}`,
+    }
+  });
+
+  if (res.status !== 200) {
+    console.warn('⚠️ No se pudo obtener mi equipo. Status:', res.status);
+    return null;
+  }
+
+  const data = res.body?.data;
+  if (!data) {
+    console.warn('⚠️ Sin datos de mi equipo');
+    return null;
+  }
+
+  const players = data.team?.players || data.players || [];
+  console.log(`✅ Mi equipo: ${players.length} jugadores`);
+
+  return {
+    teamId:  data.team?.id || null,
+    name:    data.team?.name || 'Guitlla',
+    points:  data.team?.points || 0,
+    value:   data.team?.teamValue || 0,
+    players: players.map(p => ({
+      id:       p.id,
+      name:     p.name,
+      position: p.position,
+      price:    p.price || 0,
+      points:   p.points || 0,
+      trend:    p.priceIncrement || 0,
+      status:   p.fitness?.[0]?.status || 'ok',
+      jForm:    (p.fitness || []).slice(0, 5).map(f => typeof f === 'number' ? f : (f?.points ?? null)),
+      clausula: p.clause || null,
+    })),
+  };
+}
+
+// ─── 6. LA LIGA (football-data.org) ─────────────────────────────────────────
 async function fetchLaLiga() {
   console.log('⚽ Descargando datos de La Liga (football-data.org)...');
 
@@ -199,22 +288,20 @@ async function fetchLaLiga() {
   }
 
   try {
-    // Llamadas en serie para no superar rate limit del plan gratuito (10 req/min)
     const standings = await fdGet('/competitions/PD/standings');
-    await new Promise(r => setTimeout(r, 700)); // espera 700ms entre llamadas
+    await new Promise(r => setTimeout(r, 700));
     const scheduled = await fdGet('/competitions/PD/matches?status=SCHEDULED&limit=30');
     await new Promise(r => setTimeout(r, 700));
     const finished  = await fdGet('/competitions/PD/matches?status=FINISHED&limit=50');
 
     if (!standings.ok) {
-      console.warn('⚠️ No se pudo obtener clasificación. Status puede ser rate-limit.');
+      console.warn('⚠️ No se pudo obtener clasificación.');
       return null;
     }
 
     const table    = standings.body?.standings?.[0]?.table || [];
     const matchday = standings.body?.season?.currentMatchday || null;
 
-    // Calcular forma de cada equipo (últimas 5)
     const forms = {};
     const sortedMatches = (finished.body?.matches || [])
       .sort((a, b) => new Date(b.utcDate) - new Date(a.utcDate));
@@ -236,7 +323,6 @@ async function fetchLaLiga() {
       });
     });
 
-    // Próxima jornada
     const allScheduled = scheduled.body?.matches || [];
     const nextMD = allScheduled.length
       ? Math.min(...allScheduled.map(m => m.matchday).filter(Boolean))
@@ -251,7 +337,6 @@ async function fetchLaLiga() {
         }))
       : [];
 
-    // Últimos 8 resultados
     const recentResults = sortedMatches.slice(0, 8).map(m => ({
       date: m.utcDate,
       home: { name: m.homeTeam.name, short: m.homeTeam.shortName, crest: m.homeTeam.crest },
@@ -259,8 +344,7 @@ async function fetchLaLiga() {
       score: { home: m.score?.fullTime?.home, away: m.score?.fullTime?.away }
     }));
 
-    console.log(`✅ La Liga: ${table.length} equipos, jornada ${matchday}, ${nextMatches.length} partidos próximos`);
-
+    console.log(`✅ La Liga: ${table.length} equipos, jornada ${matchday}, ${nextMatches.length} próximos`);
     return { matchday, table, forms, nextMatches, recentResults };
 
   } catch(e) {
@@ -269,24 +353,101 @@ async function fetchLaLiga() {
   }
 }
 
+// ─── 7. NOTICIAS RSS (sin CORS, desde Node) ──────────────────────────────────
+async function fetchNews() {
+  console.log('📰 Descargando noticias RSS...');
+  const allNews = [];
+
+  for (const src of RSS_SOURCES) {
+    try {
+      const url = new URL(src.url);
+      const res = await request({
+        hostname: url.hostname,
+        path: url.pathname + (url.search || ''),
+        method: 'GET',
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (compatible; RSS reader)',
+          'Accept': 'application/rss+xml, application/xml, text/xml, */*',
+        }
+      });
+
+      if (res.status !== 200) {
+        console.warn(`⚠️ RSS ${src.id} status ${res.status}`);
+        continue;
+      }
+
+      // Parse XML manual (sin dependencias externas)
+      const xml = res.raw;
+      const items = xml.match(/<item[\s\S]*?<\/item>/g) || [];
+      console.log(`  ${src.id}: ${items.length} noticias`);
+
+      items.slice(0, 10).forEach(item => {
+        const getTag = (tag) => {
+          const m = item.match(new RegExp(`<${tag}[^>]*>(?:<!\\[CDATA\\[)?([\\s\\S]*?)(?:\\]\\]>)?<\\/${tag}>`, 'i'));
+          return m ? m[1].trim() : '';
+        };
+        const getAttr = (tag, attr) => {
+          const m = item.match(new RegExp(`<${tag}[^>]*${attr}=["']([^"']+)["']`, 'i'));
+          return m ? m[1] : '';
+        };
+
+        const title = getTag('title');
+        const link  = getTag('link') || getAttr('link', 'href');
+        const date  = getTag('pubDate') || getTag('dc:date') || '';
+        const img   = getAttr('enclosure', 'url') ||
+                      getAttr('media:content', 'url') ||
+                      (item.match(/<img[^>]+src=["']([^"']+)["']/i) || [])[1] || '';
+
+        if (title && link) {
+          allNews.push({
+            title,
+            link,
+            date,
+            img,
+            srcId:    src.id,
+            srcLabel: src.label,
+          });
+        }
+      });
+
+    } catch(e) {
+      console.warn(`⚠️ Error RSS ${src.id}:`, e.message);
+    }
+  }
+
+  // Ordenar por fecha descendente
+  allNews.sort((a, b) => {
+    try { return new Date(b.date) - new Date(a.date); } catch(e) { return 0; }
+  });
+
+  console.log(`✅ ${allNews.length} noticias descargadas en total`);
+  return allNews;
+}
+
 // ─── MAIN ────────────────────────────────────────────────────────────────────
 async function main() {
   try {
-    const token   = await login();
-    const players = await fetchPlayers();   // No necesita token, es pública
-    const league  = await fetchLeague(token);
-    const laliga  = await fetchLaLiga();    // football-data.org
+    const token    = await login();
+    const players  = await fetchPlayers();
+    const league   = await fetchLeague(token);
+    const allTeams = await fetchAllTeams(token);
+    const myTeam   = await fetchMyTeam(token);
+    const laliga   = await fetchLaLiga();
+    const news     = await fetchNews();
 
     const output = {
       updatedAt: new Date().toISOString(),
       players,
       league,
+      allTeams,
+      myTeam,
       laliga,
+      news,
     };
 
     fs.writeFileSync('data.json', JSON.stringify(output, null, 2), 'utf8');
     console.log('💾 data.json guardado correctamente');
-    console.log(`📊 ${players.length} jugadores | liga: ${league ? 'OK' : 'no'} | laliga: ${laliga ? 'OK' : 'no'}`);
+    console.log(`📊 ${players.length} jugadores | equipos: ${allTeams?.length || 0} | mi equipo: ${myTeam?.players?.length || 0} jugadores | noticias: ${news.length}`);
 
   } catch (err) {
     console.error('❌ Error inesperado:', err.message);
