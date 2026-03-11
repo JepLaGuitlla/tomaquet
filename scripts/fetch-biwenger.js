@@ -145,65 +145,41 @@ async function fetchPlayers() {
 async function fetchLeague(token) {
   console.log('🏆 Descargando datos de liga (Biwenger)...');
 
-  // Diagnóstico: loguear respuesta completa del primer intento
-  const diagRes = await requestJSON({
-    hostname: 'biwenger.as.com',
-    path:     `/api/v2/leagues/${LEAGUE_ID}`,
-    method:   'GET',
-    headers:  { ...COMMON_HEADERS, 'Authorization': `Bearer ${token}` }
-  });
-  console.log('  🔍 DIAGNÓSTICO fetchLeague:');
-  console.log('     status:', diagRes.status);
-  console.log('     body:', JSON.stringify(diagRes.body).slice(0, 300));
+  const authOnly = {
+    'User-Agent':    'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15',
+    'Accept':        'application/json, text/plain, */*',
+    'Authorization': `Bearer ${token}`,
+  };
 
-  // Intentar también sin x-league/x-user en headers
-  const diagRes2 = await requestJSON({
-    hostname: 'biwenger.as.com',
-    path:     `/api/v2/leagues/${LEAGUE_ID}`,
-    method:   'GET',
-    headers:  {
-      'User-Agent':      COMMON_HEADERS['User-Agent'],
-      'Accept':          '*/*',
-      'Authorization':   `Bearer ${token}`,
-      'Content-Type':    'application/json',
-    }
-  });
-  console.log('  🔍 DIAGNÓSTICO sin x-headers:');
-  console.log('     status:', diagRes2.status);
-  console.log('     body:', JSON.stringify(diagRes2.body).slice(0, 300));
+  const withXHeaders = {
+    ...authOnly,
+    'x-league':  LEAGUE_ID,
+    'x-user':    USER_ID,
+    'x-version': '670',
+  };
 
-  // Intentar endpoint /account para ver si el token funciona
-  const diagRes3 = await requestJSON({
-    hostname: 'biwenger.as.com',
-    path:     `/api/v2/account`,
-    method:   'GET',
-    headers:  { ...COMMON_HEADERS, 'Authorization': `Bearer ${token}` }
-  });
-  console.log('  🔍 DIAGNÓSTICO /account:');
-  console.log('     status:', diagRes3.status);
-  console.log('     body:', JSON.stringify(diagRes3.body).slice(0, 300));
-
-  const paths = [
-    `/api/v2/leagues/${LEAGUE_ID}`,
-    `/api/v2/leagues/${LEAGUE_ID}?fields=id,name,standings,competition`,
-    `/api/v2/leagues/${LEAGUE_ID}?fields=*`,
+  const tests = [
+    { label: 'GET /leagues/ID — solo auth',        path: `/api/v2/leagues/${LEAGUE_ID}`,                         headers: authOnly,     method: 'GET'  },
+    { label: 'GET /leagues/ID — con x-headers',    path: `/api/v2/leagues/${LEAGUE_ID}`,                         headers: withXHeaders, method: 'GET'  },
+    { label: 'GET /user/leagues — sin x-headers',  path: `/api/v2/user/leagues`,                                 headers: authOnly,     method: 'GET'  },
+    { label: 'GET /leagues sin ID',                path: `/api/v2/leagues`,                                      headers: authOnly,     method: 'GET'  },
+    { label: 'GET /leagues/ID/rounds',             path: `/api/v2/leagues/${LEAGUE_ID}/rounds`,                  headers: authOnly,     method: 'GET'  },
+    { label: 'GET /leagues/ID/standings',          path: `/api/v2/leagues/${LEAGUE_ID}/standings`,               headers: authOnly,     method: 'GET'  },
+    { label: 'GET /leagues/ID v1',                 path: `/api/v1/leagues/${LEAGUE_ID}`,                         headers: authOnly,     method: 'GET'  },
   ];
 
-  for (const path of paths) {
-    const res = await requestJSON({
-      hostname: 'biwenger.as.com',
-      path,
-      method:   'GET',
-      headers:  { ...COMMON_HEADERS, 'Authorization': `Bearer ${token}` }
-    });
-    console.log(`  fetchLeague ${path} → ${res.status}`);
+  for (const t of tests) {
+    const res = await requestJSON({ hostname: 'biwenger.as.com', path: t.path, method: t.method, headers: t.headers });
+    console.log(`  [${res.status}] ${t.label}`);
+    if (res.status !== 200) console.log(`         → ${JSON.stringify(res.body).slice(0,120)}`);
     if (res.status === 200) {
       console.log('✅ Datos de liga descargados');
+      console.log('  body preview:', JSON.stringify(res.body).slice(0, 200));
       return res.body?.data || null;
     }
   }
 
-  console.warn('⚠️ No se pudieron obtener datos de liga (todos los paths fallaron)');
+  console.warn('⚠️ Todos los intentos fallaron para fetchLeague');
   return null;
 }
 
