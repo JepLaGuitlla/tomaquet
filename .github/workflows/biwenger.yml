@@ -1,9 +1,12 @@
-name: Actualizar datos Biwenger
+name: Actualizar datos La Pausa Fantasy
 
 on:
   schedule:
-    - cron: '0 */6 * * *'
+    # Una vez al día a las 07:00 UTC (9h España en verano, 8h en invierno)
+    # Después de que la jornada nocturna esté completamente procesada
+    - cron: '0 7 * * *'
   workflow_dispatch:
+    # También se puede lanzar manualmente desde GitHub Actions
 
 jobs:
   fetch:
@@ -18,11 +21,12 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Ejecutar script de Biwenger
+      - name: Ejecutar script de datos
         env:
-          BIWENGER_EMAIL: ${{ secrets.BIWENGER_EMAIL }}
-          BIWENGER_PASSWORD: ${{ secrets.BIWENGER_PASSWORD }}
+          BIWENGER_EMAIL:     ${{ secrets.BIWENGER_EMAIL }}
+          BIWENGER_PASSWORD:  ${{ secrets.BIWENGER_PASSWORD }}
           BIWENGER_LEAGUE_ID: ${{ secrets.BIWENGER_LEAGUE_ID }}
+          API_FOOTBALL_KEY:   ${{ secrets.API_FOOTBALL_KEY }}
         run: node scripts/fetch-biwenger.js
 
       - name: Guardar data.json en el repositorio
@@ -30,5 +34,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data.json
-          git diff --staged --quiet || git commit -m "datos: actualización automática $(date -u '+%Y-%m-%d %H:%M') UTC"
+          git diff --staged --quiet || git commit -m "datos: actualización $(date -u '+%Y-%m-%d %H:%M') UTC"
           git push
