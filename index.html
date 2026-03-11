@@ -35,7 +35,7 @@ header::after{display:none;}
 /* ── NAV ─── */
 .nav-wrap{border-bottom:2px solid var(--border);background:#fff;}
 nav{max-width:1440px;margin:0 auto;padding:0 2rem;display:flex;gap:0;}
-.nav-btn{font-family:'Barlow Condensed',sans-serif;font-size:0.8rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text3);background:none;border:none;padding:12px 20px;cursor:pointer;border-bottom:2px solid transparent;transition:all 0.2s;position:relative;}
+.nav-btn{font-family:'Barlow Condensed',sans-serif;font-family:'IBM Plex Mono',monospace;font-size:0.72rem;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--text3);background:none;border:none;padding:12px 20px;cursor:pointer;border-bottom:2px solid transparent;transition:all 0.2s;position:relative;}
 .nav-btn:hover{color:var(--text2);}
 .nav-btn.active{color:var(--accent);border-bottom-color:var(--accent);}
 .nav-btn.active::before{content:'';position:absolute;bottom:-1px;left:50%;transform:translateX(-50%);width:4px;height:4px;background:var(--accent);border-radius:50%;box-shadow:0 0 6px var(--accent);}
@@ -51,7 +51,7 @@ main{max-width:1440px;margin:0 auto;padding:1.5rem 2rem;}
 @keyframes spin{to{transform:rotate(360deg)}}
 
 /* ── SECTION TITLES ─── */
-.section-title{font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;font-weight:600;color:var(--text3);letter-spacing:3px;text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:10px;}
+.section-title{font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;font-weight:700;color:var(--text3);letter-spacing:3px;text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:10px;}
 .section-title::before{content:'//';color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:0.65rem;}
 .section-title::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--border2),transparent);}
 
@@ -60,19 +60,19 @@ main{max-width:1440px;margin:0 auto;padding:1.5rem 2rem;}
 .stat-card{background:var(--bg2);padding:1rem 1.2rem;position:relative;overflow:hidden;}
 .stat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),transparent);opacity:0;}
 .stat-card:hover::before{opacity:1;}
-.stat-label{font-family:'IBM Plex Mono',monospace;font-size:0.58rem;color:var(--text3);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:6px;}
-.stat-value{font-family:'Barlow Condensed',sans-serif;font-size:1.9rem;font-weight:700;color:var(--text);letter-spacing:1px;line-height:1;}
+.stat-label{font-family:'IBM Plex Mono',monospace;font-size:0.56rem;color:var(--text3);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:4px;font-weight:500;}
+.stat-value{font-family:'Barlow Condensed',sans-serif;font-size:1.9rem;font-weight:800;color:var(--text);letter-spacing:0px;line-height:1;}
 .stat-sub{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;color:var(--text3);margin-top:4px;}
 
 /* ── FILTERS ─── */
 .filters{display:flex;gap:8px;margin-bottom:1.2rem;flex-wrap:wrap;align-items:center;}
-.search-box{flex:1;min-width:200px;background:var(--bg2);border:1px solid var(--border2);border-radius:3px;padding:9px 14px;color:var(--text);font-family:'IBM Plex Mono',monospace;font-size:0.8rem;outline:none;transition:border-color 0.2s;}
+.search-box{flex:1;min-width:200px;background:var(--bg2);border:1px solid var(--border2);border-radius:3px;padding:8px 13px;color:var(--text);font-family:'IBM Plex Mono',monospace;font-size:0.78rem;outline:none;transition:border-color 0.15s;}
 .search-box:focus{border-color:var(--accent);}
 .search-box::placeholder{color:var(--text3);}
-.filter-btn{background:var(--bg2);border:1px solid var(--border2);border-radius:3px;padding:9px 14px;color:var(--text3);font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all 0.15s;white-space:nowrap;}
+.filter-btn{background:var(--bg2);border:1px solid var(--border2);border-radius:3px;padding:6px 12px;color:var(--text3);font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all 0.15s;white-space:nowrap;}
 .filter-btn:hover{color:var(--text);border-color:var(--text3);}
 .filter-btn.active{background:var(--accent-dim);border-color:var(--accent);color:var(--accent);}
-.sort-select{background:var(--bg2);border:1px solid var(--border2);border-radius:3px;padding:9px 14px;color:var(--text2);font-family:'IBM Plex Mono',monospace;font-size:0.75rem;cursor:pointer;outline:none;}
+.sort-select{background:var(--bg2);border:1px solid var(--border2);border-radius:3px;padding:7px 11px;color:var(--text2);font-family:'IBM Plex Mono',monospace;font-size:0.72rem;cursor:pointer;outline:none;}
 .sort-select:focus{border-color:var(--accent);}
 
 /* ── TABLE ─── */
@@ -80,12 +80,13 @@ main{max-width:1440px;margin:0 auto;padding:1.5rem 2rem;}
 .table-header{display:grid;grid-template-columns:40px 2fr 80px 1fr 100px 100px 80px 80px 80px;padding:10px 16px;background:var(--bg3);border-bottom:1px solid var(--border2);}
 .th{font-family:'IBM Plex Mono',monospace;font-size:0.58rem;color:var(--text3);text-transform:uppercase;letter-spacing:1.5px;font-weight:500;cursor:pointer;user-select:none;transition:color 0.15s;}
 .th:hover{color:var(--accent);}
-.player-row{display:grid;grid-template-columns:40px 2fr 80px 1fr 100px 100px 80px 80px 80px;padding:9px 16px;border-bottom:1px solid rgba(26,37,53,0.8);transition:background 0.12s;align-items:center;}
-.player-row:hover{background:rgba(230,51,41,0.04);}
+.player-row{display:grid;grid-template-columns:28px 24px minmax(140px,1fr) 70px 60px 60px 54px 54px 54px 54px;padding:7px 10px;border-bottom:1px solid var(--border);transition:background 0.12s;align-items:center;cursor:pointer;min-width:640px;}
+.player-row:hover{background:var(--accent-dim);}
+.player-row.selected{background:var(--accent-dim);border-left:2px solid var(--accent);}
 .player-row:last-child{border-bottom:none;}
 .rank{font-family:'IBM Plex Mono',monospace;font-size:0.7rem;color:var(--text3);font-weight:400;text-align:center;}
 .rank-1{color:var(--lime);font-weight:600;}.rank-2{color:#94a3b8;}.rank-3{color:#cd7f32;}
-.player-name{font-size:0.88rem;font-weight:500;color:var(--text);word-break:break-word;line-height:1.3;}
+.player-name{font-family:'Barlow Condensed',sans-serif;font-size:0.92rem;font-weight:700;color:var(--text);text-transform:uppercase;letter-spacing:0.3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.2;}
 .player-club{font-family:'IBM Plex Mono',monospace;font-size:0.65rem;color:var(--text3);}
 .injured-icon{font-size:0.6rem;background:rgba(248,113,113,0.15);color:var(--red);border-radius:2px;padding:1px 5px;font-family:'IBM Plex Mono',monospace;letter-spacing:1px;}
 .sanction-icon{font-size:0.6rem;background:rgba(163,230,53,0.1);color:var(--lime);border-radius:2px;padding:1px 5px;font-family:'IBM Plex Mono',monospace;}
@@ -95,10 +96,10 @@ main{max-width:1440px;margin:0 auto;padding:1.5rem 2rem;}
 .price{font-family:'IBM Plex Mono',monospace;font-size:0.82rem;font-weight:500;color:var(--text);}
 .trend{font-family:'IBM Plex Mono',monospace;font-size:0.75rem;font-weight:500;}
 .trend.up{color:var(--green);}.trend.down{color:var(--red);}.trend.neutral{color:var(--text3);}
-.points{font-family:'Barlow Condensed',sans-serif;font-size:1.3rem;font-weight:700;color:var(--lime);letter-spacing:1px;}
+.points{font-family:'Barlow Condensed',sans-serif;font-size:1.3rem;font-weight:800;color:var(--lime);letter-spacing:0px;line-height:1;}
 .roi{font-family:'IBM Plex Mono',monospace;font-size:0.78rem;font-weight:500;}
 .roi.high{color:var(--green);}.roi.mid{color:var(--lime);}.roi.low{color:var(--text3);}
-.played{font-family:'IBM Plex Mono',monospace;font-size:0.78rem;color:var(--text2);text-align:center;}
+.played{font-family:'IBM Plex Mono',monospace;font-family:'IBM Plex Mono',monospace;font-size:0.66rem;color:var(--text3);text-align:center;}
 .error-msg{background:rgba(248,113,113,0.08);border:1px solid rgba(248,113,113,0.25);border-radius:4px;padding:14px 18px;color:#fca5a5;font-family:'IBM Plex Mono',monospace;font-size:0.8rem;margin:1rem 0;}
 
 /* ── PAGINATION ─── */
@@ -117,12 +118,12 @@ main{max-width:1440px;margin:0 auto;padding:1.5rem 2rem;}
 .jornada-banner{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:2rem;background:var(--bg2);border:1px solid var(--border2);border-left:3px solid var(--accent);border-radius:4px;padding:1rem 1.5rem;margin-bottom:1.5rem;position:relative;overflow:hidden;}
 .jornada-round{font-family:'Barlow Condensed',sans-serif;}
 .jornada-round .label{font-family:'IBM Plex Mono',monospace;font-size:0.58rem;color:var(--text3);letter-spacing:2px;text-transform:uppercase;margin-bottom:2px;}
-.jornada-round .num{font-size:3rem;font-weight:800;color:var(--accent);line-height:1;letter-spacing:2px;}
+.jornada-round .num{font-size:3rem;font-weight:800;color:var(--accent);line-height:1;letter-spacing:0px;}
 .jornada-round .sub{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;color:var(--text3);letter-spacing:1px;text-transform:uppercase;}
 .jornada-divider{width:1px;height:48px;background:var(--border2);}
 .jornada-kpis{display:flex;gap:2.5rem;}
 .jornada-kpi .label{font-family:'IBM Plex Mono',monospace;font-size:0.58rem;color:var(--text3);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:3px;}
-.jornada-kpi .val{font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;font-weight:700;color:var(--text);letter-spacing:1px;}
+.jornada-kpi .val{font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;font-weight:800;color:var(--text);letter-spacing:0px;line-height:1;}
 .jornada-kpi .val.highlight{color:var(--accent);}
 
 /* ── NOTICIAS ── */
@@ -138,7 +139,7 @@ main{max-width:1440px;margin:0 auto;padding:1.5rem 2rem;}
 .news-featured img{width:100%;height:200px;object-fit:cover;display:block;}
 .news-featured-overlay{position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,0.82));}
 .news-featured-tag{display:inline-block;background:var(--accent);color:#fff;font-family:'IBM Plex Mono',monospace;font-size:0.55rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 8px;border-radius:3px;margin-bottom:6px;}
-.news-featured-title{font-family:'Barlow Condensed',sans-serif;font-size:1.15rem;font-weight:700;color:#fff;line-height:1.25;}
+.news-featured-title{font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;font-weight:800;color:#fff;line-height:1.2;letter-spacing:0.2px;}
 .news-featured-meta{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;color:rgba(255,255,255,0.6);margin-top:5px;}
 .news-featured-noimg{display:block;text-decoration:none;padding:14px 16px;border-bottom:1px solid var(--border);background:var(--accent-dim);}
 .news-featured-noimg .news-featured-title{font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:700;color:var(--text);line-height:1.3;}
@@ -150,7 +151,7 @@ main{max-width:1440px;margin:0 auto;padding:1.5rem 2rem;}
 .news-item-thumb{width:64px;height:48px;object-fit:cover;border-radius:4px;flex-shrink:0;background:var(--bg3);}
 .news-item-thumb-placeholder{width:64px;height:48px;border-radius:4px;flex-shrink:0;background:var(--bg3);display:flex;align-items:center;justify-content:center;font-size:1.2rem;}
 .news-item-body{flex:1;min-width:0;}
-.news-item-title{font-size:0.82rem;font-weight:600;color:var(--text);line-height:1.35;margin-bottom:4px;}
+.news-item-title{font-family:'Barlow Condensed',sans-serif;font-size:0.92rem;font-weight:700;color:var(--text);line-height:1.3;margin-bottom:4px;letter-spacing:0.2px;}
 .news-item-meta{font-family:'IBM Plex Mono',monospace;font-size:0.58rem;color:var(--text3);display:flex;align-items:center;gap:6px;}
 .news-source-tag{display:inline-block;padding:2px 6px;border-radius:3px;font-size:0.55rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;}
 .src-jp{background:rgba(230,51,41,0.1);color:var(--accent);}
@@ -171,9 +172,9 @@ main{max-width:1440px;margin:0 auto;padding:1.5rem 2rem;}
 .rank-num{font-family:'IBM Plex Mono',monospace;font-size:0.7rem;color:var(--text3);width:16px;text-align:center;flex-shrink:0;}
 .rank-num.gold{color:var(--accent);}
 .rank-player-info{flex:1;min-width:0;}
-.rank-player-name{font-size:0.82rem;font-weight:500;color:var(--text);word-break:break-word;}
+.rank-player-name{font-family:'Barlow Condensed',sans-serif;font-size:0.88rem;font-weight:700;color:var(--text);text-transform:uppercase;letter-spacing:0.3px;word-break:break-word;}
 .rank-player-club{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;color:var(--text3);}
-.rank-val{font-family:'IBM Plex Mono',monospace;font-size:0.8rem;font-weight:500;flex-shrink:0;}
+.rank-val{font-family:'Barlow Condensed',sans-serif;font-size:0.95rem;font-weight:800;flex-shrink:0;letter-spacing:0px;line-height:1;}
 .rank-val.green{color:var(--green);}.rank-val.red{color:var(--red);}.rank-val.amber{color:var(--lime);}.rank-val.blue{color:var(--blue);}
 .rank-pos-dot{width:22px;height:22px;border-radius:2px;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-size:7px;font-weight:700;color:white;flex-shrink:0;clip-path:polygon(0 0,calc(100% - 3px) 0,100% 3px,100% 100%,3px 100%,0 calc(100% - 3px));}
 .rank-bar-bg{flex:1;background:var(--bg3);border-radius:1px;height:3px;overflow:hidden;max-width:50px;}
@@ -262,9 +263,9 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
 .s-rank.gold{color:var(--lime);font-weight:600;}
 .s-rank.silver{color:#94a3b8;}
 .s-rank.bronze{color:#cd7f32;}
-.s-name{font-size:0.88rem;font-weight:500;color:var(--text);padding-left:4px;word-break:break-word;line-height:1.3;}
-.s-pts{font-family:'Barlow Condensed',sans-serif;font-size:1.15rem;font-weight:700;color:var(--text);text-align:right;padding-right:8px;}
-.s-num{font-family:'IBM Plex Mono',monospace;font-size:0.78rem;color:var(--text2);text-align:right;padding-right:8px;}
+.s-name{font-family:'Barlow Condensed',sans-serif;font-size:0.92rem;font-weight:700;color:var(--text);padding-left:4px;word-break:break-word;line-height:1.3;text-transform:uppercase;letter-spacing:0.3px;}
+.s-pts{font-family:'Barlow Condensed',sans-serif;font-size:1.15rem;font-weight:800;color:var(--text);text-align:right;padding-right:8px;line-height:1;}
+.s-num{font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:var(--text2);text-align:right;padding-right:8px;}
 .s-diff{font-family:'IBM Plex Mono',monospace;font-size:0.78rem;font-weight:500;text-align:right;padding-right:8px;}
 .miequipo-layout{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:start;}
 @media(max-width:900px){.miequipo-layout{grid-template-columns:1fr;}}
@@ -291,7 +292,7 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
 .badge-warn{font-family:'IBM Plex Mono',monospace;font-size:6px;background:var(--lime);color:#000;border-radius:2px;padding:1px 4px;font-weight:600;}
 .team-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border-radius:4px;overflow:hidden;margin-bottom:1.2rem;}
 .ts-card{background:var(--bg2);padding:0.8rem 1rem;}
-.ts-label{font-family:'IBM Plex Mono',monospace;font-size:0.55rem;color:var(--text3);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:4px;}
+.ts-label{font-family:'IBM Plex Mono',monospace;font-size:0.54rem;color:var(--text3);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:4px;font-weight:500;}
 .ts-value{font-family:'Barlow Condensed',sans-serif;font-size:1.4rem;font-weight:700;color:var(--text);letter-spacing:1px;}
 .ts-sub{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;color:var(--text3);}
 .me-table{background:var(--bg2);border-radius:4px;overflow:hidden;border:1px solid var(--border);}
@@ -351,7 +352,7 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
 .team-form{display:flex;gap:3px;padding:8px 14px;border-top:1px solid var(--border);}
 .fixture-row{display:flex;align-items:center;gap:10px;padding:9px 14px;border-bottom:1px solid var(--border);}
 .fixture-row:last-child{border-bottom:none;}
-.fixture-teams{flex:1;font-size:0.85rem;font-weight:500;color:var(--text);}
+.fixture-teams{flex:1;font-family:'Barlow Condensed',sans-serif;font-size:0.92rem;font-weight:700;color:var(--text);text-transform:uppercase;letter-spacing:0.3px;}
 .fixture-score{font-family:'IBM Plex Mono',monospace;font-size:0.85rem;font-weight:700;color:var(--text);min-width:40px;text-align:center;}
 .fixture-date{font-family:'IBM Plex Mono',monospace;font-size:0.62rem;color:var(--text3);min-width:50px;text-align:right;}
 .fixture-status{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;padding:2px 6px;border-radius:3px;font-weight:600;}
@@ -388,6 +389,71 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
 .rec-sell{background:rgba(230,51,41,0.1);color:#e63329;}
 .rec-watch{background:rgba(29,111,206,0.1);color:#1d6fce;}
 .liga-loading{display:flex;align-items:center;justify-content:center;padding:60px;gap:12px;color:var(--text3);font-family:'IBM Plex Mono',monospace;font-size:0.8rem;}
+
+/* ── PANEL LATERAL JUGADOR ─────────────────────────────── */
+.jug-panel-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:200;backdrop-filter:blur(2px);}
+.jug-panel-overlay.open{display:flex;justify-content:flex-end;}
+.jug-panel{width:420px;max-width:95vw;height:100vh;overflow-y:auto;background:var(--bg);border-left:1px solid var(--border);display:flex;flex-direction:column;animation:slideIn 0.2s ease;}
+@keyframes slideIn{from{transform:translateX(100%)}to{transform:translateX(0)}}
+.jug-panel-close{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:var(--bg3);border-bottom:1px solid var(--border);}
+.jug-panel-close-btn{background:none;border:1px solid var(--border2);border-radius:3px;color:var(--text3);font-family:'IBM Plex Mono',monospace;font-size:0.68rem;padding:4px 10px;cursor:pointer;letter-spacing:1px;}
+.jug-panel-close-btn:hover{border-color:var(--accent);color:var(--accent);}
+.jug-panel-body{flex:1;overflow-y:auto;}
+.jp-header{padding:16px;border-bottom:1px solid var(--border);display:flex;gap:12px;align-items:center;}
+.jp-pos-badge{width:36px;height:36px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;font-weight:800;color:#fff;flex-shrink:0;}
+.jp-name{font-family:'Barlow Condensed',sans-serif;font-size:1.3rem;font-weight:800;text-transform:uppercase;letter-spacing:0.3px;line-height:1.1;}
+.jp-club{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;color:var(--text3);margin-top:3px;}
+.jp-kpis{display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:1px solid var(--border);}
+.jp-kpi{padding:12px 14px;border-right:1px solid var(--border);}
+.jp-kpi:last-child{border-right:none;}
+.jp-kpi-lbl{font-family:'IBM Plex Mono',monospace;font-size:0.52rem;color:var(--text3);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:4px;}
+.jp-kpi-val{font-family:'Barlow Condensed',sans-serif;font-size:1.5rem;font-weight:800;line-height:1;}
+.jp-section{padding:12px 16px;border-bottom:1px solid var(--border);}
+.jp-section-title{font-family:'IBM Plex Mono',monospace;font-size:0.52rem;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--text3);margin-bottom:10px;}
+.jp-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;}
+.jp-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:6px;}
+.jp-stat{background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:8px 10px;text-align:center;}
+.jp-stat-val{font-family:'Barlow Condensed',sans-serif;font-size:1.3rem;font-weight:800;line-height:1;}
+.jp-stat-lbl{font-family:'IBM Plex Mono',monospace;font-size:0.5rem;color:var(--text3);text-transform:uppercase;letter-spacing:0.5px;margin-top:3px;}
+.jp-jform{display:flex;gap:6px;align-items:center;flex-wrap:wrap;}
+.jp-jf-val{font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:800;min-width:28px;text-align:center;padding:4px 6px;border-radius:3px;background:var(--bg2);border:1px solid var(--border);}
+.jp-add-compare{width:100%;padding:10px;background:var(--bg2);border:1px solid var(--border2);border-radius:4px;font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);cursor:pointer;transition:all 0.15s;margin-top:8px;}
+.jp-add-compare:hover{border-color:var(--accent);color:var(--accent);}
+.jp-add-compare.added{background:var(--accent-dim);border-color:var(--accent);color:var(--accent);}
+
+/* ── COMPARADOR ─────────────────────────────────────────── */
+.compare-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:150;background:var(--bg3);border-top:2px solid var(--accent);padding:10px 20px;align-items:center;gap:12px;flex-wrap:wrap;}
+.compare-bar.visible{display:flex;}
+.compare-slot{display:flex;align-items:center;gap:6px;background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:5px 10px;font-family:'Barlow Condensed',sans-serif;font-size:0.8rem;font-weight:700;text-transform:uppercase;}
+.compare-slot-rm{background:none;border:none;color:var(--text3);cursor:pointer;font-size:0.9rem;padding:0 2px;line-height:1;}
+.compare-slot-rm:hover{color:var(--red);}
+.compare-btn{font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:7px 16px;border-radius:3px;cursor:pointer;transition:all 0.15s;}
+.compare-btn.run{background:var(--accent);color:#fff;border:none;}
+.compare-btn.clear{background:transparent;border:1px solid var(--border2);color:var(--text3);}
+.compare-lbl{font-family:'IBM Plex Mono',monospace;font-size:0.62rem;color:var(--text3);letter-spacing:1px;text-transform:uppercase;}
+
+/* ── MODAL COMPARACIÓN ──────────────────────────────────── */
+.compare-modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:300;backdrop-filter:blur(3px);overflow-y:auto;padding:20px;}
+.compare-modal-overlay.open{display:flex;align-items:flex-start;justify-content:center;}
+.compare-modal{background:var(--bg);border:1px solid var(--border);border-radius:8px;width:100%;max-width:900px;overflow:hidden;}
+.compare-modal-header{padding:14px 20px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;background:var(--bg3);}
+.compare-modal-title{font-family:'Barlow Condensed',sans-serif;font-size:0.8rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text3);}
+.compare-modal-close{background:none;border:1px solid var(--border2);border-radius:3px;color:var(--text3);font-family:'IBM Plex Mono',monospace;font-size:0.68rem;padding:4px 10px;cursor:pointer;}
+.compare-modal-body{padding:20px;overflow-x:auto;}
+.compare-table{width:100%;border-collapse:collapse;}
+.compare-table th{font-family:'IBM Plex Mono',monospace;font-size:0.52rem;color:var(--text3);text-transform:uppercase;letter-spacing:1.5px;padding:8px 12px;border-bottom:1px solid var(--border);text-align:left;background:var(--bg3);}
+.compare-table td{padding:8px 12px;border-bottom:1px solid var(--border);font-family:'Barlow Condensed',sans-serif;font-size:0.95rem;font-weight:700;}
+.compare-table .row-label{font-family:'IBM Plex Mono',monospace;font-size:0.58rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px;font-weight:400;}
+.compare-table .best{color:var(--c-top);}
+.compare-table .worst{color:var(--c-low);}
+
+/* ── LISTA COMPLETA (sin paginación) ─────────────────────── */
+.full-list-wrap{max-height:65vh;overflow-y:auto;border:1px solid var(--border);border-radius:4px;}
+.full-list-wrap::-webkit-scrollbar{width:4px;}
+.full-list-wrap::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px;}
+.list-toggle-btn{background:var(--bg2);border:1px solid var(--border2);border-radius:3px;padding:6px 14px;font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);cursor:pointer;transition:all 0.15s;}
+.list-toggle-btn:hover{border-color:var(--accent);color:var(--accent);}
+
 </style>
 </head>
 <body class="liga-tomaquet">
@@ -497,36 +563,53 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
 <div id="jugadores" class="section">
   <div id="jugadores-loading" class="loading"><div class="spinner"></div><span style="font-family:'IBM Plex Mono',monospace;font-size:0.72rem;letter-spacing:2px">LOADING PLAYERS...</span></div>
   <div id="jugadores-content" style="display:none">
-    <div class="stats-bar" id="statsBar"></div>
-    <div class="filters">
-      <input type="text" class="search-box" id="searchInput" placeholder="/ search player..." oninput="filterPlayers()">
-      <button class="filter-btn active" onclick="filterPos('',this)">ALL</button>
-      <button class="filter-btn" onclick="filterPos('PT',this)">PT</button>
-      <button class="filter-btn" onclick="filterPos('DF',this)">DF</button>
-      <button class="filter-btn" onclick="filterPos('MC',this)">MC</button>
-      <button class="filter-btn" onclick="filterPos('MD',this)">MD</button>
-      <button class="filter-btn" onclick="filterPos('DL',this)">DL</button>
-      <select class="sort-select" id="sortSelect" onchange="sortPlayers()">
-        <option value="points_desc">↓ PUNTOS</option>
-        <option value="points_asc">↑ PUNTOS</option>
-        <option value="price_desc">↓ VALOR</option>
-        <option value="price_asc">↑ VALOR</option>
-        <option value="roi_desc">↓ ROI</option>
-        <option value="trend_desc">↓ TENDENCIA</option>
-      </select>
-    </div>
-    <div class="section-title">Todos los jugadores <span class="player-count" id="playerCount"></span></div>
-    <div class="table-wrap">
-      <div class="table-header">
-        <div class="th">#</div><div class="th">JUGADOR</div><div class="th">POS</div><div class="th">CLUB</div>
-        <div class="th" onclick="setSortAndRender('points_desc')">PTS ↕</div>
-        <div class="th" onclick="setSortAndRender('price_desc')">VALOR ↕</div>
-        <div class="th" onclick="setSortAndRender('roi_desc')">ROI ↕</div>
-        <div class="th">LOCAL</div><div class="th">VISIT.</div>
+
+    <!-- CONTROLES -->
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:1rem;flex-wrap:wrap;">
+      <input type="text" class="search-box" id="searchInput" placeholder="/ buscar jugador o club..." oninput="filterPlayers()" style="flex:1;min-width:200px;max-width:340px;">
+      <div style="display:flex;gap:4px;">
+        <button class="filter-btn active" onclick="filterPos('',this)">ALL</button>
+        <button class="filter-btn" onclick="filterPos('PT',this)">PT</button>
+        <button class="filter-btn" onclick="filterPos('DF',this)">DF</button>
+        <button class="filter-btn" onclick="filterPos('MC',this)">MC</button>
+        <button class="filter-btn" onclick="filterPos('DL',this)">DL</button>
       </div>
-      <div id="playersList"></div>
+      <select class="sort-select" id="sortSelect" onchange="sortPlayers()">
+        <optgroup label="— Biwenger —">
+          <option value="points_desc">↓ Puntos Biwenger</option>
+          <option value="price_desc">↓ Valor mercado</option>
+          <option value="roi_desc">↓ ROI</option>
+          <option value="trend_desc">↓ Tendencia</option>
+        </optgroup>
+        <optgroup label="— Estadísticas reales —">
+          <option value="sf_rating_desc">↓ Rating Sofascore</option>
+          <option value="sf_goals_desc">↓ Goles</option>
+          <option value="sf_assists_desc">↓ Asistencias</option>
+          <option value="sf_minutes_desc">↓ Minutos</option>
+          <option value="sf_saves_desc">↓ Paradas</option>
+        </optgroup>
+      </select>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:0.66rem;color:var(--text3);margin-left:auto;" id="playerCount"></span>
     </div>
-    <div class="pagination" id="pagination"></div>
+
+    <!-- TABLA COMPLETA -->
+    <div class="table-wrap" style="overflow-x:auto;">
+      <div class="table-header" style="display:grid;grid-template-columns:28px 24px minmax(160px,1fr) 70px 60px 60px 54px 54px 54px 54px;gap:0;min-width:640px;position:sticky;top:48px;z-index:10;background:var(--bg3);">
+        <div class="th">#</div>
+        <div class="th"></div>
+        <div class="th">JUGADOR</div>
+        <div class="th" onclick="setSortAndRender('points_desc')" style="cursor:pointer;text-align:right">PTS↕</div>
+        <div class="th" onclick="setSortAndRender('price_desc')" style="cursor:pointer;text-align:right">VALOR↕</div>
+        <div class="th" onclick="setSortAndRender('sf_rating_desc')" style="cursor:pointer;text-align:center">RAT↕</div>
+        <div class="th" onclick="setSortAndRender('sf_goals_desc')" style="cursor:pointer;text-align:center">GOL↕</div>
+        <div class="th" onclick="setSortAndRender('sf_assists_desc')" style="cursor:pointer;text-align:center">AST↕</div>
+        <div class="th" style="text-align:center">AM</div>
+        <div class="th" style="text-align:center">TJ</div>
+      </div>
+      <div class="full-list-wrap">
+        <div id="playersList"></div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -637,11 +720,12 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
     <div class="mch" style="color:var(--border2);font-size:.42rem">Extra<br><span style="opacity:.7">próx.</span></div>
   </div>
 
-  <!-- Lista jugadores (con scroll horizontal si necesario) -->
+  <!-- Lista jugadores completa con scroll -->
   <div style="overflow-x:auto">
-    <div id="mv3PlayerList"></div>
+    <div class="full-list-wrap" style="max-height:70vh;">
+      <div id="mv3PlayerList"></div>
+    </div>
   </div>
-  <div class="mv3-pager" id="mv3Pager"></div>
 </div>
 
 <div id="miequipo" class="section">
@@ -1097,6 +1181,7 @@ const PAGE_SIZE=50;
 let cf='4-3-3',lineup={},marketPlayers=[],currentSlot=null;
 let myTeamData=null; // datos reales de mi equipo desde Biwenger
 
+document.addEventListener('keydown',e=>{ if(e.key==='Escape'){ closeJugPanelDirect(); closeCompareModalDirect(); }});
 document.addEventListener('DOMContentLoaded',()=>{
   renderGeneral(); renderGrupos(); autoPlace(); renderMiEquipo();
   mv3InitFromAdvancedStats(); // fallback inmediato con datos estáticos
@@ -1124,6 +1209,8 @@ async function loadPlayers(){
     const when=data.updatedAt?new Date(data.updatedAt).toLocaleDateString('es-ES'):'?';
     document.getElementById('statusText').textContent=allPlayers.length+' jugadores · actualizado '+when;
     renderStats(); renderRankings(allPlayers); initRankings();
+    // Cargar estadísticas Sofascore
+    if(data.sofascore) mergeSofascoreIntoPlayers(data.sofascore);
 
     // Cargar mi equipo real desde Biwenger
     if(data.myTeam && data.myTeam.players && data.myTeam.players.length){
@@ -1160,7 +1247,7 @@ async function loadPlayers(){
 }
 
 function mapPosition(pos){const m={1:'PT',2:'DF',3:'MC',4:'DL',5:'MD'};return m[pos]||pos||'?';}
-function renderStats(){
+function renderStats(){ if(!document.getElementById('statsBar')) return; // elemento eliminado
   const t=allPlayers.length;
   const avg=(allPlayers.reduce((s,p)=>s+(p.pts||0),0)/t).toFixed(0);
   const mx=Math.max(...allPlayers.map(p=>p.pts||0));
@@ -1171,22 +1258,86 @@ function filterPlayers(){currentPage=1;applyFilters();}
 function applyFilters(){const q=document.getElementById('searchInput').value.toLowerCase();filteredPlayers=allPlayers.filter(p=>(!currentPos||p.position.includes(currentPos))&&(!q||p.name.toLowerCase().includes(q)||(p.club||'').toLowerCase().includes(q)));sortAndRender();}
 function setSortAndRender(val){document.getElementById('sortSelect').value=val;currentSort=val;sortAndRender();}
 function sortPlayers(){currentSort=document.getElementById('sortSelect').value;currentPage=1;sortAndRender();}
-function sortAndRender(){const[key,dir]=currentSort.split('_');filteredPlayers.sort((a,b)=>{const va=key==='roi'?a.roi:key==='trend'?a.trend:key==='price'?a.price:a.pts||0;const vb=key==='roi'?b.roi:key==='trend'?b.trend:key==='price'?b.price:b.pts||0;return dir==='desc'?vb-va:va-vb;});renderPlayers();}
-function renderPlayers(){
-  document.getElementById('playerCount').textContent=filteredPlayers.length+' jugadores';
-  const start=(currentPage-1)*PAGE_SIZE;
-  document.getElementById('playersList').innerHTML=filteredPlayers.slice(start,start+PAGE_SIZE).map((p,i)=>{const r=start+i+1,rc=r===1?'rank-1':r===2?'rank-2':r===3?'rank-3':'';return '<div class="player-row"><div class="rank '+rc+'">'+r+'</div><div><div class="player-name">'+p.name+'</div><div class="player-club">'+(p.club||'—')+'</div></div><div>'+posBadge(p.position)+'</div><div class="player-club" style="font-size:0.85rem">'+(p.club||'—')+'</div><div class="points">'+(p.pts||'—')+'</div><div><div class="price">'+fmt(p.price)+'</div><div style="margin-top:2px">'+fmtTrend(p.trend)+'</div></div><div class="roi '+roiClass(p.roi)+'">'+(p.roi>0?p.roi+'x':'—')+'</div><div class="played">'+(p.playedHome||'—')+'</div><div class="played">'+(p.playedAway||'—')+'</div></div>';}).join('')||'<div style="padding:40px;text-align:center;color:var(--text3)">Sin jugadores</div>';
-  renderPagination(filteredPlayers.length);
+// sofascore data store
+let sofascoreStats = {};
+
+function normName(n){ return (n||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]/g,' ').trim(); }
+
+function mergeSofascoreIntoPlayers(sfData){
+  if(!sfData || !sfData.players) return;
+  sfData.players.forEach(s=>{
+    sofascoreStats[normName(s.name)] = s;
+    if(s.shortName) sofascoreStats[normName(s.shortName)] = s;
+  });
+  allPlayers.forEach(p=>{
+    const sf = sofascoreStats[normName(p.name)] || sofascoreStats[normName(p.name.split(' ').slice(-1)[0])];
+    if(sf) p.sf = sf;
+  });
+  console.log('\u{1F4CA} Sofascore: '+Object.keys(sofascoreStats).length+' entradas cargadas');
 }
+
+function getSfVal(p, key){ return p.sf ? (p.sf[key] ?? null) : null; }
+
+function sortAndRender(){
+  const val = currentSort;
+  filteredPlayers.sort((a,b)=>{
+    let va, vb;
+    if(val.startsWith('sf_')){
+      const k = val.replace('sf_','').replace('_desc','').replace('_asc','');
+      va = getSfVal(a,k) ?? -Infinity;
+      vb = getSfVal(b,k) ?? -Infinity;
+    } else {
+      const [key] = val.split('_');
+      va = key==='roi'?a.roi:key==='trend'?a.trend:key==='price'?a.price:a.pts||0;
+      vb = key==='roi'?b.roi:key==='trend'?b.trend:key==='price'?b.price:b.pts||0;
+    }
+    return val.endsWith('asc') ? va-vb : vb-va;
+  });
+  renderPlayers();
+}
+
+let selectedPlayerId = null;
+
+function renderPlayers(){
+  document.getElementById('playerCount').textContent = filteredPlayers.length+' jugadores';
+  const PosC = {PT:'#6366f1',DF:'#16a34a',MC:'#d97706',DL:'#e63329',MD:'#8b5cf6'};
+  document.getElementById('playersList').innerHTML = filteredPlayers.map((p,i)=>{
+    const r = i+1;
+    const rc = r===1?'rank-1':r===2?'rank-2':r===3?'rank-3':'';
+    const posCol = PosC[p.position.split('/')[0]] || '#555';
+    const sf = p.sf;
+    const rating = sf?.rating ? sf.rating.toFixed(1) : '\u2014';
+    const ratingCol = sf?.rating ? (sf.rating>=7.5?'color:var(--green)':sf.rating>=6.5?'color:var(--text2)':'color:var(--red)') : 'color:var(--text3)';
+    const goles = sf?.goals ?? '\u2014';
+    const asis  = sf?.assists ?? '\u2014';
+    const am    = sf?.minutesPerGoal ? sf.minutesPerGoal+'\u2032' : '\u2014';
+    const tj    = sf ? '<span style="color:#f59e0b">'+(sf.yellowCards||0)+'</span>'+(sf.redCards?'<span style="color:var(--red);margin-left:2px">'+sf.redCards+'</span>':'') : '\u2014';
+    return '<div class="player-row" style="cursor:pointer" onclick="openJugPanel(filteredPlayers['+i+'])">'+
+      '<div class="rank '+rc+'" style="font-size:0.7rem">'+r+'</div>'+
+      '<div style="width:22px;height:22px;border-radius:3px;background:'+posCol+';display:flex;align-items:center;justify-content:center;font-family:\'Barlow Condensed\',sans-serif;font-size:0.56rem;font-weight:800;color:#fff;flex-shrink:0">'+p.position.split('/')[0]+'</div>'+
+      '<div style="min-width:0"><div class="player-name" style="font-size:0.82rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">'+p.name+'</div><div class="player-club">'+(p.club||'\u2014')+'</div></div>'+
+      '<div style="text-align:right;font-family:\'Barlow Condensed\',sans-serif;font-size:1.1rem;font-weight:700;color:var(--lime)">'+(p.pts||'\u2014')+'</div>'+
+      '<div style="text-align:right;font-family:\'IBM Plex Mono\',monospace;font-size:0.66rem;color:var(--text3)">'+fmt(p.price)+'</div>'+
+      '<div style="text-align:center;font-family:\'IBM Plex Mono\',monospace;font-family:'IBM Plex Mono',monospace;font-size:0.72rem;font-weight:500;'+ratingCol+'">'+rating+'</div>'+
+      '<div style="text-align:center;font-family:\'Barlow Condensed\',sans-serif;font-size:0.88rem;font-weight:600">'+goles+'</div>'+
+      '<div style="text-align:center;font-family:\'Barlow Condensed\',sans-serif;font-size:0.88rem;font-weight:600">'+asis+'</div>'+
+      '<div style="text-align:center;font-family:\'IBM Plex Mono\',monospace;font-size:0.66rem;color:var(--text3)">'+am+'</div>'+
+      '<div style="text-align:center;font-family:\'IBM Plex Mono\',monospace;font-size:0.7rem">'+tj+'</div>'+
+    '</div>';
+  }).join('') || '<div style="padding:40px;text-align:center;color:var(--text3)">Sin jugadores</div>';
+  // sin paginación — lista completa
+}
+
+function selectJugador(p){ openJugPanel(p); }
 function renderPagination(total){
   const tp=Math.ceil(total/PAGE_SIZE);
   if(tp<=1){document.getElementById('pagination').innerHTML='';return;}
-  let h=currentPage>1?`<button class="page-btn" onclick="goPage(${currentPage-1})">←</button>`:'';
-  for(let p=1;p<=tp;p++){if(p===1||p===tp||Math.abs(p-currentPage)<=2)h+=`<button class="page-btn ${p===currentPage?'active':''}" onclick="goPage(${p})">${p}</button>`;else if(Math.abs(p-currentPage)===3)h+='<span class="page-info">...</span>';}
-  if(currentPage<tp)h+=`<button class="page-btn" onclick="goPage(${currentPage+1})">→</button>`;
+  let h=currentPage>1?'<button class="page-btn" onclick="goPage('+(currentPage-1)+'">\u2190</button>':'';
+  for(let p=1;p<=tp;p++){if(p===1||p===tp||Math.abs(p-currentPage)<=2)h+='<button class="page-btn '+(p===currentPage?'active':'')+'" onclick="goPage('+p+')">'+p+'</button>';else if(Math.abs(p-currentPage)===3)h+='<span class="page-info">...</span>';}
+  if(currentPage<tp)h+='<button class="page-btn" onclick="goPage('+(currentPage+1)+'">\u2192</button>';
   document.getElementById('pagination').innerHTML=h;
 }
-function goPage(p){currentPage=p;renderPlayers();window.scrollTo({top:0,behavior:'smooth'});}
+function goPage(p){currentPage=p;renderPlayers();}
 
 // ══════════════════════════════════════════
 // ESTUDIO DE MERCADO v3
@@ -1303,10 +1454,8 @@ function mv3Render(list){
   const container=document.getElementById('mv3PlayerList');
   if(!container)return;
   if(!list.length){container.innerHTML='<div style="padding:40px;text-align:center;font-family:\'IBM Plex Mono\',monospace;font-size:0.72rem;color:var(--text3)">Sin jugadores con esos filtros</div>';mv3RenderPager(0);return;}
-  const start=(mv3Page-1)*MV3_PAGE;
-  const page=list.slice(start,start+MV3_PAGE);
-  container.innerHTML=page.map((p,i)=>{
-    const rank=start+i+1;
+  container.innerHTML=list.map((p,i)=>{
+    const rank=i+1;
     const isG=p.inGuitlla;
     const posColor=MV3_POS_COLORS[p.pos]||'#888';
     const ptsPct=mv3PctRank(mv3Pcts.pts,p.pts);
@@ -1323,7 +1472,7 @@ function mv3Render(list){
     const mV=p.ptsV>0?p.ptsV:'—';
     const mLavg=p.ptsL>0?(p.ptsL/13).toFixed(1):'—';
     const mVavg=p.ptsV>0?(p.ptsV/13).toFixed(1):'—';
-    return `<div class="mpc${isG?' guitlla':''}">
+    return `<div class="mpc${isG?' guitlla':''}" style="cursor:pointer" onclick="openJugPanel(mv3Players.find(x=>x.name==='${p.name}'))">
       <div class="mpc-row">
         <div class="mpc-rk${rank<=3?' top3':''}">${rank}</div>
         <div class="mpc-pos" style="background:${posColor}">${p.pos}</div>
@@ -1373,21 +1522,10 @@ function mv3Render(list){
       </div>
     </div>`;
   }).join('');
-  mv3RenderPager(list.length);
+
 }
 
-function mv3RenderPager(total){
-  const tp=Math.ceil(total/MV3_PAGE);
-  const el=document.getElementById('mv3Pager');
-  if(!el)return;
-  if(tp<=1){el.innerHTML='';return;}
-  let h='';
-  if(mv3Page>1)h+=`<button class="mv3-pbtn" onclick="mv3GoPage(${mv3Page-1})">← Ant.</button>`;
-  h+=`<span class="mv3-pinfo">Pág. ${mv3Page} / ${tp} · ${total} jugadores</span>`;
-  if(mv3Page<tp)h+=`<button class="mv3-pbtn" onclick="mv3GoPage(${mv3Page+1})">Sig. →</button>`;
-  el.innerHTML=h;
-}
-function mv3GoPage(p){mv3Page=p;mv3Render(mv3Sorted);window.scrollTo({top:0,behavior:'smooth'});}
+function mv3RenderPager(total){} // sin paginación — lista completa con scroll
 
 // Legacy stub — mantiene compatibilidad por si se llama desde algún lugar
 function closeMercadoFab(){}
@@ -1407,7 +1545,7 @@ function renderGeneral(){
     const vsTxt=vsSig===null?'—':'+'+vsSig;
     const vsColor=vsSig===null?'color:var(--text3)':vsSig<=5?'color:var(--red)':'color:var(--green)';
     const rowBg=isMe?'background:rgba(163,230,53,0.04);border-left:2px solid var(--accent)':'';
-    return `<div class="standings-grid standings-row" style="${rowBg}"><div class="s-rank ${rankCls}">${t.pos}</div><div class="s-name" style="${isMe?'color:var(--accent);font-weight:600':''}">${t.name}</div><div class="s-pts">${t.pts}</div><div class="s-num">${t.value}M€</div><div class="s-num">${t.players}</div><div class="s-num">${t.ptsPer}</div><div class="s-diff" style="${diffColor}">${diffTxt}</div><div class="s-diff" style="${vsColor}">${vsTxt}</div></div>`;
+    return `<div class="standings-grid standings-row" style="${rowBg}"><div class="s-rank ${rankCls}">${t.pos}</div><div class="s-name" style="${isMe?'color:var(--accent);font-weight:700':''}">${t.name}</div><div class="s-pts">${t.pts}</div><div class="s-num">${t.value}M€</div><div class="s-num">${t.players}</div><div class="s-num">${t.ptsPer}</div><div class="s-diff" style="${diffColor}">${diffTxt}</div><div class="s-diff" style="${vsColor}">${vsTxt}</div></div>`;
   }).join('');
 }
 
@@ -1423,7 +1561,7 @@ function renderGrupos(){
     const tbHtml=g.tiebreaker?`<div style="padding:10px 14px;font-family:'IBM Plex Mono',monospace;font-size:0.65rem;color:var(--text3);border-top:1px solid var(--border);line-height:1.6;background:var(--bg3)"><span style="color:var(--accent)">// DESEMPATE</span> ${g.tiebreaker}</div>`:'';
     return `<div style="margin-bottom:1.5rem"><div class="section-title">${g.name}</div><div class="table-wrap"><div style="display:grid;grid-template-columns:32px 2fr 55px 80px 60px 60px 70px;padding:9px 14px;background:var(--bg3);border-bottom:1px solid var(--border2)"><div class="th">#</div><div class="th">EQUIPO</div><div class="th">PTS</div><div class="th">RECORD</div><div class="th">GF</div><div class="th">GC</div><div class="th">DG</div></div>${rows}${tbHtml}</div></div>`;
   }).join('');
-  const qfHtml=`<div style="margin-top:0.5rem"><div class="section-title">Cuartos de final</div><div class="table-wrap">${getQuarterfinals().map(cf=>{const isGuitlla=cf.home.includes('Guitlla')||cf.away.includes('Guitlla');return `<div class="player-row" style="grid-template-columns:60px 1fr 40px 1fr${isGuitlla?';background:rgba(163,230,53,0.04)':''}"><div style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;color:var(--accent);font-weight:600">${cf.id}</div><div><div style="font-size:0.88rem;font-weight:600;${cf.home.includes('Guitlla')?'color:var(--lime)':''}">${cf.home}</div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.6rem;color:var(--text3)">${cf.homeRef}</div></div><div style="font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;color:var(--text3);text-align:center">VS</div><div><div style="font-size:0.88rem;font-weight:600;${cf.away.includes('Guitlla')?'color:var(--lime)':''}">${cf.away}</div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.6rem;color:var(--text3)">${cf.awayRef}</div></div></div>`;}).join('')}</div></div>`;
+  const qfHtml=`<div style="margin-top:0.5rem"><div class="section-title">Cuartos de final</div><div class="table-wrap">${getQuarterfinals().map(cf=>{const isGuitlla=cf.home.includes('Guitlla')||cf.away.includes('Guitlla');return `<div class="player-row" style="grid-template-columns:60px 1fr 40px 1fr${isGuitlla?';background:rgba(163,230,53,0.04)':''}"><div style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;color:var(--accent);font-weight:600">${cf.id}</div><div><div style="font-family:'Barlow Condensed',sans-serif;font-size:0.95rem;font-weight:700;text-transform:uppercase;letter-spacing:0.3px;${cf.home.includes('Guitlla')?'color:var(--lime)':''}">${cf.home}</div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.6rem;color:var(--text3)">${cf.homeRef}</div></div><div style="font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;color:var(--text3);text-align:center">VS</div><div><div style="font-size:0.88rem;font-weight:600;${cf.away.includes('Guitlla')?'color:var(--lime)':''}">${cf.away}</div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.6rem;color:var(--text3)">${cf.awayRef}</div></div></div>`;}).join('')}</div></div>`;
   document.getElementById('gruposList').innerHTML=groupsHtml+qfHtml;
 }
 
@@ -1472,7 +1610,7 @@ function renderMeTable(){
     const tc=p.trend>0?'color:var(--green)':p.trend<0?'color:var(--red)':'color:var(--text3)';
     const ts=p.trend>0?'+'+fmt(p.trend):p.trend<0?fmt(p.trend):'—';
     const badges=getPlayerBadges(ep);
-    return `<div class="me-row"><div class="me-pos" style="background:${PC[p.position.split('/')[0]]||'#666'};font-size:${p.position.includes('/')?'6px':'8px'}">${p.position}</div><div><div style="font-size:0.84rem;font-weight:500;word-break:break-word;line-height:1.3">${p.name}</div><div style="font-size:0.69rem;color:var(--text3)">${p.club}</div></div><div style="font-size:0.8rem;font-weight:600">${fmt(p.price)}</div><div style="${tc};font-size:0.76rem;font-weight:600">${ts}</div><div style="font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;color:var(--accent)">${p.pts}</div><div style="font-size:0.78rem;color:var(--text2)">${media}</div><div>${renderBadges(badges)}</div></div>`;
+    return `<div class="me-row"><div class="me-pos" style="background:${PC[p.position.split('/')[0]]||'#666'};font-size:${p.position.includes('/')?'6px':'8px'}">${p.position}</div><div><div style="font-family:'Barlow Condensed',sans-serif;font-size:0.9rem;font-weight:700;text-transform:uppercase;letter-spacing:0.3px;line-height:1.2">${p.name}</div><div style="font-family:'IBM Plex Mono',monospace;font-size:0.58rem;color:var(--text3)">${p.club}</div></div><div style="font-size:0.8rem;font-weight:600">${fmt(p.price)}</div><div style="${tc};font-size:0.76rem;font-weight:600">${ts}</div><div style="font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;font-weight:800;color:var(--accent);line-height:1">${p.pts}</div><div style="font-size:0.78rem;color:var(--text2)">${media}</div><div>${renderBadges(badges)}</div></div>`;
   }).join('');
 }
 
@@ -1533,7 +1671,7 @@ function renderTablaLiga(){
 function renderProximaJornada(){
   const matches=ligaData.nextMatches||[];
   if(!matches.length){document.getElementById('proximaJornada').innerHTML='<div style="padding:14px;color:var(--text3);font-size:0.8rem">No hay partidos programados</div>';return;}
-  document.getElementById('proximaJornada').innerHTML=matches.map(m=>{const date=new Date(m.date);const dateStr=date.toLocaleDateString('es-ES',{weekday:'short',day:'numeric',month:'short'});const timeStr=date.toLocaleTimeString('es-ES',{hour:'2-digit',minute:'2-digit'});return`<div class="fixture-row"><img class="crest-sm" src="${m.home.crest}" onerror="this.style.display='none'"><div class="fixture-teams"><span style="font-weight:600">${m.home.short||m.home.name}</span><span style="color:var(--text3);font-size:0.75rem;margin:0 4px">vs</span>${m.away.short||m.away.name}</div><img class="crest-sm" src="${m.away.crest}" onerror="this.style.display='none'"><div class="fixture-date">${dateStr}<br>${timeStr}</div></div>`;}).join('');
+  document.getElementById('proximaJornada').innerHTML=matches.map(m=>{const date=new Date(m.date);const dateStr=date.toLocaleDateString('es-ES',{weekday:'short',day:'numeric',month:'short'});const timeStr=date.toLocaleTimeString('es-ES',{hour:'2-digit',minute:'2-digit'});return`<div class="fixture-row"><img class="crest-sm" src="${m.home.crest}" onerror="this.style.display='none'"><div class="fixture-teams"><span style="color:var(--accent)">${m.home.short||m.home.name}</span><span style="color:var(--text3);font-size:0.75rem;margin:0 4px">vs</span>${m.away.short||m.away.name}</div><img class="crest-sm" src="${m.away.crest}" onerror="this.style.display='none'"><div class="fixture-date">${dateStr}<br>${timeStr}</div></div>`;}).join('');
 }
 function renderUltimosResultados(){
   const last=ligaData.recentResults||[];
@@ -1552,7 +1690,267 @@ function renderRecomendaciones(){
   if(!recs.length){document.getElementById('recomendaciones').innerHTML='<div style="padding:16px;color:var(--text3);font-size:0.8rem;grid-column:1/-1">No hay recomendaciones destacadas esta jornada.</div>';return;}
   document.getElementById('recomendaciones').innerHTML=recs.slice(0,8).map(r=>`<div class="rec-card"><div class="rec-icon">${r.icon}</div><div><div class="rec-title">${r.title}</div><div class="rec-body">${r.body}</div><span class="rec-badge ${r.cls}">${r.badge}</span></div></div>`).join('');
 }
+
+// ══════════════════════════════════════════════════════════════════
+// PANEL LATERAL JUGADOR + COMPARADOR
+// ══════════════════════════════════════════════════════════════════
+
+const PC_COLORS = {PT:'#6366f1',DF:'#16a34a',MC:'#d97706',DL:'#e63329',MD:'#8b5cf6'};
+let compareList = []; // máx 4 jugadores
+let currentPanelPlayer = null;
+
+// ── Abrir/cerrar panel ─────────────────────────────────────────────
+function openJugPanel(p){
+  currentPanelPlayer = p;
+  document.getElementById('jugPanelOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  renderJugPanel(p);
+}
+function closeJugPanel(e){
+  if(e && e.target !== document.getElementById('jugPanelOverlay')) return;
+  closeJugPanelDirect();
+}
+function closeJugPanelDirect(){
+  document.getElementById('jugPanelOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// ── Renderizar ficha completa ──────────────────────────────────────
+function renderJugPanel(p){
+  const sf = p.sf || sofascoreStats[normName(p.name)];
+  const pos = (p.position||p.pos||'').split('/')[0];
+  const col = PC_COLORS[pos] || '#555';
+  const inCompare = compareList.some(x=>(x.id||x.name)===(p.id||p.name));
+
+  // KPIs principales
+  const pj = sf ? sf.appearances : (p.playedHome||0)+(p.playedAway||0)||'—';
+  const media = p.media ? p.media.toFixed(1) : (pj&&pj!=='—'&&p.pts ? (p.pts/pj).toFixed(1) : '—');
+
+  // Jornadas
+  const jFormHtml = (p.jForm||[]).length ? (p.jForm||[]).map(v=>{
+    if(v===null||v===undefined) return '<div class="jp-jf-val" style="color:var(--text3)">—</div>';
+    const col2 = v<0?'var(--c-low)':v===0?'var(--text3)':v<6?'var(--c-mid)':v<10?'var(--c-good)':'var(--c-top)';
+    return `<div class="jp-jf-val" style="color:${col2};border-color:${col2}20">${v}</div>`;
+  }).join('') : '<span style="color:var(--text3);font-size:0.7rem">Sin datos</span>';
+
+  // Tendencia
+  const trend = p.trend||p.priceIncrement||0;
+  const trendHtml = trend>0?`<span style="color:var(--c-good)">▲ +${fmt(trend)}</span>`:trend<0?`<span style="color:var(--c-low)">▼ ${fmt(trend)}</span>`:'<span style="color:var(--text3)">—</span>';
+
+  // Bloque Sofascore
+  let sfHtml = '';
+  if(sf){
+    const rat = sf.rating ? sf.rating.toFixed(1) : '—';
+    const ratCol = sf.rating ? (sf.rating>=7.5?'var(--c-good)':sf.rating>=6.5?'var(--text)':'var(--c-low)') : 'var(--text3)';
+    const mpg = sf.minutesPerGoal ? sf.minutesPerGoal+"'" : '—';
+    const subs = (sf.appearances||0)-(sf.started||0);
+
+    sfHtml = `
+    <div class="jp-section">
+      <div class="jp-section-title">Estadísticas reales — Sofascore</div>
+      <div class="jp-grid" style="margin-bottom:8px">
+        <div class="jp-stat"><div class="jp-stat-val" style="color:${ratCol}">${rat}</div><div class="jp-stat-lbl">Rating</div></div>
+        <div class="jp-stat"><div class="jp-stat-val">${sf.appearances||0}</div><div class="jp-stat-lbl">PJ</div></div>
+        <div class="jp-stat"><div class="jp-stat-val">${sf.minutes||0}</div><div class="jp-stat-lbl">Minutos</div></div>
+        <div class="jp-stat"><div class="jp-stat-val">${sf.started||0}</div><div class="jp-stat-lbl">Titular</div></div>
+        <div class="jp-stat"><div class="jp-stat-val">${subs}</div><div class="jp-stat-lbl">Suplente</div></div>
+        <div class="jp-stat"><div class="jp-stat-val">${mpg}</div><div class="jp-stat-lbl">Min/Gol</div></div>
+      </div>
+      <div style="border-top:1px solid var(--border);padding-top:10px;margin-bottom:8px">
+        <div class="jp-section-title" style="margin-bottom:6px">Ataque</div>
+        <div class="jp-grid">
+          <div class="jp-stat"><div class="jp-stat-val" style="color:var(--c-good)">${sf.goals||0}</div><div class="jp-stat-lbl">Goles</div></div>
+          <div class="jp-stat"><div class="jp-stat-val" style="color:var(--c-top)">${sf.assists||0}</div><div class="jp-stat-lbl">Asistencias</div></div>
+          <div class="jp-stat"><div class="jp-stat-val">${sf.shotsOnTarget||0}</div><div class="jp-stat-lbl">Remates</div></div>
+          <div class="jp-stat"><div class="jp-stat-val">${sf.dribbles||0}</div><div class="jp-stat-lbl">Regates</div></div>
+          <div class="jp-stat"><div class="jp-stat-val">${sf.tackles||0}</div><div class="jp-stat-lbl">Recuperac.</div></div>
+          <div class="jp-stat"><div class="jp-stat-val">${sf.interceptions||0}</div><div class="jp-stat-lbl">Intercep.</div></div>
+        </div>
+      </div>
+      <div style="border-top:1px solid var(--border);padding-top:10px${sf.saves>0?';margin-bottom:8px':''}">
+        <div class="jp-section-title" style="margin-bottom:6px">Disciplina</div>
+        <div class="jp-grid-2">
+          <div class="jp-stat"><div class="jp-stat-val" style="color:#f59e0b">${sf.yellowCards||0}</div><div class="jp-stat-lbl">Amarillas</div></div>
+          <div class="jp-stat"><div class="jp-stat-val" style="color:var(--c-low)">${sf.redCards||0}</div><div class="jp-stat-lbl">Rojas</div></div>
+        </div>
+      </div>
+      ${sf.saves>0?`<div style="border-top:1px solid var(--border);padding-top:10px">
+        <div class="jp-section-title" style="margin-bottom:6px">Portero</div>
+        <div class="jp-grid-2">
+          <div class="jp-stat"><div class="jp-stat-val" style="color:var(--c-top)">${sf.saves||0}</div><div class="jp-stat-lbl">Paradas</div></div>
+          <div class="jp-stat"><div class="jp-stat-val" style="color:var(--c-good)">${sf.cleanSheets||0}</div><div class="jp-stat-lbl">Portería 0</div></div>
+        </div>
+      </div>`:''}
+    </div>`;
+  } else {
+    sfHtml = `<div class="jp-section"><div style="padding:16px;text-align:center;color:var(--text3);font-family:'IBM Plex Mono',monospace;font-size:0.68rem;">Sin datos Sofascore<br><span style="opacity:0.5;font-size:0.58rem">Se activarán tras la próxima actualización</span></div></div>`;
+  }
+
+  document.getElementById('jugPanelBody').innerHTML = `
+    <div class="jp-header">
+      <div class="jp-pos-badge" style="background:${col}">${p.position||p.pos||'?'}</div>
+      <div>
+        <div class="jp-name">${(p.name||'').toUpperCase()}${(p.inGuitlla||MV3_GUITLLA.has(p.name))?'<span style="font-size:0.7rem;margin-left:6px">🦊</span>':''}</div>
+        <div class="jp-club">${p.club||p.teamName||'—'}</div>
+      </div>
+    </div>
+    <div class="jp-kpis">
+      <div class="jp-kpi"><div class="jp-kpi-lbl">Puntos</div><div class="jp-kpi-val" style="color:var(--lime)">${p.pts||p.points||0}</div></div>
+      <div class="jp-kpi"><div class="jp-kpi-lbl">Media</div><div class="jp-kpi-val">${media}</div></div>
+      <div class="jp-kpi"><div class="jp-kpi-lbl">Valor</div><div class="jp-kpi-val" style="font-size:1rem">${fmt(p.price||p.precio||0)}</div></div>
+    </div>
+    <div class="jp-section">
+      <div class="jp-section-title">Últimas 5 Jornadas Biwenger</div>
+      <div class="jp-jform">${jFormHtml}</div>
+    </div>
+    <div class="jp-section">
+      <div class="jp-section-title">Biwenger</div>
+      <div class="jp-grid">
+        <div class="jp-stat"><div class="jp-stat-val">${p.playedHome||sf?.started||'—'}</div><div class="jp-stat-lbl">PJ Local</div></div>
+        <div class="jp-stat"><div class="jp-stat-val">${p.playedAway||'—'}</div><div class="jp-stat-lbl">PJ Visita</div></div>
+        <div class="jp-stat"><div class="jp-stat-val">${p.roi?p.roi.toFixed(1)+'x':'—'}</div><div class="jp-stat-lbl">ROI</div></div>
+      </div>
+      <div style="margin-top:8px;display:flex;justify-content:space-between;align-items:center;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;">
+        <span style="color:var(--text3)">Tendencia</span>
+        <span>${trendHtml}</span>
+      </div>
+    </div>
+    ${sfHtml}
+    <div style="padding:12px 16px;border-top:1px solid var(--border)">
+      <button class="jp-add-compare${inCompare?' added':''}" onclick="toggleCompare(${JSON.stringify(p).replace(/"/g,'&quot;')})">
+        ${inCompare?'✓ EN COMPARADOR':'+ AÑADIR AL COMPARADOR'}
+      </button>
+    </div>
+  `;
+}
+
+// ── Comparador ─────────────────────────────────────────────────────
+function toggleCompare(p){
+  const key = p.id||p.name;
+  const idx = compareList.findIndex(x=>(x.id||x.name)===key);
+  if(idx>-1){
+    compareList.splice(idx,1);
+  } else {
+    if(compareList.length>=4){ alert('Máximo 4 jugadores para comparar'); return; }
+    compareList.push(p);
+  }
+  updateCompareBar();
+  if(currentPanelPlayer && (currentPanelPlayer.id||currentPanelPlayer.name)===key){
+    renderJugPanel(currentPanelPlayer); // refrescar botón
+  }
+}
+
+function updateCompareBar(){
+  const bar = document.getElementById('compareBar');
+  const slots = document.getElementById('compareSlots');
+  if(!compareList.length){ bar.classList.remove('visible'); return; }
+  bar.classList.add('visible');
+  slots.innerHTML = compareList.map(p=>`
+    <div class="compare-slot">
+      <span style="color:${PC_COLORS[(p.position||p.pos||'').split('/')[0]]||'#555'}">${(p.position||p.pos||'?').split('/')[0]}</span>
+      <span>${(p.name||'').toUpperCase()}</span>
+      <button class="compare-slot-rm" onclick="toggleCompare(${JSON.stringify(p).replace(/"/g,'&quot;')})">✕</button>
+    </div>`).join('');
+}
+
+function clearCompare(){
+  compareList=[];
+  updateCompareBar();
+  if(currentPanelPlayer) renderJugPanel(currentPanelPlayer);
+}
+
+function openCompareModal(){
+  if(compareList.length<2){ alert('Añade al menos 2 jugadores'); return; }
+  renderCompareModal();
+  document.getElementById('compareModalOverlay').classList.add('open');
+}
+function closeCompareModal(e){
+  if(e && e.target!==document.getElementById('compareModalOverlay')) return;
+  closeCompareModalDirect();
+}
+function closeCompareModalDirect(){
+  document.getElementById('compareModalOverlay').classList.remove('open');
+}
+
+function renderCompareModal(){
+  const ps = compareList;
+  const rows = [
+    {lbl:'Posición',      fn:p=>p.position||p.pos||'—',          num:false},
+    {lbl:'Club',          fn:p=>p.club||p.teamName||'—',          num:false},
+    {lbl:'Puntos BW',     fn:p=>p.pts||p.points||0,               num:true},
+    {lbl:'Media BW',      fn:p=>p.media?p.media.toFixed(1):((p.pts||0)/Math.max(1,(p.playedHome||0)+(p.playedAway||0))).toFixed(1), num:true},
+    {lbl:'Valor',         fn:p=>fmt(p.price||p.precio||0),        num:false},
+    {lbl:'Tendencia',     fn:p=>fmt(p.trend||0),                  num:false},
+    {lbl:'ROI',           fn:p=>p.roi?p.roi.toFixed(1)+'x':'—',  num:false},
+    {lbl:'Rating SF',     fn:p=>p.sf?.rating?.toFixed(1)||'—',    num:true},
+    {lbl:'PJ',            fn:p=>p.sf?.appearances||'—',           num:true},
+    {lbl:'Titular',       fn:p=>p.sf?.started||'—',               num:true},
+    {lbl:'Minutos',       fn:p=>p.sf?.minutes||'—',               num:true},
+    {lbl:'Goles',         fn:p=>p.sf?.goals??'—',                 num:true},
+    {lbl:'Asistencias',   fn:p=>p.sf?.assists??'—',               num:true},
+    {lbl:'Min/Gol',       fn:p=>p.sf?.minutesPerGoal?p.sf.minutesPerGoal+"'":'—', num:false},
+    {lbl:'Amarillas',     fn:p=>p.sf?.yellowCards??'—',            num:false},
+    {lbl:'Rojas',         fn:p=>p.sf?.redCards??'—',              num:false},
+    {lbl:'Paradas',       fn:p=>p.sf?.saves??'—',                 num:true},
+    {lbl:'Portería 0',    fn:p=>p.sf?.cleanSheets??'—',           num:true},
+  ];
+
+  const header = `<tr><th style="min-width:100px">Stat</th>${ps.map(p=>`<th style="min-width:120px"><div style="font-family:'Barlow Condensed',sans-serif;font-size:0.9rem;font-weight:800;text-transform:uppercase;color:var(--text)">${p.name}</div><div style="font-size:0.52rem;color:var(--text3)">${p.club||p.teamName||''}</div></th>`).join('')}</tr>`;
+
+  const body = rows.map(row=>{
+    const vals = ps.map(p=>row.fn(p));
+    const numVals = row.num ? vals.map(v=>parseFloat(v)||0) : [];
+    const maxV = row.num ? Math.max(...numVals) : null;
+    const minV = row.num ? Math.min(...numVals) : null;
+    const cells = vals.map((v,i)=>{
+      let cls = '';
+      if(row.num && numVals[i]===maxV && maxV!==minV) cls='best';
+      if(row.num && numVals[i]===minV && maxV!==minV) cls='worst';
+      return `<td class="${cls}">${v}</td>`;
+    }).join('');
+    return `<tr><td class="row-label">${row.lbl}</td>${cells}</tr>`;
+  }).join('');
+
+  document.getElementById('compareModalBody').innerHTML=`<table class="compare-table"><thead>${header}</thead><tbody>${body}</tbody></table>`;
+}
+
+// ── Conectar clicks en filas de jugadores al panel ─────────────────
+// renderPlayers y mv3Render ya llaman a openJugPanel(p) en onclick
+
 </script>
+
+
+<!-- ══ PANEL LATERAL JUGADOR ══ -->
+<div class="jug-panel-overlay" id="jugPanelOverlay" onclick="closeJugPanel(event)">
+  <div class="jug-panel" id="jugPanel">
+    <div class="jug-panel-close">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:0.6rem;color:var(--text3);letter-spacing:1px;text-transform:uppercase;">// FICHA JUGADOR</span>
+      <button class="jug-panel-close-btn" onclick="closeJugPanelDirect()">✕ CERRAR</button>
+    </div>
+    <div class="jug-panel-body" id="jugPanelBody">
+      <div style="padding:40px;text-align:center;color:var(--text3);font-family:'IBM Plex Mono',monospace;font-size:0.7rem;">Selecciona un jugador</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ BARRA COMPARADOR ══ -->
+<div class="compare-bar" id="compareBar">
+  <span class="compare-lbl">Comparar:</span>
+  <div id="compareSlots" style="display:flex;gap:8px;flex-wrap:wrap;"></div>
+  <button class="compare-btn run" onclick="openCompareModal()">VER COMPARATIVA →</button>
+  <button class="compare-btn clear" onclick="clearCompare()">✕ Limpiar</button>
+</div>
+
+<!-- ══ MODAL COMPARACIÓN ══ -->
+<div class="compare-modal-overlay" id="compareModalOverlay" onclick="closeCompareModal(event)">
+  <div class="compare-modal">
+    <div class="compare-modal-header">
+      <span class="compare-modal-title">// Comparativa de jugadores</span>
+      <button class="compare-modal-close" onclick="closeCompareModalDirect()">✕ CERRAR</button>
+    </div>
+    <div class="compare-modal-body" id="compareModalBody"></div>
+  </div>
+</div>
 
 </body>
 </html>
