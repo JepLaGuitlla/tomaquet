@@ -412,6 +412,7 @@ async function fetchPlayerStats() {
         hostname: 'site.api.espn.com',
         path,
         method:   'GET',
+        timeout:  8000,
         headers:  {
           'User-Agent': 'Mozilla/5.0 (compatible; LaPausaFantasy/1.0)',
           'Accept':     'application/json',
@@ -424,6 +425,7 @@ async function fetchPlayerStats() {
           catch { resolve({ ok: false, status: res.statusCode, body: null }); }
         });
       });
+      req.on('timeout', () => { req.destroy(); resolve({ ok: false, status: 0, body: null, timedOut: true }); });
       req.on('error', (e) => { console.warn('    ESPN req error:', e.message); resolve({ ok: false, status: 0, body: null }); });
       req.end();
     });
@@ -437,7 +439,8 @@ async function fetchPlayerStats() {
       const res  = await espnGet(path);
 
       if (!res.ok || !res.body) {
-        console.warn(`  \u26A0\uFE0F ESPN roster ${team.name}: status ${res.status}`);
+        const reason = res.timedOut ? 'TIMEOUT' : `status ${res.status}`;
+        console.warn(`  ⚠️ ESPN roster ${team.name}: ${reason}`);
         await sleep(300);
         continue;
       }
