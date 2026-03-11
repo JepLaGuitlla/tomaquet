@@ -3,10 +3,11 @@ name: Actualizar datos La Pausa Fantasy
 on:
   schedule:
     # Una vez al día a las 07:00 UTC (9h España en verano, 8h en invierno)
-    # Después de que la jornada nocturna esté completamente procesada
     - cron: '0 7 * * *'
   workflow_dispatch:
-    # También se puede lanzar manualmente desde GitHub Actions
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   fetch:
@@ -19,7 +20,13 @@ jobs:
       - name: Instalar Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
+
+      - name: Verificar secrets configurados
+        run: |
+          echo "BIWENGER_EMAIL set:    ${{ secrets.BIWENGER_EMAIL != '' }}"
+          echo "BIWENGER_PASSWORD set: ${{ secrets.BIWENGER_PASSWORD != '' }}"
+          echo "API_FOOTBALL_KEY set:  ${{ secrets.API_FOOTBALL_KEY != '' }}"
 
       - name: Ejecutar script de datos
         env:
