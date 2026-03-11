@@ -491,6 +491,7 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
     <button class="nav-btn" onclick="showSection('grupos',this)">SA CAPRITXOSA</button>
     <button class="nav-btn" onclick="showSection('miequipo',this)">MI EQUIPO</button>
     <button class="nav-btn" onclick="showSection('liga',this)">⚡ ANÁLISIS LIGA</button>
+    <button class="nav-btn" onclick="showSection('factorpausa',this)">☕ FACTOR PAUSA</button>
   </nav>
 </div>
 
@@ -829,6 +830,192 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
       <div id="recomendaciones" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem;padding:16px"></div>
     </div>
   </div>
+</div>
+
+
+<div id="factorpausa" class="section">
+
+  <!-- CABECERA -->
+  <div style="max-width:800px;margin-bottom:2rem;">
+    <div class="section-title">El Factor Pausa <span style="font-size:0.58rem;font-weight:500;letter-spacing:0;color:var(--text3);margin-left:8px;font-family:'Figtree',sans-serif;">en construcción</span></div>
+    <div style="font-family:'Figtree',sans-serif;font-size:1.05rem;font-weight:700;color:var(--text);line-height:1.5;margin-bottom:0.6rem;">
+      La nota de cada jugador. Sin fórmulas raras, sin escalas inventadas.
+    </div>
+    <div style="font-family:'Figtree',sans-serif;font-size:0.82rem;color:var(--text2);line-height:1.7;">
+      Como en el cole — un <strong>9</strong> es sobresaliente, un <strong>4</strong> suspende, y si ves un <strong>11</strong> ya sabes que estás ante algo especial.
+      Y si ves un número negativo, ese jugador no solo es malo — es un problema.
+    </div>
+  </div>
+
+  <!-- ESCALA VISUAL -->
+  <div style="margin-bottom:2rem;">
+    <div class="section-title">La escala</div>
+    <div style="display:flex;gap:0;border-radius:6px;overflow:hidden;border:1px solid var(--border);margin-bottom:0.8rem;">
+      <div style="flex:1;padding:14px 8px;background:#7c3aed;text-align:center;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:1rem;font-weight:700;color:#fff;">-2 / -1</div>
+        <div style="font-family:'Figtree',sans-serif;font-size:0.58rem;color:rgba(255,255,255,0.75);text-transform:uppercase;letter-spacing:1px;margin-top:4px;">Desastre</div>
+      </div>
+      <div style="flex:1;padding:14px 8px;background:var(--c-low);text-align:center;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:1rem;font-weight:700;color:#fff;">0 — 3</div>
+        <div style="font-family:'Figtree',sans-serif;font-size:0.58rem;color:rgba(255,255,255,0.75);text-transform:uppercase;letter-spacing:1px;margin-top:4px;">Suspenso</div>
+      </div>
+      <div style="flex:1;padding:14px 8px;background:var(--c-mid);text-align:center;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:1rem;font-weight:700;color:#fff;">4 — 5.9</div>
+        <div style="font-family:'Figtree',sans-serif;font-size:0.58rem;color:rgba(255,255,255,0.75);text-transform:uppercase;letter-spacing:1px;margin-top:4px;">Aprobado</div>
+      </div>
+      <div style="flex:1;padding:14px 8px;background:#16a34a;text-align:center;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:1rem;font-weight:700;color:#fff;">6 — 7.9</div>
+        <div style="font-family:'Figtree',sans-serif;font-size:0.58rem;color:rgba(255,255,255,0.75);text-transform:uppercase;letter-spacing:1px;margin-top:4px;">Notable</div>
+      </div>
+      <div style="flex:1;padding:14px 8px;background:var(--c-top);text-align:center;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:1rem;font-weight:700;color:#fff;">8 — 10</div>
+        <div style="font-family:'Figtree',sans-serif;font-size:0.58rem;color:rgba(255,255,255,0.75);text-transform:uppercase;letter-spacing:1px;margin-top:4px;">Sobresaliente</div>
+      </div>
+      <div style="flex:1;padding:14px 8px;background:#d97706;text-align:center;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:1rem;font-weight:700;color:#fff;">11 / 12+</div>
+        <div style="font-family:'Figtree',sans-serif;font-size:0.58rem;color:rgba(255,255,255,0.75);text-transform:uppercase;letter-spacing:1px;margin-top:4px;">Excepcional</div>
+      </div>
+    </div>
+    <div style="font-family:'Figtree',sans-serif;font-size:0.72rem;color:var(--text3);line-height:1.6;">
+      Usa <strong style="color:var(--text2)">toda la franja del 0 al 10</strong> — a diferencia de Sofascore que en la práctica solo va del 6 al 9, desperdiciando el 50% de la escala.
+      Los extremos (<strong style="color:#7c3aed">negativo</strong> y <strong style="color:#d97706">+11</strong>) se reservan para casos realmente fuera de lo normal.
+    </div>
+  </div>
+
+  <!-- POR QUE NO ES SOFASCORE -->
+  <div style="margin-bottom:2rem;">
+    <div class="section-title">Por qué no es Sofascore</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+      <div style="border:1px solid var(--border);border-radius:4px;padding:1.2rem;background:var(--bg2);">
+        <div style="font-family:'Figtree',sans-serif;font-size:0.68rem;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:0.8rem;">Sofascore</div>
+        <div style="font-family:'Figtree',sans-serif;font-size:0.78rem;color:var(--text2);line-height:1.9;">
+          ✗ Escala real comprimida: solo del <strong>6 al 9</strong><br>
+          ✗ Fórmula <strong>opaca</strong>, no sabes qué pesa<br>
+          ✗ Partido a partido, no acumulada<br>
+          ✗ No incluye <strong>valor fantasy</strong> (ROI, precio)<br>
+          ✗ Su lenguaje, no el nuestro
+        </div>
+      </div>
+      <div style="border:1px solid var(--accent);border-radius:4px;padding:1.2rem;background:var(--accent-dim);">
+        <div style="font-family:'Figtree',sans-serif;font-size:0.68rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:0.8rem;">Factor Pausa</div>
+        <div style="font-family:'Figtree',sans-serif;font-size:0.78rem;color:var(--text2);line-height:1.9;">
+          ✓ Escala completa: del <strong>-2 al 12+</strong><br>
+          ✓ Criterio <strong>futbolístico real</strong>, transparente<br>
+          ✓ Acumulada en la <strong>temporada completa</strong><br>
+          ✓ Extrapolable a <strong>cualquier liga o temporada</strong><br>
+          ✓ Nuestro lenguaje
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DECISIONES TOMADAS -->
+  <div style="margin-bottom:2rem;">
+    <div class="section-title">Decisiones tomadas ✓</div>
+    <div style="display:flex;flex-direction:column;gap:5px;">
+
+      <div style="display:grid;grid-template-columns:28px 1fr;gap:12px;border:1px solid #bbf7d0;border-radius:4px;padding:12px 14px;background:#f0fdf4;">
+        <div style="font-size:1.1rem;line-height:1;">✓</div>
+        <div>
+          <div style="font-family:'Figtree',sans-serif;font-size:0.82rem;font-weight:700;color:#15803d;margin-bottom:3px;">Escala de notas escolares (0–10, con margen)</div>
+          <div style="font-family:'Figtree',sans-serif;font-size:0.73rem;color:var(--text2);line-height:1.65;">Todo el mundo entiende una nota. El suspenso tiene peso emocional. El "más de 10" ya existe culturalmente. Los negativos para desastres reales como un jugador expulsado en 3 partidos seguidos.</div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:28px 1fr;gap:12px;border:1px solid #bbf7d0;border-radius:4px;padding:12px 14px;background:#f0fdf4;">
+        <div style="font-size:1.1rem;line-height:1;">✓</div>
+        <div>
+          <div style="font-family:'Figtree',sans-serif;font-size:0.82rem;font-weight:700;color:#15803d;margin-bottom:3px;">Escala absoluta, no relativa</div>
+          <div style="font-family:'Figtree',sans-serif;font-size:0.73rem;color:var(--text2);line-height:1.65;">Un 7.2 significa lo mismo hoy que el año que viene, en LaLiga o en Premier. No depende de lo que hagan los demás. Si fuera relativo, un jugador podría subir de nota sin haber mejorado solo porque los demás empeoraron — eso es engañoso.</div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:28px 1fr;gap:12px;border:1px solid #bbf7d0;border-radius:4px;padding:12px 14px;background:#f0fdf4;">
+        <div style="font-size:1.1rem;line-height:1;">✓</div>
+        <div>
+          <div style="font-family:'Figtree',sans-serif;font-size:0.82rem;font-weight:700;color:#15803d;margin-bottom:3px;">Basado en rendimiento real de fútbol, no solo en fantasy</div>
+          <div style="font-family:'Figtree',sans-serif;font-size:0.73rem;color:var(--text2);line-height:1.65;">Pensar más en grande que en fantasy. Un jugador bueno de verdad tiene más valor e interés que un jugador con buen ROI puntual. Además es extrapolable a otras ligas, otros contextos, otras temporadas.</div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:28px 1fr;gap:12px;border:1px solid #bbf7d0;border-radius:4px;padding:12px 14px;background:#f0fdf4;">
+        <div style="font-size:1.1rem;line-height:1;">✓</div>
+        <div>
+          <div style="font-family:'Figtree',sans-serif;font-size:0.82rem;font-weight:700;color:#15803d;margin-bottom:3px;">Cada stat tiene su propia curva de traducción independiente</div>
+          <div style="font-family:'Figtree',sans-serif;font-size:0.73rem;color:var(--text2);line-height:1.65;">No es un índice compuesto — es un traductor universal. ROI de 78 → Factor 8.4. Amarillas → Factor 2.1. Rating Sofascore → Factor 7.6. Cada número complejo se convierte individualmente a la escala 0–10.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- EN DEBATE -->
+  <div style="margin-bottom:2rem;">
+    <div class="section-title">En debate 🤔</div>
+    <div style="display:flex;flex-direction:column;gap:5px;">
+
+      <div style="display:grid;grid-template-columns:28px 1fr;gap:12px;border:1px solid #fde68a;border-radius:4px;padding:12px 14px;background:#fffbeb;">
+        <div style="font-size:1.1rem;line-height:1;">?</div>
+        <div>
+          <div style="font-family:'Figtree',sans-serif;font-size:0.82rem;font-weight:700;color:#92400e;margin-bottom:3px;">Pesos distintos por posición</div>
+          <div style="font-family:'Figtree',sans-serif;font-size:0.73rem;color:var(--text2);line-height:1.65;">Un portero con goles encajados no se evalúa igual que un delantero. PT: paradas y cleanSheets pesan más. DL: goles y asistencias. DF: minutos y duelos ganados. MC: asistencias y recuperaciones. O se usan las mismas curvas para todos y solo cambia qué stats se incluyen por posición.</div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:28px 1fr;gap:12px;border:1px solid #fde68a;border-radius:4px;padding:12px 14px;background:#fffbeb;">
+        <div style="font-size:1.1rem;line-height:1;">?</div>
+        <div>
+          <div style="font-family:'Figtree',sans-serif;font-size:0.82rem;font-weight:700;color:#92400e;margin-bottom:3px;">Qué stats entran en el cálculo</div>
+          <div style="font-family:'Figtree',sans-serif;font-size:0.73rem;color:var(--text2);line-height:1.65;">Disponibles: <code style="font-family:monospace;font-size:0.68rem;background:var(--bg3);padding:1px 5px;border-radius:2px;color:var(--accent);">rating Sofascore · goles · asistencias · minutos · amarillas · rojas · paradas · cleanSheets · ROI · pts Biwenger · tendencia precio</code>. Pendiente decidir qué entra, qué no, y si el ROI (dato fantasy) debe convivir con las stats reales.</div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:28px 1fr;gap:12px;border:1px solid #fde68a;border-radius:4px;padding:12px 14px;background:#fffbeb;">
+        <div style="font-size:1.1rem;line-height:1;">?</div>
+        <div>
+          <div style="font-family:'Figtree',sans-serif;font-size:0.82rem;font-weight:700;color:#92400e;margin-bottom:3px;">Un Factor único o tres versiones</div>
+          <div style="font-family:'Figtree',sans-serif;font-size:0.73rem;color:var(--text2);line-height:1.65;">Opción A: un solo número que lo resume todo. Simple y directo.<br>Opción B: tres notas — <strong>rendimiento real</strong> (fútbol), <strong>rendimiento fantasy</strong> (Biwenger), <strong>eficiencia económica</strong> (ROI/valor). Un jugador puede ser 8.1 real y 5.3 fantasy — esa tensión es información valiosa.</div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:28px 1fr;gap:12px;border:1px solid #fde68a;border-radius:4px;padding:12px 14px;background:#fffbeb;">
+        <div style="font-size:1.1rem;line-height:1;">?</div>
+        <div>
+          <div style="font-family:'Figtree',sans-serif;font-size:0.82rem;font-weight:700;color:#92400e;margin-bottom:3px;">Definir las curvas de traducción</div>
+          <div style="font-family:'Figtree',sans-serif;font-size:0.73rem;color:var(--text2);line-height:1.65;">Pendiente acordar los umbrales para cada stat con criterio futbolístico real. Ejemplo para ROI: 0 → FP 0 · 15 → FP 3 · 30 → FP 5 · 60 → FP 8 · 90+ → FP 10. Ejemplo para goles/90min: 0 → FP 0 · 0.3 → FP 5 · 0.6 → FP 8 · 1.0+ → FP 11.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PROXIMOS PASOS -->
+  <div style="margin-bottom:2rem;">
+    <div class="section-title">Próximos pasos</div>
+    <div style="display:flex;flex-direction:column;gap:4px;">
+      <div style="display:flex;align-items:center;gap:12px;padding:10px 14px;border:1px solid var(--border);border-radius:3px;background:var(--bg2);">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:var(--accent);font-weight:700;flex-shrink:0;min-width:24px;">01</div>
+        <div style="font-family:'Figtree',sans-serif;font-size:0.78rem;color:var(--text2);">Decidir si el Factor Pausa es único o tiene tres versiones (real / fantasy / económico)</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;padding:10px 14px;border:1px solid var(--border);border-radius:3px;background:var(--bg2);">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:var(--accent);font-weight:700;flex-shrink:0;min-width:24px;">02</div>
+        <div style="font-family:'Figtree',sans-serif;font-size:0.78rem;color:var(--text2);">Decidir qué stats entran y si los pesos varían por posición</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;padding:10px 14px;border:1px solid var(--border);border-radius:3px;background:var(--bg2);">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:var(--accent);font-weight:700;flex-shrink:0;min-width:24px;">03</div>
+        <div style="font-family:'Figtree',sans-serif;font-size:0.78rem;color:var(--text2);">Definir las curvas de traducción stat por stat (los umbrales con criterio futbolístico)</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;padding:10px 14px;border:1px solid var(--border);border-radius:3px;background:var(--bg2);">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:var(--accent);font-weight:700;flex-shrink:0;min-width:24px;">04</div>
+        <div style="font-family:'Figtree',sans-serif;font-size:0.78rem;color:var(--text2);">Implementar <code style="font-family:monospace;font-size:0.68rem;background:var(--bg3);padding:1px 5px;border-radius:2px;">calcFactorPausa(player)</code> y añadir columna en tabla Jugadores</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;padding:10px 14px;border:1px solid var(--border);border-radius:3px;background:var(--bg2);">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:var(--accent);font-weight:700;flex-shrink:0;min-width:24px;">05</div>
+        <div style="font-family:'Figtree',sans-serif;font-size:0.78rem;color:var(--text2);">Construir el ranking completo de jugadores por Factor Pausa en esta pestaña</div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <button class="mercado-fab" id="mercadoFab" onclick="closeMercadoFab()">▲ CERRAR LISTA</button>
