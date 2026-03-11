@@ -795,7 +795,28 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
     <div class="spinner"></div> Cargando datos de La Liga…
   </div>
   <div id="ligaContent" style="display:none">
-    <div class="liga-layout" style="margin-bottom:1.2rem">
+
+    <!-- 1. RECOMENDACIONES -->
+    <div class="panel liga-full" style="margin-bottom:1.2rem">
+      <div class="panel-header">
+        <div class="panel-title">Recomendaciones Fantasy — Próxima Jornada</div>
+      </div>
+      <div id="recomendaciones" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem;padding:16px"></div>
+    </div>
+
+    <!-- 2. FORMA EQUIPOS -->
+    <div class="panel liga-full" style="margin-bottom:1.2rem">
+      <div class="panel-header">
+        <div class="panel-title">Forma de los Equipos (Últimas 5)</div>
+        <div style="display:flex;gap:6px">
+          <input id="teamSearch" placeholder="Buscar equipo…" style="border:1px solid var(--border);border-radius:4px;padding:5px 10px;font-size:0.78rem;outline:none;color:var(--text)" oninput="filterTeamCards(this.value)">
+        </div>
+      </div>
+      <div id="equiposGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1px;background:var(--border);padding:0"></div>
+    </div>
+
+    <!-- 3. CLASIFICACIÓN + COLUMNA DERECHA -->
+    <div class="liga-layout">
       <div class="panel">
         <div class="panel-header">
           <div class="panel-title">Clasificación La Liga</div>
@@ -806,35 +827,22 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
         </div>
       </div>
       <div style="display:flex;flex-direction:column;gap:1rem">
-        <!-- WIDGET TOP GOLEADORES / ASISTENCIAS -->
+        <!-- Próxima Jornada arriba -->
+        <div class="panel">
+          <div class="panel-header"><div class="panel-title">Próxima Jornada</div></div>
+          <div id="proximaJornada"></div>
+        </div>
+        <!-- Top Goleadores abajo -->
         <div class="panel">
           <div class="panel-header" style="justify-content:space-between">
             <div class="panel-title">Top Goleadores / Asistencias</div>
             <button onclick="openJugadoresModal()" style="background:none;border:1px solid var(--border2);border-radius:3px;font-family:'Figtree',sans-serif;font-size:0.6rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--text3);padding:3px 8px;cursor:pointer;" onmouseover="this.style.color='var(--accent)';this.style.borderColor='var(--accent)'" onmouseout="this.style.color='var(--text3)';this.style.borderColor='var(--border2)'">Ver todos →</button>
           </div>
-          <div id="widgetJugadores" style="overflow-y:auto"></div>
-        </div>
-        <div class="panel">
-          <div class="panel-header"><div class="panel-title">Próxima Jornada</div></div>
-          <div id="proximaJornada"></div>
+          <div id="widgetJugadores"></div>
         </div>
       </div>
     </div>
-    <div class="panel liga-full" style="margin-bottom:1.2rem">
-      <div class="panel-header">
-        <div class="panel-title">Forma de los Equipos (Últimas 5)</div>
-        <div style="display:flex;gap:6px">
-          <input id="teamSearch" placeholder="Buscar equipo…" style="border:1px solid var(--border);border-radius:4px;padding:5px 10px;font-size:0.78rem;outline:none;color:var(--text)" oninput="filterTeamCards(this.value)">
-        </div>
-      </div>
-      <div id="equiposGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1px;background:var(--border);padding:0"></div>
-    </div>
-    <div class="panel liga-full">
-      <div class="panel-header">
-        <div class="panel-title">Recomendaciones Fantasy — Próxima Jornada</div>
-      </div>
-      <div id="recomendaciones" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem;padding:16px"></div>
-    </div>
+
   </div>
 </div>
 
@@ -1981,12 +1989,12 @@ function renderWidgetJugadores(){
   const sorted = [...allPlayers]
     .filter(p => p.sf && (p.sf.goals||0) > 0)
     .sort((a,b) => (b.sf.goals||0)-(a.sf.goals||0) || (b.sf.assists||0)-(a.sf.assists||0))
-    .slice(0,25);
+    .slice(0,10);
   if(!sorted.length){
     el.innerHTML='<div style="padding:16px;text-align:center;color:var(--text3);font-size:0.72rem">Sin datos de goles</div>';
     return;
   }
-  // Calcular percentiles dentro del widget (solo jugadores con datos)
+
   function widgetPctColor(val, vals) {
     const nonZero = vals.filter(v => v > 0).sort((a,b)=>a-b);
     if (!nonZero.length || val === 0) return 'var(--text3)';
@@ -1999,28 +2007,27 @@ function renderWidgetJugadores(){
   const allGols = sorted.map(p => p.sf.goals || 0);
   const allAsts = sorted.map(p => p.sf.assists || 0);
 
-  el.innerHTML = sorted.map((p,i)=>{
-    const pos = p.position.split('/')[0];
-    const posCol = PosC[pos]||'#555';
-    const gol = p.sf.goals || 0;
-    const ast = p.sf.assists || 0;
-    const golCol = widgetPctColor(gol, allGols);
-    const astCol = ast === 0 ? 'var(--text3)' : widgetPctColor(ast, allAsts);
-
-    return `<div style="display:flex;align-items:center;gap:8px;padding:6px 14px;border-bottom:1px solid var(--border);cursor:pointer;transition:background 0.1s" onclick="openJugPanel(allPlayers[${allPlayers.indexOf(p)}])" onmouseover="this.style.background='var(--accent-dim)'" onmouseout="this.style.background=''">
-      <div style="font-family:'IBM Plex Mono',monospace;font-size:0.58rem;color:var(--text3);width:16px;text-align:right;flex-shrink:0">${i+1}</div>
-      <div style="width:18px;height:18px;border-radius:2px;background:${posCol};display:flex;align-items:center;justify-content:center;font-size:0.5rem;font-weight:800;color:#fff;flex-shrink:0">${pos}</div>
-      <div style="flex:1;min-width:0;font-family:'Figtree',sans-serif;font-size:0.82rem;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--text)">${p.name}</div>
-      <div style="display:flex;align-items:baseline;gap:5px;flex-shrink:0">
-        <span style="font-family:'IBM Plex Mono',monospace;font-size:1rem;font-weight:700;color:${golCol};line-height:1">${gol}</span>
-        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;font-weight:500;color:${astCol};line-height:1">${ast > 0 ? '+'+ast : '·'}</span>
-      </div>
-    </div>`;
-  }).join('')
-  + `<div style="display:flex;justify-content:flex-end;gap:14px;padding:6px 14px;border-top:1px solid var(--border)">
-      <span style="font-family:'IBM Plex Mono',monospace;font-size:0.55rem;color:var(--text3);letter-spacing:0.5px">GOL</span>
-      <span style="font-family:'IBM Plex Mono',monospace;font-size:0.55rem;color:var(--text3);letter-spacing:0.5px">+AST</span>
-    </div>`;
+  el.innerHTML = `
+    <div style="display:grid;grid-template-columns:20px 22px 1fr 28px 28px;gap:0;border-bottom:1px solid var(--border2);padding:5px 14px;margin-bottom:0">
+      <div></div><div></div><div></div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:0.55rem;color:var(--text3);text-align:right;letter-spacing:0.5px">GOL</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:0.55rem;color:var(--text3);text-align:right;letter-spacing:0.5px">AST</div>
+    </div>
+    ${sorted.map((p,i)=>{
+      const pos = p.position.split('/')[0];
+      const posCol = PosC[pos]||'#555';
+      const gol = p.sf.goals || 0;
+      const ast = p.sf.assists || 0;
+      const golCol = widgetPctColor(gol, allGols);
+      const astCol = ast === 0 ? 'var(--text3)' : widgetPctColor(ast, allAsts);
+      return `<div style="display:grid;grid-template-columns:20px 22px 1fr 28px 28px;align-items:center;gap:0;padding:6px 14px;border-bottom:1px solid var(--border);cursor:pointer;transition:background 0.1s" onclick="openJugPanel(allPlayers[${allPlayers.indexOf(p)}])" onmouseover="this.style.background='var(--accent-dim)'" onmouseout="this.style.background=''">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:0.58rem;color:var(--text3)">${i+1}</div>
+        <div style="width:18px;height:18px;border-radius:2px;background:${posCol};display:flex;align-items:center;justify-content:center;font-size:0.5rem;font-weight:800;color:#fff">${pos}</div>
+        <div style="font-family:'Figtree',sans-serif;font-size:0.82rem;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--text);padding:0 8px">${p.name}</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:0.95rem;font-weight:700;color:${golCol};text-align:right">${gol}</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;font-weight:500;color:${astCol};text-align:right">${ast}</div>
+      </div>`;
+    }).join('')}`;
 }
 
 // ── MODAL VOLANTE JUGADORES ───────────────────────────────────────────────
