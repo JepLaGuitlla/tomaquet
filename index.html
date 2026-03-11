@@ -25,9 +25,9 @@ header{background:#fff;border-bottom:1px solid var(--border);padding:0 2rem;posi
 header::after{display:none;}
 .header-inner{max-width:1440px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px;}
 .logo{display:flex;align-items:center;gap:12px;}
-.logo-emoji{font-size:2.2rem;line-height:1;flex-shrink:0;}
+.logo-emoji{font-size:2.6rem;line-height:1;flex-shrink:0;}
 .logo-text{display:flex;flex-direction:column;gap:1px;}
-.logo-name{font-family:'Figtree',sans-serif;font-size:1.3rem;font-weight:900;color:var(--text);letter-spacing:0.5px;text-transform:uppercase;line-height:1.1;}
+.logo-name{font-family:'Figtree',sans-serif;font-size:1.7rem;font-weight:900;color:var(--text);letter-spacing:0.5px;text-transform:uppercase;line-height:1;white-space:nowrap;}
 .logo-liga{font-family:'Figtree',sans-serif;font-size:0.6rem;font-weight:500;color:var(--accent);letter-spacing:2px;text-transform:uppercase;opacity:0.85;}
 .logo-sep{width:1px;height:14px;background:var(--border2);margin:0 4px;}
 .logo-sub{font-family:'Figtree',sans-serif;font-size:0.65rem;color:var(--text3);letter-spacing:2px;text-transform:uppercase;}
@@ -466,7 +466,7 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
     <div class="logo">
       <div class="logo-emoji">☕</div>
       <div class="logo-text">
-        <div class="logo-name">La Pausa<br>Fantasy</div>
+        <div class="logo-name">La Pausa Fantasy</div>
       </div>
     </div>
     <div style="display:flex;align-items:center;gap:16px">
@@ -596,20 +596,36 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
       <span style="font-family:'Figtree',sans-serif;font-size:0.66rem;color:var(--text3);margin-left:auto;" id="playerCount"></span>
     </div>
 
+    <!-- LEYENDA COLUMNAS -->
+    <div class="mv3-legend" style="margin-bottom:10px;">
+      <div class="mv3-leg-col">
+        <div class="mv3-leg-title">Biwenger</div>
+        <div class="mv3-leg-items">
+          <div class="mv3-li"><div class="mv3-ldot" style="background:var(--accent)"></div><span onclick="setSortAndRender('points_desc')" style="cursor:pointer">PTS — Puntos acumulados</span></div>
+          <div class="mv3-li"><div class="mv3-ldot" style="background:var(--blue)"></div><span onclick="setSortAndRender('price_desc')" style="cursor:pointer">VALOR — Precio de mercado</span></div>
+        </div>
+      </div>
+      <div class="mv3-leg-sep"></div>
+      <div class="mv3-leg-col">
+        <div class="mv3-leg-title">Sofascore</div>
+        <div class="mv3-leg-items">
+          <div class="mv3-li"><div class="mv3-ldot" style="background:var(--c-top)"></div><span onclick="setSortAndRender('sf_rating_desc')" style="cursor:pointer">RAT — Rating medio</span></div>
+          <div class="mv3-li"><div class="mv3-ldot" style="background:var(--green)"></div><span onclick="setSortAndRender('sf_goals_desc')" style="cursor:pointer">GOL — Goles</span></div>
+          <div class="mv3-li"><div class="mv3-ldot" style="background:var(--c-mid)"></div><span onclick="setSortAndRender('sf_assists_desc')" style="cursor:pointer">AST — Asistencias</span></div>
+        </div>
+      </div>
+      <div class="mv3-leg-sep"></div>
+      <div class="mv3-leg-col">
+        <div class="mv3-leg-title">Tarjetas</div>
+        <div class="mv3-leg-items">
+          <div class="mv3-li"><div class="mv3-ldot" style="background:#f59e0b"></div>AM — Amarillas</div>
+          <div class="mv3-li"><div class="mv3-ldot" style="background:#ef4444"></div>TJ — Tarjeta roja / expulsado</div>
+        </div>
+      </div>
+    </div>
+
     <!-- TABLA COMPLETA -->
     <div class="table-wrap" style="overflow-x:auto;">
-      <div class="table-header" style="display:grid;grid-template-columns:28px 24px minmax(160px,1fr) 70px 60px 60px 54px 54px 54px 54px;gap:0;min-width:640px;position:sticky;top:48px;z-index:10;background:var(--bg3);">
-        <div class="th">#</div>
-        <div class="th"></div>
-        <div class="th">JUGADOR</div>
-        <div class="th" onclick="setSortAndRender('points_desc')" style="cursor:pointer;text-align:right">PTS↕</div>
-        <div class="th" onclick="setSortAndRender('price_desc')" style="cursor:pointer;text-align:right">VALOR↕</div>
-        <div class="th" onclick="setSortAndRender('sf_rating_desc')" style="cursor:pointer;text-align:center">RAT↕</div>
-        <div class="th" onclick="setSortAndRender('sf_goals_desc')" style="cursor:pointer;text-align:center">GOL↕</div>
-        <div class="th" onclick="setSortAndRender('sf_assists_desc')" style="cursor:pointer;text-align:center">AST↕</div>
-        <div class="th" style="text-align:center">AM</div>
-        <div class="th" style="text-align:center">TJ</div>
-      </div>
       <div class="full-list-wrap">
         <div id="playersList"></div>
       </div>
