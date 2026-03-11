@@ -959,7 +959,7 @@ let LIGA_ACTIVA = LIGAS.tomaquet;
 function getStandings()     { return LIGA_ACTIVA.standings; }
 function getGroups()        { return LIGA_ACTIVA.groups; }
 function getQuarterfinals() { return LIGA_ACTIVA.quarterfinals; }
-function getEquipo()        { return LIGA_ACTIVA.equipo; }
+function getEquipo()        { return myTeamData || LIGA_ACTIVA.equipo; }
 function getMiEquipoName()  { return LIGA_ACTIVA.miEquipo; }
 
 function switchLiga(id) {
@@ -1095,11 +1095,12 @@ function renderRankings(players) {
 let allPlayers=[],filteredPlayers=[],currentPos='',currentSort='points_desc',currentPage=1;
 const PAGE_SIZE=50;
 let cf='4-3-3',lineup={},marketPlayers=[],currentSlot=null;
+let myTeamData=null; // datos reales de mi equipo desde Biwenger
 
 document.addEventListener('DOMContentLoaded',()=>{
   renderGeneral(); renderGrupos(); autoPlace(); renderMiEquipo();
   mv3InitFromAdvancedStats(); // fallback inmediato con datos estáticos
-  loadPlayers(); loadNews();
+  loadPlayers(); // las noticias se cargan desde data.json dentro de loadPlayers
 });
 
 async function loadPlayers(){
@@ -1123,6 +1124,34 @@ async function loadPlayers(){
     const when=data.updatedAt?new Date(data.updatedAt).toLocaleDateString('es-ES'):'?';
     document.getElementById('statusText').textContent=allPlayers.length+' jugadores · actualizado '+when;
     renderStats(); renderRankings(allPlayers); initRankings();
+
+    // Cargar mi equipo real desde Biwenger
+    if(data.myTeam && data.myTeam.players && data.myTeam.players.length){
+      myTeamData = data.myTeam.players.map(p=>({
+        id:       p.id,
+        name:     p.name,
+        position: mapPosition(p.position),
+        price:    p.price||0,
+        pts:      p.points||0,
+        trend:    p.trend||0,
+        club:     allPlayers.find(a=>a.id===p.id)?.club || '',
+        status:   p.status||'ok',
+        jForm:    p.jForm||[],
+        clausula: p.clausula||null,
+      }));
+      console.log('🦊 Mi equipo real cargado:', myTeamData.length, 'jugadores');
+      refreshGuitllaSet(); // actualizar marcadores en mercado v3
+      renderMiEquipo();
+      mv3InitFromPlayers(allPlayers); // re-render mercado con guitlla actualizado
+    }
+
+    // Cargar noticias desde data.json (sin CORS)
+    if(data.news && data.news.length){
+      allNews = data.news;
+      allNews.sort((a,b)=>{try{return new Date(b.date)-new Date(a.date);}catch(e){return 0;}});
+      renderNews();
+    }
+
   }catch(e){
     document.getElementById('jugadores-loading').innerHTML='<div class="error-msg">❌ Error cargando jugadores: '+e.message+'</div>';
     document.getElementById('statusText').textContent='Sin datos API';
@@ -1162,11 +1191,17 @@ function goPage(p){currentPage=p;renderPlayers();window.scrollTo({top:0,behavior
 // ══════════════════════════════════════════
 // ESTUDIO DE MERCADO v3
 // ══════════════════════════════════════════
-const MV3_GUITLLA = new Set([
+// MV3_GUITLLA se actualiza dinámicamente cuando llegan datos reales
+let MV3_GUITLLA = new Set([
   'Unai Simón','Remiro','Ratiu','Rafa Marín','Jon Pacheco','Unai Núñez','Luiz Felipe',
   'Soler','Ounahi','Selton Sánchez','Yamal','Ez Abde','Viñas','Roony',
   'Paco Cortés','Raúl Moro','Ángel Pérez'
 ]);
+function refreshGuitllaSet(){
+  if(myTeamData && myTeamData.length){
+    MV3_GUITLLA = new Set(myTeamData.map(p=>p.name));
+  }
+}
 const MV3_POS_COLORS = {PT:'#6366f1',DF:'#16a34a',MC:'#d97706',DL:'#e63329',MD:'#8b5cf6'};
 let mv3Players=[], mv3ActivePos='', mv3Page=1, mv3Sorted=[];
 const MV3_PAGE = 25;
