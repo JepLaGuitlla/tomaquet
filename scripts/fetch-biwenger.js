@@ -373,112 +373,106 @@ async function fetchNews() {
   return allNews;
 }
 
-// ─── 8. STATS DE JUGADORES — UNDERSTAT ─────────────────────────────────────────────
+// ─── 8. STATS DE JUGADORES — API LALIGA ──────────────────────────────────────
 //
-//  Una sola request a understat.com/league/La_liga (temporada actual 2025/26)
-//  Los datos estan embebidos en el HTML como JSON en una variable JS.
-//  Sin API key, sin limites, sin Cloudflare.
-//  Campos: goles, asistencias, xG, xA, minutos, partidos, equipo, posicion.
+//  La propia web de laliga.com usa una API JSON pública sin autenticación.
+//  Endpoint: api.laliga.com/laliga-backend-web/api/stats/players
+//  Una sola request paginada devuelve todos los jugadores con stats 2025/26.
+//  Sin API key, sin Cloudflare, datos oficiales.
 
 async function fetchPlayerStats() {
-  console.log('📊 Descargando estadisticas de jugadores (Understat 2025/26)...');
+  console.log('\u{1F4CA} Descargando estadísticas de jugadores (API LaLiga 2025/26)...');
 
-  return new Promise((resolve) => {
-    const req = https.request({
-      hostname: 'understat.com',
-      path:     '/league/La_liga',
-      method:   'GET',
-      headers:  {
-        'User-Agent':      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36',
-        'Accept':          'text/html,application/xhtml+xml,*/*',
-        'Accept-Language': 'es-ES,es;q=0.9',
-        'Accept-Encoding': 'identity',
-      }
-    }, (res) => {
-      console.log('  → Understat status:', res.statusCode);
-      let html = '';
-      res.on('data', c => html += c);
-      res.on('end', () => resolve(parseUnderstatHtml(html)));
+  function apiGet(path) {
+    return new Promise((resolve) => {
+      const req = https.request({
+        hostname: 'api.laliga.com',
+        path,
+        method:   'GET',
+        headers:  {
+          'User-Agent':    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+          'Accept':        'application/json',
+          'Origin':        'https://www.laliga.com',
+          'Referer':       'https://www.laliga.com/',
+        }
+      }, (res) => {
+        let data = '';
+        res.on('data', c => data += c);
+        res.on('end', () => {
+          try   { resolve({ ok: res.statusCode === 200, status: res.statusCode, body: JSON.parse(data) }); }
+          catch { resolve({ ok: false, status: res.statusCode, body: {} }); }
+        });
+      });
+      req.on('error', () => resolve({ ok: false, status: 0, body: {} }));
+      req.end();
     });
-    req.on('error', (e) => { console.warn('⚠️ Error Understat:', e.message); resolve(null); });
-    req.end();
-  });
-}
-
-function parseUnderstatHtml(html) {
-  if (!html || html.length < 1000) {
-    console.warn('⚠️ Understat: respuesta vacia');
-    return null;
   }
 
-  // Understat embebe los datos como: var playersData = JSON.parse('...')
-  // o directamente como objeto JS en el HTML
-  const marker = 'playersData';
-  const idx = html.indexOf(marker);
-  if (idx === -1) {
-    console.warn('⚠️ Understat: no se encontro playersData en el HTML (length:', html.length, ')');
-    return null;
-  }
-
-  // El formato es: var playersData = JSON.parse('[[...]]')
-  // Extraer el contenido entre la primera ' y la última ' antes del )
-  const jsonStart = html.indexOf("JSON.parse('", idx);
-  if (jsonStart === -1) {
-    console.warn('⚠️ Understat: formato inesperado de playersData');
-    return null;
-  }
-  const dataStart = jsonStart + 12; // longitud de "JSON.parse('"
-  const dataEnd   = html.lastIndexOf("')", dataStart + 500000);
-  if (dataEnd === -1) {
-    console.warn('⚠️ Understat: no se encontro el cierre del JSON');
-    return null;
-  }
-
-  const raw_str = html.slice(dataStart, dataEnd);
   try {
-    const raw = JSON.parse(raw_str);
-    return processUnderstatData(raw);
+    const allPlayers = [];
+    let   page       = 1;
+    const limit      = 100;
+    let   total      = 9999;
+
+    while (allPlayers.length < total) {
+      const path = '/laliga-backend-web/api/stats/players?competition_id=1&season_id=&limit=' + limit + '&offset=' + ((page - 1) * limit) + '&order_field=goals&order_type=desc&lang=es';
+      const res  = await apiGet(path);
+
+      if (!res.ok) {
+        console.warn('  \u26A0\uFE0F API LaLiga status:', res.status, '| página:', page);
+        break;
+      }
+
+      const items = res.body?.data || res.body?.players || res.body?.items || [];
+      if (!items.length) break;
+
+      total = res.body?.total || res.body?.count || total;
+      items.forEach(p => {
+        const stats = p.stats || p.statistics || p;
+        allPlayers.push({
+          id:          p.id || p.player_id || '',
+          name:        p.name || p.player_name || p.full_name || '',
+          team:        p.team?.name || p.club?.name || p.team_name || '',
+          position:    p.position?.name || p.demarcation?.name || p.position || '',
+          appearances: parseInt(stats.matches_played || stats.games || p.matches_played) || 0,
+          minutes:     parseInt(stats.minutes_played || stats.time  || p.minutes_played) || 0,
+          goals:       parseInt(stats.goals          || p.goals)    || 0,
+          assists:     parseInt(stats.goal_assist    || stats.assists || p.assists) || 0,
+          yellowCards: parseInt(stats.yellow_cards   || p.yellow_cards) || 0,
+          redCards:    parseInt(stats.red_cards      || p.red_cards)    || 0,
+          saves:       parseInt(stats.saves          || p.saves)        || 0,
+        });
+      });
+
+      console.log('  \u2192 Página ' + page + ': ' + items.length + ' jugadores (total: ' + allPlayers.length + '/' + total + ')');
+      if (allPlayers.length >= total || items.length < limit) break;
+      page++;
+      await sleep(500);
+    }
+
+    if (!allPlayers.length) {
+      console.warn('\u26A0\uFE0F API LaLiga: sin jugadores');
+      return null;
+    }
+
+    // Calcular minutesPerGoal
+    allPlayers.forEach(p => {
+      p.minutesPerGoal = (p.goals && p.minutes) ? Math.round(p.minutes / p.goals) : null;
+    });
+
+    console.log('\u2705 API LaLiga: ' + allPlayers.length + ' jugadores descargados');
+    return {
+      source:    'laliga-api',
+      league:    'LaLiga',
+      season:    '2025/26',
+      updatedAt: new Date().toISOString(),
+      players:   allPlayers,
+    };
+
   } catch(e) {
-    console.warn('⚠️ Understat: error parseando JSON:', e.message);
+    console.warn('\u26A0\uFE0F Error API LaLiga:', e.message);
     return null;
   }
-}
-
-function processUnderstatData(raw) {
-  if (!Array.isArray(raw) || !raw.length) {
-    console.warn('⚠️ Understat: datos vacios o formato inesperado');
-    return null;
-  }
-
-  const players = raw.map(p => ({
-    id:        p.id,
-    name:      p.player_name || p.name || '',
-    team:      p.team_title  || p.team || '',
-    position:  p.position    || '',
-    appearances: parseInt(p.games)   || 0,
-    minutes:   parseInt(p.time)      || 0,
-    goals:     parseInt(p.goals)     || 0,
-    assists:   parseInt(p.assists)   || 0,
-    xg:        parseFloat(p.xG)      || 0,
-    xag:       parseFloat(p.xA)      || 0,
-    shots:     parseInt(p.shots)     || 0,
-    keyPasses: parseInt(p.key_passes)|| 0,
-    yellowCards: parseInt(p.yellow_cards) || 0,
-    redCards:    parseInt(p.red_cards)    || 0,
-    npg:       parseInt(p.npg)       || 0,
-    npxg:      parseFloat(p.npxG)    || 0,
-    minutesPerGoal: (parseInt(p.goals) && parseInt(p.time))
-      ? Math.round(parseInt(p.time) / parseInt(p.goals)) : null,
-  }));
-
-  console.log('✅ Understat: ' + players.length + ' jugadores descargados');
-  return {
-    source:    'understat',
-    league:    'LaLiga',
-    season:    '2025/26',
-    updatedAt: new Date().toISOString(),
-    players,
-  };
 }
 
 // ─── MAIN ────────────────────────────────────────────────────────────────────
@@ -515,7 +509,7 @@ async function main() {
     console.log(`👥 Equipos fantasy:    ${allTeams?.length || 0}`);
     console.log(`🦊 Mi equipo:          ${myTeam?.players?.length || 0} jugadores`);
     console.log(`📰 Noticias:           ${news.length}`);
-    console.log(`⚽ Stats jugadores:    ${playerStats?.players?.length || 0} (Understat)`);
+    console.log(`⚽ Stats jugadores:    ${playerStats?.players?.length || 0} (API LaLiga)`);
 
   } catch(err) {
     console.error('❌ Error inesperado:', err.message);
