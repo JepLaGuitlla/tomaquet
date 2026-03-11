@@ -447,9 +447,14 @@ function parseFbrefHtml(html) {
 
   // Extraer filas de la tabla stats_standard (LaLiga)
   // FBref usa: <td data-stat="player"><a href="...">Nombre</a></td>
-  const tableIdx = html.indexOf('id="stats_standard');
+  // FBref: la tabla de LaLiga es stats_standard_12 (comp_id=12)
+  // Buscar primero el ID específico, luego el genérico como fallback
+  let tableIdx = html.indexOf('id="stats_standard_12"');
+  if (tableIdx === -1) tableIdx = html.indexOf('id="stats_standard');
   if (tableIdx === -1) {
-    console.warn('⚠️ FBref: no se encontró la tabla stats_standard');
+    // Diagnóstico: mostrar qué IDs hay disponibles
+    const allIds = [...html.matchAll(/id="([^"]{0,40})"/g)].map(m => m[1]).filter(id => id.includes('stat') || id.includes('player'));
+    console.warn('⚠️ FBref: no se encontró la tabla. IDs disponibles:', allIds.slice(0, 15).join(', '));
     return null;
   }
   const tableEnd = html.indexOf('</table>', tableIdx);
