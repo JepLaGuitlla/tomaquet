@@ -77,6 +77,7 @@ main{max-width:1440px;margin:0 auto;padding:1.5rem 2rem;}
 
 /* ── TABLE ─── */
 .table-wrap{background:var(--bg2);border-radius:4px;overflow:hidden;border:1px solid var(--border);}
+#jugadores-table-header{position:sticky;top:102px;z-index:10;background:var(--bg3);border-bottom:1px solid var(--border2);}
 .table-header{display:grid;grid-template-columns:40px 2fr 80px 1fr 100px 100px 80px 80px 80px;padding:10px 16px;background:var(--bg3);border-bottom:1px solid var(--border2);}
 .th{font-family:'IBM Plex Mono',monospace;font-size:0.58rem;color:var(--text3);text-transform:uppercase;letter-spacing:1.5px;font-weight:500;cursor:pointer;user-select:none;transition:color 0.15s;}
 .th:hover{color:var(--accent);}
@@ -575,36 +576,39 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
         <button class="filter-btn" onclick="filterPos('DL',this)">DL</button>
       </div>
       <select class="sort-select" id="sortSelect" onchange="sortPlayers()">
-        <optgroup label="— Biwenger —">
-          <option value="points_desc">↓ Puntos Biwenger</option>
-          <option value="price_desc">↓ Valor mercado</option>
-          <option value="roi_desc">↓ ROI</option>
-          <option value="trend_desc">↓ Tendencia</option>
+        <optgroup label="— Partidos —">
+          <option value="sf_appearances_desc">↓ Partidos jugados</option>
+          <option value="sf_started_desc">↓ Titular</option>
+          <option value="sf_subsIn_desc">↓ Suplente</option>
+          <option value="sf_minutes_desc">↓ Minutos jugados</option>
         </optgroup>
-        <optgroup label="— Estadísticas reales —">
+        <optgroup label="— Rendimiento —">
           <option value="sf_rating_desc">↓ Rating Sofascore</option>
           <option value="sf_goals_desc">↓ Goles</option>
           <option value="sf_assists_desc">↓ Asistencias</option>
-          <option value="sf_minutes_desc">↓ Minutos</option>
-          <option value="sf_saves_desc">↓ Paradas</option>
+          <option value="sf_tackles_desc">↓ Entradas</option>
+          <option value="sf_yellowCards_desc">↓ Tarjetas amarillas</option>
+          <option value="sf_saves_desc">↓ Paradas (PT)</option>
         </optgroup>
       </select>
       <span style="font-family:'IBM Plex Mono',monospace;font-size:0.66rem;color:var(--text3);margin-left:auto;" id="playerCount"></span>
     </div>
 
     <!-- TABLA COMPLETA -->
-    <div class="table-wrap" style="overflow-x:auto;">
-      <div class="table-header" style="display:grid;grid-template-columns:28px 24px minmax(160px,1fr) 70px 60px 60px 54px 54px 54px 54px;gap:0;min-width:640px;position:sticky;top:48px;z-index:10;background:var(--bg3);">
+    <div class="table-wrap" style="overflow-x:auto;overflow-y:visible;">
+      <div class="table-header" id="jugadores-table-header" style="display:grid;grid-template-columns:28px 24px minmax(160px,1fr) 50px 50px 50px 60px 54px 54px 54px 54px 54px;gap:0;min-width:760px;padding:10px 10px;">
         <div class="th">#</div>
         <div class="th"></div>
         <div class="th">JUGADOR</div>
-        <div class="th" onclick="setSortAndRender('points_desc')" style="cursor:pointer;text-align:right">PTS↕</div>
-        <div class="th" onclick="setSortAndRender('price_desc')" style="cursor:pointer;text-align:right">VALOR↕</div>
-        <div class="th" onclick="setSortAndRender('sf_rating_desc')" style="cursor:pointer;text-align:center">RAT↕</div>
-        <div class="th" onclick="setSortAndRender('sf_goals_desc')" style="cursor:pointer;text-align:center">GOL↕</div>
-        <div class="th" onclick="setSortAndRender('sf_assists_desc')" style="cursor:pointer;text-align:center">AST↕</div>
-        <div class="th" style="text-align:center">AM</div>
-        <div class="th" style="text-align:center">TJ</div>
+        <div class="th" onclick="setSortAndRender('sf_appearances_desc')" style="cursor:pointer;text-align:center" title="Partidos jugados">PJ↕</div>
+        <div class="th" onclick="setSortAndRender('sf_started_desc')" style="cursor:pointer;text-align:center" title="Partidos de titular">TIT↕</div>
+        <div class="th" onclick="setSortAndRender('sf_subsIn_desc')" style="cursor:pointer;text-align:center" title="Partidos como suplente">SUP↕</div>
+        <div class="th" onclick="setSortAndRender('sf_minutes_desc')" style="cursor:pointer;text-align:center" title="Minutos jugados">MIN↕</div>
+        <div class="th" onclick="setSortAndRender('sf_rating_desc')" style="cursor:pointer;text-align:center" title="Rating medio">RAT↕</div>
+        <div class="th" onclick="setSortAndRender('sf_goals_desc')" style="cursor:pointer;text-align:center" title="Goles">GOL↕</div>
+        <div class="th" onclick="setSortAndRender('sf_assists_desc')" style="cursor:pointer;text-align:center" title="Asistencias">AST↕</div>
+        <div class="th" onclick="setSortAndRender('sf_tackles_desc')" style="cursor:pointer;text-align:center" title="Entradas">ENT↕</div>
+        <div class="th" onclick="setSortAndRender('sf_yellowCards_desc')" style="cursor:pointer;text-align:center" title="Tarjetas">TJ↕</div>
       </div>
       <div class="full-list-wrap">
         <div id="playersList"></div>
@@ -1176,7 +1180,7 @@ function renderRankings(players) {
 // ══════════════════════════════════════════
 // JUGADORES
 // ══════════════════════════════════════════
-let allPlayers=[],filteredPlayers=[],currentPos='',currentSort='points_desc',currentPage=1;
+let allPlayers=[],filteredPlayers=[],currentPos='',currentSort='sf_rating_desc',currentPage=1;
 const PAGE_SIZE=50;
 let cf='4-3-3',lineup={},marketPlayers=[],currentSlot=null;
 let myTeamData=null; // datos reales de mi equipo desde Biwenger
@@ -1301,31 +1305,44 @@ let selectedPlayerId = null;
 function renderPlayers(){
   document.getElementById('playerCount').textContent = filteredPlayers.length+' jugadores';
   const PosC = {PT:'#6366f1',DF:'#16a34a',MC:'#d97706',DL:'#e63329',MD:'#8b5cf6'};
+  const ROW_COLS = '28px 24px minmax(160px,1fr) 50px 50px 50px 60px 54px 54px 54px 54px 54px';
+  const dash = '\u2014';
   document.getElementById('playersList').innerHTML = filteredPlayers.map((p,i)=>{
     const r = i+1;
     const rc = r===1?'rank-1':r===2?'rank-2':r===3?'rank-3':'';
     const posCol = PosC[p.position.split('/')[0]] || '#555';
     const sf = p.sf;
-    const rating = sf?.rating ? sf.rating.toFixed(1) : '\u2014';
+
+    // Stats reales
+    const pj      = sf?.appearances ?? dash;
+    const tit     = sf?.started ?? dash;
+    const sup     = sf?.subsIn ?? dash;
+    const min     = sf?.minutes ? sf.minutes+'\u2032' : dash;
+    const rating  = sf?.rating ? sf.rating.toFixed(1) : dash;
     const ratingCol = sf?.rating ? (sf.rating>=7.5?'color:var(--green)':sf.rating>=6.5?'color:var(--text2)':'color:var(--red)') : 'color:var(--text3)';
-    const goles = sf?.goals ?? '\u2014';
-    const asis  = sf?.assists ?? '\u2014';
-    const am    = sf?.minutesPerGoal ? sf.minutesPerGoal+'\u2032' : '\u2014';
-    const tj    = sf ? '<span style="color:#f59e0b">'+(sf.yellowCards||0)+'</span>'+(sf.redCards?'<span style="color:var(--red);margin-left:2px">'+sf.redCards+'</span>':'') : '\u2014';
-    return '<div class="player-row" style="cursor:pointer" onclick="openJugPanel(filteredPlayers['+i+'])">'+
+    const goles   = sf?.goals ?? dash;
+    const asis    = sf?.assists ?? dash;
+    const entradas = sf?.tackles ?? dash;
+    const tarjetas = sf ? '<span style="color:#f59e0b;font-weight:600">'+(sf.yellowCards||0)+'</span>'+(sf.redCards?'<span style="color:var(--red);margin-left:3px;font-weight:700">'+sf.redCards+'R</span>':'') : dash;
+
+    const cNum = 'font-family:\'IBM Plex Mono\',monospace;font-size:0.75rem;text-align:center;color:var(--text2)';
+    const cStat = 'font-family:\'Barlow Condensed\',sans-serif;font-size:0.95rem;font-weight:600;text-align:center';
+
+    return '<div class="player-row" style="cursor:pointer;grid-template-columns:'+ROW_COLS+';min-width:760px" onclick="openJugPanel(filteredPlayers['+i+'])">'+
       '<div class="rank '+rc+'" style="font-size:0.7rem">'+r+'</div>'+
       '<div style="width:22px;height:22px;border-radius:3px;background:'+posCol+';display:flex;align-items:center;justify-content:center;font-family:\'Barlow Condensed\',sans-serif;font-size:0.56rem;font-weight:800;color:#fff;flex-shrink:0">'+p.position.split('/')[0]+'</div>'+
-      '<div style="min-width:0"><div class="player-name" style="font-size:0.82rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">'+p.name+'</div><div class="player-club">'+(p.club||'\u2014')+'</div></div>'+
-      '<div style="text-align:right;font-family:\'Barlow Condensed\',sans-serif;font-size:1.1rem;font-weight:700;color:var(--lime)">'+(p.pts||'\u2014')+'</div>'+
-      '<div style="text-align:right;font-family:\'IBM Plex Mono\',monospace;font-size:0.66rem;color:var(--text3)">'+fmt(p.price)+'</div>'+
-      '<div style="text-align:center;font-family:\'IBM Plex Mono\',monospace;font-size:0.72rem;font-weight:500;'+ratingCol+'">'+rating+'</div>'+
-      '<div style="text-align:center;font-family:\'Barlow Condensed\',sans-serif;font-size:0.88rem;font-weight:600">'+goles+'</div>'+
-      '<div style="text-align:center;font-family:\'Barlow Condensed\',sans-serif;font-size:0.88rem;font-weight:600">'+asis+'</div>'+
-      '<div style="text-align:center;font-family:\'IBM Plex Mono\',monospace;font-size:0.66rem;color:var(--text3)">'+am+'</div>'+
-      '<div style="text-align:center;font-family:\'IBM Plex Mono\',monospace;font-size:0.7rem">'+tj+'</div>'+
+      '<div style="min-width:0"><div class="player-name" style="font-size:0.82rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">'+p.name+'</div><div class="player-club">'+(p.club||dash)+'</div></div>'+
+      '<div style="'+cNum+'">'+pj+'</div>'+
+      '<div style="'+cNum+'">'+tit+'</div>'+
+      '<div style="'+cNum+'">'+sup+'</div>'+
+      '<div style="'+cNum+';font-size:0.68rem;color:var(--text3)">'+min+'</div>'+
+      '<div style="'+cNum+';font-weight:600;'+ratingCol+'">'+rating+'</div>'+
+      '<div style="'+cStat+'">'+goles+'</div>'+
+      '<div style="'+cStat+'">'+asis+'</div>'+
+      '<div style="'+cNum+'">'+entradas+'</div>'+
+      '<div style="'+cNum+';font-size:0.7rem">'+tarjetas+'</div>'+
     '</div>';
   }).join('') || '<div style="padding:40px;text-align:center;color:var(--text3)">Sin jugadores</div>';
-  // sin paginación — lista completa
 }
 
 function selectJugador(p){ openJugPanel(p); }
