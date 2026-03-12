@@ -2400,7 +2400,6 @@ function closeMercadoFab(){}
 function renderGeneral(){
   const standings=getStandings().slice().sort((a,b)=>b.pts-a.pts).map((t,i)=>({...t,pos:i+1,diff:i===0?0:t.pts-getStandings()[0].pts}));
   if(!standings.length){document.getElementById('generalList').innerHTML='<div style="padding:2rem;text-align:center;font-family:Figtree,sans-serif;font-size:0.75rem;color:var(--text3)">// Datos pendientes para esta liga</div>';return;}
-  const POS_LABELS={1:'PT',2:'DF',3:'MC',4:'DL'};
   document.getElementById('generalList').innerHTML=standings.map((t,i)=>{
     const isMe=t.name.includes(getMiEquipoName().replace(' 🦊','').trim())||t.name===getMiEquipoName();
     const rankCls=t.pos===1?'gold':t.pos===2?'silver':t.pos===3?'bronze':'';
@@ -2410,30 +2409,83 @@ function renderGeneral(){
     const vsTxt=vsSig===null?'—':'+'+vsSig;
     const vsColor=vsSig===null?'color:var(--text3)':vsSig<=5?'color:var(--red)':'color:var(--green)';
     const rowBg=isMe?'background:rgba(163,230,53,0.04);border-left:2px solid var(--accent)':'';
-    const tid=`rival-${i}`;
-    // Plantilla del rival (ordenada por posición)
-    const squad=(t.playersList||[]).slice().sort((a,b)=>(a.position||9)-(b.position||9));
-    const squadHtml=squad.length?`<div id="${tid}" style="display:none;padding:10px 16px 12px;border-top:1px solid var(--border);background:var(--bg3);"><div style="display:flex;flex-wrap:wrap;gap:6px;">${
-      squad.map(p=>{
-        const full=allPlayers.find(x=>x.id==p.id)||p;
-        const pos=POS_LABELS[full.position||p.position]||'?';
-        const posColor=pos==='PT'?'#64748b':pos==='DF'?'#1d6fce':pos==='MC'?'#16a34a':'#e63329';
-        const pts=full.points||p.points||0;
-        const price=full.price||p.price||0;
-        const priceStr=price>=1000000?(price/1000000).toFixed(1)+'M':price>=1000?Math.round(price/1000)+'K':price;
-        return `<div style="display:inline-flex;align-items:center;gap:5px;padding:4px 8px;background:var(--bg2);border:1px solid var(--border);border-radius:3px;font-family:'Figtree',sans-serif;font-size:0.7rem;"><span style="font-size:0.58rem;font-weight:700;color:${posColor};letter-spacing:0.5px">${pos}</span><span style="color:var(--text);font-weight:500">${full.name||p.name}</span><span style="color:var(--text3)">${pts}pts</span><span style="color:var(--text3);font-size:0.65rem">${priceStr}</span></div>`;
-      }).join('')
-    }</div></div>`:'';
-    return `<div><div class="standings-grid standings-row" style="${rowBg};cursor:pointer" onclick="toggleRival('${tid}',this)"><div class="s-rank ${rankCls}">${t.pos}</div><div class="s-name" style="${isMe?'color:var(--accent);font-weight:700':''}">${t.name}</div><div class="s-pts">${t.pts}</div><div class="s-num">${t.value}M€</div><div class="s-num">${t.players}</div><div class="s-num">${t.ptsPer||'—'}</div><div class="s-diff" style="${diffColor}">${diffTxt}</div><div class="s-diff" style="${vsColor}">${vsTxt}</div></div>${squadHtml}</div>`;
+    const clickable=!isMe?`style="${rowBg};cursor:pointer" onclick="openRivalModal(${i})"`:` style="${rowBg}"`;
+    return `<div class="standings-grid standings-row"${clickable}><div class="s-rank ${rankCls}">${t.pos}</div><div class="s-name" style="${isMe?'color:var(--accent);font-weight:700':''}">${t.name}${!isMe?'<span style="font-size:0.55rem;color:var(--text3);margin-left:6px;opacity:0.6">ver plantilla</span>':''}</div><div class="s-pts">${t.pts}</div><div class="s-num">${t.value}M€</div><div class="s-num">${t.players}</div><div class="s-num">${t.ptsPer||'—'}</div><div class="s-diff" style="${diffColor}">${diffTxt}</div><div class="s-diff" style="${vsColor}">${vsTxt}</div></div>`;
   }).join('');
 }
 
-function toggleRival(id,row){
-  const el=document.getElementById(id);
-  if(!el)return;
-  const open=el.style.display!=='none'&&el.style.display!=='';
-  el.style.display=open?'none':'block';
-  row.style.borderBottom=open?'':'none';
+function openRivalModal(idx){
+  const POS_LABELS={1:'PT',2:'DF',3:'MC',4:'DL'};
+  const standings=getStandings().slice().sort((a,b)=>b.pts-a.pts).map((t,i)=>({...t,pos:i+1}));
+  const rival=standings[idx];
+  if(!rival)return;
+
+  // Plantilla rival
+  const rivalSquad=(rival.playersList||[]).slice().sort((a,b)=>(a.position||9)-(b.position||9));
+
+  // Mi plantilla
+  const myData=getEquipo();
+  const mySquad=myData?myData.players||[]:[];
+
+  function buildCard(p,isRival){
+    const full=allPlayers.find(x=>x.id==p.id)||p;
+    const pos=POS_LABELS[full.position||p.position]||'?';
+    const posColor=pos==='PT'?'#94a3b8':pos==='DF'?'#60a5fa':pos==='MC'?'#4ade80':'#f87171';
+    const pts=full.points||p.points||0;
+    const price=full.price||p.price||0;
+    const priceStr=price>=1000000?(price/1000000).toFixed(1)+'M':price>=1000?Math.round(price/1000)+'K':price;
+    const trend=full.trend||0;
+    const trendTxt=trend>0?`<span style="color:var(--green);font-size:0.6rem">▲${(trend/1000).toFixed(0)}K</span>`:trend<0?`<span style="color:var(--red);font-size:0.6rem">▼${Math.abs(trend/1000).toFixed(0)}K</span>`:'';
+    return `<div style="display:flex;align-items:center;justify-content:space-between;padding:7px 10px;border-bottom:1px solid var(--border);gap:8px;">
+      <div style="display:flex;align-items:center;gap:7px;min-width:0;">
+        <span style="font-size:0.58rem;font-weight:700;color:${posColor};width:18px;flex-shrink:0">${pos}</span>
+        <span style="font-family:'Figtree',sans-serif;font-size:0.78rem;font-weight:500;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${full.name||p.name}</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;font-family:'Figtree',sans-serif;">
+        <span style="font-size:0.72rem;font-weight:700;color:var(--text)">${pts}<span style="font-size:0.58rem;font-weight:400;color:var(--text3)">pts</span></span>
+        <span style="font-size:0.68rem;color:var(--text3)">${priceStr}</span>
+        ${trendTxt}
+      </div>
+    </div>`;
+  }
+
+  const rivalHtml=rivalSquad.length?rivalSquad.map(p=>buildCard(p,true)).join(''):'<div style="padding:2rem;text-align:center;color:var(--text3);font-size:0.75rem">Sin datos</div>';
+  const myHtml=mySquad.length?mySquad.slice().sort((a,b)=>(allPlayers.find(x=>x.id==a.id)?.position||9)-(allPlayers.find(x=>x.id==b.id)?.position||9)).map(p=>buildCard(p,false)).join(''):'<div style="padding:2rem;text-align:center;color:var(--text3);font-size:0.75rem">Sin datos</div>';
+
+  const rivalPts=rival.pts;
+  const meStanding=standings.find(t=>t.name.includes(getMiEquipoName().replace(' 🦊','').trim()));
+  const mePts=meStanding?.pts||0;
+  const diff=mePts-rivalPts;
+  const diffTxt=diff>0?`<span style="color:var(--green)">+${diff}</span>`:diff<0?`<span style="color:var(--red)">${diff}</span>`:`<span style="color:var(--text3)">=</span>`;
+
+  document.getElementById('rivalModalContent').innerHTML=`
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--border);background:var(--bg3);">
+      <div style="font-family:'Figtree',sans-serif;font-size:0.65rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text3)">VS RIVAL</div>
+      <button onclick="closeRivalModal()" style="background:none;border:none;color:var(--text3);cursor:pointer;font-size:1.2rem;line-height:1;padding:2px 6px;">✕</button>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:14px 20px;border-bottom:1px solid var(--border);gap:12px;">
+      <div style="text-align:center;">
+        <div style="font-family:'Figtree',sans-serif;font-size:0.62rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin-bottom:2px">YO</div>
+        <div style="font-family:'Figtree',sans-serif;font-size:0.85rem;font-weight:700;color:var(--accent)">${getMiEquipoName()}</div>
+        <div style="font-family:'Figtree',sans-serif;font-size:1.4rem;font-weight:800;color:var(--text)">${mePts}<span style="font-size:0.65rem;color:var(--text3)"> pts</span></div>
+      </div>
+      <div style="font-family:'Figtree',sans-serif;font-size:0.9rem;font-weight:700;color:var(--text3);text-align:center">${diffTxt}</div>
+      <div style="text-align:center;">
+        <div style="font-family:'Figtree',sans-serif;font-size:0.62rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin-bottom:2px">${rival.pos}º</div>
+        <div style="font-family:'Figtree',sans-serif;font-size:0.85rem;font-weight:700;color:var(--text)">${rival.name}</div>
+        <div style="font-family:'Figtree',sans-serif;font-size:1.4rem;font-weight:800;color:var(--text)">${rivalPts}<span style="font-size:0.65rem;color:var(--text3)"> pts</span></div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;height:calc(100% - 140px);overflow:hidden;">
+      <div style="border-right:1px solid var(--border);overflow-y:auto;">${myHtml}</div>
+      <div style="overflow-y:auto;">${rivalHtml}</div>
+    </div>`;
+
+  document.getElementById('rivalModal').style.display='flex';
+}
+
+function closeRivalModal(){
+  document.getElementById('rivalModal').style.display='none';
 }
 
 function renderGrupos(){
@@ -3773,6 +3825,13 @@ function renderBolsaHistoria() {
       <button class="compare-modal-close" onclick="closeCompareModalDirect()">✕ CERRAR</button>
     </div>
     <div class="compare-modal-body" id="compareModalBody"></div>
+  </div>
+</div>
+
+<!-- ── MODAL RIVAL ───────────────────────────────────────── -->
+<div id="rivalModal" style="display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,0.65);align-items:center;justify-content:center;padding:20px;" onclick="if(event.target===this)closeRivalModal()">
+  <div style="background:var(--bg2);border:1px solid var(--border);border-radius:6px;width:100%;max-width:680px;max-height:85vh;display:flex;flex-direction:column;overflow:hidden;">
+    <div id="rivalModalContent"></div>
   </div>
 </div>
 
