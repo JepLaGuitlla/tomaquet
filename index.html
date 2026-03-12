@@ -1475,22 +1475,29 @@ async function loadPlayers(){
 
     // Cargar mi equipo real desde Biwenger
     if(data.myTeam && data.myTeam.players && data.myTeam.players.length){
-      myTeamData = data.myTeam.players.map(p=>({
-        id:       p.id,
-        name:     p.name,
-        position: mapPosition(p.position),
-        price:    p.price||0,
-        pts:      p.points||0,
-        trend:    p.trend||0,
-        club:     allPlayers.find(a=>a.id===p.id)?.club || '',
-        status:   p.status||'ok',
-        jForm:    p.jForm||[],
-        clausula: p.clausula||null,
-      }));
+      // Los jugadores vienen como {id, buyPrice, clause} — cruzar con allPlayers
+      myTeamData = data.myTeam.players.map(p => {
+        const full = allPlayers.find(a => a.id === p.id);
+        if(!full) return null;
+        return {
+          id:       full.id,
+          name:     full.name,
+          position: full.position,
+          price:    full.price  || 0,
+          pts:      full.pts    || 0,
+          trend:    full.trend  || 0,
+          club:     full.club   || '',
+          status:   full.status || 'ok',
+          jForm:    full.jForm  || [],
+          buyPrice: p.buyPrice  || 0,
+          clause:   p.clause    || 0,
+          invested: p.invested  || 0,
+        };
+      }).filter(Boolean);
       console.log('🦊 Mi equipo real cargado:', myTeamData.length, 'jugadores');
-      refreshGuitllaSet(); // actualizar marcadores en mercado v3
+      refreshGuitllaSet();
       renderMiEquipo();
-      mv3InitFromPlayers(allPlayers); // re-render mercado con guitlla actualizado
+      mv3InitFromPlayers(allPlayers);
     }
 
     // Cargar noticias desde data.json (sin CORS)
