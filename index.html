@@ -2423,34 +2423,37 @@ function openRivalModal(idx){
   // Plantilla rival
   const rivalSquad=(rival.playersList||[]).slice().sort((a,b)=>(a.position||9)-(b.position||9));
 
-  // Mi plantilla
-  const myData=getEquipo();
-  const mySquad=myData?myData.players||[]:[];
-
-  function buildCard(p,isRival){
-    const full=allPlayers.find(x=>x.id==p.id)||p;
-    const pos=POS_LABELS[full.position||p.position]||'?';
+  function buildCard(p){
+    const full=allPlayers.find(x=>Number(x.id)===Number(p.id));
+    if(!full&&!p.name)return '';
+    const src=full||p;
+    const pos={1:'PT',2:'DF',3:'MC',4:'DL'}[src.position]||'?';
     const posColor=pos==='PT'?'#94a3b8':pos==='DF'?'#60a5fa':pos==='MC'?'#4ade80':'#f87171';
-    const pts=full.points||p.points||0;
-    const price=full.price||p.price||0;
-    const priceStr=price>=1000000?(price/1000000).toFixed(1)+'M':price>=1000?Math.round(price/1000)+'K':price;
-    const trend=full.trend||0;
+    const pts=src.points||0;
+    const price=src.price||0;
+    const priceStr=price>=1000000?(price/1000000).toFixed(1)+'M':price>=1000?Math.round(price/1000)+'K':price+'€';
+    const trend=src.trend||0;
     const trendTxt=trend>0?`<span style="color:var(--green);font-size:0.6rem">▲${(trend/1000).toFixed(0)}K</span>`:trend<0?`<span style="color:var(--red);font-size:0.6rem">▼${Math.abs(trend/1000).toFixed(0)}K</span>`:'';
     return `<div style="display:flex;align-items:center;justify-content:space-between;padding:7px 10px;border-bottom:1px solid var(--border);gap:8px;">
-      <div style="display:flex;align-items:center;gap:7px;min-width:0;">
+      <div style="display:flex;align-items:center;gap:7px;min-width:0;flex:1;">
         <span style="font-size:0.58rem;font-weight:700;color:${posColor};width:18px;flex-shrink:0">${pos}</span>
-        <span style="font-family:'Figtree',sans-serif;font-size:0.78rem;font-weight:500;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${full.name||p.name}</span>
+        <span style="font-family:'Figtree',sans-serif;font-size:0.78rem;font-weight:500;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${src.name}</span>
       </div>
-      <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;font-family:'Figtree',sans-serif;">
+      <div style="display:flex;align-items:center;gap:6px;flex-shrink:0;">
         <span style="font-size:0.72rem;font-weight:700;color:var(--text)">${pts}<span style="font-size:0.58rem;font-weight:400;color:var(--text3)">pts</span></span>
-        <span style="font-size:0.68rem;color:var(--text3)">${priceStr}</span>
+        <span style="font-size:0.65rem;color:var(--text3)">${priceStr}</span>
         ${trendTxt}
       </div>
     </div>`;
   }
 
-  const rivalHtml=rivalSquad.length?rivalSquad.map(p=>buildCard(p,true)).join(''):'<div style="padding:2rem;text-align:center;color:var(--text3);font-size:0.75rem">Sin datos</div>';
-  const myHtml=mySquad.length?mySquad.slice().sort((a,b)=>(allPlayers.find(x=>x.id==a.id)?.position||9)-(allPlayers.find(x=>x.id==b.id)?.position||9)).map(p=>buildCard(p,false)).join(''):'<div style="padding:2rem;text-align:center;color:var(--text3);font-size:0.75rem">Sin datos</div>';
+  const rivalHtml=rivalSquad.length?rivalSquad.map(p=>buildCard(p)).filter(Boolean).join(''):'<div style="padding:2rem;text-align:center;color:var(--text3);font-size:0.75rem">Sin datos</div>';
+
+  // Mi plantilla: getEquipo().players solo tiene {id, clause, invested} — cruzar con allPlayers
+  const myData=getEquipo();
+  const myRefs=myData?myData.players||[]:[];
+  const mySquad=myRefs.map(ref=>allPlayers.find(x=>Number(x.id)===Number(ref.id))).filter(Boolean).sort((a,b)=>(a.position||9)-(b.position||9));
+  const myHtml=mySquad.length?mySquad.map(p=>buildCard(p)).filter(Boolean).join(''):'<div style="padding:2rem;text-align:center;color:var(--text3);font-size:0.75rem">Sin datos</div>';
 
   const rivalPts=rival.pts;
   const meStanding=standings.find(t=>t.name.includes(getMiEquipoName().replace(' 🦊','').trim()));
