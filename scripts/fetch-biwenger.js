@@ -567,6 +567,31 @@ async function fetchSofascoreStats() {
   }
 }
 
+// ─── TABLÓN ──────────────────────────────────────────────────────────────────
+async function fetchBoard(token, liga) {
+  console.log(`📋 Descargando tablón liga ${liga.id}...`);
+  const res = await got('https://biwenger.as.com/api/v2/home', {
+    headers: headersForLeague(token, liga),
+    responseType: 'json',
+    throwHttpErrors: false,
+  });
+  if (res.statusCode !== 200) {
+    console.warn(`⚠️ Board liga ${liga.id}: status ${res.statusCode}`);
+    return [];
+  }
+  const board = res.body?.data?.league?.board || [];
+  // Filtrar solo transfers y markets, ignorar bettingPool, playerMovements
+  const events = board
+    .filter(e => e.type === 'transfer' || e.type === 'market')
+    .map(e => ({
+      type:    e.type,
+      date:    e.date,
+      content: e.content,
+    }));
+  console.log(`✅ Tablón liga ${liga.id}: ${events.length} eventos`);
+  return events;
+}
+
 // ─── MAIN ────────────────────────────────────────────────────────────────────
 async function main() {
   try {
@@ -577,11 +602,13 @@ async function main() {
     const league        = await fetchLeague(token, LEAGUE_TOMAQUET);
     const allTeams      = await fetchAllTeams(token, LEAGUE_TOMAQUET);
     const myTeam        = await fetchMyTeam(token, LEAGUE_TOMAQUET);
+    const boardTomaquet = await fetchBoard(token, LEAGUE_TOMAQUET);
 
     // ── Liga EN BAS ──
     const leagueEnBas   = await fetchLeague(token, LEAGUE_ENBAS);
     const allTeamsEnBas = await fetchAllTeams(token, LEAGUE_ENBAS);
     const myTeamEnBas   = await fetchMyTeam(token, LEAGUE_ENBAS);
+    const boardEnBas    = await fetchBoard(token, LEAGUE_ENBAS);
 
     const laliga     = await fetchLaLiga();
     const news       = await fetchNews();
@@ -593,9 +620,11 @@ async function main() {
       league,
       allTeams,
       myTeam,
+      boardTomaquet,
       leagueEnBas,
       allTeamsEnBas,
       myTeamEnBas,
+      boardEnBas,
       laliga,
       news,
       sofascore,
