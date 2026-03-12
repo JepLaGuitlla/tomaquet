@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-12T10:18:55.134Z",
+  "updatedAt": "2026-03-12T10:30:38.706Z",
   "players": [
     {
       "id": 11,
@@ -6618,7 +6618,7 @@
     },
     {
       "id": 31027,
-      "name": "Arda Güler",
+      "name": "Arda G��ler",
       "position": 3,
       "price": 14150000,
       "points": 149,
@@ -11435,6 +11435,761 @@
       }
     ]
   },
+  "leagueEnBas": {
+    "id": 1248640,
+    "name": "Lliga Bas Promesas",
+    "type": "premium",
+    "mode": "league",
+    "marketMode": "normal",
+    "scoreID": 5,
+    "icon": "icons/1.png",
+    "cover": "",
+    "created": 1626898315,
+    "competition": "la-liga",
+    "settings": {
+      "description": ""
+    },
+    "tournaments": [
+      {
+        "id": 130069,
+        "name": "Chempiooons",
+        "icon": "img/tournament.png",
+        "activeRound": {
+          "index": 9,
+          "type": "league",
+          "leg": "unique"
+        }
+      }
+    ],
+    "standings": [
+      {
+        "id": 9890450,
+        "name": "MarK Lenders",
+        "icon": "icons/34.png",
+        "points": 1307,
+        "lastPositions": [
+          3,
+          8,
+          8,
+          10,
+          1
+        ],
+        "teamSize": 16,
+        "teamValue": 71820000,
+        "teamValueInc": 300000,
+        "lastTrophy": {
+          "type": "league",
+          "position": 1,
+          "season": "Temporada 2024/2025"
+        },
+        "position": 1,
+        "role": ""
+      },
+      {
+        "id": 6588130,
+        "name": "The GOAT club",
+        "icon": "i/u/6588130.png?v=12",
+        "points": 1240,
+        "lastPositions": [
+          10,
+          1,
+          2,
+          1,
+          9
+        ],
+        "teamSize": 13,
+        "teamValue": 98620000,
+        "teamValueInc": 230000,
+        "position": 2,
+        "positionInc": 1,
+        "role": ""
+      },
+      {
+        "id": 6579505,
+        "name": "Xevi borrat",
+        "icon": "i/u/6579505.png",
+        "points": 1231,
+        "lastPositions": [
+          17,
+          14,
+          4,
+          3,
+          12
+        ],
+        "teamSize": 19,
+        "teamValue": 82010000,
+        "teamValueInc": 310000,
+        "position": 3,
+        "positionInc": -1,
+        "role": ""
+      },
+      {
+        "id": 11504267,
+        "name": "🦊",
+        "icon": "i/u/11504267.png",
+        "role": "manager",
+        "points": 1214,
+        "lastPositions": [
+          6,
+          12,
+          9,
+          2,
+          2
+        ],
+        "teamSize": 19,
+        "teamValue": 87900000,
+        "teamValueInc": -60000,
+        "position": 4
+      },
+      {
+        "id": 6579402,
+        "name": "Valors FC",
+        "icon": "icons/7.png",
+        "points": 1200,
+        "lastPositions": [
+          5,
+          18,
+          14,
+          13,
+          16
+        ],
+        "teamSize": 15,
+        "teamValue": 56910000,
+        "teamValueInc": 90000,
+        "position": 5,
+        "role": ""
+      },
+      {
+        "id": 6580423,
+        "name": "FC Borça",
+        "icon": "i/t/3.png",
+        "points": 1168,
+        "lastPositions": [
+          1,
+          11,
+          19,
+          7,
+          15
+        ],
+        "teamSize": 17,
+        "teamValue": 67680000,
+        "teamValueInc": 50000,
+        "position": 6,
+        "positionInc": 1,
+        "role": ""
+      },
+      {
+        "id": 6578885,
+        "name": "Norimaki  FC",
+        "icon": "icons/41.png",
+        "role": "manager",
+        "points": 1160,
+        "lastPositions": [
+          9,
+          4,
+          11,
+          11,
+          7
+        ],
+        "teamSize": 14,
+        "teamValue": 67460000,
+        "teamValueInc": 190000,
+        "position": 7,
+        "positionInc": -1
+      },
+      {
+        "id": 7817228,
+        "name": "Petraques",
+        "icon": "i/u/7817228.png",
+        "points": 1112,
+        "lastPositions": [
+          16,
+          5,
+          1,
+          16,
+          19
+        ],
+        "teamSize": 17,
+        "teamValue": 57580000,
+        "teamValueInc": 170000,
+        "position": 8,
+        "role": ""
+      },
+      {
+        "id": 6579540,
+        "name": "Aiveen Teaam",
+        "icon": "i/u/6579540.png?v=63",
+        "role": "manager",
+        "points": 1087,
+        "lastPositions": [
+          18,
+          17,
+          5,
+          6,
+          13
+        ],
+        "teamSize": 15,
+        "teamValue": 53950000,
+        "teamValueInc": -20000,
+        "position": 9
+      },
+      {
+        "id": 6586225,
+        "name": "Sergi Sala Duran",
+        "icon": "https://graph.facebook.com/10156583054878679/picture?height=300&width=300",
+        "points": 1061,
+        "lastPositions": [
+          12,
+          7,
+          12,
+          8,
+          14
+        ],
+        "teamSize": 14,
+        "teamValue": 63560000,
+        "teamValueInc": -130000,
+        "position": 10,
+        "role": ""
+      },
+      {
+        "id": 6579283,
+        "name": "Fiorenzola",
+        "icon": "i/u/6579283.png?v=33",
+        "points": 1042,
+        "lastPositions": [
+          14,
+          16,
+          10,
+          5,
+          5
+        ],
+        "teamSize": 13,
+        "teamValue": 56280000,
+        "teamValueInc": 350000,
+        "position": 11,
+        "role": ""
+      },
+      {
+        "id": 6580389,
+        "name": "Kings Team",
+        "icon": "icons/31.png",
+        "points": 1024,
+        "lastPositions": [
+          19,
+          6,
+          17,
+          14,
+          6
+        ],
+        "teamSize": 16,
+        "teamValue": 28280000,
+        "teamValueInc": 50000,
+        "lastTrophy": {
+          "type": "league",
+          "position": -1,
+          "season": "Temporada 2024/2025"
+        },
+        "position": 12,
+        "role": ""
+      },
+      {
+        "id": 6580386,
+        "name": "Lamine i els 7 nans 👯‍♀️",
+        "icon": "i/u/6580386.png?v=10",
+        "points": 1023,
+        "lastPositions": [
+          4,
+          10,
+          16,
+          12,
+          4
+        ],
+        "teamSize": 13,
+        "teamValue": 38560000,
+        "teamValueInc": 140000,
+        "lastTrophy": {
+          "type": "league",
+          "position": 2,
+          "season": "Temporada 2024/2025"
+        },
+        "position": 13,
+        "role": ""
+      },
+      {
+        "id": 9890540,
+        "name": "UE Trincadors",
+        "points": 1006,
+        "lastPositions": [
+          8,
+          15,
+          3,
+          9,
+          18
+        ],
+        "teamSize": 14,
+        "teamValue": 47960000,
+        "teamValueInc": 260000,
+        "lastTrophy": {
+          "type": "league",
+          "position": 3,
+          "season": "Temporada 2024/2025"
+        },
+        "position": 14,
+        "positionInc": 1,
+        "role": ""
+      },
+      {
+        "id": 6593096,
+        "name": "Janwandowski",
+        "icon": "i/u/6593096.png",
+        "points": 982,
+        "lastPositions": [
+          20,
+          3,
+          6,
+          17,
+          10
+        ],
+        "teamSize": 17,
+        "teamValue": 33330000,
+        "teamValueInc": -180000,
+        "position": 15,
+        "positionInc": -1,
+        "role": ""
+      },
+      {
+        "id": 6579280,
+        "name": "Sant Pere Atlètic",
+        "icon": "i/u/6579280.png?v=22",
+        "points": 982,
+        "lastPositions": [
+          11,
+          20,
+          20,
+          4,
+          17
+        ],
+        "teamSize": 13,
+        "teamValue": 36140000,
+        "teamValueInc": 40000,
+        "position": 16,
+        "role": ""
+      },
+      {
+        "id": 6579330,
+        "name": "Mindundis",
+        "icon": "i/u/6579330.png?v=66",
+        "points": 953,
+        "lastPositions": [
+          7,
+          9,
+          15,
+          18,
+          8
+        ],
+        "teamSize": 17,
+        "teamValue": 46250000,
+        "teamValueInc": 270000,
+        "position": 17,
+        "role": ""
+      },
+      {
+        "id": 6586257,
+        "name": "Aquest any he trepitjat merda !!",
+        "icon": "i/u/6586257.png",
+        "points": 952,
+        "lastPositions": [
+          2,
+          13,
+          7,
+          19,
+          11
+        ],
+        "teamSize": 18,
+        "teamValue": 37800000,
+        "teamValueInc": 320000,
+        "position": 18,
+        "positionInc": 1,
+        "role": ""
+      },
+      {
+        "id": 6585052,
+        "name": "Tots som Olost",
+        "icon": "i/u/6585052.png?v=69",
+        "points": 932,
+        "lastPositions": [
+          13,
+          19,
+          18,
+          20,
+          20
+        ],
+        "teamSize": 15,
+        "teamValue": 43430000,
+        "teamValueInc": 0,
+        "position": 19,
+        "positionInc": -1,
+        "role": ""
+      },
+      {
+        "id": 9897660,
+        "name": "Eric Duran",
+        "points": 929,
+        "lastPositions": [
+          15,
+          2,
+          13,
+          15,
+          3
+        ],
+        "teamSize": 19,
+        "teamValue": 58210000,
+        "teamValueInc": 190000,
+        "position": 20,
+        "role": ""
+      }
+    ]
+  },
+  "allTeamsEnBas": [
+    {
+      "id": 9890450,
+      "name": "MarK Lenders",
+      "manager": "MarK Lenders",
+      "points": 1307,
+      "value": 71820000,
+      "players": []
+    },
+    {
+      "id": 6588130,
+      "name": "The GOAT club",
+      "manager": "The GOAT club",
+      "points": 1240,
+      "value": 98620000,
+      "players": []
+    },
+    {
+      "id": 6579505,
+      "name": "Xevi borrat",
+      "manager": "Xevi borrat",
+      "points": 1231,
+      "value": 82010000,
+      "players": []
+    },
+    {
+      "id": 11504267,
+      "name": "🦊",
+      "manager": "🦊",
+      "points": 1214,
+      "value": 87900000,
+      "players": []
+    },
+    {
+      "id": 6579402,
+      "name": "Valors FC",
+      "manager": "Valors FC",
+      "points": 1200,
+      "value": 56910000,
+      "players": []
+    },
+    {
+      "id": 6580423,
+      "name": "FC Borça",
+      "manager": "FC Borça",
+      "points": 1168,
+      "value": 67680000,
+      "players": []
+    },
+    {
+      "id": 6578885,
+      "name": "Norimaki  FC",
+      "manager": "Norimaki  FC",
+      "points": 1160,
+      "value": 67460000,
+      "players": []
+    },
+    {
+      "id": 7817228,
+      "name": "Petraques",
+      "manager": "Petraques",
+      "points": 1112,
+      "value": 57580000,
+      "players": []
+    },
+    {
+      "id": 6579540,
+      "name": "Aiveen Teaam",
+      "manager": "Aiveen Teaam",
+      "points": 1087,
+      "value": 53950000,
+      "players": []
+    },
+    {
+      "id": 6586225,
+      "name": "Sergi Sala Duran",
+      "manager": "Sergi Sala Duran",
+      "points": 1061,
+      "value": 63560000,
+      "players": []
+    },
+    {
+      "id": 6579283,
+      "name": "Fiorenzola",
+      "manager": "Fiorenzola",
+      "points": 1042,
+      "value": 56280000,
+      "players": []
+    },
+    {
+      "id": 6580389,
+      "name": "Kings Team",
+      "manager": "Kings Team",
+      "points": 1024,
+      "value": 28280000,
+      "players": []
+    },
+    {
+      "id": 6580386,
+      "name": "Lamine i els 7 nans 👯‍♀️",
+      "manager": "Lamine i els 7 nans 👯‍♀️",
+      "points": 1023,
+      "value": 38560000,
+      "players": []
+    },
+    {
+      "id": 9890540,
+      "name": "UE Trincadors",
+      "manager": "UE Trincadors",
+      "points": 1006,
+      "value": 47960000,
+      "players": []
+    },
+    {
+      "id": 6593096,
+      "name": "Janwandowski",
+      "manager": "Janwandowski",
+      "points": 982,
+      "value": 33330000,
+      "players": []
+    },
+    {
+      "id": 6579280,
+      "name": "Sant Pere Atlètic",
+      "manager": "Sant Pere Atlètic",
+      "points": 982,
+      "value": 36140000,
+      "players": []
+    },
+    {
+      "id": 6579330,
+      "name": "Mindundis",
+      "manager": "Mindundis",
+      "points": 953,
+      "value": 46250000,
+      "players": []
+    },
+    {
+      "id": 6586257,
+      "name": "Aquest any he trepitjat merda !!",
+      "manager": "Aquest any he trepitjat merda !!",
+      "points": 952,
+      "value": 37800000,
+      "players": []
+    },
+    {
+      "id": 6585052,
+      "name": "Tots som Olost",
+      "manager": "Tots som Olost",
+      "points": 932,
+      "value": 43430000,
+      "players": []
+    },
+    {
+      "id": 9897660,
+      "name": "Eric Duran",
+      "manager": "Eric Duran",
+      "points": 929,
+      "value": 58210000,
+      "players": []
+    }
+  ],
+  "myTeamEnBas": {
+    "teamId": 11504267,
+    "name": "🦊",
+    "points": 1214,
+    "balance": 40909,
+    "lineup": {
+      "type": "4-3-3",
+      "date": 1773310730,
+      "playersID": [
+        14630,
+        32440,
+        38847,
+        17121,
+        25398,
+        29034,
+        1969,
+        38368,
+        38962,
+        35615,
+        19577
+      ]
+    },
+    "players": [
+      {
+        "id": 29034,
+        "buyPrice": 795000,
+        "clause": 0,
+        "invested": 0,
+        "buyDate": 1773310536
+      },
+      {
+        "id": 1969,
+        "buyPrice": 841233,
+        "clause": 0,
+        "invested": 0,
+        "buyDate": 1770357797
+      },
+      {
+        "id": 14630,
+        "buyPrice": 5256633,
+        "clause": 0,
+        "invested": 0,
+        "buyDate": 1754542966
+      },
+      {
+        "id": 17121,
+        "buyPrice": 312555,
+        "clause": 0,
+        "invested": 0,
+        "buyDate": 1773209125
+      },
+      {
+        "id": 19577,
+        "buyPrice": 27230011,
+        "clause": 0,
+        "invested": 0,
+        "buyDate": 1761890506
+      },
+      {
+        "id": 25398,
+        "buyPrice": 7702345,
+        "clause": 9780000,
+        "invested": 0,
+        "buyDate": 1772172158
+      },
+      {
+        "id": 26048,
+        "buyPrice": 5921000,
+        "clause": 0,
+        "invested": 0,
+        "buyDate": 1763791344
+      },
+      {
+        "id": 30628,
+        "buyPrice": 150000,
+        "clause": 0,
+        "invested": 0,
+        "buyDate": 1772258605
+      },
+      {
+        "id": 31707,
+        "buyPrice": 7658222,
+        "clause": 11745000,
+        "invested": 0,
+        "buyDate": 1770444175
+      },
+      {
+        "id": 32440,
+        "buyPrice": 7124336,
+        "clause": 0,
+        "invested": 0,
+        "buyDate": 1770876139
+      },
+      {
+        "id": 34077,
+        "buyPrice": 2125333,
+        "clause": 8400000,
+        "invested": 0,
+        "buyDate": 1770184962
+      },
+      {
+        "id": 34541,
+        "buyPrice": 380000,
+        "clause": 0,
+        "invested": 0,
+        "buyDate": 1773209125
+      },
+      {
+        "id": 35615,
+        "buyPrice": 3123455,
+        "clause": 0,
+        "invested": 0,
+        "buyDate": 1771826504
+      },
+      {
+        "id": 38368,
+        "buyPrice": 1713466,
+        "clause": 0,
+        "invested": 0,
+        "buyDate": 1772258605
+      },
+      {
+        "id": 38847,
+        "buyPrice": 1170000,
+        "clause": 0,
+        "invested": 0,
+        "buyDate": 1767593085
+      },
+      {
+        "id": 38962,
+        "buyPrice": 5923555,
+        "clause": 0,
+        "invested": 0,
+        "buyDate": 1763618623
+      },
+      {
+        "id": 39327,
+        "buyPrice": 150000,
+        "clause": 0,
+        "invested": 0,
+        "buyDate": 1771912934
+      },
+      {
+        "id": 39431,
+        "buyPrice": 161920,
+        "clause": 0,
+        "invested": 0,
+        "buyDate": 1767593084
+      },
+      {
+        "id": 39736,
+        "buyPrice": 150089,
+        "clause": 0,
+        "invested": 0,
+        "buyDate": 1771912934
+      }
+    ],
+    "market": [
+      {
+        "playerID": 25398,
+        "price": 9780000,
+        "type": "sale",
+        "until": 1773437073
+      },
+      {
+        "playerID": 31707,
+        "price": 11745000,
+        "type": "sale",
+        "until": 1773386121
+      },
+      {
+        "playerID": 34077,
+        "price": 8400000,
+        "type": "sale",
+        "until": 1773437063
+      }
+    ]
+  },
   "laliga": {
     "matchday": 28,
     "table": [
@@ -12478,7 +13233,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-03-12T10:18:55.133Z",
+    "updatedAt": "2026-03-12T10:30:38.705Z",
     "players": [
       {
         "id": "3374",
