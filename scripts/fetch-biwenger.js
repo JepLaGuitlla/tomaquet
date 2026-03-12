@@ -570,24 +570,20 @@ async function fetchSofascoreStats() {
 // ─── TABLÓN ──────────────────────────────────────────────────────────────────
 async function fetchBoard(token, liga) {
   console.log(`📋 Descargando tablón liga ${liga.id}...`);
-  const res = await got('https://biwenger.as.com/api/v2/home', {
-    headers: headersForLeague(token, liga),
-    responseType: 'json',
-    throwHttpErrors: false,
+  const res = await requestJSON({
+    hostname: 'biwenger.as.com',
+    path: '/api/v2/home',
+    method: 'GET',
+    headers: { ...headersForLeague(liga), 'Authorization': `Bearer ${token}`, 'x-lang': 'es' }
   });
-  if (res.statusCode !== 200) {
-    console.warn(`⚠️ Board liga ${liga.id}: status ${res.statusCode}`);
+  if (res.status !== 200) {
+    console.warn(`⚠️ Board liga ${liga.id}: status ${res.status}`);
     return [];
   }
   const board = res.body?.data?.league?.board || [];
-  // Filtrar solo transfers y markets, ignorar bettingPool, playerMovements
   const events = board
     .filter(e => e.type === 'transfer' || e.type === 'market')
-    .map(e => ({
-      type:    e.type,
-      date:    e.date,
-      content: e.content,
-    }));
+    .map(e => ({ type: e.type, date: e.date, content: e.content }));
   console.log(`✅ Tablón liga ${liga.id}: ${events.length} eventos`);
   return events;
 }
