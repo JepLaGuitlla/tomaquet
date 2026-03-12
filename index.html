@@ -3585,7 +3585,7 @@ function renderBolsaRoiTable() {
   const mediaArr  = list.map(p => p.media).filter(v => v > 0);
   const precioArr = list.map(p => p.price).filter(v => v > 0);
   const roiArr    = list.map(p => p.roi).filter(v => v > 0);
-  const fpArr     = list.map(p => p.factor).filter(v => v != null);
+  const fpArr     = list.map(p => p.factor).filter(v => v != null && v > 0 && v < 20); // excluir outliers extremos (jugadores baratos con pocos PJ)
 
   function pct(arr, val) {
     if (!arr.length || val == null || val <= 0) return null;
@@ -3595,20 +3595,12 @@ function renderBolsaRoiTable() {
   // Usar mv3Color que ya existe: mct/mcg/mcm/mcl
   const pc = v => mv3Color(v ?? 0);
 
-  // Color específico para Factor Pausa (escala absoluta 0–4+)
-  function fpColor(f) {
-    if (f == null) return 'color:var(--text3)';
-    if (f >= 3.5) return 'color:var(--c-top)';
-    if (f >= 2.8) return 'color:var(--c-good)';
-    if (f >= 2.0) return 'color:var(--c-mid)';
-    return 'color:var(--c-low)';
-  }
-  function fpBarColor(f) {
-    if (f == null) return 'var(--border2)';
-    if (f >= 3.5) return 'var(--c-top)';
-    if (f >= 2.8) return 'var(--c-good)';
-    if (f >= 2.0) return 'var(--c-mid)';
-    return 'var(--c-low)';
+  // Factor Pausa: usar percentil (igual que el resto de columnas)
+  // Los outliers (valor >20, jugadores muy baratos con pocos PJ) se tratan aparte
+  function fpPct(f) {
+    if (f == null || f <= 0) return null;
+    const cap = f > 20 ? 20 : f; // capear outliers para el cálculo percentil
+    return pct(fpArr, cap);
   }
 
   // Orden
@@ -3631,7 +3623,7 @@ function renderBolsaRoiTable() {
     `${total} jugadores · pág ${bolsaPage}/${pages}`;
 
   const PosC = {PT:'#d97706',DF:'#1d6fce',MC:'#16a34a',DL:'#e63329',MD:'#8b5cf6'};
-  const FP_MAX = 5; // escala visual barra factor
+
 
   el.innerHTML = slice.map(p => {
     const pos    = (p.position||'?').split('/')[0];
@@ -3640,9 +3632,14 @@ function renderBolsaRoiTable() {
     const medPc  = pc(pct(mediaArr, p.media));
     const prePc  = pc(pct(precioArr,p.price));
     const roiPc  = pc(pct(roiArr,   p.roi));
-    const fpCol  = fpColor(p.factor);
-    const fpBar  = fpBarColor(p.factor);
-    const fpBarW = p.factor != null ? Math.min(100, (p.factor / FP_MAX) * 100).toFixed(0) : 0;
+    const fpP    = fpPct(p.factor);
+    const fpCls  = fpP != null ? pc(fpP) : 'mcn';  // mcn = gris si sin dato
+    const fpBarW = fpP != null ? fpP : 0;
+    // mostrar valor real si está en rango normal, ∞ si es outlier
+    const fpDisplay = p.factor == null ? '—' : p.factor > 20 ? '∞' : p.factor.toFixed(2);
+    const fpBarColor = fpP == null ? 'var(--border2)'
+      : fpP >= 75 ? 'var(--c-top)' : fpP >= 50 ? 'var(--c-good)'
+      : fpP >= 25 ? 'var(--c-mid)' : 'var(--c-low)';
     const trendUp  = (p.trend||0) > 0;
     const trendNeu = (p.trend||0) === 0;
     const trendCls = trendUp ? 'up' : trendNeu ? '' : 'dn';
@@ -3659,8 +3656,8 @@ function renderBolsaRoiTable() {
       <div class="brc-stat ${prePc}">${fmt(p.price)}<div class="brc-sub">${prePc?'p'+pct(precioArr,p.price):'—'}</div></div>
       <div class="brc-stat ${roiPc}">${p.roi > 0 ? p.roi.toFixed(1) : '—'}<div class="brc-sub">${roiPc?'p'+pct(roiArr,p.roi):'—'}</div></div>
       <div class="brc-fp">
-        <div class="brc-fp-val" style="${fpCol}">${p.factor != null ? p.factor.toFixed(2) : '—'}</div>
-        <div class="brc-fp-bar"><div class="brc-fp-fill" style="width:${fpBarW}%;background:${fpBar}"></div></div>
+        <div class="brc-fp-val ${fpCls}">${fpDisplay}<span style="font-size:0.56rem;opacity:0.6"> ${fpP!=null?'p'+fpP:''}</span></div>
+        <div class="brc-fp-bar"><div class="brc-fp-fill" style="width:${fpBarW}%;background:${fpBarColor}"></div></div>
       </div>
       <div class="brc-trend tend-val ${trendCls}">${trendStr}</div>
     </div>`;
