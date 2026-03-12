@@ -152,7 +152,7 @@ async function fetchPlayers() {
   console.log(`✅ ${arr.length} jugadores descargados`);
 
   return arr.map(p => ({
-    id:         p.id,
+    id:         Number(p.id),
     name:       p.name,
     position:   p.position,           // posición principal (número: 1,2,3,4)
     position2:  p.position2 || null,  // segunda posición si multipos activa (número)
@@ -220,12 +220,7 @@ async function fetchAllTeams(token, liga) {
     points:  t.points  || 0,
     value:   t.teamValue || 0,
     players: (t.players || []).map(p => ({
-      id:       p.id,
-      name:     p.name,
-      position: p.position,
-      price:    p.price  || 0,
-      points:   p.points || 0,
-    })),
+      id:       Number(p.id),
   }));
 }
 
@@ -256,7 +251,6 @@ async function fetchMyTeam(token, liga) {
   // Los jugadores vienen como {id, owner} — cruzar con allPlayers en el HTML
   const playerRefs = data.players || [];
   console.log(`✅ Mi equipo liga ${liga.id}: ${playerRefs.length} jugadores, balance: ${data.balance || 0}`);
-  if(playerRefs.length > 0) console.log(`  🔍 Muestra jugador[0]:`, JSON.stringify(playerRefs[0]).slice(0, 200));
 
   return {
     teamId:  data.id     || null,
@@ -265,8 +259,7 @@ async function fetchMyTeam(token, liga) {
     balance: data.balance || 0,
     lineup:  data.lineup  || {},
     players: playerRefs.map(p => ({
-      id:       p.id,
-      buyPrice: p.owner?.price    || 0,
+      id:       Number(p.id),
       clause:   p.owner?.clause   || 0,
       invested: p.owner?.invested || 0,
       buyDate:  p.owner?.date     || 0,
