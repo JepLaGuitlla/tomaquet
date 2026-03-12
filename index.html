@@ -608,6 +608,22 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
 .cm-player-row .p-club{color:var(--text3);font-size:0.7rem;}
 .cm-player-row .p-price{color:var(--text);font-family:'Figtree',sans-serif;font-size:0.78rem;}
 .cm-player-row .p-tag{font-size:0.62rem;padding:2px 6px;border-radius:3px;font-weight:700;}
+/* ── TABLÓN ───────────────────────────────────────────────────────── */
+.board-feed{display:flex;flex-direction:column;gap:2px;}
+.board-item{display:flex;align-items:center;gap:0.6rem;padding:0.55rem 0.8rem;background:var(--bg2);border-radius:4px;font-size:0.78rem;border-left:3px solid transparent;}
+.board-item.ev-transfer-sell{border-color:#ef4444;}
+.board-item.ev-transfer-buy{border-color:#22c55e;}
+.board-item.ev-transfer-clause{border-color:#f97316;}
+.board-item.ev-market{border-color:#6366f1;}
+.board-item .b-icon{font-size:1rem;flex-shrink:0;width:1.4rem;text-align:center;}
+.board-item .b-body{flex:1;line-height:1.35;}
+.board-item .b-player{font-weight:700;color:var(--text);}
+.board-item .b-detail{color:var(--text3);font-size:0.7rem;}
+.board-item .b-amount{font-family:'Figtree',sans-serif;font-weight:700;white-space:nowrap;font-size:0.78rem;}
+.board-item .b-time{font-size:0.62rem;color:var(--text3);white-space:nowrap;flex-shrink:0;}
+.board-section-tabs{display:flex;gap:4px;margin-bottom:0.75rem;}
+.board-tab{background:var(--bg3);border:none;color:var(--text3);font-size:0.65rem;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:3px;cursor:pointer;font-family:'Figtree',sans-serif;}
+.board-tab.active{background:var(--accent);color:#fff;}
 </style>
 </head>
 <body class="liga-tomaquet">
@@ -699,6 +715,22 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
             <div class="spinner" style="width:24px;height:24px;margin:0 auto 10px"></div>
             LOADING FEEDS...
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:1.5rem">
+      <div class="section-title">Tablón de la liga</div>
+      <div class="news-block">
+        <div class="news-block-header" style="padding:8px 16px">
+          <div class="news-block-title">Actividad reciente</div>
+          <div class="board-section-tabs">
+            <button class="board-tab active" onclick="switchBoard('tomaquet',this)">🍅 Tomaquet</button>
+            <button class="board-tab" onclick="switchBoard('enbas',this)">⛰️ EN BAS</button>
+          </div>
+        </div>
+        <div style="padding:0.75rem" id="boardFeed">
+          <div style="color:var(--text3);font-size:0.75rem;text-align:center;padding:1rem">Cargando tablón...</div>
         </div>
       </div>
     </div>
@@ -1496,6 +1528,8 @@ const RSS_SOURCES = [
 ];
 function rss2jsonUrl(rssUrl) { return `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}&count=10`; }
 let allNews = [], activeNewsFilter = 'all';
+let boardData = { tomaquet: [], enbas: [] };
+let activeBoardLiga = 'tomaquet';
 function parseRSS(xmlStr) {
   const doc = new DOMParser().parseFromString(xmlStr,'text/xml');
   return Array.from(doc.querySelectorAll('item')).slice(0,12).map(item => {
@@ -1525,6 +1559,105 @@ async function loadNews() {
   renderNews();
 }
 function filterNews(srcId,btn) { activeNewsFilter=srcId; document.querySelectorAll('.nsrc-btn').forEach(b=>b.classList.remove('active')); btn.classList.add('active'); renderNews(); }
+// ── TABLÓN ────────────────────────────────────────────────────────────────
+function switchBoard(liga, btn) {
+  activeBoardLiga = liga;
+  document.querySelectorAll('.board-tab').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderBoard(liga);
+}
+
+function timeAgo(ts) {
+  const diff = Math.floor(Date.now()/1000) - ts;
+  if (diff < 60)    return 'ahora';
+  if (diff < 3600)  return Math.floor(diff/60)+'m';
+  if (diff < 86400) return Math.floor(diff/3600)+'h';
+  return Math.floor(diff/86400)+'d';
+}
+
+function renderBoard(liga) {
+  const el = document.getElementById('boardFeed');
+  if (!el) return;
+  const events = boardData[liga] || [];
+  if (!events.length) {
+    el.innerHTML = '<div style="color:var(--text3);font-size:0.75rem;text-align:center;padding:1.5rem">Sin actividad reciente</div>';
+    return;
+  }
+
+  const myId = liga==='tomaquet' ? 6541195 : 11504267;
+
+  const rows = events.map(ev => {
+    if (ev.type === 'transfer') {
+      return ev.content.map(t => {
+        const player = allPlayers.find(p=>Number(p.id)===Number(t.player));
+        const pName = player?.name || `#${t.player}`;
+        const amt = fmt(t.amount);
+
+        if (!t.to) {
+          // Venta al mercado libre
+          const isMe = t.from?.id === myId;
+          return `<div class="board-item ev-transfer-sell">
+            <span class="b-icon">💸</span>
+            <div class="b-body">
+              <div class="b-player">${pName}</div>
+              <div class="b-detail">${isMe?'<b style="color:#ef4444">Tú vendiste</b>':t.from?.name+' vendió'} al mercado</div>
+            </div>
+            <span class="b-amount" style="color:#ef4444">${amt}</span>
+            <span class="b-time">${timeAgo(ev.date)}</span>
+          </div>`;
+        } else if (t.type === 'clause') {
+          // Ejecución de cláusula
+          const isMe = t.to?.id === myId;
+          const isMeSell = t.from?.id === myId;
+          return `<div class="board-item ev-transfer-clause">
+            <span class="b-icon">⚡</span>
+            <div class="b-body">
+              <div class="b-player">${pName}</div>
+              <div class="b-detail">${isMeSell?'<b style="color:#f97316">Te ejecutaron cláusula</b>':isMe?'<b style="color:#22c55e">Ejecutaste cláusula</b>':t.from?.name+' → '+t.to?.name}</div>
+            </div>
+            <span class="b-amount" style="color:#f97316">${amt}</span>
+            <span class="b-time">${timeAgo(ev.date)}</span>
+          </div>`;
+        } else {
+          // Transferencia normal
+          const isMe = t.to?.id === myId;
+          return `<div class="board-item ev-transfer-buy">
+            <span class="b-icon">🔄</span>
+            <div class="b-body">
+              <div class="b-player">${pName}</div>
+              <div class="b-detail">${isMe?'<b style="color:#22c55e">Tú compraste</b>':t.to?.name+' compró'} de ${t.from?.name||'mercado'}</div>
+            </div>
+            <span class="b-amount" style="color:#22c55e">${amt}</span>
+            <span class="b-time">${timeAgo(ev.date)}</span>
+          </div>`;
+        }
+      }).join('');
+    }
+
+    if (ev.type === 'market') {
+      return ev.content.map(t => {
+        const player = allPlayers.find(p=>Number(p.id)===Number(t.player));
+        const pName = player?.name || `#${t.player}`;
+        const amt = fmt(t.amount);
+        const isMe = t.to?.id === myId;
+        const nBids = t.bids?.length || 0;
+        return `<div class="board-item ev-market">
+          <span class="b-icon">🏷️</span>
+          <div class="b-body">
+            <div class="b-player">${pName}</div>
+            <div class="b-detail">${isMe?'<b style="color:#6366f1">Tú ganaste la puja</b>':t.to?.name+' ganó la puja'}${nBids?' · '+nBids+' pujadores':''}</div>
+          </div>
+          <span class="b-amount" style="color:#6366f1">${amt}</span>
+          <span class="b-time">${timeAgo(ev.date)}</span>
+        </div>`;
+      }).join('');
+    }
+    return '';
+  }).join('');
+
+  el.innerHTML = `<div class="board-feed">${rows}</div>`;
+}
+
 function renderNews() {
   const container=document.getElementById('newsList');
   const items=activeNewsFilter==='all'?allNews:allNews.filter(n=>n.srcId===activeNewsFilter);
@@ -1713,6 +1846,13 @@ async function loadPlayers(){
       allNews = data.news;
       allNews.sort((a,b)=>{try{return new Date(b.date)-new Date(a.date);}catch(e){return 0;}});
       renderNews();
+    }
+
+    // Cargar tablón
+    if(data.boardTomaquet || data.boardEnBas){
+      boardData.tomaquet = data.boardTomaquet || [];
+      boardData.enbas    = data.boardEnBas    || [];
+      renderBoard('tomaquet');
     }
 
   }catch(e){
