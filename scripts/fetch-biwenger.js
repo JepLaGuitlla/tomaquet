@@ -448,56 +448,49 @@ async function fetchPlayerStats() {
   });
 }
 
-// ─── TABLÓN DE LIGA (Biwenger board) ─────────────────────────────────────────
+// ─── TABLÓN DE LIGA (extraído de fetchLeague con feed) ───────────────────────
 
 async function fetchBoard(token, liga) {
   console.log(`📋 Descargando tablón liga ${liga.id}...`);
 
-  // Biwenger usa /api/v2/league/feed (no /board) para el tablón de actividad
-  const endpoints = [
-    `/api/v2/league/feed?offset=0&limit=25&lang=es`,
-    `/api/v2/league/board?offset=0&limit=25&lang=es`,
-    `/api/v2/league?include=all&fields=*,feed`,
-  ];
+  // El tablón viene dentro del endpoint de liga con fields=*,feed
+  const res = await requestJSON({
+    hostname: 'biwenger.as.com',
+    path:     `/api/v2/league?include=all&fields=*,standings,feed`,
+    method:   'GET',
+    headers:  { ...headersForLeague(liga), 'Authorization': `Bearer ${token}`, 'x-lang': 'es' }
+  });
 
-  for (const path of endpoints) {
-    const res = await requestJSON({
-      hostname: 'biwenger.as.com',
-      path,
-      method:   'GET',
-      headers:  { ...headersForLeague(liga), 'Authorization': `Bearer ${token}`, 'x-lang': 'es' }
-    });
-
-    if (res.status === 200) {
-      // El feed puede estar en data, data.feed, o data.board
-      const items = res.body?.data?.feed || res.body?.data?.board || res.body?.data || [];
-      if (Array.isArray(items) && items.length > 0) {
-        console.log(`✅ Tablón liga ${liga.id}: ${items.length} eventos (via ${path.split('?')[0]})`);
-        return items.map(ev => {
-          const type   = ev.type || '';
-          const player = ev.player || ev.offer?.player || ev.request?.player || null;
-          const amount = ev.amount || ev.offer?.amount || ev.request?.amount || null;
-          const from   = ev.from?.name || ev.offer?.from?.name || null;
-          const to     = ev.to?.name   || ev.offer?.to?.name   || null;
-          return {
-            id:     ev.id   || null,
-            type,
-            date:   ev.date || null,
-            player: player ? { id: player.id, name: player.name, position: player.position } : null,
-            amount, from, to,
-            extra:  ev.extra || null,
-          };
-        });
-      }
-      // 200 pero sin items — loguear estructura para debug
-      console.log(`  ↳ ${path.split('?')[0]} → 200 pero sin items. Keys: ${Object.keys(res.body?.data||res.body||{}).join(',')}`);
-    } else {
-      console.log(`  ↳ ${path.split('?')[0]} → ${res.status}`);
-    }
+  if (res.status !== 200) {
+    console.warn(`⚠️ No se pudo obtener tablón liga ${liga.id}. Status:`, res.status);
+    return [];
   }
 
-  console.warn(`⚠️ No se pudo obtener tablón liga ${liga.id}`);
-  return [];
+  const data  = res.body?.data;
+  const items = data?.feed || [];
+
+  if (!items.length) {
+    // Loguear keys disponibles para debug futuro
+    console.log(`  ↳ Liga ${liga.id} OK pero sin feed. Keys: ${Object.keys(data||{}).join(',')}`);
+    return [];
+  }
+
+  console.log(`✅ Tablón liga ${liga.id}: ${items.length} eventos`);
+  return items.map(ev => {
+    const type   = ev.type || '';
+    const player = ev.player || ev.offer?.player || ev.request?.player || null;
+    const amount = ev.amount || ev.offer?.amount || ev.request?.amount || null;
+    const from   = ev.from?.name || ev.offer?.from?.name || null;
+    const to     = ev.to?.name   || ev.offer?.to?.name   || null;
+    return {
+      id:     ev.id   || null,
+      type,
+      date:   ev.date || null,
+      player: player ? { id: player.id, name: player.name, position: player.position } : null,
+      amount, from, to,
+      extra:  ev.extra || null,
+    };
+  });
 }
 
 // ─── MAIN ────────────────────────────────────────────────────────────────────
