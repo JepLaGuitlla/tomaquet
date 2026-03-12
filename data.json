@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-12T14:58:38.785Z",
+  "updatedAt": "2026-03-12T19:55:24.138Z",
   "players": [
     {
       "id": 11,
@@ -809,7 +809,7 @@
       "playedHome": 1,
       "playedAway": 1,
       "teamName": "",
-      "status": "doubt",
+      "status": "injured",
       "jForm": [
         5,
         null,
@@ -6430,7 +6430,7 @@
       "playedHome": 10,
       "playedAway": 11,
       "teamName": "",
-      "status": "doubt",
+      "status": "injured",
       "jForm": [
         "doubt",
         "injured",
@@ -11796,7 +11796,7 @@
     "balance": 2984840,
     "lineup": {
       "type": "3-5-2",
-      "date": 1773272804,
+      "date": 1773344434,
       "playersID": [
         17021,
         10155,
@@ -11804,7 +11804,7 @@
         26276,
         6837,
         38867,
-        39736,
+        38964,
         25127,
         39885,
         26271,
@@ -11935,16 +11935,22 @@
     ],
     "market": [
       {
-        "playerID": 26676,
-        "price": 250000,
+        "playerID": 21,
+        "price": 510000,
         "type": "sale",
-        "until": 1773385957
+        "until": 1773516926
       },
       {
-        "playerID": 39327,
-        "price": 150000,
+        "playerID": 10155,
+        "price": 3150000,
         "type": "sale",
-        "until": 1773385964
+        "until": 1773516942
+      },
+      {
+        "playerID": 38245,
+        "price": 250000,
+        "type": "sale",
+        "until": 1773517031
       }
     ]
   },
@@ -13937,6 +13943,46 @@
   },
   "news": [
     {
+      "title": "Pablo Barrios sufre una nueva lesión muscular: Parte médico oficial",
+      "link": "https://www.jornadaperfecta.com/blog/pablo-barrios-parte-medico-atleti/",
+      "date": "Thu, 12 Mar 2026 16:55:28 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Mikautadze entra en la convocatoria del Villarreal CF",
+      "link": "https://www.jornadaperfecta.com/blog/mikautadze-estado-j28/",
+      "date": "Thu, 12 Mar 2026 16:01:56 +0000",
+      "img": "https://cdn.biwenger.com/i/t/19.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "La enésima vuelta de Gerard Moreno: ¿oportunidad fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/gerard-moreno-vuelta-fantasy-villarreal/",
+      "date": "Thu, 12 Mar 2026 15:57:45 +0000",
+      "img": "https://cdn.biwenger.com/i/t/19.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Quique habla de Ville Koski, Diabate y Boyé",
+      "link": "https://www.jornadaperfecta.com/blog/quique-previa-alaves-villarreal-j28/",
+      "date": "Thu, 12 Mar 2026 15:14:56 +0000",
+      "img": "https://cdn.biwenger.com/i/t/91.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Raghouber y Tunde siguen al margen, posibles bajas para la j28",
+      "link": "https://www.jornadaperfecta.com/blog/raghouber-estado-levante-j28/",
+      "date": "Thu, 12 Mar 2026 15:00:55 +0000",
+      "img": "https://cdn.biwenger.com/i/t/10.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Actualizadas las Alineaciones Probables para la Jornada 28",
       "link": "https://www.jornadaperfecta.com/blog/alineaciones-probables-j28-laliga-25-26/",
       "date": "Thu, 12 Mar 2026 14:30:05 +0000",
@@ -13972,46 +14018,6 @@
       "title": "Mendy, baja confirmada para la jornada 28: ¿tiempo de baja?",
       "link": "https://www.jornadaperfecta.com/blog/ferland-mendy-estado-molestias-26/",
       "date": "Thu, 12 Mar 2026 14:15:02 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Mikautadze entrena con el Villarreal, según la prensa",
-      "link": "https://www.jornadaperfecta.com/blog/mikautadze-estado-j28/",
-      "date": "Thu, 12 Mar 2026 14:10:56 +0000",
-      "img": "https://cdn.biwenger.com/i/t/19.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Javi Guerra vuelve a brillar en el Valencia. ¿Buena opción fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/javi-guerra-analisis-j28-25-26/",
-      "date": "Thu, 12 Mar 2026 14:00:28 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/10/image-2025-10-24T152442.571.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Militão ya toca balón con el grupo. ¿Cuándo vuelve?",
-      "link": "https://www.jornadaperfecta.com/blog/militao-recuperacion-lesion-26/",
-      "date": "Thu, 12 Mar 2026 12:59:14 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Gorrotxategi sigue ausente y podría ser baja en la jornada 28",
-      "link": "https://www.jornadaperfecta.com/blog/gorrotxategi-estado-j28-25-26/",
-      "date": "Thu, 12 Mar 2026 12:40:26 +0000",
-      "img": "https://cdn.biwenger.com/i/t/13.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "David Costas entrena y podría volver en la Jornada 28",
-      "link": "https://www.jornadaperfecta.com/blog/david-costas-estado-j28-25-26/",
-      "date": "Thu, 12 Mar 2026 12:30:08 +0000",
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
