@@ -2114,12 +2114,11 @@ function openModal(sid,pos){currentSlot=sid;currentSlotPos=pos;document.getEleme
 function closeModal(){document.getElementById('modalOverlay').classList.remove('open');currentSlot=null;currentSlotPos=null;}
 function filterModal(){
   const q=document.getElementById('modalSearch').value.toLowerCase();
-  // Solo jugadores de mi equipo, filtrados por posición y búsqueda
   const pool=getEquipo();
   const filtered=pool.filter(p=>{
-    const posOk=!currentSlotPos||p.position.split('/').some(pos=>pos===currentSlotPos||
-      (currentSlotPos==='MC'&&p.position.includes('MC'))||
-      (currentSlotPos==='DL'&&p.position.includes('DL')));
+    // Multiposición: "DL/MC" puede jugar en DL o MC
+    const posiciones=p.position.split('/').map(s=>s.trim());
+    const posOk=!currentSlotPos||posiciones.includes(currentSlotPos);
     const textOk=!q||p.name.toLowerCase().includes(q)||(p.club||'').toLowerCase().includes(q);
     return posOk&&textOk;
   });
@@ -2130,8 +2129,8 @@ function filterModal(){
     const parts=p.name.split(' ');
     const ini=parts.length>=2?(parts[0].charAt(0)+parts[parts.length-1].charAt(0)):p.name.substring(0,2);
     return `<div class="modal-player" onclick='selectPlayer(${JSON.stringify(p)})'>
-      <div class="modal-player-pos" style="background:${col};color:#fff;border-radius:50%;font-weight:800;font-size:8px">${ini.toUpperCase()}</div>
-      <div class="modal-player-info"><div class="modal-player-name">${p.name}</div><div class="modal-player-club">${p.club||'—'} · ${p.position}</div></div>
+      <div class="modal-player-pos" style="background:${col};color:#fff;border-radius:50%;font-weight:800;font-size:8px;width:26px;height:26px;display:flex;align-items:center;justify-content:center;flex-shrink:0">${ini.toUpperCase()}</div>
+      <div class="modal-player-info"><div class="modal-player-name">${p.name}</div><div class="modal-player-club">${p.club||'—'} · <span style="color:${col};font-weight:700">${p.position}</span></div></div>
       <div style="text-align:right"><div class="modal-player-pts">${p.pts||0}</div><div class="modal-player-price">${fmt(p.price)}</div></div>
     </div>`;
   }).join('')||`<div style="padding:20px;text-align:center;color:var(--text3);font-family:Figtree,sans-serif;font-size:0.8rem">Sin jugadores de ${currentSlotPos} en tu equipo</div>`;
