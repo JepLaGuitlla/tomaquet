@@ -1885,12 +1885,13 @@ async function loadPlayers(){
     // Cargar standings y banner Tomaquet desde Biwenger
     if(data.allTeams && data.allTeams.length){
       LIGAS.tomaquet.standings = data.allTeams.map((t,i) => ({
-        pos:   i+1,
-        name:  t.name,
-        pts:   t.points || 0,
-        value: t.value  || 0,
-        players: t.players?.length || 0,
-        diff:  0,
+        pos:      i+1,
+        name:     t.name,
+        pts:      t.points || 0,
+        value:    t.value  || 0,
+        players:  t.players?.length || 0,
+        playersList: t.players || [],
+        diff:     0,
       })).sort((a,b)=>b.pts-a.pts).map((t,i)=>({...t,pos:i+1,diff:i===0?0:null}));
       // calcular diff respecto al líder
       const liderPts = LIGAS.tomaquet.standings[0]?.pts || 0;
@@ -1903,12 +1904,13 @@ async function loadPlayers(){
     // Cargar standings y banner EN BAS desde Biwenger
     if(data.allTeamsEnBas && data.allTeamsEnBas.length){
       LIGAS.promesas.standings = data.allTeamsEnBas.map((t,i) => ({
-        pos:   i+1,
-        name:  t.name,
-        pts:   t.points || 0,
-        value: t.value  || 0,
-        players: t.players?.length || 0,
-        diff:  0,
+        pos:      i+1,
+        name:     t.name,
+        pts:      t.points || 0,
+        value:    t.value  || 0,
+        players:  t.players?.length || 0,
+        playersList: t.players || [],
+        diff:     0,
       })).sort((a,b)=>b.pts-a.pts).map((t,i)=>({...t,pos:i+1}));
       const liderPtsEB = LIGAS.promesas.standings[0]?.pts || 0;
       LIGAS.promesas.standings.forEach(t => { t.diff = t.pts - liderPtsEB; });
@@ -2398,6 +2400,7 @@ function closeMercadoFab(){}
 function renderGeneral(){
   const standings=getStandings().slice().sort((a,b)=>b.pts-a.pts).map((t,i)=>({...t,pos:i+1,diff:i===0?0:t.pts-getStandings()[0].pts}));
   if(!standings.length){document.getElementById('generalList').innerHTML='<div style="padding:2rem;text-align:center;font-family:Figtree,sans-serif;font-size:0.75rem;color:var(--text3)">// Datos pendientes para esta liga</div>';return;}
+  const POS_LABELS={1:'PT',2:'DF',3:'MC',4:'DL'};
   document.getElementById('generalList').innerHTML=standings.map((t,i)=>{
     const isMe=t.name.includes(getMiEquipoName().replace(' 🦊','').trim())||t.name===getMiEquipoName();
     const rankCls=t.pos===1?'gold':t.pos===2?'silver':t.pos===3?'bronze':'';
@@ -2407,8 +2410,30 @@ function renderGeneral(){
     const vsTxt=vsSig===null?'—':'+'+vsSig;
     const vsColor=vsSig===null?'color:var(--text3)':vsSig<=5?'color:var(--red)':'color:var(--green)';
     const rowBg=isMe?'background:rgba(163,230,53,0.04);border-left:2px solid var(--accent)':'';
-    return `<div class="standings-grid standings-row" style="${rowBg}"><div class="s-rank ${rankCls}">${t.pos}</div><div class="s-name" style="${isMe?'color:var(--accent);font-weight:700':''}">${t.name}</div><div class="s-pts">${t.pts}</div><div class="s-num">${t.value}M€</div><div class="s-num">${t.players}</div><div class="s-num">${t.ptsPer}</div><div class="s-diff" style="${diffColor}">${diffTxt}</div><div class="s-diff" style="${vsColor}">${vsTxt}</div></div>`;
+    const tid=`rival-${i}`;
+    // Plantilla del rival (ordenada por posición)
+    const squad=(t.playersList||[]).slice().sort((a,b)=>(a.position||9)-(b.position||9));
+    const squadHtml=squad.length?`<div id="${tid}" style="display:none;padding:10px 16px 12px;border-top:1px solid var(--border);background:var(--bg3);flex-wrap:wrap;gap:6px;">${
+      squad.map(p=>{
+        const full=allPlayers.find(x=>x.id==p.id)||p;
+        const pos=POS_LABELS[full.position||p.position]||'?';
+        const posColor=pos==='PT'?'#64748b':pos==='DF'?'#1d6fce':pos==='MC'?'#16a34a':'#e63329';
+        const pts=full.points||p.points||0;
+        const price=full.price||p.price||0;
+        const priceStr=price>=1000000?(price/1000000).toFixed(1)+'M':price>=1000?Math.round(price/1000)+'K':price;
+        return `<div style="display:inline-flex;align-items:center;gap:5px;padding:4px 8px;background:var(--bg2);border:1px solid var(--border);border-radius:3px;font-family:'Figtree',sans-serif;font-size:0.7rem;"><span style="font-size:0.58rem;font-weight:700;color:${posColor};letter-spacing:0.5px">${pos}</span><span style="color:var(--text);font-weight:500">${full.name||p.name}</span><span style="color:var(--text3)">${pts}pts</span><span style="color:var(--text3);font-size:0.65rem">${priceStr}</span></div>`;
+      }).join('')
+    }</div>`:'';
+    return `<div><div class="standings-grid standings-row" style="${rowBg};cursor:pointer" onclick="toggleRival('${tid}',this)"><div class="s-rank ${rankCls}">${t.pos}</div><div class="s-name" style="${isMe?'color:var(--accent);font-weight:700':''}">${t.name}</div><div class="s-pts">${t.pts}</div><div class="s-num">${t.value}M€</div><div class="s-num">${t.players}</div><div class="s-num">${t.ptsPer||'—'}</div><div class="s-diff" style="${diffColor}">${diffTxt}</div><div class="s-diff" style="${vsColor}">${vsTxt}</div></div>${squadHtml}</div>`;
   }).join('');
+}
+
+function toggleRival(id,row){
+  const el=document.getElementById(id);
+  if(!el)return;
+  const open=el.style.display==='flex';
+  el.style.display=open?'none':'flex';
+  row.style.background=open?'':'rgba(255,255,255,0.03)';
 }
 
 function renderGrupos(){
