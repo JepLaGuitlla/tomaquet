@@ -2,12 +2,12 @@
 const https = require('https');
 const fs    = require('fs');
 
-const EMAIL     = process.env.BIWENGER_EMAIL;
-const PASSWORD  = process.env.BIWENGER_PASSWORD;
-const LEAGUE_ID = '44700';
-const USER_ID   = '6541195';
-const VERSION   = '630';
-const FD_TOKEN  = '00308a91cfc84b248611ecc22550c9de'; // football-data.org
+const EMAIL           = process.env.BIWENGER_EMAIL;
+const PASSWORD        = process.env.BIWENGER_PASSWORD;
+const LEAGUE_TOMAQUET = { id: '44700',   userId: '6541195'  };
+const LEAGUE_ENBAS    = { id: '1248640', userId: '11504267' };
+const VERSION         = '630';
+const FD_TOKEN        = '00308a91cfc84b248611ecc22550c9de'; // football-data.org
 
 // Feeds RSS de noticias fantasy
 const RSS_SOURCES = [
@@ -56,15 +56,29 @@ function requestJSON(options, body = null) {
   });
 }
 
-const COMMON_HEADERS = {
-  'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-  'Accept': '*/*',
+// Headers base — el ID de liga se pasa via x-league por función
+function headersForLeague(liga) {
+  return {
+    'User-Agent':      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+    'Accept':          'application/json, text/plain, */*',
+    'Accept-Language': 'es-ES,es;q=0.9',
+    'Origin':          'https://biwenger.as.com',
+    'Referer':         'https://biwenger.as.com/',
+    'x-league':        liga.id,
+    'x-user':          liga.userId,
+    'x-version':       VERSION,
+  };
+}
+// Alias para login (no necesita liga)
+const LOGIN_HEADERS = {
+  'User-Agent':      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+  'Accept':          'application/json, text/plain, */*',
   'Accept-Language': 'es-ES,es;q=0.9',
-  'Origin': 'https://biwenger.as.com',
-  'Referer': 'https://biwenger.as.com/',
-  'x-league': LEAGUE_ID,
-  'x-user': USER_ID,
-  'x-version': VERSION,
+  'Origin':          'https://biwenger.as.com',
+  'Referer':         'https://biwenger.as.com/',
+  'x-league':        LEAGUE_TOMAQUET.id,
+  'x-user':          LEAGUE_TOMAQUET.userId,
+  'x-version':       VERSION,
 };
 
 // ─── 1. LOGIN ────────────────────────────────────────────────────────────────
@@ -77,7 +91,7 @@ async function login() {
     path: '/api/v2/auth/login',
     method: 'POST',
     headers: {
-      ...COMMON_HEADERS,
+      ...LOGIN_HEADERS,
       'Content-Type': 'application/json',
       'Content-Length': Buffer.byteLength(payload),
     }
@@ -160,116 +174,107 @@ async function fetchPlayers() {
 }
 
 // ─── 3. DATOS DE LIGA ────────────────────────────────────────────────────────
-async function fetchLeague(token) {
-  console.log('🏆 Descargando datos de la liga...');
+async function fetchLeague(token, liga) {
+  console.log(`🏆 Descargando datos de liga ${liga.id}...`);
 
   const res = await requestJSON({
     hostname: 'biwenger.as.com',
-    path: `/api/v2/leagues/${LEAGUE_ID}?fields=*,standings,teams`,
+    path: `/api/v2/league?include=all,-lastAccess&fields=*,standings,tournaments,group,settings(description)`,
     method: 'GET',
-    headers: {
-      ...COMMON_HEADERS,
-      'Authorization': `Bearer ${token}`,
-    }
+    headers: { ...headersForLeague(liga), 'Authorization': `Bearer ${token}`, 'x-lang': 'es' }
   });
 
   if (res.status !== 200) {
-    console.warn('⚠️ No se pudieron obtener datos de liga. Status:', res.status);
+    console.warn(`⚠️ Liga ${liga.id} falló. Status:`, res.status, JSON.stringify(res.body).slice(0,100));
     return null;
   }
 
-  console.log('✅ Datos de liga descargados');
+  console.log(`✅ Liga ${liga.id} descargada`);
   return res.body?.data || null;
 }
 
 // ─── 4. TODOS LOS EQUIPOS DE LA LIGA (quién tiene cada jugador) ──────────────
-async function fetchAllTeams(token) {
-  console.log('👥 Descargando equipos de todos los participantes...');
+async function fetchAllTeams(token, liga) {
+  console.log(`👥 Descargando equipos liga ${liga.id}...`);
 
   const res = await requestJSON({
     hostname: 'biwenger.as.com',
-    path: `/api/v2/leagues/${LEAGUE_ID}/teams?fields=*,players`,
+    path: `/api/v2/league?include=all&fields=*,standings,tournaments,group,settings(description)`,
     method: 'GET',
-    headers: {
-      ...COMMON_HEADERS,
-      'Authorization': `Bearer ${token}`,
-    }
+    headers: { ...headersForLeague(liga), 'Authorization': `Bearer ${token}`, 'x-lang': 'es' }
   });
 
   if (res.status !== 200) {
-    console.warn('⚠️ No se pudieron obtener equipos. Status:', res.status);
+    console.warn(`⚠️ Equipos liga ${liga.id} fallaron. Status:`, res.status);
     return null;
   }
 
-  const teams = res.body?.data || [];
-  console.log(`✅ ${teams.length} equipos descargados`);
+  const data  = res.body?.data;
+  const teams = data?.standings || [];
+  console.log(`✅ ${teams.length} equipos descargados (liga ${liga.id})`);
 
-  // Devuelve array de equipos con sus jugadores (solo IDs para no duplicar datos)
   return teams.map(t => ({
     id:      t.id,
     name:    t.name,
     manager: t.manager?.name || t.name,
-    points:  t.points || 0,
+    points:  t.points  || 0,
     value:   t.teamValue || 0,
     players: (t.players || []).map(p => ({
       id:       p.id,
       name:     p.name,
       position: p.position,
-      price:    p.price || 0,
+      price:    p.price  || 0,
       points:   p.points || 0,
     })),
   }));
 }
 
 // ─── 5. MI EQUIPO (Guitlla) ──────────────────────────────────────────────────
-async function fetchMyTeam(token) {
-  console.log('🦊 Descargando mi equipo (Guitlla)...');
+async function fetchMyTeam(token, liga) {
+  console.log(`🦊 Descargando mi equipo liga ${liga.id}...`);
 
-  // Primero obtenemos el ID del equipo del usuario en la liga
   const res = await requestJSON({
     hostname: 'biwenger.as.com',
-    path: `/api/v2/leagues/${LEAGUE_ID}/user?fields=*,team,players`,
+    path: `/api/v2/user?fields=*,lineup(type,playersID,reservesID,captain,striker,coach,date),players(id,owner),market,offers,-trophies`,
     method: 'GET',
     headers: {
-      ...COMMON_HEADERS,
+      ...headersForLeague(liga),
       'Authorization': `Bearer ${token}`,
+      'Content-Type':  'application/json; charset=utf-8',
+      'x-lang':        'es',
     }
   });
 
   if (res.status !== 200) {
-    console.warn('⚠️ No se pudo obtener mi equipo. Status:', res.status);
+    console.warn(`⚠️ Mi equipo liga ${liga.id} falló. Status:`, res.status, JSON.stringify(res.body).slice(0,150));
     return null;
   }
 
   const data = res.body?.data;
-  if (!data) {
-    console.warn('⚠️ Sin datos de mi equipo');
-    return null;
-  }
+  if (!data) { console.warn('⚠️ Sin datos de mi equipo'); return null; }
 
-  const players = data.team?.players || data.players || [];
-  console.log(`✅ Mi equipo: ${players.length} jugadores`);
+  // Los jugadores vienen como {id, owner} — cruzar con allPlayers en el HTML
+  const playerRefs = data.players || [];
+  console.log(`✅ Mi equipo liga ${liga.id}: ${playerRefs.length} jugadores, balance: ${data.balance || 0}`);
 
   return {
-    teamId:  data.team?.id || null,
-    name:    data.team?.name || 'Guitlla',
-    points:  data.team?.points || 0,
-    value:   data.team?.teamValue || 0,
-    players: players.map(p => ({
+    teamId:  data.id     || null,
+    name:    data.name   || 'Guitlla',
+    points:  data.points || 0,
+    balance: data.balance || 0,
+    lineup:  data.lineup  || {},
+    players: playerRefs.map(p => ({
       id:       p.id,
-      name:     p.name,
-      position: p.position,
-      price:    p.price || 0,
-      points:   p.points || 0,
-      trend:    p.priceIncrement || 0,
-      status:   p.status || 'ok',
-      jForm:    (p.fitness || []).slice(0, 5).map(f => {
-        if (typeof f === 'number') return f;
-        if (typeof f === 'string') return f;
-        if (f && typeof f === 'object') return f.points ?? f.status ?? null;
-        return null;
-      }),
-      clausula: p.clause || null,
+      buyPrice: p.owner?.price    || 0,
+      clause:   p.owner?.clause   || 0,
+      invested: p.owner?.invested || 0,
+      buyDate:  p.owner?.date     || 0,
+    })),
+    market: (data.market || []).map(m => ({
+      playerID: m.playerID,
+      price:    m.price,
+      type:     m.type,
+      until:    m.until,
     })),
   };
 }
@@ -566,14 +571,22 @@ async function fetchSofascoreStats() {
 // ─── MAIN ────────────────────────────────────────────────────────────────────
 async function main() {
   try {
-    const token    = await login();
-    const players  = await fetchPlayers();
-    const league   = await fetchLeague(token);
-    const allTeams = await fetchAllTeams(token);
-    const myTeam   = await fetchMyTeam(token);
-    const laliga   = await fetchLaLiga();
-    const news     = await fetchNews();
-    const sofascore = await fetchSofascoreStats();
+    const token = await login();
+    const players = await fetchPlayers();
+
+    // ── Liga Tomaquet ──
+    const league        = await fetchLeague(token, LEAGUE_TOMAQUET);
+    const allTeams      = await fetchAllTeams(token, LEAGUE_TOMAQUET);
+    const myTeam        = await fetchMyTeam(token, LEAGUE_TOMAQUET);
+
+    // ── Liga EN BAS ──
+    const leagueEnBas   = await fetchLeague(token, LEAGUE_ENBAS);
+    const allTeamsEnBas = await fetchAllTeams(token, LEAGUE_ENBAS);
+    const myTeamEnBas   = await fetchMyTeam(token, LEAGUE_ENBAS);
+
+    const laliga     = await fetchLaLiga();
+    const news       = await fetchNews();
+    const sofascore  = await fetchSofascoreStats();
 
     const output = {
       updatedAt: new Date().toISOString(),
@@ -581,6 +594,9 @@ async function main() {
       league,
       allTeams,
       myTeam,
+      leagueEnBas,
+      allTeamsEnBas,
+      myTeamEnBas,
       laliga,
       news,
       sofascore,
