@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-12T10:09:53.035Z",
+  "updatedAt": "2026-03-12T10:18:55.134Z",
   "players": [
     {
       "id": 11,
@@ -5749,7 +5749,10 @@
       "status": "ok",
       "jForm": [
         2,
-        2
+        2,
+        null,
+        null,
+        null
       ],
       "clausula": null
     },
@@ -10785,6 +10788,46 @@
       "clausula": null
     },
     {
+      "id": 40070,
+      "name": "Manuel Ángel",
+      "position": 3,
+      "price": 200000,
+      "points": 0,
+      "trend": 0,
+      "playedHome": 0,
+      "playedAway": 1,
+      "teamName": "",
+      "status": "ok",
+      "jForm": [
+        0,
+        null,
+        null,
+        null,
+        null
+      ],
+      "clausula": null
+    },
+    {
+      "id": 40071,
+      "name": "César Palacios",
+      "position": 3,
+      "price": 420000,
+      "points": 2,
+      "trend": 0,
+      "playedHome": 0,
+      "playedAway": 1,
+      "teamName": "",
+      "status": "ok",
+      "jForm": [
+        2,
+        null,
+        null,
+        null,
+        null
+      ],
+      "clausula": null
+    },
+    {
       "id": 40075,
       "name": "Xavi Espart",
       "position": 2,
@@ -11218,7 +11261,6 @@
     "teamId": 6541195,
     "name": "🦊",
     "points": 1319,
-    "value": 0,
     "balance": 2984840,
     "lineup": {
       "type": "3-5-2",
@@ -11246,176 +11288,150 @@
     "players": [
       {
         "id": 6837,
-        "owner": {
-          "date": 1772905346,
-          "price": 8055000,
-          "clause": 12082500,
-          "lastClause": {
-            "user": {
-              "id": 8068427,
-              "name": "Albertini",
-              "icon": "i/u/8068427.png"
-            },
-            "date": 1772905346,
-            "amount": 8055000
-          },
-          "clauseLockedUntil": 1773510146
-        }
+        "buyPrice": 8055000,
+        "clause": 12082500,
+        "invested": 0,
+        "buyDate": 1772905346
       },
       {
         "id": 21,
-        "owner": {
-          "date": 1773295445,
-          "price": 522310,
-          "clause": 522310000000,
-          "clauseLockedUntil": 1773900245
-        }
+        "buyPrice": 522310,
+        "clause": 522310000000,
+        "invested": 0,
+        "buyDate": 1773295445
       },
       {
         "id": 1908,
-        "owner": {
-          "date": 1773209088,
-          "price": 2235666,
-          "clause": 3353499,
-          "clauseLockedUntil": 1773813888
-        }
+        "buyPrice": 2235666,
+        "clause": 3353499,
+        "invested": 0,
+        "buyDate": 1773209088
       },
       {
         "id": 10155,
-        "owner": {
-          "date": 1770616993,
-          "price": 1875666,
-          "clause": 6225000,
-          "invested": 1000000
-        }
+        "buyPrice": 1875666,
+        "clause": 6225000,
+        "invested": 1000000,
+        "buyDate": 1770616993
       },
       {
         "id": 10158,
-        "owner": {
-          "date": 1773209089,
-          "price": 300000,
-          "clause": 300000000000,
-          "clauseLockedUntil": 1773813889
-        }
+        "buyPrice": 300000,
+        "clause": 300000000000,
+        "invested": 0,
+        "buyDate": 1773209089
       },
       {
         "id": 17021,
-        "owner": {
-          "date": 1765470211,
-          "price": 4620000,
-          "clause": 6930000
-        }
+        "buyPrice": 4620000,
+        "clause": 6930000,
+        "invested": 0,
+        "buyDate": 1765470211
       },
       {
         "id": 21068,
-        "owner": {
-          "date": 1773036393,
-          "price": 1725333,
-          "clause": 2587999,
-          "clauseLockedUntil": 1773641193
-        }
+        "buyPrice": 1725333,
+        "clause": 2587999,
+        "invested": 0,
+        "buyDate": 1773036393
       },
       {
         "id": 25127,
-        "owner": {
-          "date": 1771480952,
-          "price": 18852333,
-          "clause": 28278499
-        }
+        "buyPrice": 18852333,
+        "clause": 28278499,
+        "invested": 0,
+        "buyDate": 1771480952
       },
       {
         "id": 26271,
-        "owner": {
-          "date": 1770191798,
-          "price": 54818505,
-          "clause": 82227757
-        }
+        "buyPrice": 54818505,
+        "clause": 82227757,
+        "invested": 0,
+        "buyDate": 1770191798
       },
       {
         "id": 26276,
-        "owner": {
-          "date": 1765459975,
-          "price": 6600000,
-          "clause": 10950000,
-          "invested": 700000
-        }
+        "buyPrice": 6600000,
+        "clause": 10950000,
+        "invested": 700000,
+        "buyDate": 1765459975
       },
       {
         "id": 26676,
-        "owner": {
-          "date": 1772950164,
-          "price": 253666,
-          "clause": 253666000000,
-          "clauseLockedUntil": 1773554964
-        }
+        "buyPrice": 253666,
+        "clause": 253666000000,
+        "invested": 0,
+        "buyDate": 1772950164
       },
       {
         "id": 37451,
-        "owner": {
-          "date": 1762841122,
-          "price": 1888955,
-          "clause": 12195000,
-          "invested": 4300000
-        }
+        "buyPrice": 1888955,
+        "clause": 12195000,
+        "invested": 4300000,
+        "buyDate": 1762841122
       },
       {
         "id": 38216,
-        "owner": {
-          "date": 1771912934,
-          "price": 620000,
-          "clause": 620000000000
-        }
+        "buyPrice": 620000,
+        "clause": 620000000000,
+        "invested": 0,
+        "buyDate": 1771912934
       },
       {
         "id": 38245,
-        "owner": {
-          "date": 1773295445,
-          "price": 250000,
-          "clause": 250000000000,
-          "clauseLockedUntil": 1773900245
-        }
+        "buyPrice": 250000,
+        "clause": 250000000000,
+        "invested": 0,
+        "buyDate": 1773295445
       },
       {
         "id": 38867,
-        "owner": {
-          "date": 1769493971,
-          "price": 10072222,
-          "clause": 24108333,
-          "invested": 6000000
-        }
+        "buyPrice": 10072222,
+        "clause": 24108333,
+        "invested": 6000000,
+        "buyDate": 1769493971
       },
       {
         "id": 38964,
-        "owner": {
-          "date": 1773295445,
-          "price": 1210000,
-          "clause": 1815000,
-          "clauseLockedUntil": 1773900245
-        }
+        "buyPrice": 1210000,
+        "clause": 1815000,
+        "invested": 0,
+        "buyDate": 1773295445
       },
       {
         "id": 39327,
-        "owner": {
-          "date": 1770357975,
-          "price": 151236,
-          "clause": 151236000000
-        }
+        "buyPrice": 151236,
+        "clause": 151236000000,
+        "invested": 0,
+        "buyDate": 1770357975
       },
       {
         "id": 39736,
-        "owner": {
-          "date": 1771826834,
-          "price": 151234,
-          "clause": 151234000000
-        }
+        "buyPrice": 151234,
+        "clause": 151234000000,
+        "invested": 0,
+        "buyDate": 1771826834
       },
       {
         "id": 39885,
-        "owner": {
-          "date": 1770616993,
-          "price": 162532,
-          "clause": 280000000000
-        }
+        "buyPrice": 162532,
+        "clause": 280000000000,
+        "invested": 0,
+        "buyDate": 1770616993
+      }
+    ],
+    "market": [
+      {
+        "playerID": 26676,
+        "price": 250000,
+        "type": "sale",
+        "until": 1773385957
+      },
+      {
+        "playerID": 39327,
+        "price": 150000,
+        "type": "sale",
+        "until": 1773385964
       }
     ]
   },
@@ -12378,6 +12394,14 @@
   },
   "news": [
     {
+      "title": "Paredes sigue ausente y Unai Gómez se prueba",
+      "link": "https://www.jornadaperfecta.com/blog/aitor-paredes-estado-j28-25-26/",
+      "date": "Thu, 12 Mar 2026 10:10:30 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Lucas Beltrán sigue entrenando con el grupo. ¿Llega a la Jornada 28?",
       "link": "https://www.jornadaperfecta.com/blog/lucas-beltran-estado-j28-25-26/",
       "date": "Thu, 12 Mar 2026 10:05:05 +0000",
@@ -12448,21 +12472,13 @@
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Cinco noticias fantasy para antes de irte a dormir",
-      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-11-3-26/",
-      "date": "Wed, 11 Mar 2026 21:57:28 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-03-12T10:09:53.035Z",
+    "updatedAt": "2026-03-12T10:18:55.133Z",
     "players": [
       {
         "id": "3374",
