@@ -126,10 +126,6 @@ async function fetchPlayers() {
   const arr = Array.isArray(rawPlayers) ? rawPlayers : Object.values(rawPlayers);
   console.log(`✅ ${arr.length} jugadores descargados`);
 
-  // Debug: mostrar estructura fitness de los primeros jugadores con estado no-ok
-  const sample = arr.filter(p => p.fitness && p.fitness.length > 0).slice(0, 3);
-  if (sample.length) console.log('🔍 Fitness sample:', JSON.stringify(sample[0].fitness?.slice(0,2)));
-
   return arr.map(p => ({
     id:         p.id,
     name:       p.name,
@@ -140,7 +136,7 @@ async function fetchPlayers() {
     playedHome: p.playedHome     || 0,
     playedAway: p.playedAway     || 0,
     teamName:   p.teamName       || p.team?.name || '',
-    status:     (p.fitness || []).find(f => f && typeof f === 'object' && f.status && f.status !== 'ok')?.status || p.fitness?.find(f => f && typeof f === 'object')?.status || 'ok',
+    status:     p.status || 'ok',  // campo directo de Biwenger (ok/injured/doubt/sanctioned)
     jForm:      (p.fitness || []).slice(0, 5).map(f => typeof f === 'number' ? f : (f?.points ?? null)),
     clausula:   p.clause         || null,
   }));
@@ -457,43 +453,51 @@ async function fetchPlayerStats() {
 async function fetchBoard(token, liga) {
   console.log(`📋 Descargando tablón liga ${liga.id}...`);
 
-  const res = await requestJSON({
-    hostname: 'biwenger.as.com',
-    path:     `/api/v2/league/board?offset=0&limit=25&lang=es`,
-    method:   'GET',
-    headers:  { ...headersForLeague(liga), 'Authorization': `Bearer ${token}`, 'x-lang': 'es' }
-  });
+  // Biwenger usa /api/v2/league/feed (no /board) para el tablón de actividad
+  const endpoints = [
+    `/api/v2/league/feed?offset=0&limit=25&lang=es`,
+    `/api/v2/league/board?offset=0&limit=25&lang=es`,
+    `/api/v2/league?include=all&fields=*,feed`,
+  ];
 
-  if (res.status !== 200) {
-    console.warn(`⚠️ No se pudo obtener tablón liga ${liga.id}. Status:`, res.status);
-    return [];
+  for (const path of endpoints) {
+    const res = await requestJSON({
+      hostname: 'biwenger.as.com',
+      path,
+      method:   'GET',
+      headers:  { ...headersForLeague(liga), 'Authorization': `Bearer ${token}`, 'x-lang': 'es' }
+    });
+
+    if (res.status === 200) {
+      // El feed puede estar en data, data.feed, o data.board
+      const items = res.body?.data?.feed || res.body?.data?.board || res.body?.data || [];
+      if (Array.isArray(items) && items.length > 0) {
+        console.log(`✅ Tablón liga ${liga.id}: ${items.length} eventos (via ${path.split('?')[0]})`);
+        return items.map(ev => {
+          const type   = ev.type || '';
+          const player = ev.player || ev.offer?.player || ev.request?.player || null;
+          const amount = ev.amount || ev.offer?.amount || ev.request?.amount || null;
+          const from   = ev.from?.name || ev.offer?.from?.name || null;
+          const to     = ev.to?.name   || ev.offer?.to?.name   || null;
+          return {
+            id:     ev.id   || null,
+            type,
+            date:   ev.date || null,
+            player: player ? { id: player.id, name: player.name, position: player.position } : null,
+            amount, from, to,
+            extra:  ev.extra || null,
+          };
+        });
+      }
+      // 200 pero sin items — loguear estructura para debug
+      console.log(`  ↳ ${path.split('?')[0]} → 200 pero sin items. Keys: ${Object.keys(res.body?.data||res.body||{}).join(',')}`);
+    } else {
+      console.log(`  ↳ ${path.split('?')[0]} → ${res.status}`);
+    }
   }
 
-  const items = res.body?.data || [];
-  console.log(`✅ Tablón liga ${liga.id}: ${items.length} eventos`);
-
-  return items.map(ev => {
-    // Normalizar tipo
-    const type = ev.type || '';
-    // Extraer jugador (puede venir en ev.player o ev.offer.player, etc.)
-    const player = ev.player || ev.offer?.player || ev.request?.player || null;
-    // Importes
-    const amount = ev.amount || ev.offer?.amount || ev.request?.amount || null;
-    // Equipos implicados
-    const from = ev.from?.name || ev.offer?.from?.name || null;
-    const to   = ev.to?.name   || ev.offer?.to?.name   || null;
-
-    return {
-      id:        ev.id || null,
-      type,
-      date:      ev.date || null,
-      player:    player ? { id: player.id, name: player.name, position: player.position } : null,
-      amount,
-      from,
-      to,
-      extra:     ev.extra || null,
-    };
-  });
+  console.warn(`⚠️ No se pudo obtener tablón liga ${liga.id}`);
+  return [];
 }
 
 // ─── MAIN ────────────────────────────────────────────────────────────────────
