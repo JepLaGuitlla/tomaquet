@@ -126,6 +126,10 @@ async function fetchPlayers() {
   const arr = Array.isArray(rawPlayers) ? rawPlayers : Object.values(rawPlayers);
   console.log(`✅ ${arr.length} jugadores descargados`);
 
+  // Debug: mostrar estructura fitness de los primeros jugadores con estado no-ok
+  const sample = arr.filter(p => p.fitness && p.fitness.length > 0).slice(0, 3);
+  if (sample.length) console.log('🔍 Fitness sample:', JSON.stringify(sample[0].fitness?.slice(0,2)));
+
   return arr.map(p => ({
     id:         p.id,
     name:       p.name,
@@ -136,7 +140,7 @@ async function fetchPlayers() {
     playedHome: p.playedHome     || 0,
     playedAway: p.playedAway     || 0,
     teamName:   p.teamName       || p.team?.name || '',
-    status:     p.fitness?.[0]?.status || 'ok',
+    status:     (p.fitness || []).find(f => f && typeof f === 'object' && f.status && f.status !== 'ok')?.status || p.fitness?.find(f => f && typeof f === 'object')?.status || 'ok',
     jForm:      (p.fitness || []).slice(0, 5).map(f => typeof f === 'number' ? f : (f?.points ?? null)),
     clausula:   p.clause         || null,
   }));
