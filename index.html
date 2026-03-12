@@ -2356,7 +2356,7 @@ function closeChartModal() {
 function _cmEsc(e) { if(e.key==='Escape') closeChartModal(); }
 
 // Gráfico SVG interactivo con tooltip
-function makeInteractiveChart(container, entries, valueFn, labelFn, color, yFmt, invertY=false) {
+function makeInteractiveChart(container, entries, valueFn, labelFn, color, yFmt, invertY=false, xLabelFn=null) {
   if (!entries || entries.length === 0) {
     container.innerHTML = '<div style="color:var(--text3);text-align:center;padding:3rem;font-size:0.85rem">Sin datos históricos aún.<br>Se acumularán con cada fetch diario.</div>';
     return;
@@ -2387,6 +2387,7 @@ function makeInteractiveChart(container, entries, valueFn, labelFn, color, yFmt,
   const yTicks = [0,.33,.66,1].map(t => ({ y: H-padB-(t*(H-padT-padB)), v: minV+t*rng }));
   // Eje X — primero, cada ~10 puntos, último
   const xIdxs = [...new Set([0, ...Array.from({length:Math.floor(n/10)},(_,i)=>(i+1)*10).filter(i=>i<n-1), n-1])];
+  const xLabel = i => xLabelFn ? xLabelFn(entries[i]) : (entries[i].date?.slice(5)||'');
 
   const svgId = 'ichart_'+Date.now();
   const tipId = 'ichart_tip_'+Date.now();
@@ -2405,7 +2406,7 @@ function makeInteractiveChart(container, entries, valueFn, labelFn, color, yFmt,
         <!-- Y labels -->
         ${yTicks.map(t=>`<text x="${padL-6}" y="${(t.y+4).toFixed(1)}" text-anchor="end" font-size="10" fill="var(--text3)" font-family="Figtree,sans-serif">${yFmt(t.v)}</text>`).join('')}
         <!-- X labels -->
-        ${xIdxs.map(i=>`<text x="${cx(i).toFixed(1)}" y="${H-4}" text-anchor="middle" font-size="10" fill="var(--text3)" font-family="Figtree,sans-serif">${entries[i].date?.slice(5)||''}</text>`).join('')}
+        ${xIdxs.map(i=>`<text x="${cx(i).toFixed(1)}" y="${H-4}" text-anchor="middle" font-size="10" fill="var(--text3)" font-family="Figtree,sans-serif">${xLabel(i)}</text>`).join('')}
         <!-- Area -->
         ${areaD?`<path d="${areaD}" fill="url(#${svgId}_g)"/>`:''}
         <!-- Line -->
@@ -2413,7 +2414,7 @@ function makeInteractiveChart(container, entries, valueFn, labelFn, color, yFmt,
         <!-- Dots interactivos -->
         ${vc.map((c,i)=>`
           <circle class="cm-dot" cx="${c.x.toFixed(1)}" cy="${c.y.toFixed(1)}" r="4" fill="${sc}" stroke="#151b28" stroke-width="2" style="cursor:pointer"
-            data-idx="${i}" data-v="${c.v}" data-date="${c.e.date||''}" data-label="${labelFn(c.e)}"/>
+            data-idx="${i}" data-v="${c.v}" data-date="${xLabelFn?xLabelFn(c.e):(c.e.date||'')}" data-label="${labelFn(c.e)}"/>
         `).join('')}
       </svg>
       <div id="${tipId}" class="cm-tooltip">
@@ -2451,48 +2452,85 @@ function makeInteractiveChart(container, entries, valueFn, labelFn, color, yFmt,
 // ── MODALES POR TARJETA ───────────────────────────────────────────────────
 function modalPosicion() {
   const liga = LIGA_ACTIVA.id==='tomaquet'?'tomaquet':'enbas';
-  const entries = historyData?.[liga]||[];
+  const entries = (historyData?.[liga]||[]).filter(e=>e.pos!=null);
   const last = entries[entries.length-1];
   const best = entries.reduce((b,e)=>(!b||e.pos<b.pos)?e:b, null);
+  const worst = entries.reduce((b,e)=>(!b||e.pos>b.pos)?e:b, null);
+  const avg = entries.length ? (entries.reduce((s,e)=>s+e.pos,0)/entries.length).toFixed(1) : '—';
   openChartModal('POSICIÓN EN LA CLASIFICACIÓN', body => {
-    const kpis = `<div class="chart-modal-kpis">
+    body.innerHTML = `<div class="chart-modal-kpis">
       <div class="cm-kpi"><div class="k-label">Posición actual</div><div class="k-value">${last?.pos??'—'}º</div><div class="k-sub">en la liga</div></div>
-      <div class="cm-kpi"><div class="k-label">Mejor posición</div><div class="k-value" style="color:#22c55e">${best?.pos??'—'}º</div><div class="k-sub">${best?.date||''}</div></div>
-      <div class="cm-kpi"><div class="k-label">Días registrados</div><div class="k-value">${entries.length}</div><div class="k-sub">desde el inicio</div></div>
+      <div class="cm-kpi"><div class="k-label">Mejor</div><div class="k-value" style="color:#22c55e">${best?.pos??'—'}º</div><div class="k-sub">${best?.jornada?'J'+best.jornada:best?.date||''}</div></div>
+      <div class="cm-kpi"><div class="k-label">Peor</div><div class="k-value" style="color:var(--red)">${worst?.pos??'—'}º</div><div class="k-sub">${worst?.jornada?'J'+worst.jornada:worst?.date||''}</div></div>
+      <div class="cm-kpi"><div class="k-label">Posición media</div><div class="k-value">${avg}º</div><div class="k-sub">toda la temporada</div></div>
     </div>`;
-    body.innerHTML = kpis;
     const chartDiv = document.createElement('div');
     body.appendChild(chartDiv);
-    makeInteractiveChart(chartDiv, entries, e=>e.pos, e=>`${e.pos}º`, '#6366f1', v=>v+'º', true);
+    makeInteractiveChart(chartDiv, entries,
+      e => e.pos,
+      e => `${e.jornada?'J'+e.jornada:e.date} — ${e.pos}º`,
+      '#6366f1', v => v+'º', true);
   });
 }
 
 function modalPuntos() {
   const liga = LIGA_ACTIVA.id==='tomaquet'?'tomaquet':'enbas';
-  const entries = historyData?.[liga]||[];
-  // Puntos por jornada desde jForm
-  const equipo = getEquipo();
-  const nJ = 10;
-  const jornadas = Array.from({length:nJ},(_,i)=>i);
-  const jornadaData = jornadas.map(i=>{
-    let sum=0,cnt=0;
-    equipo.forEach(p=>{const v=(p.jForm||[])[i];if(typeof v==='number'&&!isNaN(v)){sum+=v;cnt++;}});
-    return {j: nJ-i, pts: cnt>0?Math.round(sum):null};
-  }).reverse().filter(d=>d.pts!==null);
-  const maxJ=Math.max(...jornadaData.map(d=>d.pts));
-  const minJ=Math.min(...jornadaData.map(d=>d.pts));
-  const avgJ=jornadaData.length?Math.round(jornadaData.reduce((s,d)=>s+d.pts,0)/jornadaData.length):0;
+  const allEntries = historyData?.[liga]||[];
+  // Usar datos históricos de jornada si existen
+  const jorEntries = allEntries.filter(e=>e.jornada!=null&&e.pts!=null);
+  const useHistory = jorEntries.length > 0;
+
+  let ptsData, maxJ, minJ, avgJ, totalPts;
+  if (useHistory) {
+    ptsData = jorEntries;
+    maxJ = Math.max(...ptsData.map(d=>d.pts));
+    minJ = Math.min(...ptsData.map(d=>d.pts));
+    avgJ = Math.round(ptsData.reduce((s,d)=>s+d.pts,0)/ptsData.length);
+    totalPts = ptsData[ptsData.length-1]?.ptsAcum || ptsData.reduce((s,d)=>s+d.pts,0);
+  } else {
+    // fallback: jForm del equipo actual
+    const equipo = getEquipo();
+    const nJ=10;
+    ptsData = Array.from({length:nJ},(_,i)=>{
+      let sum=0,cnt=0;
+      equipo.forEach(p=>{const v=(p.jForm||[])[i];if(typeof v==='number'&&!isNaN(v)){sum+=v;cnt++;}});
+      return {jornada:nJ-i,pts:cnt>0?Math.round(sum):null};
+    }).reverse().filter(d=>d.pts!==null).map(d=>({...d,date:`J${d.jornada}`}));
+    maxJ=Math.max(...ptsData.map(d=>d.pts));
+    minJ=Math.min(...ptsData.map(d=>d.pts));
+    avgJ=Math.round(ptsData.reduce((s,d)=>s+d.pts,0)/ptsData.length);
+    totalPts=ptsData.reduce((s,d)=>s+d.pts,0);
+  }
+  const bestJ = ptsData.reduce((b,d)=>(!b||d.pts>b.pts)?d:b,null);
+  const worstJ = ptsData.reduce((b,d)=>(!b||d.pts<b.pts)?d:b,null);
+
   openChartModal('PUNTOS POR JORNADA', body => {
     body.innerHTML = `<div class="chart-modal-kpis">
-      <div class="cm-kpi"><div class="k-label">Mejor jornada</div><div class="k-value" style="color:#22c55e">${maxJ}</div><div class="k-sub">puntos</div></div>
-      <div class="cm-kpi"><div class="k-label">Peor jornada</div><div class="k-value" style="color:var(--red)">${minJ}</div><div class="k-sub">puntos</div></div>
+      <div class="cm-kpi"><div class="k-label">Total acumulado</div><div class="k-value">${totalPts}</div><div class="k-sub">puntos</div></div>
+      <div class="cm-kpi"><div class="k-label">Mejor jornada</div><div class="k-value" style="color:#22c55e">${maxJ} pts</div><div class="k-sub">${bestJ?.jornada?'J'+bestJ.jornada:''}</div></div>
+      <div class="cm-kpi"><div class="k-label">Peor jornada</div><div class="k-value" style="color:var(--red)">${minJ} pts</div><div class="k-sub">${worstJ?.jornada?'J'+worstJ.jornada:''}</div></div>
       <div class="cm-kpi"><div class="k-label">Media</div><div class="k-value">${avgJ}</div><div class="k-sub">pts/jornada</div></div>
-    </div>`;
+    </div>
+    <div style="font-size:0.65rem;color:var(--text3);margin-bottom:0.5rem">Puntos por jornada · hover en cada punto para ver el detalle</div>`;
     const chartDiv = document.createElement('div');
     body.appendChild(chartDiv);
-    // Adaptar entries para makeInteractiveChart
-    const fakeEntries = jornadaData.map(d=>({date:`J${d.j}`, pts:d.pts}));
-    makeInteractiveChart(chartDiv, fakeEntries, e=>e.pts, e=>`${e.pts} pts`, '#f59e0b', v=>Math.round(v)+'pts');
+    makeInteractiveChart(chartDiv, ptsData,
+      e => e.pts,
+      e => `J${e.jornada} — ${e.pts} pts`,
+      '#f59e0b', v => Math.round(v)+'pts');
+
+    // Tabla resumen debajo
+    const tabla = document.createElement('div');
+    tabla.style.cssText = 'display:grid;grid-template-columns:repeat(auto-fill,minmax(80px,1fr));gap:4px;margin-top:1rem';
+    tabla.innerHTML = ptsData.map(d=>{
+      const c = d.pts>=avgJ?'#22c55e':'#ef4444';
+      return `<div style="background:var(--bg3);border-radius:4px;padding:4px 6px;text-align:center">
+        <div style="font-size:0.6rem;color:var(--text3)">J${d.jornada}</div>
+        <div style="font-size:0.85rem;font-weight:700;color:${c}">${d.pts}</div>
+        <div style="font-size:0.6rem;color:var(--text3)">${d.pos??''}${d.pos?'º':''}</div>
+      </div>`;
+    }).join('');
+    body.appendChild(tabla);
   });
 }
 
