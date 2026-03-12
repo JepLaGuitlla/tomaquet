@@ -1501,7 +1501,7 @@ async function loadPlayers(){
     const data=await res.json();
     let players=[];
     if(data.players&&Array.isArray(data.players)){
-      players=data.players.map(p=>({id:p.id,name:p.name,position:mapPosition(p.position),price:p.price||0,pts:p.points||0,trend:p.trend||0,playedHome:p.playedHome||0,playedAway:p.playedAway||0,club:p.teamName||'',status:p.status||'ok',jForm:p.jForm||[]}));
+      players=data.players.map(p=>({id:p.id,name:p.name,position:mapPosition(p.position,p.position2),price:p.price||0,pts:p.points||0,trend:p.trend||0,playedHome:p.playedHome||0,playedAway:p.playedAway||0,club:p.teamName||'',status:p.status||'ok',jForm:p.jForm||[]}));
     }
     if(!players.length) throw new Error('Sin jugadores en data.json');
     allPlayers=mergeStats(players);
@@ -1571,7 +1571,9 @@ async function loadPlayers(){
           invested: p.invested  || 0,
         };
       }).filter(Boolean);
-      console.log('🦊 Mi equipo Tomaquet real cargado:', myTeamData.length, 'jugadores');
+      // Detectar si Tomaquet tiene multiposición (algún jugador con '/' en posición)
+      MULTIPOS_LIGA.tomaquet = myTeamData.some(p => p.position.includes('/'));
+      console.log('🦊 Mi equipo Tomaquet real cargado:', myTeamData.length, 'jugadores | multipos:', MULTIPOS_LIGA.tomaquet);
     }
 
     // Cargar mi equipo real desde Biwenger — EN BAS
@@ -1579,10 +1581,12 @@ async function loadPlayers(){
       myTeamDataEnBas = data.myTeamEnBas.players.map(p => {
         const full = allPlayers.find(a => a.id === p.id);
         if(!full) return null;
+        // EN BAS sin multiposición: usar solo posición principal
+        const posEnBas = full.position.split('/')[0];
         return {
           id:       full.id,
           name:     full.name,
-          position: full.position,
+          position: MULTIPOS_LIGA.enbas ? full.position : posEnBas,
           price:    full.price  || 0,
           pts:      full.pts    || 0,
           trend:    full.trend  || 0,
@@ -1594,7 +1598,8 @@ async function loadPlayers(){
           invested: p.invested  || 0,
         };
       }).filter(Boolean);
-      console.log('🦊 Mi equipo EN BAS real cargado:', myTeamDataEnBas.length, 'jugadores');
+      MULTIPOS_LIGA.enbas = myTeamDataEnBas.some(p => p.position.includes('/'));
+      console.log('🦊 Mi equipo EN BAS real cargado:', myTeamDataEnBas.length, 'jugadores | multipos:', MULTIPOS_LIGA.enbas);
     }
 
     // Re-render con el equipo de la liga activa
@@ -1621,16 +1626,20 @@ async function loadPlayers(){
 // Posiciones Biwenger: 1=PT, 2=DF, 3=MC, 4=DL, 5=MD
 // Multiposición viene como "3/4" (string con slash) o número simple
 const POS_NUM = {1:'PT',2:'DF',3:'MC',4:'DL',5:'MD'};
-function mapPosition(pos){
+function mapPosition(pos, pos2){
   if(!pos && pos!==0) return '?';
-  // Si ya es string tipo "PT" o "MC/DL"
   if(typeof pos==='string'){
-    if(/^[A-Z]/.test(pos)) return pos; // ya mapeado
-    // puede ser "3/4" etc
+    if(/^[A-Z]/.test(pos)) return pos;
     return pos.split('/').map(n=>POS_NUM[parseInt(n)]||n).filter(Boolean).join('/');
   }
-  return POS_NUM[pos]||String(pos);
+  const p1 = POS_NUM[pos] || String(pos);
+  if(pos2 && POS_NUM[pos2] && POS_NUM[pos2]!==p1) return p1+'/'+POS_NUM[pos2];
+  return p1;
 }
+
+// Flag multiposición por liga — se detecta automáticamente
+// si algún jugador del equipo tiene '/' en su posición, la liga tiene multipos
+const MULTIPOS_LIGA = { tomaquet: false, enbas: false };
 
 // Estados Biwenger (campo "status" del jugador)
 // ok = disponible, injured = lesionado, doubt = duda, sanctioned = sancionado
@@ -2128,7 +2137,12 @@ function renderField(){
 }
 function renderMeTable(){
   const posOrder={'PT':0,'DF':1,'MC':2,'DL':3};
-  const sorted=[...getEquipo()].sort((a,b)=>(posOrder[a.position.split('/')[0]]??9)-(posOrder[b.position.split('/')[0]]??9));
+  const sorted=[...getEquipo()].sort((a,b)=>{
+    const pa=posOrder[a.position.split('/')[0]]??9;
+    const pb=posOrder[b.position.split('/')[0]]??9;
+    if(pa!==pb) return pa-pb;
+    return (b.pts||0)-(a.pts||0); // mismo grupo → más puntos primero
+  });
   document.getElementById('meTableBody').innerHTML=sorted.map(p=>{
     const ep=enrichPlayer(p);const media=ep.media?ep.media.toFixed(1):(p.pts/26).toFixed(1);
     const tc=p.trend>0?'color:var(--green)':p.trend<0?'color:var(--red)':'color:var(--text3)';
