@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-12T12:31:14.857Z",
+  "updatedAt": "2026-03-12T12:45:45.846Z",
   "players": [
     {
       "id": 11,
@@ -821,7 +821,7 @@
     },
     {
       "id": 1874,
-      "name": "Pau L��pez",
+      "name": "Pau López",
       "position": 1,
       "position2": null,
       "price": 550000,
@@ -11948,6 +11948,129 @@
       }
     ]
   },
+  "boardTomaquet": [
+    {
+      "type": "market",
+      "date": 1773295445,
+      "content": [
+        {
+          "player": 39673,
+          "to": {
+            "id": 8068002,
+            "name": "Soulands Rangers",
+            "icon": "i/u/8068002.png?v=69"
+          },
+          "amount": 340000
+        },
+        {
+          "player": 38245,
+          "to": {
+            "id": 6541195,
+            "name": "🦊",
+            "icon": "i/u/6541195.png?v=17"
+          },
+          "amount": 250000
+        },
+        {
+          "player": 24326,
+          "to": {
+            "id": 12713493,
+            "name": "Tata Martini",
+            "icon": "i/u/12713493.png"
+          },
+          "amount": 3060000,
+          "bids": [
+            {
+              "user": {
+                "id": 6541195,
+                "name": "🦊",
+                "icon": "i/u/6541195.png?v=17"
+              },
+              "amount": 2678999
+            },
+            {
+              "user": {
+                "id": 8070044,
+                "name": "CA CABA JUNIORS",
+                "icon": "i/u/8070044.png?v=63"
+              },
+              "amount": 2623000
+            }
+          ]
+        },
+        {
+          "player": 38964,
+          "to": {
+            "id": 6541195,
+            "name": "🦊",
+            "icon": "i/u/6541195.png?v=17"
+          },
+          "amount": 1210000
+        },
+        {
+          "player": 21,
+          "to": {
+            "id": 6541195,
+            "name": "🦊",
+            "icon": "i/u/6541195.png?v=17"
+          },
+          "amount": 522310,
+          "bids": [
+            {
+              "user": {
+                "id": 11520975,
+                "name": "Morankus FC",
+                "icon": "i/u/11520975.png?v=81"
+              },
+              "amount": 520000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1773245644,
+      "content": [
+        {
+          "player": 27995,
+          "from": {
+            "id": 8070044,
+            "name": "CA CABA JUNIORS",
+            "icon": "i/u/8070044.png?v=63"
+          },
+          "to": {
+            "id": 8068002,
+            "name": "Soulands Rangers",
+            "icon": "i/u/8068002.png?v=69"
+          },
+          "amount": 600000,
+          "type": "auction"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1773243082,
+      "content": [
+        {
+          "player": 37399,
+          "from": {
+            "id": 12713493,
+            "name": "Tata Martini",
+            "icon": "i/u/12713493.png"
+          },
+          "to": {
+            "id": 8068002,
+            "name": "Soulands Rangers",
+            "icon": "i/u/8068002.png?v=69"
+          },
+          "amount": 1970000,
+          "type": "auction"
+        }
+      ]
+    }
+  ],
   "leagueEnBas": {
     "id": 1248640,
     "name": "Lliga Bas Promesas",
@@ -12684,6 +12807,177 @@
       }
     ]
   },
+  "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1773310542,
+      "content": [
+        {
+          "player": 30141,
+          "from": {
+            "id": 11504267,
+            "name": "🦊",
+            "icon": "i/u/11504267.png"
+          },
+          "amount": 754600
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1773310536,
+      "content": [
+        {
+          "player": 29034,
+          "from": {
+            "id": 6579330,
+            "name": "Mindundis",
+            "icon": "i/u/6579330.png?v=66"
+          },
+          "to": {
+            "id": 11504267,
+            "name": "🦊",
+            "icon": "i/u/11504267.png"
+          },
+          "amount": 795000,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1773299332,
+      "content": [
+        {
+          "player": 1769,
+          "from": {
+            "id": 6579283,
+            "name": "Fiorenzola",
+            "icon": "i/u/6579283.png?v=33"
+          },
+          "to": {
+            "id": 6580386,
+            "name": "Lamine i els 7 nans 👯‍♀️",
+            "icon": "i/u/6580386.png?v=10"
+          },
+          "amount": 3750000,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1773299324,
+      "content": [
+        {
+          "player": 28115,
+          "from": {
+            "id": 6580386,
+            "name": "Lamine i els 7 nans 👯‍♀️",
+            "icon": "i/u/6580386.png?v=10"
+          },
+          "amount": 4129700
+        }
+      ]
+    },
+    {
+      "type": "market",
+      "date": 1773209125,
+      "content": [
+        {
+          "player": 32460,
+          "to": {
+            "id": 6586257,
+            "name": "Aquest any he trepitjat merda !!",
+            "icon": "i/u/6586257.png"
+          },
+          "amount": 1358000,
+          "bids": [
+            {
+              "user": {
+                "id": 6586225,
+                "name": "Sergi Sala Duran",
+                "icon": "https://graph.facebook.com/10156583054878679/picture?height=300&width=300"
+              },
+              "amount": 1064440
+            },
+            {
+              "user": {
+                "id": 6579505,
+                "name": "Xevi borrat",
+                "icon": "i/u/6579505.png"
+              },
+              "amount": 1012000
+            },
+            {
+              "user": {
+                "id": 6588130,
+                "name": "The GOAT club",
+                "icon": "i/u/6588130.png?v=12"
+              },
+              "amount": 999000
+            }
+          ]
+        },
+        {
+          "player": 17121,
+          "to": {
+            "id": 11504267,
+            "name": "🦊",
+            "icon": "i/u/11504267.png"
+          },
+          "amount": 312555,
+          "bids": [
+            {
+              "user": {
+                "id": 6579283,
+                "name": "Fiorenzola",
+                "icon": "i/u/6579283.png?v=33"
+              },
+              "amount": 225000
+            },
+            {
+              "user": {
+                "id": 9890540,
+                "name": "UE Trincadors"
+              },
+              "amount": 190000
+            }
+          ]
+        },
+        {
+          "player": 34541,
+          "to": {
+            "id": 11504267,
+            "name": "🦊",
+            "icon": "i/u/11504267.png"
+          },
+          "amount": 380000
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1773184905,
+      "content": [
+        {
+          "player": 26676,
+          "from": {
+            "id": 6579402,
+            "name": "Valors FC",
+            "icon": "icons/7.png"
+          },
+          "to": {
+            "id": 6579283,
+            "name": "Fiorenzola",
+            "icon": "i/u/6579283.png?v=33"
+          },
+          "amount": 375000,
+          "type": "clause"
+        }
+      ]
+    }
+  ],
   "laliga": {
     "matchday": 28,
     "table": [
@@ -13643,6 +13937,22 @@
   },
   "news": [
     {
+      "title": "Gorrotxategi sigue ausente y podría ser baja en la jornada 28",
+      "link": "https://www.jornadaperfecta.com/blog/gorrotxategi-estado-j28-25-26/",
+      "date": "Thu, 12 Mar 2026 12:40:26 +0000",
+      "img": "https://cdn.biwenger.com/i/t/13.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "David Costas entrena y podría volver en la Jornada 28",
+      "link": "https://www.jornadaperfecta.com/blog/david-costas-estado-j28-25-26/",
+      "date": "Thu, 12 Mar 2026 12:30:08 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Pablo Barrios sufre un pinchazo y se teme por su estado",
       "link": "https://www.jornadaperfecta.com/blog/pablo-barrios-problema-muscular-26/",
       "date": "Thu, 12 Mar 2026 12:22:14 +0000",
@@ -13703,22 +14013,6 @@
       "link": "https://www.jornadaperfecta.com/blog/azpilicueta-lesion-sevilla/",
       "date": "Thu, 12 Mar 2026 09:50:59 +0000",
       "img": "https://cdn.biwenger.com/i/t/17.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "David Costas entrena y podría volver en la Jornada 28",
-      "link": "https://www.jornadaperfecta.com/blog/david-costas-estado-j28-25-26/",
-      "date": "Thu, 12 Mar 2026 09:46:08 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Marcelino deja en duda a Mikautadze y recupera a Navarro y Kambwala",
-      "link": "https://www.jornadaperfecta.com/blog/marcelino-previa-alaves-villarreal-j28-25-26/",
-      "date": "Thu, 12 Mar 2026 09:27:29 +0000",
-      "img": "https://cdn.biwenger.com/i/t/19.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
