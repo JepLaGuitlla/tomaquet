@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-12T09:52:43.516Z",
+  "updatedAt": "2026-03-12T10:09:53.035Z",
   "players": [
     {
       "id": 11,
@@ -10799,9 +10799,626 @@
       "clausula": null
     }
   ],
-  "league": null,
-  "allTeams": null,
-  "myTeam": null,
+  "league": {
+    "id": 44700,
+    "name": "TOMAQUET",
+    "type": "premium",
+    "mode": "league",
+    "marketMode": "normal",
+    "scoreID": 5,
+    "icon": "i/l/44700.png",
+    "cover": "",
+    "created": 1440985436,
+    "competition": "la-liga",
+    "settings": {
+      "description": ""
+    },
+    "tournaments": [
+      {
+        "id": 130600,
+        "name": "Sa Capritxosa Copa",
+        "icon": "i/to/130600.png",
+        "activeRound": {
+          "index": 8,
+          "type": "quarterFinal",
+          "leg": "home"
+        }
+      }
+    ],
+    "standings": [
+      {
+        "id": 8068427,
+        "name": "Albertini",
+        "icon": "i/u/8068427.png",
+        "points": 1497,
+        "lastPositions": [
+          3,
+          2,
+          2,
+          4,
+          12
+        ],
+        "teamSize": 16,
+        "teamValue": 94610000,
+        "teamValueInc": -40000,
+        "position": 1,
+        "role": ""
+      },
+      {
+        "id": 6552586,
+        "name": "LeMola Team",
+        "icon": "i/u/6552586.png",
+        "role": "manager",
+        "points": 1431,
+        "lastPositions": [
+          1,
+          11,
+          14,
+          6,
+          3
+        ],
+        "teamSize": 18,
+        "teamValue": 98870000,
+        "teamValueInc": 630000,
+        "lastTrophy": {
+          "type": "league",
+          "position": 2,
+          "season": "Temporada 2024/2025"
+        },
+        "position": 2
+      },
+      {
+        "id": 6541195,
+        "name": "🦊",
+        "icon": "i/u/6541195.png?v=17",
+        "role": "manager",
+        "points": 1319,
+        "lastPositions": [
+          13,
+          1,
+          6,
+          7,
+          11
+        ],
+        "teamSize": 19,
+        "teamValue": 75040000,
+        "teamValueInc": 420000,
+        "position": 3
+      },
+      {
+        "id": 8070044,
+        "name": "CA CABA JUNIORS",
+        "icon": "i/u/8070044.png?v=63",
+        "points": 1289,
+        "lastPositions": [
+          14,
+          8,
+          1,
+          14,
+          2
+        ],
+        "teamSize": 17,
+        "teamValue": 82540000,
+        "teamValueInc": 110000,
+        "lastTrophy": {
+          "type": "league",
+          "position": 3,
+          "season": "Temporada 2024/2025"
+        },
+        "position": 4,
+        "role": ""
+      },
+      {
+        "id": 8068002,
+        "name": "Soulands Rangers",
+        "icon": "i/u/8068002.png?v=69",
+        "points": 1288,
+        "lastPositions": [
+          11,
+          12,
+          7,
+          10,
+          5
+        ],
+        "teamSize": 18,
+        "teamValue": 106410000,
+        "teamValueInc": -130000,
+        "position": 5,
+        "role": ""
+      },
+      {
+        "id": 148051,
+        "name": "Zaza Pachulia",
+        "icon": "i/u/148051.png?v=39",
+        "role": "manager",
+        "points": 1273,
+        "lastPositions": [
+          2,
+          3,
+          13,
+          1,
+          9
+        ],
+        "teamSize": 14,
+        "teamValue": 89760000,
+        "teamValueInc": 610000,
+        "lastTrophy": {
+          "type": "league",
+          "position": 1,
+          "season": "Temporada 2024/2025"
+        },
+        "position": 6
+      },
+      {
+        "id": 12697101,
+        "name": "INDOMABLE FC",
+        "icon": "i/u/11757390.png",
+        "points": 1247,
+        "lastPositions": [
+          5,
+          6,
+          4,
+          11,
+          4
+        ],
+        "teamSize": 16,
+        "teamValue": 81630000,
+        "teamValueInc": 230000,
+        "position": 7,
+        "role": ""
+      },
+      {
+        "id": 12696491,
+        "name": "NACECH1",
+        "icon": "https://graph.facebook.com/10235185447969563/picture?height=300&width=300",
+        "points": 1237,
+        "lastPositions": [
+          9,
+          9,
+          5,
+          2,
+          1
+        ],
+        "teamSize": 13,
+        "teamValue": 53750000,
+        "teamValueInc": -60000,
+        "position": 8,
+        "role": ""
+      },
+      {
+        "id": 3928497,
+        "name": "The Black Team",
+        "icon": "i/u/3928497.png",
+        "role": "manager",
+        "points": 1161,
+        "lastPositions": [
+          4,
+          10,
+          8,
+          12,
+          8
+        ],
+        "teamSize": 19,
+        "teamValue": 46850000,
+        "teamValueInc": 220000,
+        "position": 9
+      },
+      {
+        "id": 11520975,
+        "name": "Morankus FC",
+        "icon": "i/u/11520975.png?v=81",
+        "points": 1124,
+        "lastPositions": [
+          12,
+          5,
+          11,
+          8,
+          6
+        ],
+        "teamSize": 16,
+        "teamValue": 47050000,
+        "teamValueInc": 30000,
+        "position": 10,
+        "role": ""
+      },
+      {
+        "id": 12696899,
+        "name": "CIGALERU",
+        "icon": "i/u/12696899.png",
+        "points": 1119,
+        "lastPositions": [
+          8,
+          14,
+          10,
+          5,
+          14
+        ],
+        "teamSize": 13,
+        "teamValue": 54600000,
+        "teamValueInc": 100000,
+        "position": 11,
+        "role": ""
+      },
+      {
+        "id": 12696599,
+        "name": "Trileros FC",
+        "icon": "i/u/12696599.png",
+        "points": 1106,
+        "lastPositions": [
+          6,
+          4,
+          12,
+          3,
+          10
+        ],
+        "teamSize": 11,
+        "teamValue": 42040000,
+        "teamValueInc": 90000,
+        "position": 12,
+        "role": ""
+      },
+      {
+        "id": 12713493,
+        "name": "Tata Martini",
+        "icon": "i/u/12713493.png",
+        "points": 1088,
+        "lastPositions": [
+          7,
+          13,
+          9,
+          9,
+          7
+        ],
+        "teamSize": 17,
+        "teamValue": 55830000,
+        "teamValueInc": 210000,
+        "lastTrophy": {
+          "type": "league",
+          "position": 3,
+          "season": "Temporada 2023/2024"
+        },
+        "position": 13,
+        "role": ""
+      },
+      {
+        "id": 11521196,
+        "name": "Hufflepuff 🍋",
+        "icon": "i/u/11521196.png?v=57",
+        "points": 1046,
+        "lastPositions": [
+          10,
+          7,
+          3,
+          13,
+          13
+        ],
+        "teamSize": 17,
+        "teamValue": 53650000,
+        "teamValueInc": 10000,
+        "position": 14,
+        "role": ""
+      }
+    ]
+  },
+  "allTeams": [
+    {
+      "id": 8068427,
+      "name": "Albertini",
+      "manager": "Albertini",
+      "points": 1497,
+      "value": 94610000,
+      "players": []
+    },
+    {
+      "id": 6552586,
+      "name": "LeMola Team",
+      "manager": "LeMola Team",
+      "points": 1431,
+      "value": 98870000,
+      "players": []
+    },
+    {
+      "id": 6541195,
+      "name": "🦊",
+      "manager": "🦊",
+      "points": 1319,
+      "value": 75040000,
+      "players": []
+    },
+    {
+      "id": 8070044,
+      "name": "CA CABA JUNIORS",
+      "manager": "CA CABA JUNIORS",
+      "points": 1289,
+      "value": 82540000,
+      "players": []
+    },
+    {
+      "id": 8068002,
+      "name": "Soulands Rangers",
+      "manager": "Soulands Rangers",
+      "points": 1288,
+      "value": 106410000,
+      "players": []
+    },
+    {
+      "id": 148051,
+      "name": "Zaza Pachulia",
+      "manager": "Zaza Pachulia",
+      "points": 1273,
+      "value": 89760000,
+      "players": []
+    },
+    {
+      "id": 12697101,
+      "name": "INDOMABLE FC",
+      "manager": "INDOMABLE FC",
+      "points": 1247,
+      "value": 81630000,
+      "players": []
+    },
+    {
+      "id": 12696491,
+      "name": "NACECH1",
+      "manager": "NACECH1",
+      "points": 1237,
+      "value": 53750000,
+      "players": []
+    },
+    {
+      "id": 3928497,
+      "name": "The Black Team",
+      "manager": "The Black Team",
+      "points": 1161,
+      "value": 46850000,
+      "players": []
+    },
+    {
+      "id": 11520975,
+      "name": "Morankus FC",
+      "manager": "Morankus FC",
+      "points": 1124,
+      "value": 47050000,
+      "players": []
+    },
+    {
+      "id": 12696899,
+      "name": "CIGALERU",
+      "manager": "CIGALERU",
+      "points": 1119,
+      "value": 54600000,
+      "players": []
+    },
+    {
+      "id": 12696599,
+      "name": "Trileros FC",
+      "manager": "Trileros FC",
+      "points": 1106,
+      "value": 42040000,
+      "players": []
+    },
+    {
+      "id": 12713493,
+      "name": "Tata Martini",
+      "manager": "Tata Martini",
+      "points": 1088,
+      "value": 55830000,
+      "players": []
+    },
+    {
+      "id": 11521196,
+      "name": "Hufflepuff 🍋",
+      "manager": "Hufflepuff 🍋",
+      "points": 1046,
+      "value": 53650000,
+      "players": []
+    }
+  ],
+  "myTeam": {
+    "teamId": 6541195,
+    "name": "🦊",
+    "points": 1319,
+    "value": 0,
+    "balance": 2984840,
+    "lineup": {
+      "type": "3-5-2",
+      "date": 1773272804,
+      "playersID": [
+        17021,
+        10155,
+        21068,
+        26276,
+        6837,
+        38867,
+        39736,
+        25127,
+        39885,
+        26271,
+        37451
+      ],
+      "reservesID": [
+        null,
+        1908,
+        10158,
+        38216
+      ]
+    },
+    "players": [
+      {
+        "id": 6837,
+        "owner": {
+          "date": 1772905346,
+          "price": 8055000,
+          "clause": 12082500,
+          "lastClause": {
+            "user": {
+              "id": 8068427,
+              "name": "Albertini",
+              "icon": "i/u/8068427.png"
+            },
+            "date": 1772905346,
+            "amount": 8055000
+          },
+          "clauseLockedUntil": 1773510146
+        }
+      },
+      {
+        "id": 21,
+        "owner": {
+          "date": 1773295445,
+          "price": 522310,
+          "clause": 522310000000,
+          "clauseLockedUntil": 1773900245
+        }
+      },
+      {
+        "id": 1908,
+        "owner": {
+          "date": 1773209088,
+          "price": 2235666,
+          "clause": 3353499,
+          "clauseLockedUntil": 1773813888
+        }
+      },
+      {
+        "id": 10155,
+        "owner": {
+          "date": 1770616993,
+          "price": 1875666,
+          "clause": 6225000,
+          "invested": 1000000
+        }
+      },
+      {
+        "id": 10158,
+        "owner": {
+          "date": 1773209089,
+          "price": 300000,
+          "clause": 300000000000,
+          "clauseLockedUntil": 1773813889
+        }
+      },
+      {
+        "id": 17021,
+        "owner": {
+          "date": 1765470211,
+          "price": 4620000,
+          "clause": 6930000
+        }
+      },
+      {
+        "id": 21068,
+        "owner": {
+          "date": 1773036393,
+          "price": 1725333,
+          "clause": 2587999,
+          "clauseLockedUntil": 1773641193
+        }
+      },
+      {
+        "id": 25127,
+        "owner": {
+          "date": 1771480952,
+          "price": 18852333,
+          "clause": 28278499
+        }
+      },
+      {
+        "id": 26271,
+        "owner": {
+          "date": 1770191798,
+          "price": 54818505,
+          "clause": 82227757
+        }
+      },
+      {
+        "id": 26276,
+        "owner": {
+          "date": 1765459975,
+          "price": 6600000,
+          "clause": 10950000,
+          "invested": 700000
+        }
+      },
+      {
+        "id": 26676,
+        "owner": {
+          "date": 1772950164,
+          "price": 253666,
+          "clause": 253666000000,
+          "clauseLockedUntil": 1773554964
+        }
+      },
+      {
+        "id": 37451,
+        "owner": {
+          "date": 1762841122,
+          "price": 1888955,
+          "clause": 12195000,
+          "invested": 4300000
+        }
+      },
+      {
+        "id": 38216,
+        "owner": {
+          "date": 1771912934,
+          "price": 620000,
+          "clause": 620000000000
+        }
+      },
+      {
+        "id": 38245,
+        "owner": {
+          "date": 1773295445,
+          "price": 250000,
+          "clause": 250000000000,
+          "clauseLockedUntil": 1773900245
+        }
+      },
+      {
+        "id": 38867,
+        "owner": {
+          "date": 1769493971,
+          "price": 10072222,
+          "clause": 24108333,
+          "invested": 6000000
+        }
+      },
+      {
+        "id": 38964,
+        "owner": {
+          "date": 1773295445,
+          "price": 1210000,
+          "clause": 1815000,
+          "clauseLockedUntil": 1773900245
+        }
+      },
+      {
+        "id": 39327,
+        "owner": {
+          "date": 1770357975,
+          "price": 151236,
+          "clause": 151236000000
+        }
+      },
+      {
+        "id": 39736,
+        "owner": {
+          "date": 1771826834,
+          "price": 151234,
+          "clause": 151234000000
+        }
+      },
+      {
+        "id": 39885,
+        "owner": {
+          "date": 1770616993,
+          "price": 162532,
+          "clause": 280000000000
+        }
+      }
+    ]
+  },
   "laliga": {
     "matchday": 28,
     "table": [
@@ -11761,6 +12378,22 @@
   },
   "news": [
     {
+      "title": "Lucas Beltrán sigue entrenando con el grupo. ¿Llega a la Jornada 28?",
+      "link": "https://www.jornadaperfecta.com/blog/lucas-beltran-estado-j28-25-26/",
+      "date": "Thu, 12 Mar 2026 10:05:05 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Pablo Barrios vuelve tras lesión. ¿Gran oportunidad fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/pablo-barrios-analisis-vuelta-lesion-26/",
+      "date": "Thu, 12 Mar 2026 10:00:38 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/09/Johnny-Cardoso-Atletico-de-Madrid.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Azpilicueta, Vargas y Maupay entrenan y se apuntan al Camp Nou",
       "link": "https://www.jornadaperfecta.com/blog/azpilicueta-lesion-sevilla/",
       "date": "Thu, 12 Mar 2026 09:50:59 +0000",
@@ -11823,29 +12456,13 @@
       "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Rayo Vallecano, alineación probable contra el Samsunspor y dónde ver en TV",
-      "link": "https://www.jornadaperfecta.com/blog/rayo-vallecano-alineacion-probable-conference-ida-octavos-26/",
-      "date": "Wed, 11 Mar 2026 20:22:08 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Real Betis, alineación probable contra el Panathinaikos y dónde ver en TV",
-      "link": "https://www.jornadaperfecta.com/blog/real-betis-alineacion-probable-europa-ida-octavos-26/",
-      "date": "Wed, 11 Mar 2026 20:13:31 +0000",
-      "img": "https://cdn.biwenger.com/i/t/87.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-03-12T09:52:43.516Z",
+    "updatedAt": "2026-03-12T10:09:53.035Z",
     "players": [
       {
         "id": "3374",
