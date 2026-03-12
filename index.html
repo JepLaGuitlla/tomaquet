@@ -274,27 +274,97 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
 .s-diff{font-family:'Figtree',sans-serif;font-size:0.78rem;font-weight:500;text-align:right;padding-right:8px;}
 .miequipo-layout{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:start;}
 @media(max-width:900px){.miequipo-layout{grid-template-columns:1fr;}}
-.formation-tabs{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:1rem;}
-.ftab{background:var(--bg2);border:1px solid var(--border2);border-radius:3px;padding:6px 12px;color:var(--text3);font-family:'Figtree',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all 0.15s;}
+.formation-tabs{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:1rem;}
+.ftab{background:transparent;border:1px solid var(--border2);border-radius:20px;padding:5px 14px;color:var(--text3);font-family:'Figtree',sans-serif;font-size:0.68rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all 0.2s;}
 .ftab:hover{border-color:var(--accent);color:var(--accent);}
-.ftab.active{background:var(--accent-dim);border-color:var(--accent);color:var(--accent);}
-.field-wrap{position:relative;width:100%;max-width:400px;margin:0 auto;}
-.field{background:linear-gradient(180deg,#2d6a1f 0%,#327520 8%,#2d6a1f 16%,#327520 24%,#2d6a1f 32%,#327520 40%,#2d6a1f 48%,#327520 56%,#2d6a1f 64%,#327520 72%,#2d6a1f 80%,#327520 88%,#2d6a1f 96%);border:1px solid rgba(0,0,0,0.15);border-radius:4px;aspect-ratio:0.65;position:relative;overflow:hidden;}
-.field::before{content:'';position:absolute;top:50%;left:5%;width:90%;height:1px;background:var(--field-line);}
-.field::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:20%;padding-bottom:20%;border:1px solid var(--field-line);border-radius:50%;}
-.field-center-dot{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:5px;height:5px;background:var(--field-line);border-radius:50%;z-index:1;}
-.field-penalty-top{position:absolute;top:0;left:20%;width:60%;height:14%;border:1px solid var(--field-line);border-top:none;}
-.field-penalty-bot{position:absolute;bottom:0;left:20%;width:60%;height:14%;border:1px solid var(--field-line);border-bottom:none;}
-.field-goal-top{position:absolute;top:0;left:37%;width:26%;height:5%;border:1px solid var(--field-line);border-top:none;}
-.field-goal-bot{position:absolute;bottom:0;left:37%;width:26%;height:5%;border:1px solid var(--field-line);border-bottom:none;}
-.player-slot{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer;z-index:10;}
-.player-circle{width:40px;height:40px;border-radius:2px;clip-path:polygon(0 0,calc(100% - 5px) 0,100% 5px,100% 100%,5px 100%,0 calc(100% - 5px));border:none;display:flex;align-items:center;justify-content:center;font-family:'Figtree',sans-serif;font-size:8px;font-weight:500;color:white;transition:all 0.2s;}
-.player-circle:hover{transform:scale(1.1);filter:brightness(1.2);}
-.player-circle.empty{background:rgba(255,255,255,0.05);border:1px dashed rgba(255,255,255,0.15);border-radius:2px;clip-path:none;color:var(--text3);}
-.player-name-tag{background:rgba(0,0,0,0.75);border:none;border-radius:2px;padding:2px 5px;font-family:'Figtree',sans-serif;font-size:8px;color:#fff;white-space:nowrap;text-align:center;}
-.player-pts-tag{font-family:'Figtree',sans-serif;font-size:7px;color:var(--lime);}
-.badge-sell{font-family:'Figtree',sans-serif;font-size:6px;background:var(--red);color:white;border-radius:2px;padding:1px 4px;font-weight:600;letter-spacing:1px;}
-.badge-warn{font-family:'Figtree',sans-serif;font-size:6px;background:var(--lime);color:#000;border-radius:2px;padding:1px 4px;font-weight:600;}
+.ftab.active{background:var(--accent);border-color:var(--accent);color:#000;font-weight:700;}
+
+/* ── CAMPO ── */
+.field-wrap{position:relative;width:100%;max-width:420px;margin:0 auto;filter:drop-shadow(0 8px 32px rgba(0,0,0,0.5));}
+.field{
+  background:
+    repeating-linear-gradient(180deg,
+      rgba(0,0,0,0.06) 0px, rgba(0,0,0,0.06) 1px,
+      transparent 1px, transparent 48px
+    ),
+    linear-gradient(180deg,
+      #1a4a0e 0%, #1f5511 12%, #1a4a0e 24%, #1f5511 36%,
+      #1a4a0e 48%, #1f5511 60%, #1a4a0e 72%, #1f5511 84%, #1a4a0e 96%
+    );
+  border:2px solid rgba(255,255,255,0.06);
+  border-radius:8px;
+  aspect-ratio:0.65;
+  position:relative;
+  overflow:hidden;
+  box-shadow:inset 0 0 60px rgba(0,0,0,0.4), inset 0 0 0 1px rgba(255,255,255,0.04);
+}
+.field::before{content:'';position:absolute;top:50%;left:4%;width:92%;height:1px;background:rgba(255,255,255,0.12);}
+.field::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:22%;padding-bottom:22%;border:1px solid rgba(255,255,255,0.12);border-radius:50%;}
+.field-center-dot{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:4px;height:4px;background:rgba(255,255,255,0.3);border-radius:50%;z-index:1;}
+.field-penalty-top{position:absolute;top:0;left:18%;width:64%;height:15%;border:1px solid rgba(255,255,255,0.1);border-top:none;border-radius:0 0 4px 4px;}
+.field-penalty-bot{position:absolute;bottom:0;left:18%;width:64%;height:15%;border:1px solid rgba(255,255,255,0.1);border-bottom:none;border-radius:4px 4px 0 0;}
+.field-goal-top{position:absolute;top:0;left:36%;width:28%;height:5%;border:1px solid rgba(255,255,255,0.1);border-top:none;}
+.field-goal-bot{position:absolute;bottom:0;left:36%;width:28%;height:5%;border:1px solid rgba(255,255,255,0.1);border-bottom:none;}
+
+/* ── TARJETAS JUGADOR ── */
+.player-slot{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:0;cursor:pointer;z-index:10;}
+.player-slot:hover .player-card{transform:scale(1.08) translateY(-2px);filter:brightness(1.15);}
+.player-slot:hover .player-label{opacity:1;}
+
+.player-card{
+  width:46px;height:46px;border-radius:4px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  position:relative;transition:all 0.2s ease;
+  box-shadow:0 2px 8px rgba(0,0,0,0.5);
+  overflow:hidden;
+}
+.player-card::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(255,255,255,0.12) 0%,transparent 60%);
+  pointer-events:none;
+}
+.player-card-pos{
+  font-family:'Figtree',sans-serif;font-size:7px;font-weight:800;
+  color:rgba(255,255,255,0.6);letter-spacing:1px;text-transform:uppercase;
+  margin-bottom:1px;
+}
+.player-card-num{
+  font-family:'Figtree',sans-serif;font-size:16px;font-weight:900;
+  color:rgba(255,255,255,0.95);line-height:1;
+}
+.player-card.empty{
+  background:rgba(255,255,255,0.04)!important;
+  border:1px dashed rgba(255,255,255,0.1);
+  box-shadow:none;
+}
+.player-card.empty .player-card-num{color:rgba(255,255,255,0.15);font-size:20px;font-weight:300;}
+
+.player-label{
+  background:rgba(5,12,20,0.92);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:3px;
+  padding:3px 6px;
+  margin-top:3px;
+  min-width:52px;max-width:72px;
+  text-align:center;
+  transition:opacity 0.15s;
+}
+.player-label-name{
+  font-family:'Figtree',sans-serif;font-size:7.5px;font-weight:700;
+  color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  text-transform:uppercase;letter-spacing:0.3px;line-height:1.3;
+}
+.player-label-pts{
+  font-family:'Figtree',sans-serif;font-size:7px;font-weight:600;
+  color:var(--accent);line-height:1.2;
+}
+.player-status-dot{
+  position:absolute;top:3px;right:3px;
+  width:5px;height:5px;border-radius:50%;
+}
+
+.badge-sell{font-family:'Figtree',sans-serif;font-size:6px;background:var(--red);color:white;border-radius:2px;padding:1px 4px;font-weight:600;letter-spacing:1px;margin-top:1px;}
+.badge-warn{font-family:'Figtree',sans-serif;font-size:6px;background:rgba(251,191,36,0.2);color:#fbbf24;border:1px solid rgba(251,191,36,0.3);border-radius:2px;padding:1px 4px;font-weight:600;margin-top:1px;}
 .team-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border-radius:4px;overflow:hidden;margin-bottom:1.2rem;}
 .ts-card{background:var(--bg2);padding:0.8rem 1rem;}
 .ts-label{font-family:'Figtree',sans-serif;font-size:0.54rem;color:var(--text3);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:4px;font-weight:500;}
@@ -1973,11 +2043,57 @@ function renderField(){
       const xPct=row.count===1?50:10+(i/(row.count-1))*80;
       const sid=row.pos+'_'+ri+'_'+i;
       const p=lineup[sid];
-      const slot=document.createElement('div');slot.className='player-slot';slot.style.left=xPct+'%';slot.style.top=yPct+'%';slot.onclick=()=>openModal(sid,row.pos);
-      const circle=document.createElement('div');circle.className='player-circle'+(p?'':' empty');circle.style.background=p?(PC[row.pos]||'#555'):'';circle.textContent=p?p.position:'+';circle.style.fontSize=p&&p.position.includes('/')?'7px':'9px';
-      const nt=document.createElement('div');nt.className='player-name-tag';nt.textContent=p?p.name:row.pos;
-      slot.appendChild(circle);slot.appendChild(nt);
-      if(p){const pt=document.createElement('div');pt.className='player-pts-tag';pt.textContent=(p.pts||0)+'pts';slot.appendChild(pt);if(p.status==='sell'){const b=document.createElement('div');b.className='badge-sell';b.textContent='VENDER';slot.appendChild(b);}else if(p.status==='warn'){const b=document.createElement('div');b.className='badge-warn';b.textContent='⚠️';slot.appendChild(b);}}
+      const slot=document.createElement('div');
+      slot.className='player-slot';
+      slot.style.left=xPct+'%';
+      slot.style.top=yPct+'%';
+      slot.onclick=()=>openModal(sid,row.pos);
+
+      // Tarjeta principal
+      const card=document.createElement('div');
+      card.className='player-card'+(p?'':' empty');
+      if(p){
+        const posKey=p.position.split('/')[0];
+        const baseColor=PC[posKey]||'#555';
+        card.style.background=`linear-gradient(155deg,${baseColor}dd,${baseColor}88)`;
+        // Punto de estado
+        if(p.status==='sell'||p.status==='warn'){
+          const dot=document.createElement('div');
+          dot.className='player-status-dot';
+          dot.style.background=p.status==='sell'?'#f87171':'#fbbf24';
+          card.appendChild(dot);
+        }
+        // Inicial grande
+        const num=document.createElement('div');
+        num.className='player-card-num';
+        num.textContent=p.name.charAt(0).toUpperCase();
+        card.appendChild(num);
+        // Posición debajo
+        const posEl=document.createElement('div');
+        posEl.className='player-card-pos';
+        posEl.textContent=p.position;
+        card.appendChild(posEl);
+      } else {
+        const plus=document.createElement('div');
+        plus.className='player-card-num';
+        plus.textContent='+';
+        card.appendChild(plus);
+      }
+      slot.appendChild(card);
+
+      // Etiqueta nombre + puntos
+      const label=document.createElement('div');
+      label.className='player-label';
+      if(p){
+        const shortName = p.name.split(' ').slice(-1)[0]; // apellido
+        label.innerHTML=`<div class="player-label-name">${shortName}</div><div class="player-label-pts">${p.pts||0} pts</div>`;
+        // badges
+        if(p.status==='sell'){const b=document.createElement('div');b.className='badge-sell';b.textContent='VENDER';slot.appendChild(b);}
+        else if(p.status==='warn'){const b=document.createElement('div');b.className='badge-warn';b.textContent='⚠';slot.appendChild(b);}
+      } else {
+        label.innerHTML=`<div class="player-label-name" style="color:rgba(255,255,255,0.2)">${row.pos}</div>`;
+      }
+      slot.appendChild(label);
       field.appendChild(slot);
     }
   });
