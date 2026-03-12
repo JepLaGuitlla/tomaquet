@@ -2311,50 +2311,44 @@ function renderSummary(){
   const trendArrow = trendTotal>0?'▲':trendTotal<0?'▼':'●';
   const trendSign  = trendTotal>0?'+':'';
 
-  const standPos   = getStandings().find(t=>t.name&&(t.name.includes('Guitlla')||t.name.includes('\u{1F98A}')));
-  const posStr     = standPos?`${standPos.pos}\u{BA}`:'\u2014';
-  const totalTeams = getStandings().length||'\u2014';
-  const totalPts   = standPos?standPos.pts.toLocaleString('es'):'\u2014';
+  const standPos   = getStandings().find(t=>t.name&&(t.name.includes('Guitlla')||t.name.includes('🦊')));
+  const posStr     = standPos?`${standPos.pos}º`:'—';
+  const totalTeams = getStandings().length||'—';
+  const totalPts   = standPos?standPos.pts.toLocaleString('es'):'—';
 
-  const card = (id, popFn, label, value, sub, valueStyle='') =>
-    `<div class="ts-card has-pop" id="${id}"
-       onmouseenter="popShow(document.getElementById('${id}'),${popFn}(document.getElementById('${id}')))"
-       onmouseleave="popHide()"
-       onclick="${popFn}Click(document.getElementById('${id}'))">
-      <div class="ts-label">${label} <span style="font-size:0.55rem;opacity:.5">&#9432;</span></div>
-      <div class="ts-value" ${valueStyle?`style="${valueStyle}"`:''}>${value}</div>
+  const card = (id, label, value, sub, valueStyle='') =>
+    `<div class="ts-card has-pop" id="${id}">
+      <div class="ts-label">${label} <span style="font-size:0.5rem;opacity:.4">▾</span></div>
+      <div class="ts-value"${valueStyle?` style="${valueStyle}"`:''}>${value}</div>
       <div class="ts-sub">${sub}</div>
     </div>`;
 
   document.getElementById('teamSummary').innerHTML =
-    card('tsPos',     'popPosicion', 'Posici\u{F3}n',       posStr,                   `de ${totalTeams}`) +
-    card('tsPts',     'popPuntos',   'Puntos totales',        totalPts,                 'acumulados') +
-    card('tsVal',     'popValor',    'Valor plantilla',       fmt(tv),                  'mercado') +
-    card('tsTrend',   'popTendencia','Tendencia',             `${trendArrow} ${trendSign}${fmt(trendTotal)}`, 'valor total equipo', `color:${trendColor};font-size:1.1rem`) +
-    card('tsVender',  'popVender',   'Vender',                `<span style="color:var(--red)">${toSell}</span>`, 'urgente') +
-    card('tsVigilar', 'popVigilar',  'Vigilar',               `<span style="color:var(--accent)">${toWarn}</span>`, 'jugadores');
+    card('tsPos',     'Posición',       posStr,    `de ${totalTeams}`) +
+    card('tsPts',     'Puntos totales', totalPts,  'acumulados') +
+    card('tsVal',     'Valor plantilla',fmt(tv),   'mercado') +
+    card('tsTrend',   'Tendencia',      `${trendArrow} ${trendSign}${fmt(trendTotal)}`, 'valor total equipo', `color:${trendColor}`) +
+    card('tsVender',  'Vender',         `<span style="color:var(--red)">${toSell}</span>`, 'urgente') +
+    card('tsVigilar', 'Vigilar',        `<span style="color:var(--accent)">${toWarn}</span>`, 'jugadores');
 
-  // Bind click handlers (toggle popover)
-  ['tsPos','tsPts','tsVal','tsTrend','tsVender','tsVigilar'].forEach(id => {
+  // Bind handlers via JS (no inline)
+  const fnMap = {
+    tsPos:     popPosicion,
+    tsPts:     popPuntos,
+    tsVal:     popValor,
+    tsTrend:   popTendencia,
+    tsVender:  popVender,
+    tsVigilar: popVigilar,
+  };
+  Object.entries(fnMap).forEach(([id, fn]) => {
     const el = document.getElementById(id);
     if (!el) return;
+    el.onmouseenter = () => fn(el);
+    el.onmouseleave = () => setTimeout(()=>{ if(!document.getElementById('tsPopover').matches(':hover')) popHide(); }, 120);
     el.onclick = () => {
       const pop = document.getElementById('tsPopover');
       if (pop.classList.contains('visible') && pop._anchor===id) { popHide(); }
-      else { pop._anchor=id; el.dispatchEvent(new Event('mouseenter')); }
-    };
-    el.onmouseenter = () => {
-      const pop = document.getElementById('tsPopover');
-      pop._anchor = id;
-      const fnMap = {tsPos:popPosicion,tsPts:popPuntos,tsVal:popValor,tsTrend:popTendencia,tsVender:popVender,tsVigilar:popVigilar};
-      fnMap[id]?.(el);
-    };
-    el.onmouseleave = () => {
-      // pequeño delay para no cerrar al mover al popover
-      setTimeout(()=>{
-        const pop=document.getElementById('tsPopover');
-        if(!pop.matches(':hover')) popHide();
-      },120);
+      else { pop._anchor=id; fn(el); }
     };
   });
 }
