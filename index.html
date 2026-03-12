@@ -624,66 +624,44 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
 .board-section-tabs{display:flex;gap:4px;margin-bottom:0.75rem;}
 .board-tab{background:var(--bg3);border:none;color:var(--text3);font-size:0.65rem;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:3px;cursor:pointer;font-family:'Figtree',sans-serif;}
 .board-tab.active{background:var(--accent);color:#fff;}
-/* ── LA BOLSA ────────────────────────────────────────────────────────── */
-.bolsa-grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-bottom:1.5rem;}
-@media(max-width:900px){.bolsa-grid-3{grid-template-columns:1fr;}}
-.bolsa-card{background:var(--bg2);border:1px solid var(--border);border-radius:6px;overflow:hidden;}
-.bolsa-card-hd{padding:10px 14px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
-.bolsa-card-title{font-family:'Figtree',sans-serif;font-size:0.62rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text3);}
-.bolsa-card-title::before{content:'// ';color:var(--accent);}
-.bolsa-card-body{padding:10px;}
-/* KPI inline compacto */
-.bolsa-kpi-inline{background:var(--bg2);padding:8px 16px;display:flex;flex-direction:column;gap:2px;}
-.bolsa-kpi-lbl{font-family:'Figtree',sans-serif;font-size:0.5rem;color:var(--text3);text-transform:uppercase;letter-spacing:1.5px;}
-.bolsa-kpi-val{font-family:'Figtree',sans-serif;font-size:1rem;font-weight:800;line-height:1;color:var(--text);}
-.bolsa-kpi-val.up{color:var(--c-good);}.bolsa-kpi-val.dn{color:var(--c-low);}
-/* Liga tabs */
-.bolsa-liga-tabs{display:flex;gap:4px;}
-.bolsa-liga-tab{background:var(--bg3);border:none;color:var(--text3);font-size:0.65rem;letter-spacing:1px;text-transform:uppercase;padding:5px 12px;border-radius:3px;cursor:pointer;font-family:'Figtree',sans-serif;}
-.bolsa-liga-tab.active{background:var(--accent);color:#fff;}
-/* Pos filter */
-.bolsa-pos-btn{background:var(--bg3);border:1px solid var(--border);color:var(--text3);font-size:0.58rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 8px;border-radius:3px;cursor:pointer;font-family:'Figtree',sans-serif;}
-.bolsa-pos-btn.active{background:var(--accent);border-color:var(--accent);color:#fff;}
-/* Leyenda dot */
-.bolsa-leg-dot{display:inline-block;width:8px;height:8px;border-radius:50%;}
-/* Tabla ROI principal */
-.bolsa-roi-hd{display:grid;grid-template-columns:26px 1fr 64px 60px 80px 64px 88px 72px;align-items:center;padding:6px 12px;background:var(--bg3);border-bottom:1px solid var(--border);gap:6px;}
-.brh-pos,.brh-name,.brh-stat,.brh-trend,.brh-fp{font-family:'Figtree',sans-serif;font-size:0.52rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);}
-.brh-stat,.brh-fp,.brh-trend{text-align:center;cursor:pointer;user-select:none;}
-.brh-stat:hover,.brh-fp:hover{color:var(--accent);}
-.brh-stat.active,.brh-fp.active{color:var(--accent);}
+
+/* ── LA BOLSA (prefijos b: para no colisionar) ───────────────────── */
+.bcard{background:var(--bg2);border:1px solid var(--border);border-radius:6px;overflow:hidden;margin-bottom:0;}
+.bcard-hd{padding:9px 13px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
+.bcard-title{font-family:'Figtree',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text3);}
+.bcard-title::before{content:'// ';color:var(--accent);}
+.bcard-empty{padding:1.5rem;text-align:center;color:var(--text3);font-family:'Figtree',sans-serif;font-size:0.72rem;line-height:1.6;}
+.bkpi{background:var(--bg2);padding:7px 15px;display:flex;flex-direction:column;gap:2px;}
+.bkpi-lbl{font-family:'Figtree',sans-serif;font-size:0.5rem;color:var(--text3);text-transform:uppercase;letter-spacing:1.5px;}
+.bkpi-val{font-family:'Figtree',sans-serif;font-size:0.95rem;font-weight:800;line-height:1;color:var(--text);}
+.bkpi-val.bup{color:var(--c-good);}.bkpi-val.bdn{color:var(--c-low);}
+.blg-tab{background:var(--bg3);border:none;color:var(--text3);font-size:0.65rem;letter-spacing:1px;text-transform:uppercase;padding:5px 12px;border-radius:3px;cursor:pointer;font-family:'Figtree',sans-serif;}
+.blg-tab.active{background:var(--accent);color:#fff;}
+.bpos-btn{background:var(--bg3);border:1px solid var(--border);color:var(--text3);font-size:0.58rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 8px;border-radius:3px;cursor:pointer;font-family:'Figtree',sans-serif;}
+.bpos-btn.active{background:var(--accent);border-color:var(--accent);color:#fff;}
+.broi-hd{display:grid;grid-template-columns:24px 1fr 60px 58px 76px 60px 86px 68px;align-items:center;padding:5px 12px;background:var(--bg3);border-bottom:1px solid var(--border);gap:5px;font-family:'Figtree',sans-serif;font-size:0.52rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);}
+.broi-hd-stat{text-align:center;cursor:pointer;user-select:none;}.broi-hd-stat:hover{color:var(--accent);}
+.broi-hd-stat.bactive{color:var(--accent);}
 .bsh-arr{color:var(--accent);}
-.bolsa-roi-row{display:grid;grid-template-columns:26px 1fr 64px 60px 80px 64px 88px 72px;align-items:center;padding:7px 12px;border-bottom:1px solid var(--border);gap:6px;transition:background 0.1s;cursor:pointer;}
-.bolsa-roi-row:hover{background:var(--bg3);}
-.bolsa-roi-row:last-child{border-bottom:none;}
-/* Celdas stat con color percentil */
-.brc-stat{font-family:'Figtree',sans-serif;font-size:0.88rem;font-weight:800;text-align:center;line-height:1;}
-.brc-sub{font-family:'Figtree',sans-serif;font-size:0.56rem;color:var(--text3);text-align:center;margin-top:1px;}
-/* Factor Pausa cell especial */
-.brc-fp{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;}
-.brc-fp-val{font-family:'Figtree',sans-serif;font-size:1rem;font-weight:800;line-height:1;}
-.brc-fp-bar{width:48px;height:3px;border-radius:2px;margin-top:2px;background:var(--border);}
+.broi-row{display:grid;grid-template-columns:24px 1fr 60px 58px 76px 60px 86px 68px;align-items:center;padding:6px 12px;border-bottom:1px solid var(--border);gap:5px;cursor:pointer;transition:background 0.1s;}
+.broi-row:hover{background:var(--bg3);}.broi-row:last-child{border-bottom:none;}
+.brc-stat{font-family:'Figtree',sans-serif;font-size:0.86rem;font-weight:800;text-align:center;line-height:1;}
+.brc-sub{font-family:'Figtree',sans-serif;font-size:0.54rem;color:var(--text3);text-align:center;margin-top:1px;}
+.brc-fp{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;}
+.brc-fp-val{font-family:'Figtree',sans-serif;font-size:0.88rem;font-weight:800;line-height:1;}
+.brc-fp-bar{width:44px;height:3px;border-radius:2px;background:var(--border);}
 .brc-fp-fill{height:100%;border-radius:2px;}
-/* Tendencia */
 .brc-trend{font-family:'Figtree',sans-serif;font-size:0.72rem;font-weight:700;text-align:center;}
-/* Suben/Bajan compactos */
-.tend-row{display:flex;align-items:center;gap:0.6rem;padding:0.45rem 0.75rem;border-bottom:1px solid var(--border);font-size:0.78rem;}
-.tend-row:last-child{border-bottom:none;}
-.tend-bar-wrap{width:48px;height:3px;background:var(--bg3);border-radius:2px;overflow:hidden;flex-shrink:0;}
-.tend-bar{height:100%;border-radius:2px;}
-.tend-val{font-family:'Figtree',sans-serif;font-weight:700;font-size:0.75rem;text-align:right;width:64px;flex-shrink:0;}
-.tend-val.up{color:var(--c-good);}.tend-val.dn{color:var(--c-low);}
-/* Mercado compacto */
-.mkt-row{display:flex;align-items:center;gap:0.5rem;padding:0.45rem 0.75rem;border-bottom:1px solid var(--border);font-size:0.75rem;}
-.mkt-row:last-child{border-bottom:none;}
-.mkt-pos{width:22px;height:22px;border-radius:3px;display:flex;align-items:center;justify-content:center;font-family:'Figtree',sans-serif;font-size:0.52rem;font-weight:800;color:#fff;flex-shrink:0;}
-.mkt-player{font-family:'Figtree',sans-serif;font-weight:700;color:var(--text);flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.mkt-price{font-family:'Figtree',sans-serif;font-weight:700;font-size:0.75rem;white-space:nowrap;color:var(--c-good);}
-/* Paginación */
-.bolsa-pg-btn{background:var(--bg3);border:1px solid var(--border);color:var(--text3);font-size:0.62rem;font-weight:600;padding:3px 10px;border-radius:3px;cursor:pointer;font-family:'Figtree',sans-serif;}
-.bolsa-pg-btn:hover{border-color:var(--accent);color:var(--accent);}
-/* Empty */
-.bolsa-empty{padding:1.5rem;text-align:center;color:var(--text3);font-family:'Figtree',sans-serif;font-size:0.72rem;line-height:1.6;}
+.brc-trend-up{color:var(--c-good);}.brc-trend-dn{color:var(--c-low);}
+.btend-row{display:flex;align-items:center;gap:0.6rem;padding:0.4rem 0.75rem;border-bottom:1px solid var(--border);}.btend-row:last-child{border-bottom:none;}
+.btend-bar-wrap{width:44px;height:3px;background:var(--bg3);border-radius:2px;overflow:hidden;flex-shrink:0;}
+.btend-bar{height:100%;border-radius:2px;}
+.btend-val{font-family:'Figtree',sans-serif;font-weight:700;font-size:0.73rem;text-align:right;width:60px;flex-shrink:0;}
+.btend-val-up{color:var(--c-good);}.btend-val-dn{color:var(--c-low);}
+.bmkt-row{display:flex;align-items:center;gap:0.5rem;padding:0.4rem 0.75rem;border-bottom:1px solid var(--border);}.bmkt-row:last-child{border-bottom:none;}
+.bpg-btn{background:var(--bg3);border:1px solid var(--border);color:var(--text3);font-size:0.62rem;font-weight:600;padding:3px 10px;border-radius:3px;cursor:pointer;font-family:'Figtree',sans-serif;}
+.bpg-btn:hover{border-color:var(--accent);color:var(--accent);}
+@media(max-width:900px){.broi-hd,.broi-row{grid-template-columns:20px 1fr 52px 50px 66px 52px 76px 56px;}}
 </style>
 </head>
 <body class="liga-tomaquet">
@@ -1309,103 +1287,97 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
 <!-- ══ LA BOLSA ══════════════════════════════════════════════════════ -->
 <div id="bolsa" class="section">
 
-  <!-- Liga tabs + KPIs en la misma fila -->
+  <!-- Header row: liga tabs + KPIs compactos -->
   <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.2rem;flex-wrap:wrap;gap:0.75rem;">
-    <div class="bolsa-liga-tabs" style="margin-bottom:0;">
-      <button class="bolsa-liga-tab active" onclick="setBolsaLiga('tomaquet',this)">🍅 Tomaquet</button>
-      <button class="bolsa-liga-tab" onclick="setBolsaLiga('enbas',this)">⛰️ EN BAS</button>
+    <div style="display:flex;gap:4px;">
+      <button class="blg-tab active" onclick="setBolsaLiga('tomaquet',this)">🍅 Tomaquet</button>
+      <button class="blg-tab" onclick="setBolsaLiga('enbas',this)">⛰️ EN BAS</button>
     </div>
-    <!-- KPIs inline compactos -->
     <div style="display:flex;gap:1px;background:var(--border);border-radius:5px;overflow:hidden;">
-      <div class="bolsa-kpi-inline"><div class="bolsa-kpi-lbl">Plantilla</div><div class="bolsa-kpi-val" id="bKpiValor">—</div></div>
-      <div class="bolsa-kpi-inline"><div class="bolsa-kpi-lbl">Plusvalía</div><div class="bolsa-kpi-val" id="bKpiPlusv">—</div></div>
-      <div class="bolsa-kpi-inline"><div class="bolsa-kpi-lbl">Tendencia</div><div class="bolsa-kpi-val" id="bKpiTrend">—</div></div>
+      <div class="bkpi"><div class="bkpi-lbl">Plantilla</div><div class="bkpi-val" id="bKpiValor">—</div></div>
+      <div class="bkpi"><div class="bkpi-lbl">Plusvalía</div><div class="bkpi-val" id="bKpiPlusv">—</div></div>
+      <div class="bkpi"><div class="bkpi-lbl">Tendencia</div><div class="bkpi-val" id="bKpiTrend">—</div></div>
     </div>
   </div>
 
-  <!-- BLOQUE PRINCIPAL: Tabla ROI + Factor Pausa (ocupa toda la anchura) -->
-  <div class="bolsa-card" style="margin-bottom:1rem;">
-    <div class="bolsa-card-hd">
-      <div class="bolsa-card-title">Ranking ROI · Factor Pausa</div>
+  <!-- TABLA PRINCIPAL: ROI + Factor Pausa -->
+  <div class="bcard" style="margin-bottom:1rem;">
+    <div class="bcard-hd">
+      <div class="bcard-title">Ranking ROI · Factor Pausa</div>
       <div style="display:flex;align-items:center;gap:8px;">
-        <!-- Filtros posición -->
-        <div style="display:flex;gap:3px;" id="bolsaPosFilters">
-          <button class="bolsa-pos-btn active" onclick="setBolsaPos('',this)">ALL</button>
-          <button class="bolsa-pos-btn" onclick="setBolsaPos('PT',this)">PT</button>
-          <button class="bolsa-pos-btn" onclick="setBolsaPos('DF',this)">DF</button>
-          <button class="bolsa-pos-btn" onclick="setBolsaPos('MC',this)">MC</button>
-          <button class="bolsa-pos-btn" onclick="setBolsaPos('DL',this)">DL</button>
+        <div style="display:flex;gap:3px;">
+          <button class="bpos-btn active" onclick="setBolsaPos('',this)">ALL</button>
+          <button class="bpos-btn" onclick="setBolsaPos('PT',this)">PT</button>
+          <button class="bpos-btn" onclick="setBolsaPos('DF',this)">DF</button>
+          <button class="bpos-btn" onclick="setBolsaPos('MC',this)">MC</button>
+          <button class="bpos-btn" onclick="setBolsaPos('DL',this)">DL</button>
         </div>
-        <!-- Leyenda colores -->
-        <div style="display:flex;gap:4px;align-items:center;margin-left:8px;">
-          <span style="font-size:0.5rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px;">percentil</span>
-          <span class="bolsa-leg-dot" style="background:var(--c-low)"></span>
-          <span class="bolsa-leg-dot" style="background:var(--c-mid)"></span>
-          <span class="bolsa-leg-dot" style="background:var(--c-good)"></span>
-          <span class="bolsa-leg-dot" style="background:var(--c-top)"></span>
+        <div style="display:flex;gap:3px;align-items:center;margin-left:6px;">
+          <span style="font-size:0.5rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px;">pct</span>
+          <span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--c-low)"></span>
+          <span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--c-mid)"></span>
+          <span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--c-good)"></span>
+          <span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--c-top)"></span>
         </div>
       </div>
     </div>
-    <!-- Cabecera tabla -->
-    <div class="bolsa-roi-hd">
-      <div class="brh-pos"></div>
-      <div class="brh-name">Jugador</div>
-      <div class="brh-stat" onclick="setBolsaSort('pts')" id="bsh-pts">PTS <span class="bsh-arr">↓</span></div>
-      <div class="brh-stat" onclick="setBolsaSort('media')" id="bsh-media">MEDIA</div>
-      <div class="brh-stat" onclick="setBolsaSort('precio')" id="bsh-precio">VALOR</div>
-      <div class="brh-stat" onclick="setBolsaSort('roi')" id="bsh-roi">ROI</div>
-      <div class="brh-stat brh-fp" onclick="setBolsaSort('factor')" id="bsh-factor">☕ FACTOR</div>
-      <div class="brh-trend">HOY</div>
+    <!-- Cabecera columnas -->
+    <div class="broi-hd">
+      <div></div>
+      <div>Jugador</div>
+      <div class="broi-hd-stat" onclick="setBolsaSort('pts')" id="bsh-pts">PTS <span id="bsh-pts-arr" class="bsh-arr">↓</span></div>
+      <div class="broi-hd-stat" onclick="setBolsaSort('media')" id="bsh-media">MEDIA</div>
+      <div class="broi-hd-stat" onclick="setBolsaSort('precio')" id="bsh-precio">VALOR</div>
+      <div class="broi-hd-stat" onclick="setBolsaSort('roi')" id="bsh-roi">ROI</div>
+      <div class="broi-hd-stat" onclick="setBolsaSort('factor')" id="bsh-factor">☕ FACTOR</div>
+      <div class="broi-hd-stat">HOY</div>
     </div>
-    <!-- Filas -->
-    <div id="bolsaRoiTable"><div class="bolsa-empty">Cargando...</div></div>
-    <!-- Paginación -->
-    <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 12px;border-top:1px solid var(--border);font-size:0.65rem;color:var(--text3);">
+    <div id="bolsaRoiTable"><div class="bcard-empty">Cargando...</div></div>
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:7px 12px;border-top:1px solid var(--border);font-size:0.63rem;color:var(--text3);">
       <span id="bolsaRoiInfo"></span>
       <div style="display:flex;gap:4px;">
-        <button class="bolsa-pg-btn" onclick="bolsaRoiPage(-1)">← Ant</button>
-        <button class="bolsa-pg-btn" onclick="bolsaRoiPage(1)">Sig →</button>
+        <button class="bpg-btn" onclick="bolsaRoiPage(-1)">← Ant</button>
+        <button class="bpg-btn" onclick="bolsaRoiPage(1)">Sig →</button>
       </div>
     </div>
   </div>
 
-  <!-- Row inferior: Suben · Bajan · Mercado (compactos, secundarios) -->
-  <div class="bolsa-grid-3" style="margin-bottom:1rem;">
+  <!-- Fila inferior: Suben · Bajan · Mercado -->
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-bottom:1rem;">
 
-    <div class="bolsa-card">
-      <div class="bolsa-card-hd"><div class="bolsa-card-title">▲ Más suben hoy</div></div>
-      <div id="bolsaSuben" style="padding:0;"><div class="bolsa-empty">—</div></div>
+    <div class="bcard">
+      <div class="bcard-hd"><div class="bcard-title">▲ Más suben hoy</div></div>
+      <div id="bolsaSuben"><div class="bcard-empty">—</div></div>
     </div>
 
-    <div class="bolsa-card">
-      <div class="bolsa-card-hd"><div class="bolsa-card-title">▼ Más bajan hoy</div></div>
-      <div id="bolsaBajan" style="padding:0;"><div class="bolsa-empty">—</div></div>
+    <div class="bcard">
+      <div class="bcard-hd"><div class="bcard-title">▼ Más bajan hoy</div></div>
+      <div id="bolsaBajan"><div class="bcard-empty">—</div></div>
     </div>
 
-    <div class="bolsa-card">
-      <div class="bolsa-card-hd">
-        <div class="bolsa-card-title">Mercado activo</div>
+    <div class="bcard">
+      <div class="bcard-hd">
+        <div class="bcard-title">Mercado activo</div>
         <span id="bolsaMktCount" style="font-size:0.6rem;color:var(--text3)"></span>
       </div>
-      <div id="bolsaMercado" style="padding:0;"><div class="bolsa-empty" style="font-size:0.68rem;">Sin datos de mercado.<br><span style="opacity:0.5">Próx. run: fetchMarket()</span></div></div>
+      <div id="bolsaMercado"><div class="bcard-empty" style="font-size:0.68rem;">Sin datos.<br><span style="opacity:0.5">Próx: fetchMarket()</span></div></div>
     </div>
 
   </div>
 
   <!-- Evolución valor plantilla -->
-  <div class="bolsa-card" style="margin-bottom:1.5rem;">
-    <div class="bolsa-card-hd">
-      <div class="bolsa-card-title">Evolución valor plantilla</div>
+  <div class="bcard" style="margin-bottom:1.5rem;">
+    <div class="bcard-hd">
+      <div class="bcard-title">Evolución valor plantilla</div>
       <span style="font-size:0.6rem;color:var(--text3)">historia diaria acumulada</span>
     </div>
-    <div class="bolsa-card-body" id="bolsaHistoria">
-      <div class="bolsa-empty">Sin historial aún. Se acumula con cada fetch diario.</div>
-    </div>
+    <div id="bolsaHistoria"><div class="bcard-empty">Sin historial aún. Se acumula con cada fetch diario.</div></div>
   </div>
 
 </div><!-- /bolsa -->
 
 <button class="mercado-fab" id="mercadoFab" onclick="closeMercadoFab()">▲ CERRAR LISTA</button>
+</main>
 
 <div class="modal-overlay" id="modalOverlay">
   <div class="modal">
@@ -2014,10 +1986,6 @@ async function loadPlayers(){
       boardData.enbas    = data.boardEnBas    || [];
       renderBoard('tomaquet');
     }
-
-    // Cargar mercado activo (si existe en data.json)
-    if(data.myTeam?.market)    window._mktTomaquet = data.myTeam.market;
-    if(data.myTeamEnBas?.market) window._mktEnBas  = data.myTeamEnBas.market;
 
   }catch(e){
     document.getElementById('jugadores-loading').innerHTML='<div class="error-msg">❌ Error cargando jugadores: '+e.message+'</div>';
@@ -3488,30 +3456,31 @@ function renderCompareModal(){
   document.getElementById('compareModalBody').innerHTML=`<table class="compare-table"><thead>${header}</thead><tbody>${body}</tbody></table>`;
 }
 
+// ── Conectar clicks en filas de jugadores al panel ─────────────────
+// renderPlayers y mv3Render ya llaman a openJugPanel(p) en onclick
 
-// ══════════════════════════════════════════════════════════════════════
+// ══════════════════════════════════════════════════════════════════
 // LA BOLSA
-// ══════════════════════════════════════════════════════════════════════
+// ══════════════════════════════════════════════════════════════════
+let bolsaLiga  = 'tomaquet';
+let bolsaPos   = '';
+let bolsaSort  = 'roi';
+let bolsaPage  = 1;
+const BOLSA_PER_PAGE = 25;
+let bolsaInited = false;
 
-let bolsaLiga    = 'tomaquet';
-let bolsaPos     = '';
-let bolsaSort    = 'roi';   // columna activa
-let bolsaPage    = 1;
-const BOLSA_PAGE = 25;
-let bolsaInited  = false;
-
-// ── Punto de entrada ─────────────────────────────────────────────────
 function initBolsa() { bolsaInited = true; renderBolsa(); }
+
 function setBolsaLiga(liga, btn) {
   bolsaLiga = liga;
-  document.querySelectorAll('.bolsa-liga-tab').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.blg-tab').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   bolsaPage = 1;
   renderBolsa();
 }
 function setBolsaPos(pos, btn) {
   bolsaPos = pos;
-  document.querySelectorAll('.bolsa-pos-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.bpos-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   bolsaPage = 1;
   renderBolsaRoiTable();
@@ -3519,13 +3488,12 @@ function setBolsaPos(pos, btn) {
 function setBolsaSort(col) {
   bolsaSort = col;
   bolsaPage = 1;
-  // actualizar cabecera activa
   ['pts','media','precio','roi','factor'].forEach(k => {
-    const el = document.getElementById('bsh-' + k);
+    const el  = document.getElementById('bsh-' + k);
+    const arr = document.getElementById('bsh-' + k + '-arr');
     if (!el) return;
-    const arr = el.querySelector('.bsh-arr');
-    if (k === col) { el.classList.add('active'); if(arr) arr.textContent = '↓'; }
-    else           { el.classList.remove('active'); if(arr) arr.textContent = ''; }
+    if (k === col) { el.classList.add('bactive'); if(arr) arr.textContent = '↓'; }
+    else           { el.classList.remove('bactive'); if(arr) arr.textContent = ''; }
   });
   renderBolsaRoiTable();
 }
@@ -3537,232 +3505,217 @@ function bolsaRoiPage(dir) {
 function renderBolsa() {
   renderBolsaKpis();
   renderBolsaRoiTable();
-  renderBolsaTendencias();
+  renderBolsaTend();
   renderBolsaMercado();
   renderBolsaHistoria();
 }
 
-// ── KPIs ─────────────────────────────────────────────────────────────
+// ── KPIs compactos ───────────────────────────────────────────────
 function renderBolsaKpis() {
   const equipo = (bolsaLiga === 'tomaquet' ? myTeamData : myTeamDataEnBas) || [];
   const valorTotal = equipo.reduce((s, p) => s + (p.price||0), 0);
   document.getElementById('bKpiValor').textContent = valorTotal ? fmt(valorTotal) : '—';
 
   const buyTotal = equipo.reduce((s, p) => s + (p.buyPrice||0), 0);
-  const plusv    = buyTotal ? valorTotal - buyTotal : null;
-  const elPlusv  = document.getElementById('bKpiPlusv');
-  elPlusv.textContent = plusv != null ? (plusv >= 0 ? '+' : '') + fmt(plusv) : '—';
-  elPlusv.className   = 'bolsa-kpi-val' + (plusv == null ? '' : plusv >= 0 ? ' up' : ' dn');
+  const plusv = buyTotal ? valorTotal - buyTotal : null;
+  const elP = document.getElementById('bKpiPlusv');
+  elP.textContent  = plusv != null ? (plusv >= 0 ? '+' : '') + fmt(plusv) : '—';
+  elP.className    = 'bkpi-val' + (plusv == null ? '' : plusv >= 0 ? ' bup' : ' bdn');
 
   const trendTotal = equipo.reduce((s, p) => s + (p.trend||0), 0);
-  const elTrend = document.getElementById('bKpiTrend');
-  elTrend.textContent = trendTotal ? (trendTotal > 0 ? '+' : '') + fmt(trendTotal) : '—';
-  elTrend.className   = 'bolsa-kpi-val' + (trendTotal > 0 ? ' up' : trendTotal < 0 ? ' dn' : '');
+  const elT = document.getElementById('bKpiTrend');
+  elT.textContent = trendTotal ? (trendTotal > 0 ? '+' : '') + fmt(trendTotal) : '—';
+  elT.className   = 'bkpi-val' + (trendTotal > 0 ? ' bup' : trendTotal < 0 ? ' bdn' : '');
 }
 
-// ── TABLA ROI + FACTOR PAUSA ──────────────────────────────────────────
+// ── Tabla ROI + Factor Pausa ─────────────────────────────────────
 function renderBolsaRoiTable() {
   const el = document.getElementById('bolsaRoiTable');
-  if (!allPlayers.length) { el.innerHTML = '<div class="bolsa-empty">Cargando jugadores...</div>'; return; }
+  if (!allPlayers || !allPlayers.length) {
+    el.innerHTML = '<div class="bcard-empty">Cargando jugadores...</div>';
+    return;
+  }
 
-  // Construir lista enriquecida con datos ADVANCED_STATS
+  // Construir lista enriquecida
   let list = allPlayers.map(p => {
-    const adv  = (typeof ADVANCED_STATS !== 'undefined' && ADVANCED_STATS[p.name]) || {};
-    const pj   = (p.playedHome||0) + (p.playedAway||0);
+    const adv   = (typeof ADVANCED_STATS !== 'undefined' && ADVANCED_STATS[p.name]) || {};
+    const pj    = (p.playedHome||0) + (p.playedAway||0);
     const media = pj > 0 ? p.pts / pj : (adv.media || 0);
-    const roi   = p.price > 0 ? Math.round((p.pts / (p.price / 1000000)) * 10) / 10 : 0;
+    const roi   = p.price > 0 ? Math.round((p.pts / (p.price / 1e6)) * 10) / 10 : 0;
     const factor = adv.factor || null;
     return { ...p, media, roi, factor };
-  });
+  }).filter(p => p.pts > 0 && p.price > 500000);
 
-  // Filtro posición
   if (bolsaPos) list = list.filter(p => (p.position||'').split('/')[0] === bolsaPos);
-  // Solo jugadores con datos mínimos
-  list = list.filter(p => p.pts > 0 && p.price > 500000);
 
-  // Calcular percentiles sobre la lista filtrada
-  const ptsArr    = list.map(p => p.pts).filter(v => v > 0);
-  const mediaArr  = list.map(p => p.media).filter(v => v > 0);
-  const precioArr = list.map(p => p.price).filter(v => v > 0);
-  const roiArr    = list.map(p => p.roi).filter(v => v > 0);
-  const fpArr     = list.map(p => p.factor).filter(v => v != null && v > 0 && v < 20); // excluir outliers extremos (jugadores baratos con pocos PJ)
-
-  function pct(arr, val) {
+  // Percentiles (excluir outliers del factor para que la distribución sea útil)
+  function bPct(arr, val) {
     if (!arr.length || val == null || val <= 0) return null;
     const s = [...arr].sort((a,b) => a-b);
-    return Math.round((s.filter(x => x < val).length / Math.max(s.length-1, 1)) * 100);
+    return Math.round((s.filter(x => x < val).length / Math.max(s.length-1,1)) * 100);
   }
-  // Usar mv3Color que ya existe: mct/mcg/mcm/mcl
+  const ptsArr   = list.map(p => p.pts).filter(v => v > 0);
+  const mediaArr = list.map(p => p.media).filter(v => v > 0);
+  const precArr  = list.map(p => p.price).filter(v => v > 0);
+  const roiArr   = list.map(p => p.roi).filter(v => v > 0);
+  const fpArr    = list.map(p => p.factor).filter(v => v != null && v > 0 && v < 20);
+
+  // Color por percentil — usando las clases mv3Color ya existentes (mct/mcg/mcm/mcl)
   const pc = v => mv3Color(v ?? 0);
 
-  // Factor Pausa: usar percentil (igual que el resto de columnas)
-  // Los outliers (valor >20, jugadores muy baratos con pocos PJ) se tratan aparte
-  function fpPct(f) {
-    if (f == null || f <= 0) return null;
-    const cap = f > 20 ? 20 : f; // capear outliers para el cálculo percentil
-    return pct(fpArr, cap);
-  }
-
   // Orden
-  list.sort((a, b) => {
-    const v = k => k === 'precio' ? (b.price||0) - (a.price||0)
-                 : k === 'pts'    ? (b.pts||0)   - (a.pts||0)
-                 : k === 'media'  ? (b.media||0)  - (a.media||0)
-                 : k === 'roi'    ? (b.roi||0)    - (a.roi||0)
-                 : k === 'factor' ? ((b.factor??-1)) - ((a.factor??-1))
-                 : 0;
-    return v(bolsaSort);
+  list.sort((a,b) => {
+    if (bolsaSort === 'pts')    return (b.pts||0)    - (a.pts||0);
+    if (bolsaSort === 'media')  return (b.media||0)  - (a.media||0);
+    if (bolsaSort === 'precio') return (b.price||0)  - (a.price||0);
+    if (bolsaSort === 'roi')    return (b.roi||0)    - (a.roi||0);
+    if (bolsaSort === 'factor') return ((b.factor??-1)) - ((a.factor??-1));
+    return 0;
   });
 
-  const total   = list.length;
-  const pages   = Math.max(1, Math.ceil(total / BOLSA_PAGE));
-  bolsaPage     = Math.min(bolsaPage, pages);
-  const slice   = list.slice((bolsaPage-1)*BOLSA_PAGE, bolsaPage*BOLSA_PAGE);
-
+  const total = list.length;
+  const pages = Math.max(1, Math.ceil(total / BOLSA_PER_PAGE));
+  bolsaPage   = Math.min(bolsaPage, pages);
+  const slice = list.slice((bolsaPage-1)*BOLSA_PER_PAGE, bolsaPage*BOLSA_PER_PAGE);
   document.getElementById('bolsaRoiInfo').textContent =
-    `${total} jugadores · pág ${bolsaPage}/${pages}`;
+    total + ' jugadores · pág ' + bolsaPage + '/' + pages;
 
   const PosC = {PT:'#d97706',DF:'#1d6fce',MC:'#16a34a',DL:'#e63329',MD:'#8b5cf6'};
-
 
   el.innerHTML = slice.map(p => {
     const pos    = (p.position||'?').split('/')[0];
-    const col    = PosC[pos] || '#888';
-    const ptsPc  = pc(pct(ptsArr,   p.pts));
-    const medPc  = pc(pct(mediaArr, p.media));
-    const prePc  = pc(pct(precioArr,p.price));
-    const roiPc  = pc(pct(roiArr,   p.roi));
-    const fpP    = fpPct(p.factor);
-    const fpCls  = fpP != null ? pc(fpP) : 'mcn';  // mcn = gris si sin dato
-    const fpBarW = fpP != null ? fpP : 0;
-    // mostrar valor real si está en rango normal, ∞ si es outlier
-    const fpDisplay = p.factor == null ? '—' : p.factor > 20 ? '∞' : p.factor.toFixed(2);
-    const fpBarColor = fpP == null ? 'var(--border2)'
-      : fpP >= 75 ? 'var(--c-top)' : fpP >= 50 ? 'var(--c-good)'
-      : fpP >= 25 ? 'var(--c-mid)' : 'var(--c-low)';
+    const posCol = PosC[pos] || '#888';
+
+    const ptsPc  = bPct(ptsArr,  p.pts);
+    const medPc  = bPct(mediaArr,p.media);
+    const prePc  = bPct(precArr, p.price);
+    const roiPc  = bPct(roiArr,  p.roi);
+
+    // Factor: percentil sobre distribución sin outliers
+    const fpCap  = p.factor != null && p.factor < 20 ? p.factor : null;
+    const fpPc   = bPct(fpArr, fpCap);
+    const fpCls  = fpPc != null ? pc(fpPc) : 'mcn';
+    const fpTxt  = p.factor == null ? '—' : p.factor > 20 ? fpCap === null ? '—' : p.factor.toFixed(1) : p.factor.toFixed(2);
+    const fpBarPct = fpPc != null ? fpPc : 0;
+    const fpBarCol = fpPc == null ? 'var(--border2)'
+      : fpPc >= 75 ? 'var(--c-top)' : fpPc >= 50 ? 'var(--c-good)'
+      : fpPc >= 25 ? 'var(--c-mid)' : 'var(--c-low)';
+
     const trendUp  = (p.trend||0) > 0;
     const trendNeu = (p.trend||0) === 0;
-    const trendCls = trendUp ? 'up' : trendNeu ? '' : 'dn';
-    const trendStr = p.trend ? (trendUp ? '+' : '') + fmt(p.trend) : '—';
+    const trendCls = trendUp ? 'brc-trend brc-trend-up' : trendNeu ? 'brc-trend' : 'brc-trend brc-trend-dn';
+    const trendTxt = p.trend ? (trendUp ? '+' : '') + fmt(p.trend) : '—';
 
-    return `<div class="bolsa-roi-row" onclick="openJugPanel(${JSON.stringify(p).replace(/"/g,'&quot;')})">
-      <div class="mkt-pos" style="background:${col};width:22px;height:22px;font-size:0.52rem;">${pos}</div>
-      <div>
-        <div style="font-family:'Figtree',sans-serif;font-weight:700;font-size:0.82rem;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:160px;">${p.name}</div>
-        <div style="font-size:0.58rem;color:var(--text3);">${p.club||'—'}</div>
-      </div>
-      <div class="brc-stat ${ptsPc}">${p.pts||'—'}<div class="brc-sub">${ptsPc?'p'+pct(ptsArr,p.pts):'—'}</div></div>
-      <div class="brc-stat ${medPc}">${p.media > 0 ? p.media.toFixed(1) : '—'}<div class="brc-sub">${medPc?'p'+pct(mediaArr,p.media):'—'}</div></div>
-      <div class="brc-stat ${prePc}">${fmt(p.price)}<div class="brc-sub">${prePc?'p'+pct(precioArr,p.price):'—'}</div></div>
-      <div class="brc-stat ${roiPc}">${p.roi > 0 ? p.roi.toFixed(1) : '—'}<div class="brc-sub">${roiPc?'p'+pct(roiArr,p.roi):'—'}</div></div>
-      <div class="brc-fp">
-        <div class="brc-fp-val ${fpCls}">${fpDisplay}<span style="font-size:0.56rem;opacity:0.6"> ${fpP!=null?'p'+fpP:''}</span></div>
-        <div class="brc-fp-bar"><div class="brc-fp-fill" style="width:${fpBarW}%;background:${fpBarColor}"></div></div>
-      </div>
-      <div class="brc-trend tend-val ${trendCls}">${trendStr}</div>
-    </div>`;
-  }).join('') || '<div class="bolsa-empty">Sin jugadores con estos filtros.</div>';
+    const pData = JSON.stringify(p).replace(/"/g, '&quot;');
+    return '<div class="broi-row" onclick="openJugPanel(' + pData + ')">' +
+      '<div style="width:20px;height:20px;border-radius:3px;background:' + posCol + ';display:flex;align-items:center;justify-content:center;font-family:\'Figtree\',sans-serif;font-size:0.5rem;font-weight:800;color:#fff;flex-shrink:0">' + pos + '</div>' +
+      '<div>' +
+        '<div style="font-family:\'Figtree\',sans-serif;font-weight:700;font-size:0.8rem;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:150px">' + p.name + '</div>' +
+        '<div style="font-size:0.57rem;color:var(--text3)">' + (p.club||'—') + '</div>' +
+      '</div>' +
+      '<div class="brc-stat ' + pc(ptsPc) + '">' + (p.pts||'—') + '<div class="brc-sub">' + (ptsPc!=null?'p'+ptsPc:'—') + '</div></div>' +
+      '<div class="brc-stat ' + pc(medPc) + '">' + (p.media>0?p.media.toFixed(1):'—') + '<div class="brc-sub">' + (medPc!=null?'p'+medPc:'—') + '</div></div>' +
+      '<div class="brc-stat ' + pc(prePc) + '">' + fmt(p.price) + '<div class="brc-sub">' + (prePc!=null?'p'+prePc:'—') + '</div></div>' +
+      '<div class="brc-stat ' + pc(roiPc) + '">' + (p.roi>0?p.roi.toFixed(1):'—') + '<div class="brc-sub">' + (roiPc!=null?'p'+roiPc:'—') + '</div></div>' +
+      '<div class="brc-fp">' +
+        '<div class="brc-fp-val ' + fpCls + '">' + fpTxt + '<span style="font-size:0.5rem;opacity:0.6"> ' + (fpPc!=null?'p'+fpPc:'') + '</span></div>' +
+        '<div class="brc-fp-bar"><div class="brc-fp-fill" style="width:' + fpBarPct + '%;background:' + fpBarCol + '"></div></div>' +
+      '</div>' +
+      '<div class="' + trendCls + '">' + trendTxt + '</div>' +
+    '</div>';
+  }).join('') || '<div class="bcard-empty">Sin jugadores con estos filtros.</div>';
 }
 
-// ── TENDENCIAS (suben / bajan) ────────────────────────────────────────
-function renderBolsaTendencias() {
+// ── Tendencias suben / bajan ────────────────────────────────────
+function renderBolsaTend() {
   const PosC = {PT:'#d97706',DF:'#1d6fce',MC:'#16a34a',DL:'#e63329',MD:'#8b5cf6'};
-  function tendRow(p, maxAbs, isUp) {
-    const pos = (p.position||'?').split('/')[0];
-    const col = PosC[pos] || '#888';
-    const barW = Math.round((Math.abs(p.trend||0) / maxAbs) * 100);
-    return `<div class="tend-row">
-      <div class="mkt-pos" style="background:${col};width:20px;height:20px;font-size:0.5rem;flex-shrink:0">${pos}</div>
-      <div style="flex:1;min-width:0">
-        <div style="font-family:'Figtree',sans-serif;font-weight:700;font-size:0.76rem;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${p.name}</div>
-        <div style="font-size:0.58rem;color:var(--text3)">${fmt(p.price)}</div>
-      </div>
-      <div class="tend-bar-wrap"><div class="tend-bar" style="width:${barW}%;background:${isUp?'var(--c-good)':'var(--c-low)'}"></div></div>
-      <div class="tend-val ${isUp?'up':'dn'}">${isUp?'+':''}${fmt(p.trend)}</div>
-    </div>`;
+
+  function btendRow(p, maxAbs, isUp) {
+    const pos    = (p.position||'?').split('/')[0];
+    const posCol = PosC[pos] || '#888';
+    const barW   = Math.round((Math.abs(p.trend||0) / maxAbs) * 100);
+    const valCls = isUp ? 'btend-val btend-val-up' : 'btend-val btend-val-dn';
+    const barCol = isUp ? 'var(--c-good)' : 'var(--c-low)';
+    return '<div class="btend-row">' +
+      '<div style="width:20px;height:20px;border-radius:3px;background:' + posCol + ';display:flex;align-items:center;justify-content:center;font-family:\'Figtree\',sans-serif;font-size:0.5rem;font-weight:800;color:#fff;flex-shrink:0">' + pos + '</div>' +
+      '<div style="flex:1;min-width:0">' +
+        '<div style="font-family:\'Figtree\',sans-serif;font-weight:700;font-size:0.75rem;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">' + p.name + '</div>' +
+        '<div style="font-size:0.57rem;color:var(--text3)">' + fmt(p.price) + '</div>' +
+      '</div>' +
+      '<div class="btend-bar-wrap"><div class="btend-bar" style="width:' + barW + '%;background:' + barCol + '"></div></div>' +
+      '<div class="' + valCls + '">' + (isUp?'+':'') + fmt(p.trend) + '</div>' +
+    '</div>';
   }
+
   const suben = [...allPlayers].filter(p=>(p.trend||0)>0).sort((a,b)=>(b.trend||0)-(a.trend||0)).slice(0,8);
-  const subenMax = suben[0]?.trend || 1;
+  const maxS  = suben[0]?.trend || 1;
   document.getElementById('bolsaSuben').innerHTML = suben.length
-    ? suben.map(p => tendRow(p, subenMax, true)).join('')
-    : '<div class="bolsa-empty">—</div>';
+    ? suben.map(p => btendRow(p, maxS, true)).join('')
+    : '<div class="bcard-empty">—</div>';
 
   const bajan = [...allPlayers].filter(p=>(p.trend||0)<0).sort((a,b)=>(a.trend||0)-(b.trend||0)).slice(0,8);
-  const bajanMax = Math.abs(bajan[0]?.trend || 1);
+  const maxB  = Math.abs(bajan[0]?.trend||1);
   document.getElementById('bolsaBajan').innerHTML = bajan.length
-    ? bajan.map(p => tendRow(p, bajanMax, false)).join('')
-    : '<div class="bolsa-empty">—</div>';
+    ? bajan.map(p => btendRow(p, maxB, false)).join('')
+    : '<div class="bcard-empty">—</div>';
 }
 
-// ── MERCADO ACTIVO (compacto) ─────────────────────────────────────────
+// ── Mercado activo (compacto) ────────────────────────────────────
 function renderBolsaMercado() {
-  const el = document.getElementById('bolsaMercado');
-  const mktData = bolsaLiga === 'tomaquet' ? (window._mktTomaquet||[]) : (window._mktEnBas||[]);
-  if (!mktData.length) {
-    document.getElementById('bolsaMktCount').textContent = '';
-    return; // mantiene el mensaje "Sin datos"
-  }
+  const mkt = bolsaLiga === 'tomaquet' ? (window._mktTomaquet||[]) : (window._mktEnBas||[]);
+  if (!mkt.length) { document.getElementById('bolsaMktCount').textContent = ''; return; }
   const PosC = {PT:'#d97706',DF:'#1d6fce',MC:'#16a34a',DL:'#e63329',MD:'#8b5cf6'};
-  el.innerHTML = mktData.slice(0,8).map(item => {
+  document.getElementById('bolsaMercado').innerHTML = mkt.slice(0,8).map(item => {
     const p   = allPlayers.find(a => a.id == item.playerID) || {};
     const pos = ((p.position||'?').split('/')[0]);
-    const col = PosC[pos] || '#888';
-    return `<div class="mkt-row">
-      <div class="mkt-pos" style="background:${col}">${pos}</div>
-      <div class="mkt-player">${p.name||'ID '+item.playerID}</div>
-      <div class="mkt-price">${fmt(item.price)}</div>
-    </div>`;
+    return '<div class="bmkt-row">' +
+      '<div style="width:20px;height:20px;border-radius:3px;background:' + (PosC[pos]||'#888') + ';display:flex;align-items:center;justify-content:center;font-family:\'Figtree\',sans-serif;font-size:0.5rem;font-weight:800;color:#fff;flex-shrink:0">' + pos + '</div>' +
+      '<div style="flex:1;min-width:0;font-family:\'Figtree\',sans-serif;font-weight:700;font-size:0.76rem;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">' + (p.name||'ID '+item.playerID) + '</div>' +
+      '<div style="font-family:\'Figtree\',sans-serif;font-weight:700;font-size:0.74rem;color:var(--c-good);white-space:nowrap">' + fmt(item.price) + '</div>' +
+    '</div>';
   }).join('');
-  document.getElementById('bolsaMktCount').textContent = mktData.length + ' en venta';
+  document.getElementById('bolsaMktCount').textContent = mkt.length + ' en venta';
 }
 
-// ── HISTORIA VALOR PLANTILLA ──────────────────────────────────────────
+// ── Evolución plantilla ─────────────────────────────────────────
 function renderBolsaHistoria() {
   const el = document.getElementById('bolsaHistoria');
   if (!historyData) return;
-  const ligaKey = bolsaLiga === 'tomaquet' ? 'tomaquet' : 'enbas';
-  const entries = historyData[ligaKey] || [];
+  const entries = (historyData[bolsaLiga === 'tomaquet' ? 'tomaquet' : 'enbas']) || [];
   if (entries.length < 2) {
-    el.innerHTML = `<div class="bolsa-empty">${entries.length} entrada(s). Necesitas al menos 2 días de historia.</div>`;
+    el.innerHTML = '<div class="bcard-empty">' + entries.length + ' entrada(s). Necesitas al menos 2 días.</div>';
     return;
   }
   const values = entries.map(e => e.teamValue);
-  const first  = values[0], last = values[values.length-1];
-  const diff   = last - first;
-  const sc     = diff >= 0 ? 'var(--c-good)' : 'var(--c-low)';
+  const first = values[0], last = values[values.length-1], diff = last - first;
+  const sc = diff >= 0 ? 'var(--c-good)' : 'var(--c-low)';
   const W=700, H=100, pad=14;
-  const minV=Math.min(...values), maxV=Math.max(...values), rng=maxV-minV||1;
+  const minV=Math.min(...values), rng=Math.max(...values)-minV||1;
   const xs = values.map((_,i) => pad + (i/(values.length-1))*(W-pad*2));
   const ys = values.map(v => H-pad-((v-minV)/rng)*(H-pad*2));
   const lineD = xs.map((x,i)=>(i===0?'M':'L')+x.toFixed(1)+' '+ys[i].toFixed(1)).join(' ');
-  const areaD = lineD+` L${xs[xs.length-1].toFixed(1)} ${H-pad} L${xs[0].toFixed(1)} ${H-pad} Z`;
+  const areaD = lineD+' L'+xs[xs.length-1].toFixed(1)+' '+(H-pad)+' L'+xs[0].toFixed(1)+' '+(H-pad)+' Z';
   const n = entries.length;
   const axisIdxs = [0, Math.floor(n/4), Math.floor(n/2), Math.floor(3*n/4), n-1];
-  el.innerHTML = `
-    <div style="display:flex;gap:2.5rem;padding:12px 14px 0;flex-wrap:wrap;">
-      <div><div class="bolsa-kpi-lbl">Inicio</div><div class="bolsa-kpi-val">${fmt(first)}</div></div>
-      <div><div class="bolsa-kpi-lbl">Hoy</div><div class="bolsa-kpi-val">${fmt(last)}</div></div>
-      <div><div class="bolsa-kpi-lbl">Total</div><div class="bolsa-kpi-val ${diff>=0?'up':'dn'}">${diff>=0?'+':''}${fmt(diff)}</div></div>
-      <div><div class="bolsa-kpi-lbl">Días</div><div class="bolsa-kpi-val">${n}</div></div>
-    </div>
-    <div style="padding:10px 14px 4px;">
-      <svg viewBox="0 0 ${W} ${H}" style="width:100%;display:block;" xmlns="http://www.w3.org/2000/svg">
-        <defs><linearGradient id="bHistGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="${sc}" stop-opacity="0.3"/>
-          <stop offset="100%" stop-color="${sc}" stop-opacity="0.02"/>
-        </linearGradient></defs>
-        <path d="${areaD}" fill="url(#bHistGrad)"/>
-        <path d="${lineD}" fill="none" stroke="${sc}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <circle cx="${xs[xs.length-1].toFixed(1)}" cy="${ys[ys.length-1].toFixed(1)}" r="3.5" fill="${sc}"/>
-      </svg>
-      <div style="display:flex;justify-content:space-between;margin-top:2px;">
-        ${axisIdxs.map(i=>`<span style="font-size:0.56rem;color:var(--text3)">${entries[i]?.date?.slice(5)||''}</span>`).join('')}
-      </div>
-    </div>`;
+  el.innerHTML =
+    '<div style="display:flex;gap:2.5rem;padding:11px 14px 0;flex-wrap:wrap;">' +
+      '<div><div class="bkpi-lbl">Inicio</div><div class="bkpi-val">' + fmt(first) + '</div></div>' +
+      '<div><div class="bkpi-lbl">Hoy</div><div class="bkpi-val">' + fmt(last) + '</div></div>' +
+      '<div><div class="bkpi-lbl">Total</div><div class="bkpi-val ' + (diff>=0?'bup':'bdn') + '">' + (diff>=0?'+':'') + fmt(diff) + '</div></div>' +
+      '<div><div class="bkpi-lbl">Días</div><div class="bkpi-val">' + n + '</div></div>' +
+    '</div>' +
+    '<div style="padding:8px 14px 6px;">' +
+      '<svg viewBox="0 0 ' + W + ' ' + H + '" style="width:100%;display:block" xmlns="http://www.w3.org/2000/svg">' +
+        '<defs><linearGradient id="bHGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="' + sc + '" stop-opacity="0.3"/><stop offset="100%" stop-color="' + sc + '" stop-opacity="0.02"/></linearGradient></defs>' +
+        '<path d="' + areaD + '" fill="url(#bHGrad)"/>' +
+        '<path d="' + lineD + '" fill="none" stroke="' + sc + '" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>' +
+        '<circle cx="' + xs[xs.length-1].toFixed(1) + '" cy="' + ys[ys.length-1].toFixed(1) + '" r="3.5" fill="' + sc + '"/>' +
+      '</svg>' +
+      '<div style="display:flex;justify-content:space-between;margin-top:2px">' +
+        axisIdxs.map(i => '<span style="font-size:0.55rem;color:var(--text3)">' + (entries[i]?.date?.slice(5)||'') + '</span>').join('') +
+      '</div>' +
+    '</div>';
 }
-
-
-
 </script>
 
 
