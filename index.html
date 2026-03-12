@@ -2425,18 +2425,19 @@ function openRivalModal(idx){
 
   function buildCard(p){
     const full=allPlayers.find(x=>Number(x.id)===Number(p.id));
-    if(!full&&!p.name)return '';
     const src=full||p;
-    const pos={1:'PT',2:'DF',3:'MC',4:'DL'}[src.position]||'?';
-    const posColor=pos==='PT'?'#94a3b8':pos==='DF'?'#60a5fa':pos==='MC'?'#4ade80':'#f87171';
-    const pts=src.points||0;
+    if(!src.name)return '';
+    const posKey=(src.position||'').split('/')[0];
+    const posLabel={PT:'PT',DF:'DF',MC:'MC',DL:'DL',MD:'MD'}[posKey]||posKey||'?';
+    const posColor=posLabel==='PT'?'#94a3b8':posLabel==='DF'?'#60a5fa':posLabel==='MC'?'#4ade80':posLabel==='DL'?'#f87171':'#c084fc';
+    const pts=src.pts||src.points||0;
     const price=src.price||0;
     const priceStr=price>=1000000?(price/1000000).toFixed(1)+'M':price>=1000?Math.round(price/1000)+'K':price+'€';
     const trend=src.trend||0;
     const trendTxt=trend>0?`<span style="color:var(--green);font-size:0.6rem">▲${(trend/1000).toFixed(0)}K</span>`:trend<0?`<span style="color:var(--red);font-size:0.6rem">▼${Math.abs(trend/1000).toFixed(0)}K</span>`:'';
     return `<div style="display:flex;align-items:center;justify-content:space-between;padding:7px 10px;border-bottom:1px solid var(--border);gap:8px;">
       <div style="display:flex;align-items:center;gap:7px;min-width:0;flex:1;">
-        <span style="font-size:0.58rem;font-weight:700;color:${posColor};width:18px;flex-shrink:0">${pos}</span>
+        <span style="font-size:0.58rem;font-weight:700;color:${posColor};width:18px;flex-shrink:0">${posLabel}</span>
         <span style="font-family:'Figtree',sans-serif;font-size:0.78rem;font-weight:500;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${src.name}</span>
       </div>
       <div style="display:flex;align-items:center;gap:6px;flex-shrink:0;">
@@ -2447,12 +2448,16 @@ function openRivalModal(idx){
     </div>`;
   }
 
-  const rivalHtml=rivalSquad.length?rivalSquad.map(p=>buildCard(p)).filter(Boolean).join(''):'<div style="padding:2rem;text-align:center;color:var(--text3);font-size:0.75rem">Sin datos</div>';
+  const POS_ORDER={PT:0,DF:1,MC:2,DL:3,MD:4};
+  function posOrd(p){return POS_ORDER[(p.position||'').split('/')[0]]??9;}
+  // Rival: playersList tiene solo {id,...} de Biwenger — cruzar con allPlayers para enriquecer
+  const rivalEnriched=rivalSquad.map(p=>allPlayers.find(x=>Number(x.id)===Number(p.id))).filter(Boolean).sort((a,b)=>posOrd(a)-posOrd(b));
+  const rivalHtml=rivalEnriched.length?rivalEnriched.map(p=>buildCard(p)).filter(Boolean).join(''):'<div style="padding:2rem;text-align:center;color:var(--text3);font-size:0.75rem">Sin datos</div>';
 
-  // Mi plantilla: getEquipo().players solo tiene {id, clause, invested} — cruzar con allPlayers
+  // Mi plantilla: getEquipo() devuelve myTeamData que ya es array enriquecido directamente
   const myData=getEquipo();
-  const myRefs=myData?myData.players||[]:[];
-  const mySquad=myRefs.map(ref=>allPlayers.find(x=>Number(x.id)===Number(ref.id))).filter(Boolean).sort((a,b)=>(a.position||9)-(b.position||9));
+  const myArr=Array.isArray(myData)?myData:(myData?.players||[]);
+  const mySquad=[...myArr].sort((a,b)=>posOrd(a)-posOrd(b));
   const myHtml=mySquad.length?mySquad.map(p=>buildCard(p)).filter(Boolean).join(''):'<div style="padding:2rem;text-align:center;color:var(--text3);font-size:0.75rem">Sin datos</div>';
 
   const rivalPts=rival.pts;
