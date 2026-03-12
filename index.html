@@ -120,7 +120,7 @@ main{max-width:1440px;margin:0 auto;padding:1.5rem 2rem;}
 @media(max-width:1100px){.inicio-layout{grid-template-columns:1fr;}}
 
 /* Jornada Banner */
-.jornada-banner{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:2rem;background:var(--bg2);border:1px solid var(--border2);border-left:3px solid var(--accent);border-radius:4px;padding:1rem 1.5rem;margin-bottom:1.5rem;position:relative;overflow:hidden;}
+.jornada-banner{display:grid;grid-template-columns:auto auto 1fr auto auto;align-items:center;gap:2rem;background:var(--bg2);border:1px solid var(--border2);border-left:3px solid var(--accent);border-radius:4px;padding:1rem 1.5rem;margin-bottom:1.5rem;position:relative;overflow:hidden;}
 .jornada-round{font-family:'Figtree',sans-serif;}
 .jornada-round .label{font-family:'Figtree',sans-serif;font-size:0.58rem;color:var(--text3);letter-spacing:2px;text-transform:uppercase;margin-bottom:2px;}
 .jornada-round .num{font-size:3rem;font-weight:800;color:var(--accent);line-height:1;letter-spacing:0px;}
@@ -527,9 +527,41 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
 .list-toggle-btn{background:var(--bg2);border:1px solid var(--border2);border-radius:3px;padding:6px 14px;font-family:'Figtree',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);cursor:pointer;transition:all 0.15s;}
 .list-toggle-btn:hover{border-color:var(--accent);color:var(--accent);}
 
+/* ── POPOVERS DE TARJETAS SUMMARY ─────────────────────────────────── */
+.ts-wrap{position:relative;display:contents;}
+.ts-card{cursor:default;}
+.ts-card.has-pop{cursor:pointer;}
+.ts-card.has-pop:hover{background:var(--bg3,#1e2433);}
+.ts-popover{
+  position:fixed;z-index:9999;
+  background:#1a1f2e;border:1px solid var(--border2);border-radius:8px;
+  padding:1rem 1.2rem;min-width:220px;max-width:320px;
+  box-shadow:0 8px 32px rgba(0,0,0,0.5);
+  pointer-events:none;opacity:0;transition:opacity .15s;
+  font-family:'Figtree',sans-serif;
+}
+.ts-popover.visible{opacity:1;pointer-events:auto;}
+.ts-popover h4{font-size:0.65rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--text3);margin:0 0 0.6rem;}
+.ts-popover .pop-chart{width:100%;height:70px;display:block;margin-bottom:0.5rem;}
+.ts-popover .pop-list{display:flex;flex-direction:column;gap:0.35rem;}
+.ts-popover .pop-player{display:flex;align-items:center;gap:0.5rem;font-size:0.8rem;}
+.ts-popover .pop-player .dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.ts-popover .pop-player .pname{flex:1;color:var(--text);}
+.ts-popover .pop-player .preason{font-size:0.7rem;color:var(--text3);}
+/* ── WIDGET ALERTA EN INICIO ──────────────────────────────────────── */
+.jornada-alerts{display:flex;flex-direction:column;gap:0.4rem;min-width:160px;}
+.alert-item{display:flex;align-items:center;gap:0.45rem;font-size:0.75rem;padding:0.25rem 0.5rem;border-radius:3px;background:var(--bg3,#1e2433);}
+.alert-item .a-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.alert-item .a-name{color:var(--text);font-weight:600;}
+.alert-item .a-tag{font-size:0.62rem;padding:1px 5px;border-radius:2px;font-weight:700;letter-spacing:.5px;}
+.alert-item .a-tag.lesion{background:#ef444422;color:#ef4444;}
+.alert-item .a-tag.duda{background:#eab30822;color:#eab308;}
+.alert-item .a-tag.sancion{background:#f9731622;color:#f97316;}
+.jornada-alerts-title{font-size:0.55rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--text3);margin-bottom:0.25rem;font-family:'Figtree',sans-serif;}
 </style>
 </head>
 <body class="liga-tomaquet">
+<div id="tsPopover" class="ts-popover"></div>
 
 <header>
   <div class="header-inner">
@@ -579,6 +611,11 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
       <div class="jornada-kpi"><div class="label">Mis puntos</div><div class="val">1.264</div></div>
       <div class="jornada-kpi"><div class="label">Líder</div><div class="val">1.439</div></div>
       <div class="jornada-kpi"><div class="label">Diferencia</div><div class="val" style="color:var(--red)">-175</div></div>
+    </div>
+    <div class="jornada-divider"></div>
+    <div id="jornadaAlerts">
+      <div class="jornada-alerts-title">⚠️ Mi equipo</div>
+      <div class="jornada-alerts" id="jornadaAlertsList"><div style="font-size:0.7rem;color:var(--text3)">Cargando...</div></div>
     </div>
   </div>
 
@@ -1603,6 +1640,7 @@ async function loadPlayers(){
     }
 
     // Re-render con el equipo de la liga activa
+    historyData = await loadHistory(); // cargar histórico (puede ser null si no existe aún)
     refreshGuitllaSet();
     renderMiEquipo();
     renderGeneral();
@@ -2067,96 +2105,258 @@ function autoPlace(){
   const used=new Set();
   FORMATIONS[cf].forEach((row,ri)=>{const pool=(byPos[row.pos]||[]).filter(p=>!used.has(p.name));for(let i=0;i<row.count;i++){if(pool[i]){lineup[row.pos+'_'+ri+'_'+i]=pool[i];used.add(pool[i].name);}}});
 }
-function renderMiEquipo(){renderSummary();renderTabs();renderField();renderMeTable();}
-function renderSummary(){
+// ── SISTEMA DE POPOVERS ────────────────────────────────────────────────────
+let historyData = null;
+
+async function loadHistory() {
+  try {
+    const res = await fetch('./history.json');
+    if (!res.ok) return null;
+    return await res.json();
+  } catch(e) { return null; }
+}
+
+function popShow(el, html) {
+  const pop = document.getElementById('tsPopover');
+  pop.innerHTML = html;
+  pop.classList.add('visible');
+  positionPopover(el, pop);
+}
+function popHide() {
+  document.getElementById('tsPopover').classList.remove('visible');
+}
+function positionPopover(anchor, pop) {
+  const rect = anchor.getBoundingClientRect();
+  const pw = pop.offsetWidth || 260;
+  const ph = pop.offsetHeight || 200;
+  let left = rect.left + rect.width/2 - pw/2;
+  let top  = rect.bottom + 10;
+  if (left < 8) left = 8;
+  if (left + pw > window.innerWidth - 8) left = window.innerWidth - pw - 8;
+  if (top + ph > window.innerHeight - 8) top = rect.top - ph - 10;
+  pop.style.left = left + 'px';
+  pop.style.top  = top  + 'px';
+}
+
+function makeSparkSVG(values, W=220, H=60, color=null) {
+  const valid = values.filter(v=>v!=null&&!isNaN(v));
+  if (valid.length < 2) return '<div style="color:var(--text3);font-size:0.75rem;text-align:center;padding:1rem">Sin datos suficientes aún.<br>Se acumulan con cada fetch diario.</div>';
+  const minV = Math.min(...valid), maxV = Math.max(...valid), rng = maxV-minV||1;
+  const pad = 6;
+  const coords = values.map((v,i) => ({
+    x: pad + (i/(values.length-1))*(W-pad*2),
+    y: v==null ? null : H-pad-((v-minV)/rng)*(H-pad*2),
+    v
+  }));
+  const vc = coords.filter(c=>c.y!=null);
+  const up = vc[vc.length-1].v >= vc[0].v;
+  const sc = color || (up?'#22c55e':'#ef4444');
+  const lineD = vc.map((c,i)=>(i===0?'M':'L')+c.x.toFixed(1)+' '+c.y.toFixed(1)).join(' ');
+  const areaD = lineD + ` L${vc[vc.length-1].x.toFixed(1)} ${H-pad} L${vc[0].x.toFixed(1)} ${H-pad} Z`;
+  return `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" class="pop-chart" xmlns="http://www.w3.org/2000/svg">
+    <defs><linearGradient id="pg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="${sc}" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="${sc}" stop-opacity="0.02"/>
+    </linearGradient></defs>
+    <path d="${areaD}" fill="url(#pg)"/>
+    <path d="${lineD}" fill="none" stroke="${sc}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    ${vc.map(c=>`<circle cx="${c.x.toFixed(1)}" cy="${c.y.toFixed(1)}" r="2.5" fill="${sc}"/>`).join('')}
+  </svg>`;
+}
+
+function makeAxisLabels(entries, keyFn) {
+  // Mostrar primera, mitad y última fecha
+  if (!entries||entries.length<2) return '';
+  const n=entries.length;
+  const idxs=[0, Math.floor(n/2), n-1];
+  return `<div style="display:flex;justify-content:space-between;font-size:0.6rem;color:var(--text3);margin-top:2px">
+    ${idxs.map(i=>`<span>${entries[i]?.date?.slice(5)||''}</span>`).join('')}
+  </div>`;
+}
+
+function popPosicion(el) {
+  const h = historyData;
+  const liga = LIGA_ACTIVA.id === 'tomaquet' ? 'tomaquet' : 'enbas';
+  const entries = h?.[liga] || [];
+  if (entries.length === 0) {
+    popShow(el, `<h4>Posición por día</h4><div style="color:var(--text3);font-size:0.75rem;padding:0.5rem 0">Sin datos aún. Se acumula desde hoy con cada fetch.</div>`);
+    return;
+  }
+  const values = entries.map(e => e.pos);
+  // Posición: invertir eje (1º arriba)
+  const valid = values.filter(v=>v!=null);
+  const minP=Math.min(...valid), maxP=Math.max(...valid);
+  const W=220,H=60,pad=6,rng=(maxP-minP)||1;
+  const coords = values.map((v,i)=>({
+    x: pad+(i/(values.length-1||1))*(W-pad*2),
+    y: v==null?null: pad+((v-minP)/rng)*(H-pad*2), // invertido: 1º = arriba
+    v
+  }));
+  const vc=coords.filter(c=>c.y!=null);
+  const lineD=vc.map((c,i)=>(i===0?'M':'L')+c.x.toFixed(1)+' '+c.y.toFixed(1)).join(' ');
+  const areaD=lineD+` L${vc[vc.length-1].x.toFixed(1)} ${H-pad} L${vc[0].x.toFixed(1)} ${H-pad} Z`;
+  const last=entries[entries.length-1];
+  popShow(el, `<h4>Posición en la clasificación</h4>
+    <svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" class="pop-chart" xmlns="http://www.w3.org/2000/svg">
+      <defs><linearGradient id="pg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#6366f1" stop-opacity="0.4"/><stop offset="100%" stop-color="#6366f1" stop-opacity="0.02"/></linearGradient></defs>
+      <path d="${areaD}" fill="url(#pg)"/>
+      <path d="${lineD}" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      ${vc.map(c=>`<circle cx="${c.x.toFixed(1)}" cy="${c.y.toFixed(1)}" r="2.5" fill="#6366f1"/>`).join('')}
+    </svg>
+    ${makeAxisLabels(entries)}
+    <div style="font-size:0.72rem;color:var(--text3);margin-top:0.5rem">Último registro: <b style="color:var(--text)">${last?.pos?last.pos+'º':'—'}</b> · ${last?.date||''}</div>
+  `);
+}
+
+function popPuntos(el) {
+  const liga = LIGA_ACTIVA.id === 'tomaquet' ? 'tomaquet' : 'enbas';
+  const entries = historyData?.[liga] || [];
+  // Puntos: calcular diferencia entre días (puntos ganados por jornada) O usar jForm del equipo
   const equipo = getEquipo();
-  const tv  = equipo.reduce((s,p)=>s+(p.price||0),0);
-  const trendTotal = equipo.reduce((s,p)=>s+(p.trend||0),0);
-  const toSell = equipo.filter(p=>p.status==='injured').length;
-  const toWarn = equipo.filter(p=>p.status==='doubt'||p.status==='sanctioned').length;
-
-  // Color y flecha de tendencia
-  const trendColor = trendTotal>0?'var(--green)':trendTotal<0?'var(--red)':'var(--text3)';
-  const trendArrow = trendTotal>0?'▲':trendTotal<0?'▼':'●';
-  const trendSign  = trendTotal>0?'+':'';
-
-  // Puntos por jornada: sumar jForm de todos los jugadores (jForm[0]=más reciente)
   const nJ = 5;
-  const sumas = Array(nJ).fill(0);
-  const counts = Array(nJ).fill(0);
+  const sumas = Array(nJ).fill(0), counts = Array(nJ).fill(0);
   equipo.forEach(p => {
     (p.jForm||[]).slice(0,nJ).forEach((v,i)=>{
       if(typeof v==='number'&&!isNaN(v)){sumas[i]+=v;counts[i]++;}
     });
   });
-  // Invertir: de más antigua a más reciente
   const puntos = sumas.map((s,i)=>counts[i]>0?Math.round(s):null).reverse();
+  const labels = ['J-4','J-3','J-2','J-1','J↑'];
+  const svg = makeSparkSVG(puntos, 220, 60, '#f59e0b');
+  const rows = labels.map((l,i)=>`<div style="display:flex;justify-content:space-between;font-size:0.72rem;padding:2px 0;border-bottom:1px solid var(--border)"><span style="color:var(--text3)">${l}</span><b style="color:var(--text)">${puntos[i]!=null?puntos[i]+'pts':'—'}</b></div>`).join('');
+  popShow(el, `<h4>Puntos del equipo por jornada</h4>${svg}<div style="margin-top:0.5rem">${rows}</div>`);
+}
 
-  // SVG sparkline
-  const valid = puntos.filter(v=>v!==null);
-  const minP=Math.min(...valid), maxP=Math.max(...valid), rng=maxP-minP||1;
-  const W=130,H=44,pad=5;
-  const coords = puntos.map((v,i)=>({
-    x: pad+(i/(nJ-1))*(W-pad*2),
-    y: v===null?null:H-pad-((v-minP)/rng)*(H-pad*2),
-    v
-  }));
-  const validCoords = coords.filter(c=>c.y!==null);
-  const lineD = validCoords.map((c,i)=>(i===0?'M':'L')+c.x.toFixed(1)+' '+c.y.toFixed(1)).join(' ');
-  const first=validCoords[0], last=validCoords[validCoords.length-1];
-  const areaD = first&&last ? lineD+` L${last.x.toFixed(1)} ${H-pad} L${first.x.toFixed(1)} ${H-pad} Z` : '';
-  const up = valid.length>1&&valid[valid.length-1]>=valid[0];
-  const sc = valid.length>1?(up?'#22c55e':'#ef4444'):'#94a3b8';
+function popValor(el) {
+  const liga = LIGA_ACTIVA.id === 'tomaquet' ? 'tomaquet' : 'enbas';
+  const entries = historyData?.[liga] || [];
+  const values = entries.map(e=>e.teamValue);
+  const svg = makeSparkSVG(values);
+  const last = entries[entries.length-1];
+  const prev = entries[entries.length-2];
+  const diff = last&&prev ? last.teamValue-prev.teamValue : null;
+  const diffStr = diff!=null ? `<span style="color:${diff>=0?'#22c55e':'#ef4444'}">${diff>=0?'+':''}${fmt(diff)}</span>` : '';
+  popShow(el, `<h4>Valor de plantilla diario</h4>${svg}${makeAxisLabels(entries)}
+    <div style="font-size:0.72rem;color:var(--text3);margin-top:0.5rem">
+      Hoy: <b style="color:var(--text)">${last?fmt(last.teamValue):'—'}</b> ${diffStr}
+    </div>`);
+}
 
-  const spark = `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
-    <defs><linearGradient id="sg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="${sc}" stop-opacity="0.35"/>
-      <stop offset="100%" stop-color="${sc}" stop-opacity="0.03"/>
-    </linearGradient></defs>
-    ${areaD?`<path d="${areaD}" fill="url(#sg)"/>`:''}
-    <path d="${lineD}" fill="none" stroke="${sc}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    ${validCoords.map(c=>`<circle cx="${c.x.toFixed(1)}" cy="${c.y.toFixed(1)}" r="2.5" fill="${sc}"/>`).join('')}
-  </svg>`;
+function popTendencia(el) {
+  const liga = LIGA_ACTIVA.id === 'tomaquet' ? 'tomaquet' : 'enbas';
+  const entries = historyData?.[liga] || [];
+  const values = entries.map(e=>e.trend);
+  const svg = makeSparkSVG(values);
+  const last = entries[entries.length-1];
+  const trendColor = last?.trend>0?'#22c55e':last?.trend<0?'#ef4444':'var(--text3)';
+  popShow(el, `<h4>Tendencia diaria del equipo</h4>${svg}${makeAxisLabels(entries)}
+    <div style="font-size:0.72rem;color:var(--text3);margin-top:0.5rem">
+      Hoy: <b style="color:${trendColor}">${last?fmt(last.trend):'—'}</b>
+    </div>`);
+}
 
-  const ligaName = LIGA_ACTIVA.id==='tomaquet'?'Tomaquet':'EN BAS';
-  const standPos = getStandings().find(t=>t.name&&(t.name.includes('Guitlla')||t.name.includes('🦊')));
-  const posStr = standPos?`${standPos.pos}º`:'—';
-  const totalTeams = getStandings().length||'—';
-  const totalPts = standPos?standPos.pts.toLocaleString('es'):'—';
+function popVender(el) {
+  const lesionados = getEquipo().filter(p=>p.status==='injured');
+  if (!lesionados.length) { popShow(el, '<h4>Vender urgente</h4><div style="color:#22c55e;font-size:0.8rem">✓ Ningún jugador lesionado</div>'); return; }
+  const rows = lesionados.map(p=>`<div class="pop-player"><span class="dot" style="background:#ef4444"></span><span class="pname">${p.name}</span><span class="preason">Lesionado · ${fmt(p.price)}</span></div>`).join('');
+  popShow(el, `<h4>Vender urgente (${lesionados.length})</h4><div class="pop-list">${rows}</div>`);
+}
 
-  document.getElementById('teamSummary').innerHTML=`
-    <div class="ts-card">
-      <div class="ts-label">Posición</div>
-      <div class="ts-value">${posStr}</div>
-      <div class="ts-sub">de ${totalTeams}</div>
-    </div>
-    <div class="ts-card">
-      <div class="ts-label">Puntos totales</div>
-      <div class="ts-value">${totalPts}</div>
-      <div class="ts-sub">acumulados</div>
-    </div>
-    <div class="ts-card">
-      <div class="ts-label">Valor plantilla</div>
-      <div class="ts-value">${fmt(tv)}</div>
-      <div class="ts-sub">mercado</div>
-    </div>
-    <div class="ts-card">
-      <div class="ts-label">Tendencia</div>
-      <div class="ts-value" style="color:${trendColor};font-size:1.1rem">${trendArrow} ${trendSign}${fmt(trendTotal)}</div>
-      <div class="ts-sub">valor total equipo</div>
-    </div>
-    <div class="ts-card ts-card--spark">
-      <div class="ts-label">Pts equipo · últimas jornadas</div>
-      <div style="display:flex;align-items:flex-end;gap:6px;margin-top:4px">
-        ${spark}
-        <div style="display:flex;flex-direction:column;gap:2px;font-size:0.65rem;color:var(--text3)">
-          ${['J↑','J-1','J-2','J-3','J-4'].map((l,i)=>{const v=puntos[nJ-1-i];return`<div style="white-space:nowrap">${l}: <b style="color:${v!==null?(v>=0?'var(--text)':'var(--red)'):'var(--text3)'}">${v!==null?v:'—'}</b></div>`}).join('')}
-        </div>
-      </div>
-    </div>
-    <div class="ts-card"><div class="ts-label">Vender</div><div class="ts-value" style="color:var(--red)">${toSell}</div><div class="ts-sub">urgente</div></div>
-    <div class="ts-card"><div class="ts-label">Vigilar</div><div class="ts-value" style="color:var(--accent)">${toWarn}</div><div class="ts-sub">jugadores</div></div>
-  `;
+function popVigilar(el) {
+  const vigilar = getEquipo().filter(p=>p.status==='doubt'||p.status==='sanctioned');
+  if (!vigilar.length) { popShow(el, '<h4>Vigilar</h4><div style="color:#22c55e;font-size:0.8rem">✓ Sin jugadores en duda ni sancionados</div>'); return; }
+  const rows = vigilar.map(p=>{
+    const c = p.status==='doubt'?'#eab308':'#f97316';
+    const label = p.status==='doubt'?'Duda':'Sancionado';
+    return `<div class="pop-player"><span class="dot" style="background:${c}"></span><span class="pname">${p.name}</span><span class="preason">${label} · ${fmt(p.price)}</span></div>`;
+  }).join('');
+  popShow(el, `<h4>Vigilar (${vigilar.length})</h4><div class="pop-list">${rows}</div>`);
+}
+
+// Cerrar popover al click fuera
+document.addEventListener('click', e => {
+  if (!e.target.closest('.ts-card') && !e.target.closest('#tsPopover')) popHide();
+});
+document.getElementById('tsPopover').addEventListener('mouseleave', () => popHide());
+
+// ── WIDGET ALERTAS EN INICIO ───────────────────────────────────────────────
+function renderJornadaAlerts() {
+  const el = document.getElementById('jornadaAlertsList');
+  if (!el) return;
+  const equipo = getEquipo();
+  const alertas = equipo.filter(p=>p.status==='injured'||p.status==='doubt'||p.status==='sanctioned');
+  if (!alertas.length) { el.innerHTML = '<div style="font-size:0.72rem;color:#22c55e">✓ Sin alertas</div>'; return; }
+  el.innerHTML = alertas.slice(0,5).map(p => {
+    const [dotColor, tagClass, tagLabel] =
+      p.status==='injured'   ? ['#ef4444','lesion','LESIÓN'] :
+      p.status==='sanctioned'? ['#f97316','sancion','SANCIÓN'] :
+                               ['#eab308','duda','DUDA'];
+    return `<div class="alert-item">
+      <span class="a-dot" style="background:${dotColor}"></span>
+      <span class="a-name">${p.name.split(' ').slice(-1)[0]}</span>
+      <span class="a-tag ${tagClass}">${tagLabel}</span>
+    </div>`;
+  }).join('') + (alertas.length>5?`<div style="font-size:0.65rem;color:var(--text3);margin-top:2px">+${alertas.length-5} más</div>`:'');
+}
+
+function renderMiEquipo(){renderSummary();renderTabs();renderField();renderMeTable();renderJornadaAlerts();}
+function renderSummary(){
+  const equipo = getEquipo();
+  const tv         = equipo.reduce((s,p)=>s+(p.price||0),0);
+  const trendTotal = equipo.reduce((s,p)=>s+(p.trend||0),0);
+  const toSell     = equipo.filter(p=>p.status==='injured').length;
+  const toWarn     = equipo.filter(p=>p.status==='doubt'||p.status==='sanctioned').length;
+
+  const trendColor = trendTotal>0?'var(--green)':trendTotal<0?'var(--red)':'var(--text3)';
+  const trendArrow = trendTotal>0?'▲':trendTotal<0?'▼':'●';
+  const trendSign  = trendTotal>0?'+':'';
+
+  const standPos   = getStandings().find(t=>t.name&&(t.name.includes('Guitlla')||t.name.includes('\u{1F98A}')));
+  const posStr     = standPos?`${standPos.pos}\u{BA}`:'\u2014';
+  const totalTeams = getStandings().length||'\u2014';
+  const totalPts   = standPos?standPos.pts.toLocaleString('es'):'\u2014';
+
+  const card = (id, popFn, label, value, sub, valueStyle='') =>
+    `<div class="ts-card has-pop" id="${id}"
+       onmouseenter="popShow(document.getElementById('${id}'),${popFn}(document.getElementById('${id}')))"
+       onmouseleave="popHide()"
+       onclick="${popFn}Click(document.getElementById('${id}'))">
+      <div class="ts-label">${label} <span style="font-size:0.55rem;opacity:.5">&#9432;</span></div>
+      <div class="ts-value" ${valueStyle?`style="${valueStyle}"`:''}>${value}</div>
+      <div class="ts-sub">${sub}</div>
+    </div>`;
+
+  document.getElementById('teamSummary').innerHTML =
+    card('tsPos',     'popPosicion', 'Posici\u{F3}n',       posStr,                   `de ${totalTeams}`) +
+    card('tsPts',     'popPuntos',   'Puntos totales',        totalPts,                 'acumulados') +
+    card('tsVal',     'popValor',    'Valor plantilla',       fmt(tv),                  'mercado') +
+    card('tsTrend',   'popTendencia','Tendencia',             `${trendArrow} ${trendSign}${fmt(trendTotal)}`, 'valor total equipo', `color:${trendColor};font-size:1.1rem`) +
+    card('tsVender',  'popVender',   'Vender',                `<span style="color:var(--red)">${toSell}</span>`, 'urgente') +
+    card('tsVigilar', 'popVigilar',  'Vigilar',               `<span style="color:var(--accent)">${toWarn}</span>`, 'jugadores');
+
+  // Bind click handlers (toggle popover)
+  ['tsPos','tsPts','tsVal','tsTrend','tsVender','tsVigilar'].forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.onclick = () => {
+      const pop = document.getElementById('tsPopover');
+      if (pop.classList.contains('visible') && pop._anchor===id) { popHide(); }
+      else { pop._anchor=id; el.dispatchEvent(new Event('mouseenter')); }
+    };
+    el.onmouseenter = () => {
+      const pop = document.getElementById('tsPopover');
+      pop._anchor = id;
+      const fnMap = {tsPos:popPosicion,tsPts:popPuntos,tsVal:popValor,tsTrend:popTendencia,tsVender:popVender,tsVigilar:popVigilar};
+      fnMap[id]?.(el);
+    };
+    el.onmouseleave = () => {
+      // pequeño delay para no cerrar al mover al popover
+      setTimeout(()=>{
+        const pop=document.getElementById('tsPopover');
+        if(!pop.matches(':hover')) popHide();
+      },120);
+    };
+  });
 }
 function renderTabs(){document.getElementById('formationTabs').innerHTML=Object.keys(FORMATIONS).map(f=>`<button class="ftab ${f===cf?'active':''}" onclick="setFormation('${f}')">${f}</button>`).join('');}
 function setFormation(f){cf=f;autoPlace();renderTabs();renderField();}
