@@ -605,6 +605,52 @@ async function main() {
     console.log('💾 data.json guardado correctamente');
     console.log(`📊 ${players.length} jugadores | equipos: ${allTeams?.length || 0} | mi equipo: ${myTeam?.players?.length || 0} | noticias: ${news.length} | sofascore: ${sofascore?.players?.length || 0} stats`);
 
+    // ── Acumular history.json (una entrada por día) ──────────────────────────
+    const today = new Date().toISOString().slice(0, 10); // "2026-03-12"
+
+    let history = { tomaquet: [], enbas: [] };
+    try { history = JSON.parse(fs.readFileSync('history.json', 'utf8')); } catch(e) {}
+
+    // Calcular valor y tendencia de mi equipo cruzando playerRefs con players
+    function calcTeamStats(myTeamData, allPlayersList) {
+      if (!myTeamData || !myTeamData.players) return { teamValue: 0, trend: 0, pts: 0 };
+      let teamValue = 0, trend = 0, pts = 0;
+      myTeamData.players.forEach(ref => {
+        const p = allPlayersList.find(x => Number(x.id) === Number(ref.id));
+        if (p) { teamValue += p.price || 0; trend += p.trend || 0; pts += p.points || 0; }
+      });
+      return { teamValue, trend, pts };
+    }
+
+    const statsT  = calcTeamStats(myTeam,      players);
+    const statsEB = calcTeamStats(myTeamEnBas, players);
+
+    // Posición en standings
+    function getPos(standings, name) {
+      const sorted = [...(standings||[])].sort((a,b)=>(b.points||0)-(a.points||0));
+      const idx = sorted.findIndex(t => t.name?.includes('Guitlla') || t.name?.includes('🦊'));
+      return idx >= 0 ? idx + 1 : null;
+    }
+    const posT  = getPos(allTeams,      'Guitlla');
+    const posEB = getPos(allTeamsEnBas, 'Guitlla');
+
+    // Solo añadir si no hay entrada de hoy
+    if (!history.tomaquet.find(e => e.date === today)) {
+      history.tomaquet.push({ date: today, teamValue: statsT.teamValue, trend: statsT.trend, pts: statsT.pts, pos: posT });
+      console.log(`📈 History Tomaquet: ${today} | val:${statsT.teamValue} | trend:${statsT.trend} | pos:${posT}`);
+    }
+    if (!history.enbas.find(e => e.date === today)) {
+      history.enbas.push({ date: today, teamValue: statsEB.teamValue, trend: statsEB.trend, pts: statsEB.pts, pos: posEB });
+      console.log(`📈 History EN BAS:   ${today} | val:${statsEB.teamValue} | trend:${statsEB.trend} | pos:${posEB}`);
+    }
+
+    // Mantener máx 120 entradas (4 meses)
+    if (history.tomaquet.length > 120) history.tomaquet = history.tomaquet.slice(-120);
+    if (history.enbas.length    > 120) history.enbas    = history.enbas.slice(-120);
+
+    fs.writeFileSync('history.json', JSON.stringify(history, null, 2), 'utf8');
+    console.log('💾 history.json actualizado');
+
   } catch (err) {
     console.error('❌ Error inesperado:', err.message);
     process.exit(1);
