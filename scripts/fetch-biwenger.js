@@ -4,8 +4,8 @@ const fs    = require('fs');
 
 const EMAIL          = process.env.BIWENGER_EMAIL;
 const PASSWORD       = process.env.BIWENGER_PASSWORD;
-const LEAGUE_ID      = '44700';
-const USER_ID        = '6541195';
+const LEAGUE_TOMAQUET = { id: '44700',   userId: '6541195'  };
+const LEAGUE_ENBAS    = { id: '1248640', userId: '11504267' };
 const VERSION        = '630';
 const FD_TOKEN       = '00308a91cfc84b248611ecc22550c9de'; // football-data.org
 
@@ -63,10 +63,12 @@ const COMMON_HEADERS = {
   'Accept-Language': 'es-ES,es;q=0.9',
   'Origin':          'https://biwenger.as.com',
   'Referer':         'https://biwenger.as.com/',
-  'x-league':        LEAGUE_ID,
-  'x-user':          USER_ID,
   'x-version':       VERSION,
 };
+
+function headersForLeague(liga) {
+  return { ...COMMON_HEADERS, 'x-league': liga.id, 'x-user': liga.userId };
+}
 
 // ─── 1. LOGIN ────────────────────────────────────────────────────────────────
 
@@ -142,39 +144,39 @@ async function fetchPlayers() {
 
 // ─── 3. DATOS DE LIGA (Biwenger) ─────────────────────────────────────────────
 
-async function fetchLeague(token) {
-  console.log('🏆 Descargando datos de liga (Biwenger)...');
+async function fetchLeague(token, liga) {
+  console.log(`🏆 Descargando datos de liga ${liga.id} (Biwenger)...`);
 
   const res = await requestJSON({
     hostname: 'biwenger.as.com',
     path:     `/api/v2/league?include=all,-lastAccess&fields=*,standings,tournaments,group,settings(description)`,
     method:   'GET',
-    headers:  { ...COMMON_HEADERS, 'Authorization': `Bearer ${token}`, 'x-lang': 'es' }
+    headers:  { ...headersForLeague(liga), 'Authorization': `Bearer ${token}`, 'x-lang': 'es' }
   });
 
   if (res.status !== 200) { console.warn('⚠️ No se pudieron obtener datos de liga. Status:', res.status, JSON.stringify(res.body).slice(0,150)); return null; }
 
-  console.log('✅ Datos de liga descargados');
+  console.log(`✅ Liga ${liga.id} descargada`);
   return res.body?.data || null;
 }
 
 // ─── 4. TODOS LOS EQUIPOS DE LA LIGA ────────────────────────────────────────
 
-async function fetchAllTeams(token) {
-  console.log('👥 Descargando equipos de todos los participantes...');
+async function fetchAllTeams(token, liga) {
+  console.log(`👥 Descargando equipos liga ${liga.id}...`);
 
   const res = await requestJSON({
     hostname: 'biwenger.as.com',
     path:     `/api/v2/league?include=all&fields=*,standings,tournaments,group,settings(description)`,
     method:   'GET',
-    headers:  { ...COMMON_HEADERS, 'Authorization': `Bearer ${token}`, 'x-lang': 'es' }
+    headers:  { ...headersForLeague(liga), 'Authorization': `Bearer ${token}`, 'x-lang': 'es' }
   });
 
   if (res.status !== 200) { console.warn('⚠️ No se pudieron obtener equipos. Status:', res.status); return null; }
 
   const data  = res.body?.data;
   const teams = data?.standings || [];
-  console.log(`✅ ${teams.length} equipos descargados`);
+  console.log(`✅ ${teams.length} equipos descargados (liga ${liga.id})`);
   return teams.map(t => ({
     id:      t.id,
     name:    t.name,
@@ -193,15 +195,15 @@ async function fetchAllTeams(token) {
 
 // ─── 5. MI EQUIPO (Guitlla) ───────────────────────────────────────────────────
 
-async function fetchMyTeam(token) {
-  console.log('🦊 Descargando mi equipo (Guitlla)...');
+async function fetchMyTeam(token, liga) {
+  console.log(`🦊 Descargando mi equipo liga ${liga.id}...`);
 
   const res = await requestJSON({
     hostname: 'biwenger.as.com',
     path:     `/api/v2/user?fields=*,lineup(type,playersID,reservesID,captain,striker,coach,date),players(id,owner),market,offers,-trophies`,
     method:   'GET',
     headers:  {
-      ...COMMON_HEADERS,
+      ...headersForLeague(liga),
       'Authorization':  `Bearer ${token}`,
       'Content-Type':   'application/json; charset=utf-8',
       'x-lang':         'es',
@@ -452,22 +454,37 @@ async function main() {
   try {
     console.log('🚀 Iniciando fetch — La Pausa Fantasy\n');
 
-    const token      = await login();
-    const players    = await fetchPlayers();
-    const league     = await fetchLeague(token);
-    const allTeams   = await fetchAllTeams(token);
-    const myTeam     = await fetchMyTeam(token);
-    const laliga     = await fetchLaLiga();
-    const news       = await fetchNews();
+    const token   = await login();
+    const players = await fetchPlayers();
 
+    // ── Tomaquet ──
+    console.log('\n--- TOMAQUET ---');
+    const leagueTomaquet  = await fetchLeague(token, LEAGUE_TOMAQUET);
+    const allTeamsTomaquet = await fetchAllTeams(token, LEAGUE_TOMAQUET);
+    const myTeamTomaquet  = await fetchMyTeam(token, LEAGUE_TOMAQUET);
+
+    // ── EN BAS ──
+    console.log('\n--- EN BAS ---');
+    const leagueEnBas   = await fetchLeague(token, LEAGUE_ENBAS);
+    const allTeamsEnBas = await fetchAllTeams(token, LEAGUE_ENBAS);
+    const myTeamEnBas   = await fetchMyTeam(token, LEAGUE_ENBAS);
+
+    const laliga      = await fetchLaLiga();
+    const news        = await fetchNews();
     const playerStats = await fetchPlayerStats();
 
     const output = {
       updatedAt:   new Date().toISOString(),
       players,
-      league,
-      allTeams,
-      myTeam,
+      // Tomaquet
+      league:    leagueTomaquet,
+      allTeams:  allTeamsTomaquet,
+      myTeam:    myTeamTomaquet,
+      // EN BAS
+      leagueEnBas,
+      allTeamsEnBas,
+      myTeamEnBas,
+      // LaLiga real
       laliga,
       news,
       playerStats,
@@ -477,8 +494,10 @@ async function main() {
 
     console.log('\n💾 data.json guardado correctamente');
     console.log(`📊 Jugadores Biwenger: ${players.length}`);
-    console.log(`👥 Equipos fantasy:    ${allTeams?.length || 0}`);
-    console.log(`🦊 Mi equipo:          ${myTeam?.players?.length || 0} jugadores`);
+    console.log(`👥 Equipos Tomaquet:   ${allTeamsTomaquet?.length || 0}`);
+    console.log(`👥 Equipos EN BAS:     ${allTeamsEnBas?.length || 0}`);
+    console.log(`🦊 Mi equipo Tomaquet: ${myTeamTomaquet?.players?.length || 0} jugadores`);
+    console.log(`🦊 Mi equipo EN BAS:   ${myTeamEnBas?.players?.length || 0} jugadores`);
     console.log(`📰 Noticias:           ${news.length}`);
     console.log(`⚽ Stats jugadores:    ${playerStats?.players?.length || 0} (football-data)`);
 
