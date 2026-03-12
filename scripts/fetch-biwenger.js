@@ -221,6 +221,11 @@ async function fetchAllTeams(token, liga) {
     value:   t.teamValue || 0,
     players: (t.players || []).map(p => ({
       id:       Number(p.id),
+      name:     p.name,
+      position: p.position,
+      price:    p.price  || 0,
+      points:   p.points || 0,
+    })),
   }));
 }
 
