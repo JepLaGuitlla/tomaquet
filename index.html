@@ -361,8 +361,10 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
 
 .badge-sell{font-family:'Figtree',sans-serif;font-size:6px;background:var(--red);color:white;border-radius:2px;padding:1px 4px;font-weight:600;letter-spacing:1px;margin-top:2px;}
 .badge-warn{font-family:'Figtree',sans-serif;font-size:6px;background:rgba(234,179,8,0.15);color:#ca8a04;border:1px solid rgba(234,179,8,0.3);border-radius:2px;padding:1px 4px;font-weight:600;margin-top:2px;}
-.team-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border-radius:4px;overflow:hidden;margin-bottom:1.2rem;}
+.team-summary{display:flex;flex-wrap:wrap;gap:1px;background:var(--border);border-radius:4px;overflow:hidden;margin-bottom:1.2rem;}
+.team-summary .ts-card{flex:1 1 120px;}
 .ts-card{background:var(--bg2);padding:0.8rem 1rem;}
+.ts-card--spark{padding:0.7rem 1rem;min-width:220px;flex:2 1 220px;}
 .ts-label{font-family:'Figtree',sans-serif;font-size:0.54rem;color:var(--text3);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:4px;font-weight:500;}
 .ts-value{font-family:'Figtree',sans-serif;font-size:1.4rem;font-weight:700;color:var(--text);letter-spacing:1px;}
 .ts-sub{font-family:'Figtree',sans-serif;font-size:0.6rem;color:var(--text3);}
@@ -2067,10 +2069,94 @@ function autoPlace(){
 }
 function renderMiEquipo(){renderSummary();renderTabs();renderField();renderMeTable();}
 function renderSummary(){
-  const tv=getEquipo().reduce((s,p)=>s+(p.price||0),0);
-  const toSell=getEquipo().filter(p=>p.status==='injured').length;
-  const toWarn=getEquipo().filter(p=>p.status==='doubt'||p.status==='sanctioned').length;
-  document.getElementById('teamSummary').innerHTML=`<div class="ts-card"><div class="ts-label">Posición</div><div class="ts-value">3º</div><div class="ts-sub">de 14</div></div><div class="ts-card"><div class="ts-label">Puntos J26</div><div class="ts-value">1.278</div><div class="ts-sub">acumulados</div></div><div class="ts-card"><div class="ts-label">Valor plantilla</div><div class="ts-value">${fmt(tv)}</div><div class="ts-sub">mercado</div></div><div class="ts-card"><div class="ts-label">Jugadores</div><div class="ts-value">${getEquipo().length}</div><div class="ts-sub">en plantilla</div></div><div class="ts-card"><div class="ts-label">Vender</div><div class="ts-value" style="color:var(--red)">${toSell}</div><div class="ts-sub">urgente</div></div><div class="ts-card"><div class="ts-label">Vigilar</div><div class="ts-value" style="color:var(--accent)">${toWarn}</div><div class="ts-sub">jugadores</div></div>`;
+  const equipo = getEquipo();
+  const tv  = equipo.reduce((s,p)=>s+(p.price||0),0);
+  const trendTotal = equipo.reduce((s,p)=>s+(p.trend||0),0);
+  const toSell = equipo.filter(p=>p.status==='injured').length;
+  const toWarn = equipo.filter(p=>p.status==='doubt'||p.status==='sanctioned').length;
+
+  // Color y flecha de tendencia
+  const trendColor = trendTotal>0?'var(--green)':trendTotal<0?'var(--red)':'var(--text3)';
+  const trendArrow = trendTotal>0?'▲':trendTotal<0?'▼':'●';
+  const trendSign  = trendTotal>0?'+':'';
+
+  // Puntos por jornada: sumar jForm de todos los jugadores (jForm[0]=más reciente)
+  const nJ = 5;
+  const sumas = Array(nJ).fill(0);
+  const counts = Array(nJ).fill(0);
+  equipo.forEach(p => {
+    (p.jForm||[]).slice(0,nJ).forEach((v,i)=>{
+      if(typeof v==='number'&&!isNaN(v)){sumas[i]+=v;counts[i]++;}
+    });
+  });
+  // Invertir: de más antigua a más reciente
+  const puntos = sumas.map((s,i)=>counts[i]>0?Math.round(s):null).reverse();
+
+  // SVG sparkline
+  const valid = puntos.filter(v=>v!==null);
+  const minP=Math.min(...valid), maxP=Math.max(...valid), rng=maxP-minP||1;
+  const W=130,H=44,pad=5;
+  const coords = puntos.map((v,i)=>({
+    x: pad+(i/(nJ-1))*(W-pad*2),
+    y: v===null?null:H-pad-((v-minP)/rng)*(H-pad*2),
+    v
+  }));
+  const validCoords = coords.filter(c=>c.y!==null);
+  const lineD = validCoords.map((c,i)=>(i===0?'M':'L')+c.x.toFixed(1)+' '+c.y.toFixed(1)).join(' ');
+  const first=validCoords[0], last=validCoords[validCoords.length-1];
+  const areaD = first&&last ? lineD+` L${last.x.toFixed(1)} ${H-pad} L${first.x.toFixed(1)} ${H-pad} Z` : '';
+  const up = valid.length>1&&valid[valid.length-1]>=valid[0];
+  const sc = valid.length>1?(up?'#22c55e':'#ef4444'):'#94a3b8';
+
+  const spark = `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
+    <defs><linearGradient id="sg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="${sc}" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="${sc}" stop-opacity="0.03"/>
+    </linearGradient></defs>
+    ${areaD?`<path d="${areaD}" fill="url(#sg)"/>`:''}
+    <path d="${lineD}" fill="none" stroke="${sc}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    ${validCoords.map(c=>`<circle cx="${c.x.toFixed(1)}" cy="${c.y.toFixed(1)}" r="2.5" fill="${sc}"/>`).join('')}
+  </svg>`;
+
+  const ligaName = LIGA_ACTIVA.id==='tomaquet'?'Tomaquet':'EN BAS';
+  const standPos = getStandings().find(t=>t.name&&(t.name.includes('Guitlla')||t.name.includes('🦊')));
+  const posStr = standPos?`${standPos.pos}º`:'—';
+  const totalTeams = getStandings().length||'—';
+  const totalPts = standPos?standPos.pts.toLocaleString('es'):'—';
+
+  document.getElementById('teamSummary').innerHTML=`
+    <div class="ts-card">
+      <div class="ts-label">Posición</div>
+      <div class="ts-value">${posStr}</div>
+      <div class="ts-sub">de ${totalTeams}</div>
+    </div>
+    <div class="ts-card">
+      <div class="ts-label">Puntos totales</div>
+      <div class="ts-value">${totalPts}</div>
+      <div class="ts-sub">acumulados</div>
+    </div>
+    <div class="ts-card">
+      <div class="ts-label">Valor plantilla</div>
+      <div class="ts-value">${fmt(tv)}</div>
+      <div class="ts-sub">mercado</div>
+    </div>
+    <div class="ts-card">
+      <div class="ts-label">Tendencia</div>
+      <div class="ts-value" style="color:${trendColor};font-size:1.1rem">${trendArrow} ${trendSign}${fmt(trendTotal)}</div>
+      <div class="ts-sub">valor total equipo</div>
+    </div>
+    <div class="ts-card ts-card--spark">
+      <div class="ts-label">Pts equipo · últimas jornadas</div>
+      <div style="display:flex;align-items:flex-end;gap:6px;margin-top:4px">
+        ${spark}
+        <div style="display:flex;flex-direction:column;gap:2px;font-size:0.65rem;color:var(--text3)">
+          ${['J↑','J-1','J-2','J-3','J-4'].map((l,i)=>{const v=puntos[nJ-1-i];return`<div style="white-space:nowrap">${l}: <b style="color:${v!==null?(v>=0?'var(--text)':'var(--red)'):'var(--text3)'}">${v!==null?v:'—'}</b></div>`}).join('')}
+        </div>
+      </div>
+    </div>
+    <div class="ts-card"><div class="ts-label">Vender</div><div class="ts-value" style="color:var(--red)">${toSell}</div><div class="ts-sub">urgente</div></div>
+    <div class="ts-card"><div class="ts-label">Vigilar</div><div class="ts-value" style="color:var(--accent)">${toWarn}</div><div class="ts-sub">jugadores</div></div>
+  `;
 }
 function renderTabs(){document.getElementById('formationTabs').innerHTML=Object.keys(FORMATIONS).map(f=>`<button class="ftab ${f===cf?'active':''}" onclick="setFormation('${f}')">${f}</button>`).join('');}
 function setFormation(f){cf=f;autoPlace();renderTabs();renderField();}
