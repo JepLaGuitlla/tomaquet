@@ -1303,7 +1303,7 @@ let LIGA_ACTIVA = LIGAS.tomaquet;
 function getStandings()     { return LIGA_ACTIVA.standings; }
 function getGroups()        { return LIGA_ACTIVA.groups; }
 function getQuarterfinals() { return LIGA_ACTIVA.quarterfinals; }
-function getEquipo()        { return myTeamData || LIGA_ACTIVA.equipo; }
+function getEquipo()        { return (LIGA_ACTIVA.id==='tomaquet' ? myTeamData : myTeamDataEnBas) || LIGA_ACTIVA.equipo; }
 function getMiEquipoName()  { return LIGA_ACTIVA.miEquipo; }
 
 function switchLiga(id) {
@@ -1439,7 +1439,8 @@ function renderRankings(players) {
 let allPlayers=[],filteredPlayers=[],currentPos='',currentSort='sf_goals_desc',currentPage=1;
 const PAGE_SIZE=50;
 let cf='4-3-3',lineup={},marketPlayers=[],currentSlot=null;
-let myTeamData=null; // datos reales de mi equipo desde Biwenger
+let myTeamData=null;      // datos reales mi equipo TOMAQUET desde Biwenger
+let myTeamDataEnBas=null; // datos reales mi equipo EN BAS desde Biwenger
 
 document.addEventListener('keydown',e=>{ if(e.key==='Escape'){ closeJugPanelDirect(); closeCompareModalDirect(); }});
 document.addEventListener('DOMContentLoaded',()=>{
@@ -1473,9 +1474,8 @@ async function loadPlayers(){
     document.getElementById('statusText').textContent=allPlayers.length+' jugadores · actualizado '+when;
     renderStats(); renderRankings(allPlayers); initRankings();
 
-    // Cargar mi equipo real desde Biwenger
+    // Cargar mi equipo real desde Biwenger — TOMAQUET
     if(data.myTeam && data.myTeam.players && data.myTeam.players.length){
-      // Los jugadores vienen como {id, buyPrice, clause} — cruzar con allPlayers
       myTeamData = data.myTeam.players.map(p => {
         const full = allPlayers.find(a => a.id === p.id);
         if(!full) return null;
@@ -1494,11 +1494,36 @@ async function loadPlayers(){
           invested: p.invested  || 0,
         };
       }).filter(Boolean);
-      console.log('🦊 Mi equipo real cargado:', myTeamData.length, 'jugadores');
-      refreshGuitllaSet();
-      renderMiEquipo();
-      mv3InitFromPlayers(allPlayers);
+      console.log('🦊 Mi equipo Tomaquet real cargado:', myTeamData.length, 'jugadores');
     }
+
+    // Cargar mi equipo real desde Biwenger — EN BAS
+    if(data.myTeamEnBas && data.myTeamEnBas.players && data.myTeamEnBas.players.length){
+      myTeamDataEnBas = data.myTeamEnBas.players.map(p => {
+        const full = allPlayers.find(a => a.id === p.id);
+        if(!full) return null;
+        return {
+          id:       full.id,
+          name:     full.name,
+          position: full.position,
+          price:    full.price  || 0,
+          pts:      full.pts    || 0,
+          trend:    full.trend  || 0,
+          club:     full.club   || '',
+          status:   full.status || 'ok',
+          jForm:    full.jForm  || [],
+          buyPrice: p.buyPrice  || 0,
+          clause:   p.clause    || 0,
+          invested: p.invested  || 0,
+        };
+      }).filter(Boolean);
+      console.log('🦊 Mi equipo EN BAS real cargado:', myTeamDataEnBas.length, 'jugadores');
+    }
+
+    // Re-render con el equipo de la liga activa
+    refreshGuitllaSet();
+    renderMiEquipo();
+    mv3InitFromPlayers(allPlayers);
 
     // Cargar noticias desde data.json (sin CORS)
     if(data.news && data.news.length){
@@ -1958,7 +1983,9 @@ function renderField(){
   });
 }
 function renderMeTable(){
-  document.getElementById('meTableBody').innerHTML=getEquipo().map(p=>{
+  const posOrder={'PT':0,'DF':1,'MC':2,'DL':3};
+  const sorted=[...getEquipo()].sort((a,b)=>(posOrder[a.position.split('/')[0]]??9)-(posOrder[b.position.split('/')[0]]??9));
+  document.getElementById('meTableBody').innerHTML=sorted.map(p=>{
     const ep=enrichPlayer(p);const media=ep.media?ep.media.toFixed(1):(p.pts/26).toFixed(1);
     const tc=p.trend>0?'color:var(--green)':p.trend<0?'color:var(--red)':'color:var(--text3)';
     const ts=p.trend>0?'+'+fmt(p.trend):p.trend<0?fmt(p.trend):'—';
