@@ -884,7 +884,7 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
 
 <div id="liga-fantasy" class="section">
   <div class="section-title">Clasificación general</div>
-  <div class="table-wrap">
+  <div class="table-wrap" style="overflow:visible;">
     <div class="standings-grid standings-header">
       <div class="th">#</div>
       <div class="th" style="padding-left:4px">EQUIPO</div>
@@ -2413,7 +2413,7 @@ function renderGeneral(){
     const tid=`rival-${i}`;
     // Plantilla del rival (ordenada por posición)
     const squad=(t.playersList||[]).slice().sort((a,b)=>(a.position||9)-(b.position||9));
-    const squadHtml=squad.length?`<div id="${tid}" style="display:none;padding:10px 16px 12px;border-top:1px solid var(--border);background:var(--bg3);flex-wrap:wrap;gap:6px;">${
+    const squadHtml=squad.length?`<div id="${tid}" style="display:none;padding:10px 16px 12px;border-top:1px solid var(--border);background:var(--bg3);"><div style="display:flex;flex-wrap:wrap;gap:6px;">${
       squad.map(p=>{
         const full=allPlayers.find(x=>x.id==p.id)||p;
         const pos=POS_LABELS[full.position||p.position]||'?';
@@ -2423,7 +2423,7 @@ function renderGeneral(){
         const priceStr=price>=1000000?(price/1000000).toFixed(1)+'M':price>=1000?Math.round(price/1000)+'K':price;
         return `<div style="display:inline-flex;align-items:center;gap:5px;padding:4px 8px;background:var(--bg2);border:1px solid var(--border);border-radius:3px;font-family:'Figtree',sans-serif;font-size:0.7rem;"><span style="font-size:0.58rem;font-weight:700;color:${posColor};letter-spacing:0.5px">${pos}</span><span style="color:var(--text);font-weight:500">${full.name||p.name}</span><span style="color:var(--text3)">${pts}pts</span><span style="color:var(--text3);font-size:0.65rem">${priceStr}</span></div>`;
       }).join('')
-    }</div>`:'';
+    }</div></div>`:'';
     return `<div><div class="standings-grid standings-row" style="${rowBg};cursor:pointer" onclick="toggleRival('${tid}',this)"><div class="s-rank ${rankCls}">${t.pos}</div><div class="s-name" style="${isMe?'color:var(--accent);font-weight:700':''}">${t.name}</div><div class="s-pts">${t.pts}</div><div class="s-num">${t.value}M€</div><div class="s-num">${t.players}</div><div class="s-num">${t.ptsPer||'—'}</div><div class="s-diff" style="${diffColor}">${diffTxt}</div><div class="s-diff" style="${vsColor}">${vsTxt}</div></div>${squadHtml}</div>`;
   }).join('');
 }
@@ -2431,9 +2431,9 @@ function renderGeneral(){
 function toggleRival(id,row){
   const el=document.getElementById(id);
   if(!el)return;
-  const open=el.style.display==='flex';
-  el.style.display=open?'none':'flex';
-  row.style.background=open?'':'rgba(255,255,255,0.03)';
+  const open=el.style.display!=='none'&&el.style.display!=='';
+  el.style.display=open?'none':'block';
+  row.style.borderBottom=open?'':'none';
 }
 
 function renderGrupos(){
