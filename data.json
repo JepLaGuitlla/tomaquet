@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-12T10:30:38.706Z",
+  "updatedAt": "2026-03-12T11:00:21.431Z",
   "players": [
     {
       "id": 11,
@@ -31,7 +31,7 @@
       "playedHome": 13,
       "playedAway": 14,
       "teamName": "",
-      "status": "ok",
+      "status": "doubt",
       "jForm": [
         5,
         9,
@@ -51,9 +51,9 @@
       "playedHome": 4,
       "playedAway": 4,
       "teamName": "",
-      "status": "ok",
+      "status": "doubt",
       "jForm": [
-        null,
+        "injured",
         1,
         3,
         4,
@@ -91,13 +91,13 @@
       "playedHome": 7,
       "playedAway": 7,
       "teamName": "",
-      "status": "ok",
+      "status": "doubt",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "doubt",
+        "doubt",
+        "doubt",
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -213,11 +213,11 @@
       "teamName": "",
       "status": "ok",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "doubt",
+        "injured",
+        "injured",
+        "doubt",
+        "doubt"
       ],
       "clausula": null
     },
@@ -231,10 +231,10 @@
       "playedHome": 4,
       "playedAway": 4,
       "teamName": "",
-      "status": "ok",
+      "status": "doubt",
       "jForm": [
-        null,
-        null,
+        "doubt",
+        "doubt",
         null,
         null,
         null
@@ -251,7 +251,7 @@
       "playedHome": 13,
       "playedAway": 9,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         10,
         2,
@@ -275,9 +275,9 @@
       "jForm": [
         5,
         5,
-        null,
-        null,
-        null
+        "injured",
+        "doubt",
+        "doubt"
       ],
       "clausula": null
     },
@@ -296,7 +296,7 @@
         2,
         2,
         2,
-        null,
+        "doubt",
         1
       ],
       "clausula": null
@@ -331,7 +331,7 @@
       "playedHome": 13,
       "playedAway": 12,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         6,
         3,
@@ -391,13 +391,13 @@
       "playedHome": 1,
       "playedAway": 0,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "injured",
+        "injured",
+        "injured",
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -456,7 +456,7 @@
         3,
         4,
         3,
-        null,
+        "sanctioned",
         2
       ],
       "clausula": null
@@ -471,7 +471,7 @@
       "playedHome": 12,
       "playedAway": 13,
       "teamName": "",
-      "status": "ok",
+      "status": "sanctioned",
       "jForm": [
         5,
         3,
@@ -632,7 +632,7 @@
       "teamName": "",
       "status": "ok",
       "jForm": [
-        null,
+        "injured",
         null,
         4,
         3,
@@ -690,13 +690,13 @@
       "playedHome": 8,
       "playedAway": 7,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "injured",
+        "injured",
+        "injured",
+        "injured",
+        "doubt"
       ],
       "clausula": null
     },
@@ -730,13 +730,13 @@
       "playedHome": 1,
       "playedAway": 1,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "injured",
+        "injured",
+        "injured",
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -770,7 +770,7 @@
       "playedHome": 1,
       "playedAway": 1,
       "teamName": "",
-      "status": "ok",
+      "status": "doubt",
       "jForm": [
         5,
         null,
@@ -810,7 +810,7 @@
       "playedHome": 11,
       "playedAway": 10,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         4,
         null,
@@ -830,13 +830,13 @@
       "playedHome": 0,
       "playedAway": 0,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "injured",
+        "injured",
+        "injured",
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -870,13 +870,13 @@
       "playedHome": 10,
       "playedAway": 11,
       "teamName": "",
-      "status": "ok",
+      "status": "doubt",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "doubt",
+        "doubt",
+        "injured",
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -896,7 +896,7 @@
         null,
         3,
         4,
-        null
+        "doubt"
       ],
       "clausula": null
     },
@@ -913,10 +913,10 @@
       "status": "ok",
       "jForm": [
         2,
-        null,
-        null,
-        null,
-        null
+        "doubt",
+        "injured",
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -950,7 +950,7 @@
       "playedHome": 10,
       "playedAway": 10,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         2,
         6,
@@ -973,8 +973,8 @@
       "status": "ok",
       "jForm": [
         null,
-        null,
-        null,
+        "sanctioned",
+        "sanctioned",
         -3,
         null
       ],
@@ -992,9 +992,9 @@
       "teamName": "",
       "status": "ok",
       "jForm": [
-        null,
-        null,
-        null,
+        "doubt",
+        "injured",
+        "injured",
         12,
         4
       ],
@@ -1030,9 +1030,9 @@
       "playedHome": 9,
       "playedAway": 9,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
+        "doubt",
         1,
         3,
         1,
@@ -1053,7 +1053,7 @@
       "status": "ok",
       "jForm": [
         8,
-        null,
+        "sanctioned",
         6,
         7,
         9
@@ -1110,10 +1110,10 @@
       "playedHome": 9,
       "playedAway": 6,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
-        null,
+        "injured",
+        "injured",
         -2,
         3,
         null
@@ -1130,7 +1130,7 @@
       "playedHome": 13,
       "playedAway": 11,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         null,
         3,
@@ -1150,7 +1150,7 @@
       "playedHome": 10,
       "playedAway": 11,
       "teamName": "",
-      "status": "ok",
+      "status": "doubt",
       "jForm": [
         7,
         5,
@@ -1190,9 +1190,9 @@
       "playedHome": 10,
       "playedAway": 9,
       "teamName": "",
-      "status": "ok",
+      "status": "doubt",
       "jForm": [
-        null,
+        "doubt",
         2,
         -1,
         8,
@@ -1230,7 +1230,7 @@
       "playedHome": 10,
       "playedAway": 10,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         3,
         3,
@@ -1295,8 +1295,8 @@
         null,
         null,
         null,
-        null,
-        null
+        "injured",
+        "doubt"
       ],
       "clausula": null
     },
@@ -1316,7 +1316,7 @@
         1,
         null,
         3,
-        null
+        "doubt"
       ],
       "clausula": null
     },
@@ -1335,7 +1335,7 @@
         5,
         4,
         2,
-        null,
+        "injured",
         2
       ],
       "clausula": null
@@ -1350,7 +1350,7 @@
       "playedHome": 13,
       "playedAway": 14,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         5,
         8,
@@ -1390,7 +1390,7 @@
       "playedHome": 8,
       "playedAway": 11,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         2,
         null,
@@ -1430,7 +1430,7 @@
       "playedHome": 12,
       "playedAway": 11,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         5,
         3,
@@ -1454,9 +1454,9 @@
       "jForm": [
         2,
         5,
-        null,
-        null,
-        null
+        "doubt",
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -1490,7 +1490,7 @@
       "playedHome": 12,
       "playedAway": 12,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         4,
         6,
@@ -1510,7 +1510,7 @@
       "playedHome": 11,
       "playedAway": 8,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         4,
         10,
@@ -1530,7 +1530,7 @@
       "playedHome": 9,
       "playedAway": 10,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
         3,
         6,
@@ -1570,12 +1570,12 @@
       "playedHome": 8,
       "playedAway": 9,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
+        "injured",
+        "injured",
+        "injured",
+        "injured",
         4
       ],
       "clausula": null
@@ -1750,13 +1750,13 @@
       "playedHome": 0,
       "playedAway": 0,
       "teamName": "",
-      "status": "ok",
+      "status": "discarded",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "discarded",
+        "discarded",
+        "discarded",
+        "discarded",
+        "discarded"
       ],
       "clausula": null
     },
@@ -1870,10 +1870,10 @@
       "playedHome": 4,
       "playedAway": 1,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
-        null,
+        "injured",
+        "injured",
         0,
         null,
         5
@@ -2016,7 +2016,7 @@
         2,
         3,
         3,
-        null
+        "injured"
       ],
       "clausula": null
     },
@@ -2030,7 +2030,7 @@
       "playedHome": 13,
       "playedAway": 12,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         4,
         2,
@@ -2070,13 +2070,13 @@
       "playedHome": 6,
       "playedAway": 4,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "injured",
+        "injured",
+        "injured",
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -2150,7 +2150,7 @@
       "playedHome": 12,
       "playedAway": 13,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         6,
         4,
@@ -2215,8 +2215,8 @@
         null,
         3,
         5,
-        null,
-        null
+        "doubt",
+        "doubt"
       ],
       "clausula": null
     },
@@ -2230,13 +2230,13 @@
       "playedHome": 4,
       "playedAway": 7,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         4,
         null,
         null,
-        null,
-        null
+        "injured",
+        "doubt"
       ],
       "clausula": null
     },
@@ -2270,10 +2270,10 @@
       "playedHome": 6,
       "playedAway": 7,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
-        null,
+        "injured",
+        "injured",
         1,
         null,
         -1
@@ -2293,7 +2293,7 @@
       "status": "ok",
       "jForm": [
         3,
-        null,
+        "sanctioned",
         -7,
         3,
         7
@@ -2330,9 +2330,9 @@
       "playedHome": 9,
       "playedAway": 12,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
+        "injured",
         3,
         null,
         2,
@@ -2370,7 +2370,7 @@
       "playedHome": 14,
       "playedAway": 13,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         5,
         8,
@@ -2410,7 +2410,7 @@
       "playedHome": 13,
       "playedAway": 14,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         2,
         3,
@@ -2470,7 +2470,7 @@
       "playedHome": 13,
       "playedAway": 14,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         5,
         6,
@@ -2495,8 +2495,8 @@
         7,
         1,
         3,
-        null,
-        null
+        "injured",
+        "doubt"
       ],
       "clausula": null
     },
@@ -2615,7 +2615,7 @@
         3,
         null,
         4,
-        null,
+        "injured",
         -1
       ],
       "clausula": null
@@ -2653,10 +2653,10 @@
       "status": "ok",
       "jForm": [
         2,
-        null,
+        "sanctioned",
         2,
-        null,
-        null
+        "sanctioned",
+        "sanctioned"
       ],
       "clausula": null
     },
@@ -2710,13 +2710,13 @@
       "playedHome": 8,
       "playedAway": 9,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "injured",
+        "injured",
+        "injured",
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -2795,8 +2795,8 @@
         4,
         4,
         5,
-        null,
-        null
+        "doubt",
+        "doubt"
       ],
       "clausula": null
     },
@@ -2830,7 +2830,7 @@
       "playedHome": 8,
       "playedAway": 12,
       "teamName": "",
-      "status": "ok",
+      "status": "sanctioned",
       "jForm": [
         -2,
         3,
@@ -2910,12 +2910,12 @@
       "playedHome": 9,
       "playedAway": 9,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         3,
         3,
         3,
-        null,
+        "doubt",
         0
       ],
       "clausula": null
@@ -2972,7 +2972,7 @@
       "teamName": "",
       "status": "ok",
       "jForm": [
-        null,
+        "sanctioned",
         6,
         5,
         3,
@@ -3010,13 +3010,13 @@
       "playedHome": 6,
       "playedAway": 9,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "injured",
+        "injured",
+        "injured",
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -3050,12 +3050,12 @@
       "playedHome": 5,
       "playedAway": 7,
       "teamName": "",
-      "status": "ok",
+      "status": "doubt",
       "jForm": [
+        "doubt",
+        "doubt",
         null,
-        null,
-        null,
-        null,
+        "doubt",
         null
       ],
       "clausula": null
@@ -3090,13 +3090,13 @@
       "playedHome": 3,
       "playedAway": 5,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "injured",
+        "injured",
+        "injured",
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -3136,7 +3136,7 @@
         6,
         12,
         17,
-        null
+        "sanctioned"
       ],
       "clausula": null
     },
@@ -3176,7 +3176,7 @@
         null,
         null,
         null,
-        null
+        "discarded"
       ],
       "clausula": null
     },
@@ -3190,13 +3190,13 @@
       "playedHome": 6,
       "playedAway": 4,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "injured",
+        "injured",
+        "injured",
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -3310,7 +3310,7 @@
       "playedHome": 9,
       "playedAway": 9,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         null,
         3,
@@ -3330,7 +3330,7 @@
       "playedHome": 7,
       "playedAway": 4,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         3,
         null,
@@ -3396,7 +3396,7 @@
         3,
         2,
         8,
-        null
+        "injured"
       ],
       "clausula": null
     },
@@ -3450,9 +3450,9 @@
       "playedHome": 7,
       "playedAway": 9,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
+        "injured",
         null,
         null,
         0,
@@ -3490,7 +3490,7 @@
       "playedHome": 9,
       "playedAway": 10,
       "teamName": "",
-      "status": "ok",
+      "status": "sanctioned",
       "jForm": [
         1,
         3,
@@ -3570,9 +3570,9 @@
       "playedHome": 11,
       "playedAway": 12,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
+        "injured",
         5,
         4,
         7,
@@ -3670,13 +3670,13 @@
       "playedHome": 7,
       "playedAway": 6,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "injured",
+        "injured",
+        "injured",
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -3690,10 +3690,10 @@
       "playedHome": 7,
       "playedAway": 12,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
-        null,
+        "injured",
+        "injured",
         14,
         1,
         null
@@ -3710,13 +3710,13 @@
       "playedHome": 10,
       "playedAway": 9,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
+        "injured",
         4,
-        null,
-        null,
-        null
+        "injured",
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -3770,7 +3770,7 @@
       "playedHome": 12,
       "playedAway": 14,
       "teamName": "",
-      "status": "ok",
+      "status": "sanctioned",
       "jForm": [
         -4,
         3,
@@ -3856,7 +3856,7 @@
         2,
         null,
         null,
-        null
+        "discarded"
       ],
       "clausula": null
     },
@@ -3890,9 +3890,9 @@
       "playedHome": 13,
       "playedAway": 12,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
+        "injured",
         9,
         6,
         3,
@@ -3930,13 +3930,13 @@
       "playedHome": 9,
       "playedAway": 9,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "injured",
+        "doubt",
+        "injured",
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -3996,7 +3996,7 @@
         8,
         2,
         1,
-        null
+        "doubt"
       ],
       "clausula": null
     },
@@ -4035,8 +4035,8 @@
         6,
         11,
         5,
-        null,
-        null
+        "injured",
+        "doubt"
       ],
       "clausula": null
     },
@@ -4076,7 +4076,7 @@
         3,
         6,
         3,
-        null
+        "sanctioned"
       ],
       "clausula": null
     },
@@ -4170,7 +4170,7 @@
       "playedHome": 13,
       "playedAway": 13,
       "teamName": "",
-      "status": "ok",
+      "status": "unknown",
       "jForm": [
         0,
         1,
@@ -4210,10 +4210,10 @@
       "playedHome": 10,
       "playedAway": 13,
       "teamName": "",
-      "status": "ok",
+      "status": "doubt",
       "jForm": [
-        null,
-        null,
+        "injured",
+        "injured",
         0,
         null,
         8
@@ -4276,7 +4276,7 @@
         6,
         6,
         null,
-        null
+        "discarded"
       ],
       "clausula": null
     },
@@ -4312,7 +4312,7 @@
       "teamName": "",
       "status": "ok",
       "jForm": [
-        null,
+        "sanctioned",
         4,
         12,
         3,
@@ -4330,13 +4330,13 @@
       "playedHome": 9,
       "playedAway": 9,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "injured",
+        "injured",
+        "injured",
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -4390,12 +4390,12 @@
       "playedHome": 10,
       "playedAway": 9,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
+        "injured",
+        "injured",
+        "injured",
+        "doubt",
         4
       ],
       "clausula": null
@@ -4410,13 +4410,13 @@
       "playedHome": 1,
       "playedAway": 1,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "injured",
+        "injured",
+        "injured",
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -4454,7 +4454,7 @@
       "jForm": [
         4,
         null,
-        null,
+        "doubt",
         4,
         null
       ],
@@ -4470,7 +4470,7 @@
       "playedHome": 14,
       "playedAway": 13,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         3,
         6,
@@ -4515,8 +4515,8 @@
         3,
         3,
         null,
-        null,
-        null
+        "injured",
+        "doubt"
       ],
       "clausula": null
     },
@@ -4590,7 +4590,7 @@
       "playedHome": 13,
       "playedAway": 13,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         5,
         3,
@@ -4610,13 +4610,13 @@
       "playedHome": 7,
       "playedAway": 6,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "injured",
+        "injured",
+        "injured",
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -4656,7 +4656,7 @@
         null,
         null,
         null,
-        null
+        "sanctioned"
       ],
       "clausula": null
     },
@@ -4710,9 +4710,9 @@
       "playedHome": 8,
       "playedAway": 6,
       "teamName": "",
-      "status": "ok",
+      "status": "doubt",
       "jForm": [
-        null,
+        "doubt",
         null,
         null,
         1,
@@ -4755,8 +4755,8 @@
         2,
         2,
         1,
-        null,
-        null
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -4770,7 +4770,7 @@
       "playedHome": 12,
       "playedAway": 12,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         3,
         6,
@@ -4810,13 +4810,13 @@
       "playedHome": 9,
       "playedAway": 10,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
-        null,
+        "doubt",
         7,
         6,
         2,
-        null
+        "sanctioned"
       ],
       "clausula": null
     },
@@ -4875,7 +4875,7 @@
         4,
         2,
         2,
-        null,
+        "injured",
         2
       ],
       "clausula": null
@@ -4910,13 +4910,13 @@
       "playedHome": 0,
       "playedAway": 2,
       "teamName": "",
-      "status": "ok",
+      "status": "doubt",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "injured",
+        "doubt",
+        "doubt",
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -4970,7 +4970,7 @@
       "playedHome": 10,
       "playedAway": 8,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         2,
         5,
@@ -5032,7 +5032,7 @@
         null,
         null,
         null,
-        null
+        "discarded"
       ],
       "clausula": null
     },
@@ -5086,9 +5086,9 @@
       "playedHome": 5,
       "playedAway": 9,
       "teamName": "",
-      "status": "ok",
+      "status": "doubt",
       "jForm": [
-        null,
+        "doubt",
         1,
         1,
         null,
@@ -5130,7 +5130,7 @@
       "jForm": [
         4,
         6,
-        null,
+        "sanctioned",
         -6,
         6
       ],
@@ -5169,10 +5169,10 @@
       "status": "ok",
       "jForm": [
         null,
+        "doubt",
+        "doubt",
         null,
-        null,
-        null,
-        null
+        "discarded"
       ],
       "clausula": null
     },
@@ -5246,13 +5246,13 @@
       "playedHome": 3,
       "playedAway": 2,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "injured",
+        "injured",
+        "injured",
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -5286,7 +5286,7 @@
       "playedHome": 10,
       "playedAway": 14,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         5,
         2,
@@ -5306,7 +5306,7 @@
       "playedHome": 10,
       "playedAway": 6,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         7,
         8,
@@ -5352,7 +5352,7 @@
         3,
         2,
         6,
-        null
+        "discarded"
       ],
       "clausula": null
     },
@@ -5446,12 +5446,12 @@
       "playedHome": 10,
       "playedAway": 11,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
-        null,
+        "injured",
+        "injured",
         2,
-        null,
+        "sanctioned",
         4
       ],
       "clausula": null
@@ -5472,7 +5472,7 @@
         12,
         -3,
         4,
-        null
+        "discarded"
       ],
       "clausula": null
     },
@@ -5532,7 +5532,7 @@
         4,
         null,
         null,
-        null
+        "injured"
       ],
       "clausula": null
     },
@@ -5546,13 +5546,13 @@
       "playedHome": 6,
       "playedAway": 6,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "injured",
+        "injured",
+        "injured",
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -5606,13 +5606,13 @@
       "playedHome": 5,
       "playedAway": 8,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "injured",
+        "injured",
+        "injured",
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -5652,7 +5652,7 @@
         3,
         7,
         5,
-        null
+        "doubt"
       ],
       "clausula": null
     },
@@ -5769,7 +5769,7 @@
       "status": "ok",
       "jForm": [
         7,
-        null,
+        "sanctioned",
         1,
         7,
         2
@@ -5809,7 +5809,7 @@
       "status": "ok",
       "jForm": [
         4,
-        null,
+        "sanctioned",
         5,
         6,
         null
@@ -5850,7 +5850,7 @@
       "jForm": [
         14,
         4,
-        null,
+        "sanctioned",
         1,
         2
       ],
@@ -5866,7 +5866,7 @@
       "playedHome": 13,
       "playedAway": 12,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         4,
         0,
@@ -5890,8 +5890,8 @@
       "jForm": [
         3,
         1,
-        null,
-        null,
+        "injured",
+        "doubt",
         null
       ],
       "clausula": null
@@ -5926,9 +5926,9 @@
       "playedHome": 8,
       "playedAway": 9,
       "teamName": "",
-      "status": "ok",
+      "status": "doubt",
       "jForm": [
-        null,
+        "injured",
         null,
         null,
         2,
@@ -5946,13 +5946,13 @@
       "playedHome": 11,
       "playedAway": 13,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         null,
         7,
         null,
         3,
-        null
+        "sanctioned"
       ],
       "clausula": null
     },
@@ -5989,7 +5989,7 @@
       "status": "ok",
       "jForm": [
         3,
-        null,
+        "doubt",
         7,
         5,
         3
@@ -6026,7 +6026,7 @@
       "playedHome": 9,
       "playedAway": 7,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
         3,
         7,
@@ -6046,13 +6046,13 @@
       "playedHome": 0,
       "playedAway": 0,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "injured",
+        "injured",
+        "injured",
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -6066,9 +6066,9 @@
       "playedHome": 13,
       "playedAway": 13,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
+        "injured",
         5,
         4,
         3,
@@ -6106,12 +6106,12 @@
       "playedHome": 2,
       "playedAway": 0,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
+        "injured",
+        "injured",
+        "injured",
+        "injured",
         null
       ],
       "clausula": null
@@ -6128,11 +6128,11 @@
       "teamName": "",
       "status": "ok",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "doubt",
+        "injured",
+        "injured",
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -6148,8 +6148,8 @@
       "teamName": "",
       "status": "ok",
       "jForm": [
-        null,
-        null,
+        "injured",
+        "injured",
         2,
         5,
         null
@@ -6186,7 +6186,7 @@
       "playedHome": 12,
       "playedAway": 11,
       "teamName": "",
-      "status": "ok",
+      "status": "sanctioned",
       "jForm": [
         -2,
         7,
@@ -6310,7 +6310,7 @@
       "jForm": [
         2,
         1,
-        null,
+        "injured",
         11,
         5
       ],
@@ -6346,13 +6346,13 @@
       "playedHome": 9,
       "playedAway": 9,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "injured",
+        "injured",
+        "injured",
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -6392,7 +6392,7 @@
         -2,
         3,
         5,
-        null
+        "doubt"
       ],
       "clausula": null
     },
@@ -6412,7 +6412,7 @@
         1,
         3,
         1,
-        null
+        "doubt"
       ],
       "clausula": null
     },
@@ -6446,13 +6446,13 @@
       "playedHome": 5,
       "playedAway": 4,
       "teamName": "",
-      "status": "ok",
+      "status": "doubt",
       "jForm": [
         4,
         2,
         null,
-        null,
-        null
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -6466,7 +6466,7 @@
       "playedHome": 11,
       "playedAway": 9,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         null,
         2,
@@ -6488,11 +6488,11 @@
       "teamName": "",
       "status": "ok",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "doubt",
+        "injured",
+        "injured",
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -6606,7 +6606,7 @@
       "playedHome": 8,
       "playedAway": 6,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         6,
         3,
@@ -6618,7 +6618,7 @@
     },
     {
       "id": 31027,
-      "name": "Arda G��ler",
+      "name": "Arda Güler",
       "position": 3,
       "price": 14150000,
       "points": 149,
@@ -6672,7 +6672,7 @@
         null,
         null,
         null,
-        null
+        "injured"
       ],
       "clausula": null
     },
@@ -6729,8 +6729,8 @@
       "status": "ok",
       "jForm": [
         6,
-        null,
-        null,
+        "doubt",
+        "doubt",
         4,
         2
       ],
@@ -6746,7 +6746,7 @@
       "playedHome": 9,
       "playedAway": 10,
       "teamName": "",
-      "status": "ok",
+      "status": "doubt",
       "jForm": [
         1,
         2,
@@ -6766,9 +6766,9 @@
       "playedHome": 1,
       "playedAway": 2,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
+        "injured",
         null,
         null,
         null,
@@ -6791,8 +6791,8 @@
         2,
         3,
         2,
-        null,
-        null
+        "injured",
+        "doubt"
       ],
       "clausula": null
     },
@@ -6846,9 +6846,9 @@
       "playedHome": 11,
       "playedAway": 12,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
+        "sanctioned",
         4,
         3,
         7,
@@ -6926,13 +6926,13 @@
       "playedHome": 5,
       "playedAway": 7,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         3,
         3,
         5,
         -1,
-        null
+        "doubt"
       ],
       "clausula": null
     },
@@ -6946,7 +6946,7 @@
       "playedHome": 13,
       "playedAway": 14,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         3,
         4,
@@ -6986,7 +6986,7 @@
       "playedHome": 12,
       "playedAway": 12,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         2,
         6,
@@ -7006,7 +7006,7 @@
       "playedHome": 10,
       "playedAway": 10,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         3,
         10,
@@ -7028,7 +7028,7 @@
       "teamName": "",
       "status": "ok",
       "jForm": [
-        null,
+        "sanctioned",
         -3,
         6,
         null,
@@ -7106,13 +7106,13 @@
       "playedHome": 5,
       "playedAway": 4,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "injured",
+        "injured",
+        "injured",
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -7186,7 +7186,7 @@
       "playedHome": 9,
       "playedAway": 8,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         3,
         null,
@@ -7206,7 +7206,7 @@
       "playedHome": 9,
       "playedAway": 10,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         null,
         1,
@@ -7266,12 +7266,12 @@
       "playedHome": 9,
       "playedAway": 11,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         null,
-        null,
-        null,
-        null,
+        "doubt",
+        "doubt",
+        "injured",
         3
       ],
       "clausula": null
@@ -7306,10 +7306,10 @@
       "playedHome": 3,
       "playedAway": 5,
       "teamName": "",
-      "status": "ok",
+      "status": "doubt",
       "jForm": [
-        null,
-        null,
+        "doubt",
+        "doubt",
         null,
         null,
         2
@@ -7406,13 +7406,13 @@
       "playedHome": 5,
       "playedAway": 3,
       "teamName": "",
-      "status": "ok",
+      "status": "doubt",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "injured",
+        "injured",
+        "injured",
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -7486,13 +7486,13 @@
       "playedHome": 9,
       "playedAway": 6,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "doubt",
+        "doubt",
+        "doubt",
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -7526,7 +7526,7 @@
       "playedHome": 7,
       "playedAway": 7,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         6,
         5,
@@ -7546,12 +7546,12 @@
       "playedHome": 3,
       "playedAway": 4,
       "teamName": "",
-      "status": "ok",
+      "status": "doubt",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
+        "doubt",
+        "doubt",
+        "doubt",
+        "injured",
         null
       ],
       "clausula": null
@@ -7569,7 +7569,7 @@
       "status": "ok",
       "jForm": [
         5,
-        null,
+        "sanctioned",
         5,
         2,
         null
@@ -7586,9 +7586,9 @@
       "playedHome": 10,
       "playedAway": 11,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
+        "injured",
         null,
         1,
         2,
@@ -7606,13 +7606,13 @@
       "playedHome": 0,
       "playedAway": 2,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "injured",
+        "injured",
+        "injured",
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -7690,8 +7690,8 @@
       "jForm": [
         7,
         3,
-        null,
-        null,
+        "doubt",
+        "injured",
         11
       ],
       "clausula": null
@@ -7886,13 +7886,13 @@
       "playedHome": 0,
       "playedAway": 0,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "injured",
+        "injured",
+        "injured",
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -7949,7 +7949,7 @@
       "status": "ok",
       "jForm": [
         1,
-        null,
+        "doubt",
         17,
         2,
         8
@@ -7989,7 +7989,7 @@
       "status": "ok",
       "jForm": [
         4,
-        null,
+        "injured",
         0,
         null,
         6
@@ -8066,9 +8066,9 @@
       "playedHome": 4,
       "playedAway": 6,
       "teamName": "",
-      "status": "ok",
+      "status": "discarded",
       "jForm": [
-        null,
+        "discarded",
         2,
         null,
         3,
@@ -8109,10 +8109,10 @@
       "status": "ok",
       "jForm": [
         null,
-        null,
-        null,
-        null,
-        null
+        "doubt",
+        "doubt",
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -8306,7 +8306,7 @@
       "playedHome": 8,
       "playedAway": 10,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         5,
         6,
@@ -8426,9 +8426,9 @@
       "playedHome": 7,
       "playedAway": 8,
       "teamName": "",
-      "status": "ok",
+      "status": "doubt",
       "jForm": [
-        null,
+        "doubt",
         2,
         2,
         null,
@@ -8451,7 +8451,7 @@
         5,
         0,
         3,
-        null,
+        "sanctioned",
         2
       ],
       "clausula": null
@@ -8506,7 +8506,7 @@
       "playedHome": 8,
       "playedAway": 9,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         3,
         null,
@@ -8548,9 +8548,9 @@
       "teamName": "",
       "status": "ok",
       "jForm": [
-        null,
+        "sanctioned",
         2,
-        null,
+        "injured",
         2,
         6
       ],
@@ -8586,7 +8586,7 @@
       "playedHome": 12,
       "playedAway": 8,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         0,
         null,
@@ -8730,9 +8730,9 @@
       "jForm": [
         null,
         null,
-        null,
-        null,
-        null
+        "doubt",
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -8748,8 +8748,8 @@
       "teamName": "",
       "status": "ok",
       "jForm": [
-        null,
-        null,
+        "sanctioned",
+        "sanctioned",
         -3,
         1,
         null
@@ -8786,11 +8786,11 @@
       "playedHome": 11,
       "playedAway": 9,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
         4,
         3,
-        null,
+        "sanctioned",
         3,
         2
       ],
@@ -8811,7 +8811,7 @@
         4,
         5,
         3,
-        null,
+        "sanctioned",
         1
       ],
       "clausula": null
@@ -8846,7 +8846,7 @@
       "playedHome": 13,
       "playedAway": 11,
       "teamName": "",
-      "status": "ok",
+      "status": "sanctioned",
       "jForm": [
         6,
         10,
@@ -8988,7 +8988,7 @@
       "teamName": "",
       "status": "ok",
       "jForm": [
-        null,
+        "sanctioned",
         0,
         3,
         3,
@@ -9010,9 +9010,9 @@
       "jForm": [
         null,
         null,
-        null,
-        null,
-        null
+        "doubt",
+        "injured",
+        "doubt"
       ],
       "clausula": null
     },
@@ -9046,12 +9046,12 @@
       "playedHome": 9,
       "playedAway": 9,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         3,
-        null,
-        null,
-        null,
+        "sanctioned",
+        "sanctioned",
+        "sanctioned",
         1
       ],
       "clausula": null
@@ -9066,13 +9066,13 @@
       "playedHome": 3,
       "playedAway": 4,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "injured",
+        "injured",
+        "injured",
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -9112,7 +9112,7 @@
         null,
         2,
         3,
-        null
+        "sanctioned"
       ],
       "clausula": null
     },
@@ -9132,7 +9132,7 @@
         4,
         2,
         3,
-        null
+        "sanctioned"
       ],
       "clausula": null
     },
@@ -9146,13 +9146,13 @@
       "playedHome": 0,
       "playedAway": 0,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "injured",
+        "injured",
+        "injured",
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -9166,9 +9166,9 @@
       "playedHome": 9,
       "playedAway": 7,
       "teamName": "",
-      "status": "ok",
+      "status": "sanctioned",
       "jForm": [
-        null,
+        "sanctioned",
         -2,
         null,
         null,
@@ -9186,7 +9186,7 @@
       "playedHome": 10,
       "playedAway": 8,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         5,
         7,
@@ -9228,7 +9228,7 @@
       "teamName": "",
       "status": "ok",
       "jForm": [
-        null,
+        "sanctioned",
         -1,
         3,
         3,
@@ -9331,7 +9331,7 @@
         -1,
         6,
         null,
-        null,
+        "injured",
         6
       ],
       "clausula": null
@@ -9389,7 +9389,7 @@
       "status": "ok",
       "jForm": [
         2,
-        null,
+        "sanctioned",
         3,
         null,
         null
@@ -9486,7 +9486,7 @@
       "playedHome": 13,
       "playedAway": 13,
       "teamName": "",
-      "status": "ok",
+      "status": "sanctioned",
       "jForm": [
         4,
         1,
@@ -9566,13 +9566,13 @@
       "playedHome": 5,
       "playedAway": 2,
       "teamName": "",
-      "status": "ok",
+      "status": "doubt",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "doubt",
+        "injured",
+        "injured",
+        "doubt",
+        "injured"
       ],
       "clausula": null
     },
@@ -9586,7 +9586,7 @@
       "playedHome": 10,
       "playedAway": 9,
       "teamName": "",
-      "status": "ok",
+      "status": "sanctioned",
       "jForm": [
         3,
         3,
@@ -9606,10 +9606,10 @@
       "playedHome": 10,
       "playedAway": 9,
       "teamName": "",
-      "status": "ok",
+      "status": "doubt",
       "jForm": [
-        null,
-        null,
+        "doubt",
+        "injured",
         null,
         2,
         null
@@ -9688,7 +9688,7 @@
       "teamName": "",
       "status": "ok",
       "jForm": [
-        null,
+        "sanctioned",
         -3,
         null,
         2,
@@ -9706,7 +9706,7 @@
       "playedHome": 10,
       "playedAway": 12,
       "teamName": "",
-      "status": "ok",
+      "status": "sanctioned",
       "jForm": [
         -7,
         3,
@@ -9771,8 +9771,8 @@
         3,
         8,
         6,
-        null,
-        null
+        "injured",
+        "doubt"
       ],
       "clausula": null
     },
@@ -9790,8 +9790,8 @@
       "jForm": [
         -1,
         3,
-        null,
-        null,
+        "injured",
+        "doubt",
         2
       ],
       "clausula": null
@@ -9806,11 +9806,11 @@
       "playedHome": 10,
       "playedAway": 11,
       "teamName": "",
-      "status": "ok",
+      "status": "doubt",
       "jForm": [
-        null,
-        null,
-        null,
+        "doubt",
+        "doubt",
+        "injured",
         2,
         5
       ],
@@ -9826,13 +9826,13 @@
       "playedHome": 5,
       "playedAway": 3,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "injured",
+        "injured",
+        "injured",
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -9846,7 +9846,7 @@
       "playedHome": 11,
       "playedAway": 13,
       "teamName": "",
-      "status": "ok",
+      "status": "warned",
       "jForm": [
         2,
         9,
@@ -9866,13 +9866,13 @@
       "playedHome": 6,
       "playedAway": 3,
       "teamName": "",
-      "status": "ok",
+      "status": "injured",
       "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
+        "injured",
+        "injured",
+        "injured",
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -9969,10 +9969,10 @@
       "status": "ok",
       "jForm": [
         20,
-        null,
-        null,
+        "injured",
+        "injured",
         -1,
-        null
+        "doubt"
       ],
       "clausula": null
     },
@@ -10050,8 +10050,8 @@
       "jForm": [
         3,
         6,
-        null,
-        null,
+        "injured",
+        "injured",
         5
       ],
       "clausula": null
@@ -10106,7 +10106,7 @@
       "playedHome": 7,
       "playedAway": 4,
       "teamName": "",
-      "status": "ok",
+      "status": "doubt",
       "jForm": [
         2,
         4,
@@ -10186,9 +10186,9 @@
       "playedHome": 1,
       "playedAway": 4,
       "teamName": "",
-      "status": "ok",
+      "status": "doubt",
       "jForm": [
-        null,
+        "doubt",
         3,
         null,
         3,
@@ -10317,13 +10317,13 @@
       "playedHome": 4,
       "playedAway": 2,
       "teamName": "",
-      "status": "ok",
+      "status": "doubt",
       "jForm": [
-        null,
+        "doubt",
         3,
         null,
         4,
-        null
+        "doubt"
       ],
       "clausula": null
     },
@@ -10499,8 +10499,8 @@
       "teamName": "",
       "status": "ok",
       "jForm": [
-        null,
-        null,
+        "doubt",
+        "doubt",
         2,
         3,
         3
@@ -10580,10 +10580,10 @@
       "status": "ok",
       "jForm": [
         null,
-        null,
-        null,
-        null,
-        null
+        "doubt",
+        "injured",
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -10702,8 +10702,8 @@
         null,
         null,
         null,
-        null,
-        null
+        "injured",
+        "injured"
       ],
       "clausula": null
     },
@@ -10762,8 +10762,8 @@
         2,
         null,
         2,
-        null,
-        null
+        "doubt",
+        "doubt"
       ],
       "clausula": null
     },
@@ -10797,7 +10797,7 @@
       "playedHome": 0,
       "playedAway": 1,
       "teamName": "",
-      "status": "ok",
+      "status": "unknown",
       "jForm": [
         0,
         null,
@@ -10817,7 +10817,7 @@
       "playedHome": 0,
       "playedAway": 1,
       "teamName": "",
-      "status": "ok",
+      "status": "unknown",
       "jForm": [
         2,
         null,
@@ -10842,1354 +10842,9 @@
       "clausula": null
     }
   ],
-  "league": {
-    "id": 44700,
-    "name": "TOMAQUET",
-    "type": "premium",
-    "mode": "league",
-    "marketMode": "normal",
-    "scoreID": 5,
-    "icon": "i/l/44700.png",
-    "cover": "",
-    "created": 1440985436,
-    "competition": "la-liga",
-    "settings": {
-      "description": ""
-    },
-    "tournaments": [
-      {
-        "id": 130600,
-        "name": "Sa Capritxosa Copa",
-        "icon": "i/to/130600.png",
-        "activeRound": {
-          "index": 8,
-          "type": "quarterFinal",
-          "leg": "home"
-        }
-      }
-    ],
-    "standings": [
-      {
-        "id": 8068427,
-        "name": "Albertini",
-        "icon": "i/u/8068427.png",
-        "points": 1497,
-        "lastPositions": [
-          3,
-          2,
-          2,
-          4,
-          12
-        ],
-        "teamSize": 16,
-        "teamValue": 94610000,
-        "teamValueInc": -40000,
-        "position": 1,
-        "role": ""
-      },
-      {
-        "id": 6552586,
-        "name": "LeMola Team",
-        "icon": "i/u/6552586.png",
-        "role": "manager",
-        "points": 1431,
-        "lastPositions": [
-          1,
-          11,
-          14,
-          6,
-          3
-        ],
-        "teamSize": 18,
-        "teamValue": 98870000,
-        "teamValueInc": 630000,
-        "lastTrophy": {
-          "type": "league",
-          "position": 2,
-          "season": "Temporada 2024/2025"
-        },
-        "position": 2
-      },
-      {
-        "id": 6541195,
-        "name": "🦊",
-        "icon": "i/u/6541195.png?v=17",
-        "role": "manager",
-        "points": 1319,
-        "lastPositions": [
-          13,
-          1,
-          6,
-          7,
-          11
-        ],
-        "teamSize": 19,
-        "teamValue": 75040000,
-        "teamValueInc": 420000,
-        "position": 3
-      },
-      {
-        "id": 8070044,
-        "name": "CA CABA JUNIORS",
-        "icon": "i/u/8070044.png?v=63",
-        "points": 1289,
-        "lastPositions": [
-          14,
-          8,
-          1,
-          14,
-          2
-        ],
-        "teamSize": 17,
-        "teamValue": 82540000,
-        "teamValueInc": 110000,
-        "lastTrophy": {
-          "type": "league",
-          "position": 3,
-          "season": "Temporada 2024/2025"
-        },
-        "position": 4,
-        "role": ""
-      },
-      {
-        "id": 8068002,
-        "name": "Soulands Rangers",
-        "icon": "i/u/8068002.png?v=69",
-        "points": 1288,
-        "lastPositions": [
-          11,
-          12,
-          7,
-          10,
-          5
-        ],
-        "teamSize": 18,
-        "teamValue": 106410000,
-        "teamValueInc": -130000,
-        "position": 5,
-        "role": ""
-      },
-      {
-        "id": 148051,
-        "name": "Zaza Pachulia",
-        "icon": "i/u/148051.png?v=39",
-        "role": "manager",
-        "points": 1273,
-        "lastPositions": [
-          2,
-          3,
-          13,
-          1,
-          9
-        ],
-        "teamSize": 14,
-        "teamValue": 89760000,
-        "teamValueInc": 610000,
-        "lastTrophy": {
-          "type": "league",
-          "position": 1,
-          "season": "Temporada 2024/2025"
-        },
-        "position": 6
-      },
-      {
-        "id": 12697101,
-        "name": "INDOMABLE FC",
-        "icon": "i/u/11757390.png",
-        "points": 1247,
-        "lastPositions": [
-          5,
-          6,
-          4,
-          11,
-          4
-        ],
-        "teamSize": 16,
-        "teamValue": 81630000,
-        "teamValueInc": 230000,
-        "position": 7,
-        "role": ""
-      },
-      {
-        "id": 12696491,
-        "name": "NACECH1",
-        "icon": "https://graph.facebook.com/10235185447969563/picture?height=300&width=300",
-        "points": 1237,
-        "lastPositions": [
-          9,
-          9,
-          5,
-          2,
-          1
-        ],
-        "teamSize": 13,
-        "teamValue": 53750000,
-        "teamValueInc": -60000,
-        "position": 8,
-        "role": ""
-      },
-      {
-        "id": 3928497,
-        "name": "The Black Team",
-        "icon": "i/u/3928497.png",
-        "role": "manager",
-        "points": 1161,
-        "lastPositions": [
-          4,
-          10,
-          8,
-          12,
-          8
-        ],
-        "teamSize": 19,
-        "teamValue": 46850000,
-        "teamValueInc": 220000,
-        "position": 9
-      },
-      {
-        "id": 11520975,
-        "name": "Morankus FC",
-        "icon": "i/u/11520975.png?v=81",
-        "points": 1124,
-        "lastPositions": [
-          12,
-          5,
-          11,
-          8,
-          6
-        ],
-        "teamSize": 16,
-        "teamValue": 47050000,
-        "teamValueInc": 30000,
-        "position": 10,
-        "role": ""
-      },
-      {
-        "id": 12696899,
-        "name": "CIGALERU",
-        "icon": "i/u/12696899.png",
-        "points": 1119,
-        "lastPositions": [
-          8,
-          14,
-          10,
-          5,
-          14
-        ],
-        "teamSize": 13,
-        "teamValue": 54600000,
-        "teamValueInc": 100000,
-        "position": 11,
-        "role": ""
-      },
-      {
-        "id": 12696599,
-        "name": "Trileros FC",
-        "icon": "i/u/12696599.png",
-        "points": 1106,
-        "lastPositions": [
-          6,
-          4,
-          12,
-          3,
-          10
-        ],
-        "teamSize": 11,
-        "teamValue": 42040000,
-        "teamValueInc": 90000,
-        "position": 12,
-        "role": ""
-      },
-      {
-        "id": 12713493,
-        "name": "Tata Martini",
-        "icon": "i/u/12713493.png",
-        "points": 1088,
-        "lastPositions": [
-          7,
-          13,
-          9,
-          9,
-          7
-        ],
-        "teamSize": 17,
-        "teamValue": 55830000,
-        "teamValueInc": 210000,
-        "lastTrophy": {
-          "type": "league",
-          "position": 3,
-          "season": "Temporada 2023/2024"
-        },
-        "position": 13,
-        "role": ""
-      },
-      {
-        "id": 11521196,
-        "name": "Hufflepuff 🍋",
-        "icon": "i/u/11521196.png?v=57",
-        "points": 1046,
-        "lastPositions": [
-          10,
-          7,
-          3,
-          13,
-          13
-        ],
-        "teamSize": 17,
-        "teamValue": 53650000,
-        "teamValueInc": 10000,
-        "position": 14,
-        "role": ""
-      }
-    ]
-  },
-  "allTeams": [
-    {
-      "id": 8068427,
-      "name": "Albertini",
-      "manager": "Albertini",
-      "points": 1497,
-      "value": 94610000,
-      "players": []
-    },
-    {
-      "id": 6552586,
-      "name": "LeMola Team",
-      "manager": "LeMola Team",
-      "points": 1431,
-      "value": 98870000,
-      "players": []
-    },
-    {
-      "id": 6541195,
-      "name": "🦊",
-      "manager": "🦊",
-      "points": 1319,
-      "value": 75040000,
-      "players": []
-    },
-    {
-      "id": 8070044,
-      "name": "CA CABA JUNIORS",
-      "manager": "CA CABA JUNIORS",
-      "points": 1289,
-      "value": 82540000,
-      "players": []
-    },
-    {
-      "id": 8068002,
-      "name": "Soulands Rangers",
-      "manager": "Soulands Rangers",
-      "points": 1288,
-      "value": 106410000,
-      "players": []
-    },
-    {
-      "id": 148051,
-      "name": "Zaza Pachulia",
-      "manager": "Zaza Pachulia",
-      "points": 1273,
-      "value": 89760000,
-      "players": []
-    },
-    {
-      "id": 12697101,
-      "name": "INDOMABLE FC",
-      "manager": "INDOMABLE FC",
-      "points": 1247,
-      "value": 81630000,
-      "players": []
-    },
-    {
-      "id": 12696491,
-      "name": "NACECH1",
-      "manager": "NACECH1",
-      "points": 1237,
-      "value": 53750000,
-      "players": []
-    },
-    {
-      "id": 3928497,
-      "name": "The Black Team",
-      "manager": "The Black Team",
-      "points": 1161,
-      "value": 46850000,
-      "players": []
-    },
-    {
-      "id": 11520975,
-      "name": "Morankus FC",
-      "manager": "Morankus FC",
-      "points": 1124,
-      "value": 47050000,
-      "players": []
-    },
-    {
-      "id": 12696899,
-      "name": "CIGALERU",
-      "manager": "CIGALERU",
-      "points": 1119,
-      "value": 54600000,
-      "players": []
-    },
-    {
-      "id": 12696599,
-      "name": "Trileros FC",
-      "manager": "Trileros FC",
-      "points": 1106,
-      "value": 42040000,
-      "players": []
-    },
-    {
-      "id": 12713493,
-      "name": "Tata Martini",
-      "manager": "Tata Martini",
-      "points": 1088,
-      "value": 55830000,
-      "players": []
-    },
-    {
-      "id": 11521196,
-      "name": "Hufflepuff 🍋",
-      "manager": "Hufflepuff 🍋",
-      "points": 1046,
-      "value": 53650000,
-      "players": []
-    }
-  ],
-  "myTeam": {
-    "teamId": 6541195,
-    "name": "🦊",
-    "points": 1319,
-    "balance": 2984840,
-    "lineup": {
-      "type": "3-5-2",
-      "date": 1773272804,
-      "playersID": [
-        17021,
-        10155,
-        21068,
-        26276,
-        6837,
-        38867,
-        39736,
-        25127,
-        39885,
-        26271,
-        37451
-      ],
-      "reservesID": [
-        null,
-        1908,
-        10158,
-        38216
-      ]
-    },
-    "players": [
-      {
-        "id": 6837,
-        "buyPrice": 8055000,
-        "clause": 12082500,
-        "invested": 0,
-        "buyDate": 1772905346
-      },
-      {
-        "id": 21,
-        "buyPrice": 522310,
-        "clause": 522310000000,
-        "invested": 0,
-        "buyDate": 1773295445
-      },
-      {
-        "id": 1908,
-        "buyPrice": 2235666,
-        "clause": 3353499,
-        "invested": 0,
-        "buyDate": 1773209088
-      },
-      {
-        "id": 10155,
-        "buyPrice": 1875666,
-        "clause": 6225000,
-        "invested": 1000000,
-        "buyDate": 1770616993
-      },
-      {
-        "id": 10158,
-        "buyPrice": 300000,
-        "clause": 300000000000,
-        "invested": 0,
-        "buyDate": 1773209089
-      },
-      {
-        "id": 17021,
-        "buyPrice": 4620000,
-        "clause": 6930000,
-        "invested": 0,
-        "buyDate": 1765470211
-      },
-      {
-        "id": 21068,
-        "buyPrice": 1725333,
-        "clause": 2587999,
-        "invested": 0,
-        "buyDate": 1773036393
-      },
-      {
-        "id": 25127,
-        "buyPrice": 18852333,
-        "clause": 28278499,
-        "invested": 0,
-        "buyDate": 1771480952
-      },
-      {
-        "id": 26271,
-        "buyPrice": 54818505,
-        "clause": 82227757,
-        "invested": 0,
-        "buyDate": 1770191798
-      },
-      {
-        "id": 26276,
-        "buyPrice": 6600000,
-        "clause": 10950000,
-        "invested": 700000,
-        "buyDate": 1765459975
-      },
-      {
-        "id": 26676,
-        "buyPrice": 253666,
-        "clause": 253666000000,
-        "invested": 0,
-        "buyDate": 1772950164
-      },
-      {
-        "id": 37451,
-        "buyPrice": 1888955,
-        "clause": 12195000,
-        "invested": 4300000,
-        "buyDate": 1762841122
-      },
-      {
-        "id": 38216,
-        "buyPrice": 620000,
-        "clause": 620000000000,
-        "invested": 0,
-        "buyDate": 1771912934
-      },
-      {
-        "id": 38245,
-        "buyPrice": 250000,
-        "clause": 250000000000,
-        "invested": 0,
-        "buyDate": 1773295445
-      },
-      {
-        "id": 38867,
-        "buyPrice": 10072222,
-        "clause": 24108333,
-        "invested": 6000000,
-        "buyDate": 1769493971
-      },
-      {
-        "id": 38964,
-        "buyPrice": 1210000,
-        "clause": 1815000,
-        "invested": 0,
-        "buyDate": 1773295445
-      },
-      {
-        "id": 39327,
-        "buyPrice": 151236,
-        "clause": 151236000000,
-        "invested": 0,
-        "buyDate": 1770357975
-      },
-      {
-        "id": 39736,
-        "buyPrice": 151234,
-        "clause": 151234000000,
-        "invested": 0,
-        "buyDate": 1771826834
-      },
-      {
-        "id": 39885,
-        "buyPrice": 162532,
-        "clause": 280000000000,
-        "invested": 0,
-        "buyDate": 1770616993
-      }
-    ],
-    "market": [
-      {
-        "playerID": 26676,
-        "price": 250000,
-        "type": "sale",
-        "until": 1773385957
-      },
-      {
-        "playerID": 39327,
-        "price": 150000,
-        "type": "sale",
-        "until": 1773385964
-      }
-    ]
-  },
-  "leagueEnBas": {
-    "id": 1248640,
-    "name": "Lliga Bas Promesas",
-    "type": "premium",
-    "mode": "league",
-    "marketMode": "normal",
-    "scoreID": 5,
-    "icon": "icons/1.png",
-    "cover": "",
-    "created": 1626898315,
-    "competition": "la-liga",
-    "settings": {
-      "description": ""
-    },
-    "tournaments": [
-      {
-        "id": 130069,
-        "name": "Chempiooons",
-        "icon": "img/tournament.png",
-        "activeRound": {
-          "index": 9,
-          "type": "league",
-          "leg": "unique"
-        }
-      }
-    ],
-    "standings": [
-      {
-        "id": 9890450,
-        "name": "MarK Lenders",
-        "icon": "icons/34.png",
-        "points": 1307,
-        "lastPositions": [
-          3,
-          8,
-          8,
-          10,
-          1
-        ],
-        "teamSize": 16,
-        "teamValue": 71820000,
-        "teamValueInc": 300000,
-        "lastTrophy": {
-          "type": "league",
-          "position": 1,
-          "season": "Temporada 2024/2025"
-        },
-        "position": 1,
-        "role": ""
-      },
-      {
-        "id": 6588130,
-        "name": "The GOAT club",
-        "icon": "i/u/6588130.png?v=12",
-        "points": 1240,
-        "lastPositions": [
-          10,
-          1,
-          2,
-          1,
-          9
-        ],
-        "teamSize": 13,
-        "teamValue": 98620000,
-        "teamValueInc": 230000,
-        "position": 2,
-        "positionInc": 1,
-        "role": ""
-      },
-      {
-        "id": 6579505,
-        "name": "Xevi borrat",
-        "icon": "i/u/6579505.png",
-        "points": 1231,
-        "lastPositions": [
-          17,
-          14,
-          4,
-          3,
-          12
-        ],
-        "teamSize": 19,
-        "teamValue": 82010000,
-        "teamValueInc": 310000,
-        "position": 3,
-        "positionInc": -1,
-        "role": ""
-      },
-      {
-        "id": 11504267,
-        "name": "🦊",
-        "icon": "i/u/11504267.png",
-        "role": "manager",
-        "points": 1214,
-        "lastPositions": [
-          6,
-          12,
-          9,
-          2,
-          2
-        ],
-        "teamSize": 19,
-        "teamValue": 87900000,
-        "teamValueInc": -60000,
-        "position": 4
-      },
-      {
-        "id": 6579402,
-        "name": "Valors FC",
-        "icon": "icons/7.png",
-        "points": 1200,
-        "lastPositions": [
-          5,
-          18,
-          14,
-          13,
-          16
-        ],
-        "teamSize": 15,
-        "teamValue": 56910000,
-        "teamValueInc": 90000,
-        "position": 5,
-        "role": ""
-      },
-      {
-        "id": 6580423,
-        "name": "FC Borça",
-        "icon": "i/t/3.png",
-        "points": 1168,
-        "lastPositions": [
-          1,
-          11,
-          19,
-          7,
-          15
-        ],
-        "teamSize": 17,
-        "teamValue": 67680000,
-        "teamValueInc": 50000,
-        "position": 6,
-        "positionInc": 1,
-        "role": ""
-      },
-      {
-        "id": 6578885,
-        "name": "Norimaki  FC",
-        "icon": "icons/41.png",
-        "role": "manager",
-        "points": 1160,
-        "lastPositions": [
-          9,
-          4,
-          11,
-          11,
-          7
-        ],
-        "teamSize": 14,
-        "teamValue": 67460000,
-        "teamValueInc": 190000,
-        "position": 7,
-        "positionInc": -1
-      },
-      {
-        "id": 7817228,
-        "name": "Petraques",
-        "icon": "i/u/7817228.png",
-        "points": 1112,
-        "lastPositions": [
-          16,
-          5,
-          1,
-          16,
-          19
-        ],
-        "teamSize": 17,
-        "teamValue": 57580000,
-        "teamValueInc": 170000,
-        "position": 8,
-        "role": ""
-      },
-      {
-        "id": 6579540,
-        "name": "Aiveen Teaam",
-        "icon": "i/u/6579540.png?v=63",
-        "role": "manager",
-        "points": 1087,
-        "lastPositions": [
-          18,
-          17,
-          5,
-          6,
-          13
-        ],
-        "teamSize": 15,
-        "teamValue": 53950000,
-        "teamValueInc": -20000,
-        "position": 9
-      },
-      {
-        "id": 6586225,
-        "name": "Sergi Sala Duran",
-        "icon": "https://graph.facebook.com/10156583054878679/picture?height=300&width=300",
-        "points": 1061,
-        "lastPositions": [
-          12,
-          7,
-          12,
-          8,
-          14
-        ],
-        "teamSize": 14,
-        "teamValue": 63560000,
-        "teamValueInc": -130000,
-        "position": 10,
-        "role": ""
-      },
-      {
-        "id": 6579283,
-        "name": "Fiorenzola",
-        "icon": "i/u/6579283.png?v=33",
-        "points": 1042,
-        "lastPositions": [
-          14,
-          16,
-          10,
-          5,
-          5
-        ],
-        "teamSize": 13,
-        "teamValue": 56280000,
-        "teamValueInc": 350000,
-        "position": 11,
-        "role": ""
-      },
-      {
-        "id": 6580389,
-        "name": "Kings Team",
-        "icon": "icons/31.png",
-        "points": 1024,
-        "lastPositions": [
-          19,
-          6,
-          17,
-          14,
-          6
-        ],
-        "teamSize": 16,
-        "teamValue": 28280000,
-        "teamValueInc": 50000,
-        "lastTrophy": {
-          "type": "league",
-          "position": -1,
-          "season": "Temporada 2024/2025"
-        },
-        "position": 12,
-        "role": ""
-      },
-      {
-        "id": 6580386,
-        "name": "Lamine i els 7 nans 👯‍♀️",
-        "icon": "i/u/6580386.png?v=10",
-        "points": 1023,
-        "lastPositions": [
-          4,
-          10,
-          16,
-          12,
-          4
-        ],
-        "teamSize": 13,
-        "teamValue": 38560000,
-        "teamValueInc": 140000,
-        "lastTrophy": {
-          "type": "league",
-          "position": 2,
-          "season": "Temporada 2024/2025"
-        },
-        "position": 13,
-        "role": ""
-      },
-      {
-        "id": 9890540,
-        "name": "UE Trincadors",
-        "points": 1006,
-        "lastPositions": [
-          8,
-          15,
-          3,
-          9,
-          18
-        ],
-        "teamSize": 14,
-        "teamValue": 47960000,
-        "teamValueInc": 260000,
-        "lastTrophy": {
-          "type": "league",
-          "position": 3,
-          "season": "Temporada 2024/2025"
-        },
-        "position": 14,
-        "positionInc": 1,
-        "role": ""
-      },
-      {
-        "id": 6593096,
-        "name": "Janwandowski",
-        "icon": "i/u/6593096.png",
-        "points": 982,
-        "lastPositions": [
-          20,
-          3,
-          6,
-          17,
-          10
-        ],
-        "teamSize": 17,
-        "teamValue": 33330000,
-        "teamValueInc": -180000,
-        "position": 15,
-        "positionInc": -1,
-        "role": ""
-      },
-      {
-        "id": 6579280,
-        "name": "Sant Pere Atlètic",
-        "icon": "i/u/6579280.png?v=22",
-        "points": 982,
-        "lastPositions": [
-          11,
-          20,
-          20,
-          4,
-          17
-        ],
-        "teamSize": 13,
-        "teamValue": 36140000,
-        "teamValueInc": 40000,
-        "position": 16,
-        "role": ""
-      },
-      {
-        "id": 6579330,
-        "name": "Mindundis",
-        "icon": "i/u/6579330.png?v=66",
-        "points": 953,
-        "lastPositions": [
-          7,
-          9,
-          15,
-          18,
-          8
-        ],
-        "teamSize": 17,
-        "teamValue": 46250000,
-        "teamValueInc": 270000,
-        "position": 17,
-        "role": ""
-      },
-      {
-        "id": 6586257,
-        "name": "Aquest any he trepitjat merda !!",
-        "icon": "i/u/6586257.png",
-        "points": 952,
-        "lastPositions": [
-          2,
-          13,
-          7,
-          19,
-          11
-        ],
-        "teamSize": 18,
-        "teamValue": 37800000,
-        "teamValueInc": 320000,
-        "position": 18,
-        "positionInc": 1,
-        "role": ""
-      },
-      {
-        "id": 6585052,
-        "name": "Tots som Olost",
-        "icon": "i/u/6585052.png?v=69",
-        "points": 932,
-        "lastPositions": [
-          13,
-          19,
-          18,
-          20,
-          20
-        ],
-        "teamSize": 15,
-        "teamValue": 43430000,
-        "teamValueInc": 0,
-        "position": 19,
-        "positionInc": -1,
-        "role": ""
-      },
-      {
-        "id": 9897660,
-        "name": "Eric Duran",
-        "points": 929,
-        "lastPositions": [
-          15,
-          2,
-          13,
-          15,
-          3
-        ],
-        "teamSize": 19,
-        "teamValue": 58210000,
-        "teamValueInc": 190000,
-        "position": 20,
-        "role": ""
-      }
-    ]
-  },
-  "allTeamsEnBas": [
-    {
-      "id": 9890450,
-      "name": "MarK Lenders",
-      "manager": "MarK Lenders",
-      "points": 1307,
-      "value": 71820000,
-      "players": []
-    },
-    {
-      "id": 6588130,
-      "name": "The GOAT club",
-      "manager": "The GOAT club",
-      "points": 1240,
-      "value": 98620000,
-      "players": []
-    },
-    {
-      "id": 6579505,
-      "name": "Xevi borrat",
-      "manager": "Xevi borrat",
-      "points": 1231,
-      "value": 82010000,
-      "players": []
-    },
-    {
-      "id": 11504267,
-      "name": "🦊",
-      "manager": "🦊",
-      "points": 1214,
-      "value": 87900000,
-      "players": []
-    },
-    {
-      "id": 6579402,
-      "name": "Valors FC",
-      "manager": "Valors FC",
-      "points": 1200,
-      "value": 56910000,
-      "players": []
-    },
-    {
-      "id": 6580423,
-      "name": "FC Borça",
-      "manager": "FC Borça",
-      "points": 1168,
-      "value": 67680000,
-      "players": []
-    },
-    {
-      "id": 6578885,
-      "name": "Norimaki  FC",
-      "manager": "Norimaki  FC",
-      "points": 1160,
-      "value": 67460000,
-      "players": []
-    },
-    {
-      "id": 7817228,
-      "name": "Petraques",
-      "manager": "Petraques",
-      "points": 1112,
-      "value": 57580000,
-      "players": []
-    },
-    {
-      "id": 6579540,
-      "name": "Aiveen Teaam",
-      "manager": "Aiveen Teaam",
-      "points": 1087,
-      "value": 53950000,
-      "players": []
-    },
-    {
-      "id": 6586225,
-      "name": "Sergi Sala Duran",
-      "manager": "Sergi Sala Duran",
-      "points": 1061,
-      "value": 63560000,
-      "players": []
-    },
-    {
-      "id": 6579283,
-      "name": "Fiorenzola",
-      "manager": "Fiorenzola",
-      "points": 1042,
-      "value": 56280000,
-      "players": []
-    },
-    {
-      "id": 6580389,
-      "name": "Kings Team",
-      "manager": "Kings Team",
-      "points": 1024,
-      "value": 28280000,
-      "players": []
-    },
-    {
-      "id": 6580386,
-      "name": "Lamine i els 7 nans 👯‍♀️",
-      "manager": "Lamine i els 7 nans 👯‍♀️",
-      "points": 1023,
-      "value": 38560000,
-      "players": []
-    },
-    {
-      "id": 9890540,
-      "name": "UE Trincadors",
-      "manager": "UE Trincadors",
-      "points": 1006,
-      "value": 47960000,
-      "players": []
-    },
-    {
-      "id": 6593096,
-      "name": "Janwandowski",
-      "manager": "Janwandowski",
-      "points": 982,
-      "value": 33330000,
-      "players": []
-    },
-    {
-      "id": 6579280,
-      "name": "Sant Pere Atlètic",
-      "manager": "Sant Pere Atlètic",
-      "points": 982,
-      "value": 36140000,
-      "players": []
-    },
-    {
-      "id": 6579330,
-      "name": "Mindundis",
-      "manager": "Mindundis",
-      "points": 953,
-      "value": 46250000,
-      "players": []
-    },
-    {
-      "id": 6586257,
-      "name": "Aquest any he trepitjat merda !!",
-      "manager": "Aquest any he trepitjat merda !!",
-      "points": 952,
-      "value": 37800000,
-      "players": []
-    },
-    {
-      "id": 6585052,
-      "name": "Tots som Olost",
-      "manager": "Tots som Olost",
-      "points": 932,
-      "value": 43430000,
-      "players": []
-    },
-    {
-      "id": 9897660,
-      "name": "Eric Duran",
-      "manager": "Eric Duran",
-      "points": 929,
-      "value": 58210000,
-      "players": []
-    }
-  ],
-  "myTeamEnBas": {
-    "teamId": 11504267,
-    "name": "🦊",
-    "points": 1214,
-    "balance": 40909,
-    "lineup": {
-      "type": "4-3-3",
-      "date": 1773310730,
-      "playersID": [
-        14630,
-        32440,
-        38847,
-        17121,
-        25398,
-        29034,
-        1969,
-        38368,
-        38962,
-        35615,
-        19577
-      ]
-    },
-    "players": [
-      {
-        "id": 29034,
-        "buyPrice": 795000,
-        "clause": 0,
-        "invested": 0,
-        "buyDate": 1773310536
-      },
-      {
-        "id": 1969,
-        "buyPrice": 841233,
-        "clause": 0,
-        "invested": 0,
-        "buyDate": 1770357797
-      },
-      {
-        "id": 14630,
-        "buyPrice": 5256633,
-        "clause": 0,
-        "invested": 0,
-        "buyDate": 1754542966
-      },
-      {
-        "id": 17121,
-        "buyPrice": 312555,
-        "clause": 0,
-        "invested": 0,
-        "buyDate": 1773209125
-      },
-      {
-        "id": 19577,
-        "buyPrice": 27230011,
-        "clause": 0,
-        "invested": 0,
-        "buyDate": 1761890506
-      },
-      {
-        "id": 25398,
-        "buyPrice": 7702345,
-        "clause": 9780000,
-        "invested": 0,
-        "buyDate": 1772172158
-      },
-      {
-        "id": 26048,
-        "buyPrice": 5921000,
-        "clause": 0,
-        "invested": 0,
-        "buyDate": 1763791344
-      },
-      {
-        "id": 30628,
-        "buyPrice": 150000,
-        "clause": 0,
-        "invested": 0,
-        "buyDate": 1772258605
-      },
-      {
-        "id": 31707,
-        "buyPrice": 7658222,
-        "clause": 11745000,
-        "invested": 0,
-        "buyDate": 1770444175
-      },
-      {
-        "id": 32440,
-        "buyPrice": 7124336,
-        "clause": 0,
-        "invested": 0,
-        "buyDate": 1770876139
-      },
-      {
-        "id": 34077,
-        "buyPrice": 2125333,
-        "clause": 8400000,
-        "invested": 0,
-        "buyDate": 1770184962
-      },
-      {
-        "id": 34541,
-        "buyPrice": 380000,
-        "clause": 0,
-        "invested": 0,
-        "buyDate": 1773209125
-      },
-      {
-        "id": 35615,
-        "buyPrice": 3123455,
-        "clause": 0,
-        "invested": 0,
-        "buyDate": 1771826504
-      },
-      {
-        "id": 38368,
-        "buyPrice": 1713466,
-        "clause": 0,
-        "invested": 0,
-        "buyDate": 1772258605
-      },
-      {
-        "id": 38847,
-        "buyPrice": 1170000,
-        "clause": 0,
-        "invested": 0,
-        "buyDate": 1767593085
-      },
-      {
-        "id": 38962,
-        "buyPrice": 5923555,
-        "clause": 0,
-        "invested": 0,
-        "buyDate": 1763618623
-      },
-      {
-        "id": 39327,
-        "buyPrice": 150000,
-        "clause": 0,
-        "invested": 0,
-        "buyDate": 1771912934
-      },
-      {
-        "id": 39431,
-        "buyPrice": 161920,
-        "clause": 0,
-        "invested": 0,
-        "buyDate": 1767593084
-      },
-      {
-        "id": 39736,
-        "buyPrice": 150089,
-        "clause": 0,
-        "invested": 0,
-        "buyDate": 1771912934
-      }
-    ],
-    "market": [
-      {
-        "playerID": 25398,
-        "price": 9780000,
-        "type": "sale",
-        "until": 1773437073
-      },
-      {
-        "playerID": 31707,
-        "price": 11745000,
-        "type": "sale",
-        "until": 1773386121
-      },
-      {
-        "playerID": 34077,
-        "price": 8400000,
-        "type": "sale",
-        "until": 1773437063
-      }
-    ]
-  },
+  "league": null,
+  "allTeams": null,
+  "myTeam": null,
   "laliga": {
     "matchday": 28,
     "table": [
@@ -13229,1212 +11884,9 @@
       "srcLabel": "Jornada Perfecta"
     }
   ],
-  "playerStats": {
-    "source": "football-data",
-    "league": "LaLiga",
-    "season": "2025/26",
-    "updatedAt": "2026-03-12T10:30:38.705Z",
-    "players": [
-      {
-        "id": "3374",
-        "name": "Kylian Mbappé",
-        "team": "Real Madrid CF",
-        "position": "",
-        "nationality": "France",
-        "appearances": 23,
-        "goals": 23,
-        "assists": 4,
-        "penalties": 8,
-        "minutesPerGoal": 90
-      },
-      {
-        "id": "30059",
-        "name": "Vedat Muriqi",
-        "team": "RCD Mallorca",
-        "position": "",
-        "nationality": "Kosovo",
-        "appearances": 26,
-        "goals": 18,
-        "assists": 1,
-        "penalties": 5,
-        "minutesPerGoal": 130
-      },
-      {
-        "id": "202283",
-        "name": "Lamine Yamal",
-        "team": "FC Barcelona",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 23,
-        "goals": 14,
-        "assists": 9,
-        "penalties": 2,
-        "minutesPerGoal": 148
-      },
-      {
-        "id": "2237",
-        "name": "Ante Budimir",
-        "team": "CA Osasuna",
-        "position": "",
-        "nationality": "Croatia",
-        "appearances": 26,
-        "goals": 13,
-        "assists": 0,
-        "penalties": 4,
-        "minutesPerGoal": 180
-      },
-      {
-        "id": "33154",
-        "name": "Ferrán Torres",
-        "team": "FC Barcelona",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 25,
-        "goals": 12,
-        "assists": 2,
-        "penalties": 0,
-        "minutesPerGoal": 188
-      },
-      {
-        "id": "32056",
-        "name": "Borja Iglesias",
-        "team": "RC Celta de Vigo",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 26,
-        "goals": 12,
-        "assists": 1,
-        "penalties": 3,
-        "minutesPerGoal": 195
-      },
-      {
-        "id": "180137",
-        "name": "Mikel Oyarzabal",
-        "team": "Real Sociedad de Fútbol",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 24,
-        "goals": 11,
-        "assists": 3,
-        "penalties": 4,
-        "minutesPerGoal": 196
-      },
-      {
-        "id": "371",
-        "name": "Robert Lewandowski",
-        "team": "FC Barcelona",
-        "position": "",
-        "nationality": "Poland",
-        "appearances": 24,
-        "goals": 11,
-        "assists": 1,
-        "penalties": 1,
-        "minutesPerGoal": 196
-      },
-      {
-        "id": "133276",
-        "name": "Jorge de Frutos",
-        "team": "Rayo Vallecano de Madrid",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 25,
-        "goals": 10,
-        "assists": 1,
-        "penalties": 1,
-        "minutesPerGoal": 225
-      },
-      {
-        "id": "8167",
-        "name": "Alexander Sørloth",
-        "team": "Club Atlético de Madrid",
-        "position": "",
-        "nationality": "Norway",
-        "appearances": 26,
-        "goals": 10,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 234
-      },
-      {
-        "id": "1556",
-        "name": "Vinicius Junior",
-        "team": "Real Madrid CF",
-        "position": "",
-        "nationality": "Brazil",
-        "appearances": 25,
-        "goals": 9,
-        "assists": 5,
-        "penalties": 3,
-        "minutesPerGoal": 250
-      },
-      {
-        "id": "160819",
-        "name": "Vladyslav Vanat",
-        "team": "Girona FC",
-        "position": "",
-        "nationality": "Ukraine",
-        "appearances": 24,
-        "goals": 9,
-        "assists": 1,
-        "penalties": 3,
-        "minutesPerGoal": 240
-      },
-      {
-        "id": "150533",
-        "name": "Alberto Moleiro",
-        "team": "Villarreal CF",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 27,
-        "goals": 9,
-        "assists": 4,
-        "penalties": 0,
-        "minutesPerGoal": 270
-      },
-      {
-        "id": "11113",
-        "name": "Lucas Boyé",
-        "team": "Deportivo Alavés",
-        "position": "",
-        "nationality": "Argentina",
-        "appearances": 22,
-        "goals": 9,
-        "assists": 1,
-        "penalties": 2,
-        "minutesPerGoal": 220
-      },
-      {
-        "id": "37428",
-        "name": "Raphinha",
-        "team": "FC Barcelona",
-        "position": "",
-        "nationality": "Brazil",
-        "appearances": 19,
-        "goals": 8,
-        "assists": 3,
-        "penalties": 1,
-        "minutesPerGoal": 214
-      },
-      {
-        "id": "98571",
-        "name": "Julián Álvarez",
-        "team": "Club Atlético de Madrid",
-        "position": "",
-        "nationality": "Argentina",
-        "appearances": 27,
-        "goals": 8,
-        "assists": 3,
-        "penalties": 2,
-        "minutesPerGoal": 304
-      },
-      {
-        "id": "32762",
-        "name": "Hugo Duro",
-        "team": "Valencia CF",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 26,
-        "goals": 8,
-        "assists": 0,
-        "penalties": 1,
-        "minutesPerGoal": 293
-      },
-      {
-        "id": "32415",
-        "name": "Cucho Hernández",
-        "team": "Real Betis Balompié",
-        "position": "",
-        "nationality": "Colombia",
-        "appearances": 22,
-        "goals": 8,
-        "assists": 3,
-        "penalties": 1,
-        "minutesPerGoal": 248
-      },
-      {
-        "id": "136646",
-        "name": "Georges Mikautadze",
-        "team": "Villarreal CF",
-        "position": "",
-        "nationality": "Georgia",
-        "appearances": 23,
-        "goals": 8,
-        "assists": 4,
-        "penalties": 0,
-        "minutesPerGoal": 259
-      },
-      {
-        "id": "4098",
-        "name": "Rafael Mir",
-        "team": "Elche CF",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 22,
-        "goals": 7,
-        "assists": 0,
-        "penalties": 1,
-        "minutesPerGoal": 283
-      },
-      {
-        "id": "1760",
-        "name": "André Silva",
-        "team": "Elche CF",
-        "position": "",
-        "nationality": "Portugal",
-        "appearances": 23,
-        "goals": 7,
-        "assists": 0,
-        "penalties": 1,
-        "minutesPerGoal": 296
-      },
-      {
-        "id": "82132",
-        "name": "Akor Adams",
-        "team": "Sevilla FC",
-        "position": "",
-        "nationality": "Nigeria",
-        "appearances": 22,
-        "goals": 7,
-        "assists": 3,
-        "penalties": 2,
-        "minutesPerGoal": 283
-      },
-      {
-        "id": "97085",
-        "name": "Antony",
-        "team": "Real Betis Balompié",
-        "position": "",
-        "nationality": "Brazil",
-        "appearances": 22,
-        "goals": 7,
-        "assists": 5,
-        "penalties": 0,
-        "minutesPerGoal": 283
-      },
-      {
-        "id": "32719",
-        "name": "Gerard Moreno",
-        "team": "Villarreal CF",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 14,
-        "goals": 7,
-        "assists": 0,
-        "penalties": 2,
-        "minutesPerGoal": 180
-      },
-      {
-        "id": "203439",
-        "name": "Karl Etta Eyong",
-        "team": "Levante UD",
-        "position": "",
-        "nationality": "Cameroon",
-        "appearances": 25,
-        "goals": 6,
-        "assists": 5,
-        "penalties": 0,
-        "minutesPerGoal": 375
-      },
-      {
-        "id": "32398",
-        "name": "Pere Milla",
-        "team": "RCD Espanyol de Barcelona",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 25,
-        "goals": 6,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 375
-      },
-      {
-        "id": "113175",
-        "name": "Tajon Buchanan",
-        "team": "Villarreal CF",
-        "position": "",
-        "nationality": "Canada",
-        "appearances": 26,
-        "goals": 6,
-        "assists": 1,
-        "penalties": 0,
-        "minutesPerGoal": 390
-      },
-      {
-        "id": "33117",
-        "name": "Pablo Fornals",
-        "team": "Real Betis Balompié",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 27,
-        "goals": 6,
-        "assists": 4,
-        "penalties": 0,
-        "minutesPerGoal": 405
-      },
-      {
-        "id": "33358",
-        "name": "Kike García",
-        "team": "RCD Espanyol de Barcelona",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 27,
-        "goals": 6,
-        "assists": 1,
-        "penalties": 1,
-        "minutesPerGoal": 405
-      },
-      {
-        "id": "23132",
-        "name": "Dani Olmo",
-        "team": "FC Barcelona",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 22,
-        "goals": 6,
-        "assists": 7,
-        "penalties": 0,
-        "minutesPerGoal": 330
-      },
-      {
-        "id": "114",
-        "name": "Antoine Griezmann",
-        "team": "Club Atlético de Madrid",
-        "position": "",
-        "nationality": "France",
-        "appearances": 25,
-        "goals": 6,
-        "assists": 1,
-        "penalties": 0,
-        "minutesPerGoal": 375
-      },
-      {
-        "id": "81565",
-        "name": "Gorka Guruzeta",
-        "team": "Athletic Club",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 26,
-        "goals": 6,
-        "assists": 1,
-        "penalties": 1,
-        "minutesPerGoal": 390
-      },
-      {
-        "id": "3259",
-        "name": "Gonçalo Guedes",
-        "team": "Real Sociedad de Fútbol",
-        "position": "",
-        "nationality": "Portugal",
-        "appearances": 27,
-        "goals": 6,
-        "assists": 4,
-        "penalties": 0,
-        "minutesPerGoal": 405
-      },
-      {
-        "id": "11733",
-        "name": "Toni Martínez",
-        "team": "Deportivo Alavés",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 27,
-        "goals": 5,
-        "assists": 2,
-        "penalties": 0,
-        "minutesPerGoal": 486
-      },
-      {
-        "id": "101870",
-        "name": "Roberto Navarro",
-        "team": "Athletic Club",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 24,
-        "goals": 5,
-        "assists": 1,
-        "penalties": 0,
-        "minutesPerGoal": 432
-      },
-      {
-        "id": "213404",
-        "name": "Carlos Vicente",
-        "team": "Deportivo Alavés",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 21,
-        "goals": 5,
-        "assists": 0,
-        "penalties": 3,
-        "minutesPerGoal": 378
-      },
-      {
-        "id": "186564",
-        "name": "Carlos Romero",
-        "team": "RCD Espanyol de Barcelona",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 25,
-        "goals": 5,
-        "assists": 1,
-        "penalties": 0,
-        "minutesPerGoal": 450
-      },
-      {
-        "id": "130324",
-        "name": "Raúl",
-        "team": "CA Osasuna",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 27,
-        "goals": 5,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 486
-      },
-      {
-        "id": "214533",
-        "name": "Fermín López",
-        "team": "FC Barcelona",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 22,
-        "goals": 5,
-        "assists": 7,
-        "penalties": 0,
-        "minutesPerGoal": 396
-      },
-      {
-        "id": "180218",
-        "name": "Roberto Fernández",
-        "team": "RCD Espanyol de Barcelona",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 27,
-        "goals": 5,
-        "assists": 1,
-        "penalties": 1,
-        "minutesPerGoal": 486
-      },
-      {
-        "id": "32758",
-        "name": "Mauro Arambarri",
-        "team": "Getafe CF",
-        "position": "",
-        "nationality": "Uruguay",
-        "appearances": 27,
-        "goals": 5,
-        "assists": 2,
-        "penalties": 2,
-        "minutesPerGoal": 486
-      },
-      {
-        "id": "175941",
-        "name": "Abdessamad Ezzalzouli",
-        "team": "Real Betis Balompié",
-        "position": "",
-        "nationality": "Morocco",
-        "appearances": 18,
-        "goals": 5,
-        "assists": 5,
-        "penalties": 0,
-        "minutesPerGoal": 324
-      },
-      {
-        "id": "112678",
-        "name": "Federico Viñas",
-        "team": "Real Oviedo",
-        "position": "",
-        "nationality": "Uruguay",
-        "appearances": 23,
-        "goals": 5,
-        "assists": 1,
-        "penalties": 1,
-        "minutesPerGoal": 414
-      },
-      {
-        "id": "189369",
-        "name": "Alvaro Rodriguez",
-        "team": "Elche CF",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 26,
-        "goals": 5,
-        "assists": 4,
-        "penalties": 0,
-        "minutesPerGoal": 468
-      },
-      {
-        "id": "16173",
-        "name": "Viktor Tsyhankov",
-        "team": "Girona FC",
-        "position": "",
-        "nationality": "Ukraine",
-        "appearances": 21,
-        "goals": 5,
-        "assists": 2,
-        "penalties": 0,
-        "minutesPerGoal": 378
-      },
-      {
-        "id": "32312",
-        "name": "Álvaro García",
-        "team": "Rayo Vallecano de Madrid",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 26,
-        "goals": 4,
-        "assists": 4,
-        "penalties": 0,
-        "minutesPerGoal": 585
-      },
-      {
-        "id": "633",
-        "name": "Pape Gueye",
-        "team": "Villarreal CF",
-        "position": "",
-        "nationality": "Senegal",
-        "appearances": 22,
-        "goals": 4,
-        "assists": 2,
-        "penalties": 1,
-        "minutesPerGoal": 495
-      },
-      {
-        "id": "157135",
-        "name": "Nico Williams",
-        "team": "Athletic Club",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 19,
-        "goals": 4,
-        "assists": 3,
-        "penalties": 1,
-        "minutesPerGoal": 428
-      },
-      {
-        "id": "33045",
-        "name": "Aitor Ruibal",
-        "team": "Real Betis Balompié",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 23,
-        "goals": 4,
-        "assists": 1,
-        "penalties": 0,
-        "minutesPerGoal": 518
-      },
-      {
-        "id": "137485",
-        "name": "Germán Valera",
-        "team": "Elche CF",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 26,
-        "goals": 4,
-        "assists": 3,
-        "penalties": 0,
-        "minutesPerGoal": 585
-      },
-      {
-        "id": "156746",
-        "name": "Iván Romero",
-        "team": "Levante UD",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 26,
-        "goals": 4,
-        "assists": 2,
-        "penalties": 0,
-        "minutesPerGoal": 585
-      },
-      {
-        "id": "182319",
-        "name": "Orri Oskarsson",
-        "team": "Real Sociedad de Fútbol",
-        "position": "",
-        "nationality": "Iceland",
-        "appearances": 11,
-        "goals": 4,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 248
-      },
-      {
-        "id": "213043",
-        "name": "Isaac",
-        "team": "Sevilla FC",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 23,
-        "goals": 4,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 518
-      },
-      {
-        "id": "69",
-        "name": "Borja Mayoral",
-        "team": "Getafe CF",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 16,
-        "goals": 4,
-        "assists": 1,
-        "penalties": 0,
-        "minutesPerGoal": 360
-      },
-      {
-        "id": "33615",
-        "name": "Brais Méndez",
-        "team": "Real Sociedad de Fútbol",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 23,
-        "goals": 4,
-        "assists": 2,
-        "penalties": 1,
-        "minutesPerGoal": 518
-      },
-      {
-        "id": "16275",
-        "name": "Djibril Sow",
-        "team": "Sevilla FC",
-        "position": "",
-        "nationality": "Switzerland",
-        "appearances": 25,
-        "goals": 4,
-        "assists": 1,
-        "penalties": 0,
-        "minutesPerGoal": 563
-      },
-      {
-        "id": "273423",
-        "name": "Víctor Muñoz",
-        "team": "CA Osasuna",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 27,
-        "goals": 4,
-        "assists": 2,
-        "penalties": 0,
-        "minutesPerGoal": 608
-      },
-      {
-        "id": "140814",
-        "name": "Samuel Almeida Costa",
-        "team": "RCD Mallorca",
-        "position": "",
-        "nationality": "Portugal",
-        "appearances": 24,
-        "goals": 4,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 540
-      },
-      {
-        "id": "3331",
-        "name": "Marcus Rashford",
-        "team": "FC Barcelona",
-        "position": "",
-        "nationality": "England",
-        "appearances": 25,
-        "goals": 4,
-        "assists": 6,
-        "penalties": 0,
-        "minutesPerGoal": 563
-      },
-      {
-        "id": "3201",
-        "name": "Iago Aspas",
-        "team": "RC Celta de Vigo",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 27,
-        "goals": 4,
-        "assists": 3,
-        "penalties": 2,
-        "minutesPerGoal": 608
-      },
-      {
-        "id": "33148",
-        "name": "Carlos Soler",
-        "team": "Real Sociedad de Fútbol",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 23,
-        "goals": 4,
-        "assists": 2,
-        "penalties": 0,
-        "minutesPerGoal": 518
-      },
-      {
-        "id": "125010",
-        "name": "Jude Bellingham",
-        "team": "Real Madrid CF",
-        "position": "",
-        "nationality": "England",
-        "appearances": 17,
-        "goals": 4,
-        "assists": 3,
-        "penalties": 0,
-        "minutesPerGoal": 383
-      },
-      {
-        "id": "83406",
-        "name": "Ferran Jutglà",
-        "team": "RC Celta de Vigo",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 24,
-        "goals": 4,
-        "assists": 1,
-        "penalties": 0,
-        "minutesPerGoal": 540
-      },
-      {
-        "id": "247061",
-        "name": "Carlos Espí",
-        "team": "Levante UD",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 23,
-        "goals": 4,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 518
-      },
-      {
-        "id": "217658",
-        "name": "Gonzalo García",
-        "team": "Real Madrid CF",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 26,
-        "goals": 4,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 585
-      },
-      {
-        "id": "136349",
-        "name": "Largie Ramazani",
-        "team": "Valencia CF",
-        "position": "",
-        "nationality": "Belgium",
-        "appearances": 20,
-        "goals": 4,
-        "assists": 1,
-        "penalties": 3,
-        "minutesPerGoal": 450
-      },
-      {
-        "id": "33496",
-        "name": "Isi Palazón",
-        "team": "Rayo Vallecano de Madrid",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 25,
-        "goals": 3,
-        "assists": 2,
-        "penalties": 2,
-        "minutesPerGoal": 750
-      },
-      {
-        "id": "180061",
-        "name": "Diego López",
-        "team": "Valencia CF",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 25,
-        "goals": 3,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 750
-      },
-      {
-        "id": "249599",
-        "name": "Adri Liso",
-        "team": "Getafe CF",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 23,
-        "goals": 3,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 690
-      },
-      {
-        "id": "101182",
-        "name": "Ander Barrenetxea",
-        "team": "Real Sociedad de Fútbol",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 21,
-        "goals": 3,
-        "assists": 3,
-        "penalties": 0,
-        "minutesPerGoal": 630
-      },
-      {
-        "id": "8412",
-        "name": "Nicolas Pépé",
-        "team": "Villarreal CF",
-        "position": "",
-        "nationality": "Ivory Coast",
-        "appearances": 27,
-        "goals": 3,
-        "assists": 4,
-        "penalties": 0,
-        "minutesPerGoal": 810
-      },
-      {
-        "id": "9870",
-        "name": "Arnaut Danjuma",
-        "team": "Valencia CF",
-        "position": "",
-        "nationality": "Netherlands",
-        "appearances": 26,
-        "goals": 3,
-        "assists": 2,
-        "penalties": 0,
-        "minutesPerGoal": 780
-      },
-      {
-        "id": "171964",
-        "name": "Giuliano Simeone",
-        "team": "Club Atlético de Madrid",
-        "position": "",
-        "nationality": "Argentina",
-        "appearances": 25,
-        "goals": 3,
-        "assists": 5,
-        "penalties": 0,
-        "minutesPerGoal": 750
-      },
-      {
-        "id": "169162",
-        "name": "Arda Guler",
-        "team": "Real Madrid CF",
-        "position": "",
-        "nationality": "Turkey",
-        "appearances": 26,
-        "goals": 3,
-        "assists": 8,
-        "penalties": 0,
-        "minutesPerGoal": 780
-      },
-      {
-        "id": "21583",
-        "name": "Cédric Bakambu",
-        "team": "Real Betis Balompié",
-        "position": "",
-        "nationality": "DR Congo",
-        "appearances": 22,
-        "goals": 3,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 660
-      },
-      {
-        "id": "45680",
-        "name": "Nicolás González",
-        "team": "Club Atlético de Madrid",
-        "position": "",
-        "nationality": "Argentina",
-        "appearances": 19,
-        "goals": 3,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 570
-      },
-      {
-        "id": "156525",
-        "name": "Carlos Álvarez",
-        "team": "Levante UD",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 26,
-        "goals": 3,
-        "assists": 2,
-        "penalties": 0,
-        "minutesPerGoal": 780
-      },
-      {
-        "id": "31913",
-        "name": "Ruben Vargas",
-        "team": "Sevilla FC",
-        "position": "",
-        "nationality": "Switzerland",
-        "appearances": 13,
-        "goals": 3,
-        "assists": 4,
-        "penalties": 1,
-        "minutesPerGoal": 390
-      },
-      {
-        "id": "7911",
-        "name": "Alexis Sánchez",
-        "team": "Sevilla FC",
-        "position": "",
-        "nationality": "Chile",
-        "appearances": 20,
-        "goals": 3,
-        "assists": 1,
-        "penalties": 1,
-        "minutesPerGoal": 600
-      },
-      {
-        "id": "122511",
-        "name": "Azzedine Ounahi",
-        "team": "Girona FC",
-        "position": "",
-        "nationality": "Morocco",
-        "appearances": 13,
-        "goals": 3,
-        "assists": 2,
-        "penalties": 0,
-        "minutesPerGoal": 390
-      },
-      {
-        "id": "11040",
-        "name": "Leandro Cabrera",
-        "team": "RCD Espanyol de Barcelona",
-        "position": "",
-        "nationality": "Uruguay",
-        "appearances": 26,
-        "goals": 3,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 780
-      },
-      {
-        "id": "191053",
-        "name": "Alberto Reina",
-        "team": "Real Oviedo",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 26,
-        "goals": 3,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 780
-      },
-      {
-        "id": "79953",
-        "name": "Thiago Almada",
-        "team": "Club Atlético de Madrid",
-        "position": "",
-        "nationality": "Argentina",
-        "appearances": 22,
-        "goals": 3,
-        "assists": 1,
-        "penalties": 0,
-        "minutesPerGoal": 660
-      },
-      {
-        "id": "3171",
-        "name": "Cristhian Stuani",
-        "team": "Girona FC",
-        "position": "",
-        "nationality": "Uruguay",
-        "appearances": 17,
-        "goals": 3,
-        "assists": 0,
-        "penalties": 3,
-        "minutesPerGoal": 510
-      },
-      {
-        "id": "213263",
-        "name": "Santi Comesaña",
-        "team": "Villarreal CF",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 26,
-        "goals": 3,
-        "assists": 3,
-        "penalties": 0,
-        "minutesPerGoal": 780
-      },
-      {
-        "id": "170438",
-        "name": "Williot Swedberg",
-        "team": "RC Celta de Vigo",
-        "position": "",
-        "nationality": "Sweden",
-        "appearances": 21,
-        "goals": 3,
-        "assists": 2,
-        "penalties": 0,
-        "minutesPerGoal": 630
-      },
-      {
-        "id": "146126",
-        "name": "Ilyas Chaira",
-        "team": "Real Oviedo",
-        "position": "",
-        "nationality": "Morocco",
-        "appearances": 25,
-        "goals": 3,
-        "assists": 1,
-        "penalties": 0,
-        "minutesPerGoal": 750
-      },
-      {
-        "id": "152458",
-        "name": "Martin Satriano",
-        "team": "Getafe CF",
-        "position": "",
-        "nationality": "Uruguay",
-        "appearances": 8,
-        "goals": 3,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 240
-      },
-      {
-        "id": "180280",
-        "name": "Casals",
-        "team": "Girona FC",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 23,
-        "goals": 2,
-        "assists": 1,
-        "penalties": 0,
-        "minutesPerGoal": 1035
-      },
-      {
-        "id": "48555",
-        "name": "Takefusa Kubo",
-        "team": "Real Sociedad de Fútbol",
-        "position": "",
-        "nationality": "Japan",
-        "appearances": 18,
-        "goals": 2,
-        "assists": 3,
-        "penalties": 0,
-        "minutesPerGoal": 810
-      },
-      {
-        "id": "3216",
-        "name": "Giovani Lo Celso",
-        "team": "Real Betis Balompié",
-        "position": "",
-        "nationality": "Argentina",
-        "appearances": 19,
-        "goals": 2,
-        "assists": 2,
-        "penalties": 0,
-        "minutesPerGoal": 855
-      },
-      {
-        "id": "253001",
-        "name": "Javi Rueda",
-        "team": "RC Celta de Vigo",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 25,
-        "goals": 2,
-        "assists": 4,
-        "penalties": 0,
-        "minutesPerGoal": 1125
-      },
-      {
-        "id": "133860",
-        "name": "Pedri",
-        "team": "FC Barcelona",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 19,
-        "goals": 2,
-        "assists": 7,
-        "penalties": 0,
-        "minutesPerGoal": 855
-      },
-      {
-        "id": "81168",
-        "name": "Javi Puado",
-        "team": "RCD Espanyol de Barcelona",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 10,
-        "goals": 2,
-        "assists": 0,
-        "penalties": 1,
-        "minutesPerGoal": 450
-      },
-      {
-        "id": "126878",
-        "name": "Oihan Sancet",
-        "team": "Athletic Club",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 20,
-        "goals": 2,
-        "assists": 0,
-        "penalties": 2,
-        "minutesPerGoal": 900
-      },
-      {
-        "id": "175869",
-        "name": "Hugo Alvarez",
-        "team": "RC Celta de Vigo",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 24,
-        "goals": 2,
-        "assists": 1,
-        "penalties": 0,
-        "minutesPerGoal": 1080
-      },
-      {
-        "id": "187117",
-        "name": "Fran Perez",
-        "team": "Rayo Vallecano de Madrid",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 25,
-        "goals": 2,
-        "assists": 1,
-        "penalties": 0,
-        "minutesPerGoal": 1125
-      },
-      {
-        "id": "185105",
-        "name": "Peque",
-        "team": "Sevilla FC",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 25,
-        "goals": 2,
-        "assists": 1,
-        "penalties": 0,
-        "minutesPerGoal": 1125
-      },
-      {
-        "id": "191064",
-        "name": "Mario Martin",
-        "team": "Getafe CF",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 25,
-        "goals": 2,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 1125
-      },
-      {
-        "id": "119265",
-        "name": "Conor Gallagher",
-        "team": "Club Atlético de Madrid",
-        "position": "",
-        "nationality": "England",
-        "appearances": 19,
-        "goals": 2,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 855
-      }
-    ]
+  "sofascore": {
+    "seasonId": 77559,
+    "seasonName": "LaLiga 25/26",
+    "players": []
   }
 }
