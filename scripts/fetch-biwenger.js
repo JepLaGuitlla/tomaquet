@@ -12,9 +12,6 @@ const FD_TOKEN       = '00308a91cfc84b248611ecc22550c9de'; // football-data.org
 // Feeds RSS de noticias fantasy
 const RSS_SOURCES = [
   { id:'jp', label:'Jornada Perfecta', url:'https://www.jornadaperfecta.com/feed/' },
-  { id:'as', label:'AS Fantasy',       url:'https://fantasy.as.com/feed/' },
-  { id:'cm', label:'Comuniate',        url:'https://www.comuniate.com/feed/' },
-  { id:'rv', label:'Relevo Fantasy',   url:'https://www.relevo.com/rss/noticias/' },
 ];
 
 if (!EMAIL || !PASSWORD) {
@@ -453,44 +450,42 @@ async function fetchPlayerStats() {
 async function fetchBoard(token, liga) {
   console.log(`📋 Descargando tablón liga ${liga.id}...`);
 
-  // El tablón viene dentro del endpoint de liga con fields=*,feed
-  const res = await requestJSON({
-    hostname: 'biwenger.as.com',
-    path:     `/api/v2/league?include=all&fields=*,standings,feed`,
-    method:   'GET',
-    headers:  { ...headersForLeague(liga), 'Authorization': `Bearer ${token}`, 'x-lang': 'es' }
-  });
+  // Probar distintas variantes de include/fields
+  const attempts = [
+    `/api/v2/league?include=all&fields=*,feed`,
+    `/api/v2/league?include=all,-lastAccess&fields=*,feed,standings`,
+    `/api/v2/league?include=feed&fields=*`,
+    `/api/v2/user?fields=*,feed`,
+  ];
 
-  if (res.status !== 200) {
-    console.warn(`⚠️ No se pudo obtener tablón liga ${liga.id}. Status:`, res.status);
-    return [];
+  for (const path of attempts) {
+    const res = await requestJSON({
+      hostname: 'biwenger.as.com',
+      path,
+      method:   'GET',
+      headers:  { ...headersForLeague(liga), 'Authorization': `Bearer ${token}`, 'x-lang': 'es' }
+    });
+    const data  = res.body?.data;
+    const items = data?.feed || data?.board || data?.transfers || null;
+    if (res.status === 200 && Array.isArray(items) && items.length > 0) {
+      console.log(`✅ Tablón liga ${liga.id}: ${items.length} eventos`);
+      return items.map(ev => ({
+        id:     ev.id   || null,
+        type:   ev.type || '',
+        date:   ev.date || null,
+        player: (ev.player||ev.offer?.player||null) ? { id: (ev.player||ev.offer.player).id, name: (ev.player||ev.offer.player).name, position: (ev.player||ev.offer.player).position } : null,
+        amount: ev.amount || ev.offer?.amount || null,
+        from:   ev.from?.name || ev.offer?.from?.name || null,
+        to:     ev.to?.name   || ev.offer?.to?.name   || null,
+        extra:  ev.extra || null,
+      }));
+    }
+    const keys = Object.keys(data || res.body || {}).join(',');
+    console.log(`  ↳ ${path.split('?')[0]} (${path.split('?')[1]?.slice(0,40)}) → ${res.status} | keys: ${keys.slice(0,80)}`);
   }
 
-  const data  = res.body?.data;
-  const items = data?.feed || [];
-
-  if (!items.length) {
-    // Loguear keys disponibles para debug futuro
-    console.log(`  ↳ Liga ${liga.id} OK pero sin feed. Keys: ${Object.keys(data||{}).join(',')}`);
-    return [];
-  }
-
-  console.log(`✅ Tablón liga ${liga.id}: ${items.length} eventos`);
-  return items.map(ev => {
-    const type   = ev.type || '';
-    const player = ev.player || ev.offer?.player || ev.request?.player || null;
-    const amount = ev.amount || ev.offer?.amount || ev.request?.amount || null;
-    const from   = ev.from?.name || ev.offer?.from?.name || null;
-    const to     = ev.to?.name   || ev.offer?.to?.name   || null;
-    return {
-      id:     ev.id   || null,
-      type,
-      date:   ev.date || null,
-      player: player ? { id: player.id, name: player.name, position: player.position } : null,
-      amount, from, to,
-      extra:  ev.extra || null,
-    };
-  });
+  console.warn(`⚠️ Tablón no disponible liga ${liga.id} — endpoint no encontrado`);
+  return [];
 }
 
 // ─── MAIN ────────────────────────────────────────────────────────────────────
