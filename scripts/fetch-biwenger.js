@@ -140,7 +140,8 @@ async function fetchPlayers() {
   return arr.map(p => ({
     id:         p.id,
     name:       p.name,
-    position:   p.position,
+    position:   p.position,           // posición principal (número: 1,2,3,4)
+    position2:  p.position2 || null,  // segunda posición si multipos activa (número)
     price:      p.price          || 0,
     points:     p.points         || 0,
     trend:      p.priceIncrement || 0,
