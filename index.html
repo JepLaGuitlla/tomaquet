@@ -624,6 +624,58 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
 .board-section-tabs{display:flex;gap:4px;margin-bottom:0.75rem;}
 .board-tab{background:var(--bg3);border:none;color:var(--text3);font-size:0.65rem;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:3px;cursor:pointer;font-family:'Figtree',sans-serif;}
 .board-tab.active{background:var(--accent);color:#fff;}
+/* ── LA BOLSA ────────────────────────────────────────────────────────── */
+.bolsa-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;}
+.bolsa-grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-bottom:1.5rem;}
+@media(max-width:900px){.bolsa-grid,.bolsa-grid-3{grid-template-columns:1fr;}}
+.bolsa-card{background:var(--bg2);border:1px solid var(--border);border-radius:6px;overflow:hidden;}
+.bolsa-card-hd{padding:10px 14px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
+.bolsa-card-title{font-family:'Figtree',sans-serif;font-size:0.62rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text3);}
+.bolsa-card-title::before{content:'// ';color:var(--accent);}
+.bolsa-card-body{padding:10px;}
+/* KPI strip */
+.bolsa-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border-radius:6px;overflow:hidden;margin-bottom:1.5rem;}
+.bolsa-kpi{background:var(--bg2);padding:14px 16px;}
+.bolsa-kpi-lbl{font-family:'Figtree',sans-serif;font-size:0.52rem;color:var(--text3);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:5px;}
+.bolsa-kpi-val{font-family:'Figtree',sans-serif;font-size:1.7rem;font-weight:800;line-height:1;color:var(--text);}
+.bolsa-kpi-val.up{color:#22c55e;}.bolsa-kpi-val.dn{color:#ef4444;}.bolsa-kpi-val.accent{color:var(--accent);}
+.bolsa-kpi-sub{font-size:0.62rem;color:var(--text3);margin-top:3px;}
+/* Mercado activo */
+.mkt-row{display:flex;align-items:center;gap:0.6rem;padding:0.55rem 0.75rem;border-bottom:1px solid var(--border);font-size:0.8rem;transition:background 0.12s;cursor:pointer;}
+.mkt-row:hover{background:var(--bg3);}
+.mkt-row:last-child{border-bottom:none;}
+.mkt-pos{width:26px;height:26px;border-radius:3px;display:flex;align-items:center;justify-content:center;font-family:'Figtree',sans-serif;font-size:0.6rem;font-weight:800;color:#fff;flex-shrink:0;}
+.mkt-name{flex:1;min-width:0;}
+.mkt-player{font-family:'Figtree',sans-serif;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.mkt-meta{font-size:0.62rem;color:var(--text3);}
+.mkt-price{font-family:'Figtree',sans-serif;font-weight:700;font-size:0.82rem;white-space:nowrap;text-align:right;}
+.mkt-type-tag{font-size:0.56rem;font-weight:700;padding:2px 7px;border-radius:3px;text-transform:uppercase;letter-spacing:0.5px;white-space:nowrap;}
+.mkt-type-offer{background:#22c55e22;color:#22c55e;}
+.mkt-type-clause{background:#f9731622;color:#f97316;}
+.mkt-timer{font-size:0.6rem;color:var(--text3);white-space:nowrap;}
+/* Tendencias */
+.tend-row{display:flex;align-items:center;gap:0.6rem;padding:0.45rem 0.75rem;border-bottom:1px solid var(--border);font-size:0.78rem;}
+.tend-row:last-child{border-bottom:none;}
+.tend-bar-wrap{width:60px;height:4px;background:var(--bg3);border-radius:2px;overflow:hidden;flex-shrink:0;}
+.tend-bar{height:100%;border-radius:2px;}
+.tend-val{font-family:'Figtree',sans-serif;font-weight:700;font-size:0.78rem;text-align:right;width:72px;flex-shrink:0;}
+.tend-val.up{color:#22c55e;}.tend-val.dn{color:#ef4444;}
+/* Cartera */
+.cartera-row{display:grid;grid-template-columns:26px 1fr 90px 90px 80px;align-items:center;gap:0.6rem;padding:0.5rem 0.75rem;border-bottom:1px solid var(--border);font-size:0.78rem;}
+.cartera-row:last-child{border-bottom:none;}
+.cartera-row.cartera-hd{background:var(--bg3);font-size:0.56rem;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:1px;padding:0.4rem 0.75rem;}
+.cartera-pl{font-family:'Figtree',sans-serif;font-weight:700;font-size:0.8rem;color:var(--text);}
+.cartera-pl-sub{font-size:0.6rem;color:var(--text3);}
+.cartera-num{font-family:'Figtree',sans-serif;font-weight:700;text-align:right;}
+.cartera-num.pos{color:#22c55e;}.cartera-num.neg{color:#ef4444;}.cartera-num.neu{color:var(--text3);}
+/* Gráfico precio inline */
+.bolsa-sparkline{display:flex;align-items:center;justify-content:center;padding:0.5rem;}
+/* Empty states */
+.bolsa-empty{padding:2rem;text-align:center;color:var(--text3);font-family:'Figtree',sans-serif;font-size:0.75rem;}
+/* Selector liga bolsa */
+.bolsa-liga-tabs{display:flex;gap:4px;margin-bottom:1rem;}
+.bolsa-liga-tab{background:var(--bg3);border:none;color:var(--text3);font-size:0.65rem;letter-spacing:1px;text-transform:uppercase;padding:5px 12px;border-radius:3px;cursor:pointer;font-family:'Figtree',sans-serif;}
+.bolsa-liga-tab.active{background:var(--accent);color:#fff;}
 </style>
 </head>
 <body class="liga-tomaquet">
@@ -670,6 +722,7 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
     <button class="nav-btn" onclick="showSection('grupos',this)"><span class="nav-icon">⚔️</span>Capritxosa</button>
     <button class="nav-btn" onclick="showSection('analisis',this)"><span class="nav-icon">⚡</span>Análisis</button>
     <button class="nav-btn" onclick="showSection('factorpausa',this)"><span class="nav-icon">☕</span>Factor Pausa</button>
+    <button class="nav-btn" onclick="showSection('bolsa',this);initBolsa()"><span class="nav-icon">💸</span>La Bolsa</button>
   </nav>
 </div>
 
@@ -1244,8 +1297,84 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
 
 </div>
 
+
+<!-- ══ LA BOLSA ══════════════════════════════════════════════════════ -->
+<div id="bolsa" class="section">
+
+  <!-- Liga tabs -->
+  <div class="bolsa-liga-tabs">
+    <button class="bolsa-liga-tab active" onclick="setBolsaLiga('tomaquet',this)">🍅 Tomaquet</button>
+    <button class="bolsa-liga-tab" onclick="setBolsaLiga('enbas',this)">⛰️ EN BAS</button>
+  </div>
+
+  <!-- KPI Strip -->
+  <div class="bolsa-kpis" id="bolsaKpis">
+    <div class="bolsa-kpi"><div class="bolsa-kpi-lbl">Valor plantilla</div><div class="bolsa-kpi-val" id="bKpiValor">—</div><div class="bolsa-kpi-sub" id="bKpiValorSub">Mi equipo</div></div>
+    <div class="bolsa-kpi"><div class="bolsa-kpi-lbl">Plusvalía neta</div><div class="bolsa-kpi-val" id="bKpiPlusv">—</div><div class="bolsa-kpi-sub" id="bKpiPlusvSub">vs precio compra</div></div>
+    <div class="bolsa-kpi"><div class="bolsa-kpi-lbl">Tendencia hoy</div><div class="bolsa-kpi-val" id="bKpiTrend">—</div><div class="bolsa-kpi-sub">Suma variaciones</div></div>
+    <div class="bolsa-kpi"><div class="bolsa-kpi-lbl">En mercado</div><div class="bolsa-kpi-val accent" id="bKpiMercado">—</div><div class="bolsa-kpi-sub">Jugadores en venta</div></div>
+  </div>
+
+  <!-- Row 1: Mercado activo + Cartera -->
+  <div class="bolsa-grid" style="margin-bottom:1rem;">
+
+    <!-- Mercado activo -->
+    <div class="bolsa-card">
+      <div class="bolsa-card-hd">
+        <div class="bolsa-card-title">Mercado activo</div>
+        <span id="bolsaMktCount" style="font-family:'Figtree',sans-serif;font-size:0.62rem;color:var(--text3)"></span>
+      </div>
+      <div id="bolsaMercado" class="bolsa-card-body" style="padding:0;">
+        <div class="bolsa-empty">Sin datos de mercado aún.<br>Se cargarán en el próximo fetch.</div>
+      </div>
+    </div>
+
+    <!-- Mi cartera -->
+    <div class="bolsa-card">
+      <div class="bolsa-card-hd">
+        <div class="bolsa-card-title">Mi cartera — plusvalías</div>
+      </div>
+      <div id="bolsaCartera" style="padding:0;">
+        <div class="bolsa-empty">Cargando cartera...</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Row 2: Subidas + Bajadas + Explosivos -->
+  <div class="bolsa-grid-3">
+
+    <div class="bolsa-card">
+      <div class="bolsa-card-hd"><div class="bolsa-card-title">🟢 Más suben hoy</div></div>
+      <div id="bolsaSuben" style="padding:0;"><div class="bolsa-empty">—</div></div>
+    </div>
+
+    <div class="bolsa-card">
+      <div class="bolsa-card-hd"><div class="bolsa-card-title">🔴 Más bajan hoy</div></div>
+      <div id="bolsaBajan" style="padding:0;"><div class="bolsa-empty">—</div></div>
+    </div>
+
+    <div class="bolsa-card">
+      <div class="bolsa-card-hd"><div class="bolsa-card-title">⚡ Top ROI del mercado</div></div>
+      <div id="bolsaRoi" style="padding:0;"><div class="bolsa-empty">—</div></div>
+    </div>
+
+  </div>
+
+  <!-- Row 3: Evolución valor plantilla (sparkline historia) -->
+  <div class="bolsa-card" style="margin-bottom:1rem;">
+    <div class="bolsa-card-hd">
+      <div class="bolsa-card-title">Evolución valor plantilla</div>
+      <span style="font-family:'Figtree',sans-serif;font-size:0.62rem;color:var(--text3)">historia diaria acumulada</span>
+    </div>
+    <div class="bolsa-card-body" id="bolsaHistoria">
+      <div class="bolsa-empty">Sin historial acumulado aún. Se irá construyendo con cada fetch diario.</div>
+    </div>
+  </div>
+
+</div><!-- /bolsa -->
+
 <button class="mercado-fab" id="mercadoFab" onclick="closeMercadoFab()">▲ CERRAR LISTA</button>
-</main>
 
 <div class="modal-overlay" id="modalOverlay">
   <div class="modal">
@@ -1854,6 +1983,10 @@ async function loadPlayers(){
       boardData.enbas    = data.boardEnBas    || [];
       renderBoard('tomaquet');
     }
+
+    // Cargar mercado activo (si existe en data.json)
+    if(data.myTeam?.market)    window._mktTomaquet = data.myTeam.market;
+    if(data.myTeamEnBas?.market) window._mktEnBas  = data.myTeamEnBas.market;
 
   }catch(e){
     document.getElementById('jugadores-loading').innerHTML='<div class="error-msg">❌ Error cargando jugadores: '+e.message+'</div>';
@@ -3324,8 +3457,314 @@ function renderCompareModal(){
   document.getElementById('compareModalBody').innerHTML=`<table class="compare-table"><thead>${header}</thead><tbody>${body}</tbody></table>`;
 }
 
-// ── Conectar clicks en filas de jugadores al panel ─────────────────
-// renderPlayers y mv3Render ya llaman a openJugPanel(p) en onclick
+
+// ══════════════════════════════════════════════════════════════════════
+// LA BOLSA
+// ══════════════════════════════════════════════════════════════════════
+
+let bolsaLiga = 'tomaquet'; // liga activa en La Bolsa
+let bolsaInited = false;
+
+function setBolsaLiga(liga, btn) {
+  bolsaLiga = liga;
+  document.querySelectorAll('.bolsa-liga-tab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderBolsa();
+}
+
+function initBolsa() {
+  if (!bolsaInited) { bolsaInited = true; }
+  renderBolsa();
+}
+
+function renderBolsa() {
+  renderBolsaKpis();
+  renderBolsaMercado();
+  renderBolsaCartera();
+  renderBolsaTendencias();
+  renderBolsaHistoria();
+}
+
+// ── KPIs ─────────────────────────────────────────────────────────────
+function renderBolsaKpis() {
+  const equipo = bolsaLiga === 'tomaquet'
+    ? (myTeamData || [])
+    : (myTeamDataEnBas || []);
+
+  // Valor plantilla
+  const valorTotal = equipo.reduce((s, p) => s + (p.price || 0), 0);
+  const elValor = document.getElementById('bKpiValor');
+  elValor.textContent = valorTotal ? fmt(valorTotal) : '—';
+
+  // Plusvalía neta (precio actual - precio compra)
+  const buyTotal  = equipo.reduce((s, p) => s + (p.buyPrice || 0), 0);
+  const plusv     = buyTotal ? valorTotal - buyTotal : null;
+  const elPlusv   = document.getElementById('bKpiPlusv');
+  if (plusv != null) {
+    elPlusv.textContent = (plusv >= 0 ? '+' : '') + fmt(plusv);
+    elPlusv.className   = 'bolsa-kpi-val ' + (plusv >= 0 ? 'up' : 'dn');
+    document.getElementById('bKpiPlusvSub').textContent =
+      'Invertido: ' + fmt(buyTotal);
+  } else {
+    elPlusv.textContent = '—';
+    elPlusv.className = 'bolsa-kpi-val';
+    document.getElementById('bKpiPlusvSub').textContent = 'Sin precio de compra';
+  }
+
+  // Tendencia del día (suma de trends)
+  const trendTotal = equipo.reduce((s, p) => s + (p.trend || 0), 0);
+  const elTrend = document.getElementById('bKpiTrend');
+  elTrend.textContent = trendTotal ? (trendTotal > 0 ? '+' : '') + fmt(trendTotal) : '—';
+  elTrend.className = 'bolsa-kpi-val ' + (trendTotal > 0 ? 'up' : trendTotal < 0 ? 'dn' : '');
+
+  // En mercado — cuántos jugadores libres tienen tendencia positiva fuerte (proxy de actividad)
+  const enMercado = allPlayers.filter(p => Math.abs(p.trend || 0) > 100000).length;
+  document.getElementById('bKpiMercado').textContent = enMercado || '—';
+}
+
+// ── MERCADO ACTIVO ────────────────────────────────────────────────────
+function renderBolsaMercado() {
+  const el = document.getElementById('bolsaMercado');
+  // Los datos de mercado vienen en myTeam.market (jugadores que nuestro equipo
+  // ha puesto en venta) — en el futuro fetchMarket() traerá el mercado global
+  const mktData = bolsaLiga === 'tomaquet'
+    ? (window._mktTomaquet || [])
+    : (window._mktEnBas    || []);
+
+  if (!mktData.length) {
+    // Fallback: mostrar jugadores con trend más alto como "en racha / demandados"
+    const top = [...allPlayers]
+      .filter(p => (p.trend || 0) > 0)
+      .sort((a, b) => (b.trend || 0) - (a.trend || 0))
+      .slice(0, 10);
+
+    if (!top.length) {
+      el.innerHTML = '<div class="bolsa-empty">Sin datos de mercado.<br><span style="font-size:0.65rem;opacity:0.6">Añade fetchMarket() al script para datos reales.</span></div>';
+      document.getElementById('bolsaMktCount').textContent = '';
+      return;
+    }
+
+    const PosColors = {PT:'#d97706',DF:'#1d6fce',MC:'#16a34a',DL:'#e63329',MD:'#8b5cf6'};
+    el.innerHTML = top.map(p => {
+      const pos = (p.position||'?').split('/')[0];
+      const col = PosColors[pos] || '#888';
+      return `<div class="mkt-row" onclick="openJugPanel(${JSON.stringify(p).replace(/"/g,'&quot;')})">
+        <div class="mkt-pos" style="background:${col}">${pos}</div>
+        <div class="mkt-name">
+          <div class="mkt-player">${p.name}</div>
+          <div class="mkt-meta">${p.club || '—'}</div>
+        </div>
+        <div style="text-align:right">
+          <div class="mkt-price" style="color:var(--text)">${fmt(p.price)}</div>
+          <div class="mkt-timer" style="color:#22c55e">▲ ${fmt(p.trend)}</div>
+        </div>
+      </div>`;
+    }).join('');
+    document.getElementById('bolsaMktCount').textContent = 'top subidas · datos reales próx. run';
+    return;
+  }
+
+  // Con datos reales de fetchMarket()
+  const PosColors = {PT:'#d97706',DF:'#1d6fce',MC:'#16a34a',DL:'#e63329',MD:'#8b5cf6'};
+  el.innerHTML = mktData.map(item => {
+    const p   = allPlayers.find(a => a.id == item.playerID) || {};
+    const pos = (p.position||'?').split('/')[0];
+    const col = PosColors[pos] || '#888';
+    const typeLabel = item.type === 'offer' ? 'oferta' : 'cláusula';
+    const typeCls   = item.type === 'offer' ? 'mkt-type-offer' : 'mkt-type-clause';
+    const timer     = item.until ? timeLeftStr(item.until) : '';
+    return `<div class="mkt-row" onclick="openJugPanel(${JSON.stringify(p).replace(/"/g,'&quot;')})">
+      <div class="mkt-pos" style="background:${col}">${pos}</div>
+      <div class="mkt-name">
+        <div class="mkt-player">${p.name || 'ID ' + item.playerID}</div>
+        <div class="mkt-meta">${p.club || '—'}</div>
+      </div>
+      <span class="mkt-type-tag ${typeCls}">${typeLabel}</span>
+      <div style="text-align:right">
+        <div class="mkt-price">${fmt(item.price)}</div>
+        ${timer ? `<div class="mkt-timer">⏱ ${timer}</div>` : ''}
+      </div>
+    </div>`;
+  }).join('');
+  document.getElementById('bolsaMktCount').textContent = mktData.length + ' en venta';
+}
+
+function timeLeftStr(until) {
+  const ms = until * 1000 - Date.now();
+  if (ms <= 0) return 'expirado';
+  const h = Math.floor(ms / 3600000);
+  const m = Math.floor((ms % 3600000) / 60000);
+  return h > 0 ? `${h}h ${m}m` : `${m}m`;
+}
+
+// ── CARTERA ───────────────────────────────────────────────────────────
+function renderBolsaCartera() {
+  const el = document.getElementById('bolsaCartera');
+  const equipo = (bolsaLiga === 'tomaquet' ? myTeamData : myTeamDataEnBas) || [];
+
+  if (!equipo.length) {
+    el.innerHTML = '<div class="bolsa-empty">Sin datos del equipo cargados.</div>';
+    return;
+  }
+
+  // Calcular plusvalía por jugador y ordenar por mayor ganancia
+  const rows = equipo
+    .map(p => ({
+      ...p,
+      plusv: p.buyPrice ? (p.price - p.buyPrice) : null,
+      pct:   p.buyPrice ? Math.round(((p.price - p.buyPrice) / p.buyPrice) * 100) : null,
+    }))
+    .sort((a, b) => (b.plusv || 0) - (a.plusv || 0));
+
+  const PosColors = {PT:'#d97706',DF:'#1d6fce',MC:'#16a34a',DL:'#e63329',MD:'#8b5cf6'};
+
+  el.innerHTML = `
+    <div class="cartera-row cartera-hd">
+      <div></div><div>Jugador</div>
+      <div style="text-align:right">Valor actual</div>
+      <div style="text-align:right">Compra</div>
+      <div style="text-align:right">+/−</div>
+    </div>` +
+    rows.map(p => {
+      const pos = (p.position||'?').split('/')[0];
+      const col = PosColors[pos] || '#888';
+      const plClass = p.plusv == null ? 'neu' : p.plusv > 0 ? 'pos' : p.plusv < 0 ? 'neg' : 'neu';
+      const plStr   = p.plusv == null ? '—'
+        : (p.plusv >= 0 ? '+' : '') + fmt(p.plusv) + (p.pct != null ? ` (${p.pct > 0 ? '+' : ''}${p.pct}%)` : '');
+      return `<div class="cartera-row">
+        <div class="mkt-pos" style="background:${col};width:22px;height:22px;font-size:0.52rem">${pos}</div>
+        <div>
+          <div class="cartera-pl">${p.name}</div>
+          <div class="cartera-pl-sub">${p.club || '—'} · ${fmt(p.trend||0)}</div>
+        </div>
+        <div class="cartera-num">${fmt(p.price)}</div>
+        <div class="cartera-num neu">${p.buyPrice ? fmt(p.buyPrice) : '—'}</div>
+        <div class="cartera-num ${plClass}">${plStr}</div>
+      </div>`;
+    }).join('');
+}
+
+// ── TENDENCIAS ────────────────────────────────────────────────────────
+function renderBolsaTendencias() {
+  // Top suben
+  const suben = [...allPlayers]
+    .filter(p => (p.trend || 0) > 0)
+    .sort((a, b) => (b.trend||0) - (a.trend||0))
+    .slice(0, 8);
+  const subenMax = suben[0]?.trend || 1;
+  document.getElementById('bolsaSuben').innerHTML = suben.length
+    ? suben.map(p => tendRow(p, subenMax, true)).join('')
+    : '<div class="bolsa-empty">—</div>';
+
+  // Top bajan
+  const bajan = [...allPlayers]
+    .filter(p => (p.trend || 0) < 0)
+    .sort((a, b) => (a.trend||0) - (b.trend||0))
+    .slice(0, 8);
+  const bajanMax = Math.abs(bajan[0]?.trend || 1);
+  document.getElementById('bolsaBajan').innerHTML = bajan.length
+    ? bajan.map(p => tendRow(p, bajanMax, false)).join('')
+    : '<div class="bolsa-empty">—</div>';
+
+  // Top ROI (pts / precio en millones)
+  const roi = [...allPlayers]
+    .filter(p => p.price > 500000 && (p.pts || 0) > 30)
+    .map(p => ({ ...p, roi: Math.round(((p.pts||0) / (p.price/1000000)) * 10) / 10 }))
+    .sort((a, b) => b.roi - a.roi)
+    .slice(0, 8);
+  const roiMax = roi[0]?.roi || 1;
+  const PosC = {PT:'#d97706',DF:'#1d6fce',MC:'#16a34a',DL:'#e63329',MD:'#8b5cf6'};
+  document.getElementById('bolsaRoi').innerHTML = roi.length
+    ? roi.map(p => {
+        const pos = (p.position||'?').split('/')[0];
+        const col = PosC[pos] || '#888';
+        const barW = Math.round((p.roi / roiMax) * 100);
+        return `<div class="tend-row">
+          <div class="mkt-pos" style="background:${col};width:22px;height:22px;font-size:0.52rem;flex-shrink:0">${pos}</div>
+          <div style="flex:1;min-width:0">
+            <div style="font-family:'Figtree',sans-serif;font-weight:700;font-size:0.78rem;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${p.name}</div>
+            <div style="font-size:0.6rem;color:var(--text3)">${fmt(p.price)} · ${p.pts}p</div>
+          </div>
+          <div class="tend-bar-wrap"><div class="tend-bar" style="width:${barW}%;background:var(--accent)"></div></div>
+          <div class="tend-val" style="color:var(--accent)">${p.roi}</div>
+        </div>`;
+      }).join('')
+    : '<div class="bolsa-empty">—</div>';
+}
+
+function tendRow(p, maxAbs, isUp) {
+  const PosC = {PT:'#d97706',DF:'#1d6fce',MC:'#16a34a',DL:'#e63329',MD:'#8b5cf6'};
+  const pos  = (p.position||'?').split('/')[0];
+  const col  = PosC[pos] || '#888';
+  const barW = Math.round((Math.abs(p.trend||0) / maxAbs) * 100);
+  const barColor = isUp ? '#22c55e' : '#ef4444';
+  return `<div class="tend-row">
+    <div class="mkt-pos" style="background:${col};width:22px;height:22px;font-size:0.52rem;flex-shrink:0">${pos}</div>
+    <div style="flex:1;min-width:0">
+      <div style="font-family:'Figtree',sans-serif;font-weight:700;font-size:0.78rem;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${p.name}</div>
+      <div style="font-size:0.6rem;color:var(--text3)">${p.club||'—'} · ${fmt(p.price)}</div>
+    </div>
+    <div class="tend-bar-wrap"><div class="tend-bar" style="width:${barW}%;background:${barColor}"></div></div>
+    <div class="tend-val ${isUp ? 'up' : 'dn'}">${isUp ? '+' : ''}${fmt(p.trend)}</div>
+  </div>`;
+}
+
+// ── HISTORIA VALOR PLANTILLA ──────────────────────────────────────────
+function renderBolsaHistoria() {
+  const el = document.getElementById('bolsaHistoria');
+  if (!historyData) {
+    el.innerHTML = '<div class="bolsa-empty">Sin historial acumulado aún. Se irá construyendo con cada fetch diario.</div>';
+    return;
+  }
+  const ligaKey = bolsaLiga === 'tomaquet' ? 'tomaquet' : 'enbas';
+  const entries = historyData[ligaKey] || [];
+  if (entries.length < 2) {
+    el.innerHTML = '<div class="bolsa-empty">Con '+ entries.length +' entrada(s). Necesitas al menos 2 días de historia.</div>';
+    return;
+  }
+
+  const values = entries.map(e => e.teamValue);
+  const first  = values[0], last = values[values.length - 1];
+  const diff   = last - first;
+  const diffCls = diff >= 0 ? '#22c55e' : '#ef4444';
+
+  // SVG grande
+  const W = 700, H = 120, pad = 16;
+  const minV = Math.min(...values), maxV = Math.max(...values), rng = maxV - minV || 1;
+  const xs = values.map((_, i) => pad + (i / (values.length - 1)) * (W - pad * 2));
+  const ys = values.map(v => H - pad - ((v - minV) / rng) * (H - pad * 2));
+  const lineD = xs.map((x, i) => (i === 0 ? 'M' : 'L') + x.toFixed(1) + ' ' + ys[i].toFixed(1)).join(' ');
+  const areaD = lineD + ` L${xs[xs.length-1].toFixed(1)} ${H-pad} L${xs[0].toFixed(1)} ${H-pad} Z`;
+  const sc = diff >= 0 ? '#22c55e' : '#ef4444';
+
+  // Eje X: fechas
+  const n = entries.length;
+  const axisIdxs = [0, Math.floor(n/4), Math.floor(n/2), Math.floor(3*n/4), n-1];
+  const axisLabels = axisIdxs
+    .map(i => `<div style="text-align:center;flex:1;font-size:0.6rem;color:var(--text3)">${entries[i]?.date?.slice(5)||''}</div>`)
+    .join('');
+
+  el.innerHTML = `
+    <div style="display:flex;gap:2rem;margin-bottom:1rem;flex-wrap:wrap;">
+      <div><div style="font-size:0.52rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--text3);margin-bottom:3px">Inicio</div><div style="font-family:'Figtree',sans-serif;font-weight:800;font-size:1.1rem">${fmt(first)}</div></div>
+      <div><div style="font-size:0.52rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--text3);margin-bottom:3px">Hoy</div><div style="font-family:'Figtree',sans-serif;font-weight:800;font-size:1.1rem">${fmt(last)}</div></div>
+      <div><div style="font-size:0.52rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--text3);margin-bottom:3px">Variación total</div><div style="font-family:'Figtree',sans-serif;font-weight:800;font-size:1.1rem;color:${diffCls}">${diff >= 0 ? '+' : ''}${fmt(diff)}</div></div>
+      <div><div style="font-size:0.52rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--text3);margin-bottom:3px">Días de historia</div><div style="font-family:'Figtree',sans-serif;font-weight:800;font-size:1.1rem">${n}</div></div>
+    </div>
+    <div style="position:relative;width:100%;overflow-x:auto;">
+      <svg viewBox="0 0 ${W} ${H}" style="width:100%;display:block;overflow:visible" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="bolsaGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="${sc}" stop-opacity="0.35"/>
+          <stop offset="100%" stop-color="${sc}" stop-opacity="0.02"/>
+        </linearGradient></defs>
+        <path d="${areaD}" fill="url(#bolsaGrad)"/>
+        <path d="${lineD}" fill="none" stroke="${sc}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="${xs[xs.length-1].toFixed(1)}" cy="${ys[ys.length-1].toFixed(1)}" r="4" fill="${sc}"/>
+      </svg>
+    </div>
+    <div style="display:flex;margin-top:4px">${axisLabels}</div>`;
+}
+
 
 </script>
 
