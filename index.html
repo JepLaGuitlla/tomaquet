@@ -1203,26 +1203,8 @@ const LIGAS = {
       {id:'CF3',home:'Albertini',homeRef:'2ºA',away:'Guitlla 🦊',awayRef:'3ºB'},
       {id:'CF4',home:'Soulands Rangers',homeRef:'2ºB',away:'LeMola Team',awayRef:'3ºA'},
     ],
-    equipo: [
-      {name:'Unai Simón',position:'PT',club:'Athletic',pts:120,price:2900000,trend:10000,status:'ok'},
-      {name:'Remiro',position:'PT',club:'Real Sociedad',pts:114,price:2610000,trend:20000,status:'ok'},
-      {name:'Ratiu',position:'DF',club:'Rayo',pts:109,price:4880000,trend:80000,status:'ok'},
-      {name:'Rafa Marín',position:'DF',club:'Alavés',pts:83,price:1660000,trend:0,status:'ok'},
-      {name:'Jon Pacheco',position:'DF',club:'Alavés',pts:79,price:1440000,trend:-30000,status:'warn'},
-      {name:'Unai Núñez',position:'DF',club:'Valencia',pts:24,price:3100000,trend:20000,status:'ok'},
-      {name:'Luiz Felipe',position:'DF',club:'Villarreal',pts:23,price:250000,trend:0,status:'ok'},
-      {name:'Soler',position:'MC',club:'Real Sociedad',pts:103,price:4650000,trend:150000,status:'ok'},
-      {name:'Ounahi',position:'MC',club:'Girona',pts:97,price:6930000,trend:100000,status:'ok'},
-      {name:'Selton Sánchez',position:'MC',club:'Athletic',pts:14,price:150000,trend:0,status:'ok'},
-      {name:'Yamal',position:'DL',club:'Barcelona',pts:228,price:27360000,trend:40000,status:'ok'},
-      {name:'Ez Abde',position:'DL/MC',club:'Betis',pts:119,price:13060000,trend:90000,status:'ok'},
-      {name:'Viñas',position:'DL/MC',club:'Girona',pts:110,price:3730000,trend:30000,status:'ok'},
-      {name:'Roony',position:'DL',club:'Barcelona',pts:51,price:560000,trend:-10000,status:'ok'},
-      {name:'Paco Cortés',position:'DL',club:'Leganés',pts:22,price:150000,trend:0,status:'ok'},
-      {name:'Raúl Moro',position:'DL/MC',club:'Osasuna',pts:21,price:3140000,trend:-20000,status:'ok'},
-      {name:'Ángel Pérez',position:'DL/MC',club:'Alavés',pts:19,price:200000,trend:10000,status:'ok'},
-    ],
-    banner: { jornada:'J27', pos:'3º', pts:'1.264', lider:'1.439', diff:'-175' },
+    equipo: [], // datos vienen de Biwenger (myTeamData)
+    banner: { jornada:'—', pos:'—', pts:'—', lider:'—', diff:'—' },
   },
   promesas: {
     id: 'promesas', nombre: '⛰️ EN BAS',
@@ -1276,26 +1258,8 @@ const LIGAS = {
       ], tiebreaker:'4 equips empatats a 18 pts (1r–4t). Desempat per DG.'},
     ],
     quarterfinals: [],
-    equipo: [
-      {name:'Leo Román',position:'PT',club:'Girona',pts:108,price:2940000,trend:-30000,status:'ok'},
-      {name:'Álvaro Carreras',position:'DF',club:'Real Madrid',pts:126,price:8430000,trend:20000,status:'ok'},
-      {name:'Cubarsí',position:'DF',club:'Barcelona',pts:100,price:6990000,trend:70000,status:'ok'},
-      {name:'David Carmo',position:'DF',club:'Getafe',pts:75,price:780000,trend:-10000,status:'ok'},
-      {name:'Pubill',position:'DF',club:'Almería',pts:71,price:6950000,trend:-230000,status:'ok'},
-      {name:'Herrando',position:'DF',club:'Valladolid',pts:68,price:780000,trend:-10000,status:'ok'},
-      {name:'Kambwala',position:'DF',club:'Villarreal',pts:0,price:150000,trend:0,status:'warn'},
-      {name:'Tchouameni',position:'MC',club:'Real Madrid',pts:138,price:11030000,trend:120000,status:'ok'},
-      {name:'Marc Bernal',position:'MC',club:'Barcelona',pts:73,price:5270000,trend:270000,status:'warn'},
-      {name:'Unai López',position:'MC',club:'Levante',pts:69,price:640000,trend:0,status:'warn'},
-      {name:'Filip Ugrinic',position:'MC',club:'Osasuna',pts:65,price:1540000,trend:0,status:'ok'},
-      {name:'Selton Sánchez',position:'MC',club:'Athletic',pts:14,price:150000,trend:0,status:'ok'},
-      {name:'Mbappé',position:'DL',club:'Real Madrid',pts:237,price:26320000,trend:-140000,status:'warn'},
-      {name:'Mikautadze',position:'DL',club:'Villarreal',pts:129,price:11410000,trend:130000,status:'ok'},
-      {name:'Rubén Vargas',position:'DL',club:'Sevilla',pts:69,price:3130000,trend:180000,status:'ok'},
-      {name:'Thiago Fernández',position:'DL',club:'Valencia',pts:22,price:710000,trend:-10000,status:'ok'},
-      {name:'Paco Cortés',position:'DL',club:'Leganés',pts:22,price:150000,trend:0,status:'ok'},
-    ],
-    banner: { jornada:'J27', pos:'4º', pts:'1.214', lider:'1.307', diff:'-93' },
+    equipo: [], // datos vienen de Biwenger (myTeamDataEnBas)
+    banner: { jornada:'—', pos:'—', pts:'—', lider:'—', diff:'—' },
   },
 };
 
@@ -1474,7 +1438,41 @@ async function loadPlayers(){
     document.getElementById('statusText').textContent=allPlayers.length+' jugadores · actualizado '+when;
     renderStats(); renderRankings(allPlayers); initRankings();
 
-    // Cargar mi equipo real desde Biwenger — TOMAQUET
+    // Cargar standings y banner Tomaquet desde Biwenger
+    if(data.allTeams && data.allTeams.length){
+      LIGAS.tomaquet.standings = data.allTeams.map((t,i) => ({
+        pos:   i+1,
+        name:  t.name,
+        pts:   t.points || 0,
+        value: t.value  || 0,
+        players: t.players?.length || 0,
+        diff:  0,
+      })).sort((a,b)=>b.pts-a.pts).map((t,i)=>({...t,pos:i+1,diff:i===0?0:null}));
+      // calcular diff respecto al líder
+      const liderPts = LIGAS.tomaquet.standings[0]?.pts || 0;
+      LIGAS.tomaquet.standings.forEach(t => { t.diff = t.pts - liderPts; });
+      // banner: buscar Guitlla
+      const me = LIGAS.tomaquet.standings.find(t=>t.name.includes('Guitlla')||t.name.includes('🦊'));
+      if(me) LIGAS.tomaquet.banner = { jornada: `J${data.league?.currentRound||'—'}`, pos:`${me.pos}º`, pts: me.pts.toLocaleString('es'), lider: liderPts.toLocaleString('es'), diff: me.diff.toLocaleString('es') };
+    }
+
+    // Cargar standings y banner EN BAS desde Biwenger
+    if(data.allTeamsEnBas && data.allTeamsEnBas.length){
+      LIGAS.promesas.standings = data.allTeamsEnBas.map((t,i) => ({
+        pos:   i+1,
+        name:  t.name,
+        pts:   t.points || 0,
+        value: t.value  || 0,
+        players: t.players?.length || 0,
+        diff:  0,
+      })).sort((a,b)=>b.pts-a.pts).map((t,i)=>({...t,pos:i+1}));
+      const liderPtsEB = LIGAS.promesas.standings[0]?.pts || 0;
+      LIGAS.promesas.standings.forEach(t => { t.diff = t.pts - liderPtsEB; });
+      const meEB = LIGAS.promesas.standings.find(t=>t.name.includes('Guitlla')||t.name.includes('🦊'));
+      if(meEB) LIGAS.promesas.banner = { jornada: `J${data.leagueEnBas?.currentRound||'—'}`, pos:`${meEB.pos}º`, pts: meEB.pts.toLocaleString('es'), lider: liderPtsEB.toLocaleString('es'), diff: meEB.diff.toLocaleString('es') };
+    }
+
+
     if(data.myTeam && data.myTeam.players && data.myTeam.players.length){
       myTeamData = data.myTeam.players.map(p => {
         const full = allPlayers.find(a => a.id === p.id);
@@ -1523,6 +1521,8 @@ async function loadPlayers(){
     // Re-render con el equipo de la liga activa
     refreshGuitllaSet();
     renderMiEquipo();
+    renderGeneral();
+    renderBanner();
     mv3InitFromPlayers(allPlayers);
 
     // Cargar noticias desde data.json (sin CORS)
