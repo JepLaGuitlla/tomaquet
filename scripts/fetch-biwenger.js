@@ -6,7 +6,7 @@ const EMAIL          = process.env.BIWENGER_EMAIL;
 const PASSWORD       = process.env.BIWENGER_PASSWORD;
 const LEAGUE_ID      = '44700';
 const USER_ID        = '6541195';
-const VERSION        = '670';
+const VERSION        = '630';
 const FD_TOKEN       = '00308a91cfc84b248611ecc22550c9de'; // football-data.org
 
 // Feeds RSS de noticias fantasy
@@ -143,22 +143,93 @@ async function fetchPlayers() {
 // ─── 3. DATOS DE LIGA (Biwenger) ─────────────────────────────────────────────
 
 async function fetchLeague(token) {
-  console.log('🏆 Descargando datos de liga (Biwenger)... [desactivado — API 400]');
-  return null;
+  console.log('🏆 Descargando datos de liga (Biwenger)...');
+
+  const res = await requestJSON({
+    hostname: 'biwenger.as.com',
+    path:     `/api/v2/league?include=all,-lastAccess&fields=*,standings,tournaments,group,settings(description)`,
+    method:   'GET',
+    headers:  { ...COMMON_HEADERS, 'Authorization': `Bearer ${token}`, 'x-lang': 'es' }
+  });
+
+  if (res.status !== 200) { console.warn('⚠️ No se pudieron obtener datos de liga. Status:', res.status, JSON.stringify(res.body).slice(0,150)); return null; }
+
+  console.log('✅ Datos de liga descargados');
+  return res.body?.data || null;
 }
 
 // ─── 4. TODOS LOS EQUIPOS DE LA LIGA ────────────────────────────────────────
 
 async function fetchAllTeams(token) {
-  console.log('👥 Descargando equipos... [desactivado — API 400]');
-  return null;
+  console.log('👥 Descargando equipos de todos los participantes...');
+
+  const res = await requestJSON({
+    hostname: 'biwenger.as.com',
+    path:     `/api/v2/league?include=all&fields=*,standings,tournaments,group,settings(description)`,
+    method:   'GET',
+    headers:  { ...COMMON_HEADERS, 'Authorization': `Bearer ${token}`, 'x-lang': 'es' }
+  });
+
+  if (res.status !== 200) { console.warn('⚠️ No se pudieron obtener equipos. Status:', res.status); return null; }
+
+  const data  = res.body?.data;
+  const teams = data?.standings || [];
+  console.log(`✅ ${teams.length} equipos descargados`);
+  return teams.map(t => ({
+    id:      t.id,
+    name:    t.name,
+    manager: t.manager?.name || t.name,
+    points:  t.points  || 0,
+    value:   t.teamValue || 0,
+    players: (t.players || []).map(p => ({
+      id:       p.id,
+      name:     p.name,
+      position: p.position,
+      price:    p.price  || 0,
+      points:   p.points || 0,
+    })),
+  }));
 }
 
 // ─── 5. MI EQUIPO (Guitlla) ───────────────────────────────────────────────────
 
 async function fetchMyTeam(token) {
-  console.log('🦊 Descargando mi equipo... [desactivado — API 400]');
-  return null;
+  console.log('🦊 Descargando mi equipo (Guitlla)...');
+
+  const res = await requestJSON({
+    hostname: 'biwenger.as.com',
+    path:     `/api/v2/user?fields=*,lineup(type,playersID,reservesID,captain,striker,coach,date),players(id,owner),market,offers,-trophies`,
+    method:   'GET',
+    headers:  {
+      ...COMMON_HEADERS,
+      'Authorization':  `Bearer ${token}`,
+      'Content-Type':   'application/json; charset=utf-8',
+      'x-lang':         'es',
+    }
+  });
+
+  if (res.status !== 200) { console.warn('⚠️ No se pudo obtener mi equipo. Status:', res.status, JSON.stringify(res.body).slice(0,200)); return null; }
+
+  const data = res.body?.data;
+  if (!data) { console.warn('⚠️ Sin datos de mi equipo'); return null; }
+
+  // Los jugadores vienen en data.players como {id, owner} — cruzar con allPlayers
+  const playerRefs = data.players || [];
+  const lineup     = data.lineup  || {};
+  console.log(`✅ Mi equipo: ${playerRefs.length} jugadores, presupuesto: ${data.balance || 0}`);
+
+  return {
+    teamId:   data.id    || null,
+    name:     data.name  || 'Guitlla',
+    points:   data.points || 0,
+    value:    data.teamValue || 0,
+    balance:  data.balance   || 0,
+    lineup,
+    players:  playerRefs.map(p => ({
+      id:    p.id,
+      owner: p.owner,
+    })),
+  };
 }
 
 // ─── 6. LA LIGA (football-data.org) ──────────────────────────────────────────
