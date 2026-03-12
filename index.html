@@ -1554,7 +1554,7 @@ async function loadPlayers(){
 
     if(data.myTeam && data.myTeam.players && data.myTeam.players.length){
       myTeamData = data.myTeam.players.map(p => {
-        const full = allPlayers.find(a => a.id === p.id);
+        const full = allPlayers.find(a => a.id == p.id);
         if(!full) return null;
         return {
           id:       full.id,
@@ -1571,7 +1571,6 @@ async function loadPlayers(){
           invested: p.invested  || 0,
         };
       }).filter(Boolean);
-      // Detectar si Tomaquet tiene multiposición (algún jugador con '/' en posición)
       MULTIPOS_LIGA.tomaquet = myTeamData.some(p => p.position.includes('/'));
       console.log('🦊 Mi equipo Tomaquet real cargado:', myTeamData.length, 'jugadores | multipos:', MULTIPOS_LIGA.tomaquet);
     }
@@ -1579,9 +1578,8 @@ async function loadPlayers(){
     // Cargar mi equipo real desde Biwenger — EN BAS
     if(data.myTeamEnBas && data.myTeamEnBas.players && data.myTeamEnBas.players.length){
       myTeamDataEnBas = data.myTeamEnBas.players.map(p => {
-        const full = allPlayers.find(a => a.id === p.id);
+        const full = allPlayers.find(a => a.id == p.id);
         if(!full) return null;
-        // EN BAS sin multiposición: usar solo posición principal
         const posEnBas = full.position.split('/')[0];
         return {
           id:       full.id,
