@@ -143,149 +143,21 @@ async function fetchPlayers() {
 // ─── 3. DATOS DE LIGA (Biwenger) ─────────────────────────────────────────────
 
 async function fetchLeague(token) {
-  console.log('🏆 Descargando datos de liga (Biwenger)...');
-
-  const authOnly = {
-    'User-Agent':    'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15',
-    'Accept':        'application/json, text/plain, */*',
-    'Authorization': `Bearer ${token}`,
-  };
-
-  // /user/leagues da "Invalid ID" → existe pero necesita parámetro
-  // Probar con POST (Biwenger puede haber migrado GET→POST) y rutas alternativas
-  const payload = JSON.stringify({ leagueId: parseInt(LEAGUE_ID) });
-  const payloadStr = JSON.stringify({ id: parseInt(LEAGUE_ID) });
-
-  const tests = [
-    // POST con body
-    { label: 'POST /leagues — body {leagueId}',     path: `/api/v2/leagues`,                         method: 'POST', headers: {...authOnly,'Content-Type':'application/json','Content-Length':Buffer.byteLength(payload)},    body: payload    },
-    { label: 'POST /leagues/ID — body {}',          path: `/api/v2/leagues/${LEAGUE_ID}`,             method: 'POST', headers: {...authOnly,'Content-Type':'application/json','Content-Length':2},                             body: '{}'       },
-    // /user/leagues con ID en query
-    { label: 'GET /user/leagues?id=ID',             path: `/api/v2/user/leagues?id=${LEAGUE_ID}`,     method: 'GET',  headers: authOnly },
-    { label: 'GET /user/leagues?leagueId=ID',       path: `/api/v2/user/leagues?leagueId=${LEAGUE_ID}`, method: 'GET', headers: authOnly },
-    // Rutas con /me al final
-    { label: 'GET /leagues/ID/me',                  path: `/api/v2/leagues/${LEAGUE_ID}/me`,          method: 'GET',  headers: authOnly },
-    // Con x-league en header (quizás ahí espera el ID)
-    { label: 'GET /user/leagues — x-league header', path: `/api/v2/user/leagues`,                     method: 'GET',  headers: {...authOnly, 'x-league': LEAGUE_ID} },
-    // Ruta /competitions estilo nueva API
-    { label: 'GET /competitions/ID',               path: `/api/v2/competitions/${LEAGUE_ID}`,         method: 'GET',  headers: authOnly },
-    // Ruta sin versión
-    { label: 'GET /api/leagues/ID',                path: `/api/leagues/${LEAGUE_ID}`,                  method: 'GET',  headers: authOnly },
-  ];
-
-  for (const t of tests) {
-    const res = await requestJSON({ hostname: 'biwenger.as.com', path: t.path, method: t.method, headers: t.headers, ...(t.body ? {body: t.body} : {}) });
-    // requestJSON no acepta body directamente — hacer la llamada manual
-    const res2 = await new Promise((resolve) => {
-      const req = https.request({ hostname: 'biwenger.as.com', path: t.path, method: t.method, headers: t.headers }, (r) => {
-        let d = ''; r.on('data', c => d += c); r.on('end', () => { try { resolve({status:r.statusCode,body:JSON.parse(d)}); } catch { resolve({status:r.statusCode,body:d}); } });
-      });
-      req.on('error', () => resolve({status:0,body:{}}));
-      if (t.body) req.write(t.body);
-      req.end();
-    });
-    console.log(`  [${res2.status}] ${t.label}`);
-    console.log(`         → ${JSON.stringify(res2.body).slice(0,150)}`);
-    if (res2.status === 200) {
-      console.log('✅ Ruta encontrada!');
-      return res2.body?.data || null;
-    }
-  }
-
-  console.warn('⚠️ Todos los intentos fallaron para fetchLeague');
+  console.log('🏆 Descargando datos de liga (Biwenger)... [desactivado — API 400]');
   return null;
 }
 
 // ─── 4. TODOS LOS EQUIPOS DE LA LIGA ────────────────────────────────────────
 
 async function fetchAllTeams(token) {
-  console.log('👥 Descargando equipos de todos los participantes...');
-
-  const paths = [
-    `/api/v2/leagues/${LEAGUE_ID}/teams`,
-    `/api/v2/leagues/${LEAGUE_ID}/teams?fields=id,name,points,teamValue,players`,
-    `/api/v2/leagues/${LEAGUE_ID}/teams?fields=*,players`,
-  ];
-
-  for (const path of paths) {
-    const res = await requestJSON({
-      hostname: 'biwenger.as.com',
-      path,
-      method:   'GET',
-      headers:  { ...COMMON_HEADERS, 'Authorization': `Bearer ${token}` }
-    });
-    console.log(`  fetchAllTeams ${path} → ${res.status}`);
-    if (res.status === 200) {
-      const teams = res.body?.data || [];
-      console.log(`✅ ${teams.length} equipos descargados`);
-      return teams.map(t => ({
-        id:      t.id,
-        name:    t.name,
-        manager: t.manager?.name || t.name,
-        points:  t.points || 0,
-        value:   t.teamValue || 0,
-        players: (t.players || []).map(p => ({
-          id:       p.id,
-          name:     p.name,
-          position: p.position,
-          price:    p.price   || 0,
-          points:   p.points  || 0,
-        })),
-      }));
-    }
-  }
-
-  console.warn('⚠️ No se pudieron obtener equipos (todos los paths fallaron)');
+  console.log('👥 Descargando equipos... [desactivado — API 400]');
   return null;
 }
 
 // ─── 5. MI EQUIPO (Guitlla) ───────────────────────────────────────────────────
 
 async function fetchMyTeam(token) {
-  console.log('🦊 Descargando mi equipo (Guitlla)...');
-
-  // Biwenger tiene distintas rutas según versión: /user, /me, /user?fields=...
-  const paths = [
-    `/api/v2/leagues/${LEAGUE_ID}/me`,
-    `/api/v2/leagues/${LEAGUE_ID}/user`,
-    `/api/v2/leagues/${LEAGUE_ID}/user?fields=id,team,players`,
-    `/api/v2/leagues/${LEAGUE_ID}/user?fields=*,team,players`,
-  ];
-
-  for (const path of paths) {
-    const res = await requestJSON({
-      hostname: 'biwenger.as.com',
-      path,
-      method:   'GET',
-      headers:  { ...COMMON_HEADERS, 'Authorization': `Bearer ${token}` }
-    });
-    console.log(`  fetchMyTeam ${path} → ${res.status}`);
-    if (res.status === 200) {
-      const data = res.body?.data;
-      if (!data) continue;
-      const players = data.team?.players || data.players || [];
-      console.log(`✅ Mi equipo: ${players.length} jugadores`);
-      return {
-        teamId:  data.team?.id || null,
-        name:    data.team?.name || 'Guitlla',
-        points:  data.team?.points || 0,
-        value:   data.team?.teamValue || 0,
-        players: players.map(p => ({
-          id:       p.id,
-          name:     p.name,
-          position: p.position,
-          price:    p.price            || 0,
-          points:   p.points           || 0,
-          trend:    p.priceIncrement   || 0,
-          status:   p.fitness?.[0]?.status || 'ok',
-          jForm:    (p.fitness || []).slice(0, 5).map(f => typeof f === 'number' ? f : (f?.points ?? null)),
-          clausula: p.clause           || null,
-        })),
-      };
-    }
-  }
-
-  console.warn('⚠️ No se pudo obtener mi equipo (todos los paths fallaron)');
+  console.log('🦊 Descargando mi equipo... [desactivado — API 400]');
   return null;
 }
 
