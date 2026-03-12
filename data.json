@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-12T11:23:02.144Z",
+  "updatedAt": "2026-03-12T12:03:47.900Z",
   "players": [
     {
       "id": 11,
@@ -1502,7 +1502,7 @@
       "playedHome": 12,
       "playedAway": 11,
       "teamName": "",
-      "status": "warned",
+      "status": "doubt",
       "jForm": [
         5,
         3,
@@ -12532,7 +12532,7 @@
     "balance": 40909,
     "lineup": {
       "type": "4-3-3",
-      "date": 1773314325,
+      "date": 1773315551,
       "playersID": [
         14630,
         32440,
@@ -12542,7 +12542,7 @@
         29034,
         1969,
         38368,
-        38962,
+        35615,
         39736,
         39431
       ]
@@ -13643,7 +13643,31 @@
   },
   "news": [
     {
-      "title": "Paredes sigue ausente y Unai Gómez se prueba",
+      "title": "Eric García entrena al margen tras sus molestias. ¿Llega a la J28?",
+      "link": "https://www.jornadaperfecta.com/blog/eric-garcia-estado-barcelona-j28/",
+      "date": "Thu, 12 Mar 2026 11:55:47 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Lamine Yamal no entrena. ¿Preocupa para la jornada 28?",
+      "link": "https://www.jornadaperfecta.com/blog/lamine-yamal-estado-j28-25-26/",
+      "date": "Thu, 12 Mar 2026 11:49:38 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Marcos Llorente y Sorloth, bajas en el entrenamiento del Atleti",
+      "link": "https://www.jornadaperfecta.com/blog/marcos-llorente-estado-j28/",
+      "date": "Thu, 12 Mar 2026 11:27:46 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Paredes sigue ausente y Unai G��mez se prueba",
       "link": "https://www.jornadaperfecta.com/blog/aitor-paredes-estado-j28-25-26/",
       "date": "Thu, 12 Mar 2026 10:10:30 +0000",
       "img": "",
@@ -13655,14 +13679,6 @@
       "link": "https://www.jornadaperfecta.com/blog/lucas-beltran-estado-j28-25-26/",
       "date": "Thu, 12 Mar 2026 10:05:05 +0000",
       "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Pablo Barrios vuelve tras lesión. ¿Gran oportunidad fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/pablo-barrios-analisis-vuelta-lesion-26/",
-      "date": "Thu, 12 Mar 2026 10:00:38 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/09/Johnny-Cardoso-Atletico-de-Madrid.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
@@ -13683,18 +13699,10 @@
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Marcelino da el alta a Kambwala y Pau Navarro y duda con Mikautadze",
+      "title": "Marcelino deja en duda a Mikautadze y recupera a Navarro y Kambwala",
       "link": "https://www.jornadaperfecta.com/blog/marcelino-previa-alaves-villarreal-j28-25-26/",
       "date": "Thu, 12 Mar 2026 09:27:29 +0000",
       "img": "https://cdn.biwenger.com/i/t/19.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Las pruebas confirman que Eric García no sufre lesión. ¿Llega a la J28?",
-      "link": "https://www.jornadaperfecta.com/blog/eric-garcia-estado-barcelona-j28/",
-      "date": "Thu, 12 Mar 2026 08:35:47 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
@@ -13713,19 +13721,7 @@
       "img": "https://cdn.biwenger.com/i/t/91.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Álvaro Arbeloa preocupa con el estado de Ferland Mendy",
-      "link": "https://www.jornadaperfecta.com/blog/ferland-mendy-estado-molestias-26/",
-      "date": "Wed, 11 Mar 2026 22:26:02 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
-  "sofascore": {
-    "seasonId": 77559,
-    "seasonName": "LaLiga 25/26",
-    "players": []
-  }
+  "sofascore": null
 }
