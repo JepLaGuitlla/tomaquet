@@ -1221,12 +1221,15 @@ function getPlayerBadges(p) {
   if (p.roi && p.roi >= 15) badges.push({ label:'ROI+', cls:'tag-ok' });
   const badJ = validJ.filter(v => v <= 0).length;
   if (validJ.length >= 2 && badJ >= 2) badges.push({ label:'BAJA FORMA', cls:'tag-sell' });
-  if (p.status === 'sell') badges.push({ label:'VENDER', cls:'tag-sell' });
-  if (p.status === 'warn') badges.push({ label:'DUDA', cls:'tag-warn' });
+  // Estados reales Biwenger
+  if (p.status === 'injured')    badges.push({ label:'🔴 LESIONADO',  cls:'tag-sell' });
+  if (p.status === 'doubt')      badges.push({ label:'🟡 DUDA',        cls:'tag-warn' });
+  if (p.status === 'sanctioned') badges.push({ label:'🟠 SANCIONADO',  cls:'tag-warn' });
+  if (p.status === 'not_in_league') badges.push({ label:'⚪ SIN EQUIPO', cls:'tag-sell' });
   return badges;
 }
 function renderBadges(badges) {
-  if (!badges.length) return '<span class="tag tag-ok">OK</span>';
+  if (!badges.length) return '<span class="tag tag-ok">✓ OK</span>';
   return badges.map(b => `<span class="tag ${b.cls}">${b.label}</span>`).join(' ');
 }
 
@@ -1615,7 +1618,32 @@ async function loadPlayers(){
   }
 }
 
-function mapPosition(pos){const m={1:'PT',2:'DF',3:'MC',4:'DL',5:'MD'};return m[pos]||pos||'?';}
+// Posiciones Biwenger: 1=PT, 2=DF, 3=MC, 4=DL, 5=MD
+// Multiposición viene como "3/4" (string con slash) o número simple
+const POS_NUM = {1:'PT',2:'DF',3:'MC',4:'DL',5:'MD'};
+function mapPosition(pos){
+  if(!pos && pos!==0) return '?';
+  // Si ya es string tipo "PT" o "MC/DL"
+  if(typeof pos==='string'){
+    if(/^[A-Z]/.test(pos)) return pos; // ya mapeado
+    // puede ser "3/4" etc
+    return pos.split('/').map(n=>POS_NUM[parseInt(n)]||n).filter(Boolean).join('/');
+  }
+  return POS_NUM[pos]||String(pos);
+}
+
+// Estados Biwenger (campo "status" del jugador)
+// ok = disponible, injured = lesionado, doubt = duda, sanctioned = sancionado
+// not_in_league = no en liga actual, unknown = desconocido
+const STATUS_MAP = {
+  'ok':           {label:'✓ Disponible', color:'#16a34a', dot:'#22c55e', icon:'✓'},
+  'injured':      {label:'🔴 Lesionado',  color:'#dc2626', dot:'#ef4444', icon:'🔴'},
+  'doubt':        {label:'🟡 Duda',       color:'#d97706', dot:'#eab308', icon:'🟡'},
+  'sanctioned':   {label:'🟠 Sancionado', color:'#ea580c', dot:'#f97316', icon:'🟠'},
+  'not_in_league':{label:'⚪ Sin equipo', color:'#6b7280', dot:'#9ca3af', icon:'⚪'},
+  'unknown':      {label:'❓ Desconocido',color:'#6b7280', dot:'#9ca3af', icon:'❓'},
+};
+function getStatus(s){ return STATUS_MAP[s] || STATUS_MAP['ok']; }
 function renderStats(){ if(!document.getElementById('statsBar')) return; // elemento eliminado
   const t=allPlayers.length;
   const avg=(allPlayers.reduce((s,p)=>s+(p.pts||0),0)/t).toFixed(0);
@@ -2033,8 +2061,8 @@ function autoPlace(){
 function renderMiEquipo(){renderSummary();renderTabs();renderField();renderMeTable();}
 function renderSummary(){
   const tv=getEquipo().reduce((s,p)=>s+(p.price||0),0);
-  const toSell=getEquipo().filter(p=>p.status==='sell').length;
-  const toWarn=getEquipo().filter(p=>p.status==='warn').length;
+  const toSell=getEquipo().filter(p=>p.status==='injured').length;
+  const toWarn=getEquipo().filter(p=>p.status==='doubt'||p.status==='sanctioned').length;
   document.getElementById('teamSummary').innerHTML=`<div class="ts-card"><div class="ts-label">Posición</div><div class="ts-value">3º</div><div class="ts-sub">de 14</div></div><div class="ts-card"><div class="ts-label">Puntos J26</div><div class="ts-value">1.278</div><div class="ts-sub">acumulados</div></div><div class="ts-card"><div class="ts-label">Valor plantilla</div><div class="ts-value">${fmt(tv)}</div><div class="ts-sub">mercado</div></div><div class="ts-card"><div class="ts-label">Jugadores</div><div class="ts-value">${getEquipo().length}</div><div class="ts-sub">en plantilla</div></div><div class="ts-card"><div class="ts-label">Vender</div><div class="ts-value" style="color:var(--red)">${toSell}</div><div class="ts-sub">urgente</div></div><div class="ts-card"><div class="ts-label">Vigilar</div><div class="ts-value" style="color:var(--accent)">${toWarn}</div><div class="ts-sub">jugadores</div></div>`;
 }
 function renderTabs(){document.getElementById('formationTabs').innerHTML=Object.keys(FORMATIONS).map(f=>`<button class="ftab ${f===cf?'active':''}" onclick="setFormation('${f}')">${f}</button>`).join('');}
@@ -2071,9 +2099,9 @@ function renderField(){
         card.textContent=initials.toUpperCase();
         const ring=document.createElement('div');ring.className='pcard-ring';
         card.appendChild(ring);
-        if(p.status==='sell'||p.status==='warn'){
+        if(p.status==='injured'||p.status==='doubt'||p.status==='sanctioned'){
           const dot=document.createElement('div');dot.className='pstatus';
-          dot.style.background=p.status==='sell'?'#ef4444':'#eab308';
+          dot.style.background=p.status==='injured'?'#ef4444':p.status==='sanctioned'?'#f97316':'#eab308';
           card.appendChild(dot);
         }
       } else {
@@ -2087,8 +2115,9 @@ function renderField(){
       if(p){
         const apellido=p.name.split(' ').slice(-1)[0];
         label.innerHTML=`<div class="plabel-name">${apellido}</div><div class="plabel-pts">${p.pts||0} pts</div>`;
-        if(p.status==='sell'){const b=document.createElement('div');b.className='badge-sell';b.textContent='VENDER';slot.appendChild(b);}
-        else if(p.status==='warn'){const b=document.createElement('div');b.className='badge-warn';b.textContent='⚠ VIGILAR';slot.appendChild(b);}
+        if(p.status==='injured'){const b=document.createElement('div');b.className='badge-sell';b.textContent='🔴 LESIONADO';slot.appendChild(b);}
+        else if(p.status==='doubt'){const b=document.createElement('div');b.className='badge-warn';b.textContent='🟡 DUDA';slot.appendChild(b);}
+        else if(p.status==='sanctioned'){const b=document.createElement('div');b.className='badge-warn';b.textContent='🟠 SANCIONADO';slot.appendChild(b);}
       } else {
         label.innerHTML=`<div class="plabel-name" style="color:rgba(255,255,255,0.25)">${row.pos}</div>`;
       }
@@ -2116,24 +2145,31 @@ function filterModal(){
   const q=document.getElementById('modalSearch').value.toLowerCase();
   const pool=getEquipo();
   const filtered=pool.filter(p=>{
-    // Multiposición: "DL/MC" puede jugar en DL o MC
-    const posiciones=p.position.split('/').map(s=>s.trim());
+    // Multiposición: "DL/MC" → split por '/' → incluye si alguna coincide
+    const posiciones=(p.position||'').split('/').map(s=>s.trim()).filter(Boolean);
     const posOk=!currentSlotPos||posiciones.includes(currentSlotPos);
     const textOk=!q||p.name.toLowerCase().includes(q)||(p.club||'').toLowerCase().includes(q);
     return posOk&&textOk;
   });
-  document.getElementById('modalList').innerHTML=filtered.slice(0,40).map(p=>{
+  const PC2={PT:'#d97706',DF:'#1d6fce',MC:'#16a34a',DL:'#e63329',MD:'#7c3aed'};
+  document.getElementById('modalList').innerHTML=filtered.map(p=>{
     const posKey=p.position.split('/')[0];
-    const posColors={PT:'#d97706',DF:'#1d6fce',MC:'#16a34a',DL:'#e63329'};
-    const col=posColors[posKey]||'#666';
+    const col=PC2[posKey]||'#666';
     const parts=p.name.split(' ');
     const ini=parts.length>=2?(parts[0].charAt(0)+parts[parts.length-1].charAt(0)):p.name.substring(0,2);
+    const st=getStatus(p.status||'ok');
     return `<div class="modal-player" onclick='selectPlayer(${JSON.stringify(p)})'>
-      <div class="modal-player-pos" style="background:${col};color:#fff;border-radius:50%;font-weight:800;font-size:8px;width:26px;height:26px;display:flex;align-items:center;justify-content:center;flex-shrink:0">${ini.toUpperCase()}</div>
-      <div class="modal-player-info"><div class="modal-player-name">${p.name}</div><div class="modal-player-club">${p.club||'—'} · <span style="color:${col};font-weight:700">${p.position}</span></div></div>
-      <div style="text-align:right"><div class="modal-player-pts">${p.pts||0}</div><div class="modal-player-price">${fmt(p.price)}</div></div>
+      <div style="width:32px;height:32px;border-radius:50%;background:${col};display:flex;align-items:center;justify-content:center;font-family:Figtree,sans-serif;font-size:9px;font-weight:900;color:#fff;flex-shrink:0">${ini.toUpperCase()}</div>
+      <div class="modal-player-info">
+        <div class="modal-player-name">${p.name}</div>
+        <div class="modal-player-club">${p.club||'—'} · <span style="color:${col};font-weight:700">${p.position}</span></div>
+      </div>
+      <div style="text-align:right">
+        <div class="modal-player-pts">${p.pts||0}</div>
+        <div style="font-size:0.62rem;color:${st.color};font-weight:600;margin-top:2px">${st.label}</div>
+      </div>
     </div>`;
-  }).join('')||`<div style="padding:20px;text-align:center;color:var(--text3);font-family:Figtree,sans-serif;font-size:0.8rem">Sin jugadores de ${currentSlotPos} en tu equipo</div>`;
+  }).join('')||`<div style="padding:20px;text-align:center;color:var(--text3);font-family:Figtree,sans-serif;font-size:0.8rem">Sin jugadores de <strong>${currentSlotPos}</strong> en tu equipo</div>`;
 }
 function selectPlayer(p){lineup[currentSlot]=p;closeModal();renderField();}
 function removePlayer(){delete lineup[currentSlot];closeModal();renderField();}
