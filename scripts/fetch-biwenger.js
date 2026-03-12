@@ -256,6 +256,7 @@ async function fetchMyTeam(token, liga) {
   // Los jugadores vienen como {id, owner} — cruzar con allPlayers en el HTML
   const playerRefs = data.players || [];
   console.log(`✅ Mi equipo liga ${liga.id}: ${playerRefs.length} jugadores, balance: ${data.balance || 0}`);
+  if(playerRefs.length > 0) console.log(`  🔍 Muestra jugador[0]:`, JSON.stringify(playerRefs[0]).slice(0, 200));
 
   return {
     teamId:  data.id     || null,
