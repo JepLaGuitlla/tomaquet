@@ -222,12 +222,20 @@ async function fetchMyTeam(token) {
     teamId:   data.id    || null,
     name:     data.name  || 'Guitlla',
     points:   data.points || 0,
-    value:    data.teamValue || 0,
-    balance:  data.balance   || 0,
+    balance:  data.balance || 0,
     lineup,
     players:  playerRefs.map(p => ({
-      id:    p.id,
-      owner: p.owner,
+      id:          p.id,
+      buyPrice:    p.owner?.price    || 0,
+      clause:      p.owner?.clause   || 0,
+      invested:    p.owner?.invested || 0,
+      buyDate:     p.owner?.date     || 0,
+    })),
+    market: (data.market || []).map(m => ({
+      playerID: m.playerID,
+      price:    m.price,
+      type:     m.type,
+      until:    m.until,
     })),
   };
 }
