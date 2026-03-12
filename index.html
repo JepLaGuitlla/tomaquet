@@ -558,10 +558,71 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
 .alert-item .a-tag.duda{background:#eab30822;color:#eab308;}
 .alert-item .a-tag.sancion{background:#f9731622;color:#f97316;}
 .jornada-alerts-title{font-size:0.55rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--text3);margin-bottom:0.25rem;font-family:'Figtree',sans-serif;}
+/* ── MODAL DETALLE GRÁFICO ────────────────────────────────────────── */
+.chart-modal-overlay{
+  display:none;position:fixed;inset:0;
+  background:rgba(0,0,0,0.75);backdrop-filter:blur(6px);
+  z-index:10000;align-items:center;justify-content:center;padding:1.5rem;
+}
+.chart-modal-overlay.open{display:flex;}
+.chart-modal{
+  background:#151b28;border:1px solid var(--border2);border-radius:10px;
+  width:75%;max-width:900px;max-height:85vh;
+  display:flex;flex-direction:column;
+  box-shadow:0 24px 80px rgba(0,0,0,0.7);
+  overflow:hidden;animation:cmIn .2s ease;
+}
+@keyframes cmIn{from{opacity:0;transform:scale(.96) translateY(12px)}to{opacity:1;transform:none}}
+.chart-modal-header{
+  padding:1.1rem 1.5rem;border-bottom:1px solid var(--border);
+  display:flex;align-items:center;justify-content:space-between;flex-shrink:0;
+}
+.chart-modal-title{font-family:'Figtree',sans-serif;font-size:0.8rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent);}
+.chart-modal-close{background:none;border:none;color:var(--text3);font-size:1.3rem;cursor:pointer;padding:0 4px;line-height:1;}
+.chart-modal-close:hover{color:var(--text);}
+.chart-modal-body{padding:1.5rem;overflow-y:auto;flex:1;}
+.chart-modal-kpis{display:flex;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap;}
+.cm-kpi{background:var(--bg3,#1e2433);border-radius:6px;padding:0.7rem 1rem;flex:1;min-width:100px;}
+.cm-kpi .k-label{font-size:0.55rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--text3);margin-bottom:3px;font-family:'Figtree',sans-serif;}
+.cm-kpi .k-value{font-size:1.2rem;font-weight:700;color:var(--text);font-family:'Figtree',sans-serif;}
+.cm-kpi .k-sub{font-size:0.62rem;color:var(--text3);margin-top:2px;}
+/* Chart interactivo */
+.cm-chart-wrap{position:relative;width:100%;margin-bottom:1rem;}
+.cm-chart-wrap svg{display:block;width:100%;overflow:visible;}
+.cm-tooltip{
+  position:absolute;pointer-events:none;
+  background:#0f1623;border:1px solid var(--border2);border-radius:6px;
+  padding:0.5rem 0.75rem;font-family:'Figtree',sans-serif;
+  font-size:0.75rem;white-space:nowrap;
+  box-shadow:0 4px 16px rgba(0,0,0,.5);
+  opacity:0;transition:opacity .1s;transform:translate(-50%,-100%);
+}
+.cm-tooltip.show{opacity:1;}
+.cm-tooltip .tt-date{color:var(--text3);font-size:0.65rem;margin-bottom:2px;}
+.cm-tooltip .tt-val{color:var(--text);font-weight:700;font-size:0.85rem;}
+/* Lista jugadores */
+.cm-player-list{display:flex;flex-direction:column;gap:0.5rem;}
+.cm-player-row{display:grid;grid-template-columns:8px 1fr auto auto;align-items:center;gap:0.75rem;padding:0.6rem 0.8rem;background:var(--bg3,#1e2433);border-radius:6px;font-size:0.82rem;}
+.cm-player-row .p-dot{width:8px;height:8px;border-radius:50%;}
+.cm-player-row .p-name{color:var(--text);font-weight:600;}
+.cm-player-row .p-club{color:var(--text3);font-size:0.7rem;}
+.cm-player-row .p-price{color:var(--text);font-family:'Figtree',sans-serif;font-size:0.78rem;}
+.cm-player-row .p-tag{font-size:0.62rem;padding:2px 6px;border-radius:3px;font-weight:700;}
 </style>
 </head>
 <body class="liga-tomaquet">
 <div id="tsPopover" class="ts-popover"></div>
+
+<!-- Modal detalle gráfico -->
+<div id="chartModalOverlay" class="chart-modal-overlay" onclick="if(event.target===this)closeChartModal()">
+  <div class="chart-modal">
+    <div class="chart-modal-header">
+      <div class="chart-modal-title" id="chartModalTitle">Detalle</div>
+      <button class="chart-modal-close" onclick="closeChartModal()">✕</button>
+    </div>
+    <div class="chart-modal-body" id="chartModalBody"></div>
+  </div>
+</div>
 
 <header>
   <div class="header-inner">
@@ -2279,6 +2340,230 @@ document.addEventListener('click', e => {
 });
 document.getElementById('tsPopover').addEventListener('mouseleave', () => popHide());
 
+// ── MODAL DETALLE GRÁFICO ─────────────────────────────────────────────────
+function openChartModal(title, bodyFn) {
+  popHide();
+  document.getElementById('chartModalTitle').textContent = title;
+  document.getElementById('chartModalBody').innerHTML = '';
+  document.getElementById('chartModalOverlay').classList.add('open');
+  bodyFn(document.getElementById('chartModalBody'));
+  document.addEventListener('keydown', _cmEsc);
+}
+function closeChartModal() {
+  document.getElementById('chartModalOverlay').classList.remove('open');
+  document.removeEventListener('keydown', _cmEsc);
+}
+function _cmEsc(e) { if(e.key==='Escape') closeChartModal(); }
+
+// Gráfico SVG interactivo con tooltip
+function makeInteractiveChart(container, entries, valueFn, labelFn, color, yFmt, invertY=false) {
+  if (!entries || entries.length === 0) {
+    container.innerHTML = '<div style="color:var(--text3);text-align:center;padding:3rem;font-size:0.85rem">Sin datos históricos aún.<br>Se acumularán con cada fetch diario.</div>';
+    return;
+  }
+  const values = entries.map(valueFn);
+  const valid  = values.filter(v=>v!=null&&!isNaN(v));
+  if (valid.length < 1) { container.innerHTML = '<div style="color:var(--text3);text-align:center;padding:3rem">Sin datos</div>'; return; }
+
+  const W=800, H=200, padL=50, padR=20, padT=20, padB=36;
+  const minV=Math.min(...valid), maxV=Math.max(...valid), rng=maxV-minV||1;
+  const n=entries.length;
+
+  const cx = i => padL + (i/(n-1||1))*(W-padL-padR);
+  const cy = v => invertY
+    ? padT + ((v-minV)/rng)*(H-padT-padB)
+    : H-padB - ((v-minV)/rng)*(H-padT-padB);
+
+  const coords = entries.map((e,i) => ({ x:cx(i), y:values[i]!=null?cy(values[i]):null, v:values[i], e }));
+  const vc = coords.filter(c=>c.y!=null);
+
+  const up = vc.length>1 && vc[vc.length-1].v >= vc[0].v;
+  const sc = color || (invertY ? '#6366f1' : up?'#22c55e':'#ef4444');
+
+  const lineD = vc.map((c,i)=>(i===0?'M':'L')+c.x.toFixed(1)+' '+c.y.toFixed(1)).join(' ');
+  const areaD = vc.length>1 ? lineD+` L${vc[vc.length-1].x.toFixed(1)} ${H-padB} L${vc[0].x.toFixed(1)} ${H-padB} Z` : '';
+
+  // Eje Y — 4 niveles
+  const yTicks = [0,.33,.66,1].map(t => ({ y: H-padB-(t*(H-padT-padB)), v: minV+t*rng }));
+  // Eje X — primero, cada ~10 puntos, último
+  const xIdxs = [...new Set([0, ...Array.from({length:Math.floor(n/10)},(_,i)=>(i+1)*10).filter(i=>i<n-1), n-1])];
+
+  const svgId = 'ichart_'+Date.now();
+  const tipId = 'ichart_tip_'+Date.now();
+
+  container.innerHTML = `
+    <div class="cm-chart-wrap" id="${svgId}_wrap">
+      <svg id="${svgId}" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" style="height:220px">
+        <defs>
+          <linearGradient id="${svgId}_g" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="${sc}" stop-opacity="0.35"/>
+            <stop offset="100%" stop-color="${sc}" stop-opacity="0.02"/>
+          </linearGradient>
+        </defs>
+        <!-- Grid lines -->
+        ${yTicks.map(t=>`<line x1="${padL}" y1="${t.y.toFixed(1)}" x2="${W-padR}" y2="${t.y.toFixed(1)}" stroke="var(--border)" stroke-width="1" stroke-dasharray="4,4"/>`).join('')}
+        <!-- Y labels -->
+        ${yTicks.map(t=>`<text x="${padL-6}" y="${(t.y+4).toFixed(1)}" text-anchor="end" font-size="10" fill="var(--text3)" font-family="Figtree,sans-serif">${yFmt(t.v)}</text>`).join('')}
+        <!-- X labels -->
+        ${xIdxs.map(i=>`<text x="${cx(i).toFixed(1)}" y="${H-4}" text-anchor="middle" font-size="10" fill="var(--text3)" font-family="Figtree,sans-serif">${entries[i].date?.slice(5)||''}</text>`).join('')}
+        <!-- Area -->
+        ${areaD?`<path d="${areaD}" fill="url(#${svgId}_g)"/>`:''}
+        <!-- Line -->
+        <path d="${lineD}" fill="none" stroke="${sc}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- Dots interactivos -->
+        ${vc.map((c,i)=>`
+          <circle class="cm-dot" cx="${c.x.toFixed(1)}" cy="${c.y.toFixed(1)}" r="4" fill="${sc}" stroke="#151b28" stroke-width="2" style="cursor:pointer"
+            data-idx="${i}" data-v="${c.v}" data-date="${c.e.date||''}" data-label="${labelFn(c.e)}"/>
+        `).join('')}
+      </svg>
+      <div id="${tipId}" class="cm-tooltip">
+        <div class="tt-date" id="${tipId}_d"></div>
+        <div class="tt-val" id="${tipId}_v"></div>
+      </div>
+    </div>`;
+
+  // Bind hover en dots
+  container.querySelectorAll('.cm-dot').forEach(dot => {
+    const svg = container.querySelector(`#${svgId}`);
+    const wrap = container.querySelector(`#${svgId}_wrap`);
+    const tip  = container.querySelector(`#${tipId}`);
+    dot.addEventListener('mouseenter', function() {
+      const rect = wrap.getBoundingClientRect();
+      const svgRect = svg.getBoundingClientRect();
+      const scaleX = svgRect.width / W;
+      const scaleY = svgRect.height / H;
+      const cx = parseFloat(this.getAttribute('cx')) * scaleX + (svgRect.left - rect.left);
+      const cy = parseFloat(this.getAttribute('cy')) * scaleY + (svgRect.top  - rect.top);
+      tip.style.left = cx + 'px';
+      tip.style.top  = (cy - 8) + 'px';
+      tip.querySelector(`#${tipId}_d`).textContent = this.dataset.date;
+      tip.querySelector(`#${tipId}_v`).textContent = this.dataset.label;
+      tip.classList.add('show');
+      this.setAttribute('r','6');
+    });
+    dot.addEventListener('mouseleave', function() {
+      tip.classList.remove('show');
+      this.setAttribute('r','4');
+    });
+  });
+}
+
+// ── MODALES POR TARJETA ───────────────────────────────────────────────────
+function modalPosicion() {
+  const liga = LIGA_ACTIVA.id==='tomaquet'?'tomaquet':'enbas';
+  const entries = historyData?.[liga]||[];
+  const last = entries[entries.length-1];
+  const best = entries.reduce((b,e)=>(!b||e.pos<b.pos)?e:b, null);
+  openChartModal('POSICIÓN EN LA CLASIFICACIÓN', body => {
+    const kpis = `<div class="chart-modal-kpis">
+      <div class="cm-kpi"><div class="k-label">Posición actual</div><div class="k-value">${last?.pos??'—'}º</div><div class="k-sub">en la liga</div></div>
+      <div class="cm-kpi"><div class="k-label">Mejor posición</div><div class="k-value" style="color:#22c55e">${best?.pos??'—'}º</div><div class="k-sub">${best?.date||''}</div></div>
+      <div class="cm-kpi"><div class="k-label">Días registrados</div><div class="k-value">${entries.length}</div><div class="k-sub">desde el inicio</div></div>
+    </div>`;
+    body.innerHTML = kpis;
+    const chartDiv = document.createElement('div');
+    body.appendChild(chartDiv);
+    makeInteractiveChart(chartDiv, entries, e=>e.pos, e=>`${e.pos}º`, '#6366f1', v=>v+'º', true);
+  });
+}
+
+function modalPuntos() {
+  const liga = LIGA_ACTIVA.id==='tomaquet'?'tomaquet':'enbas';
+  const entries = historyData?.[liga]||[];
+  // Puntos por jornada desde jForm
+  const equipo = getEquipo();
+  const nJ = 10;
+  const jornadas = Array.from({length:nJ},(_,i)=>i);
+  const jornadaData = jornadas.map(i=>{
+    let sum=0,cnt=0;
+    equipo.forEach(p=>{const v=(p.jForm||[])[i];if(typeof v==='number'&&!isNaN(v)){sum+=v;cnt++;}});
+    return {j: nJ-i, pts: cnt>0?Math.round(sum):null};
+  }).reverse().filter(d=>d.pts!==null);
+  const maxJ=Math.max(...jornadaData.map(d=>d.pts));
+  const minJ=Math.min(...jornadaData.map(d=>d.pts));
+  const avgJ=jornadaData.length?Math.round(jornadaData.reduce((s,d)=>s+d.pts,0)/jornadaData.length):0;
+  openChartModal('PUNTOS POR JORNADA', body => {
+    body.innerHTML = `<div class="chart-modal-kpis">
+      <div class="cm-kpi"><div class="k-label">Mejor jornada</div><div class="k-value" style="color:#22c55e">${maxJ}</div><div class="k-sub">puntos</div></div>
+      <div class="cm-kpi"><div class="k-label">Peor jornada</div><div class="k-value" style="color:var(--red)">${minJ}</div><div class="k-sub">puntos</div></div>
+      <div class="cm-kpi"><div class="k-label">Media</div><div class="k-value">${avgJ}</div><div class="k-sub">pts/jornada</div></div>
+    </div>`;
+    const chartDiv = document.createElement('div');
+    body.appendChild(chartDiv);
+    // Adaptar entries para makeInteractiveChart
+    const fakeEntries = jornadaData.map(d=>({date:`J${d.j}`, pts:d.pts}));
+    makeInteractiveChart(chartDiv, fakeEntries, e=>e.pts, e=>`${e.pts} pts`, '#f59e0b', v=>Math.round(v)+'pts');
+  });
+}
+
+function modalValor() {
+  const liga = LIGA_ACTIVA.id==='tomaquet'?'tomaquet':'enbas';
+  const entries = historyData?.[liga]||[];
+  const last = entries[entries.length-1];
+  const first = entries[0];
+  const delta = (last&&first) ? last.teamValue-first.teamValue : null;
+  const deltaStr = delta!=null ? `${delta>=0?'+':''}${fmt(delta)}` : '—';
+  const deltaColor = delta>0?'#22c55e':delta<0?'#ef4444':'var(--text3)';
+  openChartModal('VALOR DE PLANTILLA', body => {
+    body.innerHTML = `<div class="chart-modal-kpis">
+      <div class="cm-kpi"><div class="k-label">Valor actual</div><div class="k-value">${last?fmt(last.teamValue):'—'}</div><div class="k-sub">de mercado</div></div>
+      <div class="cm-kpi"><div class="k-label">Variación total</div><div class="k-value" style="color:${deltaColor}">${deltaStr}</div><div class="k-sub">desde el inicio</div></div>
+      <div class="cm-kpi"><div class="k-label">Días registrados</div><div class="k-value">${entries.length}</div><div class="k-sub">histórico</div></div>
+    </div>`;
+    const chartDiv = document.createElement('div');
+    body.appendChild(chartDiv);
+    makeInteractiveChart(chartDiv, entries, e=>e.teamValue, e=>fmt(e.teamValue), '#3b82f6', v=>fmt(v));
+  });
+}
+
+function modalTendencia() {
+  const liga = LIGA_ACTIVA.id==='tomaquet'?'tomaquet':'enbas';
+  const entries = historyData?.[liga]||[];
+  const last = entries[entries.length-1];
+  const positivos = entries.filter(e=>e.trend>0).length;
+  const negativos = entries.filter(e=>e.trend<0).length;
+  openChartModal('TENDENCIA DEL EQUIPO', body => {
+    body.innerHTML = `<div class="chart-modal-kpis">
+      <div class="cm-kpi"><div class="k-label">Tendencia hoy</div><div class="k-value" style="color:${last?.trend>=0?'#22c55e':'#ef4444'}">${last?fmt(last.trend):'—'}</div><div class="k-sub">valor</div></div>
+      <div class="cm-kpi"><div class="k-label">Días positivos</div><div class="k-value" style="color:#22c55e">${positivos}</div><div class="k-sub">de ${entries.length}</div></div>
+      <div class="cm-kpi"><div class="k-label">Días negativos</div><div class="k-value" style="color:var(--red)">${negativos}</div><div class="k-sub">de ${entries.length}</div></div>
+    </div>`;
+    const chartDiv = document.createElement('div');
+    body.appendChild(chartDiv);
+    makeInteractiveChart(chartDiv, entries, e=>e.trend, e=>fmt(e.trend), null, v=>fmt(v));
+  });
+}
+
+function modalVender() {
+  const lesionados = getEquipo().filter(p=>p.status==='injured');
+  openChartModal('VENDER — JUGADORES LESIONADOS', body => {
+    if (!lesionados.length) { body.innerHTML = '<div style="color:#22c55e;text-align:center;padding:2rem;font-size:0.9rem">✓ Ningún jugador lesionado ahora mismo</div>'; return; }
+    body.innerHTML = `<div class="cm-player-list">${lesionados.map(p=>`
+      <div class="cm-player-row">
+        <span class="p-dot" style="background:#ef4444"></span>
+        <div><div class="p-name">${p.name}</div><div class="p-club">${p.club||'—'}</div></div>
+        <div class="p-price">${fmt(p.price)}</div>
+        <span class="p-tag" style="background:#ef444422;color:#ef4444">LESIÓN</span>
+      </div>`).join('')}</div>`;
+  });
+}
+
+function modalVigilar() {
+  const vigilar = getEquipo().filter(p=>p.status==='doubt'||p.status==='sanctioned');
+  openChartModal('VIGILAR — DUDAS Y SANCIONES', body => {
+    if (!vigilar.length) { body.innerHTML = '<div style="color:#22c55e;text-align:center;padding:2rem;font-size:0.9rem">✓ Sin jugadores en duda ni sancionados</div>'; return; }
+    body.innerHTML = `<div class="cm-player-list">${vigilar.map(p=>{
+      const [color,label] = p.status==='doubt'?['#eab308','DUDA']:['#f97316','SANCIÓN'];
+      return `<div class="cm-player-row">
+        <span class="p-dot" style="background:${color}"></span>
+        <div><div class="p-name">${p.name}</div><div class="p-club">${p.club||'—'}</div></div>
+        <div class="p-price">${fmt(p.price)}</div>
+        <span class="p-tag" style="background:${color}22;color:${color}">${label}</span>
+      </div>`;
+    }).join('')}</div>`;
+  });
+}
+
 // ── WIDGET ALERTAS EN INICIO ───────────────────────────────────────────────
 function renderJornadaAlerts() {
   const el = document.getElementById('jornadaAlertsList');
@@ -2340,16 +2625,20 @@ function renderSummary(){
     tsVender:  popVender,
     tsVigilar: popVigilar,
   };
+  const modalFnMap = {
+    tsPos:     modalPosicion,
+    tsPts:     modalPuntos,
+    tsVal:     modalValor,
+    tsTrend:   modalTendencia,
+    tsVender:  modalVender,
+    tsVigilar: modalVigilar,
+  };
   Object.entries(fnMap).forEach(([id, fn]) => {
     const el = document.getElementById(id);
     if (!el) return;
     el.onmouseenter = () => fn(el);
     el.onmouseleave = () => setTimeout(()=>{ if(!document.getElementById('tsPopover').matches(':hover')) popHide(); }, 120);
-    el.onclick = () => {
-      const pop = document.getElementById('tsPopover');
-      if (pop.classList.contains('visible') && pop._anchor===id) { popHide(); }
-      else { pop._anchor=id; fn(el); }
-    };
+    el.onclick = () => modalFnMap[id]?.();
   });
 }
 function renderTabs(){document.getElementById('formationTabs').innerHTML=Object.keys(FORMATIONS).map(f=>`<button class="ftab ${f===cf?'active':''}" onclick="setFormation('${f}')">${f}</button>`).join('');}
