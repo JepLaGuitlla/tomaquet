@@ -720,15 +720,15 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
   <div class="jornada-banner">
     <div class="jornada-round">
       <div class="label">Jornada</div>
-      <div class="num">J27</div>
+      <div class="num" id="bannerJornada">—</div>
       <div class="sub">LaLiga 2025/26</div>
     </div>
     <div class="jornada-divider"></div>
     <div class="jornada-kpis" id="bannerContent">
-      <div class="jornada-kpi"><div class="label">Posición</div><div class="val highlight">3º</div></div>
-      <div class="jornada-kpi"><div class="label">Mis puntos</div><div class="val">1.264</div></div>
-      <div class="jornada-kpi"><div class="label">Líder</div><div class="val">1.439</div></div>
-      <div class="jornada-kpi"><div class="label">Diferencia</div><div class="val" style="color:var(--red)">-175</div></div>
+      <div class="jornada-kpi"><div class="label">Posición</div><div class="val highlight" id="bannerPos">—</div></div>
+      <div class="jornada-kpi"><div class="label">Mis puntos</div><div class="val" id="bannerPts">—</div></div>
+      <div class="jornada-kpi"><div class="label">Líder</div><div class="val" id="bannerLider">—</div></div>
+      <div class="jornada-kpi"><div class="label">Diferencia</div><div class="val" id="bannerDiff" style="color:var(--red)">—</div></div>
     </div>
     <div class="jornada-divider"></div>
     <div id="jornadaAlerts">
@@ -1648,6 +1648,8 @@ function renderBanner() {
     <div class="jornada-kpi"><div class="label">Mis puntos</div><div class="val">${b.pts}</div></div>
     <div class="jornada-kpi"><div class="label">Líder</div><div class="val">${b.lider}</div></div>
     <div class="jornada-kpi"><div class="label">Diferencia</div><div class="val" style="color:var(--red)">${b.diff}</div></div>`;
+  const jEl = document.getElementById('bannerJornada');
+  if (jEl && b.jornada) jEl.textContent = b.jornada;
 }
 
 const GUITLLA = LIGAS.tomaquet.equipo;
@@ -1910,7 +1912,7 @@ async function loadPlayers(){
       LIGAS.tomaquet.standings.forEach(t => { t.diff = t.pts - liderPts; });
       // banner: buscar Guitlla
       const me = LIGAS.tomaquet.standings.find(t=>t.name.includes('Guitlla')||t.name.includes('🦊'));
-      if(me) LIGAS.tomaquet.banner = { jornada: `J${data.league?.currentRound||'—'}`, pos:`${me.pos}º`, pts: me.pts.toLocaleString('es'), lider: liderPts.toLocaleString('es'), diff: me.diff.toLocaleString('es') };
+      if(me) LIGAS.tomaquet.banner = { jornada: `J${data.laliga?.matchday || data.league?.currentRound||'—'}`, pos:`${me.pos}º`, pts: me.pts.toLocaleString('es'), lider: liderPts.toLocaleString('es'), diff: me.diff.toLocaleString('es') };
     }
 
     // Cargar standings y banner EN BAS desde Biwenger
@@ -1927,7 +1929,7 @@ async function loadPlayers(){
       const liderPtsEB = LIGAS.promesas.standings[0]?.pts || 0;
       LIGAS.promesas.standings.forEach(t => { t.diff = t.pts - liderPtsEB; });
       const meEB = LIGAS.promesas.standings.find(t=>t.name.includes('Guitlla')||t.name.includes('🦊'));
-      if(meEB) LIGAS.promesas.banner = { jornada: `J${data.leagueEnBas?.currentRound||'—'}`, pos:`${meEB.pos}º`, pts: meEB.pts.toLocaleString('es'), lider: liderPtsEB.toLocaleString('es'), diff: meEB.diff.toLocaleString('es') };
+      if(meEB) LIGAS.promesas.banner = { jornada: `J${data.laliga?.matchday || data.leagueEnBas?.currentRound||'—'}`, pos:`${meEB.pos}º`, pts: meEB.pts.toLocaleString('es'), lider: liderPtsEB.toLocaleString('es'), diff: meEB.diff.toLocaleString('es') };
     }
 
 
