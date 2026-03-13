@@ -475,6 +475,19 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
 .jug-panel-close-btn{background:none;border:1px solid var(--border2);border-radius:3px;color:var(--text3);font-family:'Figtree',sans-serif;font-size:0.68rem;padding:4px 10px;cursor:pointer;letter-spacing:1px;}
 .jug-panel-close-btn:hover{border-color:var(--accent);color:var(--accent);}
 .jug-panel-body{flex:1;overflow-y:auto;}
+.jp-tab-btn{flex:1;font-family:'Figtree',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;background:none;border:none;border-bottom:2px solid transparent;padding:10px 8px;cursor:pointer;color:var(--text3);transition:all 0.15s;}
+.jp-tab-btn:hover{color:var(--text2);}
+.jp-tab-btn.active{color:var(--accent);border-bottom-color:var(--accent);}
+.jp-tab-loading{text-align:center;padding:2rem;font-size:0.72rem;color:var(--text3);font-family:Figtree,sans-serif;}
+.jp-price-chart{width:100%;height:140px;margin-bottom:12px;}
+.jp-owner-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--border);font-family:Figtree,sans-serif;font-size:0.72rem;}
+.jp-owner-row:last-child{border-bottom:none;}
+.jp-owner-type{font-size:0.58rem;font-weight:700;padding:2px 6px;border-radius:2px;text-transform:uppercase;letter-spacing:0.5px;flex-shrink:0;}
+.jp-owner-buy{background:#dcfce7;color:#15803d;}
+.jp-owner-sell{background:#fee2e2;color:#b91c1c;}
+.jp-owner-name{flex:1;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.jp-owner-amount{font-weight:700;font-family:'IBM Plex Mono',monospace;font-size:0.72rem;flex-shrink:0;}
+.jp-owner-date{font-size:0.62rem;color:var(--text3);flex-shrink:0;}
 .jp-header{padding:16px;border-bottom:1px solid var(--border);display:flex;gap:12px;align-items:center;}
 .jp-pos-badge{width:36px;height:36px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-family:'Figtree',sans-serif;font-size:0.7rem;font-weight:800;color:#fff;flex-shrink:0;}
 .jp-name{font-family:'Figtree',sans-serif;font-size:1.3rem;font-weight:800;text-transform:uppercase;letter-spacing:0.3px;line-height:1.1;}
@@ -3401,6 +3414,147 @@ const PC_COLORS = {PT:'#6366f1',DF:'#16a34a',MC:'#d97706',DL:'#e63329',MD:'#8b5c
 let compareList = []; // máx 4 jugadores
 let currentPanelPlayer = null;
 
+// ── Tabs Valor / Propietarios ────────────────────────────────────────
+function jpSwitchTab(tab, playerId) {
+  document.querySelectorAll('.jp-tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('jptab-valor-btn').classList.toggle('active', tab === 'valor');
+  document.getElementById('jptab-owners-btn').classList.toggle('active', tab === 'owners');
+  document.getElementById('jptab-valor').style.display  = tab === 'valor'  ? '' : 'none';
+  document.getElementById('jptab-owners').style.display = tab === 'owners' ? '' : 'none';
+}
+
+const _jugCache = {};
+
+async function loadJugadorBiwenger(p) {
+  const id = p.id;
+  if (!id) return;
+
+  // Usar caché si ya lo tenemos
+  if (_jugCache[id]) {
+    renderJugTabs(_jugCache[id], p);
+    return;
+  }
+
+  try {
+    const url = `https://cf.biwenger.com/api/v2/players/la-liga/${id}?fields=*,prices,reports(points,home,match(*,round))&score=2&lang=es`;
+    const res = await fetch(url);
+    if (!res.ok) throw new Error('Status ' + res.status);
+    const json = await res.json();
+    const data = json.data || json;
+    _jugCache[id] = data;
+    renderJugTabs(data, p);
+  } catch(e) {
+    const errHtml = `<div class="jp-tab-loading" style="color:var(--c-low)">No se pudieron cargar los datos de Biwenger</div>`;
+    const vEl = document.getElementById('jptab-valor');
+    const oEl = document.getElementById('jptab-owners');
+    if (vEl) vEl.innerHTML = errHtml;
+    if (oEl) oEl.innerHTML = errHtml;
+  }
+}
+
+function renderJugTabs(data, p) {
+  renderJugValor(data, p);
+  renderJugOwners(data, p);
+}
+
+function renderJugValor(data, p) {
+  const el = document.getElementById('jptab-valor');
+  if (!el) return;
+
+  const prices = data.prices || [];
+  if (!prices.length) {
+    el.innerHTML = '<div class="jp-tab-loading">Sin historial de precios</div>';
+    return;
+  }
+
+  // Precio de compra del usuario si es suyo
+  const myPlayer = (getEquipo()||[]).find(x => Number(x.id) === Number(p.id));
+  const buyPrice = myPlayer?.buyPrice || myPlayer?.invested || null;
+
+  // Construir curva SVG
+  const vals = prices.map(pr => pr.p || pr.price || pr[1] || 0).filter(v => v > 0);
+  const dates = prices.map(pr => pr.d || pr.date || pr[0] || '');
+  if (!vals.length) { el.innerHTML = '<div class="jp-tab-loading">Sin datos de precio</div>'; return; }
+
+  const W = 340, H = 110, padL = 44, padR = 10, padT = 10, padB = 24;
+  const minV = Math.min(...vals), maxV = Math.max(...vals), rng = maxV - minV || 1;
+  const n = vals.length;
+  const cx = i => padL + (i / (n - 1 || 1)) * (W - padL - padR);
+  const cy = v => H - padB - ((v - minV) / rng) * (H - padT - padB);
+
+  const points = vals.map((v, i) => `${cx(i).toFixed(1)},${cy(v).toFixed(1)}`).join(' ');
+  const lastX = cx(n-1), lastY = cy(vals[n-1]);
+  const firstX = cx(0);
+
+  // Línea de precio de compra
+  let buyLine = '';
+  if (buyPrice && buyPrice >= minV && buyPrice <= maxV * 1.5) {
+    const byY = cy(buyPrice).toFixed(1);
+    buyLine = `<line x1="${padL}" y1="${byY}" x2="${W-padR}" y2="${byY}" stroke="var(--accent)" stroke-width="1" stroke-dasharray="3,3" opacity="0.7"/>
+    <text x="${padL-2}" y="${byY}" text-anchor="end" font-size="9" fill="var(--accent)" font-family="Figtree,sans-serif" dominant-baseline="central">${fmt(buyPrice)}</text>`;
+  }
+
+  // Ticks eje Y
+  const yTicks = [0, 0.5, 1].map(t => ({ y: cy(minV + t * rng), v: minV + t * rng }));
+
+  // Fechas eje X — primera y última
+  const fmtDate = d => typeof d === 'number' ? new Date(d*1000).toLocaleDateString('es',{day:'2-digit',month:'2-digit'}) : (d||'').slice(5,10);
+
+  const up = vals[n-1] >= vals[0];
+  const lineColor = up ? '#22c55e' : '#ef4444';
+
+  el.innerHTML = `
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:1rem;font-weight:700;color:${lineColor}">${fmt(vals[n-1])}</span>
+      <span style="font-size:0.65rem;color:var(--text3)">${vals.length} registros</span>
+    </div>
+    <svg viewBox="0 0 ${W} ${H}" class="jp-price-chart" xmlns="http://www.w3.org/2000/svg">
+      ${yTicks.map(t=>`
+        <line x1="${padL}" y1="${t.y.toFixed(1)}" x2="${W-padR}" y2="${t.y.toFixed(1)}" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="3,3"/>
+        <text x="${padL-3}" y="${t.y.toFixed(1)}" text-anchor="end" font-size="9" fill="var(--text3)" font-family="Figtree,sans-serif" dominant-baseline="central">${fmt(t.v)}</text>
+      `).join('')}
+      ${buyLine}
+      <polyline points="${points}" fill="none" stroke="${lineColor}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="${lastX.toFixed(1)}" cy="${lastY.toFixed(1)}" r="3" fill="${lineColor}" stroke="var(--bg)" stroke-width="1.5"/>
+      <text x="${padL}" y="${H-4}" font-size="9" fill="var(--text3)" font-family="Figtree,sans-serif">${fmtDate(dates[0])}</text>
+      <text x="${W-padR}" y="${H-4}" font-size="9" fill="var(--text3)" font-family="Figtree,sans-serif" text-anchor="end">${fmtDate(dates[n-1])}</text>
+    </svg>
+    ${buyPrice ? `<div style="font-size:0.65rem;color:var(--text3);margin-top:4px;">— línea roja = tu precio de compra (${fmt(buyPrice)})</div>` : ''}
+  `;
+}
+
+function renderJugOwners(data, p) {
+  const el = document.getElementById('jptab-owners');
+  if (!el) return;
+
+  // Las transacciones vienen en reports o en un campo separado
+  const reports = data.reports || [];
+  // Buscar transacciones de tipo compra/venta en el historial de precios con owners
+  const transfers = data.transfers || data.marketHistory || [];
+
+  // Intentar construir desde prices con saltos grandes (heurística)
+  // O usar el campo directo si existe
+  if (!transfers.length && !reports.length) {
+    el.innerHTML = '<div class="jp-tab-loading">Sin historial de propietarios disponible</div>';
+    return;
+  }
+
+  const rows = transfers.map(t => {
+    const isBuy = t.type === 'buy' || t.to;
+    const name = t.to?.name || t.from?.name || '—';
+    const amount = t.amount || t.price || 0;
+    const date = t.date ? new Date(t.date * 1000).toLocaleDateString('es', {day:'2-digit', month:'2-digit', year:'2-digit'}) : '—';
+    return `<div class="jp-owner-row">
+      <span class="jp-owner-type ${isBuy ? 'jp-owner-buy' : 'jp-owner-sell'}">${isBuy ? 'Compra' : 'Venta'}</span>
+      <span class="jp-owner-name">${name}</span>
+      <span class="jp-owner-amount" style="color:${isBuy?'#22c55e':'#ef4444'}">${amount.toLocaleString('es')}€</span>
+      <span class="jp-owner-date">${date}</span>
+    </div>`;
+  }).join('');
+
+  el.innerHTML = rows || '<div class="jp-tab-loading">Sin transacciones registradas</div>';
+}
+
 // ── Abrir/cerrar panel ─────────────────────────────────────────────
 function openJugPanel(p){
   currentPanelPlayer = p;
@@ -3503,7 +3657,24 @@ function renderJugPanel(p){
         ${inCompare?'✓ EN COMPARADOR':'+ AÑADIR AL COMPARADOR'}
       </button>
     </div>
+
+    <!-- Tabs Valor / Propietarios -->
+    <div style="border-top:2px solid var(--border);margin-top:4px;">
+      <div style="display:flex;border-bottom:1px solid var(--border);">
+        <button class="jp-tab-btn active" id="jptab-valor-btn" onclick="jpSwitchTab('valor',${p.id})">📈 Valor</button>
+        <button class="jp-tab-btn" id="jptab-owners-btn" onclick="jpSwitchTab('owners',${p.id})">👤 Propietarios</button>
+      </div>
+      <div id="jptab-valor" style="padding:12px 16px;">
+        <div class="jp-tab-loading">Cargando curva de precio...</div>
+      </div>
+      <div id="jptab-owners" style="display:none;padding:12px 16px;">
+        <div class="jp-tab-loading">Cargando historial...</div>
+      </div>
+    </div>
   `;
+
+  // Lanzar fetch bajo demanda
+  loadJugadorBiwenger(p);
 }
 
 // ── Comparador ─────────────────────────────────────────────────────
