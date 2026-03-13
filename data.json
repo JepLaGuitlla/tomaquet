@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-12T19:55:24.138Z",
+  "updatedAt": "2026-03-13T05:04:48.475Z",
   "players": [
     {
       "id": 11,
@@ -11644,8 +11644,8 @@
           9,
           7
         ],
-        "teamSize": 17,
-        "teamValue": 55830000,
+        "teamSize": 16,
+        "teamValue": 54910000,
         "teamValueInc": 210000,
         "lastTrophy": {
           "type": "league",
@@ -11777,7 +11777,7 @@
       "name": "Tata Martini",
       "manager": "Tata Martini",
       "points": 1088,
-      "value": 55830000,
+      "value": 54910000,
       "players": []
     },
     {
@@ -11955,6 +11955,21 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1773359037,
+      "content": [
+        {
+          "player": 32460,
+          "from": {
+            "id": 12713493,
+            "name": "Tata Martini",
+            "icon": "i/u/12713493.png"
+          },
+          "amount": 878700
+        }
+      ]
+    },
     {
       "type": "market",
       "date": 1773295445,
@@ -12213,9 +12228,9 @@
           7,
           15
         ],
-        "teamSize": 17,
-        "teamValue": 67680000,
-        "teamValueInc": 50000,
+        "teamSize": 16,
+        "teamValue": 64150000,
+        "teamValueInc": 100000,
         "position": 6,
         "positionInc": 1,
         "role": ""
@@ -12538,7 +12553,7 @@
       "name": "FC Borça",
       "manager": "FC Borça",
       "points": 1168,
-      "value": 67680000,
+      "value": 64150000,
       "players": []
     },
     {
@@ -12816,6 +12831,21 @@
   "boardEnBas": [
     {
       "type": "transfer",
+      "date": 1773350557,
+      "content": [
+        {
+          "player": 2001,
+          "from": {
+            "id": 6580423,
+            "name": "FC Borça",
+            "icon": "i/t/3.png"
+          },
+          "amount": 3489200
+        }
+      ]
+    },
+    {
+      "type": "transfer",
       "date": 1773310542,
       "content": [
         {
@@ -12959,27 +12989,6 @@
             "icon": "i/u/11504267.png"
           },
           "amount": 380000
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1773184905,
-      "content": [
-        {
-          "player": 26676,
-          "from": {
-            "id": 6579402,
-            "name": "Valors FC",
-            "icon": "icons/7.png"
-          },
-          "to": {
-            "id": 6579283,
-            "name": "Fiorenzola",
-            "icon": "i/u/6579283.png?v=33"
-          },
-          "amount": 375000,
-          "type": "clause"
         }
       ]
     }
@@ -13943,6 +13952,30 @@
   },
   "news": [
     {
+      "title": "La Previa de las Picas: Todo sobre los Cronistas de la Jornada 28",
+      "link": "https://www.jornadaperfecta.com/blog/previa-picas-cronistas-j28/",
+      "date": "Thu, 12 Mar 2026 22:14:52 +0000",
+      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2660.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Cinco noticias fantasy para antes de irte a dormir",
+      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-12-3-26/",
+      "date": "Thu, 12 Mar 2026 22:00:42 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "El All In de Victorius para la Jornada 28 de La Liga",
+      "link": "https://www.jornadaperfecta.com/blog/all-in-victorius-j28-25-26/",
+      "date": "Thu, 12 Mar 2026 20:00:41 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Pablo Barrios sufre una nueva lesión muscular: Parte médico oficial",
       "link": "https://www.jornadaperfecta.com/blog/pablo-barrios-parte-medico-atleti/",
       "date": "Thu, 12 Mar 2026 16:55:28 +0000",
@@ -13961,7 +13994,7 @@
     {
       "title": "La enésima vuelta de Gerard Moreno: ¿oportunidad fantasy?",
       "link": "https://www.jornadaperfecta.com/blog/gerard-moreno-vuelta-fantasy-villarreal/",
-      "date": "Thu, 12 Mar 2026 15:57:45 +0000",
+      "date": "Thu, 12 Mar 2026 16:00:45 +0000",
       "img": "https://cdn.biwenger.com/i/t/19.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
@@ -13983,14 +14016,6 @@
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Actualizadas las Alineaciones Probables para la Jornada 28",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-probables-j28-laliga-25-26/",
-      "date": "Thu, 12 Mar 2026 14:30:05 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
       "title": "Lamine Yamal no entrena. ¿Preocupa para la jornada 28?",
       "link": "https://www.jornadaperfecta.com/blog/lamine-yamal-estado-j28-25-26/",
       "date": "Thu, 12 Mar 2026 14:25:38 +0000",
@@ -14003,22 +14028,6 @@
       "link": "https://www.jornadaperfecta.com/blog/mbappe-vuelta-estado-j28/",
       "date": "Thu, 12 Mar 2026 14:20:41 +0000",
       "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Pablo Barrios sufre un pinchazo y se teme por su estado",
-      "link": "https://www.jornadaperfecta.com/blog/pablo-barrios-problema-muscular-26/",
-      "date": "Thu, 12 Mar 2026 14:15:14 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Mendy, baja confirmada para la jornada 28: ¿tiempo de baja?",
-      "link": "https://www.jornadaperfecta.com/blog/ferland-mendy-estado-molestias-26/",
-      "date": "Thu, 12 Mar 2026 14:15:02 +0000",
-      "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
