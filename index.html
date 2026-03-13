@@ -43,6 +43,9 @@ nav{max-width:1440px;margin:0 auto;padding:0 2rem;display:flex;gap:0;white-space
 .nav-btn:hover{color:var(--text2);}
 .nav-btn.active{color:var(--accent);border-bottom-color:var(--accent);}
 .nav-btn.active::before{content:'';position:absolute;bottom:-1px;left:50%;transform:translateX(-50%);width:4px;height:4px;background:var(--accent);border-radius:50%;box-shadow:0 0 6px var(--accent);}
+.subtab-btn{font-family:'Figtree',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--text3);background:none;border:none;border-bottom:2px solid transparent;padding:8px 16px 10px;cursor:pointer;transition:all 0.2s;margin-bottom:-1px;}
+.subtab-btn:hover{color:var(--text2);}
+.subtab-btn.active{color:var(--accent);border-bottom-color:var(--accent);}
 .nav-icon{font-size:0.85rem;line-height:1;}
 
 /* ── MAIN ─── */
@@ -705,7 +708,6 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
     <button class="nav-btn" onclick="showSection('mercado',this)"><span class="nav-icon">🔍</span>Mercado</button>
     <button class="nav-btn" onclick="showSection('miequipo',this)"><span class="nav-icon">🦊</span>Mi Equipo</button>
     <button class="nav-btn" onclick="showSection('liga-fantasy',this)"><span class="nav-icon">🏆</span>Liga</button>
-    <button class="nav-btn" onclick="showSection('grupos',this)"><span class="nav-icon">⚔️</span>Capritxosa</button>
     <button class="nav-btn" onclick="showSection('analisis',this)"><span class="nav-icon">⚡</span>Análisis</button>
     <button class="nav-btn" onclick="showSection('factorpausa',this)"><span class="nav-icon">☕</span>Factor Pausa</button>
     <button class="nav-btn" onclick="showSection('bolsa',this);initBolsa()"><span class="nav-icon">💸</span>La Bolsa</button>
@@ -883,25 +885,35 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
 </div>
 
 <div id="liga-fantasy" class="section">
-  <div class="section-title">Clasificación general</div>
-  <div class="table-wrap" style="overflow:visible;">
-    <div class="standings-grid standings-header">
-      <div class="th">#</div>
-      <div class="th" style="padding-left:4px">EQUIPO</div>
-      <div class="th" style="text-align:right;padding-right:8px">PTS</div>
-      <div class="th" style="text-align:right;padding-right:8px">VALOR</div>
-      <div class="th" style="text-align:right;padding-right:8px">JUG.</div>
-      <div class="th" style="text-align:right;padding-right:8px">PTS/JUG</div>
-      <div class="th" style="text-align:right;padding-right:8px">VS LÍDER</div>
-      <div class="th" style="text-align:right;padding-right:8px">VS SIG.</div>
-    </div>
-    <div id="generalList"></div>
+  <!-- Sub-pestañas -->
+  <div style="display:flex;gap:4px;margin-bottom:1.2rem;border-bottom:1px solid var(--border);padding-bottom:0;">
+    <button id="subtab-general-btn" class="subtab-btn active" onclick="switchLigaTab('general',this)">🏆 Clasificación</button>
+    <button id="subtab-capritxosa-btn" class="subtab-btn" onclick="switchLigaTab('capritxosa',this)">⚔️ Sa Capritxosa</button>
   </div>
-</div>
 
-<div id="grupos" class="section">
-  <div class="section-title">Sa Capritxosa — J21–J27</div>
-  <div id="gruposList"></div>
+  <!-- Sub-pestaña: Clasificación -->
+  <div id="subtab-general">
+    <div class="section-title">Clasificación general</div>
+    <div class="table-wrap" style="overflow:visible;">
+      <div class="standings-grid standings-header">
+        <div class="th">#</div>
+        <div class="th" style="padding-left:4px">EQUIPO</div>
+        <div class="th" style="text-align:right;padding-right:8px">PTS</div>
+        <div class="th" style="text-align:right;padding-right:8px">VALOR</div>
+        <div class="th" style="text-align:right;padding-right:8px">JUG.</div>
+        <div class="th" style="text-align:right;padding-right:8px">PTS/JUG</div>
+        <div class="th" style="text-align:right;padding-right:8px">VS LÍDER</div>
+        <div class="th" style="text-align:right;padding-right:8px">VS SIG.</div>
+      </div>
+      <div id="generalList"></div>
+    </div>
+  </div>
+
+  <!-- Sub-pestaña: Sa Capritxosa -->
+  <div id="subtab-capritxosa" style="display:none;">
+    <div class="section-title">Sa Capritxosa — J21–J27</div>
+    <div id="gruposList"></div>
+  </div>
 </div>
 
 <!-- ══════════════════════════════════════
@@ -3192,6 +3204,13 @@ function fmtTrend(v){if(!v||v===0)return'<span class="trend neutral">—</span>'
 function roiClass(r){return r>=15?'high':r>=8?'mid':'low';}
 function posBadge(pos){if(!pos||pos==='?')return'<div class="pos-badge" style="background:var(--border);font-size:9px;color:var(--text3)">?</div>';const colors={PT:'var(--pt)',DF:'var(--df)',MC:'var(--mc)',DL:'var(--dl)',MD:'var(--md)'};const parts=pos.split('/').filter(p=>p);if(parts.length===1)return`<div class="pos-badge" style="background:${colors[parts[0]]||'var(--text3)'}">${parts[0]}</div>`;const gs=parts.map((p,i)=>{const c=colors[p]||'#666';return c+' '+(i/parts.length*100).toFixed(0)+'%,'+c+' '+((i+1)/parts.length*100).toFixed(0)+'%';}).join(',');return`<div class="pos-badge pos-multi" style="background:linear-gradient(180deg,${gs})">${parts.map(p=>`<span>${p}</span>`).join('')}</div>`;}
 function showSection(id,btn){document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));document.getElementById(id).classList.add('active');btn.classList.add('active');if(id==='analisis')loadLiga();}
+
+function switchLigaTab(tab, btn) {
+  document.querySelectorAll('.subtab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('subtab-general').style.display    = tab === 'general'    ? '' : 'none';
+  document.getElementById('subtab-capritxosa').style.display = tab === 'capritxosa' ? '' : 'none';
+}
 
 // ── WIDGET JUGADORES (en sección Análisis) ────────────────────────────────
 function renderWidgetJugadores(){
