@@ -177,6 +177,13 @@ async function fetchAllTeams(token, liga) {
   const data  = res.body?.data;
   const teams = data?.standings || [];
   console.log(`✅ ${teams.length} equipos descargados (liga ${liga.id})`);
+  // DEBUG — ver campos raw del primer equipo
+  if (teams.length) {
+    const t0 = teams[0];
+    const keys = Object.keys(t0).filter(k => k !== 'players');
+    console.log(`🔍 DEBUG equipo[0] keys: ${keys.join(', ')}`);
+    console.log(`🔍 DEBUG equipo[0] sample: teamValue=${t0.teamValue} teamValueIncrement=${t0.teamValueIncrement} trend=${t0.trend} balance=${t0.balance} value=${t0.value}`);
+  }
   return teams.map(t => ({
     id:      t.id,
     name:    t.name,
