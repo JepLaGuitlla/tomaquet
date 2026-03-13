@@ -3435,16 +3435,36 @@ async function loadJugadorBiwenger(p) {
     return;
   }
 
+  // Leer desde prices.json que el fetch ya tiene cargado
+  const priceHistory = (window._pricesData || {})[String(id)] || [];
+  if (priceHistory.length) {
+    _jugCache[id] = { prices: priceHistory };
+    renderJugTabs(_jugCache[id], p);
+    return;
+  }
+
+  // Si prices.json aún no está cargado, intentar fetch
   try {
-    const url = `https://cf.biwenger.com/api/v2/players/la-liga/${id}?fields=*,prices,reports(points,home,match(*,round))&score=2&lang=es`;
-    const res = await fetch(url);
-    if (!res.ok) throw new Error('Status ' + res.status);
-    const json = await res.json();
-    const data = json.data || json;
-    _jugCache[id] = data;
-    renderJugTabs(data, p);
+    if (!window._pricesData) {
+      const res = await fetch('prices.json');
+      if (res.ok) {
+        window._pricesData = await res.json();
+        const pd = (window._pricesData)[String(id)] || [];
+        if (pd.length) {
+          _jugCache[id] = { prices: pd };
+          renderJugTabs(_jugCache[id], p);
+          return;
+        }
+      }
+    }
+    // Sin datos todavía — primer día de tracking
+    const noData = '<div class="jp-tab-loading">Aún sin historial · se acumulará cada día automáticamente</div>';
+    const vEl = document.getElementById('jptab-valor');
+    const oEl = document.getElementById('jptab-owners');
+    if (vEl) vEl.innerHTML = noData;
+    if (oEl) oEl.innerHTML = noData;
   } catch(e) {
-    const errHtml = `<div class="jp-tab-loading" style="color:var(--c-low)">No se pudieron cargar los datos de Biwenger</div>`;
+    const errHtml = `<div class="jp-tab-loading" style="color:var(--c-low)">Error cargando prices.json</div>`;
     const vEl = document.getElementById('jptab-valor');
     const oEl = document.getElementById('jptab-owners');
     if (vEl) vEl.innerHTML = errHtml;
@@ -3463,18 +3483,18 @@ function renderJugValor(data, p) {
 
   const prices = data.prices || [];
   if (!prices.length) {
-    el.innerHTML = '<div class="jp-tab-loading">Sin historial de precios</div>';
+    el.innerHTML = '<div class="jp-tab-loading">Sin historial de precios aún</div>';
     return;
   }
+
+  // Formato prices.json: [{d: "2026-03-13", p: 5840000}, ...]
+  const vals  = prices.map(pr => pr.p || pr.price || 0).filter(v => v > 0);
+  const dates = prices.map(pr => pr.d || pr.date || '');
+  if (!vals.length) { el.innerHTML = '<div class="jp-tab-loading">Sin datos de precio</div>'; return; }
 
   // Precio de compra del usuario si es suyo
   const myPlayer = (getEquipo()||[]).find(x => Number(x.id) === Number(p.id));
   const buyPrice = myPlayer?.buyPrice || myPlayer?.invested || null;
-
-  // Construir curva SVG
-  const vals = prices.map(pr => pr.p || pr.price || pr[1] || 0).filter(v => v > 0);
-  const dates = prices.map(pr => pr.d || pr.date || pr[0] || '');
-  if (!vals.length) { el.innerHTML = '<div class="jp-tab-loading">Sin datos de precio</div>'; return; }
 
   const W = 340, H = 110, padL = 44, padR = 10, padT = 10, padB = 24;
   const minV = Math.min(...vals), maxV = Math.max(...vals), rng = maxV - minV || 1;
@@ -3484,29 +3504,27 @@ function renderJugValor(data, p) {
 
   const points = vals.map((v, i) => `${cx(i).toFixed(1)},${cy(v).toFixed(1)}`).join(' ');
   const lastX = cx(n-1), lastY = cy(vals[n-1]);
-  const firstX = cx(0);
 
   // Línea de precio de compra
   let buyLine = '';
-  if (buyPrice && buyPrice >= minV && buyPrice <= maxV * 1.5) {
-    const byY = cy(buyPrice).toFixed(1);
+  if (buyPrice && buyPrice >= minV * 0.5 && buyPrice <= maxV * 1.5) {
+    const byY = cy(Math.max(minV, Math.min(maxV, buyPrice))).toFixed(1);
     buyLine = `<line x1="${padL}" y1="${byY}" x2="${W-padR}" y2="${byY}" stroke="var(--accent)" stroke-width="1" stroke-dasharray="3,3" opacity="0.7"/>
-    <text x="${padL-2}" y="${byY}" text-anchor="end" font-size="9" fill="var(--accent)" font-family="Figtree,sans-serif" dominant-baseline="central">${fmt(buyPrice)}</text>`;
+    <text x="${padL-3}" y="${byY}" text-anchor="end" font-size="9" fill="var(--accent)" font-family="Figtree,sans-serif" dominant-baseline="central">${fmt(buyPrice)}</text>`;
   }
 
   // Ticks eje Y
   const yTicks = [0, 0.5, 1].map(t => ({ y: cy(minV + t * rng), v: minV + t * rng }));
-
-  // Fechas eje X — primera y última
-  const fmtDate = d => typeof d === 'number' ? new Date(d*1000).toLocaleDateString('es',{day:'2-digit',month:'2-digit'}) : (d||'').slice(5,10);
-
   const up = vals[n-1] >= vals[0];
   const lineColor = up ? '#22c55e' : '#ef4444';
+  const delta = vals[n-1] - vals[0];
+  const deltaStr = (delta >= 0 ? '+' : '') + fmt(delta);
 
   el.innerHTML = `
     <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;">
       <span style="font-family:'IBM Plex Mono',monospace;font-size:1rem;font-weight:700;color:${lineColor}">${fmt(vals[n-1])}</span>
-      <span style="font-size:0.65rem;color:var(--text3)">${vals.length} registros</span>
+      <span style="font-size:0.65rem;color:${lineColor};font-weight:600">${deltaStr}</span>
+      <span style="font-size:0.62rem;color:var(--text3)">${n} días</span>
     </div>
     <svg viewBox="0 0 ${W} ${H}" class="jp-price-chart" xmlns="http://www.w3.org/2000/svg">
       ${yTicks.map(t=>`
@@ -3516,10 +3534,10 @@ function renderJugValor(data, p) {
       ${buyLine}
       <polyline points="${points}" fill="none" stroke="${lineColor}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
       <circle cx="${lastX.toFixed(1)}" cy="${lastY.toFixed(1)}" r="3" fill="${lineColor}" stroke="var(--bg)" stroke-width="1.5"/>
-      <text x="${padL}" y="${H-4}" font-size="9" fill="var(--text3)" font-family="Figtree,sans-serif">${fmtDate(dates[0])}</text>
-      <text x="${W-padR}" y="${H-4}" font-size="9" fill="var(--text3)" font-family="Figtree,sans-serif" text-anchor="end">${fmtDate(dates[n-1])}</text>
+      <text x="${padL}" y="${H-4}" font-size="9" fill="var(--text3)" font-family="Figtree,sans-serif">${dates[0]?.slice(5)||''}</text>
+      <text x="${W-padR}" y="${H-4}" font-size="9" fill="var(--text3)" font-family="Figtree,sans-serif" text-anchor="end">${dates[n-1]?.slice(5)||''}</text>
     </svg>
-    ${buyPrice ? `<div style="font-size:0.65rem;color:var(--text3);margin-top:4px;">— línea roja = tu precio de compra (${fmt(buyPrice)})</div>` : ''}
+    ${buyPrice ? `<div style="font-size:0.62rem;color:var(--text3);margin-top:2px;">— línea roja = tu compra · ${fmt(buyPrice)}</div>` : ''}
   `;
 }
 
