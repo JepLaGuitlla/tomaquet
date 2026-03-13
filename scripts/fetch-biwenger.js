@@ -335,50 +335,50 @@ async function fetchLaLiga() {
 
 async function fetchNews() {
   console.log('📰 Descargando noticias RSS...');
-  const allNews = [];
 
-  for (const src of RSS_SOURCES) {
-    try {
+  // Solo fuentes vivas — as/cm/rv están muertas
+  const LIVE_SOURCES = RSS_SOURCES.filter(s => s.id === 'jp');
+
+  function fetchRSS(src) {
+    return new Promise((resolve) => {
       const url = new URL(src.url);
-      const res = await request({
+      const req = https.request({
         hostname: url.hostname,
         path:     url.pathname + (url.search || ''),
         method:   'GET',
+        timeout:  5000,
         headers:  {
           'User-Agent': 'Mozilla/5.0 (compatible; RSS reader)',
           'Accept':     'application/rss+xml, application/xml, text/xml, */*',
         }
+      }, (res) => {
+        let data = '';
+        res.on('data', chunk => data += chunk);
+        res.on('end', () => resolve({ src, status: res.statusCode, raw: data }));
       });
+      req.on('timeout', () => { req.destroy(); console.warn(`⚠️ Timeout RSS ${src.id}`); resolve(null); });
+      req.on('error',   (e) => { console.warn(`⚠️ Error RSS ${src.id}:`, e.message); resolve(null); });
+      req.end();
+    });
+  }
 
-      if (res.status !== 200) { console.warn(`⚠️ RSS ${src.id} status ${res.status}`); continue; }
+  // Paralelo con timeout por fuente
+  const results = await Promise.all(LIVE_SOURCES.map(fetchRSS));
+  const allNews = [];
 
-      const xml   = res.raw;
-      const items = xml.match(/<item[\s\S]*?<\/item>/g) || [];
-      console.log(`  ${src.id}: ${items.length} noticias`);
-
-      items.slice(0, 10).forEach(item => {
-        const getTag  = (tag) => {
-          const m = item.match(new RegExp(`<${tag}[^>]*>(?:<!\\[CDATA\\[)?([\\s\\S]*?)(?:\\]\\]>)?<\\/${tag}>`, 'i'));
-          return m ? m[1].trim() : '';
-        };
-        const getAttr = (tag, attr) => {
-          const m = item.match(new RegExp(`<${tag}[^>]*${attr}=["']([^"']+)["']`, 'i'));
-          return m ? m[1] : '';
-        };
-
-        const title = getTag('title');
-        const link  = getTag('link') || getAttr('link', 'href');
-        const date  = getTag('pubDate') || getTag('dc:date') || '';
-        const img   = getAttr('enclosure', 'url') ||
-                      getAttr('media:content', 'url') ||
-                      (item.match(/<img[^>]+src=["']([^"']+)["']/i) || [])[1] || '';
-
-        if (title && link) allNews.push({ title, link, date, img, srcId: src.id, srcLabel: src.label });
-      });
-
-    } catch(e) {
-      console.warn(`⚠️ Error RSS ${src.id}:`, e.message);
-    }
+  for (const r of results) {
+    if (!r || r.status !== 200) continue;
+    const items = r.raw.match(/<item[\s\S]*?<\/item>/g) || [];
+    console.log(`  ${r.src.id}: ${items.length} noticias`);
+    items.slice(0, 10).forEach(item => {
+      const getTag  = (tag) => { const m = item.match(new RegExp(`<${tag}[^>]*>(?:<!\\[CDATA\\[)?([\\s\\S]*?)(?:\\]\\]>)?<\\/${tag}>`, 'i')); return m ? m[1].trim() : ''; };
+      const getAttr = (tag, attr) => { const m = item.match(new RegExp(`<${tag}[^>]*${attr}=["']([^"']+)["']`, 'i')); return m ? m[1] : ''; };
+      const title = getTag('title');
+      const link  = getTag('link') || getAttr('link', 'href');
+      const date  = getTag('pubDate') || getTag('dc:date') || '';
+      const img   = getAttr('enclosure', 'url') || getAttr('media:content', 'url') || (item.match(/<img[^>]+src=["']([^"']+)["']/i)||[])[1] || '';
+      if (title && link) allNews.push({ title, link, date, img, srcId: r.src.id, srcLabel: r.src.label });
+    });
   }
 
   allNews.sort((a, b) => { try { return new Date(b.date) - new Date(a.date); } catch { return 0; } });
@@ -546,26 +546,26 @@ async function main() {
     const token   = await login();
     const players = await fetchPlayers();
 
-    // ── Tomaquet ──
-    console.log('\n--- TOMAQUET ---');
-    const leagueTomaquet  = await fetchLeague(token, LEAGUE_TOMAQUET);
-    const allTeamsTomaquet = await fetchAllTeams(token, LEAGUE_TOMAQUET);
-    const myTeamTomaquet  = await fetchMyTeam(token, LEAGUE_TOMAQUET);
-
-    // ── EN BAS ──
-    console.log('\n--- EN BAS ---');
-    const leagueEnBas   = await fetchLeague(token, LEAGUE_ENBAS);
-    const allTeamsEnBas = await fetchAllTeams(token, LEAGUE_ENBAS);
-    const myTeamEnBas   = await fetchMyTeam(token, LEAGUE_ENBAS);
-
-    // ── Tablones ──
-    console.log('\n--- TABLONES ---');
-    const boardTomaquet = await fetchBoard(token, LEAGUE_TOMAQUET);
-    const boardEnBas    = await fetchBoard(token, LEAGUE_ENBAS);
-
-    const laliga      = await fetchLaLiga();
-    const news        = await fetchNews();
-    const playerStats = await fetchPlayerStats();
+    // ── Ligas en paralelo ──
+    console.log('\n--- LIGAS (paralelo) ---');
+    const [
+      leagueTomaquet, allTeamsTomaquet, myTeamTomaquet,
+      leagueEnBas,    allTeamsEnBas,    myTeamEnBas,
+      boardTomaquet,  boardEnBas,
+      laliga,         news,             playerStats,
+    ] = await Promise.all([
+      fetchLeague(token, LEAGUE_TOMAQUET),
+      fetchAllTeams(token, LEAGUE_TOMAQUET),
+      fetchMyTeam(token, LEAGUE_TOMAQUET),
+      fetchLeague(token, LEAGUE_ENBAS),
+      fetchAllTeams(token, LEAGUE_ENBAS),
+      fetchMyTeam(token, LEAGUE_ENBAS),
+      fetchBoard(token, LEAGUE_TOMAQUET),
+      fetchBoard(token, LEAGUE_ENBAS),
+      fetchLaLiga(),
+      fetchNews(),
+      fetchPlayerStats(),
+    ]);
 
     const output = {
       updatedAt:   new Date().toISOString(),
