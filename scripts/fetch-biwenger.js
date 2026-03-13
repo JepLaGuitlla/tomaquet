@@ -537,6 +537,50 @@ function updateHistory(myTeamTomaquet, myTeamEnBas, allTeamsTomaquet, allTeamsEn
   console.log(`📅 history.json — Tomaquet: ${history.tomaquet.length} días (hoy: teamValue=${entryT.teamValue} trend=${entryT.trend}) · EN BAS: ${history.enbas.length} días`);
 }
 
+// ─── PLAYER PRICES HISTORY ────────────────────────────────────────────────────
+
+function updatePlayerPrices(players) {
+  const FILE      = 'prices.json';
+  const MAX_DAYS  = 90; // ~3 meses de historial
+  const today     = new Date().toISOString().slice(0, 10);
+
+  // Leer prices.json actual o inicializar
+  let prices = {};
+  try {
+    if (fs.existsSync(FILE)) {
+      prices = JSON.parse(fs.readFileSync(FILE, 'utf8'));
+    }
+  } catch(e) {
+    console.warn('⚠️ No se pudo leer prices.json, iniciando desde cero');
+  }
+
+  let updated = 0;
+  for (const p of players) {
+    if (!p.id || !p.price) continue;
+    const id = String(p.id);
+
+    if (!prices[id]) prices[id] = [];
+
+    // Sobreescribir si ya existe entrada de hoy, si no añadir
+    const todayIdx = prices[id].findIndex(e => e.d === today);
+    const entry = { d: today, p: p.price };
+    if (todayIdx >= 0) {
+      prices[id][todayIdx] = entry;
+    } else {
+      prices[id].push(entry);
+      updated++;
+    }
+
+    // Mantener solo los últimos MAX_DAYS días
+    if (prices[id].length > MAX_DAYS) {
+      prices[id] = prices[id].slice(-MAX_DAYS);
+    }
+  }
+
+  fs.writeFileSync(FILE, JSON.stringify(prices), 'utf8'); // sin indent — puede ser grande
+  console.log(`💰 prices.json — ${Object.keys(prices).length} jugadores · ${updated} nuevas entradas hoy`);
+}
+
 // ─── MAIN ────────────────────────────────────────────────────────────────────
 
 async function main() {
@@ -591,6 +635,7 @@ async function main() {
 
     // ── History ──
     updateHistory(myTeamTomaquet, myTeamEnBas, allTeamsTomaquet, allTeamsEnBas, leagueTomaquet, leagueEnBas);
+    updatePlayerPrices(players);
     console.log(`📊 Jugadores Biwenger: ${players.length}`);
     console.log(`👥 Equipos Tomaquet:   ${allTeamsTomaquet?.length || 0}`);
     console.log(`👥 Equipos EN BAS:     ${allTeamsEnBas?.length || 0}`);
