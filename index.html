@@ -1528,7 +1528,7 @@ function renderBadges(badges) {
 const LIGAS = {
   tomaquet: {
     id: 'tomaquet', nombre: '🍅 TOMAQUET',
-    acento: '#e63329', acentoDim: 'rgba(230,51,41,0.08)', miEquipo: 'Guitlla 🦊',
+    acento: '#e63329', acentoDim: 'rgba(230,51,41,0.08)', miEquipo: '🦊',
     standings: [
       {pos:1,name:'Albertini',pts:1439,value:97.57,players:16,ptsPer:89.9,diff:0},
       {pos:2,name:'LeMola Team',pts:1341,value:88.3,players:17,ptsPer:78.9,diff:-98},
@@ -1576,7 +1576,7 @@ const LIGAS = {
   },
   promesas: {
     id: 'promesas', nombre: '⛰️ EN BAS',
-    acento: '#1d6fce', acentoDim: 'rgba(29,111,206,0.08)', miEquipo: 'Guitlla 🦊',
+    acento: '#1d6fce', acentoDim: 'rgba(29,111,206,0.08)', miEquipo: '🦊',
     standings: [
       {pos:1,name:'MarK Lenders',pts:1307,value:70.91,players:16,ptsPer:81.7,diff:0},
       {pos:2,name:'The GOAT club',pts:1240,value:97.84,players:13,ptsPer:95.4,diff:-67},
@@ -2428,7 +2428,7 @@ function renderGeneral(){
   const standings=getStandings().slice().sort((a,b)=>b.pts-a.pts).map((t,i)=>({...t,pos:i+1,diff:i===0?0:t.pts-getStandings()[0].pts}));
   if(!standings.length){document.getElementById('generalList').innerHTML='<div style="padding:2rem;text-align:center;font-family:Figtree,sans-serif;font-size:0.75rem;color:var(--text3)">// Datos pendientes para esta liga</div>';return;}
   document.getElementById('generalList').innerHTML=standings.map((t,i)=>{
-    const isMe=t.name.includes(getMiEquipoName().replace(' 🦊','').trim())||t.name===getMiEquipoName();
+    const isMe=t.name.includes('🦊')||t.name.includes('Guitlla');
     const rankCls=t.pos===1?'gold':t.pos===2?'silver':t.pos===3?'bronze':'';
     const diffTxt=t.diff===0?'—':String(t.diff);
     const diffColor=t.diff===0?'color:var(--green)':'color:var(--red)';
@@ -2488,7 +2488,7 @@ function openRivalModal(idx){
   const myHtml=mySquad.length?mySquad.map(p=>buildCard(p)).filter(Boolean).join(''):'<div style="padding:2rem;text-align:center;color:var(--text3);font-size:0.75rem">Sin datos</div>';
 
   const rivalPts=rival.pts;
-  const meStanding=standings.find(t=>t.name.includes(getMiEquipoName().replace(' 🦊','').trim()));
+  const meStanding=standings.find(t=>t.name.includes('🦊')||t.name.includes('Guitlla'));
   const mePts=meStanding?.pts||0;
   const diff=mePts-rivalPts;
   const diffTxt=diff>0?`<span style="color:var(--green)">+${diff}</span>`:diff<0?`<span style="color:var(--red)">${diff}</span>`:`<span style="color:var(--text3)">=</span>`;
@@ -2526,7 +2526,7 @@ function closeRivalModal(){
 function renderGrupos(){
   const groupsHtml=getGroups().map(g=>{
     const rows=g.teams.map((t,i)=>{
-      const isMe=t.name.includes('Guitlla');
+      const isMe=t.name.includes('Guitlla')||t.name.includes('🦊');
       const qual=i<2;
       const dgColor=t.dg>0?'color:var(--green)':t.dg<0?'color:var(--red)':'color:var(--text3)';
       const dgTxt=(t.dg>0?'+':'')+t.dg;
