@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-13T23:23:16.496Z",
+  "updatedAt": "2026-03-14T05:01:26.268Z",
   "players": [
     {
       "id": 11,
@@ -297,7 +297,7 @@
         2,
         2,
         2,
-        null
+        1
       ],
       "clausula": null
     },
@@ -896,7 +896,7 @@
         2,
         null,
         3,
-        4
+        null
       ],
       "clausula": null
     },
@@ -1036,7 +1036,7 @@
         null,
         1,
         3,
-        1
+        3
       ],
       "clausula": null
     },
@@ -1096,7 +1096,7 @@
         null,
         1,
         4,
-        3
+        4
       ],
       "clausula": null
     },
@@ -2156,7 +2156,7 @@
         6,
         4,
         11,
-        4
+        3
       ],
       "clausula": null
     },
@@ -4136,7 +4136,7 @@
         3,
         0,
         3,
-        3
+        0
       ],
       "clausula": null
     },
@@ -4456,7 +4456,7 @@
         4,
         null,
         null,
-        4
+        null
       ],
       "clausula": null
     },
@@ -6250,7 +6250,7 @@
         8,
         10,
         11,
-        7
+        4
       ],
       "clausula": null
     },
@@ -6390,7 +6390,7 @@
         5,
         -2,
         3,
-        5
+        null
       ],
       "clausula": null
     },
@@ -6410,7 +6410,7 @@
         3,
         1,
         3,
-        1
+        null
       ],
       "clausula": null
     },
@@ -6570,7 +6570,7 @@
         13,
         1,
         4,
-        3
+        2
       ],
       "clausula": null
     },
@@ -7710,7 +7710,7 @@
         5,
         4,
         4,
-        6
+        1
       ],
       "clausula": null
     },
@@ -7859,18 +7859,18 @@
       "name": "Luiz Júnior",
       "position": 1,
       "price": 2160000,
-      "points": 111,
+      "points": 112,
       "trend": 30000,
       "playedHome": 13,
       "playedAway": 12,
       "teamName": "",
       "status": "ok",
       "jForm": [
-        2,
+        3,
         7,
         3,
         6,
-        6
+        1
       ],
       "clausula": null
     },
@@ -7959,18 +7959,18 @@
       "name": "Pau Navarro",
       "position": 2,
       "price": 1760000,
-      "points": 66,
+      "points": 65,
       "trend": 50000,
       "playedHome": 9,
       "playedAway": 7,
       "teamName": "",
       "status": "ok",
       "jForm": [
-        7,
+        6,
         6,
         2,
         5,
-        7
+        1
       ],
       "clausula": null
     },
@@ -9630,7 +9630,7 @@
         2,
         0,
         4,
-        4
+        -3
       ],
       "clausula": null
     },
@@ -9750,7 +9750,7 @@
         null,
         1,
         null,
-        0
+        1
       ],
       "clausula": null
     },
@@ -11996,9 +11996,9 @@
           17,
           10
         ],
-        "teamSize": 17,
-        "teamValue": 33190000,
-        "teamValueInc": -140000,
+        "teamSize": 16,
+        "teamValue": 30410000,
+        "teamValueInc": 90000,
         "position": 15,
         "positionInc": -1,
         "role": ""
@@ -12228,8 +12228,8 @@
       "name": "Janwandowski",
       "manager": "Janwandowski",
       "points": 982,
-      "value": 33190000,
-      "trend": -140000,
+      "value": 30410000,
+      "trend": 90000,
       "players": []
     },
     {
@@ -12459,6 +12459,21 @@
   "boardEnBas": [
     {
       "type": "transfer",
+      "date": 1773458844,
+      "content": [
+        {
+          "player": 3259,
+          "from": {
+            "id": 6593096,
+            "name": "Janwandowski",
+            "icon": "i/u/6593096.png"
+          },
+          "amount": 2730400
+        }
+      ]
+    },
+    {
+      "type": "transfer",
       "date": 1773437564,
       "content": [
         {
@@ -12643,27 +12658,6 @@
             "icon": "i/u/11504267.png"
           },
           "amount": 795000,
-          "type": "clause"
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1773299332,
-      "content": [
-        {
-          "player": 1769,
-          "from": {
-            "id": 6579283,
-            "name": "Fiorenzola",
-            "icon": "i/u/6579283.png?v=33"
-          },
-          "to": {
-            "id": 6580386,
-            "name": "Lamine i els 7 nans 👯‍♀️",
-            "icon": "i/u/6580386.png?v=10"
-          },
-          "amount": 3750000,
           "type": "clause"
         }
       ]
@@ -13695,7 +13689,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-03-13T23:23:15.100Z",
+    "updatedAt": "2026-03-14T05:01:25.586Z",
     "players": [
       {
         "id": "3374",
