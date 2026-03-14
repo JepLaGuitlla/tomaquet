@@ -495,8 +495,14 @@ function updateHistory(myTeamTomaquet, myTeamEnBas, allTeamsTomaquet, allTeamsEn
   const today = new Date().toISOString().slice(0, 10);
 
   // Buscar mi equipo en allTeams por nombre
-  const meT = (allTeamsTomaquet || []).find(t => t.name?.includes('Guitlla'));
-  const meE = (allTeamsEnBas   || []).find(t => t.name?.includes('Guitlla'));
+  const isMe = t => t.name?.includes('Guitlla') || t.name?.includes('🦊');
+  const meT = (allTeamsTomaquet || []).find(isMe);
+  const meE = (allTeamsEnBas   || []).find(isMe);
+
+  // DEBUG — ver nombres de equipos para confirmar búsqueda
+  if (!meT) console.warn(`⚠️ No encontré mi equipo en Tomaquet. Equipos: ${(allTeamsTomaquet||[]).map(t=>t.name).join(' | ')}`);
+  if (!meE) console.warn(`⚠️ No encontré mi equipo en EN BAS. Equipos: ${(allTeamsEnBas||[]).map(t=>t.name).join(' | ')}`);
+  if (meT) console.log(`🦊 Tomaquet found: "${meT.name}" value=${meT.value} trend=${meT.trend}`);
 
   // ── Tomaquet ──
   const entryT = {
@@ -508,7 +514,7 @@ function updateHistory(myTeamTomaquet, myTeamEnBas, allTeamsTomaquet, allTeamsEn
   };
   // Calcular posición desde standings
   const standingsT = (allTeamsTomaquet || []).slice().sort((a,b)=>(b.points||0)-(a.points||0));
-  const posT = standingsT.findIndex(t => t.name?.includes('Guitlla'));
+  const posT = standingsT.findIndex(t => t.name?.includes('🦊') || t.name?.includes('Guitlla'));
   if (posT >= 0) entryT.pos = posT + 1;
 
   const idxT = history.tomaquet.findIndex(e => e.date === today);
@@ -525,7 +531,7 @@ function updateHistory(myTeamTomaquet, myTeamEnBas, allTeamsTomaquet, allTeamsEn
     pos:       null,
   };
   const standingsE = (allTeamsEnBas || []).slice().sort((a,b)=>(b.points||0)-(a.points||0));
-  const posE = standingsE.findIndex(t => t.name?.includes('Guitlla'));
+  const posE = standingsE.findIndex(t => t.name?.includes('🦊') || t.name?.includes('Guitlla'));
   if (posE >= 0) entryE.pos = posE + 1;
 
   const idxE = history.enbas.findIndex(e => e.date === today);
