@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-14T08:11:38.260Z",
+  "updatedAt": "2026-03-14T13:57:01.688Z",
   "players": [
     {
       "id": 11,
@@ -10930,9 +10930,9 @@
           14,
           2
         ],
-        "teamSize": 19,
-        "teamValue": 87270000,
-        "teamValueInc": 260000,
+        "teamSize": 18,
+        "teamValue": 83870000,
+        "teamValueInc": 300000,
         "lastTrophy": {
           "type": "league",
           "position": 3,
@@ -11166,8 +11166,8 @@
       "name": "CA CABA JUNIORS",
       "manager": "CA CABA JUNIORS",
       "points": 1289,
-      "value": 87270000,
-      "trend": 260000,
+      "value": 83870000,
+      "trend": 300000,
       "players": []
     },
     {
@@ -11447,6 +11447,21 @@
   },
   "boardTomaquet": [
     {
+      "type": "transfer",
+      "date": 1773477150,
+      "content": [
+        {
+          "player": 1897,
+          "from": {
+            "id": 8070044,
+            "name": "CA CABA JUNIORS",
+            "icon": "i/u/8070044.png?v=63"
+          },
+          "amount": 3430600
+        }
+      ]
+    },
+    {
       "type": "market",
       "date": 1773468168,
       "content": [
@@ -11608,145 +11623,6 @@
             "icon": "i/u/8068002.png?v=69"
           },
           "amount": 418800
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1773381801,
-      "content": [
-        {
-          "player": 34479,
-          "to": {
-            "id": 12696599,
-            "name": "Trileros FC",
-            "icon": "i/u/12696599.png"
-          },
-          "amount": 9640000,
-          "bids": [
-            {
-              "user": {
-                "id": 3928497,
-                "name": "The Black Team",
-                "icon": "i/u/3928497.png"
-              },
-              "amount": 9111111
-            },
-            {
-              "user": {
-                "id": 6541195,
-                "name": "🦊",
-                "icon": "i/u/6541195.png?v=17"
-              },
-              "amount": 8253467
-            },
-            {
-              "user": {
-                "id": 6552586,
-                "name": "LeMola Team",
-                "icon": "i/u/6552586.png"
-              },
-              "amount": 7896000
-            },
-            {
-              "user": {
-                "id": 8068427,
-                "name": "Albertini",
-                "icon": "i/u/8068427.png"
-              },
-              "amount": 7640000
-            }
-          ]
-        },
-        {
-          "player": 35055,
-          "to": {
-            "id": 12696599,
-            "name": "Trileros FC",
-            "icon": "i/u/12696599.png"
-          },
-          "amount": 3740820,
-          "bids": [
-            {
-              "user": {
-                "id": 148051,
-                "name": "Zaza Pachulia",
-                "icon": "i/u/148051.png?v=39"
-              },
-              "amount": 2404980
-            }
-          ]
-        },
-        {
-          "player": 40075,
-          "to": {
-            "id": 12697101,
-            "name": "INDOMABLE FC",
-            "icon": "i/u/11757390.png"
-          },
-          "amount": 855550,
-          "bids": [
-            {
-              "user": {
-                "id": 12696491,
-                "name": "NACECH1",
-                "icon": "https://graph.facebook.com/10235185447969563/picture?height=300&width=300"
-              },
-              "amount": 500000
-            },
-            {
-              "user": {
-                "id": 12696899,
-                "name": "CIGALERU",
-                "icon": "i/u/12696899.png"
-              },
-              "amount": 471270
-            },
-            {
-              "user": {
-                "id": 8068002,
-                "name": "Soulands Rangers",
-                "icon": "i/u/8068002.png?v=69"
-              },
-              "amount": 460000
-            },
-            {
-              "user": {
-                "id": 6552586,
-                "name": "LeMola Team",
-                "icon": "i/u/6552586.png"
-              },
-              "amount": 295000
-            }
-          ]
-        },
-        {
-          "player": 38289,
-          "to": {
-            "id": 3928497,
-            "name": "The Black Team",
-            "icon": "i/u/3928497.png"
-          },
-          "amount": 8388888,
-          "bids": [
-            {
-              "user": {
-                "id": 8068002,
-                "name": "Soulands Rangers",
-                "icon": "i/u/8068002.png?v=69"
-              },
-              "amount": 7990000
-            }
-          ]
-        },
-        {
-          "player": 5717,
-          "to": {
-            "id": 8068002,
-            "name": "Soulands Rangers",
-            "icon": "i/u/8068002.png?v=69"
-          },
-          "amount": 250000
         }
       ]
     }
@@ -12959,15 +12835,15 @@
           "tla": "ATH",
           "crest": "https://crests.football-data.org/77.png"
         },
-        "playedGames": 27,
+        "playedGames": 28,
         "form": null,
         "won": 10,
         "draw": 5,
-        "lost": 12,
+        "lost": 13,
         "points": 35,
         "goalsFor": 30,
-        "goalsAgainst": 37,
-        "goalDifference": -7
+        "goalsAgainst": 38,
+        "goalDifference": -8
       },
       {
         "position": 11,
@@ -12991,6 +12867,25 @@
       {
         "position": 12,
         "team": {
+          "id": 298,
+          "name": "Girona FC",
+          "shortName": "Girona",
+          "tla": "GIR",
+          "crest": "https://crests.football-data.org/298.png"
+        },
+        "playedGames": 28,
+        "form": null,
+        "won": 8,
+        "draw": 10,
+        "lost": 10,
+        "points": 34,
+        "goalsFor": 29,
+        "goalsAgainst": 43,
+        "goalDifference": -14
+      },
+      {
+        "position": 13,
+        "team": {
           "id": 95,
           "name": "Valencia CF",
           "shortName": "Valencia",
@@ -13008,7 +12903,7 @@
         "goalDifference": -11
       },
       {
-        "position": 13,
+        "position": 14,
         "team": {
           "id": 87,
           "name": "Rayo Vallecano de Madrid",
@@ -13027,7 +12922,7 @@
         "goalDifference": -6
       },
       {
-        "position": 14,
+        "position": 15,
         "team": {
           "id": 559,
           "name": "Sevilla FC",
@@ -13044,25 +12939,6 @@
         "goalsFor": 35,
         "goalsAgainst": 42,
         "goalDifference": -7
-      },
-      {
-        "position": 15,
-        "team": {
-          "id": 298,
-          "name": "Girona FC",
-          "shortName": "Girona",
-          "tla": "GIR",
-          "crest": "https://crests.football-data.org/298.png"
-        },
-        "playedGames": 27,
-        "form": null,
-        "won": 7,
-        "draw": 10,
-        "lost": 10,
-        "points": 31,
-        "goalsFor": 28,
-        "goalsAgainst": 43,
-        "goalDifference": -15
       },
       {
         "position": 16,
@@ -13424,23 +13300,6 @@
     },
     "nextMatches": [
       {
-        "id": 544486,
-        "matchday": 28,
-        "date": "2026-03-14T13:00:00Z",
-        "home": {
-          "id": 298,
-          "name": "Girona FC",
-          "short": "Girona",
-          "crest": "https://crests.football-data.org/298.png"
-        },
-        "away": {
-          "id": 77,
-          "name": "Athletic Club",
-          "short": "Athletic",
-          "crest": "https://crests.football-data.org/77.png"
-        }
-      },
-      {
         "id": 544482,
         "matchday": 28,
         "date": "2026-03-14T15:15:00Z",
@@ -13718,82 +13577,82 @@
   },
   "news": [
     {
+      "title": "Giráldez, sobre Álvaro Nuñez, Fer López y Matías Vecino",
+      "link": "https://www.jornadaperfecta.com/blog/giraldez-previa-betis-celta-j28/",
+      "date": "Sat, 14 Mar 2026 13:56:57 +0000",
+      "img": "https://cdn.biwenger.com/i/t/5.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "BigUp: Gana dinero real con tus pronósticos del Real Madrid &#8211; Elche",
       "link": "https://www.jornadaperfecta.com/blog/bigup-pronosticos-real-madrid-elche/",
-      "date": "Fri, 13 Mar 2026 22:07:49 +0000",
+      "date": "Sat, 14 Mar 2026 13:45:49 +0000",
       "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2705.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Tenaglia pide el cambio en los minutos finales del Alavés &#8211; Villarreal",
-      "link": "https://www.jornadaperfecta.com/blog/tenaglia-estado-alaves-j29/",
-      "date": "Fri, 13 Mar 2026 22:06:03 +0000",
-      "img": "https://cdn.biwenger.com/i/t/91.png",
+      "title": "Lisci, sobre Víctor Muñoz, Rubén García y Raúl García",
+      "link": "https://www.jornadaperfecta.com/blog/lisci-previa-real-sociedad-osasuna-j28/",
+      "date": "Sat, 14 Mar 2026 13:33:27 +0000",
+      "img": "https://cdn.biwenger.com/i/t/93.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Oblak, baja de última hora en la convocatoria del Atleti",
-      "link": "https://www.jornadaperfecta.com/blog/oblak-baja-atleti-j28/",
-      "date": "Fri, 13 Mar 2026 19:52:29 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Promoción Sportium Conecta 5 LaLiga: ¡Gana hasta 5€ gratis con el Barcelona vs Sevilla!",
-      "link": "https://www.jornadaperfecta.com/blog/sportium-conecta-5-barcelona-vs-sevilla/",
-      "date": "Fri, 13 Mar 2026 19:00:33 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/03/Sportium-Conecta-5-Barcelona-vs-Sevilla.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "¡Once titular confirmado del Alavés para la jornada 28!",
-      "link": "https://www.jornadaperfecta.com/blog/once-alaves-jornada-28/",
-      "date": "Fri, 13 Mar 2026 18:58:50 +0000",
-      "img": "https://cdn.biwenger.com/i/t/91.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "¡Once confirmado del Villarreal con una sorprendente suplencia!",
-      "link": "https://www.jornadaperfecta.com/blog/once-villarreal-jornada-28/",
-      "date": "Fri, 13 Mar 2026 18:53:46 +0000",
-      "img": "https://cdn.biwenger.com/i/t/19.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Posible suplencia de Pedri en la jornada 28, ¿alinear?",
-      "link": "https://www.jornadaperfecta.com/blog/pedri-alinear-j28-fantasy-barcelona/",
-      "date": "Fri, 13 Mar 2026 16:45:53 +0000",
+      "title": "Flick, sobre el alta de Gavi y la fecha de vuelta de Frenkie De Jong",
+      "link": "https://www.jornadaperfecta.com/blog/flick-previa-barcelona-sevilla-j28/",
+      "date": "Sat, 14 Mar 2026 13:30:56 +0000",
       "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Fede Valverde podría rotar en la jornada 28, ¿alinear?",
-      "link": "https://www.jornadaperfecta.com/blog/valverde-alinear-j28-fantasy-madrid/",
-      "date": "Fri, 13 Mar 2026 16:35:21 +0000",
+      "title": "Lemar, baja de última hora por unas molestias en el pubis",
+      "link": "https://www.jornadaperfecta.com/blog/lemar-baja-j28-girona/",
+      "date": "Sat, 14 Mar 2026 13:23:28 +0000",
+      "img": "https://cdn.biwenger.com/i/t/289.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Demichelis convoca a Raíllo y habla de Sergi Darder",
+      "link": "https://www.jornadaperfecta.com/blog/demichelis-previa-mallorca-espanyol-j28/",
+      "date": "Sat, 14 Mar 2026 13:10:50 +0000",
+      "img": "https://cdn.biwenger.com/i/t/465.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Manolo González confirma la baja de Calero por lesión",
+      "link": "https://www.jornadaperfecta.com/blog/manolo-gonzalez-previa-mallorca-espanyol-j28-2/",
+      "date": "Sat, 14 Mar 2026 12:59:43 +0000",
+      "img": "https://cdn.biwenger.com/i/t/7.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Pellegrini confirma la baja de Diego Llorente y recupera a Amrabat",
+      "link": "https://www.jornadaperfecta.com/blog/pellegrini-previa-betis-celta-j28/",
+      "date": "Sat, 14 Mar 2026 12:40:44 +0000",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Gavi recibe el alta médica y va convocado ante el Sevilla",
+      "link": "https://www.jornadaperfecta.com/blog/gavi-vuelta-lesion-rodilla/",
+      "date": "Sat, 14 Mar 2026 11:55:02 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Raúl Asencio se queda fuera de la convocatoria del Real Madrid",
+      "link": "https://www.jornadaperfecta.com/blog/asencio-baja-real-madrid-j28/",
+      "date": "Sat, 14 Mar 2026 11:50:46 +0000",
       "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Posibles cambios en el once del Elche ante el Real Madrid",
-      "link": "https://www.jornadaperfecta.com/blog/once-elche-j28-laliga/",
-      "date": "Fri, 13 Mar 2026 16:17:32 +0000",
-      "img": "https://cdn.biwenger.com/i/t/75.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Eric García vuelve con el grupo, ¿lo alineamos en la J28?",
-      "link": "https://www.jornadaperfecta.com/blog/eric-garcia-estado-barcelona-j28/",
-      "date": "Fri, 13 Mar 2026 16:01:47 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -13802,7 +13661,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-03-14T08:11:36.662Z",
+    "updatedAt": "2026-03-14T13:57:00.750Z",
     "players": [
       {
         "id": "3374",
@@ -13942,11 +13801,11 @@
         "team": "Girona FC",
         "position": "",
         "nationality": "Ukraine",
-        "appearances": 24,
+        "appearances": 25,
         "goals": 9,
         "assists": 1,
         "penalties": 3,
-        "minutesPerGoal": 240
+        "minutesPerGoal": 250
       },
       {
         "id": "150533",
@@ -14182,11 +14041,11 @@
         "team": "Athletic Club",
         "position": "",
         "nationality": "Spain",
-        "appearances": 26,
+        "appearances": 27,
         "goals": 6,
         "assists": 1,
         "penalties": 1,
-        "minutesPerGoal": 390
+        "minutesPerGoal": 405
       },
       {
         "id": "3259",
@@ -14218,11 +14077,11 @@
         "team": "Athletic Club",
         "position": "",
         "nationality": "Spain",
-        "appearances": 24,
+        "appearances": 25,
         "goals": 5,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 432
+        "minutesPerGoal": 450
       },
       {
         "id": "213404",
@@ -14338,11 +14197,11 @@
         "team": "Girona FC",
         "position": "",
         "nationality": "Ukraine",
-        "appearances": 21,
+        "appearances": 22,
         "goals": 5,
-        "assists": 2,
+        "assists": 3,
         "penalties": 0,
-        "minutesPerGoal": 378
+        "minutesPerGoal": 396
       },
       {
         "id": "32312",
@@ -14758,11 +14617,11 @@
         "team": "Girona FC",
         "position": "",
         "nationality": "Morocco",
-        "appearances": 13,
+        "appearances": 14,
         "goals": 3,
         "assists": 2,
         "penalties": 0,
-        "minutesPerGoal": 390
+        "minutesPerGoal": 420
       },
       {
         "id": "11040",
@@ -14866,11 +14725,11 @@
         "team": "Girona FC",
         "position": "",
         "nationality": "Spain",
-        "appearances": 23,
+        "appearances": 24,
         "goals": 2,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 1035
+        "minutesPerGoal": 1080
       },
       {
         "id": "48555",
@@ -14938,11 +14797,11 @@
         "team": "Athletic Club",
         "position": "",
         "nationality": "Spain",
-        "appearances": 20,
+        "appearances": 21,
         "goals": 2,
         "assists": 0,
         "penalties": 2,
-        "minutesPerGoal": 900
+        "minutesPerGoal": 945
       },
       {
         "id": "175869",
