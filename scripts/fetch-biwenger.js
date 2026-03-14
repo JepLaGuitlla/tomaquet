@@ -499,11 +499,6 @@ function updateHistory(myTeamTomaquet, myTeamEnBas, allTeamsTomaquet, allTeamsEn
   const meT = (allTeamsTomaquet || []).find(isMe);
   const meE = (allTeamsEnBas   || []).find(isMe);
 
-  // DEBUG — ver nombres de equipos para confirmar búsqueda
-  if (!meT) console.warn(`⚠️ No encontré mi equipo en Tomaquet. Equipos: ${(allTeamsTomaquet||[]).map(t=>t.name).join(' | ')}`);
-  if (!meE) console.warn(`⚠️ No encontré mi equipo en EN BAS. Equipos: ${(allTeamsEnBas||[]).map(t=>t.name).join(' | ')}`);
-  if (meT) console.log(`🦊 Tomaquet found: "${meT.name}" value=${meT.value} trend=${meT.trend}`);
-
   // ── Tomaquet ──
   const entryT = {
     date:      today,
