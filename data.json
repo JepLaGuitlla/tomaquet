@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-14T07:50:56.440Z",
+  "updatedAt": "2026-03-14T08:09:16.784Z",
   "players": [
     {
       "id": 11,
@@ -11944,9 +11944,9 @@
           6,
           13
         ],
-        "teamSize": 17,
-        "teamValue": 55630000,
-        "teamValueInc": -670000,
+        "teamSize": 16,
+        "teamValue": 48530000,
+        "teamValueInc": -250000,
         "position": 9
       },
       {
@@ -12244,8 +12244,8 @@
       "name": "Aiveen Teaam",
       "manager": "Aiveen Teaam",
       "points": 1087,
-      "value": 55630000,
-      "trend": -670000,
+      "value": 48530000,
+      "trend": -250000,
       "players": []
     },
     {
@@ -12510,6 +12510,21 @@
   "boardEnBas": [
     {
       "type": "transfer",
+      "date": 1773474798,
+      "content": [
+        {
+          "player": 29184,
+          "from": {
+            "id": 6579540,
+            "name": "Aiveen Teaam",
+            "icon": "i/u/6579540.png?v=63"
+          },
+          "amount": 7606100
+        }
+      ]
+    },
+    {
+      "type": "transfer",
       "date": 1773471205,
       "content": [
         {
@@ -12757,21 +12772,6 @@
               "amount": 1373050
             }
           ]
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1773350557,
-      "content": [
-        {
-          "player": 2001,
-          "from": {
-            "id": 6580423,
-            "name": "FC Borça",
-            "icon": "i/t/3.png"
-          },
-          "amount": 3489200
         }
       ]
     }
@@ -13802,7 +13802,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-03-14T07:50:55.499Z",
+    "updatedAt": "2026-03-14T08:09:15.504Z",
     "players": [
       {
         "id": "3374",
