@@ -3517,8 +3517,14 @@ function jpSwitchTab(tab, playerId) {
   document.querySelectorAll('.jp-tab-btn').forEach(b => b.classList.remove('active'));
   document.getElementById('jptab-valor-btn').classList.toggle('active', tab === 'valor');
   document.getElementById('jptab-owners-btn').classList.toggle('active', tab === 'owners');
-  document.getElementById('jptab-valor').style.display  = tab === 'valor'  ? '' : 'none';
-  document.getElementById('jptab-owners').style.display = tab === 'owners' ? '' : 'none';
+  document.getElementById('jptab-analisis-btn').classList.toggle('active', tab === 'analisis');
+  document.getElementById('jptab-valor').style.display   = tab === 'valor'   ? '' : 'none';
+  document.getElementById('jptab-owners').style.display  = tab === 'owners'  ? '' : 'none';
+  document.getElementById('jptab-analisis').style.display = tab === 'analisis' ? '' : 'none';
+  // Renderizar análisis solo cuando se abre por primera vez
+  if (tab === 'analisis' && currentPanelPlayer) {
+    renderJugAnalisis(currentPanelPlayer);
+  }
 }
 
 const _jugCache = {};
@@ -3639,6 +3645,144 @@ function renderJugValor(data, p) {
   `;
 }
 
+function renderJugAnalisis(p) {
+  const el = document.getElementById('jptab-analisis');
+  if (!el) return;
+
+  // Datos de jornadas
+  const jForm = p.jForm || [];
+  if (!jForm.length) {
+    el.innerHTML = '<div class="jp-tab-loading">Sin datos de jornadas disponibles</div>';
+    return;
+  }
+
+  // Precios desde cache
+  const priceHistory = (window._pricesData || {})[String(p.id)] || [];
+
+  // Construir labels de jornada (J-4 → J↑)
+  const jLabels = jForm.map((_, i) => {
+    const idx = jForm.length - i;
+    return idx === 1 ? 'J↑' : 'J-' + (idx - 1);
+  }).reverse();
+  const jVals = [...jForm].reverse();
+
+  // Colores de barras según puntuación
+  const barColors = jVals.map(v =>
+    v === null || v === undefined ? 'rgba(107,114,128,0.3)' :
+    v < 0  ? 'rgba(239,68,68,0.6)'   :
+    v === 0 ? 'rgba(107,114,128,0.3)' :
+    v < 6  ? 'rgba(217,119,6,0.65)'  :
+    v < 10 ? 'rgba(34,197,94,0.65)'  :
+             'rgba(59,130,246,0.75)'
+  );
+
+  const chartId = 'jug_analisis_' + p.id;
+
+  el.innerHTML = `
+    <div style="font-size:0.6rem;color:var(--text3);margin-bottom:8px;display:flex;gap:12px;flex-wrap:wrap">
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:8px;height:8px;border-radius:1px;background:rgba(34,197,94,0.65)"></span>6-9 pts</span>
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:8px;height:8px;border-radius:1px;background:rgba(59,130,246,0.75)"></span>10+ pts</span>
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:8px;height:8px;border-radius:1px;background:rgba(217,119,6,0.65)"></span>1-5 pts</span>
+      ${priceHistory.length ? '<span style="display:flex;align-items:center;gap:4px"><span style="width:16px;height:2px;background:#3b82f6;border-radius:1px"></span>Valor</span>' : ''}
+    </div>
+    <div style="position:relative;width:100%;height:160px"><canvas id="${chartId}"></canvas></div>
+    <div style="font-size:0.6rem;color:var(--text3);margin-top:6px;text-align:center">Últimas ${jVals.filter(v=>v!=null).length} jornadas · eje izq: puntos · eje der: valor M€</div>
+  `;
+
+  function buildChart() {
+    const datasets = [
+      {
+        type: 'bar',
+        label: 'Puntos',
+        data: jVals.map(v => v ?? 0),
+        backgroundColor: barColors,
+        borderRadius: 3,
+        yAxisID: 'yPts',
+        order: 2,
+      }
+    ];
+
+    // Añadir línea de valor solo si hay datos de precio
+    if (priceHistory.length >= 2) {
+      // Tomar los últimos N precios equivalentes a las jornadas
+      const n = jVals.length;
+      const recentPrices = priceHistory.slice(-n);
+      const valorData = Array(n).fill(null);
+      recentPrices.forEach((pr, i) => {
+        valorData[n - recentPrices.length + i] = +(pr.p / 1000000).toFixed(2);
+      });
+      datasets.push({
+        type: 'line',
+        label: 'Valor M€',
+        data: valorData,
+        borderColor: '#3b82f6',
+        borderWidth: 1.5,
+        pointRadius: 2,
+        pointBackgroundColor: '#3b82f6',
+        tension: 0.3,
+        fill: false,
+        yAxisID: 'yValor',
+        order: 1,
+        spanGaps: true,
+      });
+    }
+
+    new Chart(document.getElementById(chartId), {
+      data: { labels: jLabels, datasets },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: { mode: 'index', intersect: false },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: 'rgba(15,20,32,0.95)',
+            titleColor: '#a0aec0',
+            bodyColor: '#ffffff',
+            padding: 8,
+            callbacks: {
+              label: ctx => ctx.datasetIndex === 0
+                ? '  Puntos: ' + (ctx.raw || 0) + ' pts'
+                : '  Valor: ' + ctx.raw + 'M€'
+            }
+          }
+        },
+        scales: {
+          x: {
+            grid: { color: 'rgba(255,255,255,0.04)' },
+            ticks: { color: '#718096', font: { size: 9 } },
+          },
+          yPts: {
+            position: 'left',
+            min: 0,
+            max: Math.max(16, ...jVals.filter(v=>v!=null)) + 2,
+            grid: { color: 'rgba(255,255,255,0.05)' },
+            ticks: { color: '#718096', font: { size: 9 }, stepSize: 4,
+              callback: v => v + 'p' },
+          },
+          yValor: {
+            position: 'right',
+            display: priceHistory.length >= 2,
+            grid: { display: false },
+            ticks: { color: '#3b82f6', font: { size: 9 },
+              callback: v => v + 'M' },
+          }
+        }
+      }
+    });
+  }
+
+  // Chart.js lazy load
+  if (window.Chart) {
+    buildChart();
+  } else {
+    const s = document.createElement('script');
+    s.src = 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js';
+    s.onload = buildChart;
+    document.head.appendChild(s);
+  }
+}
+
 function renderJugOwners(data, p) {
   const el = document.getElementById('jptab-owners');
   if (!el) return;
@@ -3659,11 +3803,15 @@ function renderJugOwners(data, p) {
     const isBuy = t.type === 'buy' || t.to;
     const name = t.to?.name || t.from?.name || '—';
     const amount = t.amount || t.price || 0;
+    const amountColor = isBuy ? '#22c55e' : '#ef4444';
+    const typeLabel = isBuy ? 'Compra' : 'Venta';
+    const typeCls = isBuy ? 'jp-owner-buy' : 'jp-owner-sell';
     const date = t.date ? new Date(t.date * 1000).toLocaleDateString('es', {day:'2-digit', month:'2-digit', year:'2-digit'}) : '—';
+    const amountFmt = amount.toLocaleString('es');
     return `<div class="jp-owner-row">
-      <span class="jp-owner-type ${isBuy ? 'jp-owner-buy' : 'jp-owner-sell'}">${isBuy ? 'Compra' : 'Venta'}</span>
+      <span class="jp-owner-type ${typeCls}">${typeLabel}</span>
       <span class="jp-owner-name">${name}</span>
-      <span class="jp-owner-amount" style="color:${isBuy?'#22c55e':'#ef4444'}">${amount.toLocaleString('es')}€</span>
+      <span class="jp-owner-amount" style="color:${amountColor}">${amountFmt}€</span>
       <span class="jp-owner-date">${date}</span>
     </div>`;
   }).join('');
@@ -3779,12 +3927,16 @@ function renderJugPanel(p){
       <div style="display:flex;border-bottom:1px solid var(--border);">
         <button class="jp-tab-btn active" id="jptab-valor-btn" onclick="jpSwitchTab('valor',${p.id})">📈 Valor</button>
         <button class="jp-tab-btn" id="jptab-owners-btn" onclick="jpSwitchTab('owners',${p.id})">👤 Propietarios</button>
+        <button class="jp-tab-btn" id="jptab-analisis-btn" onclick="jpSwitchTab('analisis',${p.id})">📊 Análisis</button>
       </div>
       <div id="jptab-valor" style="padding:12px 16px;">
         <div class="jp-tab-loading">Cargando curva de precio...</div>
       </div>
       <div id="jptab-owners" style="display:none;padding:12px 16px;">
         <div class="jp-tab-loading">Cargando historial...</div>
+      </div>
+      <div id="jptab-analisis" style="display:none;padding:12px 16px;">
+        <div class="jp-tab-loading">Cargando análisis...</div>
       </div>
     </div>
   `;
