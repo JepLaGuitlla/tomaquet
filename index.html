@@ -1037,7 +1037,30 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
     <div class="mch" onclick="mv3SetSortClick('pts_desc')" id="mv3ch-pts">Pts<br><span style="opacity:.65">Media AS</span></div>
     <div class="mch">Local<br><span style="opacity:.65">M.Local</span></div>
     <div class="mch">Visita<br><span style="opacity:.65">M.Visit.</span></div>
-    <div class="mch" onclick="mv3SetSortClick('roi_desc')" id="mv3ch-roi">ROI<br><span style="opacity:.65">Efic.</span></div>
+    <div class="mch" onclick="mv3SetSortClick('roi_desc')" id="mv3ch-roi">
+      <span style="display:flex;align-items:center;justify-content:center;gap:3px">
+        ROI
+        <span class="lp-tip">
+          <span class="lp-tip-icon">?</span>
+          <div class="lp-tip-box" style="min-width:240px">
+            <div class="lp-tip-title">ROI — Retorno sobre inversión</div>
+            <div class="lp-tip-body">Cuántos puntos obtienes por cada millón invertido. Un ROI de 10 significa que el jugador genera 10 puntos por cada millón que cuesta. Cuanto más alto, más rentable es el jugador en relación a su precio.</div>
+            <div class="lp-tip-formula">Pts totales ÷ precio en M€</div>
+          </div>
+        </span>
+      </span>
+      <span style="opacity:.65;display:flex;align-items:center;justify-content:center;gap:3px">
+        Efic.
+        <span class="lp-tip">
+          <span class="lp-tip-icon">?</span>
+          <div class="lp-tip-box" style="min-width:240px">
+            <div class="lp-tip-title">Eficiencia</div>
+            <div class="lp-tip-body">Compara el rendimiento del jugador con la media de jugadores de su misma posición y franja de precio. Por encima de 100 significa que produce más que la media de jugadores similares — está infravalorado por el mercado.</div>
+            <div class="lp-tip-formula">(Pts/PJ ÷ precio) normalizado vs media de su franja</div>
+          </div>
+        </span>
+      </span>
+    </div>
     <div class="mch">Cláusula<br><span style="opacity:.65">Factor</span></div>
     <div class="mch" style="font-size:.42rem;line-height:1.4;position:relative">
       <span style="display:flex;align-items:center;justify-content:center;gap:3px">
@@ -2441,7 +2464,7 @@ function mv3Render(list){
           <div class="msv ${mv3Color(ptsPct)}">${p.pts}</div>
           <div class="mstat-div"></div>
           <div class="msv2 ${mv3Color(mediaPct)}">${p.media?p.media.toFixed(1):'—'}</div>
-          <div class="msv2-lbl">media AS${lpTip('Media AS/Sofascore','Puntuación mixta Biwenger: media entre la nota AS y Sofascore del jugador por partido. Si el resultado es decimal, se redondea hacia arriba.','(AS + Sofascore) / 2 → ceil si decimal')}</div>
+          <div class="msv2-lbl">media AS</div>
         </div>
         <div class="mpc-st">
           <div class="msv ${mv3Color(ptsLPct)}">${mL}</div>
