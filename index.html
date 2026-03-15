@@ -2762,8 +2762,11 @@ function makeInteractiveChart(container, entries, valueFn, labelFn, color, yFmt,
 
   const W=800, H=200, padL=50, padR=20, padT=20, padB=36;
   const rawMin=Math.min(...valid), rawMax=Math.max(...valid);
-  const minV = invertY ? rawMin : 0;
-  const maxV = rawMax * 1.4;
+  const hasNegative = rawMin < 0;
+  // Si hay negativos: margen 40% arriba y abajo del rango real
+  // Si todo positivo: empieza en 0 con 40% de margen arriba
+  const minV = invertY ? rawMin : (hasNegative ? rawMin * 1.4 : 0);
+  const maxV = hasNegative ? rawMax * 1.4 : rawMax * 1.4;
   const rng=maxV-minV||1;
   const n=entries.length;
 
@@ -2772,6 +2775,9 @@ function makeInteractiveChart(container, entries, valueFn, labelFn, color, yFmt,
     ? padT + ((v-minV)/rng)*(H-padT-padB)
     : H-padB - ((v-minV)/rng)*(H-padT-padB);
 
+  // Posición Y del cero — para línea de referencia y área
+  const zeroY = cy(0);
+
   const coords = entries.map((e,i) => ({ x:cx(i), y:values[i]!=null?cy(values[i]):null, v:values[i], e }));
   const vc = coords.filter(c=>c.y!=null);
 
@@ -2779,7 +2785,11 @@ function makeInteractiveChart(container, entries, valueFn, labelFn, color, yFmt,
   const sc = color || (invertY ? '#6366f1' : up?'#22c55e':'#ef4444');
 
   const lineD = vc.map((c,i)=>(i===0?'M':'L')+c.x.toFixed(1)+' '+c.y.toFixed(1)).join(' ');
-  const areaD = vc.length>1 ? lineD+` L${vc[vc.length-1].x.toFixed(1)} ${H-padB} L${vc[0].x.toFixed(1)} ${H-padB} Z` : '';
+  // Área siempre cierra en la línea del cero, no en el borde inferior
+  const areaD = vc.length>1 ? lineD+` L${vc[vc.length-1].x.toFixed(1)} ${zeroY.toFixed(1)} L${vc[0].x.toFixed(1)} ${zeroY.toFixed(1)} Z` : '';
+
+  // Línea de cero visible si hay negativos
+  const zeroLine = hasNegative ? `<line x1="${padL}" y1="${zeroY.toFixed(1)}" x2="${W-padR}" y2="${zeroY.toFixed(1)}" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>` : '';
 
   // Eje Y — 4 niveles
   const yTicks = [0,.33,.66,1].map(t => ({ y: H-padB-(t*(H-padT-padB)), v: minV+t*rng }));
@@ -2801,6 +2811,8 @@ function makeInteractiveChart(container, entries, valueFn, labelFn, color, yFmt,
         </defs>
         <!-- Grid lines -->
         ${yTicks.map(t=>`<line x1="${padL}" y1="${t.y.toFixed(1)}" x2="${W-padR}" y2="${t.y.toFixed(1)}" stroke="var(--border)" stroke-width="1" stroke-dasharray="4,4"/>`).join('')}
+        <!-- Línea de cero (solo si hay negativos) -->
+        ${zeroLine}
         <!-- Y labels -->
         ${yTicks.map(t=>`<text x="${padL-6}" y="${(t.y+4).toFixed(1)}" text-anchor="end" font-size="10" fill="var(--text3)" font-family="Figtree,sans-serif">${yFmt(t.v)}</text>`).join('')}
         <!-- X labels -->
