@@ -1068,7 +1068,7 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
       <div class="me-table">
         <div class="me-header">
           <div class="th">POS</div><div class="th">JUGADOR</div><div class="th">VALOR</div>
-          <div class="th">TEND.</div><div class="th">PTS</div><div class="th">MEDIA</div><div class="th">ESTADO</div>
+          <div class="th">ÚLTIMAS 5J</div><div class="th">PTS</div><div class="th">MEDIA</div><div class="th">ESTADO</div>
         </div>
         <div id="meTableBody"></div>
       </div>
@@ -3222,14 +3222,54 @@ function renderMeTable(){
     const pa=posOrder[a.position.split('/')[0]]??9;
     const pb=posOrder[b.position.split('/')[0]]??9;
     if(pa!==pb) return pa-pb;
-    return (b.pts||0)-(a.pts||0); // mismo grupo → más puntos primero
+    return (b.pts||0)-(a.pts||0);
   });
   document.getElementById('meTableBody').innerHTML=sorted.map(p=>{
-    const ep=enrichPlayer(p);const media=ep.media?ep.media.toFixed(1):(p.pts/26).toFixed(1);
-    const tc=p.trend>0?'color:var(--green)':p.trend<0?'color:var(--red)':'color:var(--text3)';
-    const ts=p.trend>0?'+'+fmt(p.trend):p.trend<0?fmt(p.trend):'—';
-    const badges=getPlayerBadges(ep);
-    return `<div class="me-row"><div class="me-pos" style="background:${PC[p.position.split('/')[0]]||'#666'};font-size:${p.position.includes('/')?'6px':'8px'}">${p.position}</div><div><div style="font-family:Figtree,sans-serif;font-size:0.9rem;font-weight:700;text-transform:uppercase;letter-spacing:0.3px;line-height:1.2">${p.name}</div><div style="font-family:Figtree,sans-serif;font-size:0.58rem;color:var(--text3)">${p.club}</div></div><div style="font-family:Figtree,sans-serif;font-size:0.78rem;font-weight:500;color:var(--text)">${fmt(p.price)}</div><div style="${tc};font-size:0.76rem;font-weight:600">${ts}</div><div style="font-family:Figtree,sans-serif;font-size:1.2rem;font-weight:800;color:var(--accent);line-height:1">${p.pts}</div><div style="font-family:Figtree,sans-serif;font-size:0.72rem;color:var(--text3)">${media}</div><div>${renderBadges(badges)}</div></div>`;
+    const ep=enrichPlayer(p);
+    const media=ep.media?ep.media.toFixed(1):(p.pts/26).toFixed(1);
+
+    // Escudo
+    const shieldUrl = p.teamId ? `https://cf.biwenger.com/static/img/teams/la-liga/${p.teamId}.png` : '';
+    const shield = shieldUrl
+      ? `<img src="${shieldUrl}" class="me-shield" onerror="this.style.display='none'">`
+      : `<div class="me-shield-fallback"></div>`;
+
+    // Valor + tendencia
+    const tc = p.trend>0?'color:#22c55e':p.trend<0?'color:#ef4444':'color:var(--text3)';
+    const ts = p.trend>0?`▲${fmt(p.trend)}`:p.trend<0?`▼${fmt(Math.abs(p.trend))}`:'';
+    const valorCell = `<div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:0.78rem;font-weight:600;color:var(--text)">${fmt(p.price)}</div>
+      ${ts?`<div style="font-size:0.6rem;${tc};font-weight:700;margin-top:1px">${ts}</div>`:''}
+    </div>`;
+
+    // Últimas 5 jornadas
+    const jForm = p.jForm || [];
+    const jFormCell = `<div class="me-jform">${jForm.slice(0,5).map(v=>{
+      if(v===null||v===undefined) return `<div class="me-jf" style="background:var(--bg3);color:var(--text3)">—</div>`;
+      const bg = v<0?'rgba(239,68,68,0.15)':v===0?'var(--bg3)':v<6?'rgba(217,119,6,0.15)':v<10?'rgba(22,163,74,0.15)':'rgba(29,111,206,0.2)';
+      const col = v<0?'#ef4444':v===0?'var(--text3)':v<6?'#d97706':v<10?'#22c55e':'#60a5fa';
+      return `<div class="me-jf" style="background:${bg};color:${col}">${v}</div>`;
+    }).join('')}</div>`;
+
+    // Estado
+    const st = getStatus(p.status||'ok');
+    const statusCell = `<div style="font-size:0.62rem;color:${st.color};font-weight:700;font-family:Figtree,sans-serif">${st.label}</div>`;
+
+    return `<div class="me-row" style="cursor:pointer" onclick="openJugPanel(allPlayers.find(x=>x.id===${p.id})||${JSON.stringify(p).replace(/"/g,'&quot;')})">
+      <div class="me-pos" style="background:${PC[p.position.split('/')[0]]||'#666'};font-size:${p.position.includes('/')?'6px':'8px'}">${p.position}</div>
+      <div style="display:flex;align-items:center;gap:6px;min-width:0">
+        ${shield}
+        <div style="min-width:0">
+          <div style="font-family:Figtree,sans-serif;font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.3px;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${p.name}</div>
+          <div style="font-family:Figtree,sans-serif;font-size:0.58rem;color:var(--text3)">${p.club}</div>
+        </div>
+      </div>
+      ${valorCell}
+      ${jFormCell}
+      <div style="font-family:Figtree,sans-serif;font-size:1.1rem;font-weight:800;color:var(--accent);line-height:1">${p.pts}</div>
+      <div style="font-family:Figtree,sans-serif;font-size:0.72rem;color:var(--text3)">${media}</div>
+      ${statusCell}
+    </div>`;
   }).join('');
 }
 
