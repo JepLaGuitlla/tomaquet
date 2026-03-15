@@ -136,6 +136,7 @@ async function fetchPlayers() {
     playedHome: p.playedHome     || 0,
     playedAway: p.playedAway     || 0,
     teamName:   p.teamName       || p.team?.name || '',
+    teamId:     p.team?.id       || null,
     status:     p.fitness?.[0]?.status || 'ok',
     jForm:      (p.fitness || []).slice(0, 5).map(f => typeof f === 'number' ? f : (f?.points ?? null)),
     clausula:   p.clause         || null,
