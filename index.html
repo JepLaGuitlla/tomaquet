@@ -2492,8 +2492,7 @@ function mv3Render(list){
         </div>
         <div class="mpc-extra">
           ${(()=>{
-            const clubName = p.club && p.club !== '—' ? p.club
-              : (playerStatsIndex[normName(p.name)]?.teamName || '');
+            const clubName = p.club && p.club !== '—' ? p.club : '';
             const fe = calcFactorEquipo(clubName);
             if (fe === null) return '<div class="msv2-lbl" style="color:var(--border2)">próx.</div>';
             const feColor = fe >= 7 ? 'var(--green)' : fe >= 5 ? 'var(--pt)' : fe >= 3 ? '#f59e0b' : 'var(--red)';
