@@ -3604,15 +3604,16 @@ function calcFactorEquipo(clubName) {
   let standing = ligaData.standings.find(t => {
     const tn = (t.team.name||'').toLowerCase();
     const ts = (t.team.shortName||'').toLowerCase();
-    // Coincidencia directa
+    // Coincidencia exacta primero
     if (tn === cn || ts === cn) return true;
-    // Primera palabra del nombre Biwenger en nombre football-data
-    const firstWord = cn.split(' ')[0];
-    if (firstWord.length > 3 && tn.includes(firstWord)) return true;
-    // Tabla de equivalencias
-    const mapped = BW_TO_FD_TEAM[cn];
-    if (mapped && tn === mapped.toLowerCase()) return true;
-    return false;
+    // Coincidencia por shortName dentro del club name
+    if (ts.length > 3 && cn.includes(ts)) return true;
+    // Palabras significativas — ignorar palabras genéricas Y ciudades compartidas
+    const stopWords = new Set(['real','club','fc','rcd','ud','ca','rc','de','del','la','cf','sd','barcelona','madrid','sevilla','valencia','bilbao']);
+    const cnWords = cn.split(' ').filter(w => w.length > 3 && !stopWords.has(w));
+    const tnWords = tn.split(' ').filter(w => w.length > 3 && !stopWords.has(w));
+    if (!cnWords.length || !tnWords.length) return false;
+    return cnWords.some(w => tnWords.some(tw => tw === w || tw.startsWith(w) || w.startsWith(tw)));
   });
 
   // Fallback — buscar en forms por nombre directamente
