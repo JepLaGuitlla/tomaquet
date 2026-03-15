@@ -2816,7 +2816,7 @@ function makeInteractiveChart(container, entries, valueFn, labelFn, color, yFmt,
         <path d="${lineD}" fill="none" stroke="${sc}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
         ${vc.map((c,i)=>`
           <circle class="cm-dot" cx="${c.x.toFixed(1)}" cy="${c.y.toFixed(1)}" r="4" fill="${sc}" stroke="#151b28" stroke-width="2" style="cursor:pointer"
-            data-idx="${i}" data-v="${c.v}" data-date="${xLabelFn?xLabelFn(c.e):(c.e.date||'')}" data-label="${labelFn(c.e)}"/>
+            data-idx="${i}" data-v="${c.v}" data-date="${xLabelFn?xLabelFn(c.e):(c.e.date||'')}" data-label="${(labelFn(c.e)||'').replace(/"/g,'&quot;')}"/>
         `).join('')}
       </svg>
       <div id="${tipId}" class="cm-tooltip">
@@ -2884,12 +2884,9 @@ function modalPosicion() {
       e => `${e.jornada?'J'+e.jornada:e.date} — ${e.pos}º de ${totalEquipos}`,
       '#6366f1',
       v => v+'º',
-      true,  // invertY — 1º arriba
-      null,
-      { min: 1, max: totalEquipos } // rango fijo del eje Y
+      true,
+      null
     );
-  });
-}
   });
 }
 
