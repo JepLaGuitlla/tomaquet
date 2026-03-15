@@ -387,6 +387,19 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
 .tag-warn{background:rgba(163,230,53,0.1);color:var(--lime);border:1px solid rgba(163,230,53,0.2);}
 .tag-ok{background:rgba(74,222,128,0.08);color:var(--green);border:1px solid rgba(74,222,128,0.15);}
 
+/* ── Sistema de tooltips explicativos ─────────────────── */
+.lp-tip{position:relative;display:inline-flex;align-items:center;}
+.lp-tip-icon{width:12px;height:12px;border-radius:50%;background:var(--border2);color:var(--text3);font-size:8px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;cursor:help;margin-left:3px;flex-shrink:0;line-height:1;}
+.lp-tip-icon:hover{background:var(--accent);color:#000;}
+.lp-tip-box{display:none;position:absolute;bottom:calc(100% + 6px);left:50%;transform:translateX(-50%);background:rgba(10,16,28,0.98);border:1px solid var(--accent);border-radius:6px;padding:10px 12px;min-width:220px;max-width:280px;z-index:9999;pointer-events:none;}
+.lp-tip-box::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:5px solid transparent;border-top-color:var(--accent);}
+.lp-tip-icon:hover + .lp-tip-box,
+.lp-tip:hover .lp-tip-box{display:block;}
+.lp-tip-title{font-family:'Figtree',sans-serif;font-size:0.7rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:5px;}
+.lp-tip-body{font-family:'Figtree',sans-serif;font-size:0.65rem;color:#a0aec0;line-height:1.6;}
+.lp-tip-formula{font-family:'IBM Plex Mono',monospace;font-size:0.58rem;color:rgba(255,255,255,0.5);margin-top:5px;border-top:1px solid rgba(255,255,255,0.08);padding-top:5px;}
+.lp-tip-scale{display:flex;gap:4px;margin-top:5px;}
+
 /* ── MODAL ─── */
 .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.8);backdrop-filter:blur(4px);z-index:1000;align-items:center;justify-content:center;padding:1rem;}
 .modal-overlay.open{display:flex;}
@@ -1021,12 +1034,12 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
     <div class="mch"></div>
     <div class="mch left">Jugador · Últimas 5J</div>
     <div class="mch" onclick="mv3SetSortClick('price_desc')" id="mv3ch-price">Precio<br><span style="opacity:.65">Tend.</span></div>
-    <div class="mch" onclick="mv3SetSortClick('pts_desc')" id="mv3ch-pts">Pts<br><span style="opacity:.65">Media</span></div>
+    <div class="mch" onclick="mv3SetSortClick('pts_desc')" id="mv3ch-pts">Pts<br><span style="opacity:.65">Media AS</span></div>
     <div class="mch">Local<br><span style="opacity:.65">M.Local</span></div>
     <div class="mch">Visita<br><span style="opacity:.65">M.Visit.</span></div>
     <div class="mch" onclick="mv3SetSortClick('roi_desc')" id="mv3ch-roi">ROI<br><span style="opacity:.65">Efic.</span></div>
     <div class="mch">Cláusula<br><span style="opacity:.65">Factor</span></div>
-    <div class="mch" style="color:var(--border2);font-size:.42rem">Extra<br><span style="opacity:.7">próx.</span></div>
+    <div class="mch" style="font-size:.42rem;line-height:1.4">Factor<br><span style="opacity:.7">Equipo</span></div>
   </div>
 
   <!-- Lista jugadores completa con scroll -->
@@ -2410,7 +2423,7 @@ function mv3Render(list){
           <div class="msv ${mv3Color(ptsPct)}">${p.pts}</div>
           <div class="mstat-div"></div>
           <div class="msv2 ${mv3Color(mediaPct)}">${p.media?p.media.toFixed(1):'—'}</div>
-          <div class="msv2-lbl">media</div>
+          <div class="msv2-lbl">media AS${lpTip('Media AS/Sofascore','Puntuación mixta Biwenger: media entre la nota AS y Sofascore del jugador por partido. Si el resultado es decimal, se redondea hacia arriba.','(AS + Sofascore) / 2 → ceil si decimal')}</div>
         </div>
         <div class="mpc-st">
           <div class="msv ${mv3Color(ptsLPct)}">${mL}</div>
@@ -2457,7 +2470,7 @@ function mv3Render(list){
             return '<div class="msv" style="color:'+feColor+';font-size:0.82rem;font-weight:800">'+fe.toFixed(1)+'</div>'
               + '<div class="mstat-div"></div>'
               + '<div style="display:flex;align-items:center;justify-content:center;gap:3px;margin-top:1px">'+shieldHtml+'<span style="font-size:0.6rem">'+localTxt+'</span></div>'
-              + '<div class="msv2-lbl">próx.</div>';
+              + '<div class="msv2-lbl" style="display:flex;align-items:center;justify-content:center">factor equipo'+lpTip('Factor Equipo','Mide lo favorable que es el próximo partido para los jugadores de este equipo. Combina forma reciente, goles marcados, posición en tabla, si juega como local o visitante, y el nivel del rival.','Forma(35%) + Goles(25%) + Tabla(20%) + Local/Visit.(10%) + Rival(10%)')+'</div>';
           })()}
         </div>
       </div>
@@ -3349,6 +3362,19 @@ function removePlayer(){delete lineup[currentSlot];closeModal();renderField();}
 // ══════════════════════════════════════════
 function fmt(v){if(!v&&v!==0)return'—';const a=Math.abs(v),s=v<0?'-':'';if(a>=1000000)return s+(a/1000000).toFixed(2)+'M€';if(a>=1000)return s+(a/1000).toFixed(0)+'K€';return s+a+'€';}
 function fmtTrend(v){if(!v||v===0)return'<span class="trend neutral">—</span>';if(v>0)return'<span class="trend up">+'+fmt(v)+'</span>';return'<span class="trend down">'+fmt(v)+'</span>';}
+
+// ── Tooltip explicativo reutilizable ──────────────────────────────────────
+// lpTip(title, body, formula?) → HTML del globo
+function lpTip(title, body, formula) {
+  return '<span class="lp-tip">'
+    + '<span class="lp-tip-icon">?</span>'
+    + '<div class="lp-tip-box">'
+    + '<div class="lp-tip-title">'+title+'</div>'
+    + '<div class="lp-tip-body">'+body+'</div>'
+    + (formula ? '<div class="lp-tip-formula">'+formula+'</div>' : '')
+    + '</div>'
+    + '</span>';
+}
 function roiClass(r){return r>=15?'high':r>=8?'mid':'low';}
 function posBadge(pos){if(!pos||pos==='?')return'<div class="pos-badge" style="background:var(--border);font-size:9px;color:var(--text3)">?</div>';const colors={PT:'var(--pt)',DF:'var(--df)',MC:'var(--mc)',DL:'var(--dl)',MD:'var(--md)'};const parts=pos.split('/').filter(p=>p);if(parts.length===1)return`<div class="pos-badge" style="background:${colors[parts[0]]||'var(--text3)'}">${parts[0]}</div>`;const gs=parts.map((p,i)=>{const c=colors[p]||'#666';return c+' '+(i/parts.length*100).toFixed(0)+'%,'+c+' '+((i+1)/parts.length*100).toFixed(0)+'%';}).join(',');return`<div class="pos-badge pos-multi" style="background:linear-gradient(180deg,${gs})">${parts.map(p=>`<span>${p}</span>`).join('')}</div>`;}
 function showSection(id,btn){document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));document.getElementById(id).classList.add('active');btn.classList.add('active');if(id==='analisis')loadLiga();}
