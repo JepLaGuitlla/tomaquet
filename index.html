@@ -2955,11 +2955,13 @@ function modalValor() {
   const fmt1 = v => v>=1000000?(v/1000000).toFixed(2)+'M€':v>=1000?Math.round(v/1000)+'K€':v+'€';
   const fmtDelta = v => (v>=0?'+':'')+fmt1(v);
 
-  // Calcular variación diaria acumulada desde el primer día (base = 0)
+  // Calcular variación desde base 0 — añadir punto origen
+  const originDelta = first ? { date: first.date, teamValue: first.teamValue, valorDelta: 0, _isOrigin: true } : null;
   const entriesDelta = entries.map(e => ({
     ...e,
     valorDelta: e.teamValue - first.teamValue
   }));
+  const entriesDeltaWithOrigin = originDelta ? [originDelta, ...entriesDelta] : entriesDelta;
 
   openChartModal('VALOR DE PLANTILLA', body => {
     body.innerHTML = `<div class="chart-modal-kpis">
@@ -2970,9 +2972,9 @@ function modalValor() {
     const chartDiv = document.createElement('div');
     body.appendChild(chartDiv);
     makeInteractiveChart(
-      chartDiv, entriesDelta,
+      chartDiv, entriesDeltaWithOrigin,
       e => e.valorDelta,
-      e => `${e.date} · ${fmtDelta(e.valorDelta)} · valor ${fmt1(e.teamValue)}`,
+      e => e._isOrigin ? `${e.date} · Inicio (0)` : `${e.date} · ${fmtDelta(e.valorDelta)} · valor ${fmt1(e.teamValue)}`,
       '#3b82f6',
       v => fmtDelta(v)
     );
@@ -2985,12 +2987,23 @@ function modalTendencia() {
   // Solo entradas con trend real
   const entries = allEntries.filter(e=>e.trend!=null);
 
-  // Calcular acumulado desde 0
+  // Calcular acumulado desde 0 — añadir punto origen en 0
   let acum = 0;
+  const firstEntry = entries[0];
+  const originPoint = firstEntry ? {
+    date: firstEntry.date, // mismo día que el primero pero valor 0
+    trend: 0,
+    trendAcum: 0,
+    _isOrigin: true
+  } : null;
+
   const entriesAcum = entries.map(e => {
     acum += e.trend;
     return { ...e, trendAcum: acum };
   });
+
+  // Insertar punto en 0 al inicio
+  const entriesWithOrigin = originPoint ? [originPoint, ...entriesAcum] : entriesAcum;
 
   const last = entriesAcum[entriesAcum.length-1];
   const positivos = entries.filter(e=>e.trend>0).length;
@@ -3007,9 +3020,9 @@ function modalTendencia() {
     const chartDiv = document.createElement('div');
     body.appendChild(chartDiv);
     makeInteractiveChart(
-      chartDiv, entriesAcum,
+      chartDiv, entriesWithOrigin,
       e => e.trendAcum,
-      e => `${e.date} · ${e.trendAcum>=0?'+':''}${fmt1(e.trendAcum)} acum · hoy ${e.trend>=0?'+':''}${fmt1(e.trend)}`,
+      e => e._isOrigin ? `${e.date} · Inicio (0)` : `${e.date} · ${e.trendAcum>=0?'+':''}${fmt1(e.trendAcum)} acum · hoy ${e.trend>=0?'+':''}${fmt1(e.trend)}`,
       null,
       v => fmt1(v)
     );
