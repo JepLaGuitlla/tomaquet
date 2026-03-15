@@ -2770,6 +2770,8 @@ function makeInteractiveChart(container, entries, valueFn, labelFn, color, yFmt,
   const n=entries.length;
 
   const cx = i => padL + (i/(n-1||1))*(W-padL-padR);
+  // invertY=true: valor MENOR = arriba (1º arriba, 14º abajo)
+  // invertY=false: valor MAYOR = arriba (normal)
   const cy = v => invertY
     ? padT + ((v-minV)/rng)*(H-padT-padB)
     : H-padB - ((v-minV)/rng)*(H-padT-padB);
@@ -2791,8 +2793,10 @@ function makeInteractiveChart(container, entries, valueFn, labelFn, color, yFmt,
   // Línea de cero visible si hay negativos
   const zeroLine = hasNegative ? `<line x1="${padL}" y1="${zeroY.toFixed(1)}" x2="${W-padR}" y2="${zeroY.toFixed(1)}" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>` : '';
 
-  // Eje Y — 4 niveles
-  const yTicks = [0,.33,.66,1].map(t => ({ y: H-padB-(t*(H-padT-padB)), v: minV+t*rng }));
+  // Eje Y — 4 niveles. Para invertY los ticks van al revés visualmente
+  const yTicks = invertY
+    ? [0,.33,.66,1].map(t => ({ y: padT + t*(H-padT-padB), v: minV + t*rng }))
+    : [0,.33,.66,1].map(t => ({ y: H-padB-(t*(H-padT-padB)), v: minV+t*rng }));
   // Eje X — primero, cada ~10 puntos, último
   const xIdxs = [...new Set([0, ...Array.from({length:Math.floor(n/10)},(_,i)=>(i+1)*10).filter(i=>i<n-1), n-1])];
   const xLabel = i => xLabelFn ? xLabelFn(entries[i]) : (entries[i].date?.slice(5)||'');
@@ -2884,7 +2888,7 @@ function modalPosicion() {
       e => e.pos,
       e => `${e.jornada?'J'+e.jornada:e.date} — ${e.pos}º de ${totalEquipos}`,
       '#6366f1',
-      v => v+'º',
+      v => Math.round(v)+'º',
       true,
       null,
       { min: 1, max: totalEquipos }
