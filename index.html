@@ -3525,7 +3525,13 @@ document.getElementById('modalOverlay').addEventListener('click',e=>{if(e.target
 // ══════════════════════════════════════════
 let ligaData={}, ligaLoaded=false;
 async function loadLiga(){
-  if(ligaLoaded)return;
+  if(ligaLoaded){
+    // Ya tenemos datos — solo renderizar y mostrar
+    document.getElementById('ligaLoading').style.display='none';
+    document.getElementById('ligaContent').style.display='block';
+    renderTablaLiga();renderProximaJornada();renderUltimosResultados();renderEquiposGrid();renderRecomendaciones();
+    return;
+  }
   document.getElementById('ligaLoading').style.display='flex';
   document.getElementById('ligaContent').style.display='none';
   try{
