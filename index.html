@@ -550,20 +550,20 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
 .ts-card.has-pop:hover{background:var(--bg3,#1e2433);}
 .ts-popover{
   position:fixed;z-index:9999;
-  background:#1a1f2e;border:1px solid var(--border2);border-radius:8px;
+  background:rgba(15,20,32,0.98);border:1px solid rgba(255,255,255,0.12);border-radius:8px;
   padding:1rem 1.2rem;min-width:220px;max-width:320px;
-  box-shadow:0 8px 32px rgba(0,0,0,0.5);
+  box-shadow:0 8px 32px rgba(0,0,0,0.7), inset 0 1px 0 rgba(255,255,255,0.06);
   pointer-events:none;opacity:0;transition:opacity .15s;
   font-family:'Figtree',sans-serif;
 }
 .ts-popover.visible{opacity:1;pointer-events:auto;}
-.ts-popover h4{font-size:0.65rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--text3);margin:0 0 0.6rem;}
+.ts-popover h4{font-size:0.65rem;text-transform:uppercase;letter-spacing:1.5px;color:#a0aec0;margin:0 0 0.6rem;font-weight:700;}
 .ts-popover .pop-chart{width:100%;height:70px;display:block;margin-bottom:0.5rem;}
 .ts-popover .pop-list{display:flex;flex-direction:column;gap:0.35rem;}
 .ts-popover .pop-player{display:flex;align-items:center;gap:0.5rem;font-size:0.8rem;}
 .ts-popover .pop-player .dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
-.ts-popover .pop-player .pname{flex:1;color:var(--text);}
-.ts-popover .pop-player .preason{font-size:0.7rem;color:var(--text3);}
+.ts-popover .pop-player .pname{flex:1;color:#ffffff;}
+.ts-popover .pop-player .preason{font-size:0.7rem;color:#a0aec0;}
 /* ── WIDGET ALERTA EN INICIO ──────────────────────────────────────── */
 .jornada-alerts{display:flex;flex-direction:column;gap:0.4rem;min-width:160px;}
 .alert-item{display:flex;align-items:center;gap:0.45rem;font-size:0.75rem;padding:0.25rem 0.5rem;border-radius:3px;background:var(--bg3,#1e2433);}
@@ -2625,7 +2625,7 @@ function makeAxisLabels(entries, keyFn) {
   if (!entries||entries.length<2) return '';
   const n=entries.length;
   const idxs=[0, Math.floor(n/2), n-1];
-  return `<div style="display:flex;justify-content:space-between;font-size:0.6rem;color:var(--text3);margin-top:2px">
+  return `<div style="display:flex;justify-content:space-between;font-size:0.6rem;color:#718096;margin-top:2px">
     ${idxs.map(i=>`<span>${entries[i]?.date?.slice(5)||''}</span>`).join('')}
   </div>`;
 }
@@ -2660,7 +2660,7 @@ function popPosicion(el) {
       ${vc.map(c=>`<circle cx="${c.x.toFixed(1)}" cy="${c.y.toFixed(1)}" r="2.5" fill="#6366f1"/>`).join('')}
     </svg>
     ${makeAxisLabels(entries)}
-    <div style="font-size:0.72rem;color:var(--text3);margin-top:0.5rem">Último registro: <b style="color:var(--text)">${last?.pos?last.pos+'º':'—'}</b> · ${last?.date||''}</div>
+    <div style="font-size:0.72rem;color:#a0aec0;margin-top:0.5rem">Último registro: <b style="color:#ffffff">${last?.pos?last.pos+'º':'—'}</b> · ${last?.date||''}</div>
   `);
 }
 
@@ -2955,6 +2955,11 @@ function modalValor() {
   const fmt1 = v => v>=1000000?(v/1000000).toFixed(2)+'M€':v>=1000?Math.round(v/1000)+'K€':v+'€';
   const fmtDelta = v => (v>=0?'+':'')+fmt1(v);
 
+  // Siempre empieza en 0 — cada punto es la variación respecto al primer día
+  const originPoint = first ? { date: first.date, teamValue: first.teamValue, delta: 0, _isOrigin: true } : null;
+  const entriesWithDelta = entries.map(e => ({ ...e, delta: e.teamValue - first.teamValue }));
+  const chartEntries = originPoint ? [originPoint, ...entriesWithDelta] : entriesWithDelta;
+
   openChartModal('VALOR DE PLANTILLA', body => {
     body.innerHTML = `<div class="chart-modal-kpis">
       <div class="cm-kpi"><div class="k-label">Valor actual</div><div class="k-value">${last?fmt1(last.teamValue):'—'}</div><div class="k-sub">mercado</div></div>
@@ -2964,11 +2969,11 @@ function modalValor() {
     const chartDiv = document.createElement('div');
     body.appendChild(chartDiv);
     makeInteractiveChart(
-      chartDiv, entries,
-      e => e.teamValue,
-      e => `${e.date} · ${fmt1(e.teamValue)} · ${fmtDelta(e.teamValue - first.teamValue)}`,
+      chartDiv, chartEntries,
+      e => e.delta,
+      e => e._isOrigin ? `${e.date} · Inicio · ${fmt1(e.teamValue)}` : `${e.date} · ${fmtDelta(e.delta)} · valor ${fmt1(e.teamValue)}`,
       '#3b82f6',
-      v => fmt1(v)
+      v => fmtDelta(v)
     );
   });
 }
