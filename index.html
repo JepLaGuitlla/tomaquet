@@ -2784,8 +2784,9 @@ function makeInteractiveChart(container, entries, valueFn, labelFn, color, yFmt,
   const sc = color || (invertY ? '#6366f1' : up?'#22c55e':'#ef4444');
 
   const lineD = vc.map((c,i)=>(i===0?'M':'L')+c.x.toFixed(1)+' '+c.y.toFixed(1)).join(' ');
-  // Área siempre cierra en la línea del cero, no en el borde inferior
-  const areaD = vc.length>1 ? lineD+` L${vc[vc.length-1].x.toFixed(1)} ${zeroY.toFixed(1)} L${vc[0].x.toFixed(1)} ${zeroY.toFixed(1)} Z` : '';
+  // Área cierra en: zeroY si hay cero en rango, borde inferior si invertY, borde inferior normal
+  const areaBase = invertY ? (H-padB) : zeroY;
+  const areaD = vc.length>1 ? lineD+` L${vc[vc.length-1].x.toFixed(1)} ${areaBase.toFixed(1)} L${vc[0].x.toFixed(1)} ${areaBase.toFixed(1)} Z` : '';
 
   // Línea de cero visible si hay negativos
   const zeroLine = hasNegative ? `<line x1="${padL}" y1="${zeroY.toFixed(1)}" x2="${W-padR}" y2="${zeroY.toFixed(1)}" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>` : '';
@@ -2875,7 +2876,7 @@ function modalPosicion() {
       <div class="cm-kpi"><div class="k-label">Peor</div><div class="k-value" style="color:var(--red)">${worst?.pos??'—'}º</div><div class="k-sub">${worst?.jornada?'J'+worst.jornada:worst?.date||''}</div></div>
       <div class="cm-kpi"><div class="k-label">Media</div><div class="k-value">${avg}º</div><div class="k-sub">toda la temporada</div></div>
     </div>
-    <div style="font-size:0.62rem;color:#718096;margin-bottom:0.5rem">1º arriba · ${totalEquipos}º abajo · ${entries.length} jornadas registradas</div>`;
+    <div style="font-size:0.62rem;color:#718096;margin-bottom:0.5rem">1º arriba · ${totalEquipos}º abajo · ${entries.length} registros</div>`;
     const chartDiv = document.createElement('div');
     body.appendChild(chartDiv);
     makeInteractiveChart(
@@ -2885,7 +2886,8 @@ function modalPosicion() {
       '#6366f1',
       v => v+'º',
       true,
-      null
+      null,
+      { min: 1, max: totalEquipos }
     );
   });
 }
