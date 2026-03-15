@@ -2145,6 +2145,8 @@ function mergeStatsIntoPlayers(statsData){
     if(sf){
       sf.minutesPerGoal = (sf.goals && sf.minutes) ? Math.round(sf.minutes / sf.goals) : null;
       p.sf = sf;
+      // Enriquecer club desde football-data si Biwenger no lo devolvió
+      if (!p.club && sf.teamName) p.club = sf.teamName;
       matched++;
     }
   });
@@ -2436,11 +2438,13 @@ function mv3Render(list){
         </div>
         <div class="mpc-extra">
           ${(()=>{
-            const fe = calcFactorEquipo(p.club);
+            const clubName = p.club && p.club !== '—' ? p.club
+              : (playerStatsIndex[normName(p.name)]?.teamName || '');
+            const fe = calcFactorEquipo(clubName);
             if (fe === null) return '<div class="msv2-lbl" style="color:var(--border2)">próx.</div>';
             const feColor = fe >= 7 ? 'var(--green)' : fe >= 5 ? 'var(--pt)' : fe >= 3 ? '#f59e0b' : 'var(--red)';
             const standing2 = (ligaData?.standings||[]).find(t => {
-              const cn=(p.club||'').toLowerCase();
+              const cn=(clubName||'').toLowerCase();
               return (t.team.name||'').toLowerCase().includes(cn.split(' ')[0])||cn.includes((t.team.shortName||'').toLowerCase());
             });
             const nextM = standing2 ? (ligaData?.nextMatches||[]).find(m => m.home.id===standing2.team.id||m.away.id===standing2.team.id) : null;
@@ -3492,48 +3496,83 @@ async function loadLiga(){
 }
 function formScore(results){return results.reduce((s,r)=>s+(r==='W'?3:r==='D'?1:0),0);}
 
+// Tabla equivalencias nombres Biwenger → football-data
+const BW_TO_FD_TEAM = {
+  'athletic':'Athletic Club',
+  'atletico':'Club Atlético de Madrid','atlético':'Club Atlético de Madrid',
+  'osasuna':'CA Osasuna',
+  'espanyol':'RCD Espanyol de Barcelona',
+  'barcelona':'FC Barcelona',
+  'getafe':'Getafe CF',
+  'madrid':'Real Madrid CF','real madrid':'Real Madrid CF',
+  'rayo':'Rayo Vallecano de Madrid',
+  'levante':'Levante UD',
+  'mallorca':'RCD Mallorca',
+  'betis':'Real Betis Balompié',
+  'sociedad':'Real Sociedad de Fútbol','real sociedad':'Real Sociedad de Fútbol',
+  'villarreal':'Villarreal CF',
+  'valencia':'Valencia CF',
+  'alaves':'Deportivo Alavés','alavés':'Deportivo Alavés',
+  'elche':'Elche CF',
+  'girona':'Girona FC',
+  'celta':'RC Celta de Vigo',
+  'sevilla':'Sevilla FC',
+  'oviedo':'Real Oviedo','real oviedo':'Real Oviedo',
+};
+
 function calcFactorEquipo(clubName) {
   if (!ligaData || !ligaData.standings || !ligaData.forms) return null;
-  const cn = (clubName||'').toLowerCase();
+  if (!clubName || clubName === '—' || clubName === '') return null;
 
-  // Cruzar club del jugador con standings de football-data
-  const standing = ligaData.standings.find(t => {
+  const cn = clubName.toLowerCase().trim();
+
+  // Buscar en standings por nombre football-data
+  let standing = ligaData.standings.find(t => {
     const tn = (t.team.name||'').toLowerCase();
     const ts = (t.team.shortName||'').toLowerCase();
-    return tn.includes(cn.split(' ')[0]) || cn.includes(ts) || ts.includes(cn.split(' ')[0]);
+    // Coincidencia directa
+    if (tn === cn || ts === cn) return true;
+    // Primera palabra del nombre Biwenger en nombre football-data
+    const firstWord = cn.split(' ')[0];
+    if (firstWord.length > 3 && tn.includes(firstWord)) return true;
+    // Tabla de equivalencias
+    const mapped = BW_TO_FD_TEAM[cn];
+    if (mapped && tn === mapped.toLowerCase()) return true;
+    return false;
   });
+
+  // Fallback — buscar en forms por nombre directamente
+  if (!standing) {
+    const fdName = BW_TO_FD_TEAM[cn];
+    if (fdName) {
+      standing = ligaData.standings.find(t =>
+        (t.team.name||'').toLowerCase() === fdName.toLowerCase()
+      );
+    }
+  }
+
   if (!standing) return null;
 
   const teamId = standing.team.id;
   const form   = ligaData.forms[teamId];
   if (!form) return null;
 
-  // Componente 1 — Forma últimas 5 (0-15 pts → 0-10)
   const formaScore = formScore(form.results || []);
   const formaN = (formaScore / 15) * 10;
-
-  // Componente 2 — Goles a favor últimas 5 (0-15 goles → 0-10, cap en 15)
   const gfN = Math.min(10, ((form.gf || 0) / 15) * 10);
-
-  // Componente 3 — Posición tabla (1º=10, 20º=0)
   const posN = ((20 - standing.position) / 19) * 10;
 
-  // Componente 4 — Próximo partido: local o visitante
   const nextMatch = (ligaData.nextMatches || []).find(m =>
     m.home.id === teamId || m.away.id === teamId
   );
   const esLocal = nextMatch ? nextMatch.home.id === teamId : null;
   const localN  = esLocal === true ? 8 : esLocal === false ? 4 : 6;
 
-  // Componente 5 — Nivel del rival próximo
-  let rivalN = 5; // neutro por defecto
+  let rivalN = 5;
   if (nextMatch) {
     const rivalId = nextMatch.home.id === teamId ? nextMatch.away.id : nextMatch.home.id;
     const rivalStanding = ligaData.standings.find(t => t.team.id === rivalId);
-    if (rivalStanding) {
-      // Rival flojo (pos ≥14) → mejor para el jugador
-      rivalN = ((rivalStanding.position - 1) / 19) * 10;
-    }
+    if (rivalStanding) rivalN = ((rivalStanding.position - 1) / 19) * 10;
   }
 
   const fe = (formaN * 0.35) + (gfN * 0.25) + (posN * 0.20) + (localN * 0.10) + (rivalN * 0.10);
