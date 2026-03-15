@@ -372,7 +372,11 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
 .ts-value{font-family:'Figtree',sans-serif;font-size:1.4rem;font-weight:700;color:var(--text);letter-spacing:1px;}
 .ts-sub{font-family:'Figtree',sans-serif;font-size:0.6rem;color:var(--text3);}
 .me-table{background:var(--bg2);border-radius:4px;overflow:hidden;border:1px solid var(--border);}
-.me-header,.me-row{display:grid;grid-template-columns:28px 1.6fr 55px 65px 55px 55px 70px;padding:8px 12px;align-items:center;}
+.me-header,.me-row{display:grid;grid-template-columns:28px 1.8fr 80px 120px 55px 55px 80px;padding:8px 12px;align-items:center;gap:4px;}
+.me-shield{width:20px;height:20px;object-fit:contain;flex-shrink:0;}
+.me-shield-fallback{width:20px;height:20px;border-radius:2px;background:var(--border2);flex-shrink:0;}
+.me-jform{display:flex;gap:3px;align-items:center;}
+.me-jf{font-family:'IBM Plex Mono',monospace;font-size:0.65rem;font-weight:700;width:20px;height:20px;border-radius:3px;display:flex;align-items:center;justify-content:center;}
 .me-header{background:var(--bg3);border-bottom:1px solid var(--border2);}
 .me-row{border-bottom:1px solid rgba(26,37,53,0.5);transition:background 0.12s;}
 .me-row:hover{background:rgba(163,230,53,0.02);}
@@ -1904,7 +1908,7 @@ async function loadPlayers(){
     const data=await res.json();
     let players=[];
     if(data.players&&Array.isArray(data.players)){
-      players=data.players.map(p=>({id:Number(p.id),name:p.name,position:mapPosition(p.position,p.position2),price:p.price||0,pts:p.points||0,trend:p.trend||0,playedHome:p.playedHome||0,playedAway:p.playedAway||0,club:p.teamName||'',status:p.status||'ok',jForm:p.jForm||[]}));
+      players=data.players.map(p=>({id:Number(p.id),name:p.name,position:mapPosition(p.position,p.position2),price:p.price||0,pts:p.points||0,trend:p.trend||0,playedHome:p.playedHome||0,playedAway:p.playedAway||0,club:p.teamName||'',teamId:p.teamId||null,status:p.status||'ok',jForm:p.jForm||[]}));
     }
     if(!players.length) throw new Error('Sin jugadores en data.json');
     allPlayers=mergeStats(players);
