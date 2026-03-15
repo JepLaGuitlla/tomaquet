@@ -2751,7 +2751,7 @@ function closeChartModal() {
 function _cmEsc(e) { if(e.key==='Escape') closeChartModal(); }
 
 // Gráfico SVG interactivo con tooltip
-function makeInteractiveChart(container, entries, valueFn, labelFn, color, yFmt, invertY=false, xLabelFn=null) {
+function makeInteractiveChart(container, entries, valueFn, labelFn, color, yFmt, invertY=false, xLabelFn=null, yRange=null) {
   if (!entries || entries.length === 0) {
     container.innerHTML = '<div style="color:var(--text3);text-align:center;padding:3rem;font-size:0.85rem">Sin datos históricos aún.<br>Se acumularán con cada fetch diario.</div>';
     return;
@@ -2763,8 +2763,9 @@ function makeInteractiveChart(container, entries, valueFn, labelFn, color, yFmt,
   const W=800, H=200, padL=50, padR=20, padT=20, padB=36;
   const rawMin=Math.min(...valid), rawMax=Math.max(...valid);
   const hasNegative = rawMin < 0;
-  const minV = invertY ? rawMin : (hasNegative ? rawMin * 1.2 : 0);
-  const maxV = rawMax * 1.2;
+  // yRange override para gráficos con escala fija (ej: posición)
+  const minV = yRange ? yRange.min : (invertY ? rawMin : (hasNegative ? rawMin * 1.2 : 0));
+  const maxV = yRange ? yRange.max : rawMax * 1.2;
   const rng=maxV-minV||1;
   const n=entries.length;
 
@@ -2807,19 +2808,12 @@ function makeInteractiveChart(container, entries, valueFn, labelFn, color, yFmt,
             <stop offset="100%" stop-color="${sc}" stop-opacity="0.02"/>
           </linearGradient>
         </defs>
-        <!-- Grid lines -->
         ${yTicks.map(t=>`<line x1="${padL}" y1="${t.y.toFixed(1)}" x2="${W-padR}" y2="${t.y.toFixed(1)}" stroke="var(--border)" stroke-width="1" stroke-dasharray="4,4"/>`).join('')}
-        <!-- Línea de cero (solo si hay negativos) -->
         ${zeroLine}
-        <!-- Y labels -->
         ${yTicks.map(t=>`<text x="${padL-6}" y="${(t.y+4).toFixed(1)}" text-anchor="end" font-size="10" fill="var(--text3)" font-family="Figtree,sans-serif">${yFmt(t.v)}</text>`).join('')}
-        <!-- X labels -->
         ${xIdxs.map(i=>`<text x="${cx(i).toFixed(1)}" y="${H-4}" text-anchor="middle" font-size="10" fill="var(--text3)" font-family="Figtree,sans-serif">${xLabel(i)}</text>`).join('')}
-        <!-- Area -->
         ${areaD?`<path d="${areaD}" fill="url(#${svgId}_g)"/>`:''}
-        <!-- Line -->
         <path d="${lineD}" fill="none" stroke="${sc}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <!-- Dots interactivos -->
         ${vc.map((c,i)=>`
           <circle class="cm-dot" cx="${c.x.toFixed(1)}" cy="${c.y.toFixed(1)}" r="4" fill="${sc}" stroke="#151b28" stroke-width="2" style="cursor:pointer"
             data-idx="${i}" data-v="${c.v}" data-date="${xLabelFn?xLabelFn(c.e):(c.e.date||'')}" data-label="${labelFn(c.e)}"/>
@@ -2860,24 +2854,42 @@ function makeInteractiveChart(container, entries, valueFn, labelFn, color, yFmt,
 // ── MODALES POR TARJETA ───────────────────────────────────────────────────
 function modalPosicion() {
   const liga = LIGA_ACTIVA.id==='tomaquet'?'tomaquet':'enbas';
-  const entries = (historyData?.[liga]||[]).filter(e=>e.pos!=null);
-  const last = entries[entries.length-1];
-  const best = entries.reduce((b,e)=>(!b||e.pos<b.pos)?e:b, null);
+  const totalEquipos = LIGA_ACTIVA.id==='tomaquet' ? 14 : 20;
+
+  // Usar jornadas históricas (tienen pos real por jornada)
+  const jornadaEntries = (historyData?.[liga]||[]).filter(e=>e.jornada!=null&&e.pos!=null);
+  // Fallback a entradas diarias si no hay jornadas
+  const entries = jornadaEntries.length
+    ? jornadaEntries
+    : (historyData?.[liga]||[]).filter(e=>e.pos!=null);
+
+  const last  = entries[entries.length-1];
+  const best  = entries.reduce((b,e)=>(!b||e.pos<b.pos)?e:b, null);
   const worst = entries.reduce((b,e)=>(!b||e.pos>b.pos)?e:b, null);
-  const avg = entries.length ? (entries.reduce((s,e)=>s+e.pos,0)/entries.length).toFixed(1) : '—';
+  const avg   = entries.length ? (entries.reduce((s,e)=>s+e.pos,0)/entries.length).toFixed(1) : '—';
+
   openChartModal('POSICIÓN EN LA CLASIFICACIÓN', body => {
     body.innerHTML = `<div class="chart-modal-kpis">
-      <div class="cm-kpi"><div class="k-label">Posición actual</div><div class="k-value">${last?.pos??'—'}º</div><div class="k-sub">en la liga</div></div>
+      <div class="cm-kpi"><div class="k-label">Posición actual</div><div class="k-value">${last?.pos??'—'}º</div><div class="k-sub">de ${totalEquipos}</div></div>
       <div class="cm-kpi"><div class="k-label">Mejor</div><div class="k-value" style="color:#22c55e">${best?.pos??'—'}º</div><div class="k-sub">${best?.jornada?'J'+best.jornada:best?.date||''}</div></div>
       <div class="cm-kpi"><div class="k-label">Peor</div><div class="k-value" style="color:var(--red)">${worst?.pos??'—'}º</div><div class="k-sub">${worst?.jornada?'J'+worst.jornada:worst?.date||''}</div></div>
-      <div class="cm-kpi"><div class="k-label">Posición media</div><div class="k-value">${avg}º</div><div class="k-sub">toda la temporada</div></div>
-    </div>`;
+      <div class="cm-kpi"><div class="k-label">Media</div><div class="k-value">${avg}º</div><div class="k-sub">toda la temporada</div></div>
+    </div>
+    <div style="font-size:0.62rem;color:#718096;margin-bottom:0.5rem">1º arriba · ${totalEquipos}º abajo · ${entries.length} jornadas registradas</div>`;
     const chartDiv = document.createElement('div');
     body.appendChild(chartDiv);
-    makeInteractiveChart(chartDiv, entries,
+    makeInteractiveChart(
+      chartDiv, entries,
       e => e.pos,
-      e => `${e.jornada?'J'+e.jornada:e.date} — ${e.pos}º`,
-      '#6366f1', v => v+'º', true);
+      e => `${e.jornada?'J'+e.jornada:e.date} — ${e.pos}º de ${totalEquipos}`,
+      '#6366f1',
+      v => v+'º',
+      true,  // invertY — 1º arriba
+      null,
+      { min: 1, max: totalEquipos } // rango fijo del eje Y
+    );
+  });
+}
   });
 }
 
@@ -2962,19 +2974,19 @@ function modalValor() {
     const chartDiv = document.createElement('div');
     body.appendChild(chartDiv);
     // Punto origen en 0 — el equipo siempre empieza sin valor
-    const originPoint = first ? { date: first.date, teamValue: 0, _diffLabel: '' } : null;
-    const chartEntries = originPoint
-      ? [originPoint, ...entries.map((e, i) => ({
-          ...e,
-          _diffLabel: ` · ${(()=>{const d=e.teamValue-(i===0?0:entries[i-1].teamValue);return (d>=0?'+':'')+fmt1(d)+' vs ayer';})()}`
-        }))]
-      : entries;
+    const originPoint = first ? { date: first.date, teamValue: 0, _diffLabel: '', _isOrigin: true } : null;
+    const entriesLabeled = entries.map((e, i) => {
+      const prev = i === 0 ? 0 : entries[i-1].teamValue;
+      const d = e.teamValue - prev;
+      return { ...e, _diffLabel: ' · ' + (d>=0?'+':'') + fmt1(d) + ' vs ayer' };
+    });
+    const chartEntries = originPoint ? [originPoint, ...entriesLabeled] : entriesLabeled;
 
     makeInteractiveChart(
       chartDiv,
       chartEntries,
       e => e.teamValue,
-      e => e.teamValue === 0 ? `${e.date} · Inicio (0M€)` : `${e.date} · ${fmt1(e.teamValue)}${e._diffLabel}`,
+      e => e._isOrigin ? `${e.date} · Inicio (0M€)` : `${e.date} · ${fmt1(e.teamValue)}${e._diffLabel}`,
       '#3b82f6',
       v => fmt1(v)
     );
