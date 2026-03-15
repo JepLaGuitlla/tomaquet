@@ -2961,14 +2961,20 @@ function modalValor() {
     </div>`;
     const chartDiv = document.createElement('div');
     body.appendChild(chartDiv);
+    // Punto origen en 0 — el equipo siempre empieza sin valor
+    const originPoint = first ? { date: first.date, teamValue: 0, _diffLabel: '' } : null;
+    const chartEntries = originPoint
+      ? [originPoint, ...entries.map((e, i) => ({
+          ...e,
+          _diffLabel: ` · ${(()=>{const d=e.teamValue-(i===0?0:entries[i-1].teamValue);return (d>=0?'+':'')+fmt1(d)+' vs ayer';})()}`
+        }))]
+      : entries;
+
     makeInteractiveChart(
       chartDiv,
-      entries.map((e, i) => ({
-        ...e,
-        _diffLabel: i === 0 ? '' : ` · ${(()=>{const d=e.teamValue-entries[i-1].teamValue;return (d>=0?'+':'')+fmt1(d)+' vs ayer';})()}`
-      })),
+      chartEntries,
       e => e.teamValue,
-      e => `${e.date} · ${fmt1(e.teamValue)}${e._diffLabel}`,
+      e => e.teamValue === 0 ? `${e.date} · Inicio (0M€)` : `${e.date} · ${fmt1(e.teamValue)}${e._diffLabel}`,
       '#3b82f6',
       v => fmt1(v)
     );
