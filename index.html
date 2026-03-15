@@ -1906,6 +1906,18 @@ async function loadPlayers(){
     const res=await fetch('./data.json');
     if(!res.ok) throw new Error('data.json no encontrado (status '+res.status+')');
     const data=await res.json();
+
+    // Poblar ligaData PRIMERO — necesario para calcFactorEquipo en Mercado v3
+    if (data.laliga) {
+      const ll = data.laliga;
+      ligaData.standings    = ll.table        || [];
+      ligaData.nextMatches  = ll.nextMatches  || [];
+      ligaData.recentResults= ll.recentResults|| [];
+      ligaData.season       = ll.matchday     || '?';
+      ligaData.forms        = ll.forms        || {};
+      ligaLoaded = true;
+    }
+
     let players=[];
     if(data.players&&Array.isArray(data.players)){
       players=data.players.map(p=>({id:Number(p.id),name:p.name,position:mapPosition(p.position,p.position2),price:p.price||0,pts:p.points||0,trend:p.trend||0,playedHome:p.playedHome||0,playedAway:p.playedAway||0,club:p.teamName||'',teamId:p.teamId||null,status:p.status||'ok',jForm:p.jForm||[]}));
@@ -1923,17 +1935,6 @@ async function loadPlayers(){
     const when=data.updatedAt?new Date(data.updatedAt).toLocaleDateString('es-ES'):'?';
     document.getElementById('statusText').textContent=allPlayers.length+' jugadores · actualizado '+when;
     renderStats(); renderRankings(allPlayers); initRankings();
-
-    // Poblar ligaData desde data.json para que esté disponible en Mercado v3
-    if (data.laliga) {
-      const ll = data.laliga;
-      ligaData.standings    = ll.table        || [];
-      ligaData.nextMatches  = ll.nextMatches  || [];
-      ligaData.recentResults= ll.recentResults|| [];
-      ligaData.season       = ll.matchday     || '?';
-      ligaData.forms        = ll.forms        || {};
-      ligaLoaded = true;
-    }
 
     // Cargar standings y banner Tomaquet desde Biwenger
     if(data.allTeams && data.allTeams.length){
