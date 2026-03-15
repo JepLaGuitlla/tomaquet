@@ -121,26 +121,31 @@ async function fetchPlayers() {
 
   const parsed     = JSON.parse(match[1]);
   const rawPlayers = parsed?.data?.players;
+  const rawTeams   = parsed?.data?.teams || {};
   if (!rawPlayers) { console.error('❌ Sin jugadores en la respuesta'); process.exit(1); }
 
   const arr = Array.isArray(rawPlayers) ? rawPlayers : Object.values(rawPlayers);
   console.log(`✅ ${arr.length} jugadores descargados`);
 
-  return arr.map(p => ({
-    id:         p.id,
-    name:       p.name,
-    position:   p.position,
-    price:      p.price          || 0,
-    points:     p.points         || 0,
-    trend:      p.priceIncrement || 0,
-    playedHome: p.playedHome     || 0,
-    playedAway: p.playedAway     || 0,
-    teamName:   p.teamName       || p.team?.name || '',
-    teamId:     p.team?.id       || null,
-    status:     p.fitness?.[0]?.status || 'ok',
-    jForm:      (p.fitness || []).slice(0, 5).map(f => typeof f === 'number' ? f : (f?.points ?? null)),
-    clausula:   p.clause         || null,
-  }));
+  return arr.map(p => {
+    // El equipo puede venir como objeto {id,name} o solo como ID numérico
+    const teamObj = typeof p.team === 'object' ? p.team : (rawTeams[p.team] || null);
+    return {
+      id:         p.id,
+      name:       p.name,
+      position:   p.position,
+      price:      p.price          || 0,
+      points:     p.points         || 0,
+      trend:      p.priceIncrement || 0,
+      playedHome: p.playedHome     || 0,
+      playedAway: p.playedAway     || 0,
+      teamName:   teamObj?.name    || p.teamName || '',
+      teamId:     teamObj?.id      || null,
+      status:     p.fitness?.[0]?.status || 'ok',
+      jForm:      (p.fitness || []).slice(0, 5).map(f => typeof f === 'number' ? f : (f?.points ?? null)),
+      clausula:   p.clause         || null,
+    };
+  });
 }
 
 // ─── 3. DATOS DE LIGA (Biwenger) ─────────────────────────────────────────────
@@ -272,7 +277,9 @@ async function fetchLaLiga() {
   try {
     const standings = await fdGet('/competitions/PD/standings');
     await sleep(700);
-    const scheduled = await fdGet('/competitions/PD/matches?status=SCHEDULED&limit=30');
+    const scheduled = await fdGet('/competitions/PD/matches?status=SCHEDULED&limit=50');
+    await sleep(700);
+    const inPlay   = await fdGet('/competitions/PD/matches?status=IN_PLAY&limit=20');
     await sleep(700);
     const finished  = await fdGet('/competitions/PD/matches?status=FINISHED&limit=50');
 
@@ -302,19 +309,26 @@ async function fetchLaLiga() {
       });
     });
 
-    const allScheduled = scheduled.body?.matches || [];
+    // Combinar scheduled + in_play para cubrir partidos en curso
+    const allScheduled = [
+      ...(scheduled.body?.matches || []),
+      ...(inPlay.body?.matches    || []),
+    ];
     const nextMD       = allScheduled.length
       ? Math.min(...allScheduled.map(m => m.matchday).filter(Boolean))
       : null;
-    const nextMatches  = nextMD
-      ? allScheduled.filter(m => m.matchday === nextMD).map(m => ({
+
+    // Guardar partidos de las próximas 2 jornadas para cubrir equipos que ya jugaron esta jornada
+    const nextMDs = nextMD ? [nextMD, nextMD + 1] : [];
+    const nextMatches = allScheduled
+      .filter(m => nextMDs.includes(m.matchday))
+      .map(m => ({
           id:       m.id,
           matchday: m.matchday,
           date:     m.utcDate,
           home:     { id: m.homeTeam.id, name: m.homeTeam.name, short: m.homeTeam.shortName, crest: m.homeTeam.crest },
           away:     { id: m.awayTeam.id, name: m.awayTeam.name, short: m.awayTeam.shortName, crest: m.awayTeam.crest },
-        }))
-      : [];
+        }));
 
     const recentResults = sortedMatches.slice(0, 8).map(m => ({
       date:  m.utcDate,
