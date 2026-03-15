@@ -2763,10 +2763,8 @@ function makeInteractiveChart(container, entries, valueFn, labelFn, color, yFmt,
   const W=800, H=200, padL=50, padR=20, padT=20, padB=36;
   const rawMin=Math.min(...valid), rawMax=Math.max(...valid);
   const hasNegative = rawMin < 0;
-  // Si hay negativos: margen 40% arriba y abajo del rango real
-  // Si todo positivo: empieza en 0 con 40% de margen arriba
-  const minV = invertY ? rawMin : (hasNegative ? rawMin * 1.4 : 0);
-  const maxV = hasNegative ? rawMax * 1.4 : rawMax * 1.4;
+  const minV = invertY ? rawMin : (hasNegative ? rawMin * 1.2 : 0);
+  const maxV = rawMax * 1.2;
   const rng=maxV-minV||1;
   const n=entries.length;
 
