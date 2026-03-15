@@ -1924,6 +1924,17 @@ async function loadPlayers(){
     document.getElementById('statusText').textContent=allPlayers.length+' jugadores · actualizado '+when;
     renderStats(); renderRankings(allPlayers); initRankings();
 
+    // Poblar ligaData desde data.json para que esté disponible en Mercado v3
+    if (data.laliga) {
+      const ll = data.laliga;
+      ligaData.standings    = ll.table        || [];
+      ligaData.nextMatches  = ll.nextMatches  || [];
+      ligaData.recentResults= ll.recentResults|| [];
+      ligaData.season       = ll.matchday     || '?';
+      ligaData.forms        = ll.forms        || {};
+      ligaLoaded = true;
+    }
+
     // Cargar standings y banner Tomaquet desde Biwenger
     if(data.allTeams && data.allTeams.length){
       LIGAS.tomaquet.standings = data.allTeams.map((t,i) => ({
