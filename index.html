@@ -1939,6 +1939,7 @@ async function loadPlayers(){
     const data=await res.json();
 
     // Poblar ligaData PRIMERO — necesario para calcFactorEquipo en Mercado v3
+    // Nota: ligaLoaded NO se setea aquí — loadLiga() lo gestiona para la pestaña Análisis
     if (data.laliga) {
       const ll = data.laliga;
       ligaData.standings    = ll.table        || [];
@@ -1946,7 +1947,6 @@ async function loadPlayers(){
       ligaData.recentResults= ll.recentResults|| [];
       ligaData.season       = ll.matchday     || '?';
       ligaData.forms        = ll.forms        || {};
-      ligaLoaded = true;
     }
 
     let players=[];
@@ -3526,7 +3526,6 @@ document.getElementById('modalOverlay').addEventListener('click',e=>{if(e.target
 let ligaData={}, ligaLoaded=false;
 async function loadLiga(){
   if(ligaLoaded){
-    // Ya tenemos datos — solo renderizar y mostrar
     document.getElementById('ligaLoading').style.display='none';
     document.getElementById('ligaContent').style.display='block';
     renderTablaLiga();renderProximaJornada();renderUltimosResultados();renderEquiposGrid();renderRecomendaciones();
@@ -3535,9 +3534,12 @@ async function loadLiga(){
   document.getElementById('ligaLoading').style.display='flex';
   document.getElementById('ligaContent').style.display='none';
   try{
-    const res=await fetch('./data.json');const data=await res.json();const ll=data.laliga;
-    if(!ll)throw new Error('Datos de La Liga no disponibles en data.json.');
-    ligaData.standings=ll.table||[];ligaData.nextMatches=ll.nextMatches||[];ligaData.recentResults=ll.recentResults||[];ligaData.season=ll.matchday||'?';ligaData.forms=ll.forms||{};
+    // Si ligaData ya tiene datos (poblado por loadPlayers), no hacer fetch de nuevo
+    if(!ligaData.standings?.length){
+      const res=await fetch('./data.json');const data=await res.json();const ll=data.laliga;
+      if(!ll)throw new Error('Datos de La Liga no disponibles en data.json.');
+      ligaData.standings=ll.table||[];ligaData.nextMatches=ll.nextMatches||[];ligaData.recentResults=ll.recentResults||[];ligaData.season=ll.matchday||'?';ligaData.forms=ll.forms||{};
+    }
     renderTablaLiga();renderProximaJornada();renderUltimosResultados();renderEquiposGrid();renderRecomendaciones();
     ligaLoaded=true;document.getElementById('ligaLoading').style.display='none';document.getElementById('ligaContent').style.display='block';
   }catch(e){
