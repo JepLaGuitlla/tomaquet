@@ -2955,14 +2955,6 @@ function modalValor() {
   const fmt1 = v => v>=1000000?(v/1000000).toFixed(2)+'M€':v>=1000?Math.round(v/1000)+'K€':v+'€';
   const fmtDelta = v => (v>=0?'+':'')+fmt1(v);
 
-  // Calcular variación desde base 0 — añadir punto origen
-  const originDelta = first ? { date: first.date, teamValue: first.teamValue, valorDelta: 0, _isOrigin: true } : null;
-  const entriesDelta = entries.map(e => ({
-    ...e,
-    valorDelta: e.teamValue - first.teamValue
-  }));
-  const entriesDeltaWithOrigin = originDelta ? [originDelta, ...entriesDelta] : entriesDelta;
-
   openChartModal('VALOR DE PLANTILLA', body => {
     body.innerHTML = `<div class="chart-modal-kpis">
       <div class="cm-kpi"><div class="k-label">Valor actual</div><div class="k-value">${last?fmt1(last.teamValue):'—'}</div><div class="k-sub">mercado</div></div>
@@ -2972,11 +2964,11 @@ function modalValor() {
     const chartDiv = document.createElement('div');
     body.appendChild(chartDiv);
     makeInteractiveChart(
-      chartDiv, entriesDeltaWithOrigin,
-      e => e.valorDelta,
-      e => e._isOrigin ? `${e.date} · Inicio (0)` : `${e.date} · ${fmtDelta(e.valorDelta)} · valor ${fmt1(e.teamValue)}`,
+      chartDiv, entries,
+      e => e.teamValue,
+      e => `${e.date} · ${fmt1(e.teamValue)} · ${fmtDelta(e.teamValue - first.teamValue)}`,
       '#3b82f6',
-      v => fmtDelta(v)
+      v => fmt1(v)
     );
   });
 }
