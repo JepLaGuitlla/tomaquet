@@ -2635,7 +2635,7 @@ function popPosicion(el) {
   const liga = LIGA_ACTIVA.id === 'tomaquet' ? 'tomaquet' : 'enbas';
   const entries = h?.[liga] || [];
   if (entries.length === 0) {
-    popShow(el, `<h4>Posición por día</h4><div style="color:var(--text3);font-size:0.75rem;padding:0.5rem 0">Sin datos aún. Se acumula desde hoy con cada fetch.</div>`);
+    popShow(el, `<h4>Posición por día</h4><div style="color:#a0aec0;font-size:0.75rem;padding:0.5rem 0">Sin datos aún. Se acumula desde hoy con cada fetch.</div>`);
     return;
   }
   const values = entries.map(e => e.pos);
@@ -2679,7 +2679,7 @@ function popPuntos(el) {
   const puntos = sumas.map((s,i)=>counts[i]>0?Math.round(s):null).reverse();
   const labels = ['J-4','J-3','J-2','J-1','J↑'];
   const svg = makeSparkSVG(puntos, 220, 60, '#f59e0b');
-  const rows = labels.map((l,i)=>`<div style="display:flex;justify-content:space-between;font-size:0.72rem;padding:2px 0;border-bottom:1px solid var(--border)"><span style="color:var(--text3)">${l}</span><b style="color:var(--text)">${puntos[i]!=null?puntos[i]+'pts':'—'}</b></div>`).join('');
+  const rows = labels.map((l,i)=>`<div style="display:flex;justify-content:space-between;font-size:0.72rem;padding:2px 0;border-bottom:1px solid rgba(255,255,255,0.08)"><span style="color:#a0aec0">${l}</span><b style="color:#ffffff">${puntos[i]!=null?puntos[i]+'pts':'—'}</b></div>`).join('');
   popShow(el, `<h4>Puntos del equipo por jornada</h4>${svg}<div style="margin-top:0.5rem">${rows}</div>`);
 }
 
@@ -2693,8 +2693,8 @@ function popValor(el) {
   const diff = last&&prev ? last.teamValue-prev.teamValue : null;
   const diffStr = diff!=null ? `<span style="color:${diff>=0?'#22c55e':'#ef4444'}">${diff>=0?'+':''}${fmt(diff)}</span>` : '';
   popShow(el, `<h4>Valor de plantilla diario</h4>${svg}${makeAxisLabels(entries)}
-    <div style="font-size:0.72rem;color:var(--text3);margin-top:0.5rem">
-      Hoy: <b style="color:var(--text)">${last?fmt(last.teamValue):'—'}</b> ${diffStr}
+    <div style="font-size:0.72rem;color:#a0aec0;margin-top:0.5rem">
+      Hoy: <b style="color:#ffffff">${last?fmt(last.teamValue):'—'}</b> ${diffStr}
     </div>`);
 }
 
@@ -2706,7 +2706,7 @@ function popTendencia(el) {
   const last = entries[entries.length-1];
   const trendColor = last?.trend>0?'#22c55e':last?.trend<0?'#ef4444':'var(--text3)';
   popShow(el, `<h4>Tendencia diaria del equipo</h4>${svg}${makeAxisLabels(entries)}
-    <div style="font-size:0.72rem;color:var(--text3);margin-top:0.5rem">
+    <div style="font-size:0.72rem;color:#a0aec0;margin-top:0.5rem">
       Hoy: <b style="color:${trendColor}">${last?fmt(last.trend):'—'}</b>
     </div>`);
 }
@@ -2955,11 +2955,6 @@ function modalValor() {
   const fmt1 = v => v>=1000000?(v/1000000).toFixed(2)+'M€':v>=1000?Math.round(v/1000)+'K€':v+'€';
   const fmtDelta = v => (v>=0?'+':'')+fmt1(v);
 
-  // Siempre empieza en 0 — cada punto es la variación respecto al primer día
-  const originPoint = first ? { date: first.date, teamValue: first.teamValue, delta: 0, _isOrigin: true } : null;
-  const entriesWithDelta = entries.map(e => ({ ...e, delta: e.teamValue - first.teamValue }));
-  const chartEntries = originPoint ? [originPoint, ...entriesWithDelta] : entriesWithDelta;
-
   openChartModal('VALOR DE PLANTILLA', body => {
     body.innerHTML = `<div class="chart-modal-kpis">
       <div class="cm-kpi"><div class="k-label">Valor actual</div><div class="k-value">${last?fmt1(last.teamValue):'—'}</div><div class="k-sub">mercado</div></div>
@@ -2969,11 +2964,15 @@ function modalValor() {
     const chartDiv = document.createElement('div');
     body.appendChild(chartDiv);
     makeInteractiveChart(
-      chartDiv, chartEntries,
-      e => e.delta,
-      e => e._isOrigin ? `${e.date} · Inicio · ${fmt1(e.teamValue)}` : `${e.date} · ${fmtDelta(e.delta)} · valor ${fmt1(e.teamValue)}`,
+      chartDiv,
+      entries.map((e, i) => ({
+        ...e,
+        _diffLabel: i === 0 ? '' : ` · ${(()=>{const d=e.teamValue-entries[i-1].teamValue;return (d>=0?'+':'')+fmt1(d)+' vs ayer';})()}`
+      })),
+      e => e.teamValue,
+      e => `${e.date} · ${fmt1(e.teamValue)}${e._diffLabel}`,
       '#3b82f6',
-      v => fmtDelta(v)
+      v => fmt1(v)
     );
   });
 }
