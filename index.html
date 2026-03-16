@@ -3591,6 +3591,24 @@ function removePlayer(){delete lineup[currentSlot];closeModal();renderField();}
 // ══════════════════════════════════════════
 // UTILS
 // ══════════════════════════════════════════
+// ── FOTOS DE JUGADORES ───────────────────────────────────────────────────
+// Devuelve HTML de la foto del jugador con fallback a iniciales
+function playerPhoto(p, size=40) {
+  const id = p.id || p.playerId;
+  const pos = (p.position||p.pos||'?').split('/')[0];
+  const PosC = {PT:'#d97706',DF:'#1d6fce',MC:'#16a34a',DL:'#e63329',MD:'#8b5cf6'};
+  const color = PosC[pos] || '#888';
+  const parts = (p.name||'').split(' ');
+  const initials = parts.length >= 2
+    ? (parts[0].charAt(0) + parts[parts.length-1].charAt(0)).toUpperCase()
+    : (p.name||'?').substring(0,2).toUpperCase();
+
+  return `<div style="position:relative;width:${size}px;height:${size}px;border-radius:50%;flex-shrink:0;overflow:hidden;background:${color}">
+    <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Figtree',sans-serif;font-size:${Math.round(size*0.3)}px;font-weight:800;color:#fff;letter-spacing:-0.5px">${initials}</div>
+    ${id ? `<img src="./img/players/${id}.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">` : ''}
+  </div>`;
+}
+
 function fmt(v){if(!v&&v!==0)return'—';const a=Math.abs(v),s=v<0?'-':'';if(a>=1000000)return s+(a/1000000).toFixed(2)+'M€';if(a>=1000)return s+(a/1000).toFixed(0)+'K€';return s+a+'€';}
 function fmtTrend(v){if(!v||v===0)return'<span class="trend neutral">—</span>';if(v>0)return'<span class="trend up">+'+fmt(v)+'</span>';return'<span class="trend down">'+fmt(v)+'</span>';}
 
