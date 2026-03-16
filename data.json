@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-16T09:46:26.644Z",
+  "updatedAt": "2026-03-16T15:44:42.608Z",
   "players": [
     {
       "id": 11,
@@ -11505,9 +11505,9 @@
           10,
           5
         ],
-        "teamSize": 17,
-        "teamValue": 101900000,
-        "teamValueInc": 350000,
+        "teamSize": 16,
+        "teamValue": 101570000,
+        "teamValueInc": 360000,
         "position": 5,
         "role": ""
       },
@@ -11727,8 +11727,8 @@
       "name": "Soulands Rangers",
       "manager": "Soulands Rangers",
       "points": 1288,
-      "value": 101900000,
-      "trend": 350000,
+      "value": 101570000,
+      "trend": 360000,
       "players": []
     },
     {
@@ -12033,6 +12033,21 @@
   "boardTomaquet": [
     {
       "type": "transfer",
+      "date": 1773657253,
+      "content": [
+        {
+          "player": 37455,
+          "from": {
+            "id": 8068002,
+            "name": "Soulands Rangers",
+            "icon": "i/u/8068002.png?v=69"
+          },
+          "amount": 345000
+        }
+      ]
+    },
+    {
+      "type": "transfer",
       "date": 1773643589,
       "content": [
         {
@@ -12297,27 +12312,6 @@
             "icon": "i/u/6541195.png?v=17"
           },
           "amount": 240000
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1773501020,
-      "content": [
-        {
-          "player": 37898,
-          "from": {
-            "id": 8070044,
-            "name": "CA CABA JUNIORS",
-            "icon": "i/u/8070044.png?v=63"
-          },
-          "to": {
-            "id": 12696491,
-            "name": "NACECH1",
-            "icon": "https://graph.facebook.com/10235185447969563/picture?height=300&width=300"
-          },
-          "amount": 2025000,
-          "type": "clause"
         }
       ]
     }
@@ -14338,18 +14332,66 @@
   },
   "news": [
     {
+      "title": "Tenaglia entrena con normalidad, disponible para la jornada 29",
+      "link": "https://www.jornadaperfecta.com/blog/tenaglia-estado-alaves-j29/",
+      "date": "Mon, 16 Mar 2026 14:15:03 +0000",
+      "img": "https://cdn.biwenger.com/i/t/91.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Nicolas Pépé, titular y buen rendimiento: ¿chollo fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/nicolas-pepe-recomendacion-fantasy-villarreal/",
+      "date": "Mon, 16 Mar 2026 14:00:47 +0000",
+      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/1f4b0.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Oblak, descartado para Champions. ¿Llega al derbi?",
+      "link": "https://www.jornadaperfecta.com/blog/oblak-estado-j28-25-26/",
+      "date": "Mon, 16 Mar 2026 13:25:13 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Bellingham, gran novedad para Champions junto a Carreras y Alaba",
       "link": "https://www.jornadaperfecta.com/blog/bellingham-vuelta-lesion-2026/",
-      "date": "Mon, 16 Mar 2026 09:36:55 +0000",
+      "date": "Mon, 16 Mar 2026 12:36:55 +0000",
       "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Sportium lanza 11€ gratis para apostar en los octavos de final de la Champions",
+      "link": "https://www.jornadaperfecta.com/blog/champions-league-11e-gratis-sportium/",
+      "date": "Mon, 16 Mar 2026 12:27:26 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/03/Sportium-11E-gratis-Manchester-City-vs-Real-Madrid.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
       "title": "Oficial: Kylian Mbappé entra en la convocatoria de Champions League",
       "link": "https://www.jornadaperfecta.com/blog/kylian-mbappe-estado-champions-city-26/",
-      "date": "Mon, 16 Mar 2026 09:10:46 +0000",
+      "date": "Mon, 16 Mar 2026 12:10:46 +0000",
       "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "El buen momento de Sivera, ¿portero fiable en fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/sivera-portero-fantasy-recomendable-alaves/",
+      "date": "Mon, 16 Mar 2026 12:00:06 +0000",
+      "img": "https://cdn.biwenger.com/i/t/91.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Actualizadas las Alineaciones Probables para la Jornada 29",
+      "link": "https://www.jornadaperfecta.com/blog/alineaciones-probables-j29-laliga-25-26/",
+      "date": "Mon, 16 Mar 2026 10:00:00 +0000",
+      "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
@@ -14362,57 +14404,9 @@
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Oblak, descartado para Champions. ¿Llega al derbi?",
-      "link": "https://www.jornadaperfecta.com/blog/oblak-estado-j28-25-26/",
-      "date": "Sun, 15 Mar 2026 21:25:13 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
       "title": "Yangel Herrera vuelve a caer lesionado tras 5 minutos en el campo",
       "link": "https://www.jornadaperfecta.com/blog/yangel-herrera-lesion-26/",
       "date": "Sun, 15 Mar 2026 21:10:52 +0000",
-      "img": "https://cdn.biwenger.com/i/t/13.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Ferran Jutglà, sustituido con mareos. ¿Cuál es su estado?",
-      "link": "https://www.jornadaperfecta.com/blog/ferran-jutgla-estado-mareos-26/",
-      "date": "Sun, 15 Mar 2026 21:06:37 +0000",
-      "img": "https://cdn.biwenger.com/i/t/5.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Iñigo Pérez, sobre el Levante, Alemão, Camello y las bajas",
-      "link": "https://www.jornadaperfecta.com/blog/inigo-perez-previa-rayo-levante-j28/",
-      "date": "Sun, 15 Mar 2026 20:22:05 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Luis Castro analiza los tocados, Víctor García y Manu Sánchez",
-      "link": "https://www.jornadaperfecta.com/blog/luis-castro-previa-rayo-levante-j28/",
-      "date": "Sun, 15 Mar 2026 11:52:06 +0000",
-      "img": "https://cdn.biwenger.com/i/t/10.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Buba Sangaré, sustituito por un golpe en la cabeza. ¿Cuál es su estado?",
-      "link": "https://www.jornadaperfecta.com/blog/buba-sangare-golpe-cabeza-26/",
-      "date": "Sun, 15 Mar 2026 10:59:35 +0000",
-      "img": "https://cdn.biwenger.com/i/t/75.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Matarazzo, sobre Gorrotxategi y la fecha de vuelta de Kubo",
-      "link": "https://www.jornadaperfecta.com/blog/matarazzo-previa-real-sociedad-osasuna-j28/",
-      "date": "Sat, 14 Mar 2026 14:07:27 +0000",
       "img": "https://cdn.biwenger.com/i/t/13.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
@@ -14422,7 +14416,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-03-16T09:46:25.072Z",
+    "updatedAt": "2026-03-16T15:44:40.343Z",
     "players": [
       {
         "id": "3374",
