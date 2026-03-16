@@ -579,6 +579,69 @@ function updatePlayerPrices(players) {
 
 // ─── MAIN ────────────────────────────────────────────────────────────────────
 
+// ─── FOTOS DE JUGADORES ───────────────────────────────────────────────────────
+// Descarga las fotos desde cf.biwenger.com (sin CORS en Node.js)
+// y las guarda en img/players/ para servirlas desde GitHub Pages
+
+async function downloadPlayerPhotos(players) {
+  const DIR = 'img/players';
+  if (!fs.existsSync('img'))         fs.mkdirSync('img');
+  if (!fs.existsSync(DIR))           fs.mkdirSync(DIR);
+
+  let downloaded = 0, skipped = 0, failed = 0;
+
+  // Descargar en lotes de 10 para no saturar
+  const BATCH = 10;
+  for (let i = 0; i < players.length; i += BATCH) {
+    const batch = players.slice(i, i + BATCH);
+    await Promise.all(batch.map(async p => {
+      const file = `${DIR}/${p.id}.png`;
+      // Si ya existe y tiene tamaño, no volver a descargar
+      if (fs.existsSync(file) && fs.statSync(file).size > 200) {
+        skipped++;
+        return;
+      }
+      try {
+        const res = await new Promise((resolve, reject) => {
+          const req = https.request({
+            hostname: 'cf.biwenger.com',
+            path:     `/static/img/players/la-liga/${p.id}.png`,
+            method:   'GET',
+            timeout:  5000,
+            headers:  {
+              'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+              'Referer':    'https://biwenger.as.com/',
+            }
+          }, (res) => {
+            const chunks = [];
+            res.on('data', c => chunks.push(c));
+            res.on('end', () => resolve({ status: res.statusCode, data: Buffer.concat(chunks) }));
+          });
+          req.on('error', reject);
+          req.on('timeout', () => { req.destroy(); reject(new Error('timeout')); });
+          req.end();
+        });
+
+        // 304 = imagen existe pero redirige — seguir la redirección no es necesario
+        // Solo guardar si el contenido es una imagen real (>200 bytes)
+        if (res.status === 200 && res.data.length > 200) {
+          fs.writeFileSync(file, res.data);
+          downloaded++;
+        } else {
+          failed++;
+        }
+      } catch(e) {
+        failed++;
+      }
+    }));
+    // Pequeña pausa entre lotes para no saturar
+    if (i + BATCH < players.length) await sleep(200);
+  }
+
+  console.log(`🖼️  Fotos jugadores: ${downloaded} descargadas · ${skipped} ya existían · ${failed} fallidas`);
+}
+
+
 async function main() {
   try {
     console.log('🚀 Iniciando fetch — La Pausa Fantasy\n');
@@ -627,6 +690,7 @@ async function main() {
 
     updateHistory(myTeamTomaquet, myTeamEnBas, allTeamsTomaquet, allTeamsEnBas, leagueTomaquet, leagueEnBas);
     updatePlayerPrices(players);
+    await downloadPlayerPhotos(players);
     console.log(`📊 Jugadores Biwenger: ${players.length}`);
     console.log(`👥 Equipos Tomaquet:   ${allTeamsTomaquet?.length || 0}`);
     console.log(`👥 Equipos EN BAS:     ${allTeamsEnBas?.length || 0}`);
