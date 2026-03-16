@@ -3708,14 +3708,39 @@ function renderJornadaMercado() {
 
   // Jugadores con tendencia positiva + factor jornada alto + no en mi equipo
   const misIds = new Set((getEquipo()||[]).map(p=>p.id));
+  const pricesData = window._pricesData || {};
+
   const señales = allPlayers
-    .filter(p => p.trend > 50000 && p.status === 'ok' && !misIds.has(p.id))
+    .filter(p => p.status === 'ok' && !misIds.has(p.id))
     .map(p => {
       const fe = calcFactorEquipo(p.club||p.teamName||'');
-      return {...p, fe};
+      const hist = pricesData[String(p.id)] || [];
+
+      // Momentum: preferir historial real sobre trend diario
+      let mom = 0, diasSubiendo = 0, momLabel = '';
+      if (hist.length >= 3) {
+        const last  = hist[hist.length-1]?.p || p.price;
+        const prev7 = hist[Math.max(0, hist.length-8)]?.p || last;
+        mom = prev7 > 0 ? ((last - prev7) / prev7) * 100 : 0;
+        for (let i = hist.length-1; i > 0; i--) {
+          if ((hist[i]?.p||0) > (hist[i-1]?.p||0)) diasSubiendo++;
+          else break;
+        }
+        momLabel = diasSubiendo >= 3 ? `↑${diasSubiendo}d` : mom > 0 ? `+${mom.toFixed(1)}%` : '';
+      } else {
+        mom = p.trend > 0 ? (p.trend / p.price) * 100 : 0;
+        momLabel = p.trend > 0 ? `+${(p.trend/1000).toFixed(0)}K` : '';
+      }
+
+      return {...p, fe, mom, diasSubiendo, momLabel};
     })
-    .filter(p => p.fe !== null && p.fe >= 5)
-    .sort((a,b) => (b.trend * (b.fe/10)) - (a.trend * (a.fe/10)))
+    .filter(p => p.fe !== null && p.fe >= 5 && p.mom > 0.5)
+    .sort((a,b) => {
+      // Ordenar por combinación: momentum × factor × consistencia
+      const scoreA = (a.mom * 0.5) + (a.fe * 0.3) + (a.diasSubiendo * 2);
+      const scoreB = (b.mom * 0.5) + (b.fe * 0.3) + (b.diasSubiendo * 2);
+      return scoreB - scoreA;
+    })
     .slice(0, 8);
 
   if (!señales.length) {
@@ -3736,7 +3761,7 @@ function renderJornadaMercado() {
         </div>
         <div style="font-family:'Figtree',sans-serif;font-size:0.65rem;color:var(--text3)">${p.club||p.teamName||'—'} · ${(p.price/1e6).toFixed(2)}M€</div>
         <div style="display:flex;justify-content:space-between;margin-top:6px;font-size:0.7rem">
-          <span style="color:var(--green);font-weight:700">▲ +${(p.trend/1000).toFixed(0)}K€</span>
+          <span style="color:var(--green);font-weight:700">▲ ${p.momLabel}${p.diasSubiendo>=3?' · '+p.diasSubiendo+'d seguidos':''}</span>
           <span>Factor <strong style="color:${feColor}">${p.fe.toFixed(1)}</strong></span>
         </div>
       </div>`;
@@ -4014,29 +4039,36 @@ document.getElementById('modalOverlay').addEventListener('click',e=>{if(e.target
 // ANÁLISIS LIGA
 // ══════════════════════════════════════════
 let ligaData={}, ligaLoaded=false;
+
+function _mostrarAnalisis() {
+  document.getElementById('ligaLoading').style.display='none';
+  document.getElementById('atab-jornada').style.display = analisisTab==='general' ? 'none' : '';
+  document.getElementById('atab-general').style.display  = analisisTab==='general' ? '' : 'none';
+  // Sincronizar botones
+  document.getElementById('atab-jornada-btn')?.classList.toggle('active', analisisTab!=='general');
+  document.getElementById('atab-general-btn')?.classList.toggle('active', analisisTab==='general');
+}
+
 async function loadLiga(){
   if(ligaLoaded){
-    document.getElementById('ligaLoading').style.display='none';
-    document.getElementById('ligaContent').style.display='block';
-    renderTablaLiga();renderProximaJornada();renderUltimosResultados();renderEquiposGrid();renderRecomendaciones();
+    _mostrarAnalisis();
+    if(analisisTab==='jornada') renderJornada();
+    else { renderTablaLiga();renderProximaJornada();renderUltimosResultados();renderEquiposGrid(); }
     return;
   }
   document.getElementById('ligaLoading').style.display='flex';
-  document.getElementById('ligaContent').style.display='none';
+  document.getElementById('atab-jornada').style.display='none';
+  document.getElementById('atab-general').style.display='none';
   try{
-    // Si ligaData ya tiene datos (poblado por loadPlayers), no hacer fetch de nuevo
     if(!ligaData.standings?.length){
       const res=await fetch('./data.json');const data=await res.json();const ll=data.laliga;
       if(!ll)throw new Error('Datos de La Liga no disponibles en data.json.');
       ligaData.standings=ll.table||[];ligaData.nextMatches=ll.nextMatches||[];ligaData.recentResults=ll.recentResults||[];ligaData.season=ll.matchday||'?';ligaData.forms=ll.forms||{};
     }
     renderTablaLiga();renderProximaJornada();renderUltimosResultados();renderEquiposGrid();renderRecomendaciones();
-    // Mostrar tab Jornada por defecto y renderizarla
-    document.getElementById('atab-jornada').style.display = '';
-    document.getElementById('atab-general').style.display = 'none';
-    renderJornada();
     ligaLoaded=true;
-    document.getElementById('ligaLoading').style.display='none';
+    _mostrarAnalisis();
+    renderJornada();
   }catch(e){
     document.getElementById('ligaLoading').innerHTML=`<div style="color:var(--red);font-family:Figtree,sans-serif;font-size:0.8rem;padding:20px;text-align:center">❌ ${e.message}<br><br><span style="color:var(--text3)">Ve a GitHub → Actions → Run workflow para actualizar data.json</span></div>`;
   }
@@ -4322,15 +4354,46 @@ function calcRecomendacion(p) {
     else if (roiReciente >= 1.2) reasons.push(`buen rendimiento por precio (${roiReciente.toFixed(1)} pts/M€/J)`);
   }
 
-  // 4. TENDENCIA DE PRECIO (10%) — el mercado ya está apostando por él
+  // 4. MOMENTUM DE PRECIO (10%) — usando historial prices.json si disponible
   const trend = p.trend || 0;
-  if (trend > 0) {
-    const trendScore = Math.min(10, (trend / 200000) * 10);
-    score += trendScore;
-    if (trend >= 100000) reasons.push(`precio subiendo ▲${(trend/1000).toFixed(0)}K€`);
-  } else if (trend < -50000) {
-    score -= 5;
-    warnings.push(`precio bajando ▼${Math.abs(trend/1000).toFixed(0)}K€`);
+  const priceHistory = (window._pricesData || {})[String(p.id)] || [];
+
+  if (priceHistory.length >= 3) {
+    // Calcular momentum real con historial
+    const last  = priceHistory[priceHistory.length - 1]?.p || p.price;
+    const prev3 = priceHistory[Math.max(0, priceHistory.length - 4)]?.p || last;
+    const prev7 = priceHistory[Math.max(0, priceHistory.length - 8)]?.p || last;
+
+    const mom3 = prev3 > 0 ? ((last - prev3) / prev3) * 100 : 0; // % cambio 3 días
+    const mom7 = prev7 > 0 ? ((last - prev7) / prev7) * 100 : 0; // % cambio 7 días
+
+    // Días consecutivos subiendo
+    let diasSubiendo = 0;
+    for (let i = priceHistory.length - 1; i > 0; i--) {
+      if ((priceHistory[i]?.p || 0) > (priceHistory[i-1]?.p || 0)) diasSubiendo++;
+      else break;
+    }
+
+    if (mom7 > 3) {
+      const momScore = Math.min(10, (mom7 / 10) * 10);
+      score += momScore;
+      if (diasSubiendo >= 4) reasons.push(`subiendo ${diasSubiendo} días consecutivos (+${mom7.toFixed(1)}% en 7 días)`);
+      else if (mom7 >= 5)    reasons.push(`momentum fuerte: +${mom7.toFixed(1)}% en 7 días`);
+      else                   reasons.push(`precio en tendencia alcista (+${mom3.toFixed(1)}% en 3 días)`);
+    } else if (mom7 < -3) {
+      score -= 5;
+      warnings.push(`precio cayendo ${mom7.toFixed(1)}% en 7 días — el mercado vende`);
+    }
+  } else {
+    // Fallback al trend diario de Biwenger
+    if (trend > 0) {
+      const trendScore = Math.min(10, (trend / 200000) * 10);
+      score += trendScore;
+      if (trend >= 100000) reasons.push(`precio subiendo ▲${(trend/1000).toFixed(0)}K€`);
+    } else if (trend < -50000) {
+      score -= 5;
+      warnings.push(`precio bajando ▼${Math.abs(trend/1000).toFixed(0)}K€`);
+    }
   }
 
   // 5. ESTADO (penalizaciones) (15%)
