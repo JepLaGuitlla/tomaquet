@@ -2368,7 +2368,7 @@ function mv3InitFromPlayers(players){
     const media=pj>0?p.pts/pj:(adv.media||0);
     return {
       name:p.name, pos:(p.position||'').split('/')[0]||adv.pos||'?',
-      club:p.club||p.teamName||'—', precio:p.price||0, pts:p.pts||0, media,
+      club:p.club||'—', precio:p.price||0, pts:p.pts||0, media,
       ptsL:adv.ptsLocal||0, ptsV:adv.ptsVisita||0,
       roi:p.roi||adv.roi||0, efic:p.eficiencia||adv.eficiencia||0,
       trend:p.trend||0,
@@ -3676,7 +3676,25 @@ function renderUltimosResultados(){
 function renderEquiposGrid(filter){
   const el=document.getElementById('equiposGrid');if(!el)return;
   const teams=ligaData.standings;const filtered=filter?teams.filter(t=>(t.team.name+t.team.shortName).toLowerCase().includes(filter.toLowerCase())):teams;
-  el.innerHTML=filtered.map(team=>{const form=ligaData.forms[team.team.id]||{results:[],gf:0,ga:0};const score=formScore(form.results);const scoreColor=score>=10?'var(--green)':score>=6?'var(--pt)':'var(--red)';return`<div class="team-card" style="border-radius:0;border:none;border-right:1px solid var(--border);border-bottom:1px solid var(--border)"><div class="team-card-header"><img class="team-crest" src="${team.team.crest}" onerror="this.style.display='none'"><div><div class="team-card-name">${team.team.shortName||team.team.name}</div><div class="team-card-pos">${team.position}º · ${team.points} pts</div></div><div style="margin-left:auto;font-family:Figtree,sans-serif;font-size:1.6rem;font-weight:800;color:${scoreColor}">${score}/15</div></div><div class="team-form">${formBadges(form.results)}</div><div class="team-card-body"><div class="team-stat"><div class="team-stat-val">${team.won}</div><div class="team-stat-lbl">V</div></div><div class="team-stat"><div class="team-stat-val">${team.draw}</div><div class="team-stat-lbl">E</div></div><div class="team-stat"><div class="team-stat-val">${team.lost}</div><div class="team-stat-lbl">D</div></div><div class="team-stat"><div class="team-stat-val">${team.goalsFor}</div><div class="team-stat-lbl">GF</div></div></div></div>`;}).join('');
+  el.innerHTML=filtered.map(team=>{
+    const form=ligaData.forms[team.team.id]||{results:[],gf:0,ga:0};
+    const score=formScore(form.results);
+    const scoreColor=score>=10?'var(--green)':score>=6?'var(--pt)':'var(--red)';
+    // Factor Equipo
+    const teamName=team.team.shortName||team.team.name;
+    const fe=calcFactorEquipo(teamName);
+    const feColor=fe===null?'var(--text3)':fe>=7?'var(--green)':fe>=5?'var(--pt)':fe>=3?'#f59e0b':'var(--red)';
+    const feVal=fe!==null?fe.toFixed(1):'—';
+    // Próximo rival
+    const nextM=(ligaData.nextMatches||[]).find(m=>m.home.id===team.team.id||m.away.id===team.team.id);
+    const isLocal=nextM?nextM.home.id===team.team.id:null;
+    const rival=nextM?(isLocal?nextM.away:nextM.home):null;
+    const localTxt=isLocal===true?'🏠':isLocal===false?'✈️':'';
+    const rivalHtml=rival
+      ?`<div style="display:flex;align-items:center;gap:4px;margin-top:4px"><img src="${rival.crest}" style="width:16px;height:16px;object-fit:contain" onerror="this.style.display='none'"><span style="font-size:0.6rem;color:var(--text3);font-family:'Figtree',sans-serif">${localTxt} ${rival.short||rival.name}</span></div>`
+      :'<div style="font-size:0.6rem;color:var(--text3);margin-top:4px">Sin partido</div>';
+    return`<div class="team-card" style="border-radius:0;border:none;border-right:1px solid var(--border);border-bottom:1px solid var(--border)"><div class="team-card-header"><img class="team-crest" src="${team.team.crest}" onerror="this.style.display='none'"><div><div class="team-card-name">${teamName}</div><div class="team-card-pos">${team.position}º · ${team.points} pts</div></div><div style="margin-left:auto;display:flex;gap:10px;align-items:center"><div style="text-align:center"><div style="font-family:'Figtree',sans-serif;font-size:1.4rem;font-weight:800;color:${scoreColor};line-height:1">${score}/15</div><div style="font-family:'Figtree',sans-serif;font-size:0.48rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px">forma</div></div><div style="width:1px;height:32px;background:var(--border)"></div><div style="text-align:center"><div style="font-family:'Figtree',sans-serif;font-size:1.4rem;font-weight:800;color:${feColor};line-height:1">${feVal}</div><div style="font-family:'Figtree',sans-serif;font-size:0.48rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px">factor</div></div></div></div><div class="team-form" style="justify-content:space-between;align-items:center"><div style="display:flex;gap:3px">${formBadges(form.results)}</div>${rivalHtml}</div><div class="team-card-body"><div class="team-stat"><div class="team-stat-val">${team.won}</div><div class="team-stat-lbl">V</div></div><div class="team-stat"><div class="team-stat-val">${team.draw}</div><div class="team-stat-lbl">E</div></div><div class="team-stat"><div class="team-stat-val">${team.lost}</div><div class="team-stat-lbl">D</div></div><div class="team-stat"><div class="team-stat-val">${team.goalsFor}</div><div class="team-stat-lbl">GF</div></div></div></div>`;
+  }).join('');
 }
 function filterTeamCards(val){renderEquiposGrid(val);}
 function renderRecomendaciones(){
