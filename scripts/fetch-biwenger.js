@@ -127,18 +127,14 @@ async function fetchPlayers() {
   const arr = Array.isArray(rawPlayers) ? rawPlayers : Object.values(rawPlayers);
   console.log(`✅ ${arr.length} jugadores descargados`);
 
-  // ── DIAGNÓSTICO teamName — borrar después de confirmar ──
-  console.log('DEBUG team0 raw:', JSON.stringify(arr[0]?.team));
-  console.log('DEBUG team1 raw:', JSON.stringify(arr[1]?.team));
-  console.log('DEBUG rawTeams keys (5):', Object.keys(rawTeams).slice(0, 5));
-  console.log('DEBUG rawTeams sample:', JSON.stringify(Object.values(rawTeams).slice(0, 2)));
-  const sinTeam = arr.filter(p => !p.team && !p.teamName).length;
-  console.log(`DEBUG jugadores sin team: ${sinTeam} de ${arr.length}`);
-  // ── FIN DIAGNÓSTICO ──
+  // DEBUG: ver keys del jugador — borrar después
+  console.log('DEBUG keys p0:', Object.keys(arr[0] || {}));
+  console.log('DEBUG p0:', JSON.stringify(arr[0]).substring(0, 400));
 
   return arr.map(p => {
-    // El equipo puede venir como objeto {id,name} o solo como ID numérico
-    const teamObj = typeof p.team === 'object' ? p.team : (rawTeams[p.team] || null);
+    // teamID puede estar en p.teamId, p.team, o como clave numérica en rawTeams
+    const tid = p.teamId || p.team_id || p.team || null;
+    const teamObj = typeof tid === 'object' ? tid : (rawTeams[tid] || rawTeams[String(tid)] || null);
     return {
       id:         p.id,
       name:       p.name,
