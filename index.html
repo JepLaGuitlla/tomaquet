@@ -2643,7 +2643,9 @@ function mv3Render(list){
     return `<div class="mpc${isG?' guitlla':''}" style="cursor:pointer" onclick="openJugPanel(mv3Players.find(x=>x.name==='${p.name}'))">
       <div class="mpc-row">
         <div class="mpc-rk${rank<=3?' top3':''}">${rank}</div>
-        <div class="mpc-pos" style="background:${posColor}">${p.pos}</div>
+        <div style="display:flex;align-items:center;justify-content:center;padding:0 2px;flex-shrink:0">
+          ${playerPhoto(p, 36)}
+        </div>
         <div class="mpc-id">
           <div><span class="mpc-name">${p.name}</span>${isG?'<span class="guitlla-tag">🦊</span>':''}</div>
           <div class="mpc-club">${p.club}</div>
@@ -3704,7 +3706,7 @@ function renderJornadaMiEquipo() {
 
       return `<div style="background:var(--bg);padding:10px 12px;cursor:pointer;transition:background 0.1s" onclick="openJugPanel(allPlayers.find(x=>x.id===${p.id})||allPlayers.find(x=>x.name==='${p.name}'))">
         <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
-          <div style="width:22px;height:22px;border-radius:3px;background:${posCol};display:flex;align-items:center;justify-content:center;font-size:0.5rem;font-weight:800;color:#fff;flex-shrink:0">${pos}</div>
+          ${playerPhoto(p, 32)}
           <div style="font-family:'Figtree',sans-serif;font-size:0.82rem;font-weight:700;color:var(--text);flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${p.name}</div>
           <span style="font-size:0.6rem;font-weight:700;color:${decision.col};background:${decision.bg};border-radius:3px;padding:2px 6px;flex-shrink:0">${decision.txt}</span>
         </div>
@@ -3840,7 +3842,7 @@ function renderJornadaRecomendaciones() {
     return `<div class="rec-card" style="cursor:pointer;flex-direction:column;gap:8px" onclick="openJugPanel(allPlayers.find(x=>x.id===${p.id}))">
       <div style="display:flex;gap:10px;align-items:flex-start">
         <div style="display:flex;flex-direction:column;align-items:center;gap:2px;flex-shrink:0">
-          <div style="width:34px;height:34px;border-radius:4px;background:${posCol};display:flex;align-items:center;justify-content:center;font-size:0.6rem;font-weight:800;color:#fff">${pos}</div>
+          ${playerPhoto(r.player, 38)}
           <div style="font-family:'IBM Plex Mono',monospace;font-size:1rem;font-weight:900;color:${scoreColor};line-height:1">${r.score}</div>
         </div>
         <div style="flex:1;min-width:0">
@@ -4911,10 +4913,10 @@ function renderJugPanel(p){
 
   document.getElementById('jugPanelBody').innerHTML = `
     <div class="jp-header">
-      <div class="jp-pos-badge" style="background:${col}">${p.position||p.pos||'?'}</div>
+      ${playerPhoto(p, 52)}
       <div>
         <div class="jp-name">${(p.name||'').toUpperCase()}${(p.inGuitlla||MV3_GUITLLA.has(p.name))?'<span style="font-size:0.7rem;margin-left:6px">🦊</span>':''}</div>
-        <div class="jp-club">${p.club||p.teamName||'—'}</div>
+        <div class="jp-club">${p.club||p.teamName||'—'} · <span style="color:${col}">${p.position||p.pos||'?'}</span></div>
       </div>
     </div>
     <div class="jp-kpis">
