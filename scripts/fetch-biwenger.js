@@ -127,6 +127,15 @@ async function fetchPlayers() {
   const arr = Array.isArray(rawPlayers) ? rawPlayers : Object.values(rawPlayers);
   console.log(`✅ ${arr.length} jugadores descargados`);
 
+  // ── DIAGNÓSTICO teamName — borrar después de confirmar ──
+  console.log('DEBUG team0 raw:', JSON.stringify(arr[0]?.team));
+  console.log('DEBUG team1 raw:', JSON.stringify(arr[1]?.team));
+  console.log('DEBUG rawTeams keys (5):', Object.keys(rawTeams).slice(0, 5));
+  console.log('DEBUG rawTeams sample:', JSON.stringify(Object.values(rawTeams).slice(0, 2)));
+  const sinTeam = arr.filter(p => !p.team && !p.teamName).length;
+  console.log(`DEBUG jugadores sin team: ${sinTeam} de ${arr.length}`);
+  // ── FIN DIAGNÓSTICO ──
+
   return arr.map(p => {
     // El equipo puede venir como objeto {id,name} o solo como ID numérico
     const teamObj = typeof p.team === 'object' ? p.team : (rawTeams[p.team] || null);
@@ -222,7 +231,6 @@ async function fetchMyTeam(token, liga) {
   const data = res.body?.data;
   if (!data) { console.warn('⚠️ Sin datos de mi equipo'); return null; }
 
-  // Los jugadores vienen en data.players como {id, owner} — cruzar con allPlayers
   const playerRefs = data.players || [];
   const lineup     = data.lineup  || {};
   console.log(`✅ Mi equipo: ${playerRefs.length} jugadores, presupuesto: ${data.balance || 0}`);
@@ -309,16 +317,14 @@ async function fetchLaLiga() {
       });
     });
 
-    // Combinar scheduled + in_play para cubrir partidos en curso
     const allScheduled = [
       ...(scheduled.body?.matches || []),
       ...(inPlay.body?.matches    || []),
     ];
-    const nextMD       = allScheduled.length
+    const nextMD = allScheduled.length
       ? Math.min(...allScheduled.map(m => m.matchday).filter(Boolean))
       : null;
 
-    // Guardar partidos de las próximas 2 jornadas para cubrir equipos que ya jugaron esta jornada
     const nextMDs = nextMD ? [nextMD, nextMD + 1] : [];
     const nextMatches = allScheduled
       .filter(m => nextMDs.includes(m.matchday))
@@ -351,7 +357,6 @@ async function fetchLaLiga() {
 async function fetchNews() {
   console.log('📰 Descargando noticias RSS...');
 
-  // Solo fuentes vivas — as/cm/rv están muertas
   const LIVE_SOURCES = RSS_SOURCES.filter(s => s.id === 'jp');
 
   function fetchRSS(src) {
@@ -377,7 +382,6 @@ async function fetchNews() {
     });
   }
 
-  // Paralelo con timeout por fuente
   const results = await Promise.all(LIVE_SOURCES.map(fetchRSS));
   const allNews = [];
 
@@ -402,10 +406,6 @@ async function fetchNews() {
 }
 
 // ─── 8. STATS DE JUGADORES — FOOTBALL-DATA.ORG ───────────────────────────────
-//
-//  Mismo token que ya usamos para la clasificación — ya funciona desde GH Actions.
-//  /v4/competitions/PD/scorers?limit=100  →  top 100 goleadores LaLiga 2025/26
-//  Una sola request. Sin equipos adicionales. Sin límites extra.
 
 async function fetchPlayerStats() {
   console.log('\u{1F4CA} Descargando estadísticas de jugadores (football-data.org)...');
@@ -429,7 +429,6 @@ async function fetchPlayerStats() {
         try {
           const body    = JSON.parse(data);
           const scorers = body?.scorers || [];
-
           const players = scorers.map(s => ({
             id:          String(s.player?.id || ''),
             name:        s.player?.name || '',
@@ -443,7 +442,6 @@ async function fetchPlayerStats() {
             minutesPerGoal: (s.goals && s.playedMatches)
               ? Math.round((s.playedMatches * 90) / s.goals) : null,
           }));
-
           console.log('\u2705 football-data scorers: ' + players.length + ' jugadores');
           resolve({
             source:    'football-data',
@@ -509,20 +507,17 @@ function updateHistory(myTeamTomaquet, myTeamEnBas, allTeamsTomaquet, allTeamsEn
 
   const today = new Date().toISOString().slice(0, 10);
 
-  // Buscar mi equipo en allTeams por nombre
   const isMe = t => t.name?.includes('Guitlla') || t.name?.includes('🦊');
   const meT = (allTeamsTomaquet || []).find(isMe);
   const meE = (allTeamsEnBas   || []).find(isMe);
 
-  // ── Tomaquet ──
   const entryT = {
     date:      today,
-    teamValue: meT?.value  || null,  // valor total plantilla en mercado
-    trend:     meT?.trend  || null,  // variación respecto al día anterior (campo Biwenger)
+    teamValue: meT?.value  || null,
+    trend:     meT?.trend  || null,
     pts:       meT?.points || myTeamTomaquet?.points || null,
-    pos:       null, // se calcula en el HTML desde standings
+    pos:       null,
   };
-  // Calcular posición desde standings
   const standingsT = (allTeamsTomaquet || []).slice().sort((a,b)=>(b.points||0)-(a.points||0));
   const posT = standingsT.findIndex(t => t.name?.includes('🦊') || t.name?.includes('Guitlla'));
   if (posT >= 0) entryT.pos = posT + 1;
@@ -532,7 +527,6 @@ function updateHistory(myTeamTomaquet, myTeamEnBas, allTeamsTomaquet, allTeamsEn
   else history.tomaquet.push(entryT);
   if (history.tomaquet.length > MAX_ENTRIES) history.tomaquet = history.tomaquet.slice(-MAX_ENTRIES);
 
-  // ── EN BAS ──
   const entryE = {
     date:      today,
     teamValue: meE?.value  || null,
@@ -557,10 +551,9 @@ function updateHistory(myTeamTomaquet, myTeamEnBas, allTeamsTomaquet, allTeamsEn
 
 function updatePlayerPrices(players) {
   const FILE      = 'prices.json';
-  const MAX_DAYS  = 90; // ~3 meses de historial
+  const MAX_DAYS  = 90;
   const today     = new Date().toISOString().slice(0, 10);
 
-  // Leer prices.json actual o inicializar
   let prices = {};
   try {
     if (fs.existsSync(FILE)) {
@@ -574,10 +567,7 @@ function updatePlayerPrices(players) {
   for (const p of players) {
     if (!p.id || !p.price) continue;
     const id = String(p.id);
-
     if (!prices[id]) prices[id] = [];
-
-    // Sobreescribir si ya existe entrada de hoy, si no añadir
     const todayIdx = prices[id].findIndex(e => e.d === today);
     const entry = { d: today, p: p.price };
     if (todayIdx >= 0) {
@@ -586,14 +576,12 @@ function updatePlayerPrices(players) {
       prices[id].push(entry);
       updated++;
     }
-
-    // Mantener solo los últimos MAX_DAYS días
     if (prices[id].length > MAX_DAYS) {
       prices[id] = prices[id].slice(-MAX_DAYS);
     }
   }
 
-  fs.writeFileSync(FILE, JSON.stringify(prices), 'utf8'); // sin indent — puede ser grande
+  fs.writeFileSync(FILE, JSON.stringify(prices), 'utf8');
   console.log(`💰 prices.json — ${Object.keys(prices).length} jugadores · ${updated} nuevas entradas hoy`);
 }
 
@@ -606,7 +594,6 @@ async function main() {
     const token   = await login();
     const players = await fetchPlayers();
 
-    // ── Ligas en paralelo ──
     console.log('\n--- LIGAS (paralelo) ---');
     const [
       leagueTomaquet, allTeamsTomaquet, myTeamTomaquet,
@@ -630,17 +617,14 @@ async function main() {
     const output = {
       updatedAt:   new Date().toISOString(),
       players,
-      // Tomaquet
-      league:    leagueTomaquet,
-      allTeams:  allTeamsTomaquet,
-      myTeam:    myTeamTomaquet,
+      league:      leagueTomaquet,
+      allTeams:    allTeamsTomaquet,
+      myTeam:      myTeamTomaquet,
       boardTomaquet,
-      // EN BAS
       leagueEnBas,
       allTeamsEnBas,
       myTeamEnBas,
       boardEnBas,
-      // LaLiga real
       laliga,
       news,
       playerStats,
@@ -649,7 +633,6 @@ async function main() {
     fs.writeFileSync('data.json', JSON.stringify(output, null, 2), 'utf8');
     console.log('\n💾 data.json guardado correctamente');
 
-    // ── History ──
     updateHistory(myTeamTomaquet, myTeamEnBas, allTeamsTomaquet, allTeamsEnBas, leagueTomaquet, leagueEnBas);
     updatePlayerPrices(players);
     console.log(`📊 Jugadores Biwenger: ${players.length}`);
