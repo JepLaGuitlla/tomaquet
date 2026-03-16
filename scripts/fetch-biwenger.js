@@ -585,46 +585,69 @@ function updatePlayerPrices(players) {
 
 async function downloadPlayerPhotos(players) {
   const DIR = 'img/players';
-  if (!fs.existsSync('img'))         fs.mkdirSync('img');
-  if (!fs.existsSync(DIR))           fs.mkdirSync(DIR);
+  if (!fs.existsSync('img'))  fs.mkdirSync('img');
+  if (!fs.existsSync(DIR))    fs.mkdirSync(DIR);
 
   let downloaded = 0, skipped = 0, failed = 0;
 
-  // Descargar en lotes de 10 para no saturar
+  // Función que sigue redirecciones manualmente
+  function fetchImage(url, maxRedirects = 5) {
+    return new Promise((resolve, reject) => {
+      const urlObj = new URL(url);
+      const req = https.request({
+        hostname: urlObj.hostname,
+        path:     urlObj.pathname + urlObj.search,
+        method:   'GET',
+        timeout:  8000,
+        headers:  {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+          'Referer':    'https://biwenger.as.com/',
+          'Accept':     'image/png,image/jpeg,image/*',
+        }
+      }, (res) => {
+        // Seguir redirecciones (301, 302, 303, 307, 308)
+        if ([301,302,303,307,308].includes(res.statusCode) && res.headers.location && maxRedirects > 0) {
+          const redirectUrl = res.headers.location.startsWith('http')
+            ? res.headers.location
+            : `https://${urlObj.hostname}${res.headers.location}`;
+          res.resume(); // descartar body
+          resolve(fetchImage(redirectUrl, maxRedirects - 1));
+          return;
+        }
+        const chunks = [];
+        res.on('data', c => chunks.push(c));
+        res.on('end', () => resolve({ status: res.statusCode, data: Buffer.concat(chunks) }));
+      });
+      req.on('error', reject);
+      req.on('timeout', () => { req.destroy(); reject(new Error('timeout')); });
+      req.end();
+    });
+  }
+
+  // Limpiar archivos corruptos (< 500 bytes) para forzar re-descarga
+  if (fs.existsSync(DIR)) {
+    const existing = fs.readdirSync(DIR);
+    let cleaned = 0;
+    existing.forEach(f => {
+      const fp = `${DIR}/${f}`;
+      if (fs.statSync(fp).size < 500) { fs.unlinkSync(fp); cleaned++; }
+    });
+    if (cleaned > 0) console.log(`🧹 ${cleaned} fotos corruptas eliminadas`);
+  }
+
   const BATCH = 10;
   for (let i = 0; i < players.length; i += BATCH) {
     const batch = players.slice(i, i + BATCH);
     await Promise.all(batch.map(async p => {
       const file = `${DIR}/${p.id}.png`;
-      // Si ya existe y tiene tamaño, no volver a descargar
-      if (fs.existsSync(file) && fs.statSync(file).size > 200) {
+      // Si ya existe y tiene tamaño real (>500 bytes = imagen real), saltar
+      if (fs.existsSync(file) && fs.statSync(file).size > 500) {
         skipped++;
         return;
       }
       try {
-        const res = await new Promise((resolve, reject) => {
-          const req = https.request({
-            hostname: 'cf.biwenger.com',
-            path:     `/static/img/players/la-liga/${p.id}.png`,
-            method:   'GET',
-            timeout:  5000,
-            headers:  {
-              'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-              'Referer':    'https://biwenger.as.com/',
-            }
-          }, (res) => {
-            const chunks = [];
-            res.on('data', c => chunks.push(c));
-            res.on('end', () => resolve({ status: res.statusCode, data: Buffer.concat(chunks) }));
-          });
-          req.on('error', reject);
-          req.on('timeout', () => { req.destroy(); reject(new Error('timeout')); });
-          req.end();
-        });
-
-        // 304 = imagen existe pero redirige — seguir la redirección no es necesario
-        // Solo guardar si el contenido es una imagen real (>200 bytes)
-        if (res.status === 200 && res.data.length > 200) {
+        const res = await fetchImage(`https://cf.biwenger.com/static/img/players/la-liga/${p.id}.png`);
+        if (res.status === 200 && res.data.length > 500) {
           fs.writeFileSync(file, res.data);
           downloaded++;
         } else {
@@ -634,8 +657,7 @@ async function downloadPlayerPhotos(players) {
         failed++;
       }
     }));
-    // Pequeña pausa entre lotes para no saturar
-    if (i + BATCH < players.length) await sleep(200);
+    if (i + BATCH < players.length) await sleep(100);
   }
 
   console.log(`🖼️  Fotos jugadores: ${downloaded} descargadas · ${skipped} ya existían · ${failed} fallidas`);
