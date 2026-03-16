@@ -2368,7 +2368,7 @@ function mv3InitFromPlayers(players){
     const media=pj>0?p.pts/pj:(adv.media||0);
     return {
       name:p.name, pos:(p.position||'').split('/')[0]||adv.pos||'?',
-      club:p.club||'—', precio:p.price||0, pts:p.pts||0, media,
+      club:p.club||p.teamName||'—', precio:p.price||0, pts:p.pts||0, media,
       ptsL:adv.ptsLocal||0, ptsV:adv.ptsVisita||0,
       roi:p.roi||adv.roi||0, efic:p.eficiencia||adv.eficiencia||0,
       trend:p.trend||0,
