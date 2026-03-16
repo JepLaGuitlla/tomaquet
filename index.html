@@ -3641,7 +3641,9 @@ function calcFactorEquipo(clubName) {
     if (rivalStanding) rivalN = ((rivalStanding.position - 1) / 19) * 10;
   }
 
-  const fe = (formaN * 0.35) + (gfN * 0.25) + (posN * 0.20) + (localN * 0.10) + (rivalN * 0.10);
+  // Pesos: Forma(40%) + Rival(30%) + Local/Visita(20%) + Goles(10%)
+  // Posición tabla eliminada — ya está implícita en la forma
+  const fe = (formaN * 0.40) + (rivalN * 0.30) + (localN * 0.20) + (gfN * 0.10);
   return Math.min(10, Math.max(0, fe));
 }
 function formBadges(results){return results.map(r=>`<span class="form-badge form-${r}">${r}</span>`).join('');}
@@ -3676,34 +3678,192 @@ function renderUltimosResultados(){
 function renderEquiposGrid(filter){
   const el=document.getElementById('equiposGrid');if(!el)return;
   const teams=ligaData.standings;const filtered=filter?teams.filter(t=>(t.team.name+t.team.shortName).toLowerCase().includes(filter.toLowerCase())):teams;
-  el.innerHTML=filtered.map(team=>{
-    const form=ligaData.forms[team.team.id]||{results:[],gf:0,ga:0};
-    const score=formScore(form.results);
-    const scoreColor=score>=10?'var(--green)':score>=6?'var(--pt)':'var(--red)';
-    // Factor Equipo
-    const teamName=team.team.shortName||team.team.name;
-    const fe=calcFactorEquipo(teamName);
-    const feColor=fe===null?'var(--text3)':fe>=7?'var(--green)':fe>=5?'var(--pt)':fe>=3?'#f59e0b':'var(--red)';
-    const feVal=fe!==null?fe.toFixed(1):'—';
-    // Próximo rival
-    const nextM=(ligaData.nextMatches||[]).find(m=>m.home.id===team.team.id||m.away.id===team.team.id);
-    const isLocal=nextM?nextM.home.id===team.team.id:null;
-    const rival=nextM?(isLocal?nextM.away:nextM.home):null;
-    const localTxt=isLocal===true?'🏠':isLocal===false?'✈️':'';
-    const rivalHtml=rival
-      ?`<div style="display:flex;align-items:center;gap:4px;margin-top:4px"><img src="${rival.crest}" style="width:16px;height:16px;object-fit:contain" onerror="this.style.display='none'"><span style="font-size:0.6rem;color:var(--text3);font-family:'Figtree',sans-serif">${localTxt} ${rival.short||rival.name}</span></div>`
-      :'<div style="font-size:0.6rem;color:var(--text3);margin-top:4px">Sin partido</div>';
-    return`<div class="team-card" style="border-radius:0;border:none;border-right:1px solid var(--border);border-bottom:1px solid var(--border)"><div class="team-card-header"><img class="team-crest" src="${team.team.crest}" onerror="this.style.display='none'"><div><div class="team-card-name">${teamName}</div><div class="team-card-pos">${team.position}º · ${team.points} pts</div></div><div style="margin-left:auto;display:flex;gap:10px;align-items:center"><div style="text-align:center"><div style="font-family:'Figtree',sans-serif;font-size:1.4rem;font-weight:800;color:${scoreColor};line-height:1">${score}/15</div><div style="font-family:'Figtree',sans-serif;font-size:0.48rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px">forma</div></div><div style="width:1px;height:32px;background:var(--border)"></div><div style="text-align:center"><div style="font-family:'Figtree',sans-serif;font-size:1.4rem;font-weight:800;color:${feColor};line-height:1">${feVal}</div><div style="font-family:'Figtree',sans-serif;font-size:0.48rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px">factor</div></div></div></div><div class="team-form" style="justify-content:space-between;align-items:center"><div style="display:flex;gap:3px">${formBadges(form.results)}</div>${rivalHtml}</div><div class="team-card-body"><div class="team-stat"><div class="team-stat-val">${team.won}</div><div class="team-stat-lbl">V</div></div><div class="team-stat"><div class="team-stat-val">${team.draw}</div><div class="team-stat-lbl">E</div></div><div class="team-stat"><div class="team-stat-val">${team.lost}</div><div class="team-stat-lbl">D</div></div><div class="team-stat"><div class="team-stat-val">${team.goalsFor}</div><div class="team-stat-lbl">GF</div></div></div></div>`;
-  }).join('');
+  el.innerHTML=filtered.map(team=>{const form=ligaData.forms[team.team.id]||{results:[],gf:0,ga:0};const score=formScore(form.results);const scoreColor=score>=10?'var(--green)':score>=6?'var(--pt)':'var(--red)';return`<div class="team-card" style="border-radius:0;border:none;border-right:1px solid var(--border);border-bottom:1px solid var(--border)"><div class="team-card-header"><img class="team-crest" src="${team.team.crest}" onerror="this.style.display='none'"><div><div class="team-card-name">${team.team.shortName||team.team.name}</div><div class="team-card-pos">${team.position}º · ${team.points} pts</div></div><div style="margin-left:auto;font-family:Figtree,sans-serif;font-size:1.6rem;font-weight:800;color:${scoreColor}">${score}/15</div></div><div class="team-form">${formBadges(form.results)}</div><div class="team-card-body"><div class="team-stat"><div class="team-stat-val">${team.won}</div><div class="team-stat-lbl">V</div></div><div class="team-stat"><div class="team-stat-val">${team.draw}</div><div class="team-stat-lbl">E</div></div><div class="team-stat"><div class="team-stat-val">${team.lost}</div><div class="team-stat-lbl">D</div></div><div class="team-stat"><div class="team-stat-val">${team.goalsFor}</div><div class="team-stat-lbl">GF</div></div></div></div>`;}).join('');
 }
 function filterTeamCards(val){renderEquiposGrid(val);}
-function renderRecomendaciones(){
-  const recEl=document.getElementById('recomendaciones');if(!recEl)return;
-  const recs=[];const nextMatches=ligaData.nextMatches||[];if(!nextMatches.length)return;
-  nextMatches.forEach(m=>{const homeForm=ligaData.forms[m.home.id];const awayForm=ligaData.forms[m.away.id];const homeScore=homeForm?formScore(homeForm.results):5;const awayScore=awayForm?formScore(awayForm.results):5;const homeName=m.home.short||m.home.name;const awayName=m.away.short||m.away.name;if(homeScore>=9&&awayScore<=4)recs.push({icon:'🔥',title:`Atacantes del ${homeName}`,body:`Recibe a ${awayName} con forma ${homeScore}/15 vs rival en racha negativa ${awayScore}/15.`,badge:'COMPRAR',cls:'rec-buy'});if(awayScore>=9&&homeScore<=4)recs.push({icon:'📈',title:`Atacantes del ${awayName}`,body:`Visitan a ${homeName} en gran forma (${awayScore}/15).`,badge:'COMPRAR',cls:'rec-buy'});const homeGA=homeForm?.ga??99;if(homeGA<=2&&homeScore>=7)recs.push({icon:'🧤',title:`Portero/Defensas del ${homeName}`,body:`Solo ${homeGA} goles encajados en sus últimas 5 jornadas.`,badge:'VIGILAR',cls:'rec-watch'});});
-  if(allPlayers.length){getEquipo().forEach(p=>{const teamName=(p.club||'').toLowerCase();const standing=ligaData.standings.find(t=>t.team.name.toLowerCase().includes(teamName)||teamName.includes((t.team.shortName||'').toLowerCase()));if(standing&&standing.position>=16)recs.push({icon:'📉',title:`${p.name} — equipo en descenso`,body:`${standing.team.shortName} está en zona de descenso (${standing.position}º).`,badge:'REVISAR',cls:'rec-sell'});});}
-  if(!recs.length){recEl.innerHTML='<div style="padding:16px;color:var(--text3);font-size:0.8rem;grid-column:1/-1">No hay recomendaciones destacadas esta jornada.</div>';return;}
-  recEl.innerHTML=recs.slice(0,8).map(r=>`<div class="rec-card"><div class="rec-icon">${r.icon}</div><div><div class="rec-title">${r.title}</div><div class="rec-body">${r.body}</div><span class="rec-badge ${r.cls}">${r.badge}</span></div></div>`).join('');
+// ── SISTEMA DE RECOMENDACIONES ─────────────────────────────────────────────
+// Puntúa cada jugador sobre 100 combinando señales independientes
+function calcRecomendacion(p) {
+  if (!p || !p.price || p.price < 300000) return null;
+  if (p.status === 'injured') return null; // descartado automático
+
+  let score = 0;
+  const reasons = [];
+  const warnings = [];
+
+  // 1. RACHA ÚLTIMAS 3 JORNADAS (30%) — lo más relevante a corto plazo
+  const jForm = (p.jForm || []).filter(v => v !== null && v !== undefined);
+  const last3 = jForm.slice(0, 3);
+  const last5 = jForm.slice(0, 5);
+  if (last3.length >= 2) {
+    const avg3 = last3.reduce((s,v) => s+v, 0) / last3.length;
+    const avg5 = last5.length ? last5.reduce((s,v) => s+v, 0) / last5.length : avg3;
+    const rachaScore = Math.min(30, (avg3 / 10) * 30);
+    score += rachaScore;
+    if (avg3 >= 8) reasons.push(`racha de ${avg3.toFixed(1)} de media en las últimas ${last3.length} jornadas`);
+    else if (avg3 >= 6) reasons.push(`media de ${avg3.toFixed(1)} pts en sus últimas ${last3.length} jornadas`);
+    // Penalizar si la forma está bajando
+    if (last3.length >= 2 && avg3 < avg5 - 1.5) warnings.push('forma bajando respecto a su media');
+    // Bonus consistencia: ninguna jornada negativa en las últimas 3
+    if (last3.length === 3 && last3.every(v => v >= 5)) { score += 5; reasons.push('muy consistente — nunca baja de 5'); }
+  }
+
+  // 2. FACTOR EQUIPO PRÓXIMA JORNADA (25%) — cuánto de favorable es el partido
+  const club = p.club || p.teamName || '';
+  const fe = calcFactorEquipo(club);
+  if (fe !== null) {
+    const feScore = (fe / 10) * 25;
+    score += feScore;
+    if (fe >= 7) reasons.push(`partido muy favorable (factor equipo ${fe.toFixed(1)}/10)`);
+    else if (fe >= 5) reasons.push(`partido aceptable (factor ${fe.toFixed(1)}/10)`);
+    else if (fe < 3) warnings.push(`partido difícil (factor ${fe.toFixed(1)}/10)`);
+
+    // Añadir info local/visitante
+    const standing = getStandingByClub(club);
+    if (standing) {
+      const nextM = (ligaData.nextMatches||[]).find(m => m.home.id===standing.team.id||m.away.id===standing.team.id);
+      if (nextM) {
+        const isLocal = nextM.home.id === standing.team.id;
+        const rival = isLocal ? nextM.away : nextM.home;
+        if (isLocal) reasons.push(`juega en casa vs ${rival.short||rival.name}`);
+        else reasons.push(`visita ${rival.short||rival.name}`);
+      }
+    }
+  }
+
+  // 3. ROI ÚLTIMAS 5 JORNADAS (20%) — eficiencia real reciente, no acumulada
+  const precioM = p.price / 1000000;
+  const ptsRecientes = last5.reduce((s,v) => s+(v>0?v:0), 0);
+  const roiReciente = last5.length ? (ptsRecientes / last5.length) / precioM : 0;
+  if (roiReciente > 0) {
+    const roiScore = Math.min(20, (roiReciente / 3) * 20);
+    score += roiScore;
+    if (roiReciente >= 2) reasons.push(`ROI reciente excelente (${roiReciente.toFixed(1)} pts/M€ por jornada)`);
+    else if (roiReciente >= 1.2) reasons.push(`buen rendimiento por precio (${roiReciente.toFixed(1)} pts/M€/J)`);
+  }
+
+  // 4. TENDENCIA DE PRECIO (10%) — el mercado ya está apostando por él
+  const trend = p.trend || 0;
+  if (trend > 0) {
+    const trendScore = Math.min(10, (trend / 200000) * 10);
+    score += trendScore;
+    if (trend >= 100000) reasons.push(`precio subiendo ▲${(trend/1000).toFixed(0)}K€`);
+  } else if (trend < -50000) {
+    score -= 5;
+    warnings.push(`precio bajando ▼${Math.abs(trend/1000).toFixed(0)}K€`);
+  }
+
+  // 5. ESTADO (penalizaciones) (15%)
+  if (p.status === 'doubt')      { score -= 15; warnings.push('en duda para el próximo partido'); }
+  if (p.status === 'sanctioned') { score -= 20; warnings.push('sancionado — no jugará'); }
+
+  // 6. BONUS: ya lo tienes en el equipo
+  const enMiEquipo = (getEquipo()||[]).some(x => x.id === p.id || x.name === p.name);
+
+  // Score mínimo para aparecer como recomendación
+  if (score < 35) return null;
+
+  return {
+    player: p,
+    score: Math.round(Math.min(99, Math.max(0, score))),
+    reasons,
+    warnings,
+    enMiEquipo,
+    fe,
+    roiReciente,
+  };
+}
+
+function renderRecomendaciones() {
+  const recEl = document.getElementById('recomendaciones');
+  if (!recEl) return;
+
+  if (!allPlayers.length) {
+    recEl.innerHTML = '<div style="padding:16px;color:var(--text3);font-size:0.8rem;grid-column:1/-1">Cargando jugadores…</div>';
+    return;
+  }
+
+  // Calcular recomendaciones para todos los jugadores disponibles
+  const candidatos = allPlayers
+    .map(p => calcRecomendacion(p))
+    .filter(Boolean)
+    .sort((a, b) => b.score - a.score);
+
+  // Top 3 por posición — así no son todos del mismo equipo/posición
+  const porPos = { PT:[], DF:[], MC:[], DL:[] };
+  const topGlobal = [];
+  candidatos.forEach(r => {
+    const pos = (r.player.position||'').split('/')[0];
+    if (porPos[pos] && porPos[pos].length < 2) porPos[pos].push(r);
+  });
+
+  // Top global (máx 3) + top por posición (máx 1 cada una si no está ya)
+  const vistos = new Set();
+  const recs = [];
+  candidatos.slice(0, 3).forEach(r => { recs.push(r); vistos.add(r.player.id||r.player.name); });
+  Object.values(porPos).forEach(lista => {
+    lista.forEach(r => {
+      if (!vistos.has(r.player.id||r.player.name) && recs.length < 8) {
+        recs.push(r); vistos.add(r.player.id||r.player.name);
+      }
+    });
+  });
+
+  if (!recs.length) {
+    recEl.innerHTML = '<div style="padding:16px;color:var(--text3);font-size:0.8rem;grid-column:1/-1">No hay recomendaciones destacadas esta jornada.</div>';
+    return;
+  }
+
+  const PosC = {PT:'#d97706',DF:'#1d6fce',MC:'#16a34a',DL:'#e63329',MD:'#8b5cf6'};
+
+  recEl.innerHTML = recs.map(r => {
+    const p = r.player;
+    const pos = (p.position||'?').split('/')[0];
+    const posColor = PosC[pos] || '#888';
+    const scoreColor = r.score >= 70 ? 'var(--green)' : r.score >= 50 ? 'var(--pt)' : 'var(--text3)';
+    const precioM = (p.price/1000000).toFixed(2);
+
+    // Badge acción
+    const fe = r.fe;
+    const accion = r.warnings.some(w=>w.includes('sancionado')) ? {txt:'NO JUEGA', cls:'rec-sell'} :
+                   r.warnings.some(w=>w.includes('duda'))       ? {txt:'VIGILAR',  cls:'rec-watch'} :
+                   r.score >= 65                                 ? {txt:'FICHAR',   cls:'rec-buy'} :
+                   r.score >= 50                                 ? {txt:'VIGILAR',  cls:'rec-watch'} :
+                                                                   {txt:'REVISAR',  cls:'rec-sell'};
+
+    // jForm visual
+    const jFormHtml = (p.jForm||[]).slice(0,5).map(v => {
+      if (v===null||v===undefined) return `<span style="color:var(--text3)">—</span>`;
+      const c = v>=10?'var(--c-top)':v>=6?'var(--c-good)':v>=3?'var(--c-mid)':'var(--c-low)';
+      return `<span style="color:${c};font-weight:700">${v}</span>`;
+    }).join('<span style="color:var(--border2);margin:0 2px">·</span>');
+
+    return `<div class="rec-card" style="cursor:pointer;flex-direction:column;gap:10px" onclick="openJugPanel(allPlayers.find(x=>x.id===${p.id})||allPlayers.find(x=>x.name==='${p.name}'))">
+      <div style="display:flex;align-items:flex-start;gap:10px">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:3px;flex-shrink:0">
+          <div style="width:36px;height:36px;border-radius:4px;background:${posColor};display:flex;align-items:center;justify-content:center;font-family:'Figtree',sans-serif;font-size:0.62rem;font-weight:800;color:#fff">${pos}</div>
+          <div style="font-family:'Figtree',sans-serif;font-size:1.1rem;font-weight:900;color:${scoreColor};line-height:1">${r.score}</div>
+          <div style="font-family:'Figtree',sans-serif;font-size:0.42rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px">score</div>
+        </div>
+        <div style="flex:1;min-width:0">
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:2px">
+            <div style="font-family:'Figtree',sans-serif;font-size:0.95rem;font-weight:800;color:var(--text);text-transform:uppercase;letter-spacing:0.3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${p.name}</div>
+            ${r.enMiEquipo ? '<span style="font-size:0.6rem;background:var(--accent-dim);color:var(--accent);border:1px solid var(--accent);border-radius:2px;padding:1px 5px;flex-shrink:0">🦊 tuyo</span>' : ''}
+          </div>
+          <div style="font-family:'Figtree',sans-serif;font-size:0.6rem;color:var(--text3);margin-bottom:6px">${p.club||p.teamName||'—'} · ${precioM}M€ · ${p.pts||0} pts</div>
+          <div style="font-size:0.72rem;font-family:'Figtree',sans-serif;line-height:1.5;color:var(--text2)">
+            ${r.reasons.slice(0,2).map(s=>`<span style="display:block">✓ ${s}</span>`).join('')}
+            ${r.warnings.map(s=>`<span style="display:block;color:var(--pt)">⚠ ${s}</span>`).join('')}
+          </div>
+        </div>
+        <span class="rec-badge ${accion.cls}" style="flex-shrink:0;align-self:flex-start">${accion.txt}</span>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:space-between;padding-top:8px;border-top:1px solid var(--border)">
+        <div style="font-family:'Figtree',sans-serif;font-size:0.7rem;color:var(--text3)">Últimas 5J: ${jFormHtml}</div>
+        ${fe!==null?`<div style="font-family:'Figtree',sans-serif;font-size:0.68rem;color:var(--text3)">Factor equipo <span style="font-weight:700;color:${fe>=7?'var(--green)':fe>=5?'var(--pt)':'var(--red)'}">${fe.toFixed(1)}</span></div>`:''}
+      </div>
+    </div>`;
+  }).join('');
 }
 
 // ══════════════════════════════════════════════════════════════════
