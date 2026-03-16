@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-15T22:46:30.079Z",
+  "updatedAt": "2026-03-16T05:59:24.234Z",
   "players": [
     {
       "id": 11,
@@ -7603,7 +7603,7 @@
       "name": "Ejuke",
       "position": 4,
       "price": 830000,
-      "points": 80,
+      "points": 79,
       "trend": 20000,
       "playedHome": 11,
       "playedAway": 10,
@@ -7611,7 +7611,7 @@
       "teamId": null,
       "status": "ok",
       "jForm": [
-        4,
+        3,
         6,
         4,
         2,
@@ -7897,7 +7897,7 @@
       "name": "Marc Bernal",
       "position": 3,
       "price": 6060000,
-      "points": 81,
+      "points": 80,
       "trend": 120000,
       "playedHome": 8,
       "playedAway": 7,
@@ -7905,7 +7905,7 @@
       "teamId": null,
       "status": "ok",
       "jForm": [
-        8,
+        7,
         6,
         5,
         14,
@@ -11371,7 +11371,7 @@
       "name": "Xavi Espart",
       "position": 2,
       "price": 290000,
-      "points": 4,
+      "points": 5,
       "trend": 20000,
       "playedHome": 1,
       "playedAway": 0,
@@ -11379,7 +11379,7 @@
       "teamId": null,
       "status": "ok",
       "jForm": [
-        4
+        5
       ],
       "clausula": null
     }
@@ -11654,9 +11654,9 @@
           9,
           7
         ],
-        "teamSize": 15,
-        "teamValue": 66570000,
-        "teamValueInc": 10000,
+        "teamSize": 13,
+        "teamValue": 52700000,
+        "teamValueInc": 120000,
         "lastTrophy": {
           "type": "league",
           "position": 3,
@@ -11799,8 +11799,8 @@
       "name": "Tata Martini",
       "manager": "Tata Martini",
       "points": 1088,
-      "value": 66570000,
-      "trend": 10000,
+      "value": 52700000,
+      "trend": 120000,
       "players": []
     },
     {
@@ -12011,6 +12011,12 @@
         "until": 1773776830
       },
       {
+        "playerID": 21068,
+        "price": 1700000,
+        "type": "sale",
+        "until": 1773791758
+      },
+      {
         "playerID": 26676,
         "price": 500000,
         "type": "sale",
@@ -12025,6 +12031,30 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1773618221,
+      "content": [
+        {
+          "player": 10157,
+          "from": {
+            "id": 12713493,
+            "name": "Tata Martini",
+            "icon": "i/u/12713493.png"
+          },
+          "amount": 1056500
+        },
+        {
+          "player": 2597,
+          "from": {
+            "id": 12713493,
+            "name": "Tata Martini",
+            "icon": "i/u/12713493.png"
+          },
+          "amount": 13131800
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1773612458,
@@ -12141,21 +12171,6 @@
           },
           "amount": 2835000,
           "type": "clause"
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1773477150,
-      "content": [
-        {
-          "player": 1897,
-          "from": {
-            "id": 8070044,
-            "name": "CA CABA JUNIORS",
-            "icon": "i/u/8070044.png?v=63"
-          },
-          "amount": 3430600
         }
       ]
     }
@@ -12494,9 +12509,9 @@
           4,
           17
         ],
-        "teamSize": 13,
-        "teamValue": 36210000,
-        "teamValueInc": 20000,
+        "teamSize": 14,
+        "teamValue": 38920000,
+        "teamValueInc": -20000,
         "position": 16,
         "role": ""
       },
@@ -12567,9 +12582,9 @@
           15,
           3
         ],
-        "teamSize": 19,
-        "teamValue": 58860000,
-        "teamValueInc": 300000,
+        "teamSize": 18,
+        "teamValue": 56150000,
+        "teamValueInc": 340000,
         "position": 20,
         "role": ""
       }
@@ -12716,8 +12731,8 @@
       "name": "Sant Pere Atlètic",
       "manager": "Sant Pere Atlètic",
       "points": 982,
-      "value": 36210000,
-      "trend": 20000,
+      "value": 38920000,
+      "trend": -20000,
       "players": []
     },
     {
@@ -12752,8 +12767,8 @@
       "name": "Eric Duran",
       "manager": "Eric Duran",
       "points": 929,
-      "value": 58860000,
-      "trend": 300000,
+      "value": 56150000,
+      "trend": 340000,
       "players": []
     }
   ],
@@ -12764,13 +12779,13 @@
     "balance": 40909,
     "lineup": {
       "type": "4-3-3",
-      "date": 1773588172,
+      "date": 1773617933,
       "playersID": [
         14630,
         32440,
-        31707,
-        17121,
         25398,
+        17121,
+        31707,
         26048,
         34077,
         38368,
@@ -12881,7 +12896,7 @@
       {
         "id": 38847,
         "buyPrice": 1170000,
-        "clause": 0,
+        "clause": 1140000,
         "invested": 0,
         "buyDate": 1767593085
       },
@@ -12895,7 +12910,7 @@
       {
         "id": 39327,
         "buyPrice": 150000,
-        "clause": 0,
+        "clause": 225000,
         "invested": 0,
         "buyDate": 1771912934
       },
@@ -12914,9 +12929,41 @@
         "buyDate": 1771912934
       }
     ],
-    "market": []
+    "market": [
+      {
+        "playerID": 38847,
+        "price": 1140000,
+        "type": "sale",
+        "until": 1773790671
+      },
+      {
+        "playerID": 39327,
+        "price": 225000,
+        "type": "sale",
+        "until": 1773790679
+      }
+    ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1773634671,
+      "content": [
+        {
+          "player": 39836,
+          "from": {
+            "id": 9897660,
+            "name": "Eric Duran"
+          },
+          "to": {
+            "id": 6579280,
+            "name": "Sant Pere Atlètic",
+            "icon": "i/u/6579280.png?v=22"
+          },
+          "amount": 3250000
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1773570181,
@@ -13168,27 +13215,6 @@
             "icon": "i/u/6593096.png"
           },
           "amount": 2730400
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1773437564,
-      "content": [
-        {
-          "player": 30487,
-          "from": {
-            "id": 6579505,
-            "name": "Xevi borrat",
-            "icon": "i/u/6579505.png"
-          },
-          "to": {
-            "id": 6586225,
-            "name": "Sergi Sala Duran",
-            "icon": "https://graph.facebook.com/10156583054878679/picture?height=300&width=300"
-          },
-          "amount": 3435000,
-          "type": "clause"
         }
       ]
     }
@@ -14253,7 +14279,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-03-15T22:46:28.723Z",
+    "updatedAt": "2026-03-16T05:59:21.947Z",
     "players": [
       {
         "id": "3374",
