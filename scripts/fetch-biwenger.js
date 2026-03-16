@@ -127,14 +127,10 @@ async function fetchPlayers() {
   const arr = Array.isArray(rawPlayers) ? rawPlayers : Object.values(rawPlayers);
   console.log(`✅ ${arr.length} jugadores descargados`);
 
-  // DEBUG: ver keys del jugador — borrar después
-  console.log('DEBUG keys p0:', Object.keys(arr[0] || {}));
-  console.log('DEBUG p0:', JSON.stringify(arr[0]).substring(0, 400));
-
   return arr.map(p => {
-    // teamID puede estar en p.teamId, p.team, o como clave numérica en rawTeams
-    const tid = p.teamId || p.team_id || p.team || null;
-    const teamObj = typeof tid === 'object' ? tid : (rawTeams[tid] || rawTeams[String(tid)] || null);
+    // El campo correcto es p.teamID (D mayúscula) — confirmado con DEBUG
+    const tid = p.teamID || null;
+    const teamObj = rawTeams[tid] || rawTeams[String(tid)] || null;
     return {
       id:         p.id,
       name:       p.name,
