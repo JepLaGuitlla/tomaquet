@@ -661,59 +661,6 @@ async function downloadPlayerPhotos(players, token) {
   }
   if (cleaned > 0) console.log(`🧹 ${cleaned} fotos inválidas eliminadas`);
 
-  // DIAGNÓSTICO: probar solo con Yamal (id=26271) para ver qué devuelve Biwenger
-  const testId = 26271;
-  console.log(`\n🔍 Test foto jugador id=${testId}...`);
-  try {
-    const testRes = await fetchImage(`https://cdn.biwenger.com/cdn-cgi/image/f=avif/i/p/${testId}.png`);
-    console.log(`  status: ${testRes.status}`);
-    console.log(`  bytes: ${testRes.data.length}`);
-    console.log(`  magic (hex): ${testRes.data.slice(0,8).toString('hex')}`);
-    console.log(`  isPNG: ${isValidImage(testRes.data)}`);
-    if (!isValidImage(testRes.data)) {
-      console.log(`  contenido (texto): ${testRes.data.slice(0,200).toString('utf8').replace(/\n/g,' ').replace(/\r/g,'')}`);
-    }
-  } catch(e) {
-    console.log(`  ERROR: ${e.message}`);
-  }
-
-  // También probar sin Authorization para comparar
-  console.log(`\n🔍 Test sin token...`);
-  try {
-    const testRes2 = await new Promise((resolve, reject) => {
-      const req = https.request({
-        hostname: 'cf.biwenger.com',
-        path: `/static/img/players/la-liga/${testId}.png`,
-        method: 'GET',
-        timeout: 8000,
-        headers: {
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-          'Accept': 'image/png,image/*,*/*',
-        }
-      }, (res) => {
-        const chunks = [];
-        res.on('data', c => chunks.push(c));
-        res.on('end', () => resolve({ status: res.statusCode, data: Buffer.concat(chunks), headers: res.headers }));
-      });
-      req.on('error', reject);
-      req.end();
-    });
-    console.log(`  status: ${testRes2.status}`);
-    console.log(`  bytes: ${testRes2.data.length}`);
-    console.log(`  magic (hex): ${testRes2.data.slice(0,8).toString('hex')}`);
-    console.log(`  content-type: ${testRes2.headers['content-type']}`);
-    console.log(`  location: ${testRes2.headers['location'] || 'none'}`);
-    if (!isValidImage(testRes2.data)) {
-      console.log(`  contenido: ${testRes2.data.slice(0,200).toString('utf8').replace(/\n/g,' ')}`);
-    }
-  } catch(e) {
-    console.log(`  ERROR: ${e.message}`);
-  }
-
-  console.log('\n--- FIN DIAGNÓSTICO, saltando descarga masiva ---\n');
-  console.log(`🖼️  Fotos jugadores: 0 descargadas · 0 ya existían · 0 fallidas (modo diagnóstico)`);
-  return; // <-- saltar descarga masiva por ahora
-
   const BATCH = 10;
   for (let i = 0; i < players.length; i += BATCH) {
     const batch = players.slice(i, i + BATCH);
