@@ -624,30 +624,51 @@ async function downloadPlayerPhotos(players) {
     });
   }
 
-  // Limpiar archivos corruptos (< 500 bytes) para forzar re-descarga
-  if (fs.existsSync(DIR)) {
-    const existing = fs.readdirSync(DIR);
-    let cleaned = 0;
-    existing.forEach(f => {
-      const fp = `${DIR}/${f}`;
-      if (fs.statSync(fp).size < 500) { fs.unlinkSync(fp); cleaned++; }
-    });
-    if (cleaned > 0) console.log(`🧹 ${cleaned} fotos corruptas eliminadas`);
+  // Magic bytes de formatos de imagen válidos
+  const PNG_MAGIC  = Buffer.from([0x89, 0x50, 0x4E, 0x47]);
+  const JPG_MAGIC  = Buffer.from([0xFF, 0xD8, 0xFF]);
+  const WEBP_MAGIC = Buffer.from('RIFF');
+
+  function isValidImage(buf) {
+    if (!buf || buf.length < 8) return false;
+    return buf.slice(0,4).equals(PNG_MAGIC) ||
+           buf.slice(0,3).equals(JPG_MAGIC) ||
+           buf.slice(0,4).equals(WEBP_MAGIC);
   }
+
+  function isValidImageFile(filepath) {
+    try {
+      const buf = Buffer.alloc(8);
+      const fd = fs.openSync(filepath, 'r');
+      fs.readSync(fd, buf, 0, 8, 0);
+      fs.closeSync(fd);
+      return isValidImage(buf);
+    } catch(e) { return false; }
+  }
+
+  // Limpiar archivos que no son imágenes reales (magic bytes incorrectos)
+  let cleaned = 0;
+  if (fs.existsSync(DIR)) {
+    fs.readdirSync(DIR).forEach(f => {
+      const fp = `${DIR}/${f}`;
+      if (!isValidImageFile(fp)) { fs.unlinkSync(fp); cleaned++; }
+    });
+  }
+  if (cleaned > 0) console.log(`🧹 ${cleaned} fotos inválidas eliminadas`);
 
   const BATCH = 10;
   for (let i = 0; i < players.length; i += BATCH) {
     const batch = players.slice(i, i + BATCH);
     await Promise.all(batch.map(async p => {
       const file = `${DIR}/${p.id}.png`;
-      // Si ya existe y tiene tamaño real (>500 bytes = imagen real), saltar
-      if (fs.existsSync(file) && fs.statSync(file).size > 500) {
+      // Solo saltar si el archivo existe Y es una imagen válida
+      if (fs.existsSync(file) && isValidImageFile(file)) {
         skipped++;
         return;
       }
       try {
         const res = await fetchImage(`https://cf.biwenger.com/static/img/players/la-liga/${p.id}.png`);
-        if (res.status === 200 && res.data.length > 500) {
+        if (res.status === 200 && isValidImage(res.data)) {
           fs.writeFileSync(file, res.data);
           downloaded++;
         } else {
