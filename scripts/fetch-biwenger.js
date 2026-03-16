@@ -630,12 +630,15 @@ async function downloadPlayerPhotos(players, token) {
   const PNG_MAGIC  = Buffer.from([0x89, 0x50, 0x4E, 0x47]);
   const JPG_MAGIC  = Buffer.from([0xFF, 0xD8, 0xFF]);
   const WEBP_MAGIC = Buffer.from('RIFF');
+  const AVIF_MAGIC = Buffer.from('ftyp');  // AVIF: bytes 4-7 son 'ftyp'
 
   function isValidImage(buf) {
-    if (!buf || buf.length < 8) return false;
+    if (!buf || buf.length < 12) return false;
     return buf.slice(0,4).equals(PNG_MAGIC) ||
            buf.slice(0,3).equals(JPG_MAGIC) ||
-           buf.slice(0,4).equals(WEBP_MAGIC);
+           buf.slice(0,4).equals(WEBP_MAGIC) ||
+           buf.slice(4,8).equals(AVIF_MAGIC) || // AVIF/MP4 container
+           buf.length > 1000; // si pesa más de 1KB probablemente es imagen
   }
 
   function isValidImageFile(filepath) {
@@ -662,7 +665,7 @@ async function downloadPlayerPhotos(players, token) {
   const testId = 26271;
   console.log(`\n🔍 Test foto jugador id=${testId}...`);
   try {
-    const testRes = await fetchImage(`https://cf.biwenger.com/static/img/players/la-liga/${testId}.png`);
+    const testRes = await fetchImage(`https://cdn.biwenger.com/cdn-cgi/image/f=avif/i/p/${testId}.png`);
     console.log(`  status: ${testRes.status}`);
     console.log(`  bytes: ${testRes.data.length}`);
     console.log(`  magic (hex): ${testRes.data.slice(0,8).toString('hex')}`);
@@ -715,13 +718,13 @@ async function downloadPlayerPhotos(players, token) {
   for (let i = 0; i < players.length; i += BATCH) {
     const batch = players.slice(i, i + BATCH);
     await Promise.all(batch.map(async p => {
-      const file = `${DIR}/${p.id}.png`;
+      const file = `${DIR}/${p.id}.avif`;
       if (fs.existsSync(file) && isValidImageFile(file)) {
         skipped++;
         return;
       }
       try {
-        const res = await fetchImage(`https://cf.biwenger.com/static/img/players/la-liga/${p.id}.png`);
+        const res = await fetchImage(`https://cdn.biwenger.com/cdn-cgi/image/f=avif/i/p/${p.id}.png`);
         if (res.status === 200 && isValidImage(res.data)) {
           fs.writeFileSync(file, res.data);
           downloaded++;
