@@ -2372,7 +2372,7 @@ async function loadPlayers(){
     let players=[];
     if(data.players&&Array.isArray(data.players)){
       players=data.players.map(p=>({id:Number(p.id),name:p.name,position:mapPosition(p.position,p.position2),price:p.price||0,pts:p.points||0,trend:p.trend||0,playedHome:p.playedHome||0,playedAway:p.playedAway||0,club:p.teamName||'',teamId:p.teamId||null,status:p.status||'ok',jForm:p.jForm||[]}))
-        .filter(p => p.position !== 'MD'); // excluir entrenadores
+;
     }
     if(!players.length) throw new Error('Sin jugadores en data.json');
     allPlayers=mergeStats(players);
