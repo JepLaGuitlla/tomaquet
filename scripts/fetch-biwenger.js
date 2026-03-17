@@ -127,7 +127,9 @@ async function fetchPlayers() {
   const arr = Array.isArray(rawPlayers) ? rawPlayers : Object.values(rawPlayers);
   console.log(`✅ ${arr.length} jugadores descargados`);
 
-  return arr.map(p => {
+  return arr
+    .filter(p => p.position !== 5) // excluir entrenadores (position 5 = MD en Biwenger)
+    .map(p => {
     // El campo correcto es p.teamID (D mayúscula) — confirmado con DEBUG
     const tid = p.teamID || null;
     const teamObj = rawTeams[tid] || rawTeams[String(tid)] || null;
