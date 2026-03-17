@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-17T08:06:05.391Z",
+  "updatedAt": "2026-03-17T08:51:58.698Z",
   "players": [
     {
       "id": 11,
@@ -9091,7 +9091,7 @@
     },
     {
       "id": 37711,
-      "name": "Esp��",
+      "name": "Espí",
       "position": 4,
       "price": 2150000,
       "points": 75,
@@ -11442,9 +11442,9 @@
           6,
           3
         ],
-        "teamSize": 18,
-        "teamValue": 100930000,
-        "teamValueInc": 270000,
+        "teamSize": 16,
+        "teamValue": 96440000,
+        "teamValueInc": 310000,
         "lastTrophy": {
           "type": "league",
           "position": 2,
@@ -11583,9 +11583,9 @@
           12,
           8
         ],
-        "teamSize": 20,
-        "teamValue": 54800000,
-        "teamValueInc": -410000,
+        "teamSize": 19,
+        "teamValue": 47270000,
+        "teamValueInc": -150000,
         "position": 9
       },
       {
@@ -11700,8 +11700,8 @@
       "name": "LeMola Team",
       "manager": "LeMola Team",
       "points": 1431,
-      "value": 100930000,
-      "trend": 270000,
+      "value": 96440000,
+      "trend": 310000,
       "players": []
     },
     {
@@ -11763,8 +11763,8 @@
       "name": "The Black Team",
       "manager": "The Black Team",
       "points": 1161,
-      "value": 54800000,
-      "trend": -410000,
+      "value": 47270000,
+      "trend": -150000,
       "players": []
     },
     {
@@ -12046,6 +12046,45 @@
   "boardTomaquet": [
     {
       "type": "transfer",
+      "date": 1773737340,
+      "content": [
+        {
+          "player": 38289,
+          "from": {
+            "id": 3928497,
+            "name": "The Black Team",
+            "icon": "i/u/3928497.png"
+          },
+          "amount": 7180600
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1773735530,
+      "content": [
+        {
+          "player": 20702,
+          "from": {
+            "id": 6552586,
+            "name": "LeMola Team",
+            "icon": "i/u/6552586.png"
+          },
+          "amount": 2209500
+        },
+        {
+          "player": 38843,
+          "from": {
+            "id": 6552586,
+            "name": "LeMola Team",
+            "icon": "i/u/6552586.png"
+          },
+          "amount": 2368400
+        }
+      ]
+    },
+    {
+      "type": "transfer",
       "date": 1773730469,
       "content": [
         {
@@ -12101,140 +12140,6 @@
             "icon": "i/u/12713493.png"
           },
           "amount": 3706000
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1773727427,
-      "content": [
-        {
-          "player": 11686,
-          "to": {
-            "id": 8070044,
-            "name": "CA CABA JUNIORS",
-            "icon": "i/u/8070044.png?v=63"
-          },
-          "amount": 4202655,
-          "bids": [
-            {
-              "user": {
-                "id": 12697101,
-                "name": "INDOMABLE FC",
-                "icon": "i/u/11757390.png"
-              },
-              "amount": 4156070
-            },
-            {
-              "user": {
-                "id": 3928497,
-                "name": "The Black Team",
-                "icon": "i/u/3928497.png"
-              },
-              "amount": 3900000
-            },
-            {
-              "user": {
-                "id": 148051,
-                "name": "Zaza Pachulia",
-                "icon": "i/u/148051.png?v=39"
-              },
-              "amount": 3801510
-            },
-            {
-              "user": {
-                "id": 12713493,
-                "name": "Tata Martini",
-                "icon": "i/u/12713493.png"
-              },
-              "amount": 3050000
-            },
-            {
-              "user": {
-                "id": 8068002,
-                "name": "Soulands Rangers",
-                "icon": "i/u/8068002.png?v=69"
-              },
-              "amount": 2880000
-            },
-            {
-              "user": {
-                "id": 11520975,
-                "name": "Morankus FC",
-                "icon": "i/u/11520975.png?v=81"
-              },
-              "amount": 2650000
-            }
-          ]
-        },
-        {
-          "player": 5220,
-          "to": {
-            "id": 8068002,
-            "name": "Soulands Rangers",
-            "icon": "i/u/8068002.png?v=69"
-          },
-          "amount": 888880,
-          "bids": [
-            {
-              "user": {
-                "id": 12697101,
-                "name": "INDOMABLE FC",
-                "icon": "i/u/11757390.png"
-              },
-              "amount": 675980
-            },
-            {
-              "user": {
-                "id": 12713493,
-                "name": "Tata Martini",
-                "icon": "i/u/12713493.png"
-              },
-              "amount": 550000
-            }
-          ]
-        },
-        {
-          "player": 27945,
-          "to": {
-            "id": 6541195,
-            "name": "🦊",
-            "icon": "i/u/6541195.png?v=17"
-          },
-          "amount": 1122222,
-          "bids": [
-            {
-              "user": {
-                "id": 8070044,
-                "name": "CA CABA JUNIORS",
-                "icon": "i/u/8070044.png?v=63"
-              },
-              "amount": 756590
-            },
-            {
-              "user": {
-                "id": 11520975,
-                "name": "Morankus FC",
-                "icon": "i/u/11520975.png?v=81"
-              },
-              "amount": 690000
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1773704451,
-      "content": [
-        {
-          "player": 32135,
-          "from": {
-            "id": 12696899,
-            "name": "CIGALERU",
-            "icon": "i/u/12696899.png"
-          },
-          "amount": 1149600
         }
       ]
     }
@@ -13110,6 +13015,1378 @@
       ]
     }
   ],
+  "jornadaTomaquet": {
+    "round": {
+      "id": 4511
+    },
+    "league": {
+      "id": 44700,
+      "name": "TOMAQUET",
+      "competition": "la-liga",
+      "mode": "league",
+      "type": "premium",
+      "marketMode": "normal",
+      "scoreID": 5,
+      "standings": [
+        {
+          "id": 8068427,
+          "name": "Albertini",
+          "icon": "i/u/8068427.png",
+          "points": 1497,
+          "teamValue": 98330000,
+          "teamValueInc": 160000,
+          "position": 1,
+          "lineup": {
+            "type": "4-3-3",
+            "date": 1773428628,
+            "players": [
+              15430,
+              10574,
+              19299,
+              1952,
+              26095,
+              35344,
+              29631,
+              2602,
+              1927,
+              15568,
+              26945
+            ],
+            "reserves": [
+              null,
+              10525,
+              38071,
+              34802
+            ],
+            "discarded": [
+              1683,
+              31707,
+              33983
+            ],
+            "count": true
+          }
+        },
+        {
+          "id": 6552586,
+          "name": "LeMola Team",
+          "icon": "i/u/6552586.png",
+          "points": 1431,
+          "teamValue": 96440000,
+          "teamValueInc": 310000,
+          "position": 2,
+          "lineup": {
+            "type": "3-4-3",
+            "date": 1773428851,
+            "players": [
+              9887,
+              2476,
+              26566,
+              20969,
+              30123,
+              19445,
+              25159,
+              27591,
+              12526,
+              2603,
+              1995
+            ],
+            "reserves": [
+              null,
+              2100,
+              1612,
+              37711
+            ],
+            "discarded": [
+              19141,
+              20702,
+              33531,
+              38843
+            ],
+            "count": true
+          }
+        },
+        {
+          "id": 6541195,
+          "name": "🦊",
+          "icon": "i/u/6541195.png?v=17",
+          "points": 1319,
+          "teamValue": 78880000,
+          "teamValueInc": 190000,
+          "position": 3,
+          "lineup": {
+            "type": "3-5-2",
+            "date": 1773344434,
+            "players": [
+              17021,
+              10155,
+              21068,
+              26276,
+              6837,
+              38867,
+              38964,
+              25127,
+              39885,
+              26271,
+              37451
+            ],
+            "reserves": [
+              null,
+              1908,
+              10158,
+              38216
+            ],
+            "discarded": [
+              21,
+              21063,
+              26676,
+              38245,
+              39327,
+              39403,
+              39431,
+              39736
+            ],
+            "count": true
+          }
+        },
+        {
+          "id": 8070044,
+          "name": "CA CABA JUNIORS",
+          "icon": "i/u/8070044.png?v=63",
+          "points": 1289,
+          "teamValue": 81170000,
+          "teamValueInc": 250000,
+          "position": 4,
+          "lineup": {
+            "type": "4-4-2",
+            "date": 1773428943,
+            "players": [
+              11677,
+              37898,
+              31018,
+              1733,
+              13994,
+              30495,
+              19441,
+              30789,
+              27271,
+              17056,
+              38959
+            ],
+            "reserves": [
+              1897,
+              2253,
+              2595,
+              25392
+            ],
+            "discarded": [
+              23880,
+              25398,
+              37897,
+              38966
+            ],
+            "count": true
+          }
+        },
+        {
+          "id": 8068002,
+          "name": "Soulands Rangers",
+          "icon": "i/u/8068002.png?v=69",
+          "points": 1288,
+          "teamValue": 101110000,
+          "teamValueInc": 330000,
+          "position": 5,
+          "lineup": {
+            "type": "3-5-2",
+            "date": 1773430265,
+            "players": [
+              257,
+              37399,
+              25592,
+              856,
+              37473,
+              19862,
+              31027,
+              17057,
+              34527,
+              2009,
+              29908
+            ],
+            "reserves": [
+              null,
+              39673,
+              5717,
+              30787
+            ],
+            "discarded": [
+              9763,
+              19577,
+              24732,
+              37455
+            ],
+            "count": true
+          }
+        },
+        {
+          "id": 148051,
+          "name": "Zaza Pachulia",
+          "icon": "i/u/148051.png?v=39",
+          "points": 1273,
+          "teamValue": 93240000,
+          "teamValueInc": -20000,
+          "position": 6,
+          "lineup": {
+            "type": "3-5-2",
+            "date": 1773384693,
+            "players": [
+              17482,
+              38290,
+              2600,
+              17645,
+              16625,
+              30081,
+              35770,
+              19860,
+              26071,
+              26879,
+              25724
+            ],
+            "reserves": [
+              null,
+              9557,
+              38958,
+              null
+            ],
+            "discarded": [
+              25384,
+              29184
+            ],
+            "count": true
+          }
+        },
+        {
+          "id": 12697101,
+          "name": "INDOMABLE FC",
+          "icon": "i/u/11757390.png",
+          "points": 1247,
+          "teamValue": 81360000,
+          "teamValueInc": 20000,
+          "position": 7,
+          "lineup": {
+            "type": "4-3-3",
+            "date": 1773388886,
+            "players": [
+              2184,
+              31043,
+              40075,
+              23840,
+              25396,
+              14800,
+              26930,
+              31243,
+              32042,
+              742,
+              38962
+            ],
+            "reserves": [
+              null,
+              10245,
+              2368,
+              35678
+            ],
+            "discarded": [
+              19614,
+              27059,
+              38963
+            ],
+            "count": true
+          }
+        },
+        {
+          "id": 12696491,
+          "name": "NACECH1",
+          "icon": "https://graph.facebook.com/10235185447969563/picture?height=300&width=300",
+          "points": 1237,
+          "teamValue": 54910000,
+          "teamValueInc": -70000,
+          "position": 8,
+          "lineup": {
+            "type": "3-4-3",
+            "date": 1773428631,
+            "players": [
+              30487,
+              32440,
+              1679,
+              18399,
+              9480,
+              10139,
+              33697,
+              5352,
+              29907,
+              12494,
+              24576
+            ],
+            "reserves": [
+              null,
+              null,
+              31267,
+              null
+            ],
+            "discarded": [
+              37898,
+              28115
+            ],
+            "count": true
+          }
+        },
+        {
+          "id": 3928497,
+          "name": "The Black Team",
+          "icon": "i/u/3928497.png",
+          "points": 1161,
+          "teamValue": 47270000,
+          "teamValueInc": -150000,
+          "position": 9,
+          "lineup": {
+            "type": "4-3-3",
+            "date": 1773431631,
+            "players": [
+              34621,
+              1844,
+              33839,
+              12400,
+              32020,
+              38368,
+              897,
+              32120,
+              38289,
+              26077,
+              18398
+            ],
+            "reserves": [
+              38527,
+              1721,
+              33,
+              39388
+            ],
+            "discarded": [
+              1602,
+              6828,
+              8375,
+              28082,
+              33970
+            ],
+            "count": true
+          }
+        },
+        {
+          "id": 11520975,
+          "name": "Morankus FC",
+          "icon": "i/u/11520975.png?v=81",
+          "points": 1124,
+          "teamValue": 48780000,
+          "teamValueInc": -80000,
+          "position": 10,
+          "lineup": {
+            "type": "3-5-2",
+            "date": 1773304867,
+            "players": [
+              37600,
+              1074,
+              15719,
+              23403,
+              37717,
+              19485,
+              951,
+              30210,
+              24474,
+              18397,
+              35778
+            ],
+            "reserves": [
+              null,
+              1760,
+              5807,
+              null
+            ],
+            "discarded": [
+              14800,
+              19285,
+              34221,
+              38355
+            ],
+            "count": true
+          }
+        },
+        {
+          "id": 12696899,
+          "name": "CIGALERU",
+          "icon": "i/u/12696899.png",
+          "points": 1119,
+          "teamValue": 55330000,
+          "teamValueInc": 150000,
+          "position": 11,
+          "lineup": {
+            "type": "4-5-1",
+            "date": 1773402017,
+            "players": [
+              9090,
+              39804,
+              17731,
+              28012,
+              28087,
+              26068,
+              8747,
+              11610,
+              9402,
+              32135,
+              39792
+            ],
+            "reserves": [
+              null,
+              35815,
+              2224,
+              null
+            ],
+            "discarded": [
+              32464
+            ],
+            "count": true
+          }
+        },
+        {
+          "id": 12696599,
+          "name": "Trileros FC",
+          "icon": "i/u/12696599.png",
+          "points": 1106,
+          "teamValue": 53180000,
+          "teamValueInc": 250000,
+          "position": 12,
+          "lineup": {
+            "type": "3-4-3",
+            "date": 1773427660,
+            "players": [
+              18251,
+              1125,
+              20,
+              18916,
+              10745,
+              38116,
+              2201,
+              34479,
+              35055,
+              3159,
+              16821
+            ],
+            "reserves": [
+              null,
+              null,
+              25390,
+              null
+            ],
+            "discarded": [
+              37739
+            ],
+            "count": true
+          }
+        },
+        {
+          "id": 12713493,
+          "name": "Tata Martini",
+          "icon": "i/u/12713493.png",
+          "points": 1088,
+          "teamValue": 45090000,
+          "teamValueInc": 280000,
+          "position": 13,
+          "lineup": {
+            "type": "5-4-1",
+            "date": 1773423462,
+            "players": [
+              38405,
+              1613,
+              26048,
+              34111,
+              35249,
+              31026,
+              24979,
+              11196,
+              34077,
+              1153,
+              39836
+            ],
+            "reserves": [
+              null,
+              24326,
+              17344,
+              null
+            ],
+            "discarded": [
+              2597,
+              10157
+            ],
+            "count": true
+          }
+        },
+        {
+          "id": 11521196,
+          "name": "Hufflepuff 🍋",
+          "icon": "i/u/11521196.png?v=57",
+          "points": 1046,
+          "teamValue": 52510000,
+          "teamValueInc": 280000,
+          "position": 14,
+          "lineup": {
+            "type": "3-5-2",
+            "date": 1773428579,
+            "players": [
+              11,
+              2635,
+              35156,
+              30505,
+              37416,
+              9484,
+              19547,
+              5069,
+              163,
+              10276,
+              34557
+            ],
+            "reserves": [
+              34149,
+              30141,
+              1969,
+              1523
+            ],
+            "discarded": [
+              16992,
+              17369
+            ],
+            "count": true
+          }
+        }
+      ],
+      "settings": {
+        "splitRound": "recalculation",
+        "bonusFixed": 0,
+        "bonusPoint": 30000,
+        "bonusInverse": false,
+        "bonusIdealLineup": 0,
+        "bonusGameMVP": 0,
+        "bonusRoundPosition": [
+          [
+            11,
+            200000
+          ],
+          [
+            12,
+            300000
+          ],
+          [
+            13,
+            400000
+          ],
+          [
+            14,
+            500000
+          ]
+        ],
+        "lineupShow": "round",
+        "lineupRoundChanges": 0,
+        "lineupRoundChangesIn": "onlyNoPlayed",
+        "lineupRoundChangeStrategy": true,
+        "bonusGoal": 0,
+        "bonusWorstLineup": 0,
+        "bonusProfitableLineup": 0,
+        "bonusLeaguePosition": [],
+        "bonusRoundPointsPosition": []
+      }
+    },
+    "fixtures": [
+      {
+        "id": 44,
+        "home": {
+          "id": 8068427,
+          "score": 0,
+          "name": "Albertini",
+          "icon": "i/u/8068427.png"
+        },
+        "away": {
+          "id": 6541195,
+          "score": 0,
+          "name": "🦊",
+          "icon": "i/u/6541195.png?v=17"
+        },
+        "round": {
+          "index": 8,
+          "type": "quarterFinal",
+          "leg": "home"
+        },
+        "tournament": {
+          "id": 130600,
+          "name": "Sa Capritxosa Copa",
+          "icon": "i/to/130600.png",
+          "config": {
+            "score": "points"
+          }
+        }
+      }
+    ]
+  },
+  "jornadaEnBas": {
+    "round": {
+      "id": 4511
+    },
+    "league": {
+      "id": 1248640,
+      "name": "Lliga Bas Promesas",
+      "competition": "la-liga",
+      "mode": "league",
+      "type": "premium",
+      "marketMode": "normal",
+      "scoreID": 5,
+      "standings": [
+        {
+          "id": 9890450,
+          "name": "MarK Lenders",
+          "icon": "icons/34.png",
+          "points": 1307,
+          "teamValue": 73140000,
+          "teamValueInc": 40000,
+          "position": 1,
+          "lineup": {
+            "type": "3-4-3",
+            "date": 1773422052,
+            "players": [
+              257,
+              2476,
+              23840,
+              20,
+              35901,
+              19141,
+              9480,
+              30495,
+              26077,
+              742,
+              34479
+            ],
+            "discarded": [
+              15719,
+              18382,
+              25396,
+              27715,
+              33792
+            ],
+            "count": true
+          }
+        },
+        {
+          "id": 6588130,
+          "name": "The GOAT club",
+          "icon": "i/u/6588130.png?v=12",
+          "points": 1240,
+          "teamValue": 100570000,
+          "teamValueInc": 180000,
+          "position": 2,
+          "lineup": {
+            "type": "3-4-3",
+            "date": 1773430459,
+            "players": [
+              15430,
+              38143,
+              37898,
+              9557,
+              2201,
+              24326,
+              21084,
+              19441,
+              37451,
+              15568,
+              26271
+            ],
+            "discarded": [
+              951,
+              1462,
+              33473,
+              38194
+            ],
+            "count": true
+          }
+        },
+        {
+          "id": 6579505,
+          "name": "Xevi borrat",
+          "icon": "i/u/6579505.png",
+          "points": 1231,
+          "teamValue": 85890000,
+          "teamValueInc": 500000,
+          "position": 3,
+          "lineup": {
+            "type": "4-3-3",
+            "date": 1773331444,
+            "players": [
+              17482,
+              1613,
+              38517,
+              26276,
+              27059,
+              19862,
+              10139,
+              31027,
+              129,
+              25127,
+              37473
+            ],
+            "discarded": [
+              1908,
+              11610,
+              17344,
+              25159,
+              28309,
+              33694,
+              38958
+            ],
+            "count": true
+          }
+        },
+        {
+          "id": 11504267,
+          "name": "🦊",
+          "icon": "i/u/11504267.png",
+          "points": 1214,
+          "teamValue": 88330000,
+          "teamValueInc": 370000,
+          "position": 4,
+          "lineup": {
+            "type": "4-3-3",
+            "date": 1773327138,
+            "players": [
+              14630,
+              32440,
+              38847,
+              17121,
+              25398,
+              26048,
+              1969,
+              38368,
+              38962,
+              39736,
+              39431
+            ],
+            "discarded": [
+              29034,
+              19577,
+              30628,
+              31707,
+              34077,
+              34541,
+              35615,
+              39327
+            ],
+            "count": true
+          }
+        },
+        {
+          "id": 6579402,
+          "name": "Valors FC",
+          "icon": "icons/7.png",
+          "points": 1200,
+          "teamValue": 57600000,
+          "teamValueInc": -60000,
+          "position": 5,
+          "lineup": {
+            "type": "3-4-3",
+            "date": 1773383098,
+            "players": [
+              7003,
+              38290,
+              1844,
+              31018,
+              14800,
+              27591,
+              22061,
+              5352,
+              16821,
+              1927,
+              18398
+            ],
+            "discarded": [
+              1602,
+              12424,
+              31228,
+              37897,
+              38369
+            ],
+            "count": true
+          }
+        },
+        {
+          "id": 6580423,
+          "name": "FC Borça",
+          "icon": "i/t/3.png",
+          "points": 1168,
+          "teamValue": 63960000,
+          "teamValueInc": -150000,
+          "position": 6,
+          "lineup": {
+            "type": "3-4-3",
+            "date": 1773426989,
+            "players": [
+              11677,
+              35249,
+              2100,
+              30505,
+              32338,
+              1083,
+              19860,
+              38116,
+              12526,
+              25724,
+              9047
+            ],
+            "discarded": [
+              18173,
+              19192,
+              23006,
+              31020,
+              35815
+            ],
+            "count": true
+          }
+        },
+        {
+          "id": 6578885,
+          "name": "Norimaki  FC",
+          "icon": "icons/41.png",
+          "points": 1160,
+          "teamValue": 68650000,
+          "teamValueInc": 540000,
+          "position": 7,
+          "lineup": {
+            "type": "3-4-3",
+            "date": 1773431628,
+            "players": [
+              37600,
+              10030,
+              1074,
+              33970,
+              2602,
+              34527,
+              19445,
+              26879,
+              39792,
+              897,
+              2603
+            ],
+            "discarded": [
+              31475,
+              37711,
+              38216,
+              38965,
+              39357
+            ],
+            "count": true
+          }
+        },
+        {
+          "id": 7817228,
+          "name": "Petraques",
+          "icon": "i/u/7817228.png",
+          "points": 1112,
+          "teamValue": 58640000,
+          "teamValueInc": 40000,
+          "position": 8,
+          "lineup": {
+            "type": "3-4-3",
+            "date": 1773073181,
+            "players": [
+              18251,
+              1721,
+              28103,
+              12400,
+              31267,
+              2055,
+              31243,
+              37453,
+              12494,
+              34557,
+              38959
+            ],
+            "discarded": [
+              2169,
+              24732,
+              30510,
+              35765,
+              38449,
+              38875
+            ],
+            "count": true
+          }
+        },
+        {
+          "id": 6579540,
+          "name": "Aiveen Teaam",
+          "icon": "i/u/6579540.png?v=63",
+          "points": 1087,
+          "teamValue": 49420000,
+          "teamValueInc": 250000,
+          "position": 9,
+          "lineup": {
+            "type": "3-4-3",
+            "date": 1773428766,
+            "players": [
+              9090,
+              18399,
+              8376,
+              32020,
+              2597,
+              11196,
+              39966,
+              26994,
+              35055,
+              35778,
+              24576
+            ],
+            "discarded": [
+              1876,
+              9763,
+              15471,
+              27271,
+              34111,
+              37741
+            ],
+            "count": true
+          }
+        },
+        {
+          "id": 6586225,
+          "name": "Sergi Sala Duran",
+          "icon": "https://graph.facebook.com/10156583054878679/picture?height=300&width=300",
+          "points": 1061,
+          "teamValue": 63050000,
+          "teamValueInc": 290000,
+          "position": 10,
+          "lineup": {
+            "type": "4-3-3",
+            "date": 1773428738,
+            "players": [
+              1897,
+              39804,
+              38059,
+              10155,
+              35156,
+              22699,
+              35291,
+              24979,
+              10276,
+              26071,
+              26930
+            ],
+            "discarded": [
+              30487,
+              1952,
+              5807,
+              18256,
+              37719
+            ],
+            "count": true
+          }
+        },
+        {
+          "id": 6579283,
+          "name": "Fiorenzola",
+          "icon": "i/u/6579283.png?v=33",
+          "points": 1042,
+          "teamValue": 57380000,
+          "teamValueInc": 130000,
+          "position": 11,
+          "lineup": {
+            "type": "4-3-3",
+            "date": 1773425984,
+            "players": [
+              32134,
+              31026,
+              26676,
+              1683,
+              28087,
+              1733,
+              30123,
+              12403,
+              2009,
+              33,
+              29631
+            ],
+            "discarded": [
+              1249,
+              30477
+            ],
+            "count": true
+          }
+        },
+        {
+          "id": 6580389,
+          "name": "Kings Team",
+          "icon": "icons/31.png",
+          "points": 1024,
+          "teamValue": 28000000,
+          "teamValueInc": -190000,
+          "position": 12,
+          "lineup": {
+            "type": "3-4-3",
+            "date": 1771009332,
+            "players": [
+              17021,
+              19614,
+              10245,
+              37739,
+              26092,
+              8747,
+              10157,
+              29661,
+              5069,
+              29908,
+              38365
+            ],
+            "discarded": [
+              10117,
+              21145,
+              33972,
+              34469,
+              38075
+            ],
+            "count": true
+          }
+        },
+        {
+          "id": 6580386,
+          "name": "Lamine i els 7 nans 👯‍♀️",
+          "icon": "i/u/6580386.png?v=10",
+          "points": 1023,
+          "teamValue": 39130000,
+          "teamValueInc": 110000,
+          "position": 13,
+          "lineup": {
+            "type": "3-4-3",
+            "date": 1773299353,
+            "players": [
+              9887,
+              17645,
+              19285,
+              11800,
+              1769,
+              39816,
+              32135,
+              18916,
+              18397,
+              34802,
+              27945
+            ],
+            "discarded": [
+              9068,
+              32374
+            ],
+            "count": true
+          }
+        },
+        {
+          "id": 9890540,
+          "name": "UE Trincadors",
+          "points": 1006,
+          "teamValue": 49020000,
+          "teamValueInc": 0,
+          "position": 14,
+          "lineup": {
+            "type": "3-5-2",
+            "date": 1772575497,
+            "players": [
+              2184,
+              30493,
+              33839,
+              10574,
+              20969,
+              2224,
+              9402,
+              1612,
+              32629,
+              1523,
+              35678
+            ],
+            "discarded": [
+              15462,
+              22067,
+              38071
+            ],
+            "count": true
+          }
+        },
+        {
+          "id": 6593096,
+          "name": "Janwandowski",
+          "icon": "i/u/6593096.png",
+          "points": 982,
+          "teamValue": 30780000,
+          "teamValueInc": -320000,
+          "position": 15,
+          "lineup": {
+            "type": "5-3-2",
+            "date": 1773419077,
+            "players": [
+              34621,
+              31321,
+              856,
+              34488,
+              38189,
+              1992,
+              25392,
+              38245,
+              37717,
+              26945,
+              38289
+            ],
+            "discarded": [
+              11633,
+              15455,
+              34080,
+              38527,
+              40009
+            ],
+            "count": true
+          }
+        },
+        {
+          "id": 6579280,
+          "name": "Sant Pere Atlètic",
+          "icon": "i/u/6579280.png?v=22",
+          "points": 982,
+          "teamValue": 38660000,
+          "teamValueInc": -140000,
+          "position": 16,
+          "lineup": {
+            "type": "3-4-3",
+            "date": 1773058871,
+            "players": [
+              16738,
+              23403,
+              2031,
+              26095,
+              2368,
+              17148,
+              26068,
+              30210,
+              17937,
+              39885,
+              33697
+            ],
+            "discarded": [
+              17442,
+              40006
+            ],
+            "count": true
+          }
+        },
+        {
+          "id": 6579330,
+          "name": "Mindundis",
+          "icon": "i/u/6579330.png?v=66",
+          "points": 953,
+          "teamValue": 47370000,
+          "teamValueInc": 20000,
+          "position": 17,
+          "lineup": {
+            "type": "3-4-3",
+            "date": 1773400993,
+            "players": [
+              11,
+              1679,
+              25384,
+              31043,
+              26697,
+              16625,
+              19485,
+              30789,
+              6259,
+              1995,
+              1153
+            ],
+            "discarded": [
+              91,
+              2253,
+              5717,
+              8375,
+              15289,
+              34149,
+              39801
+            ],
+            "count": true
+          }
+        },
+        {
+          "id": 6586257,
+          "name": "Aquest any he trepitjat merda !!",
+          "icon": "i/u/6586257.png",
+          "points": 952,
+          "teamValue": 38580000,
+          "teamValueInc": -130000,
+          "position": 18,
+          "lineup": {
+            "type": "3-5-2",
+            "date": 1773260353,
+            "players": [
+              38405,
+              38493,
+              37399,
+              1599,
+              24474,
+              32120,
+              6837,
+              17057,
+              38966,
+              19297,
+              17056
+            ],
+            "discarded": [
+              2114,
+              9966,
+              10525,
+              20102,
+              31493,
+              32460,
+              37450,
+              37456
+            ],
+            "count": true
+          }
+        },
+        {
+          "id": 6585052,
+          "name": "Tots som Olost",
+          "icon": "i/u/6585052.png?v=69",
+          "points": 932,
+          "teamValue": 43100000,
+          "teamValueInc": -180000,
+          "position": 19,
+          "lineup": {
+            "type": "4-3-3",
+            "date": 1772778654,
+            "players": [
+              1887,
+              19299,
+              8695,
+              1760,
+              26566,
+              35344,
+              8670,
+              37416,
+              29907,
+              35770,
+              24509
+            ],
+            "discarded": [
+              21,
+              9462,
+              17756,
+              37525
+            ],
+            "count": true
+          }
+        },
+        {
+          "id": 9897660,
+          "name": "Eric Duran",
+          "points": 929,
+          "teamValue": 61770000,
+          "teamValueInc": 360000,
+          "position": 20,
+          "lineup": {
+            "type": "3-5-2",
+            "date": 1773407642,
+            "players": [
+              23880,
+              37467,
+              25592,
+              17731,
+              163,
+              19547,
+              30081,
+              38867,
+              9484,
+              3159,
+              10745
+            ],
+            "discarded": [
+              1673,
+              1874,
+              5771,
+              16889,
+              24956,
+              39403,
+              39785,
+              39836
+            ],
+            "count": true
+          }
+        }
+      ],
+      "settings": {
+        "splitRound": "recalculation",
+        "bonusFixed": 0,
+        "bonusPoint": 10000,
+        "bonusInverse": false,
+        "bonusIdealLineup": 0,
+        "bonusGameMVP": 0,
+        "bonusRoundPosition": [
+          [
+            -3,
+            200000
+          ],
+          [
+            -2,
+            400000
+          ],
+          [
+            -1,
+            600000
+          ]
+        ],
+        "lineupShow": "round",
+        "lineupRoundChanges": 0,
+        "lineupRoundChangesIn": "onlyNoPlayed",
+        "lineupRoundChangeStrategy": true,
+        "bonusGoal": 0,
+        "bonusWorstLineup": 0,
+        "bonusProfitableLineup": 0,
+        "bonusLeaguePosition": [],
+        "bonusRoundPointsPosition": []
+      }
+    },
+    "fixtures": [
+      {
+        "id": 81,
+        "home": {
+          "id": 11504267,
+          "name": "🦊",
+          "icon": "i/u/11504267.png"
+        },
+        "away": {
+          "id": 6579330,
+          "name": "Mindundis",
+          "icon": "i/u/6579330.png?v=66"
+        },
+        "group": "A",
+        "round": {
+          "index": 9,
+          "type": "league",
+          "leg": "unique"
+        },
+        "tournament": {
+          "id": 130069,
+          "name": "Chempiooons",
+          "icon": "img/tournament.png",
+          "config": {
+            "score": "points"
+          }
+        }
+      }
+    ]
+  },
   "laliga": {
     "matchday": 28,
     "table": [
@@ -14239,6 +15516,14 @@
   },
   "news": [
     {
+      "title": "Real Madrid, alineación probable contra el Manchester City y dónde ver en TV",
+      "link": "https://www.jornadaperfecta.com/blog/real-madrid-alineacion-probable-city-vuelta-26/",
+      "date": "Tue, 17 Mar 2026 08:30:43 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Los sancionados de LaLiga para la jornada 29",
       "link": "https://www.jornadaperfecta.com/blog/sancionados-laliga-j29-25-26/",
       "date": "Tue, 17 Mar 2026 08:00:36 +0000",
@@ -14303,14 +15588,6 @@
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Real Madrid, alineación probable contra el Manchester City y dónde ver en TV",
-      "link": "https://www.jornadaperfecta.com/blog/real-madrid-alineacion-probable-city-vuelta-26/",
-      "date": "Mon, 16 Mar 2026 16:00:43 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
       "title": "Tenaglia entrena con normalidad, disponible para la jornada 29",
       "link": "https://www.jornadaperfecta.com/blog/tenaglia-estado-alaves-j29/",
       "date": "Mon, 16 Mar 2026 14:15:03 +0000",
@@ -14323,7 +15600,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-03-17T08:06:03.130Z",
+    "updatedAt": "2026-03-17T08:51:56.623Z",
     "players": [
       {
         "id": "3374",
