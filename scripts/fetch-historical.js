@@ -88,24 +88,34 @@ async function fetchPlayerHistory(player, token) {
     }
   });
 
-  if (res.status !== 200) return null;
+  if (res.status !== 200) {
+    if (player.name === 'Yamal' || player.name?.includes('Yamal')) {
+      console.log(`  DEBUG Yamal: status=${res.status} raw=${res.raw.slice(0,150)}`);
+    }
+    return null;
+  }
 
   // Strip JSONP wrapper
   const match = res.raw.match(/^[^(]+\(([\s\S]*)\)\s*;?\s*$/);
-  if (!match) return null;
+  if (!match) {
+    if (player.name === 'Yamal' || player.name?.includes('Yamal')) {
+      console.log(`  DEBUG Yamal: no JSONP match. raw=${res.raw.slice(0,150)}`);
+    }
+    return null;
+  }
 
   try {
     const data = JSON.parse(match[1]);
     const reports = data?.data?.reports || [];
-    // Mapear a { roundId: points }
+    // Log diagnóstico para el primer jugador
+    if (player.name === 'Yamal' || player.name?.includes('Yamal')) {
+      console.log(`  DEBUG Yamal: status=${res.status} reports=${reports.length} raw_start=${res.raw.slice(0,100)}`);
+    }
     const history = {};
     reports.forEach(r => {
       const roundId = r.match?.round?.id;
       if (roundId && r.points !== undefined && r.points !== null) {
-        history[roundId] = {
-          pts:   r.points,
-          home:  r.home,  // true = local, false = visitante
-        };
+        history[roundId] = { pts: r.points, home: r.home };
       }
     });
     return history;
