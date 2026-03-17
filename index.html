@@ -135,6 +135,45 @@ main{max-width:1440px;margin:0 auto;padding:1.5rem 2rem;}
 .jornada-kpi .val.highlight{color:var(--accent);}
 
 /* ── NOTICIAS ── */
+/* ── INICIO REDISEÑADO ──────────────────────────────────────────── */
+.news-ticker-wrap{display:flex;align-items:center;gap:0;background:var(--accent);height:32px;overflow:hidden;margin-bottom:1.2rem;border-radius:4px;}
+.news-ticker-label{font-family:'Figtree',sans-serif;font-size:0.55rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#fff;padding:0 12px;white-space:nowrap;border-right:1px solid rgba(255,255,255,0.3);height:100%;display:flex;align-items:center;flex-shrink:0;}
+.news-ticker-track{flex:1;overflow:hidden;height:100%;position:relative;}
+.news-ticker-inner{display:flex;align-items:center;height:100%;font-family:'Figtree',sans-serif;font-size:0.7rem;color:#fff;white-space:nowrap;animation:ticker 40s linear infinite;}
+.news-ticker-inner:hover{animation-play-state:paused;}
+@keyframes ticker{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}
+.news-ticker-sep{margin:0 20px;opacity:0.4;}
+
+.inicio-grid{display:grid;grid-template-columns:1fr 280px;gap:1.2rem;}
+@media(max-width:900px){.inicio-grid{grid-template-columns:1fr;}}
+
+.inicio-tablon{min-width:0;}
+.inicio-block-header{display:flex;align-items:center;justify-content:space-between;padding:10px 16px;border-bottom:1px solid var(--border);background:var(--bg2);border-radius:8px 8px 0 0;}
+.inicio-block-title{font-family:'Figtree',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);}
+
+/* Tablón cards horizontal */
+.board-feed-cards{border:1px solid var(--border);border-top:none;border-radius:0 0 8px 8px;overflow:hidden;}
+.board-card{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid var(--border);transition:background 0.1s;cursor:default;}
+.board-card:last-child{border-bottom:none;}
+.board-card:hover{background:var(--bg2);}
+.board-card-left{display:flex;align-items:center;gap:8px;flex-shrink:0;}
+.board-card-time{font-family:'Figtree',sans-serif;font-size:0.6rem;color:var(--text3);white-space:nowrap;}
+.board-card-center{min-width:0;}
+.board-card-action{font-family:'Figtree',sans-serif;font-size:0.72rem;color:var(--text3);margin-top:2px;}
+.board-card-player{font-family:'Figtree',sans-serif;font-size:0.92rem;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.board-card-right{text-align:right;flex-shrink:0;}
+.board-card-amount{font-family:'IBM Plex Mono',monospace;font-size:0.85rem;font-weight:700;}
+.board-card-amount.buy{color:var(--green);}
+.board-card-amount.sell{color:var(--red);}
+.board-card-amount.clause{color:var(--pt);}
+.board-card-tag{font-size:0.55rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 6px;border-radius:2px;margin-top:3px;display:inline-block;}
+.board-tag-sell{background:rgba(239,68,68,0.1);color:var(--red);}
+.board-tag-buy{background:rgba(22,163,74,0.1);color:var(--green);}
+.board-tag-clause{background:rgba(217,119,6,0.1);color:var(--pt);}
+.board-tag-me{background:var(--accent-dim);color:var(--accent);}
+
+.inicio-rankings{display:flex;flex-direction:column;gap:0.8rem;}
+
 .news-block{background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden;}
 .news-block-header{padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
 .news-block-title{font-family:'Figtree',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text2);}
@@ -759,66 +798,34 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
 <main>
 
 <div id="inicio" class="section active">
-  <div class="jornada-banner">
-    <div class="jornada-round">
-      <div class="label">Jornada</div>
-      <div class="num" id="bannerJornada">—</div>
-      <div class="sub">LaLiga 2025/26</div>
-    </div>
-    <div class="jornada-divider"></div>
-    <div class="jornada-kpis" id="bannerContent">
-      <div class="jornada-kpi"><div class="label">Posición</div><div class="val highlight" id="bannerPos">—</div></div>
-      <div class="jornada-kpi"><div class="label">Mis puntos</div><div class="val" id="bannerPts">—</div></div>
-      <div class="jornada-kpi"><div class="label">Líder</div><div class="val" id="bannerLider">—</div></div>
-      <div class="jornada-kpi"><div class="label">Diferencia</div><div class="val" id="bannerDiff" style="color:var(--red)">—</div></div>
-    </div>
-    <div class="jornada-divider"></div>
-    <div id="jornadaAlerts">
-      <div class="jornada-alerts-title">⚠️ Mi equipo</div>
-      <div class="jornada-alerts" id="jornadaAlertsList"><div style="font-size:0.7rem;color:var(--text3)">Cargando...</div></div>
+
+  <!-- TICKER DE NOTICIAS -->
+  <div class="news-ticker-wrap">
+    <div class="news-ticker-label">NOTICIAS</div>
+    <div class="news-ticker-track" id="newsTicker">
+      <div class="news-ticker-inner" id="newsTickerInner">Cargando noticias...</div>
     </div>
   </div>
 
-  <div class="inicio-layout">
-    <div>
-      <div class="section-title">Últimas noticias</div>
-      <div class="news-block">
-        <div class="news-block-header">
-          <div class="news-block-title">Actualidad Fantasy</div>
-          <div class="news-source-tabs">
-            <button class="nsrc-btn active" onclick="filterNews('all',this)">ALL</button>
-            <button class="nsrc-btn" onclick="filterNews('jp',this)">JP</button>
-            <button class="nsrc-btn" onclick="filterNews('as',this)">AS</button>
-            <button class="nsrc-btn" onclick="filterNews('cm',this)">COM</button>
-            <button class="nsrc-btn" onclick="filterNews('rv',this)">RLV</button>
-          </div>
+  <!-- LAYOUT PRINCIPAL -->
+  <div class="inicio-grid">
+
+    <!-- TABLÓN — PROTAGONISTA -->
+    <div class="inicio-tablon">
+      <div class="inicio-block-header">
+        <div class="inicio-block-title">Actividad de la liga</div>
+        <div class="board-section-tabs">
+          <button class="board-tab active" onclick="switchBoard('tomaquet',this)">🍅 Tomaquet</button>
+          <button class="board-tab" onclick="switchBoard('enbas',this)">⛰️ EN BAS</button>
         </div>
-        <div class="news-list" id="newsList">
-          <div class="news-loading">
-            <div class="spinner" style="width:24px;height:24px;margin:0 auto 10px"></div>
-            LOADING FEEDS...
-          </div>
-        </div>
+      </div>
+      <div id="boardFeed" class="board-feed-cards">
+        <div style="color:var(--text3);font-size:0.75rem;text-align:center;padding:2rem">Cargando tablón...</div>
       </div>
     </div>
 
-    <div style="margin-top:1.5rem">
-      <div class="section-title">Tablón de la liga</div>
-      <div class="news-block">
-        <div class="news-block-header" style="padding:8px 16px">
-          <div class="news-block-title">Actividad reciente</div>
-          <div class="board-section-tabs">
-            <button class="board-tab active" onclick="switchBoard('tomaquet',this)">🍅 Tomaquet</button>
-            <button class="board-tab" onclick="switchBoard('enbas',this)">⛰️ EN BAS</button>
-          </div>
-        </div>
-        <div style="padding:0.75rem" id="boardFeed">
-          <div style="color:var(--text3);font-size:0.75rem;text-align:center;padding:1rem">Cargando tablón...</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="rankings-col">
+    <!-- RANKINGS — COLUMNA LATERAL -->
+    <div class="inicio-rankings">
       <div class="rank-widget">
         <div class="rank-widget-header"><div class="rank-widget-icon">🔥</div><div class="rank-widget-title">En racha</div></div>
         <div id="rankRacha"></div>
@@ -836,15 +843,20 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
         <div id="rankGoleadores"></div>
       </div>
       <div class="rank-widget">
-        <div class="rank-widget-header"><div class="rank-widget-icon">⚡</div><div class="rank-widget-title">Jugadores eficientes</div></div>
+        <div class="rank-widget-header"><div class="rank-widget-icon">⚡</div><div class="rank-widget-title">Eficientes</div></div>
         <div id="rankUndervalued"></div>
       </div>
       <div class="rank-widget">
-        <div class="rank-widget-header"><div class="rank-widget-icon">🏷️</div><div class="rank-widget-title">Chollos fantasy</div></div>
+        <div class="rank-widget-header"><div class="rank-widget-icon">🏷️</div><div class="rank-widget-title">Chollos</div></div>
         <div id="rankChollos"></div>
       </div>
     </div>
+
   </div>
+
+  <!-- NOTICIAS COMPLETAS — OCULTAS, solo para el ticker -->
+  <div id="newsList" style="display:none"></div>
+
 </div>
 
 <div id="jugadores" class="section">
@@ -2014,6 +2026,7 @@ async function loadNews() {
   await Promise.allSettled(fetches);
   allNews.sort((a,b)=>{ try{return new Date(b.date)-new Date(a.date);}catch(e){return 0;} });
   renderNews();
+  renderNewsTicker();
 }
 function filterNews(srcId,btn) { activeNewsFilter=srcId; document.querySelectorAll('.nsrc-btn').forEach(b=>b.classList.remove('active')); btn.classList.add('active'); renderNews(); }
 // ── TABLÓN ────────────────────────────────────────────────────────────────
@@ -2047,45 +2060,69 @@ function renderBoard(liga) {
     if (ev.type === 'transfer') {
       return ev.content.map(t => {
         const player = allPlayers.find(p=>Number(p.id)===Number(t.player));
-        const pName = player?.name || `#${t.player}`;
-        const amt = fmt(t.amount);
+        const pName  = player?.name || `#${t.player}`;
+        const amt    = fmt(t.amount);
+        const photo  = player ? playerPhoto(player, 40) : `<div style="width:40px;height:40px;border-radius:50%;background:var(--border);flex-shrink:0"></div>`;
 
         if (!t.to) {
           // Venta al mercado libre
           const isMe = t.from?.id === myId;
-          return `<div class="board-item ev-transfer-sell">
-            <span class="b-icon">💸</span>
-            <div class="b-body">
-              <div class="b-player">${pName}</div>
-              <div class="b-detail">${isMe?'<b style="color:#ef4444">Tú vendiste</b>':t.from?.name+' vendió'} al mercado</div>
+          const fromIcon = t.from?.icon ? `https://cdn.biwenger.com/${t.from.icon}` : '';
+          return `<div class="board-card">
+            <div class="board-card-left">
+              ${photo}
+              ${fromIcon ? `<img src="${fromIcon}" style="width:24px;height:24px;border-radius:50%;object-fit:cover" onerror="this.style.display='none'">` : ''}
             </div>
-            <span class="b-amount" style="color:#ef4444">${amt}</span>
-            <span class="b-time">${timeAgo(ev.date)}</span>
+            <div class="board-card-center">
+              <div class="board-card-player">${pName}</div>
+              <div class="board-card-action">${isMe?'<span style="color:var(--red);font-weight:700">Tú vendiste</span>':t.from?.name+' vendió'} al mercado</div>
+            </div>
+            <div class="board-card-right">
+              <div class="board-card-amount sell">${amt}</div>
+              <div class="board-card-tag board-tag-sell">VENTA</div>
+              <div class="board-card-time">${timeAgo(ev.date)}</div>
+            </div>
           </div>`;
         } else if (t.type === 'clause') {
-          // Ejecución de cláusula
-          const isMe = t.to?.id === myId;
-          const isMeSell = t.from?.id === myId;
-          return `<div class="board-item ev-transfer-clause">
-            <span class="b-icon">⚡</span>
-            <div class="b-body">
-              <div class="b-player">${pName}</div>
-              <div class="b-detail">${isMeSell?'<b style="color:#f97316">Te ejecutaron cláusula</b>':isMe?'<b style="color:#22c55e">Ejecutaste cláusula</b>':t.from?.name+' → '+t.to?.name}</div>
+          const isMe    = t.to?.id === myId;
+          const isMeSell= t.from?.id === myId;
+          const fromIcon = t.from?.icon ? `https://cdn.biwenger.com/${t.from.icon}` : '';
+          const toIcon   = t.to?.icon   ? `https://cdn.biwenger.com/${t.to.icon}`   : '';
+          return `<div class="board-card">
+            <div class="board-card-left">
+              ${photo}
+              <div style="display:flex;flex-direction:column;gap:2px">
+                ${fromIcon ? `<img src="${fromIcon}" style="width:18px;height:18px;border-radius:50%;object-fit:cover" onerror="this.style.display='none'">` : ''}
+                ${toIcon   ? `<img src="${toIcon}"   style="width:18px;height:18px;border-radius:50%;object-fit:cover" onerror="this.style.display='none'">` : ''}
+              </div>
             </div>
-            <span class="b-amount" style="color:#f97316">${amt}</span>
-            <span class="b-time">${timeAgo(ev.date)}</span>
+            <div class="board-card-center">
+              <div class="board-card-player">${pName}</div>
+              <div class="board-card-action">${isMeSell?'<span style="color:var(--pt);font-weight:700">Te ejecutaron cláusula</span>':isMe?'<span style="color:var(--green);font-weight:700">Ejecutaste cláusula</span>':t.from?.name+' → '+t.to?.name}</div>
+            </div>
+            <div class="board-card-right">
+              <div class="board-card-amount clause">${amt}</div>
+              <div class="board-card-tag board-tag-clause">CLÁUSULA</div>
+              <div class="board-card-time">${timeAgo(ev.date)}</div>
+            </div>
           </div>`;
         } else {
-          // Transferencia normal
           const isMe = t.to?.id === myId;
-          return `<div class="board-item ev-transfer-buy">
-            <span class="b-icon">🔄</span>
-            <div class="b-body">
-              <div class="b-player">${pName}</div>
-              <div class="b-detail">${isMe?'<b style="color:#22c55e">Tú compraste</b>':t.to?.name+' compró'} de ${t.from?.name||'mercado'}</div>
+          const toIcon = t.to?.icon ? `https://cdn.biwenger.com/${t.to.icon}` : '';
+          return `<div class="board-card">
+            <div class="board-card-left">
+              ${photo}
+              ${toIcon ? `<img src="${toIcon}" style="width:24px;height:24px;border-radius:50%;object-fit:cover" onerror="this.style.display='none'">` : ''}
             </div>
-            <span class="b-amount" style="color:#22c55e">${amt}</span>
-            <span class="b-time">${timeAgo(ev.date)}</span>
+            <div class="board-card-center">
+              <div class="board-card-player">${pName}</div>
+              <div class="board-card-action">${isMe?'<span style="color:var(--green);font-weight:700">Tú compraste</span>':t.to?.name+' compró'} de ${t.from?.name||'mercado'}</div>
+            </div>
+            <div class="board-card-right">
+              <div class="board-card-amount buy">${amt}</div>
+              <div class="board-card-tag board-tag-buy">COMPRA</div>
+              <div class="board-card-time">${timeAgo(ev.date)}</div>
+            </div>
           </div>`;
         }
       }).join('');
@@ -2094,25 +2131,51 @@ function renderBoard(liga) {
     if (ev.type === 'market') {
       return ev.content.map(t => {
         const player = allPlayers.find(p=>Number(p.id)===Number(t.player));
-        const pName = player?.name || `#${t.player}`;
-        const amt = fmt(t.amount);
-        const isMe = t.to?.id === myId;
-        const nBids = t.bids?.length || 0;
-        return `<div class="board-item ev-market">
-          <span class="b-icon">🏷️</span>
-          <div class="b-body">
-            <div class="b-player">${pName}</div>
-            <div class="b-detail">${isMe?'<b style="color:#6366f1">Tú ganaste la puja</b>':t.to?.name+' ganó la puja'}${nBids?' · '+nBids+' pujadores':''}</div>
+        const pName  = player?.name || `#${t.player}`;
+        const amt    = fmt(t.amount);
+        const photo  = player ? playerPhoto(player, 40) : `<div style="width:40px;height:40px;border-radius:50%;background:var(--border);flex-shrink:0"></div>`;
+        const isMe   = t.to?.id === myId;
+        const nBids  = t.bids?.length || 0;
+        const toIcon = t.to?.icon ? `https://cdn.biwenger.com/${t.to.icon}` : '';
+        return `<div class="board-card">
+          <div class="board-card-left">
+            ${photo}
+            ${toIcon ? `<img src="${toIcon}" style="width:24px;height:24px;border-radius:50%;object-fit:cover" onerror="this.style.display='none'">` : ''}
           </div>
-          <span class="b-amount" style="color:#6366f1">${amt}</span>
-          <span class="b-time">${timeAgo(ev.date)}</span>
+          <div class="board-card-center">
+            <div class="board-card-player">${pName}</div>
+            <div class="board-card-action">${isMe?'<span style="color:var(--accent);font-weight:700">Tú ganaste la puja</span>':t.to?.name+' ganó la puja'}${nBids?' · <span style="color:var(--text3)">'+nBids+' pujadores</span>':''}</div>
+          </div>
+          <div class="board-card-right">
+            <div class="board-card-amount buy">${amt}</div>
+            <div class="board-card-tag board-tag-buy">PUJA</div>
+            <div class="board-card-time">${timeAgo(ev.date)}</div>
+          </div>
+        </div>`;
         </div>`;
       }).join('');
     }
     return '';
   }).join('');
 
-  el.innerHTML = `<div class="board-feed">${rows}</div>`;
+  el.innerHTML = rows || '<div style="color:var(--text3);font-size:0.75rem;text-align:center;padding:2rem">Sin actividad reciente</div>';
+}
+
+// ── TICKER DE NOTICIAS ───────────────────────────────────────────────────────
+function renderNewsTicker() {
+  const el = document.getElementById('newsTickerInner');
+  if (!el || !allNews.length) return;
+  // Filtrar noticias relevantes — palabras clave de interés fantasy
+  const keywords = ['lesión','lesionado','baja','sancionado','regresa','titular','duda','descartado','convocado','alineación','parte médico'];
+  const relevant = allNews.filter(n => {
+    const t = (n.title||'').toLowerCase();
+    return keywords.some(k => t.includes(k));
+  });
+  const items = (relevant.length ? relevant : allNews).slice(0, 15);
+  const sep = '<span class="news-ticker-sep">·</span>';
+  el.innerHTML = items.map(n =>
+    `<a href="${n.link}" target="_blank" rel="noopener" style="color:#fff;text-decoration:none;margin:0 8px;white-space:nowrap">${n.title}</a>`
+  ).join(sep);
 }
 
 function renderNews() {
