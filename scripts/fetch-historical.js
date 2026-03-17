@@ -72,12 +72,10 @@ function nameToSlug(name) {
 
 // ─── FETCH JUGADOR ───────────────────────────────────────────────────────────
 async function fetchPlayerHistory(player, token) {
-  const slug = nameToSlug(player.name);
-  const cb   = `jsonp_${Math.floor(Math.random()*1e9)}`;
-  const path = `/api/v2/players/la-liga/${slug}?lang=es&fields=*,reports(points,home,match(*,round))&callback=${cb}`;
+  const path = `/api/v2/players/${player.id}?fields=*,reports(points,home,match(*,round))`;
 
   const res = await requestRaw({
-    hostname: 'cf.biwenger.com',
+    hostname: 'biwenger.as.com',
     path,
     method:   'GET',
     timeout:  10000,
@@ -85,27 +83,20 @@ async function fetchPlayerHistory(player, token) {
       'User-Agent':    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
       'Referer':       'https://biwenger.as.com/',
       'Authorization': `Bearer ${token}`,
+      'x-lang':        'es',
+      'x-version':     '5',
     }
   });
 
   if (res.status !== 200) {
-    if (player.name === 'Yamal' || player.name?.includes('Yamal')) {
-      console.log(`  DEBUG Yamal: status=${res.status} raw=${res.raw.slice(0,150)}`);
-    }
-    return null;
-  }
-
-  // Strip JSONP wrapper
-  const match = res.raw.match(/^[^(]+\(([\s\S]*)\)\s*;?\s*$/);
-  if (!match) {
-    if (player.name === 'Yamal' || player.name?.includes('Yamal')) {
-      console.log(`  DEBUG Yamal: no JSONP match. raw=${res.raw.slice(0,150)}`);
+    if (player.name?.includes('Yamal')) {
+      console.log(`  DEBUG Yamal: status=${res.status} raw=${res.raw.slice(0,200)}`);
     }
     return null;
   }
 
   try {
-    const data = JSON.parse(match[1]);
+    const data = JSON.parse(res.raw);
     const reports = data?.data?.reports || [];
     // Log diagnóstico para el primer jugador
     if (player.name === 'Yamal' || player.name?.includes('Yamal')) {
