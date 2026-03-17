@@ -5150,8 +5150,17 @@ async function loadJornada() {
     const data = await res.json();
 
     if (data.jornadaTomaquet) {
+      // Estructura: { current, prev, currentRoundId }
       jornadaData.tomaquet = data.jornadaTomaquet;
       jornadaData.enbas = data.jornadaEnBas || null;
+      // Establecer jornada anterior por defecto si la actual no tiene puntos
+      const currentStandings = data.jornadaTomaquet?.current?.league?.standings || [];
+      const currentHasPoints = currentStandings.some(t => t.lineup?.points > 0);
+      if (!currentHasPoints && data.jornadaTomaquet?.prev) {
+        jornadaCurrentId = data.jornadaTomaquet.currentRoundId - 1;
+      } else {
+        jornadaCurrentId = data.jornadaTomaquet.currentRoundId || JORNADA_BASE_ID;
+      }
       jornadaLoaded = true;
     }
 
@@ -5164,15 +5173,23 @@ async function loadJornada() {
 }
 
 function renderJornadaTab() {
-  const data = jornadaLigaActiva === 'tomaquet' ? jornadaData.tomaquet : jornadaData.enbas;
-  if (!data) {
+  const jornadaObj = jornadaLigaActiva === 'tomaquet' ? jornadaData.tomaquet : jornadaData.enbas;
+  if (!jornadaObj) {
     document.getElementById('jornadaClasificacion').innerHTML = '<div style="padding:1rem;color:var(--text3);font-size:0.8rem">Sin datos de jornada disponibles. Ejecuta el workflow para actualizar.</div>';
+    return;
+  }
+
+  // Seleccionar jornada actual o anterior según jornadaCurrentId
+  const isCurrentRound = jornadaCurrentId === jornadaObj.currentRoundId;
+  const data = isCurrentRound ? jornadaObj.current : jornadaObj.prev;
+  if (!data) {
+    document.getElementById('jornadaClasificacion').innerHTML = '<div style="padding:1rem;color:var(--text3);font-size:0.8rem">Solo disponibles las 2 últimas jornadas.</div>';
     return;
   }
 
   const league = data.league;
   const standings = league?.standings || [];
-  const roundNum = JORNADA_BASE_NUM + (jornadaCurrentId - JORNADA_BASE_ID);
+  const roundNum = data.round?.id ? (JORNADA_BASE_NUM + (data.round.id - JORNADA_BASE_ID)) : JORNADA_BASE_NUM;
 
   // Actualizar label
   const label = document.getElementById('jornadaLabel');
@@ -5223,6 +5240,9 @@ function renderJornadaTab() {
 
   // Sa Capritxosa fixture si existe
   const fixtures = data.fixtures || [];
+  // Ajustar navegación — solo 2 jornadas disponibles
+  const canGoPrev = !isCurrentRound ? false : !!jornadaObj.prev;
+  const canGoNext = isCurrentRound ? false : true;
   const fixturePanel = document.getElementById('jornadaFixturePanel');
   const fixtureEl = document.getElementById('jornadaFixture');
   if (fixtures.length && fixturePanel && fixtureEl) {
