@@ -1,7 +1,7 @@
 name: Recuperación histórica de jornadas
 
 on:
-  workflow_dispatch:  # Solo manual — no automático
+  workflow_dispatch:
 
 jobs:
   fetch-historical:
