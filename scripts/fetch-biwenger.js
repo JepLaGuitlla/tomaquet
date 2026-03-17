@@ -582,17 +582,34 @@ function updatePlayerPrices(players) {
 // ─── JORNADA ─────────────────────────────────────────────────────────────────
 
 async function fetchJornada(token, liga) {
-  console.log(`📅 Descargando jornada actual liga ${liga.id}...`);
-  // Sin roundId = jornada actual
-  const res = await requestJSON({
+  console.log(`📅 Descargando jornadas liga ${liga.id}...`);
+
+  // Jornada actual (sin roundId)
+  const resCurrent = await requestJSON({
     hostname: 'biwenger.as.com',
     path:     `/api/v2/rounds/league`,
     method:   'GET',
     headers:  { ...headersForLeague(liga), 'Authorization': `Bearer ${token}`, 'x-lang': 'es' }
   });
-  if (res.status !== 200) { console.warn('⚠️ No se pudo obtener jornada. Status:', res.status); return null; }
-  console.log(`✅ Jornada liga ${liga.id} descargada`);
-  return res.body?.data || null;
+  if (resCurrent.status !== 200) { console.warn('⚠️ No se pudo obtener jornada actual. Status:', resCurrent.status); return null; }
+
+  const currentData = resCurrent.body?.data || null;
+  const currentRoundId = currentData?.round?.id;
+
+  // Jornada anterior (roundId - 1)
+  let prevData = null;
+  if (currentRoundId) {
+    const resPrev = await requestJSON({
+      hostname: 'biwenger.as.com',
+      path:     `/api/v2/rounds/league/${currentRoundId - 1}`,
+      method:   'GET',
+      headers:  { ...headersForLeague(liga), 'Authorization': `Bearer ${token}`, 'x-lang': 'es' }
+    });
+    if (resPrev.status === 200) prevData = resPrev.body?.data || null;
+  }
+
+  console.log(`✅ Jornadas liga ${liga.id} descargadas (actual + anterior)`);
+  return { current: currentData, prev: prevData, currentRoundId };
 }
 
 // ─── FOTOS DE JUGADORES ───────────────────────────────────────────────────────
