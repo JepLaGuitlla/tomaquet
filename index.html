@@ -5179,7 +5179,10 @@ function renderJornadaTab() {
   if (label) label.textContent = `Jornada ${roundNum}`;
 
   // Clasificación de jornada — ordenada por puntos de esta jornada
-  const sorted = [...standings].sort((a, b) => (b.lineup?.points || 0) - (a.lineup?.points || 0));
+  const hasPoints = standings.some(t => t.lineup?.points > 0);
+  const sorted = hasPoints
+    ? [...standings].sort((a, b) => (b.lineup?.points || 0) - (a.lineup?.points || 0))
+    : [...standings].sort((a, b) => (a.position || 99) - (b.position || 99));
 
   document.getElementById('jornadaClasificacion').innerHTML = `
     <div style="overflow-x:auto">
@@ -5199,7 +5202,7 @@ function renderJornadaTab() {
             const isMe = team.name === '🦊' || team.name?.includes('🦊');
             const pts = team.lineup?.points || 0;
             const ptsColor = pts >= 70 ? 'var(--green)' : pts >= 50 ? 'var(--pt)' : pts >= 30 ? 'var(--text)' : 'var(--red)';
-            const iconUrl = team.icon?.startsWith('http') ? team.icon : `https://cdn.biwenger.com/${team.icon}`;
+            const iconUrl = !team.icon ? '' : team.icon.startsWith('http') ? team.icon : `https://cdn.biwenger.com/${team.icon}`;
             return `<tr style="border-bottom:1px solid var(--border);background:${isMe ? 'var(--accent-dim)' : 'transparent'};transition:background 0.1s" onmouseover="this.style.background='var(--bg2)'" onmouseout="this.style.background='${isMe ? 'var(--accent-dim)' : 'transparent'}'">
               <td style="padding:10px 12px;font-family:'IBM Plex Mono',monospace;font-size:0.8rem;font-weight:700;color:${i===0?'var(--green)':i<=2?'var(--pt)':'var(--text3)'}">${i+1}º</td>
               <td style="padding:10px 12px;">
@@ -5208,7 +5211,7 @@ function renderJornadaTab() {
                   <span style="font-family:'Figtree',sans-serif;font-weight:${isMe?'800':'600'};color:var(--text)">${team.name}${isMe?' 🦊':''}</span>
                 </div>
               </td>
-              <td style="padding:10px 12px;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:1rem;font-weight:800;color:${ptsColor}">${pts}</td>
+              <td style="padding:10px 12px;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:1rem;font-weight:800;color:${ptsColor}">${hasPoints ? pts : '—'}</td>
               <td style="padding:10px 12px;text-align:center;font-family:'Figtree',sans-serif;font-size:0.75rem;color:var(--text3)">${team.lineup?.type || '—'}</td>
               <td style="padding:10px 12px;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:0.8rem;color:var(--text2)">${team.position}º</td>
               <td style="padding:10px 12px;text-align:right;font-family:'Figtree',sans-serif;font-size:0.78rem;font-weight:700;color:var(--text)">${team.points.toLocaleString('es-ES')}</td>
@@ -5225,8 +5228,8 @@ function renderJornadaTab() {
   if (fixtures.length && fixturePanel && fixtureEl) {
     fixturePanel.style.display = '';
     fixtureEl.innerHTML = fixtures.map(f => {
-      const homeIcon = f.home.icon?.startsWith('http') ? f.home.icon : `https://cdn.biwenger.com/${f.home.icon}`;
-      const awayIcon = f.away.icon?.startsWith('http') ? f.away.icon : `https://cdn.biwenger.com/${f.away.icon}`;
+      const homeIcon = !f.home.icon ? '' : f.home.icon.startsWith('http') ? f.home.icon : `https://cdn.biwenger.com/${f.home.icon}`;
+      const awayIcon = !f.away.icon ? '' : f.away.icon.startsWith('http') ? f.away.icon : `https://cdn.biwenger.com/${f.away.icon}`;
       const homeWin = f.home.score > f.away.score;
       const awayWin = f.away.score > f.home.score;
       return `<div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;gap:16px">
