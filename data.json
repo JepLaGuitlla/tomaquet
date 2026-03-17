@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-17T11:10:58.500Z",
+  "updatedAt": "2026-03-17T15:43:59.253Z",
   "players": [
     {
       "id": 11,
@@ -8779,7 +8779,7 @@
     },
     {
       "id": 37711,
-      "name": "Esp��",
+      "name": "Espí",
       "position": 4,
       "price": 2150000,
       "points": 75,
@@ -12115,9 +12115,9 @@
           15,
           3
         ],
-        "teamSize": 19,
-        "teamValue": 61770000,
-        "teamValueInc": 360000,
+        "teamSize": 18,
+        "teamValue": 60560000,
+        "teamValueInc": 400000,
         "position": 20,
         "role": ""
       }
@@ -12300,8 +12300,8 @@
       "name": "Eric Duran",
       "manager": "Eric Duran",
       "points": 929,
-      "value": 61770000,
-      "trend": 360000,
+      "value": 60560000,
+      "trend": 400000,
       "players": []
     }
   ],
@@ -12459,6 +12459,20 @@
   },
   "boardEnBas": [
     {
+      "type": "transfer",
+      "date": 1773746692,
+      "content": [
+        {
+          "player": 37467,
+          "from": {
+            "id": 9897660,
+            "name": "Eric Duran"
+          },
+          "amount": 1241700
+        }
+      ]
+    },
+    {
       "type": "market",
       "date": 1773727438,
       "content": [
@@ -12560,21 +12574,6 @@
             "icon": "https://graph.facebook.com/10156583054878679/picture?height=300&width=300"
           },
           "amount": 1956400
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1773641566,
-      "content": [
-        {
-          "player": 17344,
-          "from": {
-            "id": 6579505,
-            "name": "Xevi borrat",
-            "icon": "i/u/6579505.png"
-          },
-          "amount": 1582500
         }
       ]
     }
@@ -14457,8 +14456,8 @@
             "id": 9897660,
             "name": "Eric Duran",
             "points": 929,
-            "teamValue": 61770000,
-            "teamValueInc": 360000,
+            "teamValue": 60560000,
+            "teamValueInc": 400000,
             "position": 20,
             "lineup": {
               "type": "3-5-2",
@@ -15147,8 +15146,8 @@
             "id": 9897660,
             "name": "Eric Duran",
             "points": 929,
-            "teamValue": 61770000,
-            "teamValueInc": 360000,
+            "teamValue": 60560000,
+            "teamValueInc": 400000,
             "position": 20,
             "lineup": {
               "type": "3-4-3",
@@ -16368,6 +16367,62 @@
   },
   "news": [
     {
+      "title": "Ayoze sigue sin aparecer en el entrenamiento del Villarreal",
+      "link": "https://www.jornadaperfecta.com/blog/ayoze-estado-villarreal-j29/",
+      "date": "Tue, 17 Mar 2026 14:34:35 +0000",
+      "img": "https://cdn.biwenger.com/i/t/19.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Ferran Jutglà no entrena por una conmoción leve, ¿llega a la j29?",
+      "link": "https://www.jornadaperfecta.com/blog/ferran-jutgla-estado-mareos-26/",
+      "date": "Tue, 17 Mar 2026 14:05:37 +0000",
+      "img": "https://cdn.biwenger.com/i/t/5.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Cancelo y su gran momento: ¿defensa recomendable en fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/cancelo-defensa-recomendable-fantasy-barcelona/",
+      "date": "Tue, 17 Mar 2026 14:00:55 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Primera fecha para la posible vuelta de Nico Williams",
+      "link": "https://www.jornadaperfecta.com/blog/nico-williams-fecha-de-vuelta-2/",
+      "date": "Tue, 17 Mar 2026 13:20:55 +0000",
+      "img": "https://cdn.biwenger.com/i/t/1.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Flick, sobre Lamine Yamal y la posibilidad de jugar con &#8216;falso 9&#8217;",
+      "link": "https://www.jornadaperfecta.com/blog/flick-previa-champions-vuelta-newcastle/",
+      "date": "Tue, 17 Mar 2026 12:57:45 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Isco comienza a correr sobre el césped y vuelve Llorente",
+      "link": "https://www.jornadaperfecta.com/blog/isco-regreso-lesion-2026/",
+      "date": "Tue, 17 Mar 2026 12:10:43 +0000",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "La vuelta de un TOP Fantasy: ¿fichamos a Bellingham?",
+      "link": "https://www.jornadaperfecta.com/blog/bellingham-vuelta-top-fantasy-madrid/",
+      "date": "Tue, 17 Mar 2026 12:00:25 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Laporte y Paredes, ausentes en el entrenamiento del Athletic",
       "link": "https://www.jornadaperfecta.com/blog/laporte-estado-j29/",
       "date": "Tue, 17 Mar 2026 10:50:52 +0000",
@@ -16390,69 +16445,13 @@
       "img": "https://cdn.biwenger.com/i/t/70.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Grandes subidas y bajadas del mercado fantasy para la Jornada 29",
-      "link": "https://www.jornadaperfecta.com/blog/subidas-bajadas-j29-25-26/",
-      "date": "Tue, 17 Mar 2026 10:00:40 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Oblak, baja definitiva en Champions. ¿Llega al derbi?",
-      "link": "https://www.jornadaperfecta.com/blog/oblak-estado-j28-25-26/",
-      "date": "Tue, 17 Mar 2026 09:25:13 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Real Madrid, alineación probable contra el Manchester City y dónde ver en TV",
-      "link": "https://www.jornadaperfecta.com/blog/real-madrid-alineacion-probable-city-vuelta-26/",
-      "date": "Tue, 17 Mar 2026 08:30:43 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Los sancionados de LaLiga para la jornada 29",
-      "link": "https://www.jornadaperfecta.com/blog/sancionados-laliga-j29-25-26/",
-      "date": "Tue, 17 Mar 2026 08:00:36 +0000",
-      "img": "https://cdn.biwenger.com/i/t/465.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Cinco noticias fantasy para antes de irte a dormir",
-      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-16-3-26/",
-      "date": "Mon, 16 Mar 2026 22:00:13 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Chollos Fantasy que Tienes que Fichar YA para la J29 de Biwenger",
-      "link": "https://www.jornadaperfecta.com/blog/chollos-fantasy-biwenger-j29-laliga/",
-      "date": "Mon, 16 Mar 2026 20:00:22 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Nueva lesión muscular de Yangel Herrera: Parte médico oficial",
-      "link": "https://www.jornadaperfecta.com/blog/yangel-herrera-parte-medico-real-sociedad/",
-      "date": "Mon, 16 Mar 2026 19:22:35 +0000",
-      "img": "https://cdn.biwenger.com/i/t/13.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-03-17T11:10:56.728Z",
+    "updatedAt": "2026-03-17T15:43:56.652Z",
     "players": [
       {
         "id": "3374",
