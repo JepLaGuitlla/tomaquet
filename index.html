@@ -751,6 +751,7 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
     <button class="nav-btn" onclick="showSection('liga-fantasy',this)"><span class="nav-icon">🏆</span>Liga</button>
     <button class="nav-btn" onclick="showSection('analisis',this)"><span class="nav-icon">⚡</span>Análisis</button>
     <button class="nav-btn" onclick="showSection('factorpausa',this)"><span class="nav-icon">☕</span>Factor Pausa</button>
+    <button class="nav-btn" onclick="showSection('jornada',this);loadJornada()"><span class="nav-icon">📅</span>Jornada</button>
     <button class="nav-btn" onclick="showSection('bolsa',this);initBolsa()"><span class="nav-icon">💸</span>La Bolsa</button>
   </nav>
 </div>
@@ -1571,6 +1572,40 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
 
 </div>
 
+
+<!-- ══ JORNADA ══════════════════════════════════════════════════════ -->
+<div id="jornada" class="section">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.2rem;flex-wrap:wrap;gap:0.75rem;">
+    <div style="display:flex;gap:4px;">
+      <button class="blg-tab active" id="jornada-tab-tomaquet" onclick="setJornadaLiga('tomaquet',this)">🍅 Tomaquet</button>
+      <button class="blg-tab" id="jornada-tab-enbas" onclick="setJornadaLiga('enbas',this)">⛰️ EN BAS</button>
+    </div>
+    <div style="display:flex;align-items:center;gap:8px;">
+      <button onclick="cambiarJornada(-1)" style="background:none;border:1px solid var(--border);border-radius:4px;padding:4px 10px;cursor:pointer;font-size:0.8rem;color:var(--text)">←</button>
+      <span id="jornadaLabel" style="font-family:'Figtree',sans-serif;font-size:0.85rem;font-weight:700;color:var(--text);min-width:80px;text-align:center">Jornada —</span>
+      <button onclick="cambiarJornada(1)" style="background:none;border:1px solid var(--border);border-radius:4px;padding:4px 10px;cursor:pointer;font-size:0.8rem;color:var(--text)">→</button>
+    </div>
+  </div>
+  <div id="jornadaLoading" style="display:flex;align-items:center;justify-content:center;padding:3rem;color:var(--text3);font-size:0.8rem;gap:8px;">
+    <div class="spinner"></div> Cargando jornada…
+  </div>
+  <div id="jornadaContent" style="display:none;">
+    <!-- Clasificación jornada -->
+    <div class="panel liga-full" style="margin-bottom:1rem;">
+      <div class="panel-header">
+        <div class="panel-title">Clasificación de la jornada</div>
+      </div>
+      <div id="jornadaClasificacion"></div>
+    </div>
+    <!-- Enfrentamiento Sa Capritxosa -->
+    <div class="panel liga-full" id="jornadaFixturePanel" style="display:none;margin-bottom:1rem;">
+      <div class="panel-header">
+        <div class="panel-title">⚔️ Sa Capritxosa</div>
+      </div>
+      <div id="jornadaFixture"></div>
+    </div>
+  </div>
+</div>
 
 <!-- ══ LA BOLSA ══════════════════════════════════════════════════════ -->
 <div id="bolsa" class="section">
@@ -5075,6 +5110,144 @@ const BOLSA_PER_PAGE = 25;
 let bolsaInited = false;
 
 function initBolsa() { bolsaInited = true; renderBolsa(); }
+
+// ══════════════════════════════════════════════════════════════════
+// PESTAÑA JORNADA
+// ══════════════════════════════════════════════════════════════════
+
+let jornadaData = { tomaquet: null, enbas: null };
+let jornadaLigaActiva = 'tomaquet';
+// IDs de jornada — base J28=4511, ajustar según temporada
+const JORNADA_BASE_ID = 4511;
+const JORNADA_BASE_NUM = 28;
+let jornadaCurrentId = JORNADA_BASE_ID;
+let jornadaLoaded = false;
+
+function setJornadaLiga(liga, btn) {
+  jornadaLigaActiva = liga;
+  document.querySelectorAll('[id^="jornada-tab-"]').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderJornadaTab();
+}
+
+function cambiarJornada(delta) {
+  jornadaCurrentId += delta;
+  jornadaLoaded = false;
+  loadJornada();
+}
+
+async function loadJornada() {
+  const loading = document.getElementById('jornadaLoading');
+  const jornadaContent = document.getElementById('jornadaContent');
+  if (!loading || !jornadaContent) return;
+
+  loading.style.display = 'flex';
+  jornadaContent.style.display = 'none';
+
+  try {
+    // Cargar desde data.json si está disponible (jornada actual)
+    const res = await fetch('./data.json');
+    const data = await res.json();
+
+    if (data.jornadaTomaquet) {
+      jornadaData.tomaquet = data.jornadaTomaquet;
+      jornadaData.enbas = data.jornadaEnBas || null;
+      jornadaLoaded = true;
+    }
+
+    loading.style.display = 'none';
+    jornadaContent.style.display = '';
+    renderJornadaTab();
+  } catch(e) {
+    loading.innerHTML = `<div style="color:var(--red);font-size:0.8rem;text-align:center">❌ Error cargando jornada</div>`;
+  }
+}
+
+function renderJornadaTab() {
+  const data = jornadaLigaActiva === 'tomaquet' ? jornadaData.tomaquet : jornadaData.enbas;
+  if (!data) {
+    document.getElementById('jornadaClasificacion').innerHTML = '<div style="padding:1rem;color:var(--text3);font-size:0.8rem">Sin datos de jornada disponibles. Ejecuta el workflow para actualizar.</div>';
+    return;
+  }
+
+  const league = data.league;
+  const standings = league?.standings || [];
+  const roundNum = JORNADA_BASE_NUM + (jornadaCurrentId - JORNADA_BASE_ID);
+
+  // Actualizar label
+  const label = document.getElementById('jornadaLabel');
+  if (label) label.textContent = `Jornada ${roundNum}`;
+
+  // Clasificación de jornada — ordenada por puntos de esta jornada
+  const sorted = [...standings].sort((a, b) => (b.lineup?.points || 0) - (a.lineup?.points || 0));
+
+  document.getElementById('jornadaClasificacion').innerHTML = `
+    <div style="overflow-x:auto">
+      <table style="width:100%;border-collapse:collapse;font-size:0.78rem;">
+        <thead>
+          <tr style="background:var(--bg2);border-bottom:2px solid var(--border)">
+            <th style="padding:8px 12px;text-align:left;font-family:'Figtree',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text3)">Pos. J.</th>
+            <th style="padding:8px 12px;text-align:left;font-family:'Figtree',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text3)">Equipo</th>
+            <th style="padding:8px 12px;text-align:center;font-family:'Figtree',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text3)">Pts. Jornada</th>
+            <th style="padding:8px 12px;text-align:center;font-family:'Figtree',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text3)">Formación</th>
+            <th style="padding:8px 12px;text-align:center;font-family:'Figtree',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text3)">Pos. General</th>
+            <th style="padding:8px 12px;text-align:right;font-family:'Figtree',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text3)">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${sorted.map((team, i) => {
+            const isMe = team.name === '🦊' || team.name?.includes('🦊');
+            const pts = team.lineup?.points || 0;
+            const ptsColor = pts >= 70 ? 'var(--green)' : pts >= 50 ? 'var(--pt)' : pts >= 30 ? 'var(--text)' : 'var(--red)';
+            const iconUrl = team.icon?.startsWith('http') ? team.icon : `https://cdn.biwenger.com/${team.icon}`;
+            return `<tr style="border-bottom:1px solid var(--border);background:${isMe ? 'var(--accent-dim)' : 'transparent'};transition:background 0.1s" onmouseover="this.style.background='var(--bg2)'" onmouseout="this.style.background='${isMe ? 'var(--accent-dim)' : 'transparent'}'">
+              <td style="padding:10px 12px;font-family:'IBM Plex Mono',monospace;font-size:0.8rem;font-weight:700;color:${i===0?'var(--green)':i<=2?'var(--pt)':'var(--text3)'}">${i+1}º</td>
+              <td style="padding:10px 12px;">
+                <div style="display:flex;align-items:center;gap:8px">
+                  <img src="${iconUrl}" style="width:28px;height:28px;border-radius:50%;object-fit:cover" onerror="this.style.display='none'">
+                  <span style="font-family:'Figtree',sans-serif;font-weight:${isMe?'800':'600'};color:var(--text)">${team.name}${isMe?' 🦊':''}</span>
+                </div>
+              </td>
+              <td style="padding:10px 12px;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:1rem;font-weight:800;color:${ptsColor}">${pts}</td>
+              <td style="padding:10px 12px;text-align:center;font-family:'Figtree',sans-serif;font-size:0.75rem;color:var(--text3)">${team.lineup?.type || '—'}</td>
+              <td style="padding:10px 12px;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:0.8rem;color:var(--text2)">${team.position}º</td>
+              <td style="padding:10px 12px;text-align:right;font-family:'Figtree',sans-serif;font-size:0.78rem;font-weight:700;color:var(--text)">${team.points.toLocaleString('es-ES')}</td>
+            </tr>`;
+          }).join('')}
+        </tbody>
+      </table>
+    </div>`;
+
+  // Sa Capritxosa fixture si existe
+  const fixtures = data.fixtures || [];
+  const fixturePanel = document.getElementById('jornadaFixturePanel');
+  const fixtureEl = document.getElementById('jornadaFixture');
+  if (fixtures.length && fixturePanel && fixtureEl) {
+    fixturePanel.style.display = '';
+    fixtureEl.innerHTML = fixtures.map(f => {
+      const homeIcon = f.home.icon?.startsWith('http') ? f.home.icon : `https://cdn.biwenger.com/${f.home.icon}`;
+      const awayIcon = f.away.icon?.startsWith('http') ? f.away.icon : `https://cdn.biwenger.com/${f.away.icon}`;
+      const homeWin = f.home.score > f.away.score;
+      const awayWin = f.away.score > f.home.score;
+      return `<div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;gap:16px">
+        <div style="display:flex;align-items:center;gap:10px;flex:1">
+          <img src="${homeIcon}" style="width:36px;height:36px;border-radius:50%;object-fit:cover" onerror="this.style.display='none'">
+          <span style="font-family:'Figtree',sans-serif;font-size:0.9rem;font-weight:${homeWin?'800':'500'};color:${homeWin?'var(--text)':'var(--text3)'}">${f.home.name}</span>
+        </div>
+        <div style="text-align:center;flex-shrink:0">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:1.4rem;font-weight:800;color:var(--text)">${f.home.score} — ${f.away.score}</div>
+          <div style="font-size:0.6rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin-top:2px">${f.tournament?.name || 'Sa Capritxosa'}</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;flex:1;justify-content:flex-end">
+          <span style="font-family:'Figtree',sans-serif;font-size:0.9rem;font-weight:${awayWin?'800':'500'};color:${awayWin?'var(--text)':'var(--text3)'}">${f.away.name}</span>
+          <img src="${awayIcon}" style="width:36px;height:36px;border-radius:50%;object-fit:cover" onerror="this.style.display='none'">
+        </div>
+      </div>`;
+    }).join('');
+  } else if (fixturePanel) {
+    fixturePanel.style.display = 'none';
+  }
+}
 
 function setBolsaLiga(liga, btn) {
   bolsaLiga = liga;
