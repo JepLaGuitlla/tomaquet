@@ -579,6 +579,22 @@ function updatePlayerPrices(players) {
 
 // ─── MAIN ────────────────────────────────────────────────────────────────────
 
+// ─── JORNADA ─────────────────────────────────────────────────────────────────
+
+async function fetchJornada(token, liga) {
+  console.log(`📅 Descargando jornada actual liga ${liga.id}...`);
+  // Sin roundId = jornada actual
+  const res = await requestJSON({
+    hostname: 'biwenger.as.com',
+    path:     `/api/v2/rounds/league`,
+    method:   'GET',
+    headers:  { ...headersForLeague(liga), 'Authorization': `Bearer ${token}`, 'x-lang': 'es' }
+  });
+  if (res.status !== 200) { console.warn('⚠️ No se pudo obtener jornada. Status:', res.status); return null; }
+  console.log(`✅ Jornada liga ${liga.id} descargada`);
+  return res.body?.data || null;
+}
+
 // ─── FOTOS DE JUGADORES ───────────────────────────────────────────────────────
 // Descarga las fotos desde cf.biwenger.com (sin CORS en Node.js)
 // y las guarda en img/players/ para servirlas desde GitHub Pages
@@ -701,6 +717,7 @@ async function main() {
       leagueTomaquet, allTeamsTomaquet, myTeamTomaquet,
       leagueEnBas,    allTeamsEnBas,    myTeamEnBas,
       boardTomaquet,  boardEnBas,
+      jornadaTomaquet, jornadaEnBas,
       laliga,         news,             playerStats,
     ] = await Promise.all([
       fetchLeague(token, LEAGUE_TOMAQUET),
@@ -711,6 +728,8 @@ async function main() {
       fetchMyTeam(token, LEAGUE_ENBAS),
       fetchBoard(token, LEAGUE_TOMAQUET),
       fetchBoard(token, LEAGUE_ENBAS),
+      fetchJornada(token, LEAGUE_TOMAQUET),
+      fetchJornada(token, LEAGUE_ENBAS),
       fetchLaLiga(),
       fetchNews(),
       fetchPlayerStats(),
@@ -727,6 +746,8 @@ async function main() {
       allTeamsEnBas,
       myTeamEnBas,
       boardEnBas,
+      jornadaTomaquet,
+      jornadaEnBas,
       laliga,
       news,
       playerStats,
