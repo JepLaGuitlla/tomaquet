@@ -144,10 +144,22 @@ main{max-width:1440px;margin:0 auto;padding:1.5rem 2rem;}
 @keyframes ticker{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}
 .news-ticker-sep{margin:0 20px;opacity:0.4;}
 
-.inicio-grid{display:grid;grid-template-columns:1fr 280px;gap:1.2rem;}
-@media(max-width:900px){.inicio-grid{grid-template-columns:1fr;}}
+.inicio-grid{display:grid;grid-template-columns:1fr 300px;gap:1.2rem;align-items:start;}
+@media(max-width:1100px){.inicio-grid{grid-template-columns:1fr;}}
 
-.inicio-tablon{min-width:0;}
+.inicio-rankings-main{display:flex;flex-direction:column;gap:0.8rem;min-width:0;}
+.rank-row-duo{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;}
+@media(max-width:700px){.rank-row-duo{grid-template-columns:1fr;}}
+
+.rank-widget-foto .rank-row{padding:8px 12px;gap:10px;}
+.rank-ver-mas{background:none;border:none;font-family:'Figtree',sans-serif;font-size:0.6rem;color:var(--accent);cursor:pointer;margin-left:auto;padding:0;}
+
+/* Tablón derecha con scroll */
+.inicio-tablon{min-width:0;position:sticky;top:60px;}
+.board-feed-cards{max-height:calc(100vh - 120px);overflow-y:auto;border:1px solid var(--border);border-top:none;border-radius:0 0 8px 8px;}
+.board-feed-cards::-webkit-scrollbar{width:4px;}
+.board-feed-cards::-webkit-scrollbar-track{background:transparent;}
+.board-feed-cards::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px;}
 .inicio-block-header{display:flex;align-items:center;justify-content:space-between;padding:10px 16px;border-bottom:1px solid var(--border);background:var(--bg2);border-radius:8px 8px 0 0;}
 .inicio-block-title{font-family:'Figtree',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);}
 
@@ -810,7 +822,56 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
   <!-- LAYOUT PRINCIPAL -->
   <div class="inicio-grid">
 
-    <!-- TABLÓN — PROTAGONISTA -->
+    <!-- RANKINGS — PROTAGONISTAS CON FOTOS -->
+    <div class="inicio-rankings-main">
+
+      <!-- Fila 1: En Racha + Infravalorados -->
+      <div class="rank-row-duo">
+        <div class="rank-widget rank-widget-foto">
+          <div class="rank-widget-header">
+            <div class="rank-widget-icon">🔥</div>
+            <div class="rank-widget-title">En racha</div>
+            <button class="rank-ver-mas" onclick="showSection('jugadores',document.querySelector('.nav-btn:nth-child(2)'))">Ver todos →</button>
+          </div>
+          <div id="rankRacha"></div>
+        </div>
+        <div class="rank-widget rank-widget-foto">
+          <div class="rank-widget-header">
+            <div class="rank-widget-icon">📈</div>
+            <div class="rank-widget-title">Infravalorados</div>
+            <span style="font-size:0.58rem;color:var(--text3);margin-left:auto">rinde más de lo esperado</span>
+          </div>
+          <div id="rankInfravalorados"></div>
+        </div>
+      </div>
+
+      <!-- Fila 2: Más suben + Top puntuadores -->
+      <div class="rank-row-duo">
+        <div class="rank-widget rank-widget-foto">
+          <div class="rank-widget-header"><div class="rank-widget-icon">↑</div><div class="rank-widget-title">Más suben</div></div>
+          <div id="rankSuben"></div>
+        </div>
+        <div class="rank-widget rank-widget-foto">
+          <div class="rank-widget-header"><div class="rank-widget-icon">★</div><div class="rank-widget-title">Top puntuadores</div></div>
+          <div id="rankGoleadores"></div>
+        </div>
+      </div>
+
+      <!-- Fila 3: Más bajan + Chollos -->
+      <div class="rank-row-duo">
+        <div class="rank-widget rank-widget-foto">
+          <div class="rank-widget-header"><div class="rank-widget-icon">↓</div><div class="rank-widget-title">Más bajan</div></div>
+          <div id="rankBajan"></div>
+        </div>
+        <div class="rank-widget rank-widget-foto">
+          <div class="rank-widget-header"><div class="rank-widget-icon">🏷️</div><div class="rank-widget-title">Chollos</div></div>
+          <div id="rankChollos"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- TABLÓN — COLUMNA DERECHA CON SCROLL -->
     <div class="inicio-tablon">
       <div class="inicio-block-header">
         <div class="inicio-block-title">Actividad de la liga</div>
@@ -821,38 +882,6 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
       </div>
       <div id="boardFeed" class="board-feed-cards">
         <div style="color:var(--text3);font-size:0.75rem;text-align:center;padding:2rem">Cargando tablón...</div>
-      </div>
-    </div>
-
-    <!-- RANKINGS — COLUMNA LATERAL -->
-    <div class="inicio-rankings">
-      <div class="rank-widget">
-        <div class="rank-widget-header"><div class="rank-widget-icon">🔥</div><div class="rank-widget-title">En racha</div></div>
-        <div id="rankRacha"></div>
-      </div>
-      <div class="rank-widget">
-        <div class="rank-widget-header"><div class="rank-widget-icon">↑</div><div class="rank-widget-title">Más suben</div></div>
-        <div id="rankSuben"></div>
-      </div>
-      <div class="rank-widget">
-        <div class="rank-widget-header"><div class="rank-widget-icon">↓</div><div class="rank-widget-title">Más bajan</div></div>
-        <div id="rankBajan"></div>
-      </div>
-      <div class="rank-widget">
-        <div class="rank-widget-header"><div class="rank-widget-icon">★</div><div class="rank-widget-title">Top puntuadores</div></div>
-        <div id="rankGoleadores"></div>
-      </div>
-      <div class="rank-widget">
-        <div class="rank-widget-header"><div class="rank-widget-icon">⚡</div><div class="rank-widget-title">Eficientes</div></div>
-        <div id="rankUndervalued"></div>
-      </div>
-      <div class="rank-widget">
-        <div class="rank-widget-header"><div class="rank-widget-icon">📈</div><div class="rank-widget-title">Infravalorados</div><span style="font-size:0.58rem;color:var(--text3);margin-left:auto">rinde X% más de lo esperado</span></div>
-        <div id="rankInfravalorados"></div>
-      </div>
-      <div class="rank-widget">
-        <div class="rank-widget-header"><div class="rank-widget-icon">🏷️</div><div class="rank-widget-title">Chollos</div></div>
-        <div id="rankChollos"></div>
       </div>
     </div>
 
@@ -2267,7 +2296,9 @@ function buildRankRow(name,pos,club,valLabel,colorCls,pct) {
   if(pos&&!PC[pos]){const found=allPlayers.find(p=>p.name===name);if(found)pos=(found.position||'').split('/')[0];}
   const posColor=PC[pos]||'#888';
   const barColor=colorCls==='green'?'var(--green)':colorCls==='red'?'var(--red)':colorCls==='amber'?'var(--accent)':'var(--blue)';
-  return `<div class="rank-row"><div class="rank-pos-dot" style="background:${posColor}">${(pos||'?').split('/')[0]}</div><div class="rank-player-info"><div class="rank-player-name">${name}</div><div class="rank-player-club">${club||'—'}</div></div><div style="display:flex;flex-direction:column;align-items:flex-end;gap:3px"><div class="rank-val ${colorCls}">${valLabel}</div><div class="rank-bar-bg"><div class="rank-bar-fill" style="width:${pct}%;background:${barColor}"></div></div></div></div>`;
+  const player=allPlayers.find(p=>p.name===name);
+  const foto=player?playerPhoto(player,32):`<div style="width:32px;height:32px;border-radius:50%;background:${posColor};flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:0.6rem;font-weight:800;color:#fff">${(pos||'?').split('/')[0]}</div>`;
+  return `<div class="rank-row" style="cursor:pointer" onclick="openJugPanel(allPlayers.find(p=>p.name==='${name.replace(/'/g,"\'")}'))">${foto}<div class="rank-player-info"><div class="rank-player-name">${name}</div><div class="rank-player-club">${club||'—'}</div></div><div style="display:flex;flex-direction:column;align-items:flex-end;gap:3px"><div class="rank-val ${colorCls}">${valLabel}</div><div class="rank-bar-bg"><div class="rank-bar-fill" style="width:${pct}%;background:${barColor}"></div></div></div></div>`;
 }
 function initRankings() { if(allPlayers.length) renderRankings(allPlayers); }
 function renderRankings(players) {
@@ -2340,7 +2371,8 @@ async function loadPlayers(){
 
     let players=[];
     if(data.players&&Array.isArray(data.players)){
-      players=data.players.map(p=>({id:Number(p.id),name:p.name,position:mapPosition(p.position,p.position2),price:p.price||0,pts:p.points||0,trend:p.trend||0,playedHome:p.playedHome||0,playedAway:p.playedAway||0,club:p.teamName||'',teamId:p.teamId||null,status:p.status||'ok',jForm:p.jForm||[]}));
+      players=data.players.map(p=>({id:Number(p.id),name:p.name,position:mapPosition(p.position,p.position2),price:p.price||0,pts:p.points||0,trend:p.trend||0,playedHome:p.playedHome||0,playedAway:p.playedAway||0,club:p.teamName||'',teamId:p.teamId||null,status:p.status||'ok',jForm:p.jForm||[]}))
+        .filter(p => p.position !== 'MD'); // excluir entrenadores
     }
     if(!players.length) throw new Error('Sin jugadores en data.json');
     allPlayers=mergeStats(players);
