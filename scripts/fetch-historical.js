@@ -45,13 +45,18 @@ async function login() {
   const body = JSON.stringify({ email: BIWENGER_EMAIL, password: BIWENGER_PASSWORD });
   const res = await requestJSON({
     hostname: 'biwenger.as.com',
-    path:     '/api/v2/user/login',
+    path:     '/api/v2/auth/login',
     method:   'POST',
-    headers:  { 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(body),
-                'User-Agent': 'Mozilla/5.0', 'x-lang': 'es' }
+    headers:  {
+      'Content-Type':   'application/json',
+      'Content-Length': Buffer.byteLength(body),
+      'User-Agent':     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+      'x-lang':         'es',
+      'x-version':      '5',
+    }
   }, body);
-  const token = res.body?.data?.token;
-  if (!token) { console.error('❌ Login fallido'); process.exit(1); }
+  const token = res.body?.data?.token || res.body?.token;
+  if (!token) { console.error('❌ Login fallido. Status:', res.status, JSON.stringify(res.body).slice(0,100)); process.exit(1); }
   console.log('✅ Login correcto');
   return token;
 }
