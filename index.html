@@ -2305,15 +2305,15 @@ function initRankings() { if(allPlayers.length) renderRankings(allPlayers); }
 function renderRankings(players) {
   const pos=p=>p.position||p.pos||'';
   const rachaList=[...players].map(p=>{const form=(p.jForm||[]).filter(v=>v!==null&&v!==undefined);const sum=form.reduce((s,v)=>s+(v>0?v:0),0);const pts5=form.filter(v=>v>0);const media5=pts5.length?(sum/pts5.length).toFixed(1):null;return{...p,rachaSum:sum,media5};}).filter(p=>p.rachaSum>0).sort((a,b)=>b.rachaSum-a.rachaSum).slice(0,5);
-  if(rachaList.length){const rachaMax=rachaList[0].rachaSum;document.getElementById('rankRacha').innerHTML=rachaList.map(p=>{const formDots=(p.jForm||[]).slice(0,5).map(v=>{if(v===null||v===undefined)return'<span style="color:var(--text3)">—</span>';const c=v>=10?'var(--green)':v>=5?'var(--pt)':v>0?'var(--text2)':'var(--red)';return`<span style="color:${c};font-weight:600">${v}</span>`;}).join('<span style="color:var(--border2);margin:0 2px">·</span>');const sub=`<span style="font-size:0.6rem;color:var(--text3)">${formDots}${p.media5?` &nbsp;⌀${p.media5}`:''}</span>`;return buildRankRow(p.name,pos(p),sub,`${p.rachaSum}p`,'amber',Math.round(p.rachaSum/rachaMax*100));}).join('');}
+  if(rachaList.length){const rachaMax=rachaList[0].rachaSum;const _rr=document.getElementById('rankRacha');if(_rr)_rr.innerHTML=rachaList.map(p=>{const formDots=(p.jForm||[]).slice(0,5).map(v=>{if(v===null||v===undefined)return'<span style="color:var(--text3)">—</span>';const c=v>=10?'var(--green)':v>=5?'var(--pt)':v>0?'var(--text2)':'var(--red)';return`<span style="color:${c};font-weight:600">${v}</span>`;}).join('<span style="color:var(--border2);margin:0 2px">·</span>');const sub=`<span style="font-size:0.6rem;color:var(--text3)">${formDots}${p.media5?` &nbsp;⌀${p.media5}`:''}</span>`;return buildRankRow(p.name,pos(p),sub,`${p.rachaSum}p`,'amber',Math.round(p.rachaSum/rachaMax*100));}).join('');}
   const suben=[...players].filter(p=>p.trend>0).sort((a,b)=>b.trend-a.trend).slice(0,5);
-  if(suben.length){const subenMax=suben[0].trend;document.getElementById('rankSuben').innerHTML=suben.map(p=>buildRankRow(p.name,pos(p),fmt(p.price/1000000)+'M€',`+${fmt(p.trend/1000)}K`,'green',Math.round(p.trend/subenMax*100))).join('');}
+  if(suben.length){const subenMax=suben[0].trend;const _rs=document.getElementById('rankSuben');if(_rs)_rs.innerHTML=suben.map(p=>buildRankRow(p.name,pos(p),fmt(p.price/1000000)+'M€',`+${fmt(p.trend/1000)}K`,'green',Math.round(p.trend/subenMax*100))).join('');}
   const bajan=[...players].filter(p=>p.trend<0).sort((a,b)=>a.trend-b.trend).slice(0,5);
-  if(bajan.length){const bajanMax=Math.abs(bajan[0].trend);document.getElementById('rankBajan').innerHTML=bajan.map(p=>buildRankRow(p.name,pos(p),fmt(p.price/1000000)+'M€',`${fmt(p.trend/1000)}K`,'red',Math.round(Math.abs(p.trend)/bajanMax*100))).join('');}
+  if(bajan.length){const bajanMax=Math.abs(bajan[0].trend);const _rb=document.getElementById('rankBajan');if(_rb)_rb.innerHTML=bajan.map(p=>buildRankRow(p.name,pos(p),fmt(p.price/1000000)+'M€',`${fmt(p.trend/1000)}K`,'red',Math.round(Math.abs(p.trend)/bajanMax*100))).join('');}
   const topPts=[...players].filter(p=>p.pts>0).sort((a,b)=>b.pts-a.pts).slice(0,5);
-  if(topPts.length){const ptsMax=topPts[0].pts;document.getElementById('rankGoleadores').innerHTML=topPts.map(p=>{const pj=(p.playedHome||0)+(p.playedAway||0);const media=pj>0?(p.pts/pj).toFixed(1):'—';return buildRankRow(p.name,pos(p),`${fmt(p.price/1000000)}M€ · ⌀${media}`,`${p.pts}p`,'blue',Math.round(p.pts/ptsMax*100));}).join('');}
+  if(topPts.length){const ptsMax=topPts[0].pts;const _rg=document.getElementById('rankGoleadores');if(_rg)_rg.innerHTML=topPts.map(p=>{const pj=(p.playedHome||0)+(p.playedAway||0);const media=pj>0?(p.pts/pj).toFixed(1):'—';return buildRankRow(p.name,pos(p),`${fmt(p.price/1000000)}M€ · ⌀${media}`,`${p.pts}p`,'blue',Math.round(p.pts/ptsMax*100));}).join('');}
   const eficientes=calcularEficientes(players);
-  if(eficientes.length){const efMax=eficientes[0].score;document.getElementById('rankUndervalued').innerHTML=eficientes.slice(0,5).map(p=>buildRankRow(p.name,pos(p),`${(p.price/1000000).toFixed(2)}M€ · ⌀${p.media.toFixed(1)}`,`${p.score.toFixed(1)}`,'blue',Math.round(p.score/efMax*100))).join('');}
+  if(eficientes.length){const efMax=eficientes[0].score;const _ru=document.getElementById('rankUndervalued');if(_ru)_ru.innerHTML=eficientes.slice(0,5).map(p=>buildRankRow(p.name,pos(p),`${(p.price/1000000).toFixed(2)}M€ · ⌀${p.media.toFixed(1)}`,`${p.score.toFixed(1)}`,'blue',Math.round(p.score/efMax*100))).join('');}
 
   // Ranking infravalorados — eficiencia de precio
   const medias = getMediasEsperadas();
@@ -2330,7 +2330,7 @@ function renderRankings(players) {
     }).join('');
   }
   const chollos=calcularChollos(players);
-  if(chollos.length){const chollosMax=chollos[0].score;document.getElementById('rankChollos').innerHTML=chollos.slice(0,5).map(p=>buildRankRow(p.name,pos(p),`${(p.price/1000000).toFixed(2)}M€ · ⌀${p.media.toFixed(1)}`,`${p.score.toFixed(1)}`,'amber',Math.round(p.score/chollosMax*100))).join('');}
+  if(chollos.length){const chollosMax=chollos[0].score;const _rc=document.getElementById('rankChollos');if(_rc)_rc.innerHTML=chollos.slice(0,5).map(p=>buildRankRow(p.name,pos(p),`${(p.price/1000000).toFixed(2)}M€ · ⌀${p.media.toFixed(1)}`,`${p.score.toFixed(1)}`,'amber',Math.round(p.score/chollosMax*100))).join('');}
   // Actualizar Estudio de Mercado v3 con datos reales
   mv3InitFromPlayers(players);
 }
