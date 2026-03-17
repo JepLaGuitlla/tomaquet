@@ -80,11 +80,14 @@ async function fetchPlayerHistory(player, token) {
     method:   'GET',
     timeout:  10000,
     headers:  {
-      'User-Agent':    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-      'Referer':       'https://biwenger.as.com/',
-      'Authorization': `Bearer ${token}`,
-      'x-lang':        'es',
-      'x-version':     '5',
+      'User-Agent':      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+      'Accept':          '*/*',
+      'Accept-Language': 'es-ES,es;q=0.9',
+      'Origin':          'https://biwenger.as.com',
+      'Referer':         'https://biwenger.as.com/',
+      'Authorization':   `Bearer ${token}`,
+      'x-lang':          'es',
+      'x-version':       '630',
     }
   });
 
