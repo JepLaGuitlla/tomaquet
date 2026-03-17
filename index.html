@@ -3811,8 +3811,8 @@ function playerPhoto(p, size=40) {
     : (p.name||'?').substring(0,2).toUpperCase();
 
   const uid = 'ph'+id+'_'+size;
-  return `<div style="position:relative;width:${size}px;height:${size}px;border-radius:50%;flex-shrink:0;overflow:hidden;background:${color}">
-    <div id="${uid}_init" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Figtree',sans-serif;font-size:${Math.round(size*0.3)}px;font-weight:800;color:#fff;letter-spacing:-0.5px">${initials}</div>
+  return `<div style="position:relative;width:${size}px;height:${size}px;border-radius:50%;flex-shrink:0;overflow:hidden;background:var(--border)">
+    <div id="${uid}_init" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Figtree',sans-serif;font-size:${Math.round(size*0.3)}px;font-weight:700;color:var(--text3);letter-spacing:-0.5px">${initials}</div>
     ${id ? `<img src="./img/players/${id}.avif" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onload="var e=document.getElementById('${uid}_init');if(e)e.style.display='none'" onerror="this.style.display='none'">` : ''}
   </div>`;
 }
