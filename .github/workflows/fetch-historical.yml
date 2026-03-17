@@ -1,0 +1,31 @@
+name: Recuperación histórica de jornadas
+
+on:
+  workflow_dispatch:  # Solo manual — no automático
+
+jobs:
+  fetch-historical:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Ejecutar recuperación histórica
+        env:
+          BIWENGER_EMAIL: ${{ secrets.BIWENGER_EMAIL }}
+          BIWENGER_PASSWORD: ${{ secrets.BIWENGER_PASSWORD }}
+        run: node scripts/fetch-historical.js
+
+      - name: Guardar jornadas.json en el repositorio
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add jornadas.json
+          git diff --staged --quiet || git commit -m "histórico: jornadas recuperadas $(date -u '+%Y-%m-%d %H:%M') UTC"
+          git push
