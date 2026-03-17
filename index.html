@@ -5146,7 +5146,7 @@ async function loadJornada() {
 
   try {
     // Cargar desde data.json si está disponible (jornada actual)
-    const res = await fetch('./data.json');
+    const res = await fetch('./data.json?v=' + Date.now());
     const data = await res.json();
 
     if (data.jornadaTomaquet) {
