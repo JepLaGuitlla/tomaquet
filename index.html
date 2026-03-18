@@ -159,7 +159,7 @@ main{max-width:1440px;margin:0 auto;padding:1.5rem 2rem;}
 .rk-card:hover{box-shadow:0 4px 20px rgba(0,0,0,0.08);}
 
 /* Hero — foto grande del líder */
-.rk-body{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--border);}
+.rk-body{display:grid;grid-template-columns:repeat(5,1fr);gap:0;background:var(--bg);}
 /* Cada columna de jugador */
 .rk-player-slot{position:relative;overflow:hidden;background:var(--bg2);cursor:pointer;aspect-ratio:3/4;}
 .rk-player-slot:hover .rk-slot-overlay{background:linear-gradient(to top,rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.1) 60%);}
@@ -2409,7 +2409,7 @@ function renderRankingCards(players) {
     const media5 = jf.slice(0,5).length > 0 ? (rachaSum/jf.slice(0,5).length).toFixed(1) : '—';
     return {...p, rachaSum, media5};
   }).filter(p=>p.rachaSum>0).sort((a,b)=>b.rachaSum-a.rachaSum);
-  buildRankCard('rkCard-racha','🔥','En racha',rachaList,
+  buildRankCard('rkCard-racha','🔥','En racha',rachaList.filter(p=>p.position!=='PT'),
     p => `${p.rachaSum}`,
     'rk-val-amber',
     p => jFormDots(p.jForm) + `<span style="color:var(--text3);font-size:0.55rem;margin-left:4px">⌀${p.media5}</span>`
@@ -2419,7 +2419,7 @@ function renderRankingCards(players) {
   const medias = getMediasEsperadas();
   const infra = players.map(p=>({...p,efic:calcEficiencia(p,medias)}))
     .filter(p=>p.efic!==null&&p.efic>0).sort((a,b)=>b.efic-a.efic);
-  buildRankCard('rkCard-infra','📈','Infravalorados',infra,
+  buildRankCard('rkCard-infra','📈','Infravalorados',infra.filter(p=>p.position!=='PT'),
     p => `+${p.efic}%`,
     'rk-val-green',
     p => `${(p.price/1e6).toFixed(2)}M€`
@@ -2427,7 +2427,7 @@ function renderRankingCards(players) {
 
   // 3. MÁS SUBEN
   const suben = [...players].filter(p=>p.trend>0).sort((a,b)=>b.trend-a.trend);
-  buildRankCard('rkCard-suben','↑','Más suben',suben,
+  buildRankCard('rkCard-suben','↑','Más suben',suben.filter(p=>p.position!=='PT'),
     p => `+${(p.trend/1000).toFixed(0)}K€`,
     'rk-val-green',
     p => `${(p.price/1e6).toFixed(2)}M€`
@@ -2435,15 +2435,15 @@ function renderRankingCards(players) {
 
   // 4. TOP PUNTUADORES
   const top = [...players].filter(p=>p.pts>0).sort((a,b)=>b.pts-a.pts);
-  buildRankCard('rkCard-top','★','Top puntuadores',top,
-    p => `${p.pts}p`,
+  buildRankCard('rkCard-top','★','Top puntuadores',top.filter(p=>p.position!=='PT'),
+    p => `${p.pts}`,
     'rk-val-blue',
-    p => { const pj=(p.playedHome||0)+(p.playedAway||0); return `${(p.price/1e6).toFixed(2)}M€ · ⌀${pj>0?(p.pts/pj).toFixed(1):'—'}`; }
+    p => { const pj=(p.playedHome||0)+(p.playedAway||0); return `⌀${pj>0?(p.pts/pj).toFixed(1):'—'} · ${(p.price/1e6).toFixed(2)}M€`; }
   );
 
   // 5. MÁS BAJAN
   const bajan = [...players].filter(p=>p.trend<0).sort((a,b)=>a.trend-b.trend);
-  buildRankCard('rkCard-bajan','↓','Más bajan',bajan,
+  buildRankCard('rkCard-bajan','↓','Más bajan',bajan.filter(p=>p.position!=='PT'),
     p => `${(p.trend/1000).toFixed(0)}K€`,
     'rk-val-red',
     p => `${(p.price/1e6).toFixed(2)}M€`
@@ -2460,10 +2460,10 @@ function renderRankingCards(players) {
     })
     .filter(p => p.jugadas >= 3 && p.media5 >= 2)
     .sort((a,b) => (b.jugadas*10 + b.media5) - (a.jugadas*10 + a.media5));
-  buildRankCard('rkCard-chollos','🃏','Comodines',comodines,
-    p => `${p.jugadas}/5`,
+  buildRankCard('rkCard-chollos','🃏','Comodines',comodines.filter(p=>p.position!=='PT'),
+    p => `⌀${p.media5.toFixed(1)}`,
     'rk-val-amber',
-    p => `${(p.price/1e6).toFixed(2)}M€ · ⌀${p.media5.toFixed(1)}`
+    p => `${(p.price/1e6).toFixed(2)}M€`
   );
 
   // 7. EFICIENTES — solo jugadores activos (al menos 2 jornadas recientes)
@@ -2472,7 +2472,7 @@ function renderRankingCards(players) {
     const recientes = jf.filter(v=>v!==null&&v!==undefined&&v>0).length;
     return recientes >= 2;
   });
-  buildRankCard('rkCard-eficientes','⚡','Eficientes',eficientes,
+  buildRankCard('rkCard-eficientes','⚡','Eficientes',eficientes.filter(p=>p.position!=='PT'),
     p => `${p.score.toFixed(1)}`,
     'rk-val-blue',
     p => `${(p.price/1e6).toFixed(2)}M€ · ⌀${p.media.toFixed(1)}`
@@ -2481,7 +2481,7 @@ function renderRankingCards(players) {
   // 8. SOBREVALORADOS (eficiencia negativa)
   const sobre = players.map(p=>({...p,efic:calcEficiencia(p,medias)}))
     .filter(p=>p.efic!==null&&p.efic<0).sort((a,b)=>a.efic-b.efic);
-  buildRankCard('rkCard-sobrevalorados','📉','Sobrevalorados',sobre,
+  buildRankCard('rkCard-sobrevalorados','📉','Sobrevalorados',sobre.filter(p=>p.position!=='PT'),
     p => `${p.efic}%`,
     'rk-val-red',
     p => `${(p.price/1e6).toFixed(2)}M€`
