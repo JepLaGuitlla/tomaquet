@@ -159,26 +159,17 @@ main{max-width:1440px;margin:0 auto;padding:1.5rem 2rem;}
 .rk-card:hover{box-shadow:0 4px 20px rgba(0,0,0,0.08);}
 
 /* Hero — foto grande del líder */
-.rk-body{display:grid;grid-template-columns:2fr 1fr;gap:0;min-height:120px;}
-/* Hero — foto PNG grande del líder */
-.rk-hero{position:relative;overflow:hidden;background:var(--bg2);cursor:pointer;}
-.rk-hero-img{width:100%;height:100%;object-fit:contain;object-position:center bottom;display:block;background:var(--bg2);}
-.rk-hero-fallback{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:3rem;}
-.rk-hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 55%);}
-.rk-hero-info{position:absolute;bottom:0;left:0;right:0;padding:8px 10px;}
-.rk-hero-name{font-family:'Figtree',sans-serif;font-size:0.85rem;font-weight:800;color:#fff;text-transform:uppercase;letter-spacing:0.3px;line-height:1.1;}
-.rk-hero-sub{font-family:'Figtree',sans-serif;font-size:0.58rem;color:rgba(255,255,255,0.7);margin-top:2px;display:flex;gap:4px;align-items:center;}
-.rk-hero-val{position:absolute;top:8px;right:8px;font-family:'IBM Plex Mono',monospace;font-size:1.2rem;font-weight:900;text-shadow:0 1px 6px rgba(0,0,0,0.6);}
-/* Columna derecha — jugadores 2-5 */
-.rk-others{display:flex;flex-direction:column;border-left:1px solid var(--border);}
-.rk-other-row{display:grid;grid-template-columns:18px 36px 1fr auto;align-items:center;gap:6px;padding:5px 8px;border-bottom:1px solid var(--border);cursor:pointer;transition:background 0.1s;flex:1;}
-.rk-other-row:last-child{border-bottom:none;}
-.rk-other-row:hover{background:var(--bg2);}
-.rk-other-num{font-family:'IBM Plex Mono',monospace;font-size:0.55rem;color:var(--text3);text-align:center;font-weight:700;}
-.rk-other-info{min-width:0;}
-.rk-other-name{font-family:'Figtree',sans-serif;font-size:0.68rem;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.rk-other-sub{font-family:'Figtree',sans-serif;font-size:0.55rem;color:var(--text3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.rk-other-val{font-family:'IBM Plex Mono',monospace;font-size:0.7rem;font-weight:800;white-space:nowrap;}
+.rk-body{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--border);}
+/* Cada columna de jugador */
+.rk-player-slot{position:relative;overflow:hidden;background:var(--bg2);cursor:pointer;aspect-ratio:3/4;}
+.rk-player-slot:hover .rk-slot-overlay{background:linear-gradient(to top,rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.1) 60%);}
+.rk-slot-img{width:100%;height:100%;object-fit:contain;object-position:center bottom;display:block;background:var(--bg2);}
+.rk-slot-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.82) 0%,rgba(0,0,0,0) 55%);transition:background 0.2s;}
+.rk-slot-val{position:absolute;top:6px;right:6px;font-family:'IBM Plex Mono',monospace;font-size:1rem;font-weight:900;text-shadow:0 1px 6px rgba(0,0,0,0.7);}
+.rk-slot-info{position:absolute;bottom:0;left:0;right:0;padding:6px 7px;}
+.rk-slot-name{font-family:'Figtree',sans-serif;font-size:0.7rem;font-weight:800;color:#fff;text-transform:uppercase;letter-spacing:0.2px;line-height:1.1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.rk-slot-sub{font-family:'Figtree',sans-serif;font-size:0.52rem;color:rgba(255,255,255,0.7);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.rk-slot-num{position:absolute;top:6px;left:6px;font-family:'IBM Plex Mono',monospace;font-size:0.55rem;font-weight:700;color:rgba(255,255,255,0.6);}
 /* Colores jForm */
 .jf-dot{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:0.6rem;font-weight:700;}
 
@@ -2356,25 +2347,21 @@ function buildRankCard(cardId, icon, title, players, valFn, valClass, subFn) {
   const el = document.getElementById(cardId);
   if (!el || !players.length) return;
 
-  const leader = players[0];
-  const lid = leader.id;
-  const lval = valFn(leader);
-  const lsub = subFn ? subFn(leader) : `${(leader.price/1e6).toFixed(2)}M€`;
-  const limg = lid ? `./img/players/${lid}.avif` : null;
-
-  // Jugadores 2-5 en columna derecha
-  const othersHTML = players.slice(1, 5).map((p, i) => {
+  // 5 slots idénticos en horizontal
+  const slotsHTML = players.slice(0, 5).map((p, i) => {
     const pid = p.id;
-    const pval = valFn(p);
-    const psub = subFn ? subFn(p) : `${(p.price/1e6).toFixed(2)}M€`;
-    return `<div class="rk-other-row" onclick="openJugPanel(allPlayers.find(x=>x.id===${pid}))">
-      <div class="rk-other-num">${i+2}</div>
-      ${playerPhoto(p, 32)}
-      <div class="rk-other-info">
-        <div class="rk-other-name">${p.name}</div>
-        <div class="rk-other-sub">${psub}</div>
+    const val = valFn(p);
+    const sub = subFn ? subFn(p) : `${(p.price/1e6).toFixed(2)}M€`;
+    const img = pid ? `./img/players/${pid}.avif` : null;
+    return `<div class="rk-player-slot" onclick="openJugPanel(allPlayers.find(x=>x.id===${pid}))">
+      ${img ? `<img class="rk-slot-img" src="${img}" onerror="this.style.display='none'">` : ''}
+      <div class="rk-slot-overlay"></div>
+      <div class="rk-slot-num">${i+1}</div>
+      <div class="rk-slot-val ${valClass}">${val}</div>
+      <div class="rk-slot-info">
+        <div class="rk-slot-name">${p.name}</div>
+        <div class="rk-slot-sub">${sub}</div>
       </div>
-      <div class="rk-other-val ${valClass}">${pval}</div>
     </div>`;
   }).join('');
 
@@ -2397,19 +2384,7 @@ function buildRankCard(cardId, icon, title, players, valFn, valClass, subFn) {
       <span class="rk-title">${title}</span>
       <button class="rk-expand-btn" onclick="toggleRkList('${cardId}')">Ver top 20 ↓</button>
     </div>
-    <div class="rk-body">
-      <div class="rk-hero" onclick="openJugPanel(allPlayers.find(x=>x.id===${lid}))">
-        ${limg ? `<img class="rk-hero-img" src="${limg}" onerror="this.style.display='none'">` : ''}
-        <div class="rk-hero-fallback" style="${limg?'display:none':''}">👤</div>
-        <div class="rk-hero-overlay"></div>
-        <div class="rk-hero-info">
-          <div class="rk-hero-name">${leader.name}</div>
-          <div class="rk-hero-sub">${lsub}</div>
-        </div>
-        <div class="rk-hero-val ${valClass}">${lval}</div>
-      </div>
-      <div class="rk-others">${othersHTML}</div>
-    </div>
+    <div class="rk-body">${slotsHTML}</div>
     <div class="rk-list" id="${cardId}-list">
       <div class="rk-list-inner">${listRows}</div>
     </div>`;
