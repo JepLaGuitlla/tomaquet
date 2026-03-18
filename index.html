@@ -173,6 +173,19 @@ main{max-width:1440px;margin:0 auto;padding:1.5rem 2rem;}
 /* Colores jForm */
 .jf-dot{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:0.6rem;font-weight:700;}
 
+/* Panel flotante ranking */
+.rk-panel-overlay{display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,0.4);backdrop-filter:blur(2px);}
+.rk-panel-overlay.open{display:flex;align-items:flex-start;justify-content:flex-end;padding:60px 20px 20px;}
+.rk-panel{background:var(--bg);border:1px solid var(--border);border-radius:12px;width:360px;max-height:calc(100vh - 100px);display:flex;flex-direction:column;box-shadow:0 8px 40px rgba(0,0,0,0.2);overflow:hidden;}
+.rk-panel-header{display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid var(--border);flex-shrink:0;}
+.rk-panel-icon{font-size:0.9rem;}
+.rk-panel-title{font-family:'Figtree',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text);flex:1;}
+.rk-panel-close{width:28px;height:28px;border-radius:50%;background:var(--bg2);border:1px solid var(--border);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:0.8rem;color:var(--text3);transition:all 0.1s;}
+.rk-panel-close:hover{background:var(--accent);color:#fff;border-color:var(--accent);}
+.rk-panel-list{overflow-y:auto;flex:1;}
+.rk-panel-list::-webkit-scrollbar{width:4px;}
+.rk-panel-list::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px;}
+
 /* Header del card */
 .rk-header{display:flex;align-items:center;gap:6px;padding:8px 12px;border-bottom:1px solid var(--border);}
 .rk-icon{font-size:0.8rem;}
@@ -2365,8 +2378,8 @@ function buildRankCard(cardId, icon, title, players, valFn, valClass, subFn) {
     </div>`;
   }).join('');
 
-  // Lista top 20 colapsable
-  const listRows = players.slice(0, 20).map((p, i) => {
+  // Lista completa para el panel flotante
+  const listRows = players.map((p, i) => {
     const pid = p.id;
     const pval = valFn(p);
     const psub = subFn ? subFn(p) : `${(p.price/1e6).toFixed(2)}M€`;
@@ -2382,20 +2395,57 @@ function buildRankCard(cardId, icon, title, players, valFn, valClass, subFn) {
     <div class="rk-header">
       <span class="rk-icon">${icon}</span>
       <span class="rk-title">${title}</span>
-      <button class="rk-expand-btn" onclick="toggleRkList('${cardId}')">Ver top 20 ↓</button>
+      <button class="rk-expand-btn" onclick="toggleRkList('${cardId}')">Ver ranking</button>
     </div>
     <div class="rk-body">${slotsHTML}</div>
-    <div class="rk-list" id="${cardId}-list">
+    <div class="rk-list" id="${cardId}-list" style="display:none">
       <div class="rk-list-inner">${listRows}</div>
     </div>`;
 }
 
 function toggleRkList(cardId) {
   const list = document.getElementById(`${cardId}-list`);
-  const btn = document.querySelector(`#${cardId} .rk-expand-btn`);
-  if (!list) return;
-  const isOpen = list.classList.toggle('open');
-  if (btn) btn.textContent = isOpen ? 'Cerrar ↑' : 'Ver top 20 ↓';
+  const card = document.getElementById(cardId);
+  if (!list || !card) return;
+
+  // Obtener título e icono del card
+  const icon  = card.querySelector('.rk-icon')?.textContent  || '';
+  const title = card.querySelector('.rk-title')?.textContent || '';
+
+  // Abrir panel flotante
+  openRkPanel(icon, title, list.innerHTML);
+}
+
+function openRkPanel(icon, title, innerHTML) {
+  let overlay = document.getElementById('rkPanelOverlay');
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.id = 'rkPanelOverlay';
+    overlay.className = 'rk-panel-overlay';
+    overlay.innerHTML = `
+      <div class="rk-panel">
+        <div class="rk-panel-header">
+          <span class="rk-panel-icon"></span>
+          <span class="rk-panel-title"></span>
+          <button class="rk-panel-close" onclick="closeRkPanel()">✕</button>
+        </div>
+        <div class="rk-panel-list"></div>
+      </div>`;
+    overlay.addEventListener('click', e => { if(e.target === overlay) closeRkPanel(); });
+    document.body.appendChild(overlay);
+  }
+
+  overlay.querySelector('.rk-panel-icon').textContent  = icon;
+  overlay.querySelector('.rk-panel-title').textContent = title;
+  overlay.querySelector('.rk-panel-list').innerHTML    = innerHTML;
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeRkPanel() {
+  const overlay = document.getElementById('rkPanelOverlay');
+  if (overlay) overlay.classList.remove('open');
+  document.body.style.overflow = '';
 }
 
 function renderRankingCards(players) {
