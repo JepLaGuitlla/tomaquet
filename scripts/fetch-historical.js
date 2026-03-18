@@ -2525,7 +2525,9 @@ function openRkPanel(icon, title, players, valFn, valClass, col2Fn, col2Label, c
 
   const medias = getMediasEsperadas();
   // Detectar si es el ranking de infravalorados o sobrevalorados para añadir precio justo
-  const showPrecioJusto = title.toLowerCase().includes('infra') || title.toLowerCase().includes('sobrev');
+  const titleClean = title.toLowerCase().trim();
+  const showPrecioJusto = titleClean.includes('infra') || titleClean.includes('sobrev');
+  console.log('openRkPanel title:', JSON.stringify(title), 'showPrecioJusto:', showPrecioJusto);
 
   const rows = players.map((p, i) => {
     const pid = p.id;
