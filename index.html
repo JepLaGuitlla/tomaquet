@@ -173,18 +173,32 @@ main{max-width:1440px;margin:0 auto;padding:1.5rem 2rem;}
 /* Colores jForm */
 .jf-dot{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:0.6rem;font-weight:700;}
 
-/* Panel flotante ranking */
-.rk-panel-overlay{display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,0.4);backdrop-filter:blur(2px);}
-.rk-panel-overlay.open{display:flex;align-items:flex-start;justify-content:flex-end;padding:60px 20px 20px;}
-.rk-panel{background:var(--bg);border:1px solid var(--border);border-radius:12px;width:360px;max-height:calc(100vh - 100px);display:flex;flex-direction:column;box-shadow:0 8px 40px rgba(0,0,0,0.2);overflow:hidden;}
-.rk-panel-header{display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid var(--border);flex-shrink:0;}
-.rk-panel-icon{font-size:0.9rem;}
-.rk-panel-title{font-family:'Figtree',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text);flex:1;}
-.rk-panel-close{width:28px;height:28px;border-radius:50%;background:var(--bg2);border:1px solid var(--border);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:0.8rem;color:var(--text3);transition:all 0.1s;}
+/* Modal pantalla completa ranking */
+.rk-panel-overlay{display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,0.6);backdrop-filter:blur(3px);}
+.rk-panel-overlay.open{display:flex;align-items:center;justify-content:center;padding:20px;}
+.rk-panel{background:var(--bg);border:1px solid var(--border);border-radius:12px;width:100%;max-width:900px;max-height:calc(100vh - 40px);display:flex;flex-direction:column;box-shadow:0 16px 60px rgba(0,0,0,0.3);overflow:hidden;}
+.rk-panel-header{display:flex;align-items:center;gap:10px;padding:16px 20px;border-bottom:1px solid var(--border);flex-shrink:0;background:var(--bg2);}
+.rk-panel-icon{font-size:1.1rem;}
+.rk-panel-title{font-family:'Figtree',sans-serif;font-size:0.85rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--text);flex:1;}
+.rk-panel-count{font-family:'Figtree',sans-serif;font-size:0.65rem;color:var(--text3);}
+.rk-panel-close{width:32px;height:32px;border-radius:50%;background:var(--bg);border:1px solid var(--border);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:0.9rem;color:var(--text3);transition:all 0.15s;flex-shrink:0;}
 .rk-panel-close:hover{background:var(--accent);color:#fff;border-color:var(--accent);}
 .rk-panel-list{overflow-y:auto;flex:1;}
 .rk-panel-list::-webkit-scrollbar{width:4px;}
 .rk-panel-list::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px;}
+
+/* Filas del modal — más información */
+.rk-modal-row{display:grid;grid-template-columns:32px 44px 1fr repeat(3,80px);align-items:center;gap:10px;padding:9px 20px;border-bottom:1px solid var(--border);cursor:pointer;transition:background 0.1s;}
+.rk-modal-row:last-child{border-bottom:none;}
+.rk-modal-row:hover{background:var(--bg2);}
+.rk-modal-num{font-family:'IBM Plex Mono',monospace;font-size:0.68rem;color:var(--text3);text-align:center;font-weight:700;}
+.rk-modal-info{min-width:0;}
+.rk-modal-name{font-family:'Figtree',sans-serif;font-size:0.85rem;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.rk-modal-club{font-family:'Figtree',sans-serif;font-size:0.6rem;color:var(--text3);}
+.rk-modal-val{font-family:'IBM Plex Mono',monospace;font-size:0.82rem;font-weight:800;text-align:right;white-space:nowrap;}
+.rk-modal-sec{font-family:'Figtree',sans-serif;font-size:0.72rem;color:var(--text2);text-align:right;white-space:nowrap;}
+.rk-modal-price{font-family:'Figtree',sans-serif;font-size:0.72rem;color:var(--text3);text-align:right;}
+.rk-modal-th{display:grid;grid-template-columns:32px 44px 1fr repeat(3,80px);gap:10px;padding:7px 20px 7px;background:var(--bg2);border-bottom:2px solid var(--border);font-family:'Figtree',sans-serif;font-size:0.58rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text3);position:sticky;top:0;z-index:1;}
 
 /* Header del card */
 .rk-header{display:flex;align-items:center;gap:6px;padding:8px 12px;border-bottom:1px solid var(--border);}
@@ -2356,9 +2370,11 @@ function jFormDots(jForm) {
   }).join('<span style="color:var(--border2);margin:0 1px">·</span>');
 }
 
-function buildRankCard(cardId, icon, title, players, valFn, valClass, subFn) {
+function buildRankCard(cardId, icon, title, players, valFn, valClass, subFn, col2Fn, col2Label, col3Fn, col3Label) {
   const el = document.getElementById(cardId);
   if (!el || !players.length) return;
+  // Guardar datos para el modal
+  _rkData[cardId] = { players, valFn, valClass, col2Fn, col2Label, col3Fn, col3Label };
 
   // 5 slots idénticos en horizontal
   const slotsHTML = players.slice(0, 5).map((p, i) => {
@@ -2403,41 +2419,70 @@ function buildRankCard(cardId, icon, title, players, valFn, valClass, subFn) {
     </div>`;
 }
 
-function toggleRkList(cardId) {
-  const list = document.getElementById(`${cardId}-list`);
-  const card = document.getElementById(cardId);
-  if (!list || !card) return;
+// Almacena los datos de cada ranking para el modal
+const _rkData = {};
 
-  // Obtener título e icono del card
+function toggleRkList(cardId) {
+  const card = document.getElementById(cardId);
+  if (!card) return;
   const icon  = card.querySelector('.rk-icon')?.textContent  || '';
   const title = card.querySelector('.rk-title')?.textContent || '';
-
-  // Abrir panel flotante
-  openRkPanel(icon, title, list.innerHTML);
+  const d = _rkData[cardId];
+  if (!d) return;
+  openRkPanel(icon, title, d.players, d.valFn, d.valClass, d.col2Fn, d.col2Label, d.col3Fn, d.col3Label);
 }
 
-function openRkPanel(icon, title, innerHTML) {
+function openRkPanel(icon, title, players, valFn, valClass, col2Fn, col2Label, col3Fn, col3Label) {
   let overlay = document.getElementById('rkPanelOverlay');
   if (!overlay) {
     overlay = document.createElement('div');
     overlay.id = 'rkPanelOverlay';
     overlay.className = 'rk-panel-overlay';
-    overlay.innerHTML = `
-      <div class="rk-panel">
-        <div class="rk-panel-header">
-          <span class="rk-panel-icon"></span>
-          <span class="rk-panel-title"></span>
-          <button class="rk-panel-close" onclick="closeRkPanel()">✕</button>
-        </div>
-        <div class="rk-panel-list"></div>
-      </div>`;
-    overlay.addEventListener('click', e => { if(e.target === overlay) closeRkPanel(); });
+    overlay.innerHTML = `<div class="rk-panel">
+      <div class="rk-panel-header">
+        <span class="rk-panel-icon"></span>
+        <span class="rk-panel-title"></span>
+        <span class="rk-panel-count"></span>
+        <button class="rk-panel-close" onclick="closeRkPanel()">✕</button>
+      </div>
+      <div class="rk-panel-list"></div>
+    </div>`;
+    overlay.addEventListener('click', e => { if(e.target===overlay) closeRkPanel(); });
     document.body.appendChild(overlay);
   }
 
   overlay.querySelector('.rk-panel-icon').textContent  = icon;
   overlay.querySelector('.rk-panel-title').textContent = title;
-  overlay.querySelector('.rk-panel-list').innerHTML    = innerHTML;
+  overlay.querySelector('.rk-panel-count').textContent = `${players.length} jugadores`;
+
+  const medias = getMediasEsperadas();
+  const rows = players.map((p, i) => {
+    const pid = p.id;
+    const mainVal = valFn(p);
+    const col2 = col2Fn ? col2Fn(p) : '';
+    const col3 = col3Fn ? col3Fn(p) : `${(p.price/1e6).toFixed(2)}M€`;
+    const jfHtml = jFormDots(p.jForm);
+    return `<div class="rk-modal-row" onclick="closeRkPanel();openJugPanel(allPlayers.find(x=>x.id===${pid}))">
+      <div class="rk-modal-num">${i+1}</div>
+      <div>${playerPhoto(p, 36)}</div>
+      <div class="rk-modal-info">
+        <div class="rk-modal-name">${p.name}</div>
+        <div class="rk-modal-club">${p.club||p.teamName||'—'} · ${(p.position||'').split('/')[0]}</div>
+      </div>
+      <div class="rk-modal-val ${valClass}">${mainVal}</div>
+      <div class="rk-modal-sec">${col2}</div>
+      <div class="rk-modal-price">${col3}</div>
+    </div>`;
+  }).join('');
+
+  const th = `<div class="rk-modal-th">
+    <div></div><div></div><div>Jugador</div>
+    <div style="text-align:right">${title}</div>
+    <div style="text-align:right">${col2Label||''}</div>
+    <div style="text-align:right">${col3Label||'Precio'}</div>
+  </div>`;
+
+  overlay.querySelector('.rk-panel-list').innerHTML = th + rows;
   overlay.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
@@ -2462,7 +2507,9 @@ function renderRankingCards(players) {
   buildRankCard('rkCard-racha','🔥','En racha',rachaList.filter(p=>p.position!=='PT'),
     p => `${p.rachaSum}`,
     'rk-val-amber',
-    p => jFormDots(p.jForm) + `<span style="color:var(--text3);font-size:0.55rem;margin-left:4px">⌀${p.media5}</span>`
+    p => jFormDots(p.jForm) + `<span style="color:var(--text3);font-size:0.55rem;margin-left:4px">⌀${p.media5}</span>`,
+    p => jFormDots(p.jForm), 'Últimas 5J',
+    p => `⌀${p.media5}`, 'Media'
   );
 
   // 2. INFRAVALORADOS
@@ -2472,7 +2519,9 @@ function renderRankingCards(players) {
   buildRankCard('rkCard-infra','📈','Infravalorados',infra.filter(p=>p.position!=='PT'),
     p => `+${p.efic}%`,
     'rk-val-green',
-    p => `${(p.price/1e6).toFixed(2)}M€`
+    p => `${(p.price/1e6).toFixed(2)}M€`,
+    p => { const pj=(p.playedHome||0)+(p.playedAway||0); return `⌀${pj>0?(p.pts/pj).toFixed(1):'—'}`; }, 'Media',
+    p => `${(p.price/1e6).toFixed(2)}M€`, 'Precio'
   );
 
   // 3. MÁS SUBEN
@@ -2480,7 +2529,9 @@ function renderRankingCards(players) {
   buildRankCard('rkCard-suben','↑','Más suben',suben.filter(p=>p.position!=='PT'),
     p => `+${(p.trend/1000).toFixed(0)}K€`,
     'rk-val-green',
-    p => `${(p.price/1e6).toFixed(2)}M€`
+    p => `${(p.price/1e6).toFixed(2)}M€`,
+    p => jFormDots(p.jForm), 'Últimas 5J',
+    p => `${(p.price/1e6).toFixed(2)}M€`, 'Precio'
   );
 
   // 4. TOP PUNTUADORES
@@ -2488,7 +2539,9 @@ function renderRankingCards(players) {
   buildRankCard('rkCard-top','★','Top puntuadores',top.filter(p=>p.position!=='PT'),
     p => `${p.pts}`,
     'rk-val-blue',
-    p => { const pj=(p.playedHome||0)+(p.playedAway||0); return `⌀${pj>0?(p.pts/pj).toFixed(1):'—'} · ${(p.price/1e6).toFixed(2)}M€`; }
+    p => { const pj=(p.playedHome||0)+(p.playedAway||0); return `⌀${pj>0?(p.pts/pj).toFixed(1):'—'} · ${(p.price/1e6).toFixed(2)}M€`; },
+    p => { const pj=(p.playedHome||0)+(p.playedAway||0); return `⌀${pj>0?(p.pts/pj).toFixed(1):'—'}`; }, 'Media',
+    p => `${(p.price/1e6).toFixed(2)}M€`, 'Precio'
   );
 
   // 5. MÁS BAJAN
@@ -2496,7 +2549,9 @@ function renderRankingCards(players) {
   buildRankCard('rkCard-bajan','↓','Más bajan',bajan.filter(p=>p.position!=='PT'),
     p => `${(p.trend/1000).toFixed(0)}K€`,
     'rk-val-red',
-    p => `${(p.price/1e6).toFixed(2)}M€`
+    p => `${(p.price/1e6).toFixed(2)}M€`,
+    p => jFormDots(p.jForm), 'Últimas 5J',
+    p => `${(p.price/1e6).toFixed(2)}M€`, 'Precio'
   );
 
   // 6. COMODINES — baratos, disponibles, regulares
@@ -2513,7 +2568,9 @@ function renderRankingCards(players) {
   buildRankCard('rkCard-chollos','🃏','Comodines',comodines.filter(p=>p.position!=='PT'),
     p => `⌀${p.media5.toFixed(1)}`,
     'rk-val-amber',
-    p => `${(p.price/1e6).toFixed(2)}M€`
+    p => `${(p.price/1e6).toFixed(2)}M€`,
+    p => jFormDots(p.jForm), 'Últimas 5J',
+    p => `${(p.price/1e6).toFixed(2)}M€`, 'Precio'
   );
 
   // 7. EFICIENTES — solo jugadores activos (al menos 2 jornadas recientes)
@@ -2525,7 +2582,9 @@ function renderRankingCards(players) {
   buildRankCard('rkCard-eficientes','⚡','Eficientes',eficientes.filter(p=>p.position!=='PT'),
     p => `${p.score.toFixed(1)}`,
     'rk-val-blue',
-    p => `${(p.price/1e6).toFixed(2)}M€ · ⌀${p.media.toFixed(1)}`
+    p => `${(p.price/1e6).toFixed(2)}M€ · ⌀${p.media.toFixed(1)}`,
+    p => `⌀${p.media.toFixed(1)}`, 'Media',
+    p => `${(p.price/1e6).toFixed(2)}M€`, 'Precio'
   );
 
   // 8. SOBREVALORADOS (eficiencia negativa)
@@ -2534,7 +2593,9 @@ function renderRankingCards(players) {
   buildRankCard('rkCard-sobrevalorados','📉','Sobrevalorados',sobre.filter(p=>p.position!=='PT'),
     p => `${p.efic}%`,
     'rk-val-red',
-    p => `${(p.price/1e6).toFixed(2)}M€`
+    p => `${(p.price/1e6).toFixed(2)}M€`,
+    p => { const pj=(p.playedHome||0)+(p.playedAway||0); return `⌀${pj>0?(p.pts/pj).toFixed(1):'—'}`; }, 'Media',
+    p => `${(p.price/1e6).toFixed(2)}M€`, 'Precio'
   );
 }
 
