@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-18T08:03:37.089Z",
+  "updatedAt": "2026-03-18T15:56:01.305Z",
   "players": [
     {
       "id": 11,
@@ -7771,7 +7771,7 @@
     },
     {
       "id": 34221,
-      "name": "Francés",
+      "name": "Franc��s",
       "position": 2,
       "price": 480000,
       "points": 52,
@@ -11168,9 +11168,9 @@
           10,
           5
         ],
-        "teamSize": 13,
-        "teamValue": 55540000,
-        "teamValueInc": 210000,
+        "teamSize": 14,
+        "teamValue": 58120000,
+        "teamValueInc": 450000,
         "position": 10,
         "positionInc": 1,
         "role": ""
@@ -11225,9 +11225,9 @@
           9,
           9
         ],
-        "teamSize": 15,
-        "teamValue": 48650000,
-        "teamValueInc": 510000,
+        "teamSize": 14,
+        "teamValue": 46100000,
+        "teamValueInc": 520000,
         "lastTrophy": {
           "type": "league",
           "position": 3,
@@ -11248,9 +11248,9 @@
           3,
           13
         ],
-        "teamSize": 18,
-        "teamValue": 54730000,
-        "teamValueInc": 400000,
+        "teamSize": 17,
+        "teamValue": 52150000,
+        "teamValueInc": 160000,
         "position": 14,
         "role": ""
       }
@@ -11343,8 +11343,8 @@
       "name": "CIGALERU",
       "manager": "CIGALERU",
       "points": 1182,
-      "value": 55540000,
-      "trend": 210000,
+      "value": 58120000,
+      "trend": 450000,
       "players": []
     },
     {
@@ -11370,8 +11370,8 @@
       "name": "Tata Martini",
       "manager": "Tata Martini",
       "points": 1137,
-      "value": 48650000,
-      "trend": 510000,
+      "value": 46100000,
+      "trend": 520000,
       "players": []
     },
     {
@@ -11379,8 +11379,8 @@
       "name": "Hufflepuff 🍋",
       "manager": "Hufflepuff 🍋",
       "points": 1086,
-      "value": 54730000,
-      "trend": 400000,
+      "value": 52150000,
+      "trend": 160000,
       "players": []
     }
   ],
@@ -11391,7 +11391,7 @@
     "balance": 1166263,
     "lineup": {
       "type": "3-5-2",
-      "date": 1773806498,
+      "date": 1773825720,
       "playersID": [
         17021,
         10155,
@@ -11399,7 +11399,7 @@
         26276,
         6837,
         38867,
-        39431,
+        38964,
         25127,
         39885,
         26271,
@@ -11408,7 +11408,7 @@
       "reservesID": [
         null,
         26676,
-        38964,
+        39431,
         27945
       ]
     },
@@ -11596,6 +11596,42 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1773829708,
+      "content": [
+        {
+          "player": 35156,
+          "from": {
+            "id": 11521196,
+            "name": "Hufflepuff 🍋",
+            "icon": "i/u/11521196.png?v=57"
+          },
+          "to": {
+            "id": 12696899,
+            "name": "CIGALERU",
+            "icon": "i/u/12696899.png"
+          },
+          "amount": 4920000,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1773821179,
+      "content": [
+        {
+          "player": 38405,
+          "from": {
+            "id": 12713493,
+            "name": "Tata Martini",
+            "icon": "i/u/12713493.png"
+          },
+          "amount": 2595800
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1773814366,
@@ -12028,9 +12064,9 @@
           20,
           4
         ],
-        "teamSize": 14,
-        "teamValue": 38590000,
-        "teamValueInc": -70000,
+        "teamSize": 13,
+        "teamValue": 35620000,
+        "teamValueInc": -10000,
         "position": 15,
         "positionInc": 1,
         "role": ""
@@ -12263,8 +12299,8 @@
       "name": "Sant Pere Atlètic",
       "manager": "Sant Pere Atlètic",
       "points": 1034,
-      "value": 38590000,
-      "trend": -70000,
+      "value": 35620000,
+      "trend": -10000,
       "players": []
     },
     {
@@ -12467,6 +12503,21 @@
   },
   "boardEnBas": [
     {
+      "type": "transfer",
+      "date": 1773824533,
+      "content": [
+        {
+          "player": 33697,
+          "from": {
+            "id": 6579280,
+            "name": "Sant Pere Atlètic",
+            "icon": "i/u/6579280.png?v=22"
+          },
+          "amount": 3031200
+        }
+      ]
+    },
+    {
       "type": "market",
       "date": 1773813842,
       "content": [
@@ -12589,21 +12640,6 @@
             "icon": "i/u/6588130.png?v=12"
           },
           "amount": 1292600
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1773649013,
-      "content": [
-        {
-          "player": 10155,
-          "from": {
-            "id": 6586225,
-            "name": "Sergi Sala Duran",
-            "icon": "https://graph.facebook.com/10156583054878679/picture?height=300&width=300"
-          },
-          "amount": 3142000
         }
       ]
     }
@@ -12964,8 +13000,8 @@
             "name": "CIGALERU",
             "icon": "i/u/12696899.png",
             "points": 1182,
-            "teamValue": 55540000,
-            "teamValueInc": 210000,
+            "teamValue": 58120000,
+            "teamValueInc": 450000,
             "position": 10,
             "positionInc": 1,
             "lineup": {
@@ -13078,8 +13114,8 @@
             "name": "Tata Martini",
             "icon": "i/u/12713493.png",
             "points": 1137,
-            "teamValue": 48650000,
-            "teamValueInc": 510000,
+            "teamValue": 46100000,
+            "teamValueInc": 520000,
             "position": 13,
             "lineup": {
               "type": "5-4-1",
@@ -13114,8 +13150,8 @@
             "name": "Hufflepuff 🍋",
             "icon": "i/u/11521196.png?v=57",
             "points": 1086,
-            "teamValue": 54730000,
-            "teamValueInc": 400000,
+            "teamValue": 52150000,
+            "teamValueInc": 160000,
             "position": 14,
             "lineup": {
               "type": "3-5-2",
@@ -13558,8 +13594,8 @@
             "name": "CIGALERU",
             "icon": "i/u/12696899.png",
             "points": 1119,
-            "teamValue": 55540000,
-            "teamValueInc": 210000,
+            "teamValue": 58120000,
+            "teamValueInc": 450000,
             "position": 10,
             "lineup": {
               "type": "4-5-1",
@@ -13669,8 +13705,8 @@
             "name": "Tata Martini",
             "icon": "i/u/12713493.png",
             "points": 1088,
-            "teamValue": 48650000,
-            "teamValueInc": 510000,
+            "teamValue": 46100000,
+            "teamValueInc": 520000,
             "position": 13,
             "lineup": {
               "type": "4-5-1",
@@ -13705,8 +13741,8 @@
             "name": "Hufflepuff 🍋",
             "icon": "i/u/11521196.png?v=57",
             "points": 1046,
-            "teamValue": 54730000,
-            "teamValueInc": 400000,
+            "teamValue": 52150000,
+            "teamValueInc": 160000,
             "position": 14,
             "lineup": {
               "type": "3-5-2",
@@ -14249,8 +14285,8 @@
             "name": "Sant Pere Atlètic",
             "icon": "i/u/6579280.png?v=22",
             "points": 1034,
-            "teamValue": 38590000,
-            "teamValueInc": -70000,
+            "teamValue": 35620000,
+            "teamValueInc": -10000,
             "position": 15,
             "positionInc": 1,
             "lineup": {
@@ -14946,8 +14982,8 @@
             "name": "Sant Pere Atlètic",
             "icon": "i/u/6579280.png?v=22",
             "points": 982,
-            "teamValue": 38590000,
-            "teamValueInc": -70000,
+            "teamValue": 35620000,
+            "teamValueInc": -10000,
             "position": 15,
             "lineup": {
               "type": "3-4-3",
@@ -16319,82 +16355,82 @@
   },
   "news": [
     {
-      "title": "Las claves fantasy del Real Madrid &#8211; Atlético de Madrid: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-real-madrid-atletico-j29-25-26/",
-      "date": "Wed, 18 Mar 2026 07:45:53 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "title": "Real Betis, alineación probable contra el Panathinaikos y dónde ver en TV",
+      "link": "https://www.jornadaperfecta.com/blog/betis-alineacion-probable-vuelta-panathinaikos/",
+      "date": "Wed, 18 Mar 2026 13:49:16 +0000",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Las claves fantasy del Athletic Club &#8211; Real Betis: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-athletic-real-betis-j29-25-26/",
-      "date": "Wed, 18 Mar 2026 07:40:37 +0000",
-      "img": "https://cdn.biwenger.com/i/t/1.png",
+      "title": "Rayo Vallecano, alineación probable contra el Samsunspor y dónde ver en TV",
+      "link": "https://www.jornadaperfecta.com/blog/rayo-vallecano-alineacion-probable-vuelta-samsunspor/",
+      "date": "Wed, 18 Mar 2026 13:18:59 +0000",
+      "img": "https://cdn.biwenger.com/i/t/70.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Las claves fantasy del RC Celta &#8211; Deportivo Alavés: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-celta-alaves-j29-25-26/",
-      "date": "Wed, 18 Mar 2026 07:35:45 +0000",
-      "img": "https://cdn.biwenger.com/i/t/91.png",
+      "title": "Pellegrini explica el estado de Amrabat y Natan",
+      "link": "https://www.jornadaperfecta.com/blog/pellegrini-previa-betis-panathinaikos-vuelta-octavos/",
+      "date": "Wed, 18 Mar 2026 12:56:15 +0000",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Las claves fantasy del FC Barcelona &#8211; Rayo Vallecano: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-barcelona-rayo-vallecano-j29-25-26/",
-      "date": "Wed, 18 Mar 2026 07:30:59 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Las claves fantasy del Sevilla FC &#8211; Valencia CF: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-sevilla-valencia-j29-25-26/",
-      "date": "Wed, 18 Mar 2026 07:25:09 +0000",
-      "img": "https://cdn.biwenger.com/i/t/17.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Las claves fantasy del CA Osasuna &#8211; Girona FC: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-osasuna-girona-j29-25-26/",
-      "date": "Wed, 18 Mar 2026 07:20:59 +0000",
-      "img": "https://cdn.biwenger.com/i/t/93.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Las claves fantasy del Levante UD &#8211; Real Oviedo: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-levante-real-oviedo-j29-25-26/",
-      "date": "Wed, 18 Mar 2026 07:15:42 +0000",
-      "img": "https://cdn.biwenger.com/i/t/10.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Las claves fantasy del RCD Espanyol &#8211; Getafe CF: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-espanyol-getafe-j29-25-26/",
-      "date": "Wed, 18 Mar 2026 07:10:36 +0000",
-      "img": "https://cdn.biwenger.com/i/t/7.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Las claves fantasy del Elche CF &#8211; RCD Mallorca: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-elche-mallorca-j29-25-26/",
-      "date": "Wed, 18 Mar 2026 07:05:31 +0000",
+      "title": "Buba Sangaré entrena al margen y André Silva gestiona cargas",
+      "link": "https://www.jornadaperfecta.com/blog/buba-sangare-golpe-cabeza-26/",
+      "date": "Wed, 18 Mar 2026 12:15:35 +0000",
       "img": "https://cdn.biwenger.com/i/t/75.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Las claves fantasy del Villarreal CF &#8211; Real Sociedad: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-villarreal-real-sociedad-j29-25-26/",
-      "date": "Wed, 18 Mar 2026 07:00:23 +0000",
+      "title": "Amrabat está de vuelta. ¿Volverá a ser importante en fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/amrabat-analisis-vuelta-lesion-betis-26/",
+      "date": "Wed, 18 Mar 2026 12:00:08 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/03/image-2026-03-17T190921.447.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Ilias Akhomach sufre una contusión y no está descartado",
+      "link": "https://www.jornadaperfecta.com/blog/ilias-akhomach-lesion-tobillo/",
+      "date": "Wed, 18 Mar 2026 11:40:03 +0000",
+      "img": "https://cdn.biwenger.com/i/t/70.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Marcelino, sobre la lesión de Ayoze y la posible titularidad de Gerard",
+      "link": "https://www.jornadaperfecta.com/blog/marcelino-previa-villarreal-real-j29/",
+      "date": "Wed, 18 Mar 2026 11:36:17 +0000",
       "img": "https://cdn.biwenger.com/i/t/19.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Kike Salas acorta plazos y Odysseas despeja dudas",
+      "link": "https://www.jornadaperfecta.com/blog/kike-salas-estado-j29/",
+      "date": "Wed, 18 Mar 2026 10:08:55 +0000",
+      "img": "https://cdn.biwenger.com/i/t/17.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Fede Valverde vuelve a su mejor nivel: ¿TOP Fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/fede-valverde-nivel-top-fantasy-madrid/",
+      "date": "Wed, 18 Mar 2026 10:00:14 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Arbeloa tranquiliza con el estado de Courtois",
+      "link": "https://www.jornadaperfecta.com/blog/thibaut-courtois-molestias-abductor-26/",
+      "date": "Wed, 18 Mar 2026 08:30:59 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -16403,7 +16439,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-03-18T08:03:35.596Z",
+    "updatedAt": "2026-03-18T15:55:59.656Z",
     "players": [
       {
         "id": "3374",
