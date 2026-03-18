@@ -159,6 +159,13 @@ main{max-width:1440px;margin:0 auto;padding:1.5rem 2rem;}
 .rk-card:hover{box-shadow:0 4px 20px rgba(0,0,0,0.08);}
 
 /* Hero — foto grande del líder */
+.rk-players-row{display:grid;grid-template-columns:repeat(5,1fr);gap:0;padding:10px 8px;background:var(--bg);}
+.rk-player-col{display:flex;flex-direction:column;align-items:center;gap:3px;padding:6px 4px;cursor:pointer;border-radius:6px;transition:background 0.1s;}
+.rk-player-col:hover{background:var(--bg2);}
+.rk-player-rank{font-family:'IBM Plex Mono',monospace;font-size:0.55rem;color:var(--text3);font-weight:700;}
+.rk-player-val{font-family:'IBM Plex Mono',monospace;font-size:0.78rem;font-weight:800;margin-top:2px;}
+.rk-player-name{font-family:'Figtree',sans-serif;font-size:0.6rem;font-weight:700;color:var(--text);text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:100%;max-width:80px;}
+.rk-player-sub{font-family:'Figtree',sans-serif;font-size:0.52rem;color:var(--text3);text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:100%;max-width:80px;}
 .rk-hero{position:relative;height:110px;overflow:hidden;background:var(--bg2);cursor:pointer;}
 .rk-hero-img{width:100%;height:100%;object-fit:contain;object-position:center center;display:block;background:var(--bg2);}
 .rk-hero-fallback{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:4rem;}
@@ -2330,25 +2337,34 @@ function buildRankRow(name,pos,club,valLabel,colorCls,pct) {
 }
 function initRankings() { if(allPlayers.length) renderRankings(allPlayers); }
 // ── RANKING CARDS VISUALES ───────────────────────────────────────────────────
-function buildRankCard(cardId, icon, title, players, valFn, valClass, subFn, isNegative) {
+function buildRankCard(cardId, icon, title, players, valFn, valClass, subFn) {
   const el = document.getElementById(cardId);
   if (!el || !players.length) return;
 
-  const leader = players[0];
-  const heroId = leader.id;
-  const heroImgUrl = heroId ? `./img/players/${heroId}.avif` : null;
-  const valLabel = valFn(leader);
+  // Top 5 en horizontal con foto + valor
+  const top5 = players.slice(0, 5);
+  const heroesHTML = top5.map((p, i) => {
+    const pid = p.id;
+    const val = valFn(p);
+    const sub = subFn ? subFn(p) : '';
+    return `<div class="rk-player-col" onclick="openJugPanel(allPlayers.find(x=>x.id===${pid}))" title="${p.name}">
+      <div class="rk-player-rank">${i+1}</div>
+      ${playerPhoto(p, 52)}
+      <div class="rk-player-val ${valClass}">${val}</div>
+      <div class="rk-player-name">${p.name.split(' ').pop()}</div>
+      <div class="rk-player-sub">${sub}</div>
+    </div>`;
+  }).join('');
 
-  // Construir lista de los siguientes
+  // Lista top 20 colapsable
   const listRows = players.slice(0, 20).map((p, i) => {
     const pid = p.id;
-    const pname = p.name || '—';
     const pval = valFn(p);
-    const psub = subFn ? subFn(p) : ((p.club||p.teamName||'') + (p.price ? ' · ' + (p.price/1e6).toFixed(2)+'M€' : ''));
+    const psub = subFn ? subFn(p) : `${(p.price/1e6).toFixed(2)}M€`;
     return `<div class="rk-list-row" onclick="openJugPanel(allPlayers.find(x=>x.id===${pid}))">
       <div class="rk-list-num">${i+1}</div>
       <div>${playerPhoto(p, 28)}</div>
-      <div><div class="rk-list-name">${pname}</div><div class="rk-list-sub">${psub}</div></div>
+      <div><div class="rk-list-name">${p.name||'—'}</div><div class="rk-list-sub">${psub}</div></div>
       <div class="rk-list-val ${valClass}">${pval}</div>
     </div>`;
   }).join('');
@@ -2359,18 +2375,7 @@ function buildRankCard(cardId, icon, title, players, valFn, valClass, subFn, isN
       <span class="rk-title">${title}</span>
       <button class="rk-expand-btn" onclick="toggleRkList('${cardId}')">Ver top 20 ↓</button>
     </div>
-    <div class="rk-hero" onclick="openJugPanel(allPlayers.find(x=>x.id===${heroId}))">
-      ${heroImgUrl
-        ? `<img class="rk-hero-img" src="${heroImgUrl}" onerror="this.parentElement.querySelector('.rk-hero-fallback').style.display='flex';this.style.display='none'">`
-        : ''}
-      <div class="rk-hero-fallback" style="${heroImgUrl ? 'display:none' : ''}">👤</div>
-      <div class="rk-hero-overlay"></div>
-      <div class="rk-hero-info">
-        <div class="rk-hero-name">${leader.name}</div>
-        <div class="rk-hero-club">${leader.club||leader.teamName||'—'}</div>
-      </div>
-      <div class="rk-hero-val ${valClass}">${valLabel}</div>
-    </div>
+    <div class="rk-players-row">${heroesHTML}</div>
     <div class="rk-list" id="${cardId}-list">
       <div class="rk-list-inner">${listRows}</div>
     </div>`;
@@ -2391,13 +2396,14 @@ function renderRankingCards(players) {
   // 1. EN RACHA
   const rachaList = [...players].map(p => {
     const jf = (p.jForm||[]).filter(v=>v!==null&&v!==undefined);
-    const rachaSum = jf.slice(0,3).reduce((s,v)=>s+v,0);
-    return {...p, rachaSum};
+    const rachaSum = jf.slice(0,5).reduce((s,v)=>s+v,0);
+    const media5 = jf.slice(0,5).length > 0 ? (rachaSum/jf.slice(0,5).length).toFixed(1) : '—';
+    return {...p, rachaSum, media5};
   }).filter(p=>p.rachaSum>0).sort((a,b)=>b.rachaSum-a.rachaSum);
   buildRankCard('rkCard-racha','🔥','En racha',rachaList,
     p => `${p.rachaSum}p`,
     'rk-val-amber',
-    p => { const jf=(p.jForm||[]).filter(v=>v!==null).slice(0,3); return jf.join(' · ')+'p últimas 3J'; }
+    p => { const jf=(p.jForm||[]).filter(v=>v!==null).slice(0,5); return jf.join(' · ')+` · ⌀${p.media5}`; }
   );
 
   // 2. INFRAVALORADOS
