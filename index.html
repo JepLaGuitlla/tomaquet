@@ -2421,63 +2421,124 @@ function calcGruposParaPrecioJusto() { return {}; }
 // Devuelve: { estado, icono, label, desc, colorFondo, colorTexto }
 
 function calcEstadoMercado(player) {
+  // ── FILTROS MÍNIMOS ──────────────────────────────────────────────────────
+  if (!player.price || player.price < 150000) return null;
+  // Necesita estar jugando — mínimo 3 jornadas con puntos > 0 de las últimas 5
+  const jForm = (player.jForm || []).slice(0, 5);
+  const jornadasConPuntos = jForm.filter(v => v !== null && v !== undefined && v > 0).length;
+  if (jornadasConPuntos < 3) return null;
+  // Status — no lesionado ni sancionado
+  const statusOk = !player.status || player.status === 'ok' || player.status === 1 || player.status === '';
+  if (!statusOk) return null;
+
   const efic = calcEficiencia(player, getMediasEsperadas());
   if (efic === null) return null;
 
+  const pj = calcPrecioJusto(player);
+  const precioM = player.price / 1e6;
+
+  // ── MOMENTUM DE MERCADO ──────────────────────────────────────────────────
   const priceHistory = (window._pricesData || {})[String(player.id)] || [];
+  let mom7 = 0, diasSubiendo = 0, diasBajando = 0;
 
-  // Calcular momentum del mercado
-  let diasSubiendo = 0;
-  let mom7 = 0;
-
-  if (priceHistory.length >= 3) {
+  if (priceHistory.length >= 2) {
     const last  = priceHistory[priceHistory.length - 1]?.p || player.price;
     const prev7 = priceHistory[Math.max(0, priceHistory.length - 8)]?.p || last;
+    // % sobre precio de hace 7 días — no sobre el actual
     mom7 = prev7 > 0 ? ((last - prev7) / prev7) * 100 : 0;
     for (let i = priceHistory.length - 1; i > 0; i--) {
       if ((priceHistory[i]?.p || 0) > (priceHistory[i-1]?.p || 0)) diasSubiendo++;
+      else if ((priceHistory[i]?.p || 0) < (priceHistory[i-1]?.p || 0)) { diasBajando++; break; }
       else break;
     }
   } else {
-    // Fallback trend diario
-    mom7 = player.trend > 0 ? (player.trend / player.price) * 100 * 3 : 0;
-    diasSubiendo = player.trend > 50000 ? 2 : 0;
+    mom7 = player.trend > 0 ? (player.trend / player.price) * 100 * 5 : 0;
+    diasSubiendo = player.trend > 0 ? 1 : 0;
   }
 
-  const infravalorado = efic > 20;  // rinde >20% más de lo esperado
-  const mercadoReacciona = mom7 > 2 || diasSubiendo >= 3;
+  // ── UMBRALES ADAPTATIVOS POR PRECIO ─────────────────────────────────────
+  // El mercado reacciona muy diferente según el precio del jugador
+  // Un jugador de 500K subiendo 5% es ruido. Uno de 5M subiendo 5% es señal.
+  let umbralDormido, umbralReaccionando;
+  if (precioM < 0.5)       { umbralDormido = 20;  umbralReaccionando = 60; }
+  else if (precioM < 1.0)  { umbralDormido = 12;  umbralReaccionando = 40; }
+  else if (precioM < 1.5)  { umbralDormido = 8;   umbralReaccionando = 25; }
+  else if (precioM < 2.0)  { umbralDormido = 5;   umbralReaccionando = 15; }
+  else if (precioM < 5.0)  { umbralDormido = 3;   umbralReaccionando = 10; }
+  else if (precioM < 15.0) { umbralDormido = 1.5; umbralReaccionando = 5;  }
+  else                     { umbralDormido = 0.8;  umbralReaccionando = 3;  }
 
-  if (infravalorado && !mercadoReacciona) {
+  const mercadoDormido     = mom7 < umbralDormido;
+  const mercadoReaccionando = mom7 >= umbralReaccionando;
+
+  // ── MARGEN PRECIO JUSTO ──────────────────────────────────────────────────
+  const margenPJ = pj ? ((pj.precioJusto - player.price) / player.price) * 100 : null;
+  const hayMargen     = margenPJ !== null && margenPJ > 30;   // precio justo >30% por encima
+  const estaCaroRespectoPJ = margenPJ !== null && margenPJ < -20; // precio >20% por encima del justo
+
+  // ── MEJORA RECIENTE DE RENDIMIENTO ───────────────────────────────────────
+  // Últimas 2 jornadas vs las 3 anteriores — ¿está mejorando?
+  const recientes  = jForm.slice(0, 2).filter(v => v !== null && v !== undefined);
+  const anteriores = jForm.slice(2, 5).filter(v => v !== null && v !== undefined);
+  const mediaRec  = recientes.length  ? recientes.reduce((s,v)=>s+v,0)  / recientes.length  : 0;
+  const mediaAnt  = anteriores.length ? anteriores.reduce((s,v)=>s+v,0) / anteriores.length : 0;
+  const mejorando = mediaRec > mediaAnt * 1.2; // mejora >20% respecto a jornadas anteriores
+
+  // ── LOS 4 TIPOS DE SEÑAL ─────────────────────────────────────────────────
+
+  // 🎭 HYPE — precio muy por encima del justo y sigue subiendo fuerte
+  // No es malo para especular pero tiene riesgo de corrección
+  if (estaCaroRespectoPJ && mercadoReaccionando) {
+    return {
+      estado: 'hype',
+      icono: '🎭',
+      label: 'HYPE',
+      desc: `El mercado ha ido muy por delante del rendimiento real. Precio actual ${Math.abs(margenPJ).toFixed(0)}% por encima de su valor justo. Riesgo de corrección.`,
+      colorFondo: 'rgba(239,68,68,0.1)',
+      colorTexto: 'var(--red)',
+    };
+  }
+
+  // 💎 INERCIA OCULTA — rinde bien, mercado no lo ve, hay margen real
+  // El jugador más valioso ahora mismo — periodo de rendimiento
+  if (hayMargen && mercadoDormido && efic > 20) {
     return {
       estado: 'joya',
       icono: '💎',
-      label: 'JOYA OCULTA',
-      desc: `Rinde +${efic}% sobre lo esperado pero el mercado aún no reacciona. Fichar antes de que suba.`,
+      label: 'INERCIA OCULTA',
+      desc: `Rinde +${efic}% sobre lo esperado para su precio. El mercado aún no reacciona (+${mom7.toFixed(1)}% en 7 días). Precio justo estimado: ${pj ? (pj.precioJusto/1e6).toFixed(2)+'M€' : '—'}. Margen: +${margenPJ?.toFixed(0)}%.`,
       colorFondo: 'rgba(99,102,241,0.15)',
-      colorTexto: '#6366f1',
+      colorTexto: '#818cf8',
     };
   }
-  if (infravalorado && mercadoReacciona) {
+
+  // 📈 REBOTE — rendimiento mejorando, mercado empezando a corregir
+  // Jugador que estaba castigado y el mercado reconoce la mejora
+  if (mejorando && mercadoReaccionando && efic > 0) {
     return {
-      estado: 'tren',
-      icono: '🚀',
-      label: 'TREN EN MARCHA',
-      desc: `Rinde +${efic}% sobre lo esperado y lleva ${diasSubiendo} días subiendo (+${mom7.toFixed(1)}% en 7 días). Aún puedes subir.`,
-      colorFondo: 'rgba(34,197,94,0.12)',
+      estado: 'rebote',
+      icono: '📈',
+      label: 'REBOTE',
+      desc: `Rendimiento mejorando en las últimas jornadas (ø${mediaRec.toFixed(1)} vs ø${mediaAnt.toFixed(1)} anterior). El mercado lo está reconociendo (+${mom7.toFixed(1)}% en 7 días).`,
+      colorFondo: 'rgba(34,197,94,0.1)',
       colorTexto: 'var(--green)',
     };
   }
-  if (!infravalorado && efic < -20 && mercadoReacciona) {
+
+  // 💥 EXPLOSIÓN — mercado reaccionando fuerte con rendimiento que lo justifica
+  // El tren ya salió pero el rendimiento confirma que hay recorrido
+  if (mercadoReaccionando && efic > 10 && hayMargen) {
     return {
-      estado: 'burbuja',
-      icono: '⚠️',
-      label: 'POSIBLE BURBUJA',
-      desc: `Rinde ${efic}% menos de lo esperado pero sigue subiendo. Puede corregir pronto.`,
-      colorFondo: 'rgba(245,158,11,0.12)',
-      colorTexto: 'var(--pt)',
+      estado: 'explosion',
+      icono: '💥',
+      label: 'EXPLOSIÓN',
+      desc: `Subida fuerte (+${mom7.toFixed(1)}% en 7 días) respaldada por rendimiento real (+${efic}% sobre lo esperado). Aún hay margen de +${margenPJ?.toFixed(0)}% hasta precio justo.`,
+      colorFondo: 'rgba(251,146,60,0.12)',
+      colorTexto: '#fb923c',
     };
   }
-  return null; // neutro — no mostrar
+
+  return null;
 }
 
 function calcularEficientes(players) {
