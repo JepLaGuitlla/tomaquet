@@ -1,124 +1,82 @@
 const https = require('https');
-const fs   = require('fs');
+const fs    = require('fs');
 
-const BIWENGER_EMAIL    = process.env.BIWENGER_EMAIL_HISTORICAL || process.env.BIWENGER_EMAIL;
-const BIWENGER_PASSWORD = process.env.BIWENGER_PASSWORD_HISTORICAL || process.env.BIWENGER_PASSWORD;
-const OUTPUT_FILE       = 'jornadas.json';
-const BATCH_SIZE        = 2;
-const DELAY_MS          = 2500;
-const SAVE_EVERY        = 20;
-const MAX_RETRIES       = 2;
-const RETRY_WAIT_MS     = 90000;
+const OUTPUT_FILE  = 'jornadas.json';
+const BATCH_SIZE   = 3;     // sin auth podemos ir un poco más rápido
+const DELAY_MS     = 1500;  // 1.5s entre lotes
+const SAVE_EVERY   = 30;    // guardar cada 30 jugadores
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
-function requestRaw(opts) {
-  return new Promise((resolve, reject) => {
-    const req = https.request(opts, res => {
-      let raw = '';
-      res.on('data', c => raw += c);
-      res.on('end', () => resolve({ status: res.statusCode, raw, headers: res.headers }));
-    });
-    req.on('error', reject);
-    req.on('timeout', () => { req.destroy(); reject(new Error('timeout')); });
-    req.end();
-  });
+// Genera slug desde nombre si no viene en data.json
+function nameToSlug(name) {
+  return name.toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9\s-]/g, '')
+    .trim()
+    .replace(/\s+/g, '-');
 }
 
-function requestJSON(opts, body) {
-  return new Promise((resolve, reject) => {
-    const req = https.request(opts, res => {
+async function fetchPlayerHistory(player) {
+  const slug = player.slug || nameToSlug(player.name);
+  const cb   = 'jsonp_' + Math.floor(Math.random() * 1e9);
+  const path = `/api/v2/players/${slug}?lang=es&fields=*,reports(points,home,match(*,round))&callback=${cb}`;
+
+  return new Promise((resolve) => {
+    const req = https.request({
+      hostname: 'biwenger.as.com',
+      path,
+      method:   'GET',
+      timeout:  12000,
+      headers:  {
+        'User-Agent':      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+        'Accept':          '*/*',
+        'Accept-Language': 'es-ES,es;q=0.9',
+        'Referer':         'https://biwenger.as.com/',
+      }
+    }, res => {
       let raw = '';
       res.on('data', c => raw += c);
       res.on('end', () => {
-        try { resolve({ status: res.statusCode, body: JSON.parse(raw) }); }
-        catch(e) { resolve({ status: res.statusCode, body: raw }); }
+        if (res.statusCode === 429) {
+          console.warn(`  🛑 Rate limit en ${player.name}`);
+          resolve({ status: 429, history: null });
+          return;
+        }
+        if (res.statusCode !== 200) {
+          resolve({ status: res.statusCode, history: null });
+          return;
+        }
+        try {
+          const match = raw.match(/^[^(]+\(([\s\S]*)\)\s*;?\s*$/);
+          if (!match) { resolve({ status: 0, history: null }); return; }
+          const data    = JSON.parse(match[1]);
+          const reports = data?.data?.reports || [];
+          const history = {};
+          reports.forEach(r => {
+            const roundId = r.match?.round?.id;
+            if (roundId && r.points !== undefined && r.points !== null) {
+              // Guardar puntos del scoreID 5 (AS+Sofascore) que es el de Biwenger
+              const pts = typeof r.points === 'object' ? (r.points['5'] ?? r.points['1']) : r.points;
+              history[roundId] = { pts, home: r.home ?? null };
+            }
+          });
+          resolve({ status: 200, history: Object.keys(history).length > 0 ? history : null });
+        } catch(e) {
+          resolve({ status: 0, history: null });
+        }
       });
     });
-    req.on('error', reject);
-    if (body) req.write(body);
+    req.on('error', () => resolve({ status: 0, history: null }));
+    req.on('timeout', () => { req.destroy(); resolve({ status: 0, history: null }); });
     req.end();
   });
 }
 
-async function login() {
-  const body = JSON.stringify({ email: BIWENGER_EMAIL, password: BIWENGER_PASSWORD });
-  const res = await requestJSON({
-    hostname: 'biwenger.as.com',
-    path:     '/api/v2/auth/login',
-    method:   'POST',
-    headers:  {
-      'Content-Type':   'application/json',
-      'Content-Length': Buffer.byteLength(body),
-      'User-Agent':     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-      'x-lang':         'es',
-      'x-version':      '630',
-    }
-  }, body);
-  const token = res.body?.data?.token || res.body?.token;
-  if (!token) {
-    console.error('❌ Login fallido. Status:', res.status, JSON.stringify(res.body).slice(0,100));
-    process.exit(1);
-  }
-  console.log('✅ Login correcto');
-  return token;
-}
-
-async function fetchPlayerHistory(player, token, attempt = 1) {
-  const path = `/api/v2/players/${player.id}?fields=*,reports(points,home,match(*,round))`;
-  const headers = {
-    'User-Agent':      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-    'Accept':          '*/*',
-    'Accept-Language': 'es-ES,es;q=0.9',
-    'Origin':          'https://biwenger.as.com',
-    'Referer':         'https://biwenger.as.com/',
-    'Authorization':   `Bearer ${token}`,
-    'x-lang':          'es',
-    'x-version':       '630',
-  };
-
-  let res;
-  try {
-    res = await requestRaw({ hostname: 'biwenger.as.com', path, method: 'GET', timeout: 12000, headers });
-  } catch(e) {
-    console.warn(`  ⚠️ Error red ${player.name}: ${e.message}`);
-    return null;
-  }
-
-  if (res.status === 429) {
-    console.error(`\n🛑 Rate limit (429) en ${player.name}. Esperando ${RETRY_WAIT_MS/1000}s...`);
-    await sleep(RETRY_WAIT_MS);
-    if (attempt < MAX_RETRIES) return fetchPlayerHistory(player, token, attempt + 1);
-    console.error(`❌ Rate limit persistente. Saltando ${player.name}.`);
-    return null;
-  }
-
-  if (res.status !== 200) return null;
-
-  try {
-    const data = JSON.parse(res.raw);
-    const reports = data?.data?.reports || [];
-    const history = {};
-    reports.forEach(r => {
-      const roundId = r.match?.round?.id;
-      if (roundId && r.points !== undefined && r.points !== null) {
-        history[roundId] = { pts: r.points, home: r.home };
-      }
-    });
-    return Object.keys(history).length > 0 ? history : null;
-  } catch(e) {
-    return null;
-  }
-}
-
 async function main() {
-  console.log('🚀 Recuperación histórica de jornadas');
-  console.log(`   Lotes: ${BATCH_SIZE} · Pausa: ${DELAY_MS}ms · Guardado cada: ${SAVE_EVERY}\n`);
+  console.log('🚀 Recuperación histórica de jornadas (endpoint público)');
+  console.log(`   Lotes: ${BATCH_SIZE} · Pausa: ${DELAY_MS}ms · Sin autenticación\n`);
 
-  if (!BIWENGER_EMAIL || !BIWENGER_PASSWORD) {
-    console.error('❌ Faltan BIWENGER_EMAIL / BIWENGER_PASSWORD');
-    process.exit(1);
-  }
   if (!fs.existsSync('data.json')) {
     console.error('❌ data.json no encontrado');
     process.exit(1);
@@ -134,8 +92,7 @@ async function main() {
     console.log(`📂 ${Object.keys(jornadas).length} ya procesados — se saltarán`);
   }
 
-  const token = await login();
-  let ok = 0, failed = 0, skipped = 0;
+  let ok = 0, failed = 0, skipped = 0, rateLimited = false;
   const startTime = Date.now();
 
   for (let i = 0; i < players.length; i += BATCH_SIZE) {
@@ -146,10 +103,18 @@ async function main() {
         skipped++;
         return;
       }
-      const history = await fetchPlayerHistory(p, token);
+      const { status, history } = await fetchPlayerHistory(p);
+      if (status === 429) { rateLimited = true; failed++; return; }
       if (history) { jornadas[p.id] = history; ok++; }
       else { failed++; }
     }));
+
+    // Si hay rate limit, esperar más
+    if (rateLimited) {
+      console.warn('  ⏸ Rate limit detectado. Esperando 90s...');
+      await sleep(90000);
+      rateLimited = false;
+    }
 
     const processed = i + BATCH_SIZE;
     if (processed % SAVE_EVERY === 0 || processed >= players.length) {
