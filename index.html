@@ -2575,6 +2575,25 @@ function openRkPanel(icon, title, players, valFn, valClass, col2Fn, col2Label, c
     </div>`;
   }).join('');
 
+  // Leyenda explicativa para infravalorados/sobrevalorados
+  const leyendaHtml = showPrecioJusto ? `
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:12px 16px;background:var(--bg2);border-bottom:1px solid var(--border);">
+      <div style="border-left:3px solid var(--green);padding:8px 12px;background:var(--bg);border-radius:0 4px 4px 0">
+        <div style="font-family:'Figtree',sans-serif;font-size:0.62rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--green);margin-bottom:4px">📈 ${title}</div>
+        <div style="font-family:'Figtree',sans-serif;font-size:0.7rem;color:var(--text2);line-height:1.6">
+          Compara la media real del jugador en las últimas jornadas con la media esperada de jugadores de <strong>su misma posición y precio similar</strong>.<br>
+          <span style="color:var(--text3);font-size:0.62rem">+70% significa que rinde un 70% más de lo esperado para un jugador de su precio.</span>
+        </div>
+      </div>
+      <div style="border-left:3px solid var(--blue);padding:8px 12px;background:var(--bg);border-radius:0 4px 4px 0">
+        <div style="font-family:'Figtree',sans-serif;font-size:0.62rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--blue);margin-bottom:4px">💰 Precio Justo</div>
+        <div style="font-family:'Figtree',sans-serif;font-size:0.7rem;color:var(--text2);line-height:1.6">
+          Lo que debería costar según lo que rinde. Se calcula comparando su rendimiento con jugadores similares ponderados por precio <strong>(sin grupos rígidos, curva continua)</strong>.<br>
+          <span style="color:var(--text3);font-size:0.62rem">Solo usa jugadores con precio ≥1M€ y mínimo 3 jornadas jugadas para evitar ruido.</span>
+        </div>
+      </div>
+    </div>` : '';
+
   const th = `<div class="rk-modal-th" style="grid-template-columns:${showPrecioJusto ? '32px 44px 1fr repeat(4,80px)' : '32px 44px 1fr repeat(3,80px)'}">
     <div></div><div></div><div>Jugador</div>
     <div style="text-align:right">${title}</div>
@@ -2583,7 +2602,7 @@ function openRkPanel(icon, title, players, valFn, valClass, col2Fn, col2Label, c
     ${showPrecioJusto ? '<div style="text-align:right">P. Justo</div>' : ''}
   </div>`;
 
-  overlay.querySelector('.rk-panel-list').innerHTML = th + rows;
+  overlay.querySelector('.rk-panel-list').innerHTML = leyendaHtml + th + rows;
   overlay.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
