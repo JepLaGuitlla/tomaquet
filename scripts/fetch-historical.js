@@ -20,8 +20,18 @@ function nameToSlug(name) {
 async function fetchPlayerHistory(player) {
   const slug = player.slug || nameToSlug(player.name);
   const cb   = 'jsonp_' + Math.floor(Math.random() * 1e9);
-  const path = `/api/v2/players/${slug}?lang=es&fields=*,reports(points,home,match(*,round))&callback=${cb}`;
 
+  // Intentar primero por slug, luego por ID
+  for (const identifier of [slug, player.id]) {
+    const path = `/api/v2/players/${identifier}?lang=es&fields=*,reports(points,home,match(*,round))&callback=${cb}`;
+    const result = await doRequest(path);
+    if (result.status === 200 && result.history) return result;
+    if (result.status === 429) return { status: 429, history: null };
+  }
+  return { status: 0, history: null };
+}
+
+async function doRequest(path) {
   return new Promise((resolve) => {
     const req = https.request({
       hostname: 'biwenger.as.com',
@@ -38,15 +48,8 @@ async function fetchPlayerHistory(player) {
       let raw = '';
       res.on('data', c => raw += c);
       res.on('end', () => {
-        if (res.statusCode === 429) {
-          console.warn(`  🛑 Rate limit en ${player.name}`);
-          resolve({ status: 429, history: null });
-          return;
-        }
-        if (res.statusCode !== 200) {
-          resolve({ status: res.statusCode, history: null });
-          return;
-        }
+        if (res.statusCode === 429) { resolve({ status: 429, history: null }); return; }
+        if (res.statusCode !== 200) { resolve({ status: res.statusCode, history: null, raw: raw.slice(0,100) }); return; }
         try {
           const match = raw.match(/^[^(]+\(([\s\S]*)\)\s*;?\s*$/);
           if (!match) { resolve({ status: 0, history: null }); return; }
@@ -56,7 +59,6 @@ async function fetchPlayerHistory(player) {
           reports.forEach(r => {
             const roundId = r.match?.round?.id;
             if (roundId && r.points !== undefined && r.points !== null) {
-              // Guardar puntos del scoreID 5 (AS+Sofascore) que es el de Biwenger
               const pts = typeof r.points === 'object' ? (r.points['5'] ?? r.points['1']) : r.points;
               history[roundId] = { pts, home: r.home ?? null };
             }
@@ -92,7 +94,7 @@ async function main() {
     console.log(`📂 ${Object.keys(jornadas).length} ya procesados — se saltarán`);
   }
 
-  let ok = 0, failed = 0, skipped = 0, rateLimited = false;
+  let ok = 0, failed = 0, skipped = 0, rateLimited = false, diagnosed = 0;
   const startTime = Date.now();
 
   for (let i = 0; i < players.length; i += BATCH_SIZE) {
@@ -104,6 +106,10 @@ async function main() {
         return;
       }
       const { status, history } = await fetchPlayerHistory(p);
+      if (diagnosed < 3) {
+        console.log(`  DEBUG ${p.name} (id:${p.id} slug:${p.slug||'none'}) → status:${status} history:${history ? Object.keys(history).length+' jornadas' : 'null'}`);
+        diagnosed++;
+      }
       if (status === 429) { rateLimited = true; failed++; return; }
       if (history) { jornadas[p.id] = history; ok++; }
       else { failed++; }
