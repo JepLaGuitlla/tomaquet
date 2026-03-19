@@ -1,143 +1,177 @@
+// fetch-historical.js
+// Descarga el historial de jornadas de todos los jugadores de Biwenger.
+// Usa el mismo token de autenticación que fetch-biwenger.js.
+// Diseñado para ejecutarse UNA sola vez. Después, fetch-biwenger.js 
+// mantiene jornadas.json actualizado incrementalmente.
+
 const https = require('https');
 const fs    = require('fs');
 
-const OUTPUT_FILE  = 'jornadas.json';
-const BATCH_SIZE   = 3;     // sin auth podemos ir un poco más rápido
-const DELAY_MS     = 1500;  // 1.5s entre lotes
-const SAVE_EVERY   = 30;    // guardar cada 30 jugadores
+const EMAIL    = process.env.BIWENGER_EMAIL;
+const PASSWORD = process.env.BIWENGER_PASSWORD;
+const OUT_FILE = 'jornadas.json';
+
+// Conservador: 2 jugadores por lote, 3s de pausa
+// 542 jugadores / 2 * 3s = ~13 minutos. Seguro.
+const BATCH   = 2;
+const PAUSE   = 3000;
+const SAVE_N  = 20; // guardar progreso cada N jugadores
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
-// Genera slug desde nombre si no viene en data.json
-function nameToSlug(name) {
-  return name.toLowerCase()
-    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z0-9\s-]/g, '')
-    .trim()
-    .replace(/\s+/g, '-');
-}
-
-async function fetchPlayerHistory(player) {
-  const slug = player.slug || nameToSlug(player.name);
-  const cb   = 'jsonp_' + Math.floor(Math.random() * 1e9);
-
-  // Intentar primero por slug, luego por ID
-  for (const identifier of [slug, player.id]) {
-    const path = `/api/v2/players/${identifier}?lang=es&fields=*,reports(points,home,match(*,round))&callback=${cb}`;
-    const result = await doRequest(path);
-    if (result.status === 200 && result.history) return result;
-    if (result.status === 429) return { status: 429, history: null };
-  }
-  return { status: 0, history: null };
-}
-
-async function doRequest(path) {
+function doRequest(opts, body = null) {
   return new Promise((resolve) => {
-    const req = https.request({
-      hostname: 'biwenger.as.com',
-      path,
-      method:   'GET',
-      timeout:  12000,
-      headers:  {
-        'User-Agent':      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-        'Accept':          '*/*',
-        'Accept-Language': 'es-ES,es;q=0.9',
-        'Referer':         'https://biwenger.as.com/',
-      }
-    }, res => {
+    const req = https.request(opts, res => {
       let raw = '';
       res.on('data', c => raw += c);
-      res.on('end', () => {
-        if (res.statusCode === 429) { resolve({ status: 429, history: null }); return; }
-        if (res.statusCode !== 200) { resolve({ status: res.statusCode, history: null, raw: raw.slice(0,100) }); return; }
-        try {
-          const match = raw.match(/^[^(]+\(([\s\S]*)\)\s*;?\s*$/);
-          if (!match) { resolve({ status: 0, history: null }); return; }
-          const data    = JSON.parse(match[1]);
-          const reports = data?.data?.reports || [];
-          const history = {};
-          reports.forEach(r => {
-            const roundId = r.match?.round?.id;
-            if (roundId && r.points !== undefined && r.points !== null) {
-              const pts = typeof r.points === 'object' ? (r.points['5'] ?? r.points['1']) : r.points;
-              history[roundId] = { pts, home: r.home ?? null };
-            }
-          });
-          resolve({ status: 200, history: Object.keys(history).length > 0 ? history : null });
-        } catch(e) {
-          resolve({ status: 0, history: null });
-        }
-      });
+      res.on('end', () => resolve({ status: res.statusCode, raw }));
     });
-    req.on('error', () => resolve({ status: 0, history: null }));
-    req.on('timeout', () => { req.destroy(); resolve({ status: 0, history: null }); });
+    req.on('error', () => resolve({ status: 0, raw: '' }));
+    req.on('timeout', () => { req.destroy(); resolve({ status: 0, raw: '' }); });
+    if (body) req.write(body);
     req.end();
   });
 }
 
-async function main() {
-  console.log('🚀 Recuperación histórica de jornadas (endpoint público)');
-  console.log(`   Lotes: ${BATCH_SIZE} · Pausa: ${DELAY_MS}ms · Sin autenticación\n`);
+async function login() {
+  const body = JSON.stringify({ email: EMAIL, password: PASSWORD });
+  const res = await doRequest({
+    hostname: 'biwenger.as.com',
+    path:     '/api/v2/auth/login',
+    method:   'POST',
+    timeout:  10000,
+    headers:  {
+      'Content-Type':   'application/json',
+      'Content-Length': Buffer.byteLength(body),
+      'User-Agent':     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+      'Accept':         '*/*',
+      'Origin':         'https://biwenger.as.com',
+      'Referer':        'https://biwenger.as.com/',
+      'x-lang':         'es',
+      'x-version':      '630',
+    }
+  }, body);
 
+  if (res.status !== 200) {
+    console.error('❌ Login fallido. Status:', res.status);
+    process.exit(1);
+  }
+  const data  = JSON.parse(res.raw);
+  const token = data?.data?.token || data?.token;
+  if (!token) { console.error('❌ Token no encontrado'); process.exit(1); }
+  console.log('✅ Login correcto');
+  return token;
+}
+
+async function fetchHistory(player, token) {
+  const path = `/api/v2/players/${player.id}?fields=*,reports(points,home,match(*,round))`;
+  const res  = await doRequest({
+    hostname: 'biwenger.as.com',
+    path,
+    method:   'GET',
+    timeout:  12000,
+    headers:  {
+      'User-Agent':      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+      'Accept':          '*/*',
+      'Accept-Language': 'es-ES,es;q=0.9',
+      'Origin':          'https://biwenger.as.com',
+      'Referer':         'https://biwenger.as.com/',
+      'Authorization':   `Bearer ${token}`,
+      'x-lang':          'es',
+      'x-version':       '630',
+    }
+  });
+
+  if (res.status === 429) return { rateLimited: true };
+  if (res.status !== 200) return { rateLimited: false, history: null };
+
+  try {
+    const data    = JSON.parse(res.raw);
+    const reports = data?.data?.reports || [];
+    const history = {};
+    reports.forEach(r => {
+      const roundId = r.match?.round?.id;
+      if (!roundId) return;
+      // scoreID 5 = AS+Sofascore (el de Biwenger por defecto)
+      const pts = typeof r.points === 'object'
+        ? (r.points['5'] ?? r.points['1'] ?? null)
+        : (r.points ?? null);
+      if (pts !== null) history[roundId] = { pts, home: r.home ?? null };
+    });
+    return { rateLimited: false, history: Object.keys(history).length > 0 ? history : null };
+  } catch(e) {
+    return { rateLimited: false, history: null };
+  }
+}
+
+async function main() {
+  if (!EMAIL || !PASSWORD) {
+    console.error('❌ Faltan BIWENGER_EMAIL o BIWENGER_PASSWORD');
+    process.exit(1);
+  }
   if (!fs.existsSync('data.json')) {
-    console.error('❌ data.json no encontrado');
+    console.error('❌ data.json no encontrado — ejecuta el workflow principal primero');
     process.exit(1);
   }
 
-  const data    = JSON.parse(fs.readFileSync('data.json', 'utf8'));
-  const players = data.players || [];
-  console.log(`📊 ${players.length} jugadores a procesar`);
+  const players = JSON.parse(fs.readFileSync('data.json', 'utf8')).players || [];
+  console.log(`📊 ${players.length} jugadores`);
 
   let jornadas = {};
-  if (fs.existsSync(OUTPUT_FILE)) {
-    jornadas = JSON.parse(fs.readFileSync(OUTPUT_FILE, 'utf8'));
+  if (fs.existsSync(OUT_FILE)) {
+    jornadas = JSON.parse(fs.readFileSync(OUT_FILE, 'utf8'));
     console.log(`📂 ${Object.keys(jornadas).length} ya procesados — se saltarán`);
   }
 
-  let ok = 0, failed = 0, skipped = 0, rateLimited = false, diagnosed = 0;
-  const startTime = Date.now();
+  const token = await login();
+  let ok = 0, skip = 0, fail = 0;
+  const t0 = Date.now();
 
-  for (let i = 0; i < players.length; i += BATCH_SIZE) {
-    const batch = players.slice(i, i + BATCH_SIZE);
+  for (let i = 0; i < players.length; i += BATCH) {
+    const batch = players.slice(i, i + BATCH);
 
-    await Promise.all(batch.map(async p => {
+    for (const p of batch) {
       if (jornadas[p.id] && Object.keys(jornadas[p.id]).length > 0) {
-        skipped++;
-        return;
+        skip++; continue;
       }
-      const { status, history } = await fetchPlayerHistory(p);
-      if (diagnosed < 3) {
-        console.log(`  DEBUG ${p.name} (id:${p.id} slug:${p.slug||'none'}) → status:${status} history:${history ? Object.keys(history).length+' jornadas' : 'null'}`);
-        diagnosed++;
+
+      const { rateLimited, history } = await fetchHistory(p, token);
+
+      if (rateLimited) {
+        console.warn(`\n🛑 Rate limit. Guardando progreso y esperando 2 minutos...`);
+        fs.writeFileSync(OUT_FILE, JSON.stringify(jornadas), 'utf8');
+        await sleep(120000);
+        // Reintentar este jugador
+        const retry = await fetchHistory(p, token);
+        if (retry.history) { jornadas[p.id] = retry.history; ok++; }
+        else fail++;
+        continue;
       }
-      if (status === 429) { rateLimited = true; failed++; return; }
+
       if (history) { jornadas[p.id] = history; ok++; }
-      else { failed++; }
-    }));
+      else fail++;
 
-    // Si hay rate limit, esperar más
-    if (rateLimited) {
-      console.warn('  ⏸ Rate limit detectado. Esperando 90s...');
-      await sleep(90000);
-      rateLimited = false;
+      // Pequeña pausa entre jugadores del mismo lote
+      await sleep(500);
     }
 
-    const processed = i + BATCH_SIZE;
-    if (processed % SAVE_EVERY === 0 || processed >= players.length) {
-      fs.writeFileSync(OUTPUT_FILE, JSON.stringify(jornadas), 'utf8');
-      const elapsed = ((Date.now() - startTime) / 1000).toFixed(0);
-      const pct = Math.min(100, Math.round((processed / players.length) * 100));
-      console.log(`  [${pct}%] ${Math.min(processed, players.length)}/${players.length} — ✅${ok} ⏭${skipped} ❌${failed} — ${elapsed}s`);
+    // Guardar progreso
+    const done = i + BATCH;
+    if (done % SAVE_N === 0 || done >= players.length) {
+      fs.writeFileSync(OUT_FILE, JSON.stringify(jornadas), 'utf8');
+      const pct  = Math.min(100, Math.round(done / players.length * 100));
+      const secs = ((Date.now() - t0) / 1000).toFixed(0);
+      console.log(`  [${pct}%] ${Math.min(done, players.length)}/${players.length} — ✅${ok} ⏭${skip} ❌${fail} — ${secs}s`);
     }
 
-    if (i + BATCH_SIZE < players.length) await sleep(DELAY_MS);
+    if (i + BATCH < players.length) await sleep(PAUSE);
   }
 
-  fs.writeFileSync(OUTPUT_FILE, JSON.stringify(jornadas), 'utf8');
-  const mins = ((Date.now() - startTime) / 60000).toFixed(1);
+  fs.writeFileSync(OUT_FILE, JSON.stringify(jornadas), 'utf8');
+  const mins = ((Date.now() - t0) / 60000).toFixed(1);
   console.log(`\n✅ Completado en ${mins} minutos`);
-  console.log(`📦 jornadas.json — ${ok} nuevos · ${skipped} ya existían · ${failed} fallidos`);
-  console.log(`📊 Total: ${Object.keys(jornadas).length} jugadores con historial`);
+  console.log(`📦 jornadas.json — ${ok} nuevos · ${skip} ya existían · ${fail} fallidos`);
+  console.log(`📊 Total jugadores con historial: ${Object.keys(jornadas).length}`);
 }
 
 main().catch(err => { console.error('❌', err.message); process.exit(1); });
