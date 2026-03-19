@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-19T21:18:03.568Z",
+  "updatedAt": "2026-03-19T21:57:08.651Z",
   "players": [
     {
       "id": 11,
@@ -14743,7 +14743,188 @@
       }
     ]
   },
-  "odds": null,
+  "odds": {
+    "Villarreal": {
+      "winProb": 0.4173131423009762,
+      "drawProb": 0.24996421721581313,
+      "loseProb": 0.3327226404832107,
+      "over25Prob": 0.5681818181818182,
+      "isHome": false,
+      "opponent": "Girona",
+      "matchDate": "2026-04-06T20:00:00Z"
+    },
+    "Real Sociedad": {
+      "winProb": 0.593150965277304,
+      "drawProb": 0.22764172180912742,
+      "loseProb": 0.17920731291356842,
+      "over25Prob": 0.5586592178770949,
+      "isHome": true,
+      "opponent": "Levante",
+      "matchDate": "2026-04-04T12:00:00Z"
+    },
+    "Elche CF": {
+      "winProb": 0.22846781504986396,
+      "drawProb": 0.2683590208522212,
+      "loseProb": 0.5031731640979148,
+      "over25Prob": 0.47619047619047616,
+      "isHome": false,
+      "opponent": "Rayo Vallecano",
+      "matchDate": "2026-04-03T19:00:00Z"
+    },
+    "Mallorca": {
+      "winProb": 0.20030935808197992,
+      "drawProb": 0.2273781902552204,
+      "loseProb": 0.5723124516627998,
+      "over25Prob": 0.5813953488372093,
+      "isHome": true,
+      "opponent": "Real Madrid",
+      "matchDate": "2026-04-04T14:15:00Z"
+    },
+    "Espanyol": {
+      "winProb": 0.22816888626721415,
+      "drawProb": 0.2180729178483109,
+      "loseProb": 0.553758195884475,
+      "over25Prob": 0.5128205128205129,
+      "isHome": false,
+      "opponent": "Real Betis",
+      "matchDate": "2026-04-05T19:00:00Z"
+    },
+    "Getafe": {
+      "winProb": 0.33519553072625696,
+      "drawProb": 0.3128491620111732,
+      "loseProb": 0.35195530726256985,
+      "over25Prob": 0.35714285714285715,
+      "isHome": true,
+      "opponent": "Athletic Bilbao",
+      "matchDate": "2026-04-05T12:00:00Z"
+    },
+    "CA Osasuna": {
+      "winProb": 0.3285099726241689,
+      "drawProb": 0.2991787250684395,
+      "loseProb": 0.3723113023073914,
+      "over25Prob": 0.39370078740157477,
+      "isHome": false,
+      "opponent": "Alavés",
+      "matchDate": "2026-04-04T16:30:00Z"
+    },
+    "Girona": {
+      "winProb": 0.3327226404832107,
+      "drawProb": 0.24996421721581313,
+      "loseProb": 0.4173131423009762,
+      "over25Prob": 0.5681818181818182,
+      "isHome": true,
+      "opponent": "Villarreal",
+      "matchDate": "2026-04-06T20:00:00Z"
+    },
+    "Levante": {
+      "winProb": 0.17920731291356842,
+      "drawProb": 0.22764172180912742,
+      "loseProb": 0.593150965277304,
+      "over25Prob": 0.5586592178770949,
+      "isHome": false,
+      "opponent": "Real Sociedad",
+      "matchDate": "2026-04-04T12:00:00Z"
+    },
+    "Oviedo": {
+      "winProb": 0.3310133301875664,
+      "drawProb": 0.28760174590067245,
+      "loseProb": 0.38138492391176126,
+      "over25Prob": 0.4273504273504274,
+      "isHome": true,
+      "opponent": "Sevilla",
+      "matchDate": "2026-04-05T16:30:00Z"
+    },
+    "Sevilla": {
+      "winProb": 0.38138492391176126,
+      "drawProb": 0.28760174590067245,
+      "loseProb": 0.3310133301875664,
+      "over25Prob": 0.4273504273504274,
+      "isHome": false,
+      "opponent": "Oviedo",
+      "matchDate": "2026-04-05T16:30:00Z"
+    },
+    "Valencia": {
+      "winProb": 0.3987730061349693,
+      "drawProb": 0.2791411042944785,
+      "loseProb": 0.3220858895705521,
+      "over25Prob": 0.46511627906976744,
+      "isHome": true,
+      "opponent": "Celta Vigo",
+      "matchDate": "2026-04-05T14:15:00Z"
+    },
+    "Barcelona": {
+      "winProb": 0.399630314232902,
+      "drawProb": 0.24325323475046212,
+      "loseProb": 0.35711645101663586,
+      "over25Prob": 0.7142857142857143,
+      "isHome": false,
+      "opponent": "Atlético Madrid",
+      "matchDate": "2026-04-04T19:00:00Z"
+    },
+    "Rayo Vallecano": {
+      "winProb": 0.5031731640979148,
+      "drawProb": 0.2683590208522212,
+      "loseProb": 0.22846781504986396,
+      "over25Prob": 0.47619047619047616,
+      "isHome": true,
+      "opponent": "Elche CF",
+      "matchDate": "2026-04-03T19:00:00Z"
+    },
+    "Celta Vigo": {
+      "winProb": 0.3220858895705521,
+      "drawProb": 0.2791411042944785,
+      "loseProb": 0.3987730061349693,
+      "over25Prob": 0.46511627906976744,
+      "isHome": false,
+      "opponent": "Valencia",
+      "matchDate": "2026-04-05T14:15:00Z"
+    },
+    "Alavés": {
+      "winProb": 0.3723113023073914,
+      "drawProb": 0.2991787250684395,
+      "loseProb": 0.3285099726241689,
+      "over25Prob": 0.39370078740157477,
+      "isHome": true,
+      "opponent": "CA Osasuna",
+      "matchDate": "2026-04-04T16:30:00Z"
+    },
+    "Athletic Bilbao": {
+      "winProb": 0.35195530726256985,
+      "drawProb": 0.3128491620111732,
+      "loseProb": 0.33519553072625696,
+      "over25Prob": 0.35714285714285715,
+      "isHome": false,
+      "opponent": "Getafe",
+      "matchDate": "2026-04-05T12:00:00Z"
+    },
+    "Real Betis": {
+      "winProb": 0.553758195884475,
+      "drawProb": 0.2180729178483109,
+      "loseProb": 0.22816888626721415,
+      "over25Prob": 0.5128205128205129,
+      "isHome": true,
+      "opponent": "Espanyol",
+      "matchDate": "2026-04-05T19:00:00Z"
+    },
+    "Real Madrid": {
+      "winProb": 0.5723124516627998,
+      "drawProb": 0.2273781902552204,
+      "loseProb": 0.20030935808197992,
+      "over25Prob": 0.5813953488372093,
+      "isHome": false,
+      "opponent": "Mallorca",
+      "matchDate": "2026-04-04T14:15:00Z"
+    },
+    "Atlético Madrid": {
+      "winProb": 0.35711645101663586,
+      "drawProb": 0.24325323475046212,
+      "loseProb": 0.399630314232902,
+      "over25Prob": 0.7142857142857143,
+      "isHome": true,
+      "opponent": "Barcelona",
+      "matchDate": "2026-04-04T19:00:00Z"
+    }
+  },
   "news": [
     {
       "title": "La Previa de las Picas: Todo sobre los Cronistas de la Jornada 29",
@@ -14830,7 +15011,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-03-19T21:18:01.608Z",
+    "updatedAt": "2026-03-19T21:57:07.137Z",
     "players": [
       {
         "id": "3374",
