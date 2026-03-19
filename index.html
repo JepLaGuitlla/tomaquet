@@ -2344,67 +2344,77 @@ function getMediasEsperadas() {
 
 let _precioJustoCache = null;
 
-function calcGruposParaPrecioJusto(players) {
-  const grupos = {};
-  players.forEach(p => {
-    const pos   = (p.position || p.pos || '').split('/')[0];
-    const rango = getPriceRange(p.price);
-    if (!pos || !rango || pos === 'MD') return;
-    const jForm = (p.jForm || []).filter(v => v !== null && v !== undefined && v >= 0);
-    if (jForm.length < 5) return;
-    const media = jForm.reduce((s,v) => s+v, 0) / jForm.length;
-    const key = `${pos}_${rango}`;
-    if (!grupos[key]) grupos[key] = { precios: [], medias: [] };
-    grupos[key].precios.push(p.price);
-    grupos[key].medias.push(media);
-  });
-  // Calcular precio medio y media media por grupo
-  const result = {};
-  Object.entries(grupos).forEach(([key, g]) => {
-    const precioMedio = g.precios.reduce((s,v) => s+v, 0) / g.precios.length;
-    const mediaMedio  = g.medias.reduce((s,v) => s+v, 0)  / g.medias.length;
-    result[key] = { precioMedio, mediaMedio, n: g.precios.length };
-  });
-  return result;
-}
+// ── PRECIO JUSTO v2 — curva gaussiana continua ─────────────────────────────
+// Sin grupos rígidos. Cada jugador se compara contra todos los de su posición
+// ponderando por proximidad de precio (gaussiana σ=2M€).
+// Filtro: precio ≥ 1M€ + mínimo 3 jornadas jugadas — excluye ruido.
 
-function getGruposParaPrecioJusto() {
-  if (!_precioJustoCache) _precioJustoCache = calcGruposParaPrecioJusto(allPlayers);
-  return _precioJustoCache;
-}
+const SIGMA_M = 2.0; // radio de influencia en millones
 
 function calcPrecioJusto(player) {
-  const pos   = (player.position || player.pos || '').split('/')[0];
-  const rango = getPriceRange(player.price);
-  if (!pos || !rango || pos === 'MD') return null;
+  const pos = (player.position || player.pos || '').split('/')[0];
+  if (!pos || pos === 'MD' || pos === '?') return null;
+  if (!player.price || player.price < 500000) return null;
 
-  const jForm = (player.jForm || []).filter(v => v !== null && v !== undefined && v >= 0);
-  if (jForm.length < 5) return null;
-  const mediaReal = jForm.reduce((s,v) => s+v, 0) / jForm.length;
+  const jFormPlayer = (player.jForm || []).filter(v => v !== null && v !== undefined && v > 0);
+  if (jFormPlayer.length < 3) return null;
+  const mediaReal = jFormPlayer.reduce((s,v) => s+v, 0) / jFormPlayer.length;
+  if (mediaReal <= 0) return null;
 
-  const grupos = getGruposParaPrecioJusto();
-  const key    = `${pos}_${rango}`;
-  const grupo  = grupos[key];
-  if (!grupo || grupo.mediaMedio === 0) return null;
+  const precioM = player.price / 1e6;
 
-  // Ratio precio/rendimiento del grupo
-  const ratioPrecioMedia = grupo.precioMedio / grupo.mediaMedio;
+  // Candidatos: misma posición, precio ≥ 1M€, mínimo 3 jornadas con puntos
+  const candidatos = allPlayers.filter(p => {
+    if (p.id === player.id) return false;
+    const pPos = (p.position || p.pos || '').split('/')[0];
+    if (pPos !== pos) return false;
+    if (!p.price || p.price < 1e6) return false;
+    const jf = (p.jForm || []).filter(v => v !== null && v !== undefined && v > 0);
+    return jf.length >= 3;
+  });
 
-  // Precio justo = media real × ratio del grupo
-  const precioJusto = mediaReal * ratioPrecioMedia;
+  if (candidatos.length < 3) return null;
 
-  // Diferencia en € y % — positivo = está barato, negativo = está caro
-  const difEuros  = precioJusto - player.price;
-  const difPct    = Math.round((difEuros / player.price) * 100);
+  // Calcular ratio precio/media ponderado por gaussiana
+  let sumPesosPrecio = 0, sumPesosMedia = 0, sumPesos = 0;
+  candidatos.forEach(p => {
+    const pM   = p.price / 1e6;
+    const jf   = (p.jForm || []).filter(v => v !== null && v !== undefined && v > 0);
+    const med  = jf.reduce((s,v) => s+v, 0) / jf.length;
+    if (med <= 0) return;
+
+    // Peso gaussiano — más peso a jugadores con precio similar
+    const dist  = Math.abs(pM - precioM);
+    const peso  = Math.exp(-(dist * dist) / (2 * SIGMA_M * SIGMA_M));
+
+    sumPesosPrecio += pM   * peso;
+    sumPesosMedia  += med  * peso;
+    sumPesos       += peso;
+  });
+
+  if (sumPesos < 0.1 || sumPesosMedia < 0.01) return null;
+
+  const precioMedioPond = sumPesosPrecio / sumPesos;
+  const mediaMediaPond  = sumPesosMedia  / sumPesos;
+  const ratioPrecioMedia = precioMedioPond / mediaMediaPond;
+
+  const precioJusto = Math.round(mediaReal * ratioPrecioMedia * 1e6);
+  const difEuros    = precioJusto - player.price;
+  const difPct      = Math.round((difEuros / player.price) * 100);
 
   return {
-    precioJusto: Math.round(precioJusto),
-    difEuros:    Math.round(difEuros),
+    precioJusto,
+    difEuros,
     difPct,
-    mediaReal:   Math.round(mediaReal * 10) / 10,
-    grupo: { ...grupo, key },
+    mediaReal: Math.round(mediaReal * 10) / 10,
+    ratioPrecioMedia: Math.round(ratioPrecioMedia * 100) / 100,
+    n: candidatos.length,
   };
 }
+
+// Mantener _precioJustoCache vacío — calcPrecioJusto ya no usa grupos
+function getGruposParaPrecioJusto() { return {}; }
+function calcGruposParaPrecioJusto() { return {}; }
 
 function calcularEficientes(players) {
   const MIN_PJ=8,MIN_PTS=60;
