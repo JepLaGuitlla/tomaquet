@@ -2338,6 +2338,74 @@ function getMediasEsperadas() {
   return _mediasEsperadas;
 }
 
+// ── PRECIO JUSTO ─────────────────────────────────────────────────────────────
+// Cuánto debería costar un jugador según lo que rinde vs jugadores similares
+// precio_justo = media_real × (precio_medio_grupo / media_media_grupo)
+
+let _precioJustoCache = null;
+
+function calcGruposParaPrecioJusto(players) {
+  const grupos = {};
+  players.forEach(p => {
+    const pos   = (p.position || p.pos || '').split('/')[0];
+    const rango = getPriceRange(p.price);
+    if (!pos || !rango || pos === 'MD') return;
+    const jForm = (p.jForm || []).filter(v => v !== null && v !== undefined && v >= 0);
+    if (jForm.length < 5) return;
+    const media = jForm.reduce((s,v) => s+v, 0) / jForm.length;
+    const key = `${pos}_${rango}`;
+    if (!grupos[key]) grupos[key] = { precios: [], medias: [] };
+    grupos[key].precios.push(p.price);
+    grupos[key].medias.push(media);
+  });
+  // Calcular precio medio y media media por grupo
+  const result = {};
+  Object.entries(grupos).forEach(([key, g]) => {
+    const precioMedio = g.precios.reduce((s,v) => s+v, 0) / g.precios.length;
+    const mediaMedio  = g.medias.reduce((s,v) => s+v, 0)  / g.medias.length;
+    result[key] = { precioMedio, mediaMedio, n: g.precios.length };
+  });
+  return result;
+}
+
+function getGruposParaPrecioJusto() {
+  if (!_precioJustoCache) _precioJustoCache = calcGruposParaPrecioJusto(allPlayers);
+  return _precioJustoCache;
+}
+
+function calcPrecioJusto(player) {
+  const pos   = (player.position || player.pos || '').split('/')[0];
+  const rango = getPriceRange(player.price);
+  if (!pos || !rango || pos === 'MD') return null;
+
+  const jForm = (player.jForm || []).filter(v => v !== null && v !== undefined && v >= 0);
+  if (jForm.length < 5) return null;
+  const mediaReal = jForm.reduce((s,v) => s+v, 0) / jForm.length;
+
+  const grupos = getGruposParaPrecioJusto();
+  const key    = `${pos}_${rango}`;
+  const grupo  = grupos[key];
+  if (!grupo || grupo.mediaMedio === 0) return null;
+
+  // Ratio precio/rendimiento del grupo
+  const ratioPrecioMedia = grupo.precioMedio / grupo.mediaMedio;
+
+  // Precio justo = media real × ratio del grupo
+  const precioJusto = mediaReal * ratioPrecioMedia;
+
+  // Diferencia en € y % — positivo = está barato, negativo = está caro
+  const difEuros  = precioJusto - player.price;
+  const difPct    = Math.round((difEuros / player.price) * 100);
+
+  return {
+    precioJusto: Math.round(precioJusto),
+    difEuros:    Math.round(difEuros),
+    difPct,
+    mediaReal:   Math.round(mediaReal * 10) / 10,
+    grupo: { ...grupo, key },
+  };
+}
+
 function calcularEficientes(players) {
   const MIN_PJ=8,MIN_PTS=60;
   const candidatos=players.filter(p=>p.price>0&&p.pts>=MIN_PTS&&p.pj>=MIN_PJ);
@@ -2456,13 +2524,34 @@ function openRkPanel(icon, title, players, valFn, valClass, col2Fn, col2Label, c
   overlay.querySelector('.rk-panel-count').textContent = `${players.length} jugadores`;
 
   const medias = getMediasEsperadas();
+  // Detectar si es el ranking de infravalorados o sobrevalorados para añadir precio justo
+  const titleClean = title.toLowerCase().trim();
+  const showPrecioJusto = titleClean.includes('infra') || titleClean.includes('sobrev');
+  console.log('openRkPanel title:', JSON.stringify(title), 'showPrecioJusto:', showPrecioJusto);
+
   const rows = players.map((p, i) => {
     const pid = p.id;
     const mainVal = valFn(p);
     const col2 = col2Fn ? col2Fn(p) : '';
     const col3 = col3Fn ? col3Fn(p) : `${(p.price/1e6).toFixed(2)}M€`;
-    const jfHtml = jFormDots(p.jForm);
-    return `<div class="rk-modal-row" onclick="closeRkPanel();openJugPanel(allPlayers.find(x=>x.id===${pid}))">
+
+    // Columna precio justo
+    let precioJustoHtml = '';
+    if (showPrecioJusto) {
+      const pj = calcPrecioJusto(p);
+      if (pj) {
+        const color = pj.difEuros > 0 ? 'var(--green)' : 'var(--red)';
+        const arrow = pj.difEuros > 0 ? '↑' : '↓';
+        precioJustoHtml = `<div style="text-align:right">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:0.78rem;font-weight:700;color:var(--text)">${(pj.precioJusto/1e6).toFixed(2)}M€</div>
+          <div style="font-size:0.6rem;color:${color};font-weight:600">${arrow} ${pj.difEuros > 0 ? '+' : ''}${(pj.difEuros/1e6).toFixed(2)}M€</div>
+        </div>`;
+      } else {
+        precioJustoHtml = '<div style="text-align:right;color:var(--text3);font-size:0.7rem">—</div>';
+      }
+    }
+
+    return `<div class="rk-modal-row" style="grid-template-columns:${showPrecioJusto ? '32px 44px 1fr repeat(4,80px)' : '32px 44px 1fr repeat(3,80px)'}" onclick="closeRkPanel();openJugPanel(allPlayers.find(x=>x.id===${pid}))">
       <div class="rk-modal-num">${i+1}</div>
       <div>${playerPhoto(p, 36)}</div>
       <div class="rk-modal-info">
@@ -2472,14 +2561,16 @@ function openRkPanel(icon, title, players, valFn, valClass, col2Fn, col2Label, c
       <div class="rk-modal-val ${valClass}">${mainVal}</div>
       <div class="rk-modal-sec">${col2}</div>
       <div class="rk-modal-price">${col3}</div>
+      ${showPrecioJusto ? precioJustoHtml : ''}
     </div>`;
   }).join('');
 
-  const th = `<div class="rk-modal-th">
+  const th = `<div class="rk-modal-th" style="grid-template-columns:${showPrecioJusto ? '32px 44px 1fr repeat(4,80px)' : '32px 44px 1fr repeat(3,80px)'}">
     <div></div><div></div><div>Jugador</div>
     <div style="text-align:right">${title}</div>
     <div style="text-align:right">${col2Label||''}</div>
     <div style="text-align:right">${col3Label||'Precio'}</div>
+    ${showPrecioJusto ? '<div style="text-align:right">P. Justo</div>' : ''}
   </div>`;
 
   overlay.querySelector('.rk-panel-list').innerHTML = th + rows;
