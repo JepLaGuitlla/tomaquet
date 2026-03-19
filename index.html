@@ -2675,7 +2675,23 @@ function openRkPanel(icon, title, players, valFn, valClass, col2Fn, col2Label, c
     const pid = p.id;
     const mainVal = valFn(p);
     const col2 = col2Fn ? col2Fn(p) : '';
-    const col3 = col3Fn ? col3Fn(p) : `${(p.price/1e6).toFixed(2)}M€`;
+    // Columna Precio con tendencia diaria
+    const col3Raw = col3Fn ? col3Fn(p) : null;
+    let col3 = col3Raw || `${(p.price/1e6).toFixed(2)}M€`;
+    if (showPrecioJusto && !col3Raw) {
+      const trendVal = p.trend || 0;
+      if (trendVal !== 0) {
+        const tColor = trendVal > 0 ? 'var(--green)' : 'var(--red)';
+        const tSign  = trendVal > 0 ? '+' : '';
+        const tK     = Math.abs(trendVal) >= 1000000
+          ? `${tSign}${(trendVal/1e6).toFixed(2)}M€`
+          : `${tSign}${Math.round(trendVal/1000)}K€`;
+        col3 = `<div style="text-align:right">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:0.78rem;font-weight:700;color:var(--text)">${(p.price/1e6).toFixed(2)}M€</div>
+          <div style="font-size:0.6rem;color:${tColor};font-weight:600">${tK} hoy</div>
+        </div>`;
+      }
+    }
 
     // ── PRECIO JUSTO ─────────────────────────────────────────────────────────
     let precioJustoHtml = '';
@@ -2792,7 +2808,7 @@ function openRkPanel(icon, title, players, valFn, valClass, col2Fn, col2Label, c
     <div style="text-align:right">${col2Label||''}</div>
     <div style="text-align:right">${col3Label||'Precio'}</div>
     ${showPrecioJusto ? '<div style="text-align:right">P. Justo</div>' : ''}
-    ${showPrecioJusto ? '<div style="text-align:right">Mercado</div>' : ''}
+    ${showPrecioJusto ? '<div style="text-align:right">Mercado 7d</div>' : ''}
     ${showPrecioJusto ? '<div style="text-align:center">Lectura</div>' : ''}
   </div>`;
 
