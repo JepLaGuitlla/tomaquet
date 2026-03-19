@@ -23,12 +23,13 @@ jobs:
           BIWENGER_EMAIL: ${{ secrets.BIWENGER_EMAIL }}
           BIWENGER_PASSWORD: ${{ secrets.BIWENGER_PASSWORD }}
           BIWENGER_LEAGUE_ID: ${{ secrets.BIWENGER_LEAGUE_ID }}
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: node scripts/fetch-biwenger.js
 
       - name: Guardar datos en el repositorio
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data.json history.json prices.json img/
+          git add data.json history.json prices.json
           git diff --staged --quiet || git commit -m "datos: actualización automática $(date -u '+%Y-%m-%d %H:%M') UTC"
           git push
