@@ -127,9 +127,7 @@ async function fetchPlayers() {
   const arr = Array.isArray(rawPlayers) ? rawPlayers : Object.values(rawPlayers);
   console.log(`✅ ${arr.length} jugadores descargados`);
 
-  return arr
-    .filter(p => p.position !== 5) // excluir entrenadores (position 5 = MD en Biwenger)
-    .map(p => {
+  return arr.map(p => {
     // El campo correcto es p.teamID (D mayúscula) — confirmado con DEBUG
     const tid = p.teamID || null;
     const teamObj = rawTeams[tid] || rawTeams[String(tid)] || null;
@@ -579,150 +577,85 @@ function updatePlayerPrices(players) {
   console.log(`💰 prices.json — ${Object.keys(prices).length} jugadores · ${updated} nuevas entradas hoy`);
 }
 
-// ─── MAIN ────────────────────────────────────────────────────────────────────
+// ─── ODDS (The Odds API) ──────────────────────────────────────────────────────
 
-// ─── JORNADA ─────────────────────────────────────────────────────────────────
+async function fetchOdds() {
+  console.log('🎲 Descargando cuotas LaLiga (the-odds-api.com)...');
 
-async function fetchJornada(token, liga) {
-  console.log(`📅 Descargando jornadas liga ${liga.id}...`);
+  const ODDS_KEY = process.env.ODDS_API_KEY || '';
+  if (!ODDS_KEY) { console.warn('⚠️ ODDS_API_KEY no configurada — saltando odds'); return null; }
 
-  // Jornada actual (sin roundId)
-  const resCurrent = await requestJSON({
-    hostname: 'biwenger.as.com',
-    path:     `/api/v2/rounds/league`,
-    method:   'GET',
-    headers:  { ...headersForLeague(liga), 'Authorization': `Bearer ${token}`, 'x-lang': 'es' }
-  });
-  if (resCurrent.status !== 200) { console.warn('⚠️ No se pudo obtener jornada actual. Status:', resCurrent.status); return null; }
+  return new Promise((resolve) => {
+    const path = `/v4/sports/soccer_spain_la_liga/odds/?apiKey=${ODDS_KEY}&regions=eu&markets=h2h,totals&oddsFormat=decimal`;
+    const req = https.request({
+      hostname: 'api.the-odds-api.com',
+      path,
+      method: 'GET',
+    }, (res) => {
+      let data = '';
+      res.on('data', c => data += c);
+      res.on('end', () => {
+        try {
+          const raw = JSON.parse(data);
+          if (!Array.isArray(raw)) { console.warn('⚠️ Odds: respuesta inesperada', data.slice(0,200)); resolve(null); return; }
 
-  const currentData = resCurrent.body?.data || null;
-  const currentRoundId = currentData?.round?.id;
+          // Transformar a estructura útil por equipo
+          // { "Real Madrid": { winProb: 0.72, drawProb: 0.18, loseProb: 0.10, over25Prob: 0.65, home: true }, ... }
+          const odds = {};
 
-  // Jornada anterior (roundId - 1)
-  let prevData = null;
-  if (currentRoundId) {
-    const resPrev = await requestJSON({
-      hostname: 'biwenger.as.com',
-      path:     `/api/v2/rounds/league/${currentRoundId - 1}`,
-      method:   'GET',
-      headers:  { ...headersForLeague(liga), 'Authorization': `Bearer ${token}`, 'x-lang': 'es' }
-    });
-    if (resPrev.status === 200) prevData = resPrev.body?.data || null;
-  }
+          raw.forEach(match => {
+            const home = match.home_team;
+            const away = match.away_team;
 
-  console.log(`✅ Jornadas liga ${liga.id} descargadas (actual + anterior)`);
-  return { current: currentData, prev: prevData, currentRoundId };
-}
+            let h2hHome = null, h2hDraw = null, h2hAway = null;
+            let over25 = null;
 
-// ─── FOTOS DE JUGADORES ───────────────────────────────────────────────────────
-// Descarga las fotos desde cf.biwenger.com (sin CORS en Node.js)
-// y las guarda en img/players/ para servirlas desde GitHub Pages
+            (match.bookmakers || []).forEach(bk => {
+              (bk.markets || []).forEach(mkt => {
+                if (mkt.key === 'h2h' && !h2hHome) {
+                  mkt.outcomes.forEach(o => {
+                    if (o.name === home)   h2hHome = o.price;
+                    if (o.name === 'Draw') h2hDraw = o.price;
+                    if (o.name === away)   h2hAway = o.price;
+                  });
+                }
+                if (mkt.key === 'totals' && !over25) {
+                  mkt.outcomes.forEach(o => {
+                    if (o.name === 'Over' && Math.abs(o.point - 2.5) < 0.1) over25 = o.price;
+                  });
+                }
+              });
+            });
 
-async function downloadPlayerPhotos(players, token) {
-  const DIR = 'img/players';
-  if (!fs.existsSync('img'))  fs.mkdirSync('img');
-  if (!fs.existsSync(DIR))    fs.mkdirSync(DIR);
+            // Convertir cuotas a probabilidades implícitas (normalizadas)
+            if (h2hHome && h2hDraw && h2hAway) {
+              const margin = (1/h2hHome) + (1/h2hDraw) + (1/h2hAway);
+              const pHome = (1/h2hHome) / margin;
+              const pDraw = (1/h2hDraw) / margin;
+              const pAway = (1/h2hAway) / margin;
+              const pOver25 = over25 ? (1/over25) / ((1/over25) + (1 - 1/over25)) : 0.5;
 
-  let downloaded = 0, skipped = 0, failed = 0;
+              odds[home] = { winProb: pHome, drawProb: pDraw, loseProb: pAway, over25Prob: pOver25, isHome: true,  opponent: away,  matchDate: match.commence_time };
+              odds[away] = { winProb: pAway, drawProb: pDraw, loseProb: pHome, over25Prob: pOver25, isHome: false, opponent: home, matchDate: match.commence_time };
+            }
+          });
 
-  // Función que sigue redirecciones manualmente
-  function fetchImage(url, maxRedirects = 5) {
-    return new Promise((resolve, reject) => {
-      const urlObj = new URL(url);
-      const req = https.request({
-        hostname: urlObj.hostname,
-        path:     urlObj.pathname + urlObj.search,
-        method:   'GET',
-        timeout:  8000,
-        headers:  {
-          'User-Agent':    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-          'Referer':       'https://biwenger.as.com/',
-          'Accept':        'image/png,image/jpeg,image/*',
-          'Authorization': token ? `Bearer ${token}` : '',
-          'Origin':        'https://biwenger.as.com',
+          const nMatches = raw.length;
+          const remaining = res.headers['x-requests-remaining'] || '?';
+          console.log(`✅ Odds: ${nMatches} partidos · ${Object.keys(odds).length} equipos · peticiones restantes: ${remaining}`);
+          resolve(odds);
+        } catch(e) {
+          console.warn('⚠️ Error parseando odds:', e.message);
+          resolve(null);
         }
-      }, (res) => {
-        // Seguir redirecciones (301, 302, 303, 307, 308)
-        if ([301,302,303,307,308].includes(res.statusCode) && res.headers.location && maxRedirects > 0) {
-          const redirectUrl = res.headers.location.startsWith('http')
-            ? res.headers.location
-            : `https://${urlObj.hostname}${res.headers.location}`;
-          res.resume(); // descartar body
-          resolve(fetchImage(redirectUrl, maxRedirects - 1));
-          return;
-        }
-        const chunks = [];
-        res.on('data', c => chunks.push(c));
-        res.on('end', () => resolve({ status: res.statusCode, data: Buffer.concat(chunks) }));
       });
-      req.on('error', reject);
-      req.on('timeout', () => { req.destroy(); reject(new Error('timeout')); });
-      req.end();
     });
-  }
-
-  // Magic bytes de formatos de imagen válidos
-  const PNG_MAGIC  = Buffer.from([0x89, 0x50, 0x4E, 0x47]);
-  const JPG_MAGIC  = Buffer.from([0xFF, 0xD8, 0xFF]);
-  const WEBP_MAGIC = Buffer.from('RIFF');
-  const AVIF_MAGIC = Buffer.from('ftyp');  // AVIF: bytes 4-7 son 'ftyp'
-
-  function isValidImage(buf) {
-    if (!buf || buf.length < 12) return false;
-    return buf.slice(0,4).equals(PNG_MAGIC) ||
-           buf.slice(0,3).equals(JPG_MAGIC) ||
-           buf.slice(0,4).equals(WEBP_MAGIC) ||
-           buf.slice(4,8).equals(AVIF_MAGIC) || // AVIF/MP4 container
-           buf.length > 1000; // si pesa más de 1KB probablemente es imagen
-  }
-
-  function isValidImageFile(filepath) {
-    try {
-      const buf = Buffer.alloc(8);
-      const fd = fs.openSync(filepath, 'r');
-      fs.readSync(fd, buf, 0, 8, 0);
-      fs.closeSync(fd);
-      return isValidImage(buf);
-    } catch(e) { return false; }
-  }
-
-  // Limpiar archivos que no son imágenes reales (magic bytes incorrectos)
-  let cleaned = 0;
-  if (fs.existsSync(DIR)) {
-    fs.readdirSync(DIR).forEach(f => {
-      const fp = `${DIR}/${f}`;
-      if (!isValidImageFile(fp)) { fs.unlinkSync(fp); cleaned++; }
-    });
-  }
-  if (cleaned > 0) console.log(`🧹 ${cleaned} fotos inválidas eliminadas`);
-
-  const BATCH = 10;
-  for (let i = 0; i < players.length; i += BATCH) {
-    const batch = players.slice(i, i + BATCH);
-    await Promise.all(batch.map(async p => {
-      const file = `${DIR}/${p.id}.avif`;
-      if (fs.existsSync(file) && isValidImageFile(file)) {
-        skipped++;
-        return;
-      }
-      try {
-        const res = await fetchImage(`https://cdn.biwenger.com/cdn-cgi/image/f=avif/i/p/${p.id}.png`);
-        if (res.status === 200 && isValidImage(res.data)) {
-          fs.writeFileSync(file, res.data);
-          downloaded++;
-        } else {
-          failed++;
-        }
-      } catch(e) {
-        failed++;
-      }
-    }));
-    if (i + BATCH < players.length) await sleep(100);
-  }
-
-  console.log(`🖼️  Fotos jugadores: ${downloaded} descargadas · ${skipped} ya existían · ${failed} fallidas`);
+    req.on('error', e => { console.warn('⚠️ Error red odds:', e.message); resolve(null); });
+    req.end();
+  });
 }
 
+// ─── MAIN ────────────────────────────────────────────────────────────────────
 
 async function main() {
   try {
@@ -736,8 +669,7 @@ async function main() {
       leagueTomaquet, allTeamsTomaquet, myTeamTomaquet,
       leagueEnBas,    allTeamsEnBas,    myTeamEnBas,
       boardTomaquet,  boardEnBas,
-      jornadaTomaquet, jornadaEnBas,
-      laliga,         news,             playerStats,
+      laliga,         news,             playerStats,   odds,
     ] = await Promise.all([
       fetchLeague(token, LEAGUE_TOMAQUET),
       fetchAllTeams(token, LEAGUE_TOMAQUET),
@@ -747,11 +679,10 @@ async function main() {
       fetchMyTeam(token, LEAGUE_ENBAS),
       fetchBoard(token, LEAGUE_TOMAQUET),
       fetchBoard(token, LEAGUE_ENBAS),
-      fetchJornada(token, LEAGUE_TOMAQUET),
-      fetchJornada(token, LEAGUE_ENBAS),
       fetchLaLiga(),
       fetchNews(),
       fetchPlayerStats(),
+      fetchOdds(),
     ]);
 
     const output = {
@@ -765,9 +696,8 @@ async function main() {
       allTeamsEnBas,
       myTeamEnBas,
       boardEnBas,
-      jornadaTomaquet,
-      jornadaEnBas,
       laliga,
+      odds,
       news,
       playerStats,
     };
@@ -777,7 +707,6 @@ async function main() {
 
     updateHistory(myTeamTomaquet, myTeamEnBas, allTeamsTomaquet, allTeamsEnBas, leagueTomaquet, leagueEnBas);
     updatePlayerPrices(players);
-    await downloadPlayerPhotos(players, token);
     console.log(`📊 Jugadores Biwenger: ${players.length}`);
     console.log(`👥 Equipos Tomaquet:   ${allTeamsTomaquet?.length || 0}`);
     console.log(`👥 Equipos EN BAS:     ${allTeamsEnBas?.length || 0}`);
