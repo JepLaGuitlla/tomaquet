@@ -2585,19 +2585,21 @@ function buildRankCard(cardId, icon, title, players, valFn, valClass, subFn, col
     const val = valFn(p);
     const sub = subFn ? subFn(p) : `${(p.price/1e6).toFixed(2)}M€`;
     const img = pid ? `./img/players/${pid}.avif` : null;
-    // Estado de mercado — icono sobre la foto
+    // Lectura — emoji debajo del nombre en la card
     const estado = calcEstadoMercado(p);
-    const estadoHtml = estado ? `<div style="position:absolute;top:6px;left:50%;transform:translateX(-50%);font-size:1rem;filter:drop-shadow(0 1px 3px rgba(0,0,0,0.5));z-index:3" title="${estado.label}">${estado.icono}</div>` : '';
+    const lecturaCard = estado
+      ? `<div style="font-size:0.65rem;color:var(--text3);letter-spacing:0.5px;margin-top:1px" title="${estado.desc}">${estado.icono} <span style="font-size:0.55rem;text-transform:uppercase;letter-spacing:0.8px">Lectura</span></div>`
+      : '';
 
     return `<div class="rk-player-slot" onclick="openJugPanel(allPlayers.find(x=>x.id===${pid}))">
       ${img ? `<img class="rk-slot-img" src="${img}" onerror="this.style.display='none'">` : ''}
       <div class="rk-slot-overlay"></div>
       <div class="rk-slot-num">${i+1}</div>
-      ${estadoHtml}
       <div class="rk-slot-val ${valClass}">${val}</div>
       <div class="rk-slot-info">
         <div class="rk-slot-name">${p.name}</div>
         <div class="rk-slot-sub">${sub}</div>
+        ${lecturaCard}
       </div>
     </div>`;
   }).join('');
@@ -2675,11 +2677,7 @@ function openRkPanel(icon, title, players, valFn, valClass, col2Fn, col2Label, c
     const col2 = col2Fn ? col2Fn(p) : '';
     const col3 = col3Fn ? col3Fn(p) : `${(p.price/1e6).toFixed(2)}M€`;
 
-    // Señal de mercado — solo emoji con tooltip
-    const em = showPrecioJusto ? calcEstadoMercado(p) : null;
-    const emEmoji = em ? `<span title="${em.desc}" style="font-size:0.85rem;cursor:help;margin-left:4px">${em.icono}</span>` : '';
-
-    // Columna precio justo
+    // ── PRECIO JUSTO ─────────────────────────────────────────────────────────
     let precioJustoHtml = '';
     if (showPrecioJusto) {
       const pj = calcPrecioJusto(p);
@@ -2695,17 +2693,64 @@ function openRkPanel(icon, title, players, valFn, valClass, col2Fn, col2Label, c
       }
     }
 
-    return `<div class="rk-modal-row" style="grid-template-columns:${showPrecioJusto ? '32px 44px 1fr repeat(4,80px)' : '32px 44px 1fr repeat(3,80px)'}" onclick="closeRkPanel();openJugPanel(allPlayers.find(x=>x.id===${pid}))">
+    // ── COLUMNA MERCADO — tendencia numérica de los últimos 7 días ────────
+    let mercadoHtml = '';
+    if (showPrecioJusto) {
+      const ph = (window._pricesData || {})[String(pid)] || [];
+      let mom7 = 0, diasConsec = 0, dirConsec = 0;
+      if (ph.length >= 2) {
+        const last  = ph[ph.length - 1]?.p || p.price;
+        const prev7 = ph[Math.max(0, ph.length - 8)]?.p || last;
+        mom7 = prev7 > 0 ? ((last - prev7) / prev7) * 100 : 0;
+        // Días consecutivos en la misma dirección
+        for (let k = ph.length - 1; k > 0; k--) {
+          const diff = (ph[k]?.p || 0) - (ph[k-1]?.p || 0);
+          if (k === ph.length - 1) dirConsec = diff >= 0 ? 1 : -1;
+          if ((diff >= 0 && dirConsec > 0) || (diff < 0 && dirConsec < 0)) diasConsec++;
+          else break;
+        }
+      } else if (p.trend) {
+        mom7 = (p.trend / p.price) * 100 * 5;
+        diasConsec = p.trend > 0 ? 1 : -1;
+        dirConsec = p.trend > 0 ? 1 : -1;
+      }
+      const mColor = mom7 > 0 ? 'var(--green)' : mom7 < 0 ? 'var(--red)' : 'var(--text3)';
+      const mArrow = dirConsec > 0 ? '↑' : dirConsec < 0 ? '↓' : '→';
+      const mSign  = mom7 > 0 ? '+' : '';
+      const mDias  = diasConsec > 0 ? `<span style="font-size:0.58rem;color:var(--text3)">${mArrow}${diasConsec}d</span>` : '';
+      mercadoHtml = mom7 !== 0
+        ? `<div style="text-align:right">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;font-weight:700;color:${mColor}">${mSign}${mom7.toFixed(1)}%</div>
+            ${mDias}
+           </div>`
+        : `<div style="text-align:right;color:var(--text3);font-size:0.7rem">—</div>`;
+    }
+
+    // ── COLUMNA LECTURA — interpretación del conjunto ─────────────────────
+    let lecturaHtml = '';
+    if (showPrecioJusto) {
+      const em = calcEstadoMercado(p);
+      lecturaHtml = em
+        ? `<div title="${em.desc}" style="text-align:center;cursor:help">
+            <div style="font-size:1.1rem">${em.icono}</div>
+           </div>`
+        : `<div style="text-align:center;color:var(--text3);font-size:0.7rem">—</div>`;
+    }
+
+    const cols = showPrecioJusto ? '32px 44px 1fr 80px 60px 80px 80px 70px 44px' : '32px 44px 1fr repeat(3,80px)';
+    return `<div class="rk-modal-row" style="grid-template-columns:${cols}" onclick="closeRkPanel();openJugPanel(allPlayers.find(x=>x.id===${pid}))">
       <div class="rk-modal-num">${i+1}</div>
       <div>${playerPhoto(p, 36)}</div>
       <div class="rk-modal-info">
-        <div class="rk-modal-name">${p.name}${emEmoji}</div>
+        <div class="rk-modal-name">${p.name}</div>
         <div class="rk-modal-club">${p.club||p.teamName||'—'} · ${(p.position||'').split('/')[0]}</div>
       </div>
       <div class="rk-modal-val ${valClass}">${mainVal}</div>
       <div class="rk-modal-sec">${col2}</div>
       <div class="rk-modal-price">${col3}</div>
       ${showPrecioJusto ? precioJustoHtml : ''}
+      ${showPrecioJusto ? mercadoHtml : ''}
+      ${showPrecioJusto ? lecturaHtml : ''}
     </div>`;
   }).join('');
 
@@ -2740,12 +2785,15 @@ function openRkPanel(icon, title, players, valFn, valClass, col2Fn, col2Label, c
       </div>
     </div>` : '';
 
-  const th = `<div class="rk-modal-th" style="grid-template-columns:${showPrecioJusto ? '32px 44px 1fr repeat(4,80px)' : '32px 44px 1fr repeat(3,80px)'}">
+  const thCols = showPrecioJusto ? '32px 44px 1fr 80px 60px 80px 80px 70px 44px' : '32px 44px 1fr repeat(3,80px)';
+  const th = `<div class="rk-modal-th" style="grid-template-columns:${thCols}">
     <div></div><div></div><div>Jugador</div>
     <div style="text-align:right">${title}</div>
     <div style="text-align:right">${col2Label||''}</div>
     <div style="text-align:right">${col3Label||'Precio'}</div>
     ${showPrecioJusto ? '<div style="text-align:right">P. Justo</div>' : ''}
+    ${showPrecioJusto ? '<div style="text-align:right">Mercado</div>' : ''}
+    ${showPrecioJusto ? '<div style="text-align:center">Lectura</div>' : ''}
   </div>`;
 
   overlay.querySelector('.rk-panel-list').innerHTML = leyendaHtml + th + rows;
