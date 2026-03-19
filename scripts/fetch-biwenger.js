@@ -133,6 +133,7 @@ async function fetchPlayers() {
     const teamObj = rawTeams[tid] || rawTeams[String(tid)] || null;
     return {
       id:         p.id,
+      slug:       p.slug || null,
       name:       p.name,
       position:   p.position,
       price:      p.price          || 0,
