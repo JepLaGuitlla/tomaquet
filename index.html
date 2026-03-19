@@ -2416,6 +2416,70 @@ function calcPrecioJusto(player) {
 function getGruposParaPrecioJusto() { return {}; }
 function calcGruposParaPrecioJusto() { return {}; }
 
+// ── ESTADO DE MERCADO ────────────────────────────────────────────────────────
+// Cruza infravaloración con reacción del mercado (prices.json)
+// Devuelve: { estado, icono, label, desc, colorFondo, colorTexto }
+
+function calcEstadoMercado(player) {
+  const efic = calcEficiencia(player, getMediasEsperadas());
+  if (efic === null) return null;
+
+  const priceHistory = (window._pricesData || {})[String(player.id)] || [];
+
+  // Calcular momentum del mercado
+  let diasSubiendo = 0;
+  let mom7 = 0;
+
+  if (priceHistory.length >= 3) {
+    const last  = priceHistory[priceHistory.length - 1]?.p || player.price;
+    const prev7 = priceHistory[Math.max(0, priceHistory.length - 8)]?.p || last;
+    mom7 = prev7 > 0 ? ((last - prev7) / prev7) * 100 : 0;
+    for (let i = priceHistory.length - 1; i > 0; i--) {
+      if ((priceHistory[i]?.p || 0) > (priceHistory[i-1]?.p || 0)) diasSubiendo++;
+      else break;
+    }
+  } else {
+    // Fallback trend diario
+    mom7 = player.trend > 0 ? (player.trend / player.price) * 100 * 3 : 0;
+    diasSubiendo = player.trend > 50000 ? 2 : 0;
+  }
+
+  const infravalorado = efic > 20;  // rinde >20% más de lo esperado
+  const mercadoReacciona = mom7 > 2 || diasSubiendo >= 3;
+
+  if (infravalorado && !mercadoReacciona) {
+    return {
+      estado: 'joya',
+      icono: '💎',
+      label: 'JOYA OCULTA',
+      desc: `Rinde +${efic}% sobre lo esperado pero el mercado aún no reacciona. Fichar antes de que suba.`,
+      colorFondo: 'rgba(99,102,241,0.15)',
+      colorTexto: '#6366f1',
+    };
+  }
+  if (infravalorado && mercadoReacciona) {
+    return {
+      estado: 'tren',
+      icono: '🚀',
+      label: 'TREN EN MARCHA',
+      desc: `Rinde +${efic}% sobre lo esperado y lleva ${diasSubiendo} días subiendo (+${mom7.toFixed(1)}% en 7 días). Aún puedes subir.`,
+      colorFondo: 'rgba(34,197,94,0.12)',
+      colorTexto: 'var(--green)',
+    };
+  }
+  if (!infravalorado && efic < -20 && mercadoReacciona) {
+    return {
+      estado: 'burbuja',
+      icono: '⚠️',
+      label: 'POSIBLE BURBUJA',
+      desc: `Rinde ${efic}% menos de lo esperado pero sigue subiendo. Puede corregir pronto.`,
+      colorFondo: 'rgba(245,158,11,0.12)',
+      colorTexto: 'var(--pt)',
+    };
+  }
+  return null; // neutro — no mostrar
+}
+
 function calcularEficientes(players) {
   const MIN_PJ=8,MIN_PTS=60;
   const candidatos=players.filter(p=>p.price>0&&p.pts>=MIN_PTS&&p.pj>=MIN_PJ);
@@ -2460,10 +2524,15 @@ function buildRankCard(cardId, icon, title, players, valFn, valClass, subFn, col
     const val = valFn(p);
     const sub = subFn ? subFn(p) : `${(p.price/1e6).toFixed(2)}M€`;
     const img = pid ? `./img/players/${pid}.avif` : null;
+    // Estado de mercado — icono sobre la foto
+    const estado = calcEstadoMercado(p);
+    const estadoHtml = estado ? `<div style="position:absolute;top:6px;left:50%;transform:translateX(-50%);font-size:1rem;filter:drop-shadow(0 1px 3px rgba(0,0,0,0.5));z-index:3" title="${estado.label}">${estado.icono}</div>` : '';
+
     return `<div class="rk-player-slot" onclick="openJugPanel(allPlayers.find(x=>x.id===${pid}))">
       ${img ? `<img class="rk-slot-img" src="${img}" onerror="this.style.display='none'">` : ''}
       <div class="rk-slot-overlay"></div>
       <div class="rk-slot-num">${i+1}</div>
+      ${estadoHtml}
       <div class="rk-slot-val ${valClass}">${val}</div>
       <div class="rk-slot-info">
         <div class="rk-slot-name">${p.name}</div>
@@ -2545,20 +2614,25 @@ function openRkPanel(icon, title, players, valFn, valClass, col2Fn, col2Label, c
     const col2 = col2Fn ? col2Fn(p) : '';
     const col3 = col3Fn ? col3Fn(p) : `${(p.price/1e6).toFixed(2)}M€`;
 
-    // Columna precio justo
+    // Columna precio justo + estado mercado
     let precioJustoHtml = '';
     if (showPrecioJusto) {
       const pj = calcPrecioJusto(p);
+      const em = calcEstadoMercado(p);
+      let pjHtml = '';
       if (pj) {
         const color = pj.difEuros > 0 ? 'var(--green)' : 'var(--red)';
         const arrow = pj.difEuros > 0 ? '↑' : '↓';
-        precioJustoHtml = `<div style="text-align:right">
-          <div style="font-family:'IBM Plex Mono',monospace;font-size:0.78rem;font-weight:700;color:var(--text)">${(pj.precioJusto/1e6).toFixed(2)}M€</div>
-          <div style="font-size:0.6rem;color:${color};font-weight:600">${arrow} ${pj.difEuros > 0 ? '+' : ''}${(pj.difEuros/1e6).toFixed(2)}M€</div>
-        </div>`;
+        pjHtml = `<div style="font-family:'IBM Plex Mono',monospace;font-size:0.78rem;font-weight:700;color:var(--text)">${(pj.precioJusto/1e6).toFixed(2)}M€</div>
+          <div style="font-size:0.6rem;color:${color};font-weight:600">${arrow} ${pj.difEuros > 0 ? '+' : ''}${(pj.difEuros/1e6).toFixed(2)}M€</div>`;
       } else {
-        precioJustoHtml = '<div style="text-align:right;color:var(--text3);font-size:0.7rem">—</div>';
+        pjHtml = '<div style="color:var(--text3);font-size:0.7rem">—</div>';
       }
+      const emHtml = em ? `<div title="${em.desc}" style="display:inline-flex;align-items:center;gap:3px;padding:2px 6px;border-radius:3px;background:${em.colorFondo};cursor:help;margin-top:3px">
+        <span style="font-size:0.75rem">${em.icono}</span>
+        <span style="font-family:'Figtree',sans-serif;font-size:0.52rem;font-weight:700;letter-spacing:0.5px;color:${em.colorTexto};text-transform:uppercase">${em.label}</span>
+      </div>` : '';
+      precioJustoHtml = `<div style="text-align:right">${pjHtml}${emHtml}</div>`;
     }
 
     return `<div class="rk-modal-row" style="grid-template-columns:${showPrecioJusto ? '32px 44px 1fr repeat(4,80px)' : '32px 44px 1fr repeat(3,80px)'}" onclick="closeRkPanel();openJugPanel(allPlayers.find(x=>x.id===${pid}))">
