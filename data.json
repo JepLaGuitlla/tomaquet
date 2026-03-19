@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-19T08:00:18.110Z",
+  "updatedAt": "2026-03-19T14:38:33.054Z",
   "players": [
     {
       "id": 11,
@@ -11029,8 +11029,8 @@
           6,
           7
         ],
-        "teamSize": 22,
-        "teamValue": 77780000,
+        "teamSize": 21,
+        "teamValue": 77530000,
         "teamValueInc": 300000,
         "position": 3
       },
@@ -11280,7 +11280,7 @@
       "name": "🦊",
       "manager": "🦊",
       "points": 1366,
-      "value": 77780000,
+      "value": 77530000,
       "trend": 300000,
       "players": []
     },
@@ -11388,7 +11388,7 @@
     "teamId": 6541195,
     "name": "🦊",
     "points": 1366,
-    "balance": 1166263,
+    "balance": 1419763,
     "lineup": {
       "type": "3-5-2",
       "date": 1773855394,
@@ -11512,13 +11512,6 @@
         "buyDate": 1771912934
       },
       {
-        "id": 38245,
-        "buyPrice": 250000,
-        "clause": 250000000000,
-        "invested": 0,
-        "buyDate": 1773295445
-      },
-      {
         "id": 38867,
         "buyPrice": 10072222,
         "clause": 24858333,
@@ -11582,12 +11575,6 @@
         "until": 1774064231
       },
       {
-        "playerID": 38245,
-        "price": 500000,
-        "type": "sale",
-        "until": 1774064231
-      },
-      {
         "playerID": 39327,
         "price": 300000,
         "type": "sale",
@@ -11596,6 +11583,21 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1773923910,
+      "content": [
+        {
+          "player": 38245,
+          "from": {
+            "id": 6541195,
+            "name": "🦊",
+            "icon": "i/u/6541195.png?v=17"
+          },
+          "amount": 253500
+        }
+      ]
+    },
     {
       "type": "market",
       "date": 1773900239,
@@ -11723,108 +11725,6 @@
           "amount": 2595800
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1773814366,
-      "content": [
-        {
-          "player": 38290,
-          "from": {
-            "id": 148051,
-            "name": "Zaza Pachulia",
-            "icon": "i/u/148051.png?v=39"
-          },
-          "amount": 4040800
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1773813745,
-      "content": [
-        {
-          "player": 38493,
-          "to": {
-            "id": 12713493,
-            "name": "Tata Martini",
-            "icon": "i/u/12713493.png"
-          },
-          "amount": 1580000
-        },
-        {
-          "player": 1673,
-          "to": {
-            "id": 8070044,
-            "name": "CA CABA JUNIORS",
-            "icon": "i/u/8070044.png?v=63"
-          },
-          "amount": 170000
-        },
-        {
-          "player": 38308,
-          "to": {
-            "id": 12713493,
-            "name": "Tata Martini",
-            "icon": "i/u/12713493.png"
-          },
-          "amount": 1710000,
-          "bids": [
-            {
-              "user": {
-                "id": 11521196,
-                "name": "Hufflepuff 🍋",
-                "icon": "i/u/11521196.png?v=57"
-              },
-              "amount": 1680009
-            },
-            {
-              "user": {
-                "id": 12696899,
-                "name": "CIGALERU",
-                "icon": "i/u/12696899.png"
-              },
-              "amount": 1599010
-            },
-            {
-              "user": {
-                "id": 8070044,
-                "name": "CA CABA JUNIORS",
-                "icon": "i/u/8070044.png?v=63"
-              },
-              "amount": 1510000
-            }
-          ]
-        },
-        {
-          "player": 38059,
-          "to": {
-            "id": 11521196,
-            "name": "Hufflepuff 🍋",
-            "icon": "i/u/11521196.png?v=57"
-          },
-          "amount": 1930009,
-          "bids": [
-            {
-              "user": {
-                "id": 12713493,
-                "name": "Tata Martini",
-                "icon": "i/u/12713493.png"
-              },
-              "amount": 1920000
-            }
-          ]
-        },
-        {
-          "player": 32456,
-          "to": {
-            "id": 8068002,
-            "name": "Soulands Rangers",
-            "icon": "i/u/8068002.png?v=69"
-          },
-          "amount": 333000
-        }
-      ]
     }
   ],
   "leagueEnBas": {
@@ -11848,6 +11748,16 @@
         "icon": "img/tournament.png",
         "activeRound": {
           "index": 10,
+          "type": "quarterFinal",
+          "leg": "home"
+        }
+      },
+      {
+        "id": 133057,
+        "name": "Europa League",
+        "icon": "img/tournament.png",
+        "activeRound": {
+          "index": 1,
           "type": "quarterFinal",
           "leg": "home"
         }
@@ -12818,7 +12728,7 @@
             "name": "🦊",
             "icon": "i/u/6541195.png?v=17",
             "points": 1366,
-            "teamValue": 77780000,
+            "teamValue": 77530000,
             "teamValueInc": 300000,
             "position": 3,
             "lineup": {
@@ -13422,7 +13332,7 @@
             "name": "🦊",
             "icon": "i/u/6541195.png?v=17",
             "points": 1319,
-            "teamValue": 77780000,
+            "teamValue": 77530000,
             "teamValueInc": 300000,
             "position": 3,
             "lineup": {
@@ -15310,7 +15220,7 @@
     "currentRoundId": 4511
   },
   "laliga": {
-    "matchday": 28,
+    "matchday": 29,
     "table": [
       {
         "position": 1,
@@ -16438,82 +16348,82 @@
   },
   "news": [
     {
-      "title": "Cinco noticias fantasy para antes de irte a dormir",
-      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-18-3-26/",
-      "date": "Wed, 18 Mar 2026 21:51:10 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "title": "Zaid Romero, comandante del Getafe: ¿muy buena opción fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/zaid-romero-analisis-j29-25-26/",
+      "date": "Thu, 19 Mar 2026 14:00:21 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/03/image-2026-03-19T114731.145.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Temor en el Real Madrid por el estado de Courtois",
-      "link": "https://www.jornadaperfecta.com/blog/thibaut-courtois-molestias-abductor-26/",
-      "date": "Wed, 18 Mar 2026 21:10:59 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Joan García, sufre una lesión de gemelo: tiempo de baja",
-      "link": "https://www.jornadaperfecta.com/blog/joan-garcia-molestias-gemelo-26/",
-      "date": "Wed, 18 Mar 2026 20:20:05 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Álvaro Núñez vuelve tras la pubalgia. ¿Volverá a ser importante en fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/alvaro-nunez-analisis-vuelta-pubalgia-26/",
-      "date": "Wed, 18 Mar 2026 20:00:37 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/03/5b5a8fd163981c0a9be73df13d2ec755-1.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Podcast: Alineaciones Probables Jornada 29 2025/26",
-      "link": "https://www.jornadaperfecta.com/blog/podcast-alineaciones-probables-jornada-29/",
-      "date": "Wed, 18 Mar 2026 19:39:01 +0000",
-      "img": "https://i.ytimg.com/vi/7sw-wNAo3gM/mqdefault.jpg",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Marc Pubill, suplente en Champions por molestias",
-      "link": "https://www.jornadaperfecta.com/blog/marc-pubill-molestias-costillas-26/",
-      "date": "Wed, 18 Mar 2026 19:37:15 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Iñigo Pérez sigue en duda con Akhomach y habla de Mendy",
-      "link": "https://www.jornadaperfecta.com/blog/inigo-perez-previa-rayo-conference-octavos-vuelta-26/",
-      "date": "Wed, 18 Mar 2026 19:17:38 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "RC Celta, alineación probable contra el Olympique de Lyon y dónde ver en TV",
-      "link": "https://www.jornadaperfecta.com/blog/rc-celta-alineacion-probable-octavos-europa-26/",
-      "date": "Wed, 18 Mar 2026 18:54:19 +0000",
+      "title": "Raúl Moro gestiona cargas, por segundo día consecutivo",
+      "link": "https://www.jornadaperfecta.com/blog/raul-moro-molestias-j29/",
+      "date": "Thu, 19 Mar 2026 13:59:52 +0000",
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Giráldez, sobre el estado de Jutglà, Aspas y Fer López",
-      "link": "https://www.jornadaperfecta.com/blog/giraldez-previa-octavos-europa-lyon-26/",
-      "date": "Wed, 18 Mar 2026 18:45:49 +0000",
-      "img": "https://cdn.biwenger.com/i/t/5.png",
+      "title": "Matarazzo, sobre Gorrotxategi, Aihen, Yangel y Kubo",
+      "link": "https://www.jornadaperfecta.com/blog/matarazzo-previa-villarreal-real-sociedad-j29-25-26/",
+      "date": "Thu, 19 Mar 2026 13:20:20 +0000",
+      "img": "https://cdn.biwenger.com/i/t/13.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Eric García, sustituido con molestias en Champions",
+      "title": "Eric García repite con molestias, pero no hay lesión",
       "link": "https://www.jornadaperfecta.com/blog/eric-garcia-estado-molestias-musculares-26/",
-      "date": "Wed, 18 Mar 2026 18:21:01 +0000",
+      "date": "Thu, 19 Mar 2026 13:00:01 +0000",
       "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Parte médico de Luka Ilic: lesión en el talón de Aquiles",
+      "link": "https://www.jornadaperfecta.com/blog/luka-ilic-estado-j29-25-26/",
+      "date": "Thu, 19 Mar 2026 12:45:44 +0000",
+      "img": "https://cdn.biwenger.com/i/t/779.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Bellingham entrena parcialmente y Asencio y Carreras se apuntan al derbi",
+      "link": "https://www.jornadaperfecta.com/blog/bellingham-vuelta-lesion-2026/",
+      "date": "Thu, 19 Mar 2026 12:35:55 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Joan García: las pruebas descartan una lesión y podría estrar ante el Rayo",
+      "link": "https://www.jornadaperfecta.com/blog/joan-garcia-molestias-gemelo-26/",
+      "date": "Thu, 19 Mar 2026 12:05:05 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Thibaut Courtois sufre una lesión muscular: Parte médico y tiempo de baja",
+      "link": "https://www.jornadaperfecta.com/blog/thibaut-courtois-lesion-cuadriceps-parte-medico-26/",
+      "date": "Thu, 19 Mar 2026 12:01:18 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Actualizadas las Alineaciones Probables para la Jornada 29",
+      "link": "https://www.jornadaperfecta.com/blog/alineaciones-probables-j29-laliga-25-26/",
+      "date": "Thu, 19 Mar 2026 12:00:00 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Real Betis, alineación probable contra el Panathinaikos y dónde ver en TV",
+      "link": "https://www.jornadaperfecta.com/blog/betis-alineacion-probable-vuelta-panathinaikos/",
+      "date": "Thu, 19 Mar 2026 10:49:16 +0000",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -16522,7 +16432,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-03-19T08:00:18.110Z",
+    "updatedAt": "2026-03-19T14:38:31.460Z",
     "players": [
       {
         "id": "3374",
