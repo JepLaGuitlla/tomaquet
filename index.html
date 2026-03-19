@@ -2675,32 +2675,31 @@ function openRkPanel(icon, title, players, valFn, valClass, col2Fn, col2Label, c
     const col2 = col2Fn ? col2Fn(p) : '';
     const col3 = col3Fn ? col3Fn(p) : `${(p.price/1e6).toFixed(2)}M€`;
 
-    // Columna precio justo + estado mercado
+    // Señal de mercado — solo emoji con tooltip
+    const em = showPrecioJusto ? calcEstadoMercado(p) : null;
+    const emEmoji = em ? `<span title="${em.desc}" style="font-size:0.85rem;cursor:help;margin-left:4px">${em.icono}</span>` : '';
+
+    // Columna precio justo
     let precioJustoHtml = '';
     if (showPrecioJusto) {
       const pj = calcPrecioJusto(p);
-      const em = calcEstadoMercado(p);
-      let pjHtml = '';
       if (pj) {
         const color = pj.difEuros > 0 ? 'var(--green)' : 'var(--red)';
         const arrow = pj.difEuros > 0 ? '↑' : '↓';
-        pjHtml = `<div style="font-family:'IBM Plex Mono',monospace;font-size:0.78rem;font-weight:700;color:var(--text)">${(pj.precioJusto/1e6).toFixed(2)}M€</div>
-          <div style="font-size:0.6rem;color:${color};font-weight:600">${arrow} ${pj.difEuros > 0 ? '+' : ''}${(pj.difEuros/1e6).toFixed(2)}M€</div>`;
+        precioJustoHtml = `<div style="text-align:right">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:0.78rem;font-weight:700;color:var(--text)">${(pj.precioJusto/1e6).toFixed(2)}M€</div>
+          <div style="font-size:0.6rem;color:${color};font-weight:600">${arrow} ${pj.difEuros > 0 ? '+' : ''}${(pj.difEuros/1e6).toFixed(2)}M€</div>
+        </div>`;
       } else {
-        pjHtml = '<div style="color:var(--text3);font-size:0.7rem">—</div>';
+        precioJustoHtml = '<div style="text-align:right;color:var(--text3);font-size:0.7rem">—</div>';
       }
-      const emHtml = em ? `<div title="${em.desc}" style="display:inline-flex;align-items:center;gap:3px;padding:2px 6px;border-radius:3px;background:${em.colorFondo};cursor:help;margin-top:3px">
-        <span style="font-size:0.75rem">${em.icono}</span>
-        <span style="font-family:'Figtree',sans-serif;font-size:0.52rem;font-weight:700;letter-spacing:0.5px;color:${em.colorTexto};text-transform:uppercase">${em.label}</span>
-      </div>` : '';
-      precioJustoHtml = `<div style="text-align:right">${pjHtml}${emHtml}</div>`;
     }
 
     return `<div class="rk-modal-row" style="grid-template-columns:${showPrecioJusto ? '32px 44px 1fr repeat(4,80px)' : '32px 44px 1fr repeat(3,80px)'}" onclick="closeRkPanel();openJugPanel(allPlayers.find(x=>x.id===${pid}))">
       <div class="rk-modal-num">${i+1}</div>
       <div>${playerPhoto(p, 36)}</div>
       <div class="rk-modal-info">
-        <div class="rk-modal-name">${p.name}</div>
+        <div class="rk-modal-name">${p.name}${emEmoji}</div>
         <div class="rk-modal-club">${p.club||p.teamName||'—'} · ${(p.position||'').split('/')[0]}</div>
       </div>
       <div class="rk-modal-val ${valClass}">${mainVal}</div>
