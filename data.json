@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-19T19:02:45.251Z",
+  "updatedAt": "2026-03-19T19:56:09.506Z",
   "players": [
     {
       "id": 11,
@@ -11986,9 +11986,9 @@
           6,
           7
         ],
-        "teamSize": 21,
-        "teamValue": 77530000,
-        "teamValueInc": 300000,
+        "teamSize": 19,
+        "teamValue": 78750000,
+        "teamValueInc": 450000,
         "position": 3
       },
       {
@@ -12144,9 +12144,9 @@
           12,
           3
         ],
-        "teamSize": 13,
-        "teamValue": 53740000,
-        "teamValueInc": 140000,
+        "teamSize": 12,
+        "teamValue": 51660000,
+        "teamValueInc": 0,
         "position": 11,
         "positionInc": 1,
         "role": ""
@@ -12237,8 +12237,8 @@
       "name": "🦊",
       "manager": "🦊",
       "points": 1366,
-      "value": 77530000,
-      "trend": 300000,
+      "value": 78750000,
+      "trend": 450000,
       "players": []
     },
     {
@@ -12309,8 +12309,8 @@
       "name": "Trileros FC",
       "manager": "Trileros FC",
       "points": 1169,
-      "value": 53740000,
-      "trend": 140000,
+      "value": 51660000,
+      "trend": 0,
       "players": []
     },
     {
@@ -12345,10 +12345,10 @@
     "teamId": 6541195,
     "name": "🦊",
     "points": 1366,
-    "balance": 1419763,
+    "balance": -1438437,
     "lineup": {
-      "type": "3-5-2",
-      "date": 1773855394,
+      "type": "3-4-3",
+      "date": 1773949926,
       "playersID": [
         17021,
         10155,
@@ -12358,24 +12358,24 @@
         38867,
         39885,
         25127,
-        39736,
+        3159,
         26271,
         37451
       ],
       "reservesID": [
         null,
-        26676,
-        39431,
+        null,
+        39736,
         38964
       ]
     },
     "players": [
       {
-        "id": 21,
-        "buyPrice": 522310,
-        "clause": 522310000000,
+        "id": 3159,
+        "buyPrice": 3750000,
+        "clause": 5625000,
         "invested": 0,
-        "buyDate": 1773295445
+        "buyDate": 1773949859
       },
       {
         "id": 1908,
@@ -12441,13 +12441,6 @@
         "buyDate": 1765459975
       },
       {
-        "id": 26676,
-        "buyPrice": 253666,
-        "clause": 253666000000,
-        "invested": 0,
-        "buyDate": 1772950164
-      },
-      {
         "id": 27945,
         "buyPrice": 1122222,
         "clause": 1683333,
@@ -12483,13 +12476,6 @@
         "buyDate": 1773295445
       },
       {
-        "id": 39327,
-        "buyPrice": 151236,
-        "clause": 151236000000,
-        "invested": 0,
-        "buyDate": 1770357975
-      },
-      {
         "id": 39403,
         "buyPrice": 333344,
         "clause": 340000000000,
@@ -12520,26 +12506,98 @@
     ],
     "market": [
       {
-        "playerID": 21,
-        "price": 940000,
-        "type": "sale",
-        "until": 1774064231
-      },
-      {
-        "playerID": 26676,
-        "price": 500000,
-        "type": "sale",
-        "until": 1774064231
-      },
-      {
-        "playerID": 39327,
+        "playerID": 10158,
         "price": 300000,
         "type": "sale",
-        "until": 1774064231
+        "until": 1774122471
+      },
+      {
+        "playerID": 21063,
+        "price": 240000,
+        "type": "sale",
+        "until": 1774122495
+      },
+      {
+        "playerID": 27945,
+        "price": 730000,
+        "type": "sale",
+        "until": 1774122479
+      },
+      {
+        "playerID": 38216,
+        "price": 540000,
+        "type": "sale",
+        "until": 1774122503
+      },
+      {
+        "playerID": 38964,
+        "price": 1120000,
+        "type": "sale",
+        "until": 1774122519
+      },
+      {
+        "playerID": 39403,
+        "price": 340000,
+        "type": "sale",
+        "until": 1774122650
       }
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1773949859,
+      "content": [
+        {
+          "player": 3159,
+          "from": {
+            "id": 12696599,
+            "name": "Trileros FC",
+            "icon": "i/u/12696599.png"
+          },
+          "to": {
+            "id": 6541195,
+            "name": "🦊",
+            "icon": "i/u/6541195.png?v=17"
+          },
+          "amount": 3750000,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1773949646,
+      "content": [
+        {
+          "player": 26676,
+          "from": {
+            "id": 6541195,
+            "name": "🦊",
+            "icon": "i/u/6541195.png?v=17"
+          },
+          "amount": 262000
+        },
+        {
+          "player": 21,
+          "from": {
+            "id": 6541195,
+            "name": "🦊",
+            "icon": "i/u/6541195.png?v=17"
+          },
+          "amount": 479400
+        },
+        {
+          "player": 39327,
+          "from": {
+            "id": 6541195,
+            "name": "🦊",
+            "icon": "i/u/6541195.png?v=17"
+          },
+          "amount": 150400
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1773923910,
@@ -12644,42 +12702,6 @@
             "icon": "i/u/12696899.png"
           },
           "amount": 2857800
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1773829708,
-      "content": [
-        {
-          "player": 35156,
-          "from": {
-            "id": 11521196,
-            "name": "Hufflepuff 🍋",
-            "icon": "i/u/11521196.png?v=57"
-          },
-          "to": {
-            "id": 12696899,
-            "name": "CIGALERU",
-            "icon": "i/u/12696899.png"
-          },
-          "amount": 4920000,
-          "type": "clause"
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1773821179,
-      "content": [
-        {
-          "player": 38405,
-          "from": {
-            "id": 12713493,
-            "name": "Tata Martini",
-            "icon": "i/u/12713493.png"
-          },
-          "amount": 2595800
         }
       ]
     }
@@ -14808,7 +14830,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-03-19T19:02:43.575Z",
+    "updatedAt": "2026-03-19T19:56:08.653Z",
     "players": [
       {
         "id": "3374",
