@@ -3001,6 +3001,51 @@ async function loadPlayers(){
       ligaData.recentResults= ll.recentResults|| [];
       ligaData.season       = ll.matchday     || '?';
       ligaData.forms        = ll.forms        || {};
+      ligaData.odds         = ll.odds         || {};
+    }
+
+    // Odds externas (the-odds-api) — campo raíz data.odds, clave = nombre equipo
+    // Fusionar con ligaData.odds indexando por teamId usando standings como puente
+    if (data.odds && typeof data.odds === 'object' && Object.keys(data.odds).length) {
+      // Mapa fijo: nombre football-data.org → nombre the-odds-api
+      const FD_TO_ODDS = {
+        'Athletic Club':                 'Athletic Bilbao',
+        'Club Atlético de Madrid':       'Atlético Madrid',
+        'Deportivo Alavés':              'Alavés',
+        'FC Barcelona':                  'Barcelona',
+        'RC Celta de Vigo':              'Celta Vigo',
+        'RCD Espanyol de Barcelona':     'Espanyol',
+        'RCD Mallorca':                  'Mallorca',
+        'Rayo Vallecano de Madrid':      'Rayo Vallecano',
+        'Real Betis Balompié':           'Real Betis',
+        'Real Madrid CF':                'Real Madrid',
+        'Real Oviedo':                   'Oviedo',
+        'Real Sociedad de Fútbol':       'Real Sociedad',
+        'Getafe CF':                     'Getafe',
+        'Girona FC':                     'Girona',
+        'Levante UD':                    'Levante',
+        'Sevilla FC':                    'Sevilla',
+        'Valencia CF':                   'Valencia',
+        'Villarreal CF':                 'Villarreal',
+      };
+      const oddsById = {};
+      (ligaData.standings || []).forEach(s => {
+        const fdName  = s.team.name || '';
+        const oddsKey = FD_TO_ODDS[fdName] || fdName; // fallback: nombre directo
+        const o = data.odds[oddsKey];
+        if (o) {
+          oddsById[s.team.id] = {
+            win:    o.winProb    || o.win  || 0,
+            draw:   o.drawProb   || o.draw || 0,
+            loss:   o.loseProb   || o.loss || 0,
+            over25: o.over25Prob || 0,
+            isHome: o.isHome     || false,
+          };
+        }
+      });
+      // Priorizar odds externas reales sobre sintéticas si las hay
+      if (Object.keys(oddsById).length) ligaData.odds = oddsById;
+      console.log(`🎲 Odds cargadas: ${Object.keys(oddsById).length}/20 equipos`);
     }
 
     let players=[];
@@ -5093,13 +5138,25 @@ function calcFactorEquipo(clubName) {
     if (estado.impacto === 'medio') disponN *= 0.90;
   }
 
-  const fe = (formaN    * 0.30)
-           + (potencialN * 0.25)
-           + (localN     * 0.15)
-           + (rivalN     * 0.15)
-           + (disponN    * 0.15);
+  const feBase = (formaN    * 0.30)
+              + (potencialN * 0.25)
+              + (localN     * 0.15)
+              + (rivalN     * 0.15)
+              + (disponN    * 0.15);
 
-  return Math.min(10, Math.max(0, fe));
+  // ── AMPLIFICADOR ODDS ──────────────────────────────────────────────
+  // winProb > 0.55 → boost hasta ×1.20 | winProb < 0.30 → penalización hasta ×0.80
+  // Rango suave [0.80…1.20] para no distorsionar el score base en exceso.
+  let amplificador = 1.0;
+  const teamOdds = (ligaData.odds || {})[teamId];
+  if (teamOdds && typeof teamOdds.win === 'number') {
+    // Mapea winProb [0.15…0.75] → amplificador [0.80…1.20]
+    amplificador = 0.80 + (teamOdds.win - 0.15) * (0.40 / 0.60);
+    amplificador = Math.min(1.20, Math.max(0.80, amplificador));
+  }
+  // ──────────────────────────────────────────────────────────────────
+
+  return Math.min(10, Math.max(0, feBase * amplificador));
 }
 function formBadges(results){return results.map(r=>`<span class="form-badge form-${r}">${r}</span>`).join('');}
 function renderTablaLiga(){
