@@ -3059,6 +3059,21 @@ async function loadPlayers(){
     filteredPlayers=[...allPlayers];
     // Cargar estadísticas ANTES de ordenar y calcular percentiles
     if(data.playerStats) mergeStatsIntoPlayers(data.playerStats);
+
+    // Enriquecer jugadores con goles para perfil gol del Factor Equipo
+    if(data.playerStats && data.playerStats.players){
+      const sIdx={};
+      data.playerStats.players.forEach(s=>{ sIdx[String(s.id)]=s; });
+      allPlayers.forEach(p=>{ const s=sIdx[String(p.id)]; if(s) p.sf_goals=s.goals||0; });
+    }
+
+    // Cargar jornadas.json para historial home/away (lazy, no bloquea)
+    if(!window._jornadasData){
+      fetch('./jornadas.json').then(r=>r.ok?r.json():null).then(j=>{
+        if(j) window._jornadasData=j;
+      }).catch(()=>{});
+    }
+
     buildJugPcts(allPlayers);
     sortAndRender();
     document.getElementById('jugadores-loading').style.display='none';
@@ -3572,7 +3587,7 @@ function mv3Render(list){
         <div class="mpc-extra">
           ${(()=>{
             const clubName = p.club && p.club !== '—' ? p.club : '';
-            const fe = calcFactorEquipo(clubName);
+            const fe = calcFactorEquipo(clubName, p);
             if (fe === null) return '<div class="msv2-lbl" style="color:var(--border2)">próx.</div>';
             const feColor = fe >= 7 ? 'var(--green)' : fe >= 5 ? 'var(--pt)' : fe >= 3 ? '#f59e0b' : 'var(--red)';
             const standing2 = getStandingByClub(clubName);
@@ -4557,7 +4572,7 @@ function renderJornadaMiEquipo() {
     ${sorted.map(p => {
       const pos = (p.position||'?').split('/')[0];
       const posCol = PosC[pos]||'#888';
-      const fe = calcFactorEquipo(p.club||p.teamName||'');
+      const fe = calcFactorEquipo(p.club||p.teamName||'', p);
       const feColor = fe===null?'var(--text3)':fe>=7?'var(--green)':fe>=5?'var(--pt)':fe>=3?'#f59e0b':'var(--red)';
       const trend = p.trend||0;
       const trendTxt = trend>0?`<span style="color:var(--green);font-size:0.62rem">▲${(trend/1000).toFixed(0)}K</span>`:
@@ -4617,7 +4632,7 @@ function renderJornadaMercado() {
   const señales = allPlayers
     .filter(p => p.status === 'ok' && !misIds.has(p.id))
     .map(p => {
-      const fe = calcFactorEquipo(p.club||p.teamName||'');
+      const fe = calcFactorEquipo(p.club||p.teamName||'', p);
       const hist = pricesData[String(p.id)] || [];
 
       // Momentum: preferir historial real sobre trend diario
@@ -5074,89 +5089,109 @@ function getEstadoEquipo(clubName) {
   return { pctDisponible, valorTotal, valorDisponible, jugadoresOk, jugadoresDuda, jugadoresFuera, impacto, total: jugadores.length };
 }
 
-function calcFactorEquipo(clubName) {
+// ── Factor Equipo — máximas por posición para normalización ──────────
+const FE_MEDIA_MAX_POS = { PT: 7.3, DF: 6.7, MC: 7.9, DL: 10.3 };
+
+// Pesos base contexto por posición
+// PT: necesita ganar y no encajar  DF: similar  MC: equilibrado  DL: partido con goles
+const FE_PESOS = {
+  PT: { w: 0.80, e: 0.50, l: -0.20, o25base: -0.30 },
+  DF: { w: 0.70, e: 0.40, l: -0.10, o25base:  0.00 },
+  MC: { w: 0.60, e: 0.30, l:  0.00, o25base:  0.20 },
+  DL: { w: 0.50, e: 0.10, l:  0.00, o25base:  0.40 },
+};
+
+// o25 personalizado según perfil gol del jugador (DL/MC)
+// Gol-dependiente → partido con goles le beneficia más
+function feO25Factor(pos, goles, pj) {
+  if (pos === 'PT') return -0.30;
+  if (pos === 'DF') return  0.00;
+  const ratio = pj > 0 ? goles / pj : 0;
+  if (pos === 'DL') return ratio > 0.25 ? 0.50 : ratio > 0.15 ? 0.35 : 0.20;
+  // MC
+  return ratio > 0.20 ? 0.35 : ratio > 0.10 ? 0.25 : 0.10;
+}
+
+// ── calcFactorEquipo ─────────────────────────────────────────────────
+// Firma: calcFactorEquipo(clubName, jugador?)
+// jugador = { position, points, playedHome, playedAway, jForm, sf_goals }
+// Si no se pasa jugador devuelve el FE genérico del equipo (retrocompatible)
+function calcFactorEquipo(clubName, jugador) {
   if (!ligaData || !ligaData.standings || !ligaData.forms) return null;
   if (!clubName || clubName === '—' || clubName === '') return null;
 
   const standing = getStandingByClub(clubName);
   if (!standing) return null;
 
-  const teamId = standing.team.id;
-  const form   = ligaData.forms[teamId];
-  if (!form) return null;
+  const teamId    = standing.team.id;
+  const teamOdds  = (ligaData.odds || {})[teamId];
+  if (!teamOdds) return null;
 
-  // ── 1. FORMA RECIENTE (30%) ──────────────────────────────────────────────
-  const formaScore = formScore(form.results || []);
-  const formaN = (formaScore / 15) * 10;
+  const pW    = teamOdds.win   || 0;
+  const pD    = teamOdds.draw  || 0;
+  const pL    = teamOdds.loss  || 0;
+  const over25= teamOdds.over25|| 0;
+  const isHome= teamOdds.isHome;
 
-  // ── 2. POTENCIAL GOLEADOR (25%) ──────────────────────────────────────────
-  // Combina goles marcados propios + goles encajados del rival (últimas 5J)
-  // Inspirado en λ de Poisson: cuántos goles se esperan en este partido
-  const nextMatch = (ligaData.nextMatches || []).find(m =>
-    m.home.id === teamId || m.away.id === teamId
-  );
-  let potencialN = Math.min(10, ((form.gf || 0) / 10) * 10); // base: goles propios
-  if (nextMatch) {
-    const rivalId = nextMatch.home.id === teamId ? nextMatch.away.id : nextMatch.home.id;
-    const rivalForm = ligaData.forms[rivalId];
-    if (rivalForm) {
-      // Rival que encaja mucho → más potencial goleador
-      const gaRival = rivalForm.ga || 0;
-      const potencialCombinado = ((form.gf || 0) + gaRival) / 2;
-      potencialN = Math.min(10, (potencialCombinado / 8) * 10);
+  // ── Posición del jugador ─────────────────────────────────────────
+  const posMap = { 1:'PT', 2:'DF', 3:'MC', 4:'DL' };
+  const pos = jugador ? (posMap[jugador.position] || posMap[jugador.pos] || 'MC') : 'MC';
+  const pw  = FE_PESOS[pos];
+
+  // Goles para perfil gol (de playerStats si disponible)
+  const goles = jugador ? (jugador.sf_goals || jugador.goals || 0) : 0;
+  const pj    = jugador ? ((jugador.playedHome||0) + (jugador.playedAway||0)) : 1;
+
+  // ── C1: CONTEXTO (peso 50%) ──────────────────────────────────────
+  // Odds ponderadas por posición + amplificador over25 personalizado
+  const o25f    = feO25Factor(pos, goles, pj);
+  const ctxBase = pW * pw.w + pD * pw.e + pL * pw.l;
+  const amp     = 1 + (over25 - 0.50) * o25f;
+  const ctx     = ctxBase * amp;
+  const c1      = Math.min(10, ctx / 0.65 * 10);
+
+  // ── C2: FORMA EN CONDICIÓN (peso 30%) ────────────────────────────
+  // Base: media home o away según condición + ajuste momento jForm
+  let mediaBase = 5.0; // fallback neutro
+  if (jugador) {
+    const mt = pj > 0 ? (jugador.points || jugador.pts || 0) / pj : 0;
+    // Si tiene historial home/away en _jornadasData, usarlo
+    const jdPlayer = (window._jornadasData || {})[String(jugador.id)];
+    if (jdPlayer) {
+      const cond = Object.values(jdPlayer).filter(v => v.home === isHome && v.pts !== null);
+      const all  = Object.values(jdPlayer).filter(v => v.pts !== null);
+      if (cond.length >= 3) {
+        mediaBase = cond.reduce((s,v) => s + v.pts, 0) / cond.length;
+      } else if (all.length >= 3) {
+        mediaBase = all.reduce((s,v) => s + v.pts, 0) / all.length;
+      } else {
+        mediaBase = mt;
+      }
+    } else {
+      mediaBase = mt;
+    }
+    // Ajuste momento con jForm
+    const jv = (jugador.jForm || []).filter(v => v !== null && v !== undefined);
+    if (jv.length >= 3 && mediaBase > 0) {
+      const jm  = jv.reduce((s,v) => s+v, 0) / jv.length;
+      const aj  = Math.min(1.5, Math.max(0.5, jm / mediaBase));
+      mediaBase = mediaBase * aj;
     }
   }
+  const c2 = Math.min(10, mediaBase / 10.0 * 10);
 
-  // ── 3. LOCAL/VISITANTE (15%) ─────────────────────────────────────────────
-  const esLocal = nextMatch ? nextMatch.home.id === teamId : null;
-  const localN  = esLocal === true ? 8.5 : esLocal === false ? 3.5 : 6;
-
-  // ── 4. CALIDAD DEL RIVAL (15%) ───────────────────────────────────────────
-  // Posición en tabla + goles encajados en temporada completa
-  let rivalN = 5;
-  if (nextMatch) {
-    const rivalId = nextMatch.home.id === teamId ? nextMatch.away.id : nextMatch.home.id;
-    const rivalStanding = ligaData.standings.find(t => t.team.id === rivalId);
-    if (rivalStanding) {
-      const posRival = ((rivalStanding.position - 1) / 19) * 10; // 1º=0 difícil, 20º=10 fácil
-      const gaTemporada = rivalStanding.goalsAgainst || 0;
-      const pjTemporada = rivalStanding.playedGames || 1;
-      const gaMedia = gaTemporada / pjTemporada; // goles encajados por partido
-      const porositadN = Math.min(10, (gaMedia / 2.5) * 10); // 2.5 ga/pj = máx porosidad
-      rivalN = (posRival * 0.5) + (porositadN * 0.5);
-    }
+  // ── C3: NIVEL ABSOLUTO (peso 20%) ────────────────────────────────
+  // Media total del jugador vs máximo de su posición en la liga
+  let c3 = 5.0; // fallback neutro
+  if (jugador) {
+    const mt  = pj > 0 ? (jugador.points || jugador.pts || 0) / pj : 0;
+    const max = FE_MEDIA_MAX_POS[pos] || 10;
+    c3 = Math.min(10, mt / max * 10);
   }
 
-  // ── 5. DISPONIBILIDAD PLANTILLA (15%) ────────────────────────────────────
-  // Penaliza si los jugadores más caros están caídos
-  let disponN = 10; // por defecto 10 si no tenemos datos
-  const estado = getEstadoEquipo(clubName);
-  if (estado) {
-    disponN = (estado.pctDisponible / 100) * 10;
-    // Penalización extra si el impacto es alto (jugadores muy caros fuera)
-    if (estado.impacto === 'alto')  disponN *= 0.75;
-    if (estado.impacto === 'medio') disponN *= 0.90;
-  }
-
-  const feBase = (formaN    * 0.30)
-              + (potencialN * 0.25)
-              + (localN     * 0.15)
-              + (rivalN     * 0.15)
-              + (disponN    * 0.15);
-
-  // ── AMPLIFICADOR ODDS ──────────────────────────────────────────────
-  // winProb > 0.55 → boost hasta ×1.20 | winProb < 0.30 → penalización hasta ×0.80
-  // Rango suave [0.80…1.20] para no distorsionar el score base en exceso.
-  let amplificador = 1.0;
-  const teamOdds = (ligaData.odds || {})[teamId];
-  if (teamOdds && typeof teamOdds.win === 'number') {
-    // Mapea winProb [0.15…0.75] → amplificador [0.80…1.20]
-    amplificador = 0.80 + (teamOdds.win - 0.15) * (0.40 / 0.60);
-    amplificador = Math.min(1.20, Math.max(0.80, amplificador));
-  }
-  // ──────────────────────────────────────────────────────────────────
-
-  return Math.min(10, Math.max(0, feBase * amplificador));
+  // ── FE FINAL ─────────────────────────────────────────────────────
+  const fe = c1 * 0.50 + c2 * 0.30 + c3 * 0.20;
+  return Math.min(10, Math.max(0, Math.round(fe * 10) / 10));
 }
 function formBadges(results){return results.map(r=>`<span class="form-badge form-${r}">${r}</span>`).join('');}
 function renderTablaLiga(){
