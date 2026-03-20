@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-19T21:57:08.651Z",
+  "updatedAt": "2026-03-20T05:07:52.602Z",
   "players": [
     {
       "id": 11,
@@ -2578,7 +2578,7 @@
     {
       "id": 10117,
       "slug": "ivan-villar",
-      "name": "Iván Villar",
+      "name": "Iv��n Villar",
       "position": 1,
       "price": 180000,
       "points": 0,
@@ -12182,9 +12182,9 @@
           9,
           9
         ],
-        "teamSize": 16,
-        "teamValue": 59600000,
-        "teamValueInc": 290000,
+        "teamSize": 15,
+        "teamValue": 54980000,
+        "teamValueInc": 380000,
         "lastTrophy": {
           "type": "league",
           "position": 3,
@@ -12327,8 +12327,8 @@
       "name": "Tata Martini",
       "manager": "Tata Martini",
       "points": 1137,
-      "value": 59600000,
-      "trend": 290000,
+      "value": 54980000,
+      "trend": 380000,
       "players": []
     },
     {
@@ -12544,6 +12544,21 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1773963372,
+      "content": [
+        {
+          "player": 35249,
+          "from": {
+            "id": 12713493,
+            "name": "Tata Martini",
+            "icon": "i/u/12713493.png"
+          },
+          "amount": 4649100
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1773949859,
@@ -12796,8 +12811,8 @@
           4,
           3
         ],
-        "teamSize": 18,
-        "teamValue": 86890000,
+        "teamSize": 17,
+        "teamValue": 85950000,
         "teamValueInc": 430000,
         "position": 3,
         "role": ""
@@ -12960,8 +12975,8 @@
           16,
           12
         ],
-        "teamSize": 13,
-        "teamValue": 39280000,
+        "teamSize": 14,
+        "teamValue": 40220000,
         "teamValueInc": 40000,
         "lastTrophy": {
           "type": "league",
@@ -13049,8 +13064,8 @@
           6,
           17
         ],
-        "teamSize": 19,
-        "teamValue": 33620000,
+        "teamSize": 18,
+        "teamValue": 33190000,
         "teamValueInc": -110000,
         "position": 16,
         "positionInc": -1,
@@ -13157,7 +13172,7 @@
       "name": "Xevi borrat",
       "manager": "Xevi borrat",
       "points": 1300,
-      "value": 86890000,
+      "value": 85950000,
       "trend": 430000,
       "players": []
     },
@@ -13238,7 +13253,7 @@
       "name": "Lamine i els 7 nans 👯‍♀️",
       "manager": "Lamine i els 7 nans 👯‍♀️",
       "points": 1068,
-      "value": 39280000,
+      "value": 40220000,
       "trend": 40000,
       "players": []
     },
@@ -13274,7 +13289,7 @@
       "name": "Janwandowski",
       "manager": "Janwandowski",
       "points": 1006,
-      "value": 33620000,
+      "value": 33190000,
       "trend": -110000,
       "players": []
     },
@@ -13463,6 +13478,42 @@
   "boardEnBas": [
     {
       "type": "transfer",
+      "date": 1773976985,
+      "content": [
+        {
+          "player": 11633,
+          "from": {
+            "id": 6593096,
+            "name": "Janwandowski",
+            "icon": "i/u/6593096.png"
+          },
+          "amount": 430200
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1773962645,
+      "content": [
+        {
+          "player": 2635,
+          "from": {
+            "id": 6579505,
+            "name": "Xevi borrat",
+            "icon": "i/u/6579505.png"
+          },
+          "to": {
+            "id": 6580386,
+            "name": "Lamine i els 7 nans 👯‍♀️",
+            "icon": "i/u/6580386.png?v=10"
+          },
+          "amount": 1410000,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
       "date": 1773902840,
       "content": [
         {
@@ -13545,73 +13596,6 @@
             "icon": "i/u/6579280.png?v=22"
           },
           "amount": 593200
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1773824533,
-      "content": [
-        {
-          "player": 33697,
-          "from": {
-            "id": 6579280,
-            "name": "Sant Pere Atlètic",
-            "icon": "i/u/6579280.png?v=22"
-          },
-          "amount": 3031200
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1773813842,
-      "content": [
-        {
-          "player": 28082,
-          "to": {
-            "id": 9890450,
-            "name": "MarK Lenders",
-            "icon": "icons/34.png"
-          },
-          "amount": 255000,
-          "bids": [
-            {
-              "user": {
-                "id": 6579505,
-                "name": "Xevi borrat",
-                "icon": "i/u/6579505.png"
-              },
-              "amount": 252000
-            }
-          ]
-        },
-        {
-          "player": 32435,
-          "to": {
-            "id": 6593096,
-            "name": "Janwandowski",
-            "icon": "i/u/6593096.png"
-          },
-          "amount": 3130020
-        },
-        {
-          "player": 1924,
-          "to": {
-            "id": 9897660,
-            "name": "Eric Duran"
-          },
-          "amount": 495000,
-          "bids": [
-            {
-              "user": {
-                "id": 9890450,
-                "name": "MarK Lenders",
-                "icon": "icons/34.png"
-              },
-              "amount": 460000
-            }
-          ]
         }
       ]
     }
@@ -14757,7 +14741,7 @@
       "winProb": 0.593150965277304,
       "drawProb": 0.22764172180912742,
       "loseProb": 0.17920731291356842,
-      "over25Prob": 0.5586592178770949,
+      "over25Prob": 0.5524861878453039,
       "isHome": true,
       "opponent": "Levante",
       "matchDate": "2026-04-04T12:00:00Z"
@@ -14802,7 +14786,7 @@
       "winProb": 0.3285099726241689,
       "drawProb": 0.2991787250684395,
       "loseProb": 0.3723113023073914,
-      "over25Prob": 0.39370078740157477,
+      "over25Prob": 0.3968253968253968,
       "isHome": false,
       "opponent": "Alavés",
       "matchDate": "2026-04-04T16:30:00Z"
@@ -14820,7 +14804,7 @@
       "winProb": 0.17920731291356842,
       "drawProb": 0.22764172180912742,
       "loseProb": 0.593150965277304,
-      "over25Prob": 0.5586592178770949,
+      "over25Prob": 0.5524861878453039,
       "isHome": false,
       "opponent": "Real Sociedad",
       "matchDate": "2026-04-04T12:00:00Z"
@@ -14883,7 +14867,7 @@
       "winProb": 0.3723113023073914,
       "drawProb": 0.2991787250684395,
       "loseProb": 0.3285099726241689,
-      "over25Prob": 0.39370078740157477,
+      "over25Prob": 0.3968253968253968,
       "isHome": true,
       "opponent": "CA Osasuna",
       "matchDate": "2026-04-04T16:30:00Z"
@@ -14926,6 +14910,14 @@
     }
   },
   "news": [
+    {
+      "title": "Cinco noticias fantasy para antes de irte a dormir",
+      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-19-3-26/",
+      "date": "Thu, 19 Mar 2026 22:00:28 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "La Previa de las Picas: Todo sobre los Cronistas de la Jornada 29",
       "link": "https://www.jornadaperfecta.com/blog/previa-picas-cronistas-j29/",
@@ -14997,21 +14989,13 @@
       "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "David Costas vuelve pisando fuerte. ¿Buen defensa fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/david-costas-analisis-vuelta-lesion-26/",
-      "date": "Thu, 19 Mar 2026 16:00:45 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/11/David-Carmo-Real-Oviedo-fantasy.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-03-19T21:57:07.137Z",
+    "updatedAt": "2026-03-20T05:07:51.123Z",
     "players": [
       {
         "id": "3374",
