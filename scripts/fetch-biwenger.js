@@ -336,8 +336,54 @@ async function fetchLaLiga() {
       score: { home: m.score?.fullTime?.home, away: m.score?.fullTime?.away }
     }));
 
-    console.log(`✅ La Liga: ${table.length} equipos, jornada ${matchday}, ${nextMatches.length} próximos`);
-    return { matchday, table, forms, nextMatches, recentResults };
+    // ─── ODDS SINTÉTICAS ───────────────────────────────────────────────
+    // No dependemos de API externa. Calculamos probabilidad de victoria
+    // para cada equipo en su próximo partido usando los datos que ya tenemos.
+    function calcMatchOdds(homeId, awayId) {
+      const homeStanding = table.find(t => t.team.id === homeId);
+      const awayStanding = table.find(t => t.team.id === awayId);
+      const homeForm     = forms[homeId];
+      const awayForm     = forms[awayId];
+
+      if (!homeStanding || !awayStanding) return null;
+
+      // Puntuación de forma: W=3, D=1, L=0 (máx 15)
+      function fScore(results = []) {
+        return results.reduce((s, r) => s + (r === 'W' ? 3 : r === 'D' ? 1 : 0), 0);
+      }
+
+      const homeForme = fScore(homeForm?.results || []);
+      const awayForme = fScore(awayForm?.results || []);
+
+      // Fuerza relativa: posición inversa (1er=20, último=1) + forma + ventaja local
+      const homeStrength = (20 - homeStanding.position) * 2 + homeForme + 5;
+      const awayStrength = (20 - awayStanding.position) * 2 + awayForme;
+
+      const total   = homeStrength + awayStrength + 8; // 8 = espacio para empate
+      const homeWin = homeStrength / total;
+      const awayWin = awayStrength / total;
+      const draw    = Math.max(0, 1 - homeWin - awayWin);
+
+      return {
+        homeWin: Math.round(homeWin * 100) / 100,
+        draw:    Math.round(draw    * 100) / 100,
+        awayWin: Math.round(awayWin * 100) / 100,
+      };
+    }
+
+    // Construir mapa odds por teamId → { win, draw, loss, isHome }
+    const odds = {};
+    nextMatches.forEach(m => {
+      if (m.matchday !== nextMD) return; // solo jornada inmediata
+      const o = calcMatchOdds(m.home.id, m.away.id);
+      if (!o) return;
+      odds[m.home.id] = { win: o.homeWin, draw: o.draw, loss: o.awayWin, isHome: true,  matchId: m.id };
+      odds[m.away.id] = { win: o.awayWin, draw: o.draw, loss: o.homeWin, isHome: false, matchId: m.id };
+    });
+    // ──────────────────────────────────────────────────────────────────
+
+    console.log(`✅ La Liga: ${table.length} equipos, jornada ${matchday}, ${nextMatches.length} próximos, ${Object.keys(odds).length} odds calculadas`);
+    return { matchday, table, forms, nextMatches, recentResults, odds };
 
   } catch(e) {
     console.warn('⚠️ Error en football-data:', e.message);
