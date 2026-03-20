@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-20T07:58:45.612Z",
+  "updatedAt": "2026-03-20T08:37:30.686Z",
   "players": [
     {
       "id": 11,
@@ -14756,7 +14756,149 @@
           "away": 0
         }
       }
-    ]
+    ],
+    "odds": {
+      "77": {
+        "win": 0.42,
+        "draw": 0.11,
+        "loss": 0.47,
+        "isHome": true,
+        "matchId": 544491
+      },
+      "78": {
+        "win": 0.44,
+        "draw": 0.08,
+        "loss": 0.48,
+        "isHome": false,
+        "matchId": 544498
+      },
+      "79": {
+        "win": 0.47,
+        "draw": 0.13,
+        "loss": 0.4,
+        "isHome": true,
+        "matchId": 544499
+      },
+      "80": {
+        "win": 0.45,
+        "draw": 0.11,
+        "loss": 0.44,
+        "isHome": true,
+        "matchId": 544494
+      },
+      "81": {
+        "win": 0.65,
+        "draw": 0.1,
+        "loss": 0.25,
+        "isHome": true,
+        "matchId": 544492
+      },
+      "82": {
+        "win": 0.44,
+        "draw": 0.11,
+        "loss": 0.45,
+        "isHome": false,
+        "matchId": 544494
+      },
+      "86": {
+        "win": 0.48,
+        "draw": 0.08,
+        "loss": 0.44,
+        "isHome": true,
+        "matchId": 544498
+      },
+      "87": {
+        "win": 0.25,
+        "draw": 0.1,
+        "loss": 0.65,
+        "isHome": false,
+        "matchId": 544492
+      },
+      "88": {
+        "win": 0.48,
+        "draw": 0.32,
+        "loss": 0.2,
+        "isHome": true,
+        "matchId": 544495
+      },
+      "89": {
+        "win": 0.39,
+        "draw": 0.26,
+        "loss": 0.35,
+        "isHome": false,
+        "matchId": 544493
+      },
+      "90": {
+        "win": 0.47,
+        "draw": 0.11,
+        "loss": 0.42,
+        "isHome": false,
+        "matchId": 544491
+      },
+      "92": {
+        "win": 0.38,
+        "draw": 0.09,
+        "loss": 0.53,
+        "isHome": false,
+        "matchId": 544500
+      },
+      "94": {
+        "win": 0.53,
+        "draw": 0.09,
+        "loss": 0.38,
+        "isHome": true,
+        "matchId": 544500
+      },
+      "95": {
+        "win": 0.42,
+        "draw": 0.16,
+        "loss": 0.42,
+        "isHome": false,
+        "matchId": 544496
+      },
+      "263": {
+        "win": 0.16,
+        "draw": 0.14,
+        "loss": 0.71,
+        "isHome": false,
+        "matchId": 544497
+      },
+      "285": {
+        "win": 0.35,
+        "draw": 0.26,
+        "loss": 0.39,
+        "isHome": true,
+        "matchId": 544493
+      },
+      "298": {
+        "win": 0.4,
+        "draw": 0.13,
+        "loss": 0.47,
+        "isHome": false,
+        "matchId": 544499
+      },
+      "558": {
+        "win": 0.71,
+        "draw": 0.14,
+        "loss": 0.16,
+        "isHome": true,
+        "matchId": 544497
+      },
+      "559": {
+        "win": 0.42,
+        "draw": 0.16,
+        "loss": 0.42,
+        "isHome": true,
+        "matchId": 544496
+      },
+      "1048": {
+        "win": 0.2,
+        "draw": 0.32,
+        "loss": 0.48,
+        "isHome": false,
+        "matchId": 544495
+      }
+    }
   },
   "odds": {
     "Villarreal": {
@@ -14817,7 +14959,7 @@
       "winProb": 0.3293841947663064,
       "drawProb": 0.30542898060148416,
       "loseProb": 0.3651868246322093,
-      "over25Prob": 0.3968253968253968,
+      "over25Prob": 0.39370078740157477,
       "isHome": false,
       "opponent": "Alavés",
       "matchDate": "2026-04-04T16:30:00Z"
@@ -14898,7 +15040,7 @@
       "winProb": 0.3651868246322093,
       "drawProb": 0.30542898060148416,
       "loseProb": 0.3293841947663064,
-      "over25Prob": 0.3968253968253968,
+      "over25Prob": 0.39370078740157477,
       "isHome": true,
       "opponent": "CA Osasuna",
       "matchDate": "2026-04-04T16:30:00Z"
@@ -15026,7 +15168,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-03-20T07:58:42.032Z",
+    "updatedAt": "2026-03-20T08:37:29.012Z",
     "players": [
       {
         "id": "3374",
