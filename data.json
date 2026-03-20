@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-20T14:29:56.514Z",
+  "updatedAt": "2026-03-20T19:50:12.192Z",
   "players": [
     {
       "id": 11,
@@ -11969,7 +11969,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 2,
-          "season": "Temporada 2024/2025"
+          "season": "2024/2025 season"
         },
         "position": 2
       },
@@ -12028,7 +12028,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "Temporada 2024/2025"
+          "season": "2024/2025 season"
         },
         "position": 5,
         "positionInc": -1,
@@ -12072,7 +12072,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 1,
-          "season": "Temporada 2024/2025"
+          "season": "2024/2025 season"
         },
         "position": 7,
         "positionInc": -1
@@ -12163,9 +12163,9 @@
           11,
           8
         ],
-        "teamSize": 17,
-        "teamValue": 48700000,
-        "teamValueInc": 0,
+        "teamSize": 16,
+        "teamValue": 46730000,
+        "teamValueInc": 30000,
         "position": 12,
         "positionInc": -2,
         "role": ""
@@ -12188,7 +12188,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "Temporada 2023/2024"
+          "season": "2023/2024 season"
         },
         "position": 13,
         "role": ""
@@ -12318,8 +12318,8 @@
       "name": "Morankus FC",
       "manager": "Morankus FC",
       "points": 1154,
-      "value": 48700000,
-      "trend": 0,
+      "value": 46730000,
+      "trend": 30000,
       "players": []
     },
     {
@@ -12348,7 +12348,7 @@
     "balance": 22363,
     "lineup": {
       "type": "3-4-3",
-      "date": 1773997508,
+      "date": 1774024740,
       "playersID": [
         17021,
         10155,
@@ -12520,6 +12520,21 @@
   "boardTomaquet": [
     {
       "type": "transfer",
+      "date": 1774035708,
+      "content": [
+        {
+          "player": 951,
+          "from": {
+            "id": 11520975,
+            "name": "Morankus FC",
+            "icon": "i/u/11520975.png?v=81"
+          },
+          "amount": 1957600
+        }
+      ]
+    },
+    {
+      "type": "transfer",
       "date": 1774010081,
       "content": [
         {
@@ -12623,39 +12638,6 @@
           },
           "amount": 3750000,
           "type": "clause"
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1773949646,
-      "content": [
-        {
-          "player": 26676,
-          "from": {
-            "id": 6541195,
-            "name": "🦊",
-            "icon": "i/u/6541195.png?v=17"
-          },
-          "amount": 262000
-        },
-        {
-          "player": 21,
-          "from": {
-            "id": 6541195,
-            "name": "🦊",
-            "icon": "i/u/6541195.png?v=17"
-          },
-          "amount": 479400
-        },
-        {
-          "player": 39327,
-          "from": {
-            "id": 6541195,
-            "name": "🦊",
-            "icon": "i/u/6541195.png?v=17"
-          },
-          "amount": 150400
         }
       ]
     }
@@ -13276,7 +13258,7 @@
     "balance": 1325709,
     "lineup": {
       "type": "3-4-3",
-      "date": 1774010836,
+      "date": 1774024898,
       "playersID": [
         14630,
         32440,
@@ -13323,7 +13305,7 @@
       {
         "id": 25398,
         "buyPrice": 7702345,
-        "clause": 0,
+        "clause": 9030000,
         "invested": 0,
         "buyDate": 1772172158
       },
@@ -13372,7 +13354,7 @@
       {
         "id": 34541,
         "buyPrice": 380000,
-        "clause": 0,
+        "clause": 570000,
         "invested": 0,
         "buyDate": 1773209125
       },
@@ -13413,6 +13395,18 @@
       }
     ],
     "market": [
+      {
+        "playerID": 25398,
+        "price": 9030000,
+        "type": "sale",
+        "until": 1774197662
+      },
+      {
+        "playerID": 34541,
+        "price": 570000,
+        "type": "sale",
+        "until": 1774197670
+      },
       {
         "playerID": 38368,
         "price": 2385000,
@@ -14817,10 +14811,10 @@
   },
   "odds": {
     "Villarreal": {
-      "winProb": 0.41239814049364953,
-      "drawProb": 0.2488968575201572,
-      "loseProb": 0.3387050019861933,
-      "over25Prob": 0.5681818181818182,
+      "winProb": 0.4082141175618413,
+      "drawProb": 0.2548694360943103,
+      "loseProb": 0.3369164463438485,
+      "over25Prob": 0.5649717514124294,
       "isHome": false,
       "opponent": "Girona",
       "matchDate": "2026-04-06T20:00:00Z"
@@ -14838,28 +14832,28 @@
       "winProb": 0.22748318336682097,
       "drawProb": 0.2715121865991089,
       "loseProb": 0.50100463003407,
-      "over25Prob": 0.47619047619047616,
+      "over25Prob": 0.4807692307692307,
       "isHome": false,
       "opponent": "Rayo Vallecano",
       "matchDate": "2026-04-03T19:00:00Z"
     },
     "Mallorca": {
-      "winProb": 0.20030935808197992,
-      "drawProb": 0.2273781902552204,
-      "loseProb": 0.5723124516627998,
-      "over25Prob": 0.5813953488372093,
+      "winProb": 0.19656667871340802,
+      "drawProb": 0.2284423563426093,
+      "loseProb": 0.5749909649439826,
+      "over25Prob": 0.5780346820809249,
       "isHome": true,
       "opponent": "Real Madrid",
       "matchDate": "2026-04-04T14:15:00Z"
     },
     "Espanyol": {
-      "winProb": 0.22816888626721415,
-      "drawProb": 0.2180729178483109,
-      "loseProb": 0.553758195884475,
-      "over25Prob": 0.5128205128205129,
+      "winProb": 0.2438978806115202,
+      "drawProb": 0.21083616790640303,
+      "loseProb": 0.5452659514820768,
+      "over25Prob": 0.5291005291005292,
       "isHome": false,
       "opponent": "Real Betis",
-      "matchDate": "2026-04-05T19:00:00Z"
+      "matchDate": "2026-04-04T16:30:00Z"
     },
     "Getafe": {
       "winProb": 0.33519553072625696,
@@ -14871,19 +14865,19 @@
       "matchDate": "2026-04-05T12:00:00Z"
     },
     "CA Osasuna": {
-      "winProb": 0.3293841947663064,
-      "drawProb": 0.30542898060148416,
-      "loseProb": 0.3651868246322093,
-      "over25Prob": 0.39370078740157477,
+      "winProb": 0.32437666719448466,
+      "drawProb": 0.3211001352026212,
+      "loseProb": 0.3545231976028941,
+      "over25Prob": 0.4166666666666667,
       "isHome": false,
       "opponent": "Alavés",
-      "matchDate": "2026-04-04T16:30:00Z"
+      "matchDate": "2026-04-05T19:00:00Z"
     },
     "Girona": {
-      "winProb": 0.3387050019861933,
-      "drawProb": 0.2488968575201572,
-      "loseProb": 0.41239814049364953,
-      "over25Prob": 0.5681818181818182,
+      "winProb": 0.3369164463438485,
+      "drawProb": 0.2548694360943103,
+      "loseProb": 0.4082141175618413,
+      "over25Prob": 0.5649717514124294,
       "isHome": true,
       "opponent": "Villarreal",
       "matchDate": "2026-04-06T20:00:00Z"
@@ -14937,7 +14931,7 @@
       "winProb": 0.50100463003407,
       "drawProb": 0.2715121865991089,
       "loseProb": 0.22748318336682097,
-      "over25Prob": 0.47619047619047616,
+      "over25Prob": 0.4807692307692307,
       "isHome": true,
       "opponent": "Elche CF",
       "matchDate": "2026-04-03T19:00:00Z"
@@ -14952,13 +14946,13 @@
       "matchDate": "2026-04-05T14:15:00Z"
     },
     "Alavés": {
-      "winProb": 0.3651868246322093,
-      "drawProb": 0.30542898060148416,
-      "loseProb": 0.3293841947663064,
-      "over25Prob": 0.39370078740157477,
+      "winProb": 0.3545231976028941,
+      "drawProb": 0.3211001352026212,
+      "loseProb": 0.32437666719448466,
+      "over25Prob": 0.4166666666666667,
       "isHome": true,
       "opponent": "CA Osasuna",
-      "matchDate": "2026-04-04T16:30:00Z"
+      "matchDate": "2026-04-05T19:00:00Z"
     },
     "Athletic Bilbao": {
       "winProb": 0.35195530726256985,
@@ -14970,19 +14964,19 @@
       "matchDate": "2026-04-05T12:00:00Z"
     },
     "Real Betis": {
-      "winProb": 0.553758195884475,
-      "drawProb": 0.2180729178483109,
-      "loseProb": 0.22816888626721415,
-      "over25Prob": 0.5128205128205129,
+      "winProb": 0.5452659514820768,
+      "drawProb": 0.21083616790640303,
+      "loseProb": 0.2438978806115202,
+      "over25Prob": 0.5291005291005292,
       "isHome": true,
       "opponent": "Espanyol",
-      "matchDate": "2026-04-05T19:00:00Z"
+      "matchDate": "2026-04-04T16:30:00Z"
     },
     "Real Madrid": {
-      "winProb": 0.5723124516627998,
-      "drawProb": 0.2273781902552204,
-      "loseProb": 0.20030935808197992,
-      "over25Prob": 0.5813953488372093,
+      "winProb": 0.5749909649439826,
+      "drawProb": 0.2284423563426093,
+      "loseProb": 0.19656667871340802,
+      "over25Prob": 0.5780346820809249,
       "isHome": false,
       "opponent": "Mallorca",
       "matchDate": "2026-04-04T14:15:00Z"
@@ -14999,82 +14993,82 @@
   },
   "news": [
     {
-      "title": "Manolo González habla del calendario, Terrats y Carlos Romero",
-      "link": "https://www.jornadaperfecta.com/blog/manolo-gonzalez-previa-espanyol-getafe-j29/",
-      "date": "Fri, 20 Mar 2026 14:25:10 +0000",
-      "img": "https://cdn.biwenger.com/i/t/7.png",
+      "title": "BigUp: Gana dinero real con tus pronósticos del Real Madrid &#8211; Atlético",
+      "link": "https://www.jornadaperfecta.com/blog/bigup-real-madrid-atletico-pronosticos/",
+      "date": "Fri, 20 Mar 2026 19:38:38 +0000",
+      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2705.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Lisci, sobre Boyomo, Raúl Moro y la convocatoria de Víctor Muñoz",
-      "link": "https://www.jornadaperfecta.com/blog/lisci-previa-osasuna-girona-j29/",
-      "date": "Fri, 20 Mar 2026 14:07:18 +0000",
-      "img": "https://cdn.biwenger.com/i/t/93.png",
+      "title": "Matías Vecino: Parte médico oficial y tiempo de baja",
+      "link": "https://www.jornadaperfecta.com/blog/matias-vecino-parte-medico-celta/",
+      "date": "Fri, 20 Mar 2026 19:36:38 +0000",
+      "img": "https://cdn.biwenger.com/i/t/5.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Bordalás, sobre la sanción de dos partidos a Abqar",
-      "link": "https://www.jornadaperfecta.com/blog/bordalas-previa-espanyol-getafe-j29/",
-      "date": "Fri, 20 Mar 2026 13:53:08 +0000",
-      "img": "https://cdn.biwenger.com/i/t/8.png",
+      "title": "Mbappé, convocado con Francia: ¿titular en el derbi?",
+      "link": "https://www.jornadaperfecta.com/blog/mbappe-alinear-j29-fantasy-real-madrid/",
+      "date": "Fri, 20 Mar 2026 19:25:08 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Demichelis, sobre la situación de Darder y Jan Virgili",
-      "link": "https://www.jornadaperfecta.com/blog/demichelis-previa-elche-mallorca-j29/",
-      "date": "Fri, 20 Mar 2026 13:43:55 +0000",
-      "img": "https://cdn.biwenger.com/i/t/465.png",
+      "title": "Fecha de vuelta de los lesionados del FC Barcelona",
+      "link": "https://www.jornadaperfecta.com/blog/fecha-vuelta-lesionados-barcelona/",
+      "date": "Fri, 20 Mar 2026 19:20:54 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Corberán confirma dos bajas inesperadas en el Valencia",
-      "link": "https://www.jornadaperfecta.com/blog/corberan-previa-sevilla-valencia-j29/",
-      "date": "Fri, 20 Mar 2026 13:30:35 +0000",
-      "img": "https://cdn.biwenger.com/i/t/18.png",
+      "title": "¡Once confirmado del Villarreal con varias novedades!",
+      "link": "https://www.jornadaperfecta.com/blog/once-villarreal-jornada-29/",
+      "date": "Fri, 20 Mar 2026 18:46:46 +0000",
+      "img": "https://cdn.biwenger.com/i/t/19.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Quique confirma la baja de Protesoni y calma con Tenaglia",
-      "link": "https://www.jornadaperfecta.com/blog/quique-previa-celta-alaves-j29/",
-      "date": "Fri, 20 Mar 2026 13:17:18 +0000",
-      "img": "",
+      "title": "Once confirmado de la Real Sociedad para la jornada 29",
+      "link": "https://www.jornadaperfecta.com/blog/once-real-sociedad-jornada-29/",
+      "date": "Fri, 20 Mar 2026 18:45:51 +0000",
+      "img": "https://cdn.biwenger.com/i/t/13.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Míchel da la fecha de vuelta de Bryan Gil y Stuani",
-      "link": "https://www.jornadaperfecta.com/blog/michel-previa-osasuna-girona-j29/",
-      "date": "Fri, 20 Mar 2026 13:14:32 +0000",
-      "img": "https://cdn.biwenger.com/i/t/289.png",
+      "title": "Cashback Jokerbet Real Madrid vs Atlético: recupera hasta 10€ en apuestas gratis",
+      "link": "https://www.jornadaperfecta.com/blog/jokerbet-cashback-real-madrid-atletico/",
+      "date": "Fri, 20 Mar 2026 18:00:51 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/03/Jokerbet-Real-Madrid-vs-Atletico.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Sarabia confirma las bajas y elogia a Matías Dituro",
-      "link": "https://www.jornadaperfecta.com/blog/sarabia-previa-elche-mallorca-j29/",
-      "date": "Fri, 20 Mar 2026 12:47:04 +0000",
-      "img": "https://cdn.biwenger.com/i/t/75.png",
+      "title": "Dudas con la titularidad de Joan García y Eric, ¿alinear en fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/joan-garcia-alinear-j29-fantasy-barcelona/",
+      "date": "Fri, 20 Mar 2026 15:38:02 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
       "title": "Bellingham entrena con el grupo y se apunta al derbi",
       "link": "https://www.jornadaperfecta.com/blog/bellingham-vuelta-lesion-2026/",
-      "date": "Fri, 20 Mar 2026 12:45:55 +0000",
+      "date": "Fri, 20 Mar 2026 14:45:55 +0000",
       "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Luis Castro confirma a Pablo Martínez para la «final» ante el Oviedo",
-      "link": "https://www.jornadaperfecta.com/blog/luis-castro-previa-levante-real-oviedo-j29/",
-      "date": "Fri, 20 Mar 2026 12:37:32 +0000",
-      "img": "https://cdn.biwenger.com/i/t/10.png",
+      "title": "Manolo González habla del calendario, Terrats y Carlos Romero",
+      "link": "https://www.jornadaperfecta.com/blog/manolo-gonzalez-previa-espanyol-getafe-j29/",
+      "date": "Fri, 20 Mar 2026 14:25:10 +0000",
+      "img": "https://cdn.biwenger.com/i/t/7.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -15083,7 +15077,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-03-20T14:29:53.911Z",
+    "updatedAt": "2026-03-20T19:50:12.191Z",
     "players": [
       {
         "id": "3374",
@@ -15163,11 +15157,11 @@
         "team": "Real Sociedad de Fútbol",
         "position": "",
         "nationality": "Spain",
-        "appearances": 25,
+        "appearances": 26,
         "goals": 12,
         "assists": 3,
         "penalties": 5,
-        "minutesPerGoal": 188
+        "minutesPerGoal": 195
       },
       {
         "id": "37428",
@@ -15247,11 +15241,11 @@
         "team": "Villarreal CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 28,
+        "appearances": 29,
         "goals": 9,
         "assists": 4,
         "penalties": 0,
-        "minutesPerGoal": 280
+        "minutesPerGoal": 290
       },
       {
         "id": "11113",
@@ -15307,11 +15301,11 @@
         "team": "Villarreal CF",
         "position": "",
         "nationality": "Georgia",
-        "appearances": 24,
+        "appearances": 25,
         "goals": 8,
         "assists": 4,
         "penalties": 0,
-        "minutesPerGoal": 270
+        "minutesPerGoal": 281
       },
       {
         "id": "3259",
@@ -15319,11 +15313,11 @@
         "team": "Real Sociedad de Fútbol",
         "position": "",
         "nationality": "Portugal",
-        "appearances": 28,
+        "appearances": 29,
         "goals": 8,
         "assists": 4,
         "penalties": 0,
-        "minutesPerGoal": 315
+        "minutesPerGoal": 326
       },
       {
         "id": "4098",
@@ -15391,11 +15385,11 @@
         "team": "Villarreal CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 15,
+        "appearances": 16,
         "goals": 7,
         "assists": 0,
         "penalties": 2,
-        "minutesPerGoal": 193
+        "minutesPerGoal": 206
       },
       {
         "id": "203439",
@@ -15427,11 +15421,11 @@
         "team": "Villarreal CF",
         "position": "",
         "nationality": "Canada",
-        "appearances": 27,
+        "appearances": 28,
         "goals": 6,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 405
+        "minutesPerGoal": 420
       },
       {
         "id": "33117",
@@ -15703,11 +15697,11 @@
         "team": "Villarreal CF",
         "position": "",
         "nationality": "Senegal",
-        "appearances": 23,
+        "appearances": 24,
         "goals": 4,
         "assists": 2,
         "penalties": 1,
-        "minutesPerGoal": 518
+        "minutesPerGoal": 540
       },
       {
         "id": "157135",
@@ -15763,11 +15757,11 @@
         "team": "Real Sociedad de Fútbol",
         "position": "",
         "nationality": "Iceland",
-        "appearances": 12,
+        "appearances": 13,
         "goals": 4,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 270
+        "minutesPerGoal": 293
       },
       {
         "id": "8412",
@@ -15775,11 +15769,11 @@
         "team": "Villarreal CF",
         "position": "",
         "nationality": "Ivory Coast",
-        "appearances": 28,
+        "appearances": 29,
         "goals": 4,
         "assists": 4,
         "penalties": 0,
-        "minutesPerGoal": 630
+        "minutesPerGoal": 653
       },
       {
         "id": "213043",
@@ -15823,11 +15817,11 @@
         "team": "Real Sociedad de Fútbol",
         "position": "",
         "nationality": "Spain",
-        "appearances": 24,
+        "appearances": 25,
         "goals": 4,
         "assists": 2,
         "penalties": 1,
-        "minutesPerGoal": 540
+        "minutesPerGoal": 563
       },
       {
         "id": "122511",
@@ -15871,11 +15865,11 @@
         "team": "Real Sociedad de Fútbol",
         "position": "",
         "nationality": "Spain",
-        "appearances": 24,
+        "appearances": 25,
         "goals": 4,
         "assists": 2,
         "penalties": 0,
-        "minutesPerGoal": 540
+        "minutesPerGoal": 563
       },
       {
         "id": "125010",
@@ -15955,11 +15949,11 @@
         "team": "Real Sociedad de Fútbol",
         "position": "",
         "nationality": "Spain",
-        "appearances": 22,
+        "appearances": 23,
         "goals": 3,
         "assists": 3,
         "penalties": 0,
-        "minutesPerGoal": 660
+        "minutesPerGoal": 690
       },
       {
         "id": "9870",
@@ -16099,11 +16093,11 @@
         "team": "Villarreal CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 27,
+        "appearances": 28,
         "goals": 3,
         "assists": 4,
         "penalties": 0,
-        "minutesPerGoal": 810
+        "minutesPerGoal": 840
       },
       {
         "id": "170438",
