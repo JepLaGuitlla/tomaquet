@@ -2460,13 +2460,13 @@ function calcEstadoMercado(player) {
   // El mercado reacciona muy diferente según el precio del jugador
   // Un jugador de 500K subiendo 5% es ruido. Uno de 5M subiendo 5% es señal.
   let umbralDormido, umbralReaccionando;
-  if (precioM < 0.5)       { umbralDormido = 20;  umbralReaccionando = 60; }
-  else if (precioM < 1.0)  { umbralDormido = 12;  umbralReaccionando = 40; }
-  else if (precioM < 1.5)  { umbralDormido = 8;   umbralReaccionando = 25; }
-  else if (precioM < 2.0)  { umbralDormido = 5;   umbralReaccionando = 15; }
-  else if (precioM < 5.0)  { umbralDormido = 3;   umbralReaccionando = 10; }
-  else if (precioM < 15.0) { umbralDormido = 1.5; umbralReaccionando = 5;  }
-  else                     { umbralDormido = 0.8;  umbralReaccionando = 3;  }
+  if (precioM < 0.5)       { umbralDormido = 25;  umbralReaccionando = 80; }
+  else if (precioM < 1.0)  { umbralDormido = 15;  umbralReaccionando = 60; }
+  else if (precioM < 1.5)  { umbralDormido = 10;  umbralReaccionando = 50; }
+  else if (precioM < 2.0)  { umbralDormido = 8;   umbralReaccionando = 40; }
+  else if (precioM < 5.0)  { umbralDormido = 3;   umbralReaccionando = 25; }
+  else if (precioM < 15.0) { umbralDormido = 1.5; umbralReaccionando = 15; }
+  else                     { umbralDormido = 0.8;  umbralReaccionando = 8;  }
 
   const mercadoDormido     = mom7 < umbralDormido;
   const mercadoReaccionando = mom7 >= umbralReaccionando;
@@ -2501,7 +2501,7 @@ function calcEstadoMercado(player) {
 
   // 💎 INERCIA OCULTA — rinde bien, mercado no lo ve, hay margen real
   // El jugador más valioso ahora mismo — periodo de rendimiento
-  if (hayMargen && mercadoDormido && efic > 20) {
+  if (hayMargen && mercadoDormido && efic > 10) {
     return {
       estado: 'joya',
       icono: '💎',
@@ -2538,7 +2538,18 @@ function calcEstadoMercado(player) {
     };
   }
 
-  return null;
+  // 💎 INERCIA OCULTA (mercado medio) — rinde bien, mercado moviéndose pero sin explotar aún
+  // Captura jugadores entre dormido y reaccionando con buenas fundamentales
+  if (hayMargen && !mercadoReaccionando && efic > 10) {
+    return {
+      estado: 'joya',
+      icono: '💎',
+      label: 'INERCIA OCULTA',
+      desc: `Rinde +${efic}% sobre lo esperado para su precio. El mercado empieza a moverse (+${mom7.toFixed(1)}% en 7 días) pero aún hay margen. Precio justo estimado: ${pj ? (pj.precioJusto/1e6).toFixed(2)+'M€' : '—'}. Margen: +${margenPJ?.toFixed(0)}%.`,
+      colorFondo: 'rgba(99,102,241,0.15)',
+      colorTexto: '#818cf8',
+    };
+  }
 }
 
 function calcularEficientes(players) {
