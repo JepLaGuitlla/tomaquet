@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-20T19:50:12.192Z",
+  "updatedAt": "2026-03-21T04:53:32.127Z",
   "players": [
     {
       "id": 11,
@@ -317,17 +317,17 @@
       "price": 1970000,
       "points": 81,
       "trend": -30000,
-      "playedHome": 12,
+      "playedHome": 13,
       "playedAway": 11,
       "teamName": "Villarreal",
       "teamId": 19,
       "status": "ok",
       "jForm": [
+        0,
         null,
         2,
         2,
-        2,
-        null
+        2
       ],
       "clausula": null
     },
@@ -977,17 +977,17 @@
       "price": 460000,
       "points": 48,
       "trend": 0,
-      "playedHome": 10,
+      "playedHome": 11,
       "playedAway": 8,
       "teamName": "Villarreal",
       "teamId": 19,
       "status": "ok",
       "jForm": [
+        0,
         3,
         2,
         null,
-        3,
-        4
+        3
       ],
       "clausula": null
     },
@@ -997,17 +997,17 @@
       "name": "Gerard Moreno",
       "position": 4,
       "price": 9830000,
-      "points": 96,
+      "points": 108,
       "trend": 20000,
-      "playedHome": 7,
+      "playedHome": 8,
       "playedAway": 7,
       "teamName": "Villarreal",
       "teamId": 19,
       "status": "ok",
       "jForm": [
+        12,
         2,
         2,
-        null,
         null,
         null
       ],
@@ -1139,9 +1139,9 @@
       "jForm": [
         null,
         null,
+        null,
         1,
-        3,
-        1
+        3
       ],
       "clausula": null
     },
@@ -1173,19 +1173,19 @@
       "name": "Elustondo",
       "position": 2,
       "price": 180000,
-      "points": 14,
+      "points": 17,
       "trend": 0,
       "playedHome": 3,
-      "playedAway": 6,
+      "playedAway": 7,
       "teamName": "Real Sociedad",
       "teamId": 13,
       "status": "ok",
       "jForm": [
-        null,
-        null,
-        null,
         3,
-        null
+        null,
+        null,
+        null,
+        3
       ],
       "clausula": null
     },
@@ -1195,19 +1195,19 @@
       "name": "Pedraza",
       "position": 2,
       "price": 1410000,
-      "points": 80,
+      "points": 85,
       "trend": -10000,
-      "playedHome": 9,
+      "playedHome": 10,
       "playedAway": 12,
       "teamName": "Villarreal",
       "teamId": 19,
       "status": "ok",
       "jForm": [
+        5,
         3,
         null,
         1,
-        4,
-        3
+        4
       ],
       "clausula": null
     },
@@ -1591,18 +1591,18 @@
       "name": "Barrenetxea",
       "position": 3,
       "price": 4040000,
-      "points": 110,
+      "points": 109,
       "trend": 10000,
       "playedHome": 12,
-      "playedAway": 10,
+      "playedAway": 11,
       "teamName": "Real Sociedad",
       "teamId": 13,
       "status": "ok",
       "jForm": [
+        -1,
         4,
         2,
         5,
-        null,
         null
       ],
       "clausula": null
@@ -1613,19 +1613,19 @@
       "name": "Oyarzabal",
       "position": 4,
       "price": 17930000,
-      "points": 174,
+      "points": 175,
       "trend": 30000,
       "playedHome": 12,
-      "playedAway": 13,
+      "playedAway": 14,
       "teamName": "Real Sociedad",
       "teamId": 13,
       "status": "ok",
       "jForm": [
+        1,
         5,
         10,
         3,
-        4,
-        6
+        4
       ],
       "clausula": null
     },
@@ -2031,19 +2031,19 @@
       "name": "Soler",
       "position": 3,
       "price": 5830000,
-      "points": 109,
+      "points": 113,
       "trend": 80000,
       "playedHome": 11,
-      "playedAway": 12,
+      "playedAway": 13,
       "teamName": "Real Sociedad",
       "teamId": 13,
       "status": "ok",
       "jForm": [
+        4,
         6,
         12,
         12,
-        null,
-        4
+        null
       ],
       "clausula": null
     },
@@ -2064,8 +2064,8 @@
         null,
         null,
         null,
-        0,
-        null
+        null,
+        0
       ],
       "clausula": null
     },
@@ -2075,19 +2075,19 @@
       "name": "Remiro",
       "position": 1,
       "price": 2920000,
-      "points": 119,
+      "points": 127,
       "trend": 70000,
       "playedHome": 14,
-      "playedAway": 14,
+      "playedAway": 15,
       "teamName": "Real Sociedad",
       "teamId": 13,
       "status": "ok",
       "jForm": [
+        8,
         5,
         8,
         4,
-        -1,
-        1
+        -1
       ],
       "clausula": null
     },
@@ -2119,19 +2119,19 @@
       "name": "Zubeldia",
       "position": 2,
       "price": 1070000,
-      "points": 73,
+      "points": 74,
       "trend": 0,
       "playedHome": 11,
-      "playedAway": 10,
+      "playedAway": 11,
       "teamName": "Real Sociedad",
       "teamId": 13,
       "status": "ok",
       "jForm": [
+        1,
         3,
         null,
         6,
-        null,
-        2
+        null
       ],
       "clausula": null
     },
@@ -2361,19 +2361,19 @@
       "name": "Comesaña",
       "position": 3,
       "price": 5970000,
-      "points": 123,
+      "points": 133,
       "trend": 50000,
-      "playedHome": 12,
+      "playedHome": 13,
       "playedAway": 14,
       "teamName": "Villarreal",
       "teamId": 19,
       "status": "ok",
       "jForm": [
+        10,
         6,
         6,
         4,
-        11,
-        4
+        11
       ],
       "clausula": null
     },
@@ -2845,19 +2845,19 @@
       "name": "Guedes",
       "position": 4,
       "price": 10480000,
-      "points": 142,
+      "points": 143,
       "trend": 60000,
       "playedHome": 14,
-      "playedAway": 14,
+      "playedAway": 15,
       "teamName": "Real Sociedad",
       "teamId": 13,
       "status": "ok",
       "jForm": [
+        1,
         18,
         2,
         2,
-        4,
-        3
+        4
       ],
       "clausula": null
     },
@@ -2911,19 +2911,19 @@
       "name": "Brais Méndez",
       "position": 3,
       "price": 5240000,
-      "points": 112,
+      "points": 111,
       "trend": 20000,
       "playedHome": 12,
-      "playedAway": 12,
+      "playedAway": 13,
       "teamName": "Real Sociedad",
       "teamId": 13,
       "status": "ok",
       "jForm": [
+        -1,
         6,
         2,
         null,
-        2,
-        null
+        2
       ],
       "clausula": null
     },
@@ -3803,7 +3803,7 @@
         null,
         null,
         null,
-        0
+        null
       ],
       "clausula": null
     },
@@ -3821,11 +3821,11 @@
       "teamId": 13,
       "status": "ok",
       "jForm": [
+        null,
         0,
         2,
         1,
-        5,
-        4
+        5
       ],
       "clausula": null
     },
@@ -4410,16 +4410,16 @@
       "points": 104,
       "trend": 0,
       "playedHome": 13,
-      "playedAway": 13,
+      "playedAway": 14,
       "teamName": "Real Sociedad",
       "teamId": 13,
       "status": "ok",
       "jForm": [
+        0,
         5,
         1,
         5,
-        3,
-        null
+        3
       ],
       "clausula": null
     },
@@ -4539,18 +4539,18 @@
       "name": "Marcelino",
       "position": 5,
       "price": 2300000,
-      "points": 55,
+      "points": 58,
       "trend": -10000,
-      "playedHome": 14,
+      "playedHome": 15,
       "playedAway": 14,
       "teamName": "Villarreal",
       "teamId": 19,
       "status": "ok",
       "jForm": [
+        3,
         1,
         3,
         0,
-        3,
         3
       ],
       "clausula": null
@@ -4877,11 +4877,11 @@
       "teamId": 19,
       "status": "ok",
       "jForm": [
+        null,
         2,
         4,
         null,
-        null,
-        4
+        null
       ],
       "clausula": null
     },
@@ -5199,19 +5199,19 @@
       "name": "Alfon González",
       "position": 4,
       "price": 360000,
-      "points": 32,
+      "points": 35,
       "trend": 0,
-      "playedHome": 5,
+      "playedHome": 6,
       "playedAway": 8,
       "teamName": "Villarreal",
       "teamId": 19,
       "status": "ok",
       "jForm": [
+        3,
         null,
         2,
         2,
-        1,
-        null
+        1
       ],
       "clausula": null
     },
@@ -5449,11 +5449,11 @@
       "teamId": 13,
       "status": "ok",
       "jForm": [
+        null,
         10,
         2,
         5,
-        2,
-        4
+        2
       ],
       "clausula": null
     },
@@ -6676,11 +6676,11 @@
       "teamId": 13,
       "status": "ok",
       "jForm": [
+        null,
         2,
         1,
         1,
-        2,
-        -1
+        2
       ],
       "clausula": null
     },
@@ -6844,19 +6844,19 @@
       "name": "Pape Gueye",
       "position": 3,
       "price": 10180000,
-      "points": 127,
+      "points": 133,
       "trend": 140000,
-      "playedHome": 10,
+      "playedHome": 11,
       "playedAway": 12,
       "teamName": "Villarreal",
       "teamId": 19,
       "status": "ok",
       "jForm": [
+        6,
         3,
         8,
         10,
-        11,
-        7
+        11
       ],
       "clausula": null
     },
@@ -7006,11 +7006,11 @@
       "teamId": 19,
       "status": "ok",
       "jForm": [
+        null,
         2,
         5,
         -2,
-        3,
-        5
+        3
       ],
       "clausula": null
     },
@@ -7020,19 +7020,19 @@
       "name": "Moleiro",
       "position": 3,
       "price": 11670000,
-      "points": 154,
+      "points": 160,
       "trend": -90000,
-      "playedHome": 14,
+      "playedHome": 15,
       "playedAway": 13,
       "teamName": "Villarreal",
       "teamId": 19,
       "status": "ok",
       "jForm": [
+        6,
         3,
         3,
         1,
-        3,
-        1
+        3
       ],
       "clausula": null
     },
@@ -7196,19 +7196,19 @@
       "name": "Santiago Mouriño",
       "position": 2,
       "price": 3210000,
-      "points": 92,
+      "points": 98,
       "trend": 20000,
-      "playedHome": 8,
+      "playedHome": 9,
       "playedAway": 13,
       "teamName": "Villarreal",
       "teamId": 19,
       "status": "ok",
       "jForm": [
+        6,
         3,
         13,
         1,
-        4,
-        3
+        4
       ],
       "clausula": null
     },
@@ -7438,19 +7438,19 @@
       "name": "Zakharyan",
       "position": 3,
       "price": 160000,
-      "points": 33,
+      "points": 34,
       "trend": 0,
       "playedHome": 7,
-      "playedAway": 8,
+      "playedAway": 9,
       "teamName": "Real Sociedad",
       "teamId": 13,
       "status": "ok",
       "jForm": [
+        1,
         null,
         2,
         3,
-        2,
-        null
+        2
       ],
       "clausula": null
     },
@@ -7548,19 +7548,19 @@
       "name": "Aramburu",
       "position": 2,
       "price": 2340000,
-      "points": 92,
+      "points": 94,
       "trend": 0,
       "playedHome": 14,
-      "playedAway": 12,
+      "playedAway": 13,
       "teamName": "Real Sociedad",
       "teamId": 13,
       "status": "ok",
       "jForm": [
+        2,
         4,
         4,
         3,
-        2,
-        -4
+        2
       ],
       "clausula": null
     },
@@ -7878,19 +7878,19 @@
       "name": "Jon Martín",
       "position": 2,
       "price": 1720000,
-      "points": 71,
+      "points": 74,
       "trend": -30000,
       "playedHome": 9,
-      "playedAway": 8,
+      "playedAway": 9,
       "teamName": "Real Sociedad",
       "teamId": 13,
       "status": "ok",
       "jForm": [
+        3,
         null,
         3,
         null,
-        0,
-        6
+        0
       ],
       "clausula": null
     },
@@ -8428,18 +8428,18 @@
       "name": "Luka Sucic",
       "position": 3,
       "price": 950000,
-      "points": 41,
+      "points": 53,
       "trend": -20000,
       "playedHome": 5,
-      "playedAway": 8,
+      "playedAway": 9,
       "teamName": "Real Sociedad",
       "teamId": 13,
       "status": "ok",
       "jForm": [
+        12,
         3,
         7,
         3,
-        null,
         null
       ],
       "clausula": null
@@ -8450,19 +8450,19 @@
       "name": "Pépé",
       "position": 4,
       "price": 8470000,
-      "points": 149,
+      "points": 160,
       "trend": 70000,
-      "playedHome": 14,
+      "playedHome": 15,
       "playedAway": 13,
       "teamName": "Villarreal",
       "teamId": 19,
       "status": "ok",
       "jForm": [
         11,
+        11,
         5,
         4,
-        4,
-        6
+        4
       ],
       "clausula": null
     },
@@ -8626,18 +8626,18 @@
       "name": "Luiz Júnior",
       "position": 1,
       "price": 2330000,
-      "points": 112,
+      "points": 115,
       "trend": 60000,
-      "playedHome": 13,
+      "playedHome": 14,
       "playedAway": 12,
       "teamName": "Villarreal",
       "teamId": 19,
       "status": "ok",
       "jForm": [
         3,
+        3,
         7,
         3,
-        6,
         6
       ],
       "clausula": null
@@ -8714,19 +8714,19 @@
       "name": "Óskarsson",
       "position": 4,
       "price": 2080000,
-      "points": 51,
+      "points": 53,
       "trend": -40000,
       "playedHome": 6,
-      "playedAway": 5,
+      "playedAway": 6,
       "teamName": "Real Sociedad",
       "teamId": 13,
       "status": "ok",
       "jForm": [
+        2,
         3,
         1,
         null,
-        17,
-        2
+        17
       ],
       "clausula": null
     },
@@ -8736,19 +8736,19 @@
       "name": "Pau Navarro",
       "position": 2,
       "price": 2990000,
-      "points": 65,
+      "points": 73,
       "trend": 210000,
-      "playedHome": 9,
+      "playedHome": 10,
       "playedAway": 7,
       "teamName": "Villarreal",
       "teamId": 19,
       "status": "ok",
       "jForm": [
+        8,
         6,
         6,
         2,
-        5,
-        7
+        5
       ],
       "clausula": null
     },
@@ -8824,19 +8824,19 @@
       "name": "Buchanan",
       "position": 3,
       "price": 4930000,
-      "points": 130,
+      "points": 132,
       "trend": 10000,
-      "playedHome": 14,
+      "playedHome": 15,
       "playedAway": 12,
       "teamName": "Villarreal",
       "teamId": 19,
       "status": "ok",
       "jForm": [
         2,
+        2,
         14,
         2,
-        2,
-        null
+        2
       ],
       "clausula": null
     },
@@ -9110,19 +9110,19 @@
       "name": "Caleta-Car",
       "position": 2,
       "price": 1570000,
-      "points": 76,
+      "points": 80,
       "trend": 40000,
       "playedHome": 9,
-      "playedAway": 10,
+      "playedAway": 11,
       "teamName": "Real Sociedad",
       "teamId": 13,
       "status": "ok",
       "jForm": [
         4,
+        4,
         5,
         6,
-        11,
-        null
+        11
       ],
       "clausula": null
     },
@@ -9792,19 +9792,19 @@
       "name": "Gorrotxategi",
       "position": 3,
       "price": 3280000,
-      "points": 108,
+      "points": 107,
       "trend": -50000,
       "playedHome": 12,
-      "playedAway": 12,
+      "playedAway": 13,
       "teamName": "Real Sociedad",
       "teamId": 13,
       "status": "ok",
       "jForm": [
+        -1,
         null,
         null,
         3,
-        5,
-        4
+        5
       ],
       "clausula": null
     },
@@ -10562,18 +10562,18 @@
       "name": "Renato Veiga",
       "position": 2,
       "price": 1480000,
-      "points": 62,
+      "points": 65,
       "trend": -20000,
-      "playedHome": 13,
+      "playedHome": 14,
       "playedAway": 11,
       "teamName": "Villarreal",
       "teamId": 19,
       "status": "ok",
       "jForm": [
+        3,
         null,
         2,
         0,
-        4,
         4
       ],
       "clausula": null
@@ -10696,17 +10696,17 @@
       "price": 350000,
       "points": 59,
       "trend": 0,
-      "playedHome": 10,
+      "playedHome": 11,
       "playedAway": 12,
       "teamName": "Villarreal",
       "teamId": 19,
       "status": "ok",
       "jForm": [
+        0,
         2,
         null,
         1,
-        null,
-        0
+        null
       ],
       "clausula": null
     },
@@ -10848,19 +10848,19 @@
       "name": "Mikautadze",
       "position": 4,
       "price": 11940000,
-      "points": 132,
+      "points": 142,
       "trend": 30000,
-      "playedHome": 11,
+      "playedHome": 12,
       "playedAway": 12,
       "teamName": "Villarreal",
       "teamId": 19,
       "status": "ok",
       "jForm": [
+        10,
         3,
         5,
         4,
-        2,
-        13
+        2
       ],
       "clausula": null
     },
@@ -11137,16 +11137,16 @@
       "points": 21,
       "trend": 10000,
       "playedHome": 6,
-      "playedAway": 5,
+      "playedAway": 6,
       "teamName": "Real Sociedad",
       "teamId": 13,
       "status": "ok",
       "jForm": [
+        0,
         3,
         0,
         3,
-        1,
-        0
+        1
       ],
       "clausula": null
     },
@@ -11576,11 +11576,11 @@
       "teamId": 19,
       "status": "ok",
       "jForm": [
+        null,
         3,
         null,
         null,
-        null,
-        2
+        null
       ],
       "clausula": null
     },
@@ -11642,11 +11642,11 @@
       "teamId": 13,
       "status": "ok",
       "jForm": [
+        null,
         2,
         null,
         null,
-        null,
-        -1
+        null
       ],
       "clausula": null
     },
@@ -11964,12 +11964,12 @@
           6
         ],
         "teamSize": 16,
-        "teamValue": 97680000,
-        "teamValueInc": 350000,
+        "teamValue": 103000000,
+        "teamValueInc": 90000,
         "lastTrophy": {
           "type": "league",
           "position": 2,
-          "season": "2024/2025 season"
+          "season": "Temporada 2024/2025"
         },
         "position": 2
       },
@@ -12028,7 +12028,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "2024/2025 season"
+          "season": "Temporada 2024/2025"
         },
         "position": 5,
         "positionInc": -1,
@@ -12072,7 +12072,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 1,
-          "season": "2024/2025 season"
+          "season": "Temporada 2024/2025"
         },
         "position": 7,
         "positionInc": -1
@@ -12089,9 +12089,9 @@
           5,
           2
         ],
-        "teamSize": 13,
-        "teamValue": 53940000,
-        "teamValueInc": 190000,
+        "teamSize": 14,
+        "teamValue": 57090000,
+        "teamValueInc": 520000,
         "position": 8,
         "role": ""
       },
@@ -12144,9 +12144,9 @@
           12,
           3
         ],
-        "teamSize": 12,
-        "teamValue": 51640000,
-        "teamValueInc": -20000,
+        "teamSize": 11,
+        "teamValue": 43170000,
+        "teamValueInc": -90000,
         "position": 11,
         "positionInc": 1,
         "role": ""
@@ -12188,7 +12188,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "2023/2024 season"
+          "season": "Temporada 2023/2024"
         },
         "position": 13,
         "role": ""
@@ -12228,8 +12228,8 @@
       "name": "LeMola Team",
       "manager": "LeMola Team",
       "points": 1477,
-      "value": 97680000,
-      "trend": 350000,
+      "value": 103000000,
+      "trend": 90000,
       "players": []
     },
     {
@@ -12282,8 +12282,8 @@
       "name": "NACECH1",
       "manager": "NACECH1",
       "points": 1273,
-      "value": 53940000,
-      "trend": 190000,
+      "value": 57090000,
+      "trend": 520000,
       "players": []
     },
     {
@@ -12309,8 +12309,8 @@
       "name": "Trileros FC",
       "manager": "Trileros FC",
       "points": 1169,
-      "value": 51640000,
-      "trend": -20000,
+      "value": 43170000,
+      "trend": -90000,
       "players": []
     },
     {
@@ -12520,6 +12520,48 @@
   "boardTomaquet": [
     {
       "type": "transfer",
+      "date": 1774038454,
+      "content": [
+        {
+          "player": 34479,
+          "from": {
+            "id": 12696599,
+            "name": "Trileros FC",
+            "icon": "i/u/12696599.png"
+          },
+          "to": {
+            "id": 6552586,
+            "name": "LeMola Team",
+            "icon": "i/u/6552586.png"
+          },
+          "amount": 14460000,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1774036959,
+      "content": [
+        {
+          "player": 37711,
+          "from": {
+            "id": 6552586,
+            "name": "LeMola Team",
+            "icon": "i/u/6552586.png"
+          },
+          "to": {
+            "id": 12696491,
+            "name": "NACECH1",
+            "icon": "https://graph.facebook.com/10235185447969563/picture?height=300&width=300"
+          },
+          "amount": 9975000,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
       "date": 1774035708,
       "content": [
         {
@@ -12569,75 +12611,6 @@
             "icon": "i/u/6541195.png?v=17"
           },
           "amount": 313800
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1773986624,
-      "content": [
-        {
-          "player": 129,
-          "to": {
-            "id": 12697101,
-            "name": "INDOMABLE FC",
-            "icon": "i/u/11757390.png"
-          },
-          "amount": 4123560,
-          "bids": [
-            {
-              "user": {
-                "id": 8070044,
-                "name": "CA CABA JUNIORS",
-                "icon": "i/u/8070044.png?v=63"
-              },
-              "amount": 3226650
-            },
-            {
-              "user": {
-                "id": 11521196,
-                "name": "Hufflepuff 🍋",
-                "icon": "i/u/11521196.png?v=57"
-              },
-              "amount": 3000090
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1773963372,
-      "content": [
-        {
-          "player": 35249,
-          "from": {
-            "id": 12713493,
-            "name": "Tata Martini",
-            "icon": "i/u/12713493.png"
-          },
-          "amount": 4649100
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1773949859,
-      "content": [
-        {
-          "player": 3159,
-          "from": {
-            "id": 12696599,
-            "name": "Trileros FC",
-            "icon": "i/u/12696599.png"
-          },
-          "to": {
-            "id": 6541195,
-            "name": "🦊",
-            "icon": "i/u/6541195.png?v=17"
-          },
-          "amount": 3750000,
-          "type": "clause"
         }
       ]
     }
@@ -13439,7 +13412,7 @@
           "player": 22073,
           "to": {
             "id": 6580423,
-            "name": "FC Borça",
+            "name": "FC Bor��a",
             "icon": "i/t/3.png"
           },
           "amount": 343032
@@ -13505,39 +13478,6 @@
           "amount": 152900
         }
       ]
-    },
-    {
-      "type": "market",
-      "date": 1773900149,
-      "content": [
-        {
-          "player": 20702,
-          "to": {
-            "id": 6579280,
-            "name": "Sant Pere Atlètic",
-            "icon": "i/u/6579280.png?v=22"
-          },
-          "amount": 2345160,
-          "bids": [
-            {
-              "user": {
-                "id": 9890450,
-                "name": "MarK Lenders",
-                "icon": "icons/34.png"
-              },
-              "amount": 2150000
-            },
-            {
-              "user": {
-                "id": 6579505,
-                "name": "Xevi borrat",
-                "icon": "i/u/6579505.png"
-              },
-              "amount": 2100000
-            }
-          ]
-        }
-      ]
     }
   ],
   "laliga": {
@@ -13584,6 +13524,25 @@
       {
         "position": 3,
         "team": {
+          "id": 94,
+          "name": "Villarreal CF",
+          "shortName": "Villarreal",
+          "tla": "VIL",
+          "crest": "https://crests.football-data.org/94.png"
+        },
+        "playedGames": 29,
+        "form": null,
+        "won": 18,
+        "draw": 4,
+        "lost": 7,
+        "points": 58,
+        "goalsFor": 54,
+        "goalsAgainst": 34,
+        "goalDifference": 20
+      },
+      {
+        "position": 4,
+        "team": {
           "id": 78,
           "name": "Club Atlético de Madrid",
           "shortName": "Atleti",
@@ -13599,25 +13558,6 @@
         "goalsFor": 47,
         "goalsAgainst": 25,
         "goalDifference": 22
-      },
-      {
-        "position": 4,
-        "team": {
-          "id": 94,
-          "name": "Villarreal CF",
-          "shortName": "Villarreal",
-          "tla": "VIL",
-          "crest": "https://crests.football-data.org/94.png"
-        },
-        "playedGames": 28,
-        "form": null,
-        "won": 17,
-        "draw": 4,
-        "lost": 7,
-        "points": 55,
-        "goalsFor": 51,
-        "goalsAgainst": 33,
-        "goalDifference": 18
       },
       {
         "position": 5,
@@ -13666,15 +13606,15 @@
           "tla": "RSO",
           "crest": "https://crests.football-data.org/92.png"
         },
-        "playedGames": 28,
+        "playedGames": 29,
         "form": null,
         "won": 10,
         "draw": 8,
-        "lost": 10,
+        "lost": 11,
         "points": 38,
-        "goalsFor": 43,
-        "goalsAgainst": 42,
-        "goalDifference": 1
+        "goalsFor": 44,
+        "goalsAgainst": 45,
+        "goalDifference": -1
       },
       {
         "position": 8,
@@ -14070,27 +14010,27 @@
       },
       "92": {
         "results": [
+          "L",
           "W",
           "L",
           "W",
-          "D",
-          "L"
+          "D"
         ],
         "gf": 10,
-        "ga": 11,
+        "ga": 10,
         "crest": "https://crests.football-data.org/92.png",
         "name": "Real Sociedad de Fútbol"
       },
       "94": {
         "results": [
+          "W",
           "D",
           "W",
           "L",
-          "W",
           "W"
         ],
-        "gf": 7,
-        "ga": 7,
+        "gf": 9,
+        "ga": 8,
         "crest": "https://crests.football-data.org/94.png",
         "name": "Villarreal CF"
       },
@@ -14187,23 +14127,6 @@
       }
     },
     "nextMatches": [
-      {
-        "id": 544500,
-        "matchday": 29,
-        "date": "2026-03-20T20:00:00Z",
-        "home": {
-          "id": 94,
-          "name": "Villarreal CF",
-          "short": "Villarreal",
-          "crest": "https://crests.football-data.org/94.png"
-        },
-        "away": {
-          "id": 92,
-          "name": "Real Sociedad de Fútbol",
-          "short": "Real Sociedad",
-          "crest": "https://crests.football-data.org/92.png"
-        }
-      },
       {
         "id": 544493,
         "matchday": 29,
@@ -14409,20 +14332,20 @@
         }
       },
       {
-        "id": 544501,
+        "id": 544503,
         "matchday": 30,
         "date": "2026-04-04T16:30:00Z",
         "home": {
-          "id": 263,
-          "name": "Deportivo Alavés",
-          "short": "Alavés",
-          "crest": "https://crests.football-data.org/263.png"
+          "id": 90,
+          "name": "Real Betis Balompié",
+          "short": "Real Betis",
+          "crest": "https://crests.football-data.org/90.png"
         },
         "away": {
-          "id": 79,
-          "name": "CA Osasuna",
-          "short": "Osasuna",
-          "crest": "https://crests.football-data.org/79.png"
+          "id": 80,
+          "name": "RCD Espanyol de Barcelona",
+          "short": "Espanyol",
+          "crest": "https://crests.football-data.org/80.png"
         }
       },
       {
@@ -14494,20 +14417,20 @@
         }
       },
       {
-        "id": 544503,
+        "id": 544501,
         "matchday": 30,
         "date": "2026-04-05T19:00:00Z",
         "home": {
-          "id": 90,
-          "name": "Real Betis Balompié",
-          "short": "Real Betis",
-          "crest": "https://crests.football-data.org/90.png"
+          "id": 263,
+          "name": "Deportivo Alavés",
+          "short": "Alavés",
+          "crest": "https://crests.football-data.org/263.png"
         },
         "away": {
-          "id": 80,
-          "name": "RCD Espanyol de Barcelona",
-          "short": "Espanyol",
-          "crest": "https://crests.football-data.org/80.png"
+          "id": 79,
+          "name": "CA Osasuna",
+          "short": "Osasuna",
+          "crest": "https://crests.football-data.org/79.png"
         }
       },
       {
@@ -14529,6 +14452,23 @@
       }
     ],
     "recentResults": [
+      {
+        "date": "2026-03-20T20:00:00Z",
+        "home": {
+          "name": "Villarreal CF",
+          "short": "Villarreal",
+          "crest": "https://crests.football-data.org/94.png"
+        },
+        "away": {
+          "name": "Real Sociedad de Fútbol",
+          "short": "Real Sociedad",
+          "crest": "https://crests.football-data.org/92.png"
+        },
+        "score": {
+          "home": 3,
+          "away": 1
+        }
+      },
       {
         "date": "2026-03-16T20:00:00Z",
         "home": {
@@ -14647,23 +14587,6 @@
           "home": 1,
           "away": 0
         }
-      },
-      {
-        "date": "2026-03-14T15:15:00Z",
-        "home": {
-          "name": "Club Atlético de Madrid",
-          "short": "Atleti",
-          "crest": "https://crests.football-data.org/78.png"
-        },
-        "away": {
-          "name": "Getafe CF",
-          "short": "Getafe",
-          "crest": "https://crests.football-data.org/82.png"
-        },
-        "score": {
-          "home": 1,
-          "away": 0
-        }
       }
     ],
     "odds": {
@@ -14675,9 +14598,9 @@
         "matchId": 544491
       },
       "78": {
-        "win": 0.44,
+        "win": 0.43,
         "draw": 0.08,
-        "loss": 0.48,
+        "loss": 0.49,
         "isHome": false,
         "matchId": 544498
       },
@@ -14710,9 +14633,9 @@
         "matchId": 544494
       },
       "86": {
-        "win": 0.48,
+        "win": 0.49,
         "draw": 0.08,
-        "loss": 0.44,
+        "loss": 0.43,
         "isHome": true,
         "matchId": 544498
       },
@@ -14743,20 +14666,6 @@
         "loss": 0.42,
         "isHome": false,
         "matchId": 544491
-      },
-      "92": {
-        "win": 0.38,
-        "draw": 0.09,
-        "loss": 0.53,
-        "isHome": false,
-        "matchId": 544500
-      },
-      "94": {
-        "win": 0.53,
-        "draw": 0.09,
-        "loss": 0.38,
-        "isHome": true,
-        "matchId": 544500
       },
       "95": {
         "win": 0.42,
@@ -14810,38 +14719,20 @@
     }
   },
   "odds": {
-    "Villarreal": {
-      "winProb": 0.4082141175618413,
-      "drawProb": 0.2548694360943103,
-      "loseProb": 0.3369164463438485,
-      "over25Prob": 0.5649717514124294,
-      "isHome": false,
-      "opponent": "Girona",
-      "matchDate": "2026-04-06T20:00:00Z"
-    },
-    "Real Sociedad": {
-      "winProb": 0.5914563635126863,
-      "drawProb": 0.2285898918440922,
-      "loseProb": 0.17995374464322153,
-      "over25Prob": 0.5524861878453039,
-      "isHome": true,
-      "opponent": "Levante",
-      "matchDate": "2026-04-04T12:00:00Z"
-    },
     "Elche CF": {
-      "winProb": 0.22748318336682097,
-      "drawProb": 0.2715121865991089,
-      "loseProb": 0.50100463003407,
-      "over25Prob": 0.4807692307692307,
+      "winProb": 0.2270911143924259,
+      "drawProb": 0.26674194388951616,
+      "loseProb": 0.5061669417180579,
+      "over25Prob": 0.47619047619047616,
       "isHome": false,
       "opponent": "Rayo Vallecano",
       "matchDate": "2026-04-03T19:00:00Z"
     },
     "Mallorca": {
-      "winProb": 0.19656667871340802,
-      "drawProb": 0.2284423563426093,
-      "loseProb": 0.5749909649439826,
-      "over25Prob": 0.5780346820809249,
+      "winProb": 0.20030935808197992,
+      "drawProb": 0.2273781902552204,
+      "loseProb": 0.5723124516627998,
+      "over25Prob": 0.5813953488372093,
       "isHome": true,
       "opponent": "Real Madrid",
       "matchDate": "2026-04-04T14:15:00Z"
@@ -14874,10 +14765,10 @@
       "matchDate": "2026-04-05T19:00:00Z"
     },
     "Girona": {
-      "winProb": 0.3369164463438485,
-      "drawProb": 0.2548694360943103,
-      "loseProb": 0.4082141175618413,
-      "over25Prob": 0.5649717514124294,
+      "winProb": 0.3351238243161619,
+      "drawProb": 0.2526318060229529,
+      "loseProb": 0.41224436966088535,
+      "over25Prob": 0.5681818181818182,
       "isHome": true,
       "opponent": "Villarreal",
       "matchDate": "2026-04-06T20:00:00Z"
@@ -14928,10 +14819,10 @@
       "matchDate": "2026-04-04T19:00:00Z"
     },
     "Rayo Vallecano": {
-      "winProb": 0.50100463003407,
-      "drawProb": 0.2715121865991089,
-      "loseProb": 0.22748318336682097,
-      "over25Prob": 0.4807692307692307,
+      "winProb": 0.5061669417180579,
+      "drawProb": 0.26674194388951616,
+      "loseProb": 0.2270911143924259,
+      "over25Prob": 0.47619047619047616,
       "isHome": true,
       "opponent": "Elche CF",
       "matchDate": "2026-04-03T19:00:00Z"
@@ -14973,10 +14864,10 @@
       "matchDate": "2026-04-04T16:30:00Z"
     },
     "Real Madrid": {
-      "winProb": 0.5749909649439826,
-      "drawProb": 0.2284423563426093,
-      "loseProb": 0.19656667871340802,
-      "over25Prob": 0.5780346820809249,
+      "winProb": 0.5723124516627998,
+      "drawProb": 0.2273781902552204,
+      "loseProb": 0.20030935808197992,
+      "over25Prob": 0.5813953488372093,
       "isHome": false,
       "opponent": "Mallorca",
       "matchDate": "2026-04-04T14:15:00Z"
@@ -14989,9 +14880,35 @@
       "isHome": true,
       "opponent": "Barcelona",
       "matchDate": "2026-04-04T19:00:00Z"
+    },
+    "Real Sociedad": {
+      "winProb": 0.5914563635126863,
+      "drawProb": 0.2285898918440922,
+      "loseProb": 0.17995374464322153,
+      "over25Prob": 0.5524861878453039,
+      "isHome": true,
+      "opponent": "Levante",
+      "matchDate": "2026-04-04T12:00:00Z"
+    },
+    "Villarreal": {
+      "winProb": 0.41224436966088535,
+      "drawProb": 0.2526318060229529,
+      "loseProb": 0.3351238243161619,
+      "over25Prob": 0.5681818181818182,
+      "isHome": false,
+      "opponent": "Girona",
+      "matchDate": "2026-04-06T20:00:00Z"
     }
   },
   "news": [
+    {
+      "title": "Zubeldia, sustituido por lesión en la Real Sociedad",
+      "link": "https://www.jornadaperfecta.com/blog/zubeldia-lesion-real-sociedad/",
+      "date": "Fri, 20 Mar 2026 21:37:20 +0000",
+      "img": "https://cdn.biwenger.com/i/t/13.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "BigUp: Gana dinero real con tus pronósticos del Real Madrid &#8211; Atlético",
       "link": "https://www.jornadaperfecta.com/blog/bigup-real-madrid-atletico-pronosticos/",
@@ -15063,21 +14980,13 @@
       "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Manolo González habla del calendario, Terrats y Carlos Romero",
-      "link": "https://www.jornadaperfecta.com/blog/manolo-gonzalez-previa-espanyol-getafe-j29/",
-      "date": "Fri, 20 Mar 2026 14:25:10 +0000",
-      "img": "https://cdn.biwenger.com/i/t/7.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-03-20T19:50:12.191Z",
+    "updatedAt": "2026-03-21T04:53:29.469Z",
     "players": [
       {
         "id": "3374",
@@ -15236,6 +15145,18 @@
         "minutesPerGoal": 250
       },
       {
+        "id": "136646",
+        "name": "Georges Mikautadze",
+        "team": "Villarreal CF",
+        "position": "",
+        "nationality": "Georgia",
+        "appearances": 25,
+        "goals": 9,
+        "assists": 5,
+        "penalties": 0,
+        "minutesPerGoal": 250
+      },
+      {
         "id": "150533",
         "name": "Alberto Moleiro",
         "team": "Villarreal CF",
@@ -15296,16 +15217,16 @@
         "minutesPerGoal": 259
       },
       {
-        "id": "136646",
-        "name": "Georges Mikautadze",
+        "id": "32719",
+        "name": "Gerard Moreno",
         "team": "Villarreal CF",
         "position": "",
-        "nationality": "Georgia",
-        "appearances": 25,
+        "nationality": "Spain",
+        "appearances": 16,
         "goals": 8,
-        "assists": 4,
-        "penalties": 0,
-        "minutesPerGoal": 281
+        "assists": 0,
+        "penalties": 2,
+        "minutesPerGoal": 180
       },
       {
         "id": "3259",
@@ -15378,18 +15299,6 @@
         "assists": 5,
         "penalties": 0,
         "minutesPerGoal": 296
-      },
-      {
-        "id": "32719",
-        "name": "Gerard Moreno",
-        "team": "Villarreal CF",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 16,
-        "goals": 7,
-        "assists": 0,
-        "penalties": 2,
-        "minutesPerGoal": 206
       },
       {
         "id": "203439",
@@ -15498,6 +15407,18 @@
         "assists": 1,
         "penalties": 0,
         "minutesPerGoal": 450
+      },
+      {
+        "id": "8412",
+        "name": "Nicolas Pépé",
+        "team": "Villarreal CF",
+        "position": "",
+        "nationality": "Ivory Coast",
+        "appearances": 29,
+        "goals": 5,
+        "assists": 4,
+        "penalties": 0,
+        "minutesPerGoal": 522
       },
       {
         "id": "213404",
@@ -15762,18 +15683,6 @@
         "assists": 0,
         "penalties": 0,
         "minutesPerGoal": 293
-      },
-      {
-        "id": "8412",
-        "name": "Nicolas Pépé",
-        "team": "Villarreal CF",
-        "position": "",
-        "nationality": "Ivory Coast",
-        "appearances": 29,
-        "goals": 4,
-        "assists": 4,
-        "penalties": 0,
-        "minutesPerGoal": 653
       },
       {
         "id": "213043",
@@ -16095,7 +16004,7 @@
         "nationality": "Spain",
         "appearances": 28,
         "goals": 3,
-        "assists": 4,
+        "assists": 5,
         "penalties": 0,
         "minutesPerGoal": 840
       },
