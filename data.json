@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-21T07:46:08.280Z",
+  "updatedAt": "2026-03-21T13:54:01.587Z",
   "players": [
     {
       "id": 11,
@@ -12022,9 +12022,9 @@
           1,
           14
         ],
-        "teamSize": 18,
-        "teamValue": 82820000,
-        "teamValueInc": 10000,
+        "teamSize": 17,
+        "teamValue": 82510000,
+        "teamValueInc": 20000,
         "lastTrophy": {
           "type": "league",
           "position": 3,
@@ -12255,8 +12255,8 @@
       "name": "CA CABA JUNIORS",
       "manager": "CA CABA JUNIORS",
       "points": 1335,
-      "value": 82820000,
-      "trend": 10000,
+      "value": 82510000,
+      "trend": 20000,
       "players": []
     },
     {
@@ -12348,7 +12348,7 @@
     "balance": 22363,
     "lineup": {
       "type": "3-4-3",
-      "date": 1774024740,
+      "date": 1774081589,
       "playersID": [
         17021,
         10155,
@@ -12518,6 +12518,21 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1774088845,
+      "content": [
+        {
+          "player": 13994,
+          "from": {
+            "id": 8070044,
+            "name": "CA CABA JUNIORS",
+            "icon": "i/u/8070044.png?v=63"
+          },
+          "amount": 296800
+        }
+      ]
+    },
     {
       "type": "market",
       "date": 1774073015,
@@ -13222,7 +13237,7 @@
     "balance": -4667957,
     "lineup": {
       "type": "3-4-3",
-      "date": 1774024898,
+      "date": 1774099128,
       "playersID": [
         14630,
         32440,
@@ -13230,11 +13245,11 @@
         17121,
         34077,
         26048,
-        29034,
-        1969,
+        29184,
+        38368,
         38962,
         19577,
-        39431
+        35615
       ]
     },
     "players": [
@@ -13801,12 +13816,12 @@
           "tla": "MAL",
           "crest": "https://crests.football-data.org/89.png"
         },
-        "playedGames": 28,
+        "playedGames": 29,
         "form": null,
         "won": 7,
-        "draw": 7,
+        "draw": 8,
         "lost": 14,
-        "points": 28,
+        "points": 29,
         "goalsFor": 33,
         "goalsAgainst": 45,
         "goalDifference": -12
@@ -13839,12 +13854,12 @@
           "tla": "ELC",
           "crest": "https://crests.football-data.org/285.png"
         },
-        "playedGames": 28,
+        "playedGames": 29,
         "form": null,
         "won": 5,
-        "draw": 11,
+        "draw": 12,
         "lost": 12,
-        "points": 26,
+        "points": 27,
         "goalsFor": 36,
         "goalsAgainst": 45,
         "goalDifference": -9
@@ -14151,23 +14166,6 @@
       }
     },
     "nextMatches": [
-      {
-        "id": 544493,
-        "matchday": 29,
-        "date": "2026-03-21T13:00:00Z",
-        "home": {
-          "id": 285,
-          "name": "Elche CF",
-          "short": "Elche",
-          "crest": "https://crests.football-data.org/285.png"
-        },
-        "away": {
-          "id": 89,
-          "name": "RCD Mallorca",
-          "short": "Mallorca",
-          "crest": "https://crests.football-data.org/89.png"
-        }
-      },
       {
         "id": 544494,
         "matchday": 29,
@@ -14677,13 +14675,6 @@
         "isHome": true,
         "matchId": 544495
       },
-      "89": {
-        "win": 0.39,
-        "draw": 0.26,
-        "loss": 0.35,
-        "isHome": false,
-        "matchId": 544493
-      },
       "90": {
         "win": 0.47,
         "draw": 0.11,
@@ -14704,13 +14695,6 @@
         "loss": 0.71,
         "isHome": false,
         "matchId": 544497
-      },
-      "285": {
-        "win": 0.35,
-        "draw": 0.26,
-        "loss": 0.39,
-        "isHome": true,
-        "matchId": 544493
       },
       "298": {
         "win": 0.4,
@@ -14753,9 +14737,9 @@
       "matchDate": "2026-04-03T19:00:00Z"
     },
     "Mallorca": {
-      "winProb": 0.20030935808197992,
-      "drawProb": 0.2273781902552204,
-      "loseProb": 0.5723124516627998,
+      "winProb": 0.19656667871340802,
+      "drawProb": 0.2284423563426093,
+      "loseProb": 0.5749909649439826,
       "over25Prob": 0.5813953488372093,
       "isHome": true,
       "opponent": "Real Madrid",
@@ -14789,9 +14773,9 @@
       "matchDate": "2026-04-05T19:00:00Z"
     },
     "Girona": {
-      "winProb": 0.3351238243161619,
-      "drawProb": 0.2526318060229529,
-      "loseProb": 0.41224436966088535,
+      "winProb": 0.3455383780851641,
+      "drawProb": 0.252508814754543,
+      "loseProb": 0.4019528071602929,
       "over25Prob": 0.5681818181818182,
       "isHome": true,
       "opponent": "Villarreal",
@@ -14810,7 +14794,7 @@
       "winProb": 0.3310133301875664,
       "drawProb": 0.28760174590067245,
       "loseProb": 0.38138492391176126,
-      "over25Prob": 0.4273504273504274,
+      "over25Prob": 0.4310344827586207,
       "isHome": true,
       "opponent": "Sevilla",
       "matchDate": "2026-04-05T16:30:00Z"
@@ -14819,7 +14803,7 @@
       "winProb": 0.38138492391176126,
       "drawProb": 0.28760174590067245,
       "loseProb": 0.3310133301875664,
-      "over25Prob": 0.4273504273504274,
+      "over25Prob": 0.4310344827586207,
       "isHome": false,
       "opponent": "Oviedo",
       "matchDate": "2026-04-05T16:30:00Z"
@@ -14888,9 +14872,9 @@
       "matchDate": "2026-04-04T16:30:00Z"
     },
     "Real Madrid": {
-      "winProb": 0.5723124516627998,
-      "drawProb": 0.2273781902552204,
-      "loseProb": 0.20030935808197992,
+      "winProb": 0.5749909649439826,
+      "drawProb": 0.2284423563426093,
+      "loseProb": 0.19656667871340802,
       "over25Prob": 0.5813953488372093,
       "isHome": false,
       "opponent": "Mallorca",
@@ -14915,9 +14899,9 @@
       "matchDate": "2026-04-04T12:00:00Z"
     },
     "Villarreal": {
-      "winProb": 0.41224436966088535,
-      "drawProb": 0.2526318060229529,
-      "loseProb": 0.3351238243161619,
+      "winProb": 0.4019528071602929,
+      "drawProb": 0.252508814754543,
+      "loseProb": 0.3455383780851641,
       "over25Prob": 0.5681818181818182,
       "isHome": false,
       "opponent": "Girona",
@@ -14926,82 +14910,82 @@
   },
   "news": [
     {
-      "title": "Zubeldia, sustituido por lesión en la Real Sociedad",
-      "link": "https://www.jornadaperfecta.com/blog/zubeldia-lesion-real-sociedad/",
-      "date": "Fri, 20 Mar 2026 21:37:20 +0000",
-      "img": "https://cdn.biwenger.com/i/t/13.png",
+      "title": "Valverde responde sobre su salida y confirma fechas de vuelta",
+      "link": "https://www.jornadaperfecta.com/blog/valverde-previa-athletic-betis-j29/",
+      "date": "Sat, 21 Mar 2026 12:59:50 +0000",
+      "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "BigUp: Gana dinero real con tus pronósticos del Real Madrid &#8211; Atlético",
-      "link": "https://www.jornadaperfecta.com/blog/bigup-real-madrid-atletico-pronosticos/",
-      "date": "Fri, 20 Mar 2026 19:38:38 +0000",
-      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2705.png",
+      "title": "Flick confirma a Joan titular y la suplencia de Eric García",
+      "link": "https://www.jornadaperfecta.com/blog/flick-previa-barcelona-rayo-j29/",
+      "date": "Sat, 21 Mar 2026 12:31:11 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Matías Vecino: Parte médico oficial y tiempo de baja",
-      "link": "https://www.jornadaperfecta.com/blog/matias-vecino-parte-medico-celta/",
-      "date": "Fri, 20 Mar 2026 19:36:38 +0000",
-      "img": "https://cdn.biwenger.com/i/t/5.png",
+      "title": "Simeone, sobre Musso, Julián, Obed y el derbi",
+      "link": "https://www.jornadaperfecta.com/blog/simeone-previa-real-madrid-atleti-j29/",
+      "date": "Sat, 21 Mar 2026 12:09:52 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Mbappé, convocado con Francia: ¿titular en el derbi?",
-      "link": "https://www.jornadaperfecta.com/blog/mbappe-alinear-j29-fantasy-real-madrid/",
-      "date": "Fri, 20 Mar 2026 19:25:08 +0000",
+      "title": "Pellegrini sobre la vuelta de Lo Celso y calma con Amrabat",
+      "link": "https://www.jornadaperfecta.com/blog/pellegrini-previa-athletic-betis-j29/",
+      "date": "Sat, 21 Mar 2026 11:52:34 +0000",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Arbeloa confirma minutos de Mbappé y duda con Bellingham",
+      "link": "https://www.jornadaperfecta.com/blog/arbeloa-previa-real-madrid-atleti-j29/",
+      "date": "Sat, 21 Mar 2026 11:10:42 +0000",
       "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Fecha de vuelta de los lesionados del FC Barcelona",
-      "link": "https://www.jornadaperfecta.com/blog/fecha-vuelta-lesionados-barcelona/",
-      "date": "Fri, 20 Mar 2026 19:20:54 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "title": "Marc Pubill sigue sin recuperarse y apunta a baja para el derbi",
+      "link": "https://www.jornadaperfecta.com/blog/marc-pubill-molestias-costillas-26/",
+      "date": "Sat, 21 Mar 2026 11:09:15 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "¡Once confirmado del Villarreal con varias novedades!",
-      "link": "https://www.jornadaperfecta.com/blog/once-villarreal-jornada-29/",
-      "date": "Fri, 20 Mar 2026 18:46:46 +0000",
-      "img": "https://cdn.biwenger.com/i/t/19.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Once confirmado de la Real Sociedad para la jornada 29",
-      "link": "https://www.jornadaperfecta.com/blog/once-real-sociedad-jornada-29/",
-      "date": "Fri, 20 Mar 2026 18:45:51 +0000",
-      "img": "https://cdn.biwenger.com/i/t/13.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Cashback Jokerbet Real Madrid vs Atlético: recupera hasta 10€ en apuestas gratis",
-      "link": "https://www.jornadaperfecta.com/blog/jokerbet-cashback-real-madrid-atletico/",
-      "date": "Fri, 20 Mar 2026 18:00:51 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/03/Jokerbet-Real-Madrid-vs-Atletico.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Dudas con la titularidad de Joan García y Eric, ¿alinear en fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/joan-garcia-alinear-j29-fantasy-barcelona/",
-      "date": "Fri, 20 Mar 2026 15:38:02 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "title": "Oblak sigue sin entrenar y no estará en el derbi",
+      "link": "https://www.jornadaperfecta.com/blog/oblak-estado-j28-25-26/",
+      "date": "Sat, 21 Mar 2026 11:09:13 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
       "title": "Bellingham entrena con el grupo y se apunta al derbi",
       "link": "https://www.jornadaperfecta.com/blog/bellingham-vuelta-lesion-2026/",
-      "date": "Fri, 20 Mar 2026 14:45:55 +0000",
+      "date": "Sat, 21 Mar 2026 11:05:55 +0000",
       "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Eric García sigue sin entrenar, pero no hay lesión",
+      "link": "https://www.jornadaperfecta.com/blog/eric-garcia-estado-molestias-musculares-26/",
+      "date": "Sat, 21 Mar 2026 11:01:01 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Lo Celso reaparece con el grupo y podría volver en el parón",
+      "link": "https://www.jornadaperfecta.com/blog/lo-celso-vuelta-lesion-26/",
+      "date": "Sat, 21 Mar 2026 10:55:34 +0000",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -15010,7 +14994,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-03-21T07:46:06.452Z",
+    "updatedAt": "2026-03-21T13:53:59.326Z",
     "players": [
       {
         "id": "3374",
@@ -15030,11 +15014,11 @@
         "team": "RCD Mallorca",
         "position": "",
         "nationality": "Kosovo",
-        "appearances": 27,
+        "appearances": 28,
         "goals": 18,
         "assists": 1,
         "penalties": 5,
-        "minutesPerGoal": 135
+        "minutesPerGoal": 140
       },
       {
         "id": "202283",
@@ -15270,11 +15254,11 @@
         "team": "Elche CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 23,
+        "appearances": 24,
         "goals": 7,
         "assists": 0,
         "penalties": 1,
-        "minutesPerGoal": 296
+        "minutesPerGoal": 309
       },
       {
         "id": "1760",
@@ -15558,11 +15542,11 @@
         "team": "RCD Mallorca",
         "position": "",
         "nationality": "Portugal",
-        "appearances": 25,
+        "appearances": 26,
         "goals": 5,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 450
+        "minutesPerGoal": 468
       },
       {
         "id": "112678",
@@ -15594,11 +15578,11 @@
         "team": "Elche CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 27,
+        "appearances": 28,
         "goals": 5,
         "assists": 4,
         "penalties": 0,
-        "minutesPerGoal": 486
+        "minutesPerGoal": 504
       },
       {
         "id": "16173",
@@ -15678,11 +15662,11 @@
         "team": "Elche CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 27,
+        "appearances": 28,
         "goals": 4,
         "assists": 3,
         "penalties": 0,
-        "minutesPerGoal": 608
+        "minutesPerGoal": 630
       },
       {
         "id": "156746",
