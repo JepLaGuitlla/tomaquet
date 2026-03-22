@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-22T07:51:44.372Z",
+  "updatedAt": "2026-03-22T13:55:05.895Z",
   "players": [
     {
       "id": 11,
@@ -13339,7 +13339,7 @@
       {
         "id": 38368,
         "buyPrice": 1713466,
-        "clause": 2145000,
+        "clause": 0,
         "invested": 0,
         "buyDate": 1772258605
       },
@@ -13593,15 +13593,15 @@
           "tla": "FCB",
           "crest": "https://crests.football-data.org/81.png"
         },
-        "playedGames": 28,
+        "playedGames": 29,
         "form": null,
-        "won": 23,
+        "won": 24,
         "draw": 1,
         "lost": 4,
-        "points": 70,
-        "goalsFor": 77,
+        "points": 73,
+        "goalsFor": 78,
         "goalsAgainst": 28,
-        "goalDifference": 49
+        "goalDifference": 50
       },
       {
         "position": 2,
@@ -13840,15 +13840,15 @@
           "tla": "RAY",
           "crest": "https://crests.football-data.org/87.png"
         },
-        "playedGames": 28,
+        "playedGames": 29,
         "form": null,
         "won": 7,
         "draw": 11,
-        "lost": 10,
+        "lost": 11,
         "points": 32,
         "goalsFor": 28,
-        "goalsAgainst": 34,
-        "goalDifference": -6
+        "goalsAgainst": 35,
+        "goalDifference": -7
       },
       {
         "position": 15,
@@ -14229,23 +14229,6 @@
     },
     "nextMatches": [
       {
-        "id": 544492,
-        "matchday": 29,
-        "date": "2026-03-22T13:00:00Z",
-        "home": {
-          "id": 81,
-          "name": "FC Barcelona",
-          "short": "Barça",
-          "crest": "https://crests.football-data.org/81.png"
-        },
-        "away": {
-          "id": 87,
-          "name": "Rayo Vallecano de Madrid",
-          "short": "Rayo Vallecano",
-          "crest": "https://crests.football-data.org/87.png"
-        }
-      },
-      {
         "id": 544497,
         "matchday": 29,
         "date": "2026-03-22T15:15:00Z",
@@ -14465,6 +14448,23 @@
           "short": "Villarreal",
           "crest": "https://crests.football-data.org/94.png"
         }
+      },
+      {
+        "id": 544492,
+        "matchday": 29,
+        "date": "2026-03-22T13:00:00Z",
+        "home": {
+          "id": 81,
+          "name": "FC Barcelona",
+          "short": "Barça",
+          "crest": "https://crests.football-data.org/81.png"
+        },
+        "away": {
+          "id": 87,
+          "name": "Rayo Vallecano de Madrid",
+          "short": "Rayo Vallecano",
+          "crest": "https://crests.football-data.org/87.png"
+        }
       }
     ],
     "recentResults": [
@@ -14666,27 +14666,27 @@
   },
   "odds": {
     "Barcelona": {
-      "winProb": 0.4084350721420644,
-      "drawProb": 0.24269330373658898,
-      "loseProb": 0.34887162412134665,
+      "winProb": 0.4098560624542572,
+      "drawProb": 0.2400585508660649,
+      "loseProb": 0.350085386679678,
       "over25Prob": 0.6944444444444444,
       "isHome": false,
       "opponent": "Atlético Madrid",
       "matchDate": "2026-04-04T19:00:00Z"
     },
     "Rayo Vallecano": {
-      "winProb": 0.5031731640979148,
-      "drawProb": 0.2683590208522212,
-      "loseProb": 0.22846781504986396,
-      "over25Prob": 0.4807692307692307,
+      "winProb": 0.5045972219174476,
+      "drawProb": 0.26591472647078185,
+      "loseProb": 0.22948805161177066,
+      "over25Prob": 0.47619047619047616,
       "isHome": true,
       "opponent": "Elche CF",
       "matchDate": "2026-04-03T19:00:00Z"
     },
     "Celta Vigo": {
-      "winProb": 0.3220858895705521,
-      "drawProb": 0.2791411042944785,
-      "loseProb": 0.3987730061349693,
+      "winProb": 0.32783109404990407,
+      "drawProb": 0.2740882917466411,
+      "loseProb": 0.3980806142034549,
       "over25Prob": 0.46511627906976744,
       "isHome": false,
       "opponent": "Valencia",
@@ -14702,9 +14702,9 @@
       "matchDate": "2026-04-05T19:00:00Z"
     },
     "Athletic Bilbao": {
-      "winProb": 0.3512977099236641,
-      "drawProb": 0.31526717557251904,
-      "loseProb": 0.3334351145038168,
+      "winProb": 0.3500881632279192,
+      "drawProb": 0.3153037623943759,
+      "loseProb": 0.33460807437770507,
       "over25Prob": 0.35714285714285715,
       "isHome": false,
       "opponent": "Getafe",
@@ -14720,54 +14720,54 @@
       "matchDate": "2026-04-04T16:30:00Z"
     },
     "Real Madrid": {
-      "winProb": 0.5749909649439826,
-      "drawProb": 0.2284423563426093,
-      "loseProb": 0.19656667871340802,
+      "winProb": 0.5723124516627998,
+      "drawProb": 0.2273781902552204,
+      "loseProb": 0.20030935808197992,
       "over25Prob": 0.5813953488372093,
       "isHome": false,
       "opponent": "Mallorca",
       "matchDate": "2026-04-04T14:15:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.34887162412134665,
-      "drawProb": 0.24269330373658898,
-      "loseProb": 0.4084350721420644,
+      "winProb": 0.350085386679678,
+      "drawProb": 0.2400585508660649,
+      "loseProb": 0.4098560624542572,
       "over25Prob": 0.6944444444444444,
       "isHome": true,
       "opponent": "Barcelona",
       "matchDate": "2026-04-04T19:00:00Z"
     },
     "Elche CF": {
-      "winProb": 0.22846781504986396,
-      "drawProb": 0.2683590208522212,
-      "loseProb": 0.5031731640979148,
-      "over25Prob": 0.4807692307692307,
+      "winProb": 0.22948805161177066,
+      "drawProb": 0.26591472647078185,
+      "loseProb": 0.5045972219174476,
+      "over25Prob": 0.47619047619047616,
       "isHome": false,
       "opponent": "Rayo Vallecano",
       "matchDate": "2026-04-03T19:00:00Z"
     },
     "Real Sociedad": {
-      "winProb": 0.593150965277304,
-      "drawProb": 0.22764172180912742,
-      "loseProb": 0.17920731291356842,
+      "winProb": 0.58915158018623,
+      "drawProb": 0.22769912423413752,
+      "loseProb": 0.1831492955796324,
       "over25Prob": 0.5649717514124294,
       "isHome": true,
       "opponent": "Levante",
       "matchDate": "2026-04-04T12:00:00Z"
     },
     "Levante": {
-      "winProb": 0.17920731291356842,
-      "drawProb": 0.22764172180912742,
-      "loseProb": 0.593150965277304,
+      "winProb": 0.1831492955796324,
+      "drawProb": 0.22769912423413752,
+      "loseProb": 0.58915158018623,
       "over25Prob": 0.5649717514124294,
       "isHome": false,
       "opponent": "Real Sociedad",
       "matchDate": "2026-04-04T12:00:00Z"
     },
     "Mallorca": {
-      "winProb": 0.19656667871340802,
-      "drawProb": 0.2284423563426093,
-      "loseProb": 0.5749909649439826,
+      "winProb": 0.20030935808197992,
+      "drawProb": 0.2273781902552204,
+      "loseProb": 0.5723124516627998,
       "over25Prob": 0.5813953488372093,
       "isHome": true,
       "opponent": "Real Madrid",
@@ -14783,18 +14783,18 @@
       "matchDate": "2026-04-04T16:30:00Z"
     },
     "Getafe": {
-      "winProb": 0.3334351145038168,
-      "drawProb": 0.31526717557251904,
-      "loseProb": 0.3512977099236641,
+      "winProb": 0.33460807437770507,
+      "drawProb": 0.3153037623943759,
+      "loseProb": 0.3500881632279192,
       "over25Prob": 0.35714285714285715,
       "isHome": true,
       "opponent": "Athletic Bilbao",
       "matchDate": "2026-04-05T12:00:00Z"
     },
     "Valencia": {
-      "winProb": 0.3987730061349693,
-      "drawProb": 0.2791411042944785,
-      "loseProb": 0.3220858895705521,
+      "winProb": 0.3980806142034549,
+      "drawProb": 0.2740882917466411,
+      "loseProb": 0.32783109404990407,
       "over25Prob": 0.46511627906976744,
       "isHome": true,
       "opponent": "Celta Vigo",
@@ -14848,10 +14848,74 @@
   },
   "news": [
     {
+      "title": "BigUp: Gana dinero real con tus pronósticos del Real Madrid &#8211; Atlético",
+      "link": "https://www.jornadaperfecta.com/blog/bigup-real-madrid-atletico-pronosticos/",
+      "date": "Sun, 22 Mar 2026 12:52:38 +0000",
+      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2705.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Asencio, de nuevo fuera de la convocatoria del Real Madrid",
+      "link": "https://www.jornadaperfecta.com/blog/asencio-baja-real-madrid-j29/",
+      "date": "Sun, 22 Mar 2026 12:51:15 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Sow se vio obligado a pedir el cambio en la segunda parte",
+      "link": "https://www.jornadaperfecta.com/blog/sow-estado-sevilla-j30/",
+      "date": "Sun, 22 Mar 2026 12:17:37 +0000",
+      "img": "https://cdn.biwenger.com/i/t/17.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Akhomach se queda fuera de la convocatoria para la jornada 29",
+      "link": "https://www.jornadaperfecta.com/blog/akhomach-estado-rayo-j29/",
+      "date": "Sun, 22 Mar 2026 11:50:26 +0000",
+      "img": "https://cdn.biwenger.com/i/t/70.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Marc Pubill, baja confirmada para el derbi madrileño",
+      "link": "https://www.jornadaperfecta.com/blog/marc-pubill-molestias-costillas-26/",
+      "date": "Sun, 22 Mar 2026 11:09:15 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Zubeldia sufre una lesión muscular: Parte médico oficial",
+      "link": "https://www.jornadaperfecta.com/blog/zubeldia-lesion-real-sociedad/",
+      "date": "Sun, 22 Mar 2026 10:01:20 +0000",
+      "img": "https://cdn.biwenger.com/i/t/13.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Supercuota 6.0 en Betfair para el Real Madrid vs Atlético: ¡Apuesta potenciada!",
+      "link": "https://www.jornadaperfecta.com/blog/supercuota-betfair-real-madrid-vs-atletico/",
+      "date": "Sun, 22 Mar 2026 09:00:31 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/03/Betfair-Supercuota-Real-Madrid-vs-Atletico.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Carlos Espí acaba con hielo en la rodilla, ¿preocupa?",
       "link": "https://www.jornadaperfecta.com/blog/espi-estado-rodilla-levante/",
-      "date": "Sat, 21 Mar 2026 22:11:28 +0000",
+      "date": "Sun, 22 Mar 2026 08:30:28 +0000",
       "img": "https://cdn.biwenger.com/i/t/10.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Almeyda explica el estado de Azpilicueta tras pedir el cambio",
+      "link": "https://www.jornadaperfecta.com/blog/azpilicueta-sevilla-lesion/",
+      "date": "Sun, 22 Mar 2026 08:02:17 +0000",
+      "img": "https://cdn.biwenger.com/i/t/17.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
@@ -14862,77 +14926,13 @@
       "img": "https://cdn.biwenger.com/i/t/18.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Azpilicueta, sustituido en el primer tiempo por&#8230; ¿lesión?",
-      "link": "https://www.jornadaperfecta.com/blog/azpilicueta-sevilla-lesion/",
-      "date": "Sat, 21 Mar 2026 21:34:17 +0000",
-      "img": "https://cdn.biwenger.com/i/t/17.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "BigUp: Gana dinero real con tus pronósticos del Real Madrid &#8211; Atlético",
-      "link": "https://www.jornadaperfecta.com/blog/bigup-real-madrid-atletico-pronosticos/",
-      "date": "Sat, 21 Mar 2026 21:00:38 +0000",
-      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2705.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Zubeldia, sustituido por una lesión muscular",
-      "link": "https://www.jornadaperfecta.com/blog/zubeldia-lesion-real-sociedad/",
-      "date": "Sat, 21 Mar 2026 20:30:20 +0000",
-      "img": "https://cdn.biwenger.com/i/t/13.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Germán Valera y Marc Aguado, sustituidos con molestias. ¿Cuáles son sus estados?",
-      "link": "https://www.jornadaperfecta.com/blog/german-valera-marc-aguado-molestias-26/",
-      "date": "Sat, 21 Mar 2026 16:43:12 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Iñigo Pérez sobre el estado de Akhomach y Luiz Felipe",
-      "link": "https://www.jornadaperfecta.com/blog/inigo-perez-previa-barcelona-rayo-j29/",
-      "date": "Sat, 21 Mar 2026 16:18:36 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Giráldez, sobre las bajas de Ilaix, Vecino, Starfelt y Marcos Alonso",
-      "link": "https://www.jornadaperfecta.com/blog/giraldez-previa-celta-alaves-j29/",
-      "date": "Sat, 21 Mar 2026 15:49:44 +0000",
-      "img": "https://cdn.biwenger.com/i/t/5.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Ilaix Moriba sufre una tendinopatía en el tendón rotuliano: Parte médico",
-      "link": "https://www.jornadaperfecta.com/blog/ilaix-moriba-tendinopatia-parte-medico-26/",
-      "date": "Sat, 21 Mar 2026 15:22:07 +0000",
-      "img": "https://cdn.biwenger.com/i/t/5.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Valverde responde sobre su salida y confirma fechas de vuelta",
-      "link": "https://www.jornadaperfecta.com/blog/valverde-previa-athletic-betis-j29/",
-      "date": "Sat, 21 Mar 2026 12:59:50 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-03-22T07:51:42.759Z",
+    "updatedAt": "2026-03-22T13:55:05.507Z",
     "players": [
       {
         "id": "3374",
@@ -14964,11 +14964,11 @@
         "team": "FC Barcelona",
         "position": "",
         "nationality": "Spain",
-        "appearances": 24,
+        "appearances": 25,
         "goals": 14,
         "assists": 9,
         "penalties": 2,
-        "minutesPerGoal": 154
+        "minutesPerGoal": 161
       },
       {
         "id": "2237",
@@ -14988,11 +14988,11 @@
         "team": "FC Barcelona",
         "position": "",
         "nationality": "Spain",
-        "appearances": 26,
+        "appearances": 27,
         "goals": 12,
         "assists": 2,
         "penalties": 0,
-        "minutesPerGoal": 195
+        "minutesPerGoal": 203
       },
       {
         "id": "32056",
@@ -15024,11 +15024,11 @@
         "team": "FC Barcelona",
         "position": "",
         "nationality": "Brazil",
-        "appearances": 20,
+        "appearances": 21,
         "goals": 11,
         "assists": 3,
         "penalties": 3,
-        "minutesPerGoal": 164
+        "minutesPerGoal": 172
       },
       {
         "id": "371",
@@ -15036,11 +15036,11 @@
         "team": "FC Barcelona",
         "position": "",
         "nationality": "Poland",
-        "appearances": 25,
+        "appearances": 26,
         "goals": 11,
         "assists": 1,
         "penalties": 1,
-        "minutesPerGoal": 205
+        "minutesPerGoal": 213
       },
       {
         "id": "133276",
@@ -15048,11 +15048,11 @@
         "team": "Rayo Vallecano de Madrid",
         "position": "",
         "nationality": "Spain",
-        "appearances": 26,
+        "appearances": 28,
         "goals": 10,
         "assists": 1,
         "penalties": 1,
-        "minutesPerGoal": 234
+        "minutesPerGoal": 252
       },
       {
         "id": "8167",
@@ -15216,11 +15216,11 @@
         "team": "FC Barcelona",
         "position": "",
         "nationality": "Spain",
-        "appearances": 23,
+        "appearances": 24,
         "goals": 7,
         "assists": 7,
         "penalties": 0,
-        "minutesPerGoal": 296
+        "minutesPerGoal": 309
       },
       {
         "id": "82132",
@@ -15468,11 +15468,11 @@
         "team": "FC Barcelona",
         "position": "",
         "nationality": "Spain",
-        "appearances": 23,
+        "appearances": 24,
         "goals": 5,
         "assists": 8,
         "penalties": 0,
-        "minutesPerGoal": 414
+        "minutesPerGoal": 432
       },
       {
         "id": "16275",
@@ -15576,11 +15576,11 @@
         "team": "Rayo Vallecano de Madrid",
         "position": "",
         "nationality": "Spain",
-        "appearances": 27,
+        "appearances": 29,
         "goals": 4,
         "assists": 4,
         "penalties": 0,
-        "minutesPerGoal": 608
+        "minutesPerGoal": 653
       },
       {
         "id": "633",
@@ -15708,11 +15708,11 @@
         "team": "FC Barcelona",
         "position": "",
         "nationality": "England",
-        "appearances": 26,
+        "appearances": 27,
         "goals": 4,
         "assists": 6,
         "penalties": 0,
-        "minutesPerGoal": 585
+        "minutesPerGoal": 608
       },
       {
         "id": "3201",
@@ -15780,11 +15780,11 @@
         "team": "Rayo Vallecano de Madrid",
         "position": "",
         "nationality": "Spain",
-        "appearances": 26,
+        "appearances": 27,
         "goals": 3,
         "assists": 2,
         "penalties": 2,
-        "minutesPerGoal": 780
+        "minutesPerGoal": 810
       },
       {
         "id": "180061",
@@ -15929,6 +15929,18 @@
         "assists": 0,
         "penalties": 0,
         "minutesPerGoal": 840
+      },
+      {
+        "id": "28292",
+        "name": "Ronald Araújo",
+        "team": "FC Barcelona",
+        "position": "",
+        "nationality": "Uruguay",
+        "appearances": 23,
+        "goals": 3,
+        "assists": 0,
+        "penalties": 0,
+        "minutesPerGoal": 690
       },
       {
         "id": "79953",
@@ -16080,11 +16092,11 @@
         "team": "FC Barcelona",
         "position": "",
         "nationality": "Spain",
-        "appearances": 20,
+        "appearances": 21,
         "goals": 2,
         "assists": 7,
         "penalties": 0,
-        "minutesPerGoal": 900
+        "minutesPerGoal": 945
       },
       {
         "id": "81168",
@@ -16121,18 +16133,6 @@
         "assists": 1,
         "penalties": 0,
         "minutesPerGoal": 1125
-      },
-      {
-        "id": "187117",
-        "name": "Fran Perez",
-        "team": "Rayo Vallecano de Madrid",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 26,
-        "goals": 2,
-        "assists": 1,
-        "penalties": 0,
-        "minutesPerGoal": 1170
       }
     ]
   }
