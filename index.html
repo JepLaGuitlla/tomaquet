@@ -1818,8 +1818,7 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
     <button class="modal-remove" id="modalRemove" onclick="removePlayer()">REMOVE PLAYER</button>
   </div>
 </div>
-<script src="scripts/engine.js"></script>
-<script src="scripts/ui.js"></script>
+
 <script>
 // ══════════════════════════════════════════
 // BASE DE DATOS AVANZADA (Numbers — J26)
@@ -2281,11 +2280,18 @@ function renderNews() {
 }
 
 // ══════════════════════════════════════════
-// RANKINGS INICIO
-// ══════════════════════════════════════════
-// ── EFICIENCIA DE PRECIO ────────────────────────────────────────────────────
-// Mide cuánto rinde un jugador respecto a lo esperado para su precio y posición
-// Resultado en % — positivo = rinde por encima, negativo = por debajo
+let allPlayers=[],filteredPlayers=[],currentPos='',currentSort='sf_goals_desc',currentPage=1;
+const PAGE_SIZE=50;
+let cf='4-3-3',lineup={},marketPlayers=[],currentSlot=null;
+let myTeamData=null;      // datos reales mi equipo TOMAQUET desde Biwenger
+let myTeamDataEnBas=null; // datos reales mi equipo EN BAS desde Biwenger
+
+document.addEventListener('keydown',e=>{ if(e.key==='Escape'){ closeJugPanelDirect(); closeCompareModalDirect(); }});
+document.addEventListener('DOMContentLoaded',()=>{
+  renderGeneral(); renderGrupos(); autoPlace(); renderMiEquipo();
+  mv3InitFromAdvancedStats(); // fallback inmediato con datos estáticos
+  loadPlayers(); // las noticias se cargan desde data.json dentro de loadPlayers
+});
 
 async function loadPlayers(){
   document.getElementById('jugadores-loading').style.display='flex';
@@ -4296,6 +4302,33 @@ async function loadLiga(){
   }
 }
 
+function renderRecomendaciones() {
+  const recEl = document.getElementById('recomendaciones');
+  if (!recEl) return;
+
+  if (!allPlayers.length) {
+    recEl.innerHTML = '<div style="padding:16px;color:var(--text3);font-size:0.8rem;grid-column:1/-1">Cargando jugadores…</div>';
+    return;
+  }
+
+  // Calcular recomendaciones para todos los jugadores disponibles
+  const candidatos = allPlayers
+    .map(p => calcRecomendacion(p))
+    .filter(Boolean)
+    .sort((a, b) => b.score - a.score);
+
+  // Top 3 por posición — así no son todos del mismo equipo/posición
+  const porPos = { PT:[], DF:[], MC:[], DL:[] };
+  const topGlobal = [];
+  candidatos.forEach(r => {
+    const pos = (r.player.position||'').split('/')[0];
+    if (porPos[pos] && porPos[pos].length < 2) porPos[pos].push(r);
+  });
+
+  // Top global (máx 3) + top por posición (máx 1 cada una si no está ya)
+  const vistos = new Set();
+  const recs = [];
+  candidatos.slice(0, 3).forEach(r => { recs.push(r); vistos.add(r.player.id||r.player.name); });
   Object.values(porPos).forEach(lista => {
     lista.forEach(r => {
       if (!vistos.has(r.player.id||r.player.name) && recs.length < 8) {
