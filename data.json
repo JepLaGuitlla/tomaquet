@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-23T15:39:47.966Z",
+  "updatedAt": "2026-03-23T20:00:19.645Z",
   "players": [
     {
       "id": 11,
@@ -11933,9 +11933,9 @@
         "name": "Sa Capritxosa Copa",
         "icon": "i/to/130600.png",
         "activeRound": {
-          "index": 9,
-          "type": "quarterFinal",
-          "leg": "away"
+          "index": 10,
+          "type": "semiFinal",
+          "leg": "home"
         }
       }
     ],
@@ -11944,13 +11944,13 @@
         "id": 8068427,
         "name": "Albertini",
         "icon": "i/u/8068427.png",
-        "points": 1554,
+        "points": 1609,
         "lastPositions": [
+          4,
           5,
           3,
           2,
-          2,
-          4
+          2
         ],
         "teamSize": 17,
         "teamValue": 100010000,
@@ -11963,13 +11963,13 @@
         "name": "LeMola Team",
         "icon": "i/u/6552586.png",
         "role": "manager",
-        "points": 1477,
+        "points": 1543,
         "lastPositions": [
+          2,
           8,
           1,
           11,
-          14,
-          6
+          14
         ],
         "teamSize": 17,
         "teamValue": 103380000,
@@ -11977,7 +11977,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 2,
-          "season": "2024/2025 season"
+          "season": "Temporada 2024/2025"
         },
         "position": 2
       },
@@ -11986,13 +11986,13 @@
         "name": "🦊",
         "icon": "i/u/6541195.png?v=17",
         "role": "manager",
-        "points": 1366,
+        "points": 1437,
         "lastPositions": [
+          1,
           7,
           13,
           1,
-          6,
-          7
+          6
         ],
         "teamSize": 16,
         "teamValue": 79390000,
@@ -12003,32 +12003,31 @@
         "id": 8068002,
         "name": "Soulands Rangers",
         "icon": "i/u/8068002.png?v=69",
-        "points": 1352,
+        "points": 1409,
         "lastPositions": [
+          3,
           2,
           11,
           12,
-          7,
-          10
+          7
         ],
         "teamSize": 17,
         "teamValue": 104210000,
         "teamValueInc": 250000,
         "position": 4,
-        "positionInc": 1,
         "role": ""
       },
       {
         "id": 8070044,
         "name": "CA CABA JUNIORS",
         "icon": "i/u/8070044.png?v=63",
-        "points": 1335,
+        "points": 1386,
         "lastPositions": [
+          5,
           9,
           14,
           8,
-          1,
-          14
+          1
         ],
         "teamSize": 15,
         "teamValue": 86530000,
@@ -12036,29 +12035,27 @@
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "2024/2025 season"
+          "season": "Temporada 2024/2025"
         },
         "position": 5,
-        "positionInc": -1,
         "role": ""
       },
       {
         "id": 12697101,
         "name": "INDOMABLE FC",
         "icon": "i/u/11757390.png",
-        "points": 1317,
+        "points": 1366,
         "lastPositions": [
+          7,
           1,
           5,
           6,
-          4,
-          11
+          4
         ],
         "teamSize": 17,
         "teamValue": 85990000,
         "teamValueInc": 260000,
         "position": 6,
-        "positionInc": 1,
         "role": ""
       },
       {
@@ -12066,13 +12063,13 @@
         "name": "Zaza Pachulia",
         "icon": "i/u/148051.png?v=39",
         "role": "manager",
-        "points": 1307,
+        "points": 1344,
         "lastPositions": [
+          12,
           12,
           2,
           3,
-          13,
-          1
+          13
         ],
         "teamSize": 16,
         "teamValue": 92970000,
@@ -12080,22 +12077,21 @@
         "lastTrophy": {
           "type": "league",
           "position": 1,
-          "season": "2024/2025 season"
+          "season": "Temporada 2024/2025"
         },
-        "position": 7,
-        "positionInc": -1
+        "position": 7
       },
       {
         "id": 12696491,
         "name": "NACECH1",
         "icon": "https://graph.facebook.com/10235185447969563/picture?height=300&width=300",
-        "points": 1273,
+        "points": 1320,
         "lastPositions": [
+          8,
           11,
           9,
           9,
-          5,
-          2
+          5
         ],
         "teamSize": 14,
         "teamValue": 53400000,
@@ -12108,13 +12104,13 @@
         "name": "The Black Team",
         "icon": "i/u/3928497.png",
         "role": "manager",
-        "points": 1191,
+        "points": 1236,
         "lastPositions": [
+          9,
           14,
           4,
           10,
-          8,
-          12
+          8
         ],
         "teamSize": 19,
         "teamValue": 46830000,
@@ -12125,69 +12121,66 @@
         "id": 12696899,
         "name": "CIGALERU",
         "icon": "i/u/12696899.png",
-        "points": 1182,
+        "points": 1220,
         "lastPositions": [
+          11,
           3,
           8,
           14,
-          10,
-          5
+          10
         ],
         "teamSize": 15,
         "teamValue": 57340000,
         "teamValueInc": -160000,
         "position": 10,
-        "positionInc": 1,
         "role": ""
       },
       {
         "id": 12696599,
         "name": "Trileros FC",
         "icon": "i/u/12696599.png",
-        "points": 1169,
+        "points": 1193,
         "lastPositions": [
+          14,
           4,
           6,
           4,
-          12,
-          3
+          12
         ],
         "teamSize": 11,
         "teamValue": 42750000,
         "teamValueInc": -330000,
         "position": 11,
-        "positionInc": 1,
         "role": ""
       },
       {
         "id": 11520975,
         "name": "Morankus FC",
         "icon": "i/u/11520975.png?v=81",
-        "points": 1154,
+        "points": 1182,
         "lastPositions": [
+          13,
           13,
           12,
           5,
-          11,
-          8
+          11
         ],
         "teamSize": 14,
         "teamValue": 43160000,
         "teamValueInc": -230000,
         "position": 12,
-        "positionInc": -2,
         "role": ""
       },
       {
         "id": 12713493,
         "name": "Tata Martini",
         "icon": "i/u/12713493.png",
-        "points": 1137,
+        "points": 1178,
         "lastPositions": [
+          10,
           6,
           7,
           13,
-          9,
           9
         ],
         "teamSize": 15,
@@ -12196,7 +12189,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "2023/2024 season"
+          "season": "Temporada 2023/2024"
         },
         "position": 13,
         "role": ""
@@ -12205,13 +12198,13 @@
         "id": 11521196,
         "name": "Hufflepuff 🍋",
         "icon": "i/u/11521196.png?v=57",
-        "points": 1086,
+        "points": 1137,
         "lastPositions": [
+          6,
           10,
           10,
           7,
-          3,
-          13
+          3
         ],
         "teamSize": 17,
         "teamValue": 52970000,
@@ -12226,7 +12219,7 @@
       "id": 8068427,
       "name": "Albertini",
       "manager": "Albertini",
-      "points": 1554,
+      "points": 1609,
       "value": 100010000,
       "trend": 140000,
       "players": []
@@ -12235,7 +12228,7 @@
       "id": 6552586,
       "name": "LeMola Team",
       "manager": "LeMola Team",
-      "points": 1477,
+      "points": 1543,
       "value": 103380000,
       "trend": -180000,
       "players": []
@@ -12244,7 +12237,7 @@
       "id": 6541195,
       "name": "🦊",
       "manager": "🦊",
-      "points": 1366,
+      "points": 1437,
       "value": 79390000,
       "trend": 690000,
       "players": []
@@ -12253,7 +12246,7 @@
       "id": 8068002,
       "name": "Soulands Rangers",
       "manager": "Soulands Rangers",
-      "points": 1352,
+      "points": 1409,
       "value": 104210000,
       "trend": 250000,
       "players": []
@@ -12262,7 +12255,7 @@
       "id": 8070044,
       "name": "CA CABA JUNIORS",
       "manager": "CA CABA JUNIORS",
-      "points": 1335,
+      "points": 1386,
       "value": 86530000,
       "trend": -80000,
       "players": []
@@ -12271,7 +12264,7 @@
       "id": 12697101,
       "name": "INDOMABLE FC",
       "manager": "INDOMABLE FC",
-      "points": 1317,
+      "points": 1366,
       "value": 85990000,
       "trend": 260000,
       "players": []
@@ -12280,7 +12273,7 @@
       "id": 148051,
       "name": "Zaza Pachulia",
       "manager": "Zaza Pachulia",
-      "points": 1307,
+      "points": 1344,
       "value": 92970000,
       "trend": -310000,
       "players": []
@@ -12289,7 +12282,7 @@
       "id": 12696491,
       "name": "NACECH1",
       "manager": "NACECH1",
-      "points": 1273,
+      "points": 1320,
       "value": 53400000,
       "trend": 110000,
       "players": []
@@ -12298,7 +12291,7 @@
       "id": 3928497,
       "name": "The Black Team",
       "manager": "The Black Team",
-      "points": 1191,
+      "points": 1236,
       "value": 46830000,
       "trend": -270000,
       "players": []
@@ -12307,7 +12300,7 @@
       "id": 12696899,
       "name": "CIGALERU",
       "manager": "CIGALERU",
-      "points": 1182,
+      "points": 1220,
       "value": 57340000,
       "trend": -160000,
       "players": []
@@ -12316,7 +12309,7 @@
       "id": 12696599,
       "name": "Trileros FC",
       "manager": "Trileros FC",
-      "points": 1169,
+      "points": 1193,
       "value": 42750000,
       "trend": -330000,
       "players": []
@@ -12325,7 +12318,7 @@
       "id": 11520975,
       "name": "Morankus FC",
       "manager": "Morankus FC",
-      "points": 1154,
+      "points": 1182,
       "value": 43160000,
       "trend": -230000,
       "players": []
@@ -12334,7 +12327,7 @@
       "id": 12713493,
       "name": "Tata Martini",
       "manager": "Tata Martini",
-      "points": 1137,
+      "points": 1178,
       "value": 56550000,
       "trend": 70000,
       "players": []
@@ -12343,7 +12336,7 @@
       "id": 11521196,
       "name": "Hufflepuff 🍋",
       "manager": "Hufflepuff 🍋",
-      "points": 1086,
+      "points": 1137,
       "value": 52970000,
       "trend": 130000,
       "players": []
@@ -12352,11 +12345,11 @@
   "myTeam": {
     "teamId": 6541195,
     "name": "🦊",
-    "points": 1366,
-    "balance": 94763,
+    "points": 1437,
+    "balance": 2224763,
     "lineup": {
       "type": "3-4-3",
-      "date": 1774279632,
+      "date": 1774282592,
       "playersID": [
         17021,
         10155,
@@ -12652,9 +12645,9 @@
         "name": "Chempiooons",
         "icon": "img/tournament.png",
         "activeRound": {
-          "index": 10,
+          "index": 11,
           "type": "quarterFinal",
-          "leg": "home"
+          "leg": "away"
         }
       },
       {
@@ -12662,9 +12655,9 @@
         "name": "Europa League",
         "icon": "img/tournament.png",
         "activeRound": {
-          "index": 1,
+          "index": 2,
           "type": "quarterFinal",
-          "leg": "home"
+          "leg": "away"
         }
       }
     ],
@@ -12673,13 +12666,13 @@
         "id": 9890450,
         "name": "MarK Lenders",
         "icon": "icons/34.png",
-        "points": 1360,
+        "points": 1411,
         "lastPositions": [
+          6,
           5,
           3,
           8,
-          8,
-          10
+          8
         ],
         "teamSize": 16,
         "teamValue": 73930000,
@@ -12693,39 +12686,41 @@
         "role": ""
       },
       {
-        "id": 6588130,
-        "name": "The GOAT club",
-        "icon": "i/u/6588130.png?v=12",
-        "points": 1301,
-        "lastPositions": [
-          3,
-          10,
-          1,
-          2,
-          1
-        ],
-        "teamSize": 13,
-        "teamValue": 99960000,
-        "teamValueInc": 110000,
-        "position": 2,
-        "role": ""
-      },
-      {
         "id": 6579505,
         "name": "Xevi borrat",
         "icon": "i/u/6579505.png",
-        "points": 1300,
+        "points": 1368,
         "lastPositions": [
+          1,
           2,
           17,
           14,
-          4,
-          3
+          4
         ],
         "teamSize": 18,
         "teamValue": 93610000,
         "teamValueInc": 430000,
+        "position": 2,
+        "positionInc": 1,
+        "role": ""
+      },
+      {
+        "id": 6588130,
+        "name": "The GOAT club",
+        "icon": "i/u/6588130.png?v=12",
+        "points": 1365,
+        "lastPositions": [
+          3,
+          3,
+          10,
+          1,
+          2
+        ],
+        "teamSize": 13,
+        "teamValue": 99960000,
+        "teamValueInc": 110000,
         "position": 3,
+        "positionInc": -1,
         "role": ""
       },
       {
@@ -12733,13 +12728,13 @@
         "name": "🦊",
         "icon": "i/u/11504267.png",
         "role": "manager",
-        "points": 1254,
+        "points": 1296,
         "lastPositions": [
+          14,
           13,
           6,
           12,
-          9,
-          2
+          9
         ],
         "teamSize": 19,
         "teamValue": 96450000,
@@ -12750,13 +12745,13 @@
         "id": 6579402,
         "name": "Valors FC",
         "icon": "icons/7.png",
-        "points": 1227,
+        "points": 1277,
         "lastPositions": [
+          8,
           17,
           5,
           18,
-          14,
-          13
+          14
         ],
         "teamSize": 14,
         "teamValue": 55940000,
@@ -12769,50 +12764,48 @@
         "name": "Norimaki  FC",
         "icon": "icons/41.png",
         "role": "manager",
-        "points": 1211,
+        "points": 1255,
         "lastPositions": [
+          13,
           8,
           9,
           4,
-          11,
           11
         ],
         "teamSize": 12,
         "teamValue": 68310000,
         "teamValueInc": -20000,
-        "position": 6,
-        "positionInc": 1
+        "position": 6
       },
       {
         "id": 6580423,
         "name": "FC Borça",
         "icon": "i/t/3.png",
-        "points": 1201,
+        "points": 1226,
         "lastPositions": [
+          18,
           15,
           1,
           11,
-          19,
-          7
+          19
         ],
-        "teamSize": 17,
-        "teamValue": 63990000,
-        "teamValueInc": -280000,
+        "teamSize": 13,
+        "teamValue": 59240000,
+        "teamValueInc": -180000,
         "position": 7,
-        "positionInc": -1,
         "role": ""
       },
       {
         "id": 7817228,
         "name": "Petraques",
         "icon": "i/u/7817228.png",
-        "points": 1152,
+        "points": 1193,
         "lastPositions": [
+          15,
           12,
           16,
           5,
-          1,
-          16
+          1
         ],
         "teamSize": 17,
         "teamValue": 59060000,
@@ -12825,13 +12818,13 @@
         "name": "Aiveen Teaam",
         "icon": "i/u/6579540.png?v=63",
         "role": "manager",
-        "points": 1143,
+        "points": 1189,
         "lastPositions": [
+          12,
           4,
           18,
           17,
-          5,
-          6
+          5
         ],
         "teamSize": 16,
         "teamValue": 50570000,
@@ -12842,13 +12835,13 @@
         "id": 6586225,
         "name": "Sergi Sala Duran",
         "icon": "https://graph.facebook.com/10156583054878679/picture?height=300&width=300",
-        "points": 1114,
+        "points": 1160,
         "lastPositions": [
+          11,
           6,
           12,
           7,
-          12,
-          8
+          12
         ],
         "teamSize": 12,
         "teamValue": 61350000,
@@ -12857,34 +12850,16 @@
         "role": ""
       },
       {
-        "id": 6579283,
-        "name": "Fiorenzola",
-        "icon": "i/u/6579283.png?v=33",
-        "points": 1076,
-        "lastPositions": [
-          14,
-          14,
-          16,
-          10,
-          5
-        ],
-        "teamSize": 13,
-        "teamValue": 58280000,
-        "teamValueInc": -60000,
-        "position": 11,
-        "role": ""
-      },
-      {
         "id": 6580386,
         "name": "Lamine i els 7 nans 👯‍♀️",
         "icon": "i/u/6580386.png?v=10",
-        "points": 1068,
+        "points": 1126,
         "lastPositions": [
+          4,
           9,
           4,
           10,
-          16,
-          12
+          16
         ],
         "teamSize": 15,
         "teamValue": 39430000,
@@ -12894,44 +12869,39 @@
           "position": 2,
           "season": "Temporada 2024/2025"
         },
-        "position": 12,
+        "position": 11,
         "positionInc": 1,
         "role": ""
       },
       {
-        "id": 6580389,
-        "name": "Kings Team",
-        "icon": "icons/31.png",
-        "points": 1052,
+        "id": 6579283,
+        "name": "Fiorenzola",
+        "icon": "i/u/6579283.png?v=33",
+        "points": 1111,
         "lastPositions": [
           16,
-          19,
-          6,
-          17,
-          14
+          14,
+          14,
+          16,
+          10
         ],
-        "teamSize": 16,
-        "teamValue": 27660000,
-        "teamValueInc": -100000,
-        "lastTrophy": {
-          "type": "league",
-          "position": -1,
-          "season": "Temporada 2024/2025"
-        },
-        "position": 13,
+        "teamSize": 13,
+        "teamValue": 58280000,
+        "teamValueInc": -60000,
+        "position": 12,
         "positionInc": -1,
         "role": ""
       },
       {
         "id": 9890540,
         "name": "UE Trincadors",
-        "points": 1049,
+        "points": 1097,
         "lastPositions": [
+          9,
           11,
           8,
           15,
-          3,
-          9
+          3
         ],
         "teamSize": 14,
         "teamValue": 49380000,
@@ -12941,25 +12911,105 @@
           "position": 3,
           "season": "Temporada 2024/2025"
         },
+        "position": 13,
+        "positionInc": 1,
+        "role": ""
+      },
+      {
+        "id": 6580389,
+        "name": "Kings Team",
+        "icon": "icons/31.png",
+        "points": 1087,
+        "lastPositions": [
+          17,
+          16,
+          19,
+          6,
+          17
+        ],
+        "teamSize": 16,
+        "teamValue": 27660000,
+        "teamValueInc": -100000,
+        "lastTrophy": {
+          "type": "league",
+          "position": -1,
+          "season": "Temporada 2024/2025"
+        },
         "position": 14,
+        "positionInc": -1,
         "role": ""
       },
       {
         "id": 6579280,
         "name": "Sant Pere Atlètic",
         "icon": "i/u/6579280.png?v=22",
-        "points": 1034,
+        "points": 1085,
         "lastPositions": [
+          7,
           7,
           11,
           20,
-          20,
-          4
+          20
         ],
         "teamSize": 14,
         "teamValue": 38810000,
         "teamValueInc": -260000,
         "position": 15,
+        "role": ""
+      },
+      {
+        "id": 9897660,
+        "name": "Eric Duran",
+        "points": 1068,
+        "lastPositions": [
+          2,
+          1,
+          15,
+          2,
+          13
+        ],
+        "teamSize": 18,
+        "teamValue": 65840000,
+        "teamValueInc": 570000,
+        "position": 16,
+        "positionInc": 1,
+        "role": ""
+      },
+      {
+        "id": 6579330,
+        "name": "Mindundis",
+        "icon": "i/u/6579330.png?v=66",
+        "points": 1052,
+        "lastPositions": [
+          5,
+          10,
+          7,
+          9,
+          15
+        ],
+        "teamSize": 19,
+        "teamValue": 50780000,
+        "teamValueInc": 310000,
+        "position": 17,
+        "positionInc": 1,
+        "role": ""
+      },
+      {
+        "id": 6586257,
+        "name": "Aquest any he trepitjat merda !!",
+        "icon": "i/u/6586257.png",
+        "points": 1026,
+        "lastPositions": [
+          10,
+          18,
+          2,
+          13,
+          7
+        ],
+        "teamSize": 18,
+        "teamValue": 38380000,
+        "teamValueInc": 40000,
+        "position": 18,
         "positionInc": 1,
         "role": ""
       },
@@ -12967,94 +13017,37 @@
         "id": 6593096,
         "name": "Janwandowski",
         "icon": "i/u/6593096.png",
-        "points": 1006,
+        "points": 1025,
         "lastPositions": [
+          19,
           19,
           20,
           3,
-          6,
-          17
+          6
         ],
         "teamSize": 18,
         "teamValue": 32670000,
         "teamValueInc": -310000,
-        "position": 16,
-        "positionInc": -1,
-        "role": ""
-      },
-      {
-        "id": 9897660,
-        "name": "Eric Duran",
-        "points": 1001,
-        "lastPositions": [
-          1,
-          15,
-          2,
-          13,
-          15
-        ],
-        "teamSize": 18,
-        "teamValue": 65840000,
-        "teamValueInc": 570000,
-        "position": 17,
-        "positionInc": 3,
-        "role": ""
-      },
-      {
-        "id": 6579330,
-        "name": "Mindundis",
-        "icon": "i/u/6579330.png?v=66",
-        "points": 997,
-        "lastPositions": [
-          10,
-          7,
-          9,
-          15,
-          18
-        ],
-        "teamSize": 19,
-        "teamValue": 50780000,
-        "teamValueInc": 310000,
-        "position": 18,
-        "positionInc": -1,
-        "role": ""
-      },
-      {
-        "id": 6586257,
-        "name": "Aquest any he trepitjat merda !!",
-        "icon": "i/u/6586257.png",
-        "points": 978,
-        "lastPositions": [
-          18,
-          2,
-          13,
-          7,
-          19
-        ],
-        "teamSize": 18,
-        "teamValue": 38380000,
-        "teamValueInc": 40000,
         "position": 19,
-        "positionInc": -1,
+        "positionInc": -3,
         "role": ""
       },
       {
         "id": 6585052,
         "name": "Tots som Olost",
         "icon": "i/u/6585052.png?v=69",
-        "points": 945,
+        "points": 959,
         "lastPositions": [
+          20,
           20,
           13,
           19,
-          18,
-          20
+          18
         ],
         "teamSize": 15,
         "teamValue": 41480000,
         "teamValueInc": -410000,
         "position": 20,
-        "positionInc": -1,
         "role": ""
       }
     ]
@@ -13064,34 +13057,34 @@
       "id": 9890450,
       "name": "MarK Lenders",
       "manager": "MarK Lenders",
-      "points": 1360,
+      "points": 1411,
       "value": 73930000,
       "trend": 50000,
-      "players": []
-    },
-    {
-      "id": 6588130,
-      "name": "The GOAT club",
-      "manager": "The GOAT club",
-      "points": 1301,
-      "value": 99960000,
-      "trend": 110000,
       "players": []
     },
     {
       "id": 6579505,
       "name": "Xevi borrat",
       "manager": "Xevi borrat",
-      "points": 1300,
+      "points": 1368,
       "value": 93610000,
       "trend": 430000,
+      "players": []
+    },
+    {
+      "id": 6588130,
+      "name": "The GOAT club",
+      "manager": "The GOAT club",
+      "points": 1365,
+      "value": 99960000,
+      "trend": 110000,
       "players": []
     },
     {
       "id": 11504267,
       "name": "🦊",
       "manager": "🦊",
-      "points": 1254,
+      "points": 1296,
       "value": 96450000,
       "trend": 80000,
       "players": []
@@ -13100,7 +13093,7 @@
       "id": 6579402,
       "name": "Valors FC",
       "manager": "Valors FC",
-      "points": 1227,
+      "points": 1277,
       "value": 55940000,
       "trend": -190000,
       "players": []
@@ -13109,7 +13102,7 @@
       "id": 6578885,
       "name": "Norimaki  FC",
       "manager": "Norimaki  FC",
-      "points": 1211,
+      "points": 1255,
       "value": 68310000,
       "trend": -20000,
       "players": []
@@ -13118,16 +13111,16 @@
       "id": 6580423,
       "name": "FC Borça",
       "manager": "FC Borça",
-      "points": 1201,
-      "value": 63990000,
-      "trend": -280000,
+      "points": 1226,
+      "value": 59240000,
+      "trend": -180000,
       "players": []
     },
     {
       "id": 7817228,
       "name": "Petraques",
       "manager": "Petraques",
-      "points": 1152,
+      "points": 1193,
       "value": 59060000,
       "trend": -130000,
       "players": []
@@ -13136,7 +13129,7 @@
       "id": 6579540,
       "name": "Aiveen Teaam",
       "manager": "Aiveen Teaam",
-      "points": 1143,
+      "points": 1189,
       "value": 50570000,
       "trend": -100000,
       "players": []
@@ -13145,70 +13138,61 @@
       "id": 6586225,
       "name": "Sergi Sala Duran",
       "manager": "Sergi Sala Duran",
-      "points": 1114,
+      "points": 1160,
       "value": 61350000,
       "trend": 240000,
-      "players": []
-    },
-    {
-      "id": 6579283,
-      "name": "Fiorenzola",
-      "manager": "Fiorenzola",
-      "points": 1076,
-      "value": 58280000,
-      "trend": -60000,
       "players": []
     },
     {
       "id": 6580386,
       "name": "Lamine i els 7 nans 👯‍♀️",
       "manager": "Lamine i els 7 nans 👯‍♀️",
-      "points": 1068,
+      "points": 1126,
       "value": 39430000,
       "trend": -70000,
       "players": []
     },
     {
-      "id": 6580389,
-      "name": "Kings Team",
-      "manager": "Kings Team",
-      "points": 1052,
-      "value": 27660000,
-      "trend": -100000,
+      "id": 6579283,
+      "name": "Fiorenzola",
+      "manager": "Fiorenzola",
+      "points": 1111,
+      "value": 58280000,
+      "trend": -60000,
       "players": []
     },
     {
       "id": 9890540,
       "name": "UE Trincadors",
       "manager": "UE Trincadors",
-      "points": 1049,
+      "points": 1097,
       "value": 49380000,
       "trend": 0,
+      "players": []
+    },
+    {
+      "id": 6580389,
+      "name": "Kings Team",
+      "manager": "Kings Team",
+      "points": 1087,
+      "value": 27660000,
+      "trend": -100000,
       "players": []
     },
     {
       "id": 6579280,
       "name": "Sant Pere Atlètic",
       "manager": "Sant Pere Atlètic",
-      "points": 1034,
+      "points": 1085,
       "value": 38810000,
       "trend": -260000,
-      "players": []
-    },
-    {
-      "id": 6593096,
-      "name": "Janwandowski",
-      "manager": "Janwandowski",
-      "points": 1006,
-      "value": 32670000,
-      "trend": -310000,
       "players": []
     },
     {
       "id": 9897660,
       "name": "Eric Duran",
       "manager": "Eric Duran",
-      "points": 1001,
+      "points": 1068,
       "value": 65840000,
       "trend": 570000,
       "players": []
@@ -13217,7 +13201,7 @@
       "id": 6579330,
       "name": "Mindundis",
       "manager": "Mindundis",
-      "points": 997,
+      "points": 1052,
       "value": 50780000,
       "trend": 310000,
       "players": []
@@ -13226,16 +13210,25 @@
       "id": 6586257,
       "name": "Aquest any he trepitjat merda !!",
       "manager": "Aquest any he trepitjat merda !!",
-      "points": 978,
+      "points": 1026,
       "value": 38380000,
       "trend": 40000,
+      "players": []
+    },
+    {
+      "id": 6593096,
+      "name": "Janwandowski",
+      "manager": "Janwandowski",
+      "points": 1025,
+      "value": 32670000,
+      "trend": -310000,
       "players": []
     },
     {
       "id": 6585052,
       "name": "Tots som Olost",
       "manager": "Tots som Olost",
-      "points": 945,
+      "points": 959,
       "value": 41480000,
       "trend": -410000,
       "players": []
@@ -13244,8 +13237,8 @@
   "myTeamEnBas": {
     "teamId": 11504267,
     "name": "🦊",
-    "points": 1254,
-    "balance": -4817957,
+    "points": 1296,
+    "balance": -4397957,
     "lineup": {
       "type": "3-4-3",
       "date": 1774250452,
@@ -13416,6 +13409,48 @@
   "boardEnBas": [
     {
       "type": "transfer",
+      "date": 1774290034,
+      "content": [
+        {
+          "player": 9047,
+          "from": {
+            "id": 6580423,
+            "name": "FC Borça",
+            "icon": "i/t/3.png"
+          },
+          "amount": 2526400
+        },
+        {
+          "player": 30505,
+          "from": {
+            "id": 6580423,
+            "name": "FC Borça",
+            "icon": "i/t/3.png"
+          },
+          "amount": 339300
+        },
+        {
+          "player": 32338,
+          "from": {
+            "id": 6580423,
+            "name": "FC Borça",
+            "icon": "i/t/3.png"
+          },
+          "amount": 1532200
+        },
+        {
+          "player": 22073,
+          "from": {
+            "id": 6580423,
+            "name": "FC Borça",
+            "icon": "i/t/3.png"
+          },
+          "amount": 317600
+        }
+      ]
+    },
+    {
+      "type": "transfer",
       "date": 1774277378,
       "content": [
         {
@@ -13557,49 +13592,6 @@
             "icon": "i/u/6588130.png?v=12"
           },
           "amount": 1933700
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1774197899,
-      "content": [
-        {
-          "player": 5220,
-          "from": {
-            "id": 6579505,
-            "name": "Xevi borrat",
-            "icon": "i/u/6579505.png"
-          },
-          "to": {
-            "id": 6580386,
-            "name": "Lamine i els 7 nans 👯‍♀️",
-            "icon": "i/u/6580386.png?v=10"
-          },
-          "amount": 1080000,
-          "type": "clause"
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1774164710,
-      "content": [
-        {
-          "player": 1924,
-          "from": {
-            "id": 9897660,
-            "name": "Eric Duran"
-          },
-          "amount": 446500
-        },
-        {
-          "player": 16889,
-          "from": {
-            "id": 9897660,
-            "name": "Eric Duran"
-          },
-          "amount": 308800
         }
       ]
     }
@@ -14884,19 +14876,19 @@
       "matchDate": "2026-04-12T14:15:00Z"
     },
     "Elche CF": {
-      "winProb": 0.3966197183098592,
-      "drawProb": 0.27887323943661974,
-      "loseProb": 0.32450704225352117,
-      "over25Prob": 0.4566210045662101,
+      "winProb": 0.3948717948717948,
+      "drawProb": 0.282051282051282,
+      "loseProb": 0.32307692307692304,
+      "over25Prob": 0.4672897196261682,
       "isHome": true,
       "opponent": "Valencia",
       "matchDate": "2026-04-11T14:15:00Z"
     },
     "Real Sociedad": {
-      "winProb": 0.5220824802573852,
-      "drawProb": 0.26411231354197134,
-      "loseProb": 0.21380520620064344,
-      "over25Prob": 0.4566210045662101,
+      "winProb": 0.5193740685543965,
+      "drawProb": 0.26274217585693,
+      "loseProb": 0.21788375558867365,
+      "over25Prob": 0.46511627906976744,
       "isHome": true,
       "opponent": "Alavés",
       "matchDate": "2026-04-11T12:00:00Z"
@@ -14920,9 +14912,9 @@
       "matchDate": "2026-04-12T14:15:00Z"
     },
     "Real Madrid": {
-      "winProb": 0.7637263633162812,
-      "drawProb": 0.1605119814427438,
-      "loseProb": 0.07576165524097508,
+      "winProb": 0.7483872526516706,
+      "drawProb": 0.16109352726569862,
+      "loseProb": 0.09051922008263065,
       "over25Prob": 0.5,
       "isHome": true,
       "opponent": "Girona",
@@ -14932,33 +14924,33 @@
       "winProb": 0.34846583780084417,
       "drawProb": 0.2734116573514315,
       "loseProb": 0.37812250484772447,
-      "over25Prob": 0.5102040816326531,
+      "over25Prob": 0.5076142131979695,
       "isHome": false,
       "opponent": "CA Osasuna",
       "matchDate": "2026-04-12T12:00:00Z"
     },
     "Espanyol": {
-      "winProb": 0.09395248380129587,
-      "drawProb": 0.12311015118790494,
-      "loseProb": 0.782937365010799,
+      "winProb": 0.09932985852568874,
+      "drawProb": 0.12330603127326878,
+      "loseProb": 0.7773641102010423,
       "over25Prob": 0.5,
       "isHome": false,
       "opponent": "Barcelona",
       "matchDate": "2026-04-11T16:30:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.44571896763621466,
-      "drawProb": 0.2687423187218353,
-      "loseProb": 0.28553871364195,
+      "winProb": 0.4397736459175424,
+      "drawProb": 0.2716248989490704,
+      "loseProb": 0.28860145513338725,
       "over25Prob": 0.5128205128205129,
       "isHome": false,
       "opponent": "Sevilla",
       "matchDate": "2026-04-11T19:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.782937365010799,
-      "drawProb": 0.12311015118790494,
-      "loseProb": 0.09395248380129587,
+      "winProb": 0.7773641102010423,
+      "drawProb": 0.12330603127326878,
+      "loseProb": 0.09932985852568874,
       "over25Prob": 0.5,
       "isHome": true,
       "opponent": "Espanyol",
@@ -14983,10 +14975,10 @@
       "matchDate": "2026-04-12T19:00:00Z"
     },
     "Valencia": {
-      "winProb": 0.32450704225352117,
-      "drawProb": 0.27887323943661974,
-      "loseProb": 0.3966197183098592,
-      "over25Prob": 0.4566210045662101,
+      "winProb": 0.32307692307692304,
+      "drawProb": 0.282051282051282,
+      "loseProb": 0.3948717948717948,
+      "over25Prob": 0.4672897196261682,
       "isHome": false,
       "opponent": "Elche CF",
       "matchDate": "2026-04-11T14:15:00Z"
@@ -14995,7 +14987,7 @@
       "winProb": 0.5585106382978724,
       "drawProb": 0.22340425531914898,
       "loseProb": 0.21808510638297873,
-      "over25Prob": 0.4926108374384237,
+      "over25Prob": 0.49751243781094534,
       "isHome": true,
       "opponent": "Oviedo",
       "matchDate": "2026-04-12T16:30:00Z"
@@ -15004,25 +14996,25 @@
       "winProb": 0.21808510638297873,
       "drawProb": 0.22340425531914898,
       "loseProb": 0.5585106382978724,
-      "over25Prob": 0.4926108374384237,
+      "over25Prob": 0.49751243781094534,
       "isHome": false,
       "opponent": "Celta Vigo",
       "matchDate": "2026-04-12T16:30:00Z"
     },
     "Sevilla": {
-      "winProb": 0.28553871364195,
-      "drawProb": 0.2687423187218353,
-      "loseProb": 0.44571896763621466,
+      "winProb": 0.28860145513338725,
+      "drawProb": 0.2716248989490704,
+      "loseProb": 0.4397736459175424,
       "over25Prob": 0.5128205128205129,
       "isHome": true,
       "opponent": "Atlético Madrid",
       "matchDate": "2026-04-11T19:00:00Z"
     },
     "Alavés": {
-      "winProb": 0.21380520620064344,
-      "drawProb": 0.26411231354197134,
-      "loseProb": 0.5220824802573852,
-      "over25Prob": 0.4566210045662101,
+      "winProb": 0.21788375558867365,
+      "drawProb": 0.26274217585693,
+      "loseProb": 0.5193740685543965,
+      "over25Prob": 0.46511627906976744,
       "isHome": false,
       "opponent": "Real Sociedad",
       "matchDate": "2026-04-11T12:00:00Z"
@@ -15031,15 +15023,15 @@
       "winProb": 0.37812250484772447,
       "drawProb": 0.2734116573514315,
       "loseProb": 0.34846583780084417,
-      "over25Prob": 0.5102040816326531,
+      "over25Prob": 0.5076142131979695,
       "isHome": true,
       "opponent": "Real Betis",
       "matchDate": "2026-04-12T12:00:00Z"
     },
     "Girona": {
-      "winProb": 0.07576165524097508,
-      "drawProb": 0.1605119814427438,
-      "loseProb": 0.7637263633162812,
+      "winProb": 0.09051922008263065,
+      "drawProb": 0.16109352726569862,
+      "loseProb": 0.7483872526516706,
       "over25Prob": 0.5,
       "isHome": false,
       "opponent": "Real Madrid",
@@ -15055,1294 +15047,6 @@
       "matchDate": "2026-04-12T19:00:00Z"
     }
   },
-  "news": [
-    {
-      "title": "La gran oportunidad de Lunin. ¿Chollazo de final de temporada?",
-      "link": "https://www.jornadaperfecta.com/blog/lunin-analisis-lesion-courtois-26/",
-      "date": "Mon, 23 Mar 2026 14:00:00 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/11/Thibaut-Courtois-Real-Madrid.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Oficial: Matías Almeyda destituido como técnico del Sevilla",
-      "link": "https://www.jornadaperfecta.com/blog/matias-almeyda-destituido-sevilla/",
-      "date": "Mon, 23 Mar 2026 13:59:34 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Arbeloa confirma la fecha de vuelta de Militão, ¿cuándo regresa?",
-      "link": "https://www.jornadaperfecta.com/blog/militao-recuperacion-lesion-26/",
-      "date": "Mon, 23 Mar 2026 12:30:14 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Pablo Martínez está de vuelta, ¿parche fantasy interesante?",
-      "link": "https://www.jornadaperfecta.com/blog/pablo-martinez-vuelta-fantasy-levante/",
-      "date": "Mon, 23 Mar 2026 12:00:49 +0000",
-      "img": "https://cdn.biwenger.com/i/t/10.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Actualizadas las Alineaciones Probables para la Jornada 30",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-probables-j30-laliga-25-26/",
-      "date": "Mon, 23 Mar 2026 10:00:01 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Lesionados a recuperar en el parón de marzo",
-      "link": "https://www.jornadaperfecta.com/blog/lesionados-recuperar-paron-marzo-26/",
-      "date": "Mon, 23 Mar 2026 08:00:12 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "BigUp: Gana dinero real con tus pronósticos del Real Madrid &#8211; Atlético",
-      "link": "https://www.jornadaperfecta.com/blog/bigup-real-madrid-atletico-pronosticos/",
-      "date": "Sun, 22 Mar 2026 19:08:38 +0000",
-      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2705.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Radu sufre una lesión en el gemelo: parte médico oficial",
-      "link": "https://www.jornadaperfecta.com/blog/ionut-radu-parte-medico-celta/",
-      "date": "Sun, 22 Mar 2026 19:07:50 +0000",
-      "img": "https://cdn.biwenger.com/i/t/5.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Buenas noticias sobre el estado de Fermín y Cancelo",
-      "link": "https://www.jornadaperfecta.com/blog/fermin-estado-j30-barcelona/",
-      "date": "Sun, 22 Mar 2026 15:50:30 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Asencio, de nuevo fuera de la convocatoria del Real Madrid",
-      "link": "https://www.jornadaperfecta.com/blog/asencio-baja-real-madrid-j29/",
-      "date": "Sun, 22 Mar 2026 12:51:15 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    }
-  ],
-  "playerStats": {
-    "source": "football-data",
-    "league": "LaLiga",
-    "season": "2025/26",
-    "updatedAt": "2026-03-23T15:39:45.869Z",
-    "players": [
-      {
-        "id": "3374",
-        "name": "Kylian Mbappé",
-        "team": "Real Madrid CF",
-        "position": "",
-        "nationality": "France",
-        "appearances": 24,
-        "goals": 23,
-        "assists": 4,
-        "penalties": 8,
-        "minutesPerGoal": 94
-      },
-      {
-        "id": "30059",
-        "name": "Vedat Muriqi",
-        "team": "RCD Mallorca",
-        "position": "",
-        "nationality": "Kosovo",
-        "appearances": 28,
-        "goals": 18,
-        "assists": 1,
-        "penalties": 5,
-        "minutesPerGoal": 140
-      },
-      {
-        "id": "202283",
-        "name": "Lamine Yamal",
-        "team": "FC Barcelona",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 25,
-        "goals": 14,
-        "assists": 9,
-        "penalties": 2,
-        "minutesPerGoal": 161
-      },
-      {
-        "id": "2237",
-        "name": "Ante Budimir",
-        "team": "CA Osasuna",
-        "position": "",
-        "nationality": "Croatia",
-        "appearances": 28,
-        "goals": 14,
-        "assists": 0,
-        "penalties": 4,
-        "minutesPerGoal": 180
-      },
-      {
-        "id": "33154",
-        "name": "Ferrán Torres",
-        "team": "FC Barcelona",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 27,
-        "goals": 12,
-        "assists": 2,
-        "penalties": 0,
-        "minutesPerGoal": 203
-      },
-      {
-        "id": "32056",
-        "name": "Borja Iglesias",
-        "team": "RC Celta de Vigo",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 28,
-        "goals": 12,
-        "assists": 1,
-        "penalties": 3,
-        "minutesPerGoal": 210
-      },
-      {
-        "id": "180137",
-        "name": "Mikel Oyarzabal",
-        "team": "Real Sociedad de Fútbol",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 26,
-        "goals": 12,
-        "assists": 3,
-        "penalties": 5,
-        "minutesPerGoal": 195
-      },
-      {
-        "id": "37428",
-        "name": "Raphinha",
-        "team": "FC Barcelona",
-        "position": "",
-        "nationality": "Brazil",
-        "appearances": 21,
-        "goals": 11,
-        "assists": 3,
-        "penalties": 3,
-        "minutesPerGoal": 172
-      },
-      {
-        "id": "1556",
-        "name": "Vinicius Junior",
-        "team": "Real Madrid CF",
-        "position": "",
-        "nationality": "Brazil",
-        "appearances": 27,
-        "goals": 11,
-        "assists": 5,
-        "penalties": 4,
-        "minutesPerGoal": 221
-      },
-      {
-        "id": "371",
-        "name": "Robert Lewandowski",
-        "team": "FC Barcelona",
-        "position": "",
-        "nationality": "Poland",
-        "appearances": 26,
-        "goals": 11,
-        "assists": 1,
-        "penalties": 1,
-        "minutesPerGoal": 213
-      },
-      {
-        "id": "133276",
-        "name": "Jorge de Frutos",
-        "team": "Rayo Vallecano de Madrid",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 27,
-        "goals": 10,
-        "assists": 1,
-        "penalties": 1,
-        "minutesPerGoal": 243
-      },
-      {
-        "id": "8167",
-        "name": "Alexander Sørloth",
-        "team": "Club Atlético de Madrid",
-        "position": "",
-        "nationality": "Norway",
-        "appearances": 28,
-        "goals": 10,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 252
-      },
-      {
-        "id": "32762",
-        "name": "Hugo Duro",
-        "team": "Valencia CF",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 28,
-        "goals": 9,
-        "assists": 0,
-        "penalties": 1,
-        "minutesPerGoal": 280
-      },
-      {
-        "id": "160819",
-        "name": "Vladyslav Vanat",
-        "team": "Girona FC",
-        "position": "",
-        "nationality": "Ukraine",
-        "appearances": 26,
-        "goals": 9,
-        "assists": 1,
-        "penalties": 3,
-        "minutesPerGoal": 260
-      },
-      {
-        "id": "136646",
-        "name": "Georges Mikautadze",
-        "team": "Villarreal CF",
-        "position": "",
-        "nationality": "Georgia",
-        "appearances": 25,
-        "goals": 9,
-        "assists": 5,
-        "penalties": 0,
-        "minutesPerGoal": 250
-      },
-      {
-        "id": "150533",
-        "name": "Alberto Moleiro",
-        "team": "Villarreal CF",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 29,
-        "goals": 9,
-        "assists": 4,
-        "penalties": 0,
-        "minutesPerGoal": 290
-      },
-      {
-        "id": "11113",
-        "name": "Lucas Boyé",
-        "team": "Deportivo Alavés",
-        "position": "",
-        "nationality": "Argentina",
-        "appearances": 24,
-        "goals": 9,
-        "assists": 1,
-        "penalties": 2,
-        "minutesPerGoal": 240
-      },
-      {
-        "id": "98571",
-        "name": "Julián Álvarez",
-        "team": "Club Atlético de Madrid",
-        "position": "",
-        "nationality": "Argentina",
-        "appearances": 29,
-        "goals": 8,
-        "assists": 4,
-        "penalties": 2,
-        "minutesPerGoal": 326
-      },
-      {
-        "id": "4098",
-        "name": "Rafael Mir",
-        "team": "Elche CF",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 24,
-        "goals": 8,
-        "assists": 0,
-        "penalties": 1,
-        "minutesPerGoal": 270
-      },
-      {
-        "id": "32415",
-        "name": "Cucho Hernández",
-        "team": "Real Betis Balompié",
-        "position": "",
-        "nationality": "Colombia",
-        "appearances": 24,
-        "goals": 8,
-        "assists": 3,
-        "penalties": 1,
-        "minutesPerGoal": 270
-      },
-      {
-        "id": "32719",
-        "name": "Gerard Moreno",
-        "team": "Villarreal CF",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 16,
-        "goals": 8,
-        "assists": 0,
-        "penalties": 2,
-        "minutesPerGoal": 180
-      },
-      {
-        "id": "3259",
-        "name": "Gonçalo Guedes",
-        "team": "Real Sociedad de Fútbol",
-        "position": "",
-        "nationality": "Portugal",
-        "appearances": 29,
-        "goals": 8,
-        "assists": 4,
-        "penalties": 0,
-        "minutesPerGoal": 326
-      },
-      {
-        "id": "11733",
-        "name": "Toni Martínez",
-        "team": "Deportivo Alavés",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 29,
-        "goals": 7,
-        "assists": 3,
-        "penalties": 0,
-        "minutesPerGoal": 373
-      },
-      {
-        "id": "1760",
-        "name": "André Silva",
-        "team": "Elche CF",
-        "position": "",
-        "nationality": "Portugal",
-        "appearances": 24,
-        "goals": 7,
-        "assists": 0,
-        "penalties": 1,
-        "minutesPerGoal": 309
-      },
-      {
-        "id": "33117",
-        "name": "Pablo Fornals",
-        "team": "Real Betis Balompié",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 29,
-        "goals": 7,
-        "assists": 4,
-        "penalties": 0,
-        "minutesPerGoal": 373
-      },
-      {
-        "id": "23132",
-        "name": "Dani Olmo",
-        "team": "FC Barcelona",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 24,
-        "goals": 7,
-        "assists": 7,
-        "penalties": 0,
-        "minutesPerGoal": 309
-      },
-      {
-        "id": "82132",
-        "name": "Akor Adams",
-        "team": "Sevilla FC",
-        "position": "",
-        "nationality": "Nigeria",
-        "appearances": 24,
-        "goals": 7,
-        "assists": 3,
-        "penalties": 2,
-        "minutesPerGoal": 309
-      },
-      {
-        "id": "97085",
-        "name": "Antony",
-        "team": "Real Betis Balompié",
-        "position": "",
-        "nationality": "Brazil",
-        "appearances": 24,
-        "goals": 7,
-        "assists": 5,
-        "penalties": 0,
-        "minutesPerGoal": 309
-      },
-      {
-        "id": "83406",
-        "name": "Ferran Jutglà",
-        "team": "RC Celta de Vigo",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 26,
-        "goals": 7,
-        "assists": 2,
-        "penalties": 0,
-        "minutesPerGoal": 334
-      },
-      {
-        "id": "247061",
-        "name": "Carlos Espí",
-        "team": "Levante UD",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 25,
-        "goals": 7,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 321
-      },
-      {
-        "id": "203439",
-        "name": "Karl Etta Eyong",
-        "team": "Levante UD",
-        "position": "",
-        "nationality": "Cameroon",
-        "appearances": 27,
-        "goals": 6,
-        "assists": 5,
-        "penalties": 0,
-        "minutesPerGoal": 405
-      },
-      {
-        "id": "32398",
-        "name": "Pere Milla",
-        "team": "RCD Espanyol de Barcelona",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 27,
-        "goals": 6,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 405
-      },
-      {
-        "id": "113175",
-        "name": "Tajon Buchanan",
-        "team": "Villarreal CF",
-        "position": "",
-        "nationality": "Canada",
-        "appearances": 28,
-        "goals": 6,
-        "assists": 1,
-        "penalties": 0,
-        "minutesPerGoal": 420
-      },
-      {
-        "id": "180218",
-        "name": "Roberto Fernández",
-        "team": "RCD Espanyol de Barcelona",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 29,
-        "goals": 6,
-        "assists": 1,
-        "penalties": 1,
-        "minutesPerGoal": 435
-      },
-      {
-        "id": "33358",
-        "name": "Kike García",
-        "team": "RCD Espanyol de Barcelona",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 29,
-        "goals": 6,
-        "assists": 1,
-        "penalties": 1,
-        "minutesPerGoal": 435
-      },
-      {
-        "id": "32758",
-        "name": "Mauro Arambarri",
-        "team": "Getafe CF",
-        "position": "",
-        "nationality": "Uruguay",
-        "appearances": 29,
-        "goals": 6,
-        "assists": 2,
-        "penalties": 2,
-        "minutesPerGoal": 435
-      },
-      {
-        "id": "114",
-        "name": "Antoine Griezmann",
-        "team": "Club Atlético de Madrid",
-        "position": "",
-        "nationality": "France",
-        "appearances": 27,
-        "goals": 6,
-        "assists": 1,
-        "penalties": 0,
-        "minutesPerGoal": 405
-      },
-      {
-        "id": "112678",
-        "name": "Federico Viñas",
-        "team": "Real Oviedo",
-        "position": "",
-        "nationality": "Uruguay",
-        "appearances": 25,
-        "goals": 6,
-        "assists": 1,
-        "penalties": 2,
-        "minutesPerGoal": 375
-      },
-      {
-        "id": "81565",
-        "name": "Gorka Guruzeta",
-        "team": "Athletic Club",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 28,
-        "goals": 6,
-        "assists": 1,
-        "penalties": 1,
-        "minutesPerGoal": 420
-      },
-      {
-        "id": "101870",
-        "name": "Roberto Navarro",
-        "team": "Athletic Club",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 26,
-        "goals": 5,
-        "assists": 1,
-        "penalties": 0,
-        "minutesPerGoal": 468
-      },
-      {
-        "id": "156746",
-        "name": "Iván Romero",
-        "team": "Levante UD",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 28,
-        "goals": 5,
-        "assists": 2,
-        "penalties": 0,
-        "minutesPerGoal": 504
-      },
-      {
-        "id": "8412",
-        "name": "Nicolas Pépé",
-        "team": "Villarreal CF",
-        "position": "",
-        "nationality": "Ivory Coast",
-        "appearances": 29,
-        "goals": 5,
-        "assists": 4,
-        "penalties": 0,
-        "minutesPerGoal": 522
-      },
-      {
-        "id": "213404",
-        "name": "Carlos Vicente",
-        "team": "Deportivo Alavés",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 21,
-        "goals": 5,
-        "assists": 0,
-        "penalties": 3,
-        "minutesPerGoal": 378
-      },
-      {
-        "id": "186564",
-        "name": "Carlos Romero",
-        "team": "RCD Espanyol de Barcelona",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 27,
-        "goals": 5,
-        "assists": 1,
-        "penalties": 0,
-        "minutesPerGoal": 486
-      },
-      {
-        "id": "130324",
-        "name": "Raúl",
-        "team": "CA Osasuna",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 28,
-        "goals": 5,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 504
-      },
-      {
-        "id": "214533",
-        "name": "Fermín López",
-        "team": "FC Barcelona",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 24,
-        "goals": 5,
-        "assists": 8,
-        "penalties": 0,
-        "minutesPerGoal": 432
-      },
-      {
-        "id": "16275",
-        "name": "Djibril Sow",
-        "team": "Sevilla FC",
-        "position": "",
-        "nationality": "Switzerland",
-        "appearances": 27,
-        "goals": 5,
-        "assists": 1,
-        "penalties": 0,
-        "minutesPerGoal": 486
-      },
-      {
-        "id": "273423",
-        "name": "Víctor Muñoz",
-        "team": "CA Osasuna",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 29,
-        "goals": 5,
-        "assists": 2,
-        "penalties": 0,
-        "minutesPerGoal": 522
-      },
-      {
-        "id": "175941",
-        "name": "Abdessamad Ezzalzouli",
-        "team": "Real Betis Balompié",
-        "position": "",
-        "nationality": "Morocco",
-        "appearances": 20,
-        "goals": 5,
-        "assists": 5,
-        "penalties": 0,
-        "minutesPerGoal": 360
-      },
-      {
-        "id": "140814",
-        "name": "Samuel Almeida Costa",
-        "team": "RCD Mallorca",
-        "position": "",
-        "nationality": "Portugal",
-        "appearances": 26,
-        "goals": 5,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 468
-      },
-      {
-        "id": "189369",
-        "name": "Alvaro Rodriguez",
-        "team": "Elche CF",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 28,
-        "goals": 5,
-        "assists": 4,
-        "penalties": 0,
-        "minutesPerGoal": 504
-      },
-      {
-        "id": "16173",
-        "name": "Viktor Tsyhankov",
-        "team": "Girona FC",
-        "position": "",
-        "nationality": "Ukraine",
-        "appearances": 23,
-        "goals": 5,
-        "assists": 4,
-        "penalties": 0,
-        "minutesPerGoal": 414
-      },
-      {
-        "id": "136349",
-        "name": "Largie Ramazani",
-        "team": "Valencia CF",
-        "position": "",
-        "nationality": "Belgium",
-        "appearances": 22,
-        "goals": 5,
-        "assists": 1,
-        "penalties": 3,
-        "minutesPerGoal": 396
-      },
-      {
-        "id": "32312",
-        "name": "Álvaro García",
-        "team": "Rayo Vallecano de Madrid",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 28,
-        "goals": 4,
-        "assists": 4,
-        "penalties": 0,
-        "minutesPerGoal": 630
-      },
-      {
-        "id": "633",
-        "name": "Pape Gueye",
-        "team": "Villarreal CF",
-        "position": "",
-        "nationality": "Senegal",
-        "appearances": 24,
-        "goals": 4,
-        "assists": 2,
-        "penalties": 1,
-        "minutesPerGoal": 540
-      },
-      {
-        "id": "157135",
-        "name": "Nico Williams",
-        "team": "Athletic Club",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 19,
-        "goals": 4,
-        "assists": 3,
-        "penalties": 1,
-        "minutesPerGoal": 428
-      },
-      {
-        "id": "33045",
-        "name": "Aitor Ruibal",
-        "team": "Real Betis Balompié",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 25,
-        "goals": 4,
-        "assists": 2,
-        "penalties": 0,
-        "minutesPerGoal": 563
-      },
-      {
-        "id": "137485",
-        "name": "Germán Valera",
-        "team": "Elche CF",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 28,
-        "goals": 4,
-        "assists": 4,
-        "penalties": 0,
-        "minutesPerGoal": 630
-      },
-      {
-        "id": "182319",
-        "name": "Orri Oskarsson",
-        "team": "Real Sociedad de Fútbol",
-        "position": "",
-        "nationality": "Iceland",
-        "appearances": 13,
-        "goals": 4,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 293
-      },
-      {
-        "id": "213043",
-        "name": "Isaac",
-        "team": "Sevilla FC",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 25,
-        "goals": 4,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 563
-      },
-      {
-        "id": "169162",
-        "name": "Arda Guler",
-        "team": "Real Madrid CF",
-        "position": "",
-        "nationality": "Turkey",
-        "appearances": 28,
-        "goals": 4,
-        "assists": 8,
-        "penalties": 0,
-        "minutesPerGoal": 630
-      },
-      {
-        "id": "69",
-        "name": "Borja Mayoral",
-        "team": "Getafe CF",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 16,
-        "goals": 4,
-        "assists": 1,
-        "penalties": 0,
-        "minutesPerGoal": 360
-      },
-      {
-        "id": "33615",
-        "name": "Brais Méndez",
-        "team": "Real Sociedad de Fútbol",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 25,
-        "goals": 4,
-        "assists": 2,
-        "penalties": 1,
-        "minutesPerGoal": 563
-      },
-      {
-        "id": "122511",
-        "name": "Azzedine Ounahi",
-        "team": "Girona FC",
-        "position": "",
-        "nationality": "Morocco",
-        "appearances": 15,
-        "goals": 4,
-        "assists": 2,
-        "penalties": 0,
-        "minutesPerGoal": 338
-      },
-      {
-        "id": "3331",
-        "name": "Marcus Rashford",
-        "team": "FC Barcelona",
-        "position": "",
-        "nationality": "England",
-        "appearances": 27,
-        "goals": 4,
-        "assists": 6,
-        "penalties": 0,
-        "minutesPerGoal": 608
-      },
-      {
-        "id": "3201",
-        "name": "Iago Aspas",
-        "team": "RC Celta de Vigo",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 29,
-        "goals": 4,
-        "assists": 3,
-        "penalties": 2,
-        "minutesPerGoal": 653
-      },
-      {
-        "id": "33148",
-        "name": "Carlos Soler",
-        "team": "Real Sociedad de Fútbol",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 25,
-        "goals": 4,
-        "assists": 2,
-        "penalties": 0,
-        "minutesPerGoal": 563
-      },
-      {
-        "id": "125010",
-        "name": "Jude Bellingham",
-        "team": "Real Madrid CF",
-        "position": "",
-        "nationality": "England",
-        "appearances": 18,
-        "goals": 4,
-        "assists": 3,
-        "penalties": 0,
-        "minutesPerGoal": 405
-      },
-      {
-        "id": "217658",
-        "name": "Gonzalo García",
-        "team": "Real Madrid CF",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 28,
-        "goals": 4,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 630
-      },
-      {
-        "id": "146126",
-        "name": "Ilyas Chaira",
-        "team": "Real Oviedo",
-        "position": "",
-        "nationality": "Morocco",
-        "appearances": 27,
-        "goals": 4,
-        "assists": 1,
-        "penalties": 0,
-        "minutesPerGoal": 608
-      },
-      {
-        "id": "96",
-        "name": "Federico Valverde",
-        "team": "Real Madrid CF",
-        "position": "",
-        "nationality": "Uruguay",
-        "appearances": 27,
-        "goals": 4,
-        "assists": 5,
-        "penalties": 0,
-        "minutesPerGoal": 608
-      },
-      {
-        "id": "33496",
-        "name": "Isi Palazón",
-        "team": "Rayo Vallecano de Madrid",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 27,
-        "goals": 3,
-        "assists": 2,
-        "penalties": 2,
-        "minutesPerGoal": 810
-      },
-      {
-        "id": "180061",
-        "name": "Diego López",
-        "team": "Valencia CF",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 27,
-        "goals": 3,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 810
-      },
-      {
-        "id": "249599",
-        "name": "Adri Liso",
-        "team": "Getafe CF",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 25,
-        "goals": 3,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 750
-      },
-      {
-        "id": "101182",
-        "name": "Ander Barrenetxea",
-        "team": "Real Sociedad de Fútbol",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 23,
-        "goals": 3,
-        "assists": 3,
-        "penalties": 0,
-        "minutesPerGoal": 690
-      },
-      {
-        "id": "126878",
-        "name": "Oihan Sancet",
-        "team": "Athletic Club",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 22,
-        "goals": 3,
-        "assists": 0,
-        "penalties": 2,
-        "minutesPerGoal": 660
-      },
-      {
-        "id": "175869",
-        "name": "Hugo Alvarez",
-        "team": "RC Celta de Vigo",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 26,
-        "goals": 3,
-        "assists": 1,
-        "penalties": 0,
-        "minutesPerGoal": 780
-      },
-      {
-        "id": "9870",
-        "name": "Arnaut Danjuma",
-        "team": "Valencia CF",
-        "position": "",
-        "nationality": "Netherlands",
-        "appearances": 28,
-        "goals": 3,
-        "assists": 2,
-        "penalties": 0,
-        "minutesPerGoal": 840
-      },
-      {
-        "id": "171964",
-        "name": "Giuliano Simeone",
-        "team": "Club Atlético de Madrid",
-        "position": "",
-        "nationality": "Argentina",
-        "appearances": 27,
-        "goals": 3,
-        "assists": 6,
-        "penalties": 0,
-        "minutesPerGoal": 810
-      },
-      {
-        "id": "21583",
-        "name": "Cédric Bakambu",
-        "team": "Real Betis Balompié",
-        "position": "",
-        "nationality": "DR Congo",
-        "appearances": 24,
-        "goals": 3,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 720
-      },
-      {
-        "id": "45680",
-        "name": "Nicolás González",
-        "team": "Club Atlético de Madrid",
-        "position": "",
-        "nationality": "Argentina",
-        "appearances": 21,
-        "goals": 3,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 630
-      },
-      {
-        "id": "156525",
-        "name": "Carlos Álvarez",
-        "team": "Levante UD",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 26,
-        "goals": 3,
-        "assists": 2,
-        "penalties": 0,
-        "minutesPerGoal": 780
-      },
-      {
-        "id": "31913",
-        "name": "Ruben Vargas",
-        "team": "Sevilla FC",
-        "position": "",
-        "nationality": "Switzerland",
-        "appearances": 15,
-        "goals": 3,
-        "assists": 4,
-        "penalties": 1,
-        "minutesPerGoal": 450
-      },
-      {
-        "id": "7911",
-        "name": "Alexis Sánchez",
-        "team": "Sevilla FC",
-        "position": "",
-        "nationality": "Chile",
-        "appearances": 22,
-        "goals": 3,
-        "assists": 1,
-        "penalties": 1,
-        "minutesPerGoal": 660
-      },
-      {
-        "id": "11040",
-        "name": "Leandro Cabrera",
-        "team": "RCD Espanyol de Barcelona",
-        "position": "",
-        "nationality": "Uruguay",
-        "appearances": 28,
-        "goals": 3,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 840
-      },
-      {
-        "id": "191053",
-        "name": "Alberto Reina",
-        "team": "Real Oviedo",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 28,
-        "goals": 3,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 840
-      },
-      {
-        "id": "28292",
-        "name": "Ronald Araújo",
-        "team": "FC Barcelona",
-        "position": "",
-        "nationality": "Uruguay",
-        "appearances": 23,
-        "goals": 3,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 690
-      },
-      {
-        "id": "79953",
-        "name": "Thiago Almada",
-        "team": "Club Atlético de Madrid",
-        "position": "",
-        "nationality": "Argentina",
-        "appearances": 24,
-        "goals": 3,
-        "assists": 1,
-        "penalties": 0,
-        "minutesPerGoal": 720
-      },
-      {
-        "id": "3171",
-        "name": "Cristhian Stuani",
-        "team": "Girona FC",
-        "position": "",
-        "nationality": "Uruguay",
-        "appearances": 17,
-        "goals": 3,
-        "assists": 0,
-        "penalties": 3,
-        "minutesPerGoal": 510
-      },
-      {
-        "id": "213263",
-        "name": "Santi Comesaña",
-        "team": "Villarreal CF",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 28,
-        "goals": 3,
-        "assists": 5,
-        "penalties": 0,
-        "minutesPerGoal": 840
-      },
-      {
-        "id": "170438",
-        "name": "Williot Swedberg",
-        "team": "RC Celta de Vigo",
-        "position": "",
-        "nationality": "Sweden",
-        "appearances": 23,
-        "goals": 3,
-        "assists": 2,
-        "penalties": 0,
-        "minutesPerGoal": 690
-      },
-      {
-        "id": "126913",
-        "name": "Iker Losada",
-        "team": "Levante UD",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 30,
-        "goals": 3,
-        "assists": 1,
-        "penalties": 0,
-        "minutesPerGoal": 900
-      },
-      {
-        "id": "159520",
-        "name": "Pablo Torre",
-        "team": "RCD Mallorca",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 29,
-        "goals": 3,
-        "assists": 2,
-        "penalties": 0,
-        "minutesPerGoal": 870
-      },
-      {
-        "id": "152458",
-        "name": "Martin Satriano",
-        "team": "Getafe CF",
-        "position": "",
-        "nationality": "Uruguay",
-        "appearances": 10,
-        "goals": 3,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 300
-      },
-      {
-        "id": "180280",
-        "name": "Casals",
-        "team": "Girona FC",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 25,
-        "goals": 2,
-        "assists": 1,
-        "penalties": 0,
-        "minutesPerGoal": 1125
-      },
-      {
-        "id": "48555",
-        "name": "Takefusa Kubo",
-        "team": "Real Sociedad de Fútbol",
-        "position": "",
-        "nationality": "Japan",
-        "appearances": 18,
-        "goals": 2,
-        "assists": 3,
-        "penalties": 0,
-        "minutesPerGoal": 810
-      },
-      {
-        "id": "3216",
-        "name": "Giovani Lo Celso",
-        "team": "Real Betis Balompié",
-        "position": "",
-        "nationality": "Argentina",
-        "appearances": 19,
-        "goals": 2,
-        "assists": 2,
-        "penalties": 0,
-        "minutesPerGoal": 855
-      },
-      {
-        "id": "253001",
-        "name": "Javi Rueda",
-        "team": "RC Celta de Vigo",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 27,
-        "goals": 2,
-        "assists": 4,
-        "penalties": 0,
-        "minutesPerGoal": 1215
-      },
-      {
-        "id": "133860",
-        "name": "Pedri",
-        "team": "FC Barcelona",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 21,
-        "goals": 2,
-        "assists": 7,
-        "penalties": 0,
-        "minutesPerGoal": 945
-      },
-      {
-        "id": "81168",
-        "name": "Javi Puado",
-        "team": "RCD Espanyol de Barcelona",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 10,
-        "goals": 2,
-        "assists": 0,
-        "penalties": 1,
-        "minutesPerGoal": 450
-      }
-    ]
-  }
+  "news": [],
+  "playerStats": null
 }
