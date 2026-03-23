@@ -2638,7 +2638,7 @@ const MV3_PAGE = 25;
 let mv3Pcts = {};
 
 function mv3PctRank(arr,val){if(!arr.length||val===null||val===undefined)return 50;const s=[...arr].sort((a,b)=>a-b);return Math.round((s.filter(x=>x<val).length/Math.max(s.length-1,1))*100);}
-function mv3Color(pct){return pct>=75?'mct':pct>=50?'mcg':pct>=25?'mcm':'mcl';}
+function mv3Color(pct){return pct>=95?'mct':pct>=70?'mcg':pct>=30?'mcm':'mcl';}
 function mv3JClass(v){if(v===null||v===undefined)return 'mja';if(v<0)return 'mjn';if(v<=5)return 'mjy';if(v<=9)return 'mjg';return 'mjb';}
 function mv3FmtM(v){if(!v&&v!==0)return'—';const a=Math.abs(v);if(a>=1e6)return(v/1e6).toFixed(2)+'M€';if(a>=1000)return(v/1000).toFixed(0)+'K€';return v+'€';}
 function mv3FmtTrend(t){if(!t)return{txt:'→',cls:'mcn'};const k=Math.round(t/1000);return t>0?{txt:'▲+'+k+'k',cls:'mcg'}:{txt:'▼'+k+'k',cls:'mcl'};}
