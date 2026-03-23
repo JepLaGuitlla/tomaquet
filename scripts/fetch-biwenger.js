@@ -336,54 +336,8 @@ async function fetchLaLiga() {
       score: { home: m.score?.fullTime?.home, away: m.score?.fullTime?.away }
     }));
 
-    // ─── ODDS SINTÉTICAS ───────────────────────────────────────────────
-    // No dependemos de API externa. Calculamos probabilidad de victoria
-    // para cada equipo en su próximo partido usando los datos que ya tenemos.
-    function calcMatchOdds(homeId, awayId) {
-      const homeStanding = table.find(t => t.team.id === homeId);
-      const awayStanding = table.find(t => t.team.id === awayId);
-      const homeForm     = forms[homeId];
-      const awayForm     = forms[awayId];
-
-      if (!homeStanding || !awayStanding) return null;
-
-      // Puntuación de forma: W=3, D=1, L=0 (máx 15)
-      function fScore(results = []) {
-        return results.reduce((s, r) => s + (r === 'W' ? 3 : r === 'D' ? 1 : 0), 0);
-      }
-
-      const homeForme = fScore(homeForm?.results || []);
-      const awayForme = fScore(awayForm?.results || []);
-
-      // Fuerza relativa: posición inversa (1er=20, último=1) + forma + ventaja local
-      const homeStrength = (20 - homeStanding.position) * 2 + homeForme + 5;
-      const awayStrength = (20 - awayStanding.position) * 2 + awayForme;
-
-      const total   = homeStrength + awayStrength + 8; // 8 = espacio para empate
-      const homeWin = homeStrength / total;
-      const awayWin = awayStrength / total;
-      const draw    = Math.max(0, 1 - homeWin - awayWin);
-
-      return {
-        homeWin: Math.round(homeWin * 100) / 100,
-        draw:    Math.round(draw    * 100) / 100,
-        awayWin: Math.round(awayWin * 100) / 100,
-      };
-    }
-
-    // Construir mapa odds por teamId → { win, draw, loss, isHome }
-    const odds = {};
-    nextMatches.forEach(m => {
-      if (m.matchday !== nextMD) return; // solo jornada inmediata
-      const o = calcMatchOdds(m.home.id, m.away.id);
-      if (!o) return;
-      odds[m.home.id] = { win: o.homeWin, draw: o.draw, loss: o.awayWin, isHome: true,  matchId: m.id };
-      odds[m.away.id] = { win: o.awayWin, draw: o.draw, loss: o.homeWin, isHome: false, matchId: m.id };
-    });
-    // ──────────────────────────────────────────────────────────────────
-
-    console.log(`✅ La Liga: ${table.length} equipos, jornada ${matchday}, ${nextMatches.length} próximos, ${Object.keys(odds).length} odds calculadas`);
-    return { matchday, table, forms, nextMatches, recentResults, odds };
+    console.log(`✅ La Liga: ${table.length} equipos, jornada ${matchday}, ${nextMatches.length} próximos`);
+    return { matchday, table, forms, nextMatches, recentResults };
 
   } catch(e) {
     console.warn('⚠️ Error en football-data:', e.message);
@@ -702,6 +656,143 @@ async function fetchOdds() {
   });
 }
 
+// ─── JORNADAS INCREMENTAL ────────────────────────────────────────────────────
+// Descarga 25 jugadores nuevos por día usando el token ya autenticado.
+// Objetivo: completar los 542 jugadores en ~2 semanas sin intervención manual.
+// Patrón idéntico a fetch-historical.js (lotes de 2 + pausa 2s).
+
+const JORNADAS_FILE       = 'jornadas.json';
+const JORNADAS_BATCH_DAY  = 50;  // jugadores nuevos por ejecución
+const JORNADAS_BATCH_SIZE = 2;   // peticiones en paralelo por lote
+const JORNADAS_PAUSE      = 2000; // ms entre lotes
+
+async function fetchPlayerHistory(playerId, token) {
+  const path = `/api/v2/players/${playerId}?fields=*,reports(points,home,match(*,round))`;
+  return new Promise((resolve) => {
+    const req = https.request({
+      hostname: 'biwenger.as.com',
+      path,
+      method:   'GET',
+      timeout:  12000,
+      headers:  {
+        ...COMMON_HEADERS,
+        'Authorization': `Bearer ${token}`,
+        'x-lang':        'es',
+      }
+    }, (res) => {
+      let raw = '';
+      res.on('data', c => raw += c);
+      res.on('end', () => {
+        if (res.statusCode === 429) { resolve({ rateLimited: true }); return; }
+        if (res.statusCode !== 200) { resolve({ rateLimited: false, history: null }); return; }
+        try {
+          const data    = JSON.parse(raw);
+          const reports = data?.data?.reports || [];
+          const history = {};
+          reports.forEach(r => {
+            const roundId = r.match?.round?.id;
+            if (!roundId) return;
+            // scoreID 5 = AS+Sofascore (sistema por defecto Biwenger)
+            const pts = typeof r.points === 'object'
+              ? (r.points['5'] ?? r.points['1'] ?? null)
+              : (r.points ?? null);
+            if (pts !== null) history[roundId] = { pts, home: r.home ?? null };
+          });
+          resolve({ rateLimited: false, history: Object.keys(history).length > 0 ? history : null });
+        } catch(e) {
+          resolve({ rateLimited: false, history: null });
+        }
+      });
+    });
+    req.on('error',   () => resolve({ rateLimited: false, history: null }));
+    req.on('timeout', () => { req.destroy(); resolve({ rateLimited: false, history: null }); });
+    req.end();
+  });
+}
+
+async function updateJornadas(players, token) {
+  console.log('\n📅 Iniciando descarga incremental de jornadas...');
+
+  // Leer jornadas.json existente
+  let jornadas = {};
+  if (fs.existsSync(JORNADAS_FILE)) {
+    try {
+      jornadas = JSON.parse(fs.readFileSync(JORNADAS_FILE, 'utf8'));
+    } catch(e) {
+      console.warn('⚠️ jornadas.json corrupto — empezando desde cero');
+      jornadas = {};
+    }
+  }
+
+  const totalPlayers  = players.length;
+  const yaEnHistorico = Object.keys(jornadas).length;
+
+  // Jugadores sin historial todavía (excluye posición 5 = entrenador)
+  // Ordenados por precio desc — los jugadores top se descargan primero
+  const pendientes = players.filter(p =>
+    p.position !== 5 &&
+    !jornadas[String(p.id)] &&
+    !jornadas[p.id]
+  ).sort((a, b) => (b.price || 0) - (a.price || 0));
+
+  if (pendientes.length === 0) {
+    console.log(`✅ jornadas.json completo — ${yaEnHistorico}/${totalPlayers} jugadores`);
+    return;
+  }
+
+  // Tomar solo el lote del día
+  const loteHoy = pendientes.slice(0, JORNADAS_BATCH_DAY);
+  console.log(`📊 Histórico actual: ${yaEnHistorico} jugadores · Pendientes: ${pendientes.length} · Descargando hoy: ${loteHoy.length}`);
+
+  let ok = 0, fail = 0, rateLimited = false;
+
+  for (let i = 0; i < loteHoy.length; i += JORNADAS_BATCH_SIZE) {
+    if (rateLimited) break;
+
+    const batch = loteHoy.slice(i, i + JORNADAS_BATCH_SIZE);
+    const results = await Promise.all(batch.map(p => fetchPlayerHistory(p.id, token)));
+
+    for (let j = 0; j < batch.length; j++) {
+      const p   = batch[j];
+      const res = results[j];
+
+      if (res.rateLimited) {
+        console.warn(`\n🛑 Rate limit detectado en jugador ${p.id} (${p.name}). Guardando progreso y abortando.`);
+        rateLimited = true;
+        break;
+      }
+
+      if (res.history) {
+        jornadas[String(p.id)] = res.history;
+        ok++;
+      } else {
+        // Guardar objeto vacío para no reintentar jugadores sin datos (posición MD, etc.)
+        jornadas[String(p.id)] = {};
+        fail++;
+      }
+    }
+
+    // Guardar progreso parcial cada lote
+    fs.writeFileSync(JORNADAS_FILE, JSON.stringify(jornadas), 'utf8');
+
+    if (!rateLimited && i + JORNADAS_BATCH_SIZE < loteHoy.length) {
+      await sleep(JORNADAS_PAUSE);
+    }
+  }
+
+  const totalAhora    = Object.keys(jornadas).filter(k => Object.keys(jornadas[k]).length > 0).length;
+  const quedan        = totalPlayers - totalAhora;
+  const diasRestantes = Math.ceil(Math.max(0, pendientes.length - loteHoy.length) / JORNADAS_BATCH_DAY);
+
+  console.log(`\n✅ Jornadas — +${ok} nuevos · ${fail} sin datos · Total con historial: ${totalAhora}/${totalPlayers}`);
+  if (quedan > 0 && !rateLimited) {
+    console.log(`⏳ Faltan ~${quedan} jugadores · ETA: ~${diasRestantes} días a ${JORNADAS_BATCH_DAY}/día`);
+  }
+  if (rateLimited) {
+    console.warn('⚠️ Rate limit alcanzado — se retomará mañana automáticamente');
+  }
+}
+
 // ─── MAIN ────────────────────────────────────────────────────────────────────
 
 async function main() {
@@ -754,6 +845,7 @@ async function main() {
 
     updateHistory(myTeamTomaquet, myTeamEnBas, allTeamsTomaquet, allTeamsEnBas, leagueTomaquet, leagueEnBas);
     updatePlayerPrices(players);
+    await updateJornadas(players, token);
     console.log(`📊 Jugadores Biwenger: ${players.length}`);
     console.log(`👥 Equipos Tomaquet:   ${allTeamsTomaquet?.length || 0}`);
     console.log(`👥 Equipos EN BAS:     ${allTeamsEnBas?.length || 0}`);
