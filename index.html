@@ -327,7 +327,7 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
 .mpc{background:#fff;border:1px solid var(--border);border-radius:4px;overflow:hidden;margin-bottom:3px;transition:border-color 0.12s,box-shadow 0.12s;}
 .mpc:hover{border-color:var(--border2);box-shadow:0 2px 8px rgba(0,0,0,0.05);}
 .mpc.guitlla{border-left:3px solid var(--accent);}
-.mpc-row{display:grid;grid-template-columns:28px 22px minmax(180px,260px) 92px 82px 80px 80px 80px 80px 70px;align-items:stretch;min-height:54px;}
+.mpc-row{display:grid;grid-template-columns:28px 22px minmax(180px,260px) 92px 82px 80px 80px 80px 80px 70px 70px;align-items:stretch;min-height:54px;}
 .mpc-rk{font-family:'Figtree',sans-serif;font-size:0.8rem;font-weight:700;color:var(--text3);display:flex;align-items:center;justify-content:center;}
 .mpc-rk.top3{color:var(--accent);}
 .mpc-pos{width:18px;height:18px;border-radius:2px;margin:auto 0 auto 2px;font-family:'Figtree',sans-serif;font-size:0.48rem;font-weight:800;display:flex;align-items:center;justify-content:center;color:white;flex-shrink:0;}
@@ -1142,7 +1142,7 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
     <div class="mch"></div>
     <div class="mch left">Jugador · Últimas 5J</div>
     <div class="mch" onclick="mv3SetSortClick('price_desc')" id="mv3ch-price">Precio<br><span style="opacity:.65">Tend.</span></div>
-    <div class="mch" onclick="mv3SetSortClick('pts_desc')" id="mv3ch-pts">Pts<br><span style="opacity:.65">Media AS</span></div>
+    <div class="mch" onclick="mv3SetSortClick('pts_desc')" id="mv3ch-pts">Pts<br><span style="opacity:.65">Media</span></div>
     <div class="mch">Local<br><span style="opacity:.65">M.Local</span></div>
     <div class="mch">Visita<br><span style="opacity:.65">M.Visit.</span></div>
     <div class="mch" onclick="mv3SetSortClick('roi_desc')" id="mv3ch-roi">
@@ -1152,7 +1152,7 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
           <span class="lp-tip-icon">?</span>
           <div class="lp-tip-box" style="min-width:240px">
             <div class="lp-tip-title">ROI — Retorno sobre inversión</div>
-            <div class="lp-tip-body">Cuántos puntos obtienes por cada millón invertido. Un ROI de 10 significa que el jugador genera 10 puntos por cada millón que cuesta. Cuanto más alto, más rentable es el jugador en relación a su precio.</div>
+            <div class="lp-tip-body">Cuántos puntos obtienes por cada millón invertido. Cuanto más alto, más rentable es el jugador en relación a su precio.</div>
             <div class="lp-tip-formula">Pts totales ÷ precio en M€</div>
           </div>
         </span>
@@ -1163,31 +1163,62 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
           <span class="lp-tip-icon">?</span>
           <div class="lp-tip-box" style="min-width:240px">
             <div class="lp-tip-title">Eficiencia</div>
-            <div class="lp-tip-body">Compara el rendimiento del jugador con la media de jugadores de su misma posición y franja de precio. Por encima de 100 significa que produce más que la media de jugadores similares — está infravalorado por el mercado.</div>
-            <div class="lp-tip-formula">(Pts/PJ ÷ precio) normalizado vs media de su franja</div>
+            <div class="lp-tip-body">Compara el rendimiento del jugador con la media de jugadores de su misma posición y franja de precio. Positivo = rinde más de lo esperado para su precio.</div>
+            <div class="lp-tip-formula">(Media real − media esperada) ÷ media esperada × 100</div>
           </div>
         </span>
       </span>
     </div>
-    <div class="mch">Cláusula<br><span style="opacity:.65">Factor</span></div>
+    <div class="mch">
+      <span style="display:flex;align-items:center;justify-content:center;gap:3px">
+        P.Justo
+        <span class="lp-tip">
+          <span class="lp-tip-icon">?</span>
+          <div class="lp-tip-box" style="min-width:260px">
+            <div class="lp-tip-title">Precio Justo</div>
+            <div class="lp-tip-body">Lo que debería costar el jugador según su rendimiento comparado con jugadores de su misma posición y precio similar. Verde = está barato, rojo = está caro.</div>
+            <div class="lp-tip-formula">Media real × (precio medio ponderado ÷ media media ponderada) — curva gaussiana σ=2M€</div>
+          </div>
+        </span>
+      </span>
+      <span style="opacity:.65">Margen</span>
+    </div>
     <div class="mch" style="font-size:.42rem;line-height:1.4;position:relative">
       <span style="display:flex;align-items:center;justify-content:center;gap:3px">
-        Factor Equipo
+        F.Equipo
         <span class="lp-tip" style="vertical-align:middle">
           <span class="lp-tip-icon">?</span>
           <div class="lp-tip-box" style="right:0;left:auto;transform:none;min-width:260px">
             <div class="lp-tip-title">Factor Equipo · Próxima jornada</div>
             <div class="lp-tip-body">
-              Número del 0 al 10 que mide lo favorable que es el próximo partido para los jugadores de ese equipo.<br><br>
-              <strong style="color:#fff">10</strong> = equipo en racha, marca muchos goles, rival fácil, juega en casa.<br>
-              <strong style="color:#ef4444">0</strong> = mal momento, no marca, rival top, juega fuera.<br><br>
-              El escudo es el próximo rival. 🏠 juega en casa · ✈️ juega fuera.
+              0 al 10 — lo favorable que es el próximo partido para los jugadores de ese equipo.<br><br>
+              <strong style="color:#fff">10</strong> = rival fácil, en casa, en racha.<br>
+              <strong style="color:#ef4444">0</strong> = rival top, fuera, mal momento.<br><br>
+              El escudo es el próximo rival. 🏠 casa · ✈️ fuera.
             </div>
-            <div class="lp-tip-formula">Forma(35%) + Goles/5J(25%) + Posición tabla(20%) + Local/Visita(10%) + Nivel rival(10%)</div>
+            <div class="lp-tip-formula">Contexto(50%) + Forma condición(30%) + Nivel absoluto(20%)</div>
           </div>
         </span>
       </span>
-      <span style="opacity:.7">J28</span>
+      <span style="opacity:.7">próx.</span>
+    </div>
+    <div class="mch">
+      <span style="display:flex;align-items:center;justify-content:center;gap:3px">
+        Lectura
+        <span class="lp-tip">
+          <span class="lp-tip-icon">?</span>
+          <div class="lp-tip-box" style="right:0;left:auto;transform:none;min-width:280px">
+            <div class="lp-tip-title">Señal de Mercado</div>
+            <div class="lp-tip-body">
+              Cruza rendimiento real, precio justo y reacción del mercado (últimos 7 días).<br><br>
+              💎 <strong style="color:#818cf8">INERCIA OCULTA</strong> — Rinde bien, mercado no reacciona aún.<br>
+              💥 <strong style="color:#fb923c">EXPLOSIÓN</strong> — Subida fuerte respaldada por rendimiento.<br>
+              📈 <strong style="color:var(--green)">REBOTE</strong> — Mejorando, mercado corrigiendo al alza.<br>
+              🎭 <strong style="color:var(--red)">HYPE</strong> — Precio por encima del rendimiento real.
+            </div>
+          </div>
+        </span>
+      </span>
     </div>
   </div>
 
@@ -2832,7 +2863,6 @@ function mv3Render(list){
   container.innerHTML=list.map((p,i)=>{
     const rank=i+1;
     const isG=p.inGuitlla;
-    const posColor=MV3_POS_COLORS[p.pos]||'#888';
     const ptsPct=mv3PctRank(mv3Pcts.pts,p.pts);
     const roiPct=mv3PctRank(mv3Pcts.roi,p.roi);
     const mediaPct=mv3PctRank(mv3Pcts.media,p.media);
@@ -2840,23 +2870,61 @@ function mv3Render(list){
     const ptsVPct=mv3PctRank(mv3Pcts.ptsV,p.ptsV);
     const trend=mv3FmtTrend(p.trend);
     const jornadas=(p.jForm||[]).map(v=>`<span class="mjp ${mv3JClass(v)}">${v===null||v===undefined?'—':v}</span>`).join('');
-    const clausMain=p.clausula?mv3FmtM(p.clausula):'—';
-    const factorTxt=p.factor?p.factor.toFixed(1)+'x':'—';
-    const clausCls=p.clausula?(p.clausula/1e6>5?'mcg':p.clausula/1e6>2?'mcm':'mcl'):'mcn';
     const mL=p.ptsL>0?p.ptsL:'—';
     const mV=p.ptsV>0?p.ptsV:'—';
     const mLavg=p.ptsL>0?(p.ptsL/13).toFixed(1):'—';
     const mVavg=p.ptsV>0?(p.ptsV/13).toFixed(1):'—';
-    return `<div class="mpc${isG?' guitlla':''}" style="cursor:pointer" onclick="openJugPanel(mv3Players.find(x=>x.name==='${p.name}'))">
+
+    // ── Precio Justo ────────────────────────────────────────────────
+    const playerFull = allPlayers.find(x=>x.id==p.id||x.name===p.name);
+    const pj = playerFull ? calcPrecioJusto(playerFull) : null;
+    let pjHtml = '<div class="msv2-lbl" style="color:var(--border2)">—</div>';
+    if (pj) {
+      const pjColor = pj.difEuros > 0 ? 'var(--green)' : 'var(--red)';
+      const pjSign  = pj.difEuros > 0 ? '+' : '';
+      pjHtml = `<div class="msv" style="color:${pjColor};font-size:0.72rem;font-weight:700">${mv3FmtM(pj.precioJusto)}</div>
+        <div class="mstat-div"></div>
+        <div class="msv2" style="color:${pjColor}">${pjSign}${pj.difPct}%</div>
+        <div class="msv2-lbl">p.justo</div>`;
+    }
+
+    // ── Lectura (estado mercado) ────────────────────────────────────
+    const em = playerFull ? calcEstadoMercado(playerFull) : null;
+    const emHtml = em
+      ? `<div title="${em.desc}" style="cursor:help;text-align:center">
+          <div style="font-size:1.3rem;line-height:1">${em.icono}</div>
+          <div style="font-size:0.48rem;text-transform:uppercase;letter-spacing:0.8px;color:var(--text3);margin-top:2px">${em.label}</div>
+         </div>`
+      : '<div class="msv2-lbl" style="color:var(--border2)">—</div>';
+
+    // ── Factor Equipo ───────────────────────────────────────────────
+    const clubName = p.club && p.club !== '—' ? p.club : '';
+    const fe = calcFactorEquipo(clubName, playerFull || p);
+    let feHtml = '<div class="msv2-lbl" style="color:var(--border2)">próx.</div>';
+    if (fe !== null) {
+      const feColor = fe >= 7 ? 'var(--green)' : fe >= 5 ? 'var(--pt)' : fe >= 3 ? '#f59e0b' : 'var(--red)';
+      const standing2 = getStandingByClub(clubName);
+      const nextM = standing2 ? (ligaData?.nextMatches||[]).find(m=>m.home.id===standing2.team.id||m.away.id===standing2.team.id) : null;
+      const isLocal = nextM && standing2 ? nextM.home.id===standing2.team.id : null;
+      const rivalCrest = nextM ? (isLocal ? nextM.away.crest : nextM.home.crest) : null;
+      const localTxt = isLocal === true ? '🏠' : isLocal === false ? '✈️' : '';
+      const shieldHtml = rivalCrest
+        ? `<img src="${rivalCrest}" style="width:18px;height:18px;object-fit:contain" onerror="this.style.display='none'">`
+        : '<div style="width:18px;height:18px;background:var(--border2);border-radius:2px"></div>';
+      feHtml = `<div class="msv" style="color:${feColor};font-size:0.82rem;font-weight:800">${fe.toFixed(1)}</div>
+        <div class="mstat-div"></div>
+        <div style="display:flex;align-items:center;justify-content:center;gap:3px;margin-top:1px">${shieldHtml}<span style="font-size:0.6rem">${localTxt}</span></div>
+        <div class="msv2-lbl">próx.</div>`;
+    }
+
+    return `<div class="mpc${isG?' guitlla':''}" style="cursor:pointer" onclick="openJugPanel(allPlayers.find(x=>x.id==${p.id})||mv3Players.find(x=>x.name==='${p.name}'))">
       <div class="mpc-row">
         <div class="mpc-rk${rank<=3?' top3':''}">${rank}</div>
-        <div style="display:flex;align-items:center;justify-content:center;padding:0 2px;flex-shrink:0">
-          ${playerPhoto(p, 36)}
-        </div>
+        <div style="display:flex;align-items:center;justify-content:center;padding:0 2px;flex-shrink:0">${playerPhoto(p,36)}</div>
         <div class="mpc-id">
           <div><span class="mpc-name">${p.name}</span>${isG?'<span class="guitlla-tag">🦊</span>':''}</div>
           <div class="mpc-club">${p.club}</div>
-          <div class="mjrow"><span class="mjlabel">J22→J26</span>${jornadas}</div>
+          <div class="mjrow"><span class="mjlabel">Últ.5J</span>${jornadas}</div>
         </div>
         <div class="mpc-st">
           <div class="msv ${mv3Color(mv3PctRank(mv3Pcts.precio,p.precio))}">${mv3FmtM(p.precio)}</div>
@@ -2867,7 +2935,7 @@ function mv3Render(list){
           <div class="msv ${mv3Color(ptsPct)}">${p.pts}</div>
           <div class="mstat-div"></div>
           <div class="msv2 ${mv3Color(mediaPct)}">${p.media?p.media.toFixed(1):'—'}</div>
-          <div class="msv2-lbl">media AS</div>
+          <div class="msv2-lbl">media</div>
         </div>
         <div class="mpc-st">
           <div class="msv ${mv3Color(ptsLPct)}">${mL}</div>
@@ -2887,36 +2955,12 @@ function mv3Render(list){
           <div class="msv2 ${mv3Color(roiPct)}">${p.efic?p.efic.toFixed(1):'—'}</div>
           <div class="msv2-lbl">efic.</div>
         </div>
-        <div class="mpc-st">
-          <div class="msv ${clausCls}" style="font-size:.72rem">${clausMain}</div>
-          <div class="mstat-div"></div>
-          <div class="msv2 mcn">${factorTxt}</div>
-          <div class="msv2-lbl">factor</div>
-        </div>
-        <div class="mpc-extra">
-          ${(()=>{
-            const clubName = p.club && p.club !== '—' ? p.club : '';
-            const fe = calcFactorEquipo(clubName, p);
-            if (fe === null) return '<div class="msv2-lbl" style="color:var(--border2)">próx.</div>';
-            const feColor = fe >= 7 ? 'var(--green)' : fe >= 5 ? 'var(--pt)' : fe >= 3 ? '#f59e0b' : 'var(--red)';
-            const standing2 = getStandingByClub(clubName);
-            const nextM = standing2 ? (ligaData?.nextMatches||[]).find(m => m.home.id===standing2.team.id||m.away.id===standing2.team.id) : null;
-            const isLocal = nextM && standing2 ? nextM.home.id===standing2.team.id : null;
-            const rivalCrest = nextM ? (isLocal ? nextM.away.crest : nextM.home.crest) : null;
-            const localTxt = isLocal === true ? '🏠' : isLocal === false ? '✈️' : '';
-            const shieldHtml = rivalCrest
-              ? '<img src="'+rivalCrest+'" style="width:18px;height:18px;object-fit:contain" onerror="this.style.display=\'none\'">'
-              : '<div style="width:18px;height:18px;background:var(--border2);border-radius:2px"></div>';
-            return '<div class="msv" style="color:'+feColor+';font-size:0.82rem;font-weight:800">'+fe.toFixed(1)+'</div>'
-              + '<div class="mstat-div"></div>'
-              + '<div style="display:flex;align-items:center;justify-content:center;gap:3px;margin-top:1px">'+shieldHtml+'<span style="font-size:0.6rem">'+localTxt+'</span></div>'
-              + '<div class="msv2-lbl">próx.</div>';
-          })()}
-        </div>
+        <div class="mpc-st">${pjHtml}</div>
+        <div class="mpc-extra">${feHtml}</div>
+        <div class="mpc-st" style="align-items:center;justify-content:center">${emHtml}</div>
       </div>
     </div>`;
   }).join('');
-
 }
 
 function mv3RenderPager(total){} // sin paginación — lista completa con scroll
