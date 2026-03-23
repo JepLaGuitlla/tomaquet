@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-23T08:37:49.983Z",
+  "updatedAt": "2026-03-23T15:39:47.966Z",
   "players": [
     {
       "id": 11,
@@ -11977,7 +11977,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 2,
-          "season": "Temporada 2024/2025"
+          "season": "2024/2025 season"
         },
         "position": 2
       },
@@ -12036,7 +12036,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "Temporada 2024/2025"
+          "season": "2024/2025 season"
         },
         "position": 5,
         "positionInc": -1,
@@ -12080,7 +12080,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 1,
-          "season": "Temporada 2024/2025"
+          "season": "2024/2025 season"
         },
         "position": 7,
         "positionInc": -1
@@ -12171,9 +12171,9 @@
           11,
           8
         ],
-        "teamSize": 15,
-        "teamValue": 44880000,
-        "teamValueInc": -270000,
+        "teamSize": 14,
+        "teamValue": 43160000,
+        "teamValueInc": -230000,
         "position": 12,
         "positionInc": -2,
         "role": ""
@@ -12196,7 +12196,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "Temporada 2023/2024"
+          "season": "2023/2024 season"
         },
         "position": 13,
         "role": ""
@@ -12326,8 +12326,8 @@
       "name": "Morankus FC",
       "manager": "Morankus FC",
       "points": 1154,
-      "value": 44880000,
-      "trend": -270000,
+      "value": 43160000,
+      "trend": -230000,
       "players": []
     },
     {
@@ -12356,7 +12356,7 @@
     "balance": 94763,
     "lineup": {
       "type": "3-4-3",
-      "date": 1774220258,
+      "date": 1774279632,
       "playersID": [
         17021,
         10155,
@@ -12515,6 +12515,21 @@
   "boardTomaquet": [
     {
       "type": "transfer",
+      "date": 1774273486,
+      "content": [
+        {
+          "player": 19485,
+          "from": {
+            "id": 11520975,
+            "name": "Morankus FC",
+            "icon": "i/u/11520975.png?v=81"
+          },
+          "amount": 1670300
+        }
+      ]
+    },
+    {
+      "type": "transfer",
       "date": 1774248345,
       "content": [
         {
@@ -12615,21 +12630,6 @@
           "amount": 212700
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1774214628,
-      "content": [
-        {
-          "player": 39403,
-          "from": {
-            "id": 6541195,
-            "name": "🦊",
-            "icon": "i/u/6541195.png?v=17"
-          },
-          "amount": 372400
-        }
-      ]
     }
   ],
   "leagueEnBas": {
@@ -12681,8 +12681,8 @@
           8,
           10
         ],
-        "teamSize": 17,
-        "teamValue": 74180000,
+        "teamSize": 16,
+        "teamValue": 73930000,
         "teamValueInc": 50000,
         "lastTrophy": {
           "type": "league",
@@ -12886,9 +12886,9 @@
           16,
           12
         ],
-        "teamSize": 16,
-        "teamValue": 44830000,
-        "teamValueInc": -110000,
+        "teamSize": 15,
+        "teamValue": 39430000,
+        "teamValueInc": -70000,
         "lastTrophy": {
           "type": "league",
           "position": 2,
@@ -13065,7 +13065,7 @@
       "name": "MarK Lenders",
       "manager": "MarK Lenders",
       "points": 1360,
-      "value": 74180000,
+      "value": 73930000,
       "trend": 50000,
       "players": []
     },
@@ -13164,8 +13164,8 @@
       "name": "Lamine i els 7 nans 👯‍♀️",
       "manager": "Lamine i els 7 nans 👯‍♀️",
       "points": 1068,
-      "value": 44830000,
-      "trend": -110000,
+      "value": 39430000,
+      "trend": -70000,
       "players": []
     },
     {
@@ -13416,6 +13416,36 @@
   "boardEnBas": [
     {
       "type": "transfer",
+      "date": 1774277378,
+      "content": [
+        {
+          "player": 28082,
+          "from": {
+            "id": 9890450,
+            "name": "MarK Lenders",
+            "icon": "icons/34.png"
+          },
+          "amount": 255100
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1774261455,
+      "content": [
+        {
+          "player": 11800,
+          "from": {
+            "id": 6580386,
+            "name": "Lamine i els 7 nans 👯‍♀️",
+            "icon": "i/u/6580386.png?v=10"
+          },
+          "amount": 5360800
+        }
+      ]
+    },
+    {
+      "type": "transfer",
       "date": 1774253542,
       "content": [
         {
@@ -13570,90 +13600,6 @@
             "name": "Eric Duran"
           },
           "amount": 308800
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1774163999,
-      "content": [
-        {
-          "player": 1844,
-          "from": {
-            "id": 6579402,
-            "name": "Valors FC",
-            "icon": "icons/7.png"
-          },
-          "amount": 1471200
-        },
-        {
-          "player": 22061,
-          "from": {
-            "id": 6579402,
-            "name": "Valors FC",
-            "icon": "icons/7.png"
-          },
-          "amount": 249100
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1774159515,
-      "content": [
-        {
-          "player": 18945,
-          "to": {
-            "id": 6579505,
-            "name": "Xevi borrat",
-            "icon": "i/u/6579505.png"
-          },
-          "amount": 5667000,
-          "bids": [
-            {
-              "user": {
-                "id": 6588130,
-                "name": "The GOAT club",
-                "icon": "i/u/6588130.png?v=12"
-              },
-              "amount": 5599000
-            }
-          ]
-        },
-        {
-          "player": 30787,
-          "to": {
-            "id": 9897660,
-            "name": "Eric Duran"
-          },
-          "amount": 2580000,
-          "bids": [
-            {
-              "user": {
-                "id": 6578885,
-                "name": "Norimaki  FC",
-                "icon": "icons/41.png"
-              },
-              "amount": 2550000
-            },
-            {
-              "user": {
-                "id": 6579505,
-                "name": "Xevi borrat",
-                "icon": "i/u/6579505.png"
-              },
-              "amount": 2510000
-            }
-          ]
-        },
-        {
-          "player": 40010,
-          "to": {
-            "id": 11504267,
-            "name": "🦊",
-            "icon": "i/u/11504267.png"
-          },
-          "amount": 150000
         }
       ]
     }
@@ -14929,72 +14875,72 @@
   },
   "odds": {
     "Rayo Vallecano": {
-      "winProb": 0.38961038961038963,
-      "drawProb": 0.27744982290436837,
-      "loseProb": 0.33293978748524206,
+      "winProb": 0.3536219459922846,
+      "drawProb": 0.2786112301757394,
+      "loseProb": 0.367766823831976,
       "over25Prob": 0.4504504504504504,
       "isHome": false,
       "opponent": "Mallorca",
       "matchDate": "2026-04-12T14:15:00Z"
     },
     "Elche CF": {
-      "winProb": 0.3888099237627601,
-      "drawProb": 0.2833699444372658,
-      "loseProb": 0.3278201317999742,
+      "winProb": 0.3966197183098592,
+      "drawProb": 0.27887323943661974,
+      "loseProb": 0.32450704225352117,
       "over25Prob": 0.4566210045662101,
       "isHome": true,
       "opponent": "Valencia",
       "matchDate": "2026-04-11T14:15:00Z"
     },
     "Real Sociedad": {
-      "winProb": 0.5151591395144043,
-      "drawProb": 0.2682098377154359,
-      "loseProb": 0.21663102277015978,
+      "winProb": 0.5220824802573852,
+      "drawProb": 0.26411231354197134,
+      "loseProb": 0.21380520620064344,
       "over25Prob": 0.4566210045662101,
       "isHome": true,
       "opponent": "Alavés",
       "matchDate": "2026-04-11T12:00:00Z"
     },
     "Levante": {
-      "winProb": 0.3583409179560525,
-      "drawProb": 0.31777402158366924,
-      "loseProb": 0.3238850604602782,
+      "winProb": 0.358680714612918,
+      "drawProb": 0.30920751259734314,
+      "loseProb": 0.33211177278973886,
       "over25Prob": 0.5,
       "isHome": true,
       "opponent": "Getafe",
       "matchDate": "2026-04-13T19:00:00Z"
     },
     "Mallorca": {
-      "winProb": 0.33293978748524206,
-      "drawProb": 0.27744982290436837,
-      "loseProb": 0.38961038961038963,
+      "winProb": 0.367766823831976,
+      "drawProb": 0.2786112301757394,
+      "loseProb": 0.3536219459922846,
       "over25Prob": 0.4504504504504504,
       "isHome": true,
       "opponent": "Rayo Vallecano",
       "matchDate": "2026-04-12T14:15:00Z"
     },
     "Real Madrid": {
-      "winProb": 0.7483872526516706,
-      "drawProb": 0.16109352726569862,
-      "loseProb": 0.09051922008263065,
+      "winProb": 0.7637263633162812,
+      "drawProb": 0.1605119814427438,
+      "loseProb": 0.07576165524097508,
       "over25Prob": 0.5,
       "isHome": true,
       "opponent": "Girona",
       "matchDate": "2026-04-10T19:00:00Z"
     },
     "Real Betis": {
-      "winProb": 0.3474883480062144,
-      "drawProb": 0.2734334541688245,
-      "loseProb": 0.37907819782496116,
+      "winProb": 0.34846583780084417,
+      "drawProb": 0.2734116573514315,
+      "loseProb": 0.37812250484772447,
       "over25Prob": 0.5102040816326531,
       "isHome": false,
       "opponent": "CA Osasuna",
       "matchDate": "2026-04-12T12:00:00Z"
     },
     "Espanyol": {
-      "winProb": 0.11242603550295857,
-      "drawProb": 0.14792899408284022,
-      "loseProb": 0.7396449704142012,
+      "winProb": 0.09395248380129587,
+      "drawProb": 0.12311015118790494,
+      "loseProb": 0.782937365010799,
       "over25Prob": 0.5,
       "isHome": false,
       "opponent": "Barcelona",
@@ -15010,18 +14956,18 @@
       "matchDate": "2026-04-11T19:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.7396449704142012,
-      "drawProb": 0.14792899408284022,
-      "loseProb": 0.11242603550295857,
+      "winProb": 0.782937365010799,
+      "drawProb": 0.12311015118790494,
+      "loseProb": 0.09395248380129587,
       "over25Prob": 0.5,
       "isHome": true,
       "opponent": "Espanyol",
       "matchDate": "2026-04-11T16:30:00Z"
     },
     "Getafe": {
-      "winProb": 0.3238850604602782,
-      "drawProb": 0.31777402158366924,
-      "loseProb": 0.3583409179560525,
+      "winProb": 0.33211177278973886,
+      "drawProb": 0.30920751259734314,
+      "loseProb": 0.358680714612918,
       "over25Prob": 0.5,
       "isHome": false,
       "opponent": "Levante",
@@ -15037,27 +14983,27 @@
       "matchDate": "2026-04-12T19:00:00Z"
     },
     "Valencia": {
-      "winProb": 0.3278201317999742,
-      "drawProb": 0.2833699444372658,
-      "loseProb": 0.3888099237627601,
+      "winProb": 0.32450704225352117,
+      "drawProb": 0.27887323943661974,
+      "loseProb": 0.3966197183098592,
       "over25Prob": 0.4566210045662101,
       "isHome": false,
       "opponent": "Elche CF",
       "matchDate": "2026-04-11T14:15:00Z"
     },
     "Celta Vigo": {
-      "winProb": 0.5610111505321844,
-      "drawProb": 0.23897617840851493,
-      "loseProb": 0.20001267105930057,
+      "winProb": 0.5585106382978724,
+      "drawProb": 0.22340425531914898,
+      "loseProb": 0.21808510638297873,
       "over25Prob": 0.4926108374384237,
       "isHome": true,
       "opponent": "Oviedo",
       "matchDate": "2026-04-12T16:30:00Z"
     },
     "Oviedo": {
-      "winProb": 0.20001267105930057,
-      "drawProb": 0.23897617840851493,
-      "loseProb": 0.5610111505321844,
+      "winProb": 0.21808510638297873,
+      "drawProb": 0.22340425531914898,
+      "loseProb": 0.5585106382978724,
       "over25Prob": 0.4926108374384237,
       "isHome": false,
       "opponent": "Celta Vigo",
@@ -15073,27 +15019,27 @@
       "matchDate": "2026-04-11T19:00:00Z"
     },
     "Alavés": {
-      "winProb": 0.21663102277015978,
-      "drawProb": 0.2682098377154359,
-      "loseProb": 0.5151591395144043,
+      "winProb": 0.21380520620064344,
+      "drawProb": 0.26411231354197134,
+      "loseProb": 0.5220824802573852,
       "over25Prob": 0.4566210045662101,
       "isHome": false,
       "opponent": "Real Sociedad",
       "matchDate": "2026-04-11T12:00:00Z"
     },
     "CA Osasuna": {
-      "winProb": 0.37907819782496116,
-      "drawProb": 0.2734334541688245,
-      "loseProb": 0.3474883480062144,
+      "winProb": 0.37812250484772447,
+      "drawProb": 0.2734116573514315,
+      "loseProb": 0.34846583780084417,
       "over25Prob": 0.5102040816326531,
       "isHome": true,
       "opponent": "Real Betis",
       "matchDate": "2026-04-12T12:00:00Z"
     },
     "Girona": {
-      "winProb": 0.09051922008263065,
-      "drawProb": 0.16109352726569862,
-      "loseProb": 0.7483872526516706,
+      "winProb": 0.07576165524097508,
+      "drawProb": 0.1605119814427438,
+      "loseProb": 0.7637263633162812,
       "over25Prob": 0.5,
       "isHome": false,
       "opponent": "Real Madrid",
@@ -15110,6 +15056,46 @@
     }
   },
   "news": [
+    {
+      "title": "La gran oportunidad de Lunin. ¿Chollazo de final de temporada?",
+      "link": "https://www.jornadaperfecta.com/blog/lunin-analisis-lesion-courtois-26/",
+      "date": "Mon, 23 Mar 2026 14:00:00 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/11/Thibaut-Courtois-Real-Madrid.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Oficial: Matías Almeyda destituido como técnico del Sevilla",
+      "link": "https://www.jornadaperfecta.com/blog/matias-almeyda-destituido-sevilla/",
+      "date": "Mon, 23 Mar 2026 13:59:34 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Arbeloa confirma la fecha de vuelta de Militão, ¿cuándo regresa?",
+      "link": "https://www.jornadaperfecta.com/blog/militao-recuperacion-lesion-26/",
+      "date": "Mon, 23 Mar 2026 12:30:14 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Pablo Martínez está de vuelta, ¿parche fantasy interesante?",
+      "link": "https://www.jornadaperfecta.com/blog/pablo-martinez-vuelta-fantasy-levante/",
+      "date": "Mon, 23 Mar 2026 12:00:49 +0000",
+      "img": "https://cdn.biwenger.com/i/t/10.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Actualizadas las Alineaciones Probables para la Jornada 30",
+      "link": "https://www.jornadaperfecta.com/blog/alineaciones-probables-j30-laliga-25-26/",
+      "date": "Mon, 23 Mar 2026 10:00:01 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Lesionados a recuperar en el parón de marzo",
       "link": "https://www.jornadaperfecta.com/blog/lesionados-recuperar-paron-marzo-26/",
@@ -15149,53 +15135,13 @@
       "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Sow se vio obligado a pedir el cambio en la segunda parte",
-      "link": "https://www.jornadaperfecta.com/blog/sow-estado-sevilla-j30/",
-      "date": "Sun, 22 Mar 2026 12:17:37 +0000",
-      "img": "https://cdn.biwenger.com/i/t/17.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Akhomach se queda fuera de la convocatoria para la jornada 29",
-      "link": "https://www.jornadaperfecta.com/blog/akhomach-estado-rayo-j29/",
-      "date": "Sun, 22 Mar 2026 11:50:26 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Marc Pubill, baja confirmada para el derbi madrileño",
-      "link": "https://www.jornadaperfecta.com/blog/marc-pubill-molestias-costillas-26/",
-      "date": "Sun, 22 Mar 2026 11:09:15 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Zubeldia sufre una lesión muscular: Parte médico oficial",
-      "link": "https://www.jornadaperfecta.com/blog/zubeldia-lesion-real-sociedad/",
-      "date": "Sun, 22 Mar 2026 10:01:20 +0000",
-      "img": "https://cdn.biwenger.com/i/t/13.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Supercuota 6.0 en Betfair para el Real Madrid vs Atlético: ¡Apuesta potenciada!",
-      "link": "https://www.jornadaperfecta.com/blog/supercuota-betfair-real-madrid-vs-atletico/",
-      "date": "Sun, 22 Mar 2026 09:00:31 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/03/Betfair-Supercuota-Real-Madrid-vs-Atletico.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-03-23T08:37:48.402Z",
+    "updatedAt": "2026-03-23T15:39:45.869Z",
     "players": [
       {
         "id": "3374",
