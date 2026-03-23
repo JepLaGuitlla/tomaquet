@@ -2641,7 +2641,7 @@ function buildRankCard(cardId, icon, title, players, valFn, valClass, subFn, col
 }
 
 // Almacena los datos de cada ranking para el modal
-const _rkData = {};
+
 
 function toggleRkList(cardId) {
   const card = document.getElementById(cardId);
@@ -5006,28 +5006,6 @@ async function loadLiga(){
 function formScore(results){return results.reduce((s,r)=>s+(r==='W'?3:r==='D'?1:0),0);}
 
 // Tabla equivalencias nombres Biwenger → football-data
-const BW_TO_FD_TEAM = {
-  'athletic':'Athletic Club',
-  'atletico':'Club Atlético de Madrid','atlético':'Club Atlético de Madrid',
-  'osasuna':'CA Osasuna',
-  'espanyol':'RCD Espanyol de Barcelona',
-  'barcelona':'FC Barcelona',
-  'getafe':'Getafe CF',
-  'madrid':'Real Madrid CF','real madrid':'Real Madrid CF',
-  'rayo':'Rayo Vallecano de Madrid',
-  'levante':'Levante UD',
-  'mallorca':'RCD Mallorca',
-  'betis':'Real Betis Balompié',
-  'sociedad':'Real Sociedad de Fútbol','real sociedad':'Real Sociedad de Fútbol',
-  'villarreal':'Villarreal CF',
-  'valencia':'Valencia CF',
-  'alaves':'Deportivo Alavés','alavés':'Deportivo Alavés',
-  'elche':'Elche CF',
-  'girona':'Girona FC',
-  'celta':'RC Celta de Vigo',
-  'sevilla':'Sevilla FC',
-  'oviedo':'Real Oviedo','real oviedo':'Real Oviedo',
-};
 
 function getStandingByClub(clubName) {
   if (!ligaData?.standings || !clubName || clubName === '—') return null;
@@ -5101,16 +5079,11 @@ function getEstadoEquipo(clubName) {
 }
 
 // ── Factor Equipo — máximas por posición para normalización ──────────
-const FE_MEDIA_MAX_POS = { PT: 7.3, DF: 6.7, MC: 7.9, DL: 10.3 };
+
 
 // Pesos base contexto por posición
 // PT: necesita ganar y no encajar  DF: similar  MC: equilibrado  DL: partido con goles
-const FE_PESOS = {
-  PT: { w: 0.80, e: 0.50, l: -0.20, o25base: -0.30 },
-  DF: { w: 0.70, e: 0.40, l: -0.10, o25base:  0.00 },
-  MC: { w: 0.60, e: 0.30, l:  0.00, o25base:  0.20 },
-  DL: { w: 0.50, e: 0.10, l:  0.00, o25base:  0.40 },
-};
+
 
 // o25 personalizado según perfil gol del jugador (DL/MC)
 // Gol-dependiente → partido con goles le beneficia más
