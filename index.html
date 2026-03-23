@@ -324,6 +324,10 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
 .mch:hover{color:var(--accent);}
 .mch.left{text-align:left;padding-left:10px;}
 .mch.msort-active{color:var(--accent);}
+.mch-main{display:block;color:var(--text3);}
+.mch-sub{display:block;opacity:.65;font-size:0.44rem;}
+.mch-arrow{color:var(--accent);font-size:0.55rem;font-style:normal;}
+.mch:hover .mch-main,.mch:hover .mch-sub{color:var(--accent);opacity:1;}
 .mpc{background:#fff;border:1px solid var(--border);border-radius:4px;overflow:hidden;margin-bottom:3px;transition:border-color 0.12s,box-shadow 0.12s;}
 .mpc:hover{border-color:var(--border2);box-shadow:0 2px 8px rgba(0,0,0,0.05);}
 .mpc.guitlla{border-left:3px solid var(--accent);}
@@ -1082,16 +1086,7 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
       <button class="mv3-fbtn mc" onclick="mv3SetPos('MC',this)">MC</button>
       <button class="mv3-fbtn dl" onclick="mv3SetPos('DL',this)">DL</button>
     </div>
-    <select class="mv3-sort" id="mv3SortSel" onchange="mv3ApplyAll()">
-      <option value="pts_desc">↓ Puntos</option>
-      <option value="pts_asc">↑ Puntos</option>
-      <option value="price_desc">↓ Precio</option>
-      <option value="price_asc">↑ Precio</option>
-      <option value="roi_desc">↓ ROI</option>
-      <option value="media_desc">↓ Media</option>
-      <option value="trend_desc">↓ Subida</option>
-      <option value="trend_asc">↑ Bajada</option>
-    </select>
+    <input type="hidden" id="mv3SortSel" value="pts_desc">
     <label class="mv3-only">
       <input type="checkbox" id="mv3OnlyGuitlla" onchange="mv3ApplyAll()" style="accent-color:var(--accent);">
       Solo Guitlla🦊
@@ -1104,13 +1099,25 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
     <div class="mch">#</div>
     <div class="mch"></div>
     <div class="mch left">Jugador · Últimas 5J</div>
-    <div class="mch" onclick="mv3SetSortClick('price_desc')" id="mv3ch-price">Precio<br><span style="opacity:.65">Tend.</span></div>
-    <div class="mch" onclick="mv3SetSortClick('pts_desc')" id="mv3ch-pts">Pts<br><span style="opacity:.65">Media</span></div>
-    <div class="mch">Local<br><span style="opacity:.65">M.Local</span></div>
-    <div class="mch">Visita<br><span style="opacity:.65">M.Visit.</span></div>
-    <div class="mch" onclick="mv3SetSortClick('roi_desc')" id="mv3ch-roi">
-      <span style="display:flex;align-items:center;justify-content:center;gap:3px">
-        ROI
+    <div class="mch" id="mv3ch-price" onclick="mv3CycleSort('precio','trend',this)">
+      <span class="mch-main">Precio <span class="mch-arrow" id="mv3arr-precio"></span></span>
+      <span class="mch-sub">Tend. <span class="mch-arrow" id="mv3arr-trend"></span></span>
+    </div>
+    <div class="mch" id="mv3ch-pts" onclick="mv3CycleSort('pts','media',this)">
+      <span class="mch-main">Pts <span class="mch-arrow" id="mv3arr-pts"></span></span>
+      <span class="mch-sub">Media <span class="mch-arrow" id="mv3arr-media"></span></span>
+    </div>
+    <div class="mch" onclick="mv3CycleSort('ptsL','ptsLavg',this)">
+      <span class="mch-main">Local <span class="mch-arrow" id="mv3arr-ptsL"></span></span>
+      <span class="mch-sub">M.Local <span class="mch-arrow" id="mv3arr-ptsLavg"></span></span>
+    </div>
+    <div class="mch" onclick="mv3CycleSort('ptsV','ptsVavg',this)">
+      <span class="mch-main">Visita <span class="mch-arrow" id="mv3arr-ptsV"></span></span>
+      <span class="mch-sub">M.Visit. <span class="mch-arrow" id="mv3arr-ptsVavg"></span></span>
+    </div>
+    <div class="mch" id="mv3ch-roi" onclick="mv3CycleSort('roi','efic',this)">
+      <span class="mch-main" style="display:flex;align-items:center;justify-content:center;gap:3px">
+        ROI <span class="mch-arrow" id="mv3arr-roi"></span>
         <span class="lp-tip">
           <span class="lp-tip-icon">?</span>
           <div class="lp-tip-box" style="min-width:240px">
@@ -1120,8 +1127,8 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
           </div>
         </span>
       </span>
-      <span style="opacity:.65;display:flex;align-items:center;justify-content:center;gap:3px">
-        Efic.
+      <span class="mch-sub" style="display:flex;align-items:center;justify-content:center;gap:3px">
+        Efic. <span class="mch-arrow" id="mv3arr-efic"></span>
         <span class="lp-tip">
           <span class="lp-tip-icon">?</span>
           <div class="lp-tip-box" style="min-width:240px">
@@ -1132,9 +1139,9 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
         </span>
       </span>
     </div>
-    <div class="mch">
-      <span style="display:flex;align-items:center;justify-content:center;gap:3px">
-        P.Justo
+    <div class="mch" onclick="mv3CycleSort('precioJusto','margenPJ',this)">
+      <span class="mch-main" style="display:flex;align-items:center;justify-content:center;gap:3px">
+        P.Justo <span class="mch-arrow" id="mv3arr-precioJusto"></span>
         <span class="lp-tip">
           <span class="lp-tip-icon">?</span>
           <div class="lp-tip-box" style="min-width:260px">
@@ -1144,11 +1151,11 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
           </div>
         </span>
       </span>
-      <span style="opacity:.65">Margen</span>
+      <span class="mch-sub">Margen% <span class="mch-arrow" id="mv3arr-margenPJ"></span></span>
     </div>
-    <div class="mch" style="font-size:.42rem;line-height:1.4;position:relative">
-      <span style="display:flex;align-items:center;justify-content:center;gap:3px">
-        F.Equipo
+    <div class="mch" style="font-size:.42rem;line-height:1.4;position:relative" onclick="mv3CycleSort('fe',null,this)">
+      <span class="mch-main" style="display:flex;align-items:center;justify-content:center;gap:3px">
+        F.Equipo <span class="mch-arrow" id="mv3arr-fe"></span>
         <span class="lp-tip" style="vertical-align:middle">
           <span class="lp-tip-icon">?</span>
           <div class="lp-tip-box" style="right:0;left:auto;transform:none;min-width:260px">
@@ -1163,11 +1170,11 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
           </div>
         </span>
       </span>
-      <span style="opacity:.7">próx.</span>
+      <span class="mch-sub" style="opacity:.7">próx.</span>
     </div>
-    <div class="mch">
-      <span style="display:flex;align-items:center;justify-content:center;gap:3px">
-        Lectura
+    <div class="mch" onclick="mv3CycleSort('lectura',null,this)">
+      <span class="mch-main" style="display:flex;align-items:center;justify-content:center;gap:3px">
+        Lectura <span class="mch-arrow" id="mv3arr-lectura"></span>
         <span class="lp-tip">
           <span class="lp-tip-icon">?</span>
           <div class="lp-tip-box" style="right:0;left:auto;transform:none;min-width:280px">
@@ -2700,9 +2707,63 @@ function mv3SetPos(pos,btn){
   btn.classList.add('active'); mv3Page=1; mv3ApplyAll();
 }
 function mv3SetSortClick(val){document.getElementById('mv3SortSel').value=val;mv3Page=1;mv3ApplyAll();}
+
+// ── Sistema de ordenación por ciclos ────────────────────────────────────────
+// Estado: { key, dir } donde dir = 'desc'|'asc'
+// Ciclo con 1 campo:  desc → asc → desc...
+// Ciclo con 2 campos: primary_desc → primary_asc → secondary_desc → secondary_asc → ...
+let mv3SortState = { key: 'pts', dir: 'desc', isPrimary: true };
+
+// Mapa de claves a valores en el objeto jugador
+const MV3_SORT_FN = {
+  pts:         p => p.pts        || 0,
+  media:       p => p.media      || 0,
+  precio:      p => p.precio     || 0,
+  trend:       p => p.trend      || 0,
+  ptsL:        p => p.ptsL       || 0,
+  ptsLavg:     p => p.ptsL > 0 ? p.ptsL / 13 : 0,
+  ptsV:        p => p.ptsV       || 0,
+  ptsVavg:     p => p.ptsV > 0 ? p.ptsV / 13 : 0,
+  roi:         p => p.roi        || 0,
+  efic:        p => p.efic       || 0,
+  precioJusto: p => { const pf = allPlayers.find(x=>x.id==p.id||x.name===p.name); const pj = pf ? calcPrecioJusto(pf) : null; return pj ? pj.precioJusto : 0; },
+  margenPJ:    p => { const pf = allPlayers.find(x=>x.id==p.id||x.name===p.name); const pj = pf ? calcPrecioJusto(pf) : null; return pj ? pj.difPct : -999; },
+  fe:          p => { const pf = allPlayers.find(x=>x.id==p.id||x.name===p.name); return calcFactorEquipo(p.club||'', pf||p) || 0; },
+  lectura:     p => { const pf = allPlayers.find(x=>x.id==p.id||x.name===p.name); const em = pf ? calcEstadoMercado(pf) : null; const order = {joya:4,explosion:3,rebote:2,hype:1}; return em ? (order[em.estado]||0) : 0; },
+};
+
+function mv3CycleSort(primary, secondary, el) {
+  const s = mv3SortState;
+  // Calcular siguiente estado
+  if (s.key !== primary && s.key !== secondary) {
+    // Nueva columna — empezar por primary desc
+    mv3SortState = { key: primary, dir: 'desc', isPrimary: true };
+  } else if (secondary) {
+    // Columna con 2 campos — ciclo de 4
+    if (s.key === primary && s.dir === 'desc')  mv3SortState = { key: primary,   dir: 'asc',  isPrimary: true  };
+    else if (s.key === primary && s.dir === 'asc')   mv3SortState = { key: secondary, dir: 'desc', isPrimary: false };
+    else if (s.key === secondary && s.dir === 'desc') mv3SortState = { key: secondary, dir: 'asc',  isPrimary: false };
+    else                                              mv3SortState = { key: primary,   dir: 'desc', isPrimary: true  };
+  } else {
+    // Columna con 1 campo — ciclo de 2
+    mv3SortState = { key: primary, dir: s.dir === 'desc' ? 'asc' : 'desc', isPrimary: true };
+  }
+  mv3Page = 1;
+  mv3UpdateArrows();
+  mv3ApplyAll();
+}
+
+function mv3UpdateArrows() {
+  // Limpiar todas las flechas
+  document.querySelectorAll('.mch-arrow').forEach(a => a.textContent = '');
+  document.querySelectorAll('.mch').forEach(c => c.classList.remove('msort-active'));
+  // Poner flecha en la activa
+  const arrowEl = document.getElementById('mv3arr-' + mv3SortState.key);
+  if (arrowEl) arrowEl.textContent = mv3SortState.dir === 'desc' ? ' ↓' : ' ↑';
+}
+
 function mv3ApplyAll(){
   const q=(document.getElementById('mv3Search')?.value||'').toLowerCase().trim();
-  const sortVal=document.getElementById('mv3SortSel')?.value||'pts_desc';
   const onlyG=document.getElementById('mv3OnlyGuitlla')?.checked||false;
   let list=mv3Players.filter(p=>{
     const posOk=!mv3ActivePos||p.pos===mv3ActivePos;
@@ -2710,19 +2771,14 @@ function mv3ApplyAll(){
     const gitOk=!onlyG||p.inGuitlla;
     return posOk&&txtOk&&gitOk;
   });
-  const [key,dir]=sortVal.split('_');
-  list.sort((a,b)=>{
-    let va,vb;
-    if(key==='price'){va=a.precio;vb=b.precio;}
-    else if(key==='roi'){va=a.roi;vb=b.roi;}
-    else if(key==='media'){va=a.media;vb=b.media;}
-    else if(key==='trend'){va=a.trend;vb=b.trend;}
-    else{va=a.pts;vb=b.pts;}
-    return dir==='desc'?vb-va:va-vb;
-  });
-  document.querySelectorAll('.mch').forEach(c=>c.classList.remove('msort-active'));
-  const chMap={pts:'mv3ch-pts',price:'mv3ch-price',roi:'mv3ch-roi'};
-  if(chMap[key])document.getElementById(chMap[key])?.classList.add('msort-active');
+  const sortFn = MV3_SORT_FN[mv3SortState.key];
+  if (sortFn) {
+    list.sort((a, b) => {
+      const va = sortFn(a), vb = sortFn(b);
+      return mv3SortState.dir === 'desc' ? vb - va : va - vb;
+    });
+  }
+  mv3UpdateArrows();
   mv3Sorted=list;
   const lbl=document.getElementById('mv3Count');
   if(lbl)lbl.textContent=list.length+' jugadores';
