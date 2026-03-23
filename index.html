@@ -827,6 +827,8 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
 .bpg-btn:hover{border-color:var(--accent);color:var(--accent);}
 @media(max-width:900px){.broi-hd,.broi-row{grid-template-columns:20px 1fr 52px 50px 66px 52px 76px 56px;}}
 </style>
+<script src="scripts/engine.js"></script>
+<script src="scripts/ui.js"></script>
 </head>
 <body class="liga-tomaquet">
 <div id="tsPopover" class="ts-popover"></div>
@@ -1818,7 +1820,6 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
     <button class="modal-remove" id="modalRemove" onclick="removePlayer()">REMOVE PLAYER</button>
   </div>
 </div>
-
 <script>
 // ══════════════════════════════════════════
 // BASE DE DATOS AVANZADA (Numbers — J26)
@@ -2279,18 +2280,17 @@ function renderNews() {
   container.innerHTML=featured+rest.map(n=>`<a class="news-item" href="${n.link}" target="_blank" rel="noopener">${n.img?`<img class="news-item-thumb" src="${n.img}" alt="" loading="lazy">`:'<div class="news-item-thumb-placeholder">📰</div>'}<div class="news-item-body"><div class="news-item-title">${n.title}</div><div class="news-item-meta"><span class="news-source-tag ${n.srcCls}">${n.srcLabel}</span><span>${timeAgo(n.date)}</span></div></div></a>`).join('');
 }
 
-// ══════════════════════════════════════════
 let allPlayers=[],filteredPlayers=[],currentPos='',currentSort='sf_goals_desc',currentPage=1;
 const PAGE_SIZE=50;
 let cf='4-3-3',lineup={},marketPlayers=[],currentSlot=null;
-let myTeamData=null;      // datos reales mi equipo TOMAQUET desde Biwenger
-let myTeamDataEnBas=null; // datos reales mi equipo EN BAS desde Biwenger
+let myTeamData=null;
+let myTeamDataEnBas=null;
 
 document.addEventListener('keydown',e=>{ if(e.key==='Escape'){ closeJugPanelDirect(); closeCompareModalDirect(); }});
 document.addEventListener('DOMContentLoaded',()=>{
   renderGeneral(); renderGrupos(); autoPlace(); renderMiEquipo();
-  mv3InitFromAdvancedStats(); // fallback inmediato con datos estáticos
-  loadPlayers(); // las noticias se cargan desde data.json dentro de loadPlayers
+  mv3InitFromAdvancedStats();
+  loadPlayers();
 });
 
 async function loadPlayers(){
@@ -4301,7 +4301,6 @@ async function loadLiga(){
     document.getElementById('ligaLoading').innerHTML=`<div style="color:var(--red);font-family:Figtree,sans-serif;font-size:0.8rem;padding:20px;text-align:center">❌ ${e.message}<br><br><span style="color:var(--text3)">Ve a GitHub → Actions → Run workflow para actualizar data.json</span></div>`;
   }
 }
-
 function renderRecomendaciones() {
   const recEl = document.getElementById('recomendaciones');
   if (!recEl) return;
