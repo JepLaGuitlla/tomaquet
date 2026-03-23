@@ -1819,8 +1819,6 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
   </div>
 </div>
 
-<script src="scripts/engine.js"></script>
-<script src="scripts/ui.js"></script>  
 <script>
 // ══════════════════════════════════════════
 // BASE DE DATOS AVANZADA (Numbers — J26)
@@ -2288,7 +2286,286 @@ function renderNews() {
 // Mide cuánto rinde un jugador respecto a lo esperado para su precio y posición
 // Resultado en % — positivo = rinde por encima, negativo = por debajo
 
+function getPriceRange(price) {
+  const m = price / 1000000;
+  if (m < 0.15) return null;        // excluir — sin minutos
+  if (m < 1)    return '0.15-1M';
+  if (m < 3)    return '1-3M';
+  if (m < 6)    return '3-6M';
+  if (m < 12)   return '6-12M';
+  return '+12M';
+}
 
+function calcMediaEsperada(players) {
+  // Construir tabla de medias por posición × rango de precio
+  const grupos = {};
+  players.forEach(p => {
+    const pos   = (p.position || p.pos || '').split('/')[0];
+    const rango = getPriceRange(p.price);
+    if (!pos || !rango) return;
+    const jForm = (p.jForm || []).filter(v => v !== null && v !== undefined && v >= 0);
+    if (jForm.length < 5) return; // mínimo 5 jornadas para ser representativo
+    const media = jForm.reduce((s,v) => s+v, 0) / jForm.length;
+    const key = `${pos}_${rango}`;
+    if (!grupos[key]) grupos[key] = [];
+    grupos[key].push(media);
+  });
+  // Calcular media de cada grupo
+  const medias = {};
+  Object.entries(grupos).forEach(([key, vals]) => {
+    medias[key] = vals.reduce((s,v) => s+v, 0) / vals.length;
+  });
+  return medias;
+}
+
+function calcEficiencia(player, mediasEsperadas) {
+  const pos   = (player.position || player.pos || '').split('/')[0];
+  const rango = getPriceRange(player.price);
+  if (!pos || !rango) return null;
+  const jForm = (player.jForm || []).filter(v => v !== null && v !== undefined && v >= 0);
+  if (jForm.length < 5) return null;
+  const mediaReal = jForm.reduce((s,v) => s+v, 0) / jForm.length;
+  const key = `${pos}_${rango}`;
+  const mediaEsperada = mediasEsperadas[key];
+  if (!mediaEsperada || mediaEsperada === 0) return null;
+  return Math.round(((mediaReal - mediaEsperada) / mediaEsperada) * 100);
+}
+
+// Cache de medias — se calcula una vez cuando cargan los jugadores
+let _mediasEsperadas = null;
+function getMediasEsperadas() {
+  if (!_mediasEsperadas) _mediasEsperadas = calcMediaEsperada(allPlayers);
+  return _mediasEsperadas;
+}
+
+// ── PRECIO JUSTO ─────────────────────────────────────────────────────────────
+// Cuánto debería costar un jugador según lo que rinde vs jugadores similares
+// precio_justo = media_real × (precio_medio_grupo / media_media_grupo)
+
+let _precioJustoCache = null;
+
+// ── PRECIO JUSTO v2 — curva gaussiana continua ─────────────────────────────
+// Sin grupos rígidos. Cada jugador se compara contra todos los de su posición
+// ponderando por proximidad de precio (gaussiana σ=2M€).
+// Filtro: precio ≥ 1M€ + mínimo 3 jornadas jugadas — excluye ruido.
+
+const SIGMA_M = 2.0; // radio de influencia en millones
+
+function calcPrecioJusto(player) {
+  const pos = (player.position || player.pos || '').split('/')[0];
+  if (!pos || pos === 'MD' || pos === '?') return null;
+  if (!player.price || player.price < 500000) return null;
+
+  const jFormPlayer = (player.jForm || []).filter(v => v !== null && v !== undefined && v > 0);
+  if (jFormPlayer.length < 3) return null;
+  const mediaReal = jFormPlayer.reduce((s,v) => s+v, 0) / jFormPlayer.length;
+  if (mediaReal <= 0) return null;
+
+  const precioM = player.price / 1e6;
+
+  // Candidatos: misma posición, precio ≥ 1M€, mínimo 3 jornadas con puntos
+  const candidatos = allPlayers.filter(p => {
+    if (p.id === player.id) return false;
+    const pPos = (p.position || p.pos || '').split('/')[0];
+    if (pPos !== pos) return false;
+    if (!p.price || p.price < 1e6) return false;
+    const jf = (p.jForm || []).filter(v => v !== null && v !== undefined && v > 0);
+    return jf.length >= 3;
+  });
+
+  if (candidatos.length < 3) return null;
+
+  // Calcular ratio precio/media ponderado por gaussiana
+  let sumPesosPrecio = 0, sumPesosMedia = 0, sumPesos = 0;
+  candidatos.forEach(p => {
+    const pM   = p.price / 1e6;
+    const jf   = (p.jForm || []).filter(v => v !== null && v !== undefined && v > 0);
+    const med  = jf.reduce((s,v) => s+v, 0) / jf.length;
+    if (med <= 0) return;
+
+    // Peso gaussiano — más peso a jugadores con precio similar
+    const dist  = Math.abs(pM - precioM);
+    const peso  = Math.exp(-(dist * dist) / (2 * SIGMA_M * SIGMA_M));
+
+    sumPesosPrecio += pM   * peso;
+    sumPesosMedia  += med  * peso;
+    sumPesos       += peso;
+  });
+
+  if (sumPesos < 0.1 || sumPesosMedia < 0.01) return null;
+
+  const precioMedioPond = sumPesosPrecio / sumPesos;
+  const mediaMediaPond  = sumPesosMedia  / sumPesos;
+  const ratioPrecioMedia = precioMedioPond / mediaMediaPond;
+
+  const precioJusto = Math.round(mediaReal * ratioPrecioMedia * 1e6);
+  const difEuros    = precioJusto - player.price;
+  const difPct      = Math.round((difEuros / player.price) * 100);
+
+  return {
+    precioJusto,
+    difEuros,
+    difPct,
+    mediaReal: Math.round(mediaReal * 10) / 10,
+    ratioPrecioMedia: Math.round(ratioPrecioMedia * 100) / 100,
+    n: candidatos.length,
+  };
+}
+
+// Mantener _precioJustoCache vacío — calcPrecioJusto ya no usa grupos
+function getGruposParaPrecioJusto() { return {}; }
+function calcGruposParaPrecioJusto() { return {}; }
+
+// ── ESTADO DE MERCADO ────────────────────────────────────────────────────────
+// Cruza infravaloración con reacción del mercado (prices.json)
+// Devuelve: { estado, icono, label, desc, colorFondo, colorTexto }
+
+function calcEstadoMercado(player) {
+  // ── FILTROS MÍNIMOS ──────────────────────────────────────────────────────
+  if (!player.price || player.price < 150000) return null;
+  // Necesita estar jugando — mínimo 3 jornadas con puntos > 0 de las últimas 5
+  const jForm = (player.jForm || []).slice(0, 5);
+  const jornadasConPuntos = jForm.filter(v => v !== null && v !== undefined && v > 0).length;
+  if (jornadasConPuntos < 3) return null;
+  // Status — no lesionado ni sancionado
+  const statusOk = !player.status || player.status === 'ok' || player.status === 1 || player.status === '';
+  if (!statusOk) return null;
+
+  const efic = calcEficiencia(player, getMediasEsperadas());
+  if (efic === null) return null;
+
+  const pj = calcPrecioJusto(player);
+  const precioM = player.price / 1e6;
+
+  // ── MOMENTUM DE MERCADO ──────────────────────────────────────────────────
+  const priceHistory = (window._pricesData || {})[String(player.id)] || [];
+  let mom7 = 0, diasSubiendo = 0, diasBajando = 0;
+
+  if (priceHistory.length >= 2) {
+    const last  = priceHistory[priceHistory.length - 1]?.p || player.price;
+    const prev7 = priceHistory[Math.max(0, priceHistory.length - 8)]?.p || last;
+    // % sobre precio de hace 7 días — no sobre el actual
+    mom7 = prev7 > 0 ? ((last - prev7) / prev7) * 100 : 0;
+    for (let i = priceHistory.length - 1; i > 0; i--) {
+      if ((priceHistory[i]?.p || 0) > (priceHistory[i-1]?.p || 0)) diasSubiendo++;
+      else if ((priceHistory[i]?.p || 0) < (priceHistory[i-1]?.p || 0)) { diasBajando++; break; }
+      else break;
+    }
+  } else {
+    mom7 = player.trend > 0 ? (player.trend / player.price) * 100 * 5 : 0;
+    diasSubiendo = player.trend > 0 ? 1 : 0;
+  }
+
+  // ── UMBRALES ADAPTATIVOS POR PRECIO ─────────────────────────────────────
+  // El mercado reacciona muy diferente según el precio del jugador
+  // Un jugador de 500K subiendo 5% es ruido. Uno de 5M subiendo 5% es señal.
+  let umbralDormido, umbralReaccionando;
+  if (precioM < 0.5)       { umbralDormido = 25;  umbralReaccionando = 80; }
+  else if (precioM < 1.0)  { umbralDormido = 15;  umbralReaccionando = 60; }
+  else if (precioM < 1.5)  { umbralDormido = 10;  umbralReaccionando = 50; }
+  else if (precioM < 2.0)  { umbralDormido = 8;   umbralReaccionando = 40; }
+  else if (precioM < 5.0)  { umbralDormido = 3;   umbralReaccionando = 25; }
+  else if (precioM < 15.0) { umbralDormido = 1.5; umbralReaccionando = 15; }
+  else                     { umbralDormido = 0.8;  umbralReaccionando = 8;  }
+
+  const mercadoDormido     = mom7 < umbralDormido;
+  const mercadoReaccionando = mom7 >= umbralReaccionando;
+
+  // ── MARGEN PRECIO JUSTO ──────────────────────────────────────────────────
+  const margenPJ = pj ? ((pj.precioJusto - player.price) / player.price) * 100 : null;
+  const hayMargen     = margenPJ !== null && margenPJ > 30;   // precio justo >30% por encima
+  const estaCaroRespectoPJ = margenPJ !== null && margenPJ < -20; // precio >20% por encima del justo
+
+  // ── MEJORA RECIENTE DE RENDIMIENTO ───────────────────────────────────────
+  // Últimas 2 jornadas vs las 3 anteriores — ¿está mejorando?
+  const recientes  = jForm.slice(0, 2).filter(v => v !== null && v !== undefined);
+  const anteriores = jForm.slice(2, 5).filter(v => v !== null && v !== undefined);
+  const mediaRec  = recientes.length  ? recientes.reduce((s,v)=>s+v,0)  / recientes.length  : 0;
+  const mediaAnt  = anteriores.length ? anteriores.reduce((s,v)=>s+v,0) / anteriores.length : 0;
+  const mejorando = mediaRec > mediaAnt * 1.2; // mejora >20% respecto a jornadas anteriores
+
+  // ── LOS 4 TIPOS DE SEÑAL ─────────────────────────────────────────────────
+
+  // 🎭 HYPE — precio muy por encima del justo y sigue subiendo fuerte
+  // No es malo para especular pero tiene riesgo de corrección
+  if (estaCaroRespectoPJ && mercadoReaccionando) {
+    return {
+      estado: 'hype',
+      icono: '🎭',
+      label: 'HYPE',
+      desc: `El mercado ha ido muy por delante del rendimiento real. Precio actual ${Math.abs(margenPJ).toFixed(0)}% por encima de su valor justo. Riesgo de corrección.`,
+      colorFondo: 'rgba(239,68,68,0.1)',
+      colorTexto: 'var(--red)',
+    };
+  }
+
+  // 💎 INERCIA OCULTA — rinde bien, mercado no lo ve, hay margen real
+  // El jugador más valioso ahora mismo — periodo de rendimiento
+  if (hayMargen && mercadoDormido && efic > 10) {
+    return {
+      estado: 'joya',
+      icono: '💎',
+      label: 'INERCIA OCULTA',
+      desc: `Rinde +${efic}% sobre lo esperado para su precio. El mercado aún no reacciona (+${mom7.toFixed(1)}% en 7 días). Precio justo estimado: ${pj ? (pj.precioJusto/1e6).toFixed(2)+'M€' : '—'}. Margen: +${margenPJ?.toFixed(0)}%.`,
+      colorFondo: 'rgba(99,102,241,0.15)',
+      colorTexto: '#818cf8',
+    };
+  }
+
+  // 📈 REBOTE — rendimiento mejorando, mercado empezando a corregir
+  // Jugador que estaba castigado y el mercado reconoce la mejora
+  if (mejorando && mercadoReaccionando && efic > 0) {
+    return {
+      estado: 'rebote',
+      icono: '📈',
+      label: 'REBOTE',
+      desc: `Rendimiento mejorando en las últimas jornadas (ø${mediaRec.toFixed(1)} vs ø${mediaAnt.toFixed(1)} anterior). El mercado lo está reconociendo (+${mom7.toFixed(1)}% en 7 días).`,
+      colorFondo: 'rgba(34,197,94,0.1)',
+      colorTexto: 'var(--green)',
+    };
+  }
+
+  // 💥 EXPLOSIÓN — mercado reaccionando fuerte con rendimiento que lo justifica
+  // El tren ya salió pero el rendimiento confirma que hay recorrido
+  if (mercadoReaccionando && efic > 10 && hayMargen) {
+    return {
+      estado: 'explosion',
+      icono: '💥',
+      label: 'EXPLOSIÓN',
+      desc: `Subida fuerte (+${mom7.toFixed(1)}% en 7 días) respaldada por rendimiento real (+${efic}% sobre lo esperado). Aún hay margen de +${margenPJ?.toFixed(0)}% hasta precio justo.`,
+      colorFondo: 'rgba(251,146,60,0.12)',
+      colorTexto: '#fb923c',
+    };
+  }
+
+  // 💎 INERCIA OCULTA (mercado medio) — rinde bien, mercado moviéndose pero sin explotar aún
+  // Captura jugadores entre dormido y reaccionando con buenas fundamentales
+  if (hayMargen && !mercadoReaccionando && efic > 10) {
+    return {
+      estado: 'joya',
+      icono: '💎',
+      label: 'INERCIA OCULTA',
+      desc: `Rinde +${efic}% sobre lo esperado para su precio. El mercado empieza a moverse (+${mom7.toFixed(1)}% en 7 días) pero aún hay margen. Precio justo estimado: ${pj ? (pj.precioJusto/1e6).toFixed(2)+'M€' : '—'}. Margen: +${margenPJ?.toFixed(0)}%.`,
+      colorFondo: 'rgba(99,102,241,0.15)',
+      colorTexto: '#818cf8',
+    };
+  }
+}
+
+function calcularEficientes(players) {
+  const MIN_PJ=8,MIN_PTS=60;
+  const candidatos=players.filter(p=>p.price>0&&p.pts>=MIN_PTS&&p.pj>=MIN_PJ);
+  const maxPorPos={};
+  candidatos.forEach(p=>{const pos=(p.position||p.pos||'').split('/')[0];if(!maxPorPos[pos]||p.pts>maxPorPos[pos])maxPorPos[pos]=p.pts;});
+  return candidatos.map(p=>{const precioM=p.price/1000000;const media=p.media||(p.pts/p.pj);const pos=(p.position||p.pos||'').split('/')[0];const maxPos=maxPorPos[pos]||p.pts;const score=(media*0.5)+((p.pts/precioM)*0.3)+((p.pts/maxPos)*100*0.2);return{...p,media,score};}).sort((a,b)=>b.score-a.score).slice(0,10);
+}
+function calcularChollos(players) {
+  const candidatos=players.filter(p=>p.price>0&&(p.price/1000000)<=5&&p.pts>=40&&p.pj>=6);
+  if(!candidatos.length)return[];
+  const precios=candidatos.map(p=>p.price/1000000);
+  const minP=Math.min(...precios),maxP=Math.max(...precios,1),rangoP=maxP-minP||1;
+  return candidatos.map(p=>{const precioM=p.price/1000000;const media=p.media||(p.pts/p.pj);const barato=((maxP-precioM)/rangoP)*100;const score=(p.pts*0.5)+(media*0.3)+(barato*0.2);return{...p,media,score};}).sort((a,b)=>b.score-a.score).slice(0,10);
+}
 function buildRankRow(name,pos,club,valLabel,colorCls,pct) {
   if(pos&&!PC[pos]){const found=allPlayers.find(p=>p.name===name);if(found)pos=(found.position||'').split('/')[0];}
   const posColor=PC[pos]||'#888';
@@ -2567,8 +2844,437 @@ function renderRankingCards(players) {
   const pos = p => (p.position || p.pos || '').split('/')[0];
   const fmt2 = v => v >= 1000000 ? (v/1e6).toFixed(2)+'M€' : v >= 1000 ? (v/1000).toFixed(0)+'K€' : v+'€';
 
-  
-  playerStatsIndex[fullName]  = s;
+  // 1. EN RACHA
+  const rachaList = [...players].map(p => {
+    const jf = (p.jForm||[]).filter(v=>v!==null&&v!==undefined);
+    const rachaSum = jf.slice(0,5).reduce((s,v)=>s+v,0);
+    const media5 = jf.slice(0,5).length > 0 ? (rachaSum/jf.slice(0,5).length).toFixed(1) : '—';
+    return {...p, rachaSum, media5};
+  }).filter(p=>p.rachaSum>0).sort((a,b)=>b.rachaSum-a.rachaSum);
+  buildRankCard('rkCard-racha','🔥','En racha',rachaList.filter(p=>p.position!=='PT'),
+    p => `${p.rachaSum}`,
+    'rk-val-amber',
+    p => `<span style="color:var(--text3);font-size:0.55rem">⌀${p.media5}</span>`,
+    p => jFormDots(p.jForm), 'Últimas 5J',
+    p => `⌀${p.media5}`, 'Media'
+  );
+
+  // 2. INFRAVALORADOS
+  const medias = getMediasEsperadas();
+  const infra = players.map(p=>({...p,efic:calcEficiencia(p,medias)}))
+    .filter(p=>p.efic!==null&&p.efic>0).sort((a,b)=>b.efic-a.efic);
+  buildRankCard('rkCard-infra','📈','Infravalorados',infra.filter(p=>p.position!=='PT'),
+    p => `+${p.efic}%`,
+    'rk-val-green',
+    p => `${(p.price/1e6).toFixed(2)}M€`,
+    p => { const pj=(p.playedHome||0)+(p.playedAway||0); return `⌀${pj>0?(p.pts/pj).toFixed(1):'—'}`; }, 'Media',
+    p => `${(p.price/1e6).toFixed(2)}M€`, 'Precio'
+  );
+
+  // 3. MÁS SUBEN
+  const suben = [...players].filter(p=>p.trend>0).sort((a,b)=>b.trend-a.trend);
+  buildRankCard('rkCard-suben','↑','Más suben',suben.filter(p=>p.position!=='PT'),
+    p => `+${(p.trend/1000).toFixed(0)}K€`,
+    'rk-val-green',
+    p => `${(p.price/1e6).toFixed(2)}M€`,
+    p => jFormDots(p.jForm), 'Últimas 5J',
+    p => `${(p.price/1e6).toFixed(2)}M€`, 'Precio'
+  );
+
+  // 4. TOP PUNTUADORES
+  const top = [...players].filter(p=>p.pts>0).sort((a,b)=>b.pts-a.pts);
+  buildRankCard('rkCard-top','★','Top puntuadores',top.filter(p=>p.position!=='PT'),
+    p => `${p.pts}`,
+    'rk-val-blue',
+    p => { const pj=(p.playedHome||0)+(p.playedAway||0); return `⌀${pj>0?(p.pts/pj).toFixed(1):'—'} · ${(p.price/1e6).toFixed(2)}M€`; },
+    p => { const pj=(p.playedHome||0)+(p.playedAway||0); return `⌀${pj>0?(p.pts/pj).toFixed(1):'—'}`; }, 'Media',
+    p => `${(p.price/1e6).toFixed(2)}M€`, 'Precio'
+  );
+
+  // 5. MÁS BAJAN
+  const bajan = [...players].filter(p=>p.trend<0).sort((a,b)=>a.trend-b.trend);
+  buildRankCard('rkCard-bajan','↓','Más bajan',bajan.filter(p=>p.position!=='PT'),
+    p => `${(p.trend/1000).toFixed(0)}K€`,
+    'rk-val-red',
+    p => `${(p.price/1e6).toFixed(2)}M€`,
+    p => jFormDots(p.jForm), 'Últimas 5J',
+    p => `${(p.price/1e6).toFixed(2)}M€`, 'Precio'
+  );
+
+  // 6. COMODINES — baratos, disponibles, regulares
+  const comodines = players
+    .filter(p => p.price > 0 && p.price <= 1500000 && p.status === 'ok')
+    .map(p => {
+      const jf = (p.jForm||[]).slice(0,5);
+      const jugadas = jf.filter(v => v !== null && v !== undefined && v > 0).length;
+      const media5 = jugadas > 0 ? jf.filter(v=>v>0).reduce((s,v)=>s+v,0)/jugadas : 0;
+      return {...p, jugadas, media5};
+    })
+    .filter(p => p.jugadas >= 3 && p.media5 >= 2)
+    .sort((a,b) => (b.jugadas*10 + b.media5) - (a.jugadas*10 + a.media5));
+  buildRankCard('rkCard-chollos','🃏','Comodines',comodines.filter(p=>p.position!=='PT'),
+    p => `⌀${p.media5.toFixed(1)}`,
+    'rk-val-amber',
+    p => `${(p.price/1e6).toFixed(2)}M€`,
+    p => jFormDots(p.jForm), 'Últimas 5J',
+    p => `${(p.price/1e6).toFixed(2)}M€`, 'Precio'
+  );
+
+  // 7. EFICIENTES — solo jugadores activos (al menos 2 jornadas recientes)
+  const eficientes = calcularEficientes(players).filter(p => {
+    const jf = (p.jForm||[]).slice(0,5);
+    const recientes = jf.filter(v=>v!==null&&v!==undefined&&v>0).length;
+    return recientes >= 2;
+  });
+  buildRankCard('rkCard-eficientes','⚡','Eficientes',eficientes.filter(p=>p.position!=='PT'),
+    p => `${p.score.toFixed(1)}`,
+    'rk-val-blue',
+    p => `${(p.price/1e6).toFixed(2)}M€ · ⌀${p.media.toFixed(1)}`,
+    p => `⌀${p.media.toFixed(1)}`, 'Media',
+    p => `${(p.price/1e6).toFixed(2)}M€`, 'Precio'
+  );
+
+  // 8. SOBREVALORADOS (eficiencia negativa)
+  const sobre = players.map(p=>({...p,efic:calcEficiencia(p,medias)}))
+    .filter(p=>p.efic!==null&&p.efic<0).sort((a,b)=>a.efic-b.efic);
+  buildRankCard('rkCard-sobrevalorados','📉','Sobrevalorados',sobre.filter(p=>p.position!=='PT'),
+    p => `${p.efic}%`,
+    'rk-val-red',
+    p => `${(p.price/1e6).toFixed(2)}M€`,
+    p => { const pj=(p.playedHome||0)+(p.playedAway||0); return `⌀${pj>0?(p.pts/pj).toFixed(1):'—'}`; }, 'Media',
+    p => `${(p.price/1e6).toFixed(2)}M€`, 'Precio'
+  );
+}
+
+function renderRankings(players) {
+  const pos=p=>p.position||p.pos||'';
+  const rachaList=[...players].map(p=>{const form=(p.jForm||[]).filter(v=>v!==null&&v!==undefined);const sum=form.reduce((s,v)=>s+(v>0?v:0),0);const pts5=form.filter(v=>v>0);const media5=pts5.length?(sum/pts5.length).toFixed(1):null;return{...p,rachaSum:sum,media5};}).filter(p=>p.rachaSum>0).sort((a,b)=>b.rachaSum-a.rachaSum).slice(0,5);
+  if(rachaList.length){const rachaMax=rachaList[0].rachaSum;const _rr=document.getElementById('rankRacha');if(_rr)_rr.innerHTML=rachaList.map(p=>{const formDots=(p.jForm||[]).slice(0,5).map(v=>{if(v===null||v===undefined)return'<span style="color:var(--text3)">—</span>';const c=v>=10?'var(--green)':v>=5?'var(--pt)':v>0?'var(--text2)':'var(--red)';return`<span style="color:${c};font-weight:600">${v}</span>`;}).join('<span style="color:var(--border2);margin:0 2px">·</span>');const sub=`<span style="font-size:0.6rem;color:var(--text3)">${formDots}${p.media5?` &nbsp;⌀${p.media5}`:''}</span>`;return buildRankRow(p.name,pos(p),sub,`${p.rachaSum}p`,'amber',Math.round(p.rachaSum/rachaMax*100));}).join('');}
+  const suben=[...players].filter(p=>p.trend>0).sort((a,b)=>b.trend-a.trend).slice(0,5);
+  if(suben.length){const subenMax=suben[0].trend;const _rs=document.getElementById('rankSuben');if(_rs)_rs.innerHTML=suben.map(p=>buildRankRow(p.name,pos(p),fmt(p.price/1000000)+'M€',`+${fmt(p.trend/1000)}K`,'green',Math.round(p.trend/subenMax*100))).join('');}
+  const bajan=[...players].filter(p=>p.trend<0).sort((a,b)=>a.trend-b.trend).slice(0,5);
+  if(bajan.length){const bajanMax=Math.abs(bajan[0].trend);const _rb=document.getElementById('rankBajan');if(_rb)_rb.innerHTML=bajan.map(p=>buildRankRow(p.name,pos(p),fmt(p.price/1000000)+'M€',`${fmt(p.trend/1000)}K`,'red',Math.round(Math.abs(p.trend)/bajanMax*100))).join('');}
+  const topPts=[...players].filter(p=>p.pts>0).sort((a,b)=>b.pts-a.pts).slice(0,5);
+  if(topPts.length){const ptsMax=topPts[0].pts;const _rg=document.getElementById('rankGoleadores');if(_rg)_rg.innerHTML=topPts.map(p=>{const pj=(p.playedHome||0)+(p.playedAway||0);const media=pj>0?(p.pts/pj).toFixed(1):'—';return buildRankRow(p.name,pos(p),`${fmt(p.price/1000000)}M€ · ⌀${media}`,`${p.pts}p`,'blue',Math.round(p.pts/ptsMax*100));}).join('');}
+  const eficientes=calcularEficientes(players);
+  if(eficientes.length){const efMax=eficientes[0].score;const _ru=document.getElementById('rankUndervalued');if(_ru)_ru.innerHTML=eficientes.slice(0,5).map(p=>buildRankRow(p.name,pos(p),`${(p.price/1000000).toFixed(2)}M€ · ⌀${p.media.toFixed(1)}`,`${p.score.toFixed(1)}`,'blue',Math.round(p.score/efMax*100))).join('');}
+
+  // Ranking infravalorados — eficiencia de precio
+  const medias = getMediasEsperadas();
+  const infravalorados = players
+    .map(p => ({ ...p, efic: calcEficiencia(p, medias) }))
+    .filter(p => p.efic !== null && p.efic > 0)
+    .sort((a,b) => b.efic - a.efic)
+    .slice(0, 5);
+  const elInfra = document.getElementById('rankInfravalorados');
+  if (elInfra && infravalorados.length) {
+    elInfra.innerHTML = infravalorados.map(p => {
+      const col = p.efic >= 50 ? 'green' : p.efic >= 20 ? 'amber' : 'blue';
+      return buildRankRow(p.name, pos(p), `${(p.price/1000000).toFixed(2)}M€`, `+${p.efic}%`, col, Math.min(100, p.efic));
+    }).join('');
+  }
+  const chollos=calcularChollos(players);
+  if(chollos.length){const chollosMax=chollos[0].score;const _rc=document.getElementById('rankChollos');if(_rc)_rc.innerHTML=chollos.slice(0,5).map(p=>buildRankRow(p.name,pos(p),`${(p.price/1000000).toFixed(2)}M€ · ⌀${p.media.toFixed(1)}`,`${p.score.toFixed(1)}`,'amber',Math.round(p.score/chollosMax*100))).join('');}
+  // Actualizar Estudio de Mercado v3 con datos reales
+  mv3InitFromPlayers(players);
+}
+
+// ══════════════════════════════════════════
+// JUGADORES
+// ══════════════════════════════════════════
+let allPlayers=[],filteredPlayers=[],currentPos='',currentSort='sf_goals_desc',currentPage=1;
+const PAGE_SIZE=50;
+let cf='4-3-3',lineup={},marketPlayers=[],currentSlot=null;
+let myTeamData=null;      // datos reales mi equipo TOMAQUET desde Biwenger
+let myTeamDataEnBas=null; // datos reales mi equipo EN BAS desde Biwenger
+
+document.addEventListener('keydown',e=>{ if(e.key==='Escape'){ closeJugPanelDirect(); closeCompareModalDirect(); }});
+document.addEventListener('DOMContentLoaded',()=>{
+  renderGeneral(); renderGrupos(); autoPlace(); renderMiEquipo();
+  mv3InitFromAdvancedStats(); // fallback inmediato con datos estáticos
+  loadPlayers(); // las noticias se cargan desde data.json dentro de loadPlayers
+});
+
+async function loadPlayers(){
+  document.getElementById('jugadores-loading').style.display='flex';
+  document.getElementById('jugadores-content').style.display='none';
+  try{
+    const res=await fetch('./data.json');
+    if(!res.ok) throw new Error('data.json no encontrado (status '+res.status+')');
+    const data=await res.json();
+
+    // Poblar ligaData PRIMERO — necesario para calcFactorEquipo en Mercado v3
+    // Nota: ligaLoaded NO se setea aquí — loadLiga() lo gestiona para la pestaña Análisis
+    if (data.laliga) {
+      const ll = data.laliga;
+      ligaData.standings    = ll.table        || [];
+      ligaData.nextMatches  = ll.nextMatches  || [];
+      ligaData.recentResults= ll.recentResults|| [];
+      ligaData.season       = ll.matchday     || '?';
+      ligaData.forms        = ll.forms        || {};
+      ligaData.odds         = ll.odds         || {};
+    }
+
+    // Odds externas (the-odds-api) — campo raíz data.odds, clave = nombre equipo
+    // Fusionar con ligaData.odds indexando por teamId usando standings como puente
+    if (data.odds && typeof data.odds === 'object' && Object.keys(data.odds).length) {
+      // Mapa fijo: nombre football-data.org → nombre the-odds-api
+      const FD_TO_ODDS = {
+        'Athletic Club':                 'Athletic Bilbao',
+        'Club Atlético de Madrid':       'Atlético Madrid',
+        'Deportivo Alavés':              'Alavés',
+        'FC Barcelona':                  'Barcelona',
+        'RC Celta de Vigo':              'Celta Vigo',
+        'RCD Espanyol de Barcelona':     'Espanyol',
+        'RCD Mallorca':                  'Mallorca',
+        'Rayo Vallecano de Madrid':      'Rayo Vallecano',
+        'Real Betis Balompié':           'Real Betis',
+        'Real Madrid CF':                'Real Madrid',
+        'Real Oviedo':                   'Oviedo',
+        'Real Sociedad de Fútbol':       'Real Sociedad',
+        'Getafe CF':                     'Getafe',
+        'Girona FC':                     'Girona',
+        'Levante UD':                    'Levante',
+        'Sevilla FC':                    'Sevilla',
+        'Valencia CF':                   'Valencia',
+        'Villarreal CF':                 'Villarreal',
+      };
+      const oddsById = {};
+      (ligaData.standings || []).forEach(s => {
+        const fdName  = s.team.name || '';
+        const oddsKey = FD_TO_ODDS[fdName] || fdName; // fallback: nombre directo
+        const o = data.odds[oddsKey];
+        if (o) {
+          oddsById[s.team.id] = {
+            win:    o.winProb    || o.win  || 0,
+            draw:   o.drawProb   || o.draw || 0,
+            loss:   o.loseProb   || o.loss || 0,
+            over25: o.over25Prob || 0,
+            isHome: o.isHome     || false,
+          };
+        }
+      });
+      // Priorizar odds externas reales sobre sintéticas si las hay
+      if (Object.keys(oddsById).length) ligaData.odds = oddsById;
+      console.log(`🎲 Odds cargadas: ${Object.keys(oddsById).length}/20 equipos`);
+    }
+
+    let players=[];
+    if(data.players&&Array.isArray(data.players)){
+      players=data.players.filter(p=>p.position!==5&&p.position!=='MD').map(p=>({id:Number(p.id),name:p.name,position:mapPosition(p.position,p.position2),price:p.price||0,pts:p.points||0,trend:p.trend||0,playedHome:p.playedHome||0,playedAway:p.playedAway||0,club:p.teamName||'',teamId:p.teamId||null,status:p.status||'ok',jForm:p.jForm||[]}))
+;
+    }
+    if(!players.length) throw new Error('Sin jugadores en data.json');
+    allPlayers=mergeStats(players);
+    marketPlayers=allPlayers;
+    filteredPlayers=[...allPlayers];
+    // Cargar estadísticas ANTES de ordenar y calcular percentiles
+    if(data.playerStats) mergeStatsIntoPlayers(data.playerStats);
+
+    // Enriquecer jugadores con goles para perfil gol del Factor Equipo
+    if(data.playerStats && data.playerStats.players){
+      const sIdx={};
+      data.playerStats.players.forEach(s=>{ sIdx[String(s.id)]=s; });
+      allPlayers.forEach(p=>{ const s=sIdx[String(p.id)]; if(s) p.sf_goals=s.goals||0; });
+    }
+
+    // Cargar jornadas.json para historial home/away (lazy, no bloquea)
+    if(!window._jornadasData){
+      fetch('./jornadas.json').then(r=>r.ok?r.json():null).then(j=>{
+        if(j) window._jornadasData=j;
+      }).catch(()=>{});
+    }
+
+    buildJugPcts(allPlayers);
+    sortAndRender();
+    document.getElementById('jugadores-loading').style.display='none';
+    document.getElementById('jugadores-content').style.display='block';
+    const when=data.updatedAt?new Date(data.updatedAt).toLocaleDateString('es-ES'):'?';
+    document.getElementById('statusText').textContent=allPlayers.length+' jugadores · actualizado '+when;
+    renderStats(); renderRankings(allPlayers); renderRankingCards(allPlayers); initRankings();
+
+    // Cargar standings y banner Tomaquet desde Biwenger
+    if(data.allTeams && data.allTeams.length){
+      LIGAS.tomaquet.standings = data.allTeams.map((t,i) => ({
+        pos:      i+1,
+        name:     t.name,
+        pts:      t.points || 0,
+        value:    t.value  || 0,
+        players:  t.players?.length || 0,
+        playersList: t.players || [],
+        diff:     0,
+      })).sort((a,b)=>b.pts-a.pts).map((t,i)=>({...t,pos:i+1,diff:i===0?0:null}));
+      // calcular diff respecto al líder
+      const liderPts = LIGAS.tomaquet.standings[0]?.pts || 0;
+      LIGAS.tomaquet.standings.forEach(t => { t.diff = t.pts - liderPts; });
+      // banner: buscar Guitlla
+      const me = LIGAS.tomaquet.standings.find(t=>t.name.includes('Guitlla')||t.name.includes('🦊'));
+      if(me) LIGAS.tomaquet.banner = { jornada: `J${data.laliga?.matchday || data.league?.currentRound||'—'}`, pos:`${me.pos}º`, pts: me.pts.toLocaleString('es'), lider: liderPts.toLocaleString('es'), diff: me.diff.toLocaleString('es') };
+    }
+
+    // Cargar standings y banner EN BAS desde Biwenger
+    if(data.allTeamsEnBas && data.allTeamsEnBas.length){
+      LIGAS.promesas.standings = data.allTeamsEnBas.map((t,i) => ({
+        pos:      i+1,
+        name:     t.name,
+        pts:      t.points || 0,
+        value:    t.value  || 0,
+        players:  t.players?.length || 0,
+        playersList: t.players || [],
+        diff:     0,
+      })).sort((a,b)=>b.pts-a.pts).map((t,i)=>({...t,pos:i+1}));
+      const liderPtsEB = LIGAS.promesas.standings[0]?.pts || 0;
+      LIGAS.promesas.standings.forEach(t => { t.diff = t.pts - liderPtsEB; });
+      const meEB = LIGAS.promesas.standings.find(t=>t.name.includes('Guitlla')||t.name.includes('🦊'));
+      if(meEB) LIGAS.promesas.banner = { jornada: `J${data.laliga?.matchday || data.leagueEnBas?.currentRound||'—'}`, pos:`${meEB.pos}º`, pts: meEB.pts.toLocaleString('es'), lider: liderPtsEB.toLocaleString('es'), diff: meEB.diff.toLocaleString('es') };
+    }
+
+
+    if(data.myTeam && data.myTeam.players && data.myTeam.players.length){
+      myTeamData = data.myTeam.players.map(p => {
+        const full = allPlayers.find(a => a.id == p.id);
+        if(!full) return null;
+        return {
+          id:       full.id,
+          name:     full.name,
+          position: full.position,
+          price:    full.price  || 0,
+          pts:      full.pts    || 0,
+          trend:    full.trend  || 0,
+          club:     full.club   || '',
+          status:   full.status || 'ok',
+          jForm:    full.jForm  || [],
+          buyPrice: p.buyPrice  || 0,
+          clause:   p.clause    || 0,
+          invested: p.invested  || 0,
+        };
+      }).filter(Boolean);
+      MULTIPOS_LIGA.tomaquet = myTeamData.some(p => p.position.includes('/'));
+      console.log('🦊 Mi equipo Tomaquet real cargado:', myTeamData.length, 'jugadores | multipos:', MULTIPOS_LIGA.tomaquet);
+    }
+
+    // Cargar mi equipo real desde Biwenger — EN BAS
+    if(data.myTeamEnBas && data.myTeamEnBas.players && data.myTeamEnBas.players.length){
+      myTeamDataEnBas = data.myTeamEnBas.players.map(p => {
+        const full = allPlayers.find(a => a.id == p.id);
+        if(!full) return null;
+        const posEnBas = full.position.split('/')[0];
+        return {
+          id:       full.id,
+          name:     full.name,
+          position: MULTIPOS_LIGA.enbas ? full.position : posEnBas,
+          price:    full.price  || 0,
+          pts:      full.pts    || 0,
+          trend:    full.trend  || 0,
+          club:     full.club   || '',
+          status:   full.status || 'ok',
+          jForm:    full.jForm  || [],
+          buyPrice: p.buyPrice  || 0,
+          clause:   p.clause    || 0,
+          invested: p.invested  || 0,
+        };
+      }).filter(Boolean);
+      MULTIPOS_LIGA.enbas = myTeamDataEnBas.some(p => p.position.includes('/'));
+      console.log('🦊 Mi equipo EN BAS real cargado:', myTeamDataEnBas.length, 'jugadores | multipos:', MULTIPOS_LIGA.enbas);
+    }
+
+    // Re-render con el equipo de la liga activa
+    historyData = await loadHistory(); // cargar histórico (puede ser null si no existe aún)
+    refreshGuitllaSet();
+    renderMiEquipo();
+    renderGeneral();
+    renderBanner();
+    mv3InitFromPlayers(allPlayers);
+
+    // Cargar noticias desde data.json (sin CORS)
+    if(data.news && data.news.length){
+      allNews = data.news;
+      allNews.sort((a,b)=>{try{return new Date(b.date)-new Date(a.date);}catch(e){return 0;}});
+      renderNews();
+    }
+
+    // Cargar tablón
+    if(data.boardTomaquet || data.boardEnBas){
+      boardData.tomaquet = data.boardTomaquet || [];
+      boardData.enbas    = data.boardEnBas    || [];
+      renderBoard('tomaquet');
+    }
+
+  }catch(e){
+    document.getElementById('jugadores-loading').innerHTML='<div class="error-msg">❌ Error cargando jugadores: '+e.message+'</div>';
+    document.getElementById('statusText').textContent='Sin datos API';
+    renderRankings(getEquipo().map(enrichPlayer)); initRankings();
+  }
+}
+
+// Posiciones Biwenger: 1=PT, 2=DF, 3=MC, 4=DL, 5=MD
+// Multiposición viene como "3/4" (string con slash) o número simple
+const POS_NUM = {1:'PT',2:'DF',3:'MC',4:'DL',5:'MD'};
+function mapPosition(pos, pos2){
+  if(!pos && pos!==0) return '?';
+  if(typeof pos==='string'){
+    if(/^[A-Z]/.test(pos)) return pos;
+    return pos.split('/').map(n=>POS_NUM[parseInt(n)]||n).filter(Boolean).join('/');
+  }
+  const p1 = POS_NUM[pos] || String(pos);
+  if(pos2 && POS_NUM[pos2] && POS_NUM[pos2]!==p1) return p1+'/'+POS_NUM[pos2];
+  return p1;
+}
+
+// Flag multiposición por liga — se detecta automáticamente
+// si algún jugador del equipo tiene '/' en su posición, la liga tiene multipos
+const MULTIPOS_LIGA = { tomaquet: false, enbas: false };
+
+// Estados Biwenger (campo "status" del jugador)
+// ok = disponible, injured = lesionado, doubt = duda, sanctioned = sancionado
+// not_in_league = no en liga actual, unknown = desconocido
+const STATUS_MAP = {
+  'ok':           {label:'✓ Disponible', color:'#16a34a', dot:'#22c55e', icon:'✓'},
+  'injured':      {label:'🔴 Lesionado',  color:'#dc2626', dot:'#ef4444', icon:'🔴'},
+  'doubt':        {label:'🟡 Duda',       color:'#d97706', dot:'#eab308', icon:'🟡'},
+  'sanctioned':   {label:'🟠 Sancionado', color:'#ea580c', dot:'#f97316', icon:'🟠'},
+  'not_in_league':{label:'⚪ Sin equipo', color:'#6b7280', dot:'#9ca3af', icon:'⚪'},
+  'unknown':      {label:'❓ Desconocido',color:'#6b7280', dot:'#9ca3af', icon:'❓'},
+};
+function getStatus(s){ return STATUS_MAP[s] || STATUS_MAP['ok']; }
+function renderStats(){ if(!document.getElementById('statsBar')) return; // elemento eliminado
+  const t=allPlayers.length;
+  const avg=(allPlayers.reduce((s,p)=>s+(p.pts||0),0)/t).toFixed(0);
+  const mx=Math.max(...allPlayers.map(p=>p.pts||0));
+  document.getElementById('statsBar').innerHTML=`<div class="stat-card"><div class="stat-label">Jugadores</div><div class="stat-value">${t}</div><div class="stat-sub">en el mercado</div></div><div class="stat-card"><div class="stat-label">Puntos máx</div><div class="stat-value">${mx}</div><div class="stat-sub">mejor puntuación</div></div><div class="stat-card"><div class="stat-label">Media pts</div><div class="stat-value">${avg}</div><div class="stat-sub">promedio liga</div></div>`;
+}
+function filterPos(pos,btn){currentPos=pos;currentPage=1;document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');applyFilters();}
+function filterPlayers(){currentPage=1;applyFilters();}
+function applyFilters(){const q=document.getElementById('searchInput').value.toLowerCase();filteredPlayers=allPlayers.filter(p=>(!currentPos||p.position.includes(currentPos))&&(!q||p.name.toLowerCase().includes(q)||(p.club||'').toLowerCase().includes(q)));sortAndRender();}
+function setSortAndRender(val){document.getElementById('sortSelect').value=val;currentSort=val;sortAndRender();}
+function sortPlayers(){currentSort=document.getElementById('sortSelect').value;currentPage=1;sortAndRender();}
+// stats store (FBref)
+let playerStatsIndex = {};
+
+function normName(n){
+  return (n||'').toLowerCase()
+    .replace(/ø/g,'o').replace(/æ/g,'ae').replace(/ß/g,'ss')
+    .replace(/đ/g,'d').replace(/ł/g,'l').replace(/ı/g,'i')
+    .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+    .replace(/[^a-z0-9]/g,' ').replace(/\s+/g,' ').trim();
+}
+
+function mergeStatsIntoPlayers(statsData){
+  if(!statsData || !statsData.players) return;
+
+  // Indexar por múltiples variantes del nombre para maximizar el cruce
+  statsData.players.forEach(s=>{
+    // football-data devuelve {name, team, goals, assists, appearances, penalties}
+    // Normalizar campo teamName para el cruce de equipo
+    if(!s.teamName) s.teamName = (typeof s.team==='object' ? s.team?.name : s.team) || '';
+
+    const fullName  = normName(s.name);
+    const words     = fullName.split(' ');
+    const lastWord  = words.slice(-1)[0];
+    const firstLast = words.filter((_,i,a)=>i===0||i===a.length-1).join(' ');
+    const firstTwo  = words.slice(0,2).join(' ');
+
+    playerStatsIndex[fullName]  = s;
     if(lastWord)  playerStatsIndex[lastWord]  = s;
     if(firstLast) playerStatsIndex[firstLast] = s;
     if(firstTwo && firstTwo!==fullName) playerStatsIndex[firstTwo] = s;
@@ -4576,7 +5282,380 @@ function calcRecomendacion(p) {
     if (last3.length === 3 && last3.every(v => v >= 5)) { score += 5; reasons.push('muy consistente — nunca baja de 5'); }
   }
 
- 
+  // 2. FACTOR EQUIPO PRÓXIMA JORNADA (25%) — cuánto de favorable es el partido
+  const club = p.club || p.teamName || '';
+  const fe = calcFactorEquipo(club);
+  if (fe !== null) {
+    const feScore = (fe / 10) * 25;
+    score += feScore;
+    if (fe >= 7) reasons.push(`partido muy favorable (factor equipo ${fe.toFixed(1)}/10)`);
+    else if (fe >= 5) reasons.push(`partido aceptable (factor ${fe.toFixed(1)}/10)`);
+    else if (fe < 3) warnings.push(`partido difícil (factor ${fe.toFixed(1)}/10)`);
+
+    // Añadir info local/visitante
+    const standing = getStandingByClub(club);
+    if (standing) {
+      const nextM = (ligaData.nextMatches||[]).find(m => m.home.id===standing.team.id||m.away.id===standing.team.id);
+      if (nextM) {
+        const isLocal = nextM.home.id === standing.team.id;
+        const rival = isLocal ? nextM.away : nextM.home;
+        if (isLocal) reasons.push(`juega en casa vs ${rival.short||rival.name}`);
+        else reasons.push(`visita ${rival.short||rival.name}`);
+      }
+    }
+  }
+
+  // 3. ROI ÚLTIMAS 5 JORNADAS (20%) — eficiencia real reciente, no acumulada
+  const precioM = p.price / 1000000;
+  const ptsRecientes = last5.reduce((s,v) => s+(v>0?v:0), 0);
+  const roiReciente = last5.length ? (ptsRecientes / last5.length) / precioM : 0;
+  if (roiReciente > 0) {
+    const roiScore = Math.min(20, (roiReciente / 3) * 20);
+    score += roiScore;
+    if (roiReciente >= 2) reasons.push(`ROI reciente excelente (${roiReciente.toFixed(1)} pts/M€ por jornada)`);
+    else if (roiReciente >= 1.2) reasons.push(`buen rendimiento por precio (${roiReciente.toFixed(1)} pts/M€/J)`);
+  }
+
+  // 4. MOMENTUM DE PRECIO (10%) — usando historial prices.json si disponible
+  const trend = p.trend || 0;
+  const priceHistory = (window._pricesData || {})[String(p.id)] || [];
+
+  if (priceHistory.length >= 3) {
+    // Calcular momentum real con historial
+    const last  = priceHistory[priceHistory.length - 1]?.p || p.price;
+    const prev3 = priceHistory[Math.max(0, priceHistory.length - 4)]?.p || last;
+    const prev7 = priceHistory[Math.max(0, priceHistory.length - 8)]?.p || last;
+
+    const mom3 = prev3 > 0 ? ((last - prev3) / prev3) * 100 : 0; // % cambio 3 días
+    const mom7 = prev7 > 0 ? ((last - prev7) / prev7) * 100 : 0; // % cambio 7 días
+
+    // Días consecutivos subiendo
+    let diasSubiendo = 0;
+    for (let i = priceHistory.length - 1; i > 0; i--) {
+      if ((priceHistory[i]?.p || 0) > (priceHistory[i-1]?.p || 0)) diasSubiendo++;
+      else break;
+    }
+
+    if (mom7 > 3) {
+      const momScore = Math.min(10, (mom7 / 10) * 10);
+      score += momScore;
+      if (diasSubiendo >= 4) reasons.push(`subiendo ${diasSubiendo} días consecutivos (+${mom7.toFixed(1)}% en 7 días)`);
+      else if (mom7 >= 5)    reasons.push(`momentum fuerte: +${mom7.toFixed(1)}% en 7 días`);
+      else                   reasons.push(`precio en tendencia alcista (+${mom3.toFixed(1)}% en 3 días)`);
+    } else if (mom7 < -3) {
+      score -= 5;
+      warnings.push(`precio cayendo ${mom7.toFixed(1)}% en 7 días — el mercado vende`);
+    }
+  } else {
+    // Fallback al trend diario de Biwenger
+    if (trend > 0) {
+      const trendScore = Math.min(10, (trend / 200000) * 10);
+      score += trendScore;
+      if (trend >= 100000) reasons.push(`precio subiendo ▲${(trend/1000).toFixed(0)}K€`);
+    } else if (trend < -50000) {
+      score -= 5;
+      warnings.push(`precio bajando ▼${Math.abs(trend/1000).toFixed(0)}K€`);
+    }
+  }
+
+  // 5. ESTADO (penalizaciones) (15%)
+  if (p.status === 'doubt')      { score -= 15; warnings.push('en duda para el próximo partido'); }
+  if (p.status === 'sanctioned') { score -= 20; warnings.push('sancionado — no jugará'); }
+
+  // 6. BONUS: ya lo tienes en el equipo
+  const enMiEquipo = (getEquipo()||[]).some(x => x.id === p.id || x.name === p.name);
+
+  // Score mínimo para aparecer como recomendación
+  if (score < 35) return null;
+
+  return {
+    player: p,
+    score: Math.round(Math.min(99, Math.max(0, score))),
+    reasons,
+    warnings,
+    enMiEquipo,
+    fe,
+    roiReciente,
+  };
+}
+
+function renderRecomendaciones() {
+  const recEl = document.getElementById('recomendaciones');
+  if (!recEl) return;
+
+  if (!allPlayers.length) {
+    recEl.innerHTML = '<div style="padding:16px;color:var(--text3);font-size:0.8rem;grid-column:1/-1">Cargando jugadores…</div>';
+    return;
+  }
+
+  // Calcular recomendaciones para todos los jugadores disponibles
+  const candidatos = allPlayers
+    .map(p => calcRecomendacion(p))
+    .filter(Boolean)
+    .sort((a, b) => b.score - a.score);
+
+  // Top 3 por posición — así no son todos del mismo equipo/posición
+  const porPos = { PT:[], DF:[], MC:[], DL:[] };
+  const topGlobal = [];
+  candidatos.forEach(r => {
+    const pos = (r.player.position||'').split('/')[0];
+    if (porPos[pos] && porPos[pos].length < 2) porPos[pos].push(r);
+  });
+
+  // Top global (máx 3) + top por posición (máx 1 cada una si no está ya)
+  const vistos = new Set();
+  const recs = [];
+  candidatos.slice(0, 3).forEach(r => { recs.push(r); vistos.add(r.player.id||r.player.name); });
+  Object.values(porPos).forEach(lista => {
+    lista.forEach(r => {
+      if (!vistos.has(r.player.id||r.player.name) && recs.length < 8) {
+        recs.push(r); vistos.add(r.player.id||r.player.name);
+      }
+    });
+  });
+
+  if (!recs.length) {
+    recEl.innerHTML = '<div style="padding:16px;color:var(--text3);font-size:0.8rem;grid-column:1/-1">No hay recomendaciones destacadas esta jornada.</div>';
+    return;
+  }
+
+  const PosC = {PT:'#d97706',DF:'#1d6fce',MC:'#16a34a',DL:'#e63329',MD:'#8b5cf6'};
+
+  recEl.innerHTML = recs.map(r => {
+    const p = r.player;
+    const pos = (p.position||'?').split('/')[0];
+    const posColor = PosC[pos] || '#888';
+    const scoreColor = r.score >= 70 ? 'var(--green)' : r.score >= 50 ? 'var(--pt)' : 'var(--text3)';
+    const precioM = (p.price/1000000).toFixed(2);
+
+    // Badge acción
+    const fe = r.fe;
+    const accion = r.warnings.some(w=>w.includes('sancionado')) ? {txt:'NO JUEGA', cls:'rec-sell'} :
+                   r.warnings.some(w=>w.includes('duda'))       ? {txt:'VIGILAR',  cls:'rec-watch'} :
+                   r.score >= 65                                 ? {txt:'FICHAR',   cls:'rec-buy'} :
+                   r.score >= 50                                 ? {txt:'VIGILAR',  cls:'rec-watch'} :
+                                                                   {txt:'REVISAR',  cls:'rec-sell'};
+
+    // jForm visual
+    const jFormHtml = (p.jForm||[]).slice(0,5).map(v => {
+      if (v===null||v===undefined) return `<span style="color:var(--text3)">—</span>`;
+      const c = v>=10?'var(--c-top)':v>=6?'var(--c-good)':v>=3?'var(--c-mid)':'var(--c-low)';
+      return `<span style="color:${c};font-weight:700">${v}</span>`;
+    }).join('<span style="color:var(--border2);margin:0 2px">·</span>');
+
+    return `<div class="rec-card" style="cursor:pointer;flex-direction:column;gap:10px" onclick="openJugPanel(allPlayers.find(x=>x.id===${p.id})||allPlayers.find(x=>x.name==='${p.name}'))">
+      <div style="display:flex;align-items:flex-start;gap:10px">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:3px;flex-shrink:0">
+          <div style="width:36px;height:36px;border-radius:4px;background:${posColor};display:flex;align-items:center;justify-content:center;font-family:'Figtree',sans-serif;font-size:0.62rem;font-weight:800;color:#fff">${pos}</div>
+          <div style="font-family:'Figtree',sans-serif;font-size:1.1rem;font-weight:900;color:${scoreColor};line-height:1">${r.score}</div>
+          <div style="font-family:'Figtree',sans-serif;font-size:0.42rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px">score</div>
+        </div>
+        <div style="flex:1;min-width:0">
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:2px">
+            <div style="font-family:'Figtree',sans-serif;font-size:0.95rem;font-weight:800;color:var(--text);text-transform:uppercase;letter-spacing:0.3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${p.name}</div>
+            ${r.enMiEquipo ? '<span style="font-size:0.6rem;background:var(--accent-dim);color:var(--accent);border:1px solid var(--accent);border-radius:2px;padding:1px 5px;flex-shrink:0">🦊 tuyo</span>' : ''}
+          </div>
+          <div style="font-family:'Figtree',sans-serif;font-size:0.6rem;color:var(--text3);margin-bottom:6px">${p.club||p.teamName||'—'} · ${precioM}M€ · ${p.pts||0} pts</div>
+          <div style="font-size:0.72rem;font-family:'Figtree',sans-serif;line-height:1.5;color:var(--text2)">
+            ${r.reasons.slice(0,2).map(s=>`<span style="display:block">✓ ${s}</span>`).join('')}
+            ${r.warnings.map(s=>`<span style="display:block;color:var(--pt)">⚠ ${s}</span>`).join('')}
+          </div>
+        </div>
+        <span class="rec-badge ${accion.cls}" style="flex-shrink:0;align-self:flex-start">${accion.txt}</span>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:space-between;padding-top:8px;border-top:1px solid var(--border)">
+        <div style="font-family:'Figtree',sans-serif;font-size:0.7rem;color:var(--text3)">Últimas 5J: ${jFormHtml}</div>
+        ${fe!==null?`<div style="font-family:'Figtree',sans-serif;font-size:0.68rem;color:var(--text3)">Factor equipo <span style="font-weight:700;color:${fe>=7?'var(--green)':fe>=5?'var(--pt)':'var(--red)'}">${fe.toFixed(1)}</span></div>`:''}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ══════════════════════════════════════════════════════════════════
+// PANEL LATERAL JUGADOR + COMPARADOR
+// ══════════════════════════════════════════════════════════════════
+
+const PC_COLORS = {PT:'#6366f1',DF:'#16a34a',MC:'#d97706',DL:'#e63329',MD:'#8b5cf6'};
+let compareList = []; // máx 4 jugadores
+let currentPanelPlayer = null;
+
+// ── Tabs Valor / Propietarios ────────────────────────────────────────
+function jpSwitchTab(tab, playerId) {
+  document.querySelectorAll('.jp-tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('jptab-valor-btn').classList.toggle('active', tab === 'valor');
+  document.getElementById('jptab-owners-btn').classList.toggle('active', tab === 'owners');
+  document.getElementById('jptab-analisis-btn').classList.toggle('active', tab === 'analisis');
+  document.getElementById('jptab-valor').style.display   = tab === 'valor'   ? '' : 'none';
+  document.getElementById('jptab-owners').style.display  = tab === 'owners'  ? '' : 'none';
+  document.getElementById('jptab-analisis').style.display = tab === 'analisis' ? '' : 'none';
+  // Renderizar análisis solo cuando se abre por primera vez
+  if (tab === 'analisis' && currentPanelPlayer) {
+    renderJugAnalisis(currentPanelPlayer);
+  }
+}
+
+const _jugCache = {};
+
+async function loadJugadorBiwenger(p) {
+  const id = p.id;
+  if (!id) return;
+
+  // Usar caché si ya lo tenemos
+  if (_jugCache[id]) {
+    renderJugTabs(_jugCache[id], p);
+    return;
+  }
+
+  // Leer desde prices.json que el fetch ya tiene cargado
+  const priceHistory = (window._pricesData || {})[String(id)] || [];
+  if (priceHistory.length) {
+    _jugCache[id] = { prices: priceHistory };
+    renderJugTabs(_jugCache[id], p);
+    return;
+  }
+
+  // Si prices.json aún no está cargado, intentar fetch
+  try {
+    if (!window._pricesData) {
+      const res = await fetch('prices.json');
+      if (res.ok) {
+        window._pricesData = await res.json();
+        const pd = (window._pricesData)[String(id)] || [];
+        if (pd.length) {
+          _jugCache[id] = { prices: pd };
+          renderJugTabs(_jugCache[id], p);
+          return;
+        }
+      }
+    }
+    // Sin datos todavía — primer día de tracking
+    const noData = '<div class="jp-tab-loading">Aún sin historial · se acumulará cada día automáticamente</div>';
+    const vEl = document.getElementById('jptab-valor');
+    const oEl = document.getElementById('jptab-owners');
+    if (vEl) vEl.innerHTML = noData;
+    if (oEl) oEl.innerHTML = noData;
+  } catch(e) {
+    const errHtml = `<div class="jp-tab-loading" style="color:var(--c-low)">Error cargando prices.json</div>`;
+    const vEl = document.getElementById('jptab-valor');
+    const oEl = document.getElementById('jptab-owners');
+    if (vEl) vEl.innerHTML = errHtml;
+    if (oEl) oEl.innerHTML = errHtml;
+  }
+}
+
+function renderJugTabs(data, p) {
+  renderJugValor(data, p);
+  renderJugOwners(data, p);
+}
+
+function renderJugValor(data, p) {
+  const el = document.getElementById('jptab-valor');
+  if (!el) return;
+
+  const prices = data.prices || [];
+  if (!prices.length) {
+    el.innerHTML = '<div class="jp-tab-loading">Sin historial de precios aún</div>';
+    return;
+  }
+
+  // Formato prices.json: [{d: "2026-03-13", p: 5840000}, ...]
+  const vals  = prices.map(pr => pr.p || pr.price || 0).filter(v => v > 0);
+  const dates = prices.map(pr => pr.d || pr.date || '');
+  if (!vals.length) { el.innerHTML = '<div class="jp-tab-loading">Sin datos de precio</div>'; return; }
+
+  // Precio de compra del usuario si es suyo
+  const myPlayer = (getEquipo()||[]).find(x => Number(x.id) === Number(p.id));
+  const buyPrice = myPlayer?.buyPrice || myPlayer?.invested || null;
+
+  const W = 340, H = 110, padL = 44, padR = 10, padT = 10, padB = 24;
+  const minV = Math.min(...vals), maxV = Math.max(...vals), rng = maxV - minV || 1;
+  const n = vals.length;
+  const cx = i => padL + (i / (n - 1 || 1)) * (W - padL - padR);
+  const cy = v => H - padB - ((v - minV) / rng) * (H - padT - padB);
+
+  const points = vals.map((v, i) => `${cx(i).toFixed(1)},${cy(v).toFixed(1)}`).join(' ');
+  const lastX = cx(n-1), lastY = cy(vals[n-1]);
+
+  // Línea de precio de compra
+  let buyLine = '';
+  if (buyPrice && buyPrice >= minV * 0.5 && buyPrice <= maxV * 1.5) {
+    const byY = cy(Math.max(minV, Math.min(maxV, buyPrice))).toFixed(1);
+    buyLine = `<line x1="${padL}" y1="${byY}" x2="${W-padR}" y2="${byY}" stroke="var(--accent)" stroke-width="1" stroke-dasharray="3,3" opacity="0.7"/>
+    <text x="${padL-3}" y="${byY}" text-anchor="end" font-size="9" fill="var(--accent)" font-family="Figtree,sans-serif" dominant-baseline="central">${fmt(buyPrice)}</text>`;
+  }
+
+  // Ticks eje Y
+  const yTicks = [0, 0.5, 1].map(t => ({ y: cy(minV + t * rng), v: minV + t * rng }));
+  const up = vals[n-1] >= vals[0];
+  const lineColor = up ? '#22c55e' : '#ef4444';
+  const delta = vals[n-1] - vals[0];
+  const deltaStr = (delta >= 0 ? '+' : '') + fmt(delta);
+
+  el.innerHTML = `
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:1rem;font-weight:700;color:${lineColor}">${fmt(vals[n-1])}</span>
+      <span style="font-size:0.65rem;color:${lineColor};font-weight:600">${deltaStr}</span>
+      <span style="font-size:0.62rem;color:var(--text3)">${n} días</span>
+    </div>
+    <svg viewBox="0 0 ${W} ${H}" class="jp-price-chart" xmlns="http://www.w3.org/2000/svg">
+      ${yTicks.map(t=>`
+        <line x1="${padL}" y1="${t.y.toFixed(1)}" x2="${W-padR}" y2="${t.y.toFixed(1)}" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="3,3"/>
+        <text x="${padL-3}" y="${t.y.toFixed(1)}" text-anchor="end" font-size="9" fill="var(--text3)" font-family="Figtree,sans-serif" dominant-baseline="central">${fmt(t.v)}</text>
+      `).join('')}
+      ${buyLine}
+      <polyline points="${points}" fill="none" stroke="${lineColor}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="${lastX.toFixed(1)}" cy="${lastY.toFixed(1)}" r="3" fill="${lineColor}" stroke="var(--bg)" stroke-width="1.5"/>
+      <text x="${padL}" y="${H-4}" font-size="9" fill="var(--text3)" font-family="Figtree,sans-serif">${dates[0]?.slice(5)||''}</text>
+      <text x="${W-padR}" y="${H-4}" font-size="9" fill="var(--text3)" font-family="Figtree,sans-serif" text-anchor="end">${dates[n-1]?.slice(5)||''}</text>
+    </svg>
+    ${buyPrice ? `<div style="font-size:0.62rem;color:var(--text3);margin-top:2px;">— línea roja = tu compra · ${fmt(buyPrice)}</div>` : ''}
+  `;
+}
+
+function renderJugAnalisis(p) {
+  const el = document.getElementById('jptab-analisis');
+  if (!el) return;
+
+  // Datos de jornadas
+  const jForm = p.jForm || [];
+  if (!jForm.length) {
+    el.innerHTML = '<div class="jp-tab-loading">Sin datos de jornadas disponibles</div>';
+    return;
+  }
+
+  // Precios desde cache
+  const priceHistory = (window._pricesData || {})[String(p.id)] || [];
+
+  // Construir labels de jornada (J-4 → J↑)
+  const jLabels = jForm.map((_, i) => {
+    const idx = jForm.length - i;
+    return idx === 1 ? 'J↑' : 'J-' + (idx - 1);
+  }).reverse();
+  const jVals = [...jForm].reverse();
+
+  // Colores de barras según puntuación
+  const barColors = jVals.map(v =>
+    v === null || v === undefined ? 'rgba(107,114,128,0.3)' :
+    v < 0  ? 'rgba(239,68,68,0.6)'   :
+    v === 0 ? 'rgba(107,114,128,0.3)' :
+    v < 6  ? 'rgba(217,119,6,0.65)'  :
+    v < 10 ? 'rgba(34,197,94,0.65)'  :
+             'rgba(59,130,246,0.75)'
+  );
+
+  const chartId = 'jug_analisis_' + p.id;
+
+  el.innerHTML = `
+    <div style="font-size:0.6rem;color:var(--text3);margin-bottom:8px;display:flex;gap:12px;flex-wrap:wrap">
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:8px;height:8px;border-radius:1px;background:rgba(34,197,94,0.65)"></span>6-9 pts</span>
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:8px;height:8px;border-radius:1px;background:rgba(59,130,246,0.75)"></span>10+ pts</span>
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:8px;height:8px;border-radius:1px;background:rgba(217,119,6,0.65)"></span>1-5 pts</span>
+      ${priceHistory.length ? '<span style="display:flex;align-items:center;gap:4px"><span style="width:16px;height:2px;background:#3b82f6;border-radius:1px"></span>Valor</span>' : ''}
+    </div>
+    <div style="position:relative;width:100%;height:160px"><canvas id="${chartId}"></canvas></div>
+    <div style="font-size:0.6rem;color:var(--text3);margin-top:6px;text-align:center">Últimas ${jVals.filter(v=>v!=null).length} jornadas · eje izq: puntos · eje der: valor M€</div>
+  `;
+
   function buildChart() {
     const datasets = [
       {
