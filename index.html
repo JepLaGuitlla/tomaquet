@@ -331,7 +331,7 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
 .mpc{background:#fff;border:1px solid var(--border);border-radius:4px;overflow:hidden;margin-bottom:3px;transition:border-color 0.12s,box-shadow 0.12s;}
 .mpc:hover{border-color:var(--border2);box-shadow:0 2px 8px rgba(0,0,0,0.05);}
 .mpc.guitlla{border-left:3px solid var(--accent);}
-.mpc-row{display:grid;grid-template-columns:28px 22px minmax(180px,260px) 92px 82px 80px 80px 80px 80px 70px 70px;align-items:stretch;min-height:54px;}
+.mpc-row{display:grid;grid-template-columns:28px 22px minmax(180px,260px) 92px 82px 80px 80px 72px 72px 80px 70px 70px;align-items:stretch;min-height:54px;}
 .mpc-rk{font-family:'Figtree',sans-serif;font-size:0.8rem;font-weight:700;color:var(--text3);display:flex;align-items:center;justify-content:center;}
 .mpc-rk.top3{color:var(--accent);}
 .mpc-pos{width:18px;height:18px;border-radius:2px;margin:auto 0 auto 2px;font-family:'Figtree',sans-serif;font-size:0.48rem;font-weight:800;display:flex;align-items:center;justify-content:center;color:white;flex-shrink:0;}
@@ -1115,7 +1115,7 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
       <span class="mch-main">Visita <span class="mch-arrow" id="mv3arr-ptsV"></span></span>
       <span class="mch-sub">M.Visit. <span class="mch-arrow" id="mv3arr-ptsVavg"></span></span>
     </div>
-    <div class="mch" id="mv3ch-roi" onclick="mv3CycleSort('roi','efic',this)">
+    <div class="mch" id="mv3ch-roi" onclick="mv3CycleSort('roi',null,this)">
       <span class="mch-main" style="display:flex;align-items:center;justify-content:center;gap:3px">
         ROI <span class="mch-arrow" id="mv3arr-roi"></span>
         <span class="lp-tip">
@@ -1127,11 +1127,13 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
           </div>
         </span>
       </span>
-      <span class="mch-sub" style="display:flex;align-items:center;justify-content:center;gap:3px">
+    </div>
+    <div class="mch" onclick="mv3CycleSort('efic',null,this)">
+      <span class="mch-main" style="display:flex;align-items:center;justify-content:center;gap:3px">
         Efic. <span class="mch-arrow" id="mv3arr-efic"></span>
         <span class="lp-tip">
           <span class="lp-tip-icon">?</span>
-          <div class="lp-tip-box" style="min-width:240px">
+          <div class="lp-tip-box" style="min-width:250px">
             <div class="lp-tip-title">Eficiencia</div>
             <div class="lp-tip-body">Compara el rendimiento del jugador con la media de jugadores de su misma posición y franja de precio. Positivo = rinde más de lo esperado para su precio.</div>
             <div class="lp-tip-formula">(Media real − media esperada) ÷ media esperada × 100</div>
@@ -2665,7 +2667,7 @@ function mv3InitFromAdvancedStats(){
       precio:(s.valor||0)*1e6, pts:s.pts||0, media:s.media||0,
       ptsL:s.ptsLocal||0, ptsV:s.ptsVisita||0,
       roi:s.roi||0, efic:s.eficiencia||0, trend:0,
-      clausula:s.valorReal?(s.valorReal*1e6):null,
+      
       factor:s.factor||null,
       jForm:[s.j1,s.j2,s.j3,s.j4,s.j5],
       inGuitlla:!!s.inGuitlla||MV3_GUITLLA.has(name),
@@ -2684,7 +2686,7 @@ function mv3InitFromPlayers(players){
       ptsL:adv.ptsLocal||0, ptsV:adv.ptsVisita||0,
       roi:p.roi||adv.roi||0, efic:p.eficiencia||adv.eficiencia||0,
       trend:p.trend||0,
-      clausula:adv.valorReal?(adv.valorReal*1e6):null,
+      
       factor:adv.factor||null,
       jForm:p.jForm?.length?p.jForm:[adv.j1,adv.j2,adv.j3,adv.j4,adv.j5],
       inGuitlla:MV3_GUITLLA.has(p.name)||!!adv.inGuitlla,
@@ -2725,7 +2727,7 @@ const MV3_SORT_FN = {
   ptsV:        p => p.ptsV       || 0,
   ptsVavg:     p => p.ptsV > 0 ? p.ptsV / 13 : 0,
   roi:         p => p.roi        || 0,
-  efic:        p => p.efic       || 0,
+  efic:        p => { const pf = allPlayers.find(x=>x.id==p.id||x.name===p.name); return pf ? (calcEficiencia(pf, getMediasEsperadas()) ?? 0) : 0; },
   precioJusto: p => { const pf = allPlayers.find(x=>x.id==p.id||x.name===p.name); const pj = pf ? calcPrecioJusto(pf) : null; return pj ? pj.precioJusto : 0; },
   margenPJ:    p => { const pf = allPlayers.find(x=>x.id==p.id||x.name===p.name); const pj = pf ? calcPrecioJusto(pf) : null; return pj ? pj.difPct : -999; },
   fe:          p => { const pf = allPlayers.find(x=>x.id==p.id||x.name===p.name); return calcFactorEquipo(p.club||'', pf||p) || 0; },
@@ -2880,10 +2882,15 @@ function mv3Render(list){
         </div>
         <div class="mpc-st">
           <div class="msv ${mv3Color(roiPct)}">${p.roi?p.roi.toFixed(1):'—'}</div>
-          <div class="mstat-div"></div>
-          <div class="msv2 ${mv3Color(roiPct)}">${p.efic?p.efic.toFixed(1):'—'}</div>
-          <div class="msv2-lbl">efic.</div>
         </div>
+        <div class="mpc-st">${(()=>{
+          const ef = playerFull ? calcEficiencia(playerFull, getMediasEsperadas()) : null;
+          if (ef === null) return '<div class="msv2-lbl" style="color:var(--border2)">—</div>';
+          const efColor = ef > 0 ? 'var(--green)' : 'var(--red)';
+          const efSign  = ef > 0 ? '+' : '';
+          const efPct   = mv3PctRank(mv3Players.map(x=>{ const xf=allPlayers.find(a=>a.id==x.id||a.name===x.name); return xf?calcEficiencia(xf,getMediasEsperadas())??0:0; }), ef);
+          return `<div class="msv ${mv3Color(efPct)}" style="color:${efColor}">${efSign}${ef}%</div>`;
+        })()}</div>
         <div class="mpc-st">${pjHtml}</div>
         <div class="mpc-extra">${feHtml}</div>
         <div class="mpc-st" style="align-items:center;justify-content:center">${emHtml}</div>
