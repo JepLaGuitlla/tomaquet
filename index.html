@@ -4281,6 +4281,58 @@ async function loadLiga(){
     document.getElementById('ligaLoading').innerHTML=`<div style="color:var(--red);font-family:Figtree,sans-serif;font-size:0.8rem;padding:20px;text-align:center">❌ ${e.message}<br><br><span style="color:var(--text3)">Ve a GitHub → Actions → Run workflow para actualizar data.json</span></div>`;
   }
 }
+function formBadges(results){return results.map(r=>`<span class="form-badge form-${r}">${r}</span>`).join('');}
+function renderTablaLiga(){
+  const t=ligaData.standings;
+  const jornadaEl=document.getElementById('ligaJornada');
+  if(jornadaEl) jornadaEl.textContent=`Jornada ${ligaData.season}`;
+  const rows=t.map(team=>{
+    const p=team.position;let posColor='var(--text3)';
+    if(p<=4)posColor='var(--blue)';else if(p===5)posColor='var(--green)';else if(p>=18)posColor='var(--red)';
+    const diff=team.goalDifference;const diffStr=diff>0?`+${diff}`:String(diff);
+    const form=ligaData.forms[team.team.id];const fHtml=form?formBadges(form.results):'';
+    return `<tr><td style="font-family:Figtree,sans-serif;font-size:0.72rem;color:${posColor};font-weight:700;padding-left:14px">${p}</td><td style="text-align:left;padding-left:6px"><img class="crest-sm" src="${team.team.crest}" onerror="this.style.display='none'">${team.team.shortName||team.team.name}</td><td>${team.playedGames}</td><td style="color:var(--green)">${team.won}</td><td style="color:var(--text3)">${team.draw}</td><td style="color:var(--red)">${team.lost}</td><td>${team.goalsFor}:${team.goalsAgainst}</td><td style="color:${diff>0?'var(--green)':diff<0?'var(--red)':'var(--text3)'}">${diffStr}</td><td style="font-weight:800;color:var(--accent);font-family:Figtree,sans-serif;font-size:1.1rem">${team.points}</td><td style="padding-right:14px"><div style="display:flex;gap:2px;justify-content:flex-end">${fHtml}</div></td></tr>`;
+  }).join('');
+  const tablaEl=document.getElementById('tablaLiga');
+  if(tablaEl) tablaEl.innerHTML=`<thead><tr style="background:var(--bg3)"><th style="text-align:left;padding-left:14px">#</th><th style="text-align:left">Equipo</th><th>PJ</th><th>G</th><th>E</th><th>P</th><th>GF:GC</th><th>DG</th><th>Pts</th><th style="text-align:right;padding-right:14px">Forma</th></tr></thead><tbody>${rows}</tbody>`;
+}
+function renderProximaJornada(){
+  const el=document.getElementById('proximaJornada');
+  if(!el) return;
+  const matches=ligaData.nextMatches||[];
+  if(!matches.length){el.innerHTML='<div style="padding:14px;color:var(--text3);font-size:0.8rem">No hay partidos programados</div>';return;}
+  el.innerHTML=matches.map(m=>{const date=new Date(m.date);const dateStr=date.toLocaleDateString('es-ES',{weekday:'short',day:'numeric',month:'short'});const timeStr=date.toLocaleTimeString('es-ES',{hour:'2-digit',minute:'2-digit'});return`<div class="fixture-row"><img class="crest-sm" src="${m.home.crest}" onerror="this.style.display='none'"><div class="fixture-teams"><span style="color:var(--accent)">${m.home.short||m.home.name}</span><span style="color:var(--text3);font-size:0.75rem;margin:0 4px">vs</span>${m.away.short||m.away.name}</div><img class="crest-sm" src="${m.away.crest}" onerror="this.style.display='none'"><div class="fixture-date">${dateStr}<br>${timeStr}</div></div>`;}).join('');
+}
+function renderUltimosResultados(){
+  const el=document.getElementById('ultimosResultados');
+  if(!el) return;
+  const last=ligaData.recentResults||[];
+  if(!last.length){el.innerHTML='<div style="padding:14px;color:var(--text3);font-size:0.8rem">Sin resultados</div>';return;}
+  el.innerHTML=last.map(m=>{const hg=m.score?.home??'-';const ag=m.score?.away??'-';const date=new Date(m.date).toLocaleDateString('es-ES',{day:'numeric',month:'short'});return`<div class="fixture-row"><img class="crest-sm" src="${m.home.crest}" onerror="this.style.display='none'"><div class="fixture-teams">${m.home.short||m.home.name}<span style="color:var(--text3);font-size:0.75rem;margin:0 4px">—</span>${m.away.short||m.away.name}</div><img class="crest-sm" src="${m.away.crest}" onerror="this.style.display='none'"><div class="fixture-score">${hg} — ${ag}</div><div class="fixture-date">${date}</div></div>`;}).join('');
+}
+function renderEquiposGrid(filter){
+  const el=document.getElementById('equiposGrid');if(!el)return;
+  const teams=ligaData.standings;const filtered=filter?teams.filter(t=>(t.team.name+t.team.shortName).toLowerCase().includes(filter.toLowerCase())):teams;
+  el.innerHTML=filtered.map(team=>{
+    const form=ligaData.forms[team.team.id]||{results:[],gf:0,ga:0};
+    const score=formScore(form.results);
+    const scoreColor=score>=10?'var(--green)':score>=6?'var(--pt)':'var(--red)';
+    const teamName=team.team.shortName||team.team.name;
+    const fe=calcFactorEquipo(teamName);
+    const feColor=fe===null?'var(--text3)':fe>=7?'var(--green)':fe>=5?'var(--pt)':fe>=3?'#f59e0b':'var(--red)';
+    const feVal=fe!==null?fe.toFixed(1):'—';
+    const nextM=(ligaData.nextMatches||[]).find(m=>m.home.id===team.team.id||m.away.id===team.team.id);
+    const isLocal=nextM?nextM.home.id===team.team.id:null;
+    const rival=nextM?(isLocal?nextM.away:nextM.home):null;
+    const localTxt=isLocal===true?'🏠':isLocal===false?'✈️':'';
+    const rivalHtml=rival
+      ?`<div style="display:flex;align-items:center;gap:4px;margin-top:4px"><img src="${rival.crest}" style="width:16px;height:16px;object-fit:contain" onerror="this.style.display='none'"><span style="font-size:0.6rem;color:var(--text3);font-family:'Figtree',sans-serif">${localTxt} ${rival.short||rival.name}</span></div>`
+      :'<div style="font-size:0.6rem;color:var(--text3);margin-top:4px">Sin partido</div>';
+    return`<div class="team-card" style="border-radius:0;border:none;border-right:1px solid var(--border);border-bottom:1px solid var(--border)"><div class="team-card-header"><img class="team-crest" src="${team.team.crest}" onerror="this.style.display='none'"><div><div class="team-card-name">${teamName}</div><div class="team-card-pos">${team.position}º · ${team.points} pts</div></div><div style="margin-left:auto;display:flex;gap:10px;align-items:center"><div style="text-align:center"><div style="font-family:'Figtree',sans-serif;font-size:1.4rem;font-weight:800;color:${scoreColor};line-height:1">${score}/15</div><div style="font-family:'Figtree',sans-serif;font-size:0.48rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px">forma</div></div><div style="width:1px;height:32px;background:var(--border)"></div><div style="text-align:center"><div style="font-family:'Figtree',sans-serif;font-size:1.4rem;font-weight:800;color:${feColor};line-height:1">${feVal}</div><div style="font-family:'Figtree',sans-serif;font-size:0.48rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px">factor</div></div></div></div><div class="team-form" style="justify-content:space-between;align-items:center"><div style="display:flex;gap:3px">${formBadges(form.results)}</div>${rivalHtml}</div><div class="team-card-body"><div class="team-stat"><div class="team-stat-val">${team.won}</div><div class="team-stat-lbl">V</div></div><div class="team-stat"><div class="team-stat-val">${team.draw}</div><div class="team-stat-lbl">E</div></div><div class="team-stat"><div class="team-stat-val">${team.lost}</div><div class="team-stat-lbl">D</div></div><div class="team-stat"><div class="team-stat-val">${team.goalsFor}</div><div class="team-stat-lbl">GF</div></div></div></div>`;
+  }).join('');
+}
+function filterTeamCards(val){renderEquiposGrid(val);}
+
 function renderRecomendaciones() {
   const recEl = document.getElementById('recomendaciones');
   if (!recEl) return;
