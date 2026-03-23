@@ -2333,7 +2333,7 @@ function calcEficiencia(player, mediasEsperadas) {
 }
 
 // Cache de medias — se calcula una vez cuando cargan los jugadores
-let _mediasEsperadas = null;
+
 function getMediasEsperadas() {
   if (!_mediasEsperadas) _mediasEsperadas = calcMediaEsperada(allPlayers);
   return _mediasEsperadas;
@@ -2343,7 +2343,7 @@ function getMediasEsperadas() {
 // Cuánto debería costar un jugador según lo que rinde vs jugadores similares
 // precio_justo = media_real × (precio_medio_grupo / media_media_grupo)
 
-let _precioJustoCache = null;
+
 
 // ── PRECIO JUSTO v2 — curva gaussiana continua ─────────────────────────────
 // Sin grupos rígidos. Cada jugador se compara contra todos los de su posición
