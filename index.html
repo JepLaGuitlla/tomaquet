@@ -2350,7 +2350,6 @@ function getMediasEsperadas() {
 // ponderando por proximidad de precio (gaussiana σ=2M€).
 // Filtro: precio ≥ 1M€ + mínimo 3 jornadas jugadas — excluye ruido.
 
-const SIGMA_M = 2.0; // radio de influencia en millones
 
 function calcPrecioJusto(player) {
   const pos = (player.position || player.pos || '').split('/')[0];
