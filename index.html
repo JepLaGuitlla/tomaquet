@@ -2733,7 +2733,7 @@ const MV3_SORT_FN = {
   precioJusto: p => { const pf = allPlayers.find(x=>x.id==p.id||x.name===p.name); const pj = pf ? calcPrecioJusto(pf) : null; return pj ? pj.precioJusto : 0; },
   margenPJ:    p => { const pf = allPlayers.find(x=>x.id==p.id||x.name===p.name); const pj = pf ? calcPrecioJusto(pf) : null; return pj ? pj.difPct : -999; },
   fe:          p => { const pf = allPlayers.find(x=>x.id==p.id||x.name===p.name); return calcFactorEquipo(p.club||'', pf||p) || 0; },
-  lectura:     p => { const pf = allPlayers.find(x=>x.id==p.id||x.name===p.name); const em = pf ? calcEstadoMercado(pf) : null; const order = {joya:4,explosion:3,rebote:2,hype:1}; return em ? (order[em.estado]||0) : 0; },
+  lectura:     p => { const pf = allPlayers.find(x=>x.id==p.id||x.name===p.name); const em = pf ? calcEstadoMercado(pf) : null; const order = {joya:6,explosion:5,rebote:4,despertar:3,hype:2,desplome:1}; return em ? (order[em.estado]||0) : 0; },
 };
 
 function mv3CycleSort(primary, secondary, el) {
@@ -2779,6 +2779,12 @@ function mv3ApplyAll(){
   if (sortFn) {
     list.sort((a, b) => {
       const va = sortFn(a), vb = sortFn(b);
+      // Sin dato siempre al final
+      const aNull = va === null || va === undefined || va === 0;
+      const bNull = vb === null || vb === undefined || vb === 0;
+      if (aNull && bNull) return 0;
+      if (aNull) return 1;
+      if (bNull) return -1;
       return mv3SortState.dir === 'desc' ? vb - va : va - vb;
     });
   }
