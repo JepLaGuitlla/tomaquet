@@ -191,9 +191,10 @@ function calcEstadoMercado(player) {
   const jornadasConPuntos = jForm.filter(v => v !== null && v !== undefined && v > 0).length;
   if (jornadasConPuntos < 3) return null;
 
-  // 2. Media mínima absoluta de 3 pts/J — por debajo no hay señal positiva
-  const jFormValidos = jForm.filter(v => v !== null && v !== undefined && v >= 0);
-  const mediaJForm = jFormValidos.length > 0 ? jFormValidos.reduce((s,v) => s+v, 0) / jFormValidos.length : 0;
+  // 2. Media mínima absoluta de 3 pts/J — null cuenta como 0, no se ignora
+  const mediaJForm = jForm.length > 0
+    ? jForm.map(v => (v === null || v === undefined) ? 0 : v).reduce((s,v) => s+v, 0) / jForm.length
+    : 0;
   if (mediaJForm < 3) return null;
 
   const statusOk = !player.status || player.status === 'ok' || player.status === 1 || player.status === '' || player.status === 'doubt';
