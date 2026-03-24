@@ -155,6 +155,18 @@ function calcEstadoMercado(player) {
   if (!player.price || player.price < 150000) return null;
 
   const jForm = (player.jForm || []).slice(0, 5);
+
+  // 👁️ DESPERTAR — se evalúa ANTES de los filtros de status y jornadas
+  // Sin jugar las últimas 2J pero el mercado empieza a moverse
+  const ultimas2SinJugar = jForm.slice(0, 2).every(v => v === null || v === undefined || v === 0);
+  if (ultimas2SinJugar && player.trend > 10000) {
+    return {
+      estado: 'despertar', icono: '👁️', label: 'DESPERTAR',
+      desc: `Sin jugar las últimas 2 jornadas pero el mercado empieza a moverse (▲${Math.round(player.trend/1000)}K€ hoy). El mercado anticipa su vuelta antes que las puntuaciones.`,
+      colorFondo: 'rgba(168,85,247,0.1)', colorTexto: '#a855f7',
+    };
+  }
+
   const jornadasConPuntos = jForm.filter(v => v !== null && v !== undefined && v > 0).length;
   if (jornadasConPuntos < 3) return null;
 
@@ -207,19 +219,6 @@ function calcEstadoMercado(player) {
   const mediaRec   = recientes.length  ? recientes.reduce((s,v)=>s+v,0)  / recientes.length  : 0;
   const mediaAnt   = anteriores.length ? anteriores.reduce((s,v)=>s+v,0) / anteriores.length : 0;
   const mejorando  = mediaRec > mediaAnt * 1.2;
-
-  // ── Últimas 2 jornadas sin jugar ────────────────────────────────────────────
-  const ultimas2SinJugar = jForm.slice(0, 2).every(v => v === null || v === undefined || v === 0);
-
-  // 👁️ DESPERTAR — no ha jugado las últimas 2J pero el mercado empieza a moverse
-  // Señal: el mercado anticipa la vuelta antes que las puntuaciones
-  if (ultimas2SinJugar && player.trend > 10000) {
-    return {
-      estado: 'despertar', icono: '👁️', label: 'DESPERTAR',
-      desc: `Sin jugar las últimas 2 jornadas pero el mercado empieza a moverse (▲${Math.round(player.trend/1000)}K€ hoy). El mercado anticipa su vuelta antes que las puntuaciones.`,
-      colorFondo: 'rgba(168,85,247,0.1)', colorTexto: '#a855f7',
-    };
-  }
 
   // Las señales restantes solo aplican a jugadores que están jugando
   if (!statusOk) return null;
