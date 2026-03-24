@@ -156,9 +156,18 @@ function calcEstadoMercado(player) {
 
   const jForm = (player.jForm || []).slice(0, 5);
 
+  // 🚨 VENTA OBLIGATORIA — sin jugar 2J + precio bajando
+  const ultimas2SinJugar = jForm.slice(0, 2).every(v => v === null || v === undefined || v === 0);
+  if (ultimas2SinJugar && player.trend < 0) {
+    return {
+      estado: 'venta', icono: '🚨', label: 'VENTA OBLIGATORIA',
+      desc: `Sin jugar las últimas 2 jornadas y el precio sigue bajando (▼${Math.abs(Math.round(player.trend/1000))}K€ hoy). Vende antes de que siga cayendo.`,
+      colorFondo: 'rgba(239,68,68,0.15)', colorTexto: '#ef4444',
+    };
+  }
+
   // 👁️ DESPERTAR — se evalúa ANTES de los filtros de status y jornadas
   // Sin jugar las últimas 2J pero el mercado empieza a moverse
-  const ultimas2SinJugar = jForm.slice(0, 2).every(v => v === null || v === undefined || v === 0);
   if (ultimas2SinJugar && player.trend > 10000) {
     return {
       estado: 'despertar', icono: '👁️', label: 'DESPERTAR',
@@ -251,8 +260,8 @@ function calcEstadoMercado(player) {
     };
   }
 
-  // 💎 INERCIA OCULTA — rinde bien, mercado dormido o medio
-  if (hayMargen && (efic === null || efic > 10)) {
+  // 💎 INERCIA OCULTA — rinde bien, mercado dormido o medio (nunca si baja)
+  if (hayMargen && mom7 >= 0 && (efic === null || efic > 10)) {
     if (mercadoDormido) {
       return {
         estado: 'joya', icono: '💎', label: 'INERCIA OCULTA',
@@ -269,11 +278,12 @@ function calcEstadoMercado(player) {
     }
   }
 
-  // 📉 DESPLOME — eficiencia negativa + mercado castigando
-  if (efic !== null && efic < -10 && mom7 < -umbralDormido) {
+  // 📉 DESPLOME — mercado castigando + rendimiento bajo o sin jugar
+  const mercadoBajando = mom7 < -umbralDormido || (priceHistory.length < 2 && player.trend < -10000);
+  if (mercadoBajando && (efic === null || efic < 0)) {
     return {
       estado: 'desplome', icono: '📉', label: 'DESPLOME',
-      desc: `Rinde ${efic}% por debajo de lo esperado para su precio y el mercado lo está castigando (${mom7.toFixed(1)}% en 7 días). Riesgo de seguir bajando.`,
+      desc: `El mercado lo está castigando (${mom7 < 0 ? mom7.toFixed(1)+'% en 7 días' : '▼'+Math.abs(Math.round(player.trend/1000))+'K€ hoy'})${efic !== null ? ` y rinde ${efic}% por debajo de lo esperado` : ''}. Riesgo de seguir bajando.`,
       colorFondo: 'rgba(239,68,68,0.08)', colorTexto: '#f87171',
     };
   }
