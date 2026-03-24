@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-24T15:46:08.960Z",
+  "updatedAt": "2026-03-24T20:00:36.400Z",
   "players": [
     {
       "id": 11,
@@ -11994,8 +11994,8 @@
           1,
           6
         ],
-        "teamSize": 16,
-        "teamValue": 79970000,
+        "teamSize": 15,
+        "teamValue": 79730000,
         "teamValueInc": 580000,
         "position": 3
       },
@@ -12238,7 +12238,7 @@
       "name": "🦊",
       "manager": "🦊",
       "points": 1437,
-      "value": 79970000,
+      "value": 79730000,
       "trend": 580000,
       "players": []
     },
@@ -12346,10 +12346,10 @@
     "teamId": 6541195,
     "name": "🦊",
     "points": 1437,
-    "balance": 724763,
+    "balance": 971063,
     "lineup": {
       "type": "3-4-3",
-      "date": 1774282592,
+      "date": 1774370793,
       "playersID": [
         17021,
         10155,
@@ -12365,7 +12365,7 @@
       ],
       "reservesID": [
         null,
-        21063,
+        null,
         39431,
         27945
       ]
@@ -12405,13 +12405,6 @@
         "clause": 6930000,
         "invested": 0,
         "buyDate": 1765470211
-      },
-      {
-        "id": 21063,
-        "buyPrice": 240000,
-        "clause": 240000000000,
-        "invested": 0,
-        "buyDate": 1773554472
       },
       {
         "id": 25127,
@@ -12486,12 +12479,6 @@
     ],
     "market": [
       {
-        "playerID": 21063,
-        "price": 480000,
-        "type": "sale",
-        "until": 1774472933
-      },
-      {
         "playerID": 27945,
         "price": 1500000,
         "type": "sale",
@@ -12506,6 +12493,21 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1774370703,
+      "content": [
+        {
+          "player": 21063,
+          "from": {
+            "id": 6541195,
+            "name": "🦊",
+            "icon": "i/u/6541195.png?v=17"
+          },
+          "amount": 246300
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1774345441,
@@ -12774,8 +12776,8 @@
           12,
           9
         ],
-        "teamSize": 18,
-        "teamValue": 90950000,
+        "teamSize": 17,
+        "teamValue": 90800000,
         "teamValueInc": 280000,
         "position": 4
       },
@@ -13044,9 +13046,9 @@
           13,
           7
         ],
-        "teamSize": 18,
-        "teamValue": 38480000,
-        "teamValueInc": 100000,
+        "teamSize": 17,
+        "teamValue": 36820000,
+        "teamValueInc": 150000,
         "position": 18,
         "positionInc": 1,
         "role": ""
@@ -13123,7 +13125,7 @@
       "name": "🦊",
       "manager": "🦊",
       "points": 1296,
-      "value": 90950000,
+      "value": 90800000,
       "trend": 280000,
       "players": []
     },
@@ -13249,8 +13251,8 @@
       "name": "Aquest any he trepitjat merda !!",
       "manager": "Aquest any he trepitjat merda !!",
       "points": 1026,
-      "value": 38480000,
-      "trend": 100000,
+      "value": 36820000,
+      "trend": 150000,
       "players": []
     },
     {
@@ -13276,10 +13278,10 @@
     "teamId": 11504267,
     "name": "🦊",
     "points": 1296,
-    "balance": 1664043,
+    "balance": 1817743,
     "lineup": {
       "type": "3-4-3",
-      "date": 1774311042,
+      "date": 1774370954,
       "playersID": [
         14630,
         32440,
@@ -13343,13 +13345,6 @@
         "clause": 0,
         "invested": 0,
         "buyDate": 1774072991
-      },
-      {
-        "id": 30628,
-        "buyPrice": 150000,
-        "clause": 225000,
-        "invested": 0,
-        "buyDate": 1772258605
       },
       {
         "id": 31707,
@@ -13424,12 +13419,6 @@
     ],
     "market": [
       {
-        "playerID": 30628,
-        "price": 225000,
-        "type": "sale",
-        "until": 1774483755
-      },
-      {
         "playerID": 34541,
         "price": 525000,
         "type": "sale",
@@ -13438,6 +13427,36 @@
     ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1774370943,
+      "content": [
+        {
+          "player": 30628,
+          "from": {
+            "id": 11504267,
+            "name": "🦊",
+            "icon": "i/u/11504267.png"
+          },
+          "amount": 153700
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1774369414,
+      "content": [
+        {
+          "player": 32120,
+          "from": {
+            "id": 6586257,
+            "name": "Aquest any he trepitjat merda !!",
+            "icon": "i/u/6586257.png"
+          },
+          "amount": 1593200
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1774341435,
@@ -13580,21 +13599,6 @@
             "icon": "i/t/3.png"
           },
           "amount": 317600
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1774277378,
-      "content": [
-        {
-          "player": 28082,
-          "from": {
-            "id": 9890450,
-            "name": "MarK Lenders",
-            "icon": "icons/34.png"
-          },
-          "amount": 255100
         }
       ]
     }
@@ -14910,6 +14914,54 @@
   },
   "news": [
     {
+      "title": "TOP Porteros que debes fichar en este parón de selecciones",
+      "link": "https://www.jornadaperfecta.com/blog/top-porteros-fantasy-paron-marzo-26/",
+      "date": "Tue, 24 Mar 2026 19:50:15 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Lista de ventas fantasy para el parón de selecciones",
+      "link": "https://www.jornadaperfecta.com/blog/ventas-fantasy-paron-marzo-26/",
+      "date": "Tue, 24 Mar 2026 17:56:35 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Oficial: Luis García Plaza, nuevo técnico del Sevilla",
+      "link": "https://www.jornadaperfecta.com/blog/luis-garcia-plaza-sevilla-anuncio-26/",
+      "date": "Tue, 24 Mar 2026 17:21:21 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Carlos Espí ya entrena, en una sesión sin Iker Losada",
+      "link": "https://www.jornadaperfecta.com/blog/espi-estado-rodilla-levante/",
+      "date": "Tue, 24 Mar 2026 16:35:28 +0000",
+      "img": "https://cdn.biwenger.com/i/t/10.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Iñaki Williams, baja con Ghana por un golpe. ¿Preocupa su estado?",
+      "link": "https://www.jornadaperfecta.com/blog/inaki-williams-estado-golpe-26/",
+      "date": "Tue, 24 Mar 2026 16:13:34 +0000",
+      "img": "https://cdn.biwenger.com/i/t/1.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Guía Fantasy de Cómo Exprimir el Parón",
+      "link": "https://www.jornadaperfecta.com/blog/guia-fantasy-paron/",
+      "date": "Tue, 24 Mar 2026 16:00:15 +0000",
+      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/1f4c9.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Oficial: Griezmann abandonará el Atlético de Madrid este verano",
       "link": "https://www.jornadaperfecta.com/blog/oficial-griezmann-salida-atletico-madrid/",
       "date": "Tue, 24 Mar 2026 14:23:02 +0000",
@@ -14940,61 +14992,13 @@
       "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Take Kubo repite con el grupo. ¿De vuelta tras el parón?",
-      "link": "https://www.jornadaperfecta.com/blog/kubo-fecha-vuelta-real-sociedad/",
-      "date": "Tue, 24 Mar 2026 13:03:05 +0000",
-      "img": "https://cdn.biwenger.com/i/t/13.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Expulsión de Valverde: posible sanción y recurso del Madrid",
-      "link": "https://www.jornadaperfecta.com/blog/valverde-sancion-roja-derbi/",
-      "date": "Tue, 24 Mar 2026 12:43:28 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Chollos LaLiga Fantasy: Fichajes Baratos y Rentables para el parón",
-      "link": "https://www.jornadaperfecta.com/blog/chollos-laliga-fantasy-paron-marzo-26/",
-      "date": "Tue, 24 Mar 2026 12:00:31 +0000",
-      "img": "https://cdn.biwenger.com/i/t/10.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Eric García descansa tras sus molestias. ¿Sigue siendo interesante en fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/eric-garcia-analisis-fantasy-paron-marzo-26/",
-      "date": "Tue, 24 Mar 2026 10:00:26 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/03/image-2026-03-23T204157.640.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Se descarta la lesión de Radu: parte médico oficial",
-      "link": "https://www.jornadaperfecta.com/blog/ionut-radu-parte-medico-celta/",
-      "date": "Tue, 24 Mar 2026 08:07:50 +0000",
-      "img": "https://cdn.biwenger.com/i/t/5.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Lista de compras fantasy para el parón de selecciones",
-      "link": "https://www.jornadaperfecta.com/blog/compras-fantasy-paron-marzo-26/",
-      "date": "Tue, 24 Mar 2026 08:05:30 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-03-24T15:46:06.818Z",
+    "updatedAt": "2026-03-24T20:00:36.400Z",
     "players": [
       {
         "id": "3374",
