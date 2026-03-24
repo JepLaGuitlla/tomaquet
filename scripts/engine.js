@@ -299,9 +299,12 @@ function calcEstadoMercado(player) {
   // 📉 DESPLOME — mercado castigando + rendimiento bajo o sin jugar
   const mercadoBajando = mom7 < -umbralDormido || (priceHistory.length < 2 && player.trend < -10000);
   if (mercadoBajando && (efic === null || efic < 0)) {
+    const pj2 = (player.playedHome || 0) + (player.playedAway || 0);
+    const mediaTemp = pj2 > 0 ? ((player.pts || 0) / pj2).toFixed(1) : '—';
+    const mediaUlt5 = (jForm.map(v => v === null || v === undefined ? 0 : v).reduce((s,v) => s+v, 0) / Math.max(jForm.length, 1)).toFixed(1);
     return {
       estado: 'desplome', icono: '📉', label: 'DESPLOME',
-      desc: `El mercado lo está castigando (${mom7 < 0 ? mom7.toFixed(1)+'% en 7 días' : '▼'+Math.abs(Math.round(player.trend/1000))+'K€ hoy'})${efic !== null ? ` y rinde ${efic}% por debajo de lo esperado` : ''}. Riesgo de seguir bajando.`,
+      desc: `Media últimas 5J: ${mediaUlt5} pts · Media temporada: ${mediaTemp} pts. El mercado lo castiga (${mom7 < 0 ? mom7.toFixed(1)+'% en 7 días' : '▼'+Math.abs(Math.round(player.trend/1000))+'K€ hoy'})${efic !== null ? ` · rinde ${efic}% bajo lo esperado` : ''}. Momento de vender.`,
       colorFondo: 'rgba(239,68,68,0.08)', colorTexto: '#f87171',
     };
   }
