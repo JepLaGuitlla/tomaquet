@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-23T21:34:09.253Z",
+  "updatedAt": "2026-03-24T05:15:08.990Z",
   "players": [
     {
       "id": 11,
@@ -12071,9 +12071,9 @@
           3,
           13
         ],
-        "teamSize": 16,
-        "teamValue": 92970000,
-        "teamValueInc": -310000,
+        "teamSize": 17,
+        "teamValue": 96560000,
+        "teamValueInc": -230000,
         "lastTrophy": {
           "type": "league",
           "position": 1,
@@ -12183,9 +12183,9 @@
           13,
           9
         ],
-        "teamSize": 15,
-        "teamValue": 56550000,
-        "teamValueInc": 70000,
+        "teamSize": 14,
+        "teamValue": 52960000,
+        "teamValueInc": -10000,
         "lastTrophy": {
           "type": "league",
           "position": 3,
@@ -12274,8 +12274,8 @@
       "name": "Zaza Pachulia",
       "manager": "Zaza Pachulia",
       "points": 1344,
-      "value": 92970000,
-      "trend": -310000,
+      "value": 96560000,
+      "trend": -230000,
       "players": []
     },
     {
@@ -12328,8 +12328,8 @@
       "name": "Tata Martini",
       "manager": "Tata Martini",
       "points": 1178,
-      "value": 56550000,
-      "trend": 70000,
+      "value": 52960000,
+      "trend": -10000,
       "players": []
     },
     {
@@ -12508,6 +12508,27 @@
   "boardTomaquet": [
     {
       "type": "transfer",
+      "date": 1774306573,
+      "content": [
+        {
+          "player": 38958,
+          "from": {
+            "id": 12713493,
+            "name": "Tata Martini",
+            "icon": "i/u/12713493.png"
+          },
+          "to": {
+            "id": 148051,
+            "name": "Zaza Pachulia",
+            "icon": "i/u/148051.png?v=39"
+          },
+          "amount": 6885000,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
       "date": 1774273486,
       "content": [
         {
@@ -12591,21 +12612,6 @@
             "icon": "i/u/8068002.png?v=69"
           },
           "amount": 450000
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1774221547,
-      "content": [
-        {
-          "player": 38290,
-          "from": {
-            "id": 12713493,
-            "name": "Tata Martini",
-            "icon": "i/u/12713493.png"
-          },
-          "amount": 3728700
         }
       ]
     }
@@ -12721,9 +12727,9 @@
           12,
           9
         ],
-        "teamSize": 19,
-        "teamValue": 96450000,
-        "teamValueInc": 80000,
+        "teamSize": 18,
+        "teamValue": 90670000,
+        "teamValueInc": 170000,
         "position": 4
       },
       {
@@ -13070,8 +13076,8 @@
       "name": "🦊",
       "manager": "🦊",
       "points": 1296,
-      "value": 96450000,
-      "trend": 80000,
+      "value": 90670000,
+      "trend": 170000,
       "players": []
     },
     {
@@ -13223,15 +13229,15 @@
     "teamId": 11504267,
     "name": "🦊",
     "points": 1296,
-    "balance": -4397957,
+    "balance": 1664043,
     "lineup": {
       "type": "3-4-3",
-      "date": 1774250452,
+      "date": 1774311042,
       "playersID": [
         14630,
         32440,
         31707,
-        25398,
+        17121,
         34077,
         26048,
         29184,
@@ -13271,13 +13277,6 @@
         "buyDate": 1761890506
       },
       {
-        "id": 25398,
-        "buyPrice": 7702345,
-        "clause": 8670000,
-        "invested": 0,
-        "buyDate": 1772172158
-      },
-      {
         "id": 26048,
         "buyPrice": 5921000,
         "clause": 0,
@@ -13301,7 +13300,7 @@
       {
         "id": 30628,
         "buyPrice": 150000,
-        "clause": 0,
+        "clause": 225000,
         "invested": 0,
         "buyDate": 1772258605
       },
@@ -13378,10 +13377,10 @@
     ],
     "market": [
       {
-        "playerID": 25398,
-        "price": 8670000,
+        "playerID": 30628,
+        "price": 225000,
         "type": "sale",
-        "until": 1774392931
+        "until": 1774483755
       },
       {
         "playerID": 34541,
@@ -13392,6 +13391,21 @@
     ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1774310896,
+      "content": [
+        {
+          "player": 25398,
+          "from": {
+            "id": 11504267,
+            "name": "🦊",
+            "icon": "i/u/11504267.png"
+          },
+          "amount": 6062000
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1774290034,
@@ -13491,77 +13505,6 @@
             "icon": "https://graph.facebook.com/10156583054878679/picture?height=300&width=300"
           },
           "amount": 3709400
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1774245734,
-      "content": [
-        {
-          "player": 755,
-          "to": {
-            "id": 6579330,
-            "name": "Mindundis",
-            "icon": "i/u/6579330.png?v=66"
-          },
-          "amount": 1504093,
-          "bids": [
-            {
-              "user": {
-                "id": 6578885,
-                "name": "Norimaki  FC",
-                "icon": "icons/41.png"
-              },
-              "amount": 1500000
-            }
-          ]
-        },
-        {
-          "player": 1897,
-          "to": {
-            "id": 6579280,
-            "name": "Sant Pere Atlètic",
-            "icon": "i/u/6579280.png?v=22"
-          },
-          "amount": 3350090,
-          "bids": [
-            {
-              "user": {
-                "id": 6593096,
-                "name": "Janwandowski",
-                "icon": "i/u/6593096.png"
-              },
-              "amount": 3190000
-            },
-            {
-              "user": {
-                "id": 6586225,
-                "name": "Sergi Sala Duran",
-                "icon": "https://graph.facebook.com/10156583054878679/picture?height=300&width=300"
-              },
-              "amount": 3030010
-            }
-          ]
-        },
-        {
-          "player": 37499,
-          "to": {
-            "id": 6580386,
-            "name": "Lamine i els 7 nans 👯‍♀️",
-            "icon": "i/u/6580386.png?v=10"
-          },
-          "amount": 4275000,
-          "bids": [
-            {
-              "user": {
-                "id": 6586225,
-                "name": "Sergi Sala Duran",
-                "icon": "https://graph.facebook.com/10156583054878679/picture?height=300&width=300"
-              },
-              "amount": 4010010
-            }
-          ]
         }
       ]
     }
@@ -14722,9 +14665,9 @@
       "matchDate": "2026-04-11T12:00:00Z"
     },
     "Levante": {
-      "winProb": 0.358680714612918,
-      "drawProb": 0.30920751259734314,
-      "loseProb": 0.33211177278973886,
+      "winProb": 0.3519175729822553,
+      "drawProb": 0.30944476244991415,
+      "loseProb": 0.33863766456783057,
       "over25Prob": 0.5,
       "isHome": true,
       "opponent": "Getafe",
@@ -14740,9 +14683,9 @@
       "matchDate": "2026-04-12T14:15:00Z"
     },
     "Real Madrid": {
-      "winProb": 0.7483872526516706,
-      "drawProb": 0.16109352726569862,
-      "loseProb": 0.09051922008263065,
+      "winProb": 0.7572544642857143,
+      "drawProb": 0.16043526785714285,
+      "loseProb": 0.08231026785714286,
       "over25Prob": 0.5,
       "isHome": true,
       "opponent": "Girona",
@@ -14767,9 +14710,9 @@
       "matchDate": "2026-04-11T16:30:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.4397736459175424,
-      "drawProb": 0.2716248989490704,
-      "loseProb": 0.28860145513338725,
+      "winProb": 0.4476856072115872,
+      "drawProb": 0.269928086701104,
+      "loseProb": 0.2823863060873088,
       "over25Prob": 0.5128205128205129,
       "isHome": false,
       "opponent": "Sevilla",
@@ -14785,9 +14728,9 @@
       "matchDate": "2026-04-11T16:30:00Z"
     },
     "Getafe": {
-      "winProb": 0.33211177278973886,
-      "drawProb": 0.30920751259734314,
-      "loseProb": 0.358680714612918,
+      "winProb": 0.33863766456783057,
+      "drawProb": 0.30944476244991415,
+      "loseProb": 0.3519175729822553,
       "over25Prob": 0.5,
       "isHome": false,
       "opponent": "Levante",
@@ -14830,9 +14773,9 @@
       "matchDate": "2026-04-12T16:30:00Z"
     },
     "Sevilla": {
-      "winProb": 0.28860145513338725,
-      "drawProb": 0.2716248989490704,
-      "loseProb": 0.4397736459175424,
+      "winProb": 0.2823863060873088,
+      "drawProb": 0.269928086701104,
+      "loseProb": 0.4476856072115872,
       "over25Prob": 0.5128205128205129,
       "isHome": true,
       "opponent": "Atlético Madrid",
@@ -14857,9 +14800,9 @@
       "matchDate": "2026-04-12T12:00:00Z"
     },
     "Girona": {
-      "winProb": 0.09051922008263065,
-      "drawProb": 0.16109352726569862,
-      "loseProb": 0.7483872526516706,
+      "winProb": 0.08231026785714286,
+      "drawProb": 0.16043526785714285,
+      "loseProb": 0.7572544642857143,
       "over25Prob": 0.5,
       "isHome": false,
       "opponent": "Real Madrid",
@@ -14876,6 +14819,14 @@
     }
   },
   "news": [
+    {
+      "title": "Cinco noticias fantasy para antes de irte a dormir",
+      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-23-3-26/",
+      "date": "Mon, 23 Mar 2026 22:00:23 +0000",
+      "img": "https://cdn.biwenger.com/i/t/1.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Chollos Fantasy que no puedes dejar escapar durante el parón de selecciones",
       "link": "https://www.jornadaperfecta.com/blog/chollos-fantasy-biwenger-paron-marzo-26/",
@@ -14947,21 +14898,13 @@
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Arbeloa confirma la fecha de vuelta de Militão, ¿cuándo regresa?",
-      "link": "https://www.jornadaperfecta.com/blog/militao-recuperacion-lesion-26/",
-      "date": "Mon, 23 Mar 2026 12:30:14 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-03-23T21:34:08.143Z",
+    "updatedAt": "2026-03-24T05:15:07.679Z",
     "players": [
       {
         "id": "3374",
