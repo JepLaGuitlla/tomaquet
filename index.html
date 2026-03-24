@@ -1183,11 +1183,11 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
             <div class="lp-tip-title">Señal de Mercado</div>
             <div class="lp-tip-body">
               Cruza rendimiento real, precio justo y reacción del mercado (últimos 7 días).<br><br>
-              💎 <strong style="color:#818cf8">INERCIA OCULTA</strong> — Rinde bien, mercado no reacciona aún.<br>
               💥 <strong style="color:#fb923c">EXPLOSIÓN</strong> — Subida fuerte respaldada por rendimiento.<br>
-              📈 <strong style="color:var(--green)">REBOTE</strong> — Mejorando, mercado corrigiendo al alza.<br>
-              🎭 <strong style="color:var(--red)">HYPE</strong> — Precio por encima del rendimiento real.<br>
+              📈 <strong style="color:var(--green)">COMPRAR YA!</strong> — Mejorando, momento de entrar antes de que explote.<br>
+              💎 <strong style="color:#818cf8">BUENA INVERSIÓN</strong> — Rinde bien, mercado no reacciona aún.<br>
               👁️ <strong style="color:#a855f7">DESPERTAR</strong> — Sin jugar 2J pero el mercado anticipa su vuelta.<br>
+              🎭 <strong style="color:var(--red)">HYPE</strong> — Precio por encima del rendimiento real.<br>
               📉 <strong style="color:#f87171">DESPLOME</strong> — Rinde mal y el mercado lo está castigando.<br>
               🚨 <strong style="color:#ef4444">VENTA OBLIGATORIA</strong> — Sin jugar 2J y precio bajando. Vende ya.
             </div>
@@ -2734,7 +2734,7 @@ const MV3_SORT_FN = {
   precioJusto: p => { const pf = allPlayers.find(x=>x.id==p.id||x.name===p.name); const pj = pf ? calcPrecioJusto(pf) : null; return pj ? pj.precioJusto : 0; },
   margenPJ:    p => { const pf = allPlayers.find(x=>x.id==p.id||x.name===p.name); const pj = pf ? calcPrecioJusto(pf) : null; return pj ? pj.difPct : -999; },
   fe:          p => { const pf = allPlayers.find(x=>x.id==p.id||x.name===p.name); return calcFactorEquipo(p.club||'', pf||p) || 0; },
-  lectura:     p => { const pf = allPlayers.find(x=>x.id==p.id||x.name===p.name); const em = pf ? calcEstadoMercado(pf) : null; const order = {venta:7,joya:6,explosion:5,rebote:4,despertar:3,hype:2,desplome:1}; return em ? (order[em.estado]||0) : 0; },
+  lectura:     p => { const pf = allPlayers.find(x=>x.id==p.id||x.name===p.name); const em = pf ? calcEstadoMercado(pf) : null; const order = {explosion:7,rebote:6,joya:5,despertar:4,hype:3,desplome:2,venta:1}; return em ? (order[em.estado]||0) : 0; },
 };
 
 function mv3CycleSort(primary, secondary, el) {
