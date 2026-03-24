@@ -4449,21 +4449,16 @@ async function loadJugadorBiwenger(p) {
     // Sin datos todavía — primer día de tracking
     const noData = '<div class="jp-tab-loading">Aún sin historial · se acumulará cada día automáticamente</div>';
     const vEl = document.getElementById('jptab-valor');
-    const oEl = document.getElementById('jptab-owners');
     if (vEl) vEl.innerHTML = noData;
-    if (oEl) oEl.innerHTML = noData;
   } catch(e) {
     const errHtml = `<div class="jp-tab-loading" style="color:var(--c-low)">Error cargando prices.json</div>`;
     const vEl = document.getElementById('jptab-valor');
-    const oEl = document.getElementById('jptab-owners');
     if (vEl) vEl.innerHTML = errHtml;
-    if (oEl) oEl.innerHTML = errHtml;
   }
 }
 
 function renderJugTabs(data, p) {
   renderJugValor(data, p);
-  renderJugOwners(data, p);
 }
 
 function renderJugValor(data, p) {
@@ -4471,63 +4466,128 @@ function renderJugValor(data, p) {
   if (!el) return;
 
   const prices = data.prices || [];
-  if (!prices.length) {
+  const jForm  = p.jForm || [];
+  const chartId = 'jug_valor_' + p.id;
+
+  if (!prices.length && !jForm.length) {
     el.innerHTML = '<div class="jp-tab-loading">Sin historial de precios aún</div>';
     return;
   }
 
-  // Formato prices.json: [{d: "2026-03-13", p: 5840000}, ...]
+  // Precio actual y delta
   const vals  = prices.map(pr => pr.p || pr.price || 0).filter(v => v > 0);
   const dates = prices.map(pr => pr.d || pr.date || '');
-  if (!vals.length) { el.innerHTML = '<div class="jp-tab-loading">Sin datos de precio</div>'; return; }
+  const n     = vals.length;
+  const up    = n > 1 ? vals[n-1] >= vals[0] : true;
+  const lineColor = up ? '#22c55e' : '#ef4444';
+  const delta = n > 1 ? vals[n-1] - vals[0] : 0;
+  const deltaStr = (delta >= 0 ? '+' : '') + fmt(delta);
 
-  // Precio de compra del usuario si es suyo
+  // Precio de compra
   const myPlayer = (getEquipo()||[]).find(x => Number(x.id) === Number(p.id));
   const buyPrice = myPlayer?.buyPrice || myPlayer?.invested || null;
 
-  const W = 340, H = 110, padL = 44, padR = 10, padT = 10, padB = 24;
-  const minV = Math.min(...vals), maxV = Math.max(...vals), rng = maxV - minV || 1;
-  const n = vals.length;
-  const cx = i => padL + (i / (n - 1 || 1)) * (W - padL - padR);
-  const cy = v => H - padB - ((v - minV) / rng) * (H - padT - padB);
-
-  const points = vals.map((v, i) => `${cx(i).toFixed(1)},${cy(v).toFixed(1)}`).join(' ');
-  const lastX = cx(n-1), lastY = cy(vals[n-1]);
-
-  // Línea de precio de compra
-  let buyLine = '';
-  if (buyPrice && buyPrice >= minV * 0.5 && buyPrice <= maxV * 1.5) {
-    const byY = cy(Math.max(minV, Math.min(maxV, buyPrice))).toFixed(1);
-    buyLine = `<line x1="${padL}" y1="${byY}" x2="${W-padR}" y2="${byY}" stroke="var(--accent)" stroke-width="1" stroke-dasharray="3,3" opacity="0.7"/>
-    <text x="${padL-3}" y="${byY}" text-anchor="end" font-size="9" fill="var(--accent)" font-family="Figtree,sans-serif" dominant-baseline="central">${fmt(buyPrice)}</text>`;
-  }
-
-  // Ticks eje Y
-  const yTicks = [0, 0.5, 1].map(t => ({ y: cy(minV + t * rng), v: minV + t * rng }));
-  const up = vals[n-1] >= vals[0];
-  const lineColor = up ? '#22c55e' : '#ef4444';
-  const delta = vals[n-1] - vals[0];
-  const deltaStr = (delta >= 0 ? '+' : '') + fmt(delta);
+  // jForm para el gráfico combinado — últimas 5J
+  // Etiquetas correctas: J29, J28... según jornada actual
+  const jFormReversed = [...jForm].reverse(); // cronológico
+  const jFormLabels   = jForm.map((_, i) => {
+    const offset = jForm.length - 1 - i;
+    return offset === 0 ? 'Últ.J' : `-${offset}J`;
+  });
 
   el.innerHTML = `
     <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;">
-      <span style="font-family:'IBM Plex Mono',monospace;font-size:1rem;font-weight:700;color:${lineColor}">${fmt(vals[n-1])}</span>
-      <span style="font-size:0.65rem;color:${lineColor};font-weight:600">${deltaStr}</span>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:1rem;font-weight:700;color:${lineColor}">${n?fmt(vals[n-1]):fmt(p.price||0)}</span>
+      ${n>1?`<span style="font-size:0.65rem;color:${lineColor};font-weight:600">${deltaStr}</span>`:''}
       <span style="font-size:0.62rem;color:var(--text3)">${n} días</span>
     </div>
-    <svg viewBox="0 0 ${W} ${H}" class="jp-price-chart" xmlns="http://www.w3.org/2000/svg">
-      ${yTicks.map(t=>`
-        <line x1="${padL}" y1="${t.y.toFixed(1)}" x2="${W-padR}" y2="${t.y.toFixed(1)}" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="3,3"/>
-        <text x="${padL-3}" y="${t.y.toFixed(1)}" text-anchor="end" font-size="9" fill="var(--text3)" font-family="Figtree,sans-serif" dominant-baseline="central">${fmt(t.v)}</text>
-      `).join('')}
-      ${buyLine}
-      <polyline points="${points}" fill="none" stroke="${lineColor}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-      <circle cx="${lastX.toFixed(1)}" cy="${lastY.toFixed(1)}" r="3" fill="${lineColor}" stroke="var(--bg)" stroke-width="1.5"/>
-      <text x="${padL}" y="${H-4}" font-size="9" fill="var(--text3)" font-family="Figtree,sans-serif">${dates[0]?.slice(5)||''}</text>
-      <text x="${W-padR}" y="${H-4}" font-size="9" fill="var(--text3)" font-family="Figtree,sans-serif" text-anchor="end">${dates[n-1]?.slice(5)||''}</text>
-    </svg>
-    ${buyPrice ? `<div style="font-size:0.62rem;color:var(--text3);margin-top:2px;">— línea roja = tu compra · ${fmt(buyPrice)}</div>` : ''}
+    ${n >= 2 ? `<div style="position:relative;width:100%;height:90px;margin-bottom:12px"><canvas id="${chartId}_price"></canvas></div>` : ''}
+    ${buyPrice ? `<div style="font-size:0.62rem;color:var(--text3);margin-bottom:8px;">— línea roja = tu compra · ${fmt(buyPrice)}</div>` : ''}
+    ${jForm.length ? `
+    <div style="border-top:1px solid var(--border);padding-top:10px">
+      <div style="font-family:'Figtree',sans-serif;font-size:0.58rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);margin-bottom:8px">Puntos por jornada</div>
+      <div style="position:relative;width:100%;height:100px"><canvas id="${chartId}_pts"></canvas></div>
+    </div>` : ''}
+    ${dates.length?`<div style="display:flex;justify-content:space-between;font-size:0.58rem;color:var(--text3);margin-top:4px"><span>${dates[0]?.slice(5)||''}</span><span>${dates[n-1]?.slice(5)||''}</span></div>`:''}
   `;
+
+  function buildCharts() {
+    // Gráfico de precio
+    if (n >= 2) {
+      const priceLabels = dates.map((d,i) => i===0||i===n-1||i===Math.floor(n/2) ? (d?.slice(5)||'') : '');
+      new Chart(document.getElementById(chartId+'_price'), {
+        type: 'line',
+        data: {
+          labels: priceLabels,
+          datasets: [{
+            data: vals.map(v => +(v/1000000).toFixed(2)),
+            borderColor: lineColor,
+            borderWidth: 1.8,
+            pointRadius: 0,
+            tension: 0.3,
+            fill: false,
+          }, ...(buyPrice ? [{
+            data: vals.map(() => +(buyPrice/1000000).toFixed(2)),
+            borderColor: 'var(--accent)',
+            borderWidth: 1,
+            borderDash: [3,3],
+            pointRadius: 0,
+            fill: false,
+          }] : [])]
+        },
+        options: {
+          responsive: true, maintainAspectRatio: false,
+          plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => fmt(ctx.raw*1000000) } } },
+          scales: {
+            x: { grid: { color: 'rgba(255,255,255,0.04)' }, ticks: { color: '#718096', font: { size: 8 }, maxRotation: 0 } },
+            y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: lineColor, font: { size: 8 }, callback: v => v+'M' } }
+          }
+        }
+      });
+    }
+
+    // Gráfico de puntos
+    if (jForm.length) {
+      const barColors = jFormReversed.map(v =>
+        v === null || v === undefined ? 'rgba(107,114,128,0.3)' :
+        v < 0  ? 'rgba(239,68,68,0.6)'  :
+        v === 0 ? 'rgba(107,114,128,0.3)':
+        v < 6  ? 'rgba(217,119,6,0.65)' :
+        v < 10 ? 'rgba(34,197,94,0.65)' :
+                 'rgba(59,130,246,0.75)'
+      );
+      new Chart(document.getElementById(chartId+'_pts'), {
+        type: 'bar',
+        data: {
+          labels: [...jFormLabels].reverse(),
+          datasets: [{
+            data: jFormReversed.map(v => v ?? 0),
+            backgroundColor: barColors,
+            borderRadius: 3,
+          }]
+        },
+        options: {
+          responsive: true, maintainAspectRatio: false,
+          plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ctx.raw + ' pts' } } },
+          scales: {
+            x: { grid: { color: 'rgba(255,255,255,0.04)' }, ticks: { color: '#718096', font: { size: 9 } } },
+            y: { min: 0, max: Math.max(16, ...jForm.filter(v=>v!=null)) + 2,
+                 grid: { color: 'rgba(255,255,255,0.05)' },
+                 ticks: { color: '#718096', font: { size: 9 }, stepSize: 4, callback: v => v+'p' } }
+          }
+        }
+      });
+    }
+  }
+
+  if (window.Chart) {
+    buildCharts();
+  } else {
+    const s = document.createElement('script');
+    s.src = 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js';
+    s.onload = buildCharts;
+    document.head.appendChild(s);
+  }
 }
 
 function renderJugAnalisis(p) {
@@ -4726,59 +4786,78 @@ function renderJugPanel(p){
   const pos = (p.position||p.pos||'').split('/')[0];
   const col = PC_COLORS[pos] || '#555';
   const inCompare = compareList.some(x=>(x.id||x.name)===(p.id||p.name));
+  const pj = sf ? sf.appearances : (p.playedHome||0)+(p.playedAway||0)||0;
+  const media = p.media ? p.media.toFixed(1) : (pj&&p.pts ? (p.pts/pj).toFixed(1) : '—');
+  const trend = p.trend||p.priceIncrement||0;
+  const trendHtml = trend>0?`<span style="color:var(--c-good)">▲ +${fmt(trend)}</span>`:trend<0?`<span style="color:var(--c-low)">▼ ${fmt(trend)}</span>`:'<span style="color:var(--text3)">—</span>';
 
-  // KPIs principales
-  const pj = sf ? sf.appearances : (p.playedHome||0)+(p.playedAway||0)||'—';
-  const media = p.media ? p.media.toFixed(1) : (pj&&pj!=='—'&&p.pts ? (p.pts/pj).toFixed(1) : '—');
+  // Lectura
+  const em = calcEstadoMercado(p);
+  const emBadge = em ? `<span style="font-size:1.8rem;margin-left:8px;cursor:help;filter:drop-shadow(0 1px 3px rgba(0,0,0,0.3))" title="${em.desc}">${em.icono}</span>` : '';
 
-  // Jornadas
+  // Texto explicativo del momento del jugador
+  let momentoHtml = '';
+  if (em) {
+    momentoHtml = `<div style="margin:0 16px 12px;padding:10px 12px;background:${em.colorFondo};border-left:3px solid ${em.colorTexto};border-radius:0 4px 4px 0;">
+      <div style="font-family:'Figtree',sans-serif;font-size:0.62rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:${em.colorTexto};margin-bottom:3px">${em.icono} ${em.label}</div>
+      <div style="font-family:'Figtree',sans-serif;font-size:0.72rem;color:var(--text2);line-height:1.5">${em.desc}</div>
+    </div>`;
+  }
+
+  // jForm
   const jFormHtml = (p.jForm||[]).length ? (p.jForm||[]).map(v=>{
     if(v===null||v===undefined) return '<div class="jp-jf-val" style="color:var(--text3)">—</div>';
     const col2 = v<0?'var(--c-low)':v===0?'var(--text3)':v<6?'var(--c-mid)':v<10?'var(--c-good)':'var(--c-top)';
     return `<div class="jp-jf-val" style="color:${col2};border-color:${col2}20">${v}</div>`;
   }).join('') : '<span style="color:var(--text3);font-size:0.7rem">Sin datos</span>';
 
-  // Tendencia
-  const trend = p.trend||p.priceIncrement||0;
-  const trendHtml = trend>0?`<span style="color:var(--c-good)">▲ +${fmt(trend)}</span>`:trend<0?`<span style="color:var(--c-low)">▼ ${fmt(trend)}</span>`:'<span style="color:var(--text3)">—</span>';
+  // Eficiencia
+  const efic = calcEficiencia(p, getMediasEsperadas());
+  const eficHtml = efic !== null
+    ? `<div class="jp-stat"><div class="jp-stat-val" style="color:${efic>0?'var(--c-good)':'var(--c-low)'}">${efic>0?'+':''}${efic}%</div><div class="jp-stat-lbl">Eficiencia</div></div>`
+    : '';
 
-  // Bloque stats reales
+  // Precio justo
+  const pjData = calcPrecioJusto(p);
+  const pjHtml = pjData
+    ? `<div class="jp-stat"><div class="jp-stat-val" style="font-size:0.82rem;color:${pjData.difEuros>0?'var(--c-good)':'var(--c-low)'}">${fmt(pjData.precioJusto)}</div><div class="jp-stat-lbl">P. Justo</div></div>`
+    : '';
+
+  // Factor equipo
+  const fe = calcFactorEquipo(p.club||p.teamName||'', p);
+  const feColor = fe===null?'var(--text3)':fe>=7?'var(--c-good)':fe>=5?'var(--pt)':fe>=3?'#f59e0b':'var(--c-low)';
+  const feHtml = fe !== null
+    ? `<div class="jp-stat"><div class="jp-stat-val" style="color:${feColor}">${fe.toFixed(1)}</div><div class="jp-stat-lbl">F. Equipo</div></div>`
+    : '';
+
+  // Stats reales
   let sfHtml = '';
   if(sf){
     const mpg = sf.minutesPerGoal ? sf.minutesPerGoal+"'" : '—';
-    const pen = sf.penalties || 0;
-    const hasCard = (sf.yellowCards||0)+(sf.redCards||0) > 0;
-
     sfHtml = `
     <div class="jp-section">
       <div class="jp-section-title">Estadísticas reales — LaLiga 2025/26</div>
-      <div class="jp-grid" style="margin-bottom:8px">
+      <div class="jp-grid">
         <div class="jp-stat"><div class="jp-stat-val">${sf.appearances||0}</div><div class="jp-stat-lbl">PJ</div></div>
         <div class="jp-stat"><div class="jp-stat-val" style="color:var(--c-good)">${sf.goals||0}</div><div class="jp-stat-lbl">Goles</div></div>
         <div class="jp-stat"><div class="jp-stat-val" style="color:var(--c-top)">${sf.assists||0}</div><div class="jp-stat-lbl">Asistencias</div></div>
         <div class="jp-stat"><div class="jp-stat-val">${mpg}</div><div class="jp-stat-lbl">Min/Gol</div></div>
+        ${sf.penalties>0?`<div class="jp-stat"><div class="jp-stat-val">${sf.penalties}</div><div class="jp-stat-lbl">Penaltis</div></div>`:''}
+        ${(sf.yellowCards||0)>0?`<div class="jp-stat"><div class="jp-stat-val" style="color:#f59e0b">${sf.yellowCards}</div><div class="jp-stat-lbl">Amarillas</div></div>`:''}
+        ${(sf.redCards||0)>0?`<div class="jp-stat"><div class="jp-stat-val" style="color:var(--c-low)">${sf.redCards}</div><div class="jp-stat-lbl">Rojas</div></div>`:''}
       </div>
-      ${pen>0||hasCard?`<div style="border-top:1px solid var(--border);padding-top:10px">
-        <div class="jp-section-title" style="margin-bottom:6px">Disciplina</div>
-        <div class="jp-grid">
-          ${pen>0?`<div class="jp-stat"><div class="jp-stat-val">${pen}</div><div class="jp-stat-lbl">Penaltis</div></div>`:''}
-          ${hasCard?`<div class="jp-stat"><div class="jp-stat-val" style="color:#f59e0b">${sf.yellowCards||0}</div><div class="jp-stat-lbl">Amarillas</div></div>`:''}
-          ${hasCard?`<div class="jp-stat"><div class="jp-stat-val" style="color:var(--c-low)">${sf.redCards||0}</div><div class="jp-stat-lbl">Rojas</div></div>`:''}
-        </div>
-      </div>`:''}
     </div>`;
-  } else {
-    sfHtml = `<div class="jp-section"><div style="padding:16px;text-align:center;color:var(--text3);font-family:Figtree,sans-serif;font-size:0.68rem;">Sin estadísticas<br><span style="opacity:0.5;font-size:0.58rem">Se actualizan cada día</span></div></div>`;
   }
 
   document.getElementById('jugPanelBody').innerHTML = `
     <div class="jp-header">
       ${playerPhoto(p, 52)}
-      <div>
-        <div class="jp-name">${(p.name||'').toUpperCase()}${(p.inGuitlla||MV3_GUITLLA.has(p.name))?'<span style="font-size:0.7rem;margin-left:6px">🦊</span>':''}</div>
+      <div style="flex:1">
+        <div class="jp-name" style="display:flex;align-items:center">${(p.name||'').toUpperCase()}${(p.inGuitlla||MV3_GUITLLA.has(p.name))?'<span style="font-size:0.7rem;margin-left:6px">🦊</span>':''}${emBadge}</div>
         <div class="jp-club">${p.club||p.teamName||'—'} · <span style="color:${col}">${p.position||p.pos||'?'}</span></div>
       </div>
     </div>
+    ${momentoHtml}
     <div class="jp-kpis">
       <div class="jp-kpi"><div class="jp-kpi-lbl">Puntos</div><div class="jp-kpi-val" style="color:var(--lime)">${p.pts||p.points||0}</div></div>
       <div class="jp-kpi"><div class="jp-kpi-lbl">Media</div><div class="jp-kpi-val">${media}</div></div>
@@ -4791,9 +4870,12 @@ function renderJugPanel(p){
     <div class="jp-section">
       <div class="jp-section-title">Biwenger</div>
       <div class="jp-grid">
-        <div class="jp-stat"><div class="jp-stat-val">${p.playedHome||sf?.started||'—'}</div><div class="jp-stat-lbl">PJ Local</div></div>
+        <div class="jp-stat"><div class="jp-stat-val">${p.playedHome||'—'}</div><div class="jp-stat-lbl">PJ Local</div></div>
         <div class="jp-stat"><div class="jp-stat-val">${p.playedAway||'—'}</div><div class="jp-stat-lbl">PJ Visita</div></div>
         <div class="jp-stat"><div class="jp-stat-val">${p.roi?p.roi.toFixed(1)+'x':'—'}</div><div class="jp-stat-lbl">ROI</div></div>
+        ${eficHtml}
+        ${pjHtml}
+        ${feHtml}
       </div>
       <div style="margin-top:8px;display:flex;justify-content:space-between;align-items:center;font-family:Figtree,sans-serif;font-size:0.7rem;">
         <span style="color:var(--text3)">Tendencia</span>
@@ -4806,27 +4888,13 @@ function renderJugPanel(p){
         ${inCompare?'✓ EN COMPARADOR':'+ AÑADIR AL COMPARADOR'}
       </button>
     </div>
-
-    <!-- Tabs Valor / Propietarios -->
     <div style="border-top:2px solid var(--border);margin-top:4px;">
-      <div style="display:flex;border-bottom:1px solid var(--border);">
-        <button class="jp-tab-btn active" id="jptab-valor-btn" onclick="jpSwitchTab('valor',${p.id})">📈 Valor</button>
-        <button class="jp-tab-btn" id="jptab-owners-btn" onclick="jpSwitchTab('owners',${p.id})">👤 Propietarios</button>
-        <button class="jp-tab-btn" id="jptab-analisis-btn" onclick="jpSwitchTab('analisis',${p.id})">📊 Análisis</button>
-      </div>
       <div id="jptab-valor" style="padding:12px 16px;">
         <div class="jp-tab-loading">Cargando curva de precio...</div>
-      </div>
-      <div id="jptab-owners" style="display:none;padding:12px 16px;">
-        <div class="jp-tab-loading">Cargando historial...</div>
-      </div>
-      <div id="jptab-analisis" style="display:none;padding:12px 16px;">
-        <div class="jp-tab-loading">Cargando análisis...</div>
       </div>
     </div>
   `;
 
-  // Lanzar fetch bajo demanda
   loadJugadorBiwenger(p);
 }
 
