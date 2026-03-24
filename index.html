@@ -4465,8 +4465,8 @@ function renderJugValor(data, p) {
   const el = document.getElementById('jptab-valor');
   if (!el) return;
 
-  const prices = data.prices || [];
-  const jForm  = p.jForm || [];
+  const prices  = data.prices || [];
+  const jForm   = p.jForm || [];
   const chartId = 'jug_valor_' + p.id;
 
   if (!prices.length && !jForm.length) {
@@ -4474,26 +4474,36 @@ function renderJugValor(data, p) {
     return;
   }
 
-  // Precio actual y delta
+  // Precio
   const vals  = prices.map(pr => pr.p || pr.price || 0).filter(v => v > 0);
   const dates = prices.map(pr => pr.d || pr.date || '');
   const n     = vals.length;
   const up    = n > 1 ? vals[n-1] >= vals[0] : true;
   const lineColor = up ? '#22c55e' : '#ef4444';
-  const delta = n > 1 ? vals[n-1] - vals[0] : 0;
-  const deltaStr = (delta >= 0 ? '+' : '') + fmt(delta);
+  const delta     = n > 1 ? vals[n-1] - vals[0] : 0;
+  const deltaStr  = (delta >= 0 ? '+' : '') + fmt(delta);
 
   // Precio de compra
   const myPlayer = (getEquipo()||[]).find(x => Number(x.id) === Number(p.id));
   const buyPrice = myPlayer?.buyPrice || myPlayer?.invested || null;
 
-  // jForm para el gráfico combinado — últimas 5J
-  // Etiquetas correctas: J29, J28... según jornada actual
-  const jFormReversed = [...jForm].reverse(); // cronológico
-  const jFormLabels   = jForm.map((_, i) => {
-    const offset = jForm.length - 1 - i;
-    return offset === 0 ? 'Últ.J' : `-${offset}J`;
+  // Etiquetas de jornada correctas — J25, J26, J27, J28, J29 (izq a der)
+  // jForm[0] = jornada más reciente, jForm[4] = más antigua
+  const jornadaActual = ligaData?.season || 0;
+  const jFormCronologico = [...jForm].reverse(); // J más antigua → más reciente
+  const jFormLabels = jFormCronologico.map((_, i) => {
+    const jNum = jornadaActual - (jForm.length - 1 - i);
+    return jNum > 0 ? `J${jNum}` : `J?`;
   });
+
+  const barColors = jFormCronologico.map(v =>
+    v === null || v === undefined ? 'rgba(107,114,128,0.3)' :
+    v < 0  ? 'rgba(239,68,68,0.6)'   :
+    v === 0 ? 'rgba(107,114,128,0.3)' :
+    v < 6  ? 'rgba(217,119,6,0.65)'  :
+    v < 10 ? 'rgba(34,197,94,0.65)'  :
+             'rgba(59,130,246,0.75)'
+  );
 
   el.innerHTML = `
     <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;">
@@ -4501,91 +4511,113 @@ function renderJugValor(data, p) {
       ${n>1?`<span style="font-size:0.65rem;color:${lineColor};font-weight:600">${deltaStr}</span>`:''}
       <span style="font-size:0.62rem;color:var(--text3)">${n} días</span>
     </div>
-    ${n >= 2 ? `<div style="position:relative;width:100%;height:90px;margin-bottom:12px"><canvas id="${chartId}_price"></canvas></div>` : ''}
-    ${buyPrice ? `<div style="font-size:0.62rem;color:var(--text3);margin-bottom:8px;">— línea roja = tu compra · ${fmt(buyPrice)}</div>` : ''}
-    ${jForm.length ? `
-    <div style="border-top:1px solid var(--border);padding-top:10px">
-      <div style="font-family:'Figtree',sans-serif;font-size:0.58rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);margin-bottom:8px">Puntos por jornada</div>
-      <div style="position:relative;width:100%;height:100px"><canvas id="${chartId}_pts"></canvas></div>
-    </div>` : ''}
-    ${dates.length?`<div style="display:flex;justify-content:space-between;font-size:0.58rem;color:var(--text3);margin-top:4px"><span>${dates[0]?.slice(5)||''}</span><span>${dates[n-1]?.slice(5)||''}</span></div>`:''}
+    <div style="position:relative;width:100%;height:160px"><canvas id="${chartId}"></canvas></div>
+    ${buyPrice?`<div style="font-size:0.62rem;color:var(--text3);margin-top:4px">— línea roja = tu compra · ${fmt(buyPrice)}</div>`:''}
+    ${n>1?`<div style="display:flex;justify-content:space-between;font-size:0.58rem;color:var(--text3);margin-top:2px"><span>${dates[0]?.slice(5)||''}</span><span>${dates[n-1]?.slice(5)||''}</span></div>`:''}
   `;
 
-  function buildCharts() {
-    // Gráfico de precio
-    if (n >= 2) {
-      const priceLabels = dates.map((d,i) => i===0||i===n-1||i===Math.floor(n/2) ? (d?.slice(5)||'') : '');
-      new Chart(document.getElementById(chartId+'_price'), {
-        type: 'line',
-        data: {
-          labels: priceLabels,
-          datasets: [{
-            data: vals.map(v => +(v/1000000).toFixed(2)),
-            borderColor: lineColor,
-            borderWidth: 1.8,
-            pointRadius: 0,
-            tension: 0.3,
-            fill: false,
-          }, ...(buyPrice ? [{
-            data: vals.map(() => +(buyPrice/1000000).toFixed(2)),
-            borderColor: 'var(--accent)',
-            borderWidth: 1,
-            borderDash: [3,3],
-            pointRadius: 0,
-            fill: false,
-          }] : [])]
-        },
-        options: {
-          responsive: true, maintainAspectRatio: false,
-          plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => fmt(ctx.raw*1000000) } } },
-          scales: {
-            x: { grid: { color: 'rgba(255,255,255,0.04)' }, ticks: { color: '#718096', font: { size: 8 }, maxRotation: 0 } },
-            y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: lineColor, font: { size: 8 }, callback: v => v+'M' } }
-          }
-        }
+  function buildChart() {
+    const datasets = [];
+
+    // Barras de puntos (eje izquierdo)
+    if (jForm.length) {
+      datasets.push({
+        type: 'bar',
+        label: 'Puntos',
+        data: jFormCronologico.map(v => v ?? 0),
+        backgroundColor: barColors,
+        borderRadius: 3,
+        yAxisID: 'yPts',
+        order: 2,
       });
     }
 
-    // Gráfico de puntos
-    if (jForm.length) {
-      const barColors = jFormReversed.map(v =>
-        v === null || v === undefined ? 'rgba(107,114,128,0.3)' :
-        v < 0  ? 'rgba(239,68,68,0.6)'  :
-        v === 0 ? 'rgba(107,114,128,0.3)':
-        v < 6  ? 'rgba(217,119,6,0.65)' :
-        v < 10 ? 'rgba(34,197,94,0.65)' :
-                 'rgba(59,130,246,0.75)'
-      );
-      new Chart(document.getElementById(chartId+'_pts'), {
-        type: 'bar',
-        data: {
-          labels: [...jFormLabels].reverse(),
-          datasets: [{
-            data: jFormReversed.map(v => v ?? 0),
-            backgroundColor: barColors,
-            borderRadius: 3,
-          }]
-        },
-        options: {
-          responsive: true, maintainAspectRatio: false,
-          plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ctx.raw + ' pts' } } },
-          scales: {
-            x: { grid: { color: 'rgba(255,255,255,0.04)' }, ticks: { color: '#718096', font: { size: 9 } } },
-            y: { min: 0, max: Math.max(16, ...jForm.filter(v=>v!=null)) + 2,
-                 grid: { color: 'rgba(255,255,255,0.05)' },
-                 ticks: { color: '#718096', font: { size: 9 }, stepSize: 4, callback: v => v+'p' } }
-          }
-        }
+    // Línea de valor (eje derecho) — últimos N días alineados con jornadas
+    if (n >= 2) {
+      const nJ = jForm.length || 5;
+      const recentPrices = prices.slice(-Math.max(n, nJ*7));
+      // Tomar un precio por jornada (espaciado uniforme)
+      const step = Math.max(1, Math.floor(recentPrices.length / nJ));
+      const valorData = jFormCronologico.map((_, i) => {
+        const idx = Math.min(Math.round(i * (recentPrices.length-1) / (nJ-1||1)), recentPrices.length-1);
+        return +(( recentPrices[idx]?.p || 0) / 1000000).toFixed(2);
+      }).filter(v => v > 0);
+
+      if (valorData.length >= 2) {
+        datasets.push({
+          type: 'line',
+          label: 'Valor M€',
+          data: valorData.length === jFormCronologico.length ? valorData : Array(jFormCronologico.length).fill(null).map((_,i) => valorData[i]||null),
+          borderColor: '#3b82f6',
+          borderWidth: 1.5,
+          pointRadius: 2,
+          pointBackgroundColor: '#3b82f6',
+          tension: 0.3,
+          fill: false,
+          yAxisID: 'yValor',
+          order: 1,
+          spanGaps: true,
+        });
+      }
+    }
+
+    // Línea de precio de compra
+    if (buyPrice && jForm.length) {
+      datasets.push({
+        type: 'line',
+        label: 'Compra',
+        data: Array(jFormCronologico.length).fill(+(buyPrice/1000000).toFixed(2)),
+        borderColor: 'var(--accent)',
+        borderWidth: 1,
+        borderDash: [3,3],
+        pointRadius: 0,
+        fill: false,
+        yAxisID: 'yValor',
+        order: 3,
       });
     }
+
+    new Chart(document.getElementById(chartId), {
+      data: { labels: jFormLabels, datasets },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        interaction: { mode: 'index', intersect: false },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: 'rgba(15,20,32,0.95)',
+            titleColor: '#a0aec0', bodyColor: '#ffffff', padding: 8,
+            callbacks: {
+              label: ctx => ctx.datasetIndex === 0
+                ? '  Puntos: ' + (ctx.raw||0) + ' pts'
+                : '  Valor: ' + ctx.raw + 'M€'
+            }
+          }
+        },
+        scales: {
+          x: { grid: { color: 'rgba(255,255,255,0.04)' }, ticks: { color: '#718096', font: { size: 9 } } },
+          yPts: {
+            position: 'left', min: 0,
+            max: Math.max(16, ...jForm.filter(v=>v!=null&&v!==undefined)) + 2,
+            grid: { color: 'rgba(255,255,255,0.05)' },
+            ticks: { color: '#718096', font: { size: 9 }, stepSize: 4, callback: v => v+'p' }
+          },
+          yValor: {
+            position: 'right', display: n >= 2,
+            grid: { display: false },
+            ticks: { color: '#3b82f6', font: { size: 9 }, callback: v => v+'M' }
+          }
+        }
+      }
+    });
   }
 
   if (window.Chart) {
-    buildCharts();
+    buildChart();
   } else {
     const s = document.createElement('script');
     s.src = 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js';
-    s.onload = buildCharts;
+    s.onload = buildChart;
     document.head.appendChild(s);
   }
 }
@@ -4823,12 +4855,25 @@ function renderJugPanel(p){
     ? `<div class="jp-stat"><div class="jp-stat-val" style="font-size:0.82rem;color:${pjData.difEuros>0?'var(--c-good)':'var(--c-low)'}">${fmt(pjData.precioJusto)}</div><div class="jp-stat-lbl">P. Justo</div></div>`
     : '';
 
-  // Factor equipo
+  // Factor equipo con rival
   const fe = calcFactorEquipo(p.club||p.teamName||'', p);
   const feColor = fe===null?'var(--text3)':fe>=7?'var(--c-good)':fe>=5?'var(--pt)':fe>=3?'#f59e0b':'var(--c-low)';
-  const feHtml = fe !== null
-    ? `<div class="jp-stat"><div class="jp-stat-val" style="color:${feColor}">${fe.toFixed(1)}</div><div class="jp-stat-lbl">F. Equipo</div></div>`
-    : '';
+  let feHtml = '';
+  if (fe !== null) {
+    const standing = getStandingByClub(p.club||p.teamName||'');
+    const nextM = standing ? (ligaData?.nextMatches||[]).find(m => m.home.id===standing.team.id||m.away.id===standing.team.id) : null;
+    const isLocal = nextM && standing ? nextM.home.id===standing.team.id : null;
+    const rival = nextM ? (isLocal ? nextM.away : nextM.home) : null;
+    const localTxt = isLocal === true ? '🏠 Local' : isLocal === false ? '✈️ Visita' : '';
+    const rivalHtml = rival
+      ? `<div style="display:flex;align-items:center;gap:3px;margin-top:2px"><img src="${rival.crest}" style="width:14px;height:14px;object-fit:contain" onerror="this.style.display='none'"><span style="font-size:0.58rem;color:var(--text3)">${localTxt} vs ${rival.short||rival.name}</span></div>`
+      : '';
+    feHtml = `<div class="jp-stat" style="min-width:80px">
+      <div class="jp-stat-val" style="color:${feColor}">${fe.toFixed(1)}</div>
+      <div class="jp-stat-lbl">F. Equipo</div>
+      ${rivalHtml}
+    </div>`;
+  }
 
   // Stats reales
   let sfHtml = '';
