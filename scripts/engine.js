@@ -156,8 +156,16 @@ function calcEstadoMercado(player) {
 
   const jForm = (player.jForm || []).slice(0, 5);
 
+  // Distinción clave:
+  // null = no jugó por sanción/lesión/duda (justificado)
+  // 0    = no jugó por decisión técnica (señal negativa)
+  const ultimaJ     = jForm[0];
+  const penultimaJ  = jForm[1];
+  const ultimas2SinJugar = (ultimaJ === null || ultimaJ === undefined || ultimaJ === 0) &&
+                           (penultimaJ === null || penultimaJ === undefined || penultimaJ === 0);
+  const ultimaDecisionTecnica = ultimaJ === 0; // 0 exacto = banquillo por decisión técnica
+
   // 🚨 VENTA OBLIGATORIA — sin jugar 2J + precio bajando
-  const ultimas2SinJugar = jForm.slice(0, 2).every(v => v === null || v === undefined || v === 0);
   if (ultimas2SinJugar && player.trend < 0) {
     return {
       estado: 'venta', icono: '🚨', label: 'VENTA OBLIGATORIA',
@@ -166,9 +174,9 @@ function calcEstadoMercado(player) {
     };
   }
 
-  // 👁️ DESPERTAR — se evalúa ANTES de los filtros de status y jornadas
-  // Sin jugar las últimas 2J pero el mercado empieza a moverse
-  if (ultimas2SinJugar && player.trend > 10000) {
+  // 👁️ DESPERTAR — sin jugar 2J (null = lesión/sanción) pero mercado sube
+  // No aplica si la última fue decisión técnica (0)
+  if (ultimas2SinJugar && !ultimaDecisionTecnica && player.trend > 10000) {
     return {
       estado: 'despertar', icono: '👁️', label: 'DESPERTAR',
       desc: `Sin jugar las últimas 2 jornadas pero el mercado empieza a moverse (▲${Math.round(player.trend/1000)}K€ hoy). El mercado anticipa su vuelta antes que las puntuaciones.`,
@@ -176,8 +184,17 @@ function calcEstadoMercado(player) {
     };
   }
 
+  // Filtros para señales positivas
+  // 1. Si la última jornada fue decisión técnica (0) → no hay señal positiva posible
+  if (ultimaDecisionTecnica) return null;
+
   const jornadasConPuntos = jForm.filter(v => v !== null && v !== undefined && v > 0).length;
   if (jornadasConPuntos < 3) return null;
+
+  // 2. Media mínima absoluta de 3 pts/J — por debajo no hay señal positiva
+  const jFormValidos = jForm.filter(v => v !== null && v !== undefined && v >= 0);
+  const mediaJForm = jFormValidos.length > 0 ? jFormValidos.reduce((s,v) => s+v, 0) / jFormValidos.length : 0;
+  if (mediaJForm < 3) return null;
 
   const statusOk = !player.status || player.status === 'ok' || player.status === 1 || player.status === '' || player.status === 'doubt';
   if (!statusOk) return null;
