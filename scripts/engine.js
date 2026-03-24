@@ -161,8 +161,8 @@ function calcEstadoMercado(player) {
   // 0    = no jugó por decisión técnica (señal negativa)
   const ultimaJ     = jForm[0];
   const penultimaJ  = jForm[1];
-  const ultimas2SinJugar = (ultimaJ === null || ultimaJ === undefined || ultimaJ === 0) &&
-                           (penultimaJ === null || penultimaJ === undefined || penultimaJ === 0);
+  const ultimas2SinJugar = (ultimaJ === null || ultimaJ === undefined) &&
+                           (penultimaJ === null || penultimaJ === undefined);
   const ultimaDecisionTecnica = ultimaJ === 0; // 0 exacto = banquillo por decisión técnica
 
   // 🚨 VENTA OBLIGATORIA — sin jugar 2J + precio bajando
