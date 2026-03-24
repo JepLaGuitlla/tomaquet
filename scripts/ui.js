@@ -46,17 +46,17 @@ function buildRankCard(cardId, icon, title, players, valFn, valClass, subFn, col
     const img    = pid ? `./img/players/${pid}.avif` : null;
     const estado = calcEstadoMercado(p);
     const lecturaCard = estado
-      ? `<div style="font-size:0.65rem;color:var(--text3);letter-spacing:0.5px;margin-top:1px" title="${estado.desc}">${estado.icono} <span style="font-size:0.55rem;text-transform:uppercase;letter-spacing:0.8px">Lectura</span></div>`
+      ? `<div style="position:absolute;top:4px;left:4px;font-size:1.1rem;line-height:1;cursor:help;z-index:3;filter:drop-shadow(0 1px 2px rgba(0,0,0,0.5))" title="${estado.desc}">${estado.icono}</div>`
       : '';
-    return `<div class="rk-player-slot" onclick="openJugPanel(allPlayers.find(x=>x.id===${pid}))">
+    return `<div class="rk-player-slot" onclick="openJugPanel(allPlayers.find(x=>x.id===${pid}))" style="position:relative">
       ${img ? `<img class="rk-slot-img" src="${img}" onerror="this.style.display='none'">` : ''}
       <div class="rk-slot-overlay"></div>
       <div class="rk-slot-num">${i + 1}</div>
+      ${lecturaCard}
       <div class="rk-slot-val ${valClass}">${val}</div>
       <div class="rk-slot-info">
         <div class="rk-slot-name">${p.name}</div>
         <div class="rk-slot-sub">${sub}</div>
-        ${lecturaCard}
       </div>
     </div>`;
   }).join('');
