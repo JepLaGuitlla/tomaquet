@@ -48,7 +48,7 @@ function buildRankCard(cardId, icon, title, players, valFn, valClass, subFn, col
     const lecturaCard = estado
       ? `<div style="position:absolute;top:4px;left:4px;font-size:1.1rem;line-height:1;cursor:help;z-index:3;filter:drop-shadow(0 1px 2px rgba(0,0,0,0.5))" title="${estado.desc}">${estado.icono}</div>`
       : '';
-    return `<div class="rk-player-slot" onclick="openJugPanel(allPlayers.find(x=>x.id===${pid}))" style="position:relative">
+    return `<div class="rk-player-slot" onclick="openJugPanel(allPlayers.find(x=>x.id===${pid}))">
       ${img ? `<img class="rk-slot-img" src="${img}" onerror="this.style.display='none'">` : ''}
       <div class="rk-slot-overlay"></div>
       <div class="rk-slot-num">${i + 1}</div>
