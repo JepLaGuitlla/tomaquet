@@ -246,25 +246,28 @@ function calcEstadoMercado(player) {
   const mediaAnt   = anteriores.length ? anteriores.reduce((s,v)=>s+v,0) / anteriores.length : 0;
   const mejorando  = mediaRec > mediaAnt * 1.2;
 
-  // 🎭 HYPE — precio caro respecto al justo + mercado reaccionando
-  // O subida extrema (>2x umbral) con eficiencia baja o nula
-  if (mercadoReaccionando && (
+  // Media reciente real (null = 0 para el cálculo)
+  const mediaJFormReal = jForm.map(v => v === null || v === undefined ? 0 : v).reduce((s,v) => s+v, 0) / Math.max(jForm.length, 1);
+
+  // 🎭 HYPE — subida sin rendimiento real que la justifique
+  // NUNCA si la media reciente es buena (>=6) — eso es Explosión
+  if (mercadoReaccionando && mediaJFormReal < 6 && (
     estaCaroRespectoPJ ||
     (efic !== null && efic < 5) ||
     (efic === null && mom7 > umbralReaccionando * 2)
   )) {
     return {
       estado: 'hype', icono: '🎭', label: 'HYPE',
-      desc: `Subida fuerte (+${mom7.toFixed(1)}% en 7 días) sin rendimiento real que la justifique. Riesgo de corrección.`,
+      desc: `Subida fuerte (+${mom7.toFixed(1)}% en 7 días) sin rendimiento real que la justifique (media últimas 5J: ${mediaJFormReal.toFixed(1)} pts). Riesgo de corrección.`,
       colorFondo: 'rgba(239,68,68,0.1)', colorTexto: 'var(--red)',
     };
   }
 
   // 💥 EXPLOSIÓN — mercado reaccionando + rendimiento que lo justifica
-  if (mercadoReaccionando && (efic === null || efic > 5) && (hayMargen || efic > 10)) {
+  if (mercadoReaccionando && (efic === null || efic > 5) && (hayMargen || efic > 10 || mediaJFormReal >= 6)) {
     return {
       estado: 'explosion', icono: '💥', label: 'EXPLOSIÓN',
-      desc: `Subida fuerte (+${mom7.toFixed(1)}% en 7 días) respaldada por rendimiento real${efic !== null ? ` (+${efic}% sobre lo esperado)` : ''}. ${hayMargen ? `Aún hay margen de +${margenPJ?.toFixed(0)}% hasta precio justo.` : ''}`,
+      desc: `Subida fuerte (+${mom7.toFixed(1)}% en 7 días) respaldada por rendimiento real${efic !== null ? ` (+${efic}% sobre lo esperado)` : ` (media ${mediaJFormReal.toFixed(1)} pts últimas 5J)`}. ${hayMargen ? `Aún hay margen de +${margenPJ?.toFixed(0)}% hasta precio justo.` : ''}`,
       colorFondo: 'rgba(251,146,60,0.12)', colorTexto: '#fb923c',
     };
   }
