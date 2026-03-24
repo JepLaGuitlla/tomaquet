@@ -2210,7 +2210,7 @@ async function loadPlayers(){
   document.getElementById('jugadores-loading').style.display='flex';
   document.getElementById('jugadores-content').style.display='none';
   try{
-    const res=await fetch('./data.json');
+    const res=await fetch('./data.json?v=' + Date.now());
     if(!res.ok) throw new Error('data.json no encontrado (status '+res.status+')');
     const data=await res.json();
 
@@ -4269,7 +4269,7 @@ async function loadLiga(){
   document.getElementById('atab-general').style.display='none';
   try{
     if(!ligaData.standings?.length){
-      const res=await fetch('./data.json');const data=await res.json();const ll=data.laliga;
+      const res=await fetch('./data.json?v=' + Date.now());const data=await res.json();const ll=data.laliga;
       if(!ll)throw new Error('Datos de La Liga no disponibles en data.json.');
       ligaData.standings=ll.table||[];ligaData.nextMatches=ll.nextMatches||[];ligaData.recentResults=ll.recentResults||[];ligaData.season=ll.matchday||'?';ligaData.forms=ll.forms||{};
     }
