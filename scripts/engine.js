@@ -170,7 +170,7 @@ function calcEstadoMercado(player) {
   const jornadasConPuntos = jForm.filter(v => v !== null && v !== undefined && v > 0).length;
   if (jornadasConPuntos < 3) return null;
 
-  const statusOk = !player.status || player.status === 'ok' || player.status === 1 || player.status === '';
+  const statusOk = !player.status || player.status === 'ok' || player.status === 1 || player.status === '' || player.status === 'doubt';
   if (!statusOk) return null;
 
   const efic = calcEficiencia(player, getMediasEsperadas());
