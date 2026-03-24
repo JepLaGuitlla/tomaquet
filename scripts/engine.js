@@ -67,15 +67,38 @@ const SIGMA_M = 2.0;
 
 let _precioJustoCache = null;
 
+// Pesos degradados para jForm — la jornada más reciente pesa más
+const JFORM_PESOS = [1.0, 0.8, 0.6, 0.4, 0.2];
+
+// Calcula la media real combinando:
+// 60% media de temporada (pts/pj) — estable
+// 40% jForm con degradado — captura forma reciente sin cliff effect
+function calcMediaReal(player) {
+  const pj = (player.playedHome || 0) + (player.playedAway || 0);
+  const mediaTemporada = pj > 0 ? (player.pts || 0) / pj : null;
+
+  const jForm = (player.jForm || []).slice(0, 5);
+  const validos = jForm.map((v, i) => ({ v, peso: JFORM_PESOS[i] }))
+    .filter(x => x.v !== null && x.v !== undefined && x.v >= 0);
+
+  if (validos.length < 3) return mediaTemporada; // fallback a media temporada
+
+  const sumPesos = validos.reduce((s, x) => s + x.peso, 0);
+  const mediaJForm = validos.reduce((s, x) => s + x.v * x.peso, 0) / sumPesos;
+
+  if (mediaTemporada === null) return mediaJForm;
+
+  // 60% temporada + 40% jForm ponderado
+  return mediaTemporada * 0.6 + mediaJForm * 0.4;
+}
+
 function calcPrecioJusto(player) {
   const pos = (player.position || player.pos || '').split('/')[0];
   if (!pos || pos === 'MD' || pos === '?') return null;
   if (!player.price || player.price < 500000) return null;
 
-  const jFormPlayer = (player.jForm || []).filter(v => v !== null && v !== undefined && v > 0);
-  if (jFormPlayer.length < 3) return null;
-  const mediaReal = jFormPlayer.reduce((s,v) => s+v, 0) / jFormPlayer.length;
-  if (mediaReal <= 0) return null;
+  const mediaReal = calcMediaReal(player);
+  if (!mediaReal || mediaReal <= 0) return null;
 
   const precioM = player.price / 1e6;
 
@@ -84,20 +107,19 @@ function calcPrecioJusto(player) {
     const pPos = (p.position || p.pos || '').split('/')[0];
     if (pPos !== pos) return false;
     if (!p.price || p.price < 1e6) return false;
-    const jf = (p.jForm || []).filter(v => v !== null && v !== undefined && v > 0);
-    return jf.length >= 3;
+    const med = calcMediaReal(p);
+    return med !== null && med > 0;
   });
 
   if (candidatos.length < 3) return null;
 
   let sumPesosPrecio = 0, sumPesosMedia = 0, sumPesos = 0;
   candidatos.forEach(p => {
-    const pM   = p.price / 1e6;
-    const jf   = (p.jForm || []).filter(v => v !== null && v !== undefined && v > 0);
-    const med  = jf.reduce((s,v) => s+v, 0) / jf.length;
-    if (med <= 0) return;
-    const dist  = Math.abs(pM - precioM);
-    const peso  = Math.exp(-(dist * dist) / (2 * SIGMA_M * SIGMA_M));
+    const pM  = p.price / 1e6;
+    const med = calcMediaReal(p);
+    if (!med || med <= 0) return;
+    const dist = Math.abs(pM - precioM);
+    const peso = Math.exp(-(dist * dist) / (2 * SIGMA_M * SIGMA_M));
     sumPesosPrecio += pM  * peso;
     sumPesosMedia  += med * peso;
     sumPesos       += peso;
@@ -186,6 +208,22 @@ function calcEstadoMercado(player) {
   const mediaAnt   = anteriores.length ? anteriores.reduce((s,v)=>s+v,0) / anteriores.length : 0;
   const mejorando  = mediaRec > mediaAnt * 1.2;
 
+  // ── Últimas 2 jornadas sin jugar ────────────────────────────────────────────
+  const ultimas2SinJugar = jForm.slice(0, 2).every(v => v === null || v === undefined || v === 0);
+
+  // 👁️ DESPERTAR — no ha jugado las últimas 2J pero el mercado empieza a moverse
+  // Señal: el mercado anticipa la vuelta antes que las puntuaciones
+  if (ultimas2SinJugar && player.trend > 10000) {
+    return {
+      estado: 'despertar', icono: '👁️', label: 'DESPERTAR',
+      desc: `Sin jugar las últimas 2 jornadas pero el mercado empieza a moverse (▲${Math.round(player.trend/1000)}K€ hoy). El mercado anticipa su vuelta antes que las puntuaciones.`,
+      colorFondo: 'rgba(168,85,247,0.1)', colorTexto: '#a855f7',
+    };
+  }
+
+  // Las señales restantes solo aplican a jugadores que están jugando
+  if (!statusOk) return null;
+
   // 🎭 HYPE
   if (estaCaroRespectoPJ && mercadoReaccionando) {
     return {
@@ -228,6 +266,15 @@ function calcEstadoMercado(player) {
       estado: 'joya', icono: '💎', label: 'INERCIA OCULTA',
       desc: `Rinde +${efic}% sobre lo esperado para su precio. El mercado empieza a moverse (+${mom7.toFixed(1)}% en 7 días) pero aún hay margen. Precio justo estimado: ${pj ? (pj.precioJusto/1e6).toFixed(2)+'M€' : '—'}. Margen: +${margenPJ?.toFixed(0)}%.`,
       colorFondo: 'rgba(99,102,241,0.15)', colorTexto: '#818cf8',
+    };
+  }
+
+  // 📉 DESPLOME — eficiencia negativa + mercado castigando
+  if (efic !== null && efic < -10 && mom7 < -umbralDormido) {
+    return {
+      estado: 'desplome', icono: '📉', label: 'DESPLOME',
+      desc: `Rinde ${efic}% por debajo de lo esperado para su precio y el mercado lo está castigando (${mom7.toFixed(1)}% en 7 días). Riesgo de seguir bajando.`,
+      colorFondo: 'rgba(239,68,68,0.08)', colorTexto: '#f87171',
     };
   }
 
