@@ -173,8 +173,7 @@ function calcEstadoMercado(player) {
   const statusOk = !player.status || player.status === 'ok' || player.status === 1 || player.status === '' || player.status === 'doubt';
   if (!statusOk) return null;
 
-  const efic = calcEficiencia(player, getMediasEsperadas());
-  if (efic === null) return null;
+  const efic = calcEficiencia(player, getMediasEsperadas()); // puede ser null
 
   const pj      = calcPrecioJusto(player);
   const precioM = player.price / 1e6;
@@ -220,29 +219,31 @@ function calcEstadoMercado(player) {
   const mediaAnt   = anteriores.length ? anteriores.reduce((s,v)=>s+v,0) / anteriores.length : 0;
   const mejorando  = mediaRec > mediaAnt * 1.2;
 
-  // Las señales restantes solo aplican a jugadores que están jugando
-  if (!statusOk) return null;
-
-  // 🎭 HYPE
-  if (estaCaroRespectoPJ && mercadoReaccionando) {
+  // 🎭 HYPE — precio caro respecto al justo + mercado reaccionando
+  // O subida extrema (>2x umbral) con eficiencia baja o nula
+  if (mercadoReaccionando && (
+    estaCaroRespectoPJ ||
+    (efic !== null && efic < 5) ||
+    (efic === null && mom7 > umbralReaccionando * 2)
+  )) {
     return {
       estado: 'hype', icono: '🎭', label: 'HYPE',
-      desc: `El mercado ha ido muy por delante del rendimiento real. Precio actual ${Math.abs(margenPJ).toFixed(0)}% por encima de su valor justo. Riesgo de corrección.`,
+      desc: `Subida fuerte (+${mom7.toFixed(1)}% en 7 días) sin rendimiento real que la justifique. Riesgo de corrección.`,
       colorFondo: 'rgba(239,68,68,0.1)', colorTexto: 'var(--red)',
     };
   }
 
-  // 💎 INERCIA OCULTA — mercado dormido
-  if (hayMargen && mercadoDormido && efic > 10) {
+  // 💥 EXPLOSIÓN — mercado reaccionando + rendimiento que lo justifica
+  if (mercadoReaccionando && (efic === null || efic > 5) && (hayMargen || efic > 10)) {
     return {
-      estado: 'joya', icono: '💎', label: 'INERCIA OCULTA',
-      desc: `Rinde +${efic}% sobre lo esperado para su precio. El mercado aún no reacciona (+${mom7.toFixed(1)}% en 7 días). Precio justo estimado: ${pj ? (pj.precioJusto/1e6).toFixed(2)+'M€' : '—'}. Margen: +${margenPJ?.toFixed(0)}%.`,
-      colorFondo: 'rgba(99,102,241,0.15)', colorTexto: '#818cf8',
+      estado: 'explosion', icono: '💥', label: 'EXPLOSIÓN',
+      desc: `Subida fuerte (+${mom7.toFixed(1)}% en 7 días) respaldada por rendimiento real${efic !== null ? ` (+${efic}% sobre lo esperado)` : ''}. ${hayMargen ? `Aún hay margen de +${margenPJ?.toFixed(0)}% hasta precio justo.` : ''}`,
+      colorFondo: 'rgba(251,146,60,0.12)', colorTexto: '#fb923c',
     };
   }
 
-  // 📈 REBOTE
-  if (mejorando && mercadoReaccionando && efic > 0) {
+  // 📈 REBOTE — mejorando + mercado reconociéndolo
+  if (mejorando && mercadoReaccionando && (efic === null || efic > 0)) {
     return {
       estado: 'rebote', icono: '📈', label: 'REBOTE',
       desc: `Rendimiento mejorando en las últimas jornadas (ø${mediaRec.toFixed(1)} vs ø${mediaAnt.toFixed(1)} anterior). El mercado lo está reconociendo (+${mom7.toFixed(1)}% en 7 días).`,
@@ -250,22 +251,22 @@ function calcEstadoMercado(player) {
     };
   }
 
-  // 💥 EXPLOSIÓN
-  if (mercadoReaccionando && efic > 10 && hayMargen) {
-    return {
-      estado: 'explosion', icono: '💥', label: 'EXPLOSIÓN',
-      desc: `Subida fuerte (+${mom7.toFixed(1)}% en 7 días) respaldada por rendimiento real (+${efic}% sobre lo esperado). Aún hay margen de +${margenPJ?.toFixed(0)}% hasta precio justo.`,
-      colorFondo: 'rgba(251,146,60,0.12)', colorTexto: '#fb923c',
-    };
-  }
-
-  // 💎 INERCIA OCULTA — mercado medio
-  if (hayMargen && !mercadoReaccionando && efic > 10) {
-    return {
-      estado: 'joya', icono: '💎', label: 'INERCIA OCULTA',
-      desc: `Rinde +${efic}% sobre lo esperado para su precio. El mercado empieza a moverse (+${mom7.toFixed(1)}% en 7 días) pero aún hay margen. Precio justo estimado: ${pj ? (pj.precioJusto/1e6).toFixed(2)+'M€' : '—'}. Margen: +${margenPJ?.toFixed(0)}%.`,
-      colorFondo: 'rgba(99,102,241,0.15)', colorTexto: '#818cf8',
-    };
+  // 💎 INERCIA OCULTA — rinde bien, mercado dormido o medio
+  if (hayMargen && (efic === null || efic > 10)) {
+    if (mercadoDormido) {
+      return {
+        estado: 'joya', icono: '💎', label: 'INERCIA OCULTA',
+        desc: `Rinde${efic !== null ? ` +${efic}%` : ''} por encima de lo esperado para su precio. El mercado aún no reacciona (+${mom7.toFixed(1)}% en 7 días). Precio justo estimado: ${pj ? (pj.precioJusto/1e6).toFixed(2)+'M€' : '—'}. Margen: +${margenPJ?.toFixed(0)}%.`,
+        colorFondo: 'rgba(99,102,241,0.15)', colorTexto: '#818cf8',
+      };
+    }
+    if (!mercadoReaccionando) {
+      return {
+        estado: 'joya', icono: '💎', label: 'INERCIA OCULTA',
+        desc: `Rinde${efic !== null ? ` +${efic}%` : ''} por encima de lo esperado para su precio. El mercado empieza a moverse (+${mom7.toFixed(1)}% en 7 días) pero aún hay margen. Precio justo: ${pj ? (pj.precioJusto/1e6).toFixed(2)+'M€' : '—'}.`,
+        colorFondo: 'rgba(99,102,241,0.15)', colorTexto: '#818cf8',
+      };
+    }
   }
 
   // 📉 DESPLOME — eficiencia negativa + mercado castigando
