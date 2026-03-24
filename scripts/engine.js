@@ -269,11 +269,11 @@ function calcEstadoMercado(player) {
     };
   }
 
-  // 📈 REBOTE — mejorando + mercado reconociéndolo
+  // 📈 COMPRAR YA — mejorando + mercado reconociéndolo
   if (mejorando && mercadoReaccionando && (efic === null || efic > 0)) {
     return {
-      estado: 'rebote', icono: '📈', label: 'REBOTE',
-      desc: `Rendimiento mejorando en las últimas jornadas (ø${mediaRec.toFixed(1)} vs ø${mediaAnt.toFixed(1)} anterior). El mercado lo está reconociendo (+${mom7.toFixed(1)}% en 7 días).`,
+      estado: 'rebote', icono: '📈', label: 'COMPRAR YA!',
+      desc: `Rendimiento mejorando en las últimas jornadas (ø${mediaRec.toFixed(1)} vs ø${mediaAnt.toFixed(1)} anterior). El mercado lo está reconociendo (+${mom7.toFixed(1)}% en 7 días). Momento de entrar.`,
       colorFondo: 'rgba(34,197,94,0.1)', colorTexto: 'var(--green)',
     };
   }
