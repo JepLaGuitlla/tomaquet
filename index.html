@@ -122,17 +122,6 @@ main{max-width:1440px;margin:0 auto;padding:1.5rem 2rem;}
 .inicio-layout{display:grid;grid-template-columns:1fr 360px;gap:1.5rem;align-items:start;}
 @media(max-width:1100px){.inicio-layout{grid-template-columns:1fr;}}
 
-/* Jornada Banner */
-.jornada-banner{display:grid;grid-template-columns:auto auto 1fr auto auto;align-items:center;gap:2rem;background:var(--bg2);border:1px solid var(--border2);border-left:3px solid var(--accent);border-radius:4px;padding:1rem 1.5rem;margin-bottom:1.5rem;position:relative;overflow:hidden;}
-.jornada-round{font-family:'Figtree',sans-serif;}
-.jornada-round .label{font-family:'Figtree',sans-serif;font-size:0.58rem;color:var(--text3);letter-spacing:2px;text-transform:uppercase;margin-bottom:2px;}
-.jornada-round .num{font-size:3rem;font-weight:800;color:var(--accent);line-height:1;letter-spacing:0px;}
-.jornada-round .sub{font-family:'Figtree',sans-serif;font-size:0.6rem;color:var(--text3);letter-spacing:1px;text-transform:uppercase;}
-.jornada-divider{width:1px;height:48px;background:var(--border2);}
-.jornada-kpis{display:flex;gap:2.5rem;}
-.jornada-kpi .label{font-family:'Figtree',sans-serif;font-size:0.58rem;color:var(--text3);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:3px;}
-.jornada-kpi .val{font-family:'Figtree',sans-serif;font-size:1.6rem;font-weight:800;color:var(--text);letter-spacing:0px;line-height:1;}
-.jornada-kpi .val.highlight{color:var(--accent);}
 
 /* ── NOTICIAS ── */
 /* ── INICIO REDISEÑADO ──────────────────────────────────────────── */
@@ -841,7 +830,6 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
     <button class="nav-btn" onclick="showSection('liga-fantasy',this)"><span class="nav-icon">🏆</span>Liga</button>
     <button class="nav-btn" onclick="showSection('analisis',this)"><span class="nav-icon">⚡</span>Análisis</button>
     <button class="nav-btn" onclick="showSection('factorpausa',this)"><span class="nav-icon">☕</span>Factor Pausa</button>
-    <button class="nav-btn" onclick="showSection('jornada',this);loadJornada()"><span class="nav-icon">📅</span>Jornada</button>
   </nav>
 </div>
 
@@ -1686,39 +1674,6 @@ body.liga-enbas{--accent:#1d6fce;--accent2:#1558a8;--accent-dim:rgba(29,111,206,
 </div>
 
 
-<!-- ══ JORNADA ══════════════════════════════════════════════════════ -->
-<div id="jornada" class="section">
-  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.2rem;flex-wrap:wrap;gap:0.75rem;">
-    <div style="display:flex;gap:4px;">
-      <button class="blg-tab active" id="jornada-tab-tomaquet" onclick="setJornadaLiga('tomaquet',this)">🍅 Tomaquet</button>
-      <button class="blg-tab" id="jornada-tab-enbas" onclick="setJornadaLiga('enbas',this)">⛰️ EN BAS</button>
-    </div>
-    <div style="display:flex;align-items:center;gap:8px;">
-      <button onclick="cambiarJornada(-1)" style="background:none;border:1px solid var(--border);border-radius:4px;padding:4px 10px;cursor:pointer;font-size:0.8rem;color:var(--text)">←</button>
-      <span id="jornadaLabel" style="font-family:'Figtree',sans-serif;font-size:0.85rem;font-weight:700;color:var(--text);min-width:80px;text-align:center">Jornada —</span>
-      <button onclick="cambiarJornada(1)" style="background:none;border:1px solid var(--border);border-radius:4px;padding:4px 10px;cursor:pointer;font-size:0.8rem;color:var(--text)">→</button>
-    </div>
-  </div>
-  <div id="jornadaLoading" style="display:flex;align-items:center;justify-content:center;padding:3rem;color:var(--text3);font-size:0.8rem;gap:8px;">
-    <div class="spinner"></div> Cargando jornada…
-  </div>
-  <div id="jornadaContent" style="display:none;">
-    <!-- Clasificación jornada -->
-    <div class="panel liga-full" style="margin-bottom:1rem;">
-      <div class="panel-header">
-        <div class="panel-title">Clasificación de la jornada</div>
-      </div>
-      <div id="jornadaClasificacion"></div>
-    </div>
-    <!-- Enfrentamiento Sa Capritxosa -->
-    <div class="panel liga-full" id="jornadaFixturePanel" style="display:none;margin-bottom:1rem;">
-      <div class="panel-header">
-        <div class="panel-title">⚔️ Sa Capritxosa</div>
-      </div>
-      <div id="jornadaFixture"></div>
-    </div>
-  </div>
-</div>
 
 <!-- ══ LA BOLSA ══════════════════════════════════════════════════════ -->
 
