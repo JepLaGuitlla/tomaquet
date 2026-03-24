@@ -157,26 +157,31 @@ function calcEstadoMercado(player) {
   const jForm = (player.jForm || []).slice(0, 5);
 
   // Distinción clave:
-  // null = no jugó por sanción/lesión/duda (justificado)
-  // 0    = no jugó por decisión técnica (señal negativa)
+  // null = no jugó (lesión/sanción/duda/decisión técnica)
+  // 0    = jugó y puntuó 0 (peor caso)
   const ultimaJ     = jForm[0];
   const penultimaJ  = jForm[1];
-  const ultimas2SinJugar = (ultimaJ === null || ultimaJ === undefined) &&
-                           (penultimaJ === null || penultimaJ === undefined);
-  const ultimaDecisionTecnica = ultimaJ === 0; // 0 exacto = banquillo por decisión técnica
+  const ultimas2SinPuntuar = (ultimaJ === null || ultimaJ === undefined || ultimaJ <= 0) &&
+                             (penultimaJ === null || penultimaJ === undefined || penultimaJ <= 0);
+  const ultimas2SinJugar   = (ultimaJ === null || ultimaJ === undefined) &&
+                             (penultimaJ === null || penultimaJ === undefined);
+  const ultimaDecisionTecnica = ultimaJ === 0;
 
-  // 🚨 VENTA OBLIGATORIA — sin jugar 2J + precio bajando
-  if (ultimas2SinJugar && player.trend < 0) {
+  // 🚨 VENTA OBLIGATORIA — sin puntuar 2J + precio bajando
+  if (ultimas2SinPuntuar && player.trend < 0) {
+    const jugoYFallo = ultimaJ === 0 || penultimaJ === 0;
+    const descVenta = jugoYFallo
+      ? `0 puntos en las últimas 2 jornadas y el precio cae (▼${Math.abs(Math.round(player.trend/1000))}K€ hoy). Rendimiento nulo con precio cayendo — vende ya.`
+      : `Sin datos de las últimas 2 jornadas y el precio sigue bajando (▼${Math.abs(Math.round(player.trend/1000))}K€ hoy). Vende antes de que siga cayendo.`;
     return {
       estado: 'venta', icono: '🚨', label: 'VENTA OBLIGATORIA',
-      desc: `Sin jugar las últimas 2 jornadas y el precio sigue bajando (▼${Math.abs(Math.round(player.trend/1000))}K€ hoy). Vende antes de que siga cayendo.`,
+      desc: descVenta,
       colorFondo: 'rgba(239,68,68,0.15)', colorTexto: '#ef4444',
     };
   }
 
-  // 👁️ DESPERTAR — sin jugar 2J (null = lesión/sanción) pero mercado sube
-  // No aplica si la última fue decisión técnica (0)
-  if (ultimas2SinJugar && !ultimaDecisionTecnica && player.trend > 10000) {
+  // 👁️ DESPERTAR — sin jugar 2J (null) pero mercado sube
+  if (ultimas2SinJugar && player.trend > 10000) {
     return {
       estado: 'despertar', icono: '👁️', label: 'DESPERTAR',
       desc: `Sin jugar las últimas 2 jornadas pero el mercado empieza a moverse (▲${Math.round(player.trend/1000)}K€ hoy). El mercado anticipa su vuelta antes que las puntuaciones.`,
@@ -185,7 +190,7 @@ function calcEstadoMercado(player) {
   }
 
   // Filtros para señales positivas
-  // 1. Si la última jornada fue decisión técnica (0) → no hay señal positiva posible
+  // Si la última jornada fue 0 (jugó pero no puntuó) → no hay señal positiva
   if (ultimaDecisionTecnica) return null;
 
   const jornadasConPuntos = jForm.filter(v => v !== null && v !== undefined && v > 0).length;
