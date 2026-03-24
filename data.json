@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-24T08:06:22.671Z",
+  "updatedAt": "2026-03-24T15:46:08.960Z",
   "players": [
     {
       "id": 11,
@@ -12011,9 +12011,9 @@
           12,
           7
         ],
-        "teamSize": 17,
-        "teamValue": 104490000,
-        "teamValueInc": 280000,
+        "teamSize": 16,
+        "teamValue": 102760000,
+        "teamValueInc": 320000,
         "position": 4,
         "role": ""
       },
@@ -12247,8 +12247,8 @@
       "name": "Soulands Rangers",
       "manager": "Soulands Rangers",
       "points": 1409,
-      "value": 104490000,
-      "trend": 280000,
+      "value": 102760000,
+      "trend": 320000,
       "players": []
     },
     {
@@ -12346,7 +12346,7 @@
     "teamId": 6541195,
     "name": "🦊",
     "points": 1437,
-    "balance": 2224763,
+    "balance": 724763,
     "lineup": {
       "type": "3-4-3",
       "date": 1774282592,
@@ -12479,8 +12479,8 @@
       {
         "id": 39885,
         "buyPrice": 162532,
-        "clause": 880000000000,
-        "invested": 0,
+        "clause": 880002250000,
+        "invested": 1500000,
         "buyDate": 1770616993
       }
     ],
@@ -12506,6 +12506,21 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1774345441,
+      "content": [
+        {
+          "player": 35901,
+          "from": {
+            "id": 8068002,
+            "name": "Soulands Rangers",
+            "icon": "i/u/8068002.png?v=69"
+          },
+          "amount": 1695600
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1774338194,
@@ -13010,9 +13025,9 @@
           9,
           15
         ],
-        "teamSize": 19,
-        "teamValue": 51230000,
-        "teamValueInc": 450000,
+        "teamSize": 18,
+        "teamValue": 49810000,
+        "teamValueInc": 490000,
         "position": 17,
         "positionInc": 1,
         "role": ""
@@ -13225,8 +13240,8 @@
       "name": "Mindundis",
       "manager": "Mindundis",
       "points": 1052,
-      "value": 51230000,
-      "trend": 450000,
+      "value": 49810000,
+      "trend": 490000,
       "players": []
     },
     {
@@ -13425,6 +13440,21 @@
   "boardEnBas": [
     {
       "type": "transfer",
+      "date": 1774341435,
+      "content": [
+        {
+          "player": 755,
+          "from": {
+            "id": 6579330,
+            "name": "Mindundis",
+            "icon": "i/u/6579330.png?v=66"
+          },
+          "amount": 1486700
+        }
+      ]
+    },
+    {
+      "type": "transfer",
       "date": 1774335391,
       "content": [
         {
@@ -13565,21 +13595,6 @@
             "icon": "icons/34.png"
           },
           "amount": 255100
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1774261455,
-      "content": [
-        {
-          "player": 11800,
-          "from": {
-            "id": 6580386,
-            "name": "Lamine i els 7 nans 👯‍♀️",
-            "icon": "i/u/6580386.png?v=10"
-          },
-          "amount": 5360800
         }
       ]
     }
@@ -14740,9 +14755,9 @@
       "matchDate": "2026-04-11T12:00:00Z"
     },
     "Levante": {
-      "winProb": 0.3519175729822553,
-      "drawProb": 0.30944476244991415,
-      "loseProb": 0.33863766456783057,
+      "winProb": 0.358680714612918,
+      "drawProb": 0.30920751259734314,
+      "loseProb": 0.33211177278973886,
       "over25Prob": 0.5,
       "isHome": true,
       "opponent": "Getafe",
@@ -14758,9 +14773,9 @@
       "matchDate": "2026-04-12T14:15:00Z"
     },
     "Real Madrid": {
-      "winProb": 0.7572544642857143,
-      "drawProb": 0.16043526785714285,
-      "loseProb": 0.08231026785714286,
+      "winProb": 0.7748409154745416,
+      "drawProb": 0.14891473844276346,
+      "loseProb": 0.0762443460826949,
       "over25Prob": 0.5,
       "isHome": true,
       "opponent": "Girona",
@@ -14776,9 +14791,9 @@
       "matchDate": "2026-04-12T12:00:00Z"
     },
     "Espanyol": {
-      "winProb": 0.09932985852568874,
-      "drawProb": 0.12330603127326878,
-      "loseProb": 0.7773641102010423,
+      "winProb": 0.09395248380129587,
+      "drawProb": 0.12311015118790494,
+      "loseProb": 0.782937365010799,
       "over25Prob": 0.5,
       "isHome": false,
       "opponent": "Barcelona",
@@ -14794,18 +14809,18 @@
       "matchDate": "2026-04-11T19:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.7773641102010423,
-      "drawProb": 0.12330603127326878,
-      "loseProb": 0.09932985852568874,
+      "winProb": 0.782937365010799,
+      "drawProb": 0.12311015118790494,
+      "loseProb": 0.09395248380129587,
       "over25Prob": 0.5,
       "isHome": true,
       "opponent": "Espanyol",
       "matchDate": "2026-04-11T16:30:00Z"
     },
     "Getafe": {
-      "winProb": 0.33863766456783057,
-      "drawProb": 0.30944476244991415,
-      "loseProb": 0.3519175729822553,
+      "winProb": 0.33211177278973886,
+      "drawProb": 0.30920751259734314,
+      "loseProb": 0.358680714612918,
       "over25Prob": 0.5,
       "isHome": false,
       "opponent": "Levante",
@@ -14875,9 +14890,9 @@
       "matchDate": "2026-04-12T12:00:00Z"
     },
     "Girona": {
-      "winProb": 0.08231026785714286,
-      "drawProb": 0.16043526785714285,
-      "loseProb": 0.7572544642857143,
+      "winProb": 0.0762443460826949,
+      "drawProb": 0.14891473844276346,
+      "loseProb": 0.7748409154745416,
       "over25Prob": 0.5,
       "isHome": false,
       "opponent": "Real Madrid",
@@ -14895,82 +14910,82 @@
   },
   "news": [
     {
-      "title": "Los sancionados de LaLiga para la jornada 30",
-      "link": "https://www.jornadaperfecta.com/blog/sancionados-laliga-j30-25-26/",
-      "date": "Tue, 24 Mar 2026 08:00:49 +0000",
-      "img": "https://cdn.biwenger.com/i/t/7.png",
+      "title": "Oficial: Griezmann abandonará el Atlético de Madrid este verano",
+      "link": "https://www.jornadaperfecta.com/blog/oficial-griezmann-salida-atletico-madrid/",
+      "date": "Tue, 24 Mar 2026 14:23:02 +0000",
+      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2764.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Cinco noticias fantasy para antes de irte a dormir",
-      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-23-3-26/",
-      "date": "Mon, 23 Mar 2026 22:00:23 +0000",
-      "img": "https://cdn.biwenger.com/i/t/1.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Chollos Fantasy que no puedes dejar escapar durante el parón de selecciones",
-      "link": "https://www.jornadaperfecta.com/blog/chollos-fantasy-biwenger-paron-marzo-26/",
-      "date": "Mon, 23 Mar 2026 20:00:41 +0000",
-      "img": "https://cdn.biwenger.com/i/t/19.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Se descarta lesión de Gayà en el pómulo",
-      "link": "https://www.jornadaperfecta.com/blog/gaya-golpe-cabeza-valencia/",
-      "date": "Mon, 23 Mar 2026 18:20:05 +0000",
-      "img": "https://cdn.biwenger.com/i/t/18.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Ángel Ortiz aparece en cabestrillo por una subluxación",
-      "link": "https://www.jornadaperfecta.com/blog/angel-ortiz-subluxacion-clavicula-26/",
-      "date": "Mon, 23 Mar 2026 18:18:39 +0000",
+      "title": "La vuelta de Lo Celso en clave fantasy: ¿chollo en el Real Betis?",
+      "link": "https://www.jornadaperfecta.com/blog/lo-celso-vuelta-fantasy-real-betis/",
+      "date": "Tue, 24 Mar 2026 14:00:28 +0000",
       "img": "https://cdn.biwenger.com/i/t/87.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Lamine Yamal no se ejercita en el primer entrenamiento de España",
+      "link": "https://www.jornadaperfecta.com/blog/lamine-yamal-gestion-cargas-espana/",
+      "date": "Tue, 24 Mar 2026 13:39:41 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Balde ya toca balón y Eric García se ejercita al margen",
+      "link": "https://www.jornadaperfecta.com/blog/balde-recuperacion-estado-j30/",
+      "date": "Tue, 24 Mar 2026 13:05:48 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Take Kubo repite con el grupo. ¿De vuelta tras el parón?",
+      "link": "https://www.jornadaperfecta.com/blog/kubo-fecha-vuelta-real-sociedad/",
+      "date": "Tue, 24 Mar 2026 13:03:05 +0000",
+      "img": "https://cdn.biwenger.com/i/t/13.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Expulsión de Valverde: posible sanción y recurso del Madrid",
+      "link": "https://www.jornadaperfecta.com/blog/valverde-sancion-roja-derbi/",
+      "date": "Tue, 24 Mar 2026 12:43:28 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Chollos LaLiga Fantasy: Fichajes Baratos y Rentables para el parón",
+      "link": "https://www.jornadaperfecta.com/blog/chollos-laliga-fantasy-paron-marzo-26/",
+      "date": "Tue, 24 Mar 2026 12:00:31 +0000",
+      "img": "https://cdn.biwenger.com/i/t/10.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Eric García descansa tras sus molestias. ¿Sigue siendo interesante en fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/eric-garcia-analisis-fantasy-paron-marzo-26/",
+      "date": "Tue, 24 Mar 2026 10:00:26 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/03/image-2026-03-23T204157.640.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Se descarta la lesión de Radu: parte médico oficial",
+      "link": "https://www.jornadaperfecta.com/blog/ionut-radu-parte-medico-celta/",
+      "date": "Tue, 24 Mar 2026 08:07:50 +0000",
+      "img": "https://cdn.biwenger.com/i/t/5.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
       "title": "Lista de compras fantasy para el parón de selecciones",
       "link": "https://www.jornadaperfecta.com/blog/compras-fantasy-paron-marzo-26/",
-      "date": "Mon, 23 Mar 2026 18:00:30 +0000",
+      "date": "Tue, 24 Mar 2026 08:05:30 +0000",
       "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "El Athletic espera recuperar cinco jugadores, incluido Nico Williams",
-      "link": "https://www.jornadaperfecta.com/blog/nico-williams-vuelta-pubalgia-26/",
-      "date": "Mon, 23 Mar 2026 17:07:54 +0000",
-      "img": "https://cdn.biwenger.com/i/t/1.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Take Kubo ya entrena con el grupo. ¿De vuelta tras el parón?",
-      "link": "https://www.jornadaperfecta.com/blog/kubo-fecha-vuelta-real-sociedad/",
-      "date": "Mon, 23 Mar 2026 16:25:05 +0000",
-      "img": "https://cdn.biwenger.com/i/t/13.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "El regreso de Militao, ¿el mejor fichaje del Real Madrid?",
-      "link": "https://www.jornadaperfecta.com/blog/militao-vuelta-fantasy-real-madrid/",
-      "date": "Mon, 23 Mar 2026 16:00:32 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "La gran oportunidad de Lunin. ¿Chollazo de final de temporada?",
-      "link": "https://www.jornadaperfecta.com/blog/lunin-analisis-lesion-courtois-26/",
-      "date": "Mon, 23 Mar 2026 14:00:00 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/11/Thibaut-Courtois-Real-Madrid.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -14979,7 +14994,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-03-24T08:06:20.280Z",
+    "updatedAt": "2026-03-24T15:46:06.818Z",
     "players": [
       {
         "id": "3374",
