@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-24T20:00:36.400Z",
+  "updatedAt": "2026-03-25T05:16:06.896Z",
   "players": [
     {
       "id": 11,
@@ -12183,9 +12183,9 @@
           13,
           9
         ],
-        "teamSize": 15,
-        "teamValue": 54190000,
-        "teamValueInc": 310000,
+        "teamSize": 14,
+        "teamValue": 52670000,
+        "teamValueInc": 330000,
         "lastTrophy": {
           "type": "league",
           "position": 3,
@@ -12328,8 +12328,8 @@
       "name": "Tata Martini",
       "manager": "Tata Martini",
       "points": 1178,
-      "value": 54190000,
-      "trend": 310000,
+      "value": 52670000,
+      "trend": 330000,
       "players": []
     },
     {
@@ -12346,7 +12346,7 @@
     "teamId": 6541195,
     "name": "🦊",
     "points": 1437,
-    "balance": 971063,
+    "balance": 771063,
     "lineup": {
       "type": "3-4-3",
       "date": 1774370793,
@@ -12472,8 +12472,8 @@
       {
         "id": 39885,
         "buyPrice": 162532,
-        "clause": 880002250000,
-        "invested": 1500000,
+        "clause": 880002550000,
+        "invested": 1700000,
         "buyDate": 1770616993
       }
     ],
@@ -12493,6 +12493,21 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1774395460,
+      "content": [
+        {
+          "player": 38308,
+          "from": {
+            "id": 12713493,
+            "name": "Tata Martini",
+            "icon": "i/u/12713493.png"
+          },
+          "amount": 1581000
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1774370703,
@@ -12580,87 +12595,6 @@
             "icon": "i/u/148051.png?v=39"
           },
           "amount": 2033000
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1774332257,
-      "content": [
-        {
-          "player": 31020,
-          "to": {
-            "id": 8070044,
-            "name": "CA CABA JUNIORS",
-            "icon": "i/u/8070044.png?v=63"
-          },
-          "amount": 839000,
-          "bids": [
-            {
-              "user": {
-                "id": 12696899,
-                "name": "CIGALERU",
-                "icon": "i/u/12696899.png"
-              },
-              "amount": 831060
-            },
-            {
-              "user": {
-                "id": 11520975,
-                "name": "Morankus FC",
-                "icon": "i/u/11520975.png?v=81"
-              },
-              "amount": 810000
-            }
-          ]
-        },
-        {
-          "player": 38178,
-          "to": {
-            "id": 12696899,
-            "name": "CIGALERU",
-            "icon": "i/u/12696899.png"
-          },
-          "amount": 824380,
-          "bids": [
-            {
-              "user": {
-                "id": 11521196,
-                "name": "Hufflepuff 🍋",
-                "icon": "i/u/11521196.png?v=57"
-              },
-              "amount": 760009
-            },
-            {
-              "user": {
-                "id": 8068002,
-                "name": "Soulands Rangers",
-                "icon": "i/u/8068002.png?v=69"
-              },
-              "amount": 680000
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1774306573,
-      "content": [
-        {
-          "player": 38958,
-          "from": {
-            "id": 12713493,
-            "name": "Tata Martini",
-            "icon": "i/u/12713493.png"
-          },
-          "to": {
-            "id": 148051,
-            "name": "Zaza Pachulia",
-            "icon": "i/u/148051.png?v=39"
-          },
-          "amount": 6885000,
-          "type": "clause"
         }
       ]
     }
@@ -13370,7 +13304,7 @@
       {
         "id": 34541,
         "buyPrice": 380000,
-        "clause": 525000,
+        "clause": 0,
         "invested": 0,
         "buyDate": 1773209125
       },
@@ -14777,9 +14711,9 @@
       "matchDate": "2026-04-12T14:15:00Z"
     },
     "Real Madrid": {
-      "winProb": 0.7748409154745416,
-      "drawProb": 0.14891473844276346,
-      "loseProb": 0.0762443460826949,
+      "winProb": 0.8034806910569106,
+      "drawProb": 0.13857130758807587,
+      "loseProb": 0.05794800135501355,
       "over25Prob": 0.5,
       "isHome": true,
       "opponent": "Girona",
@@ -14894,9 +14828,9 @@
       "matchDate": "2026-04-12T12:00:00Z"
     },
     "Girona": {
-      "winProb": 0.0762443460826949,
-      "drawProb": 0.14891473844276346,
-      "loseProb": 0.7748409154745416,
+      "winProb": 0.05794800135501355,
+      "drawProb": 0.13857130758807587,
+      "loseProb": 0.8034806910569106,
       "over25Prob": 0.5,
       "isHome": false,
       "opponent": "Real Madrid",
@@ -14914,6 +14848,14 @@
   },
   "news": [
     {
+      "title": "Cinco noticias fantasy para antes de irte a dormir",
+      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-24-3-26/",
+      "date": "Tue, 24 Mar 2026 22:00:43 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "TOP Porteros que debes fichar en este parón de selecciones",
       "link": "https://www.jornadaperfecta.com/blog/top-porteros-fantasy-paron-marzo-26/",
       "date": "Tue, 24 Mar 2026 19:50:15 +0000",
@@ -14925,7 +14867,7 @@
       "title": "Lista de ventas fantasy para el parón de selecciones",
       "link": "https://www.jornadaperfecta.com/blog/ventas-fantasy-paron-marzo-26/",
       "date": "Tue, 24 Mar 2026 17:56:35 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
@@ -14934,6 +14876,14 @@
       "link": "https://www.jornadaperfecta.com/blog/luis-garcia-plaza-sevilla-anuncio-26/",
       "date": "Tue, 24 Mar 2026 17:21:21 +0000",
       "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Lamine Yamal no se ejercita en el primer entrenamiento de España",
+      "link": "https://www.jornadaperfecta.com/blog/lamine-yamal-gestion-cargas-espana/",
+      "date": "Tue, 24 Mar 2026 16:39:41 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
@@ -14976,29 +14926,13 @@
       "img": "https://cdn.biwenger.com/i/t/87.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Lamine Yamal no se ejercita en el primer entrenamiento de España",
-      "link": "https://www.jornadaperfecta.com/blog/lamine-yamal-gestion-cargas-espana/",
-      "date": "Tue, 24 Mar 2026 13:39:41 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Balde ya toca balón y Eric García se ejercita al margen",
-      "link": "https://www.jornadaperfecta.com/blog/balde-recuperacion-estado-j30/",
-      "date": "Tue, 24 Mar 2026 13:05:48 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-03-24T20:00:36.400Z",
+    "updatedAt": "2026-03-25T05:16:04.477Z",
     "players": [
       {
         "id": "3374",
