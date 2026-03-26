@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-26T15:57:55.515Z",
+  "updatedAt": "2026-03-26T19:59:36.886Z",
   "players": [
     {
       "id": 11,
@@ -12010,9 +12010,9 @@
           1,
           6
         ],
-        "teamSize": 15,
-        "teamValue": 80990000,
-        "teamValueInc": 730000,
+        "teamSize": 14,
+        "teamValue": 77410000,
+        "teamValueInc": 550000,
         "position": 3
       },
       {
@@ -12199,9 +12199,9 @@
           13,
           9
         ],
-        "teamSize": 13,
-        "teamValue": 52060000,
-        "teamValueInc": 490000,
+        "teamSize": 14,
+        "teamValue": 55640000,
+        "teamValueInc": 670000,
         "lastTrophy": {
           "type": "league",
           "position": 3,
@@ -12254,8 +12254,8 @@
       "name": "🦊",
       "manager": "🦊",
       "points": 1437,
-      "value": 80990000,
-      "trend": 730000,
+      "value": 77410000,
+      "trend": 550000,
       "players": []
     },
     {
@@ -12344,8 +12344,8 @@
       "name": "Tata Martini",
       "manager": "Tata Martini",
       "points": 1178,
-      "value": 52060000,
-      "trend": 490000,
+      "value": 55640000,
+      "trend": 670000,
       "players": []
     },
     {
@@ -12362,10 +12362,10 @@
     "teamId": 6541195,
     "name": "🦊",
     "points": 1437,
-    "balance": 771063,
+    "balance": 6396063,
     "lineup": {
       "type": "3-4-3",
-      "date": 1774453501,
+      "date": 1774554953,
       "playersID": [
         17021,
         10155,
@@ -12376,24 +12376,17 @@
         39885,
         25127,
         37451,
-        3159,
+        39431,
         26271
       ],
       "reservesID": [
         null,
         null,
-        39431,
+        null,
         27945
       ]
     },
     "players": [
-      {
-        "id": 3159,
-        "buyPrice": 3750000,
-        "clause": 5625000,
-        "invested": 0,
-        "buyDate": 1773949859
-      },
       {
         "id": 1908,
         "buyPrice": 2235666,
@@ -12497,6 +12490,27 @@
   },
   "boardTomaquet": [
     {
+      "type": "transfer",
+      "date": 1774554664,
+      "content": [
+        {
+          "player": 3159,
+          "from": {
+            "id": 6541195,
+            "name": "🦊",
+            "icon": "i/u/6541195.png?v=17"
+          },
+          "to": {
+            "id": 12713493,
+            "name": "Tata Martini",
+            "icon": "i/u/12713493.png"
+          },
+          "amount": 5625000,
+          "type": "clause"
+        }
+      ]
+    },
+    {
       "type": "market",
       "date": 1774504923,
       "content": [
@@ -12599,21 +12613,6 @@
             "icon": "i/u/8070044.png?v=63"
           },
           "amount": 3327600
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1774395460,
-      "content": [
-        {
-          "player": 38308,
-          "from": {
-            "id": 12713493,
-            "name": "Tata Martini",
-            "icon": "i/u/12713493.png"
-          },
-          "amount": 1581000
         }
       ]
     }
@@ -14768,9 +14767,9 @@
       "matchDate": "2026-04-11T16:30:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.4476856072115872,
-      "drawProb": 0.269928086701104,
-      "loseProb": 0.2823863060873088,
+      "winProb": 0.4496092967341215,
+      "drawProb": 0.271087958324985,
+      "loseProb": 0.27930274494089363,
       "over25Prob": 0.5128205128205129,
       "isHome": false,
       "opponent": "Sevilla",
@@ -14795,9 +14794,9 @@
       "matchDate": "2026-04-13T19:00:00Z"
     },
     "Athletic Bilbao": {
-      "winProb": 0.40875912408759124,
-      "drawProb": 0.26277372262773724,
-      "loseProb": 0.3284671532846716,
+      "winProb": 0.40633245382585753,
+      "drawProb": 0.2612137203166227,
+      "loseProb": 0.3324538258575198,
       "over25Prob": 0.5494505494505494,
       "isHome": true,
       "opponent": "Villarreal",
@@ -14831,9 +14830,9 @@
       "matchDate": "2026-04-12T16:30:00Z"
     },
     "Sevilla": {
-      "winProb": 0.2823863060873088,
-      "drawProb": 0.269928086701104,
-      "loseProb": 0.4476856072115872,
+      "winProb": 0.27930274494089363,
+      "drawProb": 0.271087958324985,
+      "loseProb": 0.4496092967341215,
       "over25Prob": 0.5128205128205129,
       "isHome": true,
       "opponent": "Atlético Madrid",
@@ -14867,9 +14866,9 @@
       "matchDate": "2026-04-10T19:00:00Z"
     },
     "Villarreal": {
-      "winProb": 0.3284671532846716,
-      "drawProb": 0.26277372262773724,
-      "loseProb": 0.40875912408759124,
+      "winProb": 0.3324538258575198,
+      "drawProb": 0.2612137203166227,
+      "loseProb": 0.40633245382585753,
       "over25Prob": 0.5494505494505494,
       "isHome": false,
       "opponent": "Athletic Bilbao",
@@ -14878,10 +14877,34 @@
   },
   "news": [
     {
+      "title": "Lesionados a recuperar en el parón de marzo",
+      "link": "https://www.jornadaperfecta.com/blog/lesionados-recuperar-paron-marzo-26/",
+      "date": "Thu, 26 Mar 2026 17:20:12 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Antony sigue un plan específico para solucionar sus problemas de pubalgia",
       "link": "https://www.jornadaperfecta.com/blog/antony-plan-especifico-pubalgia-paron/",
-      "date": "Thu, 26 Mar 2026 15:05:31 +0000",
+      "date": "Thu, 26 Mar 2026 17:15:31 +0000",
       "img": "https://cdn.biwenger.com/i/t/87.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Yeray volverá en la jornada 30 tras casi 1 año de sanción",
+      "link": "https://www.jornadaperfecta.com/blog/yeray-vuelta-sancion-athletic/",
+      "date": "Thu, 26 Mar 2026 17:10:14 +0000",
+      "img": "https://cdn.biwenger.com/i/t/1.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Jutglà, en racha goleadora: ¿chollo fantasy en el Celta?",
+      "link": "https://www.jornadaperfecta.com/blog/jutgla-chollo-fantasy-celta/",
+      "date": "Thu, 26 Mar 2026 16:00:42 +0000",
+      "img": "https://cdn.biwenger.com/i/t/5.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
@@ -14926,34 +14949,10 @@
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Lesionados a recuperar en el parón de marzo",
-      "link": "https://www.jornadaperfecta.com/blog/lesionados-recuperar-paron-marzo-26/",
-      "date": "Thu, 26 Mar 2026 12:00:12 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
       "title": "Carlos Álvarez eleva las cargas. ¿Vuelve en la Jornada 30?",
       "link": "https://www.jornadaperfecta.com/blog/carlos-alvarez-estado-j30-25-26/",
       "date": "Thu, 26 Mar 2026 11:58:42 +0000",
       "img": "https://cdn.biwenger.com/i/t/10.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Claudio Echeverri sufre una leve lesión de tobillo. ¿Llega a la Jornada 30?",
-      "link": "https://www.jornadaperfecta.com/blog/claudio-echeverri-molestias-tobillo-26/",
-      "date": "Thu, 26 Mar 2026 11:42:06 +0000",
-      "img": "https://cdn.biwenger.com/i/t/289.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Jan Oblak aún no entrena en una sesión aún sin Pubill y Mendoza",
-      "link": "https://www.jornadaperfecta.com/blog/oblak-estado-j30-25-26/",
-      "date": "Thu, 26 Mar 2026 11:20:05 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -14962,7 +14961,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-03-26T15:57:54.118Z",
+    "updatedAt": "2026-03-26T19:59:34.848Z",
     "players": [
       {
         "id": "3374",
