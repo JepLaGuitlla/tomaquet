@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-25T19:57:31.109Z",
+  "updatedAt": "2026-03-26T05:50:48.915Z",
   "players": [
     {
       "id": 11,
@@ -12199,9 +12199,9 @@
           13,
           9
         ],
-        "teamSize": 14,
-        "teamValue": 52980000,
-        "teamValueInc": 310000,
+        "teamSize": 13,
+        "teamValue": 51570000,
+        "teamValueInc": 320000,
         "lastTrophy": {
           "type": "league",
           "position": 3,
@@ -12344,8 +12344,8 @@
       "name": "Tata Martini",
       "manager": "Tata Martini",
       "points": 1178,
-      "value": 52980000,
-      "trend": 310000,
+      "value": 51570000,
+      "trend": 320000,
       "players": []
     },
     {
@@ -12511,6 +12511,21 @@
   "boardTomaquet": [
     {
       "type": "transfer",
+      "date": 1774480325,
+      "content": [
+        {
+          "player": 38493,
+          "from": {
+            "id": 12713493,
+            "name": "Tata Martini",
+            "icon": "i/u/12713493.png"
+          },
+          "amount": 1390500
+        }
+      ]
+    },
+    {
+      "type": "transfer",
       "date": 1774421521,
       "content": [
         {
@@ -12551,42 +12566,6 @@
             "icon": "i/u/6541195.png?v=17"
           },
           "amount": 246300
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1774345441,
-      "content": [
-        {
-          "player": 35901,
-          "from": {
-            "id": 8068002,
-            "name": "Soulands Rangers",
-            "icon": "i/u/8068002.png?v=69"
-          },
-          "amount": 1695600
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1774338194,
-      "content": [
-        {
-          "player": 27059,
-          "from": {
-            "id": 12697101,
-            "name": "INDOMABLE FC",
-            "icon": "i/u/11757390.png"
-          },
-          "to": {
-            "id": 12713493,
-            "name": "Tata Martini",
-            "icon": "i/u/12713493.png"
-          },
-          "amount": 1725000,
-          "type": "clause"
         }
       ]
     }
@@ -14806,6 +14785,22 @@
   },
   "news": [
     {
+      "title": "Cinco noticias fantasy para antes de irte a dormir",
+      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-25-3-26/",
+      "date": "Wed, 25 Mar 2026 22:00:22 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "TOP Defensas que debes fichar en este parón de selecciones",
+      "link": "https://www.jornadaperfecta.com/blog/top-defensas-fantasy-paron-marzo-26/",
+      "date": "Wed, 25 Mar 2026 20:00:14 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Dani Ceballos vuelve a entrenar en el Real Madrid",
       "link": "https://www.jornadaperfecta.com/blog/dani-ceballos-vuelta-lesion-26/",
       "date": "Wed, 25 Mar 2026 18:40:13 +0000",
@@ -14868,29 +14863,13 @@
       "img": "https://cdn.biwenger.com/i/t/1.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "La desaparición de Marc Pubill. ¿Recomendamos su venta fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/marc-pubill-analisis-paron-marzo-26/",
-      "date": "Wed, 25 Mar 2026 16:00:05 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/11/Le-Normand-Atletico-de-Madrid-fantasy.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Ya se conoce la sanción a Fede Valverde",
-      "link": "https://www.jornadaperfecta.com/blog/valverde-sancion-roja-derbi/",
-      "date": "Wed, 25 Mar 2026 15:50:28 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-03-25T19:57:28.515Z",
+    "updatedAt": "2026-03-26T05:50:47.499Z",
     "players": [
       {
         "id": "3374",
