@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-27T14:44:16.175Z",
+  "updatedAt": "2026-03-27T19:53:26.247Z",
   "players": [
     {
       "id": 11,
@@ -12362,10 +12362,10 @@
     "teamId": 6541195,
     "name": "🦊",
     "points": 1437,
-    "balance": 4481808,
+    "balance": 3781808,
     "lineup": {
       "type": "3-4-3",
-      "date": 1774608331,
+      "date": 1774639921,
       "playersID": [
         17021,
         10155,
@@ -12397,8 +12397,8 @@
       {
         "id": 6837,
         "buyPrice": 8055000,
-        "clause": 13282500,
-        "invested": 800000,
+        "clause": 14332500,
+        "invested": 1500000,
         "buyDate": 1772905346
       },
       {
@@ -12623,82 +12623,6 @@
           },
           "amount": 5625000,
           "type": "clause"
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1774504923,
-      "content": [
-        {
-          "player": 26994,
-          "to": {
-            "id": 11521196,
-            "name": "Hufflepuff 🍋",
-            "icon": "i/u/11521196.png?v=57"
-          },
-          "amount": 3245009,
-          "bids": [
-            {
-              "user": {
-                "id": 6541195,
-                "name": "🦊",
-                "icon": "i/u/6541195.png?v=17"
-              },
-              "amount": 3100000
-            },
-            {
-              "user": {
-                "id": 8070044,
-                "name": "CA CABA JUNIORS",
-                "icon": "i/u/8070044.png?v=63"
-              },
-              "amount": 3051445
-            },
-            {
-              "user": {
-                "id": 12697101,
-                "name": "INDOMABLE FC",
-                "icon": "i/u/11757390.png"
-              },
-              "amount": 2333000
-            }
-          ]
-        },
-        {
-          "player": 2597,
-          "to": {
-            "id": 8068427,
-            "name": "Albertini",
-            "icon": "i/u/8068427.png"
-          },
-          "amount": 14840000,
-          "bids": [
-            {
-              "user": {
-                "id": 11521196,
-                "name": "Hufflepuff 🍋",
-                "icon": "i/u/11521196.png?v=57"
-              },
-              "amount": 13008099
-            },
-            {
-              "user": {
-                "id": 6541195,
-                "name": "🦊",
-                "icon": "i/u/6541195.png?v=17"
-              },
-              "amount": 12456366
-            },
-            {
-              "user": {
-                "id": 8070044,
-                "name": "CA CABA JUNIORS",
-                "icon": "i/u/8070044.png?v=63"
-              },
-              "amount": 12240000
-            }
-          ]
         }
       ]
     }
@@ -13422,7 +13346,7 @@
       {
         "id": 38368,
         "buyPrice": 1713466,
-        "clause": 1905000,
+        "clause": 0,
         "invested": 0,
         "buyDate": 1772258605
       },
@@ -14873,9 +14797,9 @@
       "matchDate": "2026-04-11T14:15:00Z"
     },
     "Real Sociedad": {
-      "winProb": 0.5193740685543965,
-      "drawProb": 0.26274217585693,
-      "loseProb": 0.21788375558867365,
+      "winProb": 0.525,
+      "drawProb": 0.2625,
+      "loseProb": 0.2125,
       "over25Prob": 0.46511627906976744,
       "isHome": true,
       "opponent": "Alavés",
@@ -14999,9 +14923,9 @@
       "matchDate": "2026-04-11T19:00:00Z"
     },
     "Alavés": {
-      "winProb": 0.21788375558867365,
-      "drawProb": 0.26274217585693,
-      "loseProb": 0.5193740685543965,
+      "winProb": 0.2125,
+      "drawProb": 0.2625,
+      "loseProb": 0.525,
       "over25Prob": 0.46511627906976744,
       "isHome": false,
       "opponent": "Real Sociedad",
@@ -15037,18 +14961,34 @@
   },
   "news": [
     {
+      "title": "Oficial: Brasil confirma la lesión muscular de Raphinha",
+      "link": "https://www.jornadaperfecta.com/blog/raphinha-lesion-brasil-barcelona/",
+      "date": "Fri, 27 Mar 2026 18:00:42 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Isco toca balón y avanza en su recuperación, ¿cuándo vuelve?",
       "link": "https://www.jornadaperfecta.com/blog/isco-vuelta-lesion-betis/",
-      "date": "Fri, 27 Mar 2026 14:32:35 +0000",
+      "date": "Fri, 27 Mar 2026 16:03:35 +0000",
       "img": "https://cdn.biwenger.com/i/t/87.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Temor en el Barcelona por una posible lesión de Raphinha",
-      "link": "https://www.jornadaperfecta.com/blog/raphinha-lesion-brasil-barcelona/",
-      "date": "Fri, 27 Mar 2026 14:30:42 +0000",
+      "title": "Joan García, descartado para disputar el España &#8211; Serbia",
+      "link": "https://www.jornadaperfecta.com/blog/joan-garcia-descarte-amistoso-espana-serbia/",
+      "date": "Fri, 27 Mar 2026 16:01:07 +0000",
       "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Carlos Álvarez ya entrena y podría volver pronto. ¿Chollo de final de temporada?",
+      "link": "https://www.jornadaperfecta.com/blog/carlos-alvarez-analisis-paron-marzo-26/",
+      "date": "Fri, 27 Mar 2026 16:00:13 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/01/Iker-Losada-Levante-UD-fantasy.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
@@ -15099,29 +15039,13 @@
       "img": "https://cdn.biwenger.com/i/t/17.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Kubo, recuperado de una lesión muscular: ¿lo fichamos?",
-      "link": "https://www.jornadaperfecta.com/blog/kubo-vuelta-real-sociedad-fantasy/",
-      "date": "Fri, 27 Mar 2026 10:00:40 +0000",
-      "img": "https://cdn.biwenger.com/i/t/13.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Lo Celso sigue entrenando parcialmente con el grupo. ¿Llega a la Jornada 30?",
-      "link": "https://www.jornadaperfecta.com/blog/lo-celso-vuelta-lesion-26/",
-      "date": "Fri, 27 Mar 2026 09:50:34 +0000",
-      "img": "https://cdn.biwenger.com/i/t/87.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-03-27T14:44:14.556Z",
+    "updatedAt": "2026-03-27T19:53:24.501Z",
     "players": [
       {
         "id": "3374",
