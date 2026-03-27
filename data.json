@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-26T19:59:36.886Z",
+  "updatedAt": "2026-03-27T05:51:22.391Z",
   "players": [
     {
       "id": 11,
@@ -11272,7 +11272,8 @@
         0,
         3,
         1,
-        0
+        0,
+        null
       ],
       "clausula": null
     },
@@ -12486,7 +12487,20 @@
         "buyDate": 1770616993
       }
     ],
-    "market": []
+    "market": [
+      {
+        "playerID": 38216,
+        "price": 500000,
+        "type": "sale",
+        "until": 1774728857
+      },
+      {
+        "playerID": 39431,
+        "price": 930000,
+        "type": "sale",
+        "until": 1774728862
+      }
+    ]
   },
   "boardTomaquet": [
     {
@@ -12600,21 +12614,6 @@
           "amount": 1390500
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1774421521,
-      "content": [
-        {
-          "player": 38966,
-          "from": {
-            "id": 8070044,
-            "name": "CA CABA JUNIORS",
-            "icon": "i/u/8070044.png?v=63"
-          },
-          "amount": 3327600
-        }
-      ]
     }
   ],
   "leagueEnBas": {
@@ -12708,9 +12707,9 @@
           1,
           2
         ],
-        "teamSize": 15,
-        "teamValue": 101660000,
-        "teamValueInc": 380000,
+        "teamSize": 14,
+        "teamValue": 101020000,
+        "teamValueInc": 390000,
         "position": 3,
         "positionInc": -1,
         "role": ""
@@ -13068,8 +13067,8 @@
       "name": "The GOAT club",
       "manager": "The GOAT club",
       "points": 1365,
-      "value": 101660000,
-      "trend": 380000,
+      "value": 101020000,
+      "trend": 390000,
       "players": []
     },
     {
@@ -13233,7 +13232,7 @@
     "balance": 1817743,
     "lineup": {
       "type": "3-4-3",
-      "date": 1774370954,
+      "date": 1774555189,
       "playersID": [
         14630,
         32440,
@@ -13379,6 +13378,21 @@
     ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1774565333,
+      "content": [
+        {
+          "player": 1462,
+          "from": {
+            "id": 6588130,
+            "name": "The GOAT club",
+            "icon": "i/u/6588130.png?v=12"
+          },
+          "amount": 640600
+        }
+      ]
+    },
     {
       "type": "market",
       "date": 1774504911,
@@ -13532,36 +13546,6 @@
             "icon": "i/u/11504267.png"
           },
           "amount": 153700
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1774369414,
-      "content": [
-        {
-          "player": 32120,
-          "from": {
-            "id": 6586257,
-            "name": "Aquest any he trepitjat merda !!",
-            "icon": "i/u/6586257.png"
-          },
-          "amount": 1593200
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1774341435,
-      "content": [
-        {
-          "player": 755,
-          "from": {
-            "id": 6579330,
-            "name": "Mindundis",
-            "icon": "i/u/6579330.png?v=66"
-          },
-          "amount": 1486700
         }
       ]
     }
@@ -14695,9 +14679,9 @@
   },
   "odds": {
     "Rayo Vallecano": {
-      "winProb": 0.3536219459922846,
-      "drawProb": 0.2786112301757394,
-      "loseProb": 0.367766823831976,
+      "winProb": 0.35211267605633795,
+      "drawProb": 0.28169014084507044,
+      "loseProb": 0.3661971830985915,
       "over25Prob": 0.4484304932735426,
       "isHome": false,
       "opponent": "Mallorca",
@@ -14731,18 +14715,18 @@
       "matchDate": "2026-04-13T19:00:00Z"
     },
     "Mallorca": {
-      "winProb": 0.367766823831976,
-      "drawProb": 0.2786112301757394,
-      "loseProb": 0.3536219459922846,
+      "winProb": 0.3661971830985915,
+      "drawProb": 0.28169014084507044,
+      "loseProb": 0.35211267605633795,
       "over25Prob": 0.4484304932735426,
       "isHome": true,
       "opponent": "Rayo Vallecano",
       "matchDate": "2026-04-12T14:15:00Z"
     },
     "Real Madrid": {
-      "winProb": 0.7858479621302576,
-      "drawProb": 0.14857438034025183,
-      "loseProb": 0.06557765752949046,
+      "winProb": 0.7748409154745416,
+      "drawProb": 0.14891473844276346,
+      "loseProb": 0.0762443460826949,
       "over25Prob": 0.5,
       "isHome": true,
       "opponent": "Girona",
@@ -14857,9 +14841,9 @@
       "matchDate": "2026-04-12T12:00:00Z"
     },
     "Girona": {
-      "winProb": 0.06557765752949046,
-      "drawProb": 0.14857438034025183,
-      "loseProb": 0.7858479621302576,
+      "winProb": 0.0762443460826949,
+      "drawProb": 0.14891473844276346,
+      "loseProb": 0.7748409154745416,
       "over25Prob": 0.5,
       "isHome": false,
       "opponent": "Real Madrid",
@@ -14876,6 +14860,30 @@
     }
   },
   "news": [
+    {
+      "title": "Raphinha, a la espera de pruebas tras ser sustituido con Brasil",
+      "link": "https://www.jornadaperfecta.com/blog/raphinha-lesion-brasil-barcelona/",
+      "date": "Thu, 26 Mar 2026 22:32:42 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Cinco noticias fantasy para antes de irte a dormir",
+      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-26-3-26/",
+      "date": "Thu, 26 Mar 2026 22:00:41 +0000",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "TOP Centrocampistas que debes fichar en este parón de selecciones",
+      "link": "https://www.jornadaperfecta.com/blog/top-centrocampistas-fantasy-paron-marzo-26/",
+      "date": "Thu, 26 Mar 2026 20:00:05 +0000",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Lesionados a recuperar en el parón de marzo",
       "link": "https://www.jornadaperfecta.com/blog/lesionados-recuperar-paron-marzo-26/",
@@ -14931,37 +14939,13 @@
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Ilaix Moriba, con el grupo a bajo ritmo. ¿Llega a la Jornada 30?",
-      "link": "https://www.jornadaperfecta.com/blog/ilaix-moriba-estado-j30-25-26/",
-      "date": "Thu, 26 Mar 2026 13:13:17 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Gayà ya entrena con máscara en la vuelta de Thierry",
-      "link": "https://www.jornadaperfecta.com/blog/gaya-golpe-cabeza-valencia/",
-      "date": "Thu, 26 Mar 2026 12:25:05 +0000",
-      "img": "https://cdn.biwenger.com/i/t/18.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Carlos Álvarez eleva las cargas. ¿Vuelve en la Jornada 30?",
-      "link": "https://www.jornadaperfecta.com/blog/carlos-alvarez-estado-j30-25-26/",
-      "date": "Thu, 26 Mar 2026 11:58:42 +0000",
-      "img": "https://cdn.biwenger.com/i/t/10.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-03-26T19:59:34.848Z",
+    "updatedAt": "2026-03-27T05:51:20.042Z",
     "players": [
       {
         "id": "3374",
