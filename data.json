@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-27T08:08:44.270Z",
+  "updatedAt": "2026-03-27T14:44:16.175Z",
   "players": [
     {
       "id": 11,
@@ -12222,9 +12222,9 @@
           7,
           3
         ],
-        "teamSize": 20,
-        "teamValue": 58210000,
-        "teamValueInc": 190000,
+        "teamSize": 19,
+        "teamValue": 55440000,
+        "teamValueInc": 210000,
         "position": 14,
         "role": ""
       }
@@ -12353,8 +12353,8 @@
       "name": "Hufflepuff 🍋",
       "manager": "Hufflepuff 🍋",
       "points": 1137,
-      "value": 58210000,
-      "trend": 190000,
+      "value": 55440000,
+      "trend": 210000,
       "players": []
     }
   ],
@@ -12365,7 +12365,7 @@
     "balance": 4481808,
     "lineup": {
       "type": "3-4-3",
-      "date": 1774554953,
+      "date": 1774608331,
       "playersID": [
         17021,
         10155,
@@ -12509,6 +12509,21 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1774602180,
+      "content": [
+        {
+          "player": 1523,
+          "from": {
+            "id": 11521196,
+            "name": "Hufflepuff 🍋",
+            "icon": "i/u/11521196.png?v=57"
+          },
+          "amount": 2911800
+        }
+      ]
+    },
     {
       "type": "market",
       "date": 1774591344,
@@ -12684,21 +12699,6 @@
               "amount": 12240000
             }
           ]
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1774480325,
-      "content": [
-        {
-          "player": 38493,
-          "from": {
-            "id": 12713493,
-            "name": "Tata Martini",
-            "icon": "i/u/12713493.png"
-          },
-          "amount": 1390500
         }
       ]
     }
@@ -13084,8 +13084,8 @@
           13,
           7
         ],
-        "teamSize": 20,
-        "teamValue": 37810000,
+        "teamSize": 19,
+        "teamValue": 37660000,
         "teamValueInc": 20000,
         "position": 18,
         "positionInc": 1,
@@ -13289,7 +13289,7 @@
       "name": "Aquest any he trepitjat merda !!",
       "manager": "Aquest any he trepitjat merda !!",
       "points": 1026,
-      "value": 37810000,
+      "value": 37660000,
       "trend": 20000,
       "players": []
     },
@@ -13465,6 +13465,21 @@
     ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1774606753,
+      "content": [
+        {
+          "player": 19693,
+          "from": {
+            "id": 6586257,
+            "name": "Aquest any he trepitjat merda !!",
+            "icon": "i/u/6586257.png"
+          },
+          "amount": 156200
+        }
+      ]
+    },
     {
       "type": "market",
       "date": 1774591343,
@@ -13707,48 +13722,6 @@
             "icon": "i/u/6579505.png"
           },
           "amount": 1899600
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1774418492,
-      "content": [
-        {
-          "player": 19693,
-          "to": {
-            "id": 6586257,
-            "name": "Aquest any he trepitjat merda !!",
-            "icon": "i/u/6586257.png"
-          },
-          "amount": 150000
-        },
-        {
-          "player": 30801,
-          "to": {
-            "id": 6586257,
-            "name": "Aquest any he trepitjat merda !!",
-            "icon": "i/u/6586257.png"
-          },
-          "amount": 150000
-        },
-        {
-          "player": 34483,
-          "to": {
-            "id": 6588130,
-            "name": "The GOAT club",
-            "icon": "i/u/6588130.png?v=12"
-          },
-          "amount": 550000
-        },
-        {
-          "player": 37726,
-          "to": {
-            "id": 6588130,
-            "name": "The GOAT club",
-            "icon": "i/u/6588130.png?v=12"
-          },
-          "amount": 340000
         }
       ]
     }
@@ -15062,12 +15035,93 @@
       "matchDate": "2026-04-12T19:00:00Z"
     }
   },
-  "news": [],
+  "news": [
+    {
+      "title": "Isco toca balón y avanza en su recuperación, ¿cuándo vuelve?",
+      "link": "https://www.jornadaperfecta.com/blog/isco-vuelta-lesion-betis/",
+      "date": "Fri, 27 Mar 2026 14:32:35 +0000",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Temor en el Barcelona por una posible lesión de Raphinha",
+      "link": "https://www.jornadaperfecta.com/blog/raphinha-lesion-brasil-barcelona/",
+      "date": "Fri, 27 Mar 2026 14:30:42 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Supercuota 4.50 en Betfair para el España vs Serbia: ¡Apuesta potenciada!",
+      "link": "https://www.jornadaperfecta.com/blog/supercuota-betfair-espana-vs-serbia/",
+      "date": "Fri, 27 Mar 2026 12:26:16 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/03/Betfair-Supercuota-Espana-vs-Serbia.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Ferland Mendy suma un entreno más. ¿Cuándo puede volver?",
+      "link": "https://www.jornadaperfecta.com/blog/ferland-mendy-vuelta-lesion-biceps-femoral-26/",
+      "date": "Fri, 27 Mar 2026 12:02:00 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Iñaki Williams da un paso al frente, ¿recomendable en fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/inaki-williams-recomendacion-fantasy-athletic/",
+      "date": "Fri, 27 Mar 2026 12:00:09 +0000",
+      "img": "https://cdn.biwenger.com/i/t/1.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Nico Williams vuelve a entrenar con el Athletic",
+      "link": "https://www.jornadaperfecta.com/blog/nico-williams-vuelta-pubalgia-26/",
+      "date": "Fri, 27 Mar 2026 10:40:54 +0000",
+      "img": "https://cdn.biwenger.com/i/t/1.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Vedat Muriqi, con molestias en los isquiotibiales. ¿Preocupa su estado?",
+      "link": "https://www.jornadaperfecta.com/blog/muriqi-molestias-isquiotibiales-26/",
+      "date": "Fri, 27 Mar 2026 10:15:13 +0000",
+      "img": "https://cdn.biwenger.com/i/t/465.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Descanso para Azpilicueta, Kike Salas y Peque en el Sevilla",
+      "link": "https://www.jornadaperfecta.com/blog/azpilicueta-estado-j30-25-26/",
+      "date": "Fri, 27 Mar 2026 10:15:05 +0000",
+      "img": "https://cdn.biwenger.com/i/t/17.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Kubo, recuperado de una lesión muscular: ¿lo fichamos?",
+      "link": "https://www.jornadaperfecta.com/blog/kubo-vuelta-real-sociedad-fantasy/",
+      "date": "Fri, 27 Mar 2026 10:00:40 +0000",
+      "img": "https://cdn.biwenger.com/i/t/13.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Lo Celso sigue entrenando parcialmente con el grupo. ¿Llega a la Jornada 30?",
+      "link": "https://www.jornadaperfecta.com/blog/lo-celso-vuelta-lesion-26/",
+      "date": "Fri, 27 Mar 2026 09:50:34 +0000",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    }
+  ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-03-27T08:08:41.716Z",
+    "updatedAt": "2026-03-27T14:44:14.556Z",
     "players": [
       {
         "id": "3374",
