@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-27T19:53:26.247Z",
+  "updatedAt": "2026-03-28T05:14:19.899Z",
   "players": [
     {
       "id": 11,
@@ -11968,9 +11968,9 @@
           2,
           2
         ],
-        "teamSize": 18,
-        "teamValue": 112880000,
-        "teamValueInc": -10000,
+        "teamSize": 17,
+        "teamValue": 102470000,
+        "teamValueInc": 120000,
         "position": 1,
         "role": ""
       },
@@ -11993,7 +11993,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 2,
-          "season": "Temporada 2024/2025"
+          "season": "2024/2025 season"
         },
         "position": 2
       },
@@ -12051,7 +12051,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "Temporada 2024/2025"
+          "season": "2024/2025 season"
         },
         "position": 5,
         "role": ""
@@ -12093,7 +12093,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 1,
-          "season": "Temporada 2024/2025"
+          "season": "2024/2025 season"
         },
         "position": 7
       },
@@ -12199,13 +12199,13 @@
           13,
           9
         ],
-        "teamSize": 14,
-        "teamValue": 56020000,
-        "teamValueInc": 380000,
+        "teamSize": 15,
+        "teamValue": 57090000,
+        "teamValueInc": 390000,
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "Temporada 2023/2024"
+          "season": "2023/2024 season"
         },
         "position": 13,
         "role": ""
@@ -12222,9 +12222,9 @@
           7,
           3
         ],
-        "teamSize": 19,
-        "teamValue": 55440000,
-        "teamValueInc": 210000,
+        "teamSize": 18,
+        "teamValue": 54370000,
+        "teamValueInc": 200000,
         "position": 14,
         "role": ""
       }
@@ -12236,8 +12236,8 @@
       "name": "Albertini",
       "manager": "Albertini",
       "points": 1609,
-      "value": 112880000,
-      "trend": -10000,
+      "value": 102470000,
+      "trend": 120000,
       "players": []
     },
     {
@@ -12344,8 +12344,8 @@
       "name": "Tata Martini",
       "manager": "Tata Martini",
       "points": 1178,
-      "value": 56020000,
-      "trend": 380000,
+      "value": 57090000,
+      "trend": 390000,
       "players": []
     },
     {
@@ -12353,8 +12353,8 @@
       "name": "Hufflepuff 🍋",
       "manager": "Hufflepuff 🍋",
       "points": 1137,
-      "value": 55440000,
-      "trend": 210000,
+      "value": 54370000,
+      "trend": 200000,
       "players": []
     }
   ],
@@ -12511,6 +12511,42 @@
   "boardTomaquet": [
     {
       "type": "transfer",
+      "date": 1774656356,
+      "content": [
+        {
+          "player": 26945,
+          "from": {
+            "id": 8068427,
+            "name": "Albertini",
+            "icon": "i/u/8068427.png"
+          },
+          "amount": 10751700
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1774655769,
+      "content": [
+        {
+          "player": 2635,
+          "from": {
+            "id": 11521196,
+            "name": "Hufflepuff 🍋",
+            "icon": "i/u/11521196.png?v=57"
+          },
+          "to": {
+            "id": 12713493,
+            "name": "Tata Martini",
+            "icon": "i/u/12713493.png"
+          },
+          "amount": 2317500,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
       "date": 1774602180,
       "content": [
         {
@@ -12602,27 +12638,6 @@
             "icon": "i/u/8070044.png?v=63"
           },
           "amount": 2816656
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1774554664,
-      "content": [
-        {
-          "player": 3159,
-          "from": {
-            "id": 6541195,
-            "name": "🦊",
-            "icon": "i/u/6541195.png?v=17"
-          },
-          "to": {
-            "id": 12713493,
-            "name": "Tata Martini",
-            "icon": "i/u/12713493.png"
-          },
-          "amount": 5625000,
-          "type": "clause"
         }
       ]
     }
@@ -12863,8 +12878,8 @@
           10,
           16
         ],
-        "teamSize": 17,
-        "teamValue": 42960000,
+        "teamSize": 16,
+        "teamValue": 42750000,
         "teamValueInc": 0,
         "lastTrophy": {
           "type": "league",
@@ -13150,7 +13165,7 @@
       "name": "Lamine i els 7 nans 👯‍♀️",
       "manager": "Lamine i els 7 nans 👯‍♀️",
       "points": 1126,
-      "value": 42960000,
+      "value": 42750000,
       "trend": 0,
       "players": []
     },
@@ -13346,7 +13361,7 @@
       {
         "id": 38368,
         "buyPrice": 1713466,
-        "clause": 0,
+        "clause": 1905000,
         "invested": 0,
         "buyDate": 1772258605
       },
@@ -13384,11 +13399,26 @@
         "playerID": 38368,
         "price": 1905000,
         "type": "sale",
-        "until": 1774635793
+        "until": 1774832575
       }
     ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1774650170,
+      "content": [
+        {
+          "player": 32374,
+          "from": {
+            "id": 6580386,
+            "name": "Lamine i els 7 nans 👯‍♀️",
+            "icon": "i/u/6580386.png?v=10"
+          },
+          "amount": 202800
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1774606753,
@@ -13622,30 +13652,6 @@
             "icon": "i/u/6579280.png?v=22"
           },
           "amount": 4818000
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1774420307,
-      "content": [
-        {
-          "player": 25390,
-          "from": {
-            "id": 6579505,
-            "name": "Xevi borrat",
-            "icon": "i/u/6579505.png"
-          },
-          "amount": 153100
-        },
-        {
-          "player": 1908,
-          "from": {
-            "id": 6579505,
-            "name": "Xevi borrat",
-            "icon": "i/u/6579505.png"
-          },
-          "amount": 1899600
         }
       ]
     }
@@ -14961,6 +14967,22 @@
   },
   "news": [
     {
+      "title": "Raphinha, lesionado: Parte médico oficial y tiempo de baja",
+      "link": "https://www.jornadaperfecta.com/blog/raphinha-parte-medico-fc-barcelona/",
+      "date": "Fri, 27 Mar 2026 20:34:23 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "TOP Delanteros que debes fichar en este parón de selecciones",
+      "link": "https://www.jornadaperfecta.com/blog/top-delanteros-paron-marzo-26/",
+      "date": "Fri, 27 Mar 2026 20:00:42 +0000",
+      "img": "https://cdn.biwenger.com/i/t/5.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Oficial: Brasil confirma la lesión muscular de Raphinha",
       "link": "https://www.jornadaperfecta.com/blog/raphinha-lesion-brasil-barcelona/",
       "date": "Fri, 27 Mar 2026 18:00:42 +0000",
@@ -15023,29 +15045,13 @@
       "img": "https://cdn.biwenger.com/i/t/1.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Vedat Muriqi, con molestias en los isquiotibiales. ¿Preocupa su estado?",
-      "link": "https://www.jornadaperfecta.com/blog/muriqi-molestias-isquiotibiales-26/",
-      "date": "Fri, 27 Mar 2026 10:15:13 +0000",
-      "img": "https://cdn.biwenger.com/i/t/465.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Descanso para Azpilicueta, Kike Salas y Peque en el Sevilla",
-      "link": "https://www.jornadaperfecta.com/blog/azpilicueta-estado-j30-25-26/",
-      "date": "Fri, 27 Mar 2026 10:15:05 +0000",
-      "img": "https://cdn.biwenger.com/i/t/17.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-03-27T19:53:24.501Z",
+    "updatedAt": "2026-03-28T05:14:18.015Z",
     "players": [
       {
         "id": "3374",
