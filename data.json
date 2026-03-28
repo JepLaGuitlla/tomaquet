@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-28T14:02:40.527Z",
+  "updatedAt": "2026-03-28T19:26:47.703Z",
   "players": [
     {
       "id": 11,
@@ -12742,8 +12742,8 @@
           8,
           8
         ],
-        "teamSize": 18,
-        "teamValue": 75760000,
+        "teamSize": 17,
+        "teamValue": 75450000,
         "teamValueInc": 280000,
         "lastTrophy": {
           "type": "league",
@@ -13126,7 +13126,7 @@
       "name": "MarK Lenders",
       "manager": "MarK Lenders",
       "points": 1411,
-      "value": 75760000,
+      "value": 75450000,
       "trend": 280000,
       "players": []
     },
@@ -13464,6 +13464,21 @@
   "boardEnBas": [
     {
       "type": "transfer",
+      "date": 1774723173,
+      "content": [
+        {
+          "player": 27715,
+          "from": {
+            "id": 9890450,
+            "name": "MarK Lenders",
+            "icon": "icons/34.png"
+          },
+          "amount": 310700
+        }
+      ]
+    },
+    {
+      "type": "transfer",
       "date": 1774680240,
       "content": [
         {
@@ -13530,7 +13545,7 @@
           "player": 32374,
           "from": {
             "id": 6580386,
-            "name": "Lamine i els 7 nans 👯‍♀️",
+            "name": "Lamine i els 7 nans 👯‍��️",
             "icon": "i/u/6580386.png?v=10"
           },
           "amount": 202800
@@ -13680,21 +13695,6 @@
               "date": 1774590908
             }
           ]
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1774565333,
-      "content": [
-        {
-          "player": 1462,
-          "from": {
-            "id": 6588130,
-            "name": "The GOAT club",
-            "icon": "i/u/6588130.png?v=12"
-          },
-          "amount": 640600
         }
       ]
     }
@@ -14828,9 +14828,9 @@
   },
   "odds": {
     "Rayo Vallecano": {
-      "winProb": 0.35211267605633795,
-      "drawProb": 0.28169014084507044,
-      "loseProb": 0.3661971830985915,
+      "winProb": 0.3536219459922846,
+      "drawProb": 0.2786112301757394,
+      "loseProb": 0.367766823831976,
       "over25Prob": 0.4484304932735426,
       "isHome": false,
       "opponent": "Mallorca",
@@ -14846,9 +14846,9 @@
       "matchDate": "2026-04-11T14:15:00Z"
     },
     "Real Sociedad": {
-      "winProb": 0.525,
-      "drawProb": 0.2625,
-      "loseProb": 0.2125,
+      "winProb": 0.5193740685543965,
+      "drawProb": 0.26274217585693,
+      "loseProb": 0.21788375558867365,
       "over25Prob": 0.46511627906976744,
       "isHome": true,
       "opponent": "Alavés",
@@ -14864,9 +14864,9 @@
       "matchDate": "2026-04-13T19:00:00Z"
     },
     "Mallorca": {
-      "winProb": 0.3661971830985915,
-      "drawProb": 0.28169014084507044,
-      "loseProb": 0.35211267605633795,
+      "winProb": 0.367766823831976,
+      "drawProb": 0.2786112301757394,
+      "loseProb": 0.3536219459922846,
       "over25Prob": 0.4484304932735426,
       "isHome": true,
       "opponent": "Rayo Vallecano",
@@ -14972,9 +14972,9 @@
       "matchDate": "2026-04-11T19:00:00Z"
     },
     "Alavés": {
-      "winProb": 0.2125,
-      "drawProb": 0.2625,
-      "loseProb": 0.525,
+      "winProb": 0.21788375558867365,
+      "drawProb": 0.26274217585693,
+      "loseProb": 0.5193740685543965,
       "over25Prob": 0.46511627906976744,
       "isHome": false,
       "opponent": "Real Sociedad",
@@ -15008,93 +15008,12 @@
       "matchDate": "2026-04-12T19:00:00Z"
     }
   },
-  "news": [
-    {
-      "title": "Chollos LaLiga Fantasy: Fichajes Baratos y Rentables para el parón",
-      "link": "https://www.jornadaperfecta.com/blog/chollos-laliga-fantasy-paron-marzo-26/",
-      "date": "Sat, 28 Mar 2026 10:45:31 +0000",
-      "img": "https://cdn.biwenger.com/i/t/10.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Raphinha, lesionado: Parte médico oficial y tiempo de baja",
-      "link": "https://www.jornadaperfecta.com/blog/raphinha-parte-medico-fc-barcelona/",
-      "date": "Fri, 27 Mar 2026 20:34:23 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "TOP Delanteros que debes fichar en este parón de selecciones",
-      "link": "https://www.jornadaperfecta.com/blog/top-delanteros-paron-marzo-26/",
-      "date": "Fri, 27 Mar 2026 20:00:42 +0000",
-      "img": "https://cdn.biwenger.com/i/t/5.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Oficial: Brasil confirma la lesión muscular de Raphinha",
-      "link": "https://www.jornadaperfecta.com/blog/raphinha-lesion-brasil-barcelona/",
-      "date": "Fri, 27 Mar 2026 18:00:42 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Isco toca balón y avanza en su recuperación, ¿cuándo vuelve?",
-      "link": "https://www.jornadaperfecta.com/blog/isco-vuelta-lesion-betis/",
-      "date": "Fri, 27 Mar 2026 16:03:35 +0000",
-      "img": "https://cdn.biwenger.com/i/t/87.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Joan García, descartado para disputar el España &#8211; Serbia",
-      "link": "https://www.jornadaperfecta.com/blog/joan-garcia-descarte-amistoso-espana-serbia/",
-      "date": "Fri, 27 Mar 2026 16:01:07 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Carlos Álvarez ya entrena y podría volver pronto. ¿Chollo de final de temporada?",
-      "link": "https://www.jornadaperfecta.com/blog/carlos-alvarez-analisis-paron-marzo-26/",
-      "date": "Fri, 27 Mar 2026 16:00:13 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/01/Iker-Losada-Levante-UD-fantasy.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Supercuota 4.50 en Betfair para el España vs Serbia: ¡Apuesta potenciada!",
-      "link": "https://www.jornadaperfecta.com/blog/supercuota-betfair-espana-vs-serbia/",
-      "date": "Fri, 27 Mar 2026 12:26:16 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/03/Betfair-Supercuota-Espana-vs-Serbia.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Ferland Mendy suma un entreno más. ¿Cuándo puede volver?",
-      "link": "https://www.jornadaperfecta.com/blog/ferland-mendy-vuelta-lesion-biceps-femoral-26/",
-      "date": "Fri, 27 Mar 2026 12:02:00 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Iñaki Williams da un paso al frente, ¿recomendable en fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/inaki-williams-recomendacion-fantasy-athletic/",
-      "date": "Fri, 27 Mar 2026 12:00:09 +0000",
-      "img": "https://cdn.biwenger.com/i/t/1.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    }
-  ],
+  "news": [],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-03-28T14:02:38.468Z",
+    "updatedAt": "2026-03-28T19:26:44.201Z",
     "players": [
       {
         "id": "3374",
