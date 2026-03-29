@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-29T08:01:53.216Z",
+  "updatedAt": "2026-03-29T14:03:24.362Z",
   "players": [
     {
       "id": 11,
@@ -12941,8 +12941,8 @@
           10,
           16
         ],
-        "teamSize": 17,
-        "teamValue": 46390000,
+        "teamSize": 16,
+        "teamValue": 45090000,
         "teamValueInc": 40000,
         "lastTrophy": {
           "type": "league",
@@ -13228,7 +13228,7 @@
       "name": "Lamine i els 7 nans 👯‍♀️",
       "manager": "Lamine i els 7 nans 👯‍♀️",
       "points": 1126,
-      "value": 46390000,
+      "value": 45090000,
       "trend": 40000,
       "players": []
     },
@@ -13475,6 +13475,21 @@
   },
   "boardEnBas": [
     {
+      "type": "transfer",
+      "date": 1774791721,
+      "content": [
+        {
+          "player": 19285,
+          "from": {
+            "id": 6580386,
+            "name": "Lamine i els 7 nans 👯‍♀️",
+            "icon": "i/u/6580386.png?v=10"
+          },
+          "amount": 1315800
+        }
+      ]
+    },
+    {
       "type": "market",
       "date": 1774760601,
       "content": [
@@ -13659,21 +13674,6 @@
             "icon": "i/u/6580386.png?v=10"
           },
           "amount": 202800
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1774606753,
-      "content": [
-        {
-          "player": 19693,
-          "from": {
-            "id": 6586257,
-            "name": "Aquest any he trepitjat merda !!",
-            "icon": "i/u/6586257.png"
-          },
-          "amount": 156200
         }
       ]
     }
@@ -14870,9 +14870,9 @@
       "matchDate": "2026-04-12T12:00:00Z"
     },
     "Espanyol": {
-      "winProb": 0.09395248380129587,
-      "drawProb": 0.12311015118790494,
-      "loseProb": 0.782937365010799,
+      "winProb": 0.09459651113317259,
+      "drawProb": 0.12395404907105374,
+      "loseProb": 0.7814494397957737,
       "over25Prob": 0.5,
       "isHome": false,
       "opponent": "Barcelona",
@@ -14888,9 +14888,9 @@
       "matchDate": "2026-04-11T19:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.782937365010799,
-      "drawProb": 0.12311015118790494,
-      "loseProb": 0.09395248380129587,
+      "winProb": 0.7814494397957737,
+      "drawProb": 0.12395404907105374,
+      "loseProb": 0.09459651113317259,
       "over25Prob": 0.5,
       "isHome": true,
       "opponent": "Espanyol",
@@ -14989,17 +14989,49 @@
   },
   "news": [
     {
-      "title": "Tchouameni sufre un golpe en la rodilla. ¿Preocupa su estado?",
-      "link": "https://www.jornadaperfecta.com/blog/tchouameni-estado-rodilla-26/",
-      "date": "Sat, 28 Mar 2026 17:56:07 +0000",
+      "title": "Bastoni dice sí al FC Barcelona, ¿se hará el fichaje?",
+      "link": "https://www.jornadaperfecta.com/blog/bastoni-fichaje-fc-barcelona/",
+      "date": "Sun, 29 Mar 2026 10:42:37 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Raphinha, lesionado: Parte médico oficial y tiempo de baja",
+      "link": "https://www.jornadaperfecta.com/blog/raphinha-parte-medico-fc-barcelona/",
+      "date": "Sun, 29 Mar 2026 09:34:23 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Isco toca balón y avanza en su recuperación, ¿cuándo vuelve?",
+      "link": "https://www.jornadaperfecta.com/blog/isco-vuelta-lesion-betis/",
+      "date": "Sun, 29 Mar 2026 09:32:35 +0000",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Vinicius gestiona las cargas con Brasil por unas molestias",
+      "link": "https://www.jornadaperfecta.com/blog/vinicius-jr-estado-molestias-musculares-26/",
+      "date": "Sun, 29 Mar 2026 09:01:57 +0000",
       "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Vinicius, con molestias con su selección. ¿Preocupa su situación?",
-      "link": "https://www.jornadaperfecta.com/blog/vinicius-jr-estado-molestias-musculares-26/",
-      "date": "Sat, 28 Mar 2026 17:39:57 +0000",
+      "title": "Chollos Fantasy que no puedes dejar escapar durante el parón de selecciones",
+      "link": "https://www.jornadaperfecta.com/blog/chollos-fantasy-biwenger-paron-marzo-26/",
+      "date": "Sun, 29 Mar 2026 09:00:41 +0000",
+      "img": "https://cdn.biwenger.com/i/t/19.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Tchouameni fue sustituido por precaución por un golpe en la rodilla",
+      "link": "https://www.jornadaperfecta.com/blog/tchouameni-estado-rodilla-26/",
+      "date": "Sun, 29 Mar 2026 07:30:07 +0000",
       "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
@@ -15021,14 +15053,6 @@
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Raphinha, lesionado: Parte médico oficial y tiempo de baja",
-      "link": "https://www.jornadaperfecta.com/blog/raphinha-parte-medico-fc-barcelona/",
-      "date": "Fri, 27 Mar 2026 20:34:23 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
       "title": "TOP Delanteros que debes fichar en este parón de selecciones",
       "link": "https://www.jornadaperfecta.com/blog/top-delanteros-paron-marzo-26/",
       "date": "Fri, 27 Mar 2026 20:00:42 +0000",
@@ -15043,37 +15067,13 @@
       "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Isco toca balón y avanza en su recuperación, ¿cuándo vuelve?",
-      "link": "https://www.jornadaperfecta.com/blog/isco-vuelta-lesion-betis/",
-      "date": "Fri, 27 Mar 2026 16:03:35 +0000",
-      "img": "https://cdn.biwenger.com/i/t/87.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Joan García, descartado para disputar el España &#8211; Serbia",
-      "link": "https://www.jornadaperfecta.com/blog/joan-garcia-descarte-amistoso-espana-serbia/",
-      "date": "Fri, 27 Mar 2026 16:01:07 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Carlos Álvarez ya entrena y podría volver pronto. ¿Chollo de final de temporada?",
-      "link": "https://www.jornadaperfecta.com/blog/carlos-alvarez-analisis-paron-marzo-26/",
-      "date": "Fri, 27 Mar 2026 16:00:13 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/01/Iker-Losada-Levante-UD-fantasy.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-03-29T08:01:51.331Z",
+    "updatedAt": "2026-03-29T14:03:22.402Z",
     "players": [
       {
         "id": "3374",
