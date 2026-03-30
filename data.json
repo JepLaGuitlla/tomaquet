@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-30T06:17:06.877Z",
+  "updatedAt": "2026-03-30T15:56:04.662Z",
   "players": [
     {
       "id": 11,
@@ -12711,8 +12711,8 @@
           14,
           4
         ],
-        "teamSize": 20,
-        "teamValue": 97910000,
+        "teamSize": 19,
+        "teamValue": 97440000,
         "teamValueInc": 480000,
         "position": 2,
         "positionInc": 1,
@@ -13020,8 +13020,8 @@
           13,
           7
         ],
-        "teamSize": 20,
-        "teamValue": 39040000,
+        "teamSize": 19,
+        "teamValue": 38890000,
         "teamValueInc": 70000,
         "position": 18,
         "positionInc": 1,
@@ -13081,7 +13081,7 @@
       "name": "Xevi borrat",
       "manager": "Xevi borrat",
       "points": 1368,
-      "value": 97910000,
+      "value": 97440000,
       "trend": 480000,
       "players": []
     },
@@ -13225,7 +13225,7 @@
       "name": "Aquest any he trepitjat merda !!",
       "manager": "Aquest any he trepitjat merda !!",
       "points": 1026,
-      "value": 39040000,
+      "value": 38890000,
       "trend": 70000,
       "players": []
     },
@@ -13255,7 +13255,7 @@
     "balance": 15410,
     "lineup": {
       "type": "3-4-3",
-      "date": 1774686643,
+      "date": 1774859513,
       "playersID": [
         14630,
         32440,
@@ -13330,7 +13330,7 @@
       {
         "id": 31707,
         "buyPrice": 7658222,
-        "clause": 0,
+        "clause": 11250000,
         "invested": 0,
         "buyDate": 1770444175
       },
@@ -13398,9 +13398,46 @@
         "buyDate": 1774159515
       }
     ],
-    "market": []
+    "market": [
+      {
+        "playerID": 31707,
+        "price": 11250000,
+        "type": "sale",
+        "until": 1775032263
+      }
+    ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1774867454,
+      "content": [
+        {
+          "player": 30801,
+          "from": {
+            "id": 6586257,
+            "name": "Aquest any he trepitjat merda !!",
+            "icon": "i/u/6586257.png"
+          },
+          "amount": 154700
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1774855335,
+      "content": [
+        {
+          "player": 34805,
+          "from": {
+            "id": 6579505,
+            "name": "Xevi borrat",
+            "icon": "i/u/6579505.png"
+          },
+          "amount": 474100
+        }
+      ]
+    },
     {
       "type": "market",
       "date": 1774846931,
@@ -13650,45 +13687,6 @@
           },
           "amount": 525000,
           "type": "clause"
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1774679779,
-      "content": [
-        {
-          "player": 26930,
-          "from": {
-            "id": 6586225,
-            "name": "Sergi Sala Duran",
-            "icon": "https://graph.facebook.com/10156583054878679/picture?height=300&width=300"
-          },
-          "amount": 22046900
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1774677793,
-      "content": [
-        {
-          "player": 1908,
-          "to": {
-            "id": 11504267,
-            "name": "🦊",
-            "icon": "i/u/11504267.png"
-          },
-          "amount": 1802333
-        },
-        {
-          "player": 4703,
-          "to": {
-            "id": 6579505,
-            "name": "Xevi borrat",
-            "icon": "i/u/6579505.png"
-          },
-          "amount": 1060000
         }
       ]
     }
@@ -14834,7 +14832,7 @@
       "winProb": 0.3948717948717948,
       "drawProb": 0.282051282051282,
       "loseProb": 0.32307692307692304,
-      "over25Prob": 0.46511627906976744,
+      "over25Prob": 0.4672897196261682,
       "isHome": true,
       "opponent": "Valencia",
       "matchDate": "2026-04-11T14:15:00Z"
@@ -14885,27 +14883,27 @@
       "matchDate": "2026-04-12T12:00:00Z"
     },
     "Espanyol": {
-      "winProb": 0.09932985852568874,
-      "drawProb": 0.12330603127326878,
-      "loseProb": 0.7773641102010423,
+      "winProb": 0.09955860716037271,
+      "drawProb": 0.12800392349190778,
+      "loseProb": 0.7724374693477194,
       "over25Prob": 0.5,
       "isHome": false,
       "opponent": "Barcelona",
       "matchDate": "2026-04-11T16:30:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.4496092967341215,
-      "drawProb": 0.271087958324985,
-      "loseProb": 0.27930274494089363,
+      "winProb": 0.45940574381397203,
+      "drawProb": 0.2663221703269403,
+      "loseProb": 0.27427208585908774,
       "over25Prob": 0.5128205128205129,
       "isHome": false,
       "opponent": "Sevilla",
       "matchDate": "2026-04-11T19:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.7773641102010423,
-      "drawProb": 0.12330603127326878,
-      "loseProb": 0.09932985852568874,
+      "winProb": 0.7724374693477194,
+      "drawProb": 0.12800392349190778,
+      "loseProb": 0.09955860716037271,
       "over25Prob": 0.5,
       "isHome": true,
       "opponent": "Espanyol",
@@ -14933,7 +14931,7 @@
       "winProb": 0.32307692307692304,
       "drawProb": 0.282051282051282,
       "loseProb": 0.3948717948717948,
-      "over25Prob": 0.46511627906976744,
+      "over25Prob": 0.4672897196261682,
       "isHome": false,
       "opponent": "Elche CF",
       "matchDate": "2026-04-11T14:15:00Z"
@@ -14957,9 +14955,9 @@
       "matchDate": "2026-04-12T16:30:00Z"
     },
     "Sevilla": {
-      "winProb": 0.27930274494089363,
-      "drawProb": 0.271087958324985,
-      "loseProb": 0.4496092967341215,
+      "winProb": 0.27427208585908774,
+      "drawProb": 0.2663221703269403,
+      "loseProb": 0.45940574381397203,
       "over25Prob": 0.5128205128205129,
       "isHome": true,
       "opponent": "Atlético Madrid",
@@ -15004,82 +15002,82 @@
   },
   "news": [
     {
-      "title": "Raphinha, lesionado: Parte médico oficial y tiempo de baja",
-      "link": "https://www.jornadaperfecta.com/blog/raphinha-parte-medico-fc-barcelona/",
-      "date": "Sun, 29 Mar 2026 16:34:23 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "title": "Azpilicueta y Kike Salas se reincorporan al grupo",
+      "link": "https://www.jornadaperfecta.com/blog/azpilicueta-estado-j30-25-26/",
+      "date": "Mon, 30 Mar 2026 15:40:05 +0000",
+      "img": "https://cdn.biwenger.com/i/t/17.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Vinicius Jr ya entrena con normalidad con Brasil",
-      "link": "https://www.jornadaperfecta.com/blog/vinicius-jr-estado-molestias-musculares-26/",
-      "date": "Sun, 29 Mar 2026 16:01:57 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "title": "Víctor Chust, ausente tras sus molestias. ¿Preocupa para la Jornada 30?",
+      "link": "https://www.jornadaperfecta.com/blog/victor-chust-estado-j30-25-26/",
+      "date": "Mon, 30 Mar 2026 15:35:51 +0000",
+      "img": "https://cdn.biwenger.com/i/t/75.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Bastoni dice sí al FC Barcelona, ¿se hará el fichaje?",
-      "link": "https://www.jornadaperfecta.com/blog/bastoni-fichaje-fc-barcelona/",
-      "date": "Sun, 29 Mar 2026 15:50:37 +0000",
-      "img": "",
+      "title": "Johnny Cardoso da el susto con Estados Unidos",
+      "link": "https://www.jornadaperfecta.com/blog/johnny-cardoso-estado-sobrecarga-26/",
+      "date": "Mon, 30 Mar 2026 15:01:53 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Isco toca balón y avanza en su recuperación, ¿cuándo vuelve?",
-      "link": "https://www.jornadaperfecta.com/blog/isco-vuelta-lesion-betis/",
-      "date": "Sun, 29 Mar 2026 15:32:35 +0000",
-      "img": "https://cdn.biwenger.com/i/t/87.png",
+      "title": "Raíllo, ¿dará el paso adelante para salvar al Mallorca?",
+      "link": "https://www.jornadaperfecta.com/blog/raillo-recomendacion-fantasy-mallorca/",
+      "date": "Mon, 30 Mar 2026 15:00:39 +0000",
+      "img": "https://cdn.biwenger.com/i/t/465.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "La última oportunidad de Batista Mendy. ¿Recomendable en este final de temporada?",
-      "link": "https://www.jornadaperfecta.com/blog/batista-mendy-analisis-paron-marzo-26/",
-      "date": "Sun, 29 Mar 2026 15:00:31 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/10/image-2025-10-26T234320.347.webp",
+      "title": "Vedat Muriqi, recuperado de sus molestias en los isquiotibiales.",
+      "link": "https://www.jornadaperfecta.com/blog/muriqi-molestias-isquiotibiales-26/",
+      "date": "Mon, 30 Mar 2026 14:40:13 +0000",
+      "img": "https://cdn.biwenger.com/i/t/465.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Chollos Fantasy que no puedes dejar escapar durante el parón de selecciones",
-      "link": "https://www.jornadaperfecta.com/blog/chollos-fantasy-biwenger-paron-marzo-26/",
-      "date": "Sun, 29 Mar 2026 09:00:41 +0000",
+      "title": "Pau Navarro, ¿el defensa más recomendable del Villarreal?",
+      "link": "https://www.jornadaperfecta.com/blog/pau-navarro-chollo-fantasy-villarreal/",
+      "date": "Mon, 30 Mar 2026 13:00:36 +0000",
       "img": "https://cdn.biwenger.com/i/t/19.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Tchouameni fue sustituido por precaución por un golpe en la rodilla",
-      "link": "https://www.jornadaperfecta.com/blog/tchouameni-estado-rodilla-26/",
-      "date": "Sun, 29 Mar 2026 07:30:07 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "title": "Kounde y Balde entrenan con el grupo: Fecha de vuelta de los lesionados",
+      "link": "https://www.jornadaperfecta.com/blog/fecha-vuelta-lesionados-barcelona/",
+      "date": "Mon, 30 Mar 2026 12:10:54 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "La lesión de Raphinha, en clave fantasy: sustitutos en el Barça y equivalentes fantasy",
-      "link": "https://www.jornadaperfecta.com/blog/raphinha-analisis-lesion-sustitutos-fantasy-26/",
-      "date": "Sat, 28 Mar 2026 16:00:46 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/11/Rashford-FC-Barcelona-fantasy.webp",
+      "title": "Regístrate en Sportium y gana un 50% más apostando al Atlético &#8211; Barcelona",
+      "link": "https://www.jornadaperfecta.com/blog/sportium-superaumento-atletico-barcelona/",
+      "date": "Mon, 30 Mar 2026 11:37:13 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/03/Sportium-superaumento-Atletico-Barcelona.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Chollos LaLiga Fantasy: Fichajes Baratos y Rentables para el parón",
-      "link": "https://www.jornadaperfecta.com/blog/chollos-laliga-fantasy-paron-marzo-26/",
-      "date": "Sat, 28 Mar 2026 10:45:31 +0000",
-      "img": "https://cdn.biwenger.com/i/t/10.png",
+      "title": "Gayà y Thierry entrenan con normalidad. Ugrinic lo hace al margen",
+      "link": "https://www.jornadaperfecta.com/blog/gaya-golpe-cabeza-valencia/",
+      "date": "Mon, 30 Mar 2026 11:25:05 +0000",
+      "img": "https://cdn.biwenger.com/i/t/18.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "TOP Delanteros que debes fichar en este parón de selecciones",
-      "link": "https://www.jornadaperfecta.com/blog/top-delanteros-paron-marzo-26/",
-      "date": "Fri, 27 Mar 2026 20:00:42 +0000",
-      "img": "https://cdn.biwenger.com/i/t/5.png",
+      "title": "Jon Martín, ante su gran oportunidad: ¿chollo en defensa?",
+      "link": "https://www.jornadaperfecta.com/blog/jon-martin-real-sociedad-chollo-fantasy/",
+      "date": "Mon, 30 Mar 2026 11:00:47 +0000",
+      "img": "https://cdn.biwenger.com/i/t/13.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -15088,7 +15086,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-03-30T06:17:05.341Z",
+    "updatedAt": "2026-03-30T15:56:03.641Z",
     "players": [
       {
         "id": "3374",
