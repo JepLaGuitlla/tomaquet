@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T15:52:51.965Z",
+  "updatedAt": "2026-03-31T20:03:13.396Z",
   "players": [
     {
       "id": 11,
@@ -12919,9 +12919,9 @@
           7,
           12
         ],
-        "teamSize": 12,
-        "teamValue": 54900000,
-        "teamValueInc": 160000,
+        "teamSize": 13,
+        "teamValue": 57530000,
+        "teamValueInc": 180000,
         "position": 10,
         "role": ""
       },
@@ -12937,9 +12937,9 @@
           10,
           16
         ],
-        "teamSize": 15,
-        "teamValue": 42360000,
-        "teamValueInc": 100000,
+        "teamSize": 14,
+        "teamValue": 39730000,
+        "teamValueInc": 80000,
         "lastTrophy": {
           "type": "league",
           "position": 2,
@@ -13215,8 +13215,8 @@
       "name": "Sergi Sala Duran",
       "manager": "Sergi Sala Duran",
       "points": 1160,
-      "value": 54900000,
-      "trend": 160000,
+      "value": 57530000,
+      "trend": 180000,
       "players": []
     },
     {
@@ -13224,8 +13224,8 @@
       "name": "Lamine i els 7 nans 👯‍♀️",
       "manager": "Lamine i els 7 nans 👯‍♀️",
       "points": 1126,
-      "value": 42360000,
-      "trend": 100000,
+      "value": 39730000,
+      "trend": 80000,
       "players": []
     },
     {
@@ -13472,6 +13472,27 @@
   "boardEnBas": [
     {
       "type": "transfer",
+      "date": 1774976652,
+      "content": [
+        {
+          "player": 10155,
+          "from": {
+            "id": 6580386,
+            "name": "Lamine i els 7 nans 👯‍♀️",
+            "icon": "i/u/6580386.png?v=10"
+          },
+          "to": {
+            "id": 6586225,
+            "name": "Sergi Sala Duran",
+            "icon": "https://graph.facebook.com/10156583054878679/picture?height=300&width=300"
+          },
+          "amount": 2985000,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
       "date": 1774947492,
       "content": [
         {
@@ -13666,109 +13687,6 @@
             "icon": "i/u/6579505.png"
           },
           "amount": 474100
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1774846931,
-      "content": [
-        {
-          "player": 39941,
-          "to": {
-            "id": 6586225,
-            "name": "Sergi Sala Duran",
-            "icon": "https://graph.facebook.com/10156583054878679/picture?height=300&width=300"
-          },
-          "amount": 16125390,
-          "bids": [
-            {
-              "user": {
-                "id": 6578885,
-                "name": "Norimaki  FC",
-                "icon": "icons/41.png"
-              },
-              "amount": 15900000
-            },
-            {
-              "user": {
-                "id": 6580386,
-                "name": "Lamine i els 7 nans 👯‍♀️",
-                "icon": "i/u/6580386.png?v=10"
-              },
-              "amount": 15410000
-            },
-            {
-              "user": {
-                "id": 6579540,
-                "name": "Aiveen Teaam",
-                "icon": "i/u/6579540.png?v=63"
-              },
-              "amount": 15366370
-            }
-          ]
-        },
-        {
-          "player": 18128,
-          "to": {
-            "id": 6579505,
-            "name": "Xevi borrat",
-            "icon": "i/u/6579505.png"
-          },
-          "amount": 351000,
-          "bids": [
-            {
-              "user": {
-                "id": 6578885,
-                "name": "Norimaki  FC",
-                "icon": "icons/41.png"
-              },
-              "amount": 300000
-            },
-            {
-              "user": {
-                "id": 6580386,
-                "name": "Lamine i els 7 nans 👯‍♀️",
-                "icon": "i/u/6580386.png?v=10"
-              },
-              "amount": 285000
-            },
-            {
-              "user": {
-                "id": 6579402,
-                "name": "Valors FC",
-                "icon": "icons/7.png"
-              },
-              "amount": 265070
-            }
-          ]
-        },
-        {
-          "player": 37467,
-          "to": {
-            "id": 6586257,
-            "name": "Aquest any he trepitjat merda !!",
-            "icon": "i/u/6586257.png"
-          },
-          "amount": 960000
-        },
-        {
-          "player": 28082,
-          "to": {
-            "id": 6579402,
-            "name": "Valors FC",
-            "icon": "icons/7.png"
-          },
-          "amount": 250000
-        },
-        {
-          "player": 27715,
-          "to": {
-            "id": 6579402,
-            "name": "Valors FC",
-            "icon": "icons/7.png"
-          },
-          "amount": 310020
         }
       ]
     }
@@ -14914,7 +14832,7 @@
       "winProb": 0.3948717948717948,
       "drawProb": 0.282051282051282,
       "loseProb": 0.32307692307692304,
-      "over25Prob": 0.4672897196261682,
+      "over25Prob": 0.4716981132075471,
       "isHome": true,
       "opponent": "Valencia",
       "matchDate": "2026-04-11T14:15:00Z"
@@ -15013,7 +14931,7 @@
       "winProb": 0.32307692307692304,
       "drawProb": 0.282051282051282,
       "loseProb": 0.3948717948717948,
-      "over25Prob": 0.4672897196261682,
+      "over25Prob": 0.4716981132075471,
       "isHome": false,
       "opponent": "Elche CF",
       "matchDate": "2026-04-11T14:15:00Z"
@@ -15084,6 +15002,38 @@
   },
   "news": [
     {
+      "title": "Chollos LaLiga Fantasy: Fichajes Baratos y Rentables para la jornada 30",
+      "link": "https://www.jornadaperfecta.com/blog/chollos-laliga-fantasy-j30-25-26/",
+      "date": "Tue, 31 Mar 2026 19:00:44 +0000",
+      "img": "https://i.ytimg.com/vi/rERJ9NjH5wA/mqdefault.jpg",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Ferland Mendy suma un entreno más. ¿Cuándo puede volver?",
+      "link": "https://www.jornadaperfecta.com/blog/ferland-mendy-vuelta-lesion-biceps-femoral-26/",
+      "date": "Tue, 31 Mar 2026 18:12:00 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Xavi Espart se marcha tocado con la Sub-19",
+      "link": "https://www.jornadaperfecta.com/blog/xavi-espart-molestias-26/",
+      "date": "Tue, 31 Mar 2026 18:09:37 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Nahuel Molina recupera su mejor versión, ¿chollo fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/nahuel-molina-chollo-fantasy-atleti/",
+      "date": "Tue, 31 Mar 2026 17:00:09 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Ilias Akhomach vuelve con el grupo en una sesión sin Fran Pérez",
       "link": "https://www.jornadaperfecta.com/blog/ilias-akhomach-estado-j30-25-26/",
       "date": "Tue, 31 Mar 2026 15:19:17 +0000",
@@ -15130,45 +15080,13 @@
       "img": "https://cdn.biwenger.com/i/t/2.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Tete Morente cree en la salvación. ¿Buen parche de final de temporada?",
-      "link": "https://www.jornadaperfecta.com/blog/tete-morente-analisis-paron-marzo-26/",
-      "date": "Tue, 31 Mar 2026 13:00:15 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/03/image-2026-03-15T115729.794.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Koundé y Balde entrenan con el grupo; De Jong apunta a baja",
-      "link": "https://www.jornadaperfecta.com/blog/kounde-estado-j30-barcelona/",
-      "date": "Tue, 31 Mar 2026 11:43:40 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Héctor Fort vuelve al grupo; Chust y Bigas, ausentes",
-      "link": "https://www.jornadaperfecta.com/blog/hector-fort-vuelta-lesion-hombro-elche/",
-      "date": "Tue, 31 Mar 2026 11:28:31 +0000",
-      "img": "https://cdn.biwenger.com/i/t/75.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Iker Benito inicia su incorporación al grupo tras su grave lesión",
-      "link": "https://www.jornadaperfecta.com/blog/iker-benito-recuperacion-osasuna/",
-      "date": "Tue, 31 Mar 2026 11:27:38 +0000",
-      "img": "https://cdn.biwenger.com/i/t/93.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-03-31T15:52:50.122Z",
+    "updatedAt": "2026-03-31T20:03:11.130Z",
     "players": [
       {
         "id": "3374",
