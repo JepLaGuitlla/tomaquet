@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T09:44:38.503Z",
+  "updatedAt": "2026-03-31T15:52:51.965Z",
   "players": [
     {
       "id": 11,
@@ -12088,8 +12088,8 @@
           13
         ],
         "teamSize": 15,
-        "teamValue": 89110000,
-        "teamValueInc": 160000,
+        "teamValue": 88950000,
+        "teamValueInc": 250000,
         "lastTrophy": {
           "type": "league",
           "position": 1,
@@ -12163,9 +12163,9 @@
           4,
           12
         ],
-        "teamSize": 10,
-        "teamValue": 39130000,
-        "teamValueInc": -40000,
+        "teamSize": 11,
+        "teamValue": 41530000,
+        "teamValueInc": 40000,
         "position": 11,
         "role": ""
       },
@@ -12199,9 +12199,9 @@
           13,
           9
         ],
-        "teamSize": 15,
-        "teamValue": 59160000,
-        "teamValueInc": 570000,
+        "teamSize": 14,
+        "teamValue": 56920000,
+        "teamValueInc": 400000,
         "lastTrophy": {
           "type": "league",
           "position": 3,
@@ -12290,8 +12290,8 @@
       "name": "Zaza Pachulia",
       "manager": "Zaza Pachulia",
       "points": 1344,
-      "value": 89110000,
-      "trend": 160000,
+      "value": 88950000,
+      "trend": 250000,
       "players": []
     },
     {
@@ -12326,8 +12326,8 @@
       "name": "Trileros FC",
       "manager": "Trileros FC",
       "points": 1193,
-      "value": 39130000,
-      "trend": -40000,
+      "value": 41530000,
+      "trend": 40000,
       "players": []
     },
     {
@@ -12344,8 +12344,8 @@
       "name": "Tata Martini",
       "manager": "Tata Martini",
       "points": 1178,
-      "value": 59160000,
-      "trend": 570000,
+      "value": 56920000,
+      "trend": 400000,
       "players": []
     },
     {
@@ -12365,7 +12365,7 @@
     "balance": 3419475,
     "lineup": {
       "type": "3-4-3",
-      "date": 1774945673,
+      "date": 1774954283,
       "playersID": [
         17021,
         10155,
@@ -12500,9 +12500,52 @@
         "buyDate": 1770616993
       }
     ],
-    "market": []
+    "market": [
+      {
+        "playerID": 27945,
+        "price": 700000,
+        "type": "sale",
+        "until": 1775127065
+      }
+    ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1774952654,
+      "content": [
+        {
+          "player": 25592,
+          "from": {
+            "id": 148051,
+            "name": "Zaza Pachulia",
+            "icon": "i/u/148051.png?v=39"
+          },
+          "to": {
+            "id": 12696599,
+            "name": "Trileros FC",
+            "icon": "i/u/12696599.png"
+          },
+          "amount": 4905000,
+          "type": "clause"
+        },
+        {
+          "player": 27059,
+          "from": {
+            "id": 12713493,
+            "name": "Tata Martini",
+            "icon": "i/u/12713493.png"
+          },
+          "to": {
+            "id": 148051,
+            "name": "Zaza Pachulia",
+            "icon": "i/u/148051.png?v=39"
+          },
+          "amount": 3360000,
+          "type": "clause"
+        }
+      ]
+    },
     {
       "type": "market",
       "date": 1774933330,
@@ -14880,7 +14923,7 @@
       "winProb": 0.5193740685543965,
       "drawProb": 0.26274217585693,
       "loseProb": 0.21788375558867365,
-      "over25Prob": 0.46511627906976744,
+      "over25Prob": 0.4608294930875576,
       "isHome": true,
       "opponent": "Alavés",
       "matchDate": "2026-04-11T12:00:00Z"
@@ -14916,7 +14959,7 @@
       "winProb": 0.3354794984750933,
       "drawProb": 0.2694002033209082,
       "loseProb": 0.3951202982039987,
-      "over25Prob": 0.5076142131979695,
+      "over25Prob": 0.5102040816326531,
       "isHome": false,
       "opponent": "CA Osasuna",
       "matchDate": "2026-04-12T12:00:00Z"
@@ -14931,9 +14974,9 @@
       "matchDate": "2026-04-11T16:30:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.45940574381397203,
-      "drawProb": 0.2663221703269403,
-      "loseProb": 0.27427208585908774,
+      "winProb": 0.4494438320472994,
+      "drawProb": 0.26706082773825035,
+      "loseProb": 0.2834953402144504,
       "over25Prob": 0.5128205128205129,
       "isHome": false,
       "opponent": "Sevilla",
@@ -14994,9 +15037,9 @@
       "matchDate": "2026-04-12T16:30:00Z"
     },
     "Sevilla": {
-      "winProb": 0.27427208585908774,
-      "drawProb": 0.2663221703269403,
-      "loseProb": 0.45940574381397203,
+      "winProb": 0.2834953402144504,
+      "drawProb": 0.26706082773825035,
+      "loseProb": 0.4494438320472994,
       "over25Prob": 0.5128205128205129,
       "isHome": true,
       "opponent": "Atlético Madrid",
@@ -15006,7 +15049,7 @@
       "winProb": 0.21788375558867365,
       "drawProb": 0.26274217585693,
       "loseProb": 0.5193740685543965,
-      "over25Prob": 0.46511627906976744,
+      "over25Prob": 0.4608294930875576,
       "isHome": false,
       "opponent": "Real Sociedad",
       "matchDate": "2026-04-11T12:00:00Z"
@@ -15015,7 +15058,7 @@
       "winProb": 0.3951202982039987,
       "drawProb": 0.2694002033209082,
       "loseProb": 0.3354794984750933,
-      "over25Prob": 0.5076142131979695,
+      "over25Prob": 0.5102040816326531,
       "isHome": true,
       "opponent": "Real Betis",
       "matchDate": "2026-04-12T12:00:00Z"
@@ -15041,82 +15084,82 @@
   },
   "news": [
     {
-      "title": "Ruggeri sigue al margen en el entrenamiento del Atleti",
-      "link": "https://www.jornadaperfecta.com/blog/ruggeri-estado-atleti-j30/",
-      "date": "Tue, 31 Mar 2026 09:30:33 +0000",
+      "title": "Ilias Akhomach vuelve con el grupo en una sesión sin Fran Pérez",
+      "link": "https://www.jornadaperfecta.com/blog/ilias-akhomach-estado-j30-25-26/",
+      "date": "Tue, 31 Mar 2026 15:19:17 +0000",
+      "img": "https://cdn.biwenger.com/i/t/70.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Vivian quiere llevar al Athletic a Europa. ¿Buen defensa fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/vivian-analisis-paron-marzo-26/",
+      "date": "Tue, 31 Mar 2026 15:00:24 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2024/12/Yeray-Athletic-Club-fantasy.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Se descarta lesión de Johnny Cardoso",
+      "link": "https://www.jornadaperfecta.com/blog/johnny-cardoso-estado-sobrecarga-26/",
+      "date": "Tue, 31 Mar 2026 14:55:53 +0000",
       "img": "https://cdn.biwenger.com/i/t/2.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Antony vuelve al grupo tras su plan especial por la pubalgia",
-      "link": "https://www.jornadaperfecta.com/blog/antony-plan-especifico-pubalgia-paron/",
-      "date": "Tue, 31 Mar 2026 09:15:31 +0000",
-      "img": "https://cdn.biwenger.com/i/t/87.png",
+      "title": "Nico Williams e Iñaki, con el grupo; Paredes, al margen",
+      "link": "https://www.jornadaperfecta.com/blog/nico-williams-recuperacion-pubalgia-athletic/",
+      "date": "Tue, 31 Mar 2026 14:45:45 +0000",
+      "img": "https://cdn.biwenger.com/i/t/1.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "El Celta anuncia el alta médica de Radu",
+      "link": "https://www.jornadaperfecta.com/blog/ionut-radu-parte-medico-celta/",
+      "date": "Tue, 31 Mar 2026 14:40:50 +0000",
+      "img": "https://cdn.biwenger.com/i/t/5.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Oblak, Pubill y Mendoza siguen al margen, ¿llegan a la J30?",
+      "link": "https://www.jornadaperfecta.com/blog/oblak-estado-j30-25-26/",
+      "date": "Tue, 31 Mar 2026 13:30:05 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Tete Morente cree en la salvación. ¿Buen parche de final de temporada?",
+      "link": "https://www.jornadaperfecta.com/blog/tete-morente-analisis-paron-marzo-26/",
+      "date": "Tue, 31 Mar 2026 13:00:15 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/03/image-2026-03-15T115729.794.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Koundé y Balde entrenan con el grupo; De Jong apunta a baja",
+      "link": "https://www.jornadaperfecta.com/blog/kounde-estado-j30-barcelona/",
+      "date": "Tue, 31 Mar 2026 11:43:40 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
       "title": "Héctor Fort vuelve al grupo; Chust y Bigas, ausentes",
       "link": "https://www.jornadaperfecta.com/blog/hector-fort-vuelta-lesion-hombro-elche/",
-      "date": "Tue, 31 Mar 2026 09:08:31 +0000",
+      "date": "Tue, 31 Mar 2026 11:28:31 +0000",
       "img": "https://cdn.biwenger.com/i/t/75.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Grandes subidas y bajadas del mercado fantasy para la Jornada 30",
-      "link": "https://www.jornadaperfecta.com/blog/subidas-bajadas-j30-25-26/",
-      "date": "Tue, 31 Mar 2026 09:00:08 +0000",
-      "img": "https://cdn.biwenger.com/i/t/465.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Santi Comesaña ya entrena con el grupo junto a Ayoze",
-      "link": "https://www.jornadaperfecta.com/blog/comesana-estado-villarreal-j30/",
-      "date": "Tue, 31 Mar 2026 08:50:26 +0000",
-      "img": "https://cdn.biwenger.com/i/t/19.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Supercuota 3.75 en Betfair para el España vs Egipto: ¡Apuesta potenciada!",
-      "link": "https://www.jornadaperfecta.com/blog/supercuota-betfair-espana-vs-egipto/",
-      "date": "Tue, 31 Mar 2026 08:32:29 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/03/Betfair-Supercuota-Espana-vs-Egipto.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "El Getafe CF ficha a Satriano en propiedad hasta 2030",
-      "link": "https://www.jornadaperfecta.com/blog/satriano-fichaje-getafe-cf/",
-      "date": "Tue, 31 Mar 2026 07:47:13 +0000",
-      "img": "https://cdn.biwenger.com/i/t/8.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Los sancionados de LaLiga para la jornada 30",
-      "link": "https://www.jornadaperfecta.com/blog/sancionados-laliga-j30-25-26/",
-      "date": "Tue, 31 Mar 2026 07:00:49 +0000",
-      "img": "https://cdn.biwenger.com/i/t/7.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Cinco noticias fantasy para antes de irte a dormir",
-      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-30-3-26/",
-      "date": "Mon, 30 Mar 2026 21:00:14 +0000",
-      "img": "https://cdn.biwenger.com/i/t/13.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Chollos Fantasy que Tienes que Fichar YA para la J30 de Biwenger",
-      "link": "https://www.jornadaperfecta.com/blog/chollos-fantasy-biwenger-j30-laliga/",
-      "date": "Mon, 30 Mar 2026 19:00:14 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "title": "Iker Benito inicia su incorporación al grupo tras su grave lesión",
+      "link": "https://www.jornadaperfecta.com/blog/iker-benito-recuperacion-osasuna/",
+      "date": "Tue, 31 Mar 2026 11:27:38 +0000",
+      "img": "https://cdn.biwenger.com/i/t/93.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -15125,7 +15168,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-03-31T09:44:35.319Z",
+    "updatedAt": "2026-03-31T15:52:50.122Z",
     "players": [
       {
         "id": "3374",
