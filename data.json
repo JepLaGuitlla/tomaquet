@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-31T05:55:55.595Z",
+  "updatedAt": "2026-03-31T09:44:38.503Z",
   "players": [
     {
       "id": 11,
@@ -12365,7 +12365,7 @@
     "balance": 3419475,
     "lineup": {
       "type": "3-4-3",
-      "date": 1774639921,
+      "date": 1774945673,
       "playersID": [
         17021,
         10155,
@@ -12707,9 +12707,9 @@
           8,
           8
         ],
-        "teamSize": 17,
-        "teamValue": 76190000,
-        "teamValueInc": 260000,
+        "teamSize": 16,
+        "teamValue": 74600000,
+        "teamValueInc": 280000,
         "lastTrophy": {
           "type": "league",
           "position": 1,
@@ -13091,8 +13091,8 @@
       "name": "MarK Lenders",
       "manager": "MarK Lenders",
       "points": 1411,
-      "value": 76190000,
-      "trend": 260000,
+      "value": 74600000,
+      "trend": 280000,
       "players": []
     },
     {
@@ -13429,6 +13429,21 @@
   "boardEnBas": [
     {
       "type": "transfer",
+      "date": 1774947492,
+      "content": [
+        {
+          "player": 35901,
+          "from": {
+            "id": 9890450,
+            "name": "MarK Lenders",
+            "icon": "icons/34.png"
+          },
+          "amount": 1599300
+        }
+      ]
+    },
+    {
+      "type": "transfer",
       "date": 1774934824,
       "content": [
         {
@@ -13711,21 +13726,6 @@
             "icon": "icons/7.png"
           },
           "amount": 310020
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1774791721,
-      "content": [
-        {
-          "player": 19285,
-          "from": {
-            "id": 6580386,
-            "name": "Lamine i els 7 nans 👯‍♀️",
-            "icon": "i/u/6580386.png?v=10"
-          },
-          "amount": 1315800
         }
       ]
     }
@@ -15041,6 +15041,70 @@
   },
   "news": [
     {
+      "title": "Ruggeri sigue al margen en el entrenamiento del Atleti",
+      "link": "https://www.jornadaperfecta.com/blog/ruggeri-estado-atleti-j30/",
+      "date": "Tue, 31 Mar 2026 09:30:33 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Antony vuelve al grupo tras su plan especial por la pubalgia",
+      "link": "https://www.jornadaperfecta.com/blog/antony-plan-especifico-pubalgia-paron/",
+      "date": "Tue, 31 Mar 2026 09:15:31 +0000",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Héctor Fort vuelve al grupo; Chust y Bigas, ausentes",
+      "link": "https://www.jornadaperfecta.com/blog/hector-fort-vuelta-lesion-hombro-elche/",
+      "date": "Tue, 31 Mar 2026 09:08:31 +0000",
+      "img": "https://cdn.biwenger.com/i/t/75.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Grandes subidas y bajadas del mercado fantasy para la Jornada 30",
+      "link": "https://www.jornadaperfecta.com/blog/subidas-bajadas-j30-25-26/",
+      "date": "Tue, 31 Mar 2026 09:00:08 +0000",
+      "img": "https://cdn.biwenger.com/i/t/465.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Santi Comesaña ya entrena con el grupo junto a Ayoze",
+      "link": "https://www.jornadaperfecta.com/blog/comesana-estado-villarreal-j30/",
+      "date": "Tue, 31 Mar 2026 08:50:26 +0000",
+      "img": "https://cdn.biwenger.com/i/t/19.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Supercuota 3.75 en Betfair para el España vs Egipto: ¡Apuesta potenciada!",
+      "link": "https://www.jornadaperfecta.com/blog/supercuota-betfair-espana-vs-egipto/",
+      "date": "Tue, 31 Mar 2026 08:32:29 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/03/Betfair-Supercuota-Espana-vs-Egipto.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "El Getafe CF ficha a Satriano en propiedad hasta 2030",
+      "link": "https://www.jornadaperfecta.com/blog/satriano-fichaje-getafe-cf/",
+      "date": "Tue, 31 Mar 2026 07:47:13 +0000",
+      "img": "https://cdn.biwenger.com/i/t/8.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Los sancionados de LaLiga para la jornada 30",
+      "link": "https://www.jornadaperfecta.com/blog/sancionados-laliga-j30-25-26/",
+      "date": "Tue, 31 Mar 2026 07:00:49 +0000",
+      "img": "https://cdn.biwenger.com/i/t/7.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Cinco noticias fantasy para antes de irte a dormir",
       "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-30-3-26/",
       "date": "Mon, 30 Mar 2026 21:00:14 +0000",
@@ -15055,77 +15119,13 @@
       "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "La lesión de Raphinha, en clave fantasy: sustitutos en el Barça y equivalentes fantasy",
-      "link": "https://www.jornadaperfecta.com/blog/raphinha-analisis-lesion-sustitutos-fantasy-26/",
-      "date": "Mon, 30 Mar 2026 17:20:46 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/11/Rashford-FC-Barcelona-fantasy.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "El Real Oviedo recupera futbolistas antes de una nueva «final»",
-      "link": "https://www.jornadaperfecta.com/blog/thiago-borbas-recuperacion-lesion-26/",
-      "date": "Mon, 30 Mar 2026 16:37:40 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Gorrotxategi sigue ausente mientras Kubo acumula kilometraje",
-      "link": "https://www.jornadaperfecta.com/blog/gorrotxategi-estado-j30-25-26/",
-      "date": "Mon, 30 Mar 2026 16:15:17 +0000",
-      "img": "https://cdn.biwenger.com/i/t/13.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Jan Oblak, Mendoza y Ruggeri siguen sin entrenar, con Pubill al margen",
-      "link": "https://www.jornadaperfecta.com/blog/oblak-estado-j30-25-26/",
-      "date": "Mon, 30 Mar 2026 16:15:05 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Azpilicueta y Kike Salas se reincorporan al grupo",
-      "link": "https://www.jornadaperfecta.com/blog/azpilicueta-estado-j30-25-26/",
-      "date": "Mon, 30 Mar 2026 15:40:05 +0000",
-      "img": "https://cdn.biwenger.com/i/t/17.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Víctor Chust, ausente tras sus molestias. ¿Preocupa para la Jornada 30?",
-      "link": "https://www.jornadaperfecta.com/blog/victor-chust-estado-j30-25-26/",
-      "date": "Mon, 30 Mar 2026 15:35:51 +0000",
-      "img": "https://cdn.biwenger.com/i/t/75.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Johnny Cardoso da el susto con Estados Unidos",
-      "link": "https://www.jornadaperfecta.com/blog/johnny-cardoso-estado-sobrecarga-26/",
-      "date": "Mon, 30 Mar 2026 15:01:53 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Raíllo, ¿dará el paso adelante para salvar al Mallorca?",
-      "link": "https://www.jornadaperfecta.com/blog/raillo-recomendacion-fantasy-mallorca/",
-      "date": "Mon, 30 Mar 2026 15:00:39 +0000",
-      "img": "https://cdn.biwenger.com/i/t/465.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-03-31T05:55:52.506Z",
+    "updatedAt": "2026-03-31T09:44:35.319Z",
     "players": [
       {
         "id": "3374",
