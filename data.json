@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-01T06:12:16.813Z",
+  "updatedAt": "2026-04-01T15:57:51.315Z",
   "players": [
     {
       "id": 11,
@@ -664,7 +664,7 @@
     {
       "id": 1721,
       "slug": "manu-sanchez",
-      "name": "Manu Sánchez",
+      "name": "Manu S��nchez",
       "position": 2,
       "price": 800000,
       "points": 82,
@@ -11993,7 +11993,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 2,
-          "season": "2024/2025 season"
+          "season": "Temporada 2024/2025"
         },
         "position": 2
       },
@@ -12051,7 +12051,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "2024/2025 season"
+          "season": "Temporada 2024/2025"
         },
         "position": 5,
         "role": ""
@@ -12093,7 +12093,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 1,
-          "season": "2024/2025 season"
+          "season": "Temporada 2024/2025"
         },
         "position": 7
       },
@@ -12163,9 +12163,9 @@
           4,
           12
         ],
-        "teamSize": 11,
-        "teamValue": 41540000,
-        "teamValueInc": 10000,
+        "teamSize": 10,
+        "teamValue": 39160000,
+        "teamValueInc": 40000,
         "position": 11,
         "role": ""
       },
@@ -12205,7 +12205,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "2023/2024 season"
+          "season": "Temporada 2023/2024"
         },
         "position": 13,
         "role": ""
@@ -12326,8 +12326,8 @@
       "name": "Trileros FC",
       "manager": "Trileros FC",
       "points": 1193,
-      "value": 41540000,
-      "trend": 10000,
+      "value": 39160000,
+      "trend": 40000,
       "players": []
     },
     {
@@ -12365,7 +12365,7 @@
     "balance": 3419475,
     "lineup": {
       "type": "3-4-3",
-      "date": 1774954283,
+      "date": 1775041544,
       "playersID": [
         17021,
         10155,
@@ -12506,10 +12506,31 @@
         "price": 700000,
         "type": "sale",
         "until": 1775127065
+      },
+      {
+        "playerID": 27995,
+        "price": 360000,
+        "type": "sale",
+        "until": 1775214388
       }
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1775030866,
+      "content": [
+        {
+          "player": 1125,
+          "from": {
+            "id": 12696599,
+            "name": "Trileros FC",
+            "icon": "i/u/12696599.png"
+          },
+          "amount": 2439500
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1775021464,
@@ -12646,21 +12667,6 @@
             "icon": "i/u/11757390.png"
           },
           "amount": 20177600
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1774846944,
-      "content": [
-        {
-          "player": 6259,
-          "to": {
-            "id": 11520975,
-            "name": "Morankus FC",
-            "icon": "i/u/11520975.png?v=81"
-          },
-          "amount": 3200000
         }
       ]
     }
@@ -13281,7 +13287,7 @@
     "balance": 15410,
     "lineup": {
       "type": "3-4-3",
-      "date": 1774859513,
+      "date": 1775044461,
       "playersID": [
         14630,
         32440,
@@ -13289,7 +13295,7 @@
         1908,
         34077,
         26048,
-        29184,
+        1969,
         38368,
         38962,
         19577,
@@ -13429,7 +13435,7 @@
         "playerID": 31707,
         "price": 11145000,
         "type": "sale",
-        "until": 1775032263
+        "until": 1775217278
       }
     ]
   },
@@ -14847,7 +14853,7 @@
       "winProb": 0.3536219459922846,
       "drawProb": 0.2786112301757394,
       "loseProb": 0.367766823831976,
-      "over25Prob": 0.4484304932735426,
+      "over25Prob": 0.4504504504504504,
       "isHome": false,
       "opponent": "Mallorca",
       "matchDate": "2026-04-12T14:15:00Z"
@@ -14856,7 +14862,7 @@
       "winProb": 0.3948717948717948,
       "drawProb": 0.282051282051282,
       "loseProb": 0.32307692307692304,
-      "over25Prob": 0.4716981132075471,
+      "over25Prob": 0.4672897196261682,
       "isHome": true,
       "opponent": "Valencia",
       "matchDate": "2026-04-11T14:15:00Z"
@@ -14883,7 +14889,7 @@
       "winProb": 0.367766823831976,
       "drawProb": 0.2786112301757394,
       "loseProb": 0.3536219459922846,
-      "over25Prob": 0.4484304932735426,
+      "over25Prob": 0.4504504504504504,
       "isHome": true,
       "opponent": "Rayo Vallecano",
       "matchDate": "2026-04-12T14:15:00Z"
@@ -14907,27 +14913,27 @@
       "matchDate": "2026-04-12T12:00:00Z"
     },
     "Espanyol": {
-      "winProb": 0.10499551301226442,
-      "drawProb": 0.13221657194137001,
-      "loseProb": 0.7627879150463656,
+      "winProb": 0.11154681044744764,
+      "drawProb": 0.13220362719697498,
+      "loseProb": 0.7562495623555773,
       "over25Prob": 0.5,
       "isHome": false,
       "opponent": "Barcelona",
       "matchDate": "2026-04-11T16:30:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.4494438320472994,
-      "drawProb": 0.26706082773825035,
-      "loseProb": 0.2834953402144504,
+      "winProb": 0.44746174891073065,
+      "drawProb": 0.2658830681933327,
+      "loseProb": 0.2866551828959368,
       "over25Prob": 0.5128205128205129,
       "isHome": false,
       "opponent": "Sevilla",
       "matchDate": "2026-04-11T19:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.7627879150463656,
-      "drawProb": 0.13221657194137001,
-      "loseProb": 0.10499551301226442,
+      "winProb": 0.7562495623555773,
+      "drawProb": 0.13220362719697498,
+      "loseProb": 0.11154681044744764,
       "over25Prob": 0.5,
       "isHome": true,
       "opponent": "Espanyol",
@@ -14955,7 +14961,7 @@
       "winProb": 0.32307692307692304,
       "drawProb": 0.282051282051282,
       "loseProb": 0.3948717948717948,
-      "over25Prob": 0.4716981132075471,
+      "over25Prob": 0.4672897196261682,
       "isHome": false,
       "opponent": "Elche CF",
       "matchDate": "2026-04-11T14:15:00Z"
@@ -14979,9 +14985,9 @@
       "matchDate": "2026-04-12T16:30:00Z"
     },
     "Sevilla": {
-      "winProb": 0.2834953402144504,
-      "drawProb": 0.26706082773825035,
-      "loseProb": 0.4494438320472994,
+      "winProb": 0.2866551828959368,
+      "drawProb": 0.2658830681933327,
+      "loseProb": 0.44746174891073065,
       "over25Prob": 0.5128205128205129,
       "isHome": true,
       "opponent": "Atlético Madrid",
@@ -15026,82 +15032,82 @@
   },
   "news": [
     {
-      "title": "Las claves fantasy del Real Sociedad &#8211; Levante UD: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-real-sociedad-levante-j30-25-26/",
-      "date": "Wed, 01 Apr 2026 06:05:58 +0000",
+      "title": "Iago Aspas, tocado del tendón de Aquiles. ¿Cuál es su estado?",
+      "link": "https://www.jornadaperfecta.com/blog/iago-aspas-molestias-tendon-aquiles-26/",
+      "date": "Wed, 01 Apr 2026 15:36:01 +0000",
+      "img": "https://cdn.biwenger.com/i/t/5.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Ilaix Moriba recibe el alta médica y Vecino sigue ausente",
+      "link": "https://www.jornadaperfecta.com/blog/ilaix-moriba-estado-j30-25-26/",
+      "date": "Wed, 01 Apr 2026 15:15:17 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Los Ases de PixonFantasy para la Jornada 30",
+      "link": "https://www.jornadaperfecta.com/blog/ases-fantasy-j30-25-26/",
+      "date": "Wed, 01 Apr 2026 15:00:28 +0000",
+      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2665.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Davinchi vuelve a entrenar con el Getafe. ¿Disponible en la Jornada 30?",
+      "link": "https://www.jornadaperfecta.com/blog/davinchi-vuelta-lesion-menisco-26/",
+      "date": "Wed, 01 Apr 2026 14:56:36 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Gorrotxategi sigue ausente y aumentan las dudas",
+      "link": "https://www.jornadaperfecta.com/blog/gorrotxategi-estado-j30-25-26/",
+      "date": "Wed, 01 Apr 2026 14:30:17 +0000",
       "img": "https://cdn.biwenger.com/i/t/13.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Las claves fantasy del Rayo Vallecano &#8211; Elche: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-rayo-elche-j30-25-26/",
-      "date": "Wed, 01 Apr 2026 06:00:58 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "La participación de Bellingham con Inglaterra preocupa. ¿No recomendable para la Jornada 30?",
-      "link": "https://www.jornadaperfecta.com/blog/bellingham-estado-j30-25-26/",
-      "date": "Tue, 31 Mar 2026 21:45:49 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Cinco noticias fantasy para antes de irte a dormir",
-      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-31-3-26/",
-      "date": "Tue, 31 Mar 2026 21:00:00 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Chollos LaLiga Fantasy: Fichajes Baratos y Rentables para la jornada 30",
-      "link": "https://www.jornadaperfecta.com/blog/chollos-laliga-fantasy-j30-25-26/",
-      "date": "Tue, 31 Mar 2026 19:00:44 +0000",
-      "img": "https://i.ytimg.com/vi/rERJ9NjH5wA/mqdefault.jpg",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Ferland Mendy suma un entreno más. ¿Cuándo puede volver?",
-      "link": "https://www.jornadaperfecta.com/blog/ferland-mendy-vuelta-lesion-biceps-femoral-26/",
-      "date": "Tue, 31 Mar 2026 18:12:00 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Xavi Espart se marcha tocado con la Sub-19",
-      "link": "https://www.jornadaperfecta.com/blog/xavi-espart-molestias-26/",
-      "date": "Tue, 31 Mar 2026 18:09:37 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Nahuel Molina recupera su mejor versión, ¿chollo fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/nahuel-molina-chollo-fantasy-atleti/",
-      "date": "Tue, 31 Mar 2026 17:00:09 +0000",
+      "title": "Parte médico oficial de Johnny Cardoso y Sorloth",
+      "link": "https://www.jornadaperfecta.com/blog/sorloth-cardoso-parte-medico-26/",
+      "date": "Wed, 01 Apr 2026 14:21:51 +0000",
       "img": "https://cdn.biwenger.com/i/t/2.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Ilias Akhomach vuelve con el grupo en una sesión sin Fran Pérez",
-      "link": "https://www.jornadaperfecta.com/blog/ilias-akhomach-estado-j30-25-26/",
-      "date": "Tue, 31 Mar 2026 15:19:17 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
+      "title": "Atlético vs Barcelona: cuotas, apuestas y bono de 888Sport &#124; LaLiga EA Sports",
+      "link": "https://www.jornadaperfecta.com/blog/888sport-atletico-vs-barcelona-cuotas/",
+      "date": "Wed, 01 Apr 2026 11:50:32 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/04/888Sport-Atletico-vs-Barcelona-cuotas.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Vivian quiere llevar al Athletic a Europa. ¿Buen defensa fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/vivian-analisis-paron-marzo-26/",
-      "date": "Tue, 31 Mar 2026 15:00:24 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2024/12/Yeray-Athletic-Club-fantasy.webp",
+      "title": "Tchouameni ya entrena tras superar un golpe en la rodilla",
+      "link": "https://www.jornadaperfecta.com/blog/tchouameni-estado-real-madrid-j30/",
+      "date": "Wed, 01 Apr 2026 11:39:01 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Calendario fantasy de abril: equipos más y menos recomendables",
+      "link": "https://www.jornadaperfecta.com/blog/calendario-fantasy-abril-2026/",
+      "date": "Wed, 01 Apr 2026 11:30:34 +0000",
+      "img": "https://cdn.biwenger.com/i/t/5.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Sorloth sufre un golpe en la cabeza, ¿preocupa?",
+      "link": "https://www.jornadaperfecta.com/blog/sorloth-estado-j30-atleti/",
+      "date": "Wed, 01 Apr 2026 11:26:59 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -15110,7 +15116,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-01T06:12:14.307Z",
+    "updatedAt": "2026-04-01T15:57:50.125Z",
     "players": [
       {
         "id": "3374",
