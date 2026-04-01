@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-01T15:57:51.315Z",
+  "updatedAt": "2026-04-01T20:06:29.561Z",
   "players": [
     {
       "id": 11,
@@ -664,7 +664,7 @@
     {
       "id": 1721,
       "slug": "manu-sanchez",
-      "name": "Manu S��nchez",
+      "name": "Manu Sánchez",
       "position": 2,
       "price": 800000,
       "points": 82,
@@ -12654,21 +12654,6 @@
           ]
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1774930148,
-      "content": [
-        {
-          "player": 26930,
-          "from": {
-            "id": 12697101,
-            "name": "INDOMABLE FC",
-            "icon": "i/u/11757390.png"
-          },
-          "amount": 20177600
-        }
-      ]
     }
   ],
   "leagueEnBas": {
@@ -13702,21 +13687,6 @@
           },
           "amount": 150000,
           "type": "immediateSale"
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1774867454,
-      "content": [
-        {
-          "player": 30801,
-          "from": {
-            "id": 6586257,
-            "name": "Aquest any he trepitjat merda !!",
-            "icon": "i/u/6586257.png"
-          },
-          "amount": 154700
         }
       ]
     }
@@ -14859,10 +14829,10 @@
       "matchDate": "2026-04-12T14:15:00Z"
     },
     "Elche CF": {
-      "winProb": 0.3948717948717948,
-      "drawProb": 0.282051282051282,
-      "loseProb": 0.32307692307692304,
-      "over25Prob": 0.4672897196261682,
+      "winProb": 0.3966197183098592,
+      "drawProb": 0.27887323943661974,
+      "loseProb": 0.32450704225352117,
+      "over25Prob": 0.4716981132075471,
       "isHome": true,
       "opponent": "Valencia",
       "matchDate": "2026-04-11T14:15:00Z"
@@ -14922,9 +14892,9 @@
       "matchDate": "2026-04-11T16:30:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.44746174891073065,
-      "drawProb": 0.2658830681933327,
-      "loseProb": 0.2866551828959368,
+      "winProb": 0.44543498309253005,
+      "drawProb": 0.2646787580694744,
+      "loseProb": 0.2898862588379957,
       "over25Prob": 0.5128205128205129,
       "isHome": false,
       "opponent": "Sevilla",
@@ -14958,10 +14928,10 @@
       "matchDate": "2026-04-12T19:00:00Z"
     },
     "Valencia": {
-      "winProb": 0.32307692307692304,
-      "drawProb": 0.282051282051282,
-      "loseProb": 0.3948717948717948,
-      "over25Prob": 0.4672897196261682,
+      "winProb": 0.32450704225352117,
+      "drawProb": 0.27887323943661974,
+      "loseProb": 0.3966197183098592,
+      "over25Prob": 0.4716981132075471,
       "isHome": false,
       "opponent": "Elche CF",
       "matchDate": "2026-04-11T14:15:00Z"
@@ -14985,9 +14955,9 @@
       "matchDate": "2026-04-12T16:30:00Z"
     },
     "Sevilla": {
-      "winProb": 0.2866551828959368,
-      "drawProb": 0.2658830681933327,
-      "loseProb": 0.44746174891073065,
+      "winProb": 0.2898862588379957,
+      "drawProb": 0.2646787580694744,
+      "loseProb": 0.44543498309253005,
       "over25Prob": 0.5128205128205129,
       "isHome": true,
       "opponent": "Atlético Madrid",
@@ -15031,6 +15001,30 @@
     }
   },
   "news": [
+    {
+      "title": "Boyomo vuelve a la titularidad con buenos números. ¿Recomendable fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/boyomo-analisis-paron-marzo-26/",
+      "date": "Wed, 01 Apr 2026 19:00:25 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/03/image-2026-03-31T184549.664.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Podcast: Alineaciones Probables Jornada 30 2025/26",
+      "link": "https://www.jornadaperfecta.com/blog/podcast-j30-25-26/",
+      "date": "Wed, 01 Apr 2026 17:18:04 +0000",
+      "img": "https://i.ytimg.com/vi/gK8CHznwMH4/mqdefault.jpg",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Peque vuelve a entrenar con el grupo. ¿Llega a la Jornada 30?",
+      "link": "https://www.jornadaperfecta.com/blog/peque-vuelta-lesion-tobillo-26/",
+      "date": "Wed, 01 Apr 2026 16:42:13 +0000",
+      "img": "https://cdn.biwenger.com/i/t/17.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Iago Aspas, tocado del tendón de Aquiles. ¿Cuál es su estado?",
       "link": "https://www.jornadaperfecta.com/blog/iago-aspas-molestias-tendon-aquiles-26/",
@@ -15086,37 +15080,13 @@
       "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/04/888Sport-Atletico-vs-Barcelona-cuotas.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Tchouameni ya entrena tras superar un golpe en la rodilla",
-      "link": "https://www.jornadaperfecta.com/blog/tchouameni-estado-real-madrid-j30/",
-      "date": "Wed, 01 Apr 2026 11:39:01 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Calendario fantasy de abril: equipos más y menos recomendables",
-      "link": "https://www.jornadaperfecta.com/blog/calendario-fantasy-abril-2026/",
-      "date": "Wed, 01 Apr 2026 11:30:34 +0000",
-      "img": "https://cdn.biwenger.com/i/t/5.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Sorloth sufre un golpe en la cabeza, ¿preocupa?",
-      "link": "https://www.jornadaperfecta.com/blog/sorloth-estado-j30-atleti/",
-      "date": "Wed, 01 Apr 2026 11:26:59 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-01T15:57:50.125Z",
+    "updatedAt": "2026-04-01T20:06:27.961Z",
     "players": [
       {
         "id": "3374",
