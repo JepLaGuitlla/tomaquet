@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-02T05:50:06.158Z",
+  "updatedAt": "2026-04-02T09:39:04.226Z",
   "players": [
     {
       "id": 11,
@@ -12145,9 +12145,9 @@
           14,
           10
         ],
-        "teamSize": 16,
-        "teamValue": 59510000,
-        "teamValueInc": -40000,
+        "teamSize": 15,
+        "teamValue": 57020000,
+        "teamValueInc": -30000,
         "position": 10,
         "role": ""
       },
@@ -12317,8 +12317,8 @@
       "name": "CIGALERU",
       "manager": "CIGALERU",
       "points": 1220,
-      "value": 59510000,
-      "trend": -40000,
+      "value": 57020000,
+      "trend": -30000,
       "players": []
     },
     {
@@ -12517,6 +12517,21 @@
   },
   "boardTomaquet": [
     {
+      "type": "transfer",
+      "date": 1775122303,
+      "content": [
+        {
+          "player": 17442,
+          "from": {
+            "id": 12696899,
+            "name": "CIGALERU",
+            "icon": "i/u/12696899.png"
+          },
+          "amount": 2562800
+        }
+      ]
+    },
+    {
       "type": "market",
       "date": 1775106160,
       "content": [
@@ -12606,42 +12621,6 @@
             "icon": "i/u/12696899.png"
           },
           "amount": 186300
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1774952654,
-      "content": [
-        {
-          "player": 25592,
-          "from": {
-            "id": 148051,
-            "name": "Zaza Pachulia",
-            "icon": "i/u/148051.png?v=39"
-          },
-          "to": {
-            "id": 12696599,
-            "name": "Trileros FC",
-            "icon": "i/u/12696599.png"
-          },
-          "amount": 4905000,
-          "type": "clause"
-        },
-        {
-          "player": 27059,
-          "from": {
-            "id": 12713493,
-            "name": "Tata Martini",
-            "icon": "i/u/12713493.png"
-          },
-          "to": {
-            "id": 148051,
-            "name": "Zaza Pachulia",
-            "icon": "i/u/148051.png?v=39"
-          },
-          "amount": 3360000,
-          "type": "clause"
         }
       ]
     }
@@ -13027,9 +13006,9 @@
           13,
           7
         ],
-        "teamSize": 20,
-        "teamValue": 43400000,
-        "teamValueInc": 230000,
+        "teamSize": 18,
+        "teamValue": 39880000,
+        "teamValueInc": 260000,
         "position": 18,
         "positionInc": 1,
         "role": ""
@@ -13232,8 +13211,8 @@
       "name": "Aquest any he trepitjat merda !!",
       "manager": "Aquest any he trepitjat merda !!",
       "points": 1026,
-      "value": 43400000,
-      "trend": 230000,
+      "value": 39880000,
+      "trend": 260000,
       "players": []
     },
     {
@@ -13416,6 +13395,30 @@
   },
   "boardEnBas": [
     {
+      "type": "transfer",
+      "date": 1775110821,
+      "content": [
+        {
+          "player": 38966,
+          "from": {
+            "id": 6586257,
+            "name": "Aquest any he trepitjat merda !!",
+            "icon": "i/u/6586257.png"
+          },
+          "amount": 2915900
+        },
+        {
+          "player": 37456,
+          "from": {
+            "id": 6586257,
+            "name": "Aquest any he trepitjat merda !!",
+            "icon": "i/u/6586257.png"
+          },
+          "amount": 591700
+        }
+      ]
+    },
+    {
       "type": "market",
       "date": 1775106224,
       "content": [
@@ -13586,105 +13589,6 @@
             "icon": "i/u/6580386.png?v=10"
           },
           "amount": 2904000
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1774933359,
-      "content": [
-        {
-          "player": 9983,
-          "to": {
-            "id": 6578885,
-            "name": "Norimaki  FC",
-            "icon": "icons/41.png"
-          },
-          "amount": 1320000
-        },
-        {
-          "player": 11686,
-          "to": {
-            "id": 6586257,
-            "name": "Aquest any he trepitjat merda !!",
-            "icon": "i/u/6586257.png"
-          },
-          "amount": 5832000,
-          "bids": [
-            {
-              "user": {
-                "id": 6593096,
-                "name": "Janwandowski",
-                "icon": "i/u/6593096.png"
-              },
-              "amount": 5650250
-            },
-            {
-              "user": {
-                "id": 6580386,
-                "name": "Lamine i els 7 nans 👯‍♀️",
-                "icon": "i/u/6580386.png?v=10"
-              },
-              "amount": 5275000
-            },
-            {
-              "user": {
-                "id": 6588130,
-                "name": "The GOAT club",
-                "icon": "i/u/6588130.png?v=12"
-              },
-              "amount": 5100000
-            },
-            {
-              "user": {
-                "id": 6579402,
-                "name": "Valors FC",
-                "icon": "icons/7.png"
-              },
-              "amount": 5088550
-            },
-            {
-              "user": {
-                "id": 6578885,
-                "name": "Norimaki  FC",
-                "icon": "icons/41.png"
-              },
-              "amount": 5000858
-            },
-            {
-              "user": {
-                "id": 6586225,
-                "name": "Sergi Sala Duran",
-                "icon": "https://graph.facebook.com/10156583054878679/picture?height=300&width=300"
-              },
-              "amount": 4561570
-            },
-            {
-              "user": {
-                "id": 6579330,
-                "name": "Mindundis",
-                "icon": "i/u/6579330.png?v=66"
-              },
-              "amount": 4376007
-            },
-            {
-              "user": {
-                "id": 6579505,
-                "name": "Xevi borrat",
-                "icon": "i/u/6579505.png"
-              },
-              "amount": 4187000
-            }
-          ]
-        },
-        {
-          "player": 10040,
-          "to": {
-            "id": 6578885,
-            "name": "Norimaki  FC",
-            "icon": "icons/41.png"
-          },
-          "amount": 3340000
         }
       ]
     }
@@ -14827,9 +14731,9 @@
       "matchDate": "2026-04-12T14:15:00Z"
     },
     "Elche CF": {
-      "winProb": 0.3966197183098592,
-      "drawProb": 0.27887323943661974,
-      "loseProb": 0.32450704225352117,
+      "winProb": 0.39716312056737585,
+      "drawProb": 0.2836879432624113,
+      "loseProb": 0.3191489361702128,
       "over25Prob": 0.4716981132075471,
       "isHome": true,
       "opponent": "Valencia",
@@ -14848,7 +14752,7 @@
       "winProb": 0.35644712430426717,
       "drawProb": 0.3072820037105751,
       "loseProb": 0.3362708719851577,
-      "over25Prob": 0.5,
+      "over25Prob": 0.37037037037037035,
       "isHome": true,
       "opponent": "Getafe",
       "matchDate": "2026-04-13T19:00:00Z"
@@ -14866,7 +14770,7 @@
       "winProb": 0.7748409154745416,
       "drawProb": 0.14891473844276346,
       "loseProb": 0.0762443460826949,
-      "over25Prob": 0.5,
+      "over25Prob": 0.7407407407407407,
       "isHome": true,
       "opponent": "Girona",
       "matchDate": "2026-04-10T19:00:00Z"
@@ -14881,28 +14785,28 @@
       "matchDate": "2026-04-12T12:00:00Z"
     },
     "Espanyol": {
-      "winProb": 0.11154681044744764,
-      "drawProb": 0.13220362719697498,
-      "loseProb": 0.7562495623555773,
-      "over25Prob": 0.5,
+      "winProb": 0.10499551301226442,
+      "drawProb": 0.13221657194137001,
+      "loseProb": 0.7627879150463656,
+      "over25Prob": 0.7751937984496123,
       "isHome": false,
       "opponent": "Barcelona",
       "matchDate": "2026-04-11T16:30:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.44543498309253005,
-      "drawProb": 0.2646787580694744,
-      "loseProb": 0.2898862588379957,
+      "winProb": 0.4394904458598727,
+      "drawProb": 0.26751592356687903,
+      "loseProb": 0.29299363057324845,
       "over25Prob": 0.5128205128205129,
       "isHome": false,
       "opponent": "Sevilla",
       "matchDate": "2026-04-11T19:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.7562495623555773,
-      "drawProb": 0.13220362719697498,
-      "loseProb": 0.11154681044744764,
-      "over25Prob": 0.5,
+      "winProb": 0.7627879150463656,
+      "drawProb": 0.13221657194137001,
+      "loseProb": 0.10499551301226442,
+      "over25Prob": 0.7751937984496123,
       "isHome": true,
       "opponent": "Espanyol",
       "matchDate": "2026-04-11T16:30:00Z"
@@ -14911,7 +14815,7 @@
       "winProb": 0.3362708719851577,
       "drawProb": 0.3072820037105751,
       "loseProb": 0.35644712430426717,
-      "over25Prob": 0.5,
+      "over25Prob": 0.37037037037037035,
       "isHome": false,
       "opponent": "Levante",
       "matchDate": "2026-04-13T19:00:00Z"
@@ -14926,36 +14830,36 @@
       "matchDate": "2026-04-12T19:00:00Z"
     },
     "Valencia": {
-      "winProb": 0.32450704225352117,
-      "drawProb": 0.27887323943661974,
-      "loseProb": 0.3966197183098592,
+      "winProb": 0.3191489361702128,
+      "drawProb": 0.2836879432624113,
+      "loseProb": 0.39716312056737585,
       "over25Prob": 0.4716981132075471,
       "isHome": false,
       "opponent": "Elche CF",
       "matchDate": "2026-04-11T14:15:00Z"
     },
     "Celta Vigo": {
-      "winProb": 0.5645161290322581,
-      "drawProb": 0.21774193548387097,
-      "loseProb": 0.21774193548387097,
+      "winProb": 0.5733333333333334,
+      "drawProb": 0.21333333333333335,
+      "loseProb": 0.21333333333333335,
       "over25Prob": 0.5,
       "isHome": true,
       "opponent": "Oviedo",
       "matchDate": "2026-04-12T16:30:00Z"
     },
     "Oviedo": {
-      "winProb": 0.21774193548387097,
-      "drawProb": 0.21774193548387097,
-      "loseProb": 0.5645161290322581,
+      "winProb": 0.21333333333333335,
+      "drawProb": 0.21333333333333335,
+      "loseProb": 0.5733333333333334,
       "over25Prob": 0.5,
       "isHome": false,
       "opponent": "Celta Vigo",
       "matchDate": "2026-04-12T16:30:00Z"
     },
     "Sevilla": {
-      "winProb": 0.2898862588379957,
-      "drawProb": 0.2646787580694744,
-      "loseProb": 0.44543498309253005,
+      "winProb": 0.29299363057324845,
+      "drawProb": 0.26751592356687903,
+      "loseProb": 0.4394904458598727,
       "over25Prob": 0.5128205128205129,
       "isHome": true,
       "opponent": "Atlético Madrid",
@@ -14983,7 +14887,7 @@
       "winProb": 0.0762443460826949,
       "drawProb": 0.14891473844276346,
       "loseProb": 0.7748409154745416,
-      "over25Prob": 0.5,
+      "over25Prob": 0.7407407407407407,
       "isHome": false,
       "opponent": "Real Madrid",
       "matchDate": "2026-04-10T19:00:00Z"
@@ -14999,6 +14903,54 @@
     }
   },
   "news": [
+    {
+      "title": "Echeverri y Stuani, buenas noticias en Girona, a la espera de Bryan Gil",
+      "link": "https://www.jornadaperfecta.com/blog/echeverri-y-stuani-estado-j30/",
+      "date": "Thu, 02 Apr 2026 09:34:34 +0000",
+      "img": "https://cdn.biwenger.com/i/t/289.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Lo Celso sigue con el grupo y Natan se ausenta",
+      "link": "https://www.jornadaperfecta.com/blog/lo-celso-vuelta-lesion-26/",
+      "date": "Thu, 02 Apr 2026 09:00:34 +0000",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Lejeune sigue dejando un gran rendimiento. ¿Fichamos en fantasy o es demasiado caro?",
+      "link": "https://www.jornadaperfecta.com/blog/lejeune-analisis-paron-marzo-26/",
+      "date": "Thu, 02 Apr 2026 09:00:29 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/01/Luiz-Felipe-Rayo-Vallecano-fantasy.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Sarabia confirma la baja de Chust y otros cuatro jugadores",
+      "link": "https://www.jornadaperfecta.com/blog/sarabia-previa-rayo-elche-j30-25-26/",
+      "date": "Thu, 02 Apr 2026 08:51:09 +0000",
+      "img": "https://cdn.biwenger.com/i/t/75.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Parte médico oficial de Johnny Cardoso y Sorloth",
+      "link": "https://www.jornadaperfecta.com/blog/sorloth-cardoso-parte-medico-26/",
+      "date": "Thu, 02 Apr 2026 07:21:51 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Los Mejores Capitanes Fantasy para la jornada 30 de LaLiga",
+      "link": "https://www.jornadaperfecta.com/blog/capitanes-fantasy-j30-25-26/",
+      "date": "Thu, 02 Apr 2026 07:00:30 +0000",
+      "img": "https://cdn.biwenger.com/i/t/10.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Cinco noticias fantasy para antes de irte a dormir",
       "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-1-4-26/",
@@ -15019,7 +14971,7 @@
       "title": "Podcast: Alineaciones Probables Jornada 30 2025/26",
       "link": "https://www.jornadaperfecta.com/blog/podcast-j30-25-26/",
       "date": "Wed, 01 Apr 2026 17:18:04 +0000",
-      "img": "https://i.ytimg.com/vi/gK8CHznwMH4/mqdefault.jpg",
+      "img": "https://i.ytimg.com/vi/uN60vld2ZK0/mqdefault.jpg",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
@@ -15030,61 +14982,13 @@
       "img": "https://cdn.biwenger.com/i/t/17.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Iago Aspas, tocado del tendón de Aquiles. ¿Cuál es su estado?",
-      "link": "https://www.jornadaperfecta.com/blog/iago-aspas-molestias-tendon-aquiles-26/",
-      "date": "Wed, 01 Apr 2026 15:36:01 +0000",
-      "img": "https://cdn.biwenger.com/i/t/5.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Ilaix Moriba recibe el alta médica y Vecino sigue ausente",
-      "link": "https://www.jornadaperfecta.com/blog/ilaix-moriba-estado-j30-25-26/",
-      "date": "Wed, 01 Apr 2026 15:15:17 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Los Ases de PixonFantasy para la Jornada 30",
-      "link": "https://www.jornadaperfecta.com/blog/ases-fantasy-j30-25-26/",
-      "date": "Wed, 01 Apr 2026 15:00:28 +0000",
-      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2665.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Davinchi vuelve a entrenar con el Getafe. ¿Disponible en la Jornada 30?",
-      "link": "https://www.jornadaperfecta.com/blog/davinchi-vuelta-lesion-menisco-26/",
-      "date": "Wed, 01 Apr 2026 14:56:36 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Gorrotxategi sigue ausente y aumentan las dudas",
-      "link": "https://www.jornadaperfecta.com/blog/gorrotxategi-estado-j30-25-26/",
-      "date": "Wed, 01 Apr 2026 14:30:17 +0000",
-      "img": "https://cdn.biwenger.com/i/t/13.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Parte médico oficial de Johnny Cardoso y Sorloth",
-      "link": "https://www.jornadaperfecta.com/blog/sorloth-cardoso-parte-medico-26/",
-      "date": "Wed, 01 Apr 2026 14:21:51 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-02T05:50:05.162Z",
+    "updatedAt": "2026-04-02T09:39:02.102Z",
     "players": [
       {
         "id": "3374",
