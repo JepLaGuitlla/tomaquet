@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-02T15:37:51.961Z",
+  "updatedAt": "2026-04-02T20:00:40.351Z",
   "players": [
     {
       "id": 11,
@@ -12789,9 +12789,9 @@
           11,
           19
         ],
-        "teamSize": 13,
-        "teamValue": 58070000,
-        "teamValueInc": -80000,
+        "teamSize": 14,
+        "teamValue": 60510000,
+        "teamValueInc": -90000,
         "position": 7,
         "role": ""
       },
@@ -12968,9 +12968,9 @@
           2,
           13
         ],
-        "teamSize": 18,
-        "teamValue": 70470000,
-        "teamValueInc": 570000,
+        "teamSize": 17,
+        "teamValue": 68030000,
+        "teamValueInc": 580000,
         "position": 16,
         "positionInc": 1,
         "role": ""
@@ -13112,8 +13112,8 @@
       "name": "FC Borça",
       "manager": "FC Borça",
       "points": 1226,
-      "value": 58070000,
-      "trend": -80000,
+      "value": 60510000,
+      "trend": -90000,
       "players": []
     },
     {
@@ -13193,8 +13193,8 @@
       "name": "Eric Duran",
       "manager": "Eric Duran",
       "points": 1068,
-      "value": 70470000,
-      "trend": 570000,
+      "value": 68030000,
+      "trend": 580000,
       "players": []
     },
     {
@@ -13396,6 +13396,26 @@
   "boardEnBas": [
     {
       "type": "transfer",
+      "date": 1775154958,
+      "content": [
+        {
+          "player": 30787,
+          "from": {
+            "id": 9897660,
+            "name": "Eric Duran"
+          },
+          "to": {
+            "id": 6580423,
+            "name": "FC Borça",
+            "icon": "i/t/3.png"
+          },
+          "amount": 2800000,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
       "date": 1775110821,
       "content": [
         {
@@ -13574,21 +13594,6 @@
             "icon": "icons/41.png"
           },
           "amount": 1249400
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1774933737,
-      "content": [
-        {
-          "player": 1769,
-          "from": {
-            "id": 6580386,
-            "name": "Lamine i els 7 nans 👯‍♀️",
-            "icon": "i/u/6580386.png?v=10"
-          },
-          "amount": 2904000
         }
       ]
     }
@@ -14904,6 +14909,30 @@
   },
   "news": [
     {
+      "title": "La Previa de las Picas: Todo sobre los Cronistas de la Jornada 30",
+      "link": "https://www.jornadaperfecta.com/blog/previa-picas-cronistas-j30/",
+      "date": "Thu, 02 Apr 2026 18:37:58 +0000",
+      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2660.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Iñigo Pérez, sobre el estado de Akhomach, Fran Pérez y Mendy",
+      "link": "https://www.jornadaperfecta.com/blog/inigo-perez-previa-rayo-elche-j30/",
+      "date": "Thu, 02 Apr 2026 18:34:45 +0000",
+      "img": "https://cdn.biwenger.com/i/t/70.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "El All In de Victorius para la Jornada 30 de La Liga",
+      "link": "https://www.jornadaperfecta.com/blog/all-in-victorius-j30-25-26/",
+      "date": "Thu, 02 Apr 2026 17:00:30 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/03/image-2026-03-17T185203.943.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "La prensa de Mallorca ve a Muriqi con opciones de ser suplente",
       "link": "https://www.jornadaperfecta.com/blog/muriqi-alinear-j30-mallorca/",
       "date": "Thu, 02 Apr 2026 15:15:40 +0000",
@@ -14958,37 +14987,13 @@
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Bellingham no está al 100% para ser titular. ¿Alineamos en la Jornada 30?",
-      "link": "https://www.jornadaperfecta.com/blog/bellingham-estado-j30-25-26/",
-      "date": "Thu, 02 Apr 2026 12:25:49 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Frenkie de Jong aún no entrena y apunta a baja",
-      "link": "https://www.jornadaperfecta.com/blog/frenkie-de-jong-vuelta-paron/",
-      "date": "Thu, 02 Apr 2026 12:20:29 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Guedes y Caleta-Car aún no vuelven de estar con sus selecciones. ¿Rotaciones en la Jornada 30?",
-      "link": "https://www.jornadaperfecta.com/blog/caleta-car-rotaciones-real-sociedad-j30-25-26/",
-      "date": "Thu, 02 Apr 2026 12:11:41 +0000",
-      "img": "https://cdn.biwenger.com/i/t/13.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-02T15:37:49.619Z",
+    "updatedAt": "2026-04-02T20:00:40.351Z",
     "players": [
       {
         "id": "3374",
