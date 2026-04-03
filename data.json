@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-03T08:35:45.448Z",
+  "updatedAt": "2026-04-03T14:26:38.583Z",
   "players": [
     {
       "id": 11,
@@ -12802,9 +12802,9 @@
           11,
           19
         ],
-        "teamSize": 14,
-        "teamValue": 60470000,
-        "teamValueInc": -40000,
+        "teamSize": 15,
+        "teamValue": 61840000,
+        "teamValueInc": -50000,
         "position": 7,
         "role": ""
       },
@@ -12964,9 +12964,9 @@
           20,
           20
         ],
-        "teamSize": 14,
-        "teamValue": 35570000,
-        "teamValueInc": -40000,
+        "teamSize": 13,
+        "teamValue": 34200000,
+        "teamValueInc": -30000,
         "position": 15,
         "role": ""
       },
@@ -13125,8 +13125,8 @@
       "name": "FC Borça",
       "manager": "FC Borça",
       "points": 1226,
-      "value": 60470000,
-      "trend": -40000,
+      "value": 61840000,
+      "trend": -50000,
       "players": []
     },
     {
@@ -13197,8 +13197,8 @@
       "name": "Sant Pere Atlètic",
       "manager": "Sant Pere Atlètic",
       "points": 1085,
-      "value": 35570000,
-      "trend": -40000,
+      "value": 34200000,
+      "trend": -30000,
       "players": []
     },
     {
@@ -13329,7 +13329,7 @@
       {
         "id": 31707,
         "buyPrice": 7658222,
-        "clause": 10965000,
+        "clause": 0,
         "invested": 0,
         "buyDate": 1770444175
       },
@@ -13407,6 +13407,27 @@
     ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1775222150,
+      "content": [
+        {
+          "player": 1844,
+          "from": {
+            "id": 6579280,
+            "name": "Sant Pere Atlètic",
+            "icon": "i/u/6579280.png?v=22"
+          },
+          "to": {
+            "id": 6580423,
+            "name": "FC Borça",
+            "icon": "i/t/3.png"
+          },
+          "amount": 1800000,
+          "type": "clause"
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1775198793,
@@ -13605,27 +13626,6 @@
               "amount": 810000
             }
           ]
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1774976652,
-      "content": [
-        {
-          "player": 10155,
-          "from": {
-            "id": 6580386,
-            "name": "Lamine i els 7 nans 👯‍♀️",
-            "icon": "i/u/6580386.png?v=10"
-          },
-          "to": {
-            "id": 6586225,
-            "name": "Sergi Sala Duran",
-            "icon": "https://graph.facebook.com/10156583054878679/picture?height=300&width=300"
-          },
-          "amount": 2985000,
-          "type": "clause"
         }
       ]
     }
@@ -14941,82 +14941,82 @@
   },
   "news": [
     {
-      "title": "Onces en prensa del Rayo Vallecano &#8211; Elche",
-      "link": "https://www.jornadaperfecta.com/blog/onces-prensa-rayo-vallecano-elche/",
-      "date": "Fri, 03 Apr 2026 08:22:06 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Promoción Kirolbet Atlético vs Barcelona: ¡5€ por cada gol!",
-      "link": "https://www.jornadaperfecta.com/blog/promocion-kirolbet-atletico-vs-barcelona/",
-      "date": "Fri, 03 Apr 2026 08:00:53 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/04/Kirolbet-Atletico-vs-Barcelona.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Cinco noticias fantasy para antes de irte a dormir",
-      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-2-4-26/",
-      "date": "Thu, 02 Apr 2026 21:00:33 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "La Previa de las Picas: Todo sobre los Cronistas de la Jornada 30",
-      "link": "https://www.jornadaperfecta.com/blog/previa-picas-cronistas-j30/",
-      "date": "Thu, 02 Apr 2026 18:37:58 +0000",
-      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2660.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Iñigo Pérez, sobre el estado de Akhomach, Fran Pérez y Mendy",
-      "link": "https://www.jornadaperfecta.com/blog/inigo-perez-previa-rayo-elche-j30/",
-      "date": "Thu, 02 Apr 2026 18:34:45 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "El All In de Victorius para la Jornada 30 de La Liga",
-      "link": "https://www.jornadaperfecta.com/blog/all-in-victorius-j30-25-26/",
-      "date": "Thu, 02 Apr 2026 17:00:30 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/03/image-2026-03-17T185203.943.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "La prensa de Mallorca ve a Muriqi con opciones de ser suplente",
-      "link": "https://www.jornadaperfecta.com/blog/muriqi-alinear-j30-mallorca/",
-      "date": "Thu, 02 Apr 2026 15:15:40 +0000",
+      "title": "Raíllo podría pasar por quirófano, a la espera de pruebas",
+      "link": "https://www.jornadaperfecta.com/blog/raillo-baja-mallorca-j30/",
+      "date": "Fri, 03 Apr 2026 14:01:24 +0000",
       "img": "https://cdn.biwenger.com/i/t/465.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Guedes sufrió un golpe con Portugal, ¿suplente en la jornada 30?",
-      "link": "https://www.jornadaperfecta.com/blog/guedes-estado-real-sociedad-j30/",
-      "date": "Thu, 02 Apr 2026 15:10:49 +0000",
+      "title": "Nobel Mendy se recupera; Fran Pérez, baja para la j30",
+      "link": "https://www.jornadaperfecta.com/blog/nobel-mendy-estado-j30-rayo/",
+      "date": "Fri, 03 Apr 2026 14:00:16 +0000",
+      "img": "https://cdn.biwenger.com/i/t/70.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Quique, sobre el estado de Boyé y su sustituto",
+      "link": "https://www.jornadaperfecta.com/blog/quique-previa-alaves-osasuna-j30/",
+      "date": "Fri, 03 Apr 2026 13:06:50 +0000",
+      "img": "https://cdn.biwenger.com/i/t/91.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Matarazzo aclara el estado de Guedes y explica la lesión de Gorrotxategi",
+      "link": "https://www.jornadaperfecta.com/blog/matarazzo-previa-real-sociedad-levante-j30/",
+      "date": "Fri, 03 Apr 2026 12:37:24 +0000",
       "img": "https://cdn.biwenger.com/i/t/13.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Vinicius podría rotar en la jornada 30, ¿lo alineamos en fantasy?",
+      "title": "Manolo González recupera a Calero y habla de Pickel",
+      "link": "https://www.jornadaperfecta.com/blog/manolo-gonzalez-previa-betis-espanyol-j30/",
+      "date": "Fri, 03 Apr 2026 12:21:10 +0000",
+      "img": "https://cdn.biwenger.com/i/t/7.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Lucas Boyé queda en duda por una fascitis plantar",
+      "link": "https://www.jornadaperfecta.com/blog/boye-fascitis-plantar-alaves/",
+      "date": "Fri, 03 Apr 2026 12:07:18 +0000",
+      "img": "https://cdn.biwenger.com/i/t/91.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Vinicius ya entrena pero podría rotar en la jornada 30, ¿alinear?",
       "link": "https://www.jornadaperfecta.com/blog/vinicius-estado-j30/",
-      "date": "Thu, 02 Apr 2026 15:05:15 +0000",
+      "date": "Fri, 03 Apr 2026 11:50:15 +0000",
       "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "BigUp: Gana dinero real con tus pronósticos del Girona &#8211; Villarreal",
-      "link": "https://www.jornadaperfecta.com/blog/bigup-girona-villarreal-pronosticos/",
-      "date": "Thu, 02 Apr 2026 15:01:40 +0000",
-      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2705.png",
+      "title": "Simeone da la fecha de vuelta de Oblak y Mendoza, pero no de Pubill y Barrios",
+      "link": "https://www.jornadaperfecta.com/blog/simeone-previa-atleti-barcelona-j30/",
+      "date": "Fri, 03 Apr 2026 11:45:58 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Flick, sobre Raphinha, Gavi, Rashford, De Jong y Lewandowski",
+      "link": "https://www.jornadaperfecta.com/blog/flick-previa-atleti-barcelona-j30/",
+      "date": "Fri, 03 Apr 2026 11:27:30 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Demichelis explica el motivo de la baja de Raíllo",
+      "link": "https://www.jornadaperfecta.com/blog/demichelis-previa-mallorca-real-madrid-j30/",
+      "date": "Fri, 03 Apr 2026 11:21:45 +0000",
+      "img": "https://cdn.biwenger.com/i/t/465.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -15025,7 +15025,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-03T08:35:43.616Z",
+    "updatedAt": "2026-04-03T14:26:36.874Z",
     "players": [
       {
         "id": "3374",
