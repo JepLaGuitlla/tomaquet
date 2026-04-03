@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-03T05:50:20.157Z",
+  "updatedAt": "2026-04-03T08:35:45.448Z",
   "players": [
     {
       "id": 11,
@@ -12010,9 +12010,9 @@
           1,
           6
         ],
-        "teamSize": 16,
-        "teamValue": 82300000,
-        "teamValueInc": 360000,
+        "teamSize": 15,
+        "teamValue": 81960000,
+        "teamValueInc": 370000,
         "position": 3
       },
       {
@@ -12027,9 +12027,9 @@
           12,
           7
         ],
-        "teamSize": 18,
-        "teamValue": 117640000,
-        "teamValueInc": 110000,
+        "teamSize": 16,
+        "teamValue": 111620000,
+        "teamValueInc": 100000,
         "position": 4,
         "role": ""
       },
@@ -12254,8 +12254,8 @@
       "name": "🦊",
       "manager": "🦊",
       "points": 1437,
-      "value": 82300000,
-      "trend": 360000,
+      "value": 81960000,
+      "trend": 370000,
       "players": []
     },
     {
@@ -12263,8 +12263,8 @@
       "name": "Soulands Rangers",
       "manager": "Soulands Rangers",
       "points": 1409,
-      "value": 117640000,
-      "trend": 110000,
+      "value": 111620000,
+      "trend": 100000,
       "players": []
     },
     {
@@ -12362,10 +12362,10 @@
     "teamId": 6541195,
     "name": "🦊",
     "points": 1437,
-    "balance": 2419475,
+    "balance": 2786475,
     "lineup": {
       "type": "3-4-3",
-      "date": 1775130639,
+      "date": 1775200257,
       "playersID": [
         17021,
         10155,
@@ -12444,13 +12444,6 @@
         "buyDate": 1773727427
       },
       {
-        "id": 27995,
-        "buyPrice": 362333,
-        "clause": 362333000000,
-        "invested": 0,
-        "buyDate": 1774677733
-      },
-      {
         "id": 37451,
         "buyPrice": 1888955,
         "clause": 14115000,
@@ -12500,16 +12493,48 @@
         "buyDate": 1770616993
       }
     ],
-    "market": [
-      {
-        "playerID": 27995,
-        "price": 360000,
-        "type": "sale",
-        "until": 1775214388
-      }
-    ]
+    "market": []
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1775202870,
+      "content": [
+        {
+          "player": 27995,
+          "from": {
+            "id": 6541195,
+            "name": "🦊",
+            "icon": "i/u/6541195.png?v=17"
+          },
+          "amount": 367000
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1775201999,
+      "content": [
+        {
+          "player": 24732,
+          "from": {
+            "id": 8068002,
+            "name": "Soulands Rangers",
+            "icon": "i/u/8068002.png?v=69"
+          },
+          "amount": 3584300
+        },
+        {
+          "player": 30787,
+          "from": {
+            "id": 8068002,
+            "name": "Soulands Rangers",
+            "icon": "i/u/8068002.png?v=69"
+          },
+          "amount": 2329800
+        }
+      ]
+    },
     {
       "type": "market",
       "date": 1775192681,
@@ -12609,36 +12634,6 @@
           },
           "amount": 21690000,
           "type": "clause"
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1775122303,
-      "content": [
-        {
-          "player": 17442,
-          "from": {
-            "id": 12696899,
-            "name": "CIGALERU",
-            "icon": "i/u/12696899.png"
-          },
-          "amount": 2562800
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1775106160,
-      "content": [
-        {
-          "player": 2055,
-          "to": {
-            "id": 12696599,
-            "name": "Trileros FC",
-            "icon": "i/u/12696599.png"
-          },
-          "amount": 3600000
         }
       ]
     }
@@ -13024,8 +13019,8 @@
           13,
           7
         ],
-        "teamSize": 18,
-        "teamValue": 40060000,
+        "teamSize": 17,
+        "teamValue": 39830000,
         "teamValueInc": 180000,
         "position": 18,
         "positionInc": 1,
@@ -13229,7 +13224,7 @@
       "name": "Aquest any he trepitjat merda !!",
       "manager": "Aquest any he trepitjat merda !!",
       "points": 1026,
-      "value": 40060000,
+      "value": 39830000,
       "trend": 180000,
       "players": []
     },
@@ -13259,7 +13254,7 @@
     "balance": 15410,
     "lineup": {
       "type": "3-4-3",
-      "date": 1775044461,
+      "date": 1775200230,
       "playersID": [
         14630,
         32440,
@@ -13412,6 +13407,21 @@
     ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1775198793,
+      "content": [
+        {
+          "player": 37450,
+          "from": {
+            "id": 6586257,
+            "name": "Aquest any he trepitjat merda !!",
+            "icon": "i/u/6586257.png"
+          },
+          "amount": 231400
+        }
+      ]
+    },
     {
       "type": "market",
       "date": 1775192690,
@@ -13616,21 +13626,6 @@
           },
           "amount": 2985000,
           "type": "clause"
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1774947492,
-      "content": [
-        {
-          "player": 35901,
-          "from": {
-            "id": 9890450,
-            "name": "MarK Lenders",
-            "icon": "icons/34.png"
-          },
-          "amount": 1599300
         }
       ]
     }
@@ -14773,9 +14768,9 @@
       "matchDate": "2026-04-12T14:15:00Z"
     },
     "Elche CF": {
-      "winProb": 0.3966197183098592,
-      "drawProb": 0.27887323943661974,
-      "loseProb": 0.32450704225352117,
+      "winProb": 0.3989314336598397,
+      "drawProb": 0.2804986642920748,
+      "loseProb": 0.3205699020480855,
       "over25Prob": 0.4716981132075471,
       "isHome": true,
       "opponent": "Valencia",
@@ -14872,27 +14867,27 @@
       "matchDate": "2026-04-12T19:00:00Z"
     },
     "Valencia": {
-      "winProb": 0.32450704225352117,
-      "drawProb": 0.27887323943661974,
-      "loseProb": 0.3966197183098592,
+      "winProb": 0.3205699020480855,
+      "drawProb": 0.2804986642920748,
+      "loseProb": 0.3989314336598397,
       "over25Prob": 0.4716981132075471,
       "isHome": false,
       "opponent": "Elche CF",
       "matchDate": "2026-04-11T14:15:00Z"
     },
     "Celta Vigo": {
-      "winProb": 0.5761266747868453,
-      "drawProb": 0.2143727161997564,
-      "loseProb": 0.2095006090133983,
+      "winProb": 0.5732009925558312,
+      "drawProb": 0.2183622828784119,
+      "loseProb": 0.2084367245657568,
       "over25Prob": 0.5,
       "isHome": true,
       "opponent": "Oviedo",
       "matchDate": "2026-04-12T16:30:00Z"
     },
     "Oviedo": {
-      "winProb": 0.2095006090133983,
-      "drawProb": 0.2143727161997564,
-      "loseProb": 0.5761266747868453,
+      "winProb": 0.2084367245657568,
+      "drawProb": 0.2183622828784119,
+      "loseProb": 0.5732009925558312,
       "over25Prob": 0.5,
       "isHome": false,
       "opponent": "Celta Vigo",
@@ -14945,6 +14940,22 @@
     }
   },
   "news": [
+    {
+      "title": "Onces en prensa del Rayo Vallecano &#8211; Elche",
+      "link": "https://www.jornadaperfecta.com/blog/onces-prensa-rayo-vallecano-elche/",
+      "date": "Fri, 03 Apr 2026 08:22:06 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Promoción Kirolbet Atlético vs Barcelona: ¡5€ por cada gol!",
+      "link": "https://www.jornadaperfecta.com/blog/promocion-kirolbet-atletico-vs-barcelona/",
+      "date": "Fri, 03 Apr 2026 08:00:53 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/04/Kirolbet-Atletico-vs-Barcelona.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Cinco noticias fantasy para antes de irte a dormir",
       "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-2-4-26/",
@@ -15008,29 +15019,13 @@
       "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2705.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Comesaña vuelve a dejar un buen nivel. ¿Centrocampista muy recomendable fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/comesana-analisis-fantasy-paron-marzo-26/",
-      "date": "Thu, 02 Apr 2026 15:00:53 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/12/c69542bb0000ca98cde163b95a7ea476-1.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Actualizadas las Alineaciones Probables para la Jornada 30",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-probables-j30-laliga-25-26/",
-      "date": "Thu, 02 Apr 2026 13:00:01 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-03T05:50:17.989Z",
+    "updatedAt": "2026-04-03T08:35:43.616Z",
     "players": [
       {
         "id": "3374",
