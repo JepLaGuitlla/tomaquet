@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-03T14:26:38.583Z",
+  "updatedAt": "2026-04-03T19:54:36.378Z",
   "players": [
     {
       "id": 11,
@@ -11987,9 +11987,9 @@
           11,
           14
         ],
-        "teamSize": 17,
-        "teamValue": 109860000,
-        "teamValueInc": 530000,
+        "teamSize": 15,
+        "teamValue": 96860000,
+        "teamValueInc": 570000,
         "lastTrophy": {
           "type": "league",
           "position": 2,
@@ -12109,9 +12109,9 @@
           9,
           5
         ],
-        "teamSize": 13,
-        "teamValue": 50510000,
-        "teamValueInc": -90000,
+        "teamSize": 14,
+        "teamValue": 54040000,
+        "teamValueInc": -80000,
         "position": 8,
         "role": ""
       },
@@ -12245,8 +12245,8 @@
       "name": "LeMola Team",
       "manager": "LeMola Team",
       "points": 1543,
-      "value": 109860000,
-      "trend": 530000,
+      "value": 96860000,
+      "trend": 570000,
       "players": []
     },
     {
@@ -12299,8 +12299,8 @@
       "name": "NACECH1",
       "manager": "NACECH1",
       "points": 1320,
-      "value": 50510000,
-      "trend": -90000,
+      "value": 54040000,
+      "trend": -80000,
       "players": []
     },
     {
@@ -12362,10 +12362,10 @@
     "teamId": 6541195,
     "name": "🦊",
     "points": 1437,
-    "balance": 2786475,
+    "balance": 2486475,
     "lineup": {
-      "type": "3-4-3",
-      "date": 1775200257,
+      "type": "3-5-2",
+      "date": 1775240048,
       "playersID": [
         17021,
         10155,
@@ -12373,17 +12373,17 @@
         26276,
         6837,
         38867,
-        39885,
-        25127,
-        37451,
         39431,
-        26271
+        25127,
+        39885,
+        26271,
+        37451
       ],
       "reservesID": [
         null,
-        null,
-        null,
-        27945
+        37719,
+        27945,
+        38216
       ]
     },
     "players": [
@@ -12432,8 +12432,8 @@
       {
         "id": 26276,
         "buyPrice": 6600000,
-        "clause": 10950000,
-        "invested": 700000,
+        "clause": 11400000,
+        "invested": 1000000,
         "buyDate": 1765459975
       },
       {
@@ -12496,6 +12496,41 @@
     "market": []
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1775232594,
+      "content": [
+        {
+          "player": 26566,
+          "from": {
+            "id": 6552586,
+            "name": "LeMola Team",
+            "icon": "i/u/6552586.png"
+          },
+          "amount": 9502100
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1775229336,
+      "content": [
+        {
+          "player": 27591,
+          "from": {
+            "id": 6552586,
+            "name": "LeMola Team",
+            "icon": "i/u/6552586.png"
+          },
+          "to": {
+            "id": 12696491,
+            "name": "NACECH1",
+            "icon": "https://graph.facebook.com/10235185447969563/picture?height=300&width=300"
+          },
+          "amount": 4500000
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1775202870,
@@ -12576,63 +12611,6 @@
             "icon": "i/u/8068002.png?v=69"
           },
           "amount": 31320249,
-          "type": "clause"
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1775132339,
-      "content": [
-        {
-          "player": 37473,
-          "from": {
-            "id": 8068002,
-            "name": "Soulands Rangers",
-            "icon": "i/u/8068002.png?v=69"
-          },
-          "to": {
-            "id": 6552586,
-            "name": "LeMola Team",
-            "icon": "i/u/6552586.png"
-          },
-          "amount": 21187500,
-          "type": "clause"
-        },
-        {
-          "player": 37711,
-          "from": {
-            "id": 12696491,
-            "name": "NACECH1",
-            "icon": "https://graph.facebook.com/10235185447969563/picture?height=300&width=300"
-          },
-          "to": {
-            "id": 6552586,
-            "name": "LeMola Team",
-            "icon": "i/u/6552586.png"
-          },
-          "amount": 14962500,
-          "type": "clause"
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1775130091,
-      "content": [
-        {
-          "player": 34479,
-          "from": {
-            "id": 6552586,
-            "name": "LeMola Team",
-            "icon": "i/u/6552586.png"
-          },
-          "to": {
-            "id": 12697101,
-            "name": "INDOMABLE FC",
-            "icon": "i/u/11757390.png"
-          },
-          "amount": 21690000,
           "type": "clause"
         }
       ]
@@ -13254,12 +13232,12 @@
     "balance": 15410,
     "lineup": {
       "type": "3-4-3",
-      "date": 1775200230,
+      "date": 1775240117,
       "playersID": [
         14630,
         32440,
         31707,
-        1908,
+        40010,
         34077,
         26048,
         1969,
@@ -13553,81 +13531,6 @@
           "amount": 1631000
         }
       ]
-    },
-    {
-      "type": "market",
-      "date": 1775019851,
-      "content": [
-        {
-          "player": 21008,
-          "to": {
-            "id": 6578885,
-            "name": "Norimaki  FC",
-            "icon": "icons/41.png"
-          },
-          "amount": 8000009,
-          "bids": [
-            {
-              "user": {
-                "id": 6586225,
-                "name": "Sergi Sala Duran",
-                "icon": "https://graph.facebook.com/10156583054878679/picture?height=300&width=300"
-              },
-              "amount": 7263750
-            },
-            {
-              "user": {
-                "id": 6593096,
-                "name": "Janwandowski",
-                "icon": "i/u/6593096.png"
-              },
-              "amount": 6720440
-            },
-            {
-              "user": {
-                "id": 9897660,
-                "name": "Eric Duran"
-              },
-              "amount": 6435000
-            },
-            {
-              "user": {
-                "id": 6579402,
-                "name": "Valors FC",
-                "icon": "icons/7.png"
-              },
-              "amount": 6111111
-            },
-            {
-              "user": {
-                "id": 6579505,
-                "name": "Xevi borrat",
-                "icon": "i/u/6579505.png"
-              },
-              "amount": 5700000
-            }
-          ]
-        },
-        {
-          "player": 4245,
-          "to": {
-            "id": 6579402,
-            "name": "Valors FC",
-            "icon": "icons/7.png"
-          },
-          "amount": 1111150,
-          "bids": [
-            {
-              "user": {
-                "id": 6578885,
-                "name": "Norimaki  FC",
-                "icon": "icons/41.png"
-              },
-              "amount": 810000
-            }
-          ]
-        }
-      ]
     }
   ],
   "laliga": {
@@ -13889,12 +13792,12 @@
           "tla": "RAY",
           "crest": "https://crests.football-data.org/87.png"
         },
-        "playedGames": 29,
+        "playedGames": 30,
         "form": null,
         "won": 7,
-        "draw": 11,
+        "draw": 12,
         "lost": 11,
-        "points": 32,
+        "points": 33,
         "goalsFor": 28,
         "goalsAgainst": 35,
         "goalDifference": -7
@@ -13946,12 +13849,12 @@
           "tla": "ELC",
           "crest": "https://crests.football-data.org/285.png"
         },
-        "playedGames": 29,
+        "playedGames": 30,
         "form": null,
         "won": 6,
-        "draw": 11,
+        "draw": 12,
         "lost": 12,
-        "points": 29,
+        "points": 30,
         "goalsFor": 38,
         "goalsAgainst": 46,
         "goalDifference": -8
@@ -14277,23 +14180,6 @@
       }
     },
     "nextMatches": [
-      {
-        "id": 544509,
-        "matchday": 30,
-        "date": "2026-04-03T19:00:00Z",
-        "home": {
-          "id": 87,
-          "name": "Rayo Vallecano de Madrid",
-          "short": "Rayo Vallecano",
-          "crest": "https://crests.football-data.org/87.png"
-        },
-        "away": {
-          "id": 285,
-          "name": "Elche CF",
-          "short": "Elche",
-          "crest": "https://crests.football-data.org/285.png"
-        }
-      },
       {
         "id": 544510,
         "matchday": 30,
@@ -14822,9 +14708,9 @@
       "matchDate": "2026-04-12T12:00:00Z"
     },
     "Espanyol": {
-      "winProb": 0.10499551301226442,
-      "drawProb": 0.13221657194137001,
-      "loseProb": 0.7627879150463656,
+      "winProb": 0.1108304389011683,
+      "drawProb": 0.13135459425323648,
+      "loseProb": 0.7578149668455952,
       "over25Prob": 0.7751937984496123,
       "isHome": false,
       "opponent": "Barcelona",
@@ -14840,9 +14726,9 @@
       "matchDate": "2026-04-11T19:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.7627879150463656,
-      "drawProb": 0.13221657194137001,
-      "loseProb": 0.10499551301226442,
+      "winProb": 0.7578149668455952,
+      "drawProb": 0.13135459425323648,
+      "loseProb": 0.1108304389011683,
       "over25Prob": 0.7751937984496123,
       "isHome": true,
       "opponent": "Espanyol",
@@ -14941,15 +14827,63 @@
   },
   "news": [
     {
+      "title": "Once confirmado del Rayo Vallecano para la jornada 30",
+      "link": "https://www.jornadaperfecta.com/blog/once-rayo-vallecano-jornada-30/",
+      "date": "Fri, 03 Apr 2026 17:59:00 +0000",
+      "img": "https://cdn.biwenger.com/i/t/70.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "¡Once confirmado del Elche CF con varias novedades!",
+      "link": "https://www.jornadaperfecta.com/blog/once-elche-jornada-30/",
+      "date": "Fri, 03 Apr 2026 17:54:51 +0000",
+      "img": "https://cdn.biwenger.com/i/t/75.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Militao vuelve a la convocatoria, ¿el mejor fichaje del Real Madrid?",
+      "link": "https://www.jornadaperfecta.com/blog/militao-vuelta-fantasy-real-madrid/",
+      "date": "Fri, 03 Apr 2026 17:00:32 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Dudas con la titularidad de Rashford en la jornada 30, ¿alinear?",
+      "link": "https://www.jornadaperfecta.com/blog/rashford-alinear-j30-barcelona/",
+      "date": "Fri, 03 Apr 2026 16:00:47 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Supercuota 3.6 en Betfair para el Atlético vs Barcelona: ¡Apuesta potenciada!",
+      "link": "https://www.jornadaperfecta.com/blog/supercuota-betfair-atletico-vs-barcelona/",
+      "date": "Fri, 03 Apr 2026 16:00:29 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/04/Betfair-Supercuota-Atletico-vs-Betfair.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Raíllo podría pasar por quirófano, a la espera de pruebas",
       "link": "https://www.jornadaperfecta.com/blog/raillo-baja-mallorca-j30/",
-      "date": "Fri, 03 Apr 2026 14:01:24 +0000",
+      "date": "Fri, 03 Apr 2026 15:30:24 +0000",
       "img": "https://cdn.biwenger.com/i/t/465.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Nobel Mendy se recupera; Fran Pérez, baja para la j30",
+      "title": "BigUp: Gana dinero real con tus pronósticos del Girona &#8211; Villarreal",
+      "link": "https://www.jornadaperfecta.com/blog/bigup-girona-villarreal-pronosticos/",
+      "date": "Fri, 03 Apr 2026 15:01:40 +0000",
+      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2705.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Nobel Mendy se recupera; Fran Pérez y Akhomach, bajas",
       "link": "https://www.jornadaperfecta.com/blog/nobel-mendy-estado-j30-rayo/",
       "date": "Fri, 03 Apr 2026 14:00:16 +0000",
       "img": "https://cdn.biwenger.com/i/t/70.png",
@@ -14957,66 +14891,18 @@
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Quique, sobre el estado de Boyé y su sustituto",
-      "link": "https://www.jornadaperfecta.com/blog/quique-previa-alaves-osasuna-j30/",
-      "date": "Fri, 03 Apr 2026 13:06:50 +0000",
-      "img": "https://cdn.biwenger.com/i/t/91.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Matarazzo aclara el estado de Guedes y explica la lesión de Gorrotxategi",
-      "link": "https://www.jornadaperfecta.com/blog/matarazzo-previa-real-sociedad-levante-j30/",
-      "date": "Fri, 03 Apr 2026 12:37:24 +0000",
+      "title": "Kubo, recuperado de una lesión muscular: ¿lo fichamos?",
+      "link": "https://www.jornadaperfecta.com/blog/kubo-vuelta-real-sociedad-fantasy/",
+      "date": "Fri, 03 Apr 2026 13:03:40 +0000",
       "img": "https://cdn.biwenger.com/i/t/13.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Manolo González recupera a Calero y habla de Pickel",
-      "link": "https://www.jornadaperfecta.com/blog/manolo-gonzalez-previa-betis-espanyol-j30/",
-      "date": "Fri, 03 Apr 2026 12:21:10 +0000",
-      "img": "https://cdn.biwenger.com/i/t/7.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Lucas Boyé queda en duda por una fascitis plantar",
-      "link": "https://www.jornadaperfecta.com/blog/boye-fascitis-plantar-alaves/",
-      "date": "Fri, 03 Apr 2026 12:07:18 +0000",
-      "img": "https://cdn.biwenger.com/i/t/91.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Vinicius ya entrena pero podría rotar en la jornada 30, ¿alinear?",
-      "link": "https://www.jornadaperfecta.com/blog/vinicius-estado-j30/",
-      "date": "Fri, 03 Apr 2026 11:50:15 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Simeone da la fecha de vuelta de Oblak y Mendoza, pero no de Pubill y Barrios",
-      "link": "https://www.jornadaperfecta.com/blog/simeone-previa-atleti-barcelona-j30/",
-      "date": "Fri, 03 Apr 2026 11:45:58 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
       "title": "Flick, sobre Raphinha, Gavi, Rashford, De Jong y Lewandowski",
       "link": "https://www.jornadaperfecta.com/blog/flick-previa-atleti-barcelona-j30/",
-      "date": "Fri, 03 Apr 2026 11:27:30 +0000",
+      "date": "Fri, 03 Apr 2026 13:02:30 +0000",
       "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Demichelis explica el motivo de la baja de Raíllo",
-      "link": "https://www.jornadaperfecta.com/blog/demichelis-previa-mallorca-real-madrid-j30/",
-      "date": "Fri, 03 Apr 2026 11:21:45 +0000",
-      "img": "https://cdn.biwenger.com/i/t/465.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -15025,7 +14911,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-03T14:26:36.874Z",
+    "updatedAt": "2026-04-03T19:54:34.066Z",
     "players": [
       {
         "id": "3374",
@@ -15153,11 +15039,11 @@
         "team": "Rayo Vallecano de Madrid",
         "position": "",
         "nationality": "Spain",
-        "appearances": 27,
+        "appearances": 28,
         "goals": 10,
         "assists": 1,
         "penalties": 1,
-        "minutesPerGoal": 243
+        "minutesPerGoal": 252
       },
       {
         "id": "8167",
@@ -15249,11 +15135,11 @@
         "team": "Elche CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 24,
+        "appearances": 25,
         "goals": 8,
         "assists": 0,
         "penalties": 1,
-        "minutesPerGoal": 270
+        "minutesPerGoal": 281
       },
       {
         "id": "32415",
@@ -15309,11 +15195,11 @@
         "team": "Elche CF",
         "position": "",
         "nationality": "Portugal",
-        "appearances": 24,
+        "appearances": 25,
         "goals": 7,
         "assists": 0,
         "penalties": 1,
-        "minutesPerGoal": 309
+        "minutesPerGoal": 321
       },
       {
         "id": "33117",
@@ -15633,11 +15519,11 @@
         "team": "Elche CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 28,
+        "appearances": 29,
         "goals": 5,
         "assists": 4,
         "penalties": 0,
-        "minutesPerGoal": 504
+        "minutesPerGoal": 522
       },
       {
         "id": "16173",
@@ -15669,11 +15555,11 @@
         "team": "Rayo Vallecano de Madrid",
         "position": "",
         "nationality": "Spain",
-        "appearances": 28,
+        "appearances": 29,
         "goals": 4,
         "assists": 4,
         "penalties": 0,
-        "minutesPerGoal": 630
+        "minutesPerGoal": 653
       },
       {
         "id": "633",
@@ -15717,11 +15603,11 @@
         "team": "Elche CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 28,
+        "appearances": 29,
         "goals": 4,
         "assists": 4,
         "penalties": 0,
-        "minutesPerGoal": 630
+        "minutesPerGoal": 653
       },
       {
         "id": "182319",
@@ -15885,11 +15771,11 @@
         "team": "Rayo Vallecano de Madrid",
         "position": "",
         "nationality": "Spain",
-        "appearances": 27,
+        "appearances": 28,
         "goals": 3,
         "assists": 2,
         "penalties": 2,
-        "minutesPerGoal": 810
+        "minutesPerGoal": 840
       },
       {
         "id": "180061",
