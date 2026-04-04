@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-04T07:59:53.038Z",
+  "updatedAt": "2026-04-04T14:02:55.685Z",
   "players": [
     {
       "id": 11,
@@ -13646,15 +13646,15 @@
           "tla": "RSO",
           "crest": "https://crests.football-data.org/92.png"
         },
-        "playedGames": 29,
+        "playedGames": 30,
         "form": null,
-        "won": 10,
+        "won": 11,
         "draw": 8,
         "lost": 11,
-        "points": 38,
-        "goalsFor": 44,
+        "points": 41,
+        "goalsFor": 46,
         "goalsAgainst": 45,
-        "goalDifference": -1
+        "goalDifference": 1
       },
       {
         "position": 8,
@@ -13874,15 +13874,15 @@
           "tla": "LEV",
           "crest": "https://crests.football-data.org/88.png"
         },
-        "playedGames": 29,
+        "playedGames": 30,
         "form": null,
         "won": 6,
         "draw": 8,
-        "lost": 15,
+        "lost": 16,
         "points": 26,
         "goalsFor": 34,
-        "goalsAgainst": 48,
-        "goalDifference": -14
+        "goalsAgainst": 50,
+        "goalDifference": -16
       },
       {
         "position": 20,
@@ -14167,23 +14167,6 @@
       }
     },
     "nextMatches": [
-      {
-        "id": 544510,
-        "matchday": 30,
-        "date": "2026-04-04T12:00:00Z",
-        "home": {
-          "id": 92,
-          "name": "Real Sociedad de Fútbol",
-          "short": "Real Sociedad",
-          "crest": "https://crests.football-data.org/92.png"
-        },
-        "away": {
-          "id": 88,
-          "name": "Levante UD",
-          "short": "Levante",
-          "crest": "https://crests.football-data.org/88.png"
-        }
-      },
       {
         "id": 544505,
         "matchday": 30,
@@ -14489,6 +14472,23 @@
           "short": "Getafe",
           "crest": "https://crests.football-data.org/82.png"
         }
+      },
+      {
+        "id": 544510,
+        "matchday": 30,
+        "date": "2026-04-04T12:00:00Z",
+        "home": {
+          "id": 92,
+          "name": "Real Sociedad de Fútbol",
+          "short": "Real Sociedad",
+          "crest": "https://crests.football-data.org/92.png"
+        },
+        "away": {
+          "id": 88,
+          "name": "Levante UD",
+          "short": "Levante",
+          "crest": "https://crests.football-data.org/88.png"
+        }
       }
     ],
     "recentResults": [
@@ -14632,9 +14632,9 @@
   },
   "odds": {
     "Real Sociedad": {
-      "winProb": 0.5193740685543965,
-      "drawProb": 0.26274217585693,
-      "loseProb": 0.21788375558867365,
+      "winProb": 0.5220824802573852,
+      "drawProb": 0.26411231354197134,
+      "loseProb": 0.21380520620064344,
       "over25Prob": 0.4608294930875576,
       "isHome": true,
       "opponent": "Alavés",
@@ -14686,9 +14686,9 @@
       "matchDate": "2026-04-11T16:30:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.4394904458598727,
-      "drawProb": 0.26751592356687903,
-      "loseProb": 0.29299363057324845,
+      "winProb": 0.4494438320472994,
+      "drawProb": 0.26706082773825035,
+      "loseProb": 0.2834953402144504,
       "over25Prob": 0.5128205128205129,
       "isHome": false,
       "opponent": "Sevilla",
@@ -14731,36 +14731,36 @@
       "matchDate": "2026-04-11T14:15:00Z"
     },
     "Celta Vigo": {
-      "winProb": 0.5732009925558312,
-      "drawProb": 0.2183622828784119,
-      "loseProb": 0.2084367245657568,
+      "winProb": 0.5761266747868453,
+      "drawProb": 0.2143727161997564,
+      "loseProb": 0.2095006090133983,
       "over25Prob": 0.5,
       "isHome": true,
       "opponent": "Oviedo",
       "matchDate": "2026-04-12T16:30:00Z"
     },
     "Oviedo": {
-      "winProb": 0.2084367245657568,
-      "drawProb": 0.2183622828784119,
-      "loseProb": 0.5732009925558312,
+      "winProb": 0.2095006090133983,
+      "drawProb": 0.2143727161997564,
+      "loseProb": 0.5761266747868453,
       "over25Prob": 0.5,
       "isHome": false,
       "opponent": "Celta Vigo",
       "matchDate": "2026-04-12T16:30:00Z"
     },
     "Sevilla": {
-      "winProb": 0.29299363057324845,
-      "drawProb": 0.26751592356687903,
-      "loseProb": 0.4394904458598727,
+      "winProb": 0.2834953402144504,
+      "drawProb": 0.26706082773825035,
+      "loseProb": 0.4494438320472994,
       "over25Prob": 0.5128205128205129,
       "isHome": true,
       "opponent": "Atlético Madrid",
       "matchDate": "2026-04-11T19:00:00Z"
     },
     "Alavés": {
-      "winProb": 0.21788375558867365,
-      "drawProb": 0.26274217585693,
-      "loseProb": 0.5193740685543965,
+      "winProb": 0.21380520620064344,
+      "drawProb": 0.26411231354197134,
+      "loseProb": 0.5220824802573852,
       "over25Prob": 0.4608294930875576,
       "isHome": false,
       "opponent": "Real Sociedad",
@@ -14814,81 +14814,81 @@
   },
   "news": [
     {
-      "title": "Once confirmado del Rayo Vallecano para la jornada 30",
-      "link": "https://www.jornadaperfecta.com/blog/once-rayo-vallecano-jornada-30/",
-      "date": "Fri, 03 Apr 2026 17:59:00 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
+      "title": "Lisci, sobre Víctor Muñoz y la competencia entre Iker y Torró",
+      "link": "https://www.jornadaperfecta.com/blog/lisci-previa-alaves-osasuna-j30/",
+      "date": "Sat, 04 Apr 2026 12:51:28 +0000",
+      "img": "https://cdn.biwenger.com/i/t/93.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "¡Once confirmado del Elche CF con varias novedades!",
-      "link": "https://www.jornadaperfecta.com/blog/once-elche-jornada-30/",
-      "date": "Fri, 03 Apr 2026 17:54:51 +0000",
-      "img": "https://cdn.biwenger.com/i/t/75.png",
+      "title": "Giráldez confirma la baja de Starfelt de última hora",
+      "link": "https://www.jornadaperfecta.com/blog/giraldez-previa-valencia-celta-j30/",
+      "date": "Sat, 04 Apr 2026 12:38:16 +0000",
+      "img": "https://cdn.biwenger.com/i/t/5.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Militao vuelve a la convocatoria, ¿el mejor fichaje del Real Madrid?",
-      "link": "https://www.jornadaperfecta.com/blog/militao-vuelta-fantasy-real-madrid/",
-      "date": "Fri, 03 Apr 2026 17:00:32 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "title": "Corberán recupera a Filip Ugrinic y habla de Beltrán y Guido",
+      "link": "https://www.jornadaperfecta.com/blog/corberan-previa-valencia-celta-j30/",
+      "date": "Sat, 04 Apr 2026 12:26:02 +0000",
+      "img": "https://cdn.biwenger.com/i/t/18.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Dudas con la titularidad de Rashford en la jornada 30, ¿alinear?",
-      "link": "https://www.jornadaperfecta.com/blog/rashford-alinear-j30-barcelona/",
-      "date": "Fri, 03 Apr 2026 16:00:47 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "title": "Bordalás, sobre Davinchi, Mayoral, Juanmi y Satriano",
+      "link": "https://www.jornadaperfecta.com/blog/bordalas-previa-getafe-athletic-j30/",
+      "date": "Sat, 04 Apr 2026 12:14:52 +0000",
+      "img": "https://cdn.biwenger.com/i/t/8.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Supercuota 3.6 en Betfair para el Atlético vs Barcelona: ¡Apuesta potenciada!",
-      "link": "https://www.jornadaperfecta.com/blog/supercuota-betfair-atletico-vs-barcelona/",
-      "date": "Fri, 03 Apr 2026 16:00:29 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/04/Betfair-Supercuota-Atletico-vs-Betfair.webp",
+      "title": "Valverde recupera a Nico Williams, Sannadi, Yeray y Egiluz",
+      "link": "https://www.jornadaperfecta.com/blog/valverde-previa-getafe-athletic-j30/",
+      "date": "Sat, 04 Apr 2026 11:59:33 +0000",
+      "img": "https://cdn.biwenger.com/i/t/1.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Raíllo podría pasar por quirófano, a la espera de pruebas",
-      "link": "https://www.jornadaperfecta.com/blog/raillo-baja-mallorca-j30/",
-      "date": "Fri, 03 Apr 2026 15:30:24 +0000",
-      "img": "https://cdn.biwenger.com/i/t/465.png",
+      "title": "García Plaza confirma la baja de Azpilicueta y la vuelta de Peque",
+      "link": "https://www.jornadaperfecta.com/blog/garcia-plaza-previa-real-oviedo-sevilla-j30/",
+      "date": "Sat, 04 Apr 2026 11:45:52 +0000",
+      "img": "https://cdn.biwenger.com/i/t/17.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "BigUp: Gana dinero real con tus pronósticos del Girona &#8211; Villarreal",
-      "link": "https://www.jornadaperfecta.com/blog/bigup-girona-villarreal-pronosticos/",
-      "date": "Fri, 03 Apr 2026 15:01:40 +0000",
-      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2705.png",
+      "title": "Oblak, no convocado en Liga; Volverá en Champions",
+      "link": "https://www.jornadaperfecta.com/blog/oblak-baja-j30-atleti/",
+      "date": "Sat, 04 Apr 2026 11:26:41 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Nobel Mendy se recupera; Fran Pérez y Akhomach, bajas",
-      "link": "https://www.jornadaperfecta.com/blog/nobel-mendy-estado-j30-rayo/",
-      "date": "Fri, 03 Apr 2026 14:00:16 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
+      "title": "Azpilicueta, baja confirmada para el Real Oviedo &#8211; Sevilla",
+      "link": "https://www.jornadaperfecta.com/blog/azpilicueta-estado-sevilla-j30/",
+      "date": "Sat, 04 Apr 2026 11:20:37 +0000",
+      "img": "https://cdn.biwenger.com/i/t/17.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Kubo, recuperado de una lesión muscular: ¿lo fichamos?",
-      "link": "https://www.jornadaperfecta.com/blog/kubo-vuelta-real-sociedad-fantasy/",
-      "date": "Fri, 03 Apr 2026 13:03:40 +0000",
-      "img": "https://cdn.biwenger.com/i/t/13.png",
+      "title": "Almada, sobre la posible suplencia de David Costar tras ser padre",
+      "link": "https://www.jornadaperfecta.com/blog/almada-previa-real-oviedo-sevilla-j30/",
+      "date": "Sat, 04 Apr 2026 10:30:33 +0000",
+      "img": "https://cdn.biwenger.com/i/t/779.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Flick, sobre Raphinha, Gavi, Rashford, De Jong y Lewandowski",
-      "link": "https://www.jornadaperfecta.com/blog/flick-previa-atleti-barcelona-j30/",
-      "date": "Fri, 03 Apr 2026 13:02:30 +0000",
+      "title": "Koundé y Balde reciben el alta médica; De Jong, sin convocar",
+      "link": "https://www.jornadaperfecta.com/blog/kounde-estado-j30-barcelona/",
+      "date": "Sat, 04 Apr 2026 09:10:40 +0000",
       "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
@@ -14898,7 +14898,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-04T07:59:51.554Z",
+    "updatedAt": "2026-04-04T14:02:54.280Z",
     "players": [
       {
         "id": "3374",
@@ -14906,11 +14906,11 @@
         "team": "Real Madrid CF",
         "position": "",
         "nationality": "France",
-        "appearances": 24,
+        "appearances": 25,
         "goals": 23,
         "assists": 4,
         "penalties": 8,
-        "minutesPerGoal": 94
+        "minutesPerGoal": 98
       },
       {
         "id": "30059",
@@ -14918,11 +14918,11 @@
         "team": "RCD Mallorca",
         "position": "",
         "nationality": "Kosovo",
-        "appearances": 28,
+        "appearances": 29,
         "goals": 18,
         "assists": 1,
         "penalties": 5,
-        "minutesPerGoal": 140
+        "minutesPerGoal": 145
       },
       {
         "id": "202283",
@@ -14978,11 +14978,11 @@
         "team": "Real Sociedad de Fútbol",
         "position": "",
         "nationality": "Spain",
-        "appearances": 26,
+        "appearances": 27,
         "goals": 12,
         "assists": 3,
         "penalties": 5,
-        "minutesPerGoal": 195
+        "minutesPerGoal": 203
       },
       {
         "id": "37428",
@@ -15002,11 +15002,11 @@
         "team": "Real Madrid CF",
         "position": "",
         "nationality": "Brazil",
-        "appearances": 27,
+        "appearances": 28,
         "goals": 11,
         "assists": 5,
         "penalties": 4,
-        "minutesPerGoal": 221
+        "minutesPerGoal": 229
       },
       {
         "id": "371",
@@ -15158,11 +15158,11 @@
         "team": "Real Sociedad de Fútbol",
         "position": "",
         "nationality": "Portugal",
-        "appearances": 29,
+        "appearances": 30,
         "goals": 8,
         "assists": 4,
         "penalties": 0,
-        "minutesPerGoal": 326
+        "minutesPerGoal": 338
       },
       {
         "id": "11733",
@@ -15254,11 +15254,11 @@
         "team": "Levante UD",
         "position": "",
         "nationality": "Spain",
-        "appearances": 25,
+        "appearances": 26,
         "goals": 7,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 321
+        "minutesPerGoal": 334
       },
       {
         "id": "203439",
@@ -15266,11 +15266,11 @@
         "team": "Levante UD",
         "position": "",
         "nationality": "Cameroon",
-        "appearances": 27,
+        "appearances": 28,
         "goals": 6,
         "assists": 5,
         "penalties": 0,
-        "minutesPerGoal": 405
+        "minutesPerGoal": 420
       },
       {
         "id": "32398",
@@ -15386,11 +15386,11 @@
         "team": "Levante UD",
         "position": "",
         "nationality": "Spain",
-        "appearances": 28,
+        "appearances": 29,
         "goals": 5,
         "assists": 2,
         "penalties": 0,
-        "minutesPerGoal": 504
+        "minutesPerGoal": 522
       },
       {
         "id": "8412",
@@ -15453,6 +15453,18 @@
         "minutesPerGoal": 432
       },
       {
+        "id": "33615",
+        "name": "Brais Méndez",
+        "team": "Real Sociedad de Fútbol",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 26,
+        "goals": 5,
+        "assists": 2,
+        "penalties": 1,
+        "minutesPerGoal": 468
+      },
+      {
         "id": "16275",
         "name": "Djibril Sow",
         "team": "Sevilla FC",
@@ -15494,11 +15506,11 @@
         "team": "RCD Mallorca",
         "position": "",
         "nationality": "Portugal",
-        "appearances": 26,
+        "appearances": 27,
         "goals": 5,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 468
+        "minutesPerGoal": 486
       },
       {
         "id": "189369",
@@ -15602,11 +15614,11 @@
         "team": "Real Sociedad de Fútbol",
         "position": "",
         "nationality": "Iceland",
-        "appearances": 13,
+        "appearances": 14,
         "goals": 4,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 293
+        "minutesPerGoal": 315
       },
       {
         "id": "213043",
@@ -15626,11 +15638,11 @@
         "team": "Real Madrid CF",
         "position": "",
         "nationality": "Turkey",
-        "appearances": 28,
+        "appearances": 29,
         "goals": 4,
         "assists": 8,
         "penalties": 0,
-        "minutesPerGoal": 630
+        "minutesPerGoal": 653
       },
       {
         "id": "69",
@@ -15643,18 +15655,6 @@
         "assists": 1,
         "penalties": 0,
         "minutesPerGoal": 360
-      },
-      {
-        "id": "33615",
-        "name": "Brais Méndez",
-        "team": "Real Sociedad de Fútbol",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 25,
-        "goals": 4,
-        "assists": 2,
-        "penalties": 1,
-        "minutesPerGoal": 563
       },
       {
         "id": "122511",
@@ -15698,11 +15698,11 @@
         "team": "Real Sociedad de Fútbol",
         "position": "",
         "nationality": "Spain",
-        "appearances": 25,
+        "appearances": 26,
         "goals": 4,
-        "assists": 2,
+        "assists": 3,
         "penalties": 0,
-        "minutesPerGoal": 563
+        "minutesPerGoal": 585
       },
       {
         "id": "125010",
@@ -15710,11 +15710,11 @@
         "team": "Real Madrid CF",
         "position": "",
         "nationality": "England",
-        "appearances": 18,
+        "appearances": 19,
         "goals": 4,
         "assists": 3,
         "penalties": 0,
-        "minutesPerGoal": 405
+        "minutesPerGoal": 428
       },
       {
         "id": "217658",
@@ -15722,11 +15722,11 @@
         "team": "Real Madrid CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 28,
+        "appearances": 29,
         "goals": 4,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 630
+        "minutesPerGoal": 653
       },
       {
         "id": "146126",
@@ -15794,11 +15794,11 @@
         "team": "Real Sociedad de Fútbol",
         "position": "",
         "nationality": "Spain",
-        "appearances": 23,
+        "appearances": 24,
         "goals": 3,
         "assists": 3,
         "penalties": 0,
-        "minutesPerGoal": 690
+        "minutesPerGoal": 720
       },
       {
         "id": "126878",
@@ -15878,11 +15878,11 @@
         "team": "Levante UD",
         "position": "",
         "nationality": "Spain",
-        "appearances": 26,
+        "appearances": 27,
         "goals": 3,
         "assists": 2,
         "penalties": 0,
-        "minutesPerGoal": 780
+        "minutesPerGoal": 810
       },
       {
         "id": "31913",
@@ -15998,11 +15998,11 @@
         "team": "Levante UD",
         "position": "",
         "nationality": "Spain",
-        "appearances": 30,
+        "appearances": 31,
         "goals": 3,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 900
+        "minutesPerGoal": 930
       },
       {
         "id": "159520",
@@ -16010,11 +16010,11 @@
         "team": "RCD Mallorca",
         "position": "",
         "nationality": "Spain",
-        "appearances": 29,
+        "appearances": 30,
         "goals": 3,
         "assists": 2,
         "penalties": 0,
-        "minutesPerGoal": 870
+        "minutesPerGoal": 900
       },
       {
         "id": "152458",
@@ -16046,11 +16046,11 @@
         "team": "Real Sociedad de Fútbol",
         "position": "",
         "nationality": "Japan",
-        "appearances": 18,
+        "appearances": 19,
         "goals": 2,
         "assists": 3,
         "penalties": 0,
-        "minutesPerGoal": 810
+        "minutesPerGoal": 855
       },
       {
         "id": "3216",
