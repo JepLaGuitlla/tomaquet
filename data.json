@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-05T08:03:15.691Z",
+  "updatedAt": "2026-04-05T14:03:59.033Z",
   "players": [
     {
       "id": 11,
@@ -4459,11 +4459,11 @@
       "teamId": 8,
       "status": "ok",
       "jForm": [
+        null,
         9,
         2,
         6,
-        6,
-        2
+        6
       ],
       "clausula": null
     },
@@ -6937,11 +6937,11 @@
       "teamId": 1,
       "status": "ok",
       "jForm": [
+        null,
         2,
         3,
         2,
-        1,
-        null
+        1
       ],
       "clausula": null
     },
@@ -12051,9 +12051,9 @@
           8,
           1
         ],
-        "teamSize": 18,
-        "teamValue": 93130000,
-        "teamValueInc": 200000,
+        "teamSize": 16,
+        "teamValue": 92570000,
+        "teamValueInc": 210000,
         "lastTrophy": {
           "type": "league",
           "position": 3,
@@ -12278,8 +12278,8 @@
       "name": "CA CABA JUNIORS",
       "manager": "CA CABA JUNIORS",
       "points": 1386,
-      "value": 93130000,
-      "trend": 200000,
+      "value": 92570000,
+      "trend": 210000,
       "players": []
     },
     {
@@ -12504,6 +12504,30 @@
   "boardTomaquet": [
     {
       "type": "transfer",
+      "date": 1775393499,
+      "content": [
+        {
+          "player": 2595,
+          "from": {
+            "id": 8070044,
+            "name": "CA CABA JUNIORS",
+            "icon": "i/u/8070044.png?v=63"
+          },
+          "amount": 247600
+        },
+        {
+          "player": 34488,
+          "from": {
+            "id": 8070044,
+            "name": "CA CABA JUNIORS",
+            "icon": "i/u/8070044.png?v=63"
+          },
+          "amount": 285000
+        }
+      ]
+    },
+    {
+      "type": "transfer",
       "date": 1775373410,
       "content": [
         {
@@ -12547,21 +12571,6 @@
             "icon": "i/u/12696899.png"
           },
           "amount": 695130
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1775232594,
-      "content": [
-        {
-          "player": 26566,
-          "from": {
-            "id": 6552586,
-            "name": "LeMola Team",
-            "icon": "i/u/6552586.png"
-          },
-          "amount": 9502100
         }
       ]
     }
@@ -13584,15 +13593,15 @@
           "tla": "GET",
           "crest": "https://crests.football-data.org/82.png"
         },
-        "playedGames": 29,
+        "playedGames": 30,
         "form": null,
-        "won": 11,
+        "won": 12,
         "draw": 5,
         "lost": 13,
-        "points": 38,
-        "goalsFor": 25,
+        "points": 41,
+        "goalsFor": 27,
         "goalsAgainst": 31,
-        "goalDifference": -6
+        "goalDifference": -4
       },
       {
         "position": 9,
@@ -13622,15 +13631,15 @@
           "tla": "ATH",
           "crest": "https://crests.football-data.org/77.png"
         },
-        "playedGames": 29,
+        "playedGames": 30,
         "form": null,
         "won": 11,
         "draw": 5,
-        "lost": 13,
+        "lost": 14,
         "points": 38,
         "goalsFor": 32,
-        "goalsAgainst": 41,
-        "goalDifference": -9
+        "goalsAgainst": 43,
+        "goalDifference": -11
       },
       {
         "position": 11,
@@ -13826,14 +13835,14 @@
     "forms": {
       "77": {
         "results": [
+          "L",
           "W",
           "L",
           "L",
-          "D",
-          "W"
+          "D"
         ],
-        "gf": 5,
-        "ga": 7,
+        "gf": 3,
+        "ga": 8,
         "crest": "https://crests.football-data.org/77.png",
         "name": "Athletic Club"
       },
@@ -13892,13 +13901,13 @@
       "82": {
         "results": [
           "W",
+          "W",
           "L",
           "W",
-          "W",
-          "L"
+          "W"
         ],
-        "gf": 5,
-        "ga": 3,
+        "gf": 7,
+        "ga": 2,
         "crest": "https://crests.football-data.org/82.png",
         "name": "Getafe CF"
       },
@@ -14086,23 +14095,6 @@
       }
     },
     "nextMatches": [
-      {
-        "id": 544507,
-        "matchday": 30,
-        "date": "2026-04-05T12:00:00Z",
-        "home": {
-          "id": 82,
-          "name": "Getafe CF",
-          "short": "Getafe",
-          "crest": "https://crests.football-data.org/82.png"
-        },
-        "away": {
-          "id": 77,
-          "name": "Athletic Club",
-          "short": "Athletic",
-          "crest": "https://crests.football-data.org/77.png"
-        }
-      },
       {
         "id": 544508,
         "matchday": 30,
@@ -14344,6 +14336,23 @@
     ],
     "recentResults": [
       {
+        "date": "2026-04-05T12:00:00Z",
+        "home": {
+          "name": "Getafe CF",
+          "short": "Getafe",
+          "crest": "https://crests.football-data.org/82.png"
+        },
+        "away": {
+          "name": "Athletic Club",
+          "short": "Athletic",
+          "crest": "https://crests.football-data.org/77.png"
+        },
+        "score": {
+          "home": 2,
+          "away": 0
+        }
+      },
+      {
         "date": "2026-04-04T19:00:00Z",
         "home": {
           "name": "Club Atlético de Madrid",
@@ -14461,45 +14470,10 @@
           "home": 2,
           "away": 1
         }
-      },
-      {
-        "date": "2026-03-22T15:15:00Z",
-        "home": {
-          "name": "RC Celta de Vigo",
-          "short": "Celta",
-          "crest": "https://crests.football-data.org/558.png"
-        },
-        "away": {
-          "name": "Deportivo Alavés",
-          "short": "Alavés",
-          "crest": "https://crests.football-data.org/263.png"
-        },
-        "score": {
-          "home": 3,
-          "away": 4
-        }
       }
     ]
   },
   "odds": {
-    "Getafe": {
-      "winProb": 0.32969837587006956,
-      "drawProb": 0.30696055684454754,
-      "loseProb": 0.36334106728538274,
-      "over25Prob": 0.37037037037037035,
-      "isHome": false,
-      "opponent": "Levante",
-      "matchDate": "2026-04-13T19:00:00Z"
-    },
-    "Athletic Bilbao": {
-      "winProb": 0.40633245382585753,
-      "drawProb": 0.2612137203166227,
-      "loseProb": 0.3324538258575198,
-      "over25Prob": 0.5617977528089888,
-      "isHome": true,
-      "opponent": "Villarreal",
-      "matchDate": "2026-04-12T19:00:00Z"
-    },
     "Valencia": {
       "winProb": 0.3191489361702128,
       "drawProb": 0.2836879432624113,
@@ -14510,28 +14484,28 @@
       "matchDate": "2026-04-11T14:15:00Z"
     },
     "Celta Vigo": {
-      "winProb": 0.5732009925558312,
-      "drawProb": 0.2183622828784119,
-      "loseProb": 0.2084367245657568,
+      "winProb": 0.5704358812381554,
+      "drawProb": 0.2173089071383449,
+      "loseProb": 0.21225521162349967,
       "over25Prob": 0.53475935828877,
       "isHome": true,
       "opponent": "Oviedo",
       "matchDate": "2026-04-12T16:30:00Z"
     },
     "Oviedo": {
-      "winProb": 0.2084367245657568,
-      "drawProb": 0.2183622828784119,
-      "loseProb": 0.5732009925558312,
+      "winProb": 0.21225521162349967,
+      "drawProb": 0.2173089071383449,
+      "loseProb": 0.5704358812381554,
       "over25Prob": 0.53475935828877,
       "isHome": false,
       "opponent": "Celta Vigo",
       "matchDate": "2026-04-12T16:30:00Z"
     },
     "Sevilla": {
-      "winProb": 0.27619821283509344,
-      "drawProb": 0.26807473598700243,
-      "loseProb": 0.45572705117790413,
-      "over25Prob": 0.53475935828877,
+      "winProb": 0.27727546714888485,
+      "drawProb": 0.2652200120554551,
+      "loseProb": 0.45750452079566,
+      "over25Prob": 0.5376344086021505,
       "isHome": true,
       "opponent": "Atlético Madrid",
       "matchDate": "2026-04-11T19:00:00Z"
@@ -14555,9 +14529,9 @@
       "matchDate": "2026-04-12T12:00:00Z"
     },
     "Girona": {
-      "winProb": 0.0762443460826949,
-      "drawProb": 0.14891473844276346,
-      "loseProb": 0.7748409154745416,
+      "winProb": 0.07622739018087854,
+      "drawProb": 0.1614987080103359,
+      "loseProb": 0.7622739018087855,
       "over25Prob": 0.7407407407407407,
       "isHome": false,
       "opponent": "Real Madrid",
@@ -14567,15 +14541,15 @@
       "winProb": 0.3324538258575198,
       "drawProb": 0.2612137203166227,
       "loseProb": 0.40633245382585753,
-      "over25Prob": 0.5617977528089888,
+      "over25Prob": 0.5649717514124294,
       "isHome": false,
       "opponent": "Athletic Bilbao",
       "matchDate": "2026-04-12T19:00:00Z"
     },
     "Real Madrid": {
-      "winProb": 0.7748409154745416,
-      "drawProb": 0.14891473844276346,
-      "loseProb": 0.0762443460826949,
+      "winProb": 0.7622739018087855,
+      "drawProb": 0.1614987080103359,
+      "loseProb": 0.07622739018087854,
       "over25Prob": 0.7407407407407407,
       "isHome": true,
       "opponent": "Girona",
@@ -14600,28 +14574,28 @@
       "matchDate": "2026-04-11T14:15:00Z"
     },
     "Barcelona": {
-      "winProb": 0.7627879150463656,
-      "drawProb": 0.13221657194137001,
-      "loseProb": 0.10499551301226442,
+      "winProb": 0.7664069041025311,
+      "drawProb": 0.12809943968570875,
+      "loseProb": 0.10549365621176016,
       "over25Prob": 0.7751937984496123,
       "isHome": true,
       "opponent": "Espanyol",
       "matchDate": "2026-04-11T16:30:00Z"
     },
     "Espanyol": {
-      "winProb": 0.10499551301226442,
-      "drawProb": 0.13221657194137001,
-      "loseProb": 0.7627879150463656,
+      "winProb": 0.10549365621176016,
+      "drawProb": 0.12809943968570875,
+      "loseProb": 0.7664069041025311,
       "over25Prob": 0.7751937984496123,
       "isHome": false,
       "opponent": "Barcelona",
       "matchDate": "2026-04-11T16:30:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.45572705117790413,
-      "drawProb": 0.26807473598700243,
-      "loseProb": 0.27619821283509344,
-      "over25Prob": 0.53475935828877,
+      "winProb": 0.45750452079566,
+      "drawProb": 0.2652200120554551,
+      "loseProb": 0.27727546714888485,
+      "over25Prob": 0.5376344086021505,
       "isHome": false,
       "opponent": "Sevilla",
       "matchDate": "2026-04-11T19:00:00Z"
@@ -14653,6 +14627,15 @@
       "opponent": "Mallorca",
       "matchDate": "2026-04-12T14:15:00Z"
     },
+    "Athletic Bilbao": {
+      "winProb": 0.40633245382585753,
+      "drawProb": 0.2612137203166227,
+      "loseProb": 0.3324538258575198,
+      "over25Prob": 0.5649717514124294,
+      "isHome": true,
+      "opponent": "Villarreal",
+      "matchDate": "2026-04-12T19:00:00Z"
+    },
     "Levante": {
       "winProb": 0.36334106728538274,
       "drawProb": 0.30696055684454754,
@@ -14661,21 +14644,70 @@
       "isHome": true,
       "opponent": "Getafe",
       "matchDate": "2026-04-13T19:00:00Z"
+    },
+    "Getafe": {
+      "winProb": 0.32969837587006956,
+      "drawProb": 0.30696055684454754,
+      "loseProb": 0.36334106728538274,
+      "over25Prob": 0.37037037037037035,
+      "isHome": false,
+      "opponent": "Levante",
+      "matchDate": "2026-04-13T19:00:00Z"
     }
   },
   "news": [
     {
-      "title": "Ronald Araújo, pendiente de pruebas tras sufrir un pinchazo",
-      "link": "https://www.jornadaperfecta.com/blog/ronald-araujo-lesion-fc-barcelona/",
-      "date": "Sun, 05 Apr 2026 07:40:04 +0000",
+      "title": "BigUp: Gana dinero real con tus pronósticos del Girona &#8211; Villarreal",
+      "link": "https://www.jornadaperfecta.com/blog/bigup-girona-villarreal-pronosticos/",
+      "date": "Sun, 05 Apr 2026 12:30:40 +0000",
+      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2705.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Ya conocemos el alcance de la lesión de Marc Bernal: Tiempo de baja",
+      "link": "https://www.jornadaperfecta.com/blog/marc-bernal-lesion-fc-barcelona/",
+      "date": "Sun, 05 Apr 2026 12:10:05 +0000",
       "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Marc Bernal pidió el cambio por una torcedura de tobillo",
-      "link": "https://www.jornadaperfecta.com/blog/marc-bernal-lesion-fc-barcelona/",
-      "date": "Sat, 04 Apr 2026 21:00:05 +0000",
+      "title": "Míchel confirma el regreso de jugadores importantes",
+      "link": "https://www.jornadaperfecta.com/blog/michel-previa-girona-villarreal-j30/",
+      "date": "Sun, 05 Apr 2026 12:00:55 +0000",
+      "img": "https://cdn.biwenger.com/i/t/289.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Lucas Boyé finalmente entra en la convocatoria del Alavés",
+      "link": "https://www.jornadaperfecta.com/blog/boye-fascitis-plantar-alaves/",
+      "date": "Sun, 05 Apr 2026 11:40:18 +0000",
+      "img": "https://cdn.biwenger.com/i/t/91.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Ronald Araújo salva la lesión y podrá estar en Champions",
+      "link": "https://www.jornadaperfecta.com/blog/ronald-araujo-lesion-fc-barcelona/",
+      "date": "Sun, 05 Apr 2026 11:03:04 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Marcelino confirma a Ayoze y deja en duda a Rafa Marín",
+      "link": "https://www.jornadaperfecta.com/blog/marcelino-previa-girona-villarreal-j30/",
+      "date": "Sun, 05 Apr 2026 09:53:33 +0000",
+      "img": "https://cdn.biwenger.com/i/t/19.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Frenkie de Jong será baja en Champions&#8230; ¿Y en el derbi?",
+      "link": "https://www.jornadaperfecta.com/blog/frenkie-de-jong-estado-j31/",
+      "date": "Sun, 05 Apr 2026 08:37:26 +0000",
       "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
@@ -14703,53 +14735,13 @@
       "img": "https://cdn.biwenger.com/i/t/5.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Corberán recupera a Filip Ugrinic y habla de Beltrán y Guido",
-      "link": "https://www.jornadaperfecta.com/blog/corberan-previa-valencia-celta-j30/",
-      "date": "Sat, 04 Apr 2026 12:26:02 +0000",
-      "img": "https://cdn.biwenger.com/i/t/18.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Drama en Mallorca: Raíllo podría haber dicho adiós a la temporada",
-      "link": "https://www.jornadaperfecta.com/blog/raillo-baja-mallorca-j30/",
-      "date": "Sat, 04 Apr 2026 12:15:24 +0000",
-      "img": "https://cdn.biwenger.com/i/t/465.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Bordalás, sobre Davinchi, Mayoral, Juanmi y Satriano",
-      "link": "https://www.jornadaperfecta.com/blog/bordalas-previa-getafe-athletic-j30/",
-      "date": "Sat, 04 Apr 2026 12:14:52 +0000",
-      "img": "https://cdn.biwenger.com/i/t/8.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Valverde recupera a Nico Williams, Sannadi, Yeray y Egiluz",
-      "link": "https://www.jornadaperfecta.com/blog/valverde-previa-getafe-athletic-j30/",
-      "date": "Sat, 04 Apr 2026 11:59:33 +0000",
-      "img": "https://cdn.biwenger.com/i/t/1.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "García Plaza confirma la baja de Azpilicueta y la vuelta de Peque",
-      "link": "https://www.jornadaperfecta.com/blog/garcia-plaza-previa-real-oviedo-sevilla-j30/",
-      "date": "Sat, 04 Apr 2026 11:45:52 +0000",
-      "img": "https://cdn.biwenger.com/i/t/17.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-05T08:03:13.342Z",
+    "updatedAt": "2026-04-05T14:03:56.986Z",
     "players": [
       {
         "id": "3374",
@@ -14817,11 +14809,11 @@
         "team": "RC Celta de Vigo",
         "position": "",
         "nationality": "Spain",
-        "appearances": 28,
+        "appearances": 29,
         "goals": 12,
         "assists": 1,
         "penalties": 3,
-        "minutesPerGoal": 210
+        "minutesPerGoal": 218
       },
       {
         "id": "180137",
@@ -14901,11 +14893,11 @@
         "team": "Valencia CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 28,
+        "appearances": 29,
         "goals": 9,
         "assists": 0,
         "penalties": 1,
-        "minutesPerGoal": 280
+        "minutesPerGoal": 290
       },
       {
         "id": "160819",
@@ -15093,11 +15085,11 @@
         "team": "RC Celta de Vigo",
         "position": "",
         "nationality": "Spain",
-        "appearances": 26,
+        "appearances": 27,
         "goals": 7,
         "assists": 2,
         "penalties": 0,
-        "minutesPerGoal": 334
+        "minutesPerGoal": 347
       },
       {
         "id": "247061",
@@ -15177,11 +15169,11 @@
         "team": "Getafe CF",
         "position": "",
         "nationality": "Uruguay",
-        "appearances": 29,
+        "appearances": 30,
         "goals": 6,
         "assists": 2,
         "penalties": 2,
-        "minutesPerGoal": 435
+        "minutesPerGoal": 450
       },
       {
         "id": "114",
@@ -15213,11 +15205,11 @@
         "team": "Athletic Club",
         "position": "",
         "nationality": "Spain",
-        "appearances": 28,
+        "appearances": 29,
         "goals": 6,
         "assists": 1,
         "penalties": 1,
-        "minutesPerGoal": 420
+        "minutesPerGoal": 435
       },
       {
         "id": "101870",
@@ -15225,11 +15217,11 @@
         "team": "Athletic Club",
         "position": "",
         "nationality": "Spain",
-        "appearances": 26,
+        "appearances": 27,
         "goals": 5,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 468
+        "minutesPerGoal": 486
       },
       {
         "id": "156746",
@@ -15405,11 +15397,11 @@
         "team": "Valencia CF",
         "position": "",
         "nationality": "Belgium",
-        "appearances": 22,
+        "appearances": 23,
         "goals": 5,
         "assists": 1,
         "penalties": 3,
-        "minutesPerGoal": 396
+        "minutesPerGoal": 414
       },
       {
         "id": "32312",
@@ -15441,11 +15433,11 @@
         "team": "Athletic Club",
         "position": "",
         "nationality": "Spain",
-        "appearances": 19,
+        "appearances": 20,
         "goals": 4,
         "assists": 3,
         "penalties": 1,
-        "minutesPerGoal": 428
+        "minutesPerGoal": 450
       },
       {
         "id": "33045",
@@ -15604,6 +15596,18 @@
         "minutesPerGoal": 608
       },
       {
+        "id": "152458",
+        "name": "Martin Satriano",
+        "team": "Getafe CF",
+        "position": "",
+        "nationality": "Uruguay",
+        "appearances": 11,
+        "goals": 4,
+        "assists": 1,
+        "penalties": 0,
+        "minutesPerGoal": 248
+      },
+      {
         "id": "96",
         "name": "Federico Valverde",
         "team": "Real Madrid CF",
@@ -15633,11 +15637,11 @@
         "team": "Valencia CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 27,
+        "appearances": 28,
         "goals": 3,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 810
+        "minutesPerGoal": 840
       },
       {
         "id": "249599",
@@ -15645,11 +15649,11 @@
         "team": "Getafe CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 25,
+        "appearances": 26,
         "goals": 3,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 750
+        "minutesPerGoal": 780
       },
       {
         "id": "101182",
@@ -15669,11 +15673,11 @@
         "team": "Athletic Club",
         "position": "",
         "nationality": "Spain",
-        "appearances": 22,
+        "appearances": 23,
         "goals": 3,
         "assists": 0,
         "penalties": 2,
-        "minutesPerGoal": 660
+        "minutesPerGoal": 690
       },
       {
         "id": "175869",
@@ -15681,11 +15685,11 @@
         "team": "RC Celta de Vigo",
         "position": "",
         "nationality": "Spain",
-        "appearances": 26,
+        "appearances": 27,
         "goals": 3,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 780
+        "minutesPerGoal": 810
       },
       {
         "id": "9870",
@@ -15693,11 +15697,11 @@
         "team": "Valencia CF",
         "position": "",
         "nationality": "Netherlands",
-        "appearances": 28,
+        "appearances": 29,
         "goals": 3,
         "assists": 2,
         "penalties": 0,
-        "minutesPerGoal": 840
+        "minutesPerGoal": 870
       },
       {
         "id": "21583",
@@ -15837,11 +15841,11 @@
         "team": "RC Celta de Vigo",
         "position": "",
         "nationality": "Sweden",
-        "appearances": 23,
+        "appearances": 24,
         "goals": 3,
         "assists": 2,
         "penalties": 0,
-        "minutesPerGoal": 690
+        "minutesPerGoal": 720
       },
       {
         "id": "126913",
@@ -15856,6 +15860,18 @@
         "minutesPerGoal": 930
       },
       {
+        "id": "156967",
+        "name": "Luis Vázquez",
+        "team": "Getafe CF",
+        "position": "",
+        "nationality": "Argentina",
+        "appearances": 10,
+        "goals": 3,
+        "assists": 0,
+        "penalties": 0,
+        "minutesPerGoal": 300
+      },
+      {
         "id": "159520",
         "name": "Pablo Torre",
         "team": "RCD Mallorca",
@@ -15866,18 +15882,6 @@
         "assists": 2,
         "penalties": 0,
         "minutesPerGoal": 900
-      },
-      {
-        "id": "152458",
-        "name": "Martin Satriano",
-        "team": "Getafe CF",
-        "position": "",
-        "nationality": "Uruguay",
-        "appearances": 10,
-        "goals": 3,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 300
       },
       {
         "id": "180280",
@@ -15921,11 +15925,11 @@
         "team": "RC Celta de Vigo",
         "position": "",
         "nationality": "Spain",
-        "appearances": 27,
+        "appearances": 28,
         "goals": 2,
         "assists": 4,
         "penalties": 0,
-        "minutesPerGoal": 1215
+        "minutesPerGoal": 1260
       },
       {
         "id": "133860",
@@ -15938,18 +15942,6 @@
         "assists": 7,
         "penalties": 0,
         "minutesPerGoal": 990
-      },
-      {
-        "id": "81168",
-        "name": "Javi Puado",
-        "team": "RCD Espanyol de Barcelona",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 10,
-        "goals": 2,
-        "assists": 0,
-        "penalties": 1,
-        "minutesPerGoal": 450
       }
     ]
   }
