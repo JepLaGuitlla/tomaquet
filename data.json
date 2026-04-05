@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-05T05:54:34.654Z",
+  "updatedAt": "2026-04-05T08:03:15.691Z",
   "players": [
     {
       "id": 11,
@@ -12205,9 +12205,9 @@
           13,
           9
         ],
-        "teamSize": 15,
-        "teamValue": 65590000,
-        "teamValueInc": 330000,
+        "teamSize": 14,
+        "teamValue": 64540000,
+        "teamValueInc": 350000,
         "lastTrophy": {
           "type": "league",
           "position": 3,
@@ -12350,8 +12350,8 @@
       "name": "Tata Martini",
       "manager": "Tata Martini",
       "points": 1178,
-      "value": 65590000,
-      "trend": 330000,
+      "value": 64540000,
+      "trend": 350000,
       "players": []
     },
     {
@@ -12503,6 +12503,21 @@
   },
   "boardTomaquet": [
     {
+      "type": "transfer",
+      "date": 1775373410,
+      "content": [
+        {
+          "player": 31026,
+          "from": {
+            "id": 12713493,
+            "name": "Tata Martini",
+            "icon": "i/u/12713493.png"
+          },
+          "amount": 1040400
+        }
+      ]
+    },
+    {
       "type": "market",
       "date": 1775365366,
       "content": [
@@ -12547,26 +12562,6 @@
             "icon": "i/u/6552586.png"
           },
           "amount": 9502100
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1775229336,
-      "content": [
-        {
-          "player": 27591,
-          "from": {
-            "id": 6552586,
-            "name": "LeMola Team",
-            "icon": "i/u/6552586.png"
-          },
-          "to": {
-            "id": 12696491,
-            "name": "NACECH1",
-            "icon": "https://graph.facebook.com/10235185447969563/picture?height=300&width=300"
-          },
-          "amount": 4500000
         }
       ]
     }
@@ -14497,10 +14492,10 @@
       "matchDate": "2026-04-13T19:00:00Z"
     },
     "Athletic Bilbao": {
-      "winProb": 0.40875912408759124,
-      "drawProb": 0.26277372262773724,
-      "loseProb": 0.3284671532846716,
-      "over25Prob": 0.5494505494505494,
+      "winProb": 0.40633245382585753,
+      "drawProb": 0.2612137203166227,
+      "loseProb": 0.3324538258575198,
+      "over25Prob": 0.5617977528089888,
       "isHome": true,
       "opponent": "Villarreal",
       "matchDate": "2026-04-12T19:00:00Z"
@@ -14518,7 +14513,7 @@
       "winProb": 0.5732009925558312,
       "drawProb": 0.2183622828784119,
       "loseProb": 0.2084367245657568,
-      "over25Prob": 0.5,
+      "over25Prob": 0.53475935828877,
       "isHome": true,
       "opponent": "Oviedo",
       "matchDate": "2026-04-12T16:30:00Z"
@@ -14527,7 +14522,7 @@
       "winProb": 0.2084367245657568,
       "drawProb": 0.2183622828784119,
       "loseProb": 0.5732009925558312,
-      "over25Prob": 0.5,
+      "over25Prob": 0.53475935828877,
       "isHome": false,
       "opponent": "Celta Vigo",
       "matchDate": "2026-04-12T16:30:00Z"
@@ -14536,7 +14531,7 @@
       "winProb": 0.27619821283509344,
       "drawProb": 0.26807473598700243,
       "loseProb": 0.45572705117790413,
-      "over25Prob": 0.5128205128205129,
+      "over25Prob": 0.53475935828877,
       "isHome": true,
       "opponent": "Atlético Madrid",
       "matchDate": "2026-04-11T19:00:00Z"
@@ -14569,10 +14564,10 @@
       "matchDate": "2026-04-10T19:00:00Z"
     },
     "Villarreal": {
-      "winProb": 0.3284671532846716,
-      "drawProb": 0.26277372262773724,
-      "loseProb": 0.40875912408759124,
-      "over25Prob": 0.5494505494505494,
+      "winProb": 0.3324538258575198,
+      "drawProb": 0.2612137203166227,
+      "loseProb": 0.40633245382585753,
+      "over25Prob": 0.5617977528089888,
       "isHome": false,
       "opponent": "Athletic Bilbao",
       "matchDate": "2026-04-12T19:00:00Z"
@@ -14605,18 +14600,18 @@
       "matchDate": "2026-04-11T14:15:00Z"
     },
     "Barcelona": {
-      "winProb": 0.7578149668455952,
-      "drawProb": 0.13135459425323648,
-      "loseProb": 0.1108304389011683,
+      "winProb": 0.7627879150463656,
+      "drawProb": 0.13221657194137001,
+      "loseProb": 0.10499551301226442,
       "over25Prob": 0.7751937984496123,
       "isHome": true,
       "opponent": "Espanyol",
       "matchDate": "2026-04-11T16:30:00Z"
     },
     "Espanyol": {
-      "winProb": 0.1108304389011683,
-      "drawProb": 0.13135459425323648,
-      "loseProb": 0.7578149668455952,
+      "winProb": 0.10499551301226442,
+      "drawProb": 0.13221657194137001,
+      "loseProb": 0.7627879150463656,
       "over25Prob": 0.7751937984496123,
       "isHome": false,
       "opponent": "Barcelona",
@@ -14626,7 +14621,7 @@
       "winProb": 0.45572705117790413,
       "drawProb": 0.26807473598700243,
       "loseProb": 0.27619821283509344,
-      "over25Prob": 0.5128205128205129,
+      "over25Prob": 0.53475935828877,
       "isHome": false,
       "opponent": "Sevilla",
       "matchDate": "2026-04-11T19:00:00Z"
@@ -14644,7 +14639,7 @@
       "winProb": 0.367766823831976,
       "drawProb": 0.2786112301757394,
       "loseProb": 0.3536219459922846,
-      "over25Prob": 0.4504504504504504,
+      "over25Prob": 0.48780487804878053,
       "isHome": true,
       "opponent": "Rayo Vallecano",
       "matchDate": "2026-04-12T14:15:00Z"
@@ -14653,7 +14648,7 @@
       "winProb": 0.3536219459922846,
       "drawProb": 0.2786112301757394,
       "loseProb": 0.367766823831976,
-      "over25Prob": 0.4504504504504504,
+      "over25Prob": 0.48780487804878053,
       "isHome": false,
       "opponent": "Mallorca",
       "matchDate": "2026-04-12T14:15:00Z"
@@ -14670,17 +14665,17 @@
   },
   "news": [
     {
-      "title": "Marc Bernal pidió el cambio por una torcedura de tobillo",
-      "link": "https://www.jornadaperfecta.com/blog/marc-bernal-lesion-fc-barcelona/",
-      "date": "Sat, 04 Apr 2026 21:00:05 +0000",
+      "title": "Ronald Araújo, pendiente de pruebas tras sufrir un pinchazo",
+      "link": "https://www.jornadaperfecta.com/blog/ronald-araujo-lesion-fc-barcelona/",
+      "date": "Sun, 05 Apr 2026 07:40:04 +0000",
       "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Ronald Araújo, sustituido por lesión en la primera mitad",
-      "link": "https://www.jornadaperfecta.com/blog/ronald-araujo-lesion-fc-barcelona/",
-      "date": "Sat, 04 Apr 2026 20:12:04 +0000",
+      "title": "Marc Bernal pidió el cambio por una torcedura de tobillo",
+      "link": "https://www.jornadaperfecta.com/blog/marc-bernal-lesion-fc-barcelona/",
+      "date": "Sat, 04 Apr 2026 21:00:05 +0000",
       "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
@@ -14754,7 +14749,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-05T05:54:32.350Z",
+    "updatedAt": "2026-04-05T08:03:13.342Z",
     "players": [
       {
         "id": "3374",
