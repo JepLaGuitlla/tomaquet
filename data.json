@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-07T16:14:34.464Z",
+  "updatedAt": "2026-04-07T20:04:50.887Z",
   "players": [
     {
       "id": 11,
@@ -8645,7 +8645,7 @@
     {
       "id": 34621,
       "slug": "luiz-junior",
-      "name": "Luiz J��nior",
+      "name": "Luiz Júnior",
       "position": 1,
       "price": 2260000,
       "points": 118,
@@ -12504,7 +12504,25 @@
         "playerID": 25127,
         "price": 13590000,
         "type": "sale",
-        "until": 1775573135
+        "until": 1775756032
+      },
+      {
+        "playerID": 27945,
+        "price": 730000,
+        "type": "sale",
+        "until": 1775756038
+      },
+      {
+        "playerID": 34127,
+        "price": 540000,
+        "type": "sale",
+        "until": 1775756067
+      },
+      {
+        "playerID": 39736,
+        "price": 150000,
+        "type": "sale",
+        "until": 1775756069
       }
     ]
   },
@@ -12795,9 +12813,9 @@
           9,
           4
         ],
-        "teamSize": 13,
-        "teamValue": 78240000,
-        "teamValueInc": 550000,
+        "teamSize": 12,
+        "teamValue": 73220000,
+        "teamValueInc": 450000,
         "position": 7,
         "positionInc": -1
       },
@@ -12869,9 +12887,9 @@
           4,
           10
         ],
-        "teamSize": 14,
-        "teamValue": 39190000,
-        "teamValueInc": -10000,
+        "teamSize": 15,
+        "teamValue": 44210000,
+        "teamValueInc": 90000,
         "lastTrophy": {
           "type": "league",
           "position": 2,
@@ -13119,8 +13137,8 @@
       "name": "Norimaki  FC",
       "manager": "Norimaki  FC",
       "points": 1255,
-      "value": 78240000,
-      "trend": 550000,
+      "value": 73220000,
+      "trend": 450000,
       "players": []
     },
     {
@@ -13155,8 +13173,8 @@
       "name": "Lamine i els 7 nans 👯‍♀️",
       "manager": "Lamine i els 7 nans 👯‍♀️",
       "points": 1167,
-      "value": 39190000,
-      "trend": -10000,
+      "value": 44210000,
+      "trend": 90000,
       "players": []
     },
     {
@@ -13388,6 +13406,27 @@
   },
   "boardEnBas": [
     {
+      "type": "transfer",
+      "date": 1775589672,
+      "content": [
+        {
+          "player": 39792,
+          "from": {
+            "id": 6578885,
+            "name": "Norimaki  FC",
+            "icon": "icons/41.png"
+          },
+          "to": {
+            "id": 6580386,
+            "name": "Lamine i els 7 nans 👯‍♀️",
+            "icon": "i/u/6580386.png?v=10"
+          },
+          "amount": 7380000,
+          "type": "clause"
+        }
+      ]
+    },
+    {
       "type": "market",
       "date": 1775538177,
       "content": [
@@ -13493,21 +13532,6 @@
             "icon": "i/u/6580386.png?v=10"
           },
           "amount": 1031800
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1775365374,
-      "content": [
-        {
-          "player": 38843,
-          "to": {
-            "id": 6579505,
-            "name": "Xevi borrat",
-            "icon": "i/u/6579505.png"
-          },
-          "amount": 2120000
         }
       ]
     }
@@ -14823,6 +14847,46 @@
   },
   "news": [
     {
+      "title": "Chollos LaLiga Fantasy: Fichajes Baratos y Rentables para la jornada 31",
+      "link": "https://www.jornadaperfecta.com/blog/chollos-laliga-fantasy-j31-25-26/",
+      "date": "Tue, 07 Apr 2026 19:00:17 +0000",
+      "img": "https://i.ytimg.com/vi/qAtHff7Dr8o/mqdefault.jpg",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Simeone, sobre Griezmann, la baja de Oblak y el quinto partido contra el Barcelona de la temporada",
+      "link": "https://www.jornadaperfecta.com/blog/simeone-previa-atleti-barcelona-champions-ida-26/",
+      "date": "Tue, 07 Apr 2026 18:43:03 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "¡Alerta Fantasy!: Ventas que debes hacer tras la Jornada 30 de LaLiga",
+      "link": "https://www.jornadaperfecta.com/blog/ventas-fantasy-j30-laliga-25-26/",
+      "date": "Tue, 07 Apr 2026 17:00:09 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Pellegrini, sobre el estado de Isco y el tema Bakambú",
+      "link": "https://www.jornadaperfecta.com/blog/pellegrini-previa-europa-ida-cuartos-braga/",
+      "date": "Tue, 07 Apr 2026 16:51:18 +0000",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Real Betis, alineación probable contra el Sporting de Braga y dónde ver en TV",
+      "link": "https://www.jornadaperfecta.com/blog/real-betis-alineacion-probable-ida-cuartos-europa-26/",
+      "date": "Tue, 07 Apr 2026 16:28:26 +0000",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Pubill y Mendoza, convocados; Oblak, Giménez y Johnny, bajas en Champions",
       "link": "https://www.jornadaperfecta.com/blog/pubill-oblak-mendoza-grupo/",
       "date": "Tue, 07 Apr 2026 15:01:14 +0000",
@@ -14861,53 +14925,13 @@
       "img": "https://cdn.biwenger.com/i/t/13.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Iago Aspas y Matías Vecino reciben el alta médica",
-      "link": "https://www.jornadaperfecta.com/blog/iago-aspas-y-vecino-alta-medica/",
-      "date": "Tue, 07 Apr 2026 12:44:05 +0000",
-      "img": "https://cdn.biwenger.com/i/t/5.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Flick, sobre Lamine Yamal, Rashford y la continuidad de Cancelo",
-      "link": "https://www.jornadaperfecta.com/blog/flick-previa-champions-cuartos-ida-atleti/",
-      "date": "Tue, 07 Apr 2026 12:15:24 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Mendy es baja en Champions y vuelve Ceballos. ¿Llega a la jornada 31?",
-      "link": "https://www.jornadaperfecta.com/blog/mendy-estado-j31/",
-      "date": "Tue, 07 Apr 2026 11:40:07 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Luvumbo eleva el nivel del Mallorca, ¿chollo fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/luvumbo-chollo-fantasy-mallorca/",
-      "date": "Tue, 07 Apr 2026 11:00:22 +0000",
-      "img": "https://cdn.biwenger.com/i/t/465.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Frenkie de Jong no entrena y será baja en Champions. ¿Llega al derbi?",
-      "link": "https://www.jornadaperfecta.com/blog/frenkie-de-jong-estado-j31/",
-      "date": "Tue, 07 Apr 2026 10:00:26 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-07T16:14:31.992Z",
+    "updatedAt": "2026-04-07T20:04:48.422Z",
     "players": [
       {
         "id": "3374",
