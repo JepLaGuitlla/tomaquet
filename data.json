@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T16:20:24.483Z",
+  "updatedAt": "2026-04-08T18:59:23.383Z",
   "players": [
     {
       "id": 11,
@@ -12643,21 +12643,6 @@
           "amount": 150000
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1775599604,
-      "content": [
-        {
-          "player": 34077,
-          "from": {
-            "id": 11521196,
-            "name": "Hufflepuff 🍋",
-            "icon": "i/u/11521196.png?v=57"
-          },
-          "amount": 8968500
-        }
-      ]
     }
   ],
   "leagueEnBas": {
@@ -12826,8 +12811,8 @@
           9,
           4
         ],
-        "teamSize": 12,
-        "teamValue": 73650000,
+        "teamSize": 11,
+        "teamValue": 73490000,
         "teamValueInc": 430000,
         "position": 7,
         "positionInc": -1
@@ -13150,7 +13135,7 @@
       "name": "Norimaki  FC",
       "manager": "Norimaki  FC",
       "points": 1255,
-      "value": 73650000,
+      "value": 73490000,
       "trend": 430000,
       "players": []
     },
@@ -13427,6 +13412,21 @@
   "boardEnBas": [
     {
       "type": "transfer",
+      "date": 1775668132,
+      "content": [
+        {
+          "player": 31475,
+          "from": {
+            "id": 6578885,
+            "name": "Norimaki  FC",
+            "icon": "icons/41.png"
+          },
+          "amount": 160400
+        }
+      ]
+    },
+    {
+      "type": "transfer",
       "date": 1775644829,
       "content": [
         {
@@ -13570,45 +13570,6 @@
             "icon": "i/u/7817228.png"
           },
           "amount": 480000
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1775495720,
-      "content": [
-        {
-          "player": 35249,
-          "from": {
-            "id": 6580423,
-            "name": "FC Borça",
-            "icon": "i/t/3.png"
-          },
-          "amount": 3696600
-        },
-        {
-          "player": 1083,
-          "from": {
-            "id": 6580423,
-            "name": "FC Borça",
-            "icon": "i/t/3.png"
-          },
-          "amount": 4443400
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1775454740,
-      "content": [
-        {
-          "player": 24474,
-          "from": {
-            "id": 6586257,
-            "name": "Aquest any he trepitjat merda !!",
-            "icon": "i/u/6586257.png"
-          },
-          "amount": 2242900
         }
       ]
     }
@@ -14814,9 +14775,9 @@
       "matchDate": "2026-04-23T18:00:00Z"
     },
     "Sevilla": {
-      "winProb": 0.4039805710223907,
-      "drawProb": 0.2801800734510129,
-      "loseProb": 0.31583935552659637,
+      "winProb": 0.40073868882733144,
+      "drawProb": 0.28439519852262235,
+      "loseProb": 0.31486611265004616,
       "over25Prob": 0.45454545454545453,
       "isHome": false,
       "opponent": "Levante",
@@ -14904,9 +14865,9 @@
       "matchDate": "2026-04-23T19:30:00Z"
     },
     "Levante": {
-      "winProb": 0.31583935552659637,
-      "drawProb": 0.2801800734510129,
-      "loseProb": 0.4039805710223907,
+      "winProb": 0.31486611265004616,
+      "drawProb": 0.28439519852262235,
+      "loseProb": 0.40073868882733144,
       "over25Prob": 0.45454545454545453,
       "isHome": true,
       "opponent": "Sevilla",
@@ -14924,82 +14885,82 @@
   },
   "news": [
     {
+      "title": "Satriano quiere llevar al Getafe a Europa. ¿Es uno de los delanteros TOP del momento?",
+      "link": "https://www.jornadaperfecta.com/blog/satriano-analisis-j31-25-26-getafe/",
+      "date": "Wed, 08 Apr 2026 18:54:00 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/09/Borja-Mayoral-Getafe-CF-fantasy.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Fermín suplente en Champions por un corte en la cabeza",
+      "link": "https://www.jornadaperfecta.com/blog/fermin-corte-cabeza-champions/",
+      "date": "Wed, 08 Apr 2026 18:40:33 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Podcast: Alineaciones Probables Jornada 31 2025/26",
+      "link": "https://www.jornadaperfecta.com/blog/podcast-alineaciones-probables-jornada-31-2025-26/",
+      "date": "Wed, 08 Apr 2026 18:35:57 +0000",
+      "img": "https://i.ytimg.com/vi/Uo62UHJ3LE8/mqdefault.jpg",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Giráldez, sobre Starfelt, Hugo Álvarez, Vecino y Iago Aspas",
+      "link": "https://www.jornadaperfecta.com/blog/giraldez-previa-europa-ida-cuartos-26/",
+      "date": "Wed, 08 Apr 2026 18:18:47 +0000",
+      "img": "https://cdn.biwenger.com/i/t/5.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Iñigo Pérez, sobre Ilias Akhomach y la ilusión de la Conference",
+      "link": "https://www.jornadaperfecta.com/blog/inigo-perez-previa-conference-ida-cuartos-26/",
+      "date": "Wed, 08 Apr 2026 17:41:55 +0000",
+      "img": "https://cdn.biwenger.com/i/t/70.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Ilias Akhomach, Ratiu y Valentín se apuntan a Conference",
+      "link": "https://www.jornadaperfecta.com/blog/ilias-akhomach-ratiu-valentin-conference/",
+      "date": "Wed, 08 Apr 2026 17:08:13 +0000",
+      "img": "https://cdn.biwenger.com/i/t/70.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Rubén Vargas y Sow entrenan con normalidad. Azpilicueta aún no entrena",
+      "link": "https://www.jornadaperfecta.com/blog/ruben-vargas-y-sow-estado-j31/",
+      "date": "Wed, 08 Apr 2026 16:55:53 +0000",
+      "img": "https://cdn.biwenger.com/i/t/17.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Lucas Boyé vuelve a ausentarse en el Alavés por su fascia planar",
+      "link": "https://www.jornadaperfecta.com/blog/lucas-boye-estado-j31-25-26/",
+      "date": "Wed, 08 Apr 2026 16:43:51 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Gorrotxategi no entrena con el grupo. ¿Descartado en la Jornada 31?",
+      "link": "https://www.jornadaperfecta.com/blog/gorrotxategi-estado-molestias-aductor-26/",
+      "date": "Wed, 08 Apr 2026 16:22:55 +0000",
+      "img": "https://cdn.biwenger.com/i/t/13.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Ferland Mendy vuelve con el grupo. ¿Disponible en la Jornada 31?",
       "link": "https://www.jornadaperfecta.com/blog/ferland-mendy-vuelta-lesion-biceps-femoral-26-2/",
       "date": "Wed, 08 Apr 2026 16:02:29 +0000",
       "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Los Ases de PixonFantasy para la Jornada 31",
-      "link": "https://www.jornadaperfecta.com/blog/ases-fantasy-j31-25-26/",
-      "date": "Wed, 08 Apr 2026 15:00:14 +0000",
-      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2665.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Fermín sufre un corte en la cabeza antes del partido de Champions",
-      "link": "https://www.jornadaperfecta.com/blog/fermin-corte-cabeza-champions/",
-      "date": "Wed, 08 Apr 2026 12:55:33 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "¡Biwenger Fantasy se apunta a la Jornada  Retro!",
-      "link": "https://www.jornadaperfecta.com/blog/biwenger-fantasy-jornada-retro-laliga/",
-      "date": "Wed, 08 Apr 2026 11:42:37 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Frenkie de Jong, baja confirmada en Champions. ¿Llega al derbi?",
-      "link": "https://www.jornadaperfecta.com/blog/frenkie-de-jong-estado-j31/",
-      "date": "Wed, 08 Apr 2026 11:30:26 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Unai Núñez cae lesionado y será baja en la jornada 31",
-      "link": "https://www.jornadaperfecta.com/blog/unai-nunez-estado-valencia-j31/",
-      "date": "Wed, 08 Apr 2026 11:24:42 +0000",
-      "img": "https://cdn.biwenger.com/i/t/18.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Alineaciones probables del Barcelona &#8211; Atlético de Champions",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-probables-del-barcelona-atletico-de-champions/",
-      "date": "Wed, 08 Apr 2026 11:05:35 +0000",
-      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/1f3c6.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Vuelve el mejor Guido Rodríguez a LaLiga. ¿Centrocampistas TOP en fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/guido-rodriguez-analisis-j31-25-26/",
-      "date": "Wed, 08 Apr 2026 11:00:26 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/12/Filip-Ugrinic-Valencia-CF-fantasy.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Vanat dice adiós a la temporada: Parte médico y tiempo de baja",
-      "link": "https://www.jornadaperfecta.com/blog/vanat-lesion-girona-fc/",
-      "date": "Wed, 08 Apr 2026 10:50:36 +0000",
-      "img": "https://cdn.biwenger.com/i/t/289.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Chust repite en una sesión sin Aguado ni Diangana",
-      "link": "https://www.jornadaperfecta.com/blog/chust-estado-elche-j31/",
-      "date": "Wed, 08 Apr 2026 10:00:49 +0000",
-      "img": "https://cdn.biwenger.com/i/t/75.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -15008,7 +14969,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-08T16:20:24.483Z",
+    "updatedAt": "2026-04-08T18:59:20.578Z",
     "players": [
       {
         "id": "3374",
