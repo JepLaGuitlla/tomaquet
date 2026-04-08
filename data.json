@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-08T09:51:40.596Z",
+  "updatedAt": "2026-04-08T16:20:24.483Z",
   "players": [
     {
       "id": 11,
@@ -11998,9 +11998,9 @@
           13,
           1
         ],
-        "teamSize": 16,
-        "teamValue": 85080000,
-        "teamValueInc": 140000,
+        "teamSize": 15,
+        "teamValue": 78810000,
+        "teamValueInc": 130000,
         "position": 3
       },
       {
@@ -12116,8 +12116,8 @@
           14
         ],
         "teamSize": 16,
-        "teamValue": 50900000,
-        "teamValueInc": 90000,
+        "teamValue": 61590000,
+        "teamValueInc": 270000,
         "position": 9,
         "positionInc": 1,
         "role": ""
@@ -12135,9 +12135,9 @@
           4,
           10
         ],
-        "teamSize": 20,
-        "teamValue": 47130000,
-        "teamValueInc": 80000,
+        "teamSize": 19,
+        "teamValue": 42510000,
+        "teamValueInc": 40000,
         "position": 10,
         "positionInc": -1
       },
@@ -12215,9 +12215,9 @@
           10,
           7
         ],
-        "teamSize": 18,
-        "teamValue": 55620000,
-        "teamValueInc": -150000,
+        "teamSize": 17,
+        "teamValue": 51810000,
+        "teamValueInc": -210000,
         "position": 14,
         "role": ""
       }
@@ -12247,8 +12247,8 @@
       "name": "🦊",
       "manager": "🦊",
       "points": 1502,
-      "value": 85080000,
-      "trend": 140000,
+      "value": 78810000,
+      "trend": 130000,
       "players": []
     },
     {
@@ -12301,8 +12301,8 @@
       "name": "CIGALERU",
       "manager": "CIGALERU",
       "points": 1275,
-      "value": 50900000,
-      "trend": 90000,
+      "value": 61590000,
+      "trend": 270000,
       "players": []
     },
     {
@@ -12310,8 +12310,8 @@
       "name": "The Black Team",
       "manager": "The Black Team",
       "points": 1273,
-      "value": 47130000,
-      "trend": 80000,
+      "value": 42510000,
+      "trend": 40000,
       "players": []
     },
     {
@@ -12346,8 +12346,8 @@
       "name": "Hufflepuff 🍋",
       "manager": "Hufflepuff 🍋",
       "points": 1183,
-      "value": 55620000,
-      "trend": -150000,
+      "value": 51810000,
+      "trend": -210000,
       "players": []
     }
   ],
@@ -12355,16 +12355,16 @@
     "teamId": 6541195,
     "name": "🦊",
     "points": 1502,
-    "balance": 573833,
+    "balance": 12593233,
     "lineup": {
       "type": "3-5-2",
-      "date": 1775629726,
+      "date": 1775656126,
       "playersID": [
         17021,
         1908,
         39360,
         26276,
-        6837,
+        26994,
         38867,
         39431,
         25127,
@@ -12374,32 +12374,25 @@
       ],
       "reservesID": [
         null,
-        10155,
+        null,
         27945,
         38216
       ]
     },
     "players": [
       {
+        "id": 26994,
+        "buyPrice": 5715000,
+        "clause": 8572500,
+        "invested": 0,
+        "buyDate": 1775649508
+      },
+      {
         "id": 1908,
         "buyPrice": 2235666,
         "clause": 4673499,
         "invested": 880000,
         "buyDate": 1773209088
-      },
-      {
-        "id": 6837,
-        "buyPrice": 8055000,
-        "clause": 15082500,
-        "invested": 2000000,
-        "buyDate": 1772905346
-      },
-      {
-        "id": 10155,
-        "buyPrice": 1875666,
-        "clause": 5250000,
-        "invested": 1000000,
-        "buyDate": 1770616993
       },
       {
         "id": 17021,
@@ -12495,38 +12488,128 @@
     ],
     "market": [
       {
-        "playerID": 10155,
-        "price": 2620000,
-        "type": "sale",
-        "until": 1775679965
-      },
-      {
         "playerID": 25127,
-        "price": 13590000,
+        "price": 25700000,
         "type": "sale",
-        "until": 1775756032
+        "until": 1775821937
       },
       {
         "playerID": 27945,
-        "price": 730000,
+        "price": 1440000,
         "type": "sale",
-        "until": 1775756038
+        "until": 1775821937
       },
       {
         "playerID": 34127,
-        "price": 540000,
+        "price": 1080000,
         "type": "sale",
-        "until": 1775756067
+        "until": 1775821937
       },
       {
         "playerID": 39736,
-        "price": 150000,
+        "price": 300000,
         "type": "sale",
-        "until": 1775756069
+        "until": 1775821937
       }
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1775650526,
+      "content": [
+        {
+          "player": 5678,
+          "from": {
+            "id": 12696899,
+            "name": "CIGALERU",
+            "icon": "i/u/12696899.png"
+          },
+          "amount": 691700
+        },
+        {
+          "player": 38178,
+          "from": {
+            "id": 12696899,
+            "name": "CIGALERU",
+            "icon": "i/u/12696899.png"
+          },
+          "amount": 803900
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1775650490,
+      "content": [
+        {
+          "player": 33,
+          "from": {
+            "id": 3928497,
+            "name": "The Black Team",
+            "icon": "i/u/3928497.png"
+          },
+          "to": {
+            "id": 12696899,
+            "name": "CIGALERU",
+            "icon": "i/u/12696899.png"
+          },
+          "amount": 6930000,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1775649508,
+      "content": [
+        {
+          "player": 6837,
+          "from": {
+            "id": 6541195,
+            "name": "🦊",
+            "icon": "i/u/6541195.png?v=17"
+          },
+          "to": {
+            "id": 12696899,
+            "name": "CIGALERU",
+            "icon": "i/u/12696899.png"
+          },
+          "amount": 15082500,
+          "type": "clause"
+        },
+        {
+          "player": 26994,
+          "from": {
+            "id": 11521196,
+            "name": "Hufflepuff 🍋",
+            "icon": "i/u/11521196.png?v=57"
+          },
+          "to": {
+            "id": 6541195,
+            "name": "🦊",
+            "icon": "i/u/6541195.png?v=17"
+          },
+          "amount": 5715000,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1775649045,
+      "content": [
+        {
+          "player": 10155,
+          "from": {
+            "id": 6541195,
+            "name": "🦊",
+            "icon": "i/u/6541195.png?v=17"
+          },
+          "amount": 2651900
+        }
+      ]
+    },
     {
       "type": "market",
       "date": 1775624681,
@@ -12573,51 +12656,6 @@
             "icon": "i/u/11521196.png?v=57"
           },
           "amount": 8968500
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1775598597,
-      "content": [
-        {
-          "player": 38959,
-          "from": {
-            "id": 8070044,
-            "name": "CA CABA JUNIORS",
-            "icon": "i/u/8070044.png?v=63"
-          },
-          "amount": 3287100
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1775595564,
-      "content": [
-        {
-          "player": 5807,
-          "from": {
-            "id": 11520975,
-            "name": "Morankus FC",
-            "icon": "i/u/11520975.png?v=81"
-          },
-          "amount": 2395500
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1775538302,
-      "content": [
-        {
-          "player": 34127,
-          "to": {
-            "id": 6541195,
-            "name": "🦊",
-            "icon": "i/u/6541195.png?v=17"
-          },
-          "amount": 550020
         }
       ]
     }
@@ -12713,9 +12751,9 @@
           17,
           14
         ],
-        "teamSize": 20,
-        "teamValue": 103610000,
-        "teamValueInc": -30000,
+        "teamSize": 19,
+        "teamValue": 103320000,
+        "teamValueInc": -20000,
         "position": 3,
         "positionInc": -1,
         "role": ""
@@ -12862,9 +12900,9 @@
           4,
           10
         ],
-        "teamSize": 11,
-        "teamValue": 36760000,
-        "teamValueInc": 150000,
+        "teamSize": 12,
+        "teamValue": 37050000,
+        "teamValueInc": 140000,
         "lastTrophy": {
           "type": "league",
           "position": 2,
@@ -13076,8 +13114,8 @@
       "name": "Xevi borrat",
       "manager": "Xevi borrat",
       "points": 1416,
-      "value": 103610000,
-      "trend": -30000,
+      "value": 103320000,
+      "trend": -20000,
       "players": []
     },
     {
@@ -13148,8 +13186,8 @@
       "name": "Lamine i els 7 nans 👯‍♀️",
       "manager": "Lamine i els 7 nans 👯‍♀️",
       "points": 1167,
-      "value": 36760000,
-      "trend": 150000,
+      "value": 37050000,
+      "trend": 140000,
       "players": []
     },
     {
@@ -13241,7 +13279,7 @@
     "balance": 9355410,
     "lineup": {
       "type": "3-4-3",
-      "date": 1775461418,
+      "date": 1775645659,
       "playersID": [
         14630,
         32440,
@@ -13316,7 +13354,7 @@
       {
         "id": 31707,
         "buyPrice": 7658222,
-        "clause": 0,
+        "clause": 10395000,
         "invested": 0,
         "buyDate": 1770444175
       },
@@ -13377,9 +13415,37 @@
         "buyDate": 1774159515
       }
     ],
-    "market": []
+    "market": [
+      {
+        "playerID": 31707,
+        "price": 10395000,
+        "type": "sale",
+        "until": 1775818501
+      }
+    ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1775644829,
+      "content": [
+        {
+          "player": 18128,
+          "from": {
+            "id": 6579505,
+            "name": "Xevi borrat",
+            "icon": "i/u/6579505.png"
+          },
+          "to": {
+            "id": 6580386,
+            "name": "Lamine i els 7 nans 👯‍♀️",
+            "icon": "i/u/6580386.png?v=10"
+          },
+          "amount": 435000,
+          "type": "clause"
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1775626685,
@@ -14676,9 +14742,9 @@
   },
   "odds": {
     "Real Madrid": {
-      "winProb": 0.7439618055065098,
-      "drawProb": 0.159330774535121,
-      "loseProb": 0.09670741995836925,
+      "winProb": 0.7421154477692979,
+      "drawProb": 0.1600147060555193,
+      "loseProb": 0.0978698461751826,
       "over25Prob": 0.6451612903225806,
       "isHome": true,
       "opponent": "Alavés",
@@ -14703,18 +14769,18 @@
       "matchDate": "2026-04-22T18:00:00Z"
     },
     "Alavés": {
-      "winProb": 0.09670741995836925,
-      "drawProb": 0.159330774535121,
-      "loseProb": 0.7439618055065098,
+      "winProb": 0.0978698461751826,
+      "drawProb": 0.1600147060555193,
+      "loseProb": 0.7421154477692979,
       "over25Prob": 0.6451612903225806,
       "isHome": false,
       "opponent": "Real Madrid",
       "matchDate": "2026-04-21T19:30:00Z"
     },
     "Elche CF": {
-      "winProb": 0.22358895240185525,
-      "drawProb": 0.24554342318033198,
-      "loseProb": 0.5308676244178128,
+      "winProb": 0.2250527467375166,
+      "drawProb": 0.24732359146675,
+      "loseProb": 0.5276236617957334,
       "over25Prob": 0.5952380952380952,
       "isHome": true,
       "opponent": "Atlético Madrid",
@@ -14748,18 +14814,18 @@
       "matchDate": "2026-04-23T18:00:00Z"
     },
     "Sevilla": {
-      "winProb": 0.4062719400889305,
-      "drawProb": 0.281769248771355,
-      "loseProb": 0.3119588111397145,
+      "winProb": 0.4039805710223907,
+      "drawProb": 0.2801800734510129,
+      "loseProb": 0.31583935552659637,
       "over25Prob": 0.45454545454545453,
       "isHome": false,
       "opponent": "Levante",
       "matchDate": "2026-04-23T17:00:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.5308676244178128,
-      "drawProb": 0.24554342318033198,
-      "loseProb": 0.22358895240185525,
+      "winProb": 0.5276236617957334,
+      "drawProb": 0.24732359146675,
+      "loseProb": 0.2250527467375166,
       "over25Prob": 0.5952380952380952,
       "isHome": false,
       "opponent": "Elche CF",
@@ -14838,9 +14904,9 @@
       "matchDate": "2026-04-23T19:30:00Z"
     },
     "Levante": {
-      "winProb": 0.3119588111397145,
-      "drawProb": 0.281769248771355,
-      "loseProb": 0.4062719400889305,
+      "winProb": 0.31583935552659637,
+      "drawProb": 0.2801800734510129,
+      "loseProb": 0.4039805710223907,
       "over25Prob": 0.45454545454545453,
       "isHome": true,
       "opponent": "Sevilla",
@@ -14858,82 +14924,82 @@
   },
   "news": [
     {
-      "title": "Toni Martínez lidera al Deportivo Alavés, ¿chollo fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/toni-martinez-chollo-fantasy-alaves/",
-      "date": "Wed, 08 Apr 2026 09:00:54 +0000",
-      "img": "https://cdn.biwenger.com/i/t/91.png",
+      "title": "Ferland Mendy vuelve con el grupo. ¿Disponible en la Jornada 31?",
+      "link": "https://www.jornadaperfecta.com/blog/ferland-mendy-vuelta-lesion-biceps-femoral-26-2/",
+      "date": "Wed, 08 Apr 2026 16:02:29 +0000",
+      "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Supercuota 5.2 en Betfair para el Atlético vs Barcelona: ¡Apuesta potenciada!",
-      "link": "https://www.jornadaperfecta.com/blog/supercuota-betfair-barcelona-vs-atletico-champions/",
-      "date": "Wed, 08 Apr 2026 08:00:13 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/04/Betfair-Supercuota-Barcelona-vs-Atletico.webp",
+      "title": "Los Ases de PixonFantasy para la Jornada 31",
+      "link": "https://www.jornadaperfecta.com/blog/ases-fantasy-j31-25-26/",
+      "date": "Wed, 08 Apr 2026 15:00:14 +0000",
+      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2665.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Fermín sufre un corte en la cabeza antes del partido de Champions",
+      "link": "https://www.jornadaperfecta.com/blog/fermin-corte-cabeza-champions/",
+      "date": "Wed, 08 Apr 2026 12:55:33 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "¡Biwenger Fantasy se apunta a la Jornada  Retro!",
+      "link": "https://www.jornadaperfecta.com/blog/biwenger-fantasy-jornada-retro-laliga/",
+      "date": "Wed, 08 Apr 2026 11:42:37 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Frenkie de Jong, baja confirmada en Champions. ¿Llega al derbi?",
+      "link": "https://www.jornadaperfecta.com/blog/frenkie-de-jong-estado-j31/",
+      "date": "Wed, 08 Apr 2026 11:30:26 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Unai Núñez cae lesionado y será baja en la jornada 31",
+      "link": "https://www.jornadaperfecta.com/blog/unai-nunez-estado-valencia-j31/",
+      "date": "Wed, 08 Apr 2026 11:24:42 +0000",
+      "img": "https://cdn.biwenger.com/i/t/18.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
       "title": "Alineaciones probables del Barcelona &#8211; Atlético de Champions",
       "link": "https://www.jornadaperfecta.com/blog/alineaciones-probables-del-barcelona-atletico-de-champions/",
-      "date": "Wed, 08 Apr 2026 07:05:35 +0000",
+      "date": "Wed, 08 Apr 2026 11:05:35 +0000",
       "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/1f3c6.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Las claves fantasy del Levante &#8211; Getafe: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-levante-getafe-j31-25-26/",
-      "date": "Wed, 08 Apr 2026 06:45:38 +0000",
-      "img": "https://cdn.biwenger.com/i/t/10.png",
+      "title": "Vuelve el mejor Guido Rodríguez a LaLiga. ¿Centrocampistas TOP en fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/guido-rodriguez-analisis-j31-25-26/",
+      "date": "Wed, 08 Apr 2026 11:00:26 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/12/Filip-Ugrinic-Valencia-CF-fantasy.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Las claves fantasy del Athletic &#8211; Villarreal: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-athletic-villarreal-j31-25-26/",
-      "date": "Wed, 08 Apr 2026 06:40:00 +0000",
-      "img": "https://cdn.biwenger.com/i/t/1.png",
+      "title": "Vanat dice adiós a la temporada: Parte médico y tiempo de baja",
+      "link": "https://www.jornadaperfecta.com/blog/vanat-lesion-girona-fc/",
+      "date": "Wed, 08 Apr 2026 10:50:36 +0000",
+      "img": "https://cdn.biwenger.com/i/t/289.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Las claves fantasy del Celta &#8211; Real Oviedo: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-celta-real-oviedo-j31-25-26/",
-      "date": "Wed, 08 Apr 2026 06:35:58 +0000",
-      "img": "https://cdn.biwenger.com/i/t/5.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Las claves fantasy del Mallorca &#8211; Rayo Vallecano: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-mallorca-rayo-j31-25-26/",
-      "date": "Wed, 08 Apr 2026 06:30:14 +0000",
-      "img": "https://cdn.biwenger.com/i/t/465.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Las claves fantasy del Osasuna &#8211; Betis: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-osasuna-betis-j31-25-26/",
-      "date": "Wed, 08 Apr 2026 06:25:25 +0000",
-      "img": "https://cdn.biwenger.com/i/t/93.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Las claves fantasy del Sevilla &#8211; Atlético: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-sevilla-atletico-j31-25-26/",
-      "date": "Wed, 08 Apr 2026 06:20:20 +0000",
-      "img": "https://cdn.biwenger.com/i/t/17.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Las claves fantasy del Barcelona &#8211; Espanyol: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-barcelona-espanyol-j31-25-26/",
-      "date": "Wed, 08 Apr 2026 06:15:33 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "title": "Chust repite en una sesión sin Aguado ni Diangana",
+      "link": "https://www.jornadaperfecta.com/blog/chust-estado-elche-j31/",
+      "date": "Wed, 08 Apr 2026 10:00:49 +0000",
+      "img": "https://cdn.biwenger.com/i/t/75.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -14942,7 +15008,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-08T09:51:38.394Z",
+    "updatedAt": "2026-04-08T16:20:24.483Z",
     "players": [
       {
         "id": "3374",
