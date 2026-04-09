@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-09T07:07:52.252Z",
+  "updatedAt": "2026-04-09T12:54:34.260Z",
   "players": [
     {
       "id": 11,
@@ -11998,9 +11998,9 @@
           13,
           1
         ],
-        "teamSize": 15,
-        "teamValue": 78960000,
-        "teamValueInc": 150000,
+        "teamSize": 16,
+        "teamValue": 80610000,
+        "teamValueInc": 180000,
         "position": 3
       },
       {
@@ -12153,9 +12153,9 @@
           7,
           13
         ],
-        "teamSize": 13,
-        "teamValue": 59540000,
-        "teamValueInc": 530000,
+        "teamSize": 12,
+        "teamValue": 57890000,
+        "teamValueInc": 500000,
         "lastTrophy": {
           "type": "league",
           "position": 3,
@@ -12247,8 +12247,8 @@
       "name": "🦊",
       "manager": "🦊",
       "points": 1502,
-      "value": 78960000,
-      "trend": 150000,
+      "value": 80610000,
+      "trend": 180000,
       "players": []
     },
     {
@@ -12319,8 +12319,8 @@
       "name": "Tata Martini",
       "manager": "Tata Martini",
       "points": 1228,
-      "value": 59540000,
-      "trend": 530000,
+      "value": 57890000,
+      "trend": 500000,
       "players": []
     },
     {
@@ -12355,18 +12355,18 @@
     "teamId": 6541195,
     "name": "🦊",
     "points": 1502,
-    "balance": 12593233,
+    "balance": 8400733,
     "lineup": {
       "type": "3-5-2",
-      "date": 1775656126,
+      "date": 1775727093,
       "playersID": [
         17021,
         1908,
         39360,
         26276,
-        26994,
+        24979,
         38867,
-        39431,
+        26994,
         25127,
         39885,
         26271,
@@ -12380,6 +12380,13 @@
       ]
     },
     "players": [
+      {
+        "id": 24979,
+        "buyPrice": 3892500,
+        "clause": 5838750,
+        "invested": 0,
+        "buyDate": 1775726660
+      },
       {
         "id": 26994,
         "buyPrice": 5715000,
@@ -12481,8 +12488,8 @@
       {
         "id": 39885,
         "buyPrice": 162532,
-        "clause": 5535000,
-        "invested": 1700000,
+        "clause": 5985000,
+        "invested": 2000000,
         "buyDate": 1770616993
       }
     ],
@@ -12514,6 +12521,27 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1775726660,
+      "content": [
+        {
+          "player": 24979,
+          "from": {
+            "id": 12713493,
+            "name": "Tata Martini",
+            "icon": "i/u/12713493.png"
+          },
+          "to": {
+            "id": 6541195,
+            "name": "🦊",
+            "icon": "i/u/6541195.png?v=17"
+          },
+          "amount": 3892500,
+          "type": "clause"
+        }
+      ]
+    },
     {
       "type": "market",
       "date": 1775711060,
@@ -12590,91 +12618,6 @@
           },
           "amount": 6930000,
           "type": "clause"
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1775649508,
-      "content": [
-        {
-          "player": 6837,
-          "from": {
-            "id": 6541195,
-            "name": "🦊",
-            "icon": "i/u/6541195.png?v=17"
-          },
-          "to": {
-            "id": 12696899,
-            "name": "CIGALERU",
-            "icon": "i/u/12696899.png"
-          },
-          "amount": 15082500,
-          "type": "clause"
-        },
-        {
-          "player": 26994,
-          "from": {
-            "id": 11521196,
-            "name": "Hufflepuff 🍋",
-            "icon": "i/u/11521196.png?v=57"
-          },
-          "to": {
-            "id": 6541195,
-            "name": "🦊",
-            "icon": "i/u/6541195.png?v=17"
-          },
-          "amount": 5715000,
-          "type": "clause"
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1775649045,
-      "content": [
-        {
-          "player": 10155,
-          "from": {
-            "id": 6541195,
-            "name": "🦊",
-            "icon": "i/u/6541195.png?v=17"
-          },
-          "amount": 2651900
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1775624681,
-      "content": [
-        {
-          "player": 32629,
-          "to": {
-            "id": 8070044,
-            "name": "CA CABA JUNIORS",
-            "icon": "i/u/8070044.png?v=63"
-          },
-          "amount": 1336000,
-          "bids": [
-            {
-              "user": {
-                "id": 11520975,
-                "name": "Morankus FC",
-                "icon": "i/u/11520975.png?v=81"
-              },
-              "amount": 1010000
-            }
-          ]
-        },
-        {
-          "player": 39801,
-          "to": {
-            "id": 148051,
-            "name": "Zaza Pachulia",
-            "icon": "i/u/148051.png?v=39"
-          },
-          "amount": 150000
         }
       ]
     }
@@ -14870,10 +14813,10 @@
       "matchDate": "2026-04-21T17:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.7483030202075936,
-      "drawProb": 0.14527916879222927,
-      "loseProb": 0.106417811000177,
-      "over25Prob": 0.7633587786259541,
+      "winProb": 0.7477985021975783,
+      "drawProb": 0.14585543541314994,
+      "loseProb": 0.10634606238927187,
+      "over25Prob": 0.7575757575757576,
       "isHome": true,
       "opponent": "Celta Vigo",
       "matchDate": "2026-04-22T19:30:00Z"
@@ -14942,10 +14885,10 @@
       "matchDate": "2026-04-23T18:00:00Z"
     },
     "Celta Vigo": {
-      "winProb": 0.106417811000177,
-      "drawProb": 0.14527916879222927,
-      "loseProb": 0.7483030202075936,
-      "over25Prob": 0.7633587786259541,
+      "winProb": 0.10634606238927187,
+      "drawProb": 0.14585543541314994,
+      "loseProb": 0.7477985021975783,
+      "over25Prob": 0.7575757575757576,
       "isHome": false,
       "opponent": "Barcelona",
       "matchDate": "2026-04-22T19:30:00Z"
@@ -14998,82 +14941,82 @@
   },
   "news": [
     {
-      "title": "Los Mejores Capitanes Fantasy para la jornada 31 de LaLiga",
-      "link": "https://www.jornadaperfecta.com/blog/capitanes-fantasy-j31-25-26/",
-      "date": "Thu, 09 Apr 2026 07:00:01 +0000",
-      "img": "https://cdn.biwenger.com/i/t/75.png",
+      "title": "Quique, sobre Abde Rebbach, Boyé y la Real y la Copa",
+      "link": "https://www.jornadaperfecta.com/blog/quique-previa-real-sociedad-celta-j31-25-26/",
+      "date": "Thu, 09 Apr 2026 12:39:33 +0000",
+      "img": "https://cdn.biwenger.com/i/t/91.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "David Hancko se retira entre lágrimas y enciende las alarmas",
-      "link": "https://www.jornadaperfecta.com/blog/david-hancko-lesion-champions-26/",
-      "date": "Wed, 08 Apr 2026 20:00:44 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Rayo Vallecano, alineación probable contra el AEK y dónde ver en TV",
-      "link": "https://www.jornadaperfecta.com/blog/rayo-alineacion-probable-conference-ida-cuartos-26/",
-      "date": "Wed, 08 Apr 2026 19:21:55 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "RC Celta, alineación probable contra el Friburgo y dónde ver en TV",
-      "link": "https://www.jornadaperfecta.com/blog/celta-alineacion-probable-ida-cuartos-europa-friburgo-26/",
-      "date": "Wed, 08 Apr 2026 19:12:13 +0000",
+      "title": "Actualizadas las Alineaciones Probables para la Jornada 31",
+      "link": "https://www.jornadaperfecta.com/blog/alineaciones-probables-j31-laliga-25-26/",
+      "date": "Thu, 09 Apr 2026 12:30:45 +0000",
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Satriano quiere llevar al Getafe a Europa. ¿Es uno de los delanteros TOP del momento?",
-      "link": "https://www.jornadaperfecta.com/blog/satriano-analisis-j31-25-26-getafe/",
-      "date": "Wed, 08 Apr 2026 18:54:00 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/09/Borja-Mayoral-Getafe-CF-fantasy.webp",
+      "title": "Sarabia explica el estado de Diangana y Fort, y deja en duda a Aguado",
+      "link": "https://www.jornadaperfecta.com/blog/sarabia-previa-elche-valencia-j31/",
+      "date": "Thu, 09 Apr 2026 11:58:09 +0000",
+      "img": "https://cdn.biwenger.com/i/t/75.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Fermín suplente en Champions por un corte en la cabeza",
-      "link": "https://www.jornadaperfecta.com/blog/fermin-corte-cabeza-champions/",
-      "date": "Wed, 08 Apr 2026 18:40:33 +0000",
+      "title": "Míchel confirma cansancio de Fran Beltrán y casi descarta a Blind",
+      "link": "https://www.jornadaperfecta.com/blog/michel-previa-real-madrid-girona-j31-25-26/",
+      "date": "Thu, 09 Apr 2026 11:44:44 +0000",
+      "img": "https://cdn.biwenger.com/i/t/289.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Oblak, con el grupo en una sesión sin Baena, Giménez, Cardoso y Hancko",
+      "link": "https://www.jornadaperfecta.com/blog/oblak-estado-j31-25-26/",
+      "date": "Thu, 09 Apr 2026 11:02:18 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Frenkie de Jong comienza a entrenar con el grupo, ¿llega al derbi?",
+      "link": "https://www.jornadaperfecta.com/blog/frenkie-de-jong-estado-j31/",
+      "date": "Thu, 09 Apr 2026 10:50:26 +0000",
       "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Podcast: Alineaciones Probables Jornada 31 2025/26",
-      "link": "https://www.jornadaperfecta.com/blog/podcast-alineaciones-probables-jornada-31-2025-26/",
-      "date": "Wed, 08 Apr 2026 18:35:57 +0000",
-      "img": "https://i.ytimg.com/vi/XPdXIHddcos/mqdefault.jpg",
+      "title": "Pedri, cambiado por precaución y sin lesión. ¿Titular en el derbi?",
+      "link": "https://www.jornadaperfecta.com/blog/pedri-estado-j31/",
+      "date": "Thu, 09 Apr 2026 10:00:34 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Giráldez, sobre Starfelt, Hugo Álvarez, Vecino y Iago Aspas",
-      "link": "https://www.jornadaperfecta.com/blog/giraldez-previa-europa-ida-cuartos-26/",
-      "date": "Wed, 08 Apr 2026 18:18:47 +0000",
-      "img": "https://cdn.biwenger.com/i/t/5.png",
+      "title": "Ferland Mendy suma un nuevo entreno con el grupo. ¿Disponible en la Jornada 31?",
+      "link": "https://www.jornadaperfecta.com/blog/ferland-mendy-vuelta-lesion-biceps-femoral-26-2/",
+      "date": "Thu, 09 Apr 2026 10:00:29 +0000",
+      "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Iñigo Pérez, sobre Ilias Akhomach y la ilusión de la Conference",
-      "link": "https://www.jornadaperfecta.com/blog/inigo-perez-previa-conference-ida-cuartos-26/",
-      "date": "Wed, 08 Apr 2026 17:41:55 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
+      "title": "Paredes suma una sesión y Gorosabel reaparece brevemente",
+      "link": "https://www.jornadaperfecta.com/blog/aitor-paredes-estado-j31-25-26/",
+      "date": "Thu, 09 Apr 2026 09:54:12 +0000",
+      "img": "https://cdn.biwenger.com/i/t/1.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Ilias Akhomach, Ratiu y Valentín se apuntan a Conference",
-      "link": "https://www.jornadaperfecta.com/blog/ilias-akhomach-ratiu-valentin-conference/",
-      "date": "Wed, 08 Apr 2026 17:08:13 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
+      "title": "Azpilicueta sigue sin entrenar y apunta a baja en la Jornada 31",
+      "link": "https://www.jornadaperfecta.com/blog/azpilicueta-estado-j31-25-26/",
+      "date": "Thu, 09 Apr 2026 09:26:38 +0000",
+      "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -15082,7 +15025,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-09T07:07:50.747Z",
+    "updatedAt": "2026-04-09T12:54:31.923Z",
     "players": [
       {
         "id": "3374",
