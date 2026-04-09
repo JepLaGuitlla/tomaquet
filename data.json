@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-09T12:54:34.260Z",
+  "updatedAt": "2026-04-09T18:44:25.971Z",
   "players": [
     {
       "id": 11,
@@ -11956,9 +11956,9 @@
           3,
           2
         ],
-        "teamSize": 16,
-        "teamValue": 103840000,
-        "teamValueInc": 380000,
+        "teamSize": 14,
+        "teamValue": 96440000,
+        "teamValueInc": 230000,
         "position": 1,
         "role": ""
       },
@@ -12033,8 +12033,8 @@
           14,
           8
         ],
-        "teamSize": 18,
-        "teamValue": 84810000,
+        "teamSize": 19,
+        "teamValue": 88360000,
         "teamValueInc": 370000,
         "lastTrophy": {
           "type": "league",
@@ -12056,8 +12056,8 @@
           5,
           6
         ],
-        "teamSize": 16,
-        "teamValue": 77890000,
+        "teamSize": 15,
+        "teamValue": 74340000,
         "teamValueInc": 60000,
         "position": 6,
         "role": ""
@@ -12097,9 +12097,9 @@
           9,
           9
         ],
-        "teamSize": 14,
-        "teamValue": 53190000,
-        "teamValueInc": -140000,
+        "teamSize": 15,
+        "teamValue": 56360000,
+        "teamValueInc": -100000,
         "position": 8,
         "role": ""
       },
@@ -12116,8 +12116,8 @@
           14
         ],
         "teamSize": 16,
-        "teamValue": 61960000,
-        "teamValueInc": 370000,
+        "teamValue": 60980000,
+        "teamValueInc": 380000,
         "position": 9,
         "positionInc": 1,
         "role": ""
@@ -12215,9 +12215,9 @@
           10,
           7
         ],
-        "teamSize": 17,
-        "teamValue": 51700000,
-        "teamValueInc": -110000,
+        "teamSize": 18,
+        "teamValue": 56910000,
+        "teamValueInc": -10000,
         "position": 14,
         "role": ""
       }
@@ -12229,8 +12229,8 @@
       "name": "Albertini",
       "manager": "Albertini",
       "points": 1663,
-      "value": 103840000,
-      "trend": 380000,
+      "value": 96440000,
+      "trend": 230000,
       "players": []
     },
     {
@@ -12265,7 +12265,7 @@
       "name": "CA CABA JUNIORS",
       "manager": "CA CABA JUNIORS",
       "points": 1435,
-      "value": 84810000,
+      "value": 88360000,
       "trend": 370000,
       "players": []
     },
@@ -12274,7 +12274,7 @@
       "name": "INDOMABLE FC",
       "manager": "INDOMABLE FC",
       "points": 1405,
-      "value": 77890000,
+      "value": 74340000,
       "trend": 60000,
       "players": []
     },
@@ -12292,8 +12292,8 @@
       "name": "NACECH1",
       "manager": "NACECH1",
       "points": 1364,
-      "value": 53190000,
-      "trend": -140000,
+      "value": 56360000,
+      "trend": -100000,
       "players": []
     },
     {
@@ -12301,8 +12301,8 @@
       "name": "CIGALERU",
       "manager": "CIGALERU",
       "points": 1275,
-      "value": 61960000,
-      "trend": 370000,
+      "value": 60980000,
+      "trend": 380000,
       "players": []
     },
     {
@@ -12346,8 +12346,8 @@
       "name": "Hufflepuff 🍋",
       "manager": "Hufflepuff 🍋",
       "points": 1183,
-      "value": 51700000,
-      "trend": -110000,
+      "value": 56910000,
+      "trend": -10000,
       "players": []
     }
   ],
@@ -12355,10 +12355,10 @@
     "teamId": 6541195,
     "name": "🦊",
     "points": 1502,
-    "balance": 8400733,
+    "balance": 7000733,
     "lineup": {
       "type": "3-5-2",
-      "date": 1775727093,
+      "date": 1775751129,
       "playersID": [
         17021,
         1908,
@@ -12446,8 +12446,8 @@
       {
         "id": 37451,
         "buyPrice": 1888955,
-        "clause": 14775000,
-        "invested": 4600000,
+        "clause": 16125000,
+        "invested": 5500000,
         "buyDate": 1762841122
       },
       {
@@ -12460,8 +12460,8 @@
       {
         "id": 38867,
         "buyPrice": 10072222,
-        "clause": 26358333,
-        "invested": 7500000,
+        "clause": 27108333,
+        "invested": 8000000,
         "buyDate": 1769493971
       },
       {
@@ -12523,100 +12523,78 @@
   "boardTomaquet": [
     {
       "type": "transfer",
-      "date": 1775726660,
+      "date": 1775759133,
       "content": [
         {
-          "player": 24979,
+          "player": 39792,
           "from": {
-            "id": 12713493,
-            "name": "Tata Martini",
-            "icon": "i/u/12713493.png"
+            "id": 12696899,
+            "name": "CIGALERU",
+            "icon": "i/u/12696899.png"
           },
           "to": {
-            "id": 6541195,
-            "name": "🦊",
-            "icon": "i/u/6541195.png?v=17"
+            "id": 11521196,
+            "name": "Hufflepuff 🍋",
+            "icon": "i/u/11521196.png?v=57"
           },
-          "amount": 3892500,
+          "amount": 12430500,
+          "type": "clause"
+        },
+        {
+          "player": 34802,
+          "from": {
+            "id": 8068427,
+            "name": "Albertini",
+            "icon": "i/u/8068427.png"
+          },
+          "to": {
+            "id": 12696899,
+            "name": "CIGALERU",
+            "icon": "i/u/12696899.png"
+          },
+          "amount": 13556250,
           "type": "clause"
         }
       ]
     },
     {
-      "type": "market",
-      "date": 1775711060,
+      "type": "transfer",
+      "date": 1775750245,
       "content": [
         {
-          "player": 38493,
-          "to": {
-            "id": 8070044,
-            "name": "CA CABA JUNIORS",
-            "icon": "i/u/8070044.png?v=63"
+          "player": 19299,
+          "from": {
+            "id": 8068427,
+            "name": "Albertini",
+            "icon": "i/u/8068427.png"
           },
-          "amount": 1290001,
-          "bids": [
-            {
-              "user": {
-                "id": 11520975,
-                "name": "Morankus FC",
-                "icon": "i/u/11520975.png?v=81"
-              },
-              "amount": 1290000
-            }
-          ]
-        },
-        {
-          "player": 22690,
           "to": {
-            "id": 8070044,
-            "name": "CA CABA JUNIORS",
-            "icon": "i/u/8070044.png?v=63"
+            "id": 12696491,
+            "name": "NACECH1",
+            "icon": "https://graph.facebook.com/10235185447969563/picture?height=300&width=300"
           },
-          "amount": 621560
+          "amount": 10501875,
+          "type": "clause"
         }
       ]
     },
     {
       "type": "transfer",
-      "date": 1775650526,
+      "date": 1775744575,
       "content": [
         {
-          "player": 5678,
+          "player": 129,
           "from": {
-            "id": 12696899,
-            "name": "CIGALERU",
-            "icon": "i/u/12696899.png"
-          },
-          "amount": 691700
-        },
-        {
-          "player": 38178,
-          "from": {
-            "id": 12696899,
-            "name": "CIGALERU",
-            "icon": "i/u/12696899.png"
-          },
-          "amount": 803900
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1775650490,
-      "content": [
-        {
-          "player": 33,
-          "from": {
-            "id": 3928497,
-            "name": "The Black Team",
-            "icon": "i/u/3928497.png"
+            "id": 12697101,
+            "name": "INDOMABLE FC",
+            "icon": "i/u/11757390.png"
           },
           "to": {
-            "id": 12696899,
-            "name": "CIGALERU",
-            "icon": "i/u/12696899.png"
+            "id": 8070044,
+            "name": "CA CABA JUNIORS",
+            "icon": "i/u/8070044.png?v=63"
           },
-          "amount": 6930000,
+          "amount": 6185340,
           "type": "clause"
         }
       ]
@@ -14768,9 +14746,9 @@
       "matchDate": "2026-04-21T19:30:00Z"
     },
     "Girona": {
-      "winProb": 0.373349210218214,
-      "drawProb": 0.27919075837432417,
-      "loseProb": 0.3474600314074619,
+      "winProb": 0.3869122266413463,
+      "drawProb": 0.27912143036296533,
+      "loseProb": 0.3339663429956884,
       "over25Prob": 0.5376344086021505,
       "isHome": true,
       "opponent": "Real Betis",
@@ -14795,9 +14773,9 @@
       "matchDate": "2026-04-21T19:30:00Z"
     },
     "Elche CF": {
-      "winProb": 0.2250527467375166,
-      "drawProb": 0.24732359146675,
-      "loseProb": 0.5276236617957334,
+      "winProb": 0.24052510180652048,
+      "drawProb": 0.2646446106227733,
+      "loseProb": 0.4948302875707063,
       "over25Prob": 0.5952380952380952,
       "isHome": true,
       "opponent": "Atlético Madrid",
@@ -14840,9 +14818,9 @@
       "matchDate": "2026-04-23T17:00:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.5276236617957334,
-      "drawProb": 0.24732359146675,
-      "loseProb": 0.2250527467375166,
+      "winProb": 0.4948302875707063,
+      "drawProb": 0.2646446106227733,
+      "loseProb": 0.24052510180652048,
       "over25Prob": 0.5952380952380952,
       "isHome": false,
       "opponent": "Elche CF",
@@ -14858,9 +14836,9 @@
       "matchDate": "2026-04-21T17:00:00Z"
     },
     "Real Betis": {
-      "winProb": 0.3474600314074619,
-      "drawProb": 0.27919075837432417,
-      "loseProb": 0.373349210218214,
+      "winProb": 0.3339663429956884,
+      "drawProb": 0.27912143036296533,
+      "loseProb": 0.3869122266413463,
       "over25Prob": 0.5376344086021505,
       "isHome": false,
       "opponent": "Girona",
@@ -14941,18 +14919,58 @@
   },
   "news": [
     {
-      "title": "Quique, sobre Abde Rebbach, Boyé y la Real y la Copa",
-      "link": "https://www.jornadaperfecta.com/blog/quique-previa-real-sociedad-celta-j31-25-26/",
-      "date": "Thu, 09 Apr 2026 12:39:33 +0000",
-      "img": "https://cdn.biwenger.com/i/t/91.png",
+      "title": "La Previa de las Picas: Todo sobre los Cronistas de la Jornada 31",
+      "link": "https://www.jornadaperfecta.com/blog/previa-picas-cronistas-j31/",
+      "date": "Thu, 09 Apr 2026 18:21:39 +0000",
+      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2660.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Pedri, cambiado por precaución y sin lesión. ¿Titular en el derbi?",
+      "link": "https://www.jornadaperfecta.com/blog/pedri-estado-j31/",
+      "date": "Thu, 09 Apr 2026 14:35:34 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
       "title": "Actualizadas las Alineaciones Probables para la Jornada 31",
       "link": "https://www.jornadaperfecta.com/blog/alineaciones-probables-j31-laliga-25-26/",
-      "date": "Thu, 09 Apr 2026 12:30:45 +0000",
+      "date": "Thu, 09 Apr 2026 14:33:45 +0000",
       "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Frenkie de Jong comienza a entrenar con el grupo, ¿llega al derbi?",
+      "link": "https://www.jornadaperfecta.com/blog/frenkie-de-jong-estado-j31/",
+      "date": "Thu, 09 Apr 2026 14:32:26 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Parte médico de Mateo Joseph: lesión en la rodilla y&#8230; ¿adiós a la temporada?",
+      "link": "https://www.jornadaperfecta.com/blog/mateo-joseph-lesion-rodilla-mallorca/",
+      "date": "Thu, 09 Apr 2026 14:31:25 +0000",
+      "img": "https://cdn.biwenger.com/i/t/465.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Yeray vuelve a ser titular tras la sanción: ¿recomendable?",
+      "link": "https://www.jornadaperfecta.com/blog/yeray-titular-athletic-fantasy/",
+      "date": "Thu, 09 Apr 2026 14:30:33 +0000",
+      "img": "https://cdn.biwenger.com/i/t/1.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Quique, sobre Abde Rebbach, Boyé y la Real y la Copa",
+      "link": "https://www.jornadaperfecta.com/blog/quique-previa-real-sociedad-celta-j31-25-26/",
+      "date": "Thu, 09 Apr 2026 12:39:33 +0000",
+      "img": "https://cdn.biwenger.com/i/t/91.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
@@ -14979,53 +14997,13 @@
       "img": "https://cdn.biwenger.com/i/t/2.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Frenkie de Jong comienza a entrenar con el grupo, ¿llega al derbi?",
-      "link": "https://www.jornadaperfecta.com/blog/frenkie-de-jong-estado-j31/",
-      "date": "Thu, 09 Apr 2026 10:50:26 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Pedri, cambiado por precaución y sin lesión. ¿Titular en el derbi?",
-      "link": "https://www.jornadaperfecta.com/blog/pedri-estado-j31/",
-      "date": "Thu, 09 Apr 2026 10:00:34 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Ferland Mendy suma un nuevo entreno con el grupo. ¿Disponible en la Jornada 31?",
-      "link": "https://www.jornadaperfecta.com/blog/ferland-mendy-vuelta-lesion-biceps-femoral-26-2/",
-      "date": "Thu, 09 Apr 2026 10:00:29 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Paredes suma una sesión y Gorosabel reaparece brevemente",
-      "link": "https://www.jornadaperfecta.com/blog/aitor-paredes-estado-j31-25-26/",
-      "date": "Thu, 09 Apr 2026 09:54:12 +0000",
-      "img": "https://cdn.biwenger.com/i/t/1.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Azpilicueta sigue sin entrenar y apunta a baja en la Jornada 31",
-      "link": "https://www.jornadaperfecta.com/blog/azpilicueta-estado-j31-25-26/",
-      "date": "Thu, 09 Apr 2026 09:26:38 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-09T12:54:31.923Z",
+    "updatedAt": "2026-04-09T18:44:24.324Z",
     "players": [
       {
         "id": "3374",
