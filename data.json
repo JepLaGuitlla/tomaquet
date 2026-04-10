@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-10T07:13:04.706Z",
+  "updatedAt": "2026-04-10T12:40:46.097Z",
   "players": [
     {
       "id": 11,
@@ -3192,6 +3192,28 @@
       "clausula": null
     },
     {
+      "id": 12734,
+      "slug": "javi-morcillo",
+      "name": "Javi Morcillo",
+      "position": 3,
+      "price": 170000,
+      "points": 4,
+      "trend": 0,
+      "playedHome": 1,
+      "playedAway": 0,
+      "teamName": "Atlético",
+      "teamId": 2,
+      "status": "ok",
+      "jForm": [
+        4,
+        null,
+        null,
+        null,
+        null
+      ],
+      "clausula": null
+    },
+    {
       "id": 13994,
       "slug": "thierry-correia",
       "name": "Correia",
@@ -3210,6 +3232,50 @@
         1,
         3,
         3
+      ],
+      "clausula": null
+    },
+    {
+      "id": 14373,
+      "slug": "javi-bonar",
+      "name": "Boñar",
+      "position": 2,
+      "price": 150000,
+      "points": 0,
+      "trend": 0,
+      "playedHome": 0,
+      "playedAway": 0,
+      "teamName": "Atlético",
+      "teamId": 2,
+      "status": "ok",
+      "jForm": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "clausula": null
+    },
+    {
+      "id": 14424,
+      "slug": "dani-martinez",
+      "name": "Dani Martínez",
+      "position": 2,
+      "price": 210000,
+      "points": 0,
+      "trend": 0,
+      "playedHome": 0,
+      "playedAway": 0,
+      "teamName": "Atlético",
+      "teamId": 2,
+      "status": "ok",
+      "jForm": [
+        null,
+        null,
+        null,
+        null,
+        null
       ],
       "clausula": null
     },
@@ -11975,9 +12041,9 @@
           1,
           11
         ],
-        "teamSize": 15,
-        "teamValue": 96230000,
-        "teamValueInc": 440000,
+        "teamSize": 16,
+        "teamValue": 96940000,
+        "teamValueInc": 460000,
         "lastTrophy": {
           "type": "league",
           "position": 2,
@@ -12033,9 +12099,9 @@
           14,
           8
         ],
-        "teamSize": 20,
-        "teamValue": 88970000,
-        "teamValueInc": 410000,
+        "teamSize": 19,
+        "teamValue": 87620000,
+        "teamValueInc": 380000,
         "lastTrophy": {
           "type": "league",
           "position": 3,
@@ -12056,9 +12122,9 @@
           5,
           6
         ],
-        "teamSize": 15,
-        "teamValue": 74410000,
-        "teamValueInc": 70000,
+        "teamSize": 16,
+        "teamValue": 75760000,
+        "teamValueInc": 100000,
         "position": 6,
         "role": ""
       },
@@ -12075,9 +12141,9 @@
           2,
           3
         ],
-        "teamSize": 17,
-        "teamValue": 86950000,
-        "teamValueInc": 690000,
+        "teamSize": 16,
+        "teamValue": 86240000,
+        "teamValueInc": 670000,
         "lastTrophy": {
           "type": "league",
           "position": 1,
@@ -12238,8 +12304,8 @@
       "name": "LeMola Team",
       "manager": "LeMola Team",
       "points": 1596,
-      "value": 96230000,
-      "trend": 440000,
+      "value": 96940000,
+      "trend": 460000,
       "players": []
     },
     {
@@ -12265,8 +12331,8 @@
       "name": "CA CABA JUNIORS",
       "manager": "CA CABA JUNIORS",
       "points": 1435,
-      "value": 88970000,
-      "trend": 410000,
+      "value": 87620000,
+      "trend": 380000,
       "players": []
     },
     {
@@ -12274,8 +12340,8 @@
       "name": "INDOMABLE FC",
       "manager": "INDOMABLE FC",
       "points": 1405,
-      "value": 74410000,
-      "trend": 70000,
+      "value": 75760000,
+      "trend": 100000,
       "players": []
     },
     {
@@ -12283,8 +12349,8 @@
       "name": "Zaza Pachulia",
       "manager": "Zaza Pachulia",
       "points": 1398,
-      "value": 86950000,
-      "trend": 690000,
+      "value": 86240000,
+      "trend": 670000,
       "players": []
     },
     {
@@ -12530,6 +12596,46 @@
   "boardTomaquet": [
     {
       "type": "transfer",
+      "date": 1775813725,
+      "content": [
+        {
+          "player": 38493,
+          "from": {
+            "id": 8070044,
+            "name": "CA CABA JUNIORS",
+            "icon": "i/u/8070044.png?v=63"
+          },
+          "to": {
+            "id": 12697101,
+            "name": "INDOMABLE FC",
+            "icon": "i/u/11757390.png"
+          },
+          "amount": 2000000
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1775810111,
+      "content": [
+        {
+          "player": 26592,
+          "from": {
+            "id": 148051,
+            "name": "Zaza Pachulia",
+            "icon": "i/u/148051.png?v=39"
+          },
+          "to": {
+            "id": 6552586,
+            "name": "LeMola Team",
+            "icon": "i/u/6552586.png"
+          },
+          "amount": 930000
+        }
+      ]
+    },
+    {
+      "type": "transfer",
       "date": 1775801653,
       "content": [
         {
@@ -12653,42 +12759,6 @@
           "amount": 546700
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1775759133,
-      "content": [
-        {
-          "player": 39792,
-          "from": {
-            "id": 12696899,
-            "name": "CIGALERU",
-            "icon": "i/u/12696899.png"
-          },
-          "to": {
-            "id": 11521196,
-            "name": "Hufflepuff 🍋",
-            "icon": "i/u/11521196.png?v=57"
-          },
-          "amount": 12430500,
-          "type": "clause"
-        },
-        {
-          "player": 34802,
-          "from": {
-            "id": 8068427,
-            "name": "Albertini",
-            "icon": "i/u/8068427.png"
-          },
-          "to": {
-            "id": 12696899,
-            "name": "CIGALERU",
-            "icon": "i/u/12696899.png"
-          },
-          "amount": 13556250,
-          "type": "clause"
-        }
-      ]
     }
   ],
   "leagueEnBas": {
@@ -12782,9 +12852,9 @@
           17,
           14
         ],
-        "teamSize": 19,
-        "teamValue": 103550000,
-        "teamValueInc": 190000,
+        "teamSize": 18,
+        "teamValue": 101350000,
+        "teamValueInc": 170000,
         "position": 3,
         "positionInc": -1,
         "role": ""
@@ -13145,8 +13215,8 @@
       "name": "Xevi borrat",
       "manager": "Xevi borrat",
       "points": 1416,
-      "value": 103550000,
-      "trend": 190000,
+      "value": 101350000,
+      "trend": 170000,
       "players": []
     },
     {
@@ -13310,13 +13380,13 @@
     "balance": 9355410,
     "lineup": {
       "type": "4-3-3",
-      "date": 1775802231,
+      "date": 1775822184,
       "playersID": [
         14630,
         32440,
         17121,
-        1908,
         40010,
+        1908,
         26048,
         1969,
         38368,
@@ -13451,11 +13521,26 @@
         "playerID": 31707,
         "price": 10155000,
         "type": "sale",
-        "until": 1775818501
+        "until": 1775994990
       }
     ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1775808921,
+      "content": [
+        {
+          "player": 38843,
+          "from": {
+            "id": 6579505,
+            "name": "Xevi borrat",
+            "icon": "i/u/6579505.png"
+          },
+          "amount": 2291700
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1775799102,
@@ -13662,27 +13747,6 @@
             "icon": "icons/41.png"
           },
           "amount": 160400
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1775644829,
-      "content": [
-        {
-          "player": 18128,
-          "from": {
-            "id": 6579505,
-            "name": "Xevi borrat",
-            "icon": "i/u/6579505.png"
-          },
-          "to": {
-            "id": 6580386,
-            "name": "Lamine i els 7 nans 👯‍♀️",
-            "icon": "i/u/6580386.png?v=10"
-          },
-          "amount": 435000,
-          "type": "clause"
         }
       ]
     }
@@ -14852,9 +14916,9 @@
       "matchDate": "2026-04-21T19:30:00Z"
     },
     "Elche CF": {
-      "winProb": 0.24052510180652048,
-      "drawProb": 0.2646446106227733,
-      "loseProb": 0.4948302875707063,
+      "winProb": 0.2454637311967211,
+      "drawProb": 0.2698706362873042,
+      "loseProb": 0.4846656325159749,
       "over25Prob": 0.5952380952380952,
       "isHome": true,
       "opponent": "Atlético Madrid",
@@ -14897,9 +14961,9 @@
       "matchDate": "2026-04-23T17:00:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.4948302875707063,
-      "drawProb": 0.2646446106227733,
-      "loseProb": 0.24052510180652048,
+      "winProb": 0.4846656325159749,
+      "drawProb": 0.2698706362873042,
+      "loseProb": 0.2454637311967211,
       "over25Prob": 0.5952380952380952,
       "isHome": false,
       "opponent": "Elche CF",
@@ -14998,82 +15062,82 @@
   },
   "news": [
     {
-      "title": "Cinco noticias fantasy para antes de irte a dormir",
-      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-9-4-26/",
-      "date": "Thu, 09 Apr 2026 21:00:08 +0000",
+      "title": "Trent, Carreras y Rüdiger, fuera de la convocatoria",
+      "link": "https://www.jornadaperfecta.com/blog/trent-carreras-rudiger-baja-j31-25-26/",
+      "date": "Fri, 10 Apr 2026 12:22:45 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Simeone sorprende con la baja de Oblak y los canteranos",
+      "link": "https://www.jornadaperfecta.com/blog/simeone-previa-sevilla-atleti-j31/",
+      "date": "Fri, 10 Apr 2026 12:01:52 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Corberán actualiza las bajas y habla de Renzo Saravia",
+      "link": "https://www.jornadaperfecta.com/blog/corberan-previa-elche-valencia-j31/",
+      "date": "Fri, 10 Apr 2026 11:57:55 +0000",
+      "img": "https://cdn.biwenger.com/i/t/18.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Simeone repite once del Atleti con varios canteranos",
+      "link": "https://www.jornadaperfecta.com/blog/once-del-atleti-rotaciones-sevilla/",
+      "date": "Fri, 10 Apr 2026 11:24:56 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Flick confirma la titularidad de Gavi y duda con rotaciones",
+      "link": "https://www.jornadaperfecta.com/blog/flick-previa-barcelona-espanyol-j31/",
+      "date": "Fri, 10 Apr 2026 11:20:47 +0000",
       "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Batalla, con un vendaje y cojeando: ¿preocupa su estado?",
-      "link": "https://www.jornadaperfecta.com/blog/batalla-estado-rayo-j31/",
-      "date": "Thu, 09 Apr 2026 19:11:34 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
+      "title": "¡5 mayores riesgos fantasy para la jornada 31 de LaLiga!",
+      "link": "https://www.jornadaperfecta.com/blog/riesgos-fantasy-j31-25-26/",
+      "date": "Fri, 10 Apr 2026 11:00:21 +0000",
+      "img": "https://cdn.biwenger.com/i/t/13.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "La Previa de las Picas: Todo sobre los Cronistas de la Jornada 31",
-      "link": "https://www.jornadaperfecta.com/blog/previa-picas-cronistas-j31/",
-      "date": "Thu, 09 Apr 2026 18:21:39 +0000",
-      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2660.png",
+      "title": "García Plaza confirma a Juanlu de lateral y a Maupay en la lista",
+      "link": "https://www.jornadaperfecta.com/blog/garcia-plaza-previa-sevilla-atleti-j31/",
+      "date": "Fri, 10 Apr 2026 10:56:01 +0000",
+      "img": "https://cdn.biwenger.com/i/t/17.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Pedri, cambiado por precaución y sin lesión. ¿Titular en el derbi?",
+      "title": "Javi Rodríguez acabó el partido de Europa League con molestias",
+      "link": "https://www.jornadaperfecta.com/blog/javi-rodriguez-molestias-muslo-26/",
+      "date": "Fri, 10 Apr 2026 10:31:29 +0000",
+      "img": "https://cdn.biwenger.com/i/t/5.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Oblak y Baena, con el grupo en una sesión sin Giménez, Cardoso y Hancko",
+      "link": "https://www.jornadaperfecta.com/blog/oblak-estado-j31-25-26/",
+      "date": "Fri, 10 Apr 2026 10:10:18 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Pedri entrena con normalidad, tras el susto europeo. ¿Titular en el derbi?",
       "link": "https://www.jornadaperfecta.com/blog/pedri-estado-j31/",
-      "date": "Thu, 09 Apr 2026 14:35:34 +0000",
+      "date": "Fri, 10 Apr 2026 09:50:34 +0000",
       "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Actualizadas las Alineaciones Probables para la Jornada 31",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-probables-j31-laliga-25-26/",
-      "date": "Thu, 09 Apr 2026 14:33:45 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Frenkie de Jong comienza a entrenar con el grupo, ¿llega al derbi?",
-      "link": "https://www.jornadaperfecta.com/blog/frenkie-de-jong-estado-j31/",
-      "date": "Thu, 09 Apr 2026 14:32:26 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Parte médico de Mateo Joseph: lesión en la rodilla y&#8230; ¿adiós a la temporada?",
-      "link": "https://www.jornadaperfecta.com/blog/mateo-joseph-lesion-rodilla-mallorca/",
-      "date": "Thu, 09 Apr 2026 14:31:25 +0000",
-      "img": "https://cdn.biwenger.com/i/t/465.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Yeray vuelve a ser titular tras la sanción: ¿recomendable?",
-      "link": "https://www.jornadaperfecta.com/blog/yeray-titular-athletic-fantasy/",
-      "date": "Thu, 09 Apr 2026 14:30:33 +0000",
-      "img": "https://cdn.biwenger.com/i/t/1.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Quique, sobre Abde Rebbach, Boyé y la Real y la Copa",
-      "link": "https://www.jornadaperfecta.com/blog/quique-previa-real-sociedad-celta-j31-25-26/",
-      "date": "Thu, 09 Apr 2026 12:39:33 +0000",
-      "img": "https://cdn.biwenger.com/i/t/91.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Sarabia explica el estado de Diangana y Fort, y deja en duda a Aguado",
-      "link": "https://www.jornadaperfecta.com/blog/sarabia-previa-elche-valencia-j31/",
-      "date": "Thu, 09 Apr 2026 11:58:09 +0000",
-      "img": "https://cdn.biwenger.com/i/t/75.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -15082,7 +15146,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-10T07:13:02.251Z",
+    "updatedAt": "2026-04-10T12:40:44.656Z",
     "players": [
       {
         "id": "3374",
