@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-10T12:40:46.097Z",
+  "updatedAt": "2026-04-10T18:36:49.027Z",
   "players": [
     {
       "id": 11,
@@ -3205,11 +3205,7 @@
       "teamId": 2,
       "status": "ok",
       "jForm": [
-        4,
-        null,
-        null,
-        null,
-        null
+        4
       ],
       "clausula": null
     },
@@ -3248,13 +3244,7 @@
       "teamName": "Atlético",
       "teamId": 2,
       "status": "ok",
-      "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "jForm": [],
       "clausula": null
     },
     {
@@ -3270,13 +3260,7 @@
       "teamName": "Atlético",
       "teamId": 2,
       "status": "ok",
-      "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "jForm": [],
       "clausula": null
     },
     {
@@ -12424,11 +12408,11 @@
     "balance": 4900733,
     "lineup": {
       "type": "3-5-2",
-      "date": 1775802844,
+      "date": 1775841484,
       "playersID": [
         17021,
         37399,
-        39360,
+        1908,
         26276,
         24979,
         38867,
@@ -12440,7 +12424,7 @@
       ],
       "reservesID": [
         null,
-        1908,
+        39360,
         39431,
         38216
       ]
@@ -12569,27 +12553,27 @@
     "market": [
       {
         "playerID": 25127,
-        "price": 25700000,
+        "price": 25060000,
         "type": "sale",
-        "until": 1775821937
+        "until": 1776014058
       },
       {
         "playerID": 27945,
-        "price": 1440000,
+        "price": 1400000,
         "type": "sale",
-        "until": 1775821937
+        "until": 1776014058
       },
       {
         "playerID": 34127,
         "price": 1080000,
         "type": "sale",
-        "until": 1775821937
+        "until": 1776014058
       },
       {
         "playerID": 39736,
         "price": 300000,
         "type": "sale",
-        "until": 1775821937
+        "until": 1776014058
       }
     ]
   },
@@ -12810,8 +12794,8 @@
           3,
           8
         ],
-        "teamSize": 17,
-        "teamValue": 78270000,
+        "teamSize": 16,
+        "teamValue": 77970000,
         "teamValueInc": 180000,
         "lastTrophy": {
           "type": "league",
@@ -13001,8 +12985,8 @@
           4,
           10
         ],
-        "teamSize": 12,
-        "teamValue": 37480000,
+        "teamSize": 13,
+        "teamValue": 37780000,
         "teamValueInc": 240000,
         "lastTrophy": {
           "type": "league",
@@ -13083,9 +13067,9 @@
           19,
           6
         ],
-        "teamSize": 16,
-        "teamValue": 26460000,
-        "teamValueInc": 60000,
+        "teamSize": 15,
+        "teamValue": 24830000,
+        "teamValueInc": 100000,
         "lastTrophy": {
           "type": "league",
           "position": -1,
@@ -13197,7 +13181,7 @@
       "name": "MarK Lenders",
       "manager": "MarK Lenders",
       "points": 1450,
-      "value": 78270000,
+      "value": 77970000,
       "trend": 180000,
       "players": []
     },
@@ -13287,7 +13271,7 @@
       "name": "Lamine i els 7 nans 👯‍♀️",
       "manager": "Lamine i els 7 nans 👯‍♀️",
       "points": 1167,
-      "value": 37480000,
+      "value": 37780000,
       "trend": 240000,
       "players": []
     },
@@ -13323,8 +13307,8 @@
       "name": "Kings Team",
       "manager": "Kings Team",
       "points": 1117,
-      "value": 26460000,
-      "trend": 60000,
+      "value": 24830000,
+      "trend": 100000,
       "players": []
     },
     {
@@ -13380,7 +13364,7 @@
     "balance": 9355410,
     "lineup": {
       "type": "4-3-3",
-      "date": 1775822184,
+      "date": 1775827251,
       "playersID": [
         14630,
         32440,
@@ -13526,6 +13510,42 @@
     ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1775842363,
+      "content": [
+        {
+          "player": 38365,
+          "from": {
+            "id": 6580389,
+            "name": "Kings Team",
+            "icon": "icons/31.png"
+          },
+          "amount": 1577600
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1775827584,
+      "content": [
+        {
+          "player": 23572,
+          "from": {
+            "id": 9890450,
+            "name": "MarK Lenders",
+            "icon": "icons/34.png"
+          },
+          "to": {
+            "id": 6580386,
+            "name": "Lamine i els 7 nans 👯‍♀️",
+            "icon": "i/u/6580386.png?v=10"
+          },
+          "amount": 450000,
+          "type": "clause"
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1775808921,
@@ -13732,21 +13752,6 @@
             "icon": "i/u/7817228.png"
           },
           "amount": 3226600
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1775668132,
-      "content": [
-        {
-          "player": 31475,
-          "from": {
-            "id": 6578885,
-            "name": "Norimaki  FC",
-            "icon": "icons/41.png"
-          },
-          "amount": 160400
         }
       ]
     }
@@ -14916,10 +14921,10 @@
       "matchDate": "2026-04-21T19:30:00Z"
     },
     "Elche CF": {
-      "winProb": 0.2454637311967211,
-      "drawProb": 0.2698706362873042,
-      "loseProb": 0.4846656325159749,
-      "over25Prob": 0.5952380952380952,
+      "winProb": 0.25010173178100836,
+      "drawProb": 0.27231707185324694,
+      "loseProb": 0.47758119636574464,
+      "over25Prob": 0.5813953488372093,
       "isHome": true,
       "opponent": "Atlético Madrid",
       "matchDate": "2026-04-22T17:00:00Z"
@@ -14961,10 +14966,10 @@
       "matchDate": "2026-04-23T17:00:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.4846656325159749,
-      "drawProb": 0.2698706362873042,
-      "loseProb": 0.2454637311967211,
-      "over25Prob": 0.5952380952380952,
+      "winProb": 0.47758119636574464,
+      "drawProb": 0.27231707185324694,
+      "loseProb": 0.25010173178100836,
+      "over25Prob": 0.5813953488372093,
       "isHome": false,
       "opponent": "Elche CF",
       "matchDate": "2026-04-22T17:00:00Z"
@@ -15015,9 +15020,9 @@
       "matchDate": "2026-04-22T19:30:00Z"
     },
     "Oviedo": {
-      "winProb": 0.23352231092599016,
-      "drawProb": 0.25353850900536073,
-      "loseProb": 0.5129391800686489,
+      "winProb": 0.23902975115786165,
+      "drawProb": 0.25268859408116806,
+      "loseProb": 0.5082816547609702,
       "over25Prob": 0.5376344086021505,
       "isHome": true,
       "opponent": "Villarreal",
@@ -15033,9 +15038,9 @@
       "matchDate": "2026-04-21T17:00:00Z"
     },
     "Villarreal": {
-      "winProb": 0.5129391800686489,
-      "drawProb": 0.25353850900536073,
-      "loseProb": 0.23352231092599016,
+      "winProb": 0.5082816547609702,
+      "drawProb": 0.25268859408116806,
+      "loseProb": 0.23902975115786165,
       "over25Prob": 0.5376344086021505,
       "isHome": false,
       "opponent": "Oviedo",
@@ -15062,82 +15067,82 @@
   },
   "news": [
     {
-      "title": "Trent, Carreras y Rüdiger, fuera de la convocatoria",
-      "link": "https://www.jornadaperfecta.com/blog/trent-carreras-rudiger-baja-j31-25-26/",
-      "date": "Fri, 10 Apr 2026 12:22:45 +0000",
+      "title": "Promoción YoSports Barcelona vs Espanyol: ¡consigue hasta 15€ en apuestas gratis!",
+      "link": "https://www.jornadaperfecta.com/blog/promocion-yosports-barcelona-vs-espanyol/",
+      "date": "Fri, 10 Apr 2026 18:00:06 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/04/YoSports-Barcelona-vs-Espanyol.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "¡Once titular confirmado del Girona FC!",
+      "link": "https://www.jornadaperfecta.com/blog/once-girona-jornada-31/",
+      "date": "Fri, 10 Apr 2026 17:52:23 +0000",
+      "img": "https://cdn.biwenger.com/i/t/289.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Once confirmado del Real Madrid con Militao y Bellingham",
+      "link": "https://www.jornadaperfecta.com/blog/once-real-madrid-jornada-31/",
+      "date": "Fri, 10 Apr 2026 17:23:44 +0000",
       "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Simeone sorprende con la baja de Oblak y los canteranos",
-      "link": "https://www.jornadaperfecta.com/blog/simeone-previa-sevilla-atleti-j31/",
-      "date": "Fri, 10 Apr 2026 12:01:52 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Corberán actualiza las bajas y habla de Renzo Saravia",
-      "link": "https://www.jornadaperfecta.com/blog/corberan-previa-elche-valencia-j31/",
-      "date": "Fri, 10 Apr 2026 11:57:55 +0000",
-      "img": "https://cdn.biwenger.com/i/t/18.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Simeone repite once del Atleti con varios canteranos",
-      "link": "https://www.jornadaperfecta.com/blog/once-del-atleti-rotaciones-sevilla/",
-      "date": "Fri, 10 Apr 2026 11:24:56 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Flick confirma la titularidad de Gavi y duda con rotaciones",
-      "link": "https://www.jornadaperfecta.com/blog/flick-previa-barcelona-espanyol-j31/",
-      "date": "Fri, 10 Apr 2026 11:20:47 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "¡5 mayores riesgos fantasy para la jornada 31 de LaLiga!",
-      "link": "https://www.jornadaperfecta.com/blog/riesgos-fantasy-j31-25-26/",
-      "date": "Fri, 10 Apr 2026 11:00:21 +0000",
-      "img": "https://cdn.biwenger.com/i/t/13.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "García Plaza confirma a Juanlu de lateral y a Maupay en la lista",
-      "link": "https://www.jornadaperfecta.com/blog/garcia-plaza-previa-sevilla-atleti-j31/",
-      "date": "Fri, 10 Apr 2026 10:56:01 +0000",
+      "title": "Azpilicueta sufre una pequeña rotura muscular, ¿tiempo de baja?",
+      "link": "https://www.jornadaperfecta.com/blog/azpilicueta-rotura-muscular-sevilla/",
+      "date": "Fri, 10 Apr 2026 17:01:10 +0000",
       "img": "https://cdn.biwenger.com/i/t/17.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Javi Rodríguez acabó el partido de Europa League con molestias",
-      "link": "https://www.jornadaperfecta.com/blog/javi-rodriguez-molestias-muslo-26/",
-      "date": "Fri, 10 Apr 2026 10:31:29 +0000",
-      "img": "https://cdn.biwenger.com/i/t/5.png",
+      "title": "Supercuota de Betfair para el Barcelona vs Espanyol: cuota 12.0 mejorada",
+      "link": "https://www.jornadaperfecta.com/blog/supercuota-betfair-barcelona-vs-espanyol/",
+      "date": "Fri, 10 Apr 2026 16:00:31 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/04/Betfair-Supercuota-Barcelona-vs-Espanyol.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Oblak y Baena, con el grupo en una sesión sin Giménez, Cardoso y Hancko",
-      "link": "https://www.jornadaperfecta.com/blog/oblak-estado-j31-25-26/",
-      "date": "Fri, 10 Apr 2026 10:10:18 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Pedri entrena con normalidad, tras el susto europeo. ¿Titular en el derbi?",
-      "link": "https://www.jornadaperfecta.com/blog/pedri-estado-j31/",
-      "date": "Fri, 10 Apr 2026 09:50:34 +0000",
+      "title": "Pedri apunta a descansar en la jornada 31, ¿alinear?",
+      "link": "https://www.jornadaperfecta.com/blog/pedri-alinear-j31-fantasy-barcelona/",
+      "date": "Fri, 10 Apr 2026 15:59:05 +0000",
       "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Posible suplencia de Alberto Moleiro, ¿alinear en la j31?",
+      "link": "https://www.jornadaperfecta.com/blog/moleiro-alinear-j31-villarreal-fantasy/",
+      "date": "Fri, 10 Apr 2026 15:52:14 +0000",
+      "img": "https://cdn.biwenger.com/i/t/19.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "BigUp: Gana dinero real con tus pronósticos del Athletic &#8211; Villarreal",
+      "link": "https://www.jornadaperfecta.com/blog/bigup-athletic-villarreal-pronosticos/",
+      "date": "Fri, 10 Apr 2026 15:13:15 +0000",
+      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2705.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Lesionados que podrían llegar a la jornada 31 y descartados",
+      "link": "https://www.jornadaperfecta.com/blog/lesionados-j31-25-26/",
+      "date": "Fri, 10 Apr 2026 13:50:34 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/02/image-2026-02-13T204411.801.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Manolo González, sobre Pickel, Riedel y el Barcelona",
+      "link": "https://www.jornadaperfecta.com/blog/manolo-gonzalez-previa-barcelona-espanyol-j31/",
+      "date": "Fri, 10 Apr 2026 13:29:06 +0000",
+      "img": "https://cdn.biwenger.com/i/t/7.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -15146,7 +15151,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-10T12:40:44.656Z",
+    "updatedAt": "2026-04-10T18:36:46.692Z",
     "players": [
       {
         "id": "3374",
@@ -15154,11 +15159,11 @@
         "team": "Real Madrid CF",
         "position": "",
         "nationality": "France",
-        "appearances": 25,
+        "appearances": 26,
         "goals": 23,
         "assists": 4,
         "penalties": 8,
-        "minutesPerGoal": 98
+        "minutesPerGoal": 102
       },
       {
         "id": "30059",
@@ -15262,11 +15267,11 @@
         "team": "Real Madrid CF",
         "position": "",
         "nationality": "Brazil",
-        "appearances": 28,
+        "appearances": 29,
         "goals": 11,
         "assists": 5,
         "penalties": 4,
-        "minutesPerGoal": 229
+        "minutesPerGoal": 237
       },
       {
         "id": "133276",
@@ -15790,11 +15795,11 @@
         "team": "Girona FC",
         "position": "",
         "nationality": "Ukraine",
-        "appearances": 24,
+        "appearances": 25,
         "goals": 5,
         "assists": 4,
         "penalties": 0,
-        "minutesPerGoal": 432
+        "minutesPerGoal": 450
       },
       {
         "id": "136349",
@@ -15910,11 +15915,11 @@
         "team": "Real Madrid CF",
         "position": "",
         "nationality": "Turkey",
-        "appearances": 29,
+        "appearances": 30,
         "goals": 4,
         "assists": 8,
         "penalties": 0,
-        "minutesPerGoal": 653
+        "minutesPerGoal": 675
       },
       {
         "id": "69",
@@ -15934,11 +15939,11 @@
         "team": "Girona FC",
         "position": "",
         "nationality": "Morocco",
-        "appearances": 16,
+        "appearances": 17,
         "goals": 4,
         "assists": 2,
         "penalties": 0,
-        "minutesPerGoal": 360
+        "minutesPerGoal": 383
       },
       {
         "id": "3201",
@@ -15970,11 +15975,11 @@
         "team": "Real Madrid CF",
         "position": "",
         "nationality": "England",
-        "appearances": 19,
+        "appearances": 20,
         "goals": 4,
         "assists": 3,
         "penalties": 0,
-        "minutesPerGoal": 428
+        "minutesPerGoal": 450
       },
       {
         "id": "170438",
@@ -15994,11 +15999,11 @@
         "team": "Real Madrid CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 29,
+        "appearances": 30,
         "goals": 4,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 653
+        "minutesPerGoal": 675
       },
       {
         "id": "146126",
@@ -16030,11 +16035,11 @@
         "team": "Real Madrid CF",
         "position": "",
         "nationality": "Uruguay",
-        "appearances": 27,
+        "appearances": 28,
         "goals": 4,
         "assists": 5,
         "penalties": 0,
-        "minutesPerGoal": 608
+        "minutesPerGoal": 630
       },
       {
         "id": "33496",
@@ -16234,11 +16239,11 @@
         "team": "Girona FC",
         "position": "",
         "nationality": "Uruguay",
-        "appearances": 18,
+        "appearances": 19,
         "goals": 3,
         "assists": 0,
         "penalties": 3,
-        "minutesPerGoal": 540
+        "minutesPerGoal": 570
       },
       {
         "id": "213263",
@@ -16294,11 +16299,11 @@
         "team": "Girona FC",
         "position": "",
         "nationality": "Spain",
-        "appearances": 26,
+        "appearances": 27,
         "goals": 2,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 1170
+        "minutesPerGoal": 1215
       },
       {
         "id": "48555",
