@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-09T18:44:25.971Z",
+  "updatedAt": "2026-04-10T01:14:02.006Z",
   "players": [
     {
       "id": 11,
@@ -12115,8 +12115,8 @@
           8,
           14
         ],
-        "teamSize": 16,
-        "teamValue": 60980000,
+        "teamSize": 14,
+        "teamValue": 60140000,
         "teamValueInc": 380000,
         "position": 9,
         "positionInc": 1,
@@ -12301,7 +12301,7 @@
       "name": "CIGALERU",
       "manager": "CIGALERU",
       "points": 1275,
-      "value": 60980000,
+      "value": 60140000,
       "trend": 380000,
       "players": []
     },
@@ -12521,6 +12521,30 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1775775450,
+      "content": [
+        {
+          "player": 2224,
+          "from": {
+            "id": 12696899,
+            "name": "CIGALERU",
+            "icon": "i/u/12696899.png"
+          },
+          "amount": 295800
+        },
+        {
+          "player": 34483,
+          "from": {
+            "id": 12696899,
+            "name": "CIGALERU",
+            "icon": "i/u/12696899.png"
+          },
+          "amount": 546700
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1775759133,
@@ -14791,10 +14815,10 @@
       "matchDate": "2026-04-21T17:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.7477985021975783,
-      "drawProb": 0.14585543541314994,
-      "loseProb": 0.10634606238927187,
-      "over25Prob": 0.7575757575757576,
+      "winProb": 0.7384404456342999,
+      "drawProb": 0.15075020261752853,
+      "loseProb": 0.11080935174817162,
+      "over25Prob": 0.7407407407407407,
       "isHome": true,
       "opponent": "Celta Vigo",
       "matchDate": "2026-04-22T19:30:00Z"
@@ -14809,9 +14833,9 @@
       "matchDate": "2026-04-23T18:00:00Z"
     },
     "Sevilla": {
-      "winProb": 0.40073868882733144,
-      "drawProb": 0.28439519852262235,
-      "loseProb": 0.31486611265004616,
+      "winProb": 0.4020100502512563,
+      "drawProb": 0.2763819095477387,
+      "loseProb": 0.32160804020100503,
       "over25Prob": 0.45454545454545453,
       "isHome": false,
       "opponent": "Levante",
@@ -14863,10 +14887,10 @@
       "matchDate": "2026-04-23T18:00:00Z"
     },
     "Celta Vigo": {
-      "winProb": 0.10634606238927187,
-      "drawProb": 0.14585543541314994,
-      "loseProb": 0.7477985021975783,
-      "over25Prob": 0.7575757575757576,
+      "winProb": 0.11080935174817162,
+      "drawProb": 0.15075020261752853,
+      "loseProb": 0.7384404456342999,
+      "over25Prob": 0.7407407407407407,
       "isHome": false,
       "opponent": "Barcelona",
       "matchDate": "2026-04-22T19:30:00Z"
@@ -14899,9 +14923,9 @@
       "matchDate": "2026-04-23T19:30:00Z"
     },
     "Levante": {
-      "winProb": 0.31486611265004616,
-      "drawProb": 0.28439519852262235,
-      "loseProb": 0.40073868882733144,
+      "winProb": 0.32160804020100503,
+      "drawProb": 0.2763819095477387,
+      "loseProb": 0.4020100502512563,
       "over25Prob": 0.45454545454545453,
       "isHome": true,
       "opponent": "Sevilla",
@@ -14918,6 +14942,22 @@
     }
   },
   "news": [
+    {
+      "title": "Cinco noticias fantasy para antes de irte a dormir",
+      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-9-4-26/",
+      "date": "Thu, 09 Apr 2026 21:00:08 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Batalla, con un vendaje y cojeando: ¿preocupa su estado?",
+      "link": "https://www.jornadaperfecta.com/blog/batalla-estado-rayo-j31/",
+      "date": "Thu, 09 Apr 2026 19:11:34 +0000",
+      "img": "https://cdn.biwenger.com/i/t/70.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "La Previa de las Picas: Todo sobre los Cronistas de la Jornada 31",
       "link": "https://www.jornadaperfecta.com/blog/previa-picas-cronistas-j31/",
@@ -14981,29 +15021,13 @@
       "img": "https://cdn.biwenger.com/i/t/75.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Míchel confirma cansancio de Fran Beltrán y casi descarta a Blind",
-      "link": "https://www.jornadaperfecta.com/blog/michel-previa-real-madrid-girona-j31-25-26/",
-      "date": "Thu, 09 Apr 2026 11:44:44 +0000",
-      "img": "https://cdn.biwenger.com/i/t/289.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Oblak, con el grupo en una sesión sin Baena, Giménez, Cardoso y Hancko",
-      "link": "https://www.jornadaperfecta.com/blog/oblak-estado-j31-25-26/",
-      "date": "Thu, 09 Apr 2026 11:02:18 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-09T18:44:24.324Z",
+    "updatedAt": "2026-04-10T01:14:00.360Z",
     "players": [
       {
         "id": "3374",
