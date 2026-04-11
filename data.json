@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-11T06:45:44.439Z",
+  "updatedAt": "2026-04-11T12:29:52.050Z",
   "players": [
     {
       "id": 11,
@@ -5945,7 +5945,7 @@
     {
       "id": 26095,
       "slug": "arnau-martinez",
-      "name": "Arnau Martínez",
+      "name": "Arnau Mart��nez",
       "position": 2,
       "price": 3090000,
       "points": 124,
@@ -13855,12 +13855,12 @@
           "tla": "RSO",
           "crest": "https://crests.football-data.org/92.png"
         },
-        "playedGames": 30,
+        "playedGames": 31,
         "form": null,
         "won": 11,
-        "draw": 8,
+        "draw": 9,
         "lost": 11,
-        "points": 41,
+        "points": 42,
         "goalsFor": 46,
         "goalsAgainst": 45,
         "goalDifference": 1
@@ -14007,12 +14007,12 @@
           "tla": "ALA",
           "crest": "https://crests.football-data.org/263.png"
         },
-        "playedGames": 30,
+        "playedGames": 31,
         "form": null,
         "won": 8,
-        "draw": 8,
+        "draw": 9,
         "lost": 14,
-        "points": 32,
+        "points": 33,
         "goalsFor": 32,
         "goalsAgainst": 43,
         "goalDifference": -11
@@ -14377,23 +14377,6 @@
     },
     "nextMatches": [
       {
-        "id": 544516,
-        "matchday": 31,
-        "date": "2026-04-11T12:00:00Z",
-        "home": {
-          "id": 92,
-          "name": "Real Sociedad de Fútbol",
-          "short": "Real Sociedad",
-          "crest": "https://crests.football-data.org/92.png"
-        },
-        "away": {
-          "id": 263,
-          "name": "Deportivo Alavés",
-          "short": "Alavés",
-          "crest": "https://crests.football-data.org/263.png"
-        }
-      },
-      {
         "id": 544514,
         "matchday": 31,
         "date": "2026-04-11T14:15:00Z",
@@ -14698,6 +14681,23 @@
           "short": "Levante",
           "crest": "https://crests.football-data.org/88.png"
         }
+      },
+      {
+        "id": 544516,
+        "matchday": 31,
+        "date": "2026-04-11T12:00:00Z",
+        "home": {
+          "id": 92,
+          "name": "Real Sociedad de Fútbol",
+          "short": "Real Sociedad",
+          "crest": "https://crests.football-data.org/92.png"
+        },
+        "away": {
+          "id": 263,
+          "name": "Deportivo Alavés",
+          "short": "Alavés",
+          "crest": "https://crests.football-data.org/263.png"
+        }
       }
     ],
     "recentResults": [
@@ -14850,9 +14850,9 @@
       "matchDate": "2026-04-22T18:00:00Z"
     },
     "Alavés": {
-      "winProb": 0.0978698461751826,
-      "drawProb": 0.1600147060555193,
-      "loseProb": 0.7421154477692979,
+      "winProb": 0.09789639679070186,
+      "drawProb": 0.1597868306939761,
+      "loseProb": 0.7423167725153219,
       "over25Prob": 0.6451612903225806,
       "isHome": false,
       "opponent": "Real Madrid",
@@ -15003,9 +15003,9 @@
       "matchDate": "2026-04-22T18:00:00Z"
     },
     "Real Madrid": {
-      "winProb": 0.7421154477692979,
-      "drawProb": 0.1600147060555193,
-      "loseProb": 0.0978698461751826,
+      "winProb": 0.7423167725153219,
+      "drawProb": 0.1597868306939761,
+      "loseProb": 0.09789639679070186,
       "over25Prob": 0.6451612903225806,
       "isHome": true,
       "opponent": "Alavés",
@@ -15023,82 +15023,82 @@
   },
   "news": [
     {
-      "title": "Abel Ruiz, sustituido por lesión en el Girona FC",
-      "link": "https://www.jornadaperfecta.com/blog/abel-ruiz-lesion-girona-fc/",
-      "date": "Fri, 10 Apr 2026 21:15:53 +0000",
-      "img": "https://cdn.biwenger.com/i/t/289.png",
+      "title": "Giráldez confirma las bajas de Starfelt, Ristic y Hugo Álvarez",
+      "link": "https://www.jornadaperfecta.com/blog/giraldez-previa-celta-real-oviedo-j31/",
+      "date": "Sat, 11 Apr 2026 12:19:11 +0000",
+      "img": "https://cdn.biwenger.com/i/t/5.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Lisci habla de la competencia entre Iker Muñoz y Torró",
+      "link": "https://www.jornadaperfecta.com/blog/lisci-previa-osasuna-betis-j31/",
+      "date": "Sat, 11 Apr 2026 12:08:23 +0000",
+      "img": "https://cdn.biwenger.com/i/t/93.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Suplencia de Oyarzabal en el Real Sociedad &#8211; Alavés, ¿motivo?",
+      "link": "https://www.jornadaperfecta.com/blog/oyarzabal-suplencia-real-sociedad-j31/",
+      "date": "Sat, 11 Apr 2026 11:44:15 +0000",
+      "img": "https://cdn.biwenger.com/i/t/13.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Demichelis, sobre Darder, Pablo Torre y Mascarell",
+      "link": "https://www.jornadaperfecta.com/blog/demichelis-previa-mallorca-rayo-j31/",
+      "date": "Sat, 11 Apr 2026 11:30:14 +0000",
+      "img": "https://cdn.biwenger.com/i/t/465.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Bordalás, sobre Davinchi, Satriano, Mayoral y Juanmi",
+      "link": "https://www.jornadaperfecta.com/blog/bordalas-previa-levante-getafe-j31/",
+      "date": "Sat, 11 Apr 2026 11:05:36 +0000",
+      "img": "https://cdn.biwenger.com/i/t/8.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Pellegrini confirma la vuelta de Lo Celso y habla de Isco",
+      "link": "https://www.jornadaperfecta.com/blog/pellegrini-previa-osasuna-betis-j31/",
+      "date": "Sat, 11 Apr 2026 10:50:52 +0000",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Almada recupera a David Carmo, Ejaria y Ahijado",
+      "link": "https://www.jornadaperfecta.com/blog/almada-previa-celta-real-oviedo-j31/",
+      "date": "Sat, 11 Apr 2026 10:29:35 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Lamine Yamal dio el susto en el entrenamiento del Barça",
+      "link": "https://www.jornadaperfecta.com/blog/lamine-yamal-susto-entrenamiento-barcelona/",
+      "date": "Sat, 11 Apr 2026 10:18:41 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Frenkie de Jong recibe el alta médica y vuelve a la convocatoria",
+      "link": "https://www.jornadaperfecta.com/blog/frenkie-de-jong-estado-j31/",
+      "date": "Sat, 11 Apr 2026 09:32:26 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
       "title": "BigUp: Gana dinero real con tus pronósticos del Athletic &#8211; Villarreal",
       "link": "https://www.jornadaperfecta.com/blog/bigup-athletic-villarreal-pronosticos/",
-      "date": "Fri, 10 Apr 2026 18:13:15 +0000",
+      "date": "Sat, 11 Apr 2026 09:13:15 +0000",
       "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2705.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Promoción YoSports Barcelona vs Espanyol: ¡consigue hasta 15€ en apuestas gratis!",
-      "link": "https://www.jornadaperfecta.com/blog/promocion-yosports-barcelona-vs-espanyol/",
-      "date": "Fri, 10 Apr 2026 18:00:06 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/04/YoSports-Barcelona-vs-Espanyol.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "¡Once titular confirmado del Girona FC!",
-      "link": "https://www.jornadaperfecta.com/blog/once-girona-jornada-31/",
-      "date": "Fri, 10 Apr 2026 17:52:23 +0000",
-      "img": "https://cdn.biwenger.com/i/t/289.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Once confirmado del Real Madrid con Militao y Bellingham",
-      "link": "https://www.jornadaperfecta.com/blog/once-real-madrid-jornada-31/",
-      "date": "Fri, 10 Apr 2026 17:23:44 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Azpilicueta sufre una pequeña rotura muscular, ¿tiempo de baja?",
-      "link": "https://www.jornadaperfecta.com/blog/azpilicueta-rotura-muscular-sevilla/",
-      "date": "Fri, 10 Apr 2026 17:01:10 +0000",
-      "img": "https://cdn.biwenger.com/i/t/17.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Supercuota de Betfair para el Barcelona vs Espanyol: cuota 12.0 mejorada",
-      "link": "https://www.jornadaperfecta.com/blog/supercuota-betfair-barcelona-vs-espanyol/",
-      "date": "Fri, 10 Apr 2026 16:00:31 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/04/Betfair-Supercuota-Barcelona-vs-Espanyol.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Pedri apunta a descansar en la jornada 31, ¿alinear?",
-      "link": "https://www.jornadaperfecta.com/blog/pedri-alinear-j31-fantasy-barcelona/",
-      "date": "Fri, 10 Apr 2026 15:59:05 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Posible suplencia de Alberto Moleiro, ¿alinear en la j31?",
-      "link": "https://www.jornadaperfecta.com/blog/moleiro-alinear-j31-villarreal-fantasy/",
-      "date": "Fri, 10 Apr 2026 15:52:14 +0000",
-      "img": "https://cdn.biwenger.com/i/t/19.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Manolo González, sobre Pickel, Riedel y el Barcelona",
-      "link": "https://www.jornadaperfecta.com/blog/manolo-gonzalez-previa-barcelona-espanyol-j31/",
-      "date": "Fri, 10 Apr 2026 13:29:06 +0000",
-      "img": "https://cdn.biwenger.com/i/t/7.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -15107,7 +15107,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-11T06:45:41.914Z",
+    "updatedAt": "2026-04-11T12:29:49.950Z",
     "players": [
       {
         "id": "3374",
@@ -15187,11 +15187,11 @@
         "team": "Real Sociedad de Fútbol",
         "position": "",
         "nationality": "Spain",
-        "appearances": 27,
+        "appearances": 28,
         "goals": 12,
         "assists": 3,
         "penalties": 5,
-        "minutesPerGoal": 203
+        "minutesPerGoal": 210
       },
       {
         "id": "371",
@@ -15259,11 +15259,11 @@
         "team": "Deportivo Alavés",
         "position": "",
         "nationality": "Argentina",
-        "appearances": 25,
+        "appearances": 26,
         "goals": 10,
         "assists": 1,
         "penalties": 3,
-        "minutesPerGoal": 225
+        "minutesPerGoal": 234
       },
       {
         "id": "32762",
@@ -15319,11 +15319,11 @@
         "team": "Deportivo Alavés",
         "position": "",
         "nationality": "Spain",
-        "appearances": 30,
+        "appearances": 31,
         "goals": 8,
         "assists": 3,
         "penalties": 0,
-        "minutesPerGoal": 338
+        "minutesPerGoal": 349
       },
       {
         "id": "98571",
@@ -15379,11 +15379,11 @@
         "team": "Real Sociedad de Fútbol",
         "position": "",
         "nationality": "Portugal",
-        "appearances": 30,
+        "appearances": 31,
         "goals": 8,
         "assists": 4,
         "penalties": 0,
-        "minutesPerGoal": 338
+        "minutesPerGoal": 349
       },
       {
         "id": "1760",
@@ -15667,11 +15667,11 @@
         "team": "Real Sociedad de Fútbol",
         "position": "",
         "nationality": "Spain",
-        "appearances": 26,
+        "appearances": 27,
         "goals": 5,
         "assists": 2,
         "penalties": 1,
-        "minutesPerGoal": 468
+        "minutesPerGoal": 486
       },
       {
         "id": "16275",
@@ -15847,11 +15847,11 @@
         "team": "Real Sociedad de Fútbol",
         "position": "",
         "nationality": "Iceland",
-        "appearances": 14,
+        "appearances": 15,
         "goals": 4,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 315
+        "minutesPerGoal": 338
       },
       {
         "id": "171964",
@@ -15931,11 +15931,11 @@
         "team": "Real Sociedad de Fútbol",
         "position": "",
         "nationality": "Spain",
-        "appearances": 26,
+        "appearances": 27,
         "goals": 4,
         "assists": 3,
         "penalties": 0,
-        "minutesPerGoal": 585
+        "minutesPerGoal": 608
       },
       {
         "id": "125010",
@@ -16039,11 +16039,11 @@
         "team": "Real Sociedad de Fútbol",
         "position": "",
         "nationality": "Spain",
-        "appearances": 24,
+        "appearances": 25,
         "goals": 3,
-        "assists": 3,
+        "assists": 4,
         "penalties": 0,
-        "minutesPerGoal": 720
+        "minutesPerGoal": 750
       },
       {
         "id": "126878",
@@ -16250,6 +16250,18 @@
         "minutesPerGoal": 900
       },
       {
+        "id": "82516",
+        "name": "Luka Sučić",
+        "team": "Real Sociedad de Fútbol",
+        "position": "",
+        "nationality": "Croatia",
+        "appearances": 28,
+        "goals": 3,
+        "assists": 1,
+        "penalties": 0,
+        "minutesPerGoal": 840
+      },
+      {
         "id": "3369",
         "name": "Thomas Lemar",
         "team": "Girona FC",
@@ -16279,11 +16291,11 @@
         "team": "Real Sociedad de Fútbol",
         "position": "",
         "nationality": "Japan",
-        "appearances": 19,
+        "appearances": 20,
         "goals": 2,
         "assists": 3,
         "penalties": 0,
-        "minutesPerGoal": 855
+        "minutesPerGoal": 900
       },
       {
         "id": "3216",
@@ -16296,18 +16308,6 @@
         "assists": 2,
         "penalties": 0,
         "minutesPerGoal": 855
-      },
-      {
-        "id": "253001",
-        "name": "Javi Rueda",
-        "team": "RC Celta de Vigo",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 28,
-        "goals": 2,
-        "assists": 4,
-        "penalties": 0,
-        "minutesPerGoal": 1260
       }
     ]
   }
