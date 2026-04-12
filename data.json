@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-12T07:01:26.740Z",
+  "updatedAt": "2026-04-12T12:33:12.956Z",
   "players": [
     {
       "id": 11,
@@ -12418,7 +12418,7 @@
     "balance": 4900733,
     "lineup": {
       "type": "3-5-2",
-      "date": 1775841484,
+      "date": 1775984101,
       "playersID": [
         17021,
         37399,
@@ -12867,9 +12867,9 @@
           18,
           17
         ],
-        "teamSize": 17,
-        "teamValue": 48300000,
-        "teamValueInc": 40000,
+        "teamSize": 16,
+        "teamValue": 44240000,
+        "teamValueInc": 210000,
         "position": 8,
         "positionInc": 1
       },
@@ -13181,8 +13181,8 @@
       "name": "Aiveen Teaam",
       "manager": "Aiveen Teaam",
       "points": 1233,
-      "value": 48300000,
-      "trend": 40000,
+      "value": 44240000,
+      "trend": 210000,
       "players": []
     },
     {
@@ -13376,7 +13376,7 @@
       {
         "id": 31707,
         "buyPrice": 7658222,
-        "clause": 9795000,
+        "clause": 0,
         "invested": 0,
         "buyDate": 1770444175
       },
@@ -13461,6 +13461,21 @@
     ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1775983554,
+      "content": [
+        {
+          "player": 27271,
+          "from": {
+            "id": 6579540,
+            "name": "Aiveen Teaam",
+            "icon": "i/u/6579540.png?v=63"
+          },
+          "amount": 4166000
+        }
+      ]
+    },
     {
       "type": "market",
       "date": 1775970248,
@@ -13638,42 +13653,6 @@
           "amount": 2291700
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1775799102,
-      "content": [
-        {
-          "player": 30210,
-          "from": {
-            "id": 6579280,
-            "name": "Sant Pere Atlètic",
-            "icon": "i/u/6579280.png?v=22"
-          },
-          "to": {
-            "id": 6578885,
-            "name": "Norimaki  FC",
-            "icon": "icons/41.png"
-          },
-          "amount": 4755000,
-          "type": "clause"
-        },
-        {
-          "player": 38178,
-          "from": {
-            "id": 6588130,
-            "name": "The GOAT club",
-            "icon": "i/u/6588130.png?v=12"
-          },
-          "to": {
-            "id": 6579402,
-            "name": "Valors FC",
-            "icon": "icons/7.png"
-          },
-          "amount": 1200000,
-          "type": "clause"
-        }
-      ]
     }
   ],
   "laliga": {
@@ -13764,15 +13743,15 @@
           "tla": "BET",
           "crest": "https://crests.football-data.org/90.png"
         },
-        "playedGames": 30,
+        "playedGames": 31,
         "form": null,
-        "won": 11,
+        "won": 12,
         "draw": 12,
         "lost": 7,
-        "points": 45,
-        "goalsFor": 44,
+        "points": 48,
+        "goalsFor": 45,
         "goalsAgainst": 37,
-        "goalDifference": 7
+        "goalDifference": 8
       },
       {
         "position": 6,
@@ -13840,15 +13819,15 @@
           "tla": "OSA",
           "crest": "https://crests.football-data.org/79.png"
         },
-        "playedGames": 30,
+        "playedGames": 31,
         "form": null,
         "won": 10,
         "draw": 8,
-        "lost": 12,
+        "lost": 13,
         "points": 38,
         "goalsFor": 36,
-        "goalsAgainst": 37,
-        "goalDifference": -1
+        "goalsAgainst": 38,
+        "goalDifference": -2
       },
       {
         "position": 10,
@@ -14324,23 +14303,6 @@
     },
     "nextMatches": [
       {
-        "id": 544518,
-        "matchday": 31,
-        "date": "2026-04-12T12:00:00Z",
-        "home": {
-          "id": 79,
-          "name": "CA Osasuna",
-          "short": "Osasuna",
-          "crest": "https://crests.football-data.org/79.png"
-        },
-        "away": {
-          "id": 90,
-          "name": "Real Betis Balompié",
-          "short": "Real Betis",
-          "crest": "https://crests.football-data.org/90.png"
-        }
-      },
-      {
         "id": 544515,
         "matchday": 31,
         "date": "2026-04-12T14:15:00Z",
@@ -14577,6 +14539,23 @@
           "short": "Levante",
           "crest": "https://crests.football-data.org/88.png"
         }
+      },
+      {
+        "id": 544518,
+        "matchday": 31,
+        "date": "2026-04-12T12:00:00Z",
+        "home": {
+          "id": 79,
+          "name": "CA Osasuna",
+          "short": "Osasuna",
+          "crest": "https://crests.football-data.org/79.png"
+        },
+        "away": {
+          "id": 90,
+          "name": "Real Betis Balompié",
+          "short": "Real Betis",
+          "crest": "https://crests.football-data.org/90.png"
+        }
       }
     ],
     "recentResults": [
@@ -14723,7 +14702,7 @@
       "winProb": 0.21394706835503813,
       "drawProb": 0.2753405749264839,
       "loseProb": 0.5107123567184781,
-      "over25Prob": 0.4716981132075471,
+      "over25Prob": 0.48309178743961356,
       "isHome": false,
       "opponent": "Athletic Bilbao",
       "matchDate": "2026-04-21T17:00:00Z"
@@ -14732,7 +14711,7 @@
       "winProb": 0.3339663429956884,
       "drawProb": 0.27912143036296533,
       "loseProb": 0.3869122266413463,
-      "over25Prob": 0.5376344086021505,
+      "over25Prob": 0.5747126436781609,
       "isHome": false,
       "opponent": "Girona",
       "matchDate": "2026-04-21T19:30:00Z"
@@ -14741,7 +14720,7 @@
       "winProb": 0.3876734002429202,
       "drawProb": 0.3046889982739884,
       "loseProb": 0.3076376014830915,
-      "over25Prob": 0.4484304932735426,
+      "over25Prob": 0.47846889952153115,
       "isHome": true,
       "opponent": "Valencia",
       "matchDate": "2026-04-21T17:00:00Z"
@@ -14756,18 +14735,18 @@
       "matchDate": "2026-04-23T18:00:00Z"
     },
     "Celta Vigo": {
-      "winProb": 0.11412997120145578,
-      "drawProb": 0.14040204230014663,
-      "loseProb": 0.7454679864983976,
-      "over25Prob": 0.7407407407407407,
+      "winProb": 0.10874213820674473,
+      "drawProb": 0.13444765798341074,
+      "loseProb": 0.7568102038098444,
+      "over25Prob": 0.7633587786259541,
       "isHome": false,
       "opponent": "Barcelona",
       "matchDate": "2026-04-22T19:30:00Z"
     },
     "Oviedo": {
-      "winProb": 0.23352231092599016,
-      "drawProb": 0.25353850900536073,
-      "loseProb": 0.5129391800686489,
+      "winProb": 0.23902975115786165,
+      "drawProb": 0.25268859408116806,
+      "loseProb": 0.5082816547609702,
       "over25Prob": 0.5376344086021505,
       "isHome": true,
       "opponent": "Villarreal",
@@ -14777,15 +14756,15 @@
       "winProb": 0.5107123567184781,
       "drawProb": 0.2753405749264839,
       "loseProb": 0.21394706835503813,
-      "over25Prob": 0.4716981132075471,
+      "over25Prob": 0.48309178743961356,
       "isHome": true,
       "opponent": "CA Osasuna",
       "matchDate": "2026-04-21T17:00:00Z"
     },
     "Villarreal": {
-      "winProb": 0.5129391800686489,
-      "drawProb": 0.25353850900536073,
-      "loseProb": 0.23352231092599016,
+      "winProb": 0.5082816547609702,
+      "drawProb": 0.25268859408116806,
+      "loseProb": 0.23902975115786165,
       "over25Prob": 0.5376344086021505,
       "isHome": false,
       "opponent": "Oviedo",
@@ -14813,25 +14792,25 @@
       "winProb": 0.3076376014830915,
       "drawProb": 0.3046889982739884,
       "loseProb": 0.3876734002429202,
-      "over25Prob": 0.4484304932735426,
+      "over25Prob": 0.47846889952153115,
       "isHome": false,
       "opponent": "Mallorca",
       "matchDate": "2026-04-21T17:00:00Z"
     },
     "Real Madrid": {
-      "winProb": 0.7567447376222948,
-      "drawProb": 0.15134894752445893,
-      "loseProb": 0.09190631485324637,
-      "over25Prob": 0.6802721088435374,
+      "winProb": 0.7461544656519288,
+      "drawProb": 0.1580091809615849,
+      "loseProb": 0.09583635338648626,
+      "over25Prob": 0.6711409395973155,
       "isHome": true,
       "opponent": "Alavés",
       "matchDate": "2026-04-21T19:30:00Z"
     },
     "Alavés": {
-      "winProb": 0.09190631485324637,
-      "drawProb": 0.15134894752445893,
-      "loseProb": 0.7567447376222948,
-      "over25Prob": 0.6802721088435374,
+      "winProb": 0.09583635338648626,
+      "drawProb": 0.1580091809615849,
+      "loseProb": 0.7461544656519288,
+      "over25Prob": 0.6711409395973155,
       "isHome": false,
       "opponent": "Real Madrid",
       "matchDate": "2026-04-21T19:30:00Z"
@@ -14840,24 +14819,24 @@
       "winProb": 0.3869122266413463,
       "drawProb": 0.27912143036296533,
       "loseProb": 0.3339663429956884,
-      "over25Prob": 0.5376344086021505,
+      "over25Prob": 0.5747126436781609,
       "isHome": true,
       "opponent": "Real Betis",
       "matchDate": "2026-04-21T19:30:00Z"
     },
     "Elche CF": {
-      "winProb": 0.28687703573998924,
-      "drawProb": 0.2574139888261524,
-      "loseProb": 0.45570897543385847,
+      "winProb": 0.289564742305591,
+      "drawProb": 0.25678382808231653,
+      "loseProb": 0.45365142961209254,
       "over25Prob": 0.6172839506172839,
       "isHome": true,
       "opponent": "Atlético Madrid",
       "matchDate": "2026-04-22T17:00:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.45570897543385847,
-      "drawProb": 0.2574139888261524,
-      "loseProb": 0.28687703573998924,
+      "winProb": 0.45365142961209254,
+      "drawProb": 0.25678382808231653,
+      "loseProb": 0.289564742305591,
       "over25Prob": 0.6172839506172839,
       "isHome": false,
       "opponent": "Elche CF",
@@ -14873,10 +14852,10 @@
       "matchDate": "2026-04-22T18:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.7454679864983976,
-      "drawProb": 0.14040204230014663,
-      "loseProb": 0.11412997120145578,
-      "over25Prob": 0.7407407407407407,
+      "winProb": 0.7568102038098444,
+      "drawProb": 0.13444765798341074,
+      "loseProb": 0.10874213820674473,
+      "over25Prob": 0.7633587786259541,
       "isHome": true,
       "opponent": "Celta Vigo",
       "matchDate": "2026-04-22T19:30:00Z"
@@ -14902,10 +14881,42 @@
   },
   "news": [
     {
-      "title": "El tobillo de Gerard Martín enciende las alarmas en el Barça",
+      "title": "Kylian Mbappé no entrena a tres días de la Champions. ¿Preocupa su estado?",
+      "link": "https://www.jornadaperfecta.com/blog/mbappe-estado-molestias-cara-26/",
+      "date": "Sun, 12 Apr 2026 12:11:25 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Gerard Martín y Marc Bernal no entrenan a dos días de Champions",
       "link": "https://www.jornadaperfecta.com/blog/gerard-martin-lesion-tobillo-barcelona/",
-      "date": "Sat, 11 Apr 2026 18:56:25 +0000",
+      "date": "Sun, 12 Apr 2026 11:55:25 +0000",
       "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Luis Castro, sobre Carlos Álvarez, Iván Romero y Toljan",
+      "link": "https://www.jornadaperfecta.com/blog/luis-castro-previa-levante-getafe-j31/",
+      "date": "Sun, 12 Apr 2026 11:02:40 +0000",
+      "img": "https://cdn.biwenger.com/i/t/10.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Johnny Cardoso ya entrena con el grupo. Barrios, al margen",
+      "link": "https://www.jornadaperfecta.com/blog/johnny-cardoso-vuelta-lesion-champions-26/",
+      "date": "Sun, 12 Apr 2026 10:35:53 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Areso, Sannadi y Egiluz, bajas por decisión técnica",
+      "link": "https://www.jornadaperfecta.com/blog/areso-baja-jornada-31-25-26/",
+      "date": "Sun, 12 Apr 2026 09:52:54 +0000",
+      "img": "https://cdn.biwenger.com/i/t/1.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
@@ -14948,45 +14959,13 @@
       "img": "https://cdn.biwenger.com/i/t/5.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Lisci habla de la competencia entre Iker Muñoz y Torró",
-      "link": "https://www.jornadaperfecta.com/blog/lisci-previa-osasuna-betis-j31/",
-      "date": "Sat, 11 Apr 2026 12:08:23 +0000",
-      "img": "https://cdn.biwenger.com/i/t/93.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Demichelis, sobre Darder, Pablo Torre y Mascarell",
-      "link": "https://www.jornadaperfecta.com/blog/demichelis-previa-mallorca-rayo-j31/",
-      "date": "Sat, 11 Apr 2026 11:30:14 +0000",
-      "img": "https://cdn.biwenger.com/i/t/465.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Bordalás, sobre Davinchi, Satriano, Mayoral y Juanmi",
-      "link": "https://www.jornadaperfecta.com/blog/bordalas-previa-levante-getafe-j31/",
-      "date": "Sat, 11 Apr 2026 11:05:36 +0000",
-      "img": "https://cdn.biwenger.com/i/t/8.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Pellegrini confirma la vuelta de Lo Celso y habla de Isco",
-      "link": "https://www.jornadaperfecta.com/blog/pellegrini-previa-osasuna-betis-j31/",
-      "date": "Sat, 11 Apr 2026 10:50:52 +0000",
-      "img": "https://cdn.biwenger.com/i/t/87.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-12T07:01:25.198Z",
+    "updatedAt": "2026-04-12T12:33:11.269Z",
     "players": [
       {
         "id": "3374",
@@ -15030,11 +15009,11 @@
         "team": "CA Osasuna",
         "position": "",
         "nationality": "Croatia",
-        "appearances": 29,
+        "appearances": 30,
         "goals": 15,
         "assists": 0,
         "penalties": 5,
-        "minutesPerGoal": 174
+        "minutesPerGoal": 180
       },
       {
         "id": "33154",
@@ -15234,11 +15213,11 @@
         "team": "Real Betis Balompié",
         "position": "",
         "nationality": "Colombia",
-        "appearances": 25,
+        "appearances": 26,
         "goals": 8,
         "assists": 3,
         "penalties": 1,
-        "minutesPerGoal": 281
+        "minutesPerGoal": 293
       },
       {
         "id": "82132",
@@ -15294,11 +15273,11 @@
         "team": "Real Betis Balompié",
         "position": "",
         "nationality": "Spain",
-        "appearances": 30,
+        "appearances": 31,
         "goals": 7,
         "assists": 4,
         "penalties": 0,
-        "minutesPerGoal": 386
+        "minutesPerGoal": 399
       },
       {
         "id": "23132",
@@ -15318,11 +15297,11 @@
         "team": "Real Betis Balompié",
         "position": "",
         "nationality": "Brazil",
-        "appearances": 25,
+        "appearances": 26,
         "goals": 7,
         "assists": 5,
         "penalties": 0,
-        "minutesPerGoal": 321
+        "minutesPerGoal": 334
       },
       {
         "id": "112678",
@@ -15445,6 +15424,18 @@
         "minutesPerGoal": 435
       },
       {
+        "id": "175941",
+        "name": "Abdessamad Ezzalzouli",
+        "team": "Real Betis Balompié",
+        "position": "",
+        "nationality": "Morocco",
+        "appearances": 22,
+        "goals": 6,
+        "assists": 5,
+        "penalties": 0,
+        "minutesPerGoal": 330
+      },
+      {
         "id": "3331",
         "name": "Marcus Rashford",
         "team": "FC Barcelona",
@@ -15546,11 +15537,11 @@
         "team": "CA Osasuna",
         "position": "",
         "nationality": "Spain",
-        "appearances": 29,
+        "appearances": 30,
         "goals": 5,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 522
+        "minutesPerGoal": 540
       },
       {
         "id": "214533",
@@ -15594,23 +15585,11 @@
         "team": "CA Osasuna",
         "position": "",
         "nationality": "Spain",
-        "appearances": 30,
+        "appearances": 31,
         "goals": 5,
         "assists": 2,
         "penalties": 0,
-        "minutesPerGoal": 540
-      },
-      {
-        "id": "175941",
-        "name": "Abdessamad Ezzalzouli",
-        "team": "Real Betis Balompié",
-        "position": "",
-        "nationality": "Morocco",
-        "appearances": 21,
-        "goals": 5,
-        "assists": 5,
-        "penalties": 0,
-        "minutesPerGoal": 378
+        "minutesPerGoal": 558
       },
       {
         "id": "140814",
@@ -15714,11 +15693,11 @@
         "team": "Real Betis Balompié",
         "position": "",
         "nationality": "Spain",
-        "appearances": 26,
+        "appearances": 27,
         "goals": 4,
         "assists": 2,
         "penalties": 0,
-        "minutesPerGoal": 585
+        "minutesPerGoal": 608
       },
       {
         "id": "137485",
@@ -16182,11 +16161,11 @@
         "team": "Real Betis Balompié",
         "position": "",
         "nationality": "Argentina",
-        "appearances": 19,
+        "appearances": 20,
         "goals": 2,
         "assists": 2,
         "penalties": 0,
-        "minutesPerGoal": 855
+        "minutesPerGoal": 900
       }
     ]
   }
