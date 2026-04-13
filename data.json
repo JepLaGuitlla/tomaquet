@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-13T07:45:07.782Z",
+  "updatedAt": "2026-04-13T12:56:07.443Z",
   "players": [
     {
       "id": 11,
@@ -12041,7 +12041,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 2,
-          "season": "2024/2025 season"
+          "season": "Temporada 2024/2025"
         },
         "position": 2
       },
@@ -12058,9 +12058,9 @@
           13,
           1
         ],
-        "teamSize": 18,
-        "teamValue": 80380000,
-        "teamValueInc": 310000,
+        "teamSize": 17,
+        "teamValue": 79740000,
+        "teamValueInc": 330000,
         "position": 3
       },
       {
@@ -12099,7 +12099,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "2024/2025 season"
+          "season": "Temporada 2024/2025"
         },
         "position": 5,
         "role": ""
@@ -12135,13 +12135,13 @@
           2,
           3
         ],
-        "teamSize": 15,
-        "teamValue": 85850000,
-        "teamValueInc": 470000,
+        "teamSize": 14,
+        "teamValue": 82810000,
+        "teamValueInc": 540000,
         "lastTrophy": {
           "type": "league",
           "position": 1,
-          "season": "2024/2025 season"
+          "season": "Temporada 2024/2025"
         },
         "position": 7
       },
@@ -12219,7 +12219,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "2023/2024 season"
+          "season": "Temporada 2023/2024"
         },
         "position": 11,
         "positionInc": 2,
@@ -12307,8 +12307,8 @@
       "name": "🦊",
       "manager": "🦊",
       "points": 1502,
-      "value": 80380000,
-      "trend": 310000,
+      "value": 79740000,
+      "trend": 330000,
       "players": []
     },
     {
@@ -12343,8 +12343,8 @@
       "name": "Zaza Pachulia",
       "manager": "Zaza Pachulia",
       "points": 1398,
-      "value": 85850000,
-      "trend": 470000,
+      "value": 82810000,
+      "trend": 540000,
       "players": []
     },
     {
@@ -12415,10 +12415,10 @@
     "teamId": 6541195,
     "name": "🦊",
     "points": 1502,
-    "balance": 16299400,
+    "balance": 16933900,
     "lineup": {
       "type": "3-5-2",
-      "date": 1776066059,
+      "date": 1776069826,
       "playersID": [
         17021,
         37399,
@@ -12435,7 +12435,7 @@
       "reservesID": [
         null,
         39360,
-        27945,
+        38116,
         38216
       ]
     },
@@ -12495,13 +12495,6 @@
         "clause": 12825000,
         "invested": 1500000,
         "buyDate": 1765459975
-      },
-      {
-        "id": 27945,
-        "buyPrice": 1122222,
-        "clause": 1683333,
-        "invested": 0,
-        "buyDate": 1773727427
       },
       {
         "id": 32460,
@@ -12575,12 +12568,6 @@
         "until": 1776208271
       },
       {
-        "playerID": 27945,
-        "price": 1400000,
-        "type": "sale",
-        "until": 1776208271
-      },
-      {
         "playerID": 34127,
         "price": 1080000,
         "type": "sale",
@@ -12607,6 +12594,36 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1776084781,
+      "content": [
+        {
+          "player": 27059,
+          "from": {
+            "id": 148051,
+            "name": "Zaza Pachulia",
+            "icon": "i/u/148051.png?v=39"
+          },
+          "amount": 3119200
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1776067314,
+      "content": [
+        {
+          "player": 27945,
+          "from": {
+            "id": 6541195,
+            "name": "🦊",
+            "icon": "i/u/6541195.png?v=17"
+          },
+          "amount": 634500
+        }
+      ]
+    },
     {
       "type": "market",
       "date": 1776056691,
@@ -12710,27 +12727,6 @@
             "icon": "i/u/148051.png?v=39"
           },
           "amount": 16470000,
-          "type": "clause"
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1776004453,
-      "content": [
-        {
-          "player": 38958,
-          "from": {
-            "id": 148051,
-            "name": "Zaza Pachulia",
-            "icon": "i/u/148051.png?v=39"
-          },
-          "to": {
-            "id": 12713493,
-            "name": "Tata Martini",
-            "icon": "i/u/12713493.png"
-          },
-          "amount": 13627500,
           "type": "clause"
         }
       ]
@@ -13355,7 +13351,7 @@
     "balance": 4798622,
     "lineup": {
       "type": "4-3-3",
-      "date": 1776010464,
+      "date": 1776067340,
       "playersID": [
         14630,
         32440,
@@ -13363,7 +13359,7 @@
         40010,
         1908,
         26048,
-        1969,
+        32338,
         38368,
         38962,
         19577,
@@ -14717,144 +14713,144 @@
       "matchDate": "2026-04-27T19:00:00Z"
     },
     "Getafe": {
-      "winProb": 0.18667432510051696,
-      "drawProb": 0.23894313612866167,
-      "loseProb": 0.5743825387708213,
+      "winProb": 0.18277219064276343,
+      "drawProb": 0.23567993003935286,
+      "loseProb": 0.5815478793178838,
       "over25Prob": 0.5181347150259068,
       "isHome": true,
       "opponent": "Barcelona",
       "matchDate": "2026-04-25T14:15:00Z"
     },
     "Athletic Bilbao": {
-      "winProb": 0.22968397291196388,
-      "drawProb": 0.2483069977426636,
-      "loseProb": 0.5220090293453725,
+      "winProb": 0.22399276320367412,
+      "drawProb": 0.24820819706353073,
+      "loseProb": 0.5277990397327953,
       "over25Prob": 0.53475935828877,
       "isHome": false,
       "opponent": "Atlético Madrid",
       "matchDate": "2026-04-25T19:00:00Z"
     },
     "CA Osasuna": {
-      "winProb": 0.45052833813640736,
-      "drawProb": 0.26628242074927955,
-      "loseProb": 0.28318924111431315,
+      "winProb": 0.448041609171001,
+      "drawProb": 0.2674875278632841,
+      "loseProb": 0.2844708629657149,
       "over25Prob": 0.4716981132075471,
       "isHome": true,
       "opponent": "Sevilla",
       "matchDate": "2026-04-26T16:30:00Z"
     },
     "Mallorca": {
-      "winProb": 0.25424875285363996,
-      "drawProb": 0.28705504354443223,
-      "loseProb": 0.45869620360192787,
+      "winProb": 0.25978401727861766,
+      "drawProb": 0.2849244060475161,
+      "loseProb": 0.45529157667386605,
       "over25Prob": 0.44052863436123346,
       "isHome": false,
       "opponent": "Alavés",
       "matchDate": "2026-04-25T12:00:00Z"
     },
     "Valencia": {
-      "winProb": 0.46847599164926923,
-      "drawProb": 0.2697286012526096,
-      "loseProb": 0.26179540709812105,
+      "winProb": 0.4645602049530316,
+      "drawProb": 0.27583262169086253,
+      "loseProb": 0.2596071733561059,
       "over25Prob": 0.5076142131979695,
       "isHome": true,
       "opponent": "Girona",
       "matchDate": "2026-04-25T16:30:00Z"
     },
     "Real Madrid": {
-      "winProb": 0.48744623754732924,
-      "drawProb": 0.23872367018343565,
-      "loseProb": 0.273830092269235,
-      "over25Prob": 0.6944444444444444,
+      "winProb": 0.49276387415312717,
+      "drawProb": 0.22752016198936253,
+      "loseProb": 0.2797159638575104,
+      "over25Prob": 0.5,
       "isHome": false,
       "opponent": "Real Betis",
-      "matchDate": "2026-04-26T17:00:00Z"
+      "matchDate": "2026-04-24T19:00:00Z"
     },
     "Alavés": {
-      "winProb": 0.45869620360192787,
-      "drawProb": 0.28705504354443223,
-      "loseProb": 0.25424875285363996,
+      "winProb": 0.45529157667386605,
+      "drawProb": 0.2849244060475161,
+      "loseProb": 0.25978401727861766,
       "over25Prob": 0.44052863436123346,
       "isHome": true,
       "opponent": "Mallorca",
       "matchDate": "2026-04-25T12:00:00Z"
     },
     "Girona": {
-      "winProb": 0.26179540709812105,
-      "drawProb": 0.2697286012526096,
-      "loseProb": 0.46847599164926923,
+      "winProb": 0.2596071733561059,
+      "drawProb": 0.27583262169086253,
+      "loseProb": 0.4645602049530316,
       "over25Prob": 0.5076142131979695,
       "isHome": false,
       "opponent": "Valencia",
       "matchDate": "2026-04-25T16:30:00Z"
     },
     "Real Betis": {
-      "winProb": 0.273830092269235,
-      "drawProb": 0.23872367018343565,
-      "loseProb": 0.48744623754732924,
-      "over25Prob": 0.6944444444444444,
+      "winProb": 0.2797159638575104,
+      "drawProb": 0.22752016198936253,
+      "loseProb": 0.49276387415312717,
+      "over25Prob": 0.5,
       "isHome": true,
       "opponent": "Real Madrid",
-      "matchDate": "2026-04-26T17:00:00Z"
+      "matchDate": "2026-04-24T19:00:00Z"
     },
     "Elche CF": {
-      "winProb": 0.31225561389788853,
-      "drawProb": 0.27382415372584074,
-      "loseProb": 0.41392023237627085,
+      "winProb": 0.315220985341122,
+      "drawProb": 0.27642455637606084,
+      "loseProb": 0.40835445828281713,
       "over25Prob": 0.4672897196261682,
       "isHome": false,
       "opponent": "Oviedo",
       "matchDate": "2026-04-26T14:15:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.5220090293453725,
-      "drawProb": 0.2483069977426636,
-      "loseProb": 0.22968397291196388,
+      "winProb": 0.5277990397327953,
+      "drawProb": 0.24820819706353073,
+      "loseProb": 0.22399276320367412,
       "over25Prob": 0.53475935828877,
       "isHome": true,
       "opponent": "Athletic Bilbao",
       "matchDate": "2026-04-25T19:00:00Z"
     },
     "Real Sociedad": {
-      "winProb": 0.33392802943375555,
-      "drawProb": 0.2751641583322846,
-      "loseProb": 0.3909078122339599,
+      "winProb": 0.33392777034216586,
+      "drawProb": 0.2767098096936487,
+      "loseProb": 0.3893624199641855,
       "over25Prob": 0.47619047619047616,
       "isHome": false,
       "opponent": "Rayo Vallecano",
       "matchDate": "2026-04-26T12:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.5743825387708213,
-      "drawProb": 0.23894313612866167,
-      "loseProb": 0.18667432510051696,
+      "winProb": 0.5815478793178838,
+      "drawProb": 0.23567993003935286,
+      "loseProb": 0.18277219064276343,
       "over25Prob": 0.5181347150259068,
       "isHome": false,
       "opponent": "Getafe",
       "matchDate": "2026-04-25T14:15:00Z"
     },
     "Celta Vigo": {
-      "winProb": 0.24165457184325112,
-      "drawProb": 0.24818577648766327,
-      "loseProb": 0.5101596516690857,
+      "winProb": 0.24462816004124394,
+      "drawProb": 0.25133030141223694,
+      "loseProb": 0.5040415385465191,
       "over25Prob": 0.5434782608695652,
       "isHome": false,
       "opponent": "Villarreal",
       "matchDate": "2026-04-26T19:00:00Z"
     },
     "Sevilla": {
-      "winProb": 0.28318924111431315,
-      "drawProb": 0.26628242074927955,
-      "loseProb": 0.45052833813640736,
+      "winProb": 0.2844708629657149,
+      "drawProb": 0.2674875278632841,
+      "loseProb": 0.448041609171001,
       "over25Prob": 0.4716981132075471,
       "isHome": false,
       "opponent": "CA Osasuna",
       "matchDate": "2026-04-26T16:30:00Z"
     },
     "Rayo Vallecano": {
-      "winProb": 0.3909078122339599,
-      "drawProb": 0.2751641583322846,
-      "loseProb": 0.33392802943375555,
+      "winProb": 0.3893624199641855,
+      "drawProb": 0.2767098096936487,
+      "loseProb": 0.33392777034216586,
       "over25Prob": 0.47619047619047616,
       "isHome": true,
       "opponent": "Real Sociedad",
@@ -14870,18 +14866,18 @@
       "matchDate": "2026-04-27T19:00:00Z"
     },
     "Oviedo": {
-      "winProb": 0.41392023237627085,
-      "drawProb": 0.27382415372584074,
-      "loseProb": 0.31225561389788853,
+      "winProb": 0.40835445828281713,
+      "drawProb": 0.27642455637606084,
+      "loseProb": 0.315220985341122,
       "over25Prob": 0.4672897196261682,
       "isHome": true,
       "opponent": "Elche CF",
       "matchDate": "2026-04-26T14:15:00Z"
     },
     "Villarreal": {
-      "winProb": 0.5101596516690857,
-      "drawProb": 0.24818577648766327,
-      "loseProb": 0.24165457184325112,
+      "winProb": 0.5040415385465191,
+      "drawProb": 0.25133030141223694,
+      "loseProb": 0.24462816004124394,
       "over25Prob": 0.5434782608695652,
       "isHome": true,
       "opponent": "Celta Vigo",
@@ -14889,6 +14885,70 @@
     }
   },
   "news": [
+    {
+      "title": "Simeone no da pistas sobre el portero titular en Champions",
+      "link": "https://www.jornadaperfecta.com/blog/simeone-previa-atleti-barcelona-champions-vuelta-26/",
+      "date": "Mon, 13 Apr 2026 12:38:23 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Se confirma la lesión de Cömert: parte médico oficial",
+      "link": "https://www.jornadaperfecta.com/blog/comert-lesion-valencia-cf/",
+      "date": "Mon, 13 Apr 2026 12:10:28 +0000",
+      "img": "https://cdn.biwenger.com/i/t/18.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Lemar vuelve a la titularidad con gol en el Bernabéu: ¿fichar?",
+      "link": "https://www.jornadaperfecta.com/blog/lemar-recomendable-fantasy-girona/",
+      "date": "Mon, 13 Apr 2026 11:00:10 +0000",
+      "img": "https://cdn.biwenger.com/i/t/289.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Atlético vs Barcelona: cuotas, apuestas y bono de 888Sport &#124; Champions League",
+      "link": "https://www.jornadaperfecta.com/blog/888sport-atletico-vs-barcelona-cuotas-champions/",
+      "date": "Mon, 13 Apr 2026 10:58:22 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/04/888Sport-Atletico-vs-Barcelona-cuotas-Champions.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Johnny Cardoso, Oblak y Pablo Barrios entrenan con el grupo",
+      "link": "https://www.jornadaperfecta.com/blog/johnny-cardoso-vuelta-lesion-champions-26/",
+      "date": "Mon, 13 Apr 2026 10:05:53 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Luvumbo se retiró con molestias y preocupa en Mallorca",
+      "link": "https://www.jornadaperfecta.com/blog/luvumbo-lesion-muscular/",
+      "date": "Mon, 13 Apr 2026 09:31:40 +0000",
+      "img": "https://cdn.biwenger.com/i/t/465.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Gerard Martín convocado para Champions y Bernal pendiente del alta médica",
+      "link": "https://www.jornadaperfecta.com/blog/gerard-martin-lesion-tobillo-barcelona/",
+      "date": "Mon, 13 Apr 2026 09:10:25 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Actualizadas las Alineaciones Probables para la Jornada 33",
+      "link": "https://www.jornadaperfecta.com/blog/alineaciones-probables-j33-laliga-25-26/",
+      "date": "Mon, 13 Apr 2026 09:00:46 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Lesionados que podrían llegar a la jornada 33 y descartados",
       "link": "https://www.jornadaperfecta.com/blog/lesionados-j33-25-26/",
@@ -14904,77 +14964,13 @@
       "img": "https://cdn.biwenger.com/i/t/5.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Gerard Martín y Marc Bernal no entrenan a dos días de Champions",
-      "link": "https://www.jornadaperfecta.com/blog/gerard-martin-lesion-tobillo-barcelona/",
-      "date": "Sun, 12 Apr 2026 14:25:25 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Kylian Mbappé no entrena a tres días de la Champions. ¿Preocupa su estado?",
-      "link": "https://www.jornadaperfecta.com/blog/mbappe-estado-molestias-cara-26/",
-      "date": "Sun, 12 Apr 2026 12:11:25 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Luis Castro, sobre Carlos Álvarez, Iván Romero y Toljan",
-      "link": "https://www.jornadaperfecta.com/blog/luis-castro-previa-levante-getafe-j31/",
-      "date": "Sun, 12 Apr 2026 11:02:40 +0000",
-      "img": "https://cdn.biwenger.com/i/t/10.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Johnny Cardoso ya entrena con el grupo. Barrios, al margen",
-      "link": "https://www.jornadaperfecta.com/blog/johnny-cardoso-vuelta-lesion-champions-26/",
-      "date": "Sun, 12 Apr 2026 10:35:53 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Areso, Sannadi y Egiluz, bajas por decisión técnica",
-      "link": "https://www.jornadaperfecta.com/blog/areso-baja-jornada-31-25-26/",
-      "date": "Sun, 12 Apr 2026 09:52:54 +0000",
-      "img": "https://cdn.biwenger.com/i/t/1.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Cömert, sustituido por molestias en la segunda mitad",
-      "link": "https://www.jornadaperfecta.com/blog/comert-lesion-valencia-cf/",
-      "date": "Sat, 11 Apr 2026 16:21:28 +0000",
-      "img": "https://cdn.biwenger.com/i/t/18.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Valverde, sobre Vivian, Nico Williams y Beñat Prados",
-      "link": "https://www.jornadaperfecta.com/blog/valverde-previa-athletic-villarreal-j31-2/",
-      "date": "Sat, 11 Apr 2026 15:43:21 +0000",
-      "img": "https://cdn.biwenger.com/i/t/1.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Matarazzo confirma que reservó a Oyarzabal para la Final al no estar al 100%",
-      "link": "https://www.jornadaperfecta.com/blog/oyarzabal-suplencia-real-sociedad-j31/",
-      "date": "Sat, 11 Apr 2026 14:44:15 +0000",
-      "img": "https://cdn.biwenger.com/i/t/13.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-13T07:45:07.781Z",
+    "updatedAt": "2026-04-13T12:56:05.903Z",
     "players": [
       {
         "id": "3374",
