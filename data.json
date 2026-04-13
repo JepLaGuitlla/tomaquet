@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-13T12:56:07.443Z",
+  "updatedAt": "2026-04-13T18:57:31.746Z",
   "players": [
     {
       "id": 11,
@@ -12058,9 +12058,9 @@
           13,
           1
         ],
-        "teamSize": 17,
-        "teamValue": 79740000,
-        "teamValueInc": 330000,
+        "teamSize": 16,
+        "teamValue": 78580000,
+        "teamValueInc": 270000,
         "position": 3
       },
       {
@@ -12175,9 +12175,9 @@
           8,
           14
         ],
-        "teamSize": 13,
-        "teamValue": 60940000,
-        "teamValueInc": 100000,
+        "teamSize": 14,
+        "teamValue": 62100000,
+        "teamValueInc": 160000,
         "position": 9,
         "positionInc": 1,
         "role": ""
@@ -12307,8 +12307,8 @@
       "name": "🦊",
       "manager": "🦊",
       "points": 1502,
-      "value": 79740000,
-      "trend": 330000,
+      "value": 78580000,
+      "trend": 270000,
       "players": []
     },
     {
@@ -12361,8 +12361,8 @@
       "name": "CIGALERU",
       "manager": "CIGALERU",
       "points": 1275,
-      "value": 60940000,
-      "trend": 100000,
+      "value": 62100000,
+      "trend": 160000,
       "players": []
     },
     {
@@ -12415,10 +12415,10 @@
     "teamId": 6541195,
     "name": "🦊",
     "points": 1502,
-    "balance": 16933900,
+    "balance": 18803900,
     "lineup": {
       "type": "3-5-2",
-      "date": 1776069826,
+      "date": 1776092514,
       "playersID": [
         17021,
         37399,
@@ -12430,12 +12430,12 @@
         25127,
         39885,
         26271,
-        39431
+        38116
       ],
       "reservesID": [
         null,
         39360,
-        38116,
+        34127,
         38216
       ]
     },
@@ -12464,8 +12464,8 @@
       {
         "id": 1908,
         "buyPrice": 2235666,
-        "clause": 4673499,
-        "invested": 880000,
+        "clause": 5603499,
+        "invested": 1500000,
         "buyDate": 1773209088
       },
       {
@@ -12539,13 +12539,6 @@
         "buyDate": 1775451744
       },
       {
-        "id": 39431,
-        "buyPrice": 1111111,
-        "clause": 2490000,
-        "invested": 500000,
-        "buyDate": 1773554472
-      },
-      {
         "id": 39736,
         "buyPrice": 151234,
         "clause": 151234000000,
@@ -12594,6 +12587,27 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1776091814,
+      "content": [
+        {
+          "player": 39431,
+          "from": {
+            "id": 6541195,
+            "name": "🦊",
+            "icon": "i/u/6541195.png?v=17"
+          },
+          "to": {
+            "id": 12696899,
+            "name": "CIGALERU",
+            "icon": "i/u/12696899.png"
+          },
+          "amount": 2490000,
+          "type": "clause"
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1776084781,
@@ -12706,27 +12720,6 @@
             "icon": "i/u/6541195.png?v=17"
           },
           "amount": 3150000,
-          "type": "clause"
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1776014661,
-      "content": [
-        {
-          "player": 37451,
-          "from": {
-            "id": 6541195,
-            "name": "🦊",
-            "icon": "i/u/6541195.png?v=17"
-          },
-          "to": {
-            "id": 148051,
-            "name": "Zaza Pachulia",
-            "icon": "i/u/148051.png?v=39"
-          },
-          "amount": 16470000,
           "type": "clause"
         }
       ]
@@ -14122,7 +14115,7 @@
           "L"
         ],
         "gf": 3,
-        "ga": 9,
+        "ga": 10,
         "crest": "https://crests.football-data.org/77.png",
         "name": "Athletic Club"
       },
@@ -14267,7 +14260,7 @@
         "gf": 11,
         "ga": 10,
         "crest": "https://crests.football-data.org/92.png",
-        "name": "Real Sociedad de Fútbol"
+        "name": "Real Sociedad de F��tbol"
       },
       "94": {
         "results": [
@@ -14277,7 +14270,7 @@
           "D",
           "W"
         ],
-        "gf": 8,
+        "gf": 9,
         "ga": 5,
         "crest": "https://crests.football-data.org/94.png",
         "name": "Villarreal CF"
@@ -14578,7 +14571,7 @@
         },
         "score": {
           "home": 1,
-          "away": 2
+          "away": 3
         }
       },
       {
@@ -14686,7 +14679,7 @@
       {
         "date": "2026-04-11T12:00:00Z",
         "home": {
-          "name": "Real Sociedad de Fútbol",
+          "name": "Real Sociedad de F��tbol",
           "short": "Real Sociedad",
           "crest": "https://crests.football-data.org/92.png"
         },
@@ -14758,9 +14751,9 @@
       "matchDate": "2026-04-25T16:30:00Z"
     },
     "Real Madrid": {
-      "winProb": 0.49276387415312717,
-      "drawProb": 0.22752016198936253,
-      "loseProb": 0.2797159638575104,
+      "winProb": 0.4915384104037142,
+      "drawProb": 0.23025949807746804,
+      "loseProb": 0.27820209151881764,
       "over25Prob": 0.5,
       "isHome": false,
       "opponent": "Real Betis",
@@ -14785,9 +14778,9 @@
       "matchDate": "2026-04-25T16:30:00Z"
     },
     "Real Betis": {
-      "winProb": 0.2797159638575104,
-      "drawProb": 0.22752016198936253,
-      "loseProb": 0.49276387415312717,
+      "winProb": 0.27820209151881764,
+      "drawProb": 0.23025949807746804,
+      "loseProb": 0.4915384104037142,
       "over25Prob": 0.5,
       "isHome": true,
       "opponent": "Real Madrid",
@@ -14812,9 +14805,9 @@
       "matchDate": "2026-04-25T19:00:00Z"
     },
     "Real Sociedad": {
-      "winProb": 0.33392777034216586,
-      "drawProb": 0.2767098096936487,
-      "loseProb": 0.3893624199641855,
+      "winProb": 0.33518023933540897,
+      "drawProb": 0.2722182054271001,
+      "loseProb": 0.392601555237491,
       "over25Prob": 0.47619047619047616,
       "isHome": false,
       "opponent": "Rayo Vallecano",
@@ -14830,10 +14823,10 @@
       "matchDate": "2026-04-25T14:15:00Z"
     },
     "Celta Vigo": {
-      "winProb": 0.24462816004124394,
-      "drawProb": 0.25133030141223694,
-      "loseProb": 0.5040415385465191,
-      "over25Prob": 0.5434782608695652,
+      "winProb": 0.2355676371700408,
+      "drawProb": 0.24830102296301593,
+      "loseProb": 0.5161313398669434,
+      "over25Prob": 0.5524861878453039,
       "isHome": false,
       "opponent": "Villarreal",
       "matchDate": "2026-04-26T19:00:00Z"
@@ -14848,9 +14841,9 @@
       "matchDate": "2026-04-26T16:30:00Z"
     },
     "Rayo Vallecano": {
-      "winProb": 0.3893624199641855,
-      "drawProb": 0.2767098096936487,
-      "loseProb": 0.33392777034216586,
+      "winProb": 0.392601555237491,
+      "drawProb": 0.2722182054271001,
+      "loseProb": 0.33518023933540897,
       "over25Prob": 0.47619047619047616,
       "isHome": true,
       "opponent": "Real Sociedad",
@@ -14875,16 +14868,72 @@
       "matchDate": "2026-04-26T14:15:00Z"
     },
     "Villarreal": {
-      "winProb": 0.5040415385465191,
-      "drawProb": 0.25133030141223694,
-      "loseProb": 0.24462816004124394,
-      "over25Prob": 0.5434782608695652,
+      "winProb": 0.5161313398669434,
+      "drawProb": 0.24830102296301593,
+      "loseProb": 0.2355676371700408,
+      "over25Prob": 0.5524861878453039,
       "isHome": true,
       "opponent": "Celta Vigo",
       "matchDate": "2026-04-26T19:00:00Z"
     }
   },
   "news": [
+    {
+      "title": "Frenkie de Jong está de vuelta. ¿Seguirá siendo importante?",
+      "link": "https://www.jornadaperfecta.com/blog/frenkie-de-jong-analisis-vuelta-lesion-26/",
+      "date": "Mon, 13 Apr 2026 17:00:15 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/02/image-2026-02-13T204411.801.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Flick, sobre Yamal, De Jong, Marc Bernal, Gavi y Fermín",
+      "link": "https://www.jornadaperfecta.com/blog/flick-previa-champions-cuartos-vuelta-atleti/",
+      "date": "Mon, 13 Apr 2026 15:58:21 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Alineaciones probables del Atlético &#8211; Barcelona de Champions",
+      "link": "https://www.jornadaperfecta.com/blog/alineaciones-probables-atletico-barcelona-cuartos-champions/",
+      "date": "Mon, 13 Apr 2026 15:00:27 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Mateo Joseph será operado de la rodilla: adiós a la temporada",
+      "link": "https://www.jornadaperfecta.com/blog/mateo-joseph-lesion-rodilla-mallorca/",
+      "date": "Mon, 13 Apr 2026 14:45:25 +0000",
+      "img": "https://cdn.biwenger.com/i/t/465.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Mbappé no arranca en su vuelta, ¿vender o mantener en fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/mbappe-dudas-fantasy-real-madrid/",
+      "date": "Mon, 13 Apr 2026 13:00:12 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Abel Ruiz: Parte médico oficial y tiempo de baja",
+      "link": "https://www.jornadaperfecta.com/blog/abel-ruiz-lesion-girona-fc/",
+      "date": "Mon, 13 Apr 2026 12:59:53 +0000",
+      "img": "https://cdn.biwenger.com/i/t/289.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Kylian Mbappé vuelve a entrenar tras ausentarse el domingo",
+      "link": "https://www.jornadaperfecta.com/blog/mbappe-estado-molestias-cara-26/",
+      "date": "Mon, 13 Apr 2026 12:55:25 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Simeone no da pistas sobre el portero titular en Champions",
       "link": "https://www.jornadaperfecta.com/blog/simeone-previa-atleti-barcelona-champions-vuelta-26/",
@@ -14908,69 +14957,13 @@
       "img": "https://cdn.biwenger.com/i/t/289.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Atlético vs Barcelona: cuotas, apuestas y bono de 888Sport &#124; Champions League",
-      "link": "https://www.jornadaperfecta.com/blog/888sport-atletico-vs-barcelona-cuotas-champions/",
-      "date": "Mon, 13 Apr 2026 10:58:22 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/04/888Sport-Atletico-vs-Barcelona-cuotas-Champions.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Johnny Cardoso, Oblak y Pablo Barrios entrenan con el grupo",
-      "link": "https://www.jornadaperfecta.com/blog/johnny-cardoso-vuelta-lesion-champions-26/",
-      "date": "Mon, 13 Apr 2026 10:05:53 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Luvumbo se retiró con molestias y preocupa en Mallorca",
-      "link": "https://www.jornadaperfecta.com/blog/luvumbo-lesion-muscular/",
-      "date": "Mon, 13 Apr 2026 09:31:40 +0000",
-      "img": "https://cdn.biwenger.com/i/t/465.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Gerard Martín convocado para Champions y Bernal pendiente del alta médica",
-      "link": "https://www.jornadaperfecta.com/blog/gerard-martin-lesion-tobillo-barcelona/",
-      "date": "Mon, 13 Apr 2026 09:10:25 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Actualizadas las Alineaciones Probables para la Jornada 33",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-probables-j33-laliga-25-26/",
-      "date": "Mon, 13 Apr 2026 09:00:46 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Lesionados que podrían llegar a la jornada 33 y descartados",
-      "link": "https://www.jornadaperfecta.com/blog/lesionados-j33-25-26/",
-      "date": "Mon, 13 Apr 2026 07:00:17 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/11/Raphinha-FC-Barcelona-fantasy.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Calendario fantasy de abril: equipos más y menos recomendables",
-      "link": "https://www.jornadaperfecta.com/blog/calendario-fantasy-abril-2026/",
-      "date": "Mon, 13 Apr 2026 06:00:34 +0000",
-      "img": "https://cdn.biwenger.com/i/t/5.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-13T12:56:05.903Z",
+    "updatedAt": "2026-04-13T18:57:30.146Z",
     "players": [
       {
         "id": "3374",
@@ -15350,11 +15343,11 @@
         "team": "Levante UD",
         "position": "",
         "nationality": "Spain",
-        "appearances": 26,
+        "appearances": 27,
         "goals": 7,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 334
+        "minutesPerGoal": 347
       },
       {
         "id": "203439",
@@ -15362,11 +15355,11 @@
         "team": "Levante UD",
         "position": "",
         "nationality": "Cameroon",
-        "appearances": 28,
+        "appearances": 29,
         "goals": 6,
         "assists": 5,
         "penalties": 0,
-        "minutesPerGoal": 420
+        "minutesPerGoal": 435
       },
       {
         "id": "32398",
@@ -15482,11 +15475,11 @@
         "team": "Levante UD",
         "position": "",
         "nationality": "Spain",
-        "appearances": 29,
+        "appearances": 30,
         "goals": 5,
         "assists": 2,
         "penalties": 0,
-        "minutesPerGoal": 522
+        "minutesPerGoal": 540
       },
       {
         "id": "182319",
@@ -15866,11 +15859,11 @@
         "team": "Getafe CF",
         "position": "",
         "nationality": "Uruguay",
-        "appearances": 11,
+        "appearances": 12,
         "goals": 4,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 248
+        "minutesPerGoal": 270
       },
       {
         "id": "33496",
@@ -15902,11 +15895,11 @@
         "team": "Getafe CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 26,
+        "appearances": 27,
         "goals": 3,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 780
+        "minutesPerGoal": 810
       },
       {
         "id": "101182",
@@ -15986,11 +15979,11 @@
         "team": "Levante UD",
         "position": "",
         "nationality": "Spain",
-        "appearances": 27,
+        "appearances": 28,
         "goals": 3,
         "assists": 2,
         "penalties": 0,
-        "minutesPerGoal": 810
+        "minutesPerGoal": 840
       },
       {
         "id": "31913",
@@ -16082,11 +16075,11 @@
         "team": "Levante UD",
         "position": "",
         "nationality": "Spain",
-        "appearances": 31,
+        "appearances": 32,
         "goals": 3,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 930
+        "minutesPerGoal": 960
       },
       {
         "id": "156967",
@@ -16094,11 +16087,11 @@
         "team": "Getafe CF",
         "position": "",
         "nationality": "Argentina",
-        "appearances": 10,
+        "appearances": 11,
         "goals": 3,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 300
+        "minutesPerGoal": 330
       },
       {
         "id": "159520",
