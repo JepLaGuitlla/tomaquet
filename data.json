@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-14T07:14:47.163Z",
+  "updatedAt": "2026-04-14T12:55:35.183Z",
   "players": [
     {
       "id": 11,
@@ -1635,7 +1635,7 @@
       "name": "Domingos Duarte",
       "position": 2,
       "price": 1750000,
-      "points": 97,
+      "points": 96,
       "trend": 50000,
       "playedHome": 13,
       "playedAway": 15,
@@ -1643,7 +1643,7 @@
       "teamId": 8,
       "status": "ok",
       "jForm": [
-        2,
+        1,
         6,
         11,
         4,
@@ -6857,7 +6857,7 @@
       "name": "Olasagasti",
       "position": 3,
       "price": 910000,
-      "points": 84,
+      "points": 85,
       "trend": -10000,
       "playedHome": 14,
       "playedAway": 12,
@@ -6865,7 +6865,7 @@
       "teamId": 10,
       "status": "ok",
       "jForm": [
-        2,
+        3,
         3,
         5,
         null,
@@ -9563,7 +9563,7 @@
       "name": "Espí",
       "position": 4,
       "price": 7920000,
-      "points": 105,
+      "points": 106,
       "trend": 210000,
       "playedHome": 12,
       "playedAway": 6,
@@ -9571,7 +9571,7 @@
       "teamId": 10,
       "status": "ok",
       "jForm": [
-        10,
+        11,
         3,
         17,
         12,
@@ -11829,7 +11829,7 @@
       "name": "Birmancevic",
       "position": 4,
       "price": 210000,
-      "points": 10,
+      "points": 9,
       "trend": 0,
       "playedHome": 2,
       "playedAway": 2,
@@ -11837,7 +11837,7 @@
       "teamId": 8,
       "status": "ok",
       "jForm": [
-        2,
+        1,
         3,
         null,
         3,
@@ -12415,10 +12415,10 @@
     "teamId": 6541195,
     "name": "🦊",
     "points": 1502,
-    "balance": 18953500,
+    "balance": 17953500,
     "lineup": {
       "type": "3-5-2",
-      "date": 1776092514,
+      "date": 1776157512,
       "playersID": [
         17021,
         37399,
@@ -12457,8 +12457,8 @@
       {
         "id": 26994,
         "buyPrice": 5715000,
-        "clause": 8572500,
-        "invested": 0,
+        "clause": 10072500,
+        "invested": 1000000,
         "buyDate": 1775649508
       },
       {
@@ -12722,21 +12722,6 @@
           },
           "amount": 2490000,
           "type": "clause"
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1776084781,
-      "content": [
-        {
-          "player": 27059,
-          "from": {
-            "id": 148051,
-            "name": "Zaza Pachulia",
-            "icon": "i/u/148051.png?v=39"
-          },
-          "amount": 3119200
         }
       ]
     }
@@ -13435,7 +13420,7 @@
       {
         "id": 31707,
         "buyPrice": 7658222,
-        "clause": 0,
+        "clause": 9465000,
         "invested": 0,
         "buyDate": 1770444175
       },
@@ -13484,7 +13469,7 @@
       {
         "id": 39360,
         "buyPrice": 3099999,
-        "clause": 0,
+        "clause": 4275000,
         "invested": 0,
         "buyDate": 1775883874
       },
@@ -13510,7 +13495,20 @@
         "buyDate": 1774159515
       }
     ],
-    "market": []
+    "market": [
+      {
+        "playerID": 31707,
+        "price": 9465000,
+        "type": "sale",
+        "until": 1776336573
+      },
+      {
+        "playerID": 39360,
+        "price": 4275000,
+        "type": "sale",
+        "until": 1776336617
+      }
+    ]
   },
   "boardEnBas": [
     {
@@ -14885,264 +14883,264 @@
   },
   "odds": {
     "Athletic Bilbao": {
-      "winProb": 0.5109516616314199,
-      "drawProb": 0.2709592145015106,
-      "loseProb": 0.21808912386706952,
-      "over25Prob": 0.5076142131979695,
-      "isHome": true,
-      "opponent": "CA Osasuna",
-      "matchDate": "2026-04-21T17:00:00Z"
+      "winProb": 0.22399276320367412,
+      "drawProb": 0.24820819706353073,
+      "loseProb": 0.5277990397327953,
+      "over25Prob": 0.53475935828877,
+      "isHome": false,
+      "opponent": "Atlético Madrid",
+      "matchDate": "2026-04-25T19:00:00Z"
     },
     "CA Osasuna": {
-      "winProb": 0.21808912386706952,
-      "drawProb": 0.2709592145015106,
-      "loseProb": 0.5109516616314199,
-      "over25Prob": 0.5076142131979695,
-      "isHome": false,
-      "opponent": "Athletic Bilbao",
-      "matchDate": "2026-04-21T17:00:00Z"
-    },
-    "Mallorca": {
-      "winProb": 0.39590443686006827,
-      "drawProb": 0.29692832764505117,
-      "loseProb": 0.30716723549488056,
-      "over25Prob": 0.47619047619047616,
-      "isHome": true,
-      "opponent": "Valencia",
-      "matchDate": "2026-04-21T17:00:00Z"
-    },
-    "Valencia": {
-      "winProb": 0.30716723549488056,
-      "drawProb": 0.29692832764505117,
-      "loseProb": 0.39590443686006827,
-      "over25Prob": 0.47619047619047616,
-      "isHome": false,
-      "opponent": "Mallorca",
-      "matchDate": "2026-04-21T17:00:00Z"
-    },
-    "Real Madrid": {
-      "winProb": 0.7244968543100894,
-      "drawProb": 0.1681379492078132,
-      "loseProb": 0.10736519648209757,
-      "over25Prob": 0.6711409395973155,
-      "isHome": true,
-      "opponent": "Alavés",
-      "matchDate": "2026-04-21T19:30:00Z"
-    },
-    "Alavés": {
-      "winProb": 0.10736519648209757,
-      "drawProb": 0.1681379492078132,
-      "loseProb": 0.7244968543100894,
-      "over25Prob": 0.6711409395973155,
-      "isHome": false,
-      "opponent": "Real Madrid",
-      "matchDate": "2026-04-21T19:30:00Z"
-    },
-    "Girona": {
-      "winProb": 0.38659676316389335,
-      "drawProb": 0.27786642352404833,
-      "loseProb": 0.33553681331205837,
-      "over25Prob": 0.5714285714285714,
-      "isHome": true,
-      "opponent": "Real Betis",
-      "matchDate": "2026-04-21T19:30:00Z"
-    },
-    "Real Betis": {
-      "winProb": 0.33553681331205837,
-      "drawProb": 0.27786642352404833,
-      "loseProb": 0.38659676316389335,
-      "over25Prob": 0.5714285714285714,
-      "isHome": false,
-      "opponent": "Girona",
-      "matchDate": "2026-04-21T19:30:00Z"
-    },
-    "Elche CF": {
-      "winProb": 0.2844155364204146,
-      "drawProb": 0.25751136405632136,
-      "loseProb": 0.45807309952326397,
-      "over25Prob": 0.5952380952380952,
-      "isHome": true,
-      "opponent": "Atlético Madrid",
-      "matchDate": "2026-04-22T17:00:00Z"
-    },
-    "Atlético Madrid": {
-      "winProb": 0.45807309952326397,
-      "drawProb": 0.25751136405632136,
-      "loseProb": 0.2844155364204146,
-      "over25Prob": 0.5952380952380952,
-      "isHome": false,
-      "opponent": "Elche CF",
-      "matchDate": "2026-04-22T17:00:00Z"
-    },
-    "Real Sociedad": {
-      "winProb": 0.5067806056102545,
-      "drawProb": 0.28935537804198397,
-      "loseProb": 0.20386401634776144,
-      "over25Prob": 0.40322580645161293,
-      "isHome": true,
-      "opponent": "Getafe",
-      "matchDate": "2026-04-22T18:00:00Z"
-    },
-    "Getafe": {
-      "winProb": 0.20386401634776144,
-      "drawProb": 0.28935537804198397,
-      "loseProb": 0.5067806056102545,
-      "over25Prob": 0.40322580645161293,
-      "isHome": false,
-      "opponent": "Real Sociedad",
-      "matchDate": "2026-04-22T18:00:00Z"
-    },
-    "Barcelona": {
-      "winProb": 0.7316599818864018,
-      "drawProb": 0.15390089274162244,
-      "loseProb": 0.11443912537197568,
-      "over25Prob": 0.7575757575757576,
-      "isHome": true,
-      "opponent": "Celta Vigo",
-      "matchDate": "2026-04-22T19:30:00Z"
-    },
-    "Celta Vigo": {
-      "winProb": 0.11443912537197568,
-      "drawProb": 0.15390089274162244,
-      "loseProb": 0.7316599818864018,
-      "over25Prob": 0.7575757575757576,
-      "isHome": false,
-      "opponent": "Barcelona",
-      "matchDate": "2026-04-22T19:30:00Z"
-    },
-    "Levante": {
-      "winProb": 0.3707451701931923,
-      "drawProb": 0.28702851885924563,
-      "loseProb": 0.34222631094756206,
-      "over25Prob": 0.45248868778280543,
+      "winProb": 0.448041609171001,
+      "drawProb": 0.2674875278632841,
+      "loseProb": 0.2844708629657149,
+      "over25Prob": 0.4716981132075471,
       "isHome": true,
       "opponent": "Sevilla",
-      "matchDate": "2026-04-23T17:00:00Z"
+      "matchDate": "2026-04-26T16:30:00Z"
     },
-    "Sevilla": {
-      "winProb": 0.34222631094756206,
-      "drawProb": 0.28702851885924563,
-      "loseProb": 0.3707451701931923,
-      "over25Prob": 0.45248868778280543,
+    "Mallorca": {
+      "winProb": 0.25978401727861766,
+      "drawProb": 0.2849244060475161,
+      "loseProb": 0.45529157667386605,
+      "over25Prob": 0.44052863436123346,
       "isHome": false,
-      "opponent": "Levante",
-      "matchDate": "2026-04-23T17:00:00Z"
+      "opponent": "Alavés",
+      "matchDate": "2026-04-25T12:00:00Z"
     },
-    "Rayo Vallecano": {
-      "winProb": 0.5053405306075571,
-      "drawProb": 0.2710462845985988,
-      "loseProb": 0.223613184793844,
-      "over25Prob": 0.4608294930875576,
-      "isHome": true,
-      "opponent": "Espanyol",
-      "matchDate": "2026-04-23T18:00:00Z"
-    },
-    "Espanyol": {
-      "winProb": 0.223613184793844,
-      "drawProb": 0.2710462845985988,
-      "loseProb": 0.5053405306075571,
-      "over25Prob": 0.4608294930875576,
-      "isHome": false,
-      "opponent": "Rayo Vallecano",
-      "matchDate": "2026-04-23T18:00:00Z"
-    },
-    "Oviedo": {
-      "winProb": 0.2426476354795702,
-      "drawProb": 0.26405772096306174,
-      "loseProb": 0.49329464355736796,
+    "Valencia": {
+      "winProb": 0.4645602049530316,
+      "drawProb": 0.27583262169086253,
+      "loseProb": 0.2596071733561059,
       "over25Prob": 0.5076142131979695,
       "isHome": true,
-      "opponent": "Villarreal",
-      "matchDate": "2026-04-23T19:30:00Z"
+      "opponent": "Girona",
+      "matchDate": "2026-04-25T16:30:00Z"
     },
-    "Villarreal": {
-      "winProb": 0.49329464355736796,
-      "drawProb": 0.26405772096306174,
-      "loseProb": 0.2426476354795702,
+    "Real Madrid": {
+      "winProb": 0.510853048614815,
+      "drawProb": 0.2214887343644652,
+      "loseProb": 0.26765821702071996,
+      "over25Prob": 0.6944444444444444,
+      "isHome": false,
+      "opponent": "Real Betis",
+      "matchDate": "2026-04-24T19:00:00Z"
+    },
+    "Alavés": {
+      "winProb": 0.45529157667386605,
+      "drawProb": 0.2849244060475161,
+      "loseProb": 0.25978401727861766,
+      "over25Prob": 0.44052863436123346,
+      "isHome": true,
+      "opponent": "Mallorca",
+      "matchDate": "2026-04-25T12:00:00Z"
+    },
+    "Girona": {
+      "winProb": 0.2596071733561059,
+      "drawProb": 0.27583262169086253,
+      "loseProb": 0.4645602049530316,
       "over25Prob": 0.5076142131979695,
+      "isHome": false,
+      "opponent": "Valencia",
+      "matchDate": "2026-04-25T16:30:00Z"
+    },
+    "Real Betis": {
+      "winProb": 0.26765821702071996,
+      "drawProb": 0.2214887343644652,
+      "loseProb": 0.510853048614815,
+      "over25Prob": 0.6944444444444444,
+      "isHome": true,
+      "opponent": "Real Madrid",
+      "matchDate": "2026-04-24T19:00:00Z"
+    },
+    "Elche CF": {
+      "winProb": 0.315220985341122,
+      "drawProb": 0.27642455637606084,
+      "loseProb": 0.40835445828281713,
+      "over25Prob": 0.4672897196261682,
       "isHome": false,
       "opponent": "Oviedo",
-      "matchDate": "2026-04-23T19:30:00Z"
+      "matchDate": "2026-04-26T14:15:00Z"
+    },
+    "Atlético Madrid": {
+      "winProb": 0.5277990397327953,
+      "drawProb": 0.24820819706353073,
+      "loseProb": 0.22399276320367412,
+      "over25Prob": 0.53475935828877,
+      "isHome": true,
+      "opponent": "Athletic Bilbao",
+      "matchDate": "2026-04-25T19:00:00Z"
+    },
+    "Real Sociedad": {
+      "winProb": 0.3370852558262556,
+      "drawProb": 0.26602403973315303,
+      "loseProb": 0.3968907044405913,
+      "over25Prob": 0.5076142131979695,
+      "isHome": false,
+      "opponent": "Rayo Vallecano",
+      "matchDate": "2026-04-26T12:00:00Z"
+    },
+    "Getafe": {
+      "winProb": 0.18277219064276343,
+      "drawProb": 0.23567993003935286,
+      "loseProb": 0.5815478793178838,
+      "over25Prob": 0.5181347150259068,
+      "isHome": true,
+      "opponent": "Barcelona",
+      "matchDate": "2026-04-25T14:15:00Z"
+    },
+    "Barcelona": {
+      "winProb": 0.5815478793178838,
+      "drawProb": 0.23567993003935286,
+      "loseProb": 0.18277219064276343,
+      "over25Prob": 0.5181347150259068,
+      "isHome": false,
+      "opponent": "Getafe",
+      "matchDate": "2026-04-25T14:15:00Z"
+    },
+    "Celta Vigo": {
+      "winProb": 0.23635011684724883,
+      "drawProb": 0.24580412152113873,
+      "loseProb": 0.5178457616316126,
+      "over25Prob": 0.5524861878453039,
+      "isHome": false,
+      "opponent": "Villarreal",
+      "matchDate": "2026-04-26T19:00:00Z"
+    },
+    "Levante": {
+      "winProb": 0.2385273528649209,
+      "drawProb": 0.262380088151413,
+      "loseProb": 0.49909255898366606,
+      "over25Prob": 0.5050505050505051,
+      "isHome": false,
+      "opponent": "Espanyol",
+      "matchDate": "2026-04-27T19:00:00Z"
+    },
+    "Sevilla": {
+      "winProb": 0.2844708629657149,
+      "drawProb": 0.2674875278632841,
+      "loseProb": 0.448041609171001,
+      "over25Prob": 0.4716981132075471,
+      "isHome": false,
+      "opponent": "CA Osasuna",
+      "matchDate": "2026-04-26T16:30:00Z"
+    },
+    "Rayo Vallecano": {
+      "winProb": 0.3968907044405913,
+      "drawProb": 0.26602403973315303,
+      "loseProb": 0.3370852558262556,
+      "over25Prob": 0.5076142131979695,
+      "isHome": true,
+      "opponent": "Real Sociedad",
+      "matchDate": "2026-04-26T12:00:00Z"
+    },
+    "Espanyol": {
+      "winProb": 0.49909255898366606,
+      "drawProb": 0.262380088151413,
+      "loseProb": 0.2385273528649209,
+      "over25Prob": 0.5050505050505051,
+      "isHome": true,
+      "opponent": "Levante",
+      "matchDate": "2026-04-27T19:00:00Z"
+    },
+    "Oviedo": {
+      "winProb": 0.40835445828281713,
+      "drawProb": 0.27642455637606084,
+      "loseProb": 0.315220985341122,
+      "over25Prob": 0.4672897196261682,
+      "isHome": true,
+      "opponent": "Elche CF",
+      "matchDate": "2026-04-26T14:15:00Z"
+    },
+    "Villarreal": {
+      "winProb": 0.5178457616316126,
+      "drawProb": 0.24580412152113873,
+      "loseProb": 0.23635011684724883,
+      "over25Prob": 0.5524861878453039,
+      "isHome": true,
+      "opponent": "Celta Vigo",
+      "matchDate": "2026-04-26T19:00:00Z"
     }
   },
   "news": [
     {
-      "title": "Los sancionados de LaLiga para la jornada 33",
-      "link": "https://www.jornadaperfecta.com/blog/sancionados-laliga-j33-25-26/",
-      "date": "Tue, 14 Apr 2026 07:00:22 +0000",
+      "title": "Alineaciones probables del Atlético &#8211; Barcelona de Champions",
+      "link": "https://www.jornadaperfecta.com/blog/alineaciones-probables-atletico-barcelona-cuartos-champions/",
+      "date": "Tue, 14 Apr 2026 12:01:27 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Cardoso y Oblak, convocados. Barrios baja en Champions",
+      "link": "https://www.jornadaperfecta.com/blog/johnny-cardoso-vuelta-lesion-champions-26/",
+      "date": "Tue, 14 Apr 2026 12:00:53 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Supercuotas Betfair para la UEFA Champions League: ¡Apuestas potenciadas!",
+      "link": "https://www.jornadaperfecta.com/blog/supercuotas-betfair-champions-vuelta-cuartos/",
+      "date": "Tue, 14 Apr 2026 11:35:39 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/04/Supercuota-Betfair-Atletico-vs-Barcelona-Champions.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Hugo Duro no entrena y pasará pruebas médicas. Unai Núñez sigue sin entrenar",
+      "link": "https://www.jornadaperfecta.com/blog/hugo-duro-estado-j33/",
+      "date": "Tue, 14 Apr 2026 11:03:55 +0000",
+      "img": "https://cdn.biwenger.com/i/t/18.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Gavi impone su carácter en el Barça: ¿chollo fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/gavi-chollo-fantasy-fc-barcelona/",
+      "date": "Tue, 14 Apr 2026 11:00:00 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Isco entrena con con normalidad y se acerca su regreso. ¿Cuándo vuelve?",
+      "link": "https://www.jornadaperfecta.com/blog/isco-vuelta-j33/",
+      "date": "Tue, 14 Apr 2026 10:28:20 +0000",
       "img": "https://cdn.biwenger.com/i/t/87.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Cinco noticias fantasy para antes de irte a dormir",
-      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-13-4-26/",
-      "date": "Mon, 13 Apr 2026 21:00:04 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Chollos Fantasy que Tienes que Fichar YA para la J33 de Biwenger",
-      "link": "https://www.jornadaperfecta.com/blog/chollos-fantasy-biwenger-j33-laliga/",
-      "date": "Mon, 13 Apr 2026 19:00:01 +0000",
+      "title": "Grandes subidas y bajadas del mercado fantasy para la Jornada 33",
+      "link": "https://www.jornadaperfecta.com/blog/subidas-bajadas-j33-25-26/",
+      "date": "Tue, 14 Apr 2026 09:00:47 +0000",
       "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Frenkie de Jong está de vuelta. ¿Seguirá siendo importante?",
-      "link": "https://www.jornadaperfecta.com/blog/frenkie-de-jong-analisis-vuelta-lesion-26/",
-      "date": "Mon, 13 Apr 2026 17:00:15 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/02/image-2026-02-13T204411.801.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Flick, sobre Yamal, De Jong, Marc Bernal, Gavi y Fermín",
-      "link": "https://www.jornadaperfecta.com/blog/flick-previa-champions-cuartos-vuelta-atleti/",
-      "date": "Mon, 13 Apr 2026 15:58:21 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Alineaciones probables del Atlético &#8211; Barcelona de Champions",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-probables-atletico-barcelona-cuartos-champions/",
-      "date": "Mon, 13 Apr 2026 15:00:27 +0000",
+      "title": "Kylian Mbappé entra en la convocatoria; Asencio es baja",
+      "link": "https://www.jornadaperfecta.com/blog/mbappe-estado-molestias-cara-26/",
+      "date": "Tue, 14 Apr 2026 08:20:25 +0000",
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Mateo Joseph será operado de la rodilla: adiós a la temporada",
-      "link": "https://www.jornadaperfecta.com/blog/mateo-joseph-lesion-rodilla-mallorca/",
-      "date": "Mon, 13 Apr 2026 14:45:25 +0000",
+      "title": "¡Luvumbo podría estar varias semanas de baja!",
+      "link": "https://www.jornadaperfecta.com/blog/luvumbo-lesion-muscular/",
+      "date": "Tue, 14 Apr 2026 08:15:40 +0000",
       "img": "https://cdn.biwenger.com/i/t/465.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Mbappé no arranca en su vuelta, ¿vender o mantener en fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/mbappe-dudas-fantasy-real-madrid/",
-      "date": "Mon, 13 Apr 2026 13:00:12 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Abel Ruiz: Parte médico oficial y tiempo de baja",
-      "link": "https://www.jornadaperfecta.com/blog/abel-ruiz-lesion-girona-fc/",
-      "date": "Mon, 13 Apr 2026 12:59:53 +0000",
-      "img": "https://cdn.biwenger.com/i/t/289.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Kylian Mbappé vuelve a entrenar tras ausentarse el domingo",
-      "link": "https://www.jornadaperfecta.com/blog/mbappe-estado-molestias-cara-26/",
-      "date": "Mon, 13 Apr 2026 12:55:25 +0000",
-      "img": "",
+      "title": "Promoción Sportium Bayern vs Real Madrid: ¡apuesta 20€ y te dan 5€ tanto si aciertas como si fallas!",
+      "link": "https://www.jornadaperfecta.com/blog/promocion-sportium-bayern-vs-real-madrid/",
+      "date": "Tue, 14 Apr 2026 08:00:50 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/04/Sportium-Bayern-vs-Real-Madrid.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -15151,7 +15149,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-14T07:14:44.280Z",
+    "updatedAt": "2026-04-14T12:55:33.076Z",
     "players": [
       {
         "id": "3374",
