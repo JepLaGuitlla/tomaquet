@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-15T07:15:15.334Z",
+  "updatedAt": "2026-04-15T12:54:46.544Z",
   "players": [
     {
       "id": 11,
@@ -12421,7 +12421,7 @@
     "balance": 19903500,
     "lineup": {
       "type": "3-5-2",
-      "date": 1776184319,
+      "date": 1776245558,
       "playersID": [
         17021,
         39360,
@@ -12552,21 +12552,21 @@
     "market": [
       {
         "playerID": 17021,
-        "price": 2980000,
+        "price": 5940000,
         "type": "sale",
-        "until": 1776320838
+        "until": 1776429841
       },
       {
         "playerID": 37399,
-        "price": 1620000,
+        "price": 3120000,
         "type": "sale",
-        "until": 1776236665
+        "until": 1776429841
       },
       {
         "playerID": 39360,
-        "price": 2920010,
+        "price": 5620000,
         "type": "sale",
-        "until": 1776236663
+        "until": 1776429841
       }
     ]
   },
@@ -14031,7 +14031,7 @@
           "L"
         ],
         "gf": 3,
-        "ga": 9,
+        "ga": 10,
         "crest": "https://crests.football-data.org/77.png",
         "name": "Athletic Club"
       },
@@ -14186,7 +14186,7 @@
           "D",
           "W"
         ],
-        "gf": 8,
+        "gf": 9,
         "ga": 5,
         "crest": "https://crests.football-data.org/94.png",
         "name": "Villarreal CF"
@@ -14657,7 +14657,7 @@
         },
         "score": {
           "home": 1,
-          "away": 2
+          "away": 3
         }
       },
       {
@@ -14766,10 +14766,10 @@
   },
   "odds": {
     "Athletic Bilbao": {
-      "winProb": 0.32157026519106285,
-      "drawProb": 0.2618500730841512,
-      "loseProb": 0.416579661724786,
-      "over25Prob": 0.5050505050505051,
+      "winProb": 0.3356790253124671,
+      "drawProb": 0.27150509400273076,
+      "loseProb": 0.39281588068480194,
+      "over25Prob": 0.5076142131979695,
       "isHome": false,
       "opponent": "Atlético Madrid",
       "matchDate": "2026-04-25T19:00:00Z"
@@ -14784,9 +14784,9 @@
       "matchDate": "2026-04-26T16:30:00Z"
     },
     "Mallorca": {
-      "winProb": 0.25978401727861766,
-      "drawProb": 0.2849244060475161,
-      "loseProb": 0.45529157667386605,
+      "winProb": 0.26219564288765485,
+      "drawProb": 0.2875694147800085,
+      "loseProb": 0.4502349423323366,
       "over25Prob": 0.4385964912280702,
       "isHome": false,
       "opponent": "Alavés",
@@ -14802,18 +14802,18 @@
       "matchDate": "2026-04-25T16:30:00Z"
     },
     "Real Madrid": {
-      "winProb": 0.510853048614815,
-      "drawProb": 0.2214887343644652,
-      "loseProb": 0.26765821702071996,
+      "winProb": 0.5161351373786005,
+      "drawProb": 0.21932763343571016,
+      "loseProb": 0.26453722918568945,
       "over25Prob": 0.6944444444444444,
       "isHome": false,
       "opponent": "Real Betis",
       "matchDate": "2026-04-24T19:00:00Z"
     },
     "Alavés": {
-      "winProb": 0.45529157667386605,
-      "drawProb": 0.2849244060475161,
-      "loseProb": 0.25978401727861766,
+      "winProb": 0.4502349423323366,
+      "drawProb": 0.2875694147800085,
+      "loseProb": 0.26219564288765485,
       "over25Prob": 0.4385964912280702,
       "isHome": true,
       "opponent": "Mallorca",
@@ -14829,28 +14829,28 @@
       "matchDate": "2026-04-25T16:30:00Z"
     },
     "Real Betis": {
-      "winProb": 0.26765821702071996,
-      "drawProb": 0.2214887343644652,
-      "loseProb": 0.510853048614815,
+      "winProb": 0.26453722918568945,
+      "drawProb": 0.21932763343571016,
+      "loseProb": 0.5161351373786005,
       "over25Prob": 0.6944444444444444,
       "isHome": true,
       "opponent": "Real Madrid",
       "matchDate": "2026-04-24T19:00:00Z"
     },
     "Elche CF": {
-      "winProb": 0.315220985341122,
-      "drawProb": 0.27642455637606084,
-      "loseProb": 0.40835445828281713,
+      "winProb": 0.31768953068592054,
+      "drawProb": 0.27797833935018046,
+      "loseProb": 0.4043321299638989,
       "over25Prob": 0.4672897196261682,
       "isHome": false,
       "opponent": "Oviedo",
       "matchDate": "2026-04-26T14:15:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.416579661724786,
-      "drawProb": 0.2618500730841512,
-      "loseProb": 0.32157026519106285,
-      "over25Prob": 0.5050505050505051,
+      "winProb": 0.39281588068480194,
+      "drawProb": 0.27150509400273076,
+      "loseProb": 0.3356790253124671,
+      "over25Prob": 0.5076142131979695,
       "isHome": true,
       "opponent": "Athletic Bilbao",
       "matchDate": "2026-04-25T19:00:00Z"
@@ -14865,18 +14865,18 @@
       "matchDate": "2026-04-26T12:00:00Z"
     },
     "Getafe": {
-      "winProb": 0.18219964664310953,
-      "drawProb": 0.23807420494699646,
-      "loseProb": 0.579726148409894,
+      "winProb": 0.18277219064276343,
+      "drawProb": 0.23567993003935286,
+      "loseProb": 0.5815478793178838,
       "over25Prob": 0.5208333333333334,
       "isHome": true,
       "opponent": "Barcelona",
       "matchDate": "2026-04-25T14:15:00Z"
     },
     "Barcelona": {
-      "winProb": 0.579726148409894,
-      "drawProb": 0.23807420494699646,
-      "loseProb": 0.18219964664310953,
+      "winProb": 0.5815478793178838,
+      "drawProb": 0.23567993003935286,
+      "loseProb": 0.18277219064276343,
       "over25Prob": 0.5208333333333334,
       "isHome": false,
       "opponent": "Getafe",
@@ -14928,9 +14928,9 @@
       "matchDate": "2026-04-27T19:00:00Z"
     },
     "Oviedo": {
-      "winProb": 0.40835445828281713,
-      "drawProb": 0.27642455637606084,
-      "loseProb": 0.315220985341122,
+      "winProb": 0.4043321299638989,
+      "drawProb": 0.27797833935018046,
+      "loseProb": 0.31768953068592054,
       "over25Prob": 0.4672897196261682,
       "isHome": true,
       "opponent": "Elche CF",
@@ -14948,82 +14948,82 @@
   },
   "news": [
     {
-      "title": "Bayern vs Real Madrid: cuotas, apuestas y bono de 888Sport &#124; Champions League",
-      "link": "https://www.jornadaperfecta.com/blog/888sport-bayern-vs-real-madrid-cuotas-champions/",
-      "date": "Wed, 15 Apr 2026 06:00:59 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/04/888Sport-Bayern-vs-Real-Madrid-Champions.webp",
+      "title": "Oficial: ¡Isco vuelve a la convocatoria del Real Betis!",
+      "link": "https://www.jornadaperfecta.com/blog/isco-vuelta-j33/",
+      "date": "Wed, 15 Apr 2026 11:50:20 +0000",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Cinco noticias fantasy para antes de irte a dormir",
-      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-14-4-26/",
-      "date": "Tue, 14 Apr 2026 21:00:48 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "title": "Zaid Romero, sancionado con tres partidos. ¿Vendemos en fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/zaid-romero-sancionado-tres-partidos/",
+      "date": "Wed, 15 Apr 2026 11:14:32 +0000",
+      "img": "https://cdn.biwenger.com/i/t/8.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Chollos LaLiga Fantasy: Fichajes Baratos y Rentables para la jornada 33",
-      "link": "https://www.jornadaperfecta.com/blog/chollos-laliga-fantasy-j33-25-26/",
-      "date": "Tue, 14 Apr 2026 19:00:02 +0000",
-      "img": "https://i.ytimg.com/vi/VGdywuiDdsA/mqdefault.jpg",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Arbeloa, sobre la remontada y el sustituto de Tchouameni",
-      "link": "https://www.jornadaperfecta.com/blog/arbeloa-previa-champions-vuelta-cuartos-bayern/",
-      "date": "Tue, 14 Apr 2026 17:01:23 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "¡Alerta Fantasy!: Ventas que debes hacer tras la Jornada 31 de LaLiga",
-      "link": "https://www.jornadaperfecta.com/blog/ventas-fantasy-j31-laliga-25-26/",
-      "date": "Tue, 14 Apr 2026 17:00:38 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Oyarzabal, Gorrotxategi y Yangel entrenan con el grupo",
-      "link": "https://www.jornadaperfecta.com/blog/oyarzabal-entrenamiento-real-sociedad/",
-      "date": "Tue, 14 Apr 2026 15:56:47 +0000",
+      "title": "Luka Sucic da un paso adelante en la Real Sociedad, ¿chollo fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/luka-sucic-chollo-fantasy-real-sociedad/",
+      "date": "Wed, 15 Apr 2026 11:00:17 +0000",
       "img": "https://cdn.biwenger.com/i/t/13.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Thiago Fernández, sin cláusula del miedo ante el Villarreal",
-      "link": "https://www.jornadaperfecta.com/blog/thiago-fernandez-clausula-miedo-real-oviedo-villarreal/",
-      "date": "Tue, 14 Apr 2026 15:43:32 +0000",
-      "img": "https://cdn.biwenger.com/i/t/779.png",
+      "title": "Luvumbo: Lesión menos grave y nuevo tiempo de baja. ¿Vendemos?",
+      "link": "https://www.jornadaperfecta.com/blog/luvumbo-lesion-muscular/",
+      "date": "Wed, 15 Apr 2026 10:05:40 +0000",
+      "img": "https://cdn.biwenger.com/i/t/465.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Hugo Duro y Unai Núñez siguen sin entrenar. Vuelven Tárrega y Raba",
+      "link": "https://www.jornadaperfecta.com/blog/hugo-duro-estado-j33/",
+      "date": "Wed, 15 Apr 2026 10:00:55 +0000",
+      "img": "https://cdn.biwenger.com/i/t/18.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Diangana ya se ejercita sobre el césped y Aguado sigue ausente",
+      "link": "https://www.jornadaperfecta.com/blog/diangana-fort-estado-j33/",
+      "date": "Wed, 15 Apr 2026 09:37:36 +0000",
+      "img": "https://cdn.biwenger.com/i/t/75.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Carlos Espí resucita al Levante: ¿delantero muy recomendable en fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/carlos-espi-delantero-recomendable-levante-fantasy/",
+      "date": "Wed, 15 Apr 2026 09:00:01 +0000",
+      "img": "https://cdn.biwenger.com/i/t/10.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Batalla sigue al margen pero viaja a Atenas, ¿recuperado?",
+      "link": "https://www.jornadaperfecta.com/blog/batalla-entrenamiento-rayo-vallecano-2/",
+      "date": "Wed, 15 Apr 2026 08:15:50 +0000",
+      "img": "https://cdn.biwenger.com/i/t/70.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
       "title": "Real Madrid, alineación probable contra el Bayern Munich y dónde ver en TV",
       "link": "https://www.jornadaperfecta.com/blog/real-madrid-alineacion-probable-bayern-vuelta-26/",
-      "date": "Tue, 14 Apr 2026 15:00:35 +0000",
+      "date": "Wed, 15 Apr 2026 07:05:35 +0000",
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Batalla sigue al margen en el entrenamiento, ¿preocupa?",
-      "link": "https://www.jornadaperfecta.com/blog/batalla-entrenamiento-rayo-vallecano-2/",
-      "date": "Tue, 14 Apr 2026 14:06:50 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Antony, lejos de su mejor nivel fantasy: ¿vender o mantener?",
-      "link": "https://www.jornadaperfecta.com/blog/antony-lejos-de-su-mejor-nivel-fantasy-vender-o-mantener/",
-      "date": "Tue, 14 Apr 2026 13:00:25 +0000",
-      "img": "https://cdn.biwenger.com/i/t/87.png",
+      "title": "Bayern vs Real Madrid: cuotas, apuestas y bono de 888Sport &#124; Champions League",
+      "link": "https://www.jornadaperfecta.com/blog/888sport-bayern-vs-real-madrid-cuotas-champions/",
+      "date": "Wed, 15 Apr 2026 06:00:59 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/04/888Sport-Bayern-vs-Real-Madrid-Champions.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -15032,7 +15032,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-15T07:15:14.472Z",
+    "updatedAt": "2026-04-15T12:54:46.543Z",
     "players": [
       {
         "id": "3374",
