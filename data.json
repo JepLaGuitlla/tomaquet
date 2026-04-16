@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-15T18:57:43.154Z",
+  "updatedAt": "2026-04-16T01:20:45.608Z",
   "players": [
     {
       "id": 11,
@@ -13392,7 +13392,7 @@
       {
         "id": 39736,
         "buyPrice": 150089,
-        "clause": 0,
+        "clause": 225000,
         "invested": 0,
         "buyDate": 1771912934
       },
@@ -13416,6 +13416,12 @@
         "price": 4215000,
         "type": "sale",
         "until": 1776336617
+      },
+      {
+        "playerID": 39736,
+        "price": 225000,
+        "type": "sale",
+        "until": 1776469517
       }
     ]
   },
@@ -14856,9 +14862,9 @@
       "matchDate": "2026-04-25T19:00:00Z"
     },
     "Real Sociedad": {
-      "winProb": 0.33717553763837094,
-      "drawProb": 0.26900343440001173,
-      "loseProb": 0.3938210279616173,
+      "winProb": 0.3361638637661405,
+      "drawProb": 0.2698520878999429,
+      "loseProb": 0.3939840483339167,
       "over25Prob": 0.5076142131979695,
       "isHome": false,
       "opponent": "Rayo Vallecano",
@@ -14910,9 +14916,9 @@
       "matchDate": "2026-04-26T16:30:00Z"
     },
     "Rayo Vallecano": {
-      "winProb": 0.3938210279616173,
-      "drawProb": 0.26900343440001173,
-      "loseProb": 0.33717553763837094,
+      "winProb": 0.3939840483339167,
+      "drawProb": 0.2698520878999429,
+      "loseProb": 0.3361638637661405,
       "over25Prob": 0.5076142131979695,
       "isHome": true,
       "opponent": "Real Sociedad",
@@ -14947,6 +14953,30 @@
     }
   },
   "news": [
+    {
+      "title": "Cinco noticias fantasy para antes de irte a dormir",
+      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-15-4-26/",
+      "date": "Wed, 15 Apr 2026 21:00:56 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "TonyBet te da 10€ en Apuesta Gratis para la Final de Copa del Rey",
+      "link": "https://www.jornadaperfecta.com/blog/tonybet-apuesta-gratis-final-copa-del-rey/",
+      "date": "Wed, 15 Apr 2026 21:00:05 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/04/promocion-final-copa-del-rey-tonybet-1-300x280.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Muriqi supera a Eto&#8217;o, la leyenda TOP fantasy del RCD Mallorca",
+      "link": "https://www.jornadaperfecta.com/blog/muriqi-leyenda-top-fantasy-mallorca/",
+      "date": "Wed, 15 Apr 2026 19:00:52 +0000",
+      "img": "https://cdn.biwenger.com/i/t/465.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Rayo Vallecano, alineación probable contra el AEK y dónde ver en TV",
       "link": "https://www.jornadaperfecta.com/blog/rayo-vallecano-alineacion-probable-vuelta-cuartos-conference-26/",
@@ -15002,37 +15032,13 @@
       "img": "https://cdn.biwenger.com/i/t/13.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Los Ases de PixonFantasy para la Jornada 33",
-      "link": "https://www.jornadaperfecta.com/blog/ases-fantasy-j33-25-26/",
-      "date": "Wed, 15 Apr 2026 16:13:36 +0000",
-      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2665.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Giráldez confirma la baja de Starfelt y el alta de Hugo Álvarez",
-      "link": "https://www.jornadaperfecta.com/blog/giraldez-previa-europa-vuelta-cuartos-26/",
-      "date": "Wed, 15 Apr 2026 15:50:23 +0000",
-      "img": "https://cdn.biwenger.com/i/t/5.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Oficial: ¡Isco vuelve a la convocatoria del Real Betis!",
-      "link": "https://www.jornadaperfecta.com/blog/isco-vuelta-j33/",
-      "date": "Wed, 15 Apr 2026 11:50:20 +0000",
-      "img": "https://cdn.biwenger.com/i/t/87.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-15T18:57:40.391Z",
+    "updatedAt": "2026-04-16T01:20:41.523Z",
     "players": [
       {
         "id": "3374",
