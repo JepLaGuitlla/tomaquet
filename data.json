@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-17T07:16:32.649Z",
+  "updatedAt": "2026-04-17T12:51:21.929Z",
   "players": [
     {
       "id": 11,
@@ -12458,13 +12458,6 @@
         "buyDate": 1776017113
       },
       {
-        "id": 24979,
-        "buyPrice": 3892500,
-        "clause": 5838750,
-        "invested": 0,
-        "buyDate": 1775726660
-      },
-      {
         "id": 1908,
         "buyPrice": 2235666,
         "clause": 5603499,
@@ -12484,6 +12477,13 @@
         "clause": 6930000,
         "invested": 0,
         "buyDate": 1765470211
+      },
+      {
+        "id": 24979,
+        "buyPrice": 3892500,
+        "clause": 5838750,
+        "invested": 0,
+        "buyDate": 1775726660
       },
       {
         "id": 25127,
@@ -14438,7 +14438,7 @@
         "gf": 11,
         "ga": 10,
         "crest": "https://crests.football-data.org/92.png",
-        "name": "Real Sociedad de F��tbol"
+        "name": "Real Sociedad de Fútbol"
       },
       "94": {
         "results": [
@@ -15028,10 +15028,10 @@
   },
   "odds": {
     "Athletic Bilbao": {
-      "winProb": 0.34111707163142946,
-      "drawProb": 0.26696118649416223,
-      "loseProb": 0.3919217418744083,
-      "over25Prob": 0.5128205128205129,
+      "winProb": 0.34664418923190393,
+      "drawProb": 0.26245917184701295,
+      "loseProb": 0.3908966389210832,
+      "over25Prob": 0.5154639175257733,
       "isHome": false,
       "opponent": "Atlético Madrid",
       "matchDate": "2026-04-25T19:00:00Z"
@@ -15100,19 +15100,19 @@
       "matchDate": "2026-04-24T19:00:00Z"
     },
     "Elche CF": {
-      "winProb": 0.3190539937527889,
-      "drawProb": 0.2748772869254797,
-      "loseProb": 0.40606871932173133,
+      "winProb": 0.3138653588943379,
+      "drawProb": 0.2795363352652697,
+      "loseProb": 0.4065983058403923,
       "over25Prob": 0.4672897196261682,
       "isHome": false,
       "opponent": "Oviedo",
       "matchDate": "2026-04-26T14:15:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.3919217418744083,
-      "drawProb": 0.26696118649416223,
-      "loseProb": 0.34111707163142946,
-      "over25Prob": 0.5128205128205129,
+      "winProb": 0.3908966389210832,
+      "drawProb": 0.26245917184701295,
+      "loseProb": 0.34664418923190393,
+      "over25Prob": 0.5154639175257733,
       "isHome": true,
       "opponent": "Athletic Bilbao",
       "matchDate": "2026-04-25T19:00:00Z"
@@ -15127,27 +15127,27 @@
       "matchDate": "2026-04-26T12:00:00Z"
     },
     "Getafe": {
-      "winProb": 0.19932498853135852,
-      "drawProb": 0.2329772593223671,
-      "loseProb": 0.5676977521462743,
-      "over25Prob": 0.5376344086021505,
+      "winProb": 0.1830097235346115,
+      "drawProb": 0.22702472033407503,
+      "loseProb": 0.5899655561313135,
+      "over25Prob": 0.5524861878453039,
       "isHome": true,
       "opponent": "Barcelona",
       "matchDate": "2026-04-25T14:15:00Z"
     },
     "Barcelona": {
-      "winProb": 0.5676977521462743,
-      "drawProb": 0.2329772593223671,
-      "loseProb": 0.19932498853135852,
-      "over25Prob": 0.5376344086021505,
+      "winProb": 0.5899655561313135,
+      "drawProb": 0.22702472033407503,
+      "loseProb": 0.1830097235346115,
+      "over25Prob": 0.5524861878453039,
       "isHome": false,
       "opponent": "Getafe",
       "matchDate": "2026-04-25T14:15:00Z"
     },
     "Celta Vigo": {
-      "winProb": 0.2334380453752181,
-      "drawProb": 0.242652705061082,
-      "loseProb": 0.5239092495636998,
+      "winProb": 0.23268522272559003,
+      "drawProb": 0.24509510127095485,
+      "loseProb": 0.522219676003455,
       "over25Prob": 0.5524861878453039,
       "isHome": false,
       "opponent": "Villarreal",
@@ -15190,18 +15190,18 @@
       "matchDate": "2026-04-27T19:00:00Z"
     },
     "Oviedo": {
-      "winProb": 0.40606871932173133,
-      "drawProb": 0.2748772869254797,
-      "loseProb": 0.3190539937527889,
+      "winProb": 0.4065983058403923,
+      "drawProb": 0.2795363352652697,
+      "loseProb": 0.3138653588943379,
       "over25Prob": 0.4672897196261682,
       "isHome": true,
       "opponent": "Elche CF",
       "matchDate": "2026-04-26T14:15:00Z"
     },
     "Villarreal": {
-      "winProb": 0.5239092495636998,
-      "drawProb": 0.242652705061082,
-      "loseProb": 0.2334380453752181,
+      "winProb": 0.522219676003455,
+      "drawProb": 0.24509510127095485,
+      "loseProb": 0.23268522272559003,
       "over25Prob": 0.5524861878453039,
       "isHome": true,
       "opponent": "Celta Vigo",
@@ -15209,6 +15209,70 @@
     }
   },
   "news": [
+    {
+      "title": "Oyarzabal, Gorrotxategi y Yangel entran en la convocatoria. Zakharyan KO",
+      "link": "https://www.jornadaperfecta.com/blog/oyarzabal-entrenamiento-real-sociedad/",
+      "date": "Fri, 17 Apr 2026 11:30:47 +0000",
+      "img": "https://cdn.biwenger.com/i/t/13.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Dani Vivian se ausenta del entrenamiento por tercer día",
+      "link": "https://www.jornadaperfecta.com/blog/estado-vivian-j33/",
+      "date": "Fri, 17 Apr 2026 11:12:58 +0000",
+      "img": "https://cdn.biwenger.com/i/t/1.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Etta Eyong vuelve a entrenar con el grupo. Pendientes de Pablo Martínez",
+      "link": "https://www.jornadaperfecta.com/blog/pablo-martinez-estado-j33-25-26/",
+      "date": "Fri, 17 Apr 2026 11:07:20 +0000",
+      "img": "https://cdn.biwenger.com/i/t/10.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "David Soria se postula como portero TOP fantasy. ¿Lo fichamos en este final de temporada?",
+      "link": "https://www.jornadaperfecta.com/blog/david-soria-analisis-j33-25-26/",
+      "date": "Fri, 17 Apr 2026 11:00:15 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/03/image-2026-03-19T114402.302.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Álvaro García: buenas sensaciones tras ser sustituido con molestias",
+      "link": "https://www.jornadaperfecta.com/blog/alvaro-garcia-estado-molestias-musculares-26/",
+      "date": "Fri, 17 Apr 2026 08:50:29 +0000",
+      "img": "https://cdn.biwenger.com/i/t/70.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Luiz Felipe vuelve a sufrir una lesión muscular y preocupa en Vallecas",
+      "link": "https://www.jornadaperfecta.com/blog/luiz-felipe-estado-lesion-muslo-26/",
+      "date": "Fri, 17 Apr 2026 08:28:28 +0000",
+      "img": "https://cdn.biwenger.com/i/t/70.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Promoción Kirolbet Atlético vs Real Sociedad: ¡5€ por cada gol en la Final de la Copa del Rey!",
+      "link": "https://www.jornadaperfecta.com/blog/promocion-kirolbet-final-copa-del-rey-2026/",
+      "date": "Fri, 17 Apr 2026 08:00:55 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/04/Kirolbet-Atletico-vs-Real-Sociedad-Final-Copa-del-Rey.jpg",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Pablo Barrios vuelve tras lesión. ¿Gran oportunidad fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/pablo-barrios-analisis-vuelta-lesion-26/",
+      "date": "Fri, 17 Apr 2026 07:00:38 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/09/Johnny-Cardoso-Atletico-de-Madrid.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Cinco noticias fantasy para antes de irte a dormir",
       "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-16-4-26/",
@@ -15218,74 +15282,10 @@
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Luiz Felipe, sustituido con una posible lesión muscular en Conference",
-      "link": "https://www.jornadaperfecta.com/blog/luiz-felipe-estado-lesion-muslo-26/",
-      "date": "Thu, 16 Apr 2026 20:28:28 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Álvaro García, sustituido con molestias musculares en Conference",
-      "link": "https://www.jornadaperfecta.com/blog/alvaro-garcia-estado-molestias-musculares-26/",
-      "date": "Thu, 16 Apr 2026 19:50:29 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Manu Bueno se abre paso con García Plaza. ¿Chollito fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/manu-bueno-analisis-j33-25-26/",
-      "date": "Thu, 16 Apr 2026 19:00:01 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/11/fa9031b5e9936d5beb6606d9804a2fd6-1.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Augusto Batalla, titular en Conference, despeja dudas",
-      "link": "https://www.jornadaperfecta.com/blog/batalla-entrenamiento-rayo-vallecano-2/",
-      "date": "Thu, 16 Apr 2026 18:15:50 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Sorloth, Molina, Hancko y Giménez, convocados en Copa pese a no entrenar",
-      "link": "https://www.jornadaperfecta.com/blog/sorloth-molina-estado-final-copa-26/",
-      "date": "Thu, 16 Apr 2026 18:05:00 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Pablo Barrios vuelve tras lesión. ¿Gran oportunidad fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/pablo-barrios-analisis-vuelta-lesion-26/",
-      "date": "Thu, 16 Apr 2026 17:00:38 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/09/Johnny-Cardoso-Atletico-de-Madrid.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Héctor Fort sigue con el grupo y ultima su vuelta en la Jornada 33",
-      "link": "https://www.jornadaperfecta.com/blog/hector-fort-estado-j33-25-26/",
-      "date": "Thu, 16 Apr 2026 16:44:28 +0000",
-      "img": "https://cdn.biwenger.com/i/t/75.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Pablo Martínez y Etta Eyong, ausentes en el entreno del Levante. ¿Preocupan?",
-      "link": "https://www.jornadaperfecta.com/blog/pablo-martinez-estado-j33-25-26/",
-      "date": "Thu, 16 Apr 2026 15:47:20 +0000",
-      "img": "https://cdn.biwenger.com/i/t/10.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Budimir gestiona cargas e Iker Benito entrena con el grupo",
-      "link": "https://www.jornadaperfecta.com/blog/budimir-estado-j33/",
-      "date": "Thu, 16 Apr 2026 12:51:14 +0000",
-      "img": "https://cdn.biwenger.com/i/t/93.png",
+      "title": "Fermín tuvo que acudir al hospital y estará unos días de reposo",
+      "link": "https://www.jornadaperfecta.com/blog/fermin-estado-j33/",
+      "date": "Thu, 16 Apr 2026 19:26:51 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -15294,7 +15294,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-17T07:16:30.763Z",
+    "updatedAt": "2026-04-17T12:51:20.115Z",
     "players": [
       {
         "id": "3374",
