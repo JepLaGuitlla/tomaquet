@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-16T18:54:46.944Z",
+  "updatedAt": "2026-04-17T01:18:32.533Z",
   "players": [
     {
       "id": 11,
@@ -12421,7 +12421,7 @@
     "balance": 17503678,
     "lineup": {
       "type": "3-5-2",
-      "date": 1776324029,
+      "date": 1776378839,
       "playersID": [
         17021,
         10245,
@@ -12761,21 +12761,6 @@
             "icon": "i/u/11520975.png?v=81"
           },
           "amount": 410000
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1776206008,
-      "content": [
-        {
-          "player": 26945,
-          "from": {
-            "id": 12696899,
-            "name": "CIGALERU",
-            "icon": "i/u/12696899.png"
-          },
-          "amount": 10889400
         }
       ]
     }
@@ -13393,16 +13378,16 @@
     "balance": 5538656,
     "lineup": {
       "type": "3-4-3",
-      "date": 1776322730,
+      "date": 1776378834,
       "playersID": [
         14630,
         32440,
-        17121,
         40010,
+        1908,
         1769,
         26048,
-        32338,
-        1969,
+        38368,
+        29184,
         38962,
         19577,
         35615
@@ -13766,21 +13751,6 @@
             "icon": "i/u/6579505.png"
           },
           "amount": 3020000
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1776147717,
-      "content": [
-        {
-          "player": 39941,
-          "from": {
-            "id": 6586225,
-            "name": "Sergi Sala Duran",
-            "icon": "https://graph.facebook.com/10156583054878679/picture?height=300&width=300"
-          },
-          "amount": 14096300
         }
       ]
     }
@@ -14179,7 +14149,7 @@
           "L"
         ],
         "gf": 3,
-        "ga": 9,
+        "ga": 10,
         "crest": "https://crests.football-data.org/77.png",
         "name": "Athletic Club"
       },
@@ -14324,7 +14294,7 @@
         "gf": 11,
         "ga": 10,
         "crest": "https://crests.football-data.org/92.png",
-        "name": "Real Sociedad de F��tbol"
+        "name": "Real Sociedad de Fútbol"
       },
       "94": {
         "results": [
@@ -14334,7 +14304,7 @@
           "D",
           "W"
         ],
-        "gf": 8,
+        "gf": 9,
         "ga": 5,
         "crest": "https://crests.football-data.org/94.png",
         "name": "Villarreal CF"
@@ -14805,7 +14775,7 @@
         },
         "score": {
           "home": 1,
-          "away": 2
+          "away": 3
         }
       },
       {
@@ -14926,7 +14896,7 @@
       "winProb": 0.4360446225495505,
       "drawProb": 0.27087620491714504,
       "loseProb": 0.29307917253330446,
-      "over25Prob": 0.4672897196261682,
+      "over25Prob": 0.46511627906976744,
       "isHome": true,
       "opponent": "Sevilla",
       "matchDate": "2026-04-26T16:30:00Z"
@@ -15052,7 +15022,7 @@
       "winProb": 0.29307917253330446,
       "drawProb": 0.27087620491714504,
       "loseProb": 0.4360446225495505,
-      "over25Prob": 0.4672897196261682,
+      "over25Prob": 0.46511627906976744,
       "isHome": false,
       "opponent": "CA Osasuna",
       "matchDate": "2026-04-26T16:30:00Z"
@@ -15095,6 +15065,38 @@
     }
   },
   "news": [
+    {
+      "title": "Cinco noticias fantasy para antes de irte a dormir",
+      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-16-4-26/",
+      "date": "Thu, 16 Apr 2026 21:00:20 +0000",
+      "img": "https://cdn.biwenger.com/i/t/75.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Luiz Felipe, sustituido con una posible lesión muscular en Conference",
+      "link": "https://www.jornadaperfecta.com/blog/luiz-felipe-estado-lesion-muslo-26/",
+      "date": "Thu, 16 Apr 2026 20:28:28 +0000",
+      "img": "https://cdn.biwenger.com/i/t/70.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Álvaro García, sustituido con molestias musculares en Conference",
+      "link": "https://www.jornadaperfecta.com/blog/alvaro-garcia-estado-molestias-musculares-26/",
+      "date": "Thu, 16 Apr 2026 19:50:29 +0000",
+      "img": "https://cdn.biwenger.com/i/t/70.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Manu Bueno se abre paso con García Plaza. ¿Chollito fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/manu-bueno-analisis-j33-25-26/",
+      "date": "Thu, 16 Apr 2026 19:00:01 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/11/fa9031b5e9936d5beb6606d9804a2fd6-1.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Augusto Batalla, titular en Conference, despeja dudas",
       "link": "https://www.jornadaperfecta.com/blog/batalla-entrenamiento-rayo-vallecano-2/",
@@ -15142,45 +15144,13 @@
       "img": "https://cdn.biwenger.com/i/t/93.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Oyarzabal, Gorrotxategi y Yangel siguen con el grupo. Dudas con Zakharyan",
-      "link": "https://www.jornadaperfecta.com/blog/oyarzabal-entrenamiento-real-sociedad/",
-      "date": "Thu, 16 Apr 2026 12:30:47 +0000",
-      "img": "https://cdn.biwenger.com/i/t/13.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Dani Vivian se ausenta del entrenamiento por segundo día",
-      "link": "https://www.jornadaperfecta.com/blog/estado-vivian-j33/",
-      "date": "Thu, 16 Apr 2026 12:12:58 +0000",
-      "img": "https://cdn.biwenger.com/i/t/1.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Fermín tuvo que acudir al hospital y estará unos días de reposo",
-      "link": "https://www.jornadaperfecta.com/blog/fermin-estado-j33/",
-      "date": "Thu, 16 Apr 2026 11:26:51 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Dituro planta el muro en el Martínez Valero. ¿Buen portero en este final de temporada?",
-      "link": "https://www.jornadaperfecta.com/blog/dituro-analisis-j33-25-26/",
-      "date": "Thu, 16 Apr 2026 11:00:47 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/09/inakipenaelche-1-1.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-16T18:54:44.820Z",
+    "updatedAt": "2026-04-17T01:18:30.789Z",
     "players": [
       {
         "id": "3374",
