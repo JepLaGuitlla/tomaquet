@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-18T06:54:13.180Z",
+  "updatedAt": "2026-04-18T12:33:48.964Z",
   "players": [
     {
       "id": 11,
@@ -12421,7 +12421,7 @@
     "balance": 13785655,
     "lineup": {
       "type": "5-4-1",
-      "date": 1776482999,
+      "date": 1776511961,
       "playersID": [
         17021,
         10245,
@@ -13429,7 +13429,7 @@
     "balance": 5538656,
     "lineup": {
       "type": "3-4-3",
-      "date": 1776378834,
+      "date": 1776501645,
       "playersID": [
         14630,
         32440,
@@ -14366,7 +14366,7 @@
         "gf": 11,
         "ga": 10,
         "crest": "https://crests.football-data.org/92.png",
-        "name": "Real Sociedad de Fútbol"
+        "name": "Real Sociedad de F��tbol"
       },
       "94": {
         "results": [
@@ -14959,7 +14959,7 @@
       "winProb": 0.34664418923190393,
       "drawProb": 0.26245917184701295,
       "loseProb": 0.3908966389210832,
-      "over25Prob": 0.5154639175257733,
+      "over25Prob": 0.5128205128205129,
       "isHome": false,
       "opponent": "Atlético Madrid",
       "matchDate": "2026-04-25T19:00:00Z"
@@ -14974,9 +14974,9 @@
       "matchDate": "2026-04-26T16:30:00Z"
     },
     "Mallorca": {
-      "winProb": 0.26219564288765485,
-      "drawProb": 0.2875694147800085,
-      "loseProb": 0.4502349423323366,
+      "winProb": 0.25779625779625776,
+      "drawProb": 0.291060291060291,
+      "loseProb": 0.4511434511434511,
       "over25Prob": 0.4385964912280702,
       "isHome": false,
       "opponent": "Alavés",
@@ -15001,9 +15001,9 @@
       "matchDate": "2026-04-24T19:00:00Z"
     },
     "Alavés": {
-      "winProb": 0.4502349423323366,
-      "drawProb": 0.2875694147800085,
-      "loseProb": 0.26219564288765485,
+      "winProb": 0.4511434511434511,
+      "drawProb": 0.291060291060291,
+      "loseProb": 0.25779625779625776,
       "over25Prob": 0.4385964912280702,
       "isHome": true,
       "opponent": "Mallorca",
@@ -15040,7 +15040,7 @@
       "winProb": 0.3908966389210832,
       "drawProb": 0.26245917184701295,
       "loseProb": 0.34664418923190393,
-      "over25Prob": 0.5154639175257733,
+      "over25Prob": 0.5128205128205129,
       "isHome": true,
       "opponent": "Athletic Bilbao",
       "matchDate": "2026-04-25T19:00:00Z"
@@ -15138,18 +15138,66 @@
   },
   "news": [
     {
+      "title": "Rüdiger hace gestión de cargas, ¿llega a la jornada 33?",
+      "link": "https://www.jornadaperfecta.com/blog/rudiger-estado-real-madrid-j33/",
+      "date": "Sat, 18 Apr 2026 11:56:52 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Raúl Asencio, al hospital a causa de un virus gastrointestinal",
+      "link": "https://www.jornadaperfecta.com/blog/raul-asencio-gastroenteritis-real-madrid/",
+      "date": "Sat, 18 Apr 2026 11:38:24 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Fermín y Marc Bernal siguen sin entrenar, ¿llegan a la j33?",
+      "link": "https://www.jornadaperfecta.com/blog/fermin-estado-j33/",
+      "date": "Sat, 18 Apr 2026 10:01:51 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Once Ideal Fantasy para el Final de Liga",
       "link": "https://www.jornadaperfecta.com/blog/once-ideal-fantasy-final-laliga-2026/",
-      "date": "Fri, 17 Apr 2026 18:09:49 +0000",
+      "date": "Sat, 18 Apr 2026 09:40:49 +0000",
       "img": "https://cdn.biwenger.com/i/t/75.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Hancko, Sorloth y Molina entrenan con el grupo; Giménez, no",
-      "link": "https://www.jornadaperfecta.com/blog/hancko-recuperacion-atleti/",
-      "date": "Fri, 17 Apr 2026 18:07:51 +0000",
+      "title": "Alineaciones probables Atleti &#8211; Real Sociedad para la final de Copa",
+      "link": "https://www.jornadaperfecta.com/blog/alineaciones-probables-atleti-real-sociedad-final-copa/",
+      "date": "Sat, 18 Apr 2026 09:30:59 +0000",
       "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Alfon González, gol en su primera titularidad con el Villarreal: ¿lo fichamos?",
+      "link": "https://www.jornadaperfecta.com/blog/alfon-gonzalez-chollo-fantasy-villarreal/",
+      "date": "Sat, 18 Apr 2026 09:00:10 +0000",
+      "img": "https://cdn.biwenger.com/i/t/19.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Hancko y Barrios entrenan, pero Simeone no arriesgará",
+      "link": "https://www.jornadaperfecta.com/blog/hancko-recuperacion-atleti/",
+      "date": "Sat, 18 Apr 2026 08:30:51 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Promoción MARCAapuestas Final Copa del Rey: ¡Seguro del 50% hasta 10€ si fallas!",
+      "link": "https://www.jornadaperfecta.com/blog/marcaapuestas-final-copa-del-rey-atleti-real-sociedad/",
+      "date": "Sat, 18 Apr 2026 07:00:12 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/04/MARCAapuestas-Final-Copa-del-Rey-Atletico-vs-Real-Sociedad.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
@@ -15168,61 +15216,13 @@
       "img": "https://cdn.biwenger.com/i/t/13.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Simeone habla del estado de Pablo Barrios y la final",
-      "link": "https://www.jornadaperfecta.com/blog/simeone-previa-real-sociedad-atletico-final-copa-26/",
-      "date": "Fri, 17 Apr 2026 17:56:32 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Blind vuelve al grupo, disponible para la jornada 33",
-      "link": "https://www.jornadaperfecta.com/blog/blind-estado-girona-j33/",
-      "date": "Fri, 17 Apr 2026 17:11:42 +0000",
-      "img": "https://cdn.biwenger.com/i/t/289.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Alineaciones probables Atleti &#8211; Real Sociedad para la final de Copa",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-probables-atleti-real-sociedad-final-copa/",
-      "date": "Fri, 17 Apr 2026 17:02:59 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Sergi Darder vuelve al once de Demichelis. ¿Interesante en este final de temporada?",
-      "link": "https://www.jornadaperfecta.com/blog/sergi-darder-analisis-j33-25-26/",
-      "date": "Fri, 17 Apr 2026 17:00:14 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/12/Manu-Morlanes-RCD-Mallorca-fantasy.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Supercuota de YoSports para el Atlético vs Real Sociedad: ¡Apuesta a cuota 6.00!",
-      "link": "https://www.jornadaperfecta.com/blog/yosports-supercuota-atletico-vs-real-sociedad/",
-      "date": "Fri, 17 Apr 2026 15:00:53 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/04/YoSports-Super-Apuesta-TOP-Atletico-vs-Real-Sociedad.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Oyarzabal, Gorrotxategi y Yangel entran en la convocatoria. Zakharyan KO",
-      "link": "https://www.jornadaperfecta.com/blog/oyarzabal-entrenamiento-real-sociedad/",
-      "date": "Fri, 17 Apr 2026 11:30:47 +0000",
-      "img": "https://cdn.biwenger.com/i/t/13.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-18T06:54:10.653Z",
+    "updatedAt": "2026-04-18T12:33:47.334Z",
     "players": [
       {
         "id": "3374",
