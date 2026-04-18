@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-18T12:33:48.964Z",
+  "updatedAt": "2026-04-18T18:30:22.103Z",
   "players": [
     {
       "id": 11,
@@ -14221,7 +14221,7 @@
           "L"
         ],
         "gf": 3,
-        "ga": 9,
+        "ga": 10,
         "crest": "https://crests.football-data.org/77.png",
         "name": "Athletic Club"
       },
@@ -14366,7 +14366,7 @@
         "gf": 11,
         "ga": 10,
         "crest": "https://crests.football-data.org/92.png",
-        "name": "Real Sociedad de F��tbol"
+        "name": "Real Sociedad de Fútbol"
       },
       "94": {
         "results": [
@@ -14376,7 +14376,7 @@
           "D",
           "W"
         ],
-        "gf": 8,
+        "gf": 9,
         "ga": 5,
         "crest": "https://crests.football-data.org/94.png",
         "name": "Villarreal CF"
@@ -14847,7 +14847,7 @@
         },
         "score": {
           "home": 1,
-          "away": 2
+          "away": 3
         }
       },
       {
@@ -14983,9 +14983,9 @@
       "matchDate": "2026-04-25T12:00:00Z"
     },
     "Valencia": {
-      "winProb": 0.45448676565526147,
-      "drawProb": 0.2769528728211749,
-      "loseProb": 0.26856036152356355,
+      "winProb": 0.459478275113641,
+      "drawProb": 0.27429460665874933,
+      "loseProb": 0.26622711822760964,
       "over25Prob": 0.5076142131979695,
       "isHome": true,
       "opponent": "Girona",
@@ -15010,9 +15010,9 @@
       "matchDate": "2026-04-25T12:00:00Z"
     },
     "Girona": {
-      "winProb": 0.26856036152356355,
-      "drawProb": 0.2769528728211749,
-      "loseProb": 0.45448676565526147,
+      "winProb": 0.26622711822760964,
+      "drawProb": 0.27429460665874933,
+      "loseProb": 0.459478275113641,
       "over25Prob": 0.5076142131979695,
       "isHome": false,
       "opponent": "Valencia",
@@ -15055,18 +15055,18 @@
       "matchDate": "2026-04-26T12:00:00Z"
     },
     "Getafe": {
-      "winProb": 0.175505756942195,
-      "drawProb": 0.2237698401012986,
-      "loseProb": 0.6007244029565063,
+      "winProb": 0.17646888901727426,
+      "drawProb": 0.21951008146051187,
+      "loseProb": 0.6040210295222138,
       "over25Prob": 0.53475935828877,
       "isHome": true,
       "opponent": "Barcelona",
       "matchDate": "2026-04-25T14:15:00Z"
     },
     "Barcelona": {
-      "winProb": 0.6007244029565063,
-      "drawProb": 0.2237698401012986,
-      "loseProb": 0.175505756942195,
+      "winProb": 0.6040210295222138,
+      "drawProb": 0.21951008146051187,
+      "loseProb": 0.17646888901727426,
       "over25Prob": 0.53475935828877,
       "isHome": false,
       "opponent": "Getafe",
@@ -15138,6 +15138,22 @@
   },
   "news": [
     {
+      "title": "Ferran Torres, recuperando su mejor nivel: ¿recomendable para la recta final?",
+      "link": "https://www.jornadaperfecta.com/blog/ferran-torres-recomendable-fantasy-barcelona/",
+      "date": "Sat, 18 Apr 2026 17:00:55 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Once Ideal Fantasy para el Final de Liga",
+      "link": "https://www.jornadaperfecta.com/blog/once-ideal-fantasy-final-laliga-2026/",
+      "date": "Sat, 18 Apr 2026 12:30:49 +0000",
+      "img": "https://cdn.biwenger.com/i/t/75.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Rüdiger hace gestión de cargas, ¿llega a la jornada 33?",
       "link": "https://www.jornadaperfecta.com/blog/rudiger-estado-real-madrid-j33/",
       "date": "Sat, 18 Apr 2026 11:56:52 +0000",
@@ -15158,14 +15174,6 @@
       "link": "https://www.jornadaperfecta.com/blog/fermin-estado-j33/",
       "date": "Sat, 18 Apr 2026 10:01:51 +0000",
       "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Once Ideal Fantasy para el Final de Liga",
-      "link": "https://www.jornadaperfecta.com/blog/once-ideal-fantasy-final-laliga-2026/",
-      "date": "Sat, 18 Apr 2026 09:40:49 +0000",
-      "img": "https://cdn.biwenger.com/i/t/75.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
@@ -15208,21 +15216,13 @@
       "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/04/supercuota-betfair-final-copa-del-rey-1024x482.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Matarazzo sobre Oyarzabal, Gorrotxa, Yangel y el portero",
-      "link": "https://www.jornadaperfecta.com/blog/matarazzo-previa-real-sociedad-atletico-final-copa-26/",
-      "date": "Fri, 17 Apr 2026 17:57:13 +0000",
-      "img": "https://cdn.biwenger.com/i/t/13.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-18T12:33:47.334Z",
+    "updatedAt": "2026-04-18T18:30:22.103Z",
     "players": [
       {
         "id": "3374",
