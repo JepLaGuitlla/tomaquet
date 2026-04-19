@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-19T07:04:16.147Z",
+  "updatedAt": "2026-04-19T12:32:50.492Z",
   "players": [
     {
       "id": 11,
@@ -12099,8 +12099,8 @@
           11,
           12
         ],
-        "teamSize": 15,
-        "teamValue": 110280000,
+        "teamSize": 14,
+        "teamValue": 110030000,
         "teamValueInc": 250000,
         "position": 5,
         "positionInc": -1,
@@ -12328,7 +12328,7 @@
       "name": "Soulands Rangers",
       "manager": "Soulands Rangers",
       "points": 1482,
-      "value": 110280000,
+      "value": 110030000,
       "trend": 250000,
       "players": []
     },
@@ -12593,6 +12593,21 @@
   },
   "boardTomaquet": [
     {
+      "type": "transfer",
+      "date": 1776583148,
+      "content": [
+        {
+          "player": 5717,
+          "from": {
+            "id": 8068002,
+            "name": "Soulands Rangers",
+            "icon": "i/u/8068002.png?v=69"
+          },
+          "amount": 241800
+        }
+      ]
+    },
+    {
       "type": "market",
       "date": 1776575302,
       "content": [
@@ -12803,21 +12818,6 @@
               "amount": 3610000
             }
           ]
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1776342720,
-      "content": [
-        {
-          "player": 32629,
-          "from": {
-            "id": 8070044,
-            "name": "CA CABA JUNIORS",
-            "icon": "i/u/8070044.png?v=63"
-          },
-          "amount": 1008800
         }
       ]
     }
@@ -13220,8 +13220,8 @@
           2,
           13
         ],
-        "teamSize": 19,
-        "teamValue": 40960000,
+        "teamSize": 18,
+        "teamValue": 40810000,
         "teamValueInc": 230000,
         "position": 19,
         "role": ""
@@ -13414,7 +13414,7 @@
       "name": "Aquest any he trepitjat merda !!",
       "manager": "Aquest any he trepitjat merda !!",
       "points": 1095,
-      "value": 40960000,
+      "value": 40810000,
       "trend": 230000,
       "players": []
     },
@@ -13588,6 +13588,21 @@
     "market": []
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1776593051,
+      "content": [
+        {
+          "player": 37720,
+          "from": {
+            "id": 6586257,
+            "name": "Aquest any he trepitjat merda !!",
+            "icon": "i/u/6586257.png"
+          },
+          "amount": 151500
+        }
+      ]
+    },
     {
       "type": "market",
       "date": 1776575400,
@@ -13780,21 +13795,6 @@
               "amount": 5130000
             }
           ]
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1776231334,
-      "content": [
-        {
-          "player": 39804,
-          "from": {
-            "id": 6586225,
-            "name": "Sergi Sala Duran",
-            "icon": "https://graph.facebook.com/10156583054878679/picture?height=300&width=300"
-          },
-          "amount": 3077300
         }
       ]
     }
@@ -15027,18 +15027,18 @@
       "matchDate": "2026-04-26T12:00:00Z"
     },
     "Getafe": {
-      "winProb": 0.17479626786346997,
-      "drawProb": 0.22286524152592418,
-      "loseProb": 0.6023384906106058,
+      "winProb": 0.175505756942195,
+      "drawProb": 0.2237698401012986,
+      "loseProb": 0.6007244029565063,
       "over25Prob": 0.5319148936170213,
       "isHome": true,
       "opponent": "Barcelona",
       "matchDate": "2026-04-25T14:15:00Z"
     },
     "Barcelona": {
-      "winProb": 0.6023384906106058,
-      "drawProb": 0.22286524152592418,
-      "loseProb": 0.17479626786346997,
+      "winProb": 0.6007244029565063,
+      "drawProb": 0.2237698401012986,
+      "loseProb": 0.175505756942195,
       "over25Prob": 0.5319148936170213,
       "isHome": false,
       "opponent": "Getafe",
@@ -15110,6 +15110,30 @@
   },
   "news": [
     {
+      "title": "Fermín reaparece con máscara y Marc Bernal sigue ausente",
+      "link": "https://www.jornadaperfecta.com/blog/fermin-estado-j33/",
+      "date": "Sun, 19 Apr 2026 11:40:51 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Chollos Fantasy que Tienes que Fichar YA para la J33 de Biwenger",
+      "link": "https://www.jornadaperfecta.com/blog/chollos-fantasy-biwenger-j33-laliga/",
+      "date": "Sun, 19 Apr 2026 11:30:01 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Unai Núñez y Hugo Duro siguen ausentes y apuntan a baja",
+      "link": "https://www.jornadaperfecta.com/blog/hugo-duro-estado-j33/",
+      "date": "Sun, 19 Apr 2026 10:20:55 +0000",
+      "img": "https://cdn.biwenger.com/i/t/18.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Las claves fantasy del Real Oviedo &#8211; Villarreal: Onces, Lesiones y Apuestas",
       "link": "https://www.jornadaperfecta.com/blog/alineaciones-real-oviedo-villarreal-j33-25-26/",
       "date": "Sun, 19 Apr 2026 06:45:10 +0000",
@@ -15164,37 +15188,13 @@
       "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Las claves fantasy del Girona FC &#8211; Real Betis: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-girona-real-betis-j33-25-26/",
-      "date": "Sun, 19 Apr 2026 06:10:21 +0000",
-      "img": "https://cdn.biwenger.com/i/t/289.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Las claves fantasy del Athletic Club &#8211; CA Osasuna: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-athletic-osasuna-j33-25-26/",
-      "date": "Sun, 19 Apr 2026 06:05:11 +0000",
-      "img": "https://cdn.biwenger.com/i/t/1.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Las claves fantasy del RCD Mallorca &#8211; Valencia CF: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-mallorca-valencia-j33-25-26/",
-      "date": "Sun, 19 Apr 2026 06:00:06 +0000",
-      "img": "https://cdn.biwenger.com/i/t/465.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-19T07:04:14.279Z",
+    "updatedAt": "2026-04-19T12:32:48.854Z",
     "players": [
       {
         "id": "3374",
