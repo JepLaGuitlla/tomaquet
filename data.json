@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-19T18:30:55.736Z",
+  "updatedAt": "2026-04-20T01:20:44.818Z",
   "players": [
     {
       "id": 11,
@@ -12421,7 +12421,7 @@
     "balance": 13785655,
     "lineup": {
       "type": "5-4-1",
-      "date": 1776511961,
+      "date": 1776638051,
       "playersID": [
         17021,
         10245,
@@ -12449,13 +12449,6 @@
         "clause": 5377500,
         "invested": 0,
         "buyDate": 1776323919
-      },
-      {
-        "id": 38116,
-        "buyPrice": 3150000,
-        "clause": 4725000,
-        "invested": 0,
-        "buyDate": 1776017113
       },
       {
         "id": 1908,
@@ -12540,6 +12533,13 @@
         "clause": 550020000000,
         "invested": 0,
         "buyDate": 1775538301
+      },
+      {
+        "id": 38116,
+        "buyPrice": 3150000,
+        "clause": 4725000,
+        "invested": 0,
+        "buyDate": 1776017113
       },
       {
         "id": 38216,
@@ -12918,9 +12918,9 @@
           17,
           14
         ],
-        "teamSize": 19,
-        "teamValue": 105690000,
-        "teamValueInc": 210000,
+        "teamSize": 18,
+        "teamValue": 101620000,
+        "teamValueInc": 200000,
         "position": 3,
         "role": ""
       },
@@ -13276,8 +13276,8 @@
       "name": "Xevi borrat",
       "manager": "Xevi borrat",
       "points": 1462,
-      "value": 105690000,
-      "trend": 210000,
+      "value": 101620000,
+      "trend": 200000,
       "players": []
     },
     {
@@ -13596,6 +13596,21 @@
   "boardEnBas": [
     {
       "type": "transfer",
+      "date": 1776636267,
+      "content": [
+        {
+          "player": 1083,
+          "from": {
+            "id": 6579505,
+            "name": "Xevi borrat",
+            "icon": "i/u/6579505.png"
+          },
+          "amount": 4214700
+        }
+      ]
+    },
+    {
+      "type": "transfer",
       "date": 1776593051,
       "content": [
         {
@@ -13685,21 +13700,6 @@
             "icon": "https://graph.facebook.com/10156583054878679/picture?height=300&width=300"
           },
           "amount": 2294390
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1776322714,
-      "content": [
-        {
-          "player": 31707,
-          "from": {
-            "id": 11504267,
-            "name": "🦊",
-            "icon": "i/u/11504267.png"
-          },
-          "amount": 6342600
         }
       ]
     }
@@ -14833,9 +14833,9 @@
   },
   "odds": {
     "Athletic Bilbao": {
-      "winProb": 0.29516329061595703,
-      "drawProb": 0.2691194708557256,
-      "loseProb": 0.4357172385283175,
+      "winProb": 0.2772754671488849,
+      "drawProb": 0.26522001205545515,
+      "loseProb": 0.45750452079566006,
       "over25Prob": 0.5076142131979695,
       "isHome": false,
       "opponent": "Atlético Madrid",
@@ -14851,10 +14851,10 @@
       "matchDate": "2026-04-26T16:30:00Z"
     },
     "Mallorca": {
-      "winProb": 0.28404005966332835,
-      "drawProb": 0.2932026422331131,
-      "loseProb": 0.42275729810355844,
-      "over25Prob": 0.4347826086956522,
+      "winProb": 0.2778240933722384,
+      "drawProb": 0.29574822842851184,
+      "loseProb": 0.42642767819924965,
+      "over25Prob": 0.4329004329004329,
       "isHome": false,
       "opponent": "Alavés",
       "matchDate": "2026-04-25T12:00:00Z"
@@ -14878,10 +14878,10 @@
       "matchDate": "2026-04-24T19:00:00Z"
     },
     "Alavés": {
-      "winProb": 0.42275729810355844,
-      "drawProb": 0.2932026422331131,
-      "loseProb": 0.28404005966332835,
-      "over25Prob": 0.4347826086956522,
+      "winProb": 0.42642767819924965,
+      "drawProb": 0.29574822842851184,
+      "loseProb": 0.2778240933722384,
+      "over25Prob": 0.4329004329004329,
       "isHome": true,
       "opponent": "Mallorca",
       "matchDate": "2026-04-25T12:00:00Z"
@@ -14905,46 +14905,46 @@
       "matchDate": "2026-04-24T19:00:00Z"
     },
     "Elche CF": {
-      "winProb": 0.32307692307692304,
-      "drawProb": 0.282051282051282,
-      "loseProb": 0.3948717948717948,
-      "over25Prob": 0.4566210045662101,
+      "winProb": 0.3072114311230186,
+      "drawProb": 0.27841035945523557,
+      "loseProb": 0.4143782094217459,
+      "over25Prob": 0.46511627906976744,
       "isHome": false,
       "opponent": "Oviedo",
       "matchDate": "2026-04-26T14:15:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.4357172385283175,
-      "drawProb": 0.2691194708557256,
-      "loseProb": 0.29516329061595703,
+      "winProb": 0.45750452079566006,
+      "drawProb": 0.26522001205545515,
+      "loseProb": 0.2772754671488849,
       "over25Prob": 0.5076142131979695,
       "isHome": true,
       "opponent": "Athletic Bilbao",
       "matchDate": "2026-04-25T19:00:00Z"
     },
     "Real Sociedad": {
-      "winProb": 0.2922318125770653,
-      "drawProb": 0.2922318125770653,
-      "loseProb": 0.41553637484586925,
+      "winProb": 0.28727983492832504,
+      "drawProb": 0.28981465700122205,
+      "loseProb": 0.4229055080704528,
       "over25Prob": 0.49504950495049505,
       "isHome": false,
       "opponent": "Rayo Vallecano",
       "matchDate": "2026-04-26T12:00:00Z"
     },
     "Getafe": {
-      "winProb": 0.19021980110217265,
-      "drawProb": 0.22923924748210556,
-      "loseProb": 0.5805409514157217,
-      "over25Prob": 0.5263157894736842,
+      "winProb": 0.1944192671241746,
+      "drawProb": 0.23229315033018258,
+      "loseProb": 0.5732875825456429,
+      "over25Prob": 0.5235602094240838,
       "isHome": true,
       "opponent": "Barcelona",
       "matchDate": "2026-04-25T14:15:00Z"
     },
     "Barcelona": {
-      "winProb": 0.5805409514157217,
-      "drawProb": 0.22923924748210556,
-      "loseProb": 0.19021980110217265,
-      "over25Prob": 0.5263157894736842,
+      "winProb": 0.5732875825456429,
+      "drawProb": 0.23229315033018258,
+      "loseProb": 0.1944192671241746,
+      "over25Prob": 0.5235602094240838,
       "isHome": false,
       "opponent": "Getafe",
       "matchDate": "2026-04-25T14:15:00Z"
@@ -14977,9 +14977,9 @@
       "matchDate": "2026-04-26T16:30:00Z"
     },
     "Rayo Vallecano": {
-      "winProb": 0.41553637484586925,
-      "drawProb": 0.2922318125770653,
-      "loseProb": 0.2922318125770653,
+      "winProb": 0.4229055080704528,
+      "drawProb": 0.28981465700122205,
+      "loseProb": 0.28727983492832504,
       "over25Prob": 0.49504950495049505,
       "isHome": true,
       "opponent": "Real Sociedad",
@@ -14995,10 +14995,10 @@
       "matchDate": "2026-04-27T19:00:00Z"
     },
     "Oviedo": {
-      "winProb": 0.3948717948717948,
-      "drawProb": 0.282051282051282,
-      "loseProb": 0.32307692307692304,
-      "over25Prob": 0.4566210045662101,
+      "winProb": 0.4143782094217459,
+      "drawProb": 0.27841035945523557,
+      "loseProb": 0.3072114311230186,
+      "over25Prob": 0.46511627906976744,
       "isHome": true,
       "opponent": "Elche CF",
       "matchDate": "2026-04-26T14:15:00Z"
@@ -15014,6 +15014,22 @@
     }
   },
   "news": [
+    {
+      "title": "Frenkie de Jong está de vuelta. ¿Seguirá siendo importante?",
+      "link": "https://www.jornadaperfecta.com/blog/frenkie-de-jong-analisis-vuelta-lesion-26/",
+      "date": "Sun, 19 Apr 2026 19:00:15 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/02/image-2026-02-13T204411.801.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Starfelt sigue al margen en al vuelta al trabajo del Celta",
+      "link": "https://www.jornadaperfecta.com/blog/starfelt-estado-lumbalgia-26/",
+      "date": "Sun, 19 Apr 2026 18:58:17 +0000",
+      "img": "https://cdn.biwenger.com/i/t/5.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Lookman pasará pruebas tras su cambio en Copa. ¿Preocupa su estado?",
       "link": "https://www.jornadaperfecta.com/blog/lookman-estado-molestias-aductor/",
@@ -15077,29 +15093,13 @@
       "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Unai Núñez y Hugo Duro siguen ausentes y apuntan a baja",
-      "link": "https://www.jornadaperfecta.com/blog/hugo-duro-estado-j33/",
-      "date": "Sun, 19 Apr 2026 10:20:55 +0000",
-      "img": "https://cdn.biwenger.com/i/t/18.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Las claves fantasy del Real Oviedo &#8211; Villarreal: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-real-oviedo-villarreal-j33-25-26/",
-      "date": "Sun, 19 Apr 2026 06:45:10 +0000",
-      "img": "https://cdn.biwenger.com/i/t/779.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-19T18:30:55.735Z",
+    "updatedAt": "2026-04-20T01:20:40.140Z",
     "players": [
       {
         "id": "3374",
