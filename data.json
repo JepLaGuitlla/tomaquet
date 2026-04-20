@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-20T13:00:14.052Z",
+  "updatedAt": "2026-04-20T18:47:44.484Z",
   "players": [
     {
       "id": 11,
@@ -12058,9 +12058,9 @@
           13,
           1
         ],
-        "teamSize": 18,
-        "teamValue": 86430000,
-        "teamValueInc": 510000,
+        "teamSize": 19,
+        "teamValue": 94220000,
+        "teamValueInc": 560000,
         "position": 3
       },
       {
@@ -12075,9 +12075,9 @@
           14,
           8
         ],
-        "teamSize": 20,
-        "teamValue": 93230000,
-        "teamValueInc": 120000,
+        "teamSize": 19,
+        "teamValue": 87970000,
+        "teamValueInc": 80000,
         "lastTrophy": {
           "type": "league",
           "position": 3,
@@ -12161,9 +12161,9 @@
           9,
           9
         ],
-        "teamSize": 15,
-        "teamValue": 56700000,
-        "teamValueInc": 40000,
+        "teamSize": 14,
+        "teamValue": 52940000,
+        "teamValueInc": 30000,
         "position": 8,
         "role": ""
       },
@@ -12310,8 +12310,8 @@
       "name": "🦊",
       "manager": "🦊",
       "points": 1567,
-      "value": 86430000,
-      "trend": 510000,
+      "value": 94220000,
+      "trend": 560000,
       "players": []
     },
     {
@@ -12319,8 +12319,8 @@
       "name": "CA CABA JUNIORS",
       "manager": "CA CABA JUNIORS",
       "points": 1488,
-      "value": 93230000,
-      "trend": 120000,
+      "value": 87970000,
+      "trend": 80000,
       "players": []
     },
     {
@@ -12355,8 +12355,8 @@
       "name": "NACECH1",
       "manager": "NACECH1",
       "points": 1410,
-      "value": 56700000,
-      "trend": 40000,
+      "value": 52940000,
+      "trend": 30000,
       "players": []
     },
     {
@@ -12418,31 +12418,45 @@
     "teamId": 6541195,
     "name": "🦊",
     "points": 1567,
-    "balance": 13785655,
+    "balance": -354445,
     "lineup": {
-      "type": "5-4-1",
-      "date": 1776638051,
+      "type": "3-5-2",
+      "date": 1776709797,
       "playersID": [
         17021,
-        10245,
         1908,
+        10245,
         26276,
-        39360,
-        39885,
         26994,
-        38116,
-        25127,
         38867,
-        26271
+        11686,
+        25127,
+        27591,
+        26271,
+        38116
       ],
       "reservesID": [
         null,
         32460,
-        24979,
-        9966
+        30787,
+        34127
       ]
     },
     "players": [
+      {
+        "id": 11686,
+        "buyPrice": 8640000,
+        "clause": 12960000,
+        "invested": 0,
+        "buyDate": 1776704393
+      },
+      {
+        "id": 27591,
+        "buyPrice": 6750000,
+        "clause": 10125000,
+        "invested": 0,
+        "buyDate": 1776704384
+      },
       {
         "id": 10245,
         "buyPrice": 3585000,
@@ -12505,13 +12519,6 @@
         "clause": 10072500,
         "invested": 1000000,
         "buyDate": 1775649508
-      },
-      {
-        "id": 28103,
-        "buyPrice": 1250023,
-        "clause": 1875034,
-        "invested": 0,
-        "buyDate": 1776488555
       },
       {
         "id": 30787,
@@ -12578,16 +12585,22 @@
         "until": 1776785365
       },
       {
-        "playerID": 28103,
-        "price": 1230000,
+        "playerID": 24979,
+        "price": 1660000,
         "type": "sale",
-        "until": 1776785387
+        "until": 1776880082
       },
       {
         "playerID": 30787,
         "price": 5000000,
         "type": "sale",
         "until": 1776785365
+      },
+      {
+        "playerID": 38216,
+        "price": 490000,
+        "type": "sale",
+        "until": 1776878671
       },
       {
         "playerID": 39360,
@@ -12598,6 +12611,57 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1776705852,
+      "content": [
+        {
+          "player": 28103,
+          "from": {
+            "id": 6541195,
+            "name": "🦊",
+            "icon": "i/u/6541195.png?v=17"
+          },
+          "amount": 1249900
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1776704393,
+      "content": [
+        {
+          "player": 27591,
+          "from": {
+            "id": 12696491,
+            "name": "NACECH1",
+            "icon": "https://graph.facebook.com/10235185447969563/picture?height=300&width=300"
+          },
+          "to": {
+            "id": 6541195,
+            "name": "🦊",
+            "icon": "i/u/6541195.png?v=17"
+          },
+          "amount": 6750000,
+          "type": "clause"
+        },
+        {
+          "player": 11686,
+          "from": {
+            "id": 8070044,
+            "name": "CA CABA JUNIORS",
+            "icon": "i/u/8070044.png?v=63"
+          },
+          "to": {
+            "id": 6541195,
+            "name": "🦊",
+            "icon": "i/u/6541195.png?v=17"
+          },
+          "amount": 8640000,
+          "type": "clause"
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1776668062,
@@ -12722,40 +12786,6 @@
             "icon": "i/u/148051.png?v=39"
           },
           "amount": 2689700
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1776488555,
-      "content": [
-        {
-          "player": 30787,
-          "to": {
-            "id": 6541195,
-            "name": "🦊",
-            "icon": "i/u/6541195.png?v=17"
-          },
-          "amount": 2468000,
-          "bids": [
-            {
-              "user": {
-                "id": 8070044,
-                "name": "CA CABA JUNIORS",
-                "icon": "i/u/8070044.png?v=63"
-              },
-              "amount": 2450000
-            }
-          ]
-        },
-        {
-          "player": 28103,
-          "to": {
-            "id": 6541195,
-            "name": "🦊",
-            "icon": "i/u/6541195.png?v=17"
-          },
-          "amount": 1250023
         }
       ]
     }
@@ -13373,15 +13403,15 @@
     "balance": 5538656,
     "lineup": {
       "type": "3-4-3",
-      "date": 1776578415,
+      "date": 1776709723,
       "playersID": [
         14630,
         32440,
-        40010,
         1908,
+        39360,
         1769,
         26048,
-        38368,
+        29034,
         29184,
         38962,
         19577,
@@ -13469,7 +13499,7 @@
       {
         "id": 34541,
         "buyPrice": 380000,
-        "clause": 0,
+        "clause": 525000,
         "invested": 0,
         "buyDate": 1773209125
       },
@@ -13511,7 +13541,7 @@
       {
         "id": 39736,
         "buyPrice": 150089,
-        "clause": 0,
+        "clause": 225000,
         "invested": 0,
         "buyDate": 1771912934
       },
@@ -13523,7 +13553,20 @@
         "buyDate": 1774159515
       }
     ],
-    "market": []
+    "market": [
+      {
+        "playerID": 34541,
+        "price": 525000,
+        "type": "sale",
+        "until": 1776882536
+      },
+      {
+        "playerID": 39736,
+        "price": 225000,
+        "type": "sale",
+        "until": 1776879982
+      }
+    ]
   },
   "boardEnBas": [
     {
@@ -14840,9 +14883,9 @@
   },
   "odds": {
     "Athletic Bilbao": {
-      "winProb": 0.28876229932677366,
-      "drawProb": 0.2675297773174521,
-      "loseProb": 0.44370792335577425,
+      "winProb": 0.2866551828959368,
+      "drawProb": 0.2658830681933327,
+      "loseProb": 0.44746174891073065,
       "over25Prob": 0.5076142131979695,
       "isHome": false,
       "opponent": "Atlético Madrid",
@@ -14867,9 +14910,9 @@
       "matchDate": "2026-04-25T12:00:00Z"
     },
     "Valencia": {
-      "winProb": 0.4892086330935252,
-      "drawProb": 0.2661870503597123,
-      "loseProb": 0.2446043165467626,
+      "winProb": 0.493488182256688,
+      "drawProb": 0.2636636859485733,
+      "loseProb": 0.2428481317947386,
       "over25Prob": 0.5128205128205129,
       "isHome": true,
       "opponent": "Girona",
@@ -14894,9 +14937,9 @@
       "matchDate": "2026-04-25T12:00:00Z"
     },
     "Girona": {
-      "winProb": 0.2446043165467626,
-      "drawProb": 0.2661870503597123,
-      "loseProb": 0.4892086330935252,
+      "winProb": 0.2428481317947386,
+      "drawProb": 0.2636636859485733,
+      "loseProb": 0.493488182256688,
       "over25Prob": 0.5128205128205129,
       "isHome": false,
       "opponent": "Valencia",
@@ -14921,9 +14964,9 @@
       "matchDate": "2026-04-26T14:15:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.44370792335577425,
-      "drawProb": 0.2675297773174521,
-      "loseProb": 0.28876229932677366,
+      "winProb": 0.44746174891073065,
+      "drawProb": 0.2658830681933327,
+      "loseProb": 0.2866551828959368,
       "over25Prob": 0.5076142131979695,
       "isHome": true,
       "opponent": "Athletic Bilbao",
@@ -14939,19 +14982,19 @@
       "matchDate": "2026-04-26T12:00:00Z"
     },
     "Getafe": {
-      "winProb": 0.1725473917254739,
-      "drawProb": 0.2086619620866196,
-      "loseProb": 0.6187906461879065,
-      "over25Prob": 0.5524861878453039,
+      "winProb": 0.16583501433273168,
+      "drawProb": 0.20352479031744344,
+      "loseProb": 0.6306401953498249,
+      "over25Prob": 0.5586592178770949,
       "isHome": true,
       "opponent": "Barcelona",
       "matchDate": "2026-04-25T14:15:00Z"
     },
     "Barcelona": {
-      "winProb": 0.6187906461879065,
-      "drawProb": 0.2086619620866196,
-      "loseProb": 0.1725473917254739,
-      "over25Prob": 0.5524861878453039,
+      "winProb": 0.6306401953498249,
+      "drawProb": 0.20352479031744344,
+      "loseProb": 0.16583501433273168,
+      "over25Prob": 0.5586592178770949,
       "isHome": false,
       "opponent": "Getafe",
       "matchDate": "2026-04-25T14:15:00Z"
@@ -14960,7 +15003,7 @@
       "winProb": 0.2361581920903955,
       "drawProb": 0.2790960451977401,
       "loseProb": 0.48474576271186437,
-      "over25Prob": 0.5235602094240838,
+      "over25Prob": 0.5263157894736842,
       "isHome": false,
       "opponent": "Villarreal",
       "matchDate": "2026-04-26T19:00:00Z"
@@ -15014,12 +15057,1300 @@
       "winProb": 0.48474576271186437,
       "drawProb": 0.2790960451977401,
       "loseProb": 0.2361581920903955,
-      "over25Prob": 0.5235602094240838,
+      "over25Prob": 0.5263157894736842,
       "isHome": true,
       "opponent": "Celta Vigo",
       "matchDate": "2026-04-26T19:00:00Z"
     }
   },
-  "news": [],
-  "playerStats": null
+  "news": [
+    {
+      "title": "La Previa de las Picas: Todo sobre los Cronistas de la Jornada 33",
+      "link": "https://www.jornadaperfecta.com/blog/previa-picas-cronistas-j33/",
+      "date": "Mon, 20 Apr 2026 17:48:38 +0000",
+      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2660.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "El All In de Victorius para la Jornada 33 de La Liga",
+      "link": "https://www.jornadaperfecta.com/blog/all-in-victorius-j33-25-26/",
+      "date": "Mon, 20 Apr 2026 17:00:30 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/04/Ferran-Torres-FC-Barcelona-fantasy.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Valverde explica el estado de Vivian, Prados y habla de Yeray",
+      "link": "https://www.jornadaperfecta.com/blog/valverde-previa-athletic-osasuna-j33/",
+      "date": "Mon, 20 Apr 2026 16:10:32 +0000",
+      "img": "https://cdn.biwenger.com/i/t/1.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "BigUp: Gana dinero real con tus pronósticos del Mallorca &#8211; Valencia",
+      "link": "https://www.jornadaperfecta.com/blog/bigup-mallorca-valencia-pronosticos/",
+      "date": "Mon, 20 Apr 2026 14:18:44 +0000",
+      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2705.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Lisci habla de Iker Muñoz, Lucas Torró y el rival",
+      "link": "https://www.jornadaperfecta.com/blog/lisci-previa-athletic-osasuna-j33/",
+      "date": "Mon, 20 Apr 2026 14:09:29 +0000",
+      "img": "https://cdn.biwenger.com/i/t/93.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Riedel o Calero, duda en el acompañante de Cabrera",
+      "link": "https://www.jornadaperfecta.com/blog/calero-riedel-espanyol-once-j33/",
+      "date": "Mon, 20 Apr 2026 14:00:07 +0000",
+      "img": "https://cdn.biwenger.com/i/t/7.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Jan Virgili o Asano, la duda en el once del RCD Mallorca",
+      "link": "https://www.jornadaperfecta.com/blog/jan-virgili-asano-once-mallorca-j33/",
+      "date": "Mon, 20 Apr 2026 13:50:49 +0000",
+      "img": "https://cdn.biwenger.com/i/t/465.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Dani Vivian vuelve a entrenar con el grupo, ¿titular?",
+      "link": "https://www.jornadaperfecta.com/blog/estado-vivian-j33/",
+      "date": "Mon, 20 Apr 2026 13:30:58 +0000",
+      "img": "https://cdn.biwenger.com/i/t/1.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Pellegrini anuncia la baja de Llorente y habla de los minutos de Isco y Lo Celso",
+      "link": "https://www.jornadaperfecta.com/blog/pellegrini-previa-girona-betis-j33/",
+      "date": "Mon, 20 Apr 2026 13:29:46 +0000",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Posibles cambios en la pareja de centrales del Real Oviedo",
+      "link": "https://www.jornadaperfecta.com/blog/defensa-real-oviedo-rotaciones/",
+      "date": "Mon, 20 Apr 2026 13:26:44 +0000",
+      "img": "https://cdn.biwenger.com/i/t/779.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    }
+  ],
+  "playerStats": {
+    "source": "football-data",
+    "league": "LaLiga",
+    "season": "2025/26",
+    "updatedAt": "2026-04-20T18:47:42.614Z",
+    "players": [
+      {
+        "id": "3374",
+        "name": "Kylian Mbappé",
+        "team": "Real Madrid CF",
+        "position": "",
+        "nationality": "France",
+        "appearances": 26,
+        "goals": 23,
+        "assists": 4,
+        "penalties": 8,
+        "minutesPerGoal": 102
+      },
+      {
+        "id": "30059",
+        "name": "Vedat Muriqi",
+        "team": "RCD Mallorca",
+        "position": "",
+        "nationality": "Kosovo",
+        "appearances": 30,
+        "goals": 21,
+        "assists": 1,
+        "penalties": 5,
+        "minutesPerGoal": 129
+      },
+      {
+        "id": "2237",
+        "name": "Ante Budimir",
+        "team": "CA Osasuna",
+        "position": "",
+        "nationality": "Croatia",
+        "appearances": 30,
+        "goals": 16,
+        "assists": 0,
+        "penalties": 6,
+        "minutesPerGoal": 169
+      },
+      {
+        "id": "202283",
+        "name": "Lamine Yamal",
+        "team": "FC Barcelona",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 27,
+        "goals": 15,
+        "assists": 11,
+        "penalties": 2,
+        "minutesPerGoal": 162
+      },
+      {
+        "id": "33154",
+        "name": "Ferrán Torres",
+        "team": "FC Barcelona",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 29,
+        "goals": 14,
+        "assists": 2,
+        "penalties": 0,
+        "minutesPerGoal": 186
+      },
+      {
+        "id": "32056",
+        "name": "Borja Iglesias",
+        "team": "RC Celta de Vigo",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 30,
+        "goals": 12,
+        "assists": 1,
+        "penalties": 3,
+        "minutesPerGoal": 225
+      },
+      {
+        "id": "180137",
+        "name": "Mikel Oyarzabal",
+        "team": "Real Sociedad de Fútbol",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 28,
+        "goals": 12,
+        "assists": 3,
+        "penalties": 5,
+        "minutesPerGoal": 210
+      },
+      {
+        "id": "371",
+        "name": "Robert Lewandowski",
+        "team": "FC Barcelona",
+        "position": "",
+        "nationality": "Poland",
+        "appearances": 28,
+        "goals": 12,
+        "assists": 1,
+        "penalties": 1,
+        "minutesPerGoal": 210
+      },
+      {
+        "id": "37428",
+        "name": "Raphinha",
+        "team": "FC Barcelona",
+        "position": "",
+        "nationality": "Brazil",
+        "appearances": 21,
+        "goals": 11,
+        "assists": 3,
+        "penalties": 3,
+        "minutesPerGoal": 172
+      },
+      {
+        "id": "1556",
+        "name": "Vinicius Junior",
+        "team": "Real Madrid CF",
+        "position": "",
+        "nationality": "Brazil",
+        "appearances": 29,
+        "goals": 11,
+        "assists": 5,
+        "penalties": 4,
+        "minutesPerGoal": 237
+      },
+      {
+        "id": "11113",
+        "name": "Lucas Boyé",
+        "team": "Deportivo Alavés",
+        "position": "",
+        "nationality": "Argentina",
+        "appearances": 26,
+        "goals": 11,
+        "assists": 1,
+        "penalties": 3,
+        "minutesPerGoal": 213
+      },
+      {
+        "id": "133276",
+        "name": "Jorge de Frutos",
+        "team": "Rayo Vallecano de Madrid",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 29,
+        "goals": 10,
+        "assists": 1,
+        "penalties": 1,
+        "minutesPerGoal": 261
+      },
+      {
+        "id": "8167",
+        "name": "Alexander Sørloth",
+        "team": "Club Atlético de Madrid",
+        "position": "",
+        "nationality": "Norway",
+        "appearances": 30,
+        "goals": 10,
+        "assists": 0,
+        "penalties": 0,
+        "minutesPerGoal": 270
+      },
+      {
+        "id": "32762",
+        "name": "Hugo Duro",
+        "team": "Valencia CF",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 30,
+        "goals": 9,
+        "assists": 0,
+        "penalties": 1,
+        "minutesPerGoal": 300
+      },
+      {
+        "id": "160819",
+        "name": "Vladyslav Vanat",
+        "team": "Girona FC",
+        "position": "",
+        "nationality": "Ukraine",
+        "appearances": 27,
+        "goals": 9,
+        "assists": 1,
+        "penalties": 3,
+        "minutesPerGoal": 270
+      },
+      {
+        "id": "136646",
+        "name": "Georges Mikautadze",
+        "team": "Villarreal CF",
+        "position": "",
+        "nationality": "Georgia",
+        "appearances": 27,
+        "goals": 9,
+        "assists": 5,
+        "penalties": 0,
+        "minutesPerGoal": 270
+      },
+      {
+        "id": "150533",
+        "name": "Alberto Moleiro",
+        "team": "Villarreal CF",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 31,
+        "goals": 9,
+        "assists": 4,
+        "penalties": 0,
+        "minutesPerGoal": 310
+      },
+      {
+        "id": "112678",
+        "name": "Federico Viñas",
+        "team": "Real Oviedo",
+        "position": "",
+        "nationality": "Uruguay",
+        "appearances": 27,
+        "goals": 9,
+        "assists": 1,
+        "penalties": 2,
+        "minutesPerGoal": 270
+      },
+      {
+        "id": "11733",
+        "name": "Toni Martínez",
+        "team": "Deportivo Alavés",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 31,
+        "goals": 8,
+        "assists": 3,
+        "penalties": 0,
+        "minutesPerGoal": 349
+      },
+      {
+        "id": "98571",
+        "name": "Julián Álvarez",
+        "team": "Club Atlético de Madrid",
+        "position": "",
+        "nationality": "Argentina",
+        "appearances": 31,
+        "goals": 8,
+        "assists": 4,
+        "penalties": 2,
+        "minutesPerGoal": 349
+      },
+      {
+        "id": "4098",
+        "name": "Rafael Mir",
+        "team": "Elche CF",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 26,
+        "goals": 8,
+        "assists": 0,
+        "penalties": 1,
+        "minutesPerGoal": 293
+      },
+      {
+        "id": "32415",
+        "name": "Cucho Hernández",
+        "team": "Real Betis Balompié",
+        "position": "",
+        "nationality": "Colombia",
+        "appearances": 26,
+        "goals": 8,
+        "assists": 3,
+        "penalties": 1,
+        "minutesPerGoal": 293
+      },
+      {
+        "id": "82132",
+        "name": "Akor Adams",
+        "team": "Sevilla FC",
+        "position": "",
+        "nationality": "Nigeria",
+        "appearances": 26,
+        "goals": 8,
+        "assists": 3,
+        "penalties": 3,
+        "minutesPerGoal": 293
+      },
+      {
+        "id": "32719",
+        "name": "Gerard Moreno",
+        "team": "Villarreal CF",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 18,
+        "goals": 8,
+        "assists": 0,
+        "penalties": 2,
+        "minutesPerGoal": 203
+      },
+      {
+        "id": "3259",
+        "name": "Gonçalo Guedes",
+        "team": "Real Sociedad de Fútbol",
+        "position": "",
+        "nationality": "Portugal",
+        "appearances": 31,
+        "goals": 8,
+        "assists": 4,
+        "penalties": 0,
+        "minutesPerGoal": 349
+      },
+      {
+        "id": "247061",
+        "name": "Carlos Espí",
+        "team": "Levante UD",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 27,
+        "goals": 8,
+        "assists": 0,
+        "penalties": 0,
+        "minutesPerGoal": 304
+      },
+      {
+        "id": "1760",
+        "name": "André Silva",
+        "team": "Elche CF",
+        "position": "",
+        "nationality": "Portugal",
+        "appearances": 26,
+        "goals": 7,
+        "assists": 0,
+        "penalties": 1,
+        "minutesPerGoal": 334
+      },
+      {
+        "id": "33117",
+        "name": "Pablo Fornals",
+        "team": "Real Betis Balompié",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 31,
+        "goals": 7,
+        "assists": 4,
+        "penalties": 0,
+        "minutesPerGoal": 399
+      },
+      {
+        "id": "23132",
+        "name": "Dani Olmo",
+        "team": "FC Barcelona",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 26,
+        "goals": 7,
+        "assists": 8,
+        "penalties": 0,
+        "minutesPerGoal": 334
+      },
+      {
+        "id": "97085",
+        "name": "Antony",
+        "team": "Real Betis Balompié",
+        "position": "",
+        "nationality": "Brazil",
+        "appearances": 26,
+        "goals": 7,
+        "assists": 5,
+        "penalties": 0,
+        "minutesPerGoal": 334
+      },
+      {
+        "id": "83406",
+        "name": "Ferran Jutglà",
+        "team": "RC Celta de Vigo",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 28,
+        "goals": 7,
+        "assists": 2,
+        "penalties": 0,
+        "minutesPerGoal": 360
+      },
+      {
+        "id": "81565",
+        "name": "Gorka Guruzeta",
+        "team": "Athletic Club",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 30,
+        "goals": 7,
+        "assists": 1,
+        "penalties": 1,
+        "minutesPerGoal": 386
+      },
+      {
+        "id": "203439",
+        "name": "Karl Etta Eyong",
+        "team": "Levante UD",
+        "position": "",
+        "nationality": "Cameroon",
+        "appearances": 29,
+        "goals": 6,
+        "assists": 5,
+        "penalties": 0,
+        "minutesPerGoal": 435
+      },
+      {
+        "id": "32398",
+        "name": "Pere Milla",
+        "team": "RCD Espanyol de Barcelona",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 28,
+        "goals": 6,
+        "assists": 0,
+        "penalties": 0,
+        "minutesPerGoal": 420
+      },
+      {
+        "id": "113175",
+        "name": "Tajon Buchanan",
+        "team": "Villarreal CF",
+        "position": "",
+        "nationality": "Canada",
+        "appearances": 30,
+        "goals": 6,
+        "assists": 1,
+        "penalties": 0,
+        "minutesPerGoal": 450
+      },
+      {
+        "id": "180218",
+        "name": "Roberto Fernández",
+        "team": "RCD Espanyol de Barcelona",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 31,
+        "goals": 6,
+        "assists": 1,
+        "penalties": 1,
+        "minutesPerGoal": 465
+      },
+      {
+        "id": "33358",
+        "name": "Kike García",
+        "team": "RCD Espanyol de Barcelona",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 31,
+        "goals": 6,
+        "assists": 1,
+        "penalties": 1,
+        "minutesPerGoal": 465
+      },
+      {
+        "id": "32758",
+        "name": "Mauro Arambarri",
+        "team": "Getafe CF",
+        "position": "",
+        "nationality": "Uruguay",
+        "appearances": 30,
+        "goals": 6,
+        "assists": 2,
+        "penalties": 2,
+        "minutesPerGoal": 450
+      },
+      {
+        "id": "114",
+        "name": "Antoine Griezmann",
+        "team": "Club Atlético de Madrid",
+        "position": "",
+        "nationality": "France",
+        "appearances": 29,
+        "goals": 6,
+        "assists": 1,
+        "penalties": 0,
+        "minutesPerGoal": 435
+      },
+      {
+        "id": "175941",
+        "name": "Abdessamad Ezzalzouli",
+        "team": "Real Betis Balompié",
+        "position": "",
+        "nationality": "Morocco",
+        "appearances": 22,
+        "goals": 6,
+        "assists": 5,
+        "penalties": 0,
+        "minutesPerGoal": 330
+      },
+      {
+        "id": "3331",
+        "name": "Marcus Rashford",
+        "team": "FC Barcelona",
+        "position": "",
+        "nationality": "England",
+        "appearances": 29,
+        "goals": 6,
+        "assists": 6,
+        "penalties": 0,
+        "minutesPerGoal": 435
+      },
+      {
+        "id": "101870",
+        "name": "Roberto Navarro",
+        "team": "Athletic Club",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 28,
+        "goals": 5,
+        "assists": 1,
+        "penalties": 0,
+        "minutesPerGoal": 504
+      },
+      {
+        "id": "156746",
+        "name": "Iván Romero",
+        "team": "Levante UD",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 30,
+        "goals": 5,
+        "assists": 2,
+        "penalties": 0,
+        "minutesPerGoal": 540
+      },
+      {
+        "id": "182319",
+        "name": "Orri Oskarsson",
+        "team": "Real Sociedad de Fútbol",
+        "position": "",
+        "nationality": "Iceland",
+        "appearances": 15,
+        "goals": 5,
+        "assists": 0,
+        "penalties": 0,
+        "minutesPerGoal": 270
+      },
+      {
+        "id": "8412",
+        "name": "Nicolas Pépé",
+        "team": "Villarreal CF",
+        "position": "",
+        "nationality": "Ivory Coast",
+        "appearances": 31,
+        "goals": 5,
+        "assists": 4,
+        "penalties": 0,
+        "minutesPerGoal": 558
+      },
+      {
+        "id": "213404",
+        "name": "Carlos Vicente",
+        "team": "Deportivo Alavés",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 21,
+        "goals": 5,
+        "assists": 0,
+        "penalties": 3,
+        "minutesPerGoal": 378
+      },
+      {
+        "id": "186564",
+        "name": "Carlos Romero",
+        "team": "RCD Espanyol de Barcelona",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 29,
+        "goals": 5,
+        "assists": 1,
+        "penalties": 0,
+        "minutesPerGoal": 522
+      },
+      {
+        "id": "130324",
+        "name": "Raúl",
+        "team": "CA Osasuna",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 30,
+        "goals": 5,
+        "assists": 0,
+        "penalties": 0,
+        "minutesPerGoal": 540
+      },
+      {
+        "id": "214533",
+        "name": "Fermín López",
+        "team": "FC Barcelona",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 26,
+        "goals": 5,
+        "assists": 8,
+        "penalties": 0,
+        "minutesPerGoal": 468
+      },
+      {
+        "id": "33615",
+        "name": "Brais Méndez",
+        "team": "Real Sociedad de Fútbol",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 27,
+        "goals": 5,
+        "assists": 2,
+        "penalties": 1,
+        "minutesPerGoal": 486
+      },
+      {
+        "id": "16275",
+        "name": "Djibril Sow",
+        "team": "Sevilla FC",
+        "position": "",
+        "nationality": "Switzerland",
+        "appearances": 29,
+        "goals": 5,
+        "assists": 1,
+        "penalties": 0,
+        "minutesPerGoal": 522
+      },
+      {
+        "id": "273423",
+        "name": "Víctor Muñoz",
+        "team": "CA Osasuna",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 31,
+        "goals": 5,
+        "assists": 2,
+        "penalties": 0,
+        "minutesPerGoal": 558
+      },
+      {
+        "id": "140814",
+        "name": "Samuel Almeida Costa",
+        "team": "RCD Mallorca",
+        "position": "",
+        "nationality": "Portugal",
+        "appearances": 28,
+        "goals": 5,
+        "assists": 1,
+        "penalties": 0,
+        "minutesPerGoal": 504
+      },
+      {
+        "id": "189369",
+        "name": "Alvaro Rodriguez",
+        "team": "Elche CF",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 30,
+        "goals": 5,
+        "assists": 4,
+        "penalties": 0,
+        "minutesPerGoal": 540
+      },
+      {
+        "id": "16173",
+        "name": "Viktor Tsyhankov",
+        "team": "Girona FC",
+        "position": "",
+        "nationality": "Ukraine",
+        "appearances": 25,
+        "goals": 5,
+        "assists": 4,
+        "penalties": 0,
+        "minutesPerGoal": 450
+      },
+      {
+        "id": "136349",
+        "name": "Largie Ramazani",
+        "team": "Valencia CF",
+        "position": "",
+        "nationality": "Belgium",
+        "appearances": 24,
+        "goals": 5,
+        "assists": 1,
+        "penalties": 3,
+        "minutesPerGoal": 432
+      },
+      {
+        "id": "96",
+        "name": "Federico Valverde",
+        "team": "Real Madrid CF",
+        "position": "",
+        "nationality": "Uruguay",
+        "appearances": 28,
+        "goals": 5,
+        "assists": 5,
+        "penalties": 0,
+        "minutesPerGoal": 504
+      },
+      {
+        "id": "32312",
+        "name": "Álvaro García",
+        "team": "Rayo Vallecano de Madrid",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 30,
+        "goals": 4,
+        "assists": 5,
+        "penalties": 0,
+        "minutesPerGoal": 675
+      },
+      {
+        "id": "633",
+        "name": "Pape Gueye",
+        "team": "Villarreal CF",
+        "position": "",
+        "nationality": "Senegal",
+        "appearances": 26,
+        "goals": 4,
+        "assists": 2,
+        "penalties": 1,
+        "minutesPerGoal": 585
+      },
+      {
+        "id": "157135",
+        "name": "Nico Williams",
+        "team": "Athletic Club",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 21,
+        "goals": 4,
+        "assists": 3,
+        "penalties": 1,
+        "minutesPerGoal": 473
+      },
+      {
+        "id": "33045",
+        "name": "Aitor Ruibal",
+        "team": "Real Betis Balompié",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 27,
+        "goals": 4,
+        "assists": 2,
+        "penalties": 0,
+        "minutesPerGoal": 608
+      },
+      {
+        "id": "137485",
+        "name": "Germán Valera",
+        "team": "Elche CF",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 30,
+        "goals": 4,
+        "assists": 4,
+        "penalties": 0,
+        "minutesPerGoal": 675
+      },
+      {
+        "id": "171964",
+        "name": "Giuliano Simeone",
+        "team": "Club Atlético de Madrid",
+        "position": "",
+        "nationality": "Argentina",
+        "appearances": 29,
+        "goals": 4,
+        "assists": 6,
+        "penalties": 0,
+        "minutesPerGoal": 653
+      },
+      {
+        "id": "213043",
+        "name": "Isaac",
+        "team": "Sevilla FC",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 27,
+        "goals": 4,
+        "assists": 0,
+        "penalties": 0,
+        "minutesPerGoal": 608
+      },
+      {
+        "id": "169162",
+        "name": "Arda Guler",
+        "team": "Real Madrid CF",
+        "position": "",
+        "nationality": "Turkey",
+        "appearances": 30,
+        "goals": 4,
+        "assists": 8,
+        "penalties": 0,
+        "minutesPerGoal": 675
+      },
+      {
+        "id": "69",
+        "name": "Borja Mayoral",
+        "team": "Getafe CF",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 16,
+        "goals": 4,
+        "assists": 1,
+        "penalties": 0,
+        "minutesPerGoal": 360
+      },
+      {
+        "id": "122511",
+        "name": "Azzedine Ounahi",
+        "team": "Girona FC",
+        "position": "",
+        "nationality": "Morocco",
+        "appearances": 17,
+        "goals": 4,
+        "assists": 2,
+        "penalties": 0,
+        "minutesPerGoal": 383
+      },
+      {
+        "id": "191053",
+        "name": "Alberto Reina",
+        "team": "Real Oviedo",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 30,
+        "goals": 4,
+        "assists": 1,
+        "penalties": 0,
+        "minutesPerGoal": 675
+      },
+      {
+        "id": "3201",
+        "name": "Iago Aspas",
+        "team": "RC Celta de Vigo",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 30,
+        "goals": 4,
+        "assists": 3,
+        "penalties": 2,
+        "minutesPerGoal": 675
+      },
+      {
+        "id": "33148",
+        "name": "Carlos Soler",
+        "team": "Real Sociedad de Fútbol",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 27,
+        "goals": 4,
+        "assists": 3,
+        "penalties": 0,
+        "minutesPerGoal": 608
+      },
+      {
+        "id": "125010",
+        "name": "Jude Bellingham",
+        "team": "Real Madrid CF",
+        "position": "",
+        "nationality": "England",
+        "appearances": 20,
+        "goals": 4,
+        "assists": 3,
+        "penalties": 0,
+        "minutesPerGoal": 450
+      },
+      {
+        "id": "170438",
+        "name": "Williot Swedberg",
+        "team": "RC Celta de Vigo",
+        "position": "",
+        "nationality": "Sweden",
+        "appearances": 25,
+        "goals": 4,
+        "assists": 3,
+        "penalties": 0,
+        "minutesPerGoal": 563
+      },
+      {
+        "id": "217658",
+        "name": "Gonzalo García",
+        "team": "Real Madrid CF",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 30,
+        "goals": 4,
+        "assists": 0,
+        "penalties": 0,
+        "minutesPerGoal": 675
+      },
+      {
+        "id": "146126",
+        "name": "Ilyas Chaira",
+        "team": "Real Oviedo",
+        "position": "",
+        "nationality": "Morocco",
+        "appearances": 29,
+        "goals": 4,
+        "assists": 2,
+        "penalties": 0,
+        "minutesPerGoal": 653
+      },
+      {
+        "id": "152458",
+        "name": "Martin Satriano",
+        "team": "Getafe CF",
+        "position": "",
+        "nationality": "Uruguay",
+        "appearances": 12,
+        "goals": 4,
+        "assists": 1,
+        "penalties": 0,
+        "minutesPerGoal": 270
+      },
+      {
+        "id": "33496",
+        "name": "Isi Palazón",
+        "team": "Rayo Vallecano de Madrid",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 29,
+        "goals": 3,
+        "assists": 2,
+        "penalties": 2,
+        "minutesPerGoal": 870
+      },
+      {
+        "id": "180061",
+        "name": "Diego López",
+        "team": "Valencia CF",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 29,
+        "goals": 3,
+        "assists": 0,
+        "penalties": 0,
+        "minutesPerGoal": 870
+      },
+      {
+        "id": "249599",
+        "name": "Adri Liso",
+        "team": "Getafe CF",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 27,
+        "goals": 3,
+        "assists": 0,
+        "penalties": 0,
+        "minutesPerGoal": 810
+      },
+      {
+        "id": "101182",
+        "name": "Ander Barrenetxea",
+        "team": "Real Sociedad de Fútbol",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 25,
+        "goals": 3,
+        "assists": 4,
+        "penalties": 0,
+        "minutesPerGoal": 750
+      },
+      {
+        "id": "126878",
+        "name": "Oihan Sancet",
+        "team": "Athletic Club",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 24,
+        "goals": 3,
+        "assists": 0,
+        "penalties": 2,
+        "minutesPerGoal": 720
+      },
+      {
+        "id": "175869",
+        "name": "Hugo Alvarez",
+        "team": "RC Celta de Vigo",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 27,
+        "goals": 3,
+        "assists": 1,
+        "penalties": 0,
+        "minutesPerGoal": 810
+      },
+      {
+        "id": "9870",
+        "name": "Arnaut Danjuma",
+        "team": "Valencia CF",
+        "position": "",
+        "nationality": "Netherlands",
+        "appearances": 30,
+        "goals": 3,
+        "assists": 2,
+        "penalties": 0,
+        "minutesPerGoal": 900
+      },
+      {
+        "id": "21583",
+        "name": "Cédric Bakambu",
+        "team": "Real Betis Balompié",
+        "position": "",
+        "nationality": "DR Congo",
+        "appearances": 24,
+        "goals": 3,
+        "assists": 0,
+        "penalties": 0,
+        "minutesPerGoal": 720
+      },
+      {
+        "id": "45680",
+        "name": "Nicolás González",
+        "team": "Club Atlético de Madrid",
+        "position": "",
+        "nationality": "Argentina",
+        "appearances": 22,
+        "goals": 3,
+        "assists": 0,
+        "penalties": 0,
+        "minutesPerGoal": 660
+      },
+      {
+        "id": "156525",
+        "name": "Carlos Álvarez",
+        "team": "Levante UD",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 28,
+        "goals": 3,
+        "assists": 2,
+        "penalties": 0,
+        "minutesPerGoal": 840
+      },
+      {
+        "id": "31913",
+        "name": "Ruben Vargas",
+        "team": "Sevilla FC",
+        "position": "",
+        "nationality": "Switzerland",
+        "appearances": 17,
+        "goals": 3,
+        "assists": 5,
+        "penalties": 1,
+        "minutesPerGoal": 510
+      },
+      {
+        "id": "7911",
+        "name": "Alexis Sánchez",
+        "team": "Sevilla FC",
+        "position": "",
+        "nationality": "Chile",
+        "appearances": 24,
+        "goals": 3,
+        "assists": 1,
+        "penalties": 1,
+        "minutesPerGoal": 720
+      },
+      {
+        "id": "11040",
+        "name": "Leandro Cabrera",
+        "team": "RCD Espanyol de Barcelona",
+        "position": "",
+        "nationality": "Uruguay",
+        "appearances": 30,
+        "goals": 3,
+        "assists": 0,
+        "penalties": 0,
+        "minutesPerGoal": 900
+      },
+      {
+        "id": "28292",
+        "name": "Ronald Araújo",
+        "team": "FC Barcelona",
+        "position": "",
+        "nationality": "Uruguay",
+        "appearances": 25,
+        "goals": 3,
+        "assists": 0,
+        "penalties": 0,
+        "minutesPerGoal": 750
+      },
+      {
+        "id": "79953",
+        "name": "Thiago Almada",
+        "team": "Club Atlético de Madrid",
+        "position": "",
+        "nationality": "Argentina",
+        "appearances": 26,
+        "goals": 3,
+        "assists": 1,
+        "penalties": 0,
+        "minutesPerGoal": 780
+      },
+      {
+        "id": "3171",
+        "name": "Cristhian Stuani",
+        "team": "Girona FC",
+        "position": "",
+        "nationality": "Uruguay",
+        "appearances": 19,
+        "goals": 3,
+        "assists": 0,
+        "penalties": 3,
+        "minutesPerGoal": 570
+      },
+      {
+        "id": "213263",
+        "name": "Santi Comesaña",
+        "team": "Villarreal CF",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 30,
+        "goals": 3,
+        "assists": 5,
+        "penalties": 0,
+        "minutesPerGoal": 900
+      },
+      {
+        "id": "126913",
+        "name": "Iker Losada",
+        "team": "Levante UD",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 32,
+        "goals": 3,
+        "assists": 1,
+        "penalties": 0,
+        "minutesPerGoal": 960
+      },
+      {
+        "id": "156967",
+        "name": "Luis Vázquez",
+        "team": "Getafe CF",
+        "position": "",
+        "nationality": "Argentina",
+        "appearances": 11,
+        "goals": 3,
+        "assists": 0,
+        "penalties": 0,
+        "minutesPerGoal": 330
+      },
+      {
+        "id": "159520",
+        "name": "Pablo Torre",
+        "team": "RCD Mallorca",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 31,
+        "goals": 3,
+        "assists": 3,
+        "penalties": 0,
+        "minutesPerGoal": 930
+      },
+      {
+        "id": "82516",
+        "name": "Luka Sučić",
+        "team": "Real Sociedad de Fútbol",
+        "position": "",
+        "nationality": "Croatia",
+        "appearances": 28,
+        "goals": 3,
+        "assists": 1,
+        "penalties": 0,
+        "minutesPerGoal": 840
+      },
+      {
+        "id": "3369",
+        "name": "Thomas Lemar",
+        "team": "Girona FC",
+        "position": "",
+        "nationality": "France",
+        "appearances": 22,
+        "goals": 3,
+        "assists": 1,
+        "penalties": 0,
+        "minutesPerGoal": 660
+      },
+      {
+        "id": "180280",
+        "name": "Casals",
+        "team": "Girona FC",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 27,
+        "goals": 2,
+        "assists": 1,
+        "penalties": 0,
+        "minutesPerGoal": 1215
+      },
+      {
+        "id": "48555",
+        "name": "Takefusa Kubo",
+        "team": "Real Sociedad de Fútbol",
+        "position": "",
+        "nationality": "Japan",
+        "appearances": 20,
+        "goals": 2,
+        "assists": 4,
+        "penalties": 0,
+        "minutesPerGoal": 900
+      },
+      {
+        "id": "3216",
+        "name": "Giovani Lo Celso",
+        "team": "Real Betis Balompié",
+        "position": "",
+        "nationality": "Argentina",
+        "appearances": 20,
+        "goals": 2,
+        "assists": 2,
+        "penalties": 0,
+        "minutesPerGoal": 900
+      }
+    ]
+  }
 }
