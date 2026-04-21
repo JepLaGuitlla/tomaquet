@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-21T12:55:03.434Z",
+  "updatedAt": "2026-04-21T18:53:36.914Z",
   "players": [
     {
       "id": 11,
@@ -12421,7 +12421,7 @@
     "balance": 145555,
     "lineup": {
       "type": "3-5-2",
-      "date": 1776713507,
+      "date": 1776790961,
       "playersID": [
         17021,
         1908,
@@ -13754,81 +13754,6 @@
           "amount": 1571900
         }
       ]
-    },
-    {
-      "type": "market",
-      "date": 1776661376,
-      "content": [
-        {
-          "player": 27994,
-          "to": {
-            "id": 6579330,
-            "name": "Mindundis",
-            "icon": "i/u/6579330.png?v=66"
-          },
-          "amount": 760000
-        },
-        {
-          "player": 34221,
-          "to": {
-            "id": 9897660,
-            "name": "Eric Duran"
-          },
-          "amount": 1380000,
-          "bids": [
-            {
-              "user": {
-                "id": 6586257,
-                "name": "Aquest any he trepitjat merda !!",
-                "icon": "i/u/6586257.png"
-              },
-              "amount": 870000
-            },
-            {
-              "user": {
-                "id": 6579505,
-                "name": "Xevi borrat",
-                "icon": "i/u/6579505.png"
-              },
-              "amount": 870000
-            }
-          ]
-        },
-        {
-          "player": 22073,
-          "to": {
-            "id": 6580386,
-            "name": "Lamine i els 7 nans 👯‍♀️",
-            "icon": "i/u/6580386.png?v=10"
-          },
-          "amount": 1450000,
-          "bids": [
-            {
-              "user": {
-                "id": 9897660,
-                "name": "Eric Duran"
-              },
-              "amount": 950000
-            },
-            {
-              "user": {
-                "id": 6578885,
-                "name": "Norimaki  FC",
-                "icon": "icons/41.png"
-              },
-              "amount": 750000
-            },
-            {
-              "user": {
-                "id": 6586257,
-                "name": "Aquest any he trepitjat merda !!",
-                "icon": "i/u/6586257.png"
-              },
-              "amount": 737000
-            }
-          ]
-        }
-      ]
     }
   ],
   "laliga": {
@@ -13989,24 +13914,43 @@
       {
         "position": 9,
         "team": {
+          "id": 77,
+          "name": "Athletic Club",
+          "shortName": "Athletic",
+          "tla": "ATH",
+          "crest": "https://crests.football-data.org/77.png"
+        },
+        "playedGames": 32,
+        "form": null,
+        "won": 12,
+        "draw": 5,
+        "lost": 15,
+        "points": 41,
+        "goalsFor": 34,
+        "goalsAgainst": 45,
+        "goalDifference": -11
+      },
+      {
+        "position": 10,
+        "team": {
           "id": 79,
           "name": "CA Osasuna",
           "shortName": "Osasuna",
           "tla": "OSA",
           "crest": "https://crests.football-data.org/79.png"
         },
-        "playedGames": 31,
+        "playedGames": 32,
         "form": null,
         "won": 10,
         "draw": 9,
-        "lost": 12,
+        "lost": 13,
         "points": 39,
         "goalsFor": 37,
-        "goalsAgainst": 38,
-        "goalDifference": -1
+        "goalsAgainst": 39,
+        "goalDifference": -2
       },
       {
-        "position": 10,
+        "position": 11,
         "team": {
           "id": 80,
           "name": "RCD Espanyol de Barcelona",
@@ -14025,7 +13969,7 @@
         "goalDifference": -11
       },
       {
-        "position": 11,
+        "position": 12,
         "team": {
           "id": 298,
           "name": "Girona FC",
@@ -14044,26 +13988,45 @@
         "goalDifference": -12
       },
       {
-        "position": 12,
+        "position": 13,
         "team": {
-          "id": 77,
-          "name": "Athletic Club",
-          "shortName": "Athletic",
-          "tla": "ATH",
-          "crest": "https://crests.football-data.org/77.png"
+          "id": 95,
+          "name": "Valencia CF",
+          "shortName": "Valencia",
+          "tla": "VAL",
+          "crest": "https://crests.football-data.org/95.png"
         },
-        "playedGames": 31,
+        "playedGames": 32,
         "form": null,
-        "won": 11,
-        "draw": 5,
-        "lost": 15,
-        "points": 38,
-        "goalsFor": 33,
-        "goalsAgainst": 45,
+        "won": 9,
+        "draw": 9,
+        "lost": 14,
+        "points": 36,
+        "goalsFor": 35,
+        "goalsAgainst": 47,
         "goalDifference": -12
       },
       {
-        "position": 13,
+        "position": 14,
+        "team": {
+          "id": 89,
+          "name": "RCD Mallorca",
+          "shortName": "Mallorca",
+          "tla": "MAL",
+          "crest": "https://crests.football-data.org/89.png"
+        },
+        "playedGames": 32,
+        "form": null,
+        "won": 9,
+        "draw": 8,
+        "lost": 15,
+        "points": 35,
+        "goalsFor": 40,
+        "goalsAgainst": 49,
+        "goalDifference": -9
+      },
+      {
+        "position": 15,
         "team": {
           "id": 87,
           "name": "Rayo Vallecano de Madrid",
@@ -14079,44 +14042,6 @@
         "points": 35,
         "goalsFor": 29,
         "goalsAgainst": 38,
-        "goalDifference": -9
-      },
-      {
-        "position": 14,
-        "team": {
-          "id": 95,
-          "name": "Valencia CF",
-          "shortName": "Valencia",
-          "tla": "VAL",
-          "crest": "https://crests.football-data.org/95.png"
-        },
-        "playedGames": 31,
-        "form": null,
-        "won": 9,
-        "draw": 8,
-        "lost": 14,
-        "points": 35,
-        "goalsFor": 34,
-        "goalsAgainst": 46,
-        "goalDifference": -12
-      },
-      {
-        "position": 15,
-        "team": {
-          "id": 89,
-          "name": "RCD Mallorca",
-          "shortName": "Mallorca",
-          "tla": "MAL",
-          "crest": "https://crests.football-data.org/89.png"
-        },
-        "playedGames": 31,
-        "form": null,
-        "won": 9,
-        "draw": 7,
-        "lost": 15,
-        "points": 34,
-        "goalsFor": 39,
-        "goalsAgainst": 48,
         "goalDifference": -9
       },
       {
@@ -14225,7 +14150,7 @@
           "L"
         ],
         "gf": 3,
-        "ga": 10,
+        "ga": 9,
         "crest": "https://crests.football-data.org/77.png",
         "name": "Athletic Club"
       },
@@ -14380,7 +14305,7 @@
           "D",
           "W"
         ],
-        "gf": 9,
+        "gf": 8,
         "ga": 5,
         "crest": "https://crests.football-data.org/94.png",
         "name": "Villarreal CF"
@@ -14478,40 +14403,6 @@
       }
     },
     "nextMatches": [
-      {
-        "id": 544531,
-        "matchday": 33,
-        "date": "2026-04-21T17:00:00Z",
-        "home": {
-          "id": 77,
-          "name": "Athletic Club",
-          "short": "Athletic",
-          "crest": "https://crests.football-data.org/77.png"
-        },
-        "away": {
-          "id": 79,
-          "name": "CA Osasuna",
-          "short": "Osasuna",
-          "crest": "https://crests.football-data.org/79.png"
-        }
-      },
-      {
-        "id": 544534,
-        "matchday": 33,
-        "date": "2026-04-21T17:00:00Z",
-        "home": {
-          "id": 89,
-          "name": "RCD Mallorca",
-          "short": "Mallorca",
-          "crest": "https://crests.football-data.org/89.png"
-        },
-        "away": {
-          "id": 95,
-          "name": "Valencia CF",
-          "short": "Valencia",
-          "crest": "https://crests.football-data.org/95.png"
-        }
-      },
       {
         "id": 544536,
         "matchday": 33,
@@ -14817,6 +14708,40 @@
           "short": "Levante",
           "crest": "https://crests.football-data.org/88.png"
         }
+      },
+      {
+        "id": 544531,
+        "matchday": 33,
+        "date": "2026-04-21T17:00:00Z",
+        "home": {
+          "id": 77,
+          "name": "Athletic Club",
+          "short": "Athletic",
+          "crest": "https://crests.football-data.org/77.png"
+        },
+        "away": {
+          "id": 79,
+          "name": "CA Osasuna",
+          "short": "Osasuna",
+          "crest": "https://crests.football-data.org/79.png"
+        }
+      },
+      {
+        "id": 544534,
+        "matchday": 33,
+        "date": "2026-04-21T17:00:00Z",
+        "home": {
+          "id": 89,
+          "name": "RCD Mallorca",
+          "short": "Mallorca",
+          "crest": "https://crests.football-data.org/89.png"
+        },
+        "away": {
+          "id": 95,
+          "name": "Valencia CF",
+          "short": "Valencia",
+          "crest": "https://crests.football-data.org/95.png"
+        }
       }
     ],
     "recentResults": [
@@ -14851,7 +14776,7 @@
         },
         "score": {
           "home": 1,
-          "away": 3
+          "away": 2
         }
       },
       {
@@ -14996,9 +14921,9 @@
       "matchDate": "2026-04-25T16:30:00Z"
     },
     "Real Madrid": {
-      "winProb": 0.5158732270683094,
-      "drawProb": 0.21972378189946512,
-      "loseProb": 0.2644029910322255,
+      "winProb": 0.513139941466162,
+      "drawProb": 0.22389360653594334,
+      "loseProb": 0.2629664519978947,
       "over25Prob": 0.6944444444444444,
       "isHome": false,
       "opponent": "Real Betis",
@@ -15023,9 +14948,9 @@
       "matchDate": "2026-04-25T16:30:00Z"
     },
     "Real Betis": {
-      "winProb": 0.2644029910322255,
-      "drawProb": 0.21972378189946512,
-      "loseProb": 0.5158732270683094,
+      "winProb": 0.2629664519978947,
+      "drawProb": 0.22389360653594334,
+      "loseProb": 0.513139941466162,
       "over25Prob": 0.6944444444444444,
       "isHome": true,
       "opponent": "Real Madrid",
@@ -15059,18 +14984,18 @@
       "matchDate": "2026-04-26T12:00:00Z"
     },
     "Getafe": {
-      "winProb": 0.1691807157645667,
-      "drawProb": 0.20378586217095532,
-      "loseProb": 0.627033422064478,
+      "winProb": 0.17187499999999997,
+      "drawProb": 0.20312499999999997,
+      "loseProb": 0.625,
       "over25Prob": 0.5586592178770949,
       "isHome": true,
       "opponent": "Barcelona",
       "matchDate": "2026-04-25T14:15:00Z"
     },
     "Barcelona": {
-      "winProb": 0.627033422064478,
-      "drawProb": 0.20378586217095532,
-      "loseProb": 0.1691807157645667,
+      "winProb": 0.625,
+      "drawProb": 0.20312499999999997,
+      "loseProb": 0.17187499999999997,
       "over25Prob": 0.5586592178770949,
       "isHome": false,
       "opponent": "Getafe",
@@ -15142,82 +15067,82 @@
   },
   "news": [
     {
-      "title": "La Liga 2026: panorama actual, tendencias y claves que marcarán la temporada",
-      "link": "https://www.jornadaperfecta.com/blog/la-liga-2026-tendencias-y-claves/",
-      "date": "Tue, 21 Apr 2026 12:34:17 +0000",
-      "img": "",
+      "title": "Thierry Correia sufre una lesión muscular en el aductor",
+      "link": "https://www.jornadaperfecta.com/blog/thierry-correia-lesion-valencia-cf/",
+      "date": "Tue, 21 Apr 2026 17:19:36 +0000",
+      "img": "https://cdn.biwenger.com/i/t/18.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Matarazzo confirma la baja de Guedes y a Remiro como titular",
+      "link": "https://www.jornadaperfecta.com/blog/matarazzo-previa-real-sociedad-getafe-j33/",
+      "date": "Tue, 21 Apr 2026 17:11:35 +0000",
+      "img": "https://cdn.biwenger.com/i/t/13.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Guedes, fuera de la convocatoria de la Real Sociedad",
+      "link": "https://www.jornadaperfecta.com/blog/guedes-baja-j33-real-sociedad/",
+      "date": "Tue, 21 Apr 2026 16:29:46 +0000",
+      "img": "https://cdn.biwenger.com/i/t/13.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Julián Alvarez, Marcos Llorente y Koke, no convocados",
+      "link": "https://www.jornadaperfecta.com/blog/julian-alvarez-convocatoria-atleti-j33/",
+      "date": "Tue, 21 Apr 2026 16:15:33 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
       "title": "BigUp: Gana dinero real con tus pronósticos del Mallorca &#8211; Valencia",
       "link": "https://www.jornadaperfecta.com/blog/bigup-mallorca-valencia-pronosticos/",
-      "date": "Tue, 21 Apr 2026 12:18:44 +0000",
+      "date": "Tue, 21 Apr 2026 16:10:44 +0000",
       "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2705.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Giráldez se muestra preocupado con la recuperación de Starfelt",
-      "link": "https://www.jornadaperfecta.com/blog/giraldez-previa-barcelona-celta-j33/",
-      "date": "Tue, 21 Apr 2026 12:13:37 +0000",
-      "img": "https://cdn.biwenger.com/i/t/5.png",
+      "title": "Once confirmado del Valencia con Pepelu, Diego López y Beltrán",
+      "link": "https://www.jornadaperfecta.com/blog/once-valencia-jornada-33/",
+      "date": "Tue, 21 Apr 2026 15:51:46 +0000",
+      "img": "https://cdn.biwenger.com/i/t/18.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Flick confirma su intención de renovar",
-      "link": "https://www.jornadaperfecta.com/blog/flick-previa-barcelona-celta-j33/",
-      "date": "Tue, 21 Apr 2026 11:25:09 +0000",
+      "title": "Herrando y Torró, en el once titular de CA Osasuna",
+      "link": "https://www.jornadaperfecta.com/blog/once-osasuna-jornada-33/",
+      "date": "Tue, 21 Apr 2026 15:50:07 +0000",
+      "img": "https://cdn.biwenger.com/i/t/93.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Once confirmado del Athletic con las suplencias de Vivian y Sancet",
+      "link": "https://www.jornadaperfecta.com/blog/once-athletic-jornada-33/",
+      "date": "Tue, 21 Apr 2026 15:47:06 +0000",
+      "img": "https://cdn.biwenger.com/i/t/1.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Asano, principal novedad en el once titular del Mallorca",
+      "link": "https://www.jornadaperfecta.com/blog/once-mallorca-jornada-33/",
+      "date": "Tue, 21 Apr 2026 15:40:00 +0000",
+      "img": "https://cdn.biwenger.com/i/t/465.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Dudas con la titularidad de Barrios en la j33, ¿alinear?",
+      "link": "https://www.jornadaperfecta.com/blog/barrios-alinear-j33-25-26/",
+      "date": "Tue, 21 Apr 2026 13:54:58 +0000",
       "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "¡5 mayores riesgos fantasy para la jornada 33 de LaLiga!",
-      "link": "https://www.jornadaperfecta.com/blog/riesgos-fantasy-j33-25-26/",
-      "date": "Tue, 21 Apr 2026 11:00:53 +0000",
-      "img": "https://cdn.biwenger.com/i/t/87.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Simeone fecha la vuelta de Sorloth, Hancko y Lookman",
-      "link": "https://www.jornadaperfecta.com/blog/simeone-previa-elche-atleti-j33/",
-      "date": "Tue, 21 Apr 2026 11:00:31 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Bordalás se muestra enfadado por la sanción a Zaid Romero",
-      "link": "https://www.jornadaperfecta.com/blog/bordalas-previa-real-sociedad-getafe-j33/",
-      "date": "Tue, 21 Apr 2026 10:37:41 +0000",
-      "img": "https://cdn.biwenger.com/i/t/8.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Sarabia confirma varias recuperaciones y el cansancio de Germán Valera",
-      "link": "https://www.jornadaperfecta.com/blog/sarabia-previa-elche-atleti-j33/",
-      "date": "Tue, 21 Apr 2026 10:05:15 +0000",
-      "img": "https://cdn.biwenger.com/i/t/75.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Starfelt será baja en la Jornada 33. ¿Quién será su sustituto?",
-      "link": "https://www.jornadaperfecta.com/blog/starfelt-estado-lumbalgia-26/",
-      "date": "Tue, 21 Apr 2026 09:55:17 +0000",
-      "img": "https://cdn.biwenger.com/i/t/5.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Álvaro García aún no entrena en una sesión sin Batalla ni Luiz Felipe",
-      "link": "https://www.jornadaperfecta.com/blog/alvaro-garcia-estado-molestias-musculares-26/",
-      "date": "Tue, 21 Apr 2026 09:50:29 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -15226,7 +15151,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-21T12:55:00.083Z",
+    "updatedAt": "2026-04-21T18:53:35.353Z",
     "players": [
       {
         "id": "3374",
@@ -15234,11 +15159,11 @@
         "team": "Real Madrid CF",
         "position": "",
         "nationality": "France",
-        "appearances": 26,
+        "appearances": 27,
         "goals": 23,
         "assists": 4,
         "penalties": 8,
-        "minutesPerGoal": 102
+        "minutesPerGoal": 106
       },
       {
         "id": "30059",
@@ -15246,11 +15171,11 @@
         "team": "RCD Mallorca",
         "position": "",
         "nationality": "Kosovo",
-        "appearances": 30,
+        "appearances": 31,
         "goals": 21,
         "assists": 1,
         "penalties": 5,
-        "minutesPerGoal": 129
+        "minutesPerGoal": 133
       },
       {
         "id": "2237",
@@ -15258,11 +15183,11 @@
         "team": "CA Osasuna",
         "position": "",
         "nationality": "Croatia",
-        "appearances": 30,
+        "appearances": 31,
         "goals": 16,
         "assists": 0,
         "penalties": 6,
-        "minutesPerGoal": 169
+        "minutesPerGoal": 174
       },
       {
         "id": "202283",
@@ -15342,11 +15267,11 @@
         "team": "Real Madrid CF",
         "position": "",
         "nationality": "Brazil",
-        "appearances": 29,
+        "appearances": 30,
         "goals": 11,
         "assists": 5,
         "penalties": 4,
-        "minutesPerGoal": 237
+        "minutesPerGoal": 245
       },
       {
         "id": "11113",
@@ -15354,11 +15279,11 @@
         "team": "Deportivo Alavés",
         "position": "",
         "nationality": "Argentina",
-        "appearances": 26,
+        "appearances": 27,
         "goals": 11,
         "assists": 1,
         "penalties": 3,
-        "minutesPerGoal": 213
+        "minutesPerGoal": 221
       },
       {
         "id": "133276",
@@ -15390,11 +15315,11 @@
         "team": "Valencia CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 30,
+        "appearances": 31,
         "goals": 9,
         "assists": 0,
         "penalties": 1,
-        "minutesPerGoal": 300
+        "minutesPerGoal": 310
       },
       {
         "id": "160819",
@@ -15450,11 +15375,11 @@
         "team": "Deportivo Alavés",
         "position": "",
         "nationality": "Spain",
-        "appearances": 31,
+        "appearances": 32,
         "goals": 8,
         "assists": 3,
         "penalties": 0,
-        "minutesPerGoal": 349
+        "minutesPerGoal": 360
       },
       {
         "id": "98571",
@@ -15486,11 +15411,11 @@
         "team": "Real Betis Balompié",
         "position": "",
         "nationality": "Colombia",
-        "appearances": 26,
+        "appearances": 27,
         "goals": 8,
         "assists": 3,
         "penalties": 1,
-        "minutesPerGoal": 293
+        "minutesPerGoal": 304
       },
       {
         "id": "82132",
@@ -15515,6 +15440,18 @@
         "assists": 0,
         "penalties": 2,
         "minutesPerGoal": 203
+      },
+      {
+        "id": "81565",
+        "name": "Gorka Guruzeta",
+        "team": "Athletic Club",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 31,
+        "goals": 8,
+        "assists": 1,
+        "penalties": 1,
+        "minutesPerGoal": 349
       },
       {
         "id": "3259",
@@ -15558,11 +15495,11 @@
         "team": "Real Betis Balompié",
         "position": "",
         "nationality": "Spain",
-        "appearances": 31,
+        "appearances": 32,
         "goals": 7,
         "assists": 4,
         "penalties": 0,
-        "minutesPerGoal": 399
+        "minutesPerGoal": 411
       },
       {
         "id": "23132",
@@ -15599,18 +15536,6 @@
         "assists": 2,
         "penalties": 0,
         "minutesPerGoal": 360
-      },
-      {
-        "id": "81565",
-        "name": "Gorka Guruzeta",
-        "team": "Athletic Club",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 30,
-        "goals": 7,
-        "assists": 1,
-        "penalties": 1,
-        "minutesPerGoal": 386
       },
       {
         "id": "203439",
@@ -15702,11 +15627,23 @@
         "team": "Real Betis Balompié",
         "position": "",
         "nationality": "Morocco",
-        "appearances": 22,
+        "appearances": 23,
         "goals": 6,
         "assists": 5,
         "penalties": 0,
-        "minutesPerGoal": 330
+        "minutesPerGoal": 345
+      },
+      {
+        "id": "140814",
+        "name": "Samuel Almeida Costa",
+        "team": "RCD Mallorca",
+        "position": "",
+        "nationality": "Portugal",
+        "appearances": 29,
+        "goals": 6,
+        "assists": 1,
+        "penalties": 0,
+        "minutesPerGoal": 435
       },
       {
         "id": "3331",
@@ -15726,11 +15663,11 @@
         "team": "Athletic Club",
         "position": "",
         "nationality": "Spain",
-        "appearances": 28,
+        "appearances": 29,
         "goals": 5,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 504
+        "minutesPerGoal": 522
       },
       {
         "id": "156746",
@@ -15798,11 +15735,11 @@
         "team": "CA Osasuna",
         "position": "",
         "nationality": "Spain",
-        "appearances": 30,
+        "appearances": 31,
         "goals": 5,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 540
+        "minutesPerGoal": 558
       },
       {
         "id": "214533",
@@ -15846,23 +15783,11 @@
         "team": "CA Osasuna",
         "position": "",
         "nationality": "Spain",
-        "appearances": 31,
+        "appearances": 32,
         "goals": 5,
         "assists": 2,
         "penalties": 0,
-        "minutesPerGoal": 558
-      },
-      {
-        "id": "140814",
-        "name": "Samuel Almeida Costa",
-        "team": "RCD Mallorca",
-        "position": "",
-        "nationality": "Portugal",
-        "appearances": 28,
-        "goals": 5,
-        "assists": 1,
-        "penalties": 0,
-        "minutesPerGoal": 504
+        "minutesPerGoal": 576
       },
       {
         "id": "189369",
@@ -15882,11 +15807,11 @@
         "team": "Girona FC",
         "position": "",
         "nationality": "Ukraine",
-        "appearances": 25,
+        "appearances": 26,
         "goals": 5,
         "assists": 4,
         "penalties": 0,
-        "minutesPerGoal": 450
+        "minutesPerGoal": 468
       },
       {
         "id": "136349",
@@ -15894,11 +15819,11 @@
         "team": "Valencia CF",
         "position": "",
         "nationality": "Belgium",
-        "appearances": 24,
+        "appearances": 25,
         "goals": 5,
         "assists": 1,
         "penalties": 3,
-        "minutesPerGoal": 432
+        "minutesPerGoal": 450
       },
       {
         "id": "96",
@@ -15906,11 +15831,11 @@
         "team": "Real Madrid CF",
         "position": "",
         "nationality": "Uruguay",
-        "appearances": 28,
+        "appearances": 29,
         "goals": 5,
         "assists": 5,
         "penalties": 0,
-        "minutesPerGoal": 504
+        "minutesPerGoal": 522
       },
       {
         "id": "32312",
@@ -15942,11 +15867,11 @@
         "team": "Athletic Club",
         "position": "",
         "nationality": "Spain",
-        "appearances": 21,
+        "appearances": 22,
         "goals": 4,
         "assists": 3,
         "penalties": 1,
-        "minutesPerGoal": 473
+        "minutesPerGoal": 495
       },
       {
         "id": "33045",
@@ -15954,11 +15879,11 @@
         "team": "Real Betis Balompié",
         "position": "",
         "nationality": "Spain",
-        "appearances": 27,
+        "appearances": 28,
         "goals": 4,
         "assists": 2,
         "penalties": 0,
-        "minutesPerGoal": 608
+        "minutesPerGoal": 630
       },
       {
         "id": "137485",
@@ -16002,11 +15927,11 @@
         "team": "Real Madrid CF",
         "position": "",
         "nationality": "Turkey",
-        "appearances": 30,
+        "appearances": 31,
         "goals": 4,
         "assists": 8,
         "penalties": 0,
-        "minutesPerGoal": 675
+        "minutesPerGoal": 698
       },
       {
         "id": "69",
@@ -16026,11 +15951,11 @@
         "team": "Girona FC",
         "position": "",
         "nationality": "Morocco",
-        "appearances": 17,
+        "appearances": 18,
         "goals": 4,
         "assists": 2,
         "penalties": 0,
-        "minutesPerGoal": 383
+        "minutesPerGoal": 405
       },
       {
         "id": "191053",
@@ -16074,11 +15999,11 @@
         "team": "Real Madrid CF",
         "position": "",
         "nationality": "England",
-        "appearances": 20,
+        "appearances": 21,
         "goals": 4,
         "assists": 3,
         "penalties": 0,
-        "minutesPerGoal": 450
+        "minutesPerGoal": 473
       },
       {
         "id": "170438",
@@ -16098,11 +16023,11 @@
         "team": "Real Madrid CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 30,
+        "appearances": 31,
         "goals": 4,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 675
+        "minutesPerGoal": 698
       },
       {
         "id": "146126",
@@ -16146,11 +16071,11 @@
         "team": "Valencia CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 29,
+        "appearances": 30,
         "goals": 3,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 870
+        "minutesPerGoal": 900
       },
       {
         "id": "249599",
@@ -16182,11 +16107,11 @@
         "team": "Athletic Club",
         "position": "",
         "nationality": "Spain",
-        "appearances": 24,
+        "appearances": 25,
         "goals": 3,
         "assists": 0,
         "penalties": 2,
-        "minutesPerGoal": 720
+        "minutesPerGoal": 750
       },
       {
         "id": "175869",
@@ -16206,11 +16131,11 @@
         "team": "Valencia CF",
         "position": "",
         "nationality": "Netherlands",
-        "appearances": 30,
+        "appearances": 31,
         "goals": 3,
         "assists": 2,
         "penalties": 0,
-        "minutesPerGoal": 900
+        "minutesPerGoal": 930
       },
       {
         "id": "21583",
@@ -16218,11 +16143,11 @@
         "team": "Real Betis Balompié",
         "position": "",
         "nationality": "DR Congo",
-        "appearances": 24,
+        "appearances": 25,
         "goals": 3,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 720
+        "minutesPerGoal": 750
       },
       {
         "id": "45680",
@@ -16314,11 +16239,11 @@
         "team": "Girona FC",
         "position": "",
         "nationality": "Uruguay",
-        "appearances": 19,
+        "appearances": 20,
         "goals": 3,
         "assists": 0,
         "penalties": 3,
-        "minutesPerGoal": 570
+        "minutesPerGoal": 600
       },
       {
         "id": "213263",
@@ -16362,11 +16287,11 @@
         "team": "RCD Mallorca",
         "position": "",
         "nationality": "Spain",
-        "appearances": 31,
+        "appearances": 32,
         "goals": 3,
         "assists": 3,
         "penalties": 0,
-        "minutesPerGoal": 930
+        "minutesPerGoal": 960
       },
       {
         "id": "82516",
@@ -16386,11 +16311,11 @@
         "team": "Girona FC",
         "position": "",
         "nationality": "France",
-        "appearances": 22,
+        "appearances": 23,
         "goals": 3,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 660
+        "minutesPerGoal": 690
       },
       {
         "id": "180280",
@@ -16398,11 +16323,11 @@
         "team": "Girona FC",
         "position": "",
         "nationality": "Spain",
-        "appearances": 27,
+        "appearances": 28,
         "goals": 2,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 1215
+        "minutesPerGoal": 1260
       },
       {
         "id": "48555",
@@ -16422,11 +16347,11 @@
         "team": "Real Betis Balompié",
         "position": "",
         "nationality": "Argentina",
-        "appearances": 20,
+        "appearances": 21,
         "goals": 2,
         "assists": 2,
         "penalties": 0,
-        "minutesPerGoal": 900
+        "minutesPerGoal": 945
       }
     ]
   }
