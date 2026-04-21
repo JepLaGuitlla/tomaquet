@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-21T07:18:52.782Z",
+  "updatedAt": "2026-04-21T12:55:03.434Z",
   "players": [
     {
       "id": 11,
@@ -12142,8 +12142,8 @@
           5,
           6
         ],
-        "teamSize": 17,
-        "teamValue": 81870000,
+        "teamSize": 16,
+        "teamValue": 80370000,
         "teamValueInc": 50000,
         "position": 7,
         "positionInc": -1,
@@ -12346,7 +12346,7 @@
       "name": "INDOMABLE FC",
       "manager": "INDOMABLE FC",
       "points": 1444,
-      "value": 81870000,
+      "value": 80370000,
       "trend": 50000,
       "players": []
     },
@@ -12600,6 +12600,21 @@
   "boardTomaquet": [
     {
       "type": "transfer",
+      "date": 1776760623,
+      "content": [
+        {
+          "player": 19614,
+          "from": {
+            "id": 12697101,
+            "name": "INDOMABLE FC",
+            "icon": "i/u/11757390.png"
+          },
+          "amount": 1510400
+        }
+      ]
+    },
+    {
+      "type": "transfer",
       "date": 1776754521,
       "content": [
         {
@@ -12812,21 +12827,6 @@
             "icon": "i/u/8070044.png?v=63"
           },
           "amount": 3170000
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1776583148,
-      "content": [
-        {
-          "player": 5717,
-          "from": {
-            "id": 8068002,
-            "name": "Soulands Rangers",
-            "icon": "i/u/8068002.png?v=69"
-          },
-          "amount": 241800
         }
       ]
     }
@@ -13192,8 +13192,8 @@
           7,
           9
         ],
-        "teamSize": 20,
-        "teamValue": 57250000,
+        "teamSize": 19,
+        "teamValue": 57000000,
         "teamValueInc": -30000,
         "position": 17,
         "positionInc": -1,
@@ -13405,7 +13405,7 @@
       "name": "Mindundis",
       "manager": "Mindundis",
       "points": 1140,
-      "value": 57250000,
+      "value": 57000000,
       "trend": -30000,
       "players": []
     },
@@ -13444,7 +13444,7 @@
     "balance": 3997468,
     "lineup": {
       "type": "3-4-3",
-      "date": 1776754558,
+      "date": 1776760498,
       "playersID": [
         14630,
         32440,
@@ -13604,6 +13604,21 @@
     ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1776760309,
+      "content": [
+        {
+          "player": 5717,
+          "from": {
+            "id": 6579330,
+            "name": "Mindundis",
+            "icon": "i/u/6579330.png?v=66"
+          },
+          "amount": 258900
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1776754594,
@@ -13812,21 +13827,6 @@
               "amount": 737000
             }
           ]
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1776636267,
-      "content": [
-        {
-          "player": 1083,
-          "from": {
-            "id": 6579505,
-            "name": "Xevi borrat",
-            "icon": "i/u/6579505.png"
-          },
-          "amount": 4214700
         }
       ]
     }
@@ -14225,7 +14225,7 @@
           "L"
         ],
         "gf": 3,
-        "ga": 9,
+        "ga": 10,
         "crest": "https://crests.football-data.org/77.png",
         "name": "Athletic Club"
       },
@@ -14380,7 +14380,7 @@
           "D",
           "W"
         ],
-        "gf": 8,
+        "gf": 9,
         "ga": 5,
         "crest": "https://crests.football-data.org/94.png",
         "name": "Villarreal CF"
@@ -14851,7 +14851,7 @@
         },
         "score": {
           "home": 1,
-          "away": 2
+          "away": 3
         }
       },
       {
@@ -14987,9 +14987,9 @@
       "matchDate": "2026-04-25T12:00:00Z"
     },
     "Valencia": {
-      "winProb": 0.493488182256688,
-      "drawProb": 0.2636636859485733,
-      "loseProb": 0.2428481317947386,
+      "winProb": 0.4851897562480716,
+      "drawProb": 0.26828139463128664,
+      "loseProb": 0.24652884912064174,
       "over25Prob": 0.5128205128205129,
       "isHome": true,
       "opponent": "Girona",
@@ -15014,9 +15014,9 @@
       "matchDate": "2026-04-25T12:00:00Z"
     },
     "Girona": {
-      "winProb": 0.2428481317947386,
-      "drawProb": 0.2636636859485733,
-      "loseProb": 0.493488182256688,
+      "winProb": 0.24652884912064174,
+      "drawProb": 0.26828139463128664,
+      "loseProb": 0.4851897562480716,
       "over25Prob": 0.5128205128205129,
       "isHome": false,
       "opponent": "Valencia",
@@ -15059,27 +15059,27 @@
       "matchDate": "2026-04-26T12:00:00Z"
     },
     "Getafe": {
-      "winProb": 0.17262423714036615,
-      "drawProb": 0.2040104620749782,
-      "loseProb": 0.6233653007846556,
-      "over25Prob": 0.5524861878453039,
+      "winProb": 0.1691807157645667,
+      "drawProb": 0.20378586217095532,
+      "loseProb": 0.627033422064478,
+      "over25Prob": 0.5586592178770949,
       "isHome": true,
       "opponent": "Barcelona",
       "matchDate": "2026-04-25T14:15:00Z"
     },
     "Barcelona": {
-      "winProb": 0.6233653007846556,
-      "drawProb": 0.2040104620749782,
-      "loseProb": 0.17262423714036615,
-      "over25Prob": 0.5524861878453039,
+      "winProb": 0.627033422064478,
+      "drawProb": 0.20378586217095532,
+      "loseProb": 0.1691807157645667,
+      "over25Prob": 0.5586592178770949,
       "isHome": false,
       "opponent": "Getafe",
       "matchDate": "2026-04-25T14:15:00Z"
     },
     "Celta Vigo": {
-      "winProb": 0.2361581920903955,
-      "drawProb": 0.2790960451977401,
-      "loseProb": 0.48474576271186437,
+      "winProb": 0.2420907840440165,
+      "drawProb": 0.2787712058688675,
+      "loseProb": 0.47913801008711604,
       "over25Prob": 0.5235602094240838,
       "isHome": false,
       "opponent": "Villarreal",
@@ -15131,9 +15131,9 @@
       "matchDate": "2026-04-26T14:15:00Z"
     },
     "Villarreal": {
-      "winProb": 0.48474576271186437,
-      "drawProb": 0.2790960451977401,
-      "loseProb": 0.2361581920903955,
+      "winProb": 0.47913801008711604,
+      "drawProb": 0.2787712058688675,
+      "loseProb": 0.2420907840440165,
       "over25Prob": 0.5235602094240838,
       "isHome": true,
       "opponent": "Celta Vigo",
@@ -15142,82 +15142,82 @@
   },
   "news": [
     {
-      "title": "CuotaPlus MARCAapuestas Real Madrid vs Alavés: mejora tu cuota un 25%",
-      "link": "https://www.jornadaperfecta.com/blog/marcaapuestas-cuotaplus-real-madrid-vs-alaves/",
-      "date": "Tue, 21 Apr 2026 07:00:57 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/04/MARCAapuestas-CuotaPlus-Real-Madrid-vs-Alaves.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Cinco noticias fantasy para antes de irte a dormir",
-      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-20-4-26/",
-      "date": "Mon, 20 Apr 2026 21:00:09 +0000",
-      "img": "https://cdn.biwenger.com/i/t/465.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Simeone ensaya un once del Atlético que deja varias dudas",
-      "link": "https://www.jornadaperfecta.com/blog/once-atletico-de-madrid-j33/",
-      "date": "Mon, 20 Apr 2026 20:58:22 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "La Previa de las Picas: Todo sobre los Cronistas de la Jornada 33",
-      "link": "https://www.jornadaperfecta.com/blog/previa-picas-cronistas-j33/",
-      "date": "Mon, 20 Apr 2026 17:48:38 +0000",
-      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2660.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "El All In de Victorius para la Jornada 33 de La Liga",
-      "link": "https://www.jornadaperfecta.com/blog/all-in-victorius-j33-25-26/",
-      "date": "Mon, 20 Apr 2026 17:00:30 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/04/Ferran-Torres-FC-Barcelona-fantasy.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Valverde explica el estado de Vivian, Prados y habla de Yeray",
-      "link": "https://www.jornadaperfecta.com/blog/valverde-previa-athletic-osasuna-j33/",
-      "date": "Mon, 20 Apr 2026 16:10:32 +0000",
-      "img": "https://cdn.biwenger.com/i/t/1.png",
+      "title": "La Liga 2026: panorama actual, tendencias y claves que marcarán la temporada",
+      "link": "https://www.jornadaperfecta.com/blog/la-liga-2026-tendencias-y-claves/",
+      "date": "Tue, 21 Apr 2026 12:34:17 +0000",
+      "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
       "title": "BigUp: Gana dinero real con tus pronósticos del Mallorca &#8211; Valencia",
       "link": "https://www.jornadaperfecta.com/blog/bigup-mallorca-valencia-pronosticos/",
-      "date": "Mon, 20 Apr 2026 14:18:44 +0000",
+      "date": "Tue, 21 Apr 2026 12:18:44 +0000",
       "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2705.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Lisci habla de Iker Muñoz, Lucas Torró y el rival",
-      "link": "https://www.jornadaperfecta.com/blog/lisci-previa-athletic-osasuna-j33/",
-      "date": "Mon, 20 Apr 2026 14:09:29 +0000",
-      "img": "https://cdn.biwenger.com/i/t/93.png",
+      "title": "Giráldez se muestra preocupado con la recuperación de Starfelt",
+      "link": "https://www.jornadaperfecta.com/blog/giraldez-previa-barcelona-celta-j33/",
+      "date": "Tue, 21 Apr 2026 12:13:37 +0000",
+      "img": "https://cdn.biwenger.com/i/t/5.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Riedel o Calero, duda en el acompañante de Cabrera",
-      "link": "https://www.jornadaperfecta.com/blog/calero-riedel-espanyol-once-j33/",
-      "date": "Mon, 20 Apr 2026 14:00:07 +0000",
-      "img": "https://cdn.biwenger.com/i/t/7.png",
+      "title": "Flick confirma su intención de renovar",
+      "link": "https://www.jornadaperfecta.com/blog/flick-previa-barcelona-celta-j33/",
+      "date": "Tue, 21 Apr 2026 11:25:09 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Jan Virgili o Asano, la duda en el once del RCD Mallorca",
-      "link": "https://www.jornadaperfecta.com/blog/jan-virgili-asano-once-mallorca-j33/",
-      "date": "Mon, 20 Apr 2026 13:50:49 +0000",
-      "img": "https://cdn.biwenger.com/i/t/465.png",
+      "title": "¡5 mayores riesgos fantasy para la jornada 33 de LaLiga!",
+      "link": "https://www.jornadaperfecta.com/blog/riesgos-fantasy-j33-25-26/",
+      "date": "Tue, 21 Apr 2026 11:00:53 +0000",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Simeone fecha la vuelta de Sorloth, Hancko y Lookman",
+      "link": "https://www.jornadaperfecta.com/blog/simeone-previa-elche-atleti-j33/",
+      "date": "Tue, 21 Apr 2026 11:00:31 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Bordalás se muestra enfadado por la sanción a Zaid Romero",
+      "link": "https://www.jornadaperfecta.com/blog/bordalas-previa-real-sociedad-getafe-j33/",
+      "date": "Tue, 21 Apr 2026 10:37:41 +0000",
+      "img": "https://cdn.biwenger.com/i/t/8.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Sarabia confirma varias recuperaciones y el cansancio de Germán Valera",
+      "link": "https://www.jornadaperfecta.com/blog/sarabia-previa-elche-atleti-j33/",
+      "date": "Tue, 21 Apr 2026 10:05:15 +0000",
+      "img": "https://cdn.biwenger.com/i/t/75.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Starfelt será baja en la Jornada 33. ¿Quién será su sustituto?",
+      "link": "https://www.jornadaperfecta.com/blog/starfelt-estado-lumbalgia-26/",
+      "date": "Tue, 21 Apr 2026 09:55:17 +0000",
+      "img": "https://cdn.biwenger.com/i/t/5.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Álvaro García aún no entrena en una sesión sin Batalla ni Luiz Felipe",
+      "link": "https://www.jornadaperfecta.com/blog/alvaro-garcia-estado-molestias-musculares-26/",
+      "date": "Tue, 21 Apr 2026 09:50:29 +0000",
+      "img": "https://cdn.biwenger.com/i/t/70.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -15226,7 +15226,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-21T07:18:49.803Z",
+    "updatedAt": "2026-04-21T12:55:00.083Z",
     "players": [
       {
         "id": "3374",
