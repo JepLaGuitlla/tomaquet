@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-20T18:47:44.484Z",
+  "updatedAt": "2026-04-21T01:18:03.888Z",
   "players": [
     {
       "id": 11,
@@ -12421,7 +12421,7 @@
     "balance": -354445,
     "lineup": {
       "type": "3-5-2",
-      "date": 1776709797,
+      "date": 1776713507,
       "playersID": [
         17021,
         1908,
@@ -12437,9 +12437,9 @@
       ],
       "reservesID": [
         null,
-        32460,
+        39360,
         30787,
-        34127
+        39885
       ]
     },
     "players": [
@@ -13108,8 +13108,8 @@
           15,
           2
         ],
-        "teamSize": 18,
-        "teamValue": 74050000,
+        "teamSize": 17,
+        "teamValue": 73610000,
         "teamValueInc": -60000,
         "position": 15,
         "positionInc": -2,
@@ -13170,8 +13170,8 @@
           20,
           3
         ],
-        "teamSize": 20,
-        "teamValue": 45120000,
+        "teamSize": 19,
+        "teamValue": 44840000,
         "teamValueInc": 100000,
         "position": 18,
         "role": ""
@@ -13346,7 +13346,7 @@
       "name": "Eric Duran",
       "manager": "Eric Duran",
       "points": 1157,
-      "value": 74050000,
+      "value": 73610000,
       "trend": -60000,
       "players": []
     },
@@ -13373,7 +13373,7 @@
       "name": "Janwandowski",
       "manager": "Janwandowski",
       "points": 1132,
-      "value": 45120000,
+      "value": 44840000,
       "trend": 100000,
       "players": []
     },
@@ -13571,6 +13571,35 @@
   "boardEnBas": [
     {
       "type": "transfer",
+      "date": 1776720029,
+      "content": [
+        {
+          "player": 15455,
+          "from": {
+            "id": 6593096,
+            "name": "Janwandowski",
+            "icon": "i/u/6593096.png"
+          },
+          "amount": 276400
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1776717112,
+      "content": [
+        {
+          "player": 1874,
+          "from": {
+            "id": 9897660,
+            "name": "Eric Duran"
+          },
+          "amount": 440900
+        }
+      ]
+    },
+    {
+      "type": "transfer",
       "date": 1776669047,
       "content": [
         {
@@ -13701,55 +13730,6 @@
             "icon": "i/u/6586257.png"
           },
           "amount": 151500
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1776575400,
-      "content": [
-        {
-          "player": 1871,
-          "to": {
-            "id": 6579505,
-            "name": "Xevi borrat",
-            "icon": "i/u/6579505.png"
-          },
-          "amount": 1010000
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1776488552,
-      "content": [
-        {
-          "player": 30505,
-          "to": {
-            "id": 6579402,
-            "name": "Valors FC",
-            "icon": "icons/7.png"
-          },
-          "amount": 355030,
-          "bids": [
-            {
-              "user": {
-                "id": 6579505,
-                "name": "Xevi borrat",
-                "icon": "i/u/6579505.png"
-              },
-              "amount": 340000
-            }
-          ]
-        },
-        {
-          "player": 37720,
-          "to": {
-            "id": 6586257,
-            "name": "Aquest any he trepitjat merda !!",
-            "icon": "i/u/6586257.png"
-          },
-          "amount": 150000
         }
       ]
     }
@@ -14982,19 +14962,19 @@
       "matchDate": "2026-04-26T12:00:00Z"
     },
     "Getafe": {
-      "winProb": 0.16583501433273168,
-      "drawProb": 0.20352479031744344,
-      "loseProb": 0.6306401953498249,
-      "over25Prob": 0.5586592178770949,
+      "winProb": 0.17262423714036615,
+      "drawProb": 0.2040104620749782,
+      "loseProb": 0.6233653007846556,
+      "over25Prob": 0.5524861878453039,
       "isHome": true,
       "opponent": "Barcelona",
       "matchDate": "2026-04-25T14:15:00Z"
     },
     "Barcelona": {
-      "winProb": 0.6306401953498249,
-      "drawProb": 0.20352479031744344,
-      "loseProb": 0.16583501433273168,
-      "over25Prob": 0.5586592178770949,
+      "winProb": 0.6233653007846556,
+      "drawProb": 0.2040104620749782,
+      "loseProb": 0.17262423714036615,
+      "over25Prob": 0.5524861878453039,
       "isHome": false,
       "opponent": "Getafe",
       "matchDate": "2026-04-25T14:15:00Z"
@@ -15003,7 +14983,7 @@
       "winProb": 0.2361581920903955,
       "drawProb": 0.2790960451977401,
       "loseProb": 0.48474576271186437,
-      "over25Prob": 0.5263157894736842,
+      "over25Prob": 0.5235602094240838,
       "isHome": false,
       "opponent": "Villarreal",
       "matchDate": "2026-04-26T19:00:00Z"
@@ -15057,13 +15037,29 @@
       "winProb": 0.48474576271186437,
       "drawProb": 0.2790960451977401,
       "loseProb": 0.2361581920903955,
-      "over25Prob": 0.5263157894736842,
+      "over25Prob": 0.5235602094240838,
       "isHome": true,
       "opponent": "Celta Vigo",
       "matchDate": "2026-04-26T19:00:00Z"
     }
   },
   "news": [
+    {
+      "title": "Cinco noticias fantasy para antes de irte a dormir",
+      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-20-4-26/",
+      "date": "Mon, 20 Apr 2026 21:00:09 +0000",
+      "img": "https://cdn.biwenger.com/i/t/465.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Simeone ensaya un once del Atlético que deja varias dudas",
+      "link": "https://www.jornadaperfecta.com/blog/once-atletico-de-madrid-j33/",
+      "date": "Mon, 20 Apr 2026 20:58:22 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "La Previa de las Picas: Todo sobre los Cronistas de la Jornada 33",
       "link": "https://www.jornadaperfecta.com/blog/previa-picas-cronistas-j33/",
@@ -15127,29 +15123,13 @@
       "img": "https://cdn.biwenger.com/i/t/1.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Pellegrini anuncia la baja de Llorente y habla de los minutos de Isco y Lo Celso",
-      "link": "https://www.jornadaperfecta.com/blog/pellegrini-previa-girona-betis-j33/",
-      "date": "Mon, 20 Apr 2026 13:29:46 +0000",
-      "img": "https://cdn.biwenger.com/i/t/87.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Posibles cambios en la pareja de centrales del Real Oviedo",
-      "link": "https://www.jornadaperfecta.com/blog/defensa-real-oviedo-rotaciones/",
-      "date": "Mon, 20 Apr 2026 13:26:44 +0000",
-      "img": "https://cdn.biwenger.com/i/t/779.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-20T18:47:42.614Z",
+    "updatedAt": "2026-04-21T01:18:03.193Z",
     "players": [
       {
         "id": "3374",
