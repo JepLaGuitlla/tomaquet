@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-22T12:55:30.645Z",
+  "updatedAt": "2026-04-22T18:54:56.833Z",
   "players": [
     {
       "id": 11,
@@ -12041,7 +12041,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 2,
-          "season": "2024/2025 season"
+          "season": "Temporada 2024/2025"
         },
         "position": 2
       },
@@ -12081,7 +12081,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "2024/2025 season"
+          "season": "Temporada 2024/2025"
         },
         "position": 4,
         "positionInc": 1,
@@ -12125,7 +12125,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 1,
-          "season": "2024/2025 season"
+          "season": "Temporada 2024/2025"
         },
         "position": 6,
         "positionInc": 1
@@ -12242,7 +12242,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "2023/2024 season"
+          "season": "Temporada 2023/2024"
         },
         "position": 12,
         "positionInc": -1,
@@ -12714,21 +12714,6 @@
           ]
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1776705852,
-      "content": [
-        {
-          "player": 28103,
-          "from": {
-            "id": 6541195,
-            "name": "🦊",
-            "icon": "i/u/6541195.png?v=17"
-          },
-          "amount": 1249900
-        }
-      ]
     }
   ],
   "leagueEnBas": {
@@ -12990,9 +12975,9 @@
           14,
           16
         ],
-        "teamSize": 14,
-        "teamValue": 60010000,
-        "teamValueInc": 10000,
+        "teamSize": 13,
+        "teamValue": 59720000,
+        "teamValueInc": 20000,
         "position": 12,
         "role": ""
       },
@@ -13260,8 +13245,8 @@
       "name": "Fiorenzola",
       "manager": "Fiorenzola",
       "points": 1178,
-      "value": 60010000,
-      "trend": 10000,
+      "value": 59720000,
+      "trend": 20000,
       "players": []
     },
     {
@@ -13482,7 +13467,7 @@
       {
         "id": 39736,
         "buyPrice": 150089,
-        "clause": 225000,
+        "clause": 0,
         "invested": 0,
         "buyDate": 1771912934
       },
@@ -13504,6 +13489,21 @@
     ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1776883519,
+      "content": [
+        {
+          "player": 26676,
+          "from": {
+            "id": 6579283,
+            "name": "Fiorenzola",
+            "icon": "i/u/6579283.png?v=33"
+          },
+          "amount": 312400
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1776854759,
@@ -13660,35 +13660,6 @@
           "amount": 156020
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1776720029,
-      "content": [
-        {
-          "player": 15455,
-          "from": {
-            "id": 6593096,
-            "name": "Janwandowski",
-            "icon": "i/u/6593096.png"
-          },
-          "amount": 276400
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1776717112,
-      "content": [
-        {
-          "player": 1874,
-          "from": {
-            "id": 9897660,
-            "name": "Eric Duran"
-          },
-          "amount": 440900
-        }
-      ]
     }
   ],
   "laliga": {
@@ -13760,14 +13731,14 @@
           "tla": "ATL",
           "crest": "https://crests.football-data.org/78.png"
         },
-        "playedGames": 31,
+        "playedGames": 32,
         "form": null,
         "won": 17,
-        "draw": 6,
+        "draw": 7,
         "lost": 8,
-        "points": 57,
-        "goalsFor": 51,
-        "goalsAgainst": 32,
+        "points": 58,
+        "goalsFor": 53,
+        "goalsAgainst": 34,
         "goalDifference": 19
       },
       {
@@ -13817,12 +13788,12 @@
           "tla": "RSO",
           "crest": "https://crests.football-data.org/92.png"
         },
-        "playedGames": 31,
+        "playedGames": 32,
         "form": null,
         "won": 11,
-        "draw": 9,
+        "draw": 10,
         "lost": 11,
-        "points": 42,
+        "points": 43,
         "goalsFor": 49,
         "goalsAgainst": 48,
         "goalDifference": 1
@@ -13836,12 +13807,12 @@
           "tla": "GET",
           "crest": "https://crests.football-data.org/82.png"
         },
-        "playedGames": 31,
+        "playedGames": 32,
         "form": null,
         "won": 12,
-        "draw": 5,
+        "draw": 6,
         "lost": 14,
-        "points": 41,
+        "points": 42,
         "goalsFor": 27,
         "goalsAgainst": 32,
         "goalDifference": -5
@@ -14001,6 +13972,25 @@
       {
         "position": 17,
         "team": {
+          "id": 285,
+          "name": "Elche CF",
+          "shortName": "Elche",
+          "tla": "ELC",
+          "crest": "https://crests.football-data.org/285.png"
+        },
+        "playedGames": 32,
+        "form": null,
+        "won": 7,
+        "draw": 12,
+        "lost": 13,
+        "points": 33,
+        "goalsFor": 41,
+        "goalsAgainst": 49,
+        "goalDifference": -8
+      },
+      {
+        "position": 18,
+        "team": {
           "id": 263,
           "name": "Deportivo Alavés",
           "shortName": "Alavés",
@@ -14016,25 +14006,6 @@
         "goalsFor": 36,
         "goalsAgainst": 48,
         "goalDifference": -12
-      },
-      {
-        "position": 18,
-        "team": {
-          "id": 285,
-          "name": "Elche CF",
-          "shortName": "Elche",
-          "tla": "ELC",
-          "crest": "https://crests.football-data.org/285.png"
-        },
-        "playedGames": 31,
-        "form": null,
-        "won": 7,
-        "draw": 11,
-        "lost": 13,
-        "points": 32,
-        "goalsFor": 39,
-        "goalsAgainst": 47,
-        "goalDifference": -8
       },
       {
         "position": 19,
@@ -14339,40 +14310,6 @@
     },
     "nextMatches": [
       {
-        "id": 544537,
-        "matchday": 33,
-        "date": "2026-04-22T17:00:00Z",
-        "home": {
-          "id": 285,
-          "name": "Elche CF",
-          "short": "Elche",
-          "crest": "https://crests.football-data.org/285.png"
-        },
-        "away": {
-          "id": 78,
-          "name": "Club Atlético de Madrid",
-          "short": "Atleti",
-          "crest": "https://crests.football-data.org/78.png"
-        }
-      },
-      {
-        "id": 544540,
-        "matchday": 33,
-        "date": "2026-04-22T18:00:00Z",
-        "home": {
-          "id": 92,
-          "name": "Real Sociedad de Fútbol",
-          "short": "Real Sociedad",
-          "crest": "https://crests.football-data.org/92.png"
-        },
-        "away": {
-          "id": 82,
-          "name": "Getafe CF",
-          "short": "Getafe",
-          "crest": "https://crests.football-data.org/82.png"
-        }
-      },
-      {
         "id": 544532,
         "matchday": 33,
         "date": "2026-04-22T19:30:00Z",
@@ -14609,6 +14546,40 @@
           "short": "Levante",
           "crest": "https://crests.football-data.org/88.png"
         }
+      },
+      {
+        "id": 544537,
+        "matchday": 33,
+        "date": "2026-04-22T17:00:00Z",
+        "home": {
+          "id": 285,
+          "name": "Elche CF",
+          "short": "Elche",
+          "crest": "https://crests.football-data.org/285.png"
+        },
+        "away": {
+          "id": 78,
+          "name": "Club Atlético de Madrid",
+          "short": "Atleti",
+          "crest": "https://crests.football-data.org/78.png"
+        }
+      },
+      {
+        "id": 544540,
+        "matchday": 33,
+        "date": "2026-04-22T18:00:00Z",
+        "home": {
+          "id": 92,
+          "name": "Real Sociedad de Fútbol",
+          "short": "Real Sociedad",
+          "crest": "https://crests.football-data.org/92.png"
+        },
+        "away": {
+          "id": 82,
+          "name": "Getafe CF",
+          "short": "Getafe",
+          "crest": "https://crests.football-data.org/82.png"
+        }
       }
     ],
     "recentResults": [
@@ -14752,19 +14723,19 @@
   },
   "odds": {
     "Elche CF": {
-      "winProb": 0.30224255271672434,
-      "drawProb": 0.2830525493696307,
-      "loseProb": 0.414704897913645,
+      "winProb": 0.308754733793718,
+      "drawProb": 0.2842503898418356,
+      "loseProb": 0.40699487636444637,
       "over25Prob": 0.4608294930875576,
       "isHome": false,
       "opponent": "Oviedo",
       "matchDate": "2026-04-26T14:15:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.45859872611464975,
-      "drawProb": 0.2547770700636943,
-      "loseProb": 0.2866242038216561,
-      "over25Prob": 0.5128205128205129,
+      "winProb": 0.43721449599025486,
+      "drawProb": 0.25154806618617404,
+      "loseProb": 0.3112374378235713,
+      "over25Prob": 0.5102040816326531,
       "isHome": true,
       "opponent": "Athletic Bilbao",
       "matchDate": "2026-04-25T19:00:00Z"
@@ -14779,36 +14750,36 @@
       "matchDate": "2026-04-26T12:00:00Z"
     },
     "Getafe": {
-      "winProb": 0.17262423714036615,
-      "drawProb": 0.2040104620749782,
-      "loseProb": 0.6233653007846556,
-      "over25Prob": 0.5617977528089888,
+      "winProb": 0.1754152823920266,
+      "drawProb": 0.20332225913621263,
+      "loseProb": 0.6212624584717608,
+      "over25Prob": 0.5586592178770949,
       "isHome": true,
       "opponent": "Barcelona",
       "matchDate": "2026-04-25T14:15:00Z"
     },
     "Barcelona": {
-      "winProb": 0.6233653007846556,
-      "drawProb": 0.2040104620749782,
-      "loseProb": 0.17262423714036615,
-      "over25Prob": 0.5617977528089888,
+      "winProb": 0.6212624584717608,
+      "drawProb": 0.20332225913621263,
+      "loseProb": 0.1754152823920266,
+      "over25Prob": 0.5586592178770949,
       "isHome": false,
       "opponent": "Getafe",
       "matchDate": "2026-04-25T14:15:00Z"
     },
     "Celta Vigo": {
-      "winProb": 0.23867352598060776,
-      "drawProb": 0.2827363307770277,
-      "loseProb": 0.4785901432423646,
+      "winProb": 0.2420907840440165,
+      "drawProb": 0.2787712058688675,
+      "loseProb": 0.47913801008711604,
       "over25Prob": 0.5235602094240838,
       "isHome": false,
       "opponent": "Villarreal",
       "matchDate": "2026-04-26T19:00:00Z"
     },
     "Levante": {
-      "winProb": 0.24464487034949267,
-      "drawProb": 0.262119503945885,
-      "loseProb": 0.4932356257046223,
+      "winProb": 0.245551402911809,
+      "drawProb": 0.2593852847659954,
+      "loseProb": 0.4950633123221955,
       "over25Prob": 0.5181347150259068,
       "isHome": false,
       "opponent": "Espanyol",
@@ -14818,7 +14789,7 @@
       "winProb": 0.2865827181936605,
       "drawProb": 0.2692140686061659,
       "loseProb": 0.44420321320017375,
-      "over25Prob": 0.4672897196261682,
+      "over25Prob": 0.46511627906976744,
       "isHome": false,
       "opponent": "CA Osasuna",
       "matchDate": "2026-04-26T16:30:00Z"
@@ -14833,27 +14804,27 @@
       "matchDate": "2026-04-26T12:00:00Z"
     },
     "Espanyol": {
-      "winProb": 0.4932356257046223,
-      "drawProb": 0.262119503945885,
-      "loseProb": 0.24464487034949267,
+      "winProb": 0.4950633123221955,
+      "drawProb": 0.2593852847659954,
+      "loseProb": 0.245551402911809,
       "over25Prob": 0.5181347150259068,
       "isHome": true,
       "opponent": "Levante",
       "matchDate": "2026-04-27T19:00:00Z"
     },
     "Oviedo": {
-      "winProb": 0.414704897913645,
-      "drawProb": 0.2830525493696307,
-      "loseProb": 0.30224255271672434,
+      "winProb": 0.40699487636444637,
+      "drawProb": 0.2842503898418356,
+      "loseProb": 0.308754733793718,
       "over25Prob": 0.4608294930875576,
       "isHome": true,
       "opponent": "Elche CF",
       "matchDate": "2026-04-26T14:15:00Z"
     },
     "Villarreal": {
-      "winProb": 0.4785901432423646,
-      "drawProb": 0.2827363307770277,
-      "loseProb": 0.23867352598060776,
+      "winProb": 0.47913801008711604,
+      "drawProb": 0.2787712058688675,
+      "loseProb": 0.2420907840440165,
       "over25Prob": 0.5235602094240838,
       "isHome": true,
       "opponent": "Celta Vigo",
@@ -14896,28 +14867,28 @@
       "matchDate": "2026-04-25T12:00:00Z"
     },
     "Valencia": {
-      "winProb": 0.4851897562480716,
-      "drawProb": 0.26828139463128664,
-      "loseProb": 0.24652884912064174,
+      "winProb": 0.4727694090382387,
+      "drawProb": 0.27114716106604864,
+      "loseProb": 0.2560834298957126,
       "over25Prob": 0.5128205128205129,
       "isHome": true,
       "opponent": "Girona",
       "matchDate": "2026-04-25T16:30:00Z"
     },
     "Girona": {
-      "winProb": 0.24652884912064174,
-      "drawProb": 0.26828139463128664,
-      "loseProb": 0.4851897562480716,
+      "winProb": 0.2560834298957126,
+      "drawProb": 0.27114716106604864,
+      "loseProb": 0.4727694090382387,
       "over25Prob": 0.5128205128205129,
       "isHome": false,
       "opponent": "Valencia",
       "matchDate": "2026-04-25T16:30:00Z"
     },
     "Athletic Bilbao": {
-      "winProb": 0.2866242038216561,
-      "drawProb": 0.2547770700636943,
-      "loseProb": 0.45859872611464975,
-      "over25Prob": 0.5128205128205129,
+      "winProb": 0.3112374378235713,
+      "drawProb": 0.25154806618617404,
+      "loseProb": 0.43721449599025486,
+      "over25Prob": 0.5102040816326531,
       "isHome": false,
       "opponent": "Atlético Madrid",
       "matchDate": "2026-04-25T19:00:00Z"
@@ -14926,13 +14897,53 @@
       "winProb": 0.44420321320017375,
       "drawProb": 0.2692140686061659,
       "loseProb": 0.2865827181936605,
-      "over25Prob": 0.4672897196261682,
+      "over25Prob": 0.46511627906976744,
       "isHome": true,
       "opponent": "Sevilla",
       "matchDate": "2026-04-26T16:30:00Z"
     }
   },
   "news": [
+    {
+      "title": "Chollos Fantasy que Tienes que Fichar YA para la J32 de Biwenger",
+      "link": "https://www.jornadaperfecta.com/blog/chollos-fantasy-biwenger-j32-laliga/",
+      "date": "Wed, 22 Apr 2026 17:00:40 +0000",
+      "img": "https://cdn.biwenger.com/i/t/779.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Iñigo Pérez confirma la baja de Álvaro García y deja en duda a Batalla y Akhomach",
+      "link": "https://www.jornadaperfecta.com/blog/inigo-perez-previa-rayo-espanyol-j33/",
+      "date": "Wed, 22 Apr 2026 16:06:22 +0000",
+      "img": "https://cdn.biwenger.com/i/t/70.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Manolo González, sobre el estado de Cabrera y su acompañante",
+      "link": "https://www.jornadaperfecta.com/blog/manolo-gonzalez-previa-rayo-espanyol-j33/",
+      "date": "Wed, 22 Apr 2026 15:06:02 +0000",
+      "img": "https://cdn.biwenger.com/i/t/7.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Militao no tiene una lesión en la rodilla, es muscular",
+      "link": "https://www.jornadaperfecta.com/blog/militao-lesion-real-madrid-2/",
+      "date": "Wed, 22 Apr 2026 13:30:31 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Thierry Correia sufre una rotura y dice adiós a la temporada",
+      "link": "https://www.jornadaperfecta.com/blog/thierry-correia-lesion-valencia-cf/",
+      "date": "Wed, 22 Apr 2026 13:19:36 +0000",
+      "img": "https://cdn.biwenger.com/i/t/18.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "García Plaza da pistas sobre la fecha de vuelta de Azpilicueta",
       "link": "https://www.jornadaperfecta.com/blog/garcia-plaza-previa-levante-sevilla-j33/",
@@ -14972,53 +14983,13 @@
       "img": "https://cdn.biwenger.com/i/t/289.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Desvelado el motivo del cambio del Cucho al descanso, ¿llega a la J32?",
-      "link": "https://www.jornadaperfecta.com/blog/estado-cucho-j32/",
-      "date": "Wed, 22 Apr 2026 09:35:31 +0000",
-      "img": "https://cdn.biwenger.com/i/t/87.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Grandes subidas y bajadas del mercado fantasy para la Jornada 32",
-      "link": "https://www.jornadaperfecta.com/blog/subidas-bajadas-j32-25-26/",
-      "date": "Wed, 22 Apr 2026 09:00:06 +0000",
-      "img": "https://cdn.biwenger.com/i/t/10.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Marcelino, sobre el sustituto de Comesaña y si mantendrá el once de Bilbao",
-      "link": "https://www.jornadaperfecta.com/blog/marcelino-previa-real-oviedo-villarreal-j33/",
-      "date": "Wed, 22 Apr 2026 08:41:01 +0000",
-      "img": "https://cdn.biwenger.com/i/t/19.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Actualizadas las Alineaciones Probables para la Jornada 32",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-probables-j32-laliga-25-26/",
-      "date": "Wed, 22 Apr 2026 08:00:26 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Calma con Militao, tras el susto ante el Alavés",
-      "link": "https://www.jornadaperfecta.com/blog/militao-lesion-real-madrid-2/",
-      "date": "Wed, 22 Apr 2026 07:45:31 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-22T12:55:28.808Z",
+    "updatedAt": "2026-04-22T18:54:55.484Z",
     "players": [
       {
         "id": "3374",
@@ -15062,11 +15033,11 @@
         "team": "FC Barcelona",
         "position": "",
         "nationality": "Spain",
-        "appearances": 27,
+        "appearances": 28,
         "goals": 15,
         "assists": 11,
         "penalties": 2,
-        "minutesPerGoal": 162
+        "minutesPerGoal": 168
       },
       {
         "id": "33154",
@@ -15074,11 +15045,11 @@
         "team": "FC Barcelona",
         "position": "",
         "nationality": "Spain",
-        "appearances": 29,
+        "appearances": 30,
         "goals": 14,
         "assists": 2,
         "penalties": 0,
-        "minutesPerGoal": 186
+        "minutesPerGoal": 193
       },
       {
         "id": "1556",
@@ -15098,11 +15069,11 @@
         "team": "RC Celta de Vigo",
         "position": "",
         "nationality": "Spain",
-        "appearances": 30,
+        "appearances": 31,
         "goals": 12,
         "assists": 1,
         "penalties": 3,
-        "minutesPerGoal": 225
+        "minutesPerGoal": 233
       },
       {
         "id": "180137",
@@ -15110,11 +15081,11 @@
         "team": "Real Sociedad de Fútbol",
         "position": "",
         "nationality": "Spain",
-        "appearances": 28,
+        "appearances": 29,
         "goals": 12,
         "assists": 3,
         "penalties": 5,
-        "minutesPerGoal": 210
+        "minutesPerGoal": 218
       },
       {
         "id": "371",
@@ -15122,11 +15093,11 @@
         "team": "FC Barcelona",
         "position": "",
         "nationality": "Poland",
-        "appearances": 28,
+        "appearances": 29,
         "goals": 12,
         "assists": 1,
         "penalties": 1,
-        "minutesPerGoal": 210
+        "minutesPerGoal": 218
       },
       {
         "id": "37428",
@@ -15201,6 +15172,18 @@
         "minutesPerGoal": 310
       },
       {
+        "id": "1760",
+        "name": "André Silva",
+        "team": "Elche CF",
+        "position": "",
+        "nationality": "Portugal",
+        "appearances": 27,
+        "goals": 9,
+        "assists": 0,
+        "penalties": 2,
+        "minutesPerGoal": 270
+      },
+      {
         "id": "160819",
         "name": "Vladyslav Vanat",
         "team": "Girona FC",
@@ -15266,11 +15249,11 @@
         "team": "Elche CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 26,
+        "appearances": 27,
         "goals": 8,
         "assists": 0,
         "penalties": 1,
-        "minutesPerGoal": 293
+        "minutesPerGoal": 304
       },
       {
         "id": "32415",
@@ -15345,18 +15328,6 @@
         "minutesPerGoal": 304
       },
       {
-        "id": "1760",
-        "name": "André Silva",
-        "team": "Elche CF",
-        "position": "",
-        "nationality": "Portugal",
-        "appearances": 26,
-        "goals": 7,
-        "assists": 0,
-        "penalties": 1,
-        "minutesPerGoal": 334
-      },
-      {
         "id": "33117",
         "name": "Pablo Fornals",
         "team": "Real Betis Balompié",
@@ -15374,11 +15345,11 @@
         "team": "FC Barcelona",
         "position": "",
         "nationality": "Spain",
-        "appearances": 26,
+        "appearances": 27,
         "goals": 7,
         "assists": 8,
         "penalties": 0,
-        "minutesPerGoal": 334
+        "minutesPerGoal": 347
       },
       {
         "id": "175941",
@@ -15410,11 +15381,11 @@
         "team": "RC Celta de Vigo",
         "position": "",
         "nationality": "Spain",
-        "appearances": 28,
+        "appearances": 29,
         "goals": 7,
         "assists": 2,
         "penalties": 0,
-        "minutesPerGoal": 360
+        "minutesPerGoal": 373
       },
       {
         "id": "203439",
@@ -15482,11 +15453,11 @@
         "team": "Getafe CF",
         "position": "",
         "nationality": "Uruguay",
-        "appearances": 30,
+        "appearances": 31,
         "goals": 6,
         "assists": 2,
         "penalties": 2,
-        "minutesPerGoal": 450
+        "minutesPerGoal": 465
       },
       {
         "id": "114",
@@ -15494,11 +15465,11 @@
         "team": "Club Atlético de Madrid",
         "position": "",
         "nationality": "France",
-        "appearances": 29,
+        "appearances": 30,
         "goals": 6,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 435
+        "minutesPerGoal": 450
       },
       {
         "id": "140814",
@@ -15518,11 +15489,11 @@
         "team": "FC Barcelona",
         "position": "",
         "nationality": "England",
-        "appearances": 29,
+        "appearances": 30,
         "goals": 6,
         "assists": 6,
         "penalties": 0,
-        "minutesPerGoal": 435
+        "minutesPerGoal": 450
       },
       {
         "id": "16173",
@@ -15566,11 +15537,11 @@
         "team": "Real Sociedad de Fútbol",
         "position": "",
         "nationality": "Iceland",
-        "appearances": 15,
+        "appearances": 16,
         "goals": 5,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 270
+        "minutesPerGoal": 288
       },
       {
         "id": "8412",
@@ -15609,6 +15580,18 @@
         "minutesPerGoal": 522
       },
       {
+        "id": "45680",
+        "name": "Nicolás González",
+        "team": "Club Atlético de Madrid",
+        "position": "",
+        "nationality": "Argentina",
+        "appearances": 23,
+        "goals": 5,
+        "assists": 0,
+        "penalties": 0,
+        "minutesPerGoal": 414
+      },
+      {
         "id": "130324",
         "name": "Raúl",
         "team": "CA Osasuna",
@@ -15626,11 +15609,11 @@
         "team": "FC Barcelona",
         "position": "",
         "nationality": "Spain",
-        "appearances": 26,
+        "appearances": 27,
         "goals": 5,
         "assists": 8,
         "penalties": 0,
-        "minutesPerGoal": 468
+        "minutesPerGoal": 486
       },
       {
         "id": "33615",
@@ -15638,11 +15621,11 @@
         "team": "Real Sociedad de Fútbol",
         "position": "",
         "nationality": "Spain",
-        "appearances": 27,
+        "appearances": 28,
         "goals": 5,
         "assists": 2,
         "penalties": 1,
-        "minutesPerGoal": 486
+        "minutesPerGoal": 504
       },
       {
         "id": "122511",
@@ -15686,11 +15669,11 @@
         "team": "Elche CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 30,
+        "appearances": 31,
         "goals": 5,
         "assists": 4,
         "penalties": 0,
-        "minutesPerGoal": 540
+        "minutesPerGoal": 558
       },
       {
         "id": "136349",
@@ -15770,11 +15753,11 @@
         "team": "Elche CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 30,
+        "appearances": 31,
         "goals": 4,
         "assists": 4,
         "penalties": 0,
-        "minutesPerGoal": 675
+        "minutesPerGoal": 698
       },
       {
         "id": "171964",
@@ -15782,11 +15765,11 @@
         "team": "Club Atlético de Madrid",
         "position": "",
         "nationality": "Argentina",
-        "appearances": 29,
+        "appearances": 30,
         "goals": 4,
         "assists": 6,
         "penalties": 0,
-        "minutesPerGoal": 653
+        "minutesPerGoal": 675
       },
       {
         "id": "213043",
@@ -15842,11 +15825,11 @@
         "team": "RC Celta de Vigo",
         "position": "",
         "nationality": "Spain",
-        "appearances": 30,
+        "appearances": 31,
         "goals": 4,
         "assists": 3,
         "penalties": 2,
-        "minutesPerGoal": 675
+        "minutesPerGoal": 698
       },
       {
         "id": "33148",
@@ -15854,11 +15837,11 @@
         "team": "Real Sociedad de Fútbol",
         "position": "",
         "nationality": "Spain",
-        "appearances": 27,
+        "appearances": 28,
         "goals": 4,
         "assists": 3,
         "penalties": 0,
-        "minutesPerGoal": 608
+        "minutesPerGoal": 630
       },
       {
         "id": "125010",
@@ -15878,11 +15861,11 @@
         "team": "RC Celta de Vigo",
         "position": "",
         "nationality": "Sweden",
-        "appearances": 25,
+        "appearances": 26,
         "goals": 4,
         "assists": 3,
         "penalties": 0,
-        "minutesPerGoal": 563
+        "minutesPerGoal": 585
       },
       {
         "id": "217658",
@@ -15914,11 +15897,11 @@
         "team": "Getafe CF",
         "position": "",
         "nationality": "Uruguay",
-        "appearances": 12,
+        "appearances": 13,
         "goals": 4,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 270
+        "minutesPerGoal": 293
       },
       {
         "id": "33496",
@@ -15950,11 +15933,11 @@
         "team": "Getafe CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 27,
+        "appearances": 28,
         "goals": 3,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 810
+        "minutesPerGoal": 840
       },
       {
         "id": "101182",
@@ -15962,11 +15945,11 @@
         "team": "Real Sociedad de Fútbol",
         "position": "",
         "nationality": "Spain",
-        "appearances": 25,
+        "appearances": 26,
         "goals": 3,
         "assists": 4,
         "penalties": 0,
-        "minutesPerGoal": 750
+        "minutesPerGoal": 780
       },
       {
         "id": "126878",
@@ -15986,11 +15969,11 @@
         "team": "RC Celta de Vigo",
         "position": "",
         "nationality": "Spain",
-        "appearances": 27,
+        "appearances": 28,
         "goals": 3,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 810
+        "minutesPerGoal": 840
       },
       {
         "id": "9870",
@@ -16015,18 +15998,6 @@
         "assists": 1,
         "penalties": 0,
         "minutesPerGoal": 750
-      },
-      {
-        "id": "45680",
-        "name": "Nicolás González",
-        "team": "Club Atlético de Madrid",
-        "position": "",
-        "nationality": "Argentina",
-        "appearances": 22,
-        "goals": 3,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 660
       },
       {
         "id": "156525",
@@ -16082,11 +16053,11 @@
         "team": "FC Barcelona",
         "position": "",
         "nationality": "Uruguay",
-        "appearances": 25,
+        "appearances": 26,
         "goals": 3,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 750
+        "minutesPerGoal": 780
       },
       {
         "id": "79953",
@@ -16094,11 +16065,11 @@
         "team": "Club Atlético de Madrid",
         "position": "",
         "nationality": "Argentina",
-        "appearances": 26,
+        "appearances": 27,
         "goals": 3,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 780
+        "minutesPerGoal": 810
       },
       {
         "id": "3171",
@@ -16142,11 +16113,11 @@
         "team": "Getafe CF",
         "position": "",
         "nationality": "Argentina",
-        "appearances": 11,
+        "appearances": 12,
         "goals": 3,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 330
+        "minutesPerGoal": 360
       },
       {
         "id": "159520",
@@ -16166,11 +16137,11 @@
         "team": "Real Sociedad de Fútbol",
         "position": "",
         "nationality": "Croatia",
-        "appearances": 28,
+        "appearances": 29,
         "goals": 3,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 840
+        "minutesPerGoal": 870
       },
       {
         "id": "3369",
@@ -16202,11 +16173,11 @@
         "team": "Real Sociedad de Fútbol",
         "position": "",
         "nationality": "Japan",
-        "appearances": 20,
+        "appearances": 21,
         "goals": 2,
         "assists": 4,
         "penalties": 0,
-        "minutesPerGoal": 900
+        "minutesPerGoal": 945
       },
       {
         "id": "3216",
