@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-22T07:17:19.280Z",
+  "updatedAt": "2026-04-22T12:55:30.645Z",
   "players": [
     {
       "id": 11,
@@ -12041,7 +12041,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 2,
-          "season": "Temporada 2024/2025"
+          "season": "2024/2025 season"
         },
         "position": 2
       },
@@ -12081,7 +12081,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "Temporada 2024/2025"
+          "season": "2024/2025 season"
         },
         "position": 4,
         "positionInc": 1,
@@ -12125,7 +12125,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 1,
-          "season": "Temporada 2024/2025"
+          "season": "2024/2025 season"
         },
         "position": 6,
         "positionInc": 1
@@ -12242,7 +12242,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "Temporada 2023/2024"
+          "season": "2023/2024 season"
         },
         "position": 12,
         "positionInc": -1,
@@ -12260,9 +12260,9 @@
           12,
           5
         ],
-        "teamSize": 18,
-        "teamValue": 41950000,
-        "teamValueInc": -150000,
+        "teamSize": 17,
+        "teamValue": 39080000,
+        "teamValueInc": -130000,
         "position": 13,
         "role": ""
       },
@@ -12400,8 +12400,8 @@
       "name": "Morankus FC",
       "manager": "Morankus FC",
       "points": 1251,
-      "value": 41950000,
-      "trend": -150000,
+      "value": 39080000,
+      "trend": -130000,
       "players": []
     },
     {
@@ -12421,7 +12421,7 @@
     "balance": 145555,
     "lineup": {
       "type": "3-5-2",
-      "date": 1776841357,
+      "date": 1776848645,
       "playersID": [
         17021,
         1908,
@@ -12582,6 +12582,21 @@
   "boardTomaquet": [
     {
       "type": "transfer",
+      "date": 1776860872,
+      "content": [
+        {
+          "player": 30210,
+          "from": {
+            "id": 11520975,
+            "name": "Morankus FC",
+            "icon": "i/u/11520975.png?v=81"
+          },
+          "amount": 2936900
+        }
+      ]
+    },
+    {
+      "type": "transfer",
       "date": 1776836982,
       "content": [
         {
@@ -12712,42 +12727,6 @@
             "icon": "i/u/6541195.png?v=17"
           },
           "amount": 1249900
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1776704393,
-      "content": [
-        {
-          "player": 27591,
-          "from": {
-            "id": 12696491,
-            "name": "NACECH1",
-            "icon": "https://graph.facebook.com/10235185447969563/picture?height=300&width=300"
-          },
-          "to": {
-            "id": 6541195,
-            "name": "🦊",
-            "icon": "i/u/6541195.png?v=17"
-          },
-          "amount": 6750000,
-          "type": "clause"
-        },
-        {
-          "player": 11686,
-          "from": {
-            "id": 8070044,
-            "name": "CA CABA JUNIORS",
-            "icon": "i/u/8070044.png?v=63"
-          },
-          "to": {
-            "id": 6541195,
-            "name": "🦊",
-            "icon": "i/u/6541195.png?v=17"
-          },
-          "amount": 8640000,
-          "type": "clause"
         }
       ]
     }
@@ -13150,9 +13129,9 @@
           2,
           13
         ],
-        "teamSize": 18,
-        "teamValue": 43190000,
-        "teamValueInc": 260000,
+        "teamSize": 17,
+        "teamValue": 42600000,
+        "teamValueInc": 270000,
         "position": 19,
         "role": ""
       },
@@ -13344,8 +13323,8 @@
       "name": "Aquest any he trepitjat merda !!",
       "manager": "Aquest any he trepitjat merda !!",
       "points": 1095,
-      "value": 43190000,
-      "trend": 260000,
+      "value": 42600000,
+      "trend": 270000,
       "players": []
     },
     {
@@ -13526,6 +13505,21 @@
   },
   "boardEnBas": [
     {
+      "type": "transfer",
+      "date": 1776854759,
+      "content": [
+        {
+          "player": 33971,
+          "from": {
+            "id": 6586257,
+            "name": "Aquest any he trepitjat merda !!",
+            "icon": "i/u/6586257.png"
+          },
+          "amount": 603700
+        }
+      ]
+    },
+    {
       "type": "market",
       "date": 1776834317,
       "content": [
@@ -13693,21 +13687,6 @@
             "name": "Eric Duran"
           },
           "amount": 440900
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1776669047,
-      "content": [
-        {
-          "player": 37467,
-          "from": {
-            "id": 6586257,
-            "name": "Aquest any he trepitjat merda !!",
-            "icon": "i/u/6586257.png"
-          },
-          "amount": 725500
         }
       ]
     }
@@ -14782,37 +14761,37 @@
       "matchDate": "2026-04-26T14:15:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.467904707571853,
-      "drawProb": 0.25833612023685404,
-      "loseProb": 0.27375917219129303,
-      "over25Prob": 0.5102040816326531,
+      "winProb": 0.45859872611464975,
+      "drawProb": 0.2547770700636943,
+      "loseProb": 0.2866242038216561,
+      "over25Prob": 0.5128205128205129,
       "isHome": true,
       "opponent": "Athletic Bilbao",
       "matchDate": "2026-04-25T19:00:00Z"
     },
     "Real Sociedad": {
-      "winProb": 0.2922210980389292,
-      "drawProb": 0.2904970797614134,
-      "loseProb": 0.4172818221996574,
+      "winProb": 0.2922318125770653,
+      "drawProb": 0.2922318125770653,
+      "loseProb": 0.41553637484586925,
       "over25Prob": 0.49751243781094534,
       "isHome": false,
       "opponent": "Rayo Vallecano",
       "matchDate": "2026-04-26T12:00:00Z"
     },
     "Getafe": {
-      "winProb": 0.1754152823920266,
-      "drawProb": 0.20332225913621263,
-      "loseProb": 0.6212624584717608,
-      "over25Prob": 0.5524861878453039,
+      "winProb": 0.17262423714036615,
+      "drawProb": 0.2040104620749782,
+      "loseProb": 0.6233653007846556,
+      "over25Prob": 0.5617977528089888,
       "isHome": true,
       "opponent": "Barcelona",
       "matchDate": "2026-04-25T14:15:00Z"
     },
     "Barcelona": {
-      "winProb": 0.6212624584717608,
-      "drawProb": 0.20332225913621263,
-      "loseProb": 0.1754152823920266,
-      "over25Prob": 0.5524861878453039,
+      "winProb": 0.6233653007846556,
+      "drawProb": 0.2040104620749782,
+      "loseProb": 0.17262423714036615,
+      "over25Prob": 0.5617977528089888,
       "isHome": false,
       "opponent": "Getafe",
       "matchDate": "2026-04-25T14:15:00Z"
@@ -14827,36 +14806,36 @@
       "matchDate": "2026-04-26T19:00:00Z"
     },
     "Levante": {
-      "winProb": 0.2422055212441402,
-      "drawProb": 0.2629659944936379,
-      "loseProb": 0.49482848426222187,
+      "winProb": 0.24464487034949267,
+      "drawProb": 0.262119503945885,
+      "loseProb": 0.4932356257046223,
       "over25Prob": 0.5181347150259068,
       "isHome": false,
       "opponent": "Espanyol",
       "matchDate": "2026-04-27T19:00:00Z"
     },
     "Sevilla": {
-      "winProb": 0.29307917253330446,
-      "drawProb": 0.27087620491714504,
-      "loseProb": 0.4360446225495505,
-      "over25Prob": 0.46511627906976744,
+      "winProb": 0.2865827181936605,
+      "drawProb": 0.2692140686061659,
+      "loseProb": 0.44420321320017375,
+      "over25Prob": 0.4672897196261682,
       "isHome": false,
       "opponent": "CA Osasuna",
       "matchDate": "2026-04-26T16:30:00Z"
     },
     "Rayo Vallecano": {
-      "winProb": 0.4172818221996574,
-      "drawProb": 0.2904970797614134,
-      "loseProb": 0.2922210980389292,
+      "winProb": 0.41553637484586925,
+      "drawProb": 0.2922318125770653,
+      "loseProb": 0.2922318125770653,
       "over25Prob": 0.49751243781094534,
       "isHome": true,
       "opponent": "Real Sociedad",
       "matchDate": "2026-04-26T12:00:00Z"
     },
     "Espanyol": {
-      "winProb": 0.49482848426222187,
-      "drawProb": 0.2629659944936379,
-      "loseProb": 0.2422055212441402,
+      "winProb": 0.4932356257046223,
+      "drawProb": 0.262119503945885,
+      "loseProb": 0.24464487034949267,
       "over25Prob": 0.5181347150259068,
       "isHome": true,
       "opponent": "Levante",
@@ -14902,7 +14881,7 @@
       "winProb": 0.43795620437956195,
       "drawProb": 0.3065693430656934,
       "loseProb": 0.2554744525547445,
-      "over25Prob": 0.4329004329004329,
+      "over25Prob": 0.4347826086956522,
       "isHome": true,
       "opponent": "Mallorca",
       "matchDate": "2026-04-25T12:00:00Z"
@@ -14911,7 +14890,7 @@
       "winProb": 0.2554744525547445,
       "drawProb": 0.3065693430656934,
       "loseProb": 0.43795620437956195,
-      "over25Prob": 0.4329004329004329,
+      "over25Prob": 0.4347826086956522,
       "isHome": false,
       "opponent": "Alavés",
       "matchDate": "2026-04-25T12:00:00Z"
@@ -14935,19 +14914,19 @@
       "matchDate": "2026-04-25T16:30:00Z"
     },
     "Athletic Bilbao": {
-      "winProb": 0.27375917219129303,
-      "drawProb": 0.25833612023685404,
-      "loseProb": 0.467904707571853,
-      "over25Prob": 0.5102040816326531,
+      "winProb": 0.2866242038216561,
+      "drawProb": 0.2547770700636943,
+      "loseProb": 0.45859872611464975,
+      "over25Prob": 0.5128205128205129,
       "isHome": false,
       "opponent": "Atlético Madrid",
       "matchDate": "2026-04-25T19:00:00Z"
     },
     "CA Osasuna": {
-      "winProb": 0.4360446225495505,
-      "drawProb": 0.27087620491714504,
-      "loseProb": 0.29307917253330446,
-      "over25Prob": 0.46511627906976744,
+      "winProb": 0.44420321320017375,
+      "drawProb": 0.2692140686061659,
+      "loseProb": 0.2865827181936605,
+      "over25Prob": 0.4672897196261682,
       "isHome": true,
       "opponent": "Sevilla",
       "matchDate": "2026-04-26T16:30:00Z"
@@ -14955,82 +14934,82 @@
   },
   "news": [
     {
-      "title": "Conecta 5 Sportium Barcelona vs Celta: gana hasta 5€ en freebets",
-      "link": "https://www.jornadaperfecta.com/blog/sportium-conecta-5-barcelona-vs-celta/",
-      "date": "Wed, 22 Apr 2026 07:00:21 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/04/Sportium-conecta-5-barcelona-vs-celta.webp",
+      "title": "García Plaza da pistas sobre la fecha de vuelta de Azpilicueta",
+      "link": "https://www.jornadaperfecta.com/blog/garcia-plaza-previa-levante-sevilla-j33/",
+      "date": "Wed, 22 Apr 2026 11:54:07 +0000",
+      "img": "https://cdn.biwenger.com/i/t/17.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Cinco noticias fantasy para antes de irte a dormir",
-      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-21-4-26/",
-      "date": "Tue, 21 Apr 2026 21:00:58 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "title": "Luis Castro, sobre si Carlos Álvarez puede ser titular",
+      "link": "https://www.jornadaperfecta.com/blog/luis-castro-previa-levante-sevilla-j33/",
+      "date": "Wed, 22 Apr 2026 11:36:31 +0000",
+      "img": "https://cdn.biwenger.com/i/t/10.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "La rodilla de Militao enciende las alarmas en el Real Madrid",
+      "title": "Unai Núñez vuelve a entrenar y Thierry pasará pruebas médicas",
+      "link": "https://www.jornadaperfecta.com/blog/unai-nunez-estado-j32/",
+      "date": "Wed, 22 Apr 2026 11:10:38 +0000",
+      "img": "https://cdn.biwenger.com/i/t/18.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Almada confirma rotaciones esta semana",
+      "link": "https://www.jornadaperfecta.com/blog/almada-previa-real-oviedo-villarreal-j33/",
+      "date": "Wed, 22 Apr 2026 10:32:12 +0000",
+      "img": "https://cdn.biwenger.com/i/t/779.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "El motivo de la suplencia de Lemar, así lo explicó Michel",
+      "link": "https://www.jornadaperfecta.com/blog/lemar-estado-j32/",
+      "date": "Wed, 22 Apr 2026 10:08:55 +0000",
+      "img": "https://cdn.biwenger.com/i/t/289.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Desvelado el motivo del cambio del Cucho al descanso, ¿llega a la J32?",
+      "link": "https://www.jornadaperfecta.com/blog/estado-cucho-j32/",
+      "date": "Wed, 22 Apr 2026 09:35:31 +0000",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Grandes subidas y bajadas del mercado fantasy para la Jornada 32",
+      "link": "https://www.jornadaperfecta.com/blog/subidas-bajadas-j32-25-26/",
+      "date": "Wed, 22 Apr 2026 09:00:06 +0000",
+      "img": "https://cdn.biwenger.com/i/t/10.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Marcelino, sobre el sustituto de Comesaña y si mantendrá el once de Bilbao",
+      "link": "https://www.jornadaperfecta.com/blog/marcelino-previa-real-oviedo-villarreal-j33/",
+      "date": "Wed, 22 Apr 2026 08:41:01 +0000",
+      "img": "https://cdn.biwenger.com/i/t/19.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Actualizadas las Alineaciones Probables para la Jornada 32",
+      "link": "https://www.jornadaperfecta.com/blog/alineaciones-probables-j32-laliga-25-26/",
+      "date": "Wed, 22 Apr 2026 08:00:26 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Calma con Militao, tras el susto ante el Alavés",
       "link": "https://www.jornadaperfecta.com/blog/militao-lesion-real-madrid-2/",
-      "date": "Tue, 21 Apr 2026 20:45:31 +0000",
+      "date": "Wed, 22 Apr 2026 07:45:31 +0000",
       "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Valverde explica el estado de Laporte y Yuri tras pedir el cambio",
-      "link": "https://www.jornadaperfecta.com/blog/laporte-lesion-athletic-club/",
-      "date": "Tue, 21 Apr 2026 20:11:57 +0000",
-      "img": "https://cdn.biwenger.com/i/t/1.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Thierry Correia sufre una lesión muscular en el aductor",
-      "link": "https://www.jornadaperfecta.com/blog/thierry-correia-lesion-valencia-cf/",
-      "date": "Tue, 21 Apr 2026 19:19:36 +0000",
-      "img": "https://cdn.biwenger.com/i/t/18.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Matarazzo confirma la baja de Guedes y a Remiro como titular",
-      "link": "https://www.jornadaperfecta.com/blog/matarazzo-previa-real-sociedad-getafe-j33/",
-      "date": "Tue, 21 Apr 2026 17:11:35 +0000",
-      "img": "https://cdn.biwenger.com/i/t/13.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Guedes, fuera de la convocatoria de la Real Sociedad",
-      "link": "https://www.jornadaperfecta.com/blog/guedes-baja-j33-real-sociedad/",
-      "date": "Tue, 21 Apr 2026 16:29:46 +0000",
-      "img": "https://cdn.biwenger.com/i/t/13.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Julián Alvarez, Marcos Llorente y Koke, no convocados",
-      "link": "https://www.jornadaperfecta.com/blog/julian-alvarez-convocatoria-atleti-j33/",
-      "date": "Tue, 21 Apr 2026 16:15:33 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Once confirmado del Valencia con Pepelu, Diego López y Beltrán",
-      "link": "https://www.jornadaperfecta.com/blog/once-valencia-jornada-33/",
-      "date": "Tue, 21 Apr 2026 15:51:46 +0000",
-      "img": "https://cdn.biwenger.com/i/t/18.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Herrando y Torró, en el once titular de CA Osasuna",
-      "link": "https://www.jornadaperfecta.com/blog/once-osasuna-jornada-33/",
-      "date": "Tue, 21 Apr 2026 15:50:07 +0000",
-      "img": "https://cdn.biwenger.com/i/t/93.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -15039,7 +15018,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-22T07:17:17.757Z",
+    "updatedAt": "2026-04-22T12:55:28.808Z",
     "players": [
       {
         "id": "3374",
