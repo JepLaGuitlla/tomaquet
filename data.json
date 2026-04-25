@@ -1,25 +1,25 @@
 {
-  "updatedAt": "2026-04-25T01:14:28.624Z",
+  "updatedAt": "2026-04-25T07:00:21.070Z",
   "players": [
     {
       "id": 11,
       "slug": "david-soria",
       "name": "David Soria",
       "position": 1,
-      "price": 5840000,
+      "price": 5860000,
       "points": 172,
-      "trend": 50000,
+      "trend": 20000,
       "playedHome": 15,
       "playedAway": 17,
       "teamName": "Getafe",
       "teamId": 8,
       "status": "ok",
       "jForm": [
+        null,
         7,
         11,
         2,
-        9,
-        8
+        9
       ],
       "clausula": null
     },
@@ -28,19 +28,19 @@
       "slug": "eric-garcia",
       "name": "Eric García",
       "position": 2,
-      "price": 12550000,
+      "price": 12380000,
       "points": 181,
-      "trend": -190000,
+      "trend": -170000,
       "playedHome": 15,
       "playedAway": 15,
       "teamName": "Barcelona",
       "teamId": 3,
       "status": "ok",
       "jForm": [
+        null,
         3,
         7,
         3,
-        null,
         null
       ],
       "clausula": null
@@ -72,9 +72,9 @@
       "slug": "alvaro-garcia",
       "name": "Álvaro García",
       "position": 4,
-      "price": 4480000,
+      "price": 4450000,
       "points": 148,
-      "trend": -90000,
+      "trend": -30000,
       "playedHome": 15,
       "playedAway": 16,
       "teamName": "Rayo Vallecano",
@@ -94,7 +94,7 @@
       "slug": "borja-mayoral",
       "name": "Mayoral",
       "position": 4,
-      "price": 600000,
+      "price": 590000,
       "points": 56,
       "trend": -10000,
       "playedHome": 7,
@@ -116,9 +116,9 @@
       "slug": "brahim-diaz",
       "name": "Brahim",
       "position": 4,
-      "price": 3780000,
+      "price": 3800000,
       "points": 65,
-      "trend": 30000,
+      "trend": 20000,
       "playedHome": 12,
       "playedAway": 13,
       "teamName": "Real Madrid",
@@ -138,9 +138,9 @@
       "slug": "g-rodriguez",
       "name": "Guido Rodríguez",
       "position": 3,
-      "price": 6060000,
+      "price": 6080000,
       "points": 56,
-      "trend": 30000,
+      "trend": 20000,
       "playedHome": 4,
       "playedAway": 6,
       "teamName": "Valencia",
@@ -160,20 +160,20 @@
       "slug": "aaron-escandell",
       "name": "Escandell",
       "position": 1,
-      "price": 6090000,
+      "price": 6110000,
       "points": 193,
-      "trend": 30000,
+      "trend": 20000,
       "playedHome": 16,
       "playedAway": 16,
       "teamName": "Real Oviedo",
       "teamId": 779,
       "status": "ok",
       "jForm": [
+        null,
         6,
         9,
         5,
-        2,
-        6
+        2
       ],
       "clausula": null
     },
@@ -204,20 +204,20 @@
       "slug": "kike-garcia",
       "name": "Kike García",
       "position": 4,
-      "price": 2830000,
+      "price": 2790000,
       "points": 116,
-      "trend": 0,
+      "trend": -40000,
       "playedHome": 14,
       "playedAway": 17,
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
       "jForm": [
+        null,
         -2,
         1,
         2,
-        3,
-        5
+        3
       ],
       "clausula": null
     },
@@ -226,7 +226,7 @@
       "slug": "david-costas",
       "name": "David Costas",
       "position": 2,
-      "price": 1030000,
+      "price": 1020000,
       "points": 90,
       "trend": -10000,
       "playedHome": 9,
@@ -236,10 +236,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         3,
         null,
-        0,
-        16
+        0
       ],
       "clausula": null
     },
@@ -279,11 +279,11 @@
       "teamId": 8,
       "status": "ok",
       "jForm": [
+        null,
         3,
         2,
         null,
-        2,
-        0
+        2
       ],
       "clausula": null
     },
@@ -292,19 +292,19 @@
       "slug": "alex-berenguer",
       "name": "Berenguer",
       "position": 4,
-      "price": 2200000,
+      "price": 2180000,
       "points": 102,
-      "trend": -10000,
+      "trend": -20000,
       "playedHome": 14,
       "playedAway": 13,
       "teamName": "Athletic",
       "teamId": 1,
       "status": "ok",
       "jForm": [
+        null,
         2,
         3,
         2,
-        1,
         1
       ],
       "clausula": null
@@ -314,7 +314,7 @@
       "slug": "parejo",
       "name": "Parejo",
       "position": 3,
-      "price": 1350000,
+      "price": 1340000,
       "points": 88,
       "trend": -10000,
       "playedHome": 13,
@@ -323,11 +323,11 @@
       "teamId": 19,
       "status": "ok",
       "jForm": [
+        null,
         4,
         3,
         null,
-        0,
-        null
+        0
       ],
       "clausula": null
     },
@@ -336,20 +336,20 @@
       "slug": "yuri-berchiche",
       "name": "Yuri",
       "position": 2,
-      "price": 2940000,
+      "price": 3000000,
       "points": 116,
-      "trend": 80000,
+      "trend": 60000,
       "playedHome": 14,
       "playedAway": 14,
       "teamName": "Athletic",
       "teamId": 1,
       "status": "ok",
       "jForm": [
+        null,
         7,
         7,
         -1,
-        5,
-        4
+        5
       ],
       "clausula": null
     },
@@ -358,9 +358,9 @@
       "slug": "koke",
       "name": "Koke",
       "position": 3,
-      "price": 4050000,
+      "price": 4010000,
       "points": 148,
-      "trend": -20000,
+      "trend": -40000,
       "playedHome": 15,
       "playedAway": 13,
       "teamName": "Atlético",
@@ -369,9 +369,9 @@
       "jForm": [
         null,
         null,
+        null,
         5,
-        2,
-        7
+        2
       ],
       "clausula": null
     },
@@ -380,9 +380,9 @@
       "slug": "marc-bartra",
       "name": "Bartra",
       "position": 2,
-      "price": 2510000,
+      "price": 2520000,
       "points": 111,
-      "trend": 50000,
+      "trend": 10000,
       "playedHome": 13,
       "playedAway": 12,
       "teamName": "Betis",
@@ -402,20 +402,20 @@
       "slug": "griezmann",
       "name": "Griezmann",
       "position": 4,
-      "price": 5210000,
+      "price": 5220000,
       "points": 120,
-      "trend": 30000,
+      "trend": 10000,
       "playedHome": 15,
       "playedAway": 13,
       "teamName": "Atlético",
       "teamId": 2,
       "status": "ok",
       "jForm": [
+        null,
         3,
         null,
         1,
-        3,
-        2
+        3
       ],
       "clausula": null
     },
@@ -424,9 +424,9 @@
       "slug": "isco",
       "name": "Isco",
       "position": 3,
-      "price": 8300000,
+      "price": 8440000,
       "points": 12,
-      "trend": 260000,
+      "trend": 140000,
       "playedHome": 2,
       "playedAway": 1,
       "teamName": "Betis",
@@ -455,11 +455,11 @@
       "teamId": 93,
       "status": "ok",
       "jForm": [
+        null,
         2,
         null,
         null,
-        null,
-        3
+        null
       ],
       "clausula": null
     },
@@ -468,7 +468,7 @@
       "slug": "iago-aspas",
       "name": "Iago Aspas",
       "position": 4,
-      "price": 2280000,
+      "price": 2290000,
       "points": 114,
       "trend": 10000,
       "playedHome": 14,
@@ -477,11 +477,11 @@
       "teamId": 5,
       "status": "ok",
       "jForm": [
+        null,
         3,
         2,
         null,
-        4,
-        null
+        4
       ],
       "clausula": null
     },
@@ -492,18 +492,18 @@
       "position": 2,
       "price": 1050000,
       "points": 98,
-      "trend": 10000,
+      "trend": 0,
       "playedHome": 15,
       "playedAway": 16,
       "teamName": "Alavés",
       "teamId": 91,
       "status": "ok",
       "jForm": [
+        null,
         3,
         1,
         4,
-        2,
-        3
+        2
       ],
       "clausula": null
     },
@@ -512,20 +512,20 @@
       "slug": "ruben-garcia",
       "name": "Rubén García",
       "position": 3,
-      "price": 2590000,
+      "price": 2570000,
       "points": 119,
-      "trend": 0,
+      "trend": -20000,
       "playedHome": 14,
       "playedAway": 15,
       "teamName": "Osasuna",
       "teamId": 93,
       "status": "ok",
       "jForm": [
+        null,
         2,
         5,
         2,
-        3,
-        null
+        3
       ],
       "clausula": null
     },
@@ -543,11 +543,11 @@
       "teamId": 91,
       "status": "ok",
       "jForm": [
+        null,
         4,
         3,
         6,
-        2,
-        6
+        2
       ],
       "clausula": null
     },
@@ -556,20 +556,20 @@
       "slug": "laporte",
       "name": "Laporte",
       "position": 2,
-      "price": 5010000,
+      "price": 4970000,
       "points": 94,
-      "trend": -110000,
+      "trend": -40000,
       "playedHome": 12,
       "playedAway": 9,
       "teamName": "Athletic",
       "teamId": 1,
       "status": "ok",
       "jForm": [
+        null,
         6,
         2,
         5,
-        6,
-        4
+        6
       ],
       "clausula": null
     },
@@ -600,9 +600,9 @@
       "slug": "jose-gimenez",
       "name": "Giménez",
       "position": 2,
-      "price": 1480000,
+      "price": 1440000,
       "points": 57,
-      "trend": -30000,
+      "trend": -40000,
       "playedHome": 9,
       "playedAway": 6,
       "teamName": "Atlético",
@@ -611,9 +611,9 @@
       "jForm": [
         null,
         null,
+        null,
         5,
-        -4,
-        6
+        -4
       ],
       "clausula": null
     },
@@ -622,9 +622,9 @@
       "slug": "diego-llorente",
       "name": "Diego Llorente",
       "position": 2,
-      "price": 2660000,
+      "price": 2670000,
       "points": 68,
-      "trend": -50000,
+      "trend": 10000,
       "playedHome": 7,
       "playedAway": 7,
       "teamName": "Betis",
@@ -644,9 +644,9 @@
       "slug": "carvajal",
       "name": "Carvajal",
       "position": 2,
-      "price": 2010000,
+      "price": 1980000,
       "points": 46,
-      "trend": -10000,
+      "trend": -30000,
       "playedHome": 10,
       "playedAway": 4,
       "teamName": "Real Madrid",
@@ -666,7 +666,7 @@
       "slug": "manu-sanchez",
       "name": "Manu Sánchez",
       "position": 2,
-      "price": 900000,
+      "price": 930000,
       "points": 94,
       "trend": 30000,
       "playedHome": 14,
@@ -675,11 +675,11 @@
       "teamId": 10,
       "status": "ok",
       "jForm": [
+        null,
         5,
         6,
         1,
-        1,
-        3
+        1
       ],
       "clausula": null
     },
@@ -688,9 +688,9 @@
       "slug": "e-camavinga",
       "name": "Camavinga",
       "position": 3,
-      "price": 3740000,
+      "price": 3700000,
       "points": 101,
-      "trend": -30000,
+      "trend": -40000,
       "playedHome": 13,
       "playedAway": 12,
       "teamName": "Real Madrid",
@@ -710,20 +710,20 @@
       "slug": "chust",
       "name": "Chust",
       "position": 2,
-      "price": 1110000,
+      "price": 1100000,
       "points": 99,
-      "trend": 0,
+      "trend": -10000,
       "playedHome": 14,
       "playedAway": 11,
       "teamName": "Elche",
       "teamId": 75,
       "status": "ok",
       "jForm": [
+        null,
         4,
         1,
         null,
-        6,
-        -1
+        6
       ],
       "clausula": null
     },
@@ -732,20 +732,20 @@
       "slug": "sergi-darder",
       "name": "Darder",
       "position": 3,
-      "price": 4180000,
+      "price": 4270000,
       "points": 138,
-      "trend": 180000,
+      "trend": 90000,
       "playedHome": 17,
       "playedAway": 15,
       "teamName": "Mallorca",
       "teamId": 465,
       "status": "ok",
       "jForm": [
+        null,
         8,
         9,
         8,
-        2,
-        3
+        2
       ],
       "clausula": null
     },
@@ -776,20 +776,20 @@
       "slug": "gaya",
       "name": "Gayà",
       "position": 2,
-      "price": 1340000,
+      "price": 1350000,
       "points": 85,
-      "trend": 30000,
+      "trend": 10000,
       "playedHome": 13,
       "playedAway": 15,
       "teamName": "Valencia",
       "teamId": 18,
       "status": "ok",
       "jForm": [
+        null,
         5,
         3,
         2,
-        3,
-        2
+        3
       ],
       "clausula": null
     },
@@ -798,7 +798,7 @@
       "slug": "ter-stegen",
       "name": "Ter Stegen",
       "position": 1,
-      "price": 1030000,
+      "price": 1020000,
       "points": 7,
       "trend": -10000,
       "playedHome": 1,
@@ -833,7 +833,7 @@
         null,
         null,
         null,
-        3
+        null
       ],
       "clausula": null
     },
@@ -844,7 +844,7 @@
       "position": 2,
       "price": 1140000,
       "points": 8,
-      "trend": 20000,
+      "trend": 0,
       "playedHome": 2,
       "playedAway": 2,
       "teamName": "Real Madrid",
@@ -895,11 +895,11 @@
       "teamId": 91,
       "status": "ok",
       "jForm": [
+        null,
         2,
         4,
         null,
-        5,
-        null
+        5
       ],
       "clausula": null
     },
@@ -930,17 +930,17 @@
       "slug": "oblak",
       "name": "Oblak",
       "position": 1,
-      "price": 2410000,
+      "price": 2400000,
       "points": 122,
-      "trend": 0,
+      "trend": -10000,
       "playedHome": 14,
       "playedAway": 13,
       "teamName": "Atlético",
       "teamId": 2,
       "status": "ok",
       "jForm": [
-        1,
         null,
+        1,
         null,
         null,
         null
@@ -952,19 +952,19 @@
       "slug": "alex-moreno",
       "name": "Álex Moreno",
       "position": 2,
-      "price": 2490000,
+      "price": 2530000,
       "points": 102,
-      "trend": 70000,
+      "trend": 40000,
       "playedHome": 13,
       "playedAway": 13,
       "teamName": "Girona",
       "teamId": 289,
       "status": "ok",
       "jForm": [
+        null,
         3,
         5,
         7,
-        3,
         3
       ],
       "clausula": null
@@ -983,11 +983,11 @@
       "teamId": 19,
       "status": "ok",
       "jForm": [
+        null,
         3,
         null,
         null,
-        0,
-        3
+        0
       ],
       "clausula": null
     },
@@ -996,9 +996,9 @@
       "slug": "gerard-moreno",
       "name": "Gerard Moreno",
       "position": 4,
-      "price": 12250000,
+      "price": 12290000,
       "points": 119,
-      "trend": 90000,
+      "trend": 40000,
       "playedHome": 8,
       "playedAway": 9,
       "teamName": "Villarreal",
@@ -1006,10 +1006,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         9,
         2,
-        12,
-        2
+        12
       ],
       "clausula": null
     },
@@ -1018,20 +1018,20 @@
       "slug": "cancelo",
       "name": "Cancelo",
       "position": 2,
-      "price": 10240000,
+      "price": 10290000,
       "points": 61,
-      "trend": 70000,
+      "trend": 50000,
       "playedHome": 7,
       "playedAway": 3,
       "teamName": "Barcelona",
       "teamId": 3,
       "status": "ok",
       "jForm": [
+        null,
         3,
         6,
         7,
-        9,
-        16
+        9
       ],
       "clausula": null
     },
@@ -1049,11 +1049,11 @@
       "teamId": 70,
       "status": "ok",
       "jForm": [
+        null,
         3,
         null,
         4,
-        4,
-        null
+        4
       ],
       "clausula": null
     },
@@ -1084,20 +1084,20 @@
       "slug": "eric-bailly",
       "name": "Eric Bailly",
       "position": 2,
-      "price": 3000000,
+      "price": 3060000,
       "points": 67,
-      "trend": 250000,
+      "trend": 60000,
       "playedHome": 8,
       "playedAway": 4,
       "teamName": "Real Oviedo",
       "teamId": 779,
       "status": "ok",
       "jForm": [
+        null,
         6,
         9,
         7,
-        1,
-        6
+        1
       ],
       "clausula": null
     },
@@ -1106,20 +1106,20 @@
       "slug": "williams",
       "name": "Iñaki Williams",
       "position": 4,
-      "price": 3210000,
+      "price": 3220000,
       "points": 70,
-      "trend": 40000,
+      "trend": 10000,
       "playedHome": 13,
       "playedAway": 11,
       "teamName": "Athletic",
       "teamId": 1,
       "status": "ok",
       "jForm": [
+        null,
         5,
         0,
         1,
-        7,
-        2
+        7
       ],
       "clausula": null
     },
@@ -1128,17 +1128,17 @@
       "slug": "ayoze-perez",
       "name": "Ayoze",
       "position": 4,
-      "price": 2350000,
+      "price": 2360000,
       "points": 61,
-      "trend": 0,
+      "trend": 10000,
       "playedHome": 9,
       "playedAway": 10,
       "teamName": "Villarreal",
       "teamId": 19,
       "status": "ok",
       "jForm": [
-        2,
         null,
+        2,
         null,
         null,
         null
@@ -1150,18 +1150,18 @@
       "slug": "borja-iglesias",
       "name": "Borja Iglesias",
       "position": 4,
-      "price": 7510000,
+      "price": 7460000,
       "points": 152,
-      "trend": -40000,
+      "trend": -50000,
       "playedHome": 15,
       "playedAway": 14,
       "teamName": "Celta",
       "teamId": 5,
       "status": "ok",
       "jForm": [
+        null,
         2,
         3,
-        2,
         2,
         2
       ],
@@ -1181,11 +1181,11 @@
       "teamId": 13,
       "status": "ok",
       "jForm": [
+        null,
         2,
         2,
         3,
-        3,
-        null
+        3
       ],
       "clausula": null
     },
@@ -1194,7 +1194,7 @@
       "slug": "alfonso-pedraza",
       "name": "Pedraza",
       "position": 2,
-      "price": 1150000,
+      "price": 1140000,
       "points": 87,
       "trend": -10000,
       "playedHome": 10,
@@ -1205,9 +1205,9 @@
       "jForm": [
         null,
         null,
+        null,
         2,
-        5,
-        3
+        5
       ],
       "clausula": null
     },
@@ -1216,9 +1216,9 @@
       "slug": "dani-ceballos",
       "name": "Ceballos",
       "position": 3,
-      "price": 470000,
+      "price": 460000,
       "points": 47,
-      "trend": 0,
+      "trend": -10000,
       "playedHome": 9,
       "playedAway": 6,
       "teamName": "Real Madrid",
@@ -1238,19 +1238,19 @@
       "slug": "ruiz-de-galarreta",
       "name": "De Galarreta",
       "position": 3,
-      "price": 2960000,
+      "price": 2940000,
       "points": 131,
-      "trend": 0,
+      "trend": -20000,
       "playedHome": 16,
       "playedAway": 13,
       "teamName": "Athletic",
       "teamId": 1,
       "status": "ok",
       "jForm": [
+        null,
         3,
         3,
         3,
-        5,
         5
       ],
       "clausula": null
@@ -1260,9 +1260,9 @@
       "slug": "raillo",
       "name": "Raíllo",
       "position": 2,
-      "price": 1800000,
+      "price": 1770000,
       "points": 99,
-      "trend": -40000,
+      "trend": -30000,
       "playedHome": 11,
       "playedAway": 12,
       "teamName": "Mallorca",
@@ -1272,8 +1272,8 @@
         null,
         null,
         null,
-        6,
-        8
+        null,
+        6
       ],
       "clausula": null
     },
@@ -1304,19 +1304,19 @@
       "slug": "bigas",
       "name": "Bigas",
       "position": 2,
-      "price": 1410000,
+      "price": 1390000,
       "points": 96,
-      "trend": -10000,
+      "trend": -20000,
       "playedHome": 12,
       "playedAway": 11,
       "teamName": "Elche",
       "teamId": 75,
       "status": "ok",
       "jForm": [
+        null,
         2,
         null,
         -2,
-        2,
         2
       ],
       "clausula": null
@@ -1326,20 +1326,20 @@
       "slug": "ryan",
       "name": "Ryan",
       "position": 1,
-      "price": 4500000,
+      "price": 4450000,
       "points": 166,
-      "trend": -20000,
+      "trend": -50000,
       "playedHome": 16,
       "playedAway": 14,
       "teamName": "Levante",
       "teamId": 10,
       "status": "ok",
       "jForm": [
+        null,
         3,
         3,
         5,
-        1,
-        9
+        1
       ],
       "clausula": null
     },
@@ -1350,18 +1350,18 @@
       "position": 3,
       "price": 860000,
       "points": 101,
-      "trend": 10000,
+      "trend": 0,
       "playedHome": 14,
       "playedAway": 11,
       "teamName": "Mallorca",
       "teamId": 465,
       "status": "ok",
       "jForm": [
+        null,
         4,
         4,
         4,
-        1,
-        6
+        1
       ],
       "clausula": null
     },
@@ -1370,9 +1370,9 @@
       "slug": "bakambu",
       "name": "Bakambu",
       "position": 4,
-      "price": 940000,
+      "price": 950000,
       "points": 55,
-      "trend": 20000,
+      "trend": 10000,
       "playedHome": 7,
       "playedAway": 10,
       "teamName": "Betis",
@@ -1401,10 +1401,10 @@
       "teamId": 465,
       "status": "ok",
       "jForm": [
+        null,
         3,
         2,
         1,
-        2,
         2
       ],
       "clausula": null
@@ -1414,9 +1414,9 @@
       "slug": "h-bellerin",
       "name": "Bellerín",
       "position": 2,
-      "price": 2940000,
+      "price": 3000000,
       "points": 96,
-      "trend": 20000,
+      "trend": 60000,
       "playedHome": 11,
       "playedAway": 11,
       "teamName": "Betis",
@@ -1436,9 +1436,9 @@
       "slug": "rudiger",
       "name": "Rüdiger",
       "position": 2,
-      "price": 5600000,
+      "price": 5610000,
       "points": 66,
-      "trend": 40000,
+      "trend": 10000,
       "playedHome": 8,
       "playedAway": 7,
       "teamName": "Real Madrid",
@@ -1458,20 +1458,20 @@
       "slug": "mario-martin",
       "name": "Mario Martín",
       "position": 3,
-      "price": 1170000,
+      "price": 1160000,
       "points": 98,
-      "trend": -20000,
+      "trend": -10000,
       "playedHome": 13,
       "playedAway": 17,
       "teamName": "Getafe",
       "teamId": 8,
       "status": "ok",
       "jForm": [
+        null,
         2,
         3,
         10,
-        4,
-        2
+        4
       ],
       "clausula": null
     },
@@ -1480,9 +1480,9 @@
       "slug": "lejeune",
       "name": "Lejeune",
       "position": 2,
-      "price": 7400000,
+      "price": 7430000,
       "points": 158,
-      "trend": 40000,
+      "trend": 30000,
       "playedHome": 15,
       "playedAway": 16,
       "teamName": "Rayo Vallecano",
@@ -1490,10 +1490,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         4,
         9,
-        5,
-        8
+        5
       ],
       "clausula": null
     },
@@ -1512,10 +1512,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         -2,
         null,
-        4,
-        null
+        4
       ],
       "clausula": null
     },
@@ -1533,11 +1533,11 @@
       "teamId": 70,
       "status": "ok",
       "jForm": [
+        null,
         3,
         3,
         null,
-        4,
-        2
+        4
       ],
       "clausula": null
     },
@@ -1546,9 +1546,9 @@
       "slug": "fornals",
       "name": "Fornals",
       "position": 3,
-      "price": 13490000,
+      "price": 13530000,
       "points": 198,
-      "trend": 70000,
+      "trend": 40000,
       "playedHome": 16,
       "playedAway": 17,
       "teamName": "Betis",
@@ -1570,7 +1570,7 @@
       "position": 2,
       "price": 8600000,
       "points": 121,
-      "trend": 10000,
+      "trend": 0,
       "playedHome": 13,
       "playedAway": 12,
       "teamName": "Atlético",
@@ -1580,8 +1580,8 @@
         null,
         null,
         null,
-        6,
-        3
+        null,
+        6
       ],
       "clausula": null
     },
@@ -1590,20 +1590,20 @@
       "slug": "barrenetxea",
       "name": "Barrenetxea",
       "position": 3,
-      "price": 4700000,
+      "price": 4760000,
       "points": 126,
-      "trend": 110000,
+      "trend": 60000,
       "playedHome": 15,
       "playedAway": 11,
       "teamName": "Real Sociedad",
       "teamId": 13,
       "status": "ok",
       "jForm": [
+        null,
         7,
         4,
         6,
-        -1,
-        4
+        -1
       ],
       "clausula": null
     },
@@ -1612,20 +1612,20 @@
       "slug": "oyarzabal",
       "name": "Oyarzabal",
       "position": 4,
-      "price": 16380000,
+      "price": 16410000,
       "points": 182,
-      "trend": 20000,
+      "trend": 30000,
       "playedHome": 14,
       "playedAway": 14,
       "teamName": "Real Sociedad",
       "teamId": 13,
       "status": "ok",
       "jForm": [
+        null,
         2,
         null,
         5,
-        1,
-        5
+        1
       ],
       "clausula": null
     },
@@ -1644,10 +1644,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         1,
         6,
-        11,
-        4
+        11
       ],
       "clausula": null
     },
@@ -1656,20 +1656,20 @@
       "slug": "jutgla",
       "name": "Jutglà",
       "position": 4,
-      "price": 5930000,
+      "price": 5910000,
       "points": 111,
-      "trend": -10000,
+      "trend": -20000,
       "playedHome": 13,
       "playedAway": 11,
       "teamName": "Celta",
       "teamId": 5,
       "status": "ok",
       "jForm": [
+        null,
         4,
         1,
         3,
-        19,
-        10
+        19
       ],
       "clausula": null
     },
@@ -1678,9 +1678,9 @@
       "slug": "miguel-roman",
       "name": "Miguel Román",
       "position": 3,
-      "price": 1130000,
+      "price": 1110000,
       "points": 98,
-      "trend": -10000,
+      "trend": -20000,
       "playedHome": 9,
       "playedAway": 10,
       "teamName": "Celta",
@@ -1712,8 +1712,8 @@
         null,
         null,
         null,
-        -2,
-        null
+        null,
+        -2
       ],
       "clausula": null
     },
@@ -1722,7 +1722,7 @@
       "slug": "pablo-martinez",
       "name": "Pablo Martínez",
       "position": 3,
-      "price": 770000,
+      "price": 780000,
       "points": 86,
       "trend": 10000,
       "playedHome": 11,
@@ -1731,11 +1731,11 @@
       "teamId": 10,
       "status": "ok",
       "jForm": [
+        null,
         6,
         3,
         2,
-        2,
-        null
+        2
       ],
       "clausula": null
     },
@@ -1744,7 +1744,7 @@
       "slug": "inaki-pena",
       "name": "Iñaki Peña",
       "position": 1,
-      "price": 790000,
+      "price": 780000,
       "points": 76,
       "trend": -10000,
       "playedHome": 8,
@@ -1766,7 +1766,7 @@
       "slug": "isi-palazon",
       "name": "Isi Palazón",
       "position": 4,
-      "price": 3360000,
+      "price": 3370000,
       "points": 130,
       "trend": 10000,
       "playedHome": 15,
@@ -1775,11 +1775,11 @@
       "teamId": 70,
       "status": "ok",
       "jForm": [
+        null,
         8,
         null,
         3,
-        6,
-        5
+        6
       ],
       "clausula": null
     },
@@ -1788,7 +1788,7 @@
       "slug": "fran-garcia",
       "name": "Fran García",
       "position": 2,
-      "price": 820000,
+      "price": 800000,
       "points": 34,
       "trend": -20000,
       "playedHome": 6,
@@ -1812,17 +1812,17 @@
       "position": 3,
       "price": 1160000,
       "points": 105,
-      "trend": 10000,
+      "trend": 0,
       "playedHome": 15,
       "playedAway": 13,
       "teamName": "Rayo Vallecano",
       "teamId": 70,
       "status": "ok",
       "jForm": [
+        null,
         3,
         3,
         4,
-        3,
         3
       ],
       "clausula": null
@@ -1841,11 +1841,11 @@
       "teamId": 93,
       "status": "ok",
       "jForm": [
+        null,
         0,
         1,
         1,
-        3,
-        0
+        3
       ],
       "clausula": null
     },
@@ -1863,11 +1863,11 @@
       "teamId": 8,
       "status": "ok",
       "jForm": [
+        null,
         3,
         null,
         3,
-        2,
-        3
+        2
       ],
       "clausula": null
     },
@@ -1909,9 +1909,9 @@
       "jForm": [
         null,
         null,
+        null,
         3,
-        2,
-        3
+        2
       ],
       "clausula": null
     },
@@ -1920,19 +1920,19 @@
       "slug": "yeray-alvarez",
       "name": "Yeray",
       "position": 2,
-      "price": 1180000,
+      "price": 1230000,
       "points": 11,
-      "trend": 70000,
+      "trend": 50000,
       "playedHome": 1,
       "playedAway": 1,
       "teamName": "Athletic",
       "teamId": 1,
       "status": "ok",
       "jForm": [
+        null,
         6,
         null,
         5,
-        null,
         null
       ],
       "clausula": null
@@ -1955,7 +1955,7 @@
         null,
         null,
         null,
-        0
+        null
       ],
       "clausula": null
     },
@@ -1964,9 +1964,9 @@
       "slug": "marc-roca",
       "name": "Marc Roca",
       "position": 3,
-      "price": 1980000,
+      "price": 2010000,
       "points": 96,
-      "trend": 80000,
+      "trend": 30000,
       "playedHome": 13,
       "playedAway": 12,
       "teamName": "Betis",
@@ -1986,9 +1986,9 @@
       "slug": "hugo-duro",
       "name": "Hugo Duro",
       "position": 4,
-      "price": 2880000,
+      "price": 2870000,
       "points": 126,
-      "trend": -30000,
+      "trend": -10000,
       "playedHome": 14,
       "playedAway": 16,
       "teamName": "Valencia",
@@ -1996,10 +1996,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         2,
         3,
-        7,
-        4
+        7
       ],
       "clausula": null
     },
@@ -2017,11 +2017,11 @@
       "teamId": 2,
       "status": "ok",
       "jForm": [
+        null,
         2,
         null,
         4,
-        null,
-        5
+        null
       ],
       "clausula": null
     },
@@ -2030,20 +2030,20 @@
       "slug": "carlos-soler",
       "name": "Soler",
       "position": 3,
-      "price": 8970000,
+      "price": 9000000,
       "points": 130,
-      "trend": 80000,
+      "trend": 30000,
       "playedHome": 14,
       "playedAway": 13,
       "teamName": "Real Sociedad",
       "teamId": 13,
       "status": "ok",
       "jForm": [
+        null,
         5,
         3,
         9,
-        4,
-        6
+        4
       ],
       "clausula": null
     },
@@ -2074,20 +2074,20 @@
       "slug": "alex-remiro",
       "name": "Remiro",
       "position": 1,
-      "price": 3560000,
+      "price": 3550000,
       "points": 140,
-      "trend": -20000,
+      "trend": -10000,
       "playedHome": 17,
       "playedAway": 15,
       "teamName": "Real Sociedad",
       "teamId": 13,
       "status": "ok",
       "jForm": [
+        null,
         2,
         2,
         9,
-        8,
-        5
+        8
       ],
       "clausula": null
     },
@@ -2108,8 +2108,8 @@
         null,
         null,
         null,
-        1,
-        null
+        null,
+        1
       ],
       "clausula": null
     },
@@ -2118,7 +2118,7 @@
       "slug": "zubeldia",
       "name": "Zubeldia",
       "position": 2,
-      "price": 660000,
+      "price": 650000,
       "points": 74,
       "trend": -10000,
       "playedHome": 11,
@@ -2130,8 +2130,8 @@
         null,
         null,
         null,
-        1,
-        3
+        null,
+        1
       ],
       "clausula": null
     },
@@ -2162,9 +2162,9 @@
       "slug": "rodrigo-riquelme",
       "name": "Roro Riquelme",
       "position": 3,
-      "price": 540000,
+      "price": 560000,
       "points": 64,
-      "trend": 40000,
+      "trend": 20000,
       "playedHome": 8,
       "playedAway": 13,
       "teamName": "Betis",
@@ -2195,9 +2195,9 @@
       "jForm": [
         null,
         null,
-        -1,
         null,
-        1
+        -1,
+        null
       ],
       "clausula": null
     },
@@ -2208,18 +2208,18 @@
       "position": 3,
       "price": 2820000,
       "points": 127,
-      "trend": 10000,
+      "trend": 0,
       "playedHome": 14,
       "playedAway": 16,
       "teamName": "Osasuna",
       "teamId": 93,
       "status": "ok",
       "jForm": [
+        null,
         2,
         2,
         3,
-        3,
-        5
+        3
       ],
       "clausula": null
     },
@@ -2228,20 +2228,20 @@
       "slug": "pere-milla",
       "name": "Pere Milla",
       "position": 4,
-      "price": 1940000,
+      "price": 1920000,
       "points": 112,
-      "trend": -10000,
+      "trend": -20000,
       "playedHome": 14,
       "playedAway": 14,
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
       "jForm": [
+        null,
         -1,
         0,
         null,
-        3,
-        null
+        3
       ],
       "clausula": null
     },
@@ -2294,20 +2294,20 @@
       "slug": "dmitrovic",
       "name": "Dmitrovic",
       "position": 1,
-      "price": 3260000,
+      "price": 3250000,
       "points": 158,
-      "trend": 10000,
+      "trend": -10000,
       "playedHome": 15,
       "playedAway": 17,
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
       "jForm": [
+        null,
         5,
         3,
         11,
-        4,
-        10
+        4
       ],
       "clausula": null
     },
@@ -2316,9 +2316,9 @@
       "slug": "fede-valverde",
       "name": "Valverde",
       "position": 3,
-      "price": 19450000,
+      "price": 19490000,
       "points": 195,
-      "trend": 80000,
+      "trend": 40000,
       "playedHome": 16,
       "playedAway": 15,
       "teamName": "Real Madrid",
@@ -2360,9 +2360,9 @@
       "slug": "santi-comesana",
       "name": "Comesaña",
       "position": 3,
-      "price": 7560000,
+      "price": 7580000,
       "points": 140,
-      "trend": 70000,
+      "trend": 20000,
       "playedHome": 13,
       "playedAway": 16,
       "teamName": "Villarreal",
@@ -2370,10 +2370,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         3,
         4,
-        10,
-        6
+        10
       ],
       "clausula": null
     },
@@ -2382,20 +2382,20 @@
       "slug": "fran-beltran",
       "name": "Fran Beltrán",
       "position": 3,
-      "price": 2110000,
+      "price": 2080000,
       "points": 77,
-      "trend": -20000,
+      "trend": -30000,
       "playedHome": 10,
       "playedAway": 12,
       "teamName": "Girona",
       "teamId": 289,
       "status": "ok",
       "jForm": [
+        null,
         3,
         2,
         5,
-        3,
-        6
+        3
       ],
       "clausula": null
     },
@@ -2404,17 +2404,17 @@
       "slug": "javi-lopez",
       "name": "Javi López",
       "position": 2,
-      "price": 1080000,
+      "price": 1130000,
       "points": 73,
-      "trend": 60000,
+      "trend": 50000,
       "playedHome": 9,
       "playedAway": 11,
       "teamName": "Real Oviedo",
       "teamId": 779,
       "status": "ok",
       "jForm": [
+        null,
         7,
-        5,
         5,
         5,
         5
@@ -2470,18 +2470,18 @@
       "slug": "sivera",
       "name": "Sivera",
       "position": 1,
-      "price": 3320000,
+      "price": 3300000,
       "points": 152,
-      "trend": -10000,
+      "trend": -20000,
       "playedHome": 15,
       "playedAway": 17,
       "teamName": "Alavés",
       "teamId": 91,
       "status": "ok",
       "jForm": [
+        null,
         3,
         2,
-        6,
         6,
         6
       ],
@@ -2501,9 +2501,9 @@
       "teamId": 289,
       "status": "ok",
       "jForm": [
+        null,
         3,
         2,
-        null,
         null,
         null
       ],
@@ -2514,20 +2514,20 @@
       "slug": "djene",
       "name": "Djené",
       "position": 2,
-      "price": 1290000,
+      "price": 1300000,
       "points": 99,
-      "trend": 20000,
+      "trend": 10000,
       "playedHome": 14,
       "playedAway": 16,
       "teamName": "Getafe",
       "teamId": 8,
       "status": "ok",
       "jForm": [
+        null,
         5,
         5,
         3,
-        2,
-        3
+        2
       ],
       "clausula": null
     },
@@ -2538,18 +2538,18 @@
       "position": 2,
       "price": 3210000,
       "points": 107,
-      "trend": 20000,
+      "trend": 0,
       "playedHome": 13,
       "playedAway": 13,
       "teamName": "Mallorca",
       "teamId": 465,
       "status": "ok",
       "jForm": [
+        null,
         3,
         6,
         6,
-        null,
-        4
+        null
       ],
       "clausula": null
     },
@@ -2558,18 +2558,18 @@
       "slug": "alejandro-balde",
       "name": "Balde",
       "position": 2,
-      "price": 3430000,
+      "price": 3460000,
       "points": 95,
-      "trend": 60000,
+      "trend": 30000,
       "playedHome": 11,
       "playedAway": 12,
       "teamName": "Barcelona",
       "teamId": 3,
       "status": "ok",
       "jForm": [
+        null,
         4,
         2,
-        null,
         null,
         null
       ],
@@ -2602,20 +2602,20 @@
       "slug": "mauro-arambarri",
       "name": "Arambarri",
       "position": 3,
-      "price": 8200000,
+      "price": 8210000,
       "points": 156,
-      "trend": 20000,
+      "trend": 10000,
       "playedHome": 15,
       "playedAway": 16,
       "teamName": "Getafe",
       "teamId": 8,
       "status": "ok",
       "jForm": [
+        null,
         4,
         null,
         2,
-        9,
-        1
+        9
       ],
       "clausula": null
     },
@@ -2624,9 +2624,9 @@
       "slug": "unai-nunez",
       "name": "Unai Núñez",
       "position": 2,
-      "price": 1680000,
+      "price": 1660000,
       "points": 33,
-      "trend": -10000,
+      "trend": -20000,
       "playedHome": 4,
       "playedAway": 4,
       "teamName": "Valencia",
@@ -2635,9 +2635,9 @@
       "jForm": [
         null,
         null,
+        null,
         2,
-        6,
-        1
+        6
       ],
       "clausula": null
     },
@@ -2646,20 +2646,20 @@
       "slug": "alena",
       "name": "Aleñá",
       "position": 3,
-      "price": 710000,
+      "price": 700000,
       "points": 86,
-      "trend": 0,
+      "trend": -10000,
       "playedHome": 15,
       "playedAway": 17,
       "teamName": "Alavés",
       "teamId": 91,
       "status": "ok",
       "jForm": [
+        null,
         3,
         3,
         2,
-        -1,
-        2
+        -1
       ],
       "clausula": null
     },
@@ -2677,11 +2677,11 @@
       "teamId": 91,
       "status": "ok",
       "jForm": [
+        null,
         1,
         1,
         2,
-        5,
-        2
+        5
       ],
       "clausula": null
     },
@@ -2712,20 +2712,20 @@
       "slug": "johan-mojica",
       "name": "Mojica",
       "position": 2,
-      "price": 2870000,
+      "price": 2940000,
       "points": 117,
-      "trend": 100000,
+      "trend": 70000,
       "playedHome": 17,
       "playedAway": 14,
       "teamName": "Mallorca",
       "teamId": 465,
       "status": "ok",
       "jForm": [
+        null,
         5,
         7,
         2,
-        null,
-        2
+        null
       ],
       "clausula": null
     },
@@ -2734,9 +2734,9 @@
       "slug": "cucho",
       "name": "Cucho",
       "position": 4,
-      "price": 8480000,
+      "price": 8460000,
       "points": 142,
-      "trend": -10000,
+      "trend": -20000,
       "playedHome": 14,
       "playedAway": 14,
       "teamName": "Betis",
@@ -2780,18 +2780,18 @@
       "position": 2,
       "price": 480000,
       "points": 68,
-      "trend": 10000,
+      "trend": 0,
       "playedHome": 12,
       "playedAway": 11,
       "teamName": "Real Oviedo",
       "teamId": 779,
       "status": "ok",
       "jForm": [
+        null,
         2,
         5,
         4,
-        1,
-        4
+        1
       ],
       "clausula": null
     },
@@ -2809,11 +2809,11 @@
       "teamId": 5,
       "status": "ok",
       "jForm": [
+        null,
         3,
         3,
         3,
-        2,
-        3
+        2
       ],
       "clausula": null
     },
@@ -2822,9 +2822,9 @@
       "slug": "losada",
       "name": "Losada",
       "position": 4,
-      "price": 850000,
+      "price": 830000,
       "points": 56,
-      "trend": -10000,
+      "trend": -20000,
       "playedHome": 10,
       "playedAway": 8,
       "teamName": "Levante",
@@ -2844,9 +2844,9 @@
       "slug": "guedes",
       "name": "Guedes",
       "position": 4,
-      "price": 10730000,
+      "price": 10520000,
       "points": 153,
-      "trend": -250000,
+      "trend": -210000,
       "playedHome": 16,
       "playedAway": 15,
       "teamName": "Real Sociedad",
@@ -2854,10 +2854,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         3,
         7,
-        1,
-        18
+        1
       ],
       "clausula": null
     },
@@ -2868,16 +2868,16 @@
       "position": 2,
       "price": 870000,
       "points": 88,
-      "trend": 10000,
+      "trend": 0,
       "playedHome": 11,
       "playedAway": 12,
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
       "jForm": [
+        null,
         4,
         6,
-        null,
         null,
         null
       ],
@@ -2888,20 +2888,20 @@
       "slug": "thomas-lemar",
       "name": "Lemar",
       "position": 3,
-      "price": 2950000,
+      "price": 2910000,
       "points": 92,
-      "trend": -10000,
+      "trend": -40000,
       "playedHome": 10,
       "playedAway": 12,
       "teamName": "Girona",
       "teamId": 289,
       "status": "ok",
       "jForm": [
+        null,
         2,
         11,
         3,
-        3,
-        null
+        3
       ],
       "clausula": null
     },
@@ -2910,20 +2910,20 @@
       "slug": "brais-mendez",
       "name": "Brais Méndez",
       "position": 3,
-      "price": 5300000,
+      "price": 5260000,
       "points": 123,
-      "trend": -30000,
+      "trend": -40000,
       "playedHome": 15,
       "playedAway": 13,
       "teamName": "Real Sociedad",
       "teamId": 13,
       "status": "ok",
       "jForm": [
+        null,
         2,
         2,
         8,
-        -1,
-        6
+        -1
       ],
       "clausula": null
     },
@@ -2954,7 +2954,7 @@
       "slug": "s-dimitrievski",
       "name": "Dimitrievski",
       "position": 1,
-      "price": 1550000,
+      "price": 1560000,
       "points": 65,
       "trend": 10000,
       "playedHome": 6,
@@ -2963,11 +2963,11 @@
       "teamId": 18,
       "status": "ok",
       "jForm": [
+        null,
         9,
         4,
         1,
-        4,
-        7
+        4
       ],
       "clausula": null
     },
@@ -2976,9 +2976,9 @@
       "slug": "g-lo-celso",
       "name": "Lo Celso",
       "position": 3,
-      "price": 5410000,
+      "price": 5420000,
       "points": 100,
-      "trend": 30000,
+      "trend": 10000,
       "playedHome": 9,
       "playedAway": 11,
       "teamName": "Betis",
@@ -2998,20 +2998,20 @@
       "slug": "leandro-cabrera",
       "name": "Cabrera",
       "position": 2,
-      "price": 4960000,
+      "price": 4930000,
       "points": 148,
-      "trend": -10000,
+      "trend": -30000,
       "playedHome": 15,
       "playedAway": 16,
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
       "jForm": [
+        null,
         2,
         2,
         7,
-        3,
-        1
+        3
       ],
       "clausula": null
     },
@@ -3042,20 +3042,20 @@
       "slug": "pepelu",
       "name": "Pepelu",
       "position": 3,
-      "price": 1740000,
+      "price": 1770000,
       "points": 105,
-      "trend": 50000,
+      "trend": 30000,
       "playedHome": 11,
       "playedAway": 14,
       "teamName": "Valencia",
       "teamId": 18,
       "status": "ok",
       "jForm": [
+        null,
         6,
         3,
         null,
-        0,
-        null
+        0
       ],
       "clausula": null
     },
@@ -3064,7 +3064,7 @@
       "slug": "dani-vivian",
       "name": "Vivian",
       "position": 2,
-      "price": 2850000,
+      "price": 2870000,
       "points": 91,
       "trend": 20000,
       "playedHome": 13,
@@ -3073,11 +3073,11 @@
       "teamId": 1,
       "status": "ok",
       "jForm": [
+        null,
         3,
         5,
         2,
-        12,
-        2
+        12
       ],
       "clausula": null
     },
@@ -3086,20 +3086,20 @@
       "slug": "ivan-martin",
       "name": "Iván Martín",
       "position": 3,
-      "price": 2110000,
+      "price": 2140000,
       "points": 121,
-      "trend": 50000,
+      "trend": 30000,
       "playedHome": 15,
       "playedAway": 15,
       "teamName": "Girona",
       "teamId": 289,
       "status": "ok",
       "jForm": [
+        null,
         5,
         4,
         5,
-        2,
-        3
+        2
       ],
       "clausula": null
     },
@@ -3108,7 +3108,7 @@
       "slug": "jon-pacheco",
       "name": "Jon Pacheco",
       "position": 2,
-      "price": 670000,
+      "price": 660000,
       "points": 78,
       "trend": -10000,
       "playedHome": 8,
@@ -3120,8 +3120,8 @@
         null,
         null,
         null,
-        -1,
-        null
+        null,
+        -1
       ],
       "clausula": null
     },
@@ -3130,20 +3130,20 @@
       "slug": "lucas-boye",
       "name": "Boyé",
       "position": 4,
-      "price": 5170000,
+      "price": 5190000,
       "points": 136,
-      "trend": 40000,
+      "trend": 20000,
       "playedHome": 13,
       "playedAway": 13,
       "teamName": "Alavés",
       "teamId": 91,
       "status": "ok",
       "jForm": [
+        null,
         -2,
         9,
         9,
-        0,
-        3
+        0
       ],
       "clausula": null
     },
@@ -3152,20 +3152,20 @@
       "slug": "ferran-torres",
       "name": "Ferran Torres",
       "position": 4,
-      "price": 9830000,
+      "price": 9940000,
       "points": 154,
-      "trend": 220000,
+      "trend": 110000,
       "playedHome": 14,
       "playedAway": 15,
       "teamName": "Barcelona",
       "teamId": 3,
       "status": "ok",
       "jForm": [
+        null,
         4,
         17,
         2,
-        2,
-        null
+        2
       ],
       "clausula": null
     },
@@ -3198,7 +3198,7 @@
       "position": 3,
       "price": 150000,
       "points": 6,
-      "trend": -10000,
+      "trend": 0,
       "playedHome": 1,
       "playedAway": 1,
       "teamName": "Atlético",
@@ -3206,8 +3206,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         2,
-        4
+        4,
+        null
       ],
       "clausula": null
     },
@@ -3216,7 +3218,7 @@
       "slug": "thierry-correia",
       "name": "Correia",
       "position": 2,
-      "price": 250000,
+      "price": 240000,
       "points": 51,
       "trend": -10000,
       "playedHome": 10,
@@ -3225,11 +3227,11 @@
       "teamId": 18,
       "status": "ok",
       "jForm": [
+        null,
         2,
         2,
         3,
-        null,
-        1
+        null
       ],
       "clausula": null
     },
@@ -3238,17 +3240,20 @@
       "slug": "javi-bonar",
       "name": "Boñar",
       "position": 2,
-      "price": 350000,
+      "price": 370000,
       "points": 16,
-      "trend": 30000,
+      "trend": 20000,
       "playedHome": 0,
       "playedAway": 2,
       "teamName": "Atlético",
       "teamId": 2,
       "status": "ok",
       "jForm": [
+        null,
         3,
-        13
+        13,
+        null,
+        null
       ],
       "clausula": null
     },
@@ -3259,7 +3264,7 @@
       "position": 2,
       "price": 150000,
       "points": 2,
-      "trend": -10000,
+      "trend": 0,
       "playedHome": 0,
       "playedAway": 1,
       "teamName": "Atlético",
@@ -3267,7 +3272,10 @@
       "status": "ok",
       "jForm": [
         null,
-        2
+        null,
+        2,
+        null,
+        null
       ],
       "clausula": null
     },
@@ -3276,7 +3284,7 @@
       "slug": "claudio-giraldez",
       "name": "Claudio Giráldez",
       "position": 5,
-      "price": 910000,
+      "price": 900000,
       "points": 44,
       "trend": -10000,
       "playedHome": 16,
@@ -3285,11 +3293,11 @@
       "teamId": 5,
       "status": "ok",
       "jForm": [
+        null,
         0,
         0,
         3,
-        0,
-        1
+        0
       ],
       "clausula": null
     },
@@ -3298,20 +3306,20 @@
       "slug": "leo-roman",
       "name": "Leo Román",
       "position": 1,
-      "price": 2840000,
+      "price": 2870000,
       "points": 138,
-      "trend": 50000,
+      "trend": 30000,
       "playedHome": 15,
       "playedAway": 12,
       "teamName": "Mallorca",
       "teamId": 465,
       "status": "ok",
       "jForm": [
+        null,
         7,
         7,
         9,
-        2,
-        5
+        2
       ],
       "clausula": null
     },
@@ -3320,20 +3328,20 @@
       "slug": "pablo-ibanez",
       "name": "Pablo Ibáñez",
       "position": 3,
-      "price": 1920000,
+      "price": 1910000,
       "points": 119,
-      "trend": 0,
+      "trend": -10000,
       "playedHome": 15,
       "playedAway": 16,
       "teamName": "Alavés",
       "teamId": 91,
       "status": "ok",
       "jForm": [
+        null,
         4,
         1,
         6,
-        0,
-        5
+        0
       ],
       "clausula": null
     },
@@ -3342,9 +3350,9 @@
       "slug": "andriy-lunin",
       "name": "Lunin",
       "position": 1,
-      "price": 2210000,
+      "price": 2240000,
       "points": 24,
-      "trend": 20000,
+      "trend": 30000,
       "playedHome": 4,
       "playedAway": 2,
       "teamName": "Real Madrid",
@@ -3386,20 +3394,20 @@
       "slug": "joan-garcia",
       "name": "Joan García",
       "position": 1,
-      "price": 12380000,
+      "price": 12400000,
       "points": 189,
-      "trend": 0,
+      "trend": 20000,
       "playedHome": 14,
       "playedAway": 12,
       "teamName": "Barcelona",
       "teamId": 3,
       "status": "ok",
       "jForm": [
+        null,
         10,
         5,
         3,
-        11,
-        5
+        11
       ],
       "clausula": null
     },
@@ -3432,18 +3440,18 @@
       "position": 2,
       "price": 270000,
       "points": 51,
-      "trend": 10000,
+      "trend": 0,
       "playedHome": 10,
       "playedAway": 8,
       "teamName": "Athletic",
       "teamId": 1,
       "status": "ok",
       "jForm": [
+        null,
         5,
         4,
         null,
-        null,
-        1
+        null
       ],
       "clausula": null
     },
@@ -3483,11 +3491,11 @@
       "teamId": 779,
       "status": "ok",
       "jForm": [
+        null,
         3,
         null,
         3,
-        2,
-        3
+        2
       ],
       "clausula": null
     },
@@ -3496,9 +3504,9 @@
       "slug": "vinicius-junior",
       "name": "Vinícius Jr",
       "position": 4,
-      "price": 23380000,
+      "price": 23430000,
       "points": 232,
-      "trend": 80000,
+      "trend": 50000,
       "playedHome": 17,
       "playedAway": 15,
       "teamName": "Real Madrid",
@@ -3518,20 +3526,20 @@
       "slug": "le-normand",
       "name": "Le Normand",
       "position": 2,
-      "price": 1470000,
+      "price": 1460000,
       "points": 82,
-      "trend": 0,
+      "trend": -10000,
       "playedHome": 11,
       "playedAway": 12,
       "teamName": "Atlético",
       "teamId": 2,
       "status": "ok",
       "jForm": [
+        null,
         3,
         null,
         3,
-        3,
-        null
+        3
       ],
       "clausula": null
     },
@@ -3593,11 +3601,11 @@
       "teamId": 8,
       "status": "ok",
       "jForm": [
+        null,
         3,
         null,
         null,
-        null,
-        2
+        null
       ],
       "clausula": null
     },
@@ -3628,19 +3636,19 @@
       "slug": "manu-morlanes",
       "name": "Morlanes",
       "position": 3,
-      "price": 880000,
+      "price": 910000,
       "points": 90,
-      "trend": 50000,
+      "trend": 30000,
       "playedHome": 14,
       "playedAway": 12,
       "teamName": "Mallorca",
       "teamId": 465,
       "status": "ok",
       "jForm": [
+        null,
         5,
         3,
         11,
-        3,
         3
       ],
       "clausula": null
@@ -3650,9 +3658,9 @@
       "slug": "t-courtois",
       "name": "Courtois",
       "position": 1,
-      "price": 3320000,
+      "price": 3300000,
       "points": 130,
-      "trend": -30000,
+      "trend": -20000,
       "playedHome": 14,
       "playedAway": 14,
       "teamName": "Real Madrid",
@@ -3672,20 +3680,20 @@
       "slug": "andre-silva",
       "name": "André Silva",
       "position": 4,
-      "price": 1890000,
+      "price": 2010000,
       "points": 104,
-      "trend": 140000,
+      "trend": 120000,
       "playedHome": 11,
       "playedAway": 14,
       "teamName": "Elche",
       "teamId": 75,
       "status": "ok",
       "jForm": [
+        null,
         13,
         0,
         2,
-        null,
-        0
+        null
       ],
       "clausula": null
     },
@@ -3704,10 +3712,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         3,
         2,
-        0,
-        -2
+        0
       ],
       "clausula": null
     },
@@ -3725,8 +3733,8 @@
       "teamId": 8,
       "status": "ok",
       "jForm": [
-        3,
         null,
+        3,
         null,
         null,
         null
@@ -3738,7 +3746,7 @@
       "slug": "unai-simon",
       "name": "Unai Simón",
       "position": 1,
-      "price": 2810000,
+      "price": 2820000,
       "points": 142,
       "trend": 10000,
       "playedHome": 17,
@@ -3747,11 +3755,11 @@
       "teamId": 1,
       "status": "ok",
       "jForm": [
+        null,
         10,
         -1,
         5,
-        6,
-        2
+        6
       ],
       "clausula": null
     },
@@ -3760,20 +3768,20 @@
       "slug": "guruceta",
       "name": "Guruzeta",
       "position": 4,
-      "price": 2990000,
+      "price": 3080000,
       "points": 101,
-      "trend": 110000,
+      "trend": 90000,
       "playedHome": 17,
       "playedAway": 12,
       "teamName": "Athletic",
       "teamId": 1,
       "status": "ok",
       "jForm": [
+        null,
         8,
         7,
         1,
-        2,
-        4
+        2
       ],
       "clausula": null
     },
@@ -3782,20 +3790,20 @@
       "slug": "sancet",
       "name": "Sancet",
       "position": 3,
-      "price": 4020000,
+      "price": 4030000,
       "points": 78,
-      "trend": 20000,
+      "trend": 10000,
       "playedHome": 11,
       "playedAway": 14,
       "teamName": "Athletic",
       "teamId": 1,
       "status": "ok",
       "jForm": [
+        null,
         6,
         -1,
         1,
-        15,
-        1
+        15
       ],
       "clausula": null
     },
@@ -3804,7 +3812,7 @@
       "slug": "victor-garcia",
       "name": "Víctor García",
       "position": 2,
-      "price": 350000,
+      "price": 360000,
       "points": 59,
       "trend": 10000,
       "playedHome": 9,
@@ -3813,11 +3821,11 @@
       "teamId": 10,
       "status": "ok",
       "jForm": [
+        null,
         6,
         3,
         2,
-        3,
-        5
+        3
       ],
       "clausula": null
     },
@@ -3828,18 +3836,18 @@
       "position": 3,
       "price": 1320000,
       "points": 108,
-      "trend": 20000,
+      "trend": 0,
       "playedHome": 13,
       "playedAway": 16,
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
       "jForm": [
+        null,
         2,
         9,
         3,
-        null,
-        3
+        null
       ],
       "clausula": null
     },
@@ -3857,9 +3865,9 @@
       "teamId": 13,
       "status": "ok",
       "jForm": [
-        2,
-        2,
         null,
+        2,
+        2,
         null,
         null
       ],
@@ -3870,7 +3878,7 @@
       "slug": "yangel-herrera",
       "name": "Yangel Herrera",
       "position": 3,
-      "price": 790000,
+      "price": 780000,
       "points": 25,
       "trend": -10000,
       "playedHome": 5,
@@ -3883,7 +3891,7 @@
         null,
         null,
         null,
-        0
+        null
       ],
       "clausula": null
     },
@@ -3901,10 +3909,10 @@
       "teamId": 91,
       "status": "ok",
       "jForm": [
+        null,
         4,
         3,
         2,
-        null,
         null
       ],
       "clausula": null
@@ -3914,20 +3922,20 @@
       "slug": "luis-rioja",
       "name": "Rioja",
       "position": 4,
-      "price": 3440000,
+      "price": 3450000,
       "points": 135,
-      "trend": 30000,
+      "trend": 10000,
       "playedHome": 15,
       "playedAway": 16,
       "teamName": "Valencia",
       "teamId": 18,
       "status": "ok",
       "jForm": [
+        null,
         3,
         9,
         6,
-        6,
-        3
+        6
       ],
       "clausula": null
     },
@@ -3936,20 +3944,20 @@
       "slug": "matias-dituro",
       "name": "Dituro",
       "position": 1,
-      "price": 2760000,
+      "price": 2740000,
       "points": 97,
-      "trend": 0,
+      "trend": -20000,
       "playedHome": 9,
       "playedAway": 7,
       "teamName": "Elche",
       "teamId": 75,
       "status": "ok",
       "jForm": [
+        null,
         3,
         11,
         5,
-        5,
-        1
+        5
       ],
       "clausula": null
     },
@@ -3958,19 +3966,19 @@
       "slug": "javi-galan",
       "name": "Galán",
       "position": 2,
-      "price": 4100000,
+      "price": 4070000,
       "points": 83,
-      "trend": 0,
+      "trend": -30000,
       "playedHome": 11,
       "playedAway": 9,
       "teamName": "Osasuna",
       "teamId": 93,
       "status": "ok",
       "jForm": [
+        null,
         4,
         2,
         2,
-        3,
         3
       ],
       "clausula": null
@@ -3980,9 +3988,9 @@
       "slug": "bryan-gil",
       "name": "Bryan Gil",
       "position": 4,
-      "price": 2050000,
+      "price": 2020000,
       "points": 87,
-      "trend": -50000,
+      "trend": -30000,
       "playedHome": 11,
       "playedAway": 13,
       "teamName": "Girona",
@@ -3990,8 +3998,8 @@
       "status": "ok",
       "jForm": [
         null,
-        2,
         null,
+        2,
         null,
         null
       ],
@@ -4002,9 +4010,9 @@
       "slug": "a-catena",
       "name": "Catena",
       "position": 2,
-      "price": 3840000,
+      "price": 3820000,
       "points": 133,
-      "trend": 0,
+      "trend": -20000,
       "playedHome": 15,
       "playedAway": 14,
       "teamName": "Osasuna",
@@ -4012,10 +4020,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         2,
         3,
-        4,
-        2
+        4
       ],
       "clausula": null
     },
@@ -4024,7 +4032,7 @@
       "slug": "sergio-camello",
       "name": "Camello",
       "position": 4,
-      "price": 190000,
+      "price": 200000,
       "points": 35,
       "trend": 10000,
       "playedHome": 9,
@@ -4033,11 +4041,11 @@
       "teamId": 70,
       "status": "ok",
       "jForm": [
+        null,
         12,
         2,
         1,
-        2,
-        null
+        2
       ],
       "clausula": null
     },
@@ -4046,7 +4054,7 @@
       "slug": "ivan-romero",
       "name": "Iván Romero",
       "position": 4,
-      "price": 4470000,
+      "price": 4510000,
       "points": 152,
       "trend": 40000,
       "playedHome": 15,
@@ -4055,11 +4063,11 @@
       "teamId": 10,
       "status": "ok",
       "jForm": [
+        null,
         17,
         5,
         2,
-        11,
-        6
+        11
       ],
       "clausula": null
     },
@@ -4077,11 +4085,11 @@
       "teamId": 93,
       "status": "ok",
       "jForm": [
+        null,
         3,
         6,
         2,
-        8,
-        4
+        8
       ],
       "clausula": null
     },
@@ -4090,9 +4098,9 @@
       "slug": "eder-militao",
       "name": "Militão",
       "position": 2,
-      "price": 7030000,
+      "price": 6730000,
       "points": 104,
-      "trend": -420000,
+      "trend": -300000,
       "playedHome": 9,
       "playedAway": 7,
       "teamName": "Real Madrid",
@@ -4112,18 +4120,18 @@
       "slug": "frenkie-de-jong",
       "name": "De Jong",
       "position": 3,
-      "price": 10080000,
+      "price": 10170000,
       "points": 122,
-      "trend": 140000,
+      "trend": 90000,
       "playedHome": 9,
       "playedAway": 12,
       "teamName": "Barcelona",
       "teamId": 3,
       "status": "ok",
       "jForm": [
+        null,
         5,
         6,
-        null,
         null,
         null
       ],
@@ -4134,7 +4142,7 @@
       "slug": "rodrygo-goes",
       "name": "Rodrygo",
       "position": 4,
-      "price": 2700000,
+      "price": 2670000,
       "points": 67,
       "trend": -30000,
       "playedHome": 10,
@@ -4156,20 +4164,20 @@
       "slug": "sergio-herrera",
       "name": "Sergio Herrera",
       "position": 1,
-      "price": 3300000,
+      "price": 3270000,
       "points": 150,
-      "trend": -20000,
+      "trend": -30000,
       "playedHome": 15,
       "playedAway": 17,
       "teamName": "Osasuna",
       "teamId": 93,
       "status": "ok",
       "jForm": [
+        null,
         1,
         2,
         3,
-        3,
-        2
+        3
       ],
       "clausula": null
     },
@@ -4187,11 +4195,11 @@
       "teamId": 93,
       "status": "ok",
       "jForm": [
+        null,
         3,
         3,
         2,
-        7,
-        3
+        7
       ],
       "clausula": null
     },
@@ -4209,11 +4217,11 @@
       "teamId": 93,
       "status": "ok",
       "jForm": [
+        null,
         1,
         3,
         2,
-        3,
-        null
+        3
       ],
       "clausula": null
     },
@@ -4222,20 +4230,20 @@
       "slug": "jorge-de-frutos",
       "name": "De Frutos",
       "position": 4,
-      "price": 10270000,
+      "price": 10190000,
       "points": 175,
-      "trend": -10000,
+      "trend": -80000,
       "playedHome": 16,
       "playedAway": 14,
       "teamName": "Rayo Vallecano",
       "teamId": 70,
       "status": "ok",
       "jForm": [
+        null,
         3,
         2,
         5,
-        5,
-        2
+        5
       ],
       "clausula": null
     },
@@ -4244,7 +4252,7 @@
       "slug": "ante-budimir",
       "name": "Budimir",
       "position": 4,
-      "price": 17800000,
+      "price": 17830000,
       "points": 182,
       "trend": 30000,
       "playedHome": 15,
@@ -4253,11 +4261,11 @@
       "teamId": 93,
       "status": "ok",
       "jForm": [
+        null,
         1,
         8,
         8,
-        9,
-        3
+        9
       ],
       "clausula": null
     },
@@ -4266,20 +4274,20 @@
       "slug": "martin-valjent",
       "name": "Valjent",
       "position": 2,
-      "price": 2510000,
+      "price": 2650000,
       "points": 108,
-      "trend": 170000,
+      "trend": 140000,
       "playedHome": 16,
       "playedAway": 15,
       "teamName": "Mallorca",
       "teamId": 465,
       "status": "ok",
       "jForm": [
+        null,
         7,
         null,
         5,
-        5,
-        6
+        5
       ],
       "clausula": null
     },
@@ -4298,8 +4306,8 @@
       "status": "ok",
       "jForm": [
         null,
-        1,
         null,
+        1,
         null,
         null
       ],
@@ -4312,18 +4320,18 @@
       "position": 3,
       "price": 1070000,
       "points": 96,
-      "trend": 20000,
+      "trend": 0,
       "playedHome": 14,
       "playedAway": 14,
       "teamName": "Sevilla",
       "teamId": 17,
       "status": "ok",
       "jForm": [
+        null,
         2,
         11,
         3,
-        2,
-        1
+        2
       ],
       "clausula": null
     },
@@ -4332,19 +4340,19 @@
       "slug": "jules-kounde",
       "name": "Koundé",
       "position": 2,
-      "price": 6600000,
+      "price": 6610000,
       "points": 122,
-      "trend": 20000,
+      "trend": 10000,
       "playedHome": 14,
       "playedAway": 13,
       "teamName": "Barcelona",
       "teamId": 3,
       "status": "ok",
       "jForm": [
+        null,
         4,
         null,
         3,
-        null,
         null
       ],
       "clausula": null
@@ -4354,7 +4362,7 @@
       "slug": "aitor-ruibal",
       "name": "Ruibal",
       "position": 3,
-      "price": 3260000,
+      "price": 3230000,
       "points": 119,
       "trend": -30000,
       "playedHome": 13,
@@ -4376,9 +4384,9 @@
       "slug": "julen-agirrezabala",
       "name": "Agirrezabala",
       "position": 1,
-      "price": 580000,
+      "price": 570000,
       "points": 73,
-      "trend": 0,
+      "trend": -10000,
       "playedHome": 9,
       "playedAway": 9,
       "teamName": "Valencia",
@@ -4398,16 +4406,16 @@
       "slug": "hansi-flick",
       "name": "Hansi Flick",
       "position": 5,
-      "price": 4390000,
+      "price": 4410000,
       "points": 82,
-      "trend": 10000,
+      "trend": 20000,
       "playedHome": 17,
       "playedAway": 15,
       "teamName": "Barcelona",
       "teamId": 3,
       "status": "ok",
       "jForm": [
-        3,
+        null,
         3,
         3,
         3,
@@ -4422,17 +4430,17 @@
       "position": 2,
       "price": 1100000,
       "points": 85,
-      "trend": 10000,
+      "trend": 0,
       "playedHome": 14,
       "playedAway": 11,
       "teamName": "Rayo Vallecano",
       "teamId": 70,
       "status": "ok",
       "jForm": [
+        null,
         4,
         3,
         1,
-        4,
         4
       ],
       "clausula": null
@@ -4442,20 +4450,20 @@
       "slug": "rafa-mir",
       "name": "Rafa Mir",
       "position": 4,
-      "price": 2670000,
+      "price": 2640000,
       "points": 121,
-      "trend": -20000,
+      "trend": -30000,
       "playedHome": 15,
       "playedAway": 12,
       "teamName": "Elche",
       "teamId": 75,
       "status": "ok",
       "jForm": [
+        null,
         0,
         3,
         2,
-        10,
-        2
+        10
       ],
       "clausula": null
     },
@@ -4464,7 +4472,7 @@
       "slug": "sergio-gomez",
       "name": "Sergio Gómez",
       "position": 2,
-      "price": 2690000,
+      "price": 2720000,
       "points": 109,
       "trend": 30000,
       "playedHome": 15,
@@ -4474,10 +4482,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         -2,
         7,
-        0,
-        5
+        0
       ],
       "clausula": null
     },
@@ -4486,20 +4494,20 @@
       "slug": "pedri",
       "name": "Pedri",
       "position": 3,
-      "price": 24380000,
+      "price": 24410000,
       "points": 176,
-      "trend": 50000,
+      "trend": 30000,
       "playedHome": 13,
       "playedAway": 11,
       "teamName": "Barcelona",
       "teamId": 3,
       "status": "ok",
       "jForm": [
+        null,
         3,
         6,
         4,
-        6,
-        2
+        6
       ],
       "clausula": null
     },
@@ -4508,20 +4516,20 @@
       "slug": "luis-milla",
       "name": "Luis Milla",
       "position": 3,
-      "price": 13480000,
+      "price": 13420000,
       "points": 168,
-      "trend": 0,
+      "trend": -60000,
       "playedHome": 14,
       "playedAway": 17,
       "teamName": "Getafe",
       "teamId": 8,
       "status": "ok",
       "jForm": [
+        null,
         5,
         3,
         7,
-        9,
-        2
+        9
       ],
       "clausula": null
     },
@@ -4530,7 +4538,7 @@
       "slug": "lucas-torro",
       "name": "Torró",
       "position": 3,
-      "price": 1270000,
+      "price": 1260000,
       "points": 104,
       "trend": -10000,
       "playedHome": 14,
@@ -4539,11 +4547,11 @@
       "teamId": 93,
       "status": "ok",
       "jForm": [
+        null,
         2,
         0,
         4,
-        null,
-        3
+        null
       ],
       "clausula": null
     },
@@ -4552,20 +4560,20 @@
       "slug": "simeone",
       "name": "Simeone",
       "position": 5,
-      "price": 2630000,
+      "price": 2610000,
       "points": 57,
-      "trend": -30000,
+      "trend": -20000,
       "playedHome": 16,
       "playedAway": 16,
       "teamName": "Atlético",
       "teamId": 2,
       "status": "ok",
       "jForm": [
+        null,
         0,
         0,
         0,
-        0,
-        3
+        0
       ],
       "clausula": null
     },
@@ -4576,18 +4584,18 @@
       "position": 5,
       "price": 870000,
       "points": 44,
-      "trend": 20000,
+      "trend": 0,
       "playedHome": 15,
       "playedAway": 17,
       "teamName": "Getafe",
       "teamId": 8,
       "status": "ok",
       "jForm": [
+        null,
         3,
         0,
         3,
-        3,
-        0
+        3
       ],
       "clausula": null
     },
@@ -4596,20 +4604,20 @@
       "slug": "gaizka-garitano",
       "name": "Marcelino",
       "position": 5,
-      "price": 2170000,
+      "price": 2150000,
       "points": 62,
-      "trend": -10000,
+      "trend": -20000,
       "playedHome": 15,
       "playedAway": 17,
       "teamName": "Villarreal",
       "teamId": 19,
       "status": "ok",
       "jForm": [
+        null,
         1,
         3,
         0,
-        3,
-        1
+        3
       ],
       "clausula": null
     },
@@ -4618,7 +4626,7 @@
       "slug": "pellegrini",
       "name": "Pellegrini",
       "position": 5,
-      "price": 1330000,
+      "price": 1320000,
       "points": 50,
       "trend": -10000,
       "playedHome": 16,
@@ -4640,20 +4648,20 @@
       "slug": "alex-baena",
       "name": "Baena",
       "position": 3,
-      "price": 5820000,
+      "price": 5770000,
       "points": 99,
-      "trend": -60000,
+      "trend": -50000,
       "playedHome": 11,
       "playedAway": 12,
       "teamName": "Atlético",
       "teamId": 2,
       "status": "ok",
       "jForm": [
+        null,
         2,
         2,
         3,
-        3,
-        4
+        3
       ],
       "clausula": null
     },
@@ -4662,9 +4670,9 @@
       "slug": "mbappe",
       "name": "Mbappé",
       "position": 4,
-      "price": 29750000,
+      "price": 29720000,
       "points": 252,
-      "trend": 60000,
+      "trend": -30000,
       "playedHome": 13,
       "playedAway": 15,
       "teamName": "Real Madrid",
@@ -4684,7 +4692,7 @@
       "slug": "natan",
       "name": "Natan",
       "position": 2,
-      "price": 1500000,
+      "price": 1510000,
       "points": 95,
       "trend": 10000,
       "playedHome": 14,
@@ -4717,8 +4725,8 @@
       "jForm": [
         null,
         null,
+        null,
         -3,
-        3,
         3
       ],
       "clausula": null
@@ -4738,10 +4746,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         -1,
         2,
-        -4,
-        null
+        -4
       ],
       "clausula": null
     },
@@ -4750,20 +4758,20 @@
       "slug": "aleix-febas",
       "name": "Febas",
       "position": 3,
-      "price": 12290000,
+      "price": 12340000,
       "points": 190,
-      "trend": 90000,
+      "trend": 50000,
       "playedHome": 16,
       "playedAway": 15,
       "teamName": "Elche",
       "teamId": 75,
       "status": "ok",
       "jForm": [
+        null,
         7,
         11,
         4,
-        7,
-        5
+        7
       ],
       "clausula": null
     },
@@ -4772,18 +4780,18 @@
       "slug": "edu-exposito-2",
       "name": "Expósito",
       "position": 3,
-      "price": 6620000,
+      "price": 6570000,
       "points": 158,
-      "trend": -30000,
+      "trend": -50000,
       "playedHome": 13,
       "playedAway": 17,
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
       "jForm": [
+        null,
         3,
         2,
-        5,
         5,
         5
       ],
@@ -4794,18 +4802,18 @@
       "slug": "takefusa-kubo",
       "name": "Kubo",
       "position": 3,
-      "price": 7390000,
+      "price": 7450000,
       "points": 109,
-      "trend": 130000,
+      "trend": 60000,
       "playedHome": 11,
       "playedAway": 9,
       "teamName": "Real Sociedad",
       "teamId": 13,
       "status": "ok",
       "jForm": [
+        null,
         5,
         6,
-        null,
         null,
         null
       ],
@@ -4818,7 +4826,7 @@
       "position": 2,
       "price": 3230000,
       "points": 95,
-      "trend": 10000,
+      "trend": 0,
       "playedHome": 10,
       "playedAway": 10,
       "teamName": "Barcelona",
@@ -4826,10 +4834,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         6,
         0,
-        13,
-        2
+        13
       ],
       "clausula": null
     },
@@ -4838,20 +4846,20 @@
       "slug": "german-valera",
       "name": "Germán Valera",
       "position": 3,
-      "price": 11500000,
+      "price": 11540000,
       "points": 174,
-      "trend": 60000,
+      "trend": 40000,
       "playedHome": 17,
       "playedAway": 14,
       "teamName": "Elche",
       "teamId": 75,
       "status": "ok",
       "jForm": [
+        null,
         5,
         6,
         6,
-        10,
-        -1
+        10
       ],
       "clausula": null
     },
@@ -4860,19 +4868,19 @@
       "slug": "nico-williams",
       "name": "Nico Williams",
       "position": 4,
-      "price": 8390000,
+      "price": 8480000,
       "points": 111,
-      "trend": 160000,
+      "trend": 90000,
       "playedHome": 12,
       "playedAway": 10,
       "teamName": "Athletic",
       "teamId": 1,
       "status": "ok",
       "jForm": [
+        null,
         5,
         5,
         4,
-        null,
         null
       ],
       "clausula": null
@@ -4917,7 +4925,7 @@
         null,
         null,
         null,
-        4
+        null
       ],
       "clausula": null
     },
@@ -4928,7 +4936,7 @@
       "position": 2,
       "price": 1370000,
       "points": 91,
-      "trend": 30000,
+      "trend": 0,
       "playedHome": 9,
       "playedAway": 10,
       "teamName": "Villarreal",
@@ -4936,10 +4944,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         6,
         null,
-        null,
-        2
+        null
       ],
       "clausula": null
     },
@@ -4948,20 +4956,20 @@
       "slug": "ilaix-moriba",
       "name": "Ilaix Moriba",
       "position": 3,
-      "price": 2920000,
+      "price": 3020000,
       "points": 125,
-      "trend": 110000,
+      "trend": 100000,
       "playedHome": 15,
       "playedAway": 16,
       "teamName": "Celta",
       "teamId": 5,
       "status": "ok",
       "jForm": [
+        null,
         6,
         4,
         11,
-        null,
-        4
+        null
       ],
       "clausula": null
     },
@@ -4992,18 +5000,20 @@
       "slug": "luis-garcia",
       "name": "Luis García",
       "position": 5,
-      "price": 380000,
+      "price": 370000,
       "points": 3,
-      "trend": 0,
+      "trend": -10000,
       "playedHome": 1,
       "playedAway": 2,
       "teamName": "Sevilla",
       "teamId": 17,
       "status": "ok",
       "jForm": [
+        null,
         0,
         3,
-        0
+        0,
+        null
       ],
       "clausula": null
     },
@@ -5021,11 +5031,11 @@
       "teamId": 75,
       "status": "ok",
       "jForm": [
+        null,
         6,
         null,
         null,
-        null,
-        2
+        null
       ],
       "clausula": null
     },
@@ -5044,8 +5054,8 @@
       "status": "ok",
       "jForm": [
         null,
-        4,
         null,
+        4,
         null,
         null
       ],
@@ -5056,20 +5066,20 @@
       "slug": "dani-calvo",
       "name": "Calvo",
       "position": 2,
-      "price": 860000,
+      "price": 890000,
       "points": 64,
-      "trend": 60000,
+      "trend": 30000,
       "playedHome": 7,
       "playedAway": 9,
       "teamName": "Real Oviedo",
       "teamId": 779,
       "status": "ok",
       "jForm": [
+        null,
         4,
         6,
         6,
-        null,
-        4
+        null
       ],
       "clausula": null
     },
@@ -5080,18 +5090,18 @@
       "position": 4,
       "price": 760000,
       "points": 29,
-      "trend": 10000,
+      "trend": 0,
       "playedHome": 5,
       "playedAway": 2,
       "teamName": "Elche",
       "teamId": 75,
       "status": "ok",
       "jForm": [
+        null,
         2,
         3,
         4,
-        13,
-        null
+        13
       ],
       "clausula": null
     },
@@ -5100,9 +5110,9 @@
       "slug": "urko-gonzalez",
       "name": "Urko Gonzalez",
       "position": 3,
-      "price": 1280000,
+      "price": 1270000,
       "points": 101,
-      "trend": 0,
+      "trend": -10000,
       "playedHome": 14,
       "playedAway": 16,
       "teamName": "Espanyol",
@@ -5110,10 +5120,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         0,
         2,
-        4,
-        3
+        4
       ],
       "clausula": null
     },
@@ -5122,7 +5132,7 @@
       "slug": "juan-foyth",
       "name": "Foyth",
       "position": 2,
-      "price": 890000,
+      "price": 880000,
       "points": 62,
       "trend": -10000,
       "playedHome": 7,
@@ -5144,7 +5154,7 @@
       "slug": "dani-cardenas",
       "name": "Dani Cárdenas",
       "position": 1,
-      "price": 210000,
+      "price": 220000,
       "points": 13,
       "trend": 10000,
       "playedHome": 1,
@@ -5153,9 +5163,9 @@
       "teamId": 70,
       "status": "ok",
       "jForm": [
+        null,
         11,
         2,
-        null,
         null,
         null
       ],
@@ -5188,20 +5198,20 @@
       "slug": "oscar-mingueza",
       "name": "Mingueza",
       "position": 2,
-      "price": 3120000,
+      "price": 3100000,
       "points": 125,
-      "trend": 0,
+      "trend": -20000,
       "playedHome": 14,
       "playedAway": 14,
       "teamName": "Celta",
       "teamId": 5,
       "status": "ok",
       "jForm": [
+        null,
         3,
         5,
         2,
-        2,
-        3
+        2
       ],
       "clausula": null
     },
@@ -5220,10 +5230,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         3,
         3,
-        11,
-        null
+        11
       ],
       "clausula": null
     },
@@ -5242,8 +5252,8 @@
       "status": "ok",
       "jForm": [
         null,
-        3,
         null,
+        3,
         null,
         null
       ],
@@ -5254,20 +5264,20 @@
       "slug": "juan-iglesias",
       "name": "Juan Iglesias",
       "position": 2,
-      "price": 4580000,
+      "price": 4590000,
       "points": 131,
-      "trend": 40000,
+      "trend": 10000,
       "playedHome": 15,
       "playedAway": 16,
       "teamName": "Getafe",
       "teamId": 8,
       "status": "ok",
       "jForm": [
+        null,
         8,
         2,
         3,
-        7,
-        4
+        7
       ],
       "clausula": null
     },
@@ -5276,20 +5286,20 @@
       "slug": "alfonso-gonzales",
       "name": "Alfon González",
       "position": 4,
-      "price": 1150000,
+      "price": 1160000,
       "points": 49,
-      "trend": 40000,
+      "trend": 10000,
       "playedHome": 6,
       "playedAway": 11,
       "teamName": "Villarreal",
       "teamId": 19,
       "status": "ok",
       "jForm": [
+        null,
         1,
         11,
         2,
-        3,
-        null
+        3
       ],
       "clausula": null
     },
@@ -5298,7 +5308,7 @@
       "slug": "paulo-gazzaniga",
       "name": "Gazzaniga",
       "position": 1,
-      "price": 2910000,
+      "price": 2890000,
       "points": 134,
       "trend": -20000,
       "playedHome": 15,
@@ -5307,11 +5317,11 @@
       "teamId": 289,
       "status": "ok",
       "jForm": [
+        null,
         -1,
         9,
         2,
-        10,
-        12
+        10
       ],
       "clausula": null
     },
@@ -5329,11 +5339,11 @@
       "teamId": 7,
       "status": "ok",
       "jForm": [
+        null,
         1,
         null,
         null,
-        3,
-        2
+        3
       ],
       "clausula": null
     },
@@ -5342,20 +5352,20 @@
       "slug": "pathe-ciss",
       "name": "Pathé Ciss",
       "position": 3,
-      "price": 2850000,
+      "price": 2900000,
       "points": 110,
-      "trend": 10000,
+      "trend": 50000,
       "playedHome": 11,
       "playedAway": 12,
       "teamName": "Rayo Vallecano",
       "teamId": 70,
       "status": "ok",
       "jForm": [
+        null,
         7,
         3,
         null,
-        4,
-        9
+        4
       ],
       "clausula": null
     },
@@ -5374,9 +5384,9 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         1,
         10,
-        null,
         null
       ],
       "clausula": null
@@ -5386,20 +5396,20 @@
       "slug": "robert-navarro",
       "name": "Robert Navarro",
       "position": 3,
-      "price": 1840000,
+      "price": 1830000,
       "points": 113,
-      "trend": 0,
+      "trend": -10000,
       "playedHome": 14,
       "playedAway": 12,
       "teamName": "Athletic",
       "teamId": 1,
       "status": "ok",
       "jForm": [
+        null,
         5,
         2,
         null,
-        4,
-        0
+        4
       ],
       "clausula": null
     },
@@ -5408,7 +5418,7 @@
       "slug": "arnaut-danjuma",
       "name": "Danjuma",
       "position": 4,
-      "price": 1530000,
+      "price": 1520000,
       "points": 109,
       "trend": -10000,
       "playedHome": 15,
@@ -5417,11 +5427,11 @@
       "teamId": 18,
       "status": "ok",
       "jForm": [
+        null,
         2,
         2,
         3,
-        null,
-        -1
+        null
       ],
       "clausula": null
     },
@@ -5430,9 +5440,9 @@
       "slug": "a-sorloth",
       "name": "Sørloth",
       "position": 4,
-      "price": 5930000,
+      "price": 5880000,
       "points": 118,
-      "trend": -110000,
+      "trend": -50000,
       "playedHome": 15,
       "playedAway": 15,
       "teamName": "Atlético",
@@ -5440,10 +5450,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         0,
         2,
-        2,
-        5
+        2
       ],
       "clausula": null
     },
@@ -5452,20 +5462,20 @@
       "slug": "gavi",
       "name": "Gavi",
       "position": 3,
-      "price": 5170000,
+      "price": 5210000,
       "points": 30,
-      "trend": 80000,
+      "trend": 40000,
       "playedHome": 3,
       "playedAway": 3,
       "teamName": "Barcelona",
       "teamId": 3,
       "status": "ok",
       "jForm": [
+        null,
         3,
         8,
         3,
-        null,
-        2
+        null
       ],
       "clausula": null
     },
@@ -5483,11 +5493,11 @@
       "teamId": 18,
       "status": "ok",
       "jForm": [
+        null,
         0,
         3,
         null,
-        4,
-        null
+        4
       ],
       "clausula": null
     },
@@ -5506,10 +5516,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         3,
         null,
-        5,
-        2
+        5
       ],
       "clausula": null
     },
@@ -5518,20 +5528,20 @@
       "slug": "benat-turrientes",
       "name": "Turrientes",
       "position": 3,
-      "price": 1630000,
+      "price": 1620000,
       "points": 89,
-      "trend": 0,
+      "trend": -10000,
       "playedHome": 14,
       "playedAway": 8,
       "teamName": "Real Sociedad",
       "teamId": 13,
       "status": "ok",
       "jForm": [
+        null,
         3,
         2,
         5,
-        null,
-        10
+        null
       ],
       "clausula": null
     },
@@ -5549,11 +5559,11 @@
       "teamId": 91,
       "status": "ok",
       "jForm": [
+        null,
         0,
         1,
         1,
-        3,
-        1
+        3
       ],
       "clausula": null
     },
@@ -5562,9 +5572,9 @@
       "slug": "abdessamad-ezzalzouli",
       "name": "Ez Abde",
       "position": 4,
-      "price": 13020000,
+      "price": 13130000,
       "points": 166,
-      "trend": 150000,
+      "trend": 110000,
       "playedHome": 12,
       "playedAway": 12,
       "teamName": "Betis",
@@ -5595,9 +5605,9 @@
       "jForm": [
         null,
         null,
+        null,
         0,
-        2,
-        null
+        2
       ],
       "clausula": null
     },
@@ -5606,7 +5616,7 @@
       "slug": "ilias-akhomach",
       "name": "Akhomach",
       "position": 4,
-      "price": 1930000,
+      "price": 1920000,
       "points": 60,
       "trend": -10000,
       "playedHome": 11,
@@ -5615,11 +5625,11 @@
       "teamId": 70,
       "status": "ok",
       "jForm": [
+        null,
         4,
         3,
         null,
-        null,
-        4
+        null
       ],
       "clausula": null
     },
@@ -5628,20 +5638,20 @@
       "slug": "nahuel-tenaglia",
       "name": "Tenaglia",
       "position": 2,
-      "price": 2640000,
+      "price": 2660000,
       "points": 123,
-      "trend": 70000,
+      "trend": 20000,
       "playedHome": 15,
       "playedAway": 15,
       "teamName": "Alavés",
       "teamId": 91,
       "status": "ok",
       "jForm": [
+        null,
         5,
         3,
         2,
-        1,
-        5
+        1
       ],
       "clausula": null
     },
@@ -5659,8 +5669,8 @@
       "teamId": 465,
       "status": "ok",
       "jForm": [
-        2,
         null,
+        2,
         null,
         null,
         null
@@ -5683,9 +5693,9 @@
       "jForm": [
         null,
         null,
+        null,
         2,
-        0,
-        2
+        0
       ],
       "clausula": null
     },
@@ -5694,20 +5704,20 @@
       "slug": "juanlu-sanchez",
       "name": "Juanlu",
       "position": 3,
-      "price": 1540000,
+      "price": 1550000,
       "points": 85,
-      "trend": 40000,
+      "trend": 10000,
       "playedHome": 14,
       "playedAway": 13,
       "teamName": "Sevilla",
       "teamId": 17,
       "status": "ok",
       "jForm": [
+        null,
         4,
         5,
         7,
-        3,
-        1
+        3
       ],
       "clausula": null
     },
@@ -5716,7 +5726,7 @@
       "slug": "marc-pubill",
       "name": "Pubill",
       "position": 2,
-      "price": 4970000,
+      "price": 4980000,
       "points": 84,
       "trend": 10000,
       "playedHome": 8,
@@ -5725,11 +5735,11 @@
       "teamId": 2,
       "status": "ok",
       "jForm": [
+        null,
         5,
         4,
         null,
-        null,
-        4
+        null
       ],
       "clausula": null
     },
@@ -5738,7 +5748,7 @@
       "slug": "hugo-sotelo",
       "name": "Sotelo",
       "position": 3,
-      "price": 880000,
+      "price": 870000,
       "points": 79,
       "trend": -10000,
       "playedHome": 9,
@@ -5747,11 +5757,11 @@
       "teamId": 5,
       "status": "ok",
       "jForm": [
+        null,
         2,
         null,
         4,
-        6,
-        3
+        6
       ],
       "clausula": null
     },
@@ -5769,11 +5779,11 @@
       "teamId": 75,
       "status": "ok",
       "jForm": [
+        null,
         3,
         4,
         3,
-        2,
-        null
+        2
       ],
       "clausula": null
     },
@@ -5782,7 +5792,7 @@
       "slug": "eray-comert",
       "name": "Cömert",
       "position": 2,
-      "price": 1670000,
+      "price": 1640000,
       "points": 61,
       "trend": -30000,
       "playedHome": 5,
@@ -5792,10 +5802,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         -1,
         2,
-        7,
-        3
+        7
       ],
       "clausula": null
     },
@@ -5804,20 +5814,20 @@
       "slug": "vedat-muriqi",
       "name": "Muriqi",
       "position": 4,
-      "price": 17520000,
+      "price": 17590000,
       "points": 224,
-      "trend": 130000,
+      "trend": 70000,
       "playedHome": 16,
       "playedAway": 15,
       "teamName": "Mallorca",
       "teamId": 465,
       "status": "ok",
       "jForm": [
+        null,
         3,
         16,
         12,
-        -2,
-        3
+        -2
       ],
       "clausula": null
     },
@@ -5848,9 +5858,9 @@
       "slug": "tchouameni",
       "name": "Tchouameni",
       "position": 3,
-      "price": 13010000,
+      "price": 12800000,
       "points": 159,
-      "trend": -50000,
+      "trend": -210000,
       "playedHome": 17,
       "playedAway": 12,
       "teamName": "Real Madrid",
@@ -5870,20 +5880,20 @@
       "slug": "samu",
       "name": "Samú Costa",
       "position": 3,
-      "price": 5130000,
+      "price": 5170000,
       "points": 165,
-      "trend": 90000,
+      "trend": 40000,
       "playedHome": 14,
       "playedAway": 15,
       "teamName": "Mallorca",
       "teamId": 465,
       "status": "ok",
       "jForm": [
+        null,
         12,
         7,
         2,
-        3,
-        13
+        3
       ],
       "clausula": null
     },
@@ -5892,20 +5902,20 @@
       "slug": "largie-ramazani",
       "name": "Ramazani",
       "position": 4,
-      "price": 6940000,
+      "price": 6960000,
       "points": 98,
-      "trend": 10000,
+      "trend": 20000,
       "playedHome": 11,
       "playedAway": 10,
       "teamName": "Valencia",
       "teamId": 18,
       "status": "ok",
       "jForm": [
+        null,
         5,
         5,
         3,
-        11,
-        3
+        11
       ],
       "clausula": null
     },
@@ -5914,20 +5924,20 @@
       "slug": "umar-sadiq",
       "name": "Sadiq",
       "position": 4,
-      "price": 2760000,
+      "price": 2850000,
       "points": 70,
-      "trend": 110000,
+      "trend": 90000,
       "playedHome": 8,
       "playedAway": 11,
       "teamName": "Valencia",
       "teamId": 18,
       "status": "ok",
       "jForm": [
+        null,
         8,
         2,
         7,
-        2,
-        0
+        2
       ],
       "clausula": null
     },
@@ -5945,9 +5955,9 @@
       "teamId": 7,
       "status": "ok",
       "jForm": [
+        null,
         2,
         3,
-        2,
         2,
         2
       ],
@@ -5958,20 +5968,20 @@
       "slug": "arnau-martinez",
       "name": "Arnau Martínez",
       "position": 2,
-      "price": 3480000,
+      "price": 3490000,
       "points": 126,
-      "trend": 20000,
+      "trend": 10000,
       "playedHome": 15,
       "playedAway": 14,
       "teamName": "Girona",
       "teamId": 289,
       "status": "ok",
       "jForm": [
+        null,
         2,
         5,
         7,
-        3,
-        7
+        3
       ],
       "clausula": null
     },
@@ -5980,20 +5990,20 @@
       "slug": "lamine-yamal",
       "name": "Yamal",
       "position": 4,
-      "price": 25870000,
+      "price": 24710000,
       "points": 266,
-      "trend": -1550000,
+      "trend": -1160000,
       "playedHome": 15,
       "playedAway": 13,
       "teamName": "Barcelona",
       "teamId": 3,
       "status": "ok",
       "jForm": [
+        null,
         11,
         16,
         5,
-        4,
-        2
+        4
       ],
       "clausula": null
     },
@@ -6002,7 +6012,7 @@
       "slug": "andrei-ratiu",
       "name": "Ratiu",
       "position": 2,
-      "price": 7440000,
+      "price": 7500000,
       "points": 141,
       "trend": 60000,
       "playedHome": 15,
@@ -6011,11 +6021,11 @@
       "teamId": 70,
       "status": "ok",
       "jForm": [
+        null,
         9,
         2,
         8,
-        7,
-        6
+        7
       ],
       "clausula": null
     },
@@ -6033,11 +6043,11 @@
       "teamId": 17,
       "status": "ok",
       "jForm": [
+        null,
         2,
         4,
         3,
-        null,
-        2
+        null
       ],
       "clausula": null
     },
@@ -6068,19 +6078,19 @@
       "slug": "carlos-romero",
       "name": "Carlos Romero",
       "position": 2,
-      "price": 8540000,
+      "price": 8490000,
       "points": 178,
-      "trend": -20000,
+      "trend": -50000,
       "playedHome": 14,
       "playedAway": 16,
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
       "jForm": [
+        null,
         5,
         2,
         6,
-        2,
         2
       ],
       "clausula": null
@@ -6090,20 +6100,20 @@
       "slug": "cesar-tarrega",
       "name": "Tárrega",
       "position": 2,
-      "price": 860000,
+      "price": 880000,
       "points": 81,
-      "trend": 30000,
+      "trend": 20000,
       "playedHome": 12,
       "playedAway": 14,
       "teamName": "Valencia",
       "teamId": 18,
       "status": "ok",
       "jForm": [
+        null,
         4,
         3,
         1,
-        7,
-        null
+        7
       ],
       "clausula": null
     },
@@ -6112,20 +6122,20 @@
       "slug": "ernesto-valverde",
       "name": "Ernesto Valverde",
       "position": 5,
-      "price": 880000,
+      "price": 870000,
       "points": 41,
-      "trend": 0,
+      "trend": -10000,
       "playedHome": 17,
       "playedAway": 15,
       "teamName": "Athletic",
       "teamId": 1,
       "status": "ok",
       "jForm": [
+        null,
         3,
         0,
         0,
-        3,
-        0
+        3
       ],
       "clausula": null
     },
@@ -6134,7 +6144,7 @@
       "slug": "luiz-felipe",
       "name": "Luiz Felipe",
       "position": 2,
-      "price": 270000,
+      "price": 260000,
       "points": 29,
       "trend": -10000,
       "playedHome": 5,
@@ -6145,8 +6155,8 @@
       "jForm": [
         null,
         null,
-        6,
         null,
+        6,
         null
       ],
       "clausula": null
@@ -6178,20 +6188,20 @@
       "slug": "axel-witsel",
       "name": "Witsel",
       "position": 3,
-      "price": 4250000,
+      "price": 4260000,
       "points": 110,
-      "trend": 20000,
+      "trend": 10000,
       "playedHome": 13,
       "playedAway": 13,
       "teamName": "Girona",
       "teamId": 289,
       "status": "ok",
       "jForm": [
+        null,
         4,
         3,
         7,
-        4,
-        6
+        4
       ],
       "clausula": null
     },
@@ -6209,11 +6219,11 @@
       "teamId": 70,
       "status": "ok",
       "jForm": [
+        null,
         3,
         0,
         3,
-        0,
-        1
+        0
       ],
       "clausula": null
     },
@@ -6244,20 +6254,20 @@
       "slug": "swedberg",
       "name": "Swedberg",
       "position": 3,
-      "price": 2020000,
+      "price": 2000000,
       "points": 96,
-      "trend": 0,
+      "trend": -20000,
       "playedHome": 12,
       "playedAway": 12,
       "teamName": "Celta",
       "teamId": 5,
       "status": "ok",
       "jForm": [
+        null,
         3,
         1,
         12,
-        null,
-        2
+        null
       ],
       "clausula": null
     },
@@ -6266,9 +6276,9 @@
       "slug": "raphinha",
       "name": "Raphinha",
       "position": 4,
-      "price": 14310000,
+      "price": 14380000,
       "points": 161,
-      "trend": 90000,
+      "trend": 70000,
       "playedHome": 11,
       "playedAway": 9,
       "teamName": "Barcelona",
@@ -6278,8 +6288,8 @@
         null,
         null,
         null,
-        6,
-        21
+        null,
+        6
       ],
       "clausula": null
     },
@@ -6288,9 +6298,9 @@
       "slug": "lewandowski",
       "name": "Lewandowski",
       "position": 4,
-      "price": 9540000,
+      "price": 9530000,
       "points": 125,
-      "trend": -20000,
+      "trend": -10000,
       "playedHome": 13,
       "playedAway": 12,
       "teamName": "Barcelona",
@@ -6299,8 +6309,8 @@
       "jForm": [
         null,
         null,
+        null,
         10,
-        0,
         0
       ],
       "clausula": null
@@ -6310,20 +6320,20 @@
       "slug": "pablo-torre",
       "name": "Pablo Torre",
       "position": 3,
-      "price": 5710000,
+      "price": 5790000,
       "points": 118,
-      "trend": 160000,
+      "trend": 80000,
       "playedHome": 15,
       "playedAway": 14,
       "teamName": "Mallorca",
       "teamId": 465,
       "status": "ok",
       "jForm": [
+        null,
         5,
         9,
         5,
-        11,
-        15
+        11
       ],
       "clausula": null
     },
@@ -6341,11 +6351,11 @@
       "teamId": 289,
       "status": "ok",
       "jForm": [
+        null,
         0,
         1,
         3,
-        0,
-        3
+        0
       ],
       "clausula": null
     },
@@ -6354,20 +6364,20 @@
       "slug": "nahuel-molina",
       "name": "Molina",
       "position": 2,
-      "price": 2390000,
+      "price": 2360000,
       "points": 76,
-      "trend": -40000,
+      "trend": -30000,
       "playedHome": 12,
       "playedAway": 11,
       "teamName": "Atlético",
       "teamId": 2,
       "status": "ok",
       "jForm": [
+        null,
         2,
         null,
         4,
-        11,
-        15
+        11
       ],
       "clausula": null
     },
@@ -6376,9 +6386,9 @@
       "slug": "pitarch",
       "name": "Pitarch",
       "position": 3,
-      "price": 2870000,
+      "price": 2840000,
       "points": 13,
-      "trend": -90000,
+      "trend": -30000,
       "playedHome": 3,
       "playedAway": 3,
       "teamName": "Real Madrid",
@@ -6400,18 +6410,18 @@
       "position": 3,
       "price": 3810000,
       "points": 105,
-      "trend": 20000,
+      "trend": 0,
       "playedHome": 12,
       "playedAway": 13,
       "teamName": "Osasuna",
       "teamId": 93,
       "status": "ok",
       "jForm": [
+        null,
         3,
         6,
         2,
-        6,
-        2
+        6
       ],
       "clausula": null
     },
@@ -6429,8 +6439,8 @@
       "teamId": 13,
       "status": "ok",
       "jForm": [
-        3,
         null,
+        3,
         null,
         null,
         null
@@ -6453,9 +6463,9 @@
       "jForm": [
         null,
         null,
-        -6,
         null,
-        -1
+        -6,
+        null
       ],
       "clausula": null
     },
@@ -6464,7 +6474,7 @@
       "slug": "andre-almeida-2",
       "name": "André Almeida",
       "position": 3,
-      "price": 970000,
+      "price": 950000,
       "points": 57,
       "trend": -20000,
       "playedHome": 11,
@@ -6475,9 +6485,9 @@
       "jForm": [
         null,
         null,
+        null,
         2,
-        4,
-        5
+        4
       ],
       "clausula": null
     },
@@ -6488,17 +6498,17 @@
       "position": 4,
       "price": 550000,
       "points": 86,
-      "trend": 10000,
+      "trend": 0,
       "playedHome": 14,
       "playedAway": 12,
       "teamName": "Girona",
       "teamId": 289,
       "status": "ok",
       "jForm": [
+        null,
         5,
         null,
         1,
-        3,
         3
       ],
       "clausula": null
@@ -6508,20 +6518,20 @@
       "slug": "jose-angel-carmona",
       "name": "Carmona",
       "position": 2,
-      "price": 1140000,
+      "price": 1130000,
       "points": 99,
-      "trend": 0,
+      "trend": -10000,
       "playedHome": 14,
       "playedAway": 15,
       "teamName": "Sevilla",
       "teamId": 17,
       "status": "ok",
       "jForm": [
+        null,
         2,
         null,
         3,
-        3,
-        1
+        3
       ],
       "clausula": null
     },
@@ -6539,11 +6549,11 @@
       "teamId": 18,
       "status": "ok",
       "jForm": [
+        null,
         2,
         3,
         null,
-        2,
-        3
+        2
       ],
       "clausula": null
     },
@@ -6564,8 +6574,8 @@
         null,
         null,
         null,
-        1,
-        2
+        null,
+        1
       ],
       "clausula": null
     },
@@ -6605,11 +6615,11 @@
       "teamId": 70,
       "status": "ok",
       "jForm": [
+        null,
         4,
         3,
         4,
-        8,
-        null
+        8
       ],
       "clausula": null
     },
@@ -6627,8 +6637,8 @@
       "teamId": 70,
       "status": "ok",
       "jForm": [
-        2,
         null,
+        2,
         null,
         null,
         null
@@ -6640,20 +6650,20 @@
       "slug": "marcos-alonso",
       "name": "Marcos Alonso",
       "position": 2,
-      "price": 3570000,
+      "price": 3540000,
       "points": 123,
-      "trend": -10000,
+      "trend": -30000,
       "playedHome": 13,
       "playedAway": 14,
       "teamName": "Celta",
       "teamId": 5,
       "status": "ok",
       "jForm": [
+        null,
         3,
         5,
         2,
-        null,
-        3
+        null
       ],
       "clausula": null
     },
@@ -6662,20 +6672,20 @@
       "slug": "omar-el-hilali",
       "name": "El Hilali",
       "position": 2,
-      "price": 1220000,
+      "price": 1210000,
       "points": 94,
-      "trend": 0,
+      "trend": -10000,
       "playedHome": 14,
       "playedAway": 16,
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
       "jForm": [
+        null,
         1,
         1,
         3,
-        3,
-        2
+        3
       ],
       "clausula": null
     },
@@ -6684,20 +6694,20 @@
       "slug": "kike-salas",
       "name": "Kike Salas",
       "position": 2,
-      "price": 3340000,
+      "price": 3310000,
       "points": 102,
-      "trend": 0,
+      "trend": -30000,
       "playedHome": 11,
       "playedAway": 9,
       "teamName": "Sevilla",
       "teamId": 17,
       "status": "ok",
       "jForm": [
+        null,
         2,
         6,
         3,
-        4,
-        null
+        4
       ],
       "clausula": null
     },
@@ -6730,16 +6740,16 @@
       "position": 3,
       "price": 3660000,
       "points": 126,
-      "trend": 20000,
+      "trend": 0,
       "playedHome": 15,
       "playedAway": 13,
       "teamName": "Levante",
       "teamId": 10,
       "status": "ok",
       "jForm": [
+        null,
         2,
         3,
-        null,
         null,
         null
       ],
@@ -6759,11 +6769,11 @@
       "teamId": 13,
       "status": "ok",
       "jForm": [
+        null,
         2,
         2,
         6,
-        null,
-        2
+        null
       ],
       "clausula": null
     },
@@ -6794,17 +6804,17 @@
       "slug": "pablo-barrios",
       "name": "Barrios",
       "position": 3,
-      "price": 5560000,
+      "price": 5590000,
       "points": 114,
-      "trend": 50000,
+      "trend": 30000,
       "playedHome": 10,
       "playedAway": 12,
       "teamName": "Atlético",
       "teamId": 2,
       "status": "ok",
       "jForm": [
-        3,
         null,
+        3,
         null,
         null,
         null
@@ -6825,10 +6835,10 @@
       "teamId": 5,
       "status": "ok",
       "jForm": [
+        null,
         3,
         1,
         1,
-        2,
         2
       ],
       "clausula": null
@@ -6838,20 +6848,20 @@
       "slug": "v-tsygankov",
       "name": "Tsygankov",
       "position": 4,
-      "price": 4920000,
+      "price": 4970000,
       "points": 134,
-      "trend": 70000,
+      "trend": 50000,
       "playedHome": 12,
       "playedAway": 14,
       "teamName": "Girona",
       "teamId": 289,
       "status": "ok",
       "jForm": [
+        null,
         11,
         1,
         6,
-        3,
-        8
+        3
       ],
       "clausula": null
     },
@@ -6860,20 +6870,20 @@
       "slug": "jon-ander-olasagasti",
       "name": "Olasagasti",
       "position": 3,
-      "price": 830000,
+      "price": 850000,
       "points": 91,
-      "trend": 10000,
+      "trend": 20000,
       "playedHome": 15,
       "playedAway": 12,
       "teamName": "Levante",
       "teamId": 10,
       "status": "ok",
       "jForm": [
+        null,
         6,
         3,
         3,
-        5,
-        null
+        5
       ],
       "clausula": null
     },
@@ -6882,20 +6892,20 @@
       "slug": "ricard-artero-2",
       "name": "Hassan",
       "position": 4,
-      "price": 1980000,
+      "price": 1970000,
       "points": 132,
-      "trend": 0,
+      "trend": -10000,
       "playedHome": 16,
       "playedAway": 15,
       "teamName": "Real Oviedo",
       "teamId": 779,
       "status": "ok",
       "jForm": [
+        null,
         3,
         3,
         3,
-        4,
-        2
+        4
       ],
       "clausula": null
     },
@@ -6904,20 +6914,20 @@
       "slug": "alvaro-rodriguez",
       "name": "Álvaro Rodríguez",
       "position": 4,
-      "price": 2640000,
+      "price": 2630000,
       "points": 135,
-      "trend": 0,
+      "trend": -10000,
       "playedHome": 14,
       "playedAway": 14,
       "teamName": "Elche",
       "teamId": 75,
       "status": "ok",
       "jForm": [
+        null,
         3,
         3,
         3,
-        1,
-        null
+        1
       ],
       "clausula": null
     },
@@ -6926,20 +6936,20 @@
       "slug": "pape-gueye",
       "name": "Pape Gueye",
       "position": 3,
-      "price": 14460000,
+      "price": 14520000,
       "points": 152,
-      "trend": 110000,
+      "trend": 60000,
       "playedHome": 11,
       "playedAway": 15,
       "teamName": "Villarreal",
       "teamId": 19,
       "status": "ok",
       "jForm": [
+        null,
         6,
         7,
         6,
-        6,
-        3
+        6
       ],
       "clausula": null
     },
@@ -6948,7 +6958,7 @@
       "slug": "javier-guerra",
       "name": "Javi Guerra",
       "position": 3,
-      "price": 2990000,
+      "price": 3000000,
       "points": 97,
       "trend": 10000,
       "playedHome": 15,
@@ -6957,11 +6967,11 @@
       "teamId": 18,
       "status": "ok",
       "jForm": [
+        null,
         6,
         null,
         1,
-        5,
-        4
+        5
       ],
       "clausula": null
     },
@@ -6979,11 +6989,11 @@
       "teamId": 93,
       "status": "ok",
       "jForm": [
+        null,
         3,
         3,
         1,
-        null,
-        4
+        null
       ],
       "clausula": null
     },
@@ -6992,20 +7002,20 @@
       "slug": "mikel-jauregizar",
       "name": "Jauregizar",
       "position": 3,
-      "price": 2740000,
+      "price": 2700000,
       "points": 120,
-      "trend": -50000,
+      "trend": -40000,
       "playedHome": 16,
       "playedAway": 15,
       "teamName": "Athletic",
       "teamId": 1,
       "status": "ok",
       "jForm": [
+        null,
         1,
         2,
         -1,
-        2,
-        3
+        2
       ],
       "clausula": null
     },
@@ -7036,9 +7046,9 @@
       "slug": "jude-bellingham",
       "name": "Bellingham",
       "position": 3,
-      "price": 16790000,
+      "price": 16840000,
       "points": 121,
-      "trend": 120000,
+      "trend": 50000,
       "playedHome": 12,
       "playedAway": 11,
       "teamName": "Real Madrid",
@@ -7058,7 +7068,7 @@
       "slug": "alvaro-valles",
       "name": "Álvaro Valles",
       "position": 1,
-      "price": 1530000,
+      "price": 1540000,
       "points": 97,
       "trend": 10000,
       "playedHome": 12,
@@ -7080,7 +7090,7 @@
       "slug": "sergi-cardona",
       "name": "Sergi Cardona",
       "position": 2,
-      "price": 1400000,
+      "price": 1460000,
       "points": 93,
       "trend": 60000,
       "playedHome": 10,
@@ -7089,11 +7099,11 @@
       "teamId": 19,
       "status": "ok",
       "jForm": [
+        null,
         6,
         14,
         3,
-        null,
-        2
+        null
       ],
       "clausula": null
     },
@@ -7102,20 +7112,20 @@
       "slug": "alberto-moleiro",
       "name": "Moleiro",
       "position": 3,
-      "price": 10120000,
+      "price": 10010000,
       "points": 167,
-      "trend": -50000,
+      "trend": -110000,
       "playedHome": 15,
       "playedAway": 16,
       "teamName": "Villarreal",
       "teamId": 19,
       "status": "ok",
       "jForm": [
+        null,
         2,
         2,
         3,
-        6,
-        3
+        6
       ],
       "clausula": null
     },
@@ -7126,18 +7136,18 @@
       "position": 2,
       "price": 380000,
       "points": 49,
-      "trend": 10000,
+      "trend": 0,
       "playedHome": 9,
       "playedAway": 9,
       "teamName": "Getafe",
       "teamId": 8,
       "status": "ok",
       "jForm": [
+        null,
         3,
         4,
         null,
-        null,
-        -5
+        null
       ],
       "clausula": null
     },
@@ -7168,7 +7178,7 @@
       "slug": "abde-rebbach",
       "name": "Abde Rebbach",
       "position": 4,
-      "price": 300000,
+      "price": 310000,
       "points": 78,
       "trend": 10000,
       "playedHome": 13,
@@ -7178,10 +7188,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         4,
         5,
-        13,
-        1
+        13
       ],
       "clausula": null
     },
@@ -7212,20 +7222,20 @@
       "slug": "ilyas-chaira",
       "name": "Chaira",
       "position": 4,
-      "price": 2760000,
+      "price": 2920000,
       "points": 123,
-      "trend": 140000,
+      "trend": 160000,
       "playedHome": 16,
       "playedAway": 14,
       "teamName": "Real Oviedo",
       "teamId": 779,
       "status": "ok",
       "jForm": [
+        null,
         10,
         6,
         2,
-        7,
-        3
+        7
       ],
       "clausula": null
     },
@@ -7234,7 +7244,7 @@
       "slug": "g-simeone",
       "name": "Giuliano Simeone",
       "position": 3,
-      "price": 9050000,
+      "price": 9060000,
       "points": 141,
       "trend": 10000,
       "playedHome": 16,
@@ -7243,11 +7253,11 @@
       "teamId": 2,
       "status": "ok",
       "jForm": [
+        null,
         3,
         null,
         11,
-        10,
-        3
+        10
       ],
       "clausula": null
     },
@@ -7278,20 +7288,20 @@
       "slug": "s-mourino",
       "name": "Santiago Mouriño",
       "position": 2,
-      "price": 4050000,
+      "price": 4060000,
       "points": 114,
-      "trend": 30000,
+      "trend": 10000,
       "playedHome": 9,
       "playedAway": 16,
       "teamName": "Villarreal",
       "teamId": 19,
       "status": "ok",
       "jForm": [
+        null,
         6,
         7,
         3,
-        6,
-        3
+        6
       ],
       "clausula": null
     },
@@ -7300,9 +7310,9 @@
       "slug": "sergi-altimira",
       "name": "Sergi Altimira",
       "position": 3,
-      "price": 1390000,
+      "price": 1360000,
       "points": 89,
-      "trend": -40000,
+      "trend": -30000,
       "playedHome": 9,
       "playedAway": 13,
       "teamName": "Betis",
@@ -7322,7 +7332,7 @@
       "slug": "c-azpilicueta",
       "name": "Azpilicueta",
       "position": 2,
-      "price": 680000,
+      "price": 670000,
       "points": 61,
       "trend": -10000,
       "playedHome": 9,
@@ -7334,8 +7344,8 @@
         null,
         null,
         null,
-        3,
-        null
+        null,
+        3
       ],
       "clausula": null
     },
@@ -7344,9 +7354,9 @@
       "slug": "arda-guler",
       "name": "Arda Güler",
       "position": 3,
-      "price": 13580000,
+      "price": 12970000,
       "points": 182,
-      "trend": -280000,
+      "trend": -610000,
       "playedHome": 17,
       "playedAway": 15,
       "teamName": "Real Madrid",
@@ -7366,20 +7376,20 @@
       "slug": "daley-blind",
       "name": "Blind",
       "position": 2,
-      "price": 7300000,
+      "price": 7310000,
       "points": 136,
-      "trend": 20000,
+      "trend": 10000,
       "playedHome": 15,
       "playedAway": 14,
       "teamName": "Girona",
       "teamId": 289,
       "status": "ok",
       "jForm": [
+        null,
         3,
         null,
         9,
-        3,
-        8
+        3
       ],
       "clausula": null
     },
@@ -7410,20 +7420,20 @@
       "slug": "fermin-lopez",
       "name": "Fermín",
       "position": 3,
-      "price": 16240000,
+      "price": 16280000,
       "points": 158,
-      "trend": 70000,
+      "trend": 40000,
       "playedHome": 14,
       "playedAway": 12,
       "teamName": "Barcelona",
       "teamId": 3,
       "status": "ok",
       "jForm": [
+        null,
         6,
         8,
         3,
-        3,
-        6
+        3
       ],
       "clausula": null
     },
@@ -7432,20 +7442,20 @@
       "slug": "djibril-sow",
       "name": "Sow",
       "position": 3,
-      "price": 3100000,
+      "price": 3050000,
       "points": 118,
-      "trend": -20000,
+      "trend": -50000,
       "playedHome": 14,
       "playedAway": 14,
       "teamName": "Sevilla",
       "teamId": 17,
       "status": "ok",
       "jForm": [
+        null,
         2,
         5,
         2,
-        4,
-        7
+        4
       ],
       "clausula": null
     },
@@ -7454,9 +7464,9 @@
       "slug": "carl-starfelt",
       "name": "Starfelt",
       "position": 2,
-      "price": 1870000,
+      "price": 1800000,
       "points": 76,
-      "trend": -60000,
+      "trend": -70000,
       "playedHome": 9,
       "playedAway": 10,
       "teamName": "Celta",
@@ -7467,7 +7477,7 @@
         null,
         null,
         null,
-        6
+        null
       ],
       "clausula": null
     },
@@ -7488,8 +7498,8 @@
         null,
         null,
         null,
-        2,
-        null
+        null,
+        2
       ],
       "clausula": null
     },
@@ -7532,8 +7542,8 @@
         null,
         null,
         null,
-        1,
-        null
+        null,
+        1
       ],
       "clausula": null
     },
@@ -7586,9 +7596,9 @@
       "slug": "alvaro-fernandez-2",
       "name": "Álvaro Carreras",
       "position": 2,
-      "price": 5690000,
+      "price": 5630000,
       "points": 134,
-      "trend": -30000,
+      "trend": -60000,
       "playedHome": 13,
       "playedAway": 13,
       "teamName": "Real Madrid",
@@ -7632,18 +7642,18 @@
       "position": 2,
       "price": 2470000,
       "points": 108,
-      "trend": 30000,
+      "trend": 0,
       "playedHome": 17,
       "playedAway": 13,
       "teamName": "Real Sociedad",
       "teamId": 13,
       "status": "ok",
       "jForm": [
+        null,
         4,
         4,
         6,
-        2,
-        4
+        2
       ],
       "clausula": null
     },
@@ -7652,9 +7662,9 @@
       "slug": "gonzalo-garcia",
       "name": "Gonzalo García",
       "position": 4,
-      "price": 1640000,
+      "price": 1650000,
       "points": 68,
-      "trend": -20000,
+      "trend": 10000,
       "playedHome": 13,
       "playedAway": 12,
       "teamName": "Real Madrid",
@@ -7676,18 +7686,18 @@
       "position": 3,
       "price": 1360000,
       "points": 41,
-      "trend": 10000,
+      "trend": 0,
       "playedHome": 5,
       "playedAway": 9,
       "teamName": "Atlético",
       "teamId": 2,
       "status": "ok",
       "jForm": [
+        null,
         2,
         null,
         null,
-        2,
-        null
+        2
       ],
       "clausula": null
     },
@@ -7696,9 +7706,9 @@
       "slug": "augusto-batalla",
       "name": "Batalla",
       "position": 1,
-      "price": 2010000,
+      "price": 1980000,
       "points": 134,
-      "trend": -20000,
+      "trend": -30000,
       "playedHome": 15,
       "playedAway": 15,
       "teamName": "Rayo Vallecano",
@@ -7707,9 +7717,9 @@
       "jForm": [
         null,
         null,
+        null,
         7,
-        7,
-        2
+        7
       ],
       "clausula": null
     },
@@ -7718,7 +7728,7 @@
       "slug": "hugo-alvarez",
       "name": "Hugo Álvarez",
       "position": 3,
-      "price": 950000,
+      "price": 960000,
       "points": 94,
       "trend": 10000,
       "playedHome": 12,
@@ -7727,11 +7737,11 @@
       "teamId": 5,
       "status": "ok",
       "jForm": [
+        null,
         3,
         null,
         3,
-        10,
-        3
+        10
       ],
       "clausula": null
     },
@@ -7742,18 +7752,18 @@
       "position": 3,
       "price": 1160000,
       "points": 112,
-      "trend": 10000,
+      "trend": 0,
       "playedHome": 14,
       "playedAway": 14,
       "teamName": "Sevilla",
       "teamId": 17,
       "status": "ok",
       "jForm": [
+        null,
         6,
         3,
         null,
-        0,
-        2
+        0
       ],
       "clausula": null
     },
@@ -7762,20 +7772,20 @@
       "slug": "isaac-romero",
       "name": "Isaac Romero",
       "position": 4,
-      "price": 560000,
+      "price": 550000,
       "points": 69,
-      "trend": 0,
+      "trend": -10000,
       "playedHome": 12,
       "playedAway": 12,
       "teamName": "Sevilla",
       "teamId": 17,
       "status": "ok",
       "jForm": [
+        null,
         3,
         6,
         2,
-        2,
-        null
+        2
       ],
       "clausula": null
     },
@@ -7793,11 +7803,11 @@
       "teamId": 91,
       "status": "ok",
       "jForm": [
+        null,
         3,
         1,
         3,
-        2,
-        3
+        2
       ],
       "clausula": null
     },
@@ -7806,20 +7816,20 @@
       "slug": "etta-eyong",
       "name": "Etta Eyong",
       "position": 4,
-      "price": 1890000,
+      "price": 1870000,
       "points": 105,
-      "trend": -10000,
+      "trend": -20000,
       "playedHome": 16,
       "playedAway": 12,
       "teamName": "Levante",
       "teamId": 10,
       "status": "ok",
       "jForm": [
+        null,
         1,
         2,
         null,
-        null,
-        2
+        null
       ],
       "clausula": null
     },
@@ -7828,18 +7838,18 @@
       "slug": "pau-cubarsi",
       "name": "Cubarsí",
       "position": 2,
-      "price": 9510000,
+      "price": 9550000,
       "points": 129,
-      "trend": 50000,
+      "trend": 40000,
       "playedHome": 13,
       "playedAway": 14,
       "teamName": "Barcelona",
       "teamId": 3,
       "status": "ok",
       "jForm": [
+        null,
         7,
         4,
-        6,
         6,
         6
       ],
@@ -7872,9 +7882,9 @@
       "slug": "hector-fort",
       "name": "Héctor Fort",
       "position": 2,
-      "price": 1410000,
+      "price": 1420000,
       "points": 46,
-      "trend": 20000,
+      "trend": 10000,
       "playedHome": 5,
       "playedAway": 4,
       "teamName": "Elche",
@@ -7903,8 +7913,8 @@
       "teamId": 1,
       "status": "ok",
       "jForm": [
-        3,
         null,
+        3,
         null,
         null,
         null
@@ -7916,7 +7926,7 @@
       "slug": "marc-casado",
       "name": "Marc Casadó",
       "position": 3,
-      "price": 1010000,
+      "price": 1000000,
       "points": 59,
       "trend": -10000,
       "playedHome": 14,
@@ -7926,10 +7936,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         5,
         null,
-        4,
-        3
+        4
       ],
       "clausula": null
     },
@@ -7960,20 +7970,20 @@
       "slug": "jon-martin",
       "name": "Jon Martín",
       "position": 2,
-      "price": 2440000,
+      "price": 2650000,
       "points": 91,
-      "trend": 260000,
+      "trend": 210000,
       "playedHome": 11,
       "playedAway": 9,
       "teamName": "Real Sociedad",
       "teamId": 13,
       "status": "ok",
       "jForm": [
+        null,
         6,
         null,
         11,
-        3,
-        null
+        3
       ],
       "clausula": null
     },
@@ -7982,20 +7992,20 @@
       "slug": "javier-rueda",
       "name": "Javier Rueda",
       "position": 2,
-      "price": 890000,
+      "price": 880000,
       "points": 91,
-      "trend": 0,
+      "trend": -10000,
       "playedHome": 11,
       "playedAway": 11,
       "teamName": "Celta",
       "teamId": 5,
       "status": "ok",
       "jForm": [
+        null,
         2,
         -1,
         null,
-        1,
-        null
+        1
       ],
       "clausula": null
     },
@@ -8013,10 +8023,10 @@
       "teamId": 5,
       "status": "ok",
       "jForm": [
+        null,
         -2,
         null,
         1,
-        null,
         null
       ],
       "clausula": null
@@ -8026,20 +8036,20 @@
       "slug": "ejuke",
       "name": "Ejuke",
       "position": 4,
-      "price": 530000,
+      "price": 520000,
       "points": 83,
-      "trend": 0,
+      "trend": -10000,
       "playedHome": 11,
       "playedAway": 12,
       "teamName": "Sevilla",
       "teamId": 17,
       "status": "ok",
       "jForm": [
+        null,
         1,
         null,
         3,
-        null,
-        3
+        null
       ],
       "clausula": null
     },
@@ -8050,18 +8060,18 @@
       "position": 2,
       "price": 3140000,
       "points": 114,
-      "trend": 30000,
+      "trend": 0,
       "playedHome": 10,
       "playedAway": 14,
       "teamName": "Osasuna",
       "teamId": 93,
       "status": "ok",
       "jForm": [
+        null,
         2,
         null,
         2,
-        10,
-        1
+        10
       ],
       "clausula": null
     },
@@ -8070,20 +8080,20 @@
       "slug": "raul-moro",
       "name": "Raúl Moro",
       "position": 4,
-      "price": 1440000,
+      "price": 1420000,
       "points": 27,
-      "trend": -10000,
+      "trend": -20000,
       "playedHome": 4,
       "playedAway": 5,
       "teamName": "Osasuna",
       "teamId": 93,
       "status": "ok",
       "jForm": [
+        null,
         2,
         2,
         null,
-        null,
-        2
+        null
       ],
       "clausula": null
     },
@@ -8123,10 +8133,10 @@
       "teamId": 7,
       "status": "ok",
       "jForm": [
+        null,
         0,
         0,
         1,
-        0,
         0
       ],
       "clausula": null
@@ -8146,10 +8156,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         1,
         3,
-        2,
-        3
+        2
       ],
       "clausula": null
     },
@@ -8158,7 +8168,7 @@
       "slug": "javier-rodriguez",
       "name": "Javi Rodríguez",
       "position": 2,
-      "price": 1290000,
+      "price": 1280000,
       "points": 94,
       "trend": -10000,
       "playedHome": 14,
@@ -8167,10 +8177,10 @@
       "teamId": 5,
       "status": "ok",
       "jForm": [
+        null,
         2,
         null,
         2,
-        3,
         3
       ],
       "clausula": null
@@ -8213,8 +8223,8 @@
       "jForm": [
         null,
         null,
-        2,
         null,
+        2,
         null
       ],
       "clausula": null
@@ -8226,18 +8236,18 @@
       "position": 2,
       "price": 2440000,
       "points": 97,
-      "trend": 10000,
+      "trend": 0,
       "playedHome": 11,
       "playedAway": 14,
       "teamName": "Osasuna",
       "teamId": 93,
       "status": "ok",
       "jForm": [
+        null,
         4,
         3,
         11,
-        6,
-        4
+        6
       ],
       "clausula": null
     },
@@ -8246,7 +8256,7 @@
       "slug": "bretones",
       "name": "Bretones",
       "position": 2,
-      "price": 570000,
+      "price": 560000,
       "points": 77,
       "trend": -10000,
       "playedHome": 10,
@@ -8257,9 +8267,9 @@
       "jForm": [
         null,
         null,
+        null,
         2,
-        2,
-        null
+        2
       ],
       "clausula": null
     },
@@ -8299,9 +8309,9 @@
       "teamId": 465,
       "status": "ok",
       "jForm": [
+        null,
         1,
         4,
-        null,
         null,
         null
       ],
@@ -8334,7 +8344,7 @@
       "slug": "marc-bernal",
       "name": "Marc Bernal",
       "position": 3,
-      "price": 6380000,
+      "price": 6250000,
       "points": 86,
       "trend": -130000,
       "playedHome": 9,
@@ -8345,9 +8355,9 @@
       "jForm": [
         null,
         null,
+        null,
         2,
-        4,
-        7
+        4
       ],
       "clausula": null
     },
@@ -8356,7 +8366,7 @@
       "slug": "marash-kumbulla",
       "name": "Kumbulla",
       "position": 2,
-      "price": 190000,
+      "price": 180000,
       "points": 20,
       "trend": -10000,
       "playedHome": 4,
@@ -8366,8 +8376,8 @@
       "status": "ok",
       "jForm": [
         null,
-        3,
         null,
+        3,
         null,
         null
       ],
@@ -8378,20 +8388,20 @@
       "slug": "gerard-martin",
       "name": "Gerard Martín",
       "position": 2,
-      "price": 5270000,
+      "price": 5290000,
       "points": 119,
-      "trend": 60000,
+      "trend": 20000,
       "playedHome": 15,
       "playedAway": 12,
       "teamName": "Barcelona",
       "teamId": 3,
       "status": "ok",
       "jForm": [
+        null,
         6,
         4,
         3,
-        4,
-        5
+        4
       ],
       "clausula": null
     },
@@ -8409,9 +8419,9 @@
       "teamId": 17,
       "status": "ok",
       "jForm": [
-        3,
-        3,
         null,
+        3,
+        3,
         null,
         null
       ],
@@ -8488,9 +8498,9 @@
       "slug": "frances",
       "name": "Francés",
       "position": 2,
-      "price": 910000,
+      "price": 880000,
       "points": 61,
-      "trend": -40000,
+      "trend": -30000,
       "playedHome": 10,
       "playedAway": 9,
       "teamName": "Girona",
@@ -8498,10 +8508,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         6,
         3,
-        null,
-        7
+        null
       ],
       "clausula": null
     },
@@ -8510,9 +8520,9 @@
       "slug": "luka-sucic",
       "name": "Luka Sucic",
       "position": 3,
-      "price": 3950000,
+      "price": 3980000,
       "points": 70,
-      "trend": 60000,
+      "trend": 30000,
       "playedHome": 7,
       "playedAway": 9,
       "teamName": "Real Sociedad",
@@ -8520,10 +8530,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         12,
         5,
-        12,
-        3
+        12
       ],
       "clausula": null
     },
@@ -8532,19 +8542,19 @@
       "slug": "nicolas-pepe",
       "name": "Pépé",
       "position": 4,
-      "price": 12130000,
+      "price": 12200000,
       "points": 176,
-      "trend": 110000,
+      "trend": 70000,
       "playedHome": 15,
       "playedAway": 16,
       "teamName": "Villarreal",
       "teamId": 19,
       "status": "ok",
       "jForm": [
+        null,
         11,
         3,
         2,
-        11,
         11
       ],
       "clausula": null
@@ -8554,7 +8564,7 @@
       "slug": "pedro-diaz",
       "name": "Pedro Díaz",
       "position": 3,
-      "price": 560000,
+      "price": 570000,
       "points": 80,
       "trend": 10000,
       "playedHome": 15,
@@ -8563,11 +8573,11 @@
       "teamId": 70,
       "status": "ok",
       "jForm": [
+        null,
         5,
         2,
         5,
-        2,
-        4
+        2
       ],
       "clausula": null
     },
@@ -8620,20 +8630,20 @@
       "slug": "dani-olmo",
       "name": "Dani Olmo",
       "position": 3,
-      "price": 13820000,
+      "price": 13870000,
       "points": 169,
-      "trend": 100000,
+      "trend": 50000,
       "playedHome": 15,
       "playedAway": 12,
       "teamName": "Barcelona",
       "teamId": 3,
       "status": "ok",
       "jForm": [
+        null,
         7,
         5,
         6,
-        3,
-        14
+        3
       ],
       "clausula": null
     },
@@ -8664,9 +8674,9 @@
       "slug": "j-alvarez",
       "name": "Julián Alvarez",
       "position": 4,
-      "price": 10890000,
+      "price": 10880000,
       "points": 114,
-      "trend": -30000,
+      "trend": -10000,
       "playedHome": 15,
       "playedAway": 14,
       "teamName": "Atlético",
@@ -8676,8 +8686,8 @@
         null,
         null,
         null,
-        7,
-        3
+        null,
+        7
       ],
       "clausula": null
     },
@@ -8708,9 +8718,9 @@
       "slug": "luiz-junior",
       "name": "Luiz Júnior",
       "position": 1,
-      "price": 2280000,
+      "price": 2270000,
       "points": 127,
-      "trend": 10000,
+      "trend": -10000,
       "playedHome": 14,
       "playedAway": 14,
       "teamName": "Villarreal",
@@ -8718,8 +8728,8 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         9,
-        3,
         3,
         3
       ],
@@ -8752,20 +8762,20 @@
       "slug": "toni-martinez",
       "name": "Toni Martínez",
       "position": 4,
-      "price": 5480000,
+      "price": 5570000,
       "points": 161,
-      "trend": 120000,
+      "trend": 90000,
       "playedHome": 14,
       "playedAway": 17,
       "teamName": "Alavés",
       "teamId": 91,
       "status": "ok",
       "jForm": [
+        null,
         7,
         5,
         10,
-        18,
-        6
+        18
       ],
       "clausula": null
     },
@@ -8774,9 +8784,9 @@
       "slug": "juan-musso",
       "name": "Juan Musso",
       "position": 1,
-      "price": 780000,
+      "price": 760000,
       "points": 24,
-      "trend": -30000,
+      "trend": -20000,
       "playedHome": 2,
       "playedAway": 3,
       "teamName": "Atlético",
@@ -8784,10 +8794,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         2,
         6,
-        1,
-        11
+        1
       ],
       "clausula": null
     },
@@ -8798,18 +8808,18 @@
       "position": 4,
       "price": 1710000,
       "points": 66,
-      "trend": 10000,
+      "trend": 0,
       "playedHome": 9,
       "playedAway": 6,
       "teamName": "Real Sociedad",
       "teamId": 13,
       "status": "ok",
       "jForm": [
+        null,
         2,
         9,
         2,
-        2,
-        3
+        2
       ],
       "clausula": null
     },
@@ -8818,20 +8828,20 @@
       "slug": "pau-navarro",
       "name": "Pau Navarro",
       "position": 2,
-      "price": 4310000,
+      "price": 4250000,
       "points": 79,
-      "trend": -40000,
+      "trend": -60000,
       "playedHome": 10,
       "playedAway": 10,
       "teamName": "Villarreal",
       "teamId": 19,
       "status": "ok",
       "jForm": [
+        null,
         3,
         2,
         1,
-        8,
-        6
+        8
       ],
       "clausula": null
     },
@@ -8840,7 +8850,7 @@
       "slug": "raul-asencio",
       "name": "Asencio",
       "position": 2,
-      "price": 2550000,
+      "price": 2530000,
       "points": 97,
       "trend": -20000,
       "playedHome": 8,
@@ -8862,20 +8872,20 @@
       "slug": "fer-lopez",
       "name": "Fer López",
       "position": 3,
-      "price": 3000000,
+      "price": 3010000,
       "points": 50,
-      "trend": 20000,
+      "trend": 10000,
       "playedHome": 5,
       "playedAway": 6,
       "teamName": "Celta",
       "teamId": 5,
       "status": "ok",
       "jForm": [
+        null,
         5,
         3,
         14,
-        2,
-        1
+        2
       ],
       "clausula": null
     },
@@ -8893,11 +8903,11 @@
       "teamId": 18,
       "status": "ok",
       "jForm": [
+        null,
         1,
         0,
         0,
-        3,
-        0
+        3
       ],
       "clausula": null
     },
@@ -8906,18 +8916,18 @@
       "slug": "tajon-buchanan",
       "name": "Buchanan",
       "position": 3,
-      "price": 4140000,
+      "price": 4120000,
       "points": 140,
-      "trend": -10000,
+      "trend": -20000,
       "playedHome": 15,
       "playedAway": 15,
       "teamName": "Villarreal",
       "teamId": 19,
       "status": "ok",
       "jForm": [
+        null,
         3,
         3,
-        2,
         2,
         2
       ],
@@ -8950,7 +8960,7 @@
       "slug": "el-abdellaoui",
       "name": "El-Abdellaoui",
       "position": 4,
-      "price": 450000,
+      "price": 440000,
       "points": 71,
       "trend": -10000,
       "playedHome": 10,
@@ -8961,9 +8971,9 @@
       "jForm": [
         null,
         null,
+        null,
         3,
-        0,
-        2
+        0
       ],
       "clausula": null
     },
@@ -8974,17 +8984,17 @@
       "position": 4,
       "price": 3210000,
       "points": 83,
-      "trend": 10000,
+      "trend": 0,
       "playedHome": 9,
       "playedAway": 9,
       "teamName": "Sevilla",
       "teamId": 17,
       "status": "ok",
       "jForm": [
+        null,
         2,
         5,
         3,
-        2,
         2
       ],
       "clausula": null
@@ -8996,18 +9006,18 @@
       "position": 4,
       "price": 2590000,
       "points": 131,
-      "trend": 10000,
+      "trend": 0,
       "playedHome": 15,
       "playedAway": 17,
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
       "jForm": [
+        null,
         2,
         1,
         2,
-        10,
-        2
+        10
       ],
       "clausula": null
     },
@@ -9082,9 +9092,9 @@
       "slug": "antony",
       "name": "Antony",
       "position": 4,
-      "price": 9640000,
+      "price": 9690000,
       "points": 137,
-      "trend": 80000,
+      "trend": 50000,
       "playedHome": 14,
       "playedAway": 13,
       "teamName": "Betis",
@@ -9106,18 +9116,18 @@
       "position": 4,
       "price": 3450000,
       "points": 125,
-      "trend": 20000,
+      "trend": 0,
       "playedHome": 13,
       "playedAway": 14,
       "teamName": "Sevilla",
       "teamId": 17,
       "status": "ok",
       "jForm": [
+        null,
         1,
         9,
         1,
-        2,
-        3
+        2
       ],
       "clausula": null
     },
@@ -9126,7 +9136,7 @@
       "slug": "david-lopez-2",
       "name": "David López",
       "position": 2,
-      "price": 390000,
+      "price": 380000,
       "points": 33,
       "trend": -10000,
       "playedHome": 5,
@@ -9135,10 +9145,10 @@
       "teamId": 465,
       "status": "ok",
       "jForm": [
+        null,
         3,
         5,
         5,
-        null,
         null
       ],
       "clausula": null
@@ -9148,20 +9158,20 @@
       "slug": "thiago-almada",
       "name": "Thiago Almada",
       "position": 3,
-      "price": 1470000,
+      "price": 1410000,
       "points": 76,
-      "trend": -120000,
+      "trend": -60000,
       "playedHome": 12,
       "playedAway": 11,
       "teamName": "Atlético",
       "teamId": 2,
       "status": "ok",
       "jForm": [
+        null,
         -7,
         1,
         5,
-        null,
-        3
+        null
       ],
       "clausula": null
     },
@@ -9192,7 +9202,7 @@
       "slug": "duje-caleta-car",
       "name": "Caleta-Car",
       "position": 2,
-      "price": 1400000,
+      "price": 1370000,
       "points": 87,
       "trend": -30000,
       "playedHome": 12,
@@ -9201,9 +9211,9 @@
       "teamId": 13,
       "status": "ok",
       "jForm": [
+        null,
         4,
         -1,
-        4,
         4,
         4
       ],
@@ -9214,7 +9224,7 @@
       "slug": "nelson-deossa",
       "name": "Deossa",
       "position": 3,
-      "price": 490000,
+      "price": 480000,
       "points": 58,
       "trend": -10000,
       "playedHome": 8,
@@ -9245,11 +9255,11 @@
       "teamId": 70,
       "status": "ok",
       "jForm": [
+        null,
         1,
         1,
         2,
-        null,
-        2
+        null
       ],
       "clausula": null
     },
@@ -9258,20 +9268,20 @@
       "slug": "federico-vinas",
       "name": "Viñas",
       "position": 4,
-      "price": 7350000,
+      "price": 7440000,
       "points": 167,
-      "trend": 180000,
+      "trend": 90000,
       "playedHome": 14,
       "playedAway": 14,
       "teamName": "Real Oviedo",
       "teamId": 779,
       "status": "ok",
       "jForm": [
+        null,
         5,
         17,
         11,
-        12,
-        6
+        12
       ],
       "clausula": null
     },
@@ -9289,11 +9299,11 @@
       "teamId": 779,
       "status": "ok",
       "jForm": [
+        null,
         3,
         5,
         3,
-        4,
-        5
+        4
       ],
       "clausula": null
     },
@@ -9333,8 +9343,8 @@
       "teamId": 779,
       "status": "ok",
       "jForm": [
+        null,
         4,
-        3,
         3,
         3,
         3
@@ -9355,11 +9365,11 @@
       "teamId": 779,
       "status": "ok",
       "jForm": [
+        null,
         2,
         2,
         3,
-        2,
-        null
+        2
       ],
       "clausula": null
     },
@@ -9390,9 +9400,9 @@
       "slug": "nobel-mendy",
       "name": "Nobel Mendy",
       "position": 2,
-      "price": 690000,
+      "price": 680000,
       "points": 56,
-      "trend": 0,
+      "trend": -10000,
       "playedHome": 9,
       "playedAway": 10,
       "teamName": "Rayo Vallecano",
@@ -9400,10 +9410,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         -2,
         null,
-        null,
-        -4
+        null
       ],
       "clausula": null
     },
@@ -9412,20 +9422,20 @@
       "slug": "victor-munoz",
       "name": "Víctor Muñoz",
       "position": 4,
-      "price": 12290000,
+      "price": 12360000,
       "points": 177,
-      "trend": 100000,
+      "trend": 70000,
       "playedHome": 15,
       "playedAway": 17,
       "teamName": "Osasuna",
       "teamId": 93,
       "status": "ok",
       "jForm": [
+        null,
         5,
         6,
         5,
-        11,
-        10
+        11
       ],
       "clausula": null
     },
@@ -9434,9 +9444,9 @@
       "slug": "dean-huijsen",
       "name": "Huijsen",
       "position": 2,
-      "price": 5290000,
+      "price": 5330000,
       "points": 119,
-      "trend": 80000,
+      "trend": 40000,
       "playedHome": 14,
       "playedAway": 11,
       "teamName": "Real Madrid",
@@ -9456,9 +9466,9 @@
       "slug": "alexander-arnold",
       "name": "Trent",
       "position": 2,
-      "price": 3610000,
+      "price": 3620000,
       "points": 50,
-      "trend": 40000,
+      "trend": 10000,
       "playedHome": 6,
       "playedAway": 11,
       "teamName": "Real Madrid",
@@ -9487,11 +9497,11 @@
       "teamId": 91,
       "status": "ok",
       "jForm": [
-        2,
         null,
         2,
         null,
-        3
+        2,
+        null
       ],
       "clausula": null
     },
@@ -9522,20 +9532,20 @@
       "slug": "ionut-radu",
       "name": "Ionut Radu",
       "position": 1,
-      "price": 2510000,
+      "price": 2500000,
       "points": 143,
-      "trend": 0,
+      "trend": -10000,
       "playedHome": 16,
       "playedAway": 16,
       "teamName": "Celta",
       "teamId": 5,
       "status": "ok",
       "jForm": [
+        null,
         5,
         4,
         1,
-        1,
-        8
+        1
       ],
       "clausula": null
     },
@@ -9566,20 +9576,20 @@
       "slug": "carlos-espi",
       "name": "Espí",
       "position": 4,
-      "price": 10300000,
+      "price": 10420000,
       "points": 107,
-      "trend": 220000,
+      "trend": 120000,
       "playedHome": 13,
       "playedAway": 6,
       "teamName": "Levante",
       "teamId": 10,
       "status": "ok",
       "jForm": [
+        null,
         1,
         11,
         3,
-        17,
-        12
+        17
       ],
       "clausula": null
     },
@@ -9600,8 +9610,8 @@
         null,
         null,
         null,
-        1,
-        null
+        null,
+        1
       ],
       "clausula": null
     },
@@ -9610,7 +9620,7 @@
       "slug": "marc-aguado",
       "name": "Marc Aguado",
       "position": 3,
-      "price": 1480000,
+      "price": 1460000,
       "points": 111,
       "trend": -20000,
       "playedHome": 15,
@@ -9621,9 +9631,9 @@
       "jForm": [
         null,
         null,
+        null,
         4,
-        5,
-        0
+        5
       ],
       "clausula": null
     },
@@ -9632,9 +9642,9 @@
       "slug": "alvaro-nunez",
       "name": "Álvaro Núñez",
       "position": 2,
-      "price": 1220000,
+      "price": 1200000,
       "points": 90,
-      "trend": -10000,
+      "trend": -20000,
       "playedHome": 12,
       "playedAway": 10,
       "teamName": "Celta",
@@ -9642,10 +9652,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         -1,
         null,
-        3,
-        5
+        3
       ],
       "clausula": null
     },
@@ -9665,8 +9675,8 @@
       "jForm": [
         null,
         null,
-        1,
         null,
+        1,
         null
       ],
       "clausula": null
@@ -9689,7 +9699,7 @@
         null,
         null,
         null,
-        1
+        null
       ],
       "clausula": null
     },
@@ -9700,16 +9710,16 @@
       "position": 3,
       "price": 1000000,
       "points": 76,
-      "trend": 10000,
+      "trend": 0,
       "playedHome": 11,
       "playedAway": 11,
       "teamName": "Atlético",
       "teamId": 2,
       "status": "ok",
       "jForm": [
+        null,
         3,
         2,
-        null,
         null,
         null
       ],
@@ -9720,20 +9730,20 @@
       "slug": "d-affengruber",
       "name": "Affengruber",
       "position": 2,
-      "price": 3690000,
+      "price": 3770000,
       "points": 138,
-      "trend": 150000,
+      "trend": 80000,
       "playedHome": 15,
       "playedAway": 15,
       "teamName": "Elche",
       "teamId": 75,
       "status": "ok",
       "jForm": [
+        null,
         18,
         7,
         5,
-        7,
-        2
+        7
       ],
       "clausula": null
     },
@@ -9753,9 +9763,9 @@
       "jForm": [
         null,
         null,
+        null,
         3,
-        2,
-        3
+        2
       ],
       "clausula": null
     },
@@ -9764,7 +9774,7 @@
       "slug": "a-de-la-fuente",
       "name": "De la Fuente",
       "position": 2,
-      "price": 3040000,
+      "price": 3050000,
       "points": 130,
       "trend": 10000,
       "playedHome": 16,
@@ -9773,11 +9783,11 @@
       "teamId": 10,
       "status": "ok",
       "jForm": [
+        null,
         8,
         4,
         3,
-        1,
-        null
+        1
       ],
       "clausula": null
     },
@@ -9821,7 +9831,7 @@
         null,
         null,
         null,
-        3
+        null
       ],
       "clausula": null
     },
@@ -9854,18 +9864,18 @@
       "position": 3,
       "price": 2110000,
       "points": 109,
-      "trend": 20000,
+      "trend": 0,
       "playedHome": 13,
       "playedAway": 13,
       "teamName": "Real Sociedad",
       "teamId": 13,
       "status": "ok",
       "jForm": [
+        null,
         2,
         null,
         null,
-        -1,
-        null
+        -1
       ],
       "clausula": null
     },
@@ -9874,7 +9884,7 @@
       "slug": "hugo-rincon",
       "name": "Hugo Rincón",
       "position": 2,
-      "price": 1190000,
+      "price": 1170000,
       "points": 90,
       "trend": -20000,
       "playedHome": 16,
@@ -9883,11 +9893,11 @@
       "teamId": 289,
       "status": "ok",
       "jForm": [
+        null,
         1,
         2,
         2,
-        3,
-        15
+        3
       ],
       "clausula": null
     },
@@ -9896,7 +9906,7 @@
       "slug": "matteo-ruggeri",
       "name": "Ruggeri",
       "position": 2,
-      "price": 1190000,
+      "price": 1180000,
       "points": 60,
       "trend": -10000,
       "playedHome": 11,
@@ -9907,9 +9917,9 @@
       "jForm": [
         null,
         null,
+        null,
         2,
-        -1,
-        null
+        -1
       ],
       "clausula": null
     },
@@ -9918,20 +9928,20 @@
       "slug": "adrian-liso",
       "name": "Adrián Liso",
       "position": 4,
-      "price": 540000,
+      "price": 530000,
       "points": 84,
-      "trend": 0,
+      "trend": -10000,
       "playedHome": 12,
       "playedAway": 14,
       "teamName": "Getafe",
       "teamId": 8,
       "status": "ok",
       "jForm": [
+        null,
         2,
         3,
         5,
-        null,
-        5
+        null
       ],
       "clausula": null
     },
@@ -9940,18 +9950,18 @@
       "slug": "andres-castrin",
       "name": "Andrés Castrín",
       "position": 2,
-      "price": 430000,
+      "price": 450000,
       "points": 62,
-      "trend": 30000,
+      "trend": 20000,
       "playedHome": 7,
       "playedAway": 7,
       "teamName": "Sevilla",
       "teamId": 17,
       "status": "ok",
       "jForm": [
+        null,
         5,
         6,
-        3,
         3,
         3
       ],
@@ -9993,11 +10003,11 @@
       "teamId": 10,
       "status": "ok",
       "jForm": [
+        null,
         8,
         3,
         null,
-        2,
-        1
+        2
       ],
       "clausula": null
     },
@@ -10016,8 +10026,8 @@
       "status": "ok",
       "jForm": [
         null,
-        2,
         null,
+        2,
         null,
         null
       ],
@@ -10028,20 +10038,20 @@
       "slug": "alberto-reina",
       "name": "Alberto Reina",
       "position": 3,
-      "price": 3220000,
+      "price": 3240000,
       "points": 127,
-      "trend": 50000,
+      "trend": 20000,
       "playedHome": 15,
       "playedAway": 16,
       "teamName": "Real Oviedo",
       "teamId": 779,
       "status": "ok",
       "jForm": [
+        null,
         4,
         12,
         5,
-        3,
-        6
+        3
       ],
       "clausula": null
     },
@@ -10050,9 +10060,9 @@
       "slug": "alan-matturro",
       "name": "Matturro",
       "position": 2,
-      "price": 380000,
+      "price": 370000,
       "points": 45,
-      "trend": 0,
+      "trend": -10000,
       "playedHome": 9,
       "playedAway": 8,
       "teamName": "Levante",
@@ -10060,10 +10070,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         2,
         2,
-        1,
-        4
+        1
       ],
       "clausula": null
     },
@@ -10072,20 +10082,20 @@
       "slug": "jeremy-toljan",
       "name": "Toljan",
       "position": 2,
-      "price": 1030000,
+      "price": 1050000,
       "points": 103,
-      "trend": 30000,
+      "trend": 20000,
       "playedHome": 16,
       "playedAway": 15,
       "teamName": "Levante",
       "teamId": 10,
       "status": "ok",
       "jForm": [
+        null,
         4,
         7,
         2,
-        5,
-        2
+        5
       ],
       "clausula": null
     },
@@ -10116,9 +10126,9 @@
       "slug": "mastantuono",
       "name": "Mastantuono",
       "position": 4,
-      "price": 1240000,
+      "price": 1230000,
       "points": 55,
-      "trend": 0,
+      "trend": -10000,
       "playedHome": 10,
       "playedAway": 8,
       "teamName": "Real Madrid",
@@ -10138,20 +10148,20 @@
       "slug": "matias-moreno",
       "name": "Matías Moreno",
       "position": 2,
-      "price": 1180000,
+      "price": 1210000,
       "points": 86,
-      "trend": 50000,
+      "trend": 30000,
       "playedHome": 12,
       "playedAway": 10,
       "teamName": "Levante",
       "teamId": 10,
       "status": "ok",
       "jForm": [
+        null,
         5,
         8,
         1,
-        null,
-        5
+        null
       ],
       "clausula": null
     },
@@ -10160,20 +10170,20 @@
       "slug": "leo-petrot",
       "name": "Pétrot",
       "position": 2,
-      "price": 620000,
+      "price": 660000,
       "points": 80,
-      "trend": 60000,
+      "trend": 40000,
       "playedHome": 16,
       "playedAway": 13,
       "teamName": "Elche",
       "teamId": 75,
       "status": "ok",
       "jForm": [
+        null,
         6,
         7,
         3,
-        1,
-        2
+        1
       ],
       "clausula": null
     },
@@ -10182,7 +10192,7 @@
       "slug": "gabriel-suazo",
       "name": "Gabriel Suazo",
       "position": 2,
-      "price": 770000,
+      "price": 760000,
       "points": 72,
       "trend": -10000,
       "playedHome": 10,
@@ -10192,10 +10202,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         0,
         4,
-        3,
-        0
+        3
       ],
       "clausula": null
     },
@@ -10204,7 +10214,7 @@
       "slug": "bardghji",
       "name": "Roony",
       "position": 4,
-      "price": 850000,
+      "price": 1100000,
       "points": 57,
       "trend": 250000,
       "playedHome": 12,
@@ -10213,11 +10223,11 @@
       "teamId": 3,
       "status": "ok",
       "jForm": [
+        null,
         3,
         null,
         null,
-        null,
-        3
+        null
       ],
       "clausula": null
     },
@@ -10235,11 +10245,11 @@
       "teamId": 75,
       "status": "ok",
       "jForm": [
+        null,
         3,
         3,
         0,
-        3,
-        0
+        3
       ],
       "clausula": null
     },
@@ -10261,7 +10271,7 @@
         null,
         null,
         null,
-        5
+        null
       ],
       "clausula": null
     },
@@ -10279,8 +10289,8 @@
       "teamId": 91,
       "status": "ok",
       "jForm": [
-        3,
         null,
+        3,
         null,
         null,
         null
@@ -10292,20 +10302,20 @@
       "slug": "rashford",
       "name": "Rashford",
       "position": 4,
-      "price": 9470000,
+      "price": 9550000,
       "points": 141,
-      "trend": 120000,
+      "trend": 80000,
       "playedHome": 13,
       "playedAway": 14,
       "teamName": "Barcelona",
       "teamId": 3,
       "status": "ok",
       "jForm": [
+        null,
         2,
         11,
         10,
-        3,
-        null
+        3
       ],
       "clausula": null
     },
@@ -10314,7 +10324,7 @@
       "slug": "hancko",
       "name": "Hancko",
       "position": 2,
-      "price": 2330000,
+      "price": 2290000,
       "points": 107,
       "trend": -40000,
       "playedHome": 14,
@@ -10326,8 +10336,8 @@
         null,
         null,
         null,
-        1,
-        null
+        null,
+        1
       ],
       "clausula": null
     },
@@ -10336,20 +10346,20 @@
       "slug": "dolan",
       "name": "Dolan",
       "position": 4,
-      "price": 1300000,
+      "price": 1290000,
       "points": 109,
-      "trend": 0,
+      "trend": -10000,
       "playedHome": 15,
       "playedAway": 16,
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
       "jForm": [
+        null,
         1,
         2,
         4,
-        3,
-        5
+        3
       ],
       "clausula": null
     },
@@ -10358,9 +10368,9 @@
       "slug": "valentin-gomez",
       "name": "Valentín Gómez",
       "position": 2,
-      "price": 550000,
+      "price": 540000,
       "points": 74,
-      "trend": 0,
+      "trend": -10000,
       "playedHome": 12,
       "playedAway": 12,
       "teamName": "Betis",
@@ -10382,18 +10392,18 @@
       "position": 3,
       "price": 1020000,
       "points": 100,
-      "trend": 10000,
+      "trend": 0,
       "playedHome": 12,
       "playedAway": 12,
       "teamName": "Elche",
       "teamId": 75,
       "status": "ok",
       "jForm": [
+        null,
         3,
         3,
         null,
-        null,
-        1
+        null
       ],
       "clausula": null
     },
@@ -10424,7 +10434,7 @@
       "slug": "mateo-joseph",
       "name": "Mateo Joseph",
       "position": 4,
-      "price": 1000000,
+      "price": 980000,
       "points": 106,
       "trend": -20000,
       "playedHome": 14,
@@ -10435,9 +10445,9 @@
       "jForm": [
         null,
         null,
+        null,
         4,
-        3,
-        7
+        3
       ],
       "clausula": null
     },
@@ -10446,20 +10456,20 @@
       "slug": "filip-ugrinic",
       "name": "Filip Ugrinic",
       "position": 3,
-      "price": 1230000,
+      "price": 1220000,
       "points": 79,
-      "trend": 0,
+      "trend": -10000,
       "playedHome": 9,
       "playedAway": 12,
       "teamName": "Valencia",
       "teamId": 18,
       "status": "ok",
       "jForm": [
+        null,
         3,
         5,
         3,
-        null,
-        3
+        null
       ],
       "clausula": null
     },
@@ -10468,20 +10478,20 @@
       "slug": "vitor-reis",
       "name": "Vitor Reis",
       "position": 2,
-      "price": 4500000,
+      "price": 4530000,
       "points": 132,
-      "trend": 60000,
+      "trend": 30000,
       "playedHome": 15,
       "playedAway": 15,
       "teamName": "Girona",
       "teamId": 289,
       "status": "ok",
       "jForm": [
+        null,
         3,
         7,
         7,
-        6,
-        null
+        6
       ],
       "clausula": null
     },
@@ -10499,8 +10509,8 @@
       "teamId": 70,
       "status": "ok",
       "jForm": [
-        6,
         null,
+        6,
         null,
         null,
         null
@@ -10512,20 +10522,20 @@
       "slug": "o-vlachodimos",
       "name": "Odysseas",
       "position": 1,
-      "price": 1980000,
+      "price": 1960000,
       "points": 129,
-      "trend": -10000,
+      "trend": -20000,
       "playedHome": 14,
       "playedAway": 14,
       "teamName": "Sevilla",
       "teamId": 17,
       "status": "ok",
       "jForm": [
+        null,
         1,
         3,
         3,
-        2,
-        3
+        2
       ],
       "clausula": null
     },
@@ -10545,9 +10555,9 @@
       "jForm": [
         null,
         null,
+        null,
         3,
-        3,
-        1
+        3
       ],
       "clausula": null
     },
@@ -10565,8 +10575,8 @@
       "teamId": 779,
       "status": "ok",
       "jForm": [
-        3,
         null,
+        3,
         null,
         null,
         null
@@ -10587,11 +10597,11 @@
       "teamId": 1,
       "status": "ok",
       "jForm": [
+        null,
         2,
         3,
         0,
-        5,
-        null
+        5
       ],
       "clausula": null
     },
@@ -10622,20 +10632,20 @@
       "slug": "renato-veiga",
       "name": "Renato Veiga",
       "position": 2,
-      "price": 1990000,
+      "price": 2020000,
       "points": 80,
-      "trend": 60000,
+      "trend": 30000,
       "playedHome": 14,
       "playedAway": 14,
       "teamName": "Villarreal",
       "teamId": 19,
       "status": "ok",
       "jForm": [
+        null,
         4,
         6,
         5,
-        3,
-        null
+        3
       ],
       "clausula": null
     },
@@ -10644,19 +10654,19 @@
       "slug": "clemens-riedel",
       "name": "Riedel",
       "position": 2,
-      "price": 390000,
+      "price": 380000,
       "points": 63,
-      "trend": 0,
+      "trend": -10000,
       "playedHome": 7,
       "playedAway": 11,
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
       "jForm": [
+        null,
         1,
         null,
         4,
-        2,
         2
       ],
       "clausula": null
@@ -10675,8 +10685,8 @@
       "teamId": 19,
       "status": "ok",
       "jForm": [
-        5,
         null,
+        5,
         null,
         null,
         null
@@ -10697,11 +10707,11 @@
       "teamId": 7,
       "status": "ok",
       "jForm": [
+        null,
         3,
         1,
         null,
-        null,
-        6
+        null
       ],
       "clausula": null
     },
@@ -10710,19 +10720,19 @@
       "slug": "jan-virgili",
       "name": "Jan Virgili",
       "position": 4,
-      "price": 3460000,
+      "price": 3520000,
       "points": 97,
-      "trend": 110000,
+      "trend": 60000,
       "playedHome": 13,
       "playedAway": 12,
       "teamName": "Mallorca",
       "teamId": 465,
       "status": "ok",
       "jForm": [
+        null,
         8,
         10,
         4,
-        null,
         null
       ],
       "clausula": null
@@ -10732,9 +10742,9 @@
       "slug": "david-carmo",
       "name": "David Carmo",
       "position": 2,
-      "price": 430000,
+      "price": 420000,
       "points": 75,
-      "trend": 0,
+      "trend": -10000,
       "playedHome": 9,
       "playedAway": 12,
       "teamName": "Real Oviedo",
@@ -10763,11 +10773,11 @@
       "teamId": 19,
       "status": "ok",
       "jForm": [
+        null,
         2,
         5,
         null,
-        0,
-        2
+        0
       ],
       "clausula": null
     },
@@ -10776,20 +10786,20 @@
       "slug": "azzedine-ounahi",
       "name": "Ounahi",
       "position": 3,
-      "price": 10910000,
+      "price": 10970000,
       "points": 129,
-      "trend": 90000,
+      "trend": 60000,
       "playedHome": 9,
       "playedAway": 9,
       "teamName": "Girona",
       "teamId": 289,
       "status": "ok",
       "jForm": [
+        null,
         9,
         1,
         6,
-        3,
-        13
+        3
       ],
       "clausula": null
     },
@@ -10810,7 +10820,7 @@
         null,
         null,
         null,
-        2,
+        null,
         2
       ],
       "clausula": null
@@ -10820,19 +10830,19 @@
       "slug": "lucas-beltran",
       "name": "Lucas Beltrán",
       "position": 4,
-      "price": 690000,
+      "price": 680000,
       "points": 73,
-      "trend": 0,
+      "trend": -10000,
       "playedHome": 11,
       "playedAway": 15,
       "teamName": "Valencia",
       "teamId": 18,
       "status": "ok",
       "jForm": [
+        null,
         2,
         0,
         3,
-        2,
         2
       ],
       "clausula": null
@@ -10842,9 +10852,9 @@
       "slug": "sofyan-amrabat",
       "name": "Amrabat",
       "position": 3,
-      "price": 6360000,
+      "price": 6390000,
       "points": 66,
-      "trend": 60000,
+      "trend": 30000,
       "playedHome": 7,
       "playedAway": 6,
       "teamName": "Betis",
@@ -10864,9 +10874,9 @@
       "slug": "vladyslav-vanat",
       "name": "Vanat",
       "position": 4,
-      "price": 1630000,
+      "price": 1590000,
       "points": 104,
-      "trend": -30000,
+      "trend": -40000,
       "playedHome": 13,
       "playedAway": 14,
       "teamName": "Girona",
@@ -10875,9 +10885,9 @@
       "jForm": [
         null,
         null,
+        null,
         2,
-        -1,
-        2
+        -1
       ],
       "clausula": null
     },
@@ -10896,8 +10906,8 @@
       "status": "ok",
       "jForm": [
         null,
-        2,
         null,
+        2,
         null,
         null
       ],
@@ -10908,20 +10918,20 @@
       "slug": "g-mikautadze",
       "name": "Mikautadze",
       "position": 4,
-      "price": 11300000,
+      "price": 11220000,
       "points": 148,
-      "trend": -100000,
+      "trend": -80000,
       "playedHome": 12,
       "playedAway": 15,
       "teamName": "Villarreal",
       "teamId": 19,
       "status": "ok",
       "jForm": [
+        null,
         2,
         2,
         2,
-        10,
-        3
+        10
       ],
       "clausula": null
     },
@@ -10930,7 +10940,7 @@
       "slug": "batista-mendy",
       "name": "Batista",
       "position": 3,
-      "price": 820000,
+      "price": 810000,
       "points": 91,
       "trend": -10000,
       "playedHome": 14,
@@ -10940,10 +10950,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         0,
         3,
-        7,
-        null
+        7
       ],
       "clausula": null
     },
@@ -10952,19 +10962,19 @@
       "slug": "alexis-sanchez",
       "name": "Alexis Sánchez",
       "position": 4,
-      "price": 720000,
+      "price": 710000,
       "points": 82,
-      "trend": 0,
+      "trend": -10000,
       "playedHome": 12,
       "playedAway": 11,
       "teamName": "Sevilla",
       "teamId": 17,
       "status": "ok",
       "jForm": [
+        null,
         2,
         2,
         null,
-        1,
         1
       ],
       "clausula": null
@@ -10996,19 +11006,19 @@
       "slug": "nico-gonzalez-2",
       "name": "Nico González",
       "position": 3,
-      "price": 2620000,
+      "price": 2840000,
       "points": 111,
-      "trend": 260000,
+      "trend": 220000,
       "playedHome": 12,
       "playedAway": 11,
       "teamName": "Atlético",
       "teamId": 2,
       "status": "ok",
       "jForm": [
+        null,
         20,
         null,
         -6,
-        3,
         3
       ],
       "clausula": null
@@ -11084,20 +11094,20 @@
       "slug": "oso",
       "name": "Oso",
       "position": 2,
-      "price": 2540000,
+      "price": 2500000,
       "points": 66,
-      "trend": -20000,
+      "trend": -40000,
       "playedHome": 8,
       "playedAway": 7,
       "teamName": "Sevilla",
       "teamId": 17,
       "status": "ok",
       "jForm": [
+        null,
         2,
         2,
         2,
-        3,
-        13
+        3
       ],
       "clausula": null
     },
@@ -11137,11 +11147,11 @@
       "teamId": 779,
       "status": "ok",
       "jForm": [
+        null,
         1,
         3,
         3,
-        0,
-        3
+        0
       ],
       "clausula": null
     },
@@ -11150,20 +11160,20 @@
       "slug": "tunde-2",
       "name": "Tunde",
       "position": 4,
-      "price": 160000,
+      "price": 150000,
       "points": 42,
-      "trend": 0,
+      "trend": -10000,
       "playedHome": 10,
       "playedAway": 6,
       "teamName": "Levante",
       "teamId": 10,
       "status": "ok",
       "jForm": [
+        null,
         2,
         5,
         2,
-        7,
-        2
+        7
       ],
       "clausula": null
     },
@@ -11181,11 +11191,11 @@
       "teamId": 10,
       "status": "ok",
       "jForm": [
+        null,
         3,
         3,
         0,
-        3,
-        1
+        3
       ],
       "clausula": null
     },
@@ -11194,7 +11204,7 @@
       "slug": "matarazzo",
       "name": "Matarazzo",
       "position": 5,
-      "price": 1510000,
+      "price": 1500000,
       "points": 25,
       "trend": -10000,
       "playedHome": 9,
@@ -11203,11 +11213,11 @@
       "teamId": 13,
       "status": "ok",
       "jForm": [
+        null,
         0,
         1,
         3,
-        0,
-        3
+        0
       ],
       "clausula": null
     },
@@ -11216,7 +11226,7 @@
       "slug": "fonseca",
       "name": "Fonseca",
       "position": 3,
-      "price": 550000,
+      "price": 600000,
       "points": 49,
       "trend": 50000,
       "playedHome": 6,
@@ -11226,10 +11236,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         6,
         7,
-        2,
-        7
+        2
       ],
       "clausula": null
     },
@@ -11248,9 +11258,9 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         1,
         2,
-        null,
         null
       ],
       "clausula": null
@@ -11260,20 +11270,20 @@
       "slug": "t-fernandez",
       "name": "Thiago Fernández",
       "position": 4,
-      "price": 2410000,
+      "price": 2630000,
       "points": 51,
-      "trend": 200000,
+      "trend": 220000,
       "playedHome": 6,
       "playedAway": 5,
       "teamName": "Real Oviedo",
       "teamId": 779,
       "status": "ok",
       "jForm": [
+        null,
         7,
         6,
         6,
-        2,
-        8
+        2
       ],
       "clausula": null
     },
@@ -11284,15 +11294,15 @@
       "position": 2,
       "price": 180000,
       "points": 4,
-      "trend": 10000,
+      "trend": 0,
       "playedHome": 0,
       "playedAway": 1,
       "teamName": "Valencia",
       "teamId": 18,
       "status": "ok",
       "jForm": [
-        4,
         null,
+        4,
         null,
         null,
         null
@@ -11306,18 +11316,18 @@
       "position": 5,
       "price": 440000,
       "points": 11,
-      "trend": 10000,
+      "trend": 0,
       "playedHome": 5,
       "playedAway": 2,
       "teamName": "Mallorca",
       "teamId": 465,
       "status": "ok",
       "jForm": [
+        null,
         1,
         3,
         3,
-        0,
-        3
+        0
       ],
       "clausula": null
     },
@@ -11335,9 +11345,9 @@
       "teamId": 2,
       "status": "ok",
       "jForm": [
+        null,
         2,
         7,
-        null,
         null,
         null
       ],
@@ -11360,8 +11370,8 @@
         null,
         null,
         null,
-        3,
-        1
+        null,
+        3
       ],
       "clausula": null
     },
@@ -11370,9 +11380,9 @@
       "slug": "alvaro-arbeloa",
       "name": "Álvaro Arbeloa",
       "position": 5,
-      "price": 4400000,
+      "price": 4360000,
       "points": 29,
-      "trend": -30000,
+      "trend": -40000,
       "playedHome": 8,
       "playedAway": 6,
       "teamName": "Real Madrid",
@@ -11394,16 +11404,16 @@
       "position": 3,
       "price": 420000,
       "points": 34,
-      "trend": 10000,
+      "trend": 0,
       "playedHome": 7,
       "playedAway": 4,
       "teamName": "Levante",
       "teamId": 10,
       "status": "ok",
       "jForm": [
+        null,
         3,
         5,
-        2,
         2,
         2
       ],
@@ -11426,8 +11436,8 @@
         null,
         null,
         null,
-        1,
-        4
+        null,
+        1
       ],
       "clausula": null
     },
@@ -11436,7 +11446,7 @@
       "slug": "satriano",
       "name": "Satriano",
       "position": 4,
-      "price": 5490000,
+      "price": 5420000,
       "points": 68,
       "trend": -70000,
       "playedHome": 6,
@@ -11445,10 +11455,10 @@
       "teamId": 8,
       "status": "ok",
       "jForm": [
+        null,
         1,
         2,
         14,
-        3,
         3
       ],
       "clausula": null
@@ -11467,11 +11477,11 @@
       "teamId": 8,
       "status": "ok",
       "jForm": [
+        null,
         4,
         2,
         5,
-        3,
-        null
+        3
       ],
       "clausula": null
     },
@@ -11480,9 +11490,9 @@
       "slug": "zaid-romero",
       "name": "Zaid Romero",
       "position": 2,
-      "price": 2220000,
+      "price": 2170000,
       "points": 46,
-      "trend": -40000,
+      "trend": -50000,
       "playedHome": 5,
       "playedAway": 6,
       "teamName": "Getafe",
@@ -11490,10 +11500,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         1,
         5,
-        2,
-        4
+        2
       ],
       "clausula": null
     },
@@ -11502,20 +11512,20 @@
       "slug": "c-echeverri",
       "name": "Echeverri",
       "position": 3,
-      "price": 2200000,
+      "price": 2270000,
       "points": 45,
-      "trend": 80000,
+      "trend": 70000,
       "playedHome": 5,
       "playedAway": 6,
       "teamName": "Girona",
       "teamId": 289,
       "status": "ok",
       "jForm": [
+        null,
         6,
         1,
         null,
-        2,
-        13
+        2
       ],
       "clausula": null
     },
@@ -11535,9 +11545,9 @@
       "jForm": [
         null,
         null,
+        null,
         2,
-        1,
-        null
+        1
       ],
       "clausula": null
     },
@@ -11546,7 +11556,7 @@
       "slug": "luis-vazquez",
       "name": "Luis Vázquez",
       "position": 4,
-      "price": 1910000,
+      "price": 1890000,
       "points": 52,
       "trend": -20000,
       "playedHome": 5,
@@ -11555,11 +11565,11 @@
       "teamId": 8,
       "status": "ok",
       "jForm": [
+        null,
         2,
         1,
         11,
-        1,
-        3
+        1
       ],
       "clausula": null
     },
@@ -11577,11 +11587,11 @@
       "teamId": 75,
       "status": "ok",
       "jForm": [
+        null,
         4,
         12,
         null,
-        null,
-        -1
+        null
       ],
       "clausula": null
     },
@@ -11590,9 +11600,9 @@
       "slug": "neal-maupay",
       "name": "Maupay",
       "position": 4,
-      "price": 890000,
+      "price": 870000,
       "points": 20,
-      "trend": -10000,
+      "trend": -20000,
       "playedHome": 3,
       "playedAway": 3,
       "teamName": "Sevilla",
@@ -11602,8 +11612,8 @@
         null,
         null,
         null,
-        0,
-        2
+        null,
+        0
       ],
       "clausula": null
     },
@@ -11612,20 +11622,20 @@
       "slug": "angel-perez",
       "name": "Ángel Pérez",
       "position": 4,
-      "price": 1770000,
+      "price": 1760000,
       "points": 43,
-      "trend": 0,
+      "trend": -10000,
       "playedHome": 4,
       "playedAway": 6,
       "teamName": "Alavés",
       "teamId": 91,
       "status": "ok",
       "jForm": [
+        null,
         2,
         2,
         3,
-        12,
-        5
+        12
       ],
       "clausula": null
     },
@@ -11643,11 +11653,11 @@
       "teamId": 19,
       "status": "ok",
       "jForm": [
-        3,
         null,
         3,
         null,
-        3
+        3,
+        null
       ],
       "clausula": null
     },
@@ -11665,11 +11675,11 @@
       "teamId": 7,
       "status": "ok",
       "jForm": [
+        null,
         3,
         2,
         4,
-        3,
-        null
+        3
       ],
       "clausula": null
     },
@@ -11690,8 +11700,8 @@
         null,
         null,
         null,
-        0,
-        2
+        null,
+        0
       ],
       "clausula": null
     },
@@ -11709,11 +11719,11 @@
       "teamId": 13,
       "status": "ok",
       "jForm": [
+        null,
         2,
         null,
         null,
-        null,
-        2
+        null
       ],
       "clausula": null
     },
@@ -11722,9 +11732,9 @@
       "slug": "lookman",
       "name": "Lookman",
       "position": 4,
-      "price": 11060000,
+      "price": 10840000,
       "points": 24,
-      "trend": -260000,
+      "trend": -220000,
       "playedHome": 4,
       "playedAway": 4,
       "teamName": "Atlético",
@@ -11732,10 +11742,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         -1,
         null,
-        10,
-        3
+        10
       ],
       "clausula": null
     },
@@ -11744,9 +11754,9 @@
       "slug": "alvaro-fidalgo",
       "name": "Álvaro Fidalgo",
       "position": 3,
-      "price": 2120000,
+      "price": 2080000,
       "points": 35,
-      "trend": -60000,
+      "trend": -40000,
       "playedHome": 4,
       "playedAway": 3,
       "teamName": "Betis",
@@ -11766,20 +11776,20 @@
       "slug": "obed-vargas",
       "name": "Obed Vargas",
       "position": 3,
-      "price": 670000,
+      "price": 680000,
       "points": 24,
-      "trend": 20000,
+      "trend": 10000,
       "playedHome": 3,
       "playedAway": 3,
       "teamName": "Atlético",
       "teamId": 2,
       "status": "ok",
       "jForm": [
+        null,
         4,
         5,
         5,
-        null,
-        4
+        null
       ],
       "clausula": null
     },
@@ -11788,7 +11798,7 @@
       "slug": "matias-vecino",
       "name": "Matías Vecino",
       "position": 3,
-      "price": 360000,
+      "price": 350000,
       "points": 7,
       "trend": -10000,
       "playedHome": 3,
@@ -11798,8 +11808,8 @@
       "status": "ok",
       "jForm": [
         null,
-        1,
         null,
+        1,
         null,
         null
       ],
@@ -11810,7 +11820,7 @@
       "slug": "ibrahim-diabate",
       "name": "Diabate",
       "position": 4,
-      "price": 330000,
+      "price": 320000,
       "points": 15,
       "trend": -10000,
       "playedHome": 1,
@@ -11819,11 +11829,11 @@
       "teamId": 91,
       "status": "ok",
       "jForm": [
+        null,
         0,
         9,
         1,
-        5,
-        null
+        5
       ],
       "clausula": null
     },
@@ -11832,9 +11842,9 @@
       "slug": "v-birmancevic",
       "name": "Birmancevic",
       "position": 4,
-      "price": 210000,
+      "price": 200000,
       "points": 9,
-      "trend": 0,
+      "trend": -10000,
       "playedHome": 2,
       "playedAway": 2,
       "teamName": "Getafe",
@@ -11842,10 +11852,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         1,
         3,
-        null,
-        3
+        null
       ],
       "clausula": null
     },
@@ -11854,9 +11864,9 @@
       "slug": "zito-luvumbo",
       "name": "Luvumbo",
       "position": 4,
-      "price": 1130000,
+      "price": 1160000,
       "points": 27,
-      "trend": 40000,
+      "trend": 30000,
       "playedHome": 5,
       "playedAway": 1,
       "teamName": "Mallorca",
@@ -11864,10 +11874,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         8,
         5,
-        6,
-        1
+        6
       ],
       "clausula": null
     },
@@ -11885,11 +11895,11 @@
       "teamId": 75,
       "status": "ok",
       "jForm": [
+        null,
         3,
         4,
         5,
-        3,
-        2
+        3
       ],
       "clausula": null
     },
@@ -11964,9 +11974,9 @@
       "slug": "xavi-espart",
       "name": "Xavi Espart",
       "position": 2,
-      "price": 360000,
+      "price": 350000,
       "points": 5,
-      "trend": 0,
+      "trend": -10000,
       "playedHome": 2,
       "playedAway": 0,
       "teamName": "Barcelona",
@@ -11976,8 +11986,8 @@
         null,
         null,
         null,
-        0,
-        5
+        null,
+        0
       ],
       "clausula": null
     }
@@ -12011,8 +12021,8 @@
           5
         ],
         "teamSize": 15,
-        "teamValue": 109130000,
-        "teamValueInc": 620000,
+        "teamValue": 109450000,
+        "teamValueInc": 320000,
         "position": 1,
         "role": ""
       },
@@ -12030,8 +12040,8 @@
           8
         ],
         "teamSize": 18,
-        "teamValue": 105040000,
-        "teamValueInc": 740000,
+        "teamValue": 105390000,
+        "teamValueInc": 350000,
         "lastTrophy": {
           "type": "league",
           "position": 2,
@@ -12053,8 +12063,8 @@
           7
         ],
         "teamSize": 17,
-        "teamValue": 68630000,
-        "teamValueInc": 880000,
+        "teamValue": 69200000,
+        "teamValueInc": 570000,
         "position": 3
       },
       {
@@ -12069,9 +12079,9 @@
           3,
           2
         ],
-        "teamSize": 13,
-        "teamValue": 96560000,
-        "teamValueInc": 290000,
+        "teamSize": 14,
+        "teamValue": 106120000,
+        "teamValueInc": 20000,
         "position": 4,
         "positionInc": 1,
         "role": ""
@@ -12089,8 +12099,8 @@
           9
         ],
         "teamSize": 18,
-        "teamValue": 87620000,
-        "teamValueInc": 560000,
+        "teamValue": 87810000,
+        "teamValueInc": 190000,
         "lastTrophy": {
           "type": "league",
           "position": 3,
@@ -12114,8 +12124,8 @@
           12
         ],
         "teamSize": 14,
-        "teamValue": 92330000,
-        "teamValueInc": 560000,
+        "teamValue": 92570000,
+        "teamValueInc": 240000,
         "lastTrophy": {
           "type": "league",
           "position": 1,
@@ -12136,8 +12146,8 @@
           1
         ],
         "teamSize": 15,
-        "teamValue": 73210000,
-        "teamValueInc": 430000,
+        "teamValue": 73400000,
+        "teamValueInc": 190000,
         "position": 7,
         "role": ""
       },
@@ -12154,8 +12164,8 @@
           11
         ],
         "teamSize": 15,
-        "teamValue": 52540000,
-        "teamValueInc": 90000,
+        "teamValue": 52590000,
+        "teamValueInc": 50000,
         "position": 8,
         "role": ""
       },
@@ -12173,8 +12183,8 @@
           14
         ],
         "teamSize": 20,
-        "teamValue": 47180000,
-        "teamValueInc": 290000,
+        "teamValue": 47270000,
+        "teamValueInc": 90000,
         "position": 9
       },
       {
@@ -12190,8 +12200,8 @@
           3
         ],
         "teamSize": 14,
-        "teamValue": 52790000,
-        "teamValueInc": 290000,
+        "teamValue": 52920000,
+        "teamValueInc": 130000,
         "position": 10,
         "role": ""
       },
@@ -12208,8 +12218,8 @@
           6
         ],
         "teamSize": 15,
-        "teamValue": 60930000,
-        "teamValueInc": 280000,
+        "teamValue": 60840000,
+        "teamValueInc": -90000,
         "lastTrophy": {
           "type": "league",
           "position": 3,
@@ -12232,8 +12242,8 @@
           4
         ],
         "teamSize": 11,
-        "teamValue": 42290000,
-        "teamValueInc": -420000,
+        "teamValue": 41850000,
+        "teamValueInc": -440000,
         "position": 12,
         "positionInc": -1,
         "role": ""
@@ -12251,8 +12261,8 @@
           13
         ],
         "teamSize": 17,
-        "teamValue": 39070000,
-        "teamValueInc": 40000,
+        "teamValue": 38930000,
+        "teamValueInc": -140000,
         "position": 13,
         "role": ""
       },
@@ -12269,8 +12279,8 @@
           10
         ],
         "teamSize": 18,
-        "teamValue": 54080000,
-        "teamValueInc": 120000,
+        "teamValue": 54100000,
+        "teamValueInc": 20000,
         "position": 14,
         "role": ""
       }
@@ -12282,8 +12292,8 @@
       "name": "Albertini",
       "manager": "Albertini",
       "points": 1776,
-      "value": 109130000,
-      "trend": 620000,
+      "value": 109450000,
+      "trend": 320000,
       "players": []
     },
     {
@@ -12291,8 +12301,8 @@
       "name": "LeMola Team",
       "manager": "LeMola Team",
       "points": 1696,
-      "value": 105040000,
-      "trend": 740000,
+      "value": 105390000,
+      "trend": 350000,
       "players": []
     },
     {
@@ -12300,8 +12310,8 @@
       "name": "🦊",
       "manager": "🦊",
       "points": 1643,
-      "value": 68630000,
-      "trend": 880000,
+      "value": 69200000,
+      "trend": 570000,
       "players": []
     },
     {
@@ -12309,8 +12319,8 @@
       "name": "Soulands Rangers",
       "manager": "Soulands Rangers",
       "points": 1537,
-      "value": 96560000,
-      "trend": 290000,
+      "value": 106120000,
+      "trend": 20000,
       "players": []
     },
     {
@@ -12318,8 +12328,8 @@
       "name": "CA CABA JUNIORS",
       "manager": "CA CABA JUNIORS",
       "points": 1535,
-      "value": 87620000,
-      "trend": 560000,
+      "value": 87810000,
+      "trend": 190000,
       "players": []
     },
     {
@@ -12327,8 +12337,8 @@
       "name": "Zaza Pachulia",
       "manager": "Zaza Pachulia",
       "points": 1514,
-      "value": 92330000,
-      "trend": 560000,
+      "value": 92570000,
+      "trend": 240000,
       "players": []
     },
     {
@@ -12336,8 +12346,8 @@
       "name": "INDOMABLE FC",
       "manager": "INDOMABLE FC",
       "points": 1505,
-      "value": 73210000,
-      "trend": 430000,
+      "value": 73400000,
+      "trend": 190000,
       "players": []
     },
     {
@@ -12345,8 +12355,8 @@
       "name": "NACECH1",
       "manager": "NACECH1",
       "points": 1424,
-      "value": 52540000,
-      "trend": 90000,
+      "value": 52590000,
+      "trend": 50000,
       "players": []
     },
     {
@@ -12354,8 +12364,8 @@
       "name": "The Black Team",
       "manager": "The Black Team",
       "points": 1365,
-      "value": 47180000,
-      "trend": 290000,
+      "value": 47270000,
+      "trend": 90000,
       "players": []
     },
     {
@@ -12363,8 +12373,8 @@
       "name": "CIGALERU",
       "manager": "CIGALERU",
       "points": 1359,
-      "value": 52790000,
-      "trend": 290000,
+      "value": 52920000,
+      "trend": 130000,
       "players": []
     },
     {
@@ -12372,8 +12382,8 @@
       "name": "Tata Martini",
       "manager": "Tata Martini",
       "points": 1315,
-      "value": 60930000,
-      "trend": 280000,
+      "value": 60840000,
+      "trend": -90000,
       "players": []
     },
     {
@@ -12381,8 +12391,8 @@
       "name": "Trileros FC",
       "manager": "Trileros FC",
       "points": 1298,
-      "value": 42290000,
-      "trend": -420000,
+      "value": 41850000,
+      "trend": -440000,
       "players": []
     },
     {
@@ -12390,8 +12400,8 @@
       "name": "Morankus FC",
       "manager": "Morankus FC",
       "points": 1285,
-      "value": 39070000,
-      "trend": 40000,
+      "value": 38930000,
+      "trend": -140000,
       "players": []
     },
     {
@@ -12399,8 +12409,8 @@
       "name": "Hufflepuff 🍋",
       "manager": "Hufflepuff 🍋",
       "points": 1254,
-      "value": 54080000,
-      "trend": 120000,
+      "value": 54100000,
+      "trend": 20000,
       "players": []
     }
   ],
@@ -12450,7 +12460,7 @@
       {
         "id": 1908,
         "buyPrice": 2235666,
-        "clause": 5985000,
+        "clause": 6045000,
         "invested": 1500000,
         "buyDate": 1773209088
       },
@@ -12492,21 +12502,21 @@
       {
         "id": 26276,
         "buyPrice": 6600000,
-        "clause": 14910000,
+        "clause": 15000000,
         "invested": 2500000,
         "buyDate": 1765459975
       },
       {
         "id": 26994,
         "buyPrice": 5715000,
-        "clause": 10072500,
+        "clause": 10185000,
         "invested": 1000000,
         "buyDate": 1775649508
       },
       {
         "id": 30787,
         "buyPrice": 2468000,
-        "clause": 5640000,
+        "clause": 5880000,
         "invested": 1000000,
         "buyDate": 1776488555
       },
@@ -12527,14 +12537,14 @@
       {
         "id": 38116,
         "buyPrice": 3150000,
-        "clause": 4830000,
+        "clause": 4860000,
         "invested": 0,
         "buyDate": 1776017113
       },
       {
         "id": 38867,
         "buyPrice": 10072222,
-        "clause": 28365000,
+        "clause": 28455000,
         "invested": 8000000,
         "buyDate": 1769493971
       },
@@ -12548,18 +12558,12 @@
       {
         "id": 39885,
         "buyPrice": 162532,
-        "clause": 5655000,
+        "clause": 5640000,
         "invested": 2000000,
         "buyDate": 1770616993
       }
     ],
     "market": [
-      {
-        "playerID": 24979,
-        "price": 1660000,
-        "type": "sale",
-        "until": 1777065680
-      },
       {
         "playerID": 39360,
         "price": 2540000,
@@ -12569,6 +12573,31 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "market",
+      "date": 1777093349,
+      "content": [
+        {
+          "player": 26945,
+          "to": {
+            "id": 8068002,
+            "name": "Soulands Rangers",
+            "icon": "i/u/8068002.png?v=69"
+          },
+          "amount": 10540000,
+          "bids": [
+            {
+              "user": {
+                "id": 3928497,
+                "name": "The Black Team",
+                "icon": "i/u/3928497.png"
+              },
+              "amount": 9700000
+            }
+          ]
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1777070821,
@@ -12596,21 +12625,6 @@
             "icon": "i/u/11757390.png"
           },
           "amount": 7576100
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1777015951,
-      "content": [
-        {
-          "player": 26271,
-          "from": {
-            "id": 6541195,
-            "name": "🦊",
-            "icon": "i/u/6541195.png?v=17"
-          },
-          "amount": 27641600
         }
       ]
     }
@@ -12665,8 +12679,8 @@
           3
         ],
         "teamSize": 13,
-        "teamValue": 93660000,
-        "teamValueInc": 780000,
+        "teamValue": 94270000,
+        "teamValueInc": 610000,
         "position": 1,
         "positionInc": 1,
         "role": ""
@@ -12684,8 +12698,8 @@
           5
         ],
         "teamSize": 15,
-        "teamValue": 75530000,
-        "teamValueInc": 190000,
+        "teamValue": 75430000,
+        "teamValueInc": -100000,
         "lastTrophy": {
           "type": "league",
           "position": 1,
@@ -12707,9 +12721,9 @@
           1,
           2
         ],
-        "teamSize": 16,
-        "teamValue": 96300000,
-        "teamValueInc": 420000,
+        "teamSize": 17,
+        "teamValue": 97500000,
+        "teamValueInc": 250000,
         "position": 3,
         "role": ""
       },
@@ -12726,8 +12740,8 @@
           17
         ],
         "teamSize": 19,
-        "teamValue": 61940000,
-        "teamValueInc": 400000,
+        "teamValue": 62120000,
+        "teamValueInc": 180000,
         "position": 4,
         "role": ""
       },
@@ -12745,8 +12759,8 @@
           13
         ],
         "teamSize": 19,
-        "teamValue": 92310000,
-        "teamValueInc": 400000,
+        "teamValue": 92340000,
+        "teamValueInc": 30000,
         "position": 5
       },
       {
@@ -12762,8 +12776,8 @@
           15
         ],
         "teamSize": 15,
-        "teamValue": 61200000,
-        "teamValueInc": 560000,
+        "teamValue": 61460000,
+        "teamValueInc": 260000,
         "position": 6,
         "role": ""
       },
@@ -12781,8 +12795,8 @@
           8
         ],
         "teamSize": 14,
-        "teamValue": 83620000,
-        "teamValueInc": 980000,
+        "teamValue": 84210000,
+        "teamValueInc": 590000,
         "position": 7
       },
       {
@@ -12799,8 +12813,8 @@
           4
         ],
         "teamSize": 17,
-        "teamValue": 47450000,
-        "teamValueInc": 420000,
+        "teamValue": 47650000,
+        "teamValueInc": 200000,
         "position": 8
       },
       {
@@ -12816,8 +12830,8 @@
           12
         ],
         "teamSize": 18,
-        "teamValue": 59710000,
-        "teamValueInc": 210000,
+        "teamValue": 59730000,
+        "teamValueInc": 20000,
         "position": 9,
         "role": ""
       },
@@ -12834,8 +12848,8 @@
           6
         ],
         "teamSize": 13,
-        "teamValue": 47300000,
-        "teamValueInc": 710000,
+        "teamValue": 47750000,
+        "teamValueInc": 450000,
         "position": 10,
         "role": ""
       },
@@ -12852,8 +12866,8 @@
           9
         ],
         "teamSize": 11,
-        "teamValue": 37630000,
-        "teamValueInc": 190000,
+        "teamValue": 37580000,
+        "teamValueInc": -50000,
         "lastTrophy": {
           "type": "league",
           "position": 2,
@@ -12875,8 +12889,8 @@
           14
         ],
         "teamSize": 13,
-        "teamValue": 60260000,
-        "teamValueInc": 340000,
+        "teamValue": 60330000,
+        "teamValueInc": 70000,
         "position": 12,
         "role": ""
       },
@@ -12893,8 +12907,8 @@
           16
         ],
         "teamSize": 15,
-        "teamValue": 26370000,
-        "teamValueInc": 220000,
+        "teamValue": 26510000,
+        "teamValueInc": 140000,
         "lastTrophy": {
           "type": "league",
           "position": -1,
@@ -12916,8 +12930,8 @@
           11
         ],
         "teamSize": 15,
-        "teamValue": 52080000,
-        "teamValueInc": 190000,
+        "teamValue": 52140000,
+        "teamValueInc": 60000,
         "lastTrophy": {
           "type": "league",
           "position": 3,
@@ -12940,8 +12954,8 @@
           7
         ],
         "teamSize": 13,
-        "teamValue": 35550000,
-        "teamValueInc": 150000,
+        "teamValue": 35530000,
+        "teamValueInc": -20000,
         "position": 15,
         "positionInc": -1,
         "role": ""
@@ -12958,8 +12972,8 @@
           1
         ],
         "teamSize": 18,
-        "teamValue": 75250000,
-        "teamValueInc": -40000,
+        "teamValue": 75090000,
+        "teamValueInc": -160000,
         "position": 16,
         "positionInc": -1,
         "role": ""
@@ -12977,8 +12991,8 @@
           10
         ],
         "teamSize": 19,
-        "teamValue": 56910000,
-        "teamValueInc": 270000,
+        "teamValue": 57050000,
+        "teamValueInc": 140000,
         "position": 17,
         "role": ""
       },
@@ -12995,8 +13009,8 @@
           19
         ],
         "teamSize": 20,
-        "teamValue": 46290000,
-        "teamValueInc": 400000,
+        "teamValue": 46370000,
+        "teamValueInc": 80000,
         "position": 18,
         "role": ""
       },
@@ -13013,8 +13027,8 @@
           18
         ],
         "teamSize": 17,
-        "teamValue": 43280000,
-        "teamValueInc": 430000,
+        "teamValue": 43440000,
+        "teamValueInc": 160000,
         "position": 19,
         "role": ""
       },
@@ -13032,7 +13046,7 @@
         ],
         "teamSize": 15,
         "teamValue": 33210000,
-        "teamValueInc": 140000,
+        "teamValueInc": 0,
         "position": 20,
         "role": ""
       }
@@ -13044,8 +13058,8 @@
       "name": "The GOAT club",
       "manager": "The GOAT club",
       "points": 1572,
-      "value": 93660000,
-      "trend": 780000,
+      "value": 94270000,
+      "trend": 610000,
       "players": []
     },
     {
@@ -13053,8 +13067,8 @@
       "name": "MarK Lenders",
       "manager": "MarK Lenders",
       "points": 1540,
-      "value": 75530000,
-      "trend": 190000,
+      "value": 75430000,
+      "trend": -100000,
       "players": []
     },
     {
@@ -13062,8 +13076,8 @@
       "name": "Xevi borrat",
       "manager": "Xevi borrat",
       "points": 1517,
-      "value": 96300000,
-      "trend": 420000,
+      "value": 97500000,
+      "trend": 250000,
       "players": []
     },
     {
@@ -13071,8 +13085,8 @@
       "name": "Valors FC",
       "manager": "Valors FC",
       "points": 1424,
-      "value": 61940000,
-      "trend": 400000,
+      "value": 62120000,
+      "trend": 180000,
       "players": []
     },
     {
@@ -13080,8 +13094,8 @@
       "name": "🦊",
       "manager": "🦊",
       "points": 1417,
-      "value": 92310000,
-      "trend": 400000,
+      "value": 92340000,
+      "trend": 30000,
       "players": []
     },
     {
@@ -13089,8 +13103,8 @@
       "name": "FC Borça",
       "manager": "FC Borça",
       "points": 1409,
-      "value": 61200000,
-      "trend": 560000,
+      "value": 61460000,
+      "trend": 260000,
       "players": []
     },
     {
@@ -13098,8 +13112,8 @@
       "name": "Norimaki  FC",
       "manager": "Norimaki  FC",
       "points": 1350,
-      "value": 83620000,
-      "trend": 980000,
+      "value": 84210000,
+      "trend": 590000,
       "players": []
     },
     {
@@ -13107,8 +13121,8 @@
       "name": "Aiveen Teaam",
       "manager": "Aiveen Teaam",
       "points": 1317,
-      "value": 47450000,
-      "trend": 420000,
+      "value": 47650000,
+      "trend": 200000,
       "players": []
     },
     {
@@ -13116,8 +13130,8 @@
       "name": "Petraques",
       "manager": "Petraques",
       "points": 1298,
-      "value": 59710000,
-      "trend": 210000,
+      "value": 59730000,
+      "trend": 20000,
       "players": []
     },
     {
@@ -13125,8 +13139,8 @@
       "name": "Sergi Sala Duran",
       "manager": "Sergi Sala Duran",
       "points": 1286,
-      "value": 47300000,
-      "trend": 710000,
+      "value": 47750000,
+      "trend": 450000,
       "players": []
     },
     {
@@ -13134,8 +13148,8 @@
       "name": "Lamine i els 7 nans 👯‍♀️",
       "manager": "Lamine i els 7 nans 👯‍♀️",
       "points": 1241,
-      "value": 37630000,
-      "trend": 190000,
+      "value": 37580000,
+      "trend": -50000,
       "players": []
     },
     {
@@ -13143,8 +13157,8 @@
       "name": "Fiorenzola",
       "manager": "Fiorenzola",
       "points": 1213,
-      "value": 60260000,
-      "trend": 340000,
+      "value": 60330000,
+      "trend": 70000,
       "players": []
     },
     {
@@ -13152,8 +13166,8 @@
       "name": "Kings Team",
       "manager": "Kings Team",
       "points": 1207,
-      "value": 26370000,
-      "trend": 220000,
+      "value": 26510000,
+      "trend": 140000,
       "players": []
     },
     {
@@ -13161,8 +13175,8 @@
       "name": "UE Trincadors",
       "manager": "UE Trincadors",
       "points": 1204,
-      "value": 52080000,
-      "trend": 190000,
+      "value": 52140000,
+      "trend": 60000,
       "players": []
     },
     {
@@ -13170,8 +13184,8 @@
       "name": "Sant Pere Atlètic",
       "manager": "Sant Pere Atlètic",
       "points": 1200,
-      "value": 35550000,
-      "trend": 150000,
+      "value": 35530000,
+      "trend": -20000,
       "players": []
     },
     {
@@ -13179,8 +13193,8 @@
       "name": "Eric Duran",
       "manager": "Eric Duran",
       "points": 1196,
-      "value": 75250000,
-      "trend": -40000,
+      "value": 75090000,
+      "trend": -160000,
       "players": []
     },
     {
@@ -13188,8 +13202,8 @@
       "name": "Mindundis",
       "manager": "Mindundis",
       "points": 1183,
-      "value": 56910000,
-      "trend": 270000,
+      "value": 57050000,
+      "trend": 140000,
       "players": []
     },
     {
@@ -13197,8 +13211,8 @@
       "name": "Janwandowski",
       "manager": "Janwandowski",
       "points": 1153,
-      "value": 46290000,
-      "trend": 400000,
+      "value": 46370000,
+      "trend": 80000,
       "players": []
     },
     {
@@ -13206,8 +13220,8 @@
       "name": "Aquest any he trepitjat merda !!",
       "manager": "Aquest any he trepitjat merda !!",
       "points": 1136,
-      "value": 43280000,
-      "trend": 430000,
+      "value": 43440000,
+      "trend": 160000,
       "players": []
     },
     {
@@ -13216,7 +13230,7 @@
       "manager": "Tots som Olost",
       "points": 1026,
       "value": 33210000,
-      "trend": 140000,
+      "trend": 0,
       "players": []
     }
   ],
@@ -13330,7 +13344,7 @@
       {
         "id": 35901,
         "buyPrice": 1888888,
-        "clause": 2205000,
+        "clause": 2115000,
         "invested": 0,
         "buyDate": 1776747810
       },
@@ -13380,13 +13394,28 @@
     "market": [
       {
         "playerID": 35901,
-        "price": 2205000,
+        "price": 2115000,
         "type": "sale",
         "until": 1777185887
       }
     ]
   },
   "boardEnBas": [
+    {
+      "type": "market",
+      "date": 1777093433,
+      "content": [
+        {
+          "player": 32135,
+          "to": {
+            "id": 6579505,
+            "name": "Xevi borrat",
+            "icon": "i/u/6579505.png"
+          },
+          "amount": 950000
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1777064471,
@@ -13489,27 +13518,6 @@
             "icon": "i/u/6588130.png?v=12"
           },
           "amount": 24752400
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1777007825,
-      "content": [
-        {
-          "player": 8695,
-          "from": {
-            "id": 6585052,
-            "name": "Tots som Olost",
-            "icon": "i/u/6585052.png?v=69"
-          },
-          "to": {
-            "id": 6579402,
-            "name": "Valors FC",
-            "icon": "icons/7.png"
-          },
-          "amount": 855000,
-          "type": "clause"
         }
       ]
     }
@@ -14555,10 +14563,10 @@
       "matchDate": "2026-05-03T16:30:00Z"
     },
     "Elche CF": {
-      "winProb": 0.2338067027996023,
-      "drawProb": 0.2743512177359495,
-      "loseProb": 0.49184207946444836,
-      "over25Prob": 0.5319148936170213,
+      "winProb": 0.234869633921517,
+      "drawProb": 0.27732420331840923,
+      "loseProb": 0.4878061627600738,
+      "over25Prob": 0.5494505494505494,
       "isHome": false,
       "opponent": "Celta Vigo",
       "matchDate": "2026-05-03T12:00:00Z"
@@ -14591,10 +14599,10 @@
       "matchDate": "2026-05-02T12:00:00Z"
     },
     "Celta Vigo": {
-      "winProb": 0.49184207946444836,
-      "drawProb": 0.2743512177359495,
-      "loseProb": 0.2338067027996023,
-      "over25Prob": 0.5319148936170213,
+      "winProb": 0.4878061627600738,
+      "drawProb": 0.27732420331840923,
+      "loseProb": 0.234869633921517,
+      "over25Prob": 0.5494505494505494,
       "isHome": true,
       "opponent": "Elche CF",
       "matchDate": "2026-05-03T12:00:00Z"
@@ -14722,7 +14730,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-25T01:14:28.358Z",
+    "updatedAt": "2026-04-25T07:00:21.069Z",
     "players": [
       {
         "id": "3374",
