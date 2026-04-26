@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-26T07:14:31.001Z",
+  "updatedAt": "2026-04-26T12:36:53.660Z",
   "players": [
     {
       "id": 11,
@@ -11992,7 +11992,7 @@
     "mode": "league",
     "marketMode": "normal",
     "scoreID": 5,
-    "icon": "i/l/44700.png",
+    "icon": "i/l/44700.png?v=51",
     "cover": "",
     "created": 1440985436,
     "competition": "la-liga",
@@ -12411,10 +12411,10 @@
     "teamId": 6541195,
     "name": "🦊",
     "points": 1643,
-    "balance": 19922934,
+    "balance": 19422934,
     "lineup": {
       "type": "4-5-1",
-      "date": 1777180202,
+      "date": 1777196320,
       "playersID": [
         17021,
         37495,
@@ -12495,8 +12495,8 @@
       {
         "id": 26276,
         "buyPrice": 6600000,
-        "clause": 15120000,
-        "invested": 2500000,
+        "clause": 15870000,
+        "invested": 3000000,
         "buyDate": 1765459975
       },
       {
@@ -13743,6 +13743,25 @@
       {
         "position": 6,
         "team": {
+          "id": 92,
+          "name": "Real Sociedad de Fútbol",
+          "shortName": "Real Sociedad",
+          "tla": "RSO",
+          "crest": "https://crests.football-data.org/92.png"
+        },
+        "playedGames": 33,
+        "form": null,
+        "won": 12,
+        "draw": 9,
+        "lost": 12,
+        "points": 45,
+        "goalsFor": 50,
+        "goalsAgainst": 49,
+        "goalDifference": 1
+      },
+      {
+        "position": 7,
+        "team": {
           "id": 82,
           "name": "Getafe CF",
           "shortName": "Getafe",
@@ -13760,7 +13779,7 @@
         "goalDifference": -6
       },
       {
-        "position": 7,
+        "position": 8,
         "team": {
           "id": 558,
           "name": "RC Celta de Vigo",
@@ -13777,25 +13796,6 @@
         "goalsFor": 44,
         "goalsAgainst": 41,
         "goalDifference": 3
-      },
-      {
-        "position": 8,
-        "team": {
-          "id": 92,
-          "name": "Real Sociedad de Fútbol",
-          "shortName": "Real Sociedad",
-          "tla": "RSO",
-          "crest": "https://crests.football-data.org/92.png"
-        },
-        "playedGames": 32,
-        "form": null,
-        "won": 11,
-        "draw": 9,
-        "lost": 12,
-        "points": 42,
-        "goalsFor": 49,
-        "goalsAgainst": 49,
-        "goalDifference": 0
       },
       {
         "position": 9,
@@ -13863,15 +13863,15 @@
           "tla": "RAY",
           "crest": "https://crests.football-data.org/87.png"
         },
-        "playedGames": 32,
+        "playedGames": 33,
         "form": null,
         "won": 9,
         "draw": 11,
-        "lost": 12,
+        "lost": 13,
         "points": 38,
         "goalsFor": 30,
-        "goalsAgainst": 38,
-        "goalDifference": -8
+        "goalsAgainst": 39,
+        "goalDifference": -9
       },
       {
         "position": 13,
@@ -14290,23 +14290,6 @@
     },
     "nextMatches": [
       {
-        "id": 544525,
-        "matchday": 32,
-        "date": "2026-04-26T12:00:00Z",
-        "home": {
-          "id": 87,
-          "name": "Rayo Vallecano de Madrid",
-          "short": "Rayo Vallecano",
-          "crest": "https://crests.football-data.org/87.png"
-        },
-        "away": {
-          "id": 92,
-          "name": "Real Sociedad de Fútbol",
-          "short": "Real Sociedad",
-          "crest": "https://crests.football-data.org/92.png"
-        }
-      },
-      {
         "id": 544529,
         "matchday": 32,
         "date": "2026-04-26T14:15:00Z",
@@ -14372,6 +14355,23 @@
           "name": "Levante UD",
           "short": "Levante",
           "crest": "https://crests.football-data.org/88.png"
+        }
+      },
+      {
+        "id": 544525,
+        "matchday": 32,
+        "date": "2026-04-26T12:00:00Z",
+        "home": {
+          "id": 87,
+          "name": "Rayo Vallecano de Madrid",
+          "short": "Rayo Vallecano",
+          "crest": "https://crests.football-data.org/87.png"
+        },
+        "away": {
+          "id": 92,
+          "name": "Real Sociedad de Fútbol",
+          "short": "Real Sociedad",
+          "crest": "https://crests.football-data.org/92.png"
         }
       }
     ],
@@ -14516,9 +14516,9 @@
   },
   "odds": {
     "Rayo Vallecano": {
-      "winProb": 0.2759473471255327,
-      "drawProb": 0.2791842661533982,
-      "loseProb": 0.4448683867210691,
+      "winProb": 0.267135220453564,
+      "drawProb": 0.2756525753086052,
+      "loseProb": 0.4572122042378307,
       "over25Prob": 0.38167938931297707,
       "isHome": false,
       "opponent": "Getafe",
@@ -14546,7 +14546,7 @@
       "winProb": 0.22196817631967244,
       "drawProb": 0.26171454398021987,
       "loseProb": 0.5163172797001077,
-      "over25Prob": 0.5434782608695652,
+      "over25Prob": 0.5376344086021505,
       "isHome": false,
       "opponent": "Celta Vigo",
       "matchDate": "2026-05-03T12:00:00Z"
@@ -14570,9 +14570,9 @@
       "matchDate": "2026-05-04T19:00:00Z"
     },
     "Villarreal": {
-      "winProb": 0.5350513434011349,
-      "drawProb": 0.23384666789978345,
-      "loseProb": 0.23110198869908175,
+      "winProb": 0.538129011068997,
+      "drawProb": 0.23391356063094174,
+      "loseProb": 0.22795742830006122,
       "over25Prob": 0.6024096385542169,
       "isHome": true,
       "opponent": "Levante",
@@ -14582,7 +14582,7 @@
       "winProb": 0.5163172797001077,
       "drawProb": 0.26171454398021987,
       "loseProb": 0.22196817631967244,
-      "over25Prob": 0.5434782608695652,
+      "over25Prob": 0.5376344086021505,
       "isHome": true,
       "opponent": "Elche CF",
       "matchDate": "2026-05-03T12:00:00Z"
@@ -14597,9 +14597,9 @@
       "matchDate": "2026-05-03T19:00:00Z"
     },
     "Levante": {
-      "winProb": 0.23110198869908175,
-      "drawProb": 0.23384666789978345,
-      "loseProb": 0.5350513434011349,
+      "winProb": 0.22795742830006122,
+      "drawProb": 0.23391356063094174,
+      "loseProb": 0.538129011068997,
       "over25Prob": 0.6024096385542169,
       "isHome": false,
       "opponent": "Villarreal",
@@ -14624,36 +14624,36 @@
       "matchDate": "2026-05-01T19:00:00Z"
     },
     "Valencia": {
-      "winProb": 0.4734387738464047,
-      "drawProb": 0.26655796510679924,
-      "loseProb": 0.26000326104679594,
-      "over25Prob": 0.5405405405405405,
+      "winProb": 0.4979853949804781,
+      "drawProb": 0.24769586052414408,
+      "loseProb": 0.25431874449537784,
+      "over25Prob": 0.5464480874316939,
       "isHome": true,
       "opponent": "Atlético Madrid",
       "matchDate": "2026-05-02T14:15:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.26000326104679594,
-      "drawProb": 0.26655796510679924,
-      "loseProb": 0.4734387738464047,
-      "over25Prob": 0.5405405405405405,
+      "winProb": 0.25431874449537784,
+      "drawProb": 0.24769586052414408,
+      "loseProb": 0.4979853949804781,
+      "over25Prob": 0.5464480874316939,
       "isHome": false,
       "opponent": "Valencia",
       "matchDate": "2026-05-02T14:15:00Z"
     },
     "Alavés": {
-      "winProb": 0.36206271952621716,
-      "drawProb": 0.26304556694860526,
-      "loseProb": 0.37489171352517753,
+      "winProb": 0.3648934913572469,
+      "drawProb": 0.26308619128243493,
+      "loseProb": 0.3720203173603181,
       "over25Prob": 0.49504950495049505,
       "isHome": true,
       "opponent": "Athletic Bilbao",
       "matchDate": "2026-05-02T16:30:00Z"
     },
     "Athletic Bilbao": {
-      "winProb": 0.37489171352517753,
-      "drawProb": 0.26304556694860526,
-      "loseProb": 0.36206271952621716,
+      "winProb": 0.3720203173603181,
+      "drawProb": 0.26308619128243493,
+      "loseProb": 0.3648934913572469,
       "over25Prob": 0.49504950495049505,
       "isHome": false,
       "opponent": "Alavés",
@@ -14669,9 +14669,9 @@
       "matchDate": "2026-05-02T19:00:00Z"
     },
     "Getafe": {
-      "winProb": 0.4448683867210691,
-      "drawProb": 0.2791842661533982,
-      "loseProb": 0.2759473471255327,
+      "winProb": 0.4572122042378307,
+      "drawProb": 0.2756525753086052,
+      "loseProb": 0.267135220453564,
       "over25Prob": 0.38167938931297707,
       "isHome": true,
       "opponent": "Rayo Vallecano",
@@ -14698,10 +14698,42 @@
   },
   "news": [
     {
-      "title": "Pablo Barrios vuelve a sufrir una lesión muscular",
-      "link": "https://www.jornadaperfecta.com/blog/barrios-lesion-atletico/",
-      "date": "Sat, 25 Apr 2026 20:30:49 +0000",
+      "title": "Luis Castro recupera a Brugué y habla de Carlos Álvarez",
+      "link": "https://www.jornadaperfecta.com/blog/luis-castro-previa-espanyol-levante-j32/",
+      "date": "Sun, 26 Apr 2026 11:25:16 +0000",
+      "img": "https://cdn.biwenger.com/i/t/10.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Mbappé, pendiente de evolución por una sobrecarga en el isquio",
+      "link": "https://www.jornadaperfecta.com/blog/mbappe-lesion-real-madrid/",
+      "date": "Sun, 26 Apr 2026 10:00:09 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Julián Alvarez, sin minutos por unas molestias: ¿llega a la Champions?",
+      "link": "https://www.jornadaperfecta.com/blog/julian-alvarez-molestias-atleti-ida-champions/",
+      "date": "Sun, 26 Apr 2026 09:00:52 +0000",
       "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Barrios vuelve a sufrir una lesión: Palabras del Cholo",
+      "link": "https://www.jornadaperfecta.com/blog/barrios-lesion-atletico/",
+      "date": "Sun, 26 Apr 2026 07:01:49 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Lucas Boyé sufrió un pinchazo muscular fuerte, según Quique",
+      "link": "https://www.jornadaperfecta.com/blog/lucas-boye-lesion-alaves/",
+      "date": "Sat, 25 Apr 2026 18:21:28 +0000",
+      "img": "https://cdn.biwenger.com/i/t/91.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
@@ -14718,14 +14750,6 @@
       "link": "https://www.jornadaperfecta.com/blog/marcelino-previa-villarreal-celta-j32/",
       "date": "Sat, 25 Apr 2026 17:00:23 +0000",
       "img": "https://cdn.biwenger.com/i/t/19.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Lucas Boyé sufrió un pinchazo muscular fuerte, según Quique",
-      "link": "https://www.jornadaperfecta.com/blog/lucas-boye-lesion-alaves/",
-      "date": "Sat, 25 Apr 2026 14:21:28 +0000",
-      "img": "https://cdn.biwenger.com/i/t/91.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
@@ -14752,37 +14776,13 @@
       "img": "https://cdn.biwenger.com/i/t/13.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "García Plaza, sobre la baja de Azpilicueta, Jordán y Manu Bueno",
-      "link": "https://www.jornadaperfecta.com/blog/garcia-plaza-previa-osasuna-sevilla-j32/",
-      "date": "Sat, 25 Apr 2026 11:46:28 +0000",
-      "img": "https://cdn.biwenger.com/i/t/17.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Álvaro García sufre una rotura muscular: tiempo de baja",
-      "link": "https://www.jornadaperfecta.com/blog/alvaro-garcia-rotura-muscular-rayo/",
-      "date": "Sat, 25 Apr 2026 11:36:27 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Iñigo Pérez habla de Mumin, y la sanción de Batalla",
-      "link": "https://www.jornadaperfecta.com/blog/inigo-perez-previa-rayo-real-sociedad-j32/",
-      "date": "Sat, 25 Apr 2026 11:36:25 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-26T07:14:29.417Z",
+    "updatedAt": "2026-04-26T12:36:53.660Z",
     "players": [
       {
         "id": "3374",
@@ -14857,6 +14857,18 @@
         "minutesPerGoal": 215
       },
       {
+        "id": "180137",
+        "name": "Mikel Oyarzabal",
+        "team": "Real Sociedad de Fútbol",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 30,
+        "goals": 13,
+        "assists": 3,
+        "penalties": 5,
+        "minutesPerGoal": 208
+      },
+      {
         "id": "8167",
         "name": "Alexander Sørloth",
         "team": "Club Atlético de Madrid",
@@ -14879,18 +14891,6 @@
         "assists": 1,
         "penalties": 3,
         "minutesPerGoal": 233
-      },
-      {
-        "id": "180137",
-        "name": "Mikel Oyarzabal",
-        "team": "Real Sociedad de Fútbol",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 29,
-        "goals": 12,
-        "assists": 3,
-        "penalties": 5,
-        "minutesPerGoal": 218
       },
       {
         "id": "371",
@@ -14946,11 +14946,11 @@
         "team": "Rayo Vallecano de Madrid",
         "position": "",
         "nationality": "Spain",
-        "appearances": 30,
+        "appearances": 31,
         "goals": 10,
         "assists": 1,
         "penalties": 1,
-        "minutesPerGoal": 270
+        "minutesPerGoal": 279
       },
       {
         "id": "32762",
@@ -15366,11 +15366,11 @@
         "team": "Real Sociedad de Fútbol",
         "position": "",
         "nationality": "Iceland",
-        "appearances": 16,
+        "appearances": 17,
         "goals": 5,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 288
+        "minutesPerGoal": 306
       },
       {
         "id": "213404",
@@ -15426,11 +15426,11 @@
         "team": "Real Sociedad de Fútbol",
         "position": "",
         "nationality": "Spain",
-        "appearances": 28,
+        "appearances": 29,
         "goals": 5,
         "assists": 2,
         "penalties": 1,
-        "minutesPerGoal": 504
+        "minutesPerGoal": 522
       },
       {
         "id": "122511",
@@ -15642,11 +15642,11 @@
         "team": "Real Sociedad de Fútbol",
         "position": "",
         "nationality": "Spain",
-        "appearances": 28,
+        "appearances": 29,
         "goals": 4,
         "assists": 3,
         "penalties": 0,
-        "minutesPerGoal": 630
+        "minutesPerGoal": 653
       },
       {
         "id": "125010",
@@ -15702,11 +15702,11 @@
         "team": "Rayo Vallecano de Madrid",
         "position": "",
         "nationality": "Spain",
-        "appearances": 30,
+        "appearances": 31,
         "goals": 3,
         "assists": 2,
         "penalties": 2,
-        "minutesPerGoal": 900
+        "minutesPerGoal": 930
       },
       {
         "id": "180280",
@@ -15750,11 +15750,11 @@
         "team": "Real Sociedad de Fútbol",
         "position": "",
         "nationality": "Spain",
-        "appearances": 26,
+        "appearances": 27,
         "goals": 3,
-        "assists": 4,
+        "assists": 5,
         "penalties": 0,
-        "minutesPerGoal": 780
+        "minutesPerGoal": 810
       },
       {
         "id": "126878",
@@ -15942,11 +15942,11 @@
         "team": "Real Sociedad de Fútbol",
         "position": "",
         "nationality": "Croatia",
-        "appearances": 29,
+        "appearances": 30,
         "goals": 3,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 870
+        "minutesPerGoal": 900
       },
       {
         "id": "3369",
@@ -15978,11 +15978,11 @@
         "team": "Real Sociedad de Fútbol",
         "position": "",
         "nationality": "Japan",
-        "appearances": 21,
+        "appearances": 22,
         "goals": 2,
         "assists": 4,
         "penalties": 0,
-        "minutesPerGoal": 945
+        "minutesPerGoal": 990
       }
     ]
   }
