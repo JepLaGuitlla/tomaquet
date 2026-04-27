@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-27T13:13:10.326Z",
+  "updatedAt": "2026-04-27T19:01:26.649Z",
   "players": [
     {
       "id": 11,
@@ -7703,14 +7703,14 @@
       "price": 1960000,
       "points": 134,
       "trend": -10000,
-      "playedHome": 15,
+      "playedHome": 16,
       "playedAway": 15,
       "teamName": "Rayo Vallecano",
       "teamId": 70,
       "status": "ok",
       "jForm": [
         null,
-        null,
+        0,
         null,
         7,
         7
@@ -12014,9 +12014,9 @@
           4,
           5
         ],
-        "teamSize": 15,
-        "teamValue": 110380000,
-        "teamValueInc": 300000,
+        "teamSize": 14,
+        "teamValue": 105480000,
+        "teamValueInc": 240000,
         "position": 1,
         "role": ""
       },
@@ -12176,9 +12176,9 @@
           9,
           14
         ],
-        "teamSize": 19,
-        "teamValue": 44680000,
-        "teamValueInc": 110000,
+        "teamSize": 21,
+        "teamValue": 52700000,
+        "teamValueInc": 380000,
         "position": 9
       },
       {
@@ -12193,9 +12193,9 @@
           11,
           3
         ],
-        "teamSize": 15,
-        "teamValue": 57770000,
-        "teamValueInc": 420000,
+        "teamSize": 14,
+        "teamValue": 54650000,
+        "teamValueInc": 210000,
         "position": 10,
         "role": ""
       },
@@ -12286,8 +12286,8 @@
       "name": "Albertini",
       "manager": "Albertini",
       "points": 1776,
-      "value": 110380000,
-      "trend": 300000,
+      "value": 105480000,
+      "trend": 240000,
       "players": []
     },
     {
@@ -12358,8 +12358,8 @@
       "name": "The Black Team",
       "manager": "The Black Team",
       "points": 1365,
-      "value": 44680000,
-      "trend": 110000,
+      "value": 52700000,
+      "trend": 380000,
       "players": []
     },
     {
@@ -12367,8 +12367,8 @@
       "name": "CIGALERU",
       "manager": "CIGALERU",
       "points": 1359,
-      "value": 57770000,
-      "trend": 420000,
+      "value": 54650000,
+      "trend": 210000,
       "players": []
     },
     {
@@ -12415,7 +12415,7 @@
     "balance": 14006254,
     "lineup": {
       "type": "5-4-1",
-      "date": 1777292961,
+      "date": 1777304123,
       "playersID": [
         17021,
         37495,
@@ -12614,6 +12614,42 @@
   "boardTomaquet": [
     {
       "type": "transfer",
+      "date": 1777295756,
+      "content": [
+        {
+          "player": 39431,
+          "from": {
+            "id": 12696899,
+            "name": "CIGALERU",
+            "icon": "i/u/12696899.png"
+          },
+          "to": {
+            "id": 3928497,
+            "name": "The Black Team",
+            "icon": "i/u/3928497.png"
+          },
+          "amount": 5280000,
+          "type": "clause"
+        },
+        {
+          "player": 2602,
+          "from": {
+            "id": 8068427,
+            "name": "Albertini",
+            "icon": "i/u/8068427.png"
+          },
+          "to": {
+            "id": 3928497,
+            "name": "The Black Team",
+            "icon": "i/u/3928497.png"
+          },
+          "amount": 9150000,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
       "date": 1777291571,
       "content": [
         {
@@ -12753,27 +12789,6 @@
             "icon": "https://graph.facebook.com/10235185447969563/picture?height=300&width=300"
           },
           "amount": 1750000
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1777238548,
-      "content": [
-        {
-          "player": 38493,
-          "from": {
-            "id": 12697101,
-            "name": "INDOMABLE FC",
-            "icon": "i/u/11757390.png"
-          },
-          "to": {
-            "id": 148051,
-            "name": "Zaza Pachulia",
-            "icon": "i/u/148051.png?v=39"
-          },
-          "amount": 3105000,
-          "type": "clause"
         }
       ]
     }
@@ -13521,7 +13536,7 @@
       {
         "id": 39736,
         "buyPrice": 150089,
-        "clause": 225000,
+        "clause": 0,
         "invested": 0,
         "buyDate": 1771912934
       },
@@ -13545,12 +13560,6 @@
         "price": 8055000,
         "type": "sale",
         "until": 1777347053
-      },
-      {
-        "playerID": 39736,
-        "price": 225000,
-        "type": "sale",
-        "until": 1777352797
       }
     ]
   },
@@ -13981,6 +13990,25 @@
       {
         "position": 13,
         "team": {
+          "id": 80,
+          "name": "RCD Espanyol de Barcelona",
+          "shortName": "Espanyol",
+          "tla": "ESP",
+          "crest": "https://crests.football-data.org/80.png"
+        },
+        "playedGames": 33,
+        "form": null,
+        "won": 10,
+        "draw": 9,
+        "lost": 14,
+        "points": 39,
+        "goalsFor": 37,
+        "goalsAgainst": 49,
+        "goalDifference": -12
+      },
+      {
+        "position": 14,
+        "team": {
           "id": 285,
           "name": "Elche CF",
           "shortName": "Elche",
@@ -13996,25 +14024,6 @@
         "goalsFor": 44,
         "goalsAgainst": 50,
         "goalDifference": -6
-      },
-      {
-        "position": 14,
-        "team": {
-          "id": 80,
-          "name": "RCD Espanyol de Barcelona",
-          "shortName": "Espanyol",
-          "tla": "ESP",
-          "crest": "https://crests.football-data.org/80.png"
-        },
-        "playedGames": 32,
-        "form": null,
-        "won": 10,
-        "draw": 8,
-        "lost": 14,
-        "points": 38,
-        "goalsFor": 37,
-        "goalsAgainst": 49,
-        "goalDifference": -12
       },
       {
         "position": 15,
@@ -14101,12 +14110,12 @@
           "tla": "LEV",
           "crest": "https://crests.football-data.org/88.png"
         },
-        "playedGames": 32,
+        "playedGames": 33,
         "form": null,
         "won": 8,
-        "draw": 8,
+        "draw": 9,
         "lost": 16,
-        "points": 32,
+        "points": 33,
         "goalsFor": 37,
         "goalsAgainst": 50,
         "goalDifference": -13
@@ -14141,7 +14150,7 @@
           "W"
         ],
         "gf": 6,
-        "ga": 9,
+        "ga": 8,
         "crest": "https://crests.football-data.org/77.png",
         "name": "Athletic Club"
       },
@@ -14296,7 +14305,7 @@
           "L",
           "W"
         ],
-        "gf": 9,
+        "gf": 8,
         "ga": 5,
         "crest": "https://crests.football-data.org/94.png",
         "name": "Villarreal CF"
@@ -14580,18 +14589,18 @@
       "matchDate": "2026-05-11T19:00:00Z"
     },
     "Mallorca": {
-      "winProb": 0.381124798299815,
-      "drawProb": 0.26466999881931597,
-      "loseProb": 0.354205202880869,
+      "winProb": 0.3734248358279596,
+      "drawProb": 0.26450925871147135,
+      "loseProb": 0.36206590546056916,
       "over25Prob": 0.5714285714285714,
       "isHome": true,
       "opponent": "Villarreal",
       "matchDate": "2026-05-10T12:00:00Z"
     },
     "Villarreal": {
-      "winProb": 0.354205202880869,
-      "drawProb": 0.26466999881931597,
-      "loseProb": 0.381124798299815,
+      "winProb": 0.36206590546056916,
+      "drawProb": 0.26450925871147135,
+      "loseProb": 0.3734248358279596,
       "over25Prob": 0.5714285714285714,
       "isHome": false,
       "opponent": "Mallorca",
@@ -14607,9 +14616,9 @@
       "matchDate": "2026-05-10T14:15:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.5303901676208692,
-      "drawProb": 0.24984168422140945,
-      "loseProb": 0.21976814815772128,
+      "winProb": 0.5061631190269331,
+      "drawProb": 0.26286924413553436,
+      "loseProb": 0.23096763683753263,
       "over25Prob": 0.5813953488372093,
       "isHome": true,
       "opponent": "Celta Vigo",
@@ -14652,9 +14661,9 @@
       "matchDate": "2026-05-10T19:00:00Z"
     },
     "Celta Vigo": {
-      "winProb": 0.21976814815772128,
-      "drawProb": 0.24984168422140945,
-      "loseProb": 0.5303901676208692,
+      "winProb": 0.23096763683753263,
+      "drawProb": 0.26286924413553436,
+      "loseProb": 0.5061631190269331,
       "over25Prob": 0.5813953488372093,
       "isHome": false,
       "opponent": "Atlético Madrid",
@@ -14735,82 +14744,82 @@
   },
   "news": [
     {
-      "title": "Álvaro Carreras ya no es titular en el Real Madrid, ¿venta fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/alvaro-carreras-venta-fantasy-real-madrid/",
-      "date": "Mon, 27 Apr 2026 13:00:26 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "title": "Julián Alvarez, Lookman y Hancko se apuntan a la Champions",
+      "link": "https://www.jornadaperfecta.com/blog/julian-alvarez-molestias-atleti-ida-champions/",
+      "date": "Mon, 27 Apr 2026 17:10:52 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Promoción Sportium Champions League: ¡apuesta a las semifinales con seguro!",
+      "link": "https://www.jornadaperfecta.com/blog/promocion-sportium-champions-league-seguro-semis/",
+      "date": "Mon, 27 Apr 2026 17:08:51 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/04/Sportium-Champions-League-seguro-ida-semifinales.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Koundé, lejos de su mejor nivel fantasy: ¿vender o mantener?",
+      "link": "https://www.jornadaperfecta.com/blog/kounde-decision-fantasy-barcelona/",
+      "date": "Mon, 27 Apr 2026 17:00:44 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
       "title": "¡Se confirma la lesión de Mbappé! Parte médico y tiempo de baja",
       "link": "https://www.jornadaperfecta.com/blog/mbappe-lesion-semitendinoso/",
-      "date": "Mon, 27 Apr 2026 11:55:34 +0000",
+      "date": "Mon, 27 Apr 2026 16:10:34 +0000",
       "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Tchouameni entrena con normalidad y Courtois avanza",
-      "link": "https://www.jornadaperfecta.com/blog/tchouameni-estado-j34/",
-      "date": "Mon, 27 Apr 2026 11:42:40 +0000",
+      "title": "Militao estará 5 meses de baja tras pasar por quirófano",
+      "link": "https://www.jornadaperfecta.com/blog/militao-lesion-real-madrid-2/",
+      "date": "Mon, 27 Apr 2026 15:49:31 +0000",
       "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "La lesión de Guedes genera dudas fantasy, ¿vender o mantener?",
-      "link": "https://www.jornadaperfecta.com/blog/guedes-dudas-fantasy-real-sociedad/",
-      "date": "Mon, 27 Apr 2026 11:00:50 +0000",
-      "img": "https://cdn.biwenger.com/i/t/13.png",
+      "title": "Sustitutos de Lamine Yamal: ¿quién interesa más en fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/lamine-yamal-sustitutos-beneficiados-fantasy/",
+      "date": "Mon, 27 Apr 2026 15:00:27 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Rubén Vargas no sufre lesión y dudas con Suazo y Sow",
-      "link": "https://www.jornadaperfecta.com/blog/ruben-vargas-sevilla-lesion/",
-      "date": "Mon, 27 Apr 2026 10:24:21 +0000",
-      "img": "https://cdn.biwenger.com/i/t/17.png",
+      "title": "Raphinha está cada vez más cerca de volver: Palabras de Flick",
+      "link": "https://www.jornadaperfecta.com/blog/raphinha-fecha-vuelta-fc-barcelona/",
+      "date": "Mon, 27 Apr 2026 13:51:14 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Actualizadas las Alineaciones Probables para la Jornada 34",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-probables-j34-laliga-25-26/",
-      "date": "Mon, 27 Apr 2026 09:00:00 +0000",
-      "img": "",
+      "title": "Luvumbo, buena noticia en el entrenamiento del Mallorca",
+      "link": "https://www.jornadaperfecta.com/blog/luvumbo-estado-mallorca-j34/",
+      "date": "Mon, 27 Apr 2026 13:46:20 +0000",
+      "img": "https://cdn.biwenger.com/i/t/465.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Gabriel Suazo, otro posible lesionado en el Sevilla",
-      "link": "https://www.jornadaperfecta.com/blog/suazo-lesion-hombro/",
-      "date": "Mon, 27 Apr 2026 08:17:04 +0000",
-      "img": "",
+      "title": "Boyé, rotura en los isquiotibiales y posible adiós a la temporada",
+      "link": "https://www.jornadaperfecta.com/blog/lucas-boye-lesion-alaves/",
+      "date": "Mon, 27 Apr 2026 13:05:28 +0000",
+      "img": "https://cdn.biwenger.com/i/t/91.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Lesionados que podrían llegar a la jornada 34 y descartados",
-      "link": "https://www.jornadaperfecta.com/blog/lesionados-j34-25-26/",
-      "date": "Mon, 27 Apr 2026 07:00:08 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/10/Lamine-Yamal-FC-Barcelona-fantasy.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Isi Palazón se expone a una dura sanción tras el acta",
-      "link": "https://www.jornadaperfecta.com/blog/isi-palazon-sancion-rayo-vallecano/",
-      "date": "Sun, 26 Apr 2026 16:42:56 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Luis Castro recupera a Brugué y habla de Carlos Álvarez",
-      "link": "https://www.jornadaperfecta.com/blog/luis-castro-previa-espanyol-levante-j32/",
-      "date": "Sun, 26 Apr 2026 14:57:16 +0000",
-      "img": "https://cdn.biwenger.com/i/t/10.png",
+      "title": "Álvaro Carreras ya no es titular en el Real Madrid, ¿venta fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/alvaro-carreras-venta-fantasy-real-madrid/",
+      "date": "Mon, 27 Apr 2026 13:00:26 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -14819,7 +14828,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-27T13:13:10.325Z",
+    "updatedAt": "2026-04-27T19:01:25.248Z",
     "players": [
       {
         "id": "3374",
@@ -15151,11 +15160,11 @@
         "team": "Levante UD",
         "position": "",
         "nationality": "Spain",
-        "appearances": 28,
+        "appearances": 29,
         "goals": 8,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 315
+        "minutesPerGoal": 326
       },
       {
         "id": "156746",
@@ -15271,11 +15280,11 @@
         "team": "Levante UD",
         "position": "",
         "nationality": "Cameroon",
-        "appearances": 30,
+        "appearances": 31,
         "goals": 6,
         "assists": 5,
         "penalties": 0,
-        "minutesPerGoal": 450
+        "minutesPerGoal": 465
       },
       {
         "id": "32398",
@@ -15283,11 +15292,11 @@
         "team": "RCD Espanyol de Barcelona",
         "position": "",
         "nationality": "Spain",
-        "appearances": 29,
+        "appearances": 30,
         "goals": 6,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 435
+        "minutesPerGoal": 450
       },
       {
         "id": "182319",
@@ -15343,11 +15352,11 @@
         "team": "RCD Espanyol de Barcelona",
         "position": "",
         "nationality": "Spain",
-        "appearances": 32,
+        "appearances": 33,
         "goals": 6,
         "assists": 1,
         "penalties": 1,
-        "minutesPerGoal": 480
+        "minutesPerGoal": 495
       },
       {
         "id": "33358",
@@ -15355,11 +15364,11 @@
         "team": "RCD Espanyol de Barcelona",
         "position": "",
         "nationality": "Spain",
-        "appearances": 32,
+        "appearances": 33,
         "goals": 6,
         "assists": 1,
         "penalties": 1,
-        "minutesPerGoal": 480
+        "minutesPerGoal": 495
       },
       {
         "id": "32758",
@@ -15451,11 +15460,11 @@
         "team": "RCD Espanyol de Barcelona",
         "position": "",
         "nationality": "Spain",
-        "appearances": 30,
+        "appearances": 31,
         "goals": 5,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 540
+        "minutesPerGoal": 558
       },
       {
         "id": "45680",
@@ -15847,11 +15856,11 @@
         "team": "Levante UD",
         "position": "",
         "nationality": "Spain",
-        "appearances": 29,
+        "appearances": 30,
         "goals": 3,
         "assists": 2,
         "penalties": 0,
-        "minutesPerGoal": 870
+        "minutesPerGoal": 900
       },
       {
         "id": "31913",
@@ -15883,11 +15892,11 @@
         "team": "RCD Espanyol de Barcelona",
         "position": "",
         "nationality": "Uruguay",
-        "appearances": 31,
+        "appearances": 32,
         "goals": 3,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 930
+        "minutesPerGoal": 960
       },
       {
         "id": "28292",
@@ -15955,11 +15964,11 @@
         "team": "Levante UD",
         "position": "",
         "nationality": "Spain",
-        "appearances": 33,
+        "appearances": 34,
         "goals": 3,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 990
+        "minutesPerGoal": 1020
       },
       {
         "id": "156967",
