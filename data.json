@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-27T08:00:57.564Z",
+  "updatedAt": "2026-04-27T13:13:10.326Z",
   "players": [
     {
       "id": 11,
@@ -12057,8 +12057,8 @@
           7
         ],
         "teamSize": 20,
-        "teamValue": 77210000,
-        "teamValueInc": 420000,
+        "teamValue": 77800000,
+        "teamValueInc": 450000,
         "position": 3
       },
       {
@@ -12073,9 +12073,9 @@
           3,
           2
         ],
-        "teamSize": 14,
-        "teamValue": 106530000,
-        "teamValueInc": 60000,
+        "teamSize": 13,
+        "teamValue": 102740000,
+        "teamValueInc": -50000,
         "position": 4,
         "positionInc": 1,
         "role": ""
@@ -12176,9 +12176,9 @@
           9,
           14
         ],
-        "teamSize": 20,
-        "teamValue": 47850000,
-        "teamValueInc": 290000,
+        "teamSize": 19,
+        "teamValue": 44680000,
+        "teamValueInc": 110000,
         "position": 9
       },
       {
@@ -12193,9 +12193,9 @@
           11,
           3
         ],
-        "teamSize": 13,
-        "teamValue": 51400000,
-        "teamValueInc": 160000,
+        "teamSize": 15,
+        "teamValue": 57770000,
+        "teamValueInc": 420000,
         "position": 10,
         "role": ""
       },
@@ -12304,8 +12304,8 @@
       "name": "🦊",
       "manager": "🦊",
       "points": 1643,
-      "value": 77210000,
-      "trend": 420000,
+      "value": 77800000,
+      "trend": 450000,
       "players": []
     },
     {
@@ -12313,8 +12313,8 @@
       "name": "Soulands Rangers",
       "manager": "Soulands Rangers",
       "points": 1537,
-      "value": 106530000,
-      "trend": 60000,
+      "value": 102740000,
+      "trend": -50000,
       "players": []
     },
     {
@@ -12358,8 +12358,8 @@
       "name": "The Black Team",
       "manager": "The Black Team",
       "points": 1365,
-      "value": 47850000,
-      "trend": 290000,
+      "value": 44680000,
+      "trend": 110000,
       "players": []
     },
     {
@@ -12367,8 +12367,8 @@
       "name": "CIGALERU",
       "manager": "CIGALERU",
       "points": 1359,
-      "value": 51400000,
-      "trend": 160000,
+      "value": 57770000,
+      "trend": 420000,
       "players": []
     },
     {
@@ -12412,22 +12412,22 @@
     "teamId": 6541195,
     "name": "🦊",
     "points": 1643,
-    "balance": 18422934,
+    "balance": 14006254,
     "lineup": {
-      "type": "4-5-1",
-      "date": 1777272758,
+      "type": "5-4-1",
+      "date": 1777292961,
       "playersID": [
         17021,
         37495,
         10245,
         26276,
         39885,
-        26994,
+        38178,
         11686,
         25127,
-        30787,
+        26994,
         38867,
-        27591
+        38843
       ],
       "reservesID": [
         null,
@@ -12437,6 +12437,13 @@
       ]
     },
     "players": [
+      {
+        "id": 38843,
+        "buyPrice": 8716680,
+        "clause": 13075020,
+        "invested": 0,
+        "buyDate": 1777291571
+      },
       {
         "id": 11686,
         "buyPrice": 8640000,
@@ -12489,8 +12496,8 @@
       {
         "id": 25127,
         "buyPrice": 18852333,
-        "clause": 28278499,
-        "invested": 0,
+        "clause": 29778499,
+        "invested": 1000000,
         "buyDate": 1771480952
       },
       {
@@ -12506,13 +12513,6 @@
         "clause": 10365000,
         "invested": 1000000,
         "buyDate": 1775649508
-      },
-      {
-        "id": 30787,
-        "buyPrice": 2468000,
-        "clause": 6300000,
-        "invested": 1000000,
-        "buyDate": 1776488555
       },
       {
         "id": 32460,
@@ -12552,8 +12552,8 @@
       {
         "id": 38867,
         "buyPrice": 10072222,
-        "clause": 28680000,
-        "invested": 8000000,
+        "clause": 30180000,
+        "invested": 9000000,
         "buyDate": 1769493971
       },
       {
@@ -12612,6 +12612,63 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1777291571,
+      "content": [
+        {
+          "player": 38843,
+          "from": {
+            "id": 8068002,
+            "name": "Soulands Rangers",
+            "icon": "i/u/8068002.png?v=69"
+          },
+          "to": {
+            "id": 6541195,
+            "name": "🦊",
+            "icon": "i/u/6541195.png?v=17"
+          },
+          "amount": 8716680,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1777288494,
+      "content": [
+        {
+          "player": 30787,
+          "from": {
+            "id": 6541195,
+            "name": "🦊",
+            "icon": "i/u/6541195.png?v=17"
+          },
+          "to": {
+            "id": 12696899,
+            "name": "CIGALERU",
+            "icon": "i/u/12696899.png"
+          },
+          "amount": 6300000,
+          "type": "clause"
+        },
+        {
+          "player": 26077,
+          "from": {
+            "id": 3928497,
+            "name": "The Black Team",
+            "icon": "i/u/3928497.png"
+          },
+          "to": {
+            "id": 12696899,
+            "name": "CIGALERU",
+            "icon": "i/u/12696899.png"
+          },
+          "amount": 7050000,
+          "type": "clause"
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1777268752,
@@ -12717,80 +12774,6 @@
           },
           "amount": 3105000,
           "type": "clause"
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1777219074,
-      "content": [
-        {
-          "player": 34805,
-          "from": {
-            "id": 6552586,
-            "name": "LeMola Team",
-            "icon": "i/u/6552586.png"
-          },
-          "amount": 793500
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1777179786,
-      "content": [
-        {
-          "player": 37495,
-          "to": {
-            "id": 6541195,
-            "name": "🦊",
-            "icon": "i/u/6541195.png?v=17"
-          },
-          "amount": 6685222,
-          "bids": [
-            {
-              "user": {
-                "id": 148051,
-                "name": "Zaza Pachulia",
-                "icon": "i/u/148051.png?v=39"
-              },
-              "amount": 6455646
-            },
-            {
-              "user": {
-                "id": 8068427,
-                "name": "Albertini",
-                "icon": "i/u/8068427.png"
-              },
-              "amount": 6030000
-            },
-            {
-              "user": {
-                "id": 11521196,
-                "name": "Hufflepuff 🍋",
-                "icon": "i/u/11521196.png?v=57"
-              },
-              "amount": 5848009
-            }
-          ]
-        },
-        {
-          "player": 38178,
-          "to": {
-            "id": 6541195,
-            "name": "🦊",
-            "icon": "i/u/6541195.png?v=17"
-          },
-          "amount": 1268999
-        },
-        {
-          "player": 40071,
-          "to": {
-            "id": 6541195,
-            "name": "🦊",
-            "icon": "i/u/6541195.png?v=17"
-          },
-          "amount": 190000
         }
       ]
     }
@@ -13461,7 +13444,7 @@
       {
         "id": 19577,
         "buyPrice": 27230011,
-        "clause": 44235000,
+        "clause": 0,
         "invested": 0,
         "buyDate": 1761890506
       },
@@ -14158,7 +14141,7 @@
           "W"
         ],
         "gf": 6,
-        "ga": 8,
+        "ga": 9,
         "crest": "https://crests.football-data.org/77.png",
         "name": "Athletic Club"
       },
@@ -14313,7 +14296,7 @@
           "L",
           "W"
         ],
-        "gf": 8,
+        "gf": 9,
         "ga": 5,
         "crest": "https://crests.football-data.org/94.png",
         "name": "Villarreal CF"
@@ -14597,18 +14580,18 @@
       "matchDate": "2026-05-11T19:00:00Z"
     },
     "Mallorca": {
-      "winProb": 0.37773359840954274,
-      "drawProb": 0.26441351888667997,
-      "loseProb": 0.35785288270377735,
+      "winProb": 0.381124798299815,
+      "drawProb": 0.26466999881931597,
+      "loseProb": 0.354205202880869,
       "over25Prob": 0.5714285714285714,
       "isHome": true,
       "opponent": "Villarreal",
       "matchDate": "2026-05-10T12:00:00Z"
     },
     "Villarreal": {
-      "winProb": 0.35785288270377735,
-      "drawProb": 0.26441351888667997,
-      "loseProb": 0.37773359840954274,
+      "winProb": 0.354205202880869,
+      "drawProb": 0.26466999881931597,
+      "loseProb": 0.381124798299815,
       "over25Prob": 0.5714285714285714,
       "isHome": false,
       "opponent": "Mallorca",
@@ -14752,18 +14735,66 @@
   },
   "news": [
     {
-      "title": "Lesionados que podrían llegar a la jornada 34 y descartados",
-      "link": "https://www.jornadaperfecta.com/blog/lesionados-j34-25-26/",
-      "date": "Mon, 27 Apr 2026 07:00:08 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/10/Lamine-Yamal-FC-Barcelona-fantasy.webp",
+      "title": "Álvaro Carreras ya no es titular en el Real Madrid, ¿venta fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/alvaro-carreras-venta-fantasy-real-madrid/",
+      "date": "Mon, 27 Apr 2026 13:00:26 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Rubén Vargas pide el cambio, ¿nueva lesión del suizo?",
+      "title": "¡Se confirma la lesión de Mbappé! Parte médico y tiempo de baja",
+      "link": "https://www.jornadaperfecta.com/blog/mbappe-lesion-semitendinoso/",
+      "date": "Mon, 27 Apr 2026 11:55:34 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Tchouameni entrena con normalidad y Courtois avanza",
+      "link": "https://www.jornadaperfecta.com/blog/tchouameni-estado-j34/",
+      "date": "Mon, 27 Apr 2026 11:42:40 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "La lesión de Guedes genera dudas fantasy, ¿vender o mantener?",
+      "link": "https://www.jornadaperfecta.com/blog/guedes-dudas-fantasy-real-sociedad/",
+      "date": "Mon, 27 Apr 2026 11:00:50 +0000",
+      "img": "https://cdn.biwenger.com/i/t/13.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Rubén Vargas no sufre lesión y dudas con Suazo y Sow",
       "link": "https://www.jornadaperfecta.com/blog/ruben-vargas-sevilla-lesion/",
-      "date": "Sun, 26 Apr 2026 18:24:21 +0000",
+      "date": "Mon, 27 Apr 2026 10:24:21 +0000",
       "img": "https://cdn.biwenger.com/i/t/17.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Actualizadas las Alineaciones Probables para la Jornada 34",
+      "link": "https://www.jornadaperfecta.com/blog/alineaciones-probables-j34-laliga-25-26/",
+      "date": "Mon, 27 Apr 2026 09:00:00 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Gabriel Suazo, otro posible lesionado en el Sevilla",
+      "link": "https://www.jornadaperfecta.com/blog/suazo-lesion-hombro/",
+      "date": "Mon, 27 Apr 2026 08:17:04 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Lesionados que podrían llegar a la jornada 34 y descartados",
+      "link": "https://www.jornadaperfecta.com/blog/lesionados-j34-25-26/",
+      "date": "Mon, 27 Apr 2026 07:00:08 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/10/Lamine-Yamal-FC-Barcelona-fantasy.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
@@ -14782,61 +14813,13 @@
       "img": "https://cdn.biwenger.com/i/t/10.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Manolo González, sobre la importancia de un partido clave",
-      "link": "https://www.jornadaperfecta.com/blog/manolo-gonzalez-previa-espanyol-levante-j32/",
-      "date": "Sun, 26 Apr 2026 14:57:15 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Barrios sufre una lesión muscular: Parte médico oficial",
-      "link": "https://www.jornadaperfecta.com/blog/barrios-lesion-atletico/",
-      "date": "Sun, 26 Apr 2026 12:01:49 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Mbappé, pendiente de evolución por una sobrecarga en el isquio",
-      "link": "https://www.jornadaperfecta.com/blog/mbappe-lesion-real-madrid/",
-      "date": "Sun, 26 Apr 2026 10:00:09 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Julián Alvarez, sin minutos por unas molestias: ¿llega a la Champions?",
-      "link": "https://www.jornadaperfecta.com/blog/julian-alvarez-molestias-atleti-ida-champions/",
-      "date": "Sun, 26 Apr 2026 09:00:52 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Militao pasará por quirófano: adiós a la temporada y al Mundial",
-      "link": "https://www.jornadaperfecta.com/blog/militao-lesion-real-madrid-2/",
-      "date": "Sun, 26 Apr 2026 07:30:31 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Lucas Boyé sufrió un pinchazo muscular fuerte, según Quique",
-      "link": "https://www.jornadaperfecta.com/blog/lucas-boye-lesion-alaves/",
-      "date": "Sat, 25 Apr 2026 18:21:28 +0000",
-      "img": "https://cdn.biwenger.com/i/t/91.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-27T08:00:56.364Z",
+    "updatedAt": "2026-04-27T13:13:10.325Z",
     "players": [
       {
         "id": "3374",
