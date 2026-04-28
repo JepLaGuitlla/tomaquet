@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-28T13:23:10.063Z",
+  "updatedAt": "2026-04-28T19:15:34.503Z",
   "players": [
     {
       "id": 11,
@@ -12006,13 +12006,13 @@
         "id": 8068427,
         "name": "Albertini",
         "icon": "i/u/8068427.png",
-        "points": 1776,
+        "points": 1830,
         "lastPositions": [
+          4,
           2,
           6,
           3,
-          4,
-          5
+          4
         ],
         "teamSize": 13,
         "teamValue": 92200000,
@@ -12025,13 +12025,13 @@
         "name": "LeMola Team",
         "icon": "i/u/6552586.png",
         "role": "manager",
-        "points": 1696,
+        "points": 1754,
         "lastPositions": [
+          2,
           9,
           3,
           5,
-          2,
-          8
+          2
         ],
         "teamSize": 17,
         "teamValue": 106030000,
@@ -12048,13 +12048,13 @@
         "name": "🦊",
         "icon": "i/u/6541195.png?v=17",
         "role": "manager",
-        "points": 1643,
+        "points": 1680,
         "lastPositions": [
+          11,
           1,
           2,
           1,
-          1,
-          7
+          1
         ],
         "teamSize": 20,
         "teamValue": 78510000,
@@ -12065,32 +12065,31 @@
         "id": 8068002,
         "name": "Soulands Rangers",
         "icon": "i/u/8068002.png?v=69",
-        "points": 1537,
+        "points": 1586,
         "lastPositions": [
+          5,
           4,
           10,
           12,
-          3,
-          2
+          3
         ],
         "teamSize": 15,
         "teamValue": 107270000,
         "teamValueInc": -100000,
         "position": 4,
-        "positionInc": 1,
         "role": ""
       },
       {
         "id": 8070044,
         "name": "CA CABA JUNIORS",
         "icon": "i/u/8070044.png?v=63",
-        "points": 1535,
+        "points": 1583,
         "lastPositions": [
+          8,
           8,
           4,
           7,
-          5,
-          9
+          5
         ],
         "teamSize": 19,
         "teamValue": 98650000,
@@ -12101,7 +12100,6 @@
           "season": "Temporada 2024/2025"
         },
         "position": 5,
-        "positionInc": -1,
         "role": ""
       },
       {
@@ -12109,12 +12107,12 @@
         "name": "Zaza Pachulia",
         "icon": "i/u/148051.png?v=39",
         "role": "manager",
-        "points": 1514,
+        "points": 1562,
         "lastPositions": [
+          7,
           6,
           1,
           4,
-          12,
           12
         ],
         "teamSize": 13,
@@ -12131,13 +12129,13 @@
         "id": 12697101,
         "name": "INDOMABLE FC",
         "icon": "i/u/11757390.png",
-        "points": 1505,
+        "points": 1554,
         "lastPositions": [
+          6,
           3,
           11,
           10,
-          7,
-          1
+          7
         ],
         "teamSize": 16,
         "teamValue": 77140000,
@@ -12149,13 +12147,13 @@
         "id": 12696491,
         "name": "NACECH1",
         "icon": "https://graph.facebook.com/10235185447969563/picture?height=300&width=300",
-        "points": 1424,
+        "points": 1481,
         "lastPositions": [
+          3,
           14,
           8,
           9,
-          8,
-          11
+          8
         ],
         "teamSize": 16,
         "teamValue": 55140000,
@@ -12164,52 +12162,54 @@
         "role": ""
       },
       {
-        "id": 3928497,
-        "name": "The Black Team",
-        "icon": "i/u/3928497.png",
-        "role": "manager",
-        "points": 1365,
-        "lastPositions": [
-          10,
-          5,
-          11,
-          9,
-          14
-        ],
-        "teamSize": 21,
-        "teamValue": 53110000,
-        "teamValueInc": 410000,
-        "position": 9
-      },
-      {
         "id": 12696899,
         "name": "CIGALERU",
         "icon": "i/u/12696899.png",
-        "points": 1359,
+        "points": 1430,
         "lastPositions": [
+          1,
           7,
           12,
           2,
-          11,
-          3
+          11
         ],
         "teamSize": 15,
         "teamValue": 59210000,
         "teamValueInc": 200000,
-        "position": 10,
+        "position": 9,
+        "positionInc": 1,
         "role": ""
+      },
+      {
+        "id": 3928497,
+        "name": "The Black Team",
+        "icon": "i/u/3928497.png",
+        "role": "manager",
+        "points": 1408,
+        "lastPositions": [
+          10,
+          10,
+          5,
+          11,
+          9
+        ],
+        "teamSize": 21,
+        "teamValue": 53110000,
+        "teamValueInc": 410000,
+        "position": 10,
+        "positionInc": -1
       },
       {
         "id": 12713493,
         "name": "Tata Martini",
         "icon": "i/u/12713493.png",
-        "points": 1315,
+        "points": 1360,
         "lastPositions": [
+          9,
           5,
           13,
           6,
-          10,
-          6
+          10
         ],
         "teamSize": 15,
         "teamValue": 61120000,
@@ -12220,38 +12220,36 @@
           "season": "Temporada 2023/2024"
         },
         "position": 11,
-        "positionInc": 1,
         "role": ""
       },
       {
         "id": 12696599,
         "name": "Trileros FC",
         "icon": "i/u/12696599.png",
-        "points": 1298,
+        "points": 1329,
         "lastPositions": [
+          13,
           13,
           7,
           13,
-          14,
-          4
+          14
         ],
         "teamSize": 10,
         "teamValue": 37240000,
         "teamValueInc": 10000,
         "position": 12,
-        "positionInc": -1,
         "role": ""
       },
       {
         "id": 11520975,
         "name": "Morankus FC",
         "icon": "i/u/11520975.png?v=81",
-        "points": 1285,
+        "points": 1322,
         "lastPositions": [
+          12,
           12,
           9,
           14,
-          13,
           13
         ],
         "teamSize": 17,
@@ -12264,13 +12262,13 @@
         "id": 11521196,
         "name": "Hufflepuff 🍋",
         "icon": "i/u/11521196.png?v=57",
-        "points": 1254,
+        "points": 1279,
         "lastPositions": [
+          14,
           11,
           14,
           8,
-          6,
-          10
+          6
         ],
         "teamSize": 18,
         "teamValue": 53840000,
@@ -12285,7 +12283,7 @@
       "id": 8068427,
       "name": "Albertini",
       "manager": "Albertini",
-      "points": 1776,
+      "points": 1830,
       "value": 92200000,
       "trend": 380000,
       "players": []
@@ -12294,7 +12292,7 @@
       "id": 6552586,
       "name": "LeMola Team",
       "manager": "LeMola Team",
-      "points": 1696,
+      "points": 1754,
       "value": 106030000,
       "trend": 440000,
       "players": []
@@ -12303,7 +12301,7 @@
       "id": 6541195,
       "name": "🦊",
       "manager": "🦊",
-      "points": 1643,
+      "points": 1680,
       "value": 78510000,
       "trend": 710000,
       "players": []
@@ -12312,7 +12310,7 @@
       "id": 8068002,
       "name": "Soulands Rangers",
       "manager": "Soulands Rangers",
-      "points": 1537,
+      "points": 1586,
       "value": 107270000,
       "trend": -100000,
       "players": []
@@ -12321,7 +12319,7 @@
       "id": 8070044,
       "name": "CA CABA JUNIORS",
       "manager": "CA CABA JUNIORS",
-      "points": 1535,
+      "points": 1583,
       "value": 98650000,
       "trend": 700000,
       "players": []
@@ -12330,7 +12328,7 @@
       "id": 148051,
       "name": "Zaza Pachulia",
       "manager": "Zaza Pachulia",
-      "points": 1514,
+      "points": 1562,
       "value": 96640000,
       "trend": 490000,
       "players": []
@@ -12339,7 +12337,7 @@
       "id": 12697101,
       "name": "INDOMABLE FC",
       "manager": "INDOMABLE FC",
-      "points": 1505,
+      "points": 1554,
       "value": 77140000,
       "trend": 610000,
       "players": []
@@ -12348,34 +12346,34 @@
       "id": 12696491,
       "name": "NACECH1",
       "manager": "NACECH1",
-      "points": 1424,
+      "points": 1481,
       "value": 55140000,
       "trend": 450000,
-      "players": []
-    },
-    {
-      "id": 3928497,
-      "name": "The Black Team",
-      "manager": "The Black Team",
-      "points": 1365,
-      "value": 53110000,
-      "trend": 410000,
       "players": []
     },
     {
       "id": 12696899,
       "name": "CIGALERU",
       "manager": "CIGALERU",
-      "points": 1359,
+      "points": 1430,
       "value": 59210000,
       "trend": 200000,
+      "players": []
+    },
+    {
+      "id": 3928497,
+      "name": "The Black Team",
+      "manager": "The Black Team",
+      "points": 1408,
+      "value": 53110000,
+      "trend": 410000,
       "players": []
     },
     {
       "id": 12713493,
       "name": "Tata Martini",
       "manager": "Tata Martini",
-      "points": 1315,
+      "points": 1360,
       "value": 61120000,
       "trend": 120000,
       "players": []
@@ -12384,7 +12382,7 @@
       "id": 12696599,
       "name": "Trileros FC",
       "manager": "Trileros FC",
-      "points": 1298,
+      "points": 1329,
       "value": 37240000,
       "trend": 10000,
       "players": []
@@ -12393,7 +12391,7 @@
       "id": 11520975,
       "name": "Morankus FC",
       "manager": "Morankus FC",
-      "points": 1285,
+      "points": 1322,
       "value": 38920000,
       "trend": 30000,
       "players": []
@@ -12402,7 +12400,7 @@
       "id": 11521196,
       "name": "Hufflepuff 🍋",
       "manager": "Hufflepuff 🍋",
-      "points": 1254,
+      "points": 1279,
       "value": 53840000,
       "trend": -180000,
       "players": []
@@ -12411,8 +12409,8 @@
   "myTeam": {
     "teamId": 6541195,
     "name": "🦊",
-    "points": 1643,
-    "balance": 13506254,
+    "points": 1680,
+    "balance": 14816254,
     "lineup": {
       "type": "5-4-1",
       "date": 1777363694,
@@ -12725,81 +12723,6 @@
           "amount": 359800
         }
       ]
-    },
-    {
-      "type": "market",
-      "date": 1777352623,
-      "content": [
-        {
-          "player": 33447,
-          "to": {
-            "id": 12697101,
-            "name": "INDOMABLE FC",
-            "icon": "i/u/11757390.png"
-          },
-          "amount": 5926858,
-          "bids": [
-            {
-              "user": {
-                "id": 6552586,
-                "name": "LeMola Team",
-                "icon": "i/u/6552586.png"
-              },
-              "amount": 4669000
-            },
-            {
-              "user": {
-                "id": 148051,
-                "name": "Zaza Pachulia",
-                "icon": "i/u/148051.png?v=39"
-              },
-              "amount": 4655466
-            },
-            {
-              "user": {
-                "id": 8070044,
-                "name": "CA CABA JUNIORS",
-                "icon": "i/u/8070044.png?v=63"
-              },
-              "amount": 4336244
-            },
-            {
-              "user": {
-                "id": 8068002,
-                "name": "Soulands Rangers",
-                "icon": "i/u/8068002.png?v=69"
-              },
-              "amount": 4220000
-            },
-            {
-              "user": {
-                "id": 12696899,
-                "name": "CIGALERU",
-                "icon": "i/u/12696899.png"
-              },
-              "amount": 3546500
-            }
-          ]
-        },
-        {
-          "player": 2219,
-          "to": {
-            "id": 8068002,
-            "name": "Soulands Rangers",
-            "icon": "i/u/8068002.png?v=69"
-          },
-          "amount": 1523330
-        },
-        {
-          "player": 1733,
-          "to": {
-            "id": 8068002,
-            "name": "Soulands Rangers",
-            "icon": "i/u/8068002.png?v=69"
-          },
-          "amount": 3690000
-        }
-      ]
     }
   ],
   "leagueEnBas": {
@@ -12822,9 +12745,9 @@
         "name": "Chempiooons",
         "icon": "img/tournament.png",
         "activeRound": {
-          "index": 14,
+          "index": 15,
           "type": "final",
-          "leg": "home"
+          "leg": "away"
         }
       },
       {
@@ -12832,9 +12755,9 @@
         "name": "Europa League",
         "icon": "img/tournament.png",
         "activeRound": {
-          "index": 5,
+          "index": 6,
           "type": "final",
-          "leg": "home"
+          "leg": "away"
         }
       }
     ],
@@ -12843,32 +12766,31 @@
         "id": 6588130,
         "name": "The GOAT club",
         "icon": "i/u/6588130.png?v=12",
-        "points": 1572,
+        "points": 1637,
         "lastPositions": [
+          1,
           1,
           2,
           4,
-          3,
           3
         ],
         "teamSize": 14,
         "teamValue": 100110000,
         "teamValueInc": 1000000,
         "position": 1,
-        "positionInc": 1,
         "role": ""
       },
       {
         "id": 9890450,
         "name": "MarK Lenders",
         "icon": "icons/34.png",
-        "points": 1540,
+        "points": 1592,
         "lastPositions": [
+          3,
           7,
           10,
           11,
-          6,
-          5
+          6
         ],
         "teamSize": 15,
         "teamValue": 76710000,
@@ -12879,20 +12801,19 @@
           "season": "Temporada 2024/2025"
         },
         "position": 2,
-        "positionInc": -1,
         "role": ""
       },
       {
         "id": 6579505,
         "name": "Xevi borrat",
         "icon": "i/u/6579505.png",
-        "points": 1517,
+        "points": 1566,
         "lastPositions": [
+          6,
           3,
           7,
           6,
-          1,
-          2
+          1
         ],
         "teamSize": 18,
         "teamValue": 102190000,
@@ -12901,52 +12822,54 @@
         "role": ""
       },
       {
-        "id": 6579402,
-        "name": "Valors FC",
-        "icon": "icons/7.png",
-        "points": 1424,
-        "lastPositions": [
-          8,
-          3,
-          7,
-          8,
-          17
-        ],
-        "teamSize": 19,
-        "teamValue": 63180000,
-        "teamValueInc": 420000,
-        "position": 4,
-        "role": ""
-      },
-      {
         "id": 11504267,
         "name": "🦊",
         "icon": "i/u/11504267.png",
         "role": "manager",
-        "points": 1417,
+        "points": 1466,
         "lastPositions": [
+          7,
           12,
           14,
           8,
-          14,
-          13
+          14
         ],
         "teamSize": 18,
         "teamValue": 90310000,
         "teamValueInc": -510000,
-        "position": 5
+        "position": 4,
+        "positionInc": 1
+      },
+      {
+        "id": 6579402,
+        "name": "Valors FC",
+        "icon": "icons/7.png",
+        "points": 1465,
+        "lastPositions": [
+          9,
+          8,
+          3,
+          7,
+          8
+        ],
+        "teamSize": 19,
+        "teamValue": 63180000,
+        "teamValueInc": 420000,
+        "position": 5,
+        "positionInc": -1,
+        "role": ""
       },
       {
         "id": 6580423,
         "name": "FC Borça",
         "icon": "i/t/3.png",
-        "points": 1409,
+        "points": 1444,
         "lastPositions": [
+          15,
           4,
           1,
           5,
-          18,
-          15
+          18
         ],
         "teamSize": 14,
         "teamValue": 61540000,
@@ -12959,13 +12882,13 @@
         "name": "Norimaki  FC",
         "icon": "icons/41.png",
         "role": "manager",
-        "points": 1350,
+        "points": 1400,
         "lastPositions": [
+          5,
           6,
           8,
           20,
-          13,
-          8
+          13
         ],
         "teamSize": 14,
         "teamValue": 87580000,
@@ -12977,13 +12900,13 @@
         "name": "Aiveen Teaam",
         "icon": "i/u/6579540.png?v=63",
         "role": "manager",
-        "points": 1317,
+        "points": 1368,
         "lastPositions": [
+          4,
           10,
           11,
           9,
-          12,
-          4
+          12
         ],
         "teamSize": 17,
         "teamValue": 48780000,
@@ -12994,13 +12917,13 @@
         "id": 7817228,
         "name": "Petraques",
         "icon": "i/u/7817228.png",
-        "points": 1298,
+        "points": 1332,
         "lastPositions": [
+          16,
           19,
           5,
           18,
-          15,
-          12
+          15
         ],
         "teamSize": 18,
         "teamValue": 59280000,
@@ -13012,13 +12935,13 @@
         "id": 6586225,
         "name": "Sergi Sala Duran",
         "icon": "https://graph.facebook.com/10156583054878679/picture?height=300&width=300",
-        "points": 1286,
+        "points": 1330,
         "lastPositions": [
+          8,
           2,
           16,
           14,
-          11,
-          6
+          11
         ],
         "teamSize": 14,
         "teamValue": 50730000,
@@ -13030,13 +12953,13 @@
         "id": 6580386,
         "name": "Lamine i els 7 nans 👯‍♀️",
         "icon": "i/u/6580386.png?v=10",
-        "points": 1241,
+        "points": 1277,
         "lastPositions": [
+          13,
           15,
           12,
           10,
-          4,
-          9
+          4
         ],
         "teamSize": 10,
         "teamValue": 30800000,
@@ -13050,34 +12973,53 @@
         "role": ""
       },
       {
+        "id": 9897660,
+        "name": "Eric Duran",
+        "points": 1251,
+        "lastPositions": [
+          2,
+          13,
+          18,
+          1,
+          2
+        ],
+        "teamSize": 19,
+        "teamValue": 75380000,
+        "teamValueInc": 60000,
+        "position": 12,
+        "positionInc": 4,
+        "role": ""
+      },
+      {
         "id": 6579283,
         "name": "Fiorenzola",
         "icon": "i/u/6579283.png?v=33",
-        "points": 1213,
+        "points": 1247,
         "lastPositions": [
+          17,
           14,
           17,
           12,
-          16,
-          14
+          16
         ],
         "teamSize": 14,
         "teamValue": 61880000,
         "teamValueInc": 150000,
-        "position": 12,
+        "position": 13,
+        "positionInc": -1,
         "role": ""
       },
       {
         "id": 6580389,
         "name": "Kings Team",
         "icon": "icons/31.png",
-        "points": 1207,
+        "points": 1246,
         "lastPositions": [
+          12,
           5,
           13,
           16,
-          17,
-          16
+          17
         ],
         "teamSize": 15,
         "teamValue": 26880000,
@@ -13087,20 +13029,20 @@
           "position": -1,
           "season": "Temporada 2024/2025"
         },
-        "position": 13,
-        "positionInc": 3,
+        "position": 14,
+        "positionInc": -1,
         "role": ""
       },
       {
         "id": 9890540,
         "name": "UE Trincadors",
-        "points": 1204,
+        "points": 1232,
         "lastPositions": [
+          19,
           16,
           9,
           15,
-          9,
-          11
+          9
         ],
         "teamSize": 15,
         "teamValue": 52330000,
@@ -13110,7 +13052,7 @@
           "position": 3,
           "season": "Temporada 2024/2025"
         },
-        "position": 14,
+        "position": 15,
         "positionInc": -1,
         "role": ""
       },
@@ -13118,35 +13060,17 @@
         "id": 6579280,
         "name": "Sant Pere Atlètic",
         "icon": "i/u/6579280.png?v=22",
-        "points": 1200,
+        "points": 1232,
         "lastPositions": [
+          18,
           17,
           4,
           17,
-          7,
           7
         ],
         "teamSize": 15,
         "teamValue": 42320000,
         "teamValueInc": 140000,
-        "position": 15,
-        "positionInc": -1,
-        "role": ""
-      },
-      {
-        "id": 9897660,
-        "name": "Eric Duran",
-        "points": 1196,
-        "lastPositions": [
-          13,
-          18,
-          1,
-          2,
-          1
-        ],
-        "teamSize": 19,
-        "teamValue": 75380000,
-        "teamValueInc": 60000,
         "position": 16,
         "positionInc": -1,
         "role": ""
@@ -13155,13 +13079,13 @@
         "id": 6579330,
         "name": "Mindundis",
         "icon": "i/u/6579330.png?v=66",
-        "points": 1183,
+        "points": 1222,
         "lastPositions": [
+          11,
           9,
           19,
           3,
-          5,
-          10
+          5
         ],
         "teamSize": 18,
         "teamValue": 54950000,
@@ -13173,12 +13097,12 @@
         "id": 6593096,
         "name": "Janwandowski",
         "icon": "i/u/6593096.png",
-        "points": 1153,
+        "points": 1189,
         "lastPositions": [
+          14,
           20,
           6,
           2,
-          19,
           19
         ],
         "teamSize": 19,
@@ -13191,13 +13115,13 @@
         "id": 6586257,
         "name": "Aquest any he trepitjat merda !!",
         "icon": "i/u/6586257.png",
-        "points": 1136,
+        "points": 1177,
         "lastPositions": [
+          10,
           11,
           15,
           13,
-          10,
-          18
+          10
         ],
         "teamSize": 15,
         "teamValue": 43690000,
@@ -13209,12 +13133,12 @@
         "id": 6585052,
         "name": "Tots som Olost",
         "icon": "i/u/6585052.png?v=69",
-        "points": 1026,
+        "points": 1033,
         "lastPositions": [
+          20,
           18,
           20,
           19,
-          20,
           20
         ],
         "teamSize": 15,
@@ -13230,7 +13154,7 @@
       "id": 6588130,
       "name": "The GOAT club",
       "manager": "The GOAT club",
-      "points": 1572,
+      "points": 1637,
       "value": 100110000,
       "trend": 1000000,
       "players": []
@@ -13239,7 +13163,7 @@
       "id": 9890450,
       "name": "MarK Lenders",
       "manager": "MarK Lenders",
-      "points": 1540,
+      "points": 1592,
       "value": 76710000,
       "trend": 520000,
       "players": []
@@ -13248,34 +13172,34 @@
       "id": 6579505,
       "name": "Xevi borrat",
       "manager": "Xevi borrat",
-      "points": 1517,
+      "points": 1566,
       "value": 102190000,
       "trend": 680000,
-      "players": []
-    },
-    {
-      "id": 6579402,
-      "name": "Valors FC",
-      "manager": "Valors FC",
-      "points": 1424,
-      "value": 63180000,
-      "trend": 420000,
       "players": []
     },
     {
       "id": 11504267,
       "name": "🦊",
       "manager": "🦊",
-      "points": 1417,
+      "points": 1466,
       "value": 90310000,
       "trend": -510000,
+      "players": []
+    },
+    {
+      "id": 6579402,
+      "name": "Valors FC",
+      "manager": "Valors FC",
+      "points": 1465,
+      "value": 63180000,
+      "trend": 420000,
       "players": []
     },
     {
       "id": 6580423,
       "name": "FC Borça",
       "manager": "FC Borça",
-      "points": 1409,
+      "points": 1444,
       "value": 61540000,
       "trend": 430000,
       "players": []
@@ -13284,7 +13208,7 @@
       "id": 6578885,
       "name": "Norimaki  FC",
       "manager": "Norimaki  FC",
-      "points": 1350,
+      "points": 1400,
       "value": 87580000,
       "trend": 940000,
       "players": []
@@ -13293,7 +13217,7 @@
       "id": 6579540,
       "name": "Aiveen Teaam",
       "manager": "Aiveen Teaam",
-      "points": 1317,
+      "points": 1368,
       "value": 48780000,
       "trend": 450000,
       "players": []
@@ -13302,7 +13226,7 @@
       "id": 7817228,
       "name": "Petraques",
       "manager": "Petraques",
-      "points": 1298,
+      "points": 1332,
       "value": 59280000,
       "trend": -220000,
       "players": []
@@ -13311,7 +13235,7 @@
       "id": 6586225,
       "name": "Sergi Sala Duran",
       "manager": "Sergi Sala Duran",
-      "points": 1286,
+      "points": 1330,
       "value": 50730000,
       "trend": 400000,
       "players": []
@@ -13320,16 +13244,25 @@
       "id": 6580386,
       "name": "Lamine i els 7 nans 👯‍♀️",
       "manager": "Lamine i els 7 nans 👯‍♀️",
-      "points": 1241,
+      "points": 1277,
       "value": 30800000,
       "trend": 300000,
+      "players": []
+    },
+    {
+      "id": 9897660,
+      "name": "Eric Duran",
+      "manager": "Eric Duran",
+      "points": 1251,
+      "value": 75380000,
+      "trend": 60000,
       "players": []
     },
     {
       "id": 6579283,
       "name": "Fiorenzola",
       "manager": "Fiorenzola",
-      "points": 1213,
+      "points": 1247,
       "value": 61880000,
       "trend": 150000,
       "players": []
@@ -13338,7 +13271,7 @@
       "id": 6580389,
       "name": "Kings Team",
       "manager": "Kings Team",
-      "points": 1207,
+      "points": 1246,
       "value": 26880000,
       "trend": 70000,
       "players": []
@@ -13347,7 +13280,7 @@
       "id": 9890540,
       "name": "UE Trincadors",
       "manager": "UE Trincadors",
-      "points": 1204,
+      "points": 1232,
       "value": 52330000,
       "trend": -110000,
       "players": []
@@ -13356,25 +13289,16 @@
       "id": 6579280,
       "name": "Sant Pere Atlètic",
       "manager": "Sant Pere Atlètic",
-      "points": 1200,
+      "points": 1232,
       "value": 42320000,
       "trend": 140000,
-      "players": []
-    },
-    {
-      "id": 9897660,
-      "name": "Eric Duran",
-      "manager": "Eric Duran",
-      "points": 1196,
-      "value": 75380000,
-      "trend": 60000,
       "players": []
     },
     {
       "id": 6579330,
       "name": "Mindundis",
       "manager": "Mindundis",
-      "points": 1183,
+      "points": 1222,
       "value": 54950000,
       "trend": 500000,
       "players": []
@@ -13383,7 +13307,7 @@
       "id": 6593096,
       "name": "Janwandowski",
       "manager": "Janwandowski",
-      "points": 1153,
+      "points": 1189,
       "value": 45390000,
       "trend": 280000,
       "players": []
@@ -13392,7 +13316,7 @@
       "id": 6586257,
       "name": "Aquest any he trepitjat merda !!",
       "manager": "Aquest any he trepitjat merda !!",
-      "points": 1136,
+      "points": 1177,
       "value": 43690000,
       "trend": 380000,
       "players": []
@@ -13401,7 +13325,7 @@
       "id": 6585052,
       "name": "Tots som Olost",
       "manager": "Tots som Olost",
-      "points": 1026,
+      "points": 1033,
       "value": 33850000,
       "trend": 390000,
       "players": []
@@ -13410,8 +13334,8 @@
   "myTeamEnBas": {
     "teamId": 11504267,
     "name": "🦊",
-    "points": 1417,
-    "balance": 5735668,
+    "points": 1466,
+    "balance": 6225668,
     "lineup": {
       "type": "3-4-3",
       "date": 1777369763,
@@ -13782,21 +13706,6 @@
           },
           "amount": 190000,
           "type": "immediateSale"
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1777271171,
-      "content": [
-        {
-          "player": 33938,
-          "from": {
-            "id": 6586257,
-            "name": "Aquest any he trepitjat merda !!",
-            "icon": "i/u/6586257.png"
-          },
-          "amount": 293700
         }
       ]
     }
@@ -14195,7 +14104,7 @@
           "W"
         ],
         "gf": 6,
-        "ga": 9,
+        "ga": 8,
         "crest": "https://crests.football-data.org/77.png",
         "name": "Athletic Club"
       },
@@ -14350,7 +14259,7 @@
           "L",
           "W"
         ],
-        "gf": 9,
+        "gf": 8,
         "ga": 5,
         "crest": "https://crests.football-data.org/94.png",
         "name": "Villarreal CF"
@@ -15011,10 +14920,10 @@
       "matchDate": "2026-05-08T19:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.5253693083356766,
-      "drawProb": 0.2308054485649453,
-      "loseProb": 0.24382524309937814,
-      "over25Prob": 0.8,
+      "winProb": 0.5256971298970419,
+      "drawProb": 0.2309494672605936,
+      "loseProb": 0.24335340284236462,
+      "over25Prob": 0.7874015748031495,
       "isHome": true,
       "opponent": "Real Madrid",
       "matchDate": "2026-05-10T19:00:00Z"
@@ -15083,10 +14992,10 @@
       "matchDate": "2026-05-09T14:15:00Z"
     },
     "Real Madrid": {
-      "winProb": 0.24382524309937814,
-      "drawProb": 0.2308054485649453,
-      "loseProb": 0.5253693083356766,
-      "over25Prob": 0.8,
+      "winProb": 0.24335340284236462,
+      "drawProb": 0.2309494672605936,
+      "loseProb": 0.5256971298970419,
+      "over25Prob": 0.7874015748031495,
       "isHome": false,
       "opponent": "Barcelona",
       "matchDate": "2026-05-10T19:00:00Z"
@@ -15111,6 +15020,54 @@
     }
   },
   "news": [
+    {
+      "title": "Chollos LaLiga Fantasy: Fichajes Baratos y Rentables para la jornada 34",
+      "link": "https://www.jornadaperfecta.com/blog/chollos-laliga-fantasy-j34-25-26/",
+      "date": "Tue, 28 Apr 2026 19:00:33 +0000",
+      "img": "https://i.ytimg.com/vi/sPLRB6T4C-E/mqdefault.jpg",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Nico González sufre una lesión muscular. ¿Se pierde el resto de la temporada?",
+      "link": "https://www.jornadaperfecta.com/blog/nico-gonzalez-rotura-muscular-26/",
+      "date": "Tue, 28 Apr 2026 18:20:19 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "¡Alerta Fantasy!: Ventas que debes hacer tras la Jornada 33 de LaLiga",
+      "link": "https://www.jornadaperfecta.com/blog/ventas-fantasy-j33-laliga-25-26/",
+      "date": "Tue, 28 Apr 2026 17:00:10 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Atlético de Madrid vs Arsenal: análisis, cuotas 888Sport y mejores apuestas en Champions League",
+      "link": "https://www.jornadaperfecta.com/blog/888sport-atletico-vs-arsenal-cuotas/",
+      "date": "Tue, 28 Apr 2026 16:00:33 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/04/888Sport-Atletico-vs-Arsenal-cuotas.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Atlético, alineación probable contra el Arsenal y dónde ver en TV",
+      "link": "https://www.jornadaperfecta.com/blog/atletico-alineacion-probable-arsenal-ida-26/",
+      "date": "Tue, 28 Apr 2026 15:00:21 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Dela pasa pruebas médicas por unas molestias en el aductor, ¿preocupa?",
+      "link": "https://www.jornadaperfecta.com/blog/dela-estado-levante-j34/",
+      "date": "Tue, 28 Apr 2026 14:37:02 +0000",
+      "img": "https://cdn.biwenger.com/i/t/10.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Oyarzabal va a por el Zarra, ¿muy recomendable en fantasy?",
       "link": "https://www.jornadaperfecta.com/blog/oyarzabal-zarra-fantasy-real-sociedad/",
@@ -15142,61 +15099,13 @@
       "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "El gran momento goleador de Toni Martínez en el Alavés, ¿chollazo fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/toni-martinez-alaves-chollo-fantasy/",
-      "date": "Tue, 28 Apr 2026 11:00:40 +0000",
-      "img": "https://cdn.biwenger.com/i/t/91.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Julián Alvarez, Lookman y Hancko se apuntan a la Champions",
-      "link": "https://www.jornadaperfecta.com/blog/julian-alvarez-molestias-atleti-ida-champions/",
-      "date": "Tue, 28 Apr 2026 10:45:52 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Marc Bartra dice adiós a la temporada: parte médico y tiempo de baja",
-      "link": "https://www.jornadaperfecta.com/blog/bartra-lesion-real-betis/",
-      "date": "Tue, 28 Apr 2026 10:20:31 +0000",
-      "img": "https://cdn.biwenger.com/i/t/87.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Junior Firpo vuelve a entrenar y Bartra espera pruebas",
-      "link": "https://www.jornadaperfecta.com/blog/junior-firpo-vuelve-a-entrenar-y-bartra-espera-pruebas/",
-      "date": "Tue, 28 Apr 2026 10:14:36 +0000",
-      "img": "https://cdn.biwenger.com/i/t/87.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Luvumbo repite entrenamiento y Muriqi se ausenta",
-      "link": "https://www.jornadaperfecta.com/blog/luvumbo-estado-mallorca-j34/",
-      "date": "Tue, 28 Apr 2026 09:40:20 +0000",
-      "img": "https://cdn.biwenger.com/i/t/465.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Grandes subidas y bajadas del mercado fantasy para la Jornada 34",
-      "link": "https://www.jornadaperfecta.com/blog/subidas-bajadas-j34-25-26/",
-      "date": "Tue, 28 Apr 2026 09:00:10 +0000",
-      "img": "https://cdn.biwenger.com/i/t/13.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-28T13:23:07.505Z",
+    "updatedAt": "2026-04-28T19:15:33.175Z",
     "players": [
       {
         "id": "3374",
