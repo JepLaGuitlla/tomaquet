@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-29T13:16:36.085Z",
+  "updatedAt": "2026-04-29T19:04:48.713Z",
   "players": [
     {
       "id": 11,
@@ -12697,27 +12697,6 @@
           "type": "clause"
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1777363521,
-      "content": [
-        {
-          "player": 34802,
-          "from": {
-            "id": 12696899,
-            "name": "CIGALERU",
-            "icon": "i/u/12696899.png"
-          },
-          "to": {
-            "id": 8070044,
-            "name": "CA CABA JUNIORS",
-            "icon": "i/u/8070044.png?v=63"
-          },
-          "amount": 20334375,
-          "type": "clause"
-        }
-      ]
     }
   ],
   "leagueEnBas": {
@@ -13713,21 +13692,6 @@
           "amount": 150000
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1777380648,
-      "content": [
-        {
-          "player": 14373,
-          "from": {
-            "id": 6586257,
-            "name": "Aquest any he trepitjat merda !!",
-            "icon": "i/u/6586257.png"
-          },
-          "amount": 386500
-        }
-      ]
     }
   ],
   "laliga": {
@@ -14124,7 +14088,7 @@
           "W"
         ],
         "gf": 6,
-        "ga": 9,
+        "ga": 8,
         "crest": "https://crests.football-data.org/77.png",
         "name": "Athletic Club"
       },
@@ -14279,7 +14243,7 @@
           "L",
           "W"
         ],
-        "gf": 9,
+        "gf": 8,
         "ga": 5,
         "crest": "https://crests.football-data.org/94.png",
         "name": "Villarreal CF"
@@ -14868,18 +14832,18 @@
       "matchDate": "2026-05-11T19:00:00Z"
     },
     "Mallorca": {
-      "winProb": 0.3734248358279596,
-      "drawProb": 0.26450925871147135,
-      "loseProb": 0.36206590546056916,
+      "winProb": 0.3569910752231194,
+      "drawProb": 0.2647683807904802,
+      "loseProb": 0.3782405439864003,
       "over25Prob": 0.5714285714285714,
       "isHome": true,
       "opponent": "Villarreal",
       "matchDate": "2026-05-10T12:00:00Z"
     },
     "Villarreal": {
-      "winProb": 0.36206590546056916,
-      "drawProb": 0.26450925871147135,
-      "loseProb": 0.3734248358279596,
+      "winProb": 0.3782405439864003,
+      "drawProb": 0.2647683807904802,
+      "loseProb": 0.3569910752231194,
       "over25Prob": 0.5714285714285714,
       "isHome": false,
       "opponent": "Mallorca",
@@ -14985,9 +14949,9 @@
       "matchDate": "2026-05-11T19:00:00Z"
     },
     "Real Betis": {
-      "winProb": 0.3023255813953488,
-      "drawProb": 0.2667578659370725,
-      "loseProb": 0.43091655266757867,
+      "winProb": 0.3025510223592081,
+      "drawProb": 0.2662110950925993,
+      "loseProb": 0.43123788254819256,
       "over25Prob": 0.6060606060606061,
       "isHome": false,
       "opponent": "Real Sociedad",
@@ -15030,9 +14994,9 @@
       "matchDate": "2026-05-09T14:15:00Z"
     },
     "Real Sociedad": {
-      "winProb": 0.43091655266757867,
-      "drawProb": 0.2667578659370725,
-      "loseProb": 0.3023255813953488,
+      "winProb": 0.43123788254819256,
+      "drawProb": 0.2662110950925993,
+      "loseProb": 0.3025510223592081,
       "over25Prob": 0.6060606060606061,
       "isHome": true,
       "opponent": "Real Betis",
@@ -15041,10 +15005,66 @@
   },
   "news": [
     {
+      "title": "Podcast: Alineaciones Probables Jornada 34 2025/26",
+      "link": "https://www.jornadaperfecta.com/blog/podcast-alineaciones-probables-jornada-34-2025-26/",
+      "date": "Wed, 29 Apr 2026 18:31:56 +0000",
+      "img": "https://i.ytimg.com/vi/ykgJ10y_rsw/mqdefault.jpg",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Iñigo Pérez, sobre una cita histórica y el estado de Batalla",
+      "link": "https://www.jornadaperfecta.com/blog/inigo-perez-previa-ida-semifinales-conference-26/",
+      "date": "Wed, 29 Apr 2026 18:19:20 +0000",
+      "img": "https://cdn.biwenger.com/i/t/70.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Unai Marrero, con opciones en la portería de la Real Sociedad en el final de temporada",
+      "link": "https://www.jornadaperfecta.com/blog/unai-marrero-titularidad-j34-25-26/",
+      "date": "Wed, 29 Apr 2026 17:47:37 +0000",
+      "img": "https://cdn.biwenger.com/i/t/13.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Batalla entrena con el grupo en la previa de Conference. ¿Titular en la Jornada 34?",
+      "link": "https://www.jornadaperfecta.com/blog/batalla-estado-j34-25-26/",
+      "date": "Wed, 29 Apr 2026 17:21:26 +0000",
+      "img": "https://cdn.biwenger.com/i/t/70.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Starfelt podría perderse el resto de la temporada por su lumbalgia",
+      "link": "https://www.jornadaperfecta.com/blog/starfelt-molestias-lumbalgia-26/",
+      "date": "Wed, 29 Apr 2026 16:30:47 +0000",
+      "img": "https://cdn.biwenger.com/i/t/5.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Víctor Muñoz cae lesionado y Aimar Oroz es duda",
       "link": "https://www.jornadaperfecta.com/blog/victor-munoz-lesion-soleo/",
-      "date": "Wed, 29 Apr 2026 13:04:25 +0000",
+      "date": "Wed, 29 Apr 2026 15:45:25 +0000",
       "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Isi Palazón se pierde el resto de la temporada: ¡7 partidos de sanción!",
+      "link": "https://www.jornadaperfecta.com/blog/isi-palazon-sancion-rayo-vallecano/",
+      "date": "Wed, 29 Apr 2026 15:00:56 +0000",
+      "img": "https://cdn.biwenger.com/i/t/70.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Los Ases de PixonFantasy para la Jornada 34",
+      "link": "https://www.jornadaperfecta.com/blog/ases-fantasy-j34-25-26/",
+      "date": "Wed, 29 Apr 2026 15:00:04 +0000",
+      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2665.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
@@ -15063,69 +15083,13 @@
       "img": "https://cdn.biwenger.com/i/t/2.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Cömert entrena con el grupo y Agirrezabala hace solo una parte",
-      "link": "https://www.jornadaperfecta.com/blog/comert-estado-j34/",
-      "date": "Wed, 29 Apr 2026 11:14:28 +0000",
-      "img": "https://cdn.biwenger.com/i/t/18.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Courtois ya asoma en su recuperación. ¿Merece la pena en fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/courtois-analisis-recuperacion-lesion-26/",
-      "date": "Wed, 29 Apr 2026 11:00:23 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/04/image-2026-04-28T192109.139.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Raphinha y Bernal entrenan con el grupo, ¿llegan a la jornada 34?",
-      "link": "https://www.jornadaperfecta.com/blog/raphinha-bernal-vuelta-j34/",
-      "date": "Wed, 29 Apr 2026 10:09:58 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Mbappé, su lesión y el Mundial, ¿vender o mantener en fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/mbappe-venta-fantasy-real-madrid/",
-      "date": "Wed, 29 Apr 2026 09:00:33 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Gabriel Suazo no entrena, pero no preocupa. Azpilicueta, con el grupo",
-      "link": "https://www.jornadaperfecta.com/blog/suazo-lesion-hombro/",
-      "date": "Wed, 29 Apr 2026 08:17:04 +0000",
-      "img": "https://cdn.biwenger.com/i/t/17.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Promoción Luckia Europa y Conference League : ¡Combinada con seguro de hasta 10€!",
-      "link": "https://www.jornadaperfecta.com/blog/promocion-luckia-europa-conference-league/",
-      "date": "Wed, 29 Apr 2026 08:00:51 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/04/Luckia-Europa-y-Conference-League-seguro.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Atlético, alineación probable contra el Arsenal y dónde ver en TV",
-      "link": "https://www.jornadaperfecta.com/blog/atletico-alineacion-probable-arsenal-ida-26/",
-      "date": "Wed, 29 Apr 2026 07:00:21 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-29T13:16:34.170Z",
+    "updatedAt": "2026-04-29T19:04:46.357Z",
     "players": [
       {
         "id": "3374",
