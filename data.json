@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-30T07:58:24.635Z",
+  "updatedAt": "2026-04-30T13:15:40.367Z",
   "players": [
     {
       "id": 11,
@@ -4773,7 +4773,7 @@
     {
       "id": 19862,
       "slug": "edu-exposito-2",
-      "name": "Expósito",
+      "name": "Exp��sito",
       "position": 3,
       "price": 6490000,
       "points": 163,
@@ -12033,9 +12033,9 @@
           5,
           2
         ],
-        "teamSize": 16,
-        "teamValue": 98940000,
-        "teamValueInc": 420000,
+        "teamSize": 17,
+        "teamValue": 103730000,
+        "teamValueInc": 480000,
         "lastTrophy": {
           "type": "league",
           "position": 2,
@@ -12056,9 +12056,9 @@
           1,
           1
         ],
-        "teamSize": 20,
-        "teamValue": 79950000,
-        "teamValueInc": 1010000,
+        "teamSize": 19,
+        "teamValue": 77900000,
+        "teamValueInc": 910000,
         "position": 3
       },
       {
@@ -12091,9 +12091,9 @@
           7,
           5
         ],
-        "teamSize": 20,
-        "teamValue": 101230000,
-        "teamValueInc": 890000,
+        "teamSize": 19,
+        "teamValue": 92110000,
+        "teamValueInc": 870000,
         "lastTrophy": {
           "type": "league",
           "position": 3,
@@ -12253,8 +12253,8 @@
           13
         ],
         "teamSize": 17,
-        "teamValue": 38960000,
-        "teamValueInc": 140000,
+        "teamValue": 36220000,
+        "teamValueInc": 180000,
         "position": 13,
         "role": ""
       },
@@ -12293,8 +12293,8 @@
       "name": "LeMola Team",
       "manager": "LeMola Team",
       "points": 1754,
-      "value": 98940000,
-      "trend": 420000,
+      "value": 103730000,
+      "trend": 480000,
       "players": []
     },
     {
@@ -12302,8 +12302,8 @@
       "name": "🦊",
       "manager": "🦊",
       "points": 1680,
-      "value": 79950000,
-      "trend": 1010000,
+      "value": 77900000,
+      "trend": 910000,
       "players": []
     },
     {
@@ -12320,8 +12320,8 @@
       "name": "CA CABA JUNIORS",
       "manager": "CA CABA JUNIORS",
       "points": 1583,
-      "value": 101230000,
-      "trend": 890000,
+      "value": 92110000,
+      "trend": 870000,
       "players": []
     },
     {
@@ -12392,8 +12392,8 @@
       "name": "Morankus FC",
       "manager": "Morankus FC",
       "points": 1322,
-      "value": 38960000,
-      "trend": 140000,
+      "value": 36220000,
+      "trend": 180000,
       "players": []
     },
     {
@@ -12410,16 +12410,16 @@
     "teamId": 6541195,
     "name": "🦊",
     "points": 1680,
-    "balance": 13316254,
+    "balance": 15891254,
     "lineup": {
       "type": "5-4-1",
-      "date": 1777494604,
+      "date": 1777539637,
       "playersID": [
         17021,
         37495,
         10245,
         26276,
-        39885,
+        39360,
         38178,
         11686,
         25127,
@@ -12429,7 +12429,7 @@
       ],
       "reservesID": [
         null,
-        39360,
+        32460,
         38116,
         9966
       ]
@@ -12487,8 +12487,8 @@
       {
         "id": 25127,
         "buyPrice": 18852333,
-        "clause": 30528499,
-        "invested": 1500000,
+        "clause": 32778499,
+        "invested": 3000000,
         "buyDate": 1771480952
       },
       {
@@ -12501,8 +12501,8 @@
       {
         "id": 26994,
         "buyPrice": 5715000,
-        "clause": 10695000,
-        "invested": 1000000,
+        "clause": 12195000,
+        "invested": 2000000,
         "buyDate": 1775649508
       },
       {
@@ -12550,8 +12550,8 @@
       {
         "id": 38867,
         "buyPrice": 10072222,
-        "clause": 30525000,
-        "invested": 9000000,
+        "clause": 32025000,
+        "invested": 10000000,
         "buyDate": 1769493971
       },
       {
@@ -12560,13 +12560,6 @@
         "clause": 5778333,
         "invested": 0,
         "buyDate": 1775451744
-      },
-      {
-        "id": 39885,
-        "buyPrice": 162532,
-        "clause": 6075000,
-        "invested": 2000000,
-        "buyDate": 1770616993
       },
       {
         "id": 40071,
@@ -12592,6 +12585,63 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1777539361,
+      "content": [
+        {
+          "player": 30789,
+          "from": {
+            "id": 8070044,
+            "name": "CA CABA JUNIORS",
+            "icon": "i/u/8070044.png?v=63"
+          },
+          "amount": 9575000
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1777539261,
+      "content": [
+        {
+          "player": 39885,
+          "from": {
+            "id": 6541195,
+            "name": "🦊",
+            "icon": "i/u/6541195.png?v=17"
+          },
+          "to": {
+            "id": 11520975,
+            "name": "Morankus FC",
+            "icon": "i/u/11520975.png?v=81"
+          },
+          "amount": 6075000,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1777537650,
+      "content": [
+        {
+          "player": 38369,
+          "from": {
+            "id": 11520975,
+            "name": "Morankus FC",
+            "icon": "i/u/11520975.png?v=81"
+          },
+          "to": {
+            "id": 6552586,
+            "name": "LeMola Team",
+            "icon": "i/u/6552586.png"
+          },
+          "amount": 8452269,
+          "type": "clause"
+        }
+      ]
+    },
     {
       "type": "market",
       "date": 1777525425,
@@ -12662,112 +12712,6 @@
           },
           "amount": 1500000,
           "type": "clause"
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1777498199,
-      "content": [
-        {
-          "player": 2476,
-          "from": {
-            "id": 6552586,
-            "name": "LeMola Team",
-            "icon": "i/u/6552586.png"
-          },
-          "to": {
-            "id": 8070044,
-            "name": "CA CABA JUNIORS",
-            "icon": "i/u/8070044.png?v=63"
-          },
-          "amount": 16545500,
-          "type": "clause"
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1777497151,
-      "content": [
-        {
-          "player": 20102,
-          "from": {
-            "id": 8070044,
-            "name": "CA CABA JUNIORS",
-            "icon": "i/u/8070044.png?v=63"
-          },
-          "to": {
-            "id": 8068427,
-            "name": "Albertini",
-            "icon": "i/u/8068427.png"
-          },
-          "amount": 15269034,
-          "type": "clause"
-        },
-        {
-          "player": 35770,
-          "from": {
-            "id": 11521196,
-            "name": "Hufflepuff 🍋",
-            "icon": "i/u/11521196.png?v=57"
-          },
-          "to": {
-            "id": 8068427,
-            "name": "Albertini",
-            "icon": "i/u/8068427.png"
-          },
-          "amount": 18262500,
-          "type": "clause"
-        },
-        {
-          "player": 32440,
-          "from": {
-            "id": 12696491,
-            "name": "NACECH1",
-            "icon": "https://graph.facebook.com/10235185447969563/picture?height=300&width=300"
-          },
-          "to": {
-            "id": 8068427,
-            "name": "Albertini",
-            "icon": "i/u/8068427.png"
-          },
-          "amount": 14895000,
-          "type": "clause"
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1777439100,
-      "content": [
-        {
-          "player": 35901,
-          "to": {
-            "id": 8070044,
-            "name": "CA CABA JUNIORS",
-            "icon": "i/u/8070044.png?v=63"
-          },
-          "amount": 1656000
-        },
-        {
-          "player": 4245,
-          "to": {
-            "id": 12696599,
-            "name": "Trileros FC",
-            "icon": "i/u/12696599.png"
-          },
-          "amount": 1530000,
-          "bids": [
-            {
-              "user": {
-                "id": 6541195,
-                "name": "🦊",
-                "icon": "i/u/6541195.png?v=17"
-              },
-              "amount": 1345555
-            }
-          ]
         }
       ]
     }
@@ -13030,8 +12974,8 @@
           1,
           2
         ],
-        "teamSize": 19,
-        "teamValue": 75620000,
+        "teamSize": 18,
+        "teamValue": 75380000,
         "teamValueInc": 280000,
         "position": 12,
         "positionInc": 4,
@@ -13301,7 +13245,7 @@
       "name": "Eric Duran",
       "manager": "Eric Duran",
       "points": 1251,
-      "value": 75620000,
+      "value": 75380000,
       "trend": 280000,
       "players": []
     },
@@ -13526,6 +13470,20 @@
   "boardEnBas": [
     {
       "type": "transfer",
+      "date": 1777545553,
+      "content": [
+        {
+          "player": 24956,
+          "from": {
+            "id": 9897660,
+            "name": "Eric Duran"
+          },
+          "amount": 228400
+        }
+      ]
+    },
+    {
+      "type": "transfer",
       "date": 1777525420,
       "content": [
         {
@@ -13663,21 +13621,6 @@
             "icon": "https://graph.facebook.com/10156583054878679/picture?height=300&width=300"
           },
           "amount": 3169900
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1777439821,
-      "content": [
-        {
-          "player": 1125,
-          "from": {
-            "id": 6580423,
-            "name": "FC Borça",
-            "icon": "i/t/3.png"
-          },
-          "amount": 2275600
         }
       ]
     }
@@ -14811,27 +14754,27 @@
   },
   "odds": {
     "Girona": {
-      "winProb": 0.2859602149595713,
-      "drawProb": 0.2752160450333446,
-      "loseProb": 0.438823740007084,
+      "winProb": 0.29051328632570744,
+      "drawProb": 0.28025987622009424,
+      "loseProb": 0.4292268374541983,
       "over25Prob": 0.5434782608695652,
       "isHome": false,
       "opponent": "Rayo Vallecano",
       "matchDate": "2026-05-11T19:00:00Z"
     },
     "Mallorca": {
-      "winProb": 0.3569910752231194,
-      "drawProb": 0.2647683807904802,
-      "loseProb": 0.3782405439864003,
+      "winProb": 0.35274915842089155,
+      "drawProb": 0.26165459553197995,
+      "loseProb": 0.3855962460471284,
       "over25Prob": 0.5714285714285714,
       "isHome": true,
       "opponent": "Villarreal",
       "matchDate": "2026-05-10T12:00:00Z"
     },
     "Villarreal": {
-      "winProb": 0.3782405439864003,
-      "drawProb": 0.2647683807904802,
-      "loseProb": 0.3569910752231194,
+      "winProb": 0.3855962460471284,
+      "drawProb": 0.26165459553197995,
+      "loseProb": 0.35274915842089155,
       "over25Prob": 0.5714285714285714,
       "isHome": false,
       "opponent": "Mallorca",
@@ -14928,9 +14871,9 @@
       "matchDate": "2026-05-10T16:30:00Z"
     },
     "Rayo Vallecano": {
-      "winProb": 0.438823740007084,
-      "drawProb": 0.2752160450333446,
-      "loseProb": 0.2859602149595713,
+      "winProb": 0.4292268374541983,
+      "drawProb": 0.28025987622009424,
+      "loseProb": 0.29051328632570744,
       "over25Prob": 0.5434782608695652,
       "isHome": true,
       "opponent": "Girona",
@@ -14993,82 +14936,82 @@
   },
   "news": [
     {
-      "title": "Los Mejores Capitanes Fantasy para la jornada 34 de LaLiga",
-      "link": "https://www.jornadaperfecta.com/blog/capitanes-fantasy-j34-25-26/",
-      "date": "Thu, 30 Apr 2026 07:00:48 +0000",
-      "img": "https://cdn.biwenger.com/i/t/289.png",
+      "title": "Raphinha y Bernal, con el grupo parcialmente, ¿llegan a la jornada 34?",
+      "link": "https://www.jornadaperfecta.com/blog/raphinha-bernal-vuelta-j34/",
+      "date": "Thu, 30 Apr 2026 13:03:58 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "El tobillo de Julián Álvarez hace saltar las alarmas en el Atlético de Madrid",
-      "link": "https://www.jornadaperfecta.com/blog/julian-alvarez-estado-molestias-tobillo-26/",
-      "date": "Wed, 29 Apr 2026 22:05:34 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Giuliano Simeone y Sorloth, afectados por molestias en Champions",
-      "link": "https://www.jornadaperfecta.com/blog/giuliano-simeone-sorloth-estado-molestias-26/",
-      "date": "Wed, 29 Apr 2026 22:02:19 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Cinco noticias fantasy para antes de irte a dormir",
-      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-29-4-26/",
-      "date": "Wed, 29 Apr 2026 21:00:40 +0000",
+      "title": "Aimar Oroz entrena con el grupo y jugará ante el Barça",
+      "link": "https://www.jornadaperfecta.com/blog/aimar-oroz-estado-j34-osasuna/",
+      "date": "Thu, 30 Apr 2026 13:01:16 +0000",
       "img": "https://cdn.biwenger.com/i/t/93.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Germán Valera, sancionado en el tramo final. ¿Merece la pena mantener?",
-      "link": "https://www.jornadaperfecta.com/blog/german-valera-analisis-sancion-26/",
-      "date": "Wed, 29 Apr 2026 19:00:18 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/10/image-2025-10-06T132509.855.webp",
+      "title": "Catena, ¿defensa fantasy recomendable para la recta final?",
+      "link": "https://www.jornadaperfecta.com/blog/catena-defensa-recomendable-fantasy-osasuna/",
+      "date": "Thu, 30 Apr 2026 13:00:41 +0000",
+      "img": "https://cdn.biwenger.com/i/t/93.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Podcast: Alineaciones Probables Jornada 34 2025/26",
-      "link": "https://www.jornadaperfecta.com/blog/podcast-alineaciones-probables-jornada-34-2025-26/",
-      "date": "Wed, 29 Apr 2026 18:31:56 +0000",
-      "img": "https://i.ytimg.com/vi/ykgJ10y_rsw/mqdefault.jpg",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Iñigo Pérez, sobre una cita histórica y el estado de Batalla",
-      "link": "https://www.jornadaperfecta.com/blog/inigo-perez-previa-ida-semifinales-conference-26/",
-      "date": "Wed, 29 Apr 2026 18:19:20 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Unai Marrero, con opciones en la portería de la Real Sociedad en el final de temporada",
-      "link": "https://www.jornadaperfecta.com/blog/unai-marrero-titularidad-j34-25-26/",
-      "date": "Wed, 29 Apr 2026 17:47:37 +0000",
-      "img": "https://cdn.biwenger.com/i/t/13.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Batalla entrena con el grupo en la previa de Conference. ¿Titular en la Jornada 34?",
-      "link": "https://www.jornadaperfecta.com/blog/batalla-estado-j34-25-26/",
-      "date": "Wed, 29 Apr 2026 17:21:26 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Starfelt podría perderse el resto de la temporada por su lumbalgia",
+      "title": "Swedberg vuelve al grupo y Starfelt sigue dejando muchas dudas",
       "link": "https://www.jornadaperfecta.com/blog/starfelt-molestias-lumbalgia-26/",
-      "date": "Wed, 29 Apr 2026 16:30:47 +0000",
+      "date": "Thu, 30 Apr 2026 12:20:47 +0000",
       "img": "https://cdn.biwenger.com/i/t/5.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Courtois ya entrena con el grupo. ¿Merece la pena en fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/courtois-analisis-recuperacion-lesion-26/",
+      "date": "Thu, 30 Apr 2026 12:00:23 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/04/image-2026-04-28T192109.139.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Corberán, sobre el estado de Cömert y Lucas Beltrán",
+      "link": "https://www.jornadaperfecta.com/blog/corberan-previa-valencia-atleti-j34/",
+      "date": "Thu, 30 Apr 2026 11:57:23 +0000",
+      "img": "https://cdn.biwenger.com/i/t/18.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Míchel analiza la enfermería y la pelea por la permanencia",
+      "link": "https://www.jornadaperfecta.com/blog/michel-previa-girona-mallorca-j34-2/",
+      "date": "Thu, 30 Apr 2026 11:33:35 +0000",
+      "img": "https://cdn.biwenger.com/i/t/289.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Sarabia habla de la renovación de Febas y confirma tres bajas",
+      "link": "https://www.jornadaperfecta.com/blog/sarabia-previa-celta-elche-j34/",
+      "date": "Thu, 30 Apr 2026 11:16:13 +0000",
+      "img": "https://cdn.biwenger.com/i/t/75.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Actualizadas las Alineaciones Probables para la Jornada 34",
+      "link": "https://www.jornadaperfecta.com/blog/alineaciones-probables-j34-laliga-25-26/",
+      "date": "Thu, 30 Apr 2026 11:00:00 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Demichelis, sobre Luvumbo, las cargas de Muriqi y Darder",
+      "link": "https://www.jornadaperfecta.com/blog/demichelis-previa-girona-mallorca-j34-25-26/",
+      "date": "Thu, 30 Apr 2026 10:59:35 +0000",
+      "img": "https://cdn.biwenger.com/i/t/465.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -15077,7 +15020,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-30T07:58:23.022Z",
+    "updatedAt": "2026-04-30T13:15:39.214Z",
     "players": [
       {
         "id": "3374",
