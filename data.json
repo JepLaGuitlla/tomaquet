@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-29T19:04:48.713Z",
+  "updatedAt": "2026-04-30T01:45:45.815Z",
   "players": [
     {
       "id": 11,
@@ -12014,9 +12014,9 @@
           3,
           4
         ],
-        "teamSize": 13,
-        "teamValue": 92380000,
-        "teamValueInc": 180000,
+        "teamSize": 16,
+        "teamValue": 120190000,
+        "teamValueInc": 380000,
         "position": 1,
         "role": ""
       },
@@ -12033,9 +12033,9 @@
           5,
           2
         ],
-        "teamSize": 17,
-        "teamValue": 106200000,
-        "teamValueInc": 170000,
+        "teamSize": 16,
+        "teamValue": 98520000,
+        "teamValueInc": 120000,
         "lastTrophy": {
           "type": "league",
           "position": 2,
@@ -12092,7 +12092,7 @@
           5
         ],
         "teamSize": 20,
-        "teamValue": 100420000,
+        "teamValue": 100340000,
         "teamValueInc": 370000,
         "lastTrophy": {
           "type": "league",
@@ -12115,9 +12115,9 @@
           4,
           12
         ],
-        "teamSize": 13,
-        "teamValue": 96860000,
-        "teamValueInc": 220000,
+        "teamSize": 12,
+        "teamValue": 95860000,
+        "teamValueInc": 190000,
         "lastTrophy": {
           "type": "league",
           "position": 1,
@@ -12137,9 +12137,9 @@
           10,
           7
         ],
-        "teamSize": 16,
-        "teamValue": 77470000,
-        "teamValueInc": 330000,
+        "teamSize": 17,
+        "teamValue": 78470000,
+        "teamValueInc": 360000,
         "position": 7,
         "role": ""
       },
@@ -12155,9 +12155,9 @@
           9,
           8
         ],
-        "teamSize": 16,
-        "teamValue": 55110000,
-        "teamValueInc": -30000,
+        "teamSize": 15,
+        "teamValue": 45180000,
+        "teamValueInc": -100000,
         "position": 8,
         "role": ""
       },
@@ -12270,9 +12270,9 @@
           8,
           6
         ],
-        "teamSize": 18,
-        "teamValue": 53640000,
-        "teamValueInc": -200000,
+        "teamSize": 17,
+        "teamValue": 43520000,
+        "teamValueInc": -280000,
         "position": 14,
         "role": ""
       }
@@ -12284,8 +12284,8 @@
       "name": "Albertini",
       "manager": "Albertini",
       "points": 1830,
-      "value": 92380000,
-      "trend": 180000,
+      "value": 120190000,
+      "trend": 380000,
       "players": []
     },
     {
@@ -12293,8 +12293,8 @@
       "name": "LeMola Team",
       "manager": "LeMola Team",
       "points": 1754,
-      "value": 106200000,
-      "trend": 170000,
+      "value": 98520000,
+      "trend": 120000,
       "players": []
     },
     {
@@ -12320,7 +12320,7 @@
       "name": "CA CABA JUNIORS",
       "manager": "CA CABA JUNIORS",
       "points": 1583,
-      "value": 100420000,
+      "value": 100340000,
       "trend": 370000,
       "players": []
     },
@@ -12329,8 +12329,8 @@
       "name": "Zaza Pachulia",
       "manager": "Zaza Pachulia",
       "points": 1562,
-      "value": 96860000,
-      "trend": 220000,
+      "value": 95860000,
+      "trend": 190000,
       "players": []
     },
     {
@@ -12338,8 +12338,8 @@
       "name": "INDOMABLE FC",
       "manager": "INDOMABLE FC",
       "points": 1554,
-      "value": 77470000,
-      "trend": 330000,
+      "value": 78470000,
+      "trend": 360000,
       "players": []
     },
     {
@@ -12347,8 +12347,8 @@
       "name": "NACECH1",
       "manager": "NACECH1",
       "points": 1481,
-      "value": 55110000,
-      "trend": -30000,
+      "value": 45180000,
+      "trend": -100000,
       "players": []
     },
     {
@@ -12401,8 +12401,8 @@
       "name": "Hufflepuff 🍋",
       "manager": "Hufflepuff 🍋",
       "points": 1279,
-      "value": 53640000,
-      "trend": -200000,
+      "value": 43520000,
+      "trend": -280000,
       "players": []
     }
   ],
@@ -12410,10 +12410,10 @@
     "teamId": 6541195,
     "name": "🦊",
     "points": 1680,
-    "balance": 14816254,
+    "balance": 13316254,
     "lineup": {
       "type": "5-4-1",
-      "date": 1777451100,
+      "date": 1777494604,
       "playersID": [
         17021,
         37495,
@@ -12494,8 +12494,8 @@
       {
         "id": 26276,
         "buyPrice": 6600000,
-        "clause": 16080000,
-        "invested": 3000000,
+        "clause": 18330000,
+        "invested": 4500000,
         "buyDate": 1765459975
       },
       {
@@ -12593,6 +12593,99 @@
   },
   "boardTomaquet": [
     {
+      "type": "transfer",
+      "date": 1777503688,
+      "content": [
+        {
+          "player": 16625,
+          "from": {
+            "id": 148051,
+            "name": "Zaza Pachulia",
+            "icon": "i/u/148051.png?v=39"
+          },
+          "to": {
+            "id": 12697101,
+            "name": "INDOMABLE FC",
+            "icon": "i/u/11757390.png"
+          },
+          "amount": 1500000,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1777498199,
+      "content": [
+        {
+          "player": 2476,
+          "from": {
+            "id": 6552586,
+            "name": "LeMola Team",
+            "icon": "i/u/6552586.png"
+          },
+          "to": {
+            "id": 8070044,
+            "name": "CA CABA JUNIORS",
+            "icon": "i/u/8070044.png?v=63"
+          },
+          "amount": 16545500,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1777497151,
+      "content": [
+        {
+          "player": 20102,
+          "from": {
+            "id": 8070044,
+            "name": "CA CABA JUNIORS",
+            "icon": "i/u/8070044.png?v=63"
+          },
+          "to": {
+            "id": 8068427,
+            "name": "Albertini",
+            "icon": "i/u/8068427.png"
+          },
+          "amount": 15269034,
+          "type": "clause"
+        },
+        {
+          "player": 35770,
+          "from": {
+            "id": 11521196,
+            "name": "Hufflepuff 🍋",
+            "icon": "i/u/11521196.png?v=57"
+          },
+          "to": {
+            "id": 8068427,
+            "name": "Albertini",
+            "icon": "i/u/8068427.png"
+          },
+          "amount": 18262500,
+          "type": "clause"
+        },
+        {
+          "player": 32440,
+          "from": {
+            "id": 12696491,
+            "name": "NACECH1",
+            "icon": "https://graph.facebook.com/10235185447969563/picture?height=300&width=300"
+          },
+          "to": {
+            "id": 8068427,
+            "name": "Albertini",
+            "icon": "i/u/8068427.png"
+          },
+          "amount": 14895000,
+          "type": "clause"
+        }
+      ]
+    },
+    {
       "type": "market",
       "date": 1777439100,
       "content": [
@@ -12623,78 +12716,6 @@
               "amount": 1345555
             }
           ]
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1777375398,
-      "content": [
-        {
-          "player": 2597,
-          "from": {
-            "id": 8068427,
-            "name": "Albertini",
-            "icon": "i/u/8068427.png"
-          },
-          "to": {
-            "id": 148051,
-            "name": "Zaza Pachulia",
-            "icon": "i/u/148051.png?v=39"
-          },
-          "amount": 22260000,
-          "type": "clause"
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1777374563,
-      "content": [
-        {
-          "player": 17056,
-          "from": {
-            "id": 8070044,
-            "name": "CA CABA JUNIORS",
-            "icon": "i/u/8070044.png?v=63"
-          },
-          "to": {
-            "id": 12696899,
-            "name": "CIGALERU",
-            "icon": "i/u/12696899.png"
-          },
-          "amount": 10668354,
-          "type": "clause"
-        },
-        {
-          "player": 26071,
-          "from": {
-            "id": 148051,
-            "name": "Zaza Pachulia",
-            "icon": "i/u/148051.png?v=39"
-          },
-          "to": {
-            "id": 12696899,
-            "name": "CIGALERU",
-            "icon": "i/u/12696899.png"
-          },
-          "amount": 16785000,
-          "type": "clause"
-        },
-        {
-          "player": 26697,
-          "from": {
-            "id": 12696599,
-            "name": "Trileros FC",
-            "icon": "i/u/12696599.png"
-          },
-          "to": {
-            "id": 8070044,
-            "name": "CA CABA JUNIORS",
-            "icon": "i/u/8070044.png?v=63"
-          },
-          "amount": 6765000,
-          "type": "clause"
         }
       ]
     }
@@ -14826,7 +14847,7 @@
       "winProb": 0.2859602149595713,
       "drawProb": 0.2752160450333446,
       "loseProb": 0.438823740007084,
-      "over25Prob": 0.5434782608695652,
+      "over25Prob": 0.53475935828877,
       "isHome": false,
       "opponent": "Rayo Vallecano",
       "matchDate": "2026-05-11T19:00:00Z"
@@ -14943,7 +14964,7 @@
       "winProb": 0.438823740007084,
       "drawProb": 0.2752160450333446,
       "loseProb": 0.2859602149595713,
-      "over25Prob": 0.5434782608695652,
+      "over25Prob": 0.53475935828877,
       "isHome": true,
       "opponent": "Girona",
       "matchDate": "2026-05-11T19:00:00Z"
@@ -15005,6 +15026,38 @@
   },
   "news": [
     {
+      "title": "El tobillo de Julián Álvarez hace saltar las alarmas en el Atlético de Madrid",
+      "link": "https://www.jornadaperfecta.com/blog/julian-alvarez-estado-molestias-tobillo-26/",
+      "date": "Wed, 29 Apr 2026 22:05:34 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Giuliano Simeone y Sorloth, afectados por molestias en Champions",
+      "link": "https://www.jornadaperfecta.com/blog/giuliano-simeone-sorloth-estado-molestias-26/",
+      "date": "Wed, 29 Apr 2026 22:02:19 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Cinco noticias fantasy para antes de irte a dormir",
+      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-29-4-26/",
+      "date": "Wed, 29 Apr 2026 21:00:40 +0000",
+      "img": "https://cdn.biwenger.com/i/t/93.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Germán Valera, sancionado en el tramo final. ¿Merece la pena mantener?",
+      "link": "https://www.jornadaperfecta.com/blog/german-valera-analisis-sancion-26/",
+      "date": "Wed, 29 Apr 2026 19:00:18 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/10/image-2025-10-06T132509.855.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Podcast: Alineaciones Probables Jornada 34 2025/26",
       "link": "https://www.jornadaperfecta.com/blog/podcast-alineaciones-probables-jornada-34-2025-26/",
       "date": "Wed, 29 Apr 2026 18:31:56 +0000",
@@ -15051,45 +15104,13 @@
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Isi Palazón se pierde el resto de la temporada: ¡7 partidos de sanción!",
-      "link": "https://www.jornadaperfecta.com/blog/isi-palazon-sancion-rayo-vallecano/",
-      "date": "Wed, 29 Apr 2026 15:00:56 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Los Ases de PixonFantasy para la Jornada 34",
-      "link": "https://www.jornadaperfecta.com/blog/ases-fantasy-j34-25-26/",
-      "date": "Wed, 29 Apr 2026 15:00:04 +0000",
-      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2665.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Rayo Vallecano, alineación probable contra el Estrasburgo y dónde ver en TV",
-      "link": "https://www.jornadaperfecta.com/blog/rayo-alineacion-probable-conference-ida-semis-26/",
-      "date": "Wed, 29 Apr 2026 13:00:35 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Julián Alvarez, Lookman y Hancko, en la lista de Champions",
-      "link": "https://www.jornadaperfecta.com/blog/julian-alvarez-molestias-atleti-ida-champions/",
-      "date": "Wed, 29 Apr 2026 11:45:52 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-29T19:04:46.357Z",
+    "updatedAt": "2026-04-30T01:45:42.949Z",
     "players": [
       {
         "id": "3374",
