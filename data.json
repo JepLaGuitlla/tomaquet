@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-30T19:03:16.579Z",
+  "updatedAt": "2026-05-01T01:48:34.649Z",
   "players": [
     {
       "id": 11,
@@ -12032,9 +12032,9 @@
           3,
           4
         ],
-        "teamSize": 16,
-        "teamValue": 121070000,
-        "teamValueInc": 880000,
+        "teamSize": 15,
+        "teamValue": 115760000,
+        "teamValueInc": 930000,
         "position": 1,
         "role": ""
       },
@@ -12057,7 +12057,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 2,
-          "season": "Temporada 2024/2025"
+          "season": "2024/2025 season"
         },
         "position": 2
       },
@@ -12115,7 +12115,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "Temporada 2024/2025"
+          "season": "2024/2025 season"
         },
         "position": 5,
         "role": ""
@@ -12139,7 +12139,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 1,
-          "season": "Temporada 2024/2025"
+          "season": "2024/2025 season"
         },
         "position": 6
       },
@@ -12235,7 +12235,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "Temporada 2023/2024"
+          "season": "2023/2024 season"
         },
         "position": 11,
         "role": ""
@@ -12302,8 +12302,8 @@
       "name": "Albertini",
       "manager": "Albertini",
       "points": 1830,
-      "value": 121070000,
-      "trend": 880000,
+      "value": 115760000,
+      "trend": 930000,
       "players": []
     },
     {
@@ -12603,6 +12603,21 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1777581006,
+      "content": [
+        {
+          "player": 31707,
+          "from": {
+            "id": 8068427,
+            "name": "Albertini",
+            "icon": "i/u/8068427.png"
+          },
+          "amount": 5189000
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1777539361,
@@ -14037,7 +14052,7 @@
           "W"
         ],
         "gf": 6,
-        "ga": 8,
+        "ga": 9,
         "crest": "https://crests.football-data.org/77.png",
         "name": "Athletic Club"
       },
@@ -14192,7 +14207,7 @@
           "L",
           "W"
         ],
-        "gf": 8,
+        "gf": 9,
         "ga": 5,
         "crest": "https://crests.football-data.org/94.png",
         "name": "Villarreal CF"
@@ -14954,6 +14969,22 @@
   },
   "news": [
     {
+      "title": "Cinco noticias fantasy para antes de irte a dormir",
+      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-30-4-26/",
+      "date": "Thu, 30 Apr 2026 21:00:37 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "La Previa de las Picas: Todo sobre los Cronistas de la Jornada 34",
+      "link": "https://www.jornadaperfecta.com/blog/previa-picas-cronistas-j34/",
+      "date": "Thu, 30 Apr 2026 19:00:30 +0000",
+      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2660.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "El All In de Victorius para la Jornada 34 de La Liga",
       "link": "https://www.jornadaperfecta.com/blog/all-in-fantasy-j34-25-26/",
       "date": "Thu, 30 Apr 2026 17:00:54 +0000",
@@ -15016,29 +15047,13 @@
       "img": "https://cdn.biwenger.com/i/t/93.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Rayo Vallecano, alineación probable contra el Estrasburgo y dónde ver en TV",
-      "link": "https://www.jornadaperfecta.com/blog/rayo-alineacion-probable-conference-ida-semis-26/",
-      "date": "Thu, 30 Apr 2026 13:00:35 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Swedberg vuelve al grupo y Starfelt sigue dejando muchas dudas",
-      "link": "https://www.jornadaperfecta.com/blog/starfelt-molestias-lumbalgia-26/",
-      "date": "Thu, 30 Apr 2026 12:20:47 +0000",
-      "img": "https://cdn.biwenger.com/i/t/5.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-04-30T19:03:15.138Z",
+    "updatedAt": "2026-05-01T01:48:32.913Z",
     "players": [
       {
         "id": "3374",
