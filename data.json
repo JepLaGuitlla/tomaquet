@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-02T07:16:25.309Z",
+  "updatedAt": "2026-05-02T12:40:59.857Z",
   "players": [
     {
       "id": 11,
@@ -13732,12 +13732,12 @@
           "tla": "VIL",
           "crest": "https://crests.football-data.org/94.png"
         },
-        "playedGames": 33,
+        "playedGames": 34,
         "form": null,
         "won": 20,
-        "draw": 5,
+        "draw": 6,
         "lost": 8,
-        "points": 65,
+        "points": 66,
         "goalsFor": 59,
         "goalsAgainst": 38,
         "goalDifference": 21
@@ -14011,6 +14011,25 @@
       {
         "position": 18,
         "team": {
+          "id": 88,
+          "name": "Levante UD",
+          "shortName": "Levante",
+          "tla": "LEV",
+          "crest": "https://crests.football-data.org/88.png"
+        },
+        "playedGames": 34,
+        "form": null,
+        "won": 8,
+        "draw": 10,
+        "lost": 16,
+        "points": 34,
+        "goalsFor": 37,
+        "goalsAgainst": 50,
+        "goalDifference": -13
+      },
+      {
+        "position": 19,
+        "team": {
           "id": 559,
           "name": "Sevilla FC",
           "shortName": "Sevilla FC",
@@ -14026,25 +14045,6 @@
         "goalsFor": 40,
         "goalsAgainst": 55,
         "goalDifference": -15
-      },
-      {
-        "position": 19,
-        "team": {
-          "id": 88,
-          "name": "Levante UD",
-          "shortName": "Levante",
-          "tla": "LEV",
-          "crest": "https://crests.football-data.org/88.png"
-        },
-        "playedGames": 33,
-        "form": null,
-        "won": 8,
-        "draw": 9,
-        "lost": 16,
-        "points": 33,
-        "goalsFor": 37,
-        "goalsAgainst": 50,
-        "goalDifference": -13
       },
       {
         "position": 20,
@@ -14329,23 +14329,6 @@
       }
     },
     "nextMatches": [
-      {
-        "id": 544549,
-        "matchday": 34,
-        "date": "2026-05-02T12:00:00Z",
-        "home": {
-          "id": 94,
-          "name": "Villarreal CF",
-          "short": "Villarreal",
-          "crest": "https://crests.football-data.org/94.png"
-        },
-        "away": {
-          "id": 88,
-          "name": "Levante UD",
-          "short": "Levante",
-          "crest": "https://crests.football-data.org/88.png"
-        }
-      },
       {
         "id": 544547,
         "matchday": 34,
@@ -14651,6 +14634,23 @@
           "short": "Girona",
           "crest": "https://crests.football-data.org/298.png"
         }
+      },
+      {
+        "id": 544549,
+        "matchday": 34,
+        "date": "2026-05-02T12:00:00Z",
+        "home": {
+          "id": 94,
+          "name": "Villarreal CF",
+          "short": "Villarreal",
+          "crest": "https://crests.football-data.org/94.png"
+        },
+        "away": {
+          "id": 88,
+          "name": "Levante UD",
+          "short": "Levante",
+          "crest": "https://crests.football-data.org/88.png"
+        }
       }
     ],
     "recentResults": [
@@ -14794,9 +14794,9 @@
   },
   "odds": {
     "Villarreal": {
-      "winProb": 0.3812221010598656,
-      "drawProb": 0.261828366112545,
-      "loseProb": 0.3569495328275895,
+      "winProb": 0.3606340819022457,
+      "drawProb": 0.261558784676354,
+      "loseProb": 0.37780713342140027,
       "over25Prob": 0.5714285714285714,
       "isHome": false,
       "opponent": "Mallorca",
@@ -14893,9 +14893,9 @@
       "matchDate": "2026-05-10T16:30:00Z"
     },
     "Rayo Vallecano": {
-      "winProb": 0.4292268374541983,
-      "drawProb": 0.28025987622009424,
-      "loseProb": 0.29051328632570744,
+      "winProb": 0.4344299095545264,
+      "drawProb": 0.2790033729983615,
+      "loseProb": 0.28656671744711226,
       "over25Prob": 0.5434782608695652,
       "isHome": true,
       "opponent": "Girona",
@@ -14956,18 +14956,18 @@
       "matchDate": "2026-05-09T19:00:00Z"
     },
     "Mallorca": {
-      "winProb": 0.3569495328275895,
-      "drawProb": 0.261828366112545,
-      "loseProb": 0.3812221010598656,
+      "winProb": 0.37780713342140027,
+      "drawProb": 0.261558784676354,
+      "loseProb": 0.3606340819022457,
       "over25Prob": 0.5714285714285714,
       "isHome": true,
       "opponent": "Villarreal",
       "matchDate": "2026-05-10T12:00:00Z"
     },
     "Girona": {
-      "winProb": 0.29051328632570744,
-      "drawProb": 0.28025987622009424,
-      "loseProb": 0.4292268374541983,
+      "winProb": 0.28656671744711226,
+      "drawProb": 0.2790033729983615,
+      "loseProb": 0.4344299095545264,
       "over25Prob": 0.5434782608695652,
       "isHome": false,
       "opponent": "Rayo Vallecano",
@@ -14976,18 +14976,74 @@
   },
   "news": [
     {
-      "title": "Conecta 5 Sportium Osasuna vs Barcelona: consigue hasta 5€ en freebets",
-      "link": "https://www.jornadaperfecta.com/blog/sportium-conecta-5-osasuna-vs-barcelona/",
-      "date": "Sat, 02 May 2026 07:00:15 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/04/Sportium-Conecta-5-Osasuna-vs-Barcelona.webp",
+      "title": "Giráldez, sobre Starfelt, Aspas, Álvaro Núñez y la defensa",
+      "link": "https://www.jornadaperfecta.com/blog/giraldez-previa-celta-elche-j34/",
+      "date": "Sat, 02 May 2026 12:15:52 +0000",
+      "img": "https://cdn.biwenger.com/i/t/5.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Morlanes, Kalumba y Jan Virgili acaban con problemas físicos",
+      "title": "Pellegrini analiza el estado de Isco y no descarta el quirófano para Antony",
+      "link": "https://www.jornadaperfecta.com/blog/pellegrini-previa-betis-real-oviedo-j34/",
+      "date": "Sat, 02 May 2026 11:27:12 +0000",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Guedes vuelve y Zubeldia y Karrikaburu siguen fuera. ¿Llegan a la Jornada 34?",
+      "link": "https://www.jornadaperfecta.com/blog/guedes-estado-j34-25-26/",
+      "date": "Sat, 02 May 2026 10:35:25 +0000",
+      "img": "https://cdn.biwenger.com/i/t/13.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Pablo Torre, Morlanes y Jan Virgili, sin problemas. Kalumba, preocupa",
       "link": "https://www.jornadaperfecta.com/blog/morlanes-estado-molestias-tobillo/",
-      "date": "Fri, 01 May 2026 22:19:49 +0000",
+      "date": "Sat, 02 May 2026 10:26:49 +0000",
       "img": "https://cdn.biwenger.com/i/t/465.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Almada deja dudas con Bailly y habla de la enfermería",
+      "link": "https://www.jornadaperfecta.com/blog/almada-previa-betis-real-oviedo-j34/",
+      "date": "Sat, 02 May 2026 10:13:25 +0000",
+      "img": "https://cdn.biwenger.com/i/t/779.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Arbeloa, sobre su futuro, Gonzalo, Mastantuono y Ceballos",
+      "link": "https://www.jornadaperfecta.com/blog/arbeloa-previa-espanyol-real-madrid-j34/",
+      "date": "Sat, 02 May 2026 09:50:06 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Parte médico de Dani Carvajal, que podría haber jugado su último partido en el Real Madrid",
+      "link": "https://www.jornadaperfecta.com/blog/carvajal-parte-medico-dedo-pie-26/",
+      "date": "Sat, 02 May 2026 09:23:26 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Raphinha y Bernal reciben el alta médica y van convocados",
+      "link": "https://www.jornadaperfecta.com/blog/raphinha-bernal-vuelta-j34/",
+      "date": "Sat, 02 May 2026 09:02:58 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Conecta 5 Sportium Osasuna vs Barcelona: consigue hasta 5€ en freebets",
+      "link": "https://www.jornadaperfecta.com/blog/sportium-conecta-5-osasuna-vs-barcelona/",
+      "date": "Sat, 02 May 2026 07:00:15 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/04/Sportium-Conecta-5-Osasuna-vs-Barcelona.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
@@ -14998,69 +15054,13 @@
       "img": "https://cdn.biwenger.com/i/t/465.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Once confirmado del Girona con Fran Beltrán y Joel Roca",
-      "link": "https://www.jornadaperfecta.com/blog/girona-fc-once-confirmado-j34-25-26/",
-      "date": "Fri, 01 May 2026 17:46:11 +0000",
-      "img": "https://cdn.biwenger.com/i/t/289.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Gabriel Suazo, Sow y Azpilicueta siguen con el grupo",
-      "link": "https://www.jornadaperfecta.com/blog/suazo-lesion-hombro/",
-      "date": "Fri, 01 May 2026 16:00:04 +0000",
-      "img": "https://cdn.biwenger.com/i/t/17.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Guedes, Zubeldia y Karrikaburu siguen fuera y apuntan a baja",
-      "link": "https://www.jornadaperfecta.com/blog/guedes-estado-j34-25-26/",
-      "date": "Fri, 01 May 2026 15:58:25 +0000",
-      "img": "https://cdn.biwenger.com/i/t/13.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Flick ensaya un once con Lewandowski en punta. ¿Alinear?",
-      "link": "https://www.jornadaperfecta.com/blog/lewandowski-titularidad-j34-25-26-alinear/",
-      "date": "Fri, 01 May 2026 15:25:22 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Muriqi, Samú Costa y Jan Virgili corren riesgo por un virus",
-      "link": "https://www.jornadaperfecta.com/blog/muriqi-samu-costa-jan-virgili-virus-j34/",
-      "date": "Fri, 01 May 2026 15:23:39 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Flick confirma la vuelta de Raphinha y Marc Bernal",
-      "link": "https://www.jornadaperfecta.com/blog/flick-previa-osasuna-barcelona-j34/",
-      "date": "Fri, 01 May 2026 15:22:45 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "¡5 mayores riesgos fantasy para la jornada 34 de LaLiga!",
-      "link": "https://www.jornadaperfecta.com/blog/riesgos-fantasy-j34-25-26/",
-      "date": "Fri, 01 May 2026 15:20:04 +0000",
-      "img": "https://cdn.biwenger.com/i/t/465.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-05-02T07:16:25.308Z",
+    "updatedAt": "2026-05-02T12:40:57.394Z",
     "players": [
       {
         "id": "3374",
@@ -15231,6 +15231,18 @@
         "minutesPerGoal": 279
       },
       {
+        "id": "136646",
+        "name": "Georges Mikautadze",
+        "team": "Villarreal CF",
+        "position": "",
+        "nationality": "Georgia",
+        "appearances": 30,
+        "goals": 10,
+        "assists": 5,
+        "penalties": 0,
+        "minutesPerGoal": 270
+      },
+      {
         "id": "32762",
         "name": "Hugo Duro",
         "team": "Valencia CF",
@@ -15267,28 +15279,16 @@
         "minutesPerGoal": 270
       },
       {
-        "id": "136646",
-        "name": "Georges Mikautadze",
-        "team": "Villarreal CF",
-        "position": "",
-        "nationality": "Georgia",
-        "appearances": 29,
-        "goals": 9,
-        "assists": 5,
-        "penalties": 0,
-        "minutesPerGoal": 290
-      },
-      {
         "id": "150533",
         "name": "Alberto Moleiro",
         "team": "Villarreal CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 33,
+        "appearances": 34,
         "goals": 9,
         "assists": 4,
         "penalties": 0,
-        "minutesPerGoal": 330
+        "minutesPerGoal": 340
       },
       {
         "id": "112678",
@@ -15308,11 +15308,11 @@
         "team": "Villarreal CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 20,
+        "appearances": 21,
         "goals": 9,
         "assists": 0,
         "penalties": 3,
-        "minutesPerGoal": 200
+        "minutesPerGoal": 210
       },
       {
         "id": "81565",
@@ -15392,11 +15392,11 @@
         "team": "Levante UD",
         "position": "",
         "nationality": "Spain",
-        "appearances": 29,
+        "appearances": 30,
         "goals": 8,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 326
+        "minutesPerGoal": 338
       },
       {
         "id": "156746",
@@ -15404,11 +15404,11 @@
         "team": "Levante UD",
         "position": "",
         "nationality": "Spain",
-        "appearances": 31,
+        "appearances": 32,
         "goals": 7,
         "assists": 2,
         "penalties": 0,
-        "minutesPerGoal": 399
+        "minutesPerGoal": 411
       },
       {
         "id": "8412",
@@ -15416,11 +15416,11 @@
         "team": "Villarreal CF",
         "position": "",
         "nationality": "Ivory Coast",
-        "appearances": 33,
+        "appearances": 34,
         "goals": 7,
         "assists": 4,
         "penalties": 1,
-        "minutesPerGoal": 424
+        "minutesPerGoal": 437
       },
       {
         "id": "33117",
@@ -15524,11 +15524,11 @@
         "team": "Levante UD",
         "position": "",
         "nationality": "Cameroon",
-        "appearances": 31,
+        "appearances": 32,
         "goals": 6,
         "assists": 5,
         "penalties": 0,
-        "minutesPerGoal": 465
+        "minutesPerGoal": 480
       },
       {
         "id": "32398",
@@ -15560,11 +15560,11 @@
         "team": "Villarreal CF",
         "position": "",
         "nationality": "Canada",
-        "appearances": 31,
+        "appearances": 32,
         "goals": 6,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 465
+        "minutesPerGoal": 480
       },
       {
         "id": "130324",
@@ -15800,11 +15800,11 @@
         "team": "Villarreal CF",
         "position": "",
         "nationality": "Senegal",
-        "appearances": 28,
+        "appearances": 29,
         "goals": 4,
         "assists": 2,
         "penalties": 1,
-        "minutesPerGoal": 630
+        "minutesPerGoal": 653
       },
       {
         "id": "157135",
@@ -16088,11 +16088,11 @@
         "team": "Levante UD",
         "position": "",
         "nationality": "Spain",
-        "appearances": 30,
+        "appearances": 31,
         "goals": 3,
         "assists": 2,
         "penalties": 0,
-        "minutesPerGoal": 900
+        "minutesPerGoal": 930
       },
       {
         "id": "31913",
@@ -16184,11 +16184,11 @@
         "team": "Villarreal CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 31,
+        "appearances": 32,
         "goals": 3,
         "assists": 5,
         "penalties": 0,
-        "minutesPerGoal": 930
+        "minutesPerGoal": 960
       },
       {
         "id": "126913",
@@ -16196,11 +16196,11 @@
         "team": "Levante UD",
         "position": "",
         "nationality": "Spain",
-        "appearances": 34,
+        "appearances": 35,
         "goals": 3,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 1020
+        "minutesPerGoal": 1050
       },
       {
         "id": "156967",
