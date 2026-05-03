@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-03T07:43:47.396Z",
+  "updatedAt": "2026-05-03T12:39:53.476Z",
   "players": [
     {
       "id": 11,
@@ -12055,8 +12055,8 @@
           5,
           2
         ],
-        "teamSize": 18,
-        "teamValue": 100200000,
+        "teamSize": 17,
+        "teamValue": 99840000,
         "teamValueInc": 730000,
         "lastTrophy": {
           "type": "league",
@@ -12315,7 +12315,7 @@
       "name": "LeMola Team",
       "manager": "LeMola Team",
       "points": 1754,
-      "value": 100200000,
+      "value": 99840000,
       "trend": 730000,
       "players": []
     },
@@ -12591,9 +12591,43 @@
         "buyDate": 1777179786
       }
     ],
-    "market": []
+    "market": [
+      {
+        "playerID": 27591,
+        "price": 3580000,
+        "type": "sale",
+        "until": 1777967234
+      },
+      {
+        "playerID": 37495,
+        "price": 5630000,
+        "type": "sale",
+        "until": 1777967310
+      },
+      {
+        "playerID": 38178,
+        "price": 1610000,
+        "type": "sale",
+        "until": 1777967241
+      }
+    ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1777795709,
+      "content": [
+        {
+          "player": 18128,
+          "from": {
+            "id": 6552586,
+            "name": "LeMola Team",
+            "icon": "i/u/6552586.png"
+          },
+          "amount": 368700
+        }
+      ]
+    },
     {
       "type": "market",
       "date": 1777784784,
@@ -12678,64 +12712,6 @@
             "icon": "i/u/8070044.png?v=63"
           },
           "amount": 734300
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1777698667,
-      "content": [
-        {
-          "player": 24732,
-          "to": {
-            "id": 6552586,
-            "name": "LeMola Team",
-            "icon": "i/u/6552586.png"
-          },
-          "amount": 12396000,
-          "bids": [
-            {
-              "user": {
-                "id": 11521196,
-                "name": "Hufflepuff 🍋",
-                "icon": "i/u/11521196.png?v=57"
-              },
-              "amount": 10850009
-            },
-            {
-              "user": {
-                "id": 12713493,
-                "name": "Tata Martini",
-                "icon": "i/u/12713493.png"
-              },
-              "amount": 9410010
-            },
-            {
-              "user": {
-                "id": 148051,
-                "name": "Zaza Pachulia",
-                "icon": "i/u/148051.png?v=39"
-              },
-              "amount": 8154546
-            },
-            {
-              "user": {
-                "id": 8068002,
-                "name": "Soulands Rangers",
-                "icon": "i/u/8068002.png?v=69"
-              },
-              "amount": 8110000
-            }
-          ]
-        },
-        {
-          "player": 5807,
-          "to": {
-            "id": 6552586,
-            "name": "LeMola Team",
-            "icon": "i/u/6552586.png"
-          },
-          "amount": 2140000
         }
       ]
     }
@@ -13780,15 +13756,15 @@
           "tla": "CEL",
           "crest": "https://crests.football-data.org/558.png"
         },
-        "playedGames": 33,
+        "playedGames": 34,
         "form": null,
-        "won": 11,
+        "won": 12,
         "draw": 11,
         "lost": 11,
-        "points": 44,
-        "goalsFor": 45,
+        "points": 47,
+        "goalsFor": 46,
         "goalsAgainst": 43,
-        "goalDifference": 2
+        "goalDifference": 3
       },
       {
         "position": 7,
@@ -13932,15 +13908,15 @@
           "tla": "ELC",
           "crest": "https://crests.football-data.org/285.png"
         },
-        "playedGames": 33,
+        "playedGames": 34,
         "form": null,
         "won": 9,
         "draw": 11,
-        "lost": 13,
+        "lost": 14,
         "points": 38,
         "goalsFor": 44,
-        "goalsAgainst": 50,
-        "goalDifference": -6
+        "goalsAgainst": 51,
+        "goalDifference": -7
       },
       {
         "position": 15,
@@ -14321,23 +14297,6 @@
     },
     "nextMatches": [
       {
-        "id": 544543,
-        "matchday": 34,
-        "date": "2026-05-03T12:00:00Z",
-        "home": {
-          "id": 558,
-          "name": "RC Celta de Vigo",
-          "short": "Celta",
-          "crest": "https://crests.football-data.org/558.png"
-        },
-        "away": {
-          "id": 285,
-          "name": "Elche CF",
-          "short": "Elche",
-          "crest": "https://crests.football-data.org/285.png"
-        }
-      },
-      {
         "id": 544545,
         "matchday": 34,
         "date": "2026-05-03T14:15:00Z",
@@ -14574,6 +14533,23 @@
           "short": "Girona",
           "crest": "https://crests.football-data.org/298.png"
         }
+      },
+      {
+        "id": 544543,
+        "matchday": 34,
+        "date": "2026-05-03T12:00:00Z",
+        "home": {
+          "id": 558,
+          "name": "RC Celta de Vigo",
+          "short": "Celta",
+          "crest": "https://crests.football-data.org/558.png"
+        },
+        "away": {
+          "id": 285,
+          "name": "Elche CF",
+          "short": "Elche",
+          "crest": "https://crests.football-data.org/285.png"
+        }
       }
     ],
     "recentResults": [
@@ -14807,19 +14783,19 @@
       "matchDate": "2026-05-09T19:00:00Z"
     },
     "Levante": {
-      "winProb": 0.35415999188887765,
-      "drawProb": 0.30437392274155933,
-      "loseProb": 0.34146608536956297,
-      "over25Prob": 0.5025125628140703,
+      "winProb": 0.35802479151117883,
+      "drawProb": 0.30426388032579416,
+      "loseProb": 0.3377113281630269,
+      "over25Prob": 0.5050505050505051,
       "isHome": true,
       "opponent": "CA Osasuna",
       "matchDate": "2026-05-08T19:00:00Z"
     },
     "CA Osasuna": {
-      "winProb": 0.34146608536956297,
-      "drawProb": 0.30437392274155933,
-      "loseProb": 0.35415999188887765,
-      "over25Prob": 0.5025125628140703,
+      "winProb": 0.3377113281630269,
+      "drawProb": 0.30426388032579416,
+      "loseProb": 0.35802479151117883,
+      "over25Prob": 0.5050505050505051,
       "isHome": false,
       "opponent": "Levante",
       "matchDate": "2026-05-08T19:00:00Z"
@@ -14843,37 +14819,37 @@
       "matchDate": "2026-05-09T16:30:00Z"
     },
     "Mallorca": {
-      "winProb": 0.3860988144303668,
-      "drawProb": 0.2619956240777489,
-      "loseProb": 0.3519055614918842,
+      "winProb": 0.38733842135559643,
+      "drawProb": 0.26105548398212797,
+      "loseProb": 0.3516060946622757,
       "over25Prob": 0.5714285714285714,
       "isHome": true,
       "opponent": "Villarreal",
       "matchDate": "2026-05-10T12:00:00Z"
     },
     "Villarreal": {
-      "winProb": 0.3519055614918842,
-      "drawProb": 0.2619956240777489,
-      "loseProb": 0.3860988144303668,
+      "winProb": 0.3516060946622757,
+      "drawProb": 0.26105548398212797,
+      "loseProb": 0.38733842135559643,
       "over25Prob": 0.5714285714285714,
       "isHome": false,
       "opponent": "Mallorca",
       "matchDate": "2026-05-10T12:00:00Z"
     },
     "Athletic Bilbao": {
-      "winProb": 0.5254534815681685,
-      "drawProb": 0.26272674078408426,
-      "loseProb": 0.21181977764774718,
-      "over25Prob": 0.5102040816326531,
+      "winProb": 0.5547399613952098,
+      "drawProb": 0.24639099584046978,
+      "loseProb": 0.1988690427643205,
+      "over25Prob": 0.5181347150259068,
       "isHome": true,
       "opponent": "Valencia",
       "matchDate": "2026-05-10T14:15:00Z"
     },
     "Valencia": {
-      "winProb": 0.21181977764774718,
-      "drawProb": 0.26272674078408426,
-      "loseProb": 0.5254534815681685,
-      "over25Prob": 0.5102040816326531,
+      "winProb": 0.1988690427643205,
+      "drawProb": 0.24639099584046978,
+      "loseProb": 0.5547399613952098,
+      "over25Prob": 0.5181347150259068,
       "isHome": false,
       "opponent": "Athletic Bilbao",
       "matchDate": "2026-05-10T14:15:00Z"
@@ -14899,6 +14875,62 @@
   },
   "news": [
     {
+      "title": "Matarazzo, sobre Guedes, Óskarsson, Oyarzabal y el Sevilla",
+      "link": "https://www.jornadaperfecta.com/blog/matarazzo-previa-sevilla-real-sociedad-j34/",
+      "date": "Sun, 03 May 2026 12:26:03 +0000",
+      "img": "https://cdn.biwenger.com/i/t/13.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Guedes, Zubeldia y Karrikaburu no llegan a la Jornada 34",
+      "link": "https://www.jornadaperfecta.com/blog/guedes-estado-j34-25-26/",
+      "date": "Sun, 03 May 2026 11:35:25 +0000",
+      "img": "https://cdn.biwenger.com/i/t/13.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Cyril Ngonge, baja de última hora en el Espanyol",
+      "link": "https://www.jornadaperfecta.com/blog/cyril-ngonge-estado-j34-25-26/",
+      "date": "Sun, 03 May 2026 11:15:49 +0000",
+      "img": "https://cdn.biwenger.com/i/t/7.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Rafa Mir, fuera de la convocatoria por molestias",
+      "link": "https://www.jornadaperfecta.com/blog/rafa-mir-estado-molestias-26/",
+      "date": "Sun, 03 May 2026 11:11:47 +0000",
+      "img": "https://cdn.biwenger.com/i/t/75.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "García Plaza, sobre el mediocampo, Suazo y la vuelta de Azpilicueta",
+      "link": "https://www.jornadaperfecta.com/blog/garcia-plaza-previa-sevilla-real-sociedad-j34/",
+      "date": "Sun, 03 May 2026 10:29:45 +0000",
+      "img": "https://cdn.biwenger.com/i/t/17.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Gabriel Suazo entrena con un aparatoso vendaje en el hombro",
+      "link": "https://www.jornadaperfecta.com/blog/suazo-lesion-hombro/",
+      "date": "Sun, 03 May 2026 09:50:04 +0000",
+      "img": "https://cdn.biwenger.com/i/t/17.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Borja Mayoral vuelve a una convocatoria con el Getafe",
+      "link": "https://www.jornadaperfecta.com/blog/borja-mayoral-recuperacion-getafe-cf/",
+      "date": "Sun, 03 May 2026 09:40:16 +0000",
+      "img": "https://cdn.biwenger.com/i/t/8.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "CuotaPlus MARCAapuestas Espanyol vs Real Madrid: mejora tu cuota un 25%",
       "link": "https://www.jornadaperfecta.com/blog/marcaapuestas-cuotaplus-espanyol-vs-real-madrid/",
       "date": "Sun, 03 May 2026 07:00:07 +0000",
@@ -14921,69 +14953,13 @@
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Iñigo Pérez sobre el estado de Óscar Valentín y Álvaro García",
-      "link": "https://www.jornadaperfecta.com/blog/inigo-perez-previa-getafe-rayo-j34/",
-      "date": "Sat, 02 May 2026 16:25:49 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Parte médico de Manu Bueno, que sufre una lesión de rodilla",
-      "link": "https://www.jornadaperfecta.com/blog/manu-bueno-parte-medico-lesion-rodilla-26/",
-      "date": "Sat, 02 May 2026 15:53:29 +0000",
-      "img": "https://cdn.biwenger.com/i/t/17.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Tunde sufre una recaída e Iván Romero, un golpe. ¿Preocupan?",
-      "link": "https://www.jornadaperfecta.com/blog/tunde-estado-recaida-muscular-26/",
-      "date": "Sat, 02 May 2026 15:35:35 +0000",
-      "img": "https://cdn.biwenger.com/i/t/10.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Carlos Álvarez vuelve a sufrir una lesión de tobillo y preocupa",
-      "link": "https://www.jornadaperfecta.com/blog/carlos-alvarez-lesion-tobillo-26/",
-      "date": "Sat, 02 May 2026 15:19:16 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Giráldez, sobre Starfelt, Aspas, Álvaro Núñez y la defensa",
-      "link": "https://www.jornadaperfecta.com/blog/giraldez-previa-celta-elche-j34/",
-      "date": "Sat, 02 May 2026 12:15:52 +0000",
-      "img": "https://cdn.biwenger.com/i/t/5.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Pellegrini analiza el estado de Isco y no descarta el quirófano para Antony",
-      "link": "https://www.jornadaperfecta.com/blog/pellegrini-previa-betis-real-oviedo-j34/",
-      "date": "Sat, 02 May 2026 11:27:12 +0000",
-      "img": "https://cdn.biwenger.com/i/t/87.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Guedes vuelve y Zubeldia y Karrikaburu siguen fuera. ¿Llegan a la Jornada 34?",
-      "link": "https://www.jornadaperfecta.com/blog/guedes-estado-j34-25-26/",
-      "date": "Sat, 02 May 2026 10:35:25 +0000",
-      "img": "https://cdn.biwenger.com/i/t/13.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-05-03T07:43:44.932Z",
+    "updatedAt": "2026-05-03T12:39:51.361Z",
     "players": [
       {
         "id": "3374",
@@ -15075,11 +15051,11 @@
         "team": "RC Celta de Vigo",
         "position": "",
         "nationality": "Spain",
-        "appearances": 32,
+        "appearances": 33,
         "goals": 13,
         "assists": 1,
         "penalties": 4,
-        "minutesPerGoal": 222
+        "minutesPerGoal": 228
       },
       {
         "id": "371",
@@ -15195,11 +15171,11 @@
         "team": "Elche CF",
         "position": "",
         "nationality": "Portugal",
-        "appearances": 28,
+        "appearances": 29,
         "goals": 9,
         "assists": 0,
         "penalties": 2,
-        "minutesPerGoal": 280
+        "minutesPerGoal": 290
       },
       {
         "id": "160819",
@@ -15459,11 +15435,11 @@
         "team": "RC Celta de Vigo",
         "position": "",
         "nationality": "Spain",
-        "appearances": 30,
+        "appearances": 31,
         "goals": 7,
-        "assists": 2,
+        "assists": 3,
         "penalties": 0,
-        "minutesPerGoal": 386
+        "minutesPerGoal": 399
       },
       {
         "id": "203439",
@@ -15694,16 +15670,28 @@
         "minutesPerGoal": 594
       },
       {
+        "id": "3201",
+        "name": "Iago Aspas",
+        "team": "RC Celta de Vigo",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 33,
+        "goals": 5,
+        "assists": 3,
+        "penalties": 2,
+        "minutesPerGoal": 594
+      },
+      {
         "id": "189369",
         "name": "Alvaro Rodriguez",
         "team": "Elche CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 32,
+        "appearances": 33,
         "goals": 5,
         "assists": 5,
         "penalties": 0,
-        "minutesPerGoal": 576
+        "minutesPerGoal": 594
       },
       {
         "id": "96",
@@ -15778,6 +15766,18 @@
         "minutesPerGoal": 608
       },
       {
+        "id": "175869",
+        "name": "Hugo Alvarez",
+        "team": "RC Celta de Vigo",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 30,
+        "goals": 4,
+        "assists": 1,
+        "penalties": 0,
+        "minutesPerGoal": 675
+      },
+      {
         "id": "171964",
         "name": "Giuliano Simeone",
         "team": "Club Atlético de Madrid",
@@ -15838,18 +15838,6 @@
         "minutesPerGoal": 720
       },
       {
-        "id": "3201",
-        "name": "Iago Aspas",
-        "team": "RC Celta de Vigo",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 32,
-        "goals": 4,
-        "assists": 3,
-        "penalties": 2,
-        "minutesPerGoal": 720
-      },
-      {
         "id": "33148",
         "name": "Carlos Soler",
         "team": "Real Sociedad de Fútbol",
@@ -15879,11 +15867,11 @@
         "team": "RC Celta de Vigo",
         "position": "",
         "nationality": "Sweden",
-        "appearances": 26,
+        "appearances": 27,
         "goals": 4,
         "assists": 3,
         "penalties": 0,
-        "minutesPerGoal": 585
+        "minutesPerGoal": 608
       },
       {
         "id": "217658",
@@ -15968,18 +15956,6 @@
         "assists": 5,
         "penalties": 0,
         "minutesPerGoal": 810
-      },
-      {
-        "id": "175869",
-        "name": "Hugo Alvarez",
-        "team": "RC Celta de Vigo",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 29,
-        "goals": 3,
-        "assists": 1,
-        "penalties": 0,
-        "minutesPerGoal": 870
       },
       {
         "id": "9870",
