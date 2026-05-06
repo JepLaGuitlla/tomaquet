@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-05T19:01:23.370Z",
+  "updatedAt": "2026-05-06T01:27:00.818Z",
   "players": [
     {
       "id": 11,
@@ -12159,9 +12159,9 @@
           1,
           4
         ],
-        "teamSize": 14,
-        "teamValue": 102580000,
-        "teamValueInc": 370000,
+        "teamSize": 13,
+        "teamValue": 99520000,
+        "teamValueInc": 380000,
         "lastTrophy": {
           "type": "league",
           "position": 1,
@@ -12363,8 +12363,8 @@
       "name": "Zaza Pachulia",
       "manager": "Zaza Pachulia",
       "points": 1600,
-      "value": 102580000,
-      "trend": 370000,
+      "value": 99520000,
+      "trend": 380000,
       "players": []
     },
     {
@@ -12618,6 +12618,21 @@
   "boardTomaquet": [
     {
       "type": "transfer",
+      "date": 1778014345,
+      "content": [
+        {
+          "player": 28012,
+          "from": {
+            "id": 148051,
+            "name": "Zaza Pachulia",
+            "icon": "i/u/148051.png?v=39"
+          },
+          "amount": 3177200
+        }
+      ]
+    },
+    {
+      "type": "transfer",
       "date": 1777981226,
       "content": [
         {
@@ -12727,21 +12742,6 @@
             "icon": "i/u/3928497.png"
           },
           "amount": 146900
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1777933260,
-      "content": [
-        {
-          "player": 1995,
-          "from": {
-            "id": 6552586,
-            "name": "LeMola Team",
-            "icon": "i/u/6552586.png"
-          },
-          "amount": 3409200
         }
       ]
     }
@@ -13037,8 +13037,8 @@
           19,
           3
         ],
-        "teamSize": 19,
-        "teamValue": 56360000,
+        "teamSize": 18,
+        "teamValue": 56210000,
         "teamValueInc": 240000,
         "position": 15,
         "positionInc": 2,
@@ -13274,7 +13274,7 @@
       "name": "Mindundis",
       "manager": "Mindundis",
       "points": 1274,
-      "value": 56360000,
+      "value": 56210000,
       "trend": 240000,
       "players": []
     },
@@ -13485,6 +13485,21 @@
   "boardEnBas": [
     {
       "type": "transfer",
+      "date": 1778028144,
+      "content": [
+        {
+          "player": 8375,
+          "from": {
+            "id": 6579330,
+            "name": "Mindundis",
+            "icon": "i/u/6579330.png?v=66"
+          },
+          "amount": 153200
+        }
+      ]
+    },
+    {
+      "type": "transfer",
       "date": 1777970959,
       "content": [
         {
@@ -13629,21 +13644,6 @@
             "icon": "i/u/6593096.png"
           },
           "amount": 260010
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1777941978,
-      "content": [
-        {
-          "player": 34080,
-          "from": {
-            "id": 6593096,
-            "name": "Janwandowski",
-            "icon": "i/u/6593096.png"
-          },
-          "amount": 183100
         }
       ]
     }
@@ -14042,7 +14042,7 @@
           "L"
         ],
         "gf": 8,
-        "ga": 10,
+        "ga": 9,
         "crest": "https://crests.football-data.org/77.png",
         "name": "Athletic Club"
       },
@@ -14197,7 +14197,7 @@
           "W",
           "L"
         ],
-        "gf": 11,
+        "gf": 10,
         "ga": 5,
         "crest": "https://crests.football-data.org/94.png",
         "name": "Villarreal CF"
@@ -14786,27 +14786,27 @@
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "CA Osasuna": {
-      "winProb": 0.4731292202386459,
-      "drawProb": 0.27166774581444825,
-      "loseProb": 0.25520303394690597,
+      "winProb": 0.47594677584442174,
+      "drawProb": 0.27021494370522003,
+      "loseProb": 0.2538382804503582,
       "over25Prob": 0.5235602094240838,
       "isHome": true,
       "opponent": "Espanyol",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Elche CF": {
-      "winProb": 0.4222768955490941,
-      "drawProb": 0.30060389174681273,
-      "loseProb": 0.277119212704093,
+      "winProb": 0.4303003137606454,
+      "drawProb": 0.294038547736441,
+      "loseProb": 0.27566113850291346,
       "over25Prob": 0.42016806722689076,
       "isHome": true,
       "opponent": "Getafe",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Alavés": {
-      "winProb": 0.36900369003690037,
-      "drawProb": 0.2767527675276753,
-      "loseProb": 0.3542435424354244,
+      "winProb": 0.3435517970401691,
+      "drawProb": 0.2854122621564482,
+      "loseProb": 0.3710359408033827,
       "over25Prob": 0.46511627906976744,
       "isHome": false,
       "opponent": "Oviedo",
@@ -14822,9 +14822,9 @@
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Espanyol": {
-      "winProb": 0.25520303394690597,
-      "drawProb": 0.27166774581444825,
-      "loseProb": 0.4731292202386459,
+      "winProb": 0.2538382804503582,
+      "drawProb": 0.27021494370522003,
+      "loseProb": 0.47594677584442174,
       "over25Prob": 0.5235602094240838,
       "isHome": false,
       "opponent": "CA Osasuna",
@@ -14858,9 +14858,9 @@
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Real Betis": {
-      "winProb": 0.14000655768420064,
-      "drawProb": 0.17143660124595997,
-      "loseProb": 0.6885568410698393,
+      "winProb": 0.14048825426070935,
+      "drawProb": 0.16858590511285124,
+      "loseProb": 0.6909258406264395,
       "over25Prob": 0.7751937984496123,
       "isHome": false,
       "opponent": "Barcelona",
@@ -14903,27 +14903,27 @@
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Oviedo": {
-      "winProb": 0.3542435424354244,
-      "drawProb": 0.2767527675276753,
-      "loseProb": 0.36900369003690037,
+      "winProb": 0.3710359408033827,
+      "drawProb": 0.2854122621564482,
+      "loseProb": 0.3435517970401691,
       "over25Prob": 0.46511627906976744,
       "isHome": true,
       "opponent": "Alavés",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Getafe": {
-      "winProb": 0.277119212704093,
-      "drawProb": 0.30060389174681273,
-      "loseProb": 0.4222768955490941,
+      "winProb": 0.27566113850291346,
+      "drawProb": 0.294038547736441,
+      "loseProb": 0.4303003137606454,
       "over25Prob": 0.42016806722689076,
       "isHome": false,
       "opponent": "Elche CF",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.6885568410698393,
-      "drawProb": 0.17143660124595997,
-      "loseProb": 0.14000655768420064,
+      "winProb": 0.6909258406264395,
+      "drawProb": 0.16858590511285124,
+      "loseProb": 0.14048825426070935,
       "over25Prob": 0.7751937984496123,
       "isHome": true,
       "opponent": "Real Betis",
@@ -14958,6 +14958,30 @@
     }
   },
   "news": [
+    {
+      "title": "Cinco noticias fantasy para antes de irte a dormir",
+      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-5-5-26/",
+      "date": "Tue, 05 May 2026 21:00:42 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Mbappé se ejercita en el día libre, ¿llegará al Clásico?",
+      "link": "https://www.jornadaperfecta.com/blog/mbappe-estado-real-madrid-j35/",
+      "date": "Tue, 05 May 2026 19:05:15 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Chollos LaLiga Fantasy: Fichajes Baratos y Rentables para la jornada 35",
+      "link": "https://www.jornadaperfecta.com/blog/chollos-laliga-fantasy-j35-25-26/",
+      "date": "Tue, 05 May 2026 19:00:27 +0000",
+      "img": "https://cdn.biwenger.com/i/t/1.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "¡Alerta Fantasy!: Ventas que debes hacer tras la Jornada 34 de LaLiga",
       "link": "https://www.jornadaperfecta.com/blog/ventas-fantasy-j34-laliga-25-26/",
@@ -15013,37 +15037,13 @@
       "img": "https://cdn.biwenger.com/i/t/87.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Los sancionados de LaLiga para la jornada 35",
-      "link": "https://www.jornadaperfecta.com/blog/sancionados-j35-25-26/",
-      "date": "Tue, 05 May 2026 12:00:45 +0000",
-      "img": "https://cdn.biwenger.com/i/t/289.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Supercuota YoSports Arsenal vs Atlético: cuota mejorada a 5.00",
-      "link": "https://www.jornadaperfecta.com/blog/supercuota-yosports-arsenal-vs-atletico/",
-      "date": "Tue, 05 May 2026 11:20:07 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/05/YoSports-Superapuesta-Arsenal-vs-Atletico.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Mbappé se ejercita en el día libre, ¿llegará al Clásico?",
-      "link": "https://www.jornadaperfecta.com/blog/mbappe-estado-real-madrid-j35/",
-      "date": "Tue, 05 May 2026 11:03:15 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-05-05T19:01:22.516Z",
+    "updatedAt": "2026-05-06T01:26:58.688Z",
     "players": [
       {
         "id": "3374",
