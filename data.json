@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-07T08:10:02.259Z",
+  "updatedAt": "2026-05-07T13:23:49.399Z",
   "players": [
     {
       "id": 11,
@@ -12062,7 +12062,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 2,
-          "season": "Temporada 2024/2025"
+          "season": "2024/2025 season"
         },
         "position": 2
       },
@@ -12102,7 +12102,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "Temporada 2024/2025"
+          "season": "2024/2025 season"
         },
         "position": 4,
         "positionInc": 1,
@@ -12165,7 +12165,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 1,
-          "season": "Temporada 2024/2025"
+          "season": "2024/2025 season"
         },
         "position": 7,
         "positionInc": -1
@@ -12236,13 +12236,13 @@
           13,
           6
         ],
-        "teamSize": 16,
-        "teamValue": 65460000,
-        "teamValueInc": 450000,
+        "teamSize": 15,
+        "teamValue": 61850000,
+        "teamValueInc": 360000,
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "Temporada 2023/2024"
+          "season": "2023/2024 season"
         },
         "position": 11,
         "role": ""
@@ -12278,8 +12278,8 @@
           14
         ],
         "teamSize": 19,
-        "teamValue": 39160000,
-        "teamValueInc": 340000,
+        "teamValue": 39760000,
+        "teamValueInc": 500000,
         "position": 13,
         "role": ""
       },
@@ -12399,8 +12399,8 @@
       "name": "Tata Martini",
       "manager": "Tata Martini",
       "points": 1408,
-      "value": 65460000,
-      "trend": 450000,
+      "value": 61850000,
+      "trend": 360000,
       "players": []
     },
     {
@@ -12417,8 +12417,8 @@
       "name": "Morankus FC",
       "manager": "Morankus FC",
       "points": 1359,
-      "value": 39160000,
-      "trend": 340000,
+      "value": 39760000,
+      "trend": 500000,
       "players": []
     },
     {
@@ -12438,7 +12438,7 @@
     "balance": 451310,
     "lineup": {
       "type": "3-5-2",
-      "date": 1778110421,
+      "date": 1778146871,
       "playersID": [
         38405,
         37495,
@@ -12448,14 +12448,14 @@
         11686,
         26994,
         25127,
+        30123,
         38867,
-        38116,
         38843
       ],
       "reservesID": [
         14630,
         26276,
-        30123,
+        38116,
         27591
       ]
     },
@@ -12644,6 +12644,42 @@
   },
   "boardTomaquet": [
     {
+      "type": "transfer",
+      "date": 1778157941,
+      "content": [
+        {
+          "player": 24326,
+          "from": {
+            "id": 12713493,
+            "name": "Tata Martini",
+            "icon": "i/u/12713493.png"
+          },
+          "to": {
+            "id": 11520975,
+            "name": "Morankus FC",
+            "icon": "i/u/11520975.png?v=81"
+          },
+          "amount": 10500000,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1778157689,
+      "content": [
+        {
+          "player": 35778,
+          "from": {
+            "id": 11520975,
+            "name": "Morankus FC",
+            "icon": "i/u/11520975.png?v=81"
+          },
+          "amount": 3130500
+        }
+      ]
+    },
+    {
       "type": "market",
       "date": 1778130201,
       "content": [
@@ -12810,100 +12846,6 @@
             "icon": "i/u/11521196.png?v=57"
           },
           "amount": 467000
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1778051383,
-      "content": [
-        {
-          "player": 32120,
-          "from": {
-            "id": 3928497,
-            "name": "The Black Team",
-            "icon": "i/u/3928497.png"
-          },
-          "amount": 1437200
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1778043891,
-      "content": [
-        {
-          "player": 38290,
-          "to": {
-            "id": 8068002,
-            "name": "Soulands Rangers",
-            "icon": "i/u/8068002.png?v=69"
-          },
-          "amount": 2200000
-        },
-        {
-          "player": 38405,
-          "to": {
-            "id": 6541195,
-            "name": "🦊",
-            "icon": "i/u/6541195.png?v=17"
-          },
-          "amount": 2010000
-        },
-        {
-          "player": 1523,
-          "to": {
-            "id": 6541195,
-            "name": "🦊",
-            "icon": "i/u/6541195.png?v=17"
-          },
-          "amount": 4785222,
-          "bids": [
-            {
-              "user": {
-                "id": 8068002,
-                "name": "Soulands Rangers",
-                "icon": "i/u/8068002.png?v=69"
-              },
-              "amount": 3810000
-            },
-            {
-              "user": {
-                "id": 11520975,
-                "name": "Morankus FC",
-                "icon": "i/u/11520975.png?v=81"
-              },
-              "amount": 2710000
-            }
-          ]
-        },
-        {
-          "player": 30789,
-          "to": {
-            "id": 8068002,
-            "name": "Soulands Rangers",
-            "icon": "i/u/8068002.png?v=69"
-          },
-          "amount": 8950000
-        },
-        {
-          "player": 30123,
-          "to": {
-            "id": 6541195,
-            "name": "🦊",
-            "icon": "i/u/6541195.png?v=17"
-          },
-          "amount": 5952222,
-          "bids": [
-            {
-              "user": {
-                "id": 8068002,
-                "name": "Soulands Rangers",
-                "icon": "i/u/8068002.png?v=69"
-              },
-              "amount": 4670000
-            }
-          ]
         }
       ]
     }
@@ -14940,9 +14882,9 @@
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Alavés": {
-      "winProb": 0.3435517970401691,
-      "drawProb": 0.2854122621564482,
-      "loseProb": 0.3710359408033827,
+      "winProb": 0.3803786574870912,
+      "drawProb": 0.26850258175559377,
+      "loseProb": 0.3511187607573149,
       "over25Prob": 0.46511627906976744,
       "isHome": false,
       "opponent": "Oviedo",
@@ -15039,9 +14981,9 @@
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Oviedo": {
-      "winProb": 0.3710359408033827,
-      "drawProb": 0.2854122621564482,
-      "loseProb": 0.3435517970401691,
+      "winProb": 0.3511187607573149,
+      "drawProb": 0.26850258175559377,
+      "loseProb": 0.3803786574870912,
       "over25Prob": 0.46511627906976744,
       "isHome": true,
       "opponent": "Alavés",
@@ -15095,82 +15037,82 @@
   },
   "news": [
     {
-      "title": "Rayo Vallecano, alineación probable contra el Estrasburgo y dónde ver en TV",
-      "link": "https://www.jornadaperfecta.com/blog/rayo-alineacion-probable-conference-vuelta-semis/",
-      "date": "Thu, 07 May 2026 07:20:44 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Los Mejores Capitanes Fantasy para la jornada 35 de LaLiga",
-      "link": "https://www.jornadaperfecta.com/blog/capitanes-fantasy-j35-25-26/",
-      "date": "Thu, 07 May 2026 07:00:11 +0000",
-      "img": "https://cdn.biwenger.com/i/t/17.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Cinco noticias fantasy para antes de irte a dormir",
-      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-6-5-26/",
-      "date": "Wed, 06 May 2026 21:02:04 +0000",
+      "title": "Mbappé supera la prueba y está con el grupo, ¿titular en el Clásico?",
+      "link": "https://www.jornadaperfecta.com/blog/mbappe-estado-real-madrid-j35/",
+      "date": "Thu, 07 May 2026 12:50:15 +0000",
       "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Promoción RETAbet Golmanía Estrasburgo vs Rayo Vallecano: ¡5€ gratis por cada gol!",
-      "link": "https://www.jornadaperfecta.com/blog/retabet-golmania-estrasburgo-vs-rayo-vallecano/",
-      "date": "Wed, 06 May 2026 20:45:07 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/05/RETAbet-Golmania-Estrasburgo-vs-Rayo-Vallecano.webp",
+      "title": "Courtois ya entrena con el grupo. ¿Merece la pena en fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/courtois-analisis-recuperacion-lesion-26/",
+      "date": "Thu, 07 May 2026 12:40:23 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/04/image-2026-04-28T192109.139.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Andrés Castrín vuelve al once a un gran nivel. ¿Chollazo fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/andres-castrin-analisis-j35-25-26/",
-      "date": "Wed, 06 May 2026 19:00:45 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/08/Nianzou-Sevilla.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Podcast: Alineaciones Probables Jornada 35 2025/26",
-      "link": "https://www.jornadaperfecta.com/blog/podcast-alineaciones-probables-jornada-35-2025-26/",
-      "date": "Wed, 06 May 2026 18:30:41 +0000",
-      "img": "https://i.ytimg.com/vi/0Qs7ThTOxLg/mqdefault.jpg",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Iñigo Pérez, sobre Álvaro García y un partido histórico",
-      "link": "https://www.jornadaperfecta.com/blog/inigo-perez-previa-conference-semifinales-vuelta-26/",
-      "date": "Wed, 06 May 2026 18:00:33 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Álvaro García no entrena, pese a viajar a Estrasburgo",
-      "link": "https://www.jornadaperfecta.com/blog/alvaro-garcia-estado-j34/",
-      "date": "Wed, 06 May 2026 17:10:00 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Cyril Ngonge apunta a baja de nuevo en el Espanyol",
-      "link": "https://www.jornadaperfecta.com/blog/cyril-ngonge-estado-golpe-26/",
-      "date": "Wed, 06 May 2026 16:23:35 +0000",
-      "img": "https://cdn.biwenger.com/i/t/7.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Aimar entrena en la sesión de hoy parcialmente",
-      "link": "https://www.jornadaperfecta.com/blog/aimar-oroz-estado-j35/",
-      "date": "Wed, 06 May 2026 15:30:35 +0000",
+      "title": "Lisci acerca la fecha de vuelta de Víctor Muñoz",
+      "link": "https://www.jornadaperfecta.com/blog/lisci-previa-levante-osasuna-j35/",
+      "date": "Thu, 07 May 2026 12:40:06 +0000",
       "img": "https://cdn.biwenger.com/i/t/93.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Ferland Mendy: Parte médico oficial y tiempo de baja",
+      "link": "https://www.jornadaperfecta.com/blog/ferland-mendy-parte-medico-real-madrid/",
+      "date": "Thu, 07 May 2026 12:35:01 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Matías Vecino sigue al margen y apunta a baja",
+      "link": "https://www.jornadaperfecta.com/blog/matias-vecino-estado-j35-25-26/",
+      "date": "Thu, 07 May 2026 12:34:27 +0000",
+      "img": "https://cdn.biwenger.com/i/t/5.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Actualizadas las Alineaciones Probables para la Jornada 35",
+      "link": "https://www.jornadaperfecta.com/blog/alineaciones-probables-j35-25-26/",
+      "date": "Thu, 07 May 2026 12:30:14 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Álvaro García forzará para estar en la Conference League",
+      "link": "https://www.jornadaperfecta.com/blog/alvaro-garcia-estado-j34/",
+      "date": "Thu, 07 May 2026 12:00:00 +0000",
+      "img": "https://cdn.biwenger.com/i/t/70.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Luis Castro confirma a Tunde y deja dudas con Dela",
+      "link": "https://www.jornadaperfecta.com/blog/luis-castro-previa-levante-osasuna-j35-25-26/",
+      "date": "Thu, 07 May 2026 11:02:02 +0000",
+      "img": "https://cdn.biwenger.com/i/t/10.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Johnny Cardoso se retira del entrenamiento con una posible lesión",
+      "link": "https://www.jornadaperfecta.com/blog/johnny-cardoso-estado-j35-25-26/",
+      "date": "Thu, 07 May 2026 10:38:29 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Julián Álvarez no entrena y su tobillo puede haber empeorado. ¿Preocupa?",
+      "link": "https://www.jornadaperfecta.com/blog/julian-alvarez-estado-tobillo-26/",
+      "date": "Thu, 07 May 2026 09:44:56 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -15179,7 +15121,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-05-07T08:10:02.259Z",
+    "updatedAt": "2026-05-07T13:23:48.228Z",
     "players": [
       {
         "id": "3374",
