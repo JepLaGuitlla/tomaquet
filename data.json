@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-06T19:17:14.144Z",
+  "updatedAt": "2026-05-07T01:44:58.101Z",
   "players": [
     {
       "id": 11,
@@ -12062,7 +12062,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 2,
-          "season": "2024/2025 season"
+          "season": "Temporada 2024/2025"
         },
         "position": 2
       },
@@ -12079,9 +12079,9 @@
           2,
           1
         ],
-        "teamSize": 23,
-        "teamValue": 91750000,
-        "teamValueInc": 380000,
+        "teamSize": 22,
+        "teamValue": 90210000,
+        "teamValueInc": 400000,
         "position": 3
       },
       {
@@ -12102,7 +12102,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "2024/2025 season"
+          "season": "Temporada 2024/2025"
         },
         "position": 4,
         "positionInc": 1,
@@ -12165,7 +12165,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 1,
-          "season": "2024/2025 season"
+          "season": "Temporada 2024/2025"
         },
         "position": 7,
         "positionInc": -1
@@ -12219,9 +12219,9 @@
           5,
           11
         ],
-        "teamSize": 18,
-        "teamValue": 68610000,
-        "teamValueInc": 190000,
+        "teamSize": 16,
+        "teamValue": 66310000,
+        "teamValueInc": 200000,
         "position": 10
       },
       {
@@ -12242,7 +12242,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "2023/2024 season"
+          "season": "Temporada 2023/2024"
         },
         "position": 11,
         "role": ""
@@ -12327,8 +12327,8 @@
       "name": "🦊",
       "manager": "🦊",
       "points": 1728,
-      "value": 91750000,
-      "trend": 380000,
+      "value": 90210000,
+      "trend": 400000,
       "players": []
     },
     {
@@ -12390,8 +12390,8 @@
       "name": "The Black Team",
       "manager": "The Black Team",
       "points": 1443,
-      "value": 68610000,
-      "trend": 190000,
+      "value": 66310000,
+      "trend": 200000,
       "players": []
     },
     {
@@ -12435,10 +12435,10 @@
     "teamId": 6541195,
     "name": "🦊",
     "points": 1728,
-    "balance": -1116190,
+    "balance": 451310,
     "lineup": {
       "type": "3-5-2",
-      "date": 1778076227,
+      "date": 1778110421,
       "playersID": [
         38405,
         37495,
@@ -12454,9 +12454,9 @@
       ],
       "reservesID": [
         14630,
-        38178,
-        32460,
-        9966
+        26276,
+        30123,
+        27591
       ]
     },
     "players": [
@@ -12580,13 +12580,6 @@
         "buyDate": 1776017113
       },
       {
-        "id": 38178,
-        "buyPrice": 1268999,
-        "clause": 2310000,
-        "invested": 0,
-        "buyDate": 1777179786
-      },
-      {
         "id": 38405,
         "buyPrice": 2010000,
         "clause": 3030000,
@@ -12642,12 +12635,6 @@
         "until": 1778228626
       },
       {
-        "playerID": 38178,
-        "price": 3120000,
-        "type": "sale",
-        "until": 1778169204
-      },
-      {
         "playerID": 39360,
         "price": 2290000,
         "type": "sale",
@@ -12656,6 +12643,45 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1778117234,
+      "content": [
+        {
+          "player": 33839,
+          "from": {
+            "id": 3928497,
+            "name": "The Black Team",
+            "icon": "i/u/3928497.png"
+          },
+          "amount": 1224700
+        },
+        {
+          "player": 1721,
+          "from": {
+            "id": 3928497,
+            "name": "The Black Team",
+            "icon": "i/u/3928497.png"
+          },
+          "amount": 1129800
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1778110351,
+      "content": [
+        {
+          "player": 38178,
+          "from": {
+            "id": 6541195,
+            "name": "🦊",
+            "icon": "i/u/6541195.png?v=17"
+          },
+          "amount": 1567500
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1778056850,
@@ -12852,21 +12878,6 @@
             "icon": "i/u/148051.png?v=39"
           },
           "amount": 3177200
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1777981226,
-      "content": [
-        {
-          "player": 32020,
-          "from": {
-            "id": 3928497,
-            "name": "The Black Team",
-            "icon": "i/u/3928497.png"
-          },
-          "amount": 2438900
         }
       ]
     }
@@ -13580,7 +13591,7 @@
       {
         "id": 39360,
         "buyPrice": 3099999,
-        "clause": 3435000,
+        "clause": 0,
         "invested": 0,
         "buyDate": 1775883874
       },
@@ -14919,9 +14930,9 @@
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Real Betis": {
-      "winProb": 0.14762007633038093,
-      "drawProb": 0.1682868870166343,
-      "loseProb": 0.6840930366529849,
+      "winProb": 0.1425300247675125,
+      "drawProb": 0.16818542922566476,
+      "loseProb": 0.6892845460068228,
       "over25Prob": 0.7751937984496123,
       "isHome": false,
       "opponent": "Barcelona",
@@ -14982,9 +14993,9 @@
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.6840930366529849,
-      "drawProb": 0.1682868870166343,
-      "loseProb": 0.14762007633038093,
+      "winProb": 0.6892845460068228,
+      "drawProb": 0.16818542922566476,
+      "loseProb": 0.1425300247675125,
       "over25Prob": 0.7751937984496123,
       "isHome": true,
       "opponent": "Real Betis",
@@ -15019,6 +15030,22 @@
     }
   },
   "news": [
+    {
+      "title": "Cinco noticias fantasy para antes de irte a dormir",
+      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-6-5-26/",
+      "date": "Wed, 06 May 2026 21:02:04 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Promoción RETAbet Golmanía Estrasburgo vs Rayo Vallecano: ¡5€ gratis por cada gol!",
+      "link": "https://www.jornadaperfecta.com/blog/retabet-golmania-estrasburgo-vs-rayo-vallecano/",
+      "date": "Wed, 06 May 2026 20:45:07 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/05/RETAbet-Golmania-Estrasburgo-vs-Rayo-Vallecano.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Andrés Castrín vuelve al once a un gran nivel. ¿Chollazo fantasy?",
       "link": "https://www.jornadaperfecta.com/blog/andres-castrin-analisis-j35-25-26/",
@@ -15068,7 +15095,7 @@
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Lucas Beltrán sigue sin entrenar y apunta a baja de nuevo",
+      "title": "Lucas Beltr��n sigue sin entrenar y apunta a baja de nuevo",
       "link": "https://www.jornadaperfecta.com/blog/lucas-beltran-estado-j35-25-26/",
       "date": "Wed, 06 May 2026 15:08:46 +0000",
       "img": "",
@@ -15082,29 +15109,13 @@
       "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2665.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Isaac Romero no entrena y se cuidará para la «final» del sábado",
-      "link": "https://www.jornadaperfecta.com/blog/isaac-romero-lesion-sevilla-fc/",
-      "date": "Wed, 06 May 2026 14:40:54 +0000",
-      "img": "https://cdn.biwenger.com/i/t/17.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Rayo Vallecano, alineación probable contra el Estrasburgo y dónde ver en TV",
-      "link": "https://www.jornadaperfecta.com/blog/rayo-alineacion-probable-conference-vuelta-semis/",
-      "date": "Wed, 06 May 2026 12:51:44 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-05-06T19:17:12.957Z",
+    "updatedAt": "2026-05-07T01:44:56.825Z",
     "players": [
       {
         "id": "3374",
