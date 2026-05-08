@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-08T07:12:23.893Z",
+  "updatedAt": "2026-05-08T13:04:04.721Z",
   "players": [
     {
       "id": 11,
@@ -12236,9 +12236,9 @@
           13,
           6
         ],
-        "teamSize": 17,
-        "teamValue": 66350000,
-        "teamValueInc": 360000,
+        "teamSize": 16,
+        "teamValue": 54080000,
+        "teamValueInc": 410000,
         "lastTrophy": {
           "type": "league",
           "position": 3,
@@ -12399,8 +12399,8 @@
       "name": "Tata Martini",
       "manager": "Tata Martini",
       "points": 1408,
-      "value": 66350000,
-      "trend": 360000,
+      "value": 54080000,
+      "trend": 410000,
       "players": []
     },
     {
@@ -12438,7 +12438,7 @@
     "balance": 1907980,
     "lineup": {
       "type": "3-5-2",
-      "date": 1778189847,
+      "date": 1778227466,
       "playersID": [
         14630,
         37495,
@@ -12645,6 +12645,21 @@
   "boardTomaquet": [
     {
       "type": "transfer",
+      "date": 1778224993,
+      "content": [
+        {
+          "player": 26048,
+          "from": {
+            "id": 12713493,
+            "name": "Tata Martini",
+            "icon": "i/u/12713493.png"
+          },
+          "amount": 12726200
+        }
+      ]
+    },
+    {
+      "type": "transfer",
       "date": 1778221990,
       "content": [
         {
@@ -12775,27 +12790,6 @@
             "icon": "i/u/12713493.png"
           },
           "amount": 181100
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1778177126,
-      "content": [
-        {
-          "player": 34077,
-          "from": {
-            "id": 148051,
-            "name": "Zaza Pachulia",
-            "icon": "i/u/148051.png?v=39"
-          },
-          "to": {
-            "id": 12713493,
-            "name": "Tata Martini",
-            "icon": "i/u/12713493.png"
-          },
-          "amount": 12238260,
-          "type": "clause"
         }
       ]
     }
@@ -13384,14 +13378,14 @@
     "points": 1529,
     "balance": 5776502,
     "lineup": {
-      "type": "4-3-3",
-      "date": 1778176237,
+      "type": "3-4-3",
+      "date": 1778239155,
       "playersID": [
         14630,
         32440,
         1908,
         37467,
-        40010,
+        26048,
         32338,
         38368,
         1769,
@@ -14869,9 +14863,9 @@
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "CA Osasuna": {
-      "winProb": 0.47594677584442174,
-      "drawProb": 0.27021494370522003,
-      "loseProb": 0.2538382804503582,
+      "winProb": 0.4731292202386459,
+      "drawProb": 0.27166774581444825,
+      "loseProb": 0.25520303394690597,
       "over25Prob": 0.5235602094240838,
       "isHome": true,
       "opponent": "Espanyol",
@@ -14896,18 +14890,18 @@
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Sevilla": {
-      "winProb": 0.23789294817332204,
-      "drawProb": 0.23194562446898898,
-      "loseProb": 0.530161427357689,
+      "winProb": 0.23333333333333334,
+      "drawProb": 0.23333333333333334,
+      "loseProb": 0.5333333333333333,
       "over25Prob": 0.6451612903225806,
       "isHome": true,
       "opponent": "Real Madrid",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Espanyol": {
-      "winProb": 0.2538382804503582,
-      "drawProb": 0.27021494370522003,
-      "loseProb": 0.47594677584442174,
+      "winProb": 0.25520303394690597,
+      "drawProb": 0.27166774581444825,
+      "loseProb": 0.4731292202386459,
       "over25Prob": 0.5235602094240838,
       "isHome": false,
       "opponent": "CA Osasuna",
@@ -15013,9 +15007,9 @@
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Real Madrid": {
-      "winProb": 0.530161427357689,
-      "drawProb": 0.23194562446898898,
-      "loseProb": 0.23789294817332204,
+      "winProb": 0.5333333333333333,
+      "drawProb": 0.23333333333333334,
+      "loseProb": 0.23333333333333334,
       "over25Prob": 0.6451612903225806,
       "isHome": false,
       "opponent": "Sevilla",
@@ -15042,82 +15036,82 @@
   },
   "news": [
     {
-      "title": "Cinco noticias fantasy para antes de irte a dormir",
-      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-7-5-26/",
-      "date": "Thu, 07 May 2026 21:00:14 +0000",
+      "title": "Matarazzo confirma la baja de Guedes y habla de Aritz",
+      "link": "https://www.jornadaperfecta.com/blog/matarazzo-previa-real-sociedad-betis-j35/",
+      "date": "Fri, 08 May 2026 12:50:29 +0000",
+      "img": "https://cdn.biwenger.com/i/t/13.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Giráldez, sobre Ilaix Moriba, Starfelt y Matías Vecino",
+      "link": "https://www.jornadaperfecta.com/blog/giraldez-previa-atleti-celta-j35-2/",
+      "date": "Fri, 08 May 2026 12:30:41 +0000",
+      "img": "https://cdn.biwenger.com/i/t/5.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Mbappé completa el entrenamiento con el grupo, ¿titular en el Clásico?",
+      "link": "https://www.jornadaperfecta.com/blog/mbappe-estado-real-madrid-j35/",
+      "date": "Fri, 08 May 2026 12:20:15 +0000",
       "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Fede Valverde: Parte médico oficial y tiempo de baja",
-      "link": "https://www.jornadaperfecta.com/blog/fede-valverde-traumatismo-cranoencefalico-real-madrid/",
-      "date": "Thu, 07 May 2026 20:12:21 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "title": "Manolo González confirma la baja de Cyril Ngonge",
+      "link": "https://www.jornadaperfecta.com/blog/manolo-gonzalez-previa-sevilla-espanyol-j35/",
+      "date": "Fri, 08 May 2026 11:49:28 +0000",
+      "img": "https://cdn.biwenger.com/i/t/7.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "¡TonyBet te regala una Apuesta Gratis de 10€ para El Clásico!",
-      "link": "https://www.jornadaperfecta.com/blog/tonybet-el-clasico-mayo-2026/",
-      "date": "Thu, 07 May 2026 20:00:31 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/05/Tonybet-El-Clasico.webp",
+      "title": "Guedes, de nuevo fuera de la convocatoria de la Real Sociedad",
+      "link": "https://www.jornadaperfecta.com/blog/guedes-estado-real-sociedad-j35/",
+      "date": "Fri, 08 May 2026 11:30:47 +0000",
+      "img": "https://cdn.biwenger.com/i/t/13.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Valverde, al hospital tras una pelea con Tchouameni: Comunicado oficial del Real Madrid",
-      "link": "https://www.jornadaperfecta.com/blog/valverde-tchouameni-pelea-real-madrid/",
-      "date": "Thu, 07 May 2026 19:30:29 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "title": "Bordalás confirma la mejoría de Satriano, ¿llega a la jornada 35?",
+      "link": "https://www.jornadaperfecta.com/blog/bordalas-previa-real-oviedo-getafe-j35/",
+      "date": "Fri, 08 May 2026 11:26:35 +0000",
+      "img": "https://cdn.biwenger.com/i/t/8.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Ilias Akhomach sufre una lesión en el calentamiento",
-      "link": "https://www.jornadaperfecta.com/blog/akhomach-lesion-rayo-vallecano/",
-      "date": "Thu, 07 May 2026 18:57:33 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
+      "title": "Pellegrini, sobre el estado de Isco y Marc Bartra",
+      "link": "https://www.jornadaperfecta.com/blog/pellegrini-previa-real-sociedad-betis-j35/",
+      "date": "Fri, 08 May 2026 11:22:33 +0000",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "La Previa de las Picas: Todo sobre los Cronistas de la Jornada 35",
-      "link": "https://www.jornadaperfecta.com/blog/previa-picas-cronistas-j35/",
-      "date": "Thu, 07 May 2026 17:45:45 +0000",
-      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2660.png",
+      "title": "Sarabia confirma las bajas de Rafa Mir y Adam Boayar",
+      "link": "https://www.jornadaperfecta.com/blog/sarabia-previa-elche-alaves-j35/",
+      "date": "Fri, 08 May 2026 11:10:27 +0000",
+      "img": "https://cdn.biwenger.com/i/t/75.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "¡Mendy sufre una lesión muy grave y no se descarta su retirada!",
-      "link": "https://www.jornadaperfecta.com/blog/ferland-mendy-parte-medico-real-madrid/",
-      "date": "Thu, 07 May 2026 17:01:01 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "title": "¡5 mayores riesgos fantasy para la jornada 35 de LaLiga!",
+      "link": "https://www.jornadaperfecta.com/blog/riesgos-fantasy-j35-25-26/",
+      "date": "Fri, 08 May 2026 11:00:51 +0000",
+      "img": "https://cdn.biwenger.com/i/t/75.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "El All In de Victorius para la Jornada 35 de La Liga",
-      "link": "https://www.jornadaperfecta.com/blog/all-in-victorius-j35-25-26/",
-      "date": "Thu, 07 May 2026 17:00:35 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/04/Febas-Elche-CF-fantasy.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Quique, sobre Benavidez y la fecha de vuelta de Boyé",
-      "link": "https://www.jornadaperfecta.com/blog/quique-previa-elche-alaves-j35/",
-      "date": "Thu, 07 May 2026 16:15:08 +0000",
-      "img": "https://cdn.biwenger.com/i/t/91.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Raúl García de Haro cumple con goles. ¿Chollito fantasy o parche de garantías?",
-      "link": "https://www.jornadaperfecta.com/blog/raul-garcia-de-haro-analisis-chollo-fantasy-26/",
-      "date": "Thu, 07 May 2026 15:00:07 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/09/Budimir-Osasuna-fantasy.webp",
+      "title": "Simeone, sobre la eliminación europea y el futuro de Koke",
+      "link": "https://www.jornadaperfecta.com/blog/simeone-previa-atleti-celta-j35-2/",
+      "date": "Fri, 08 May 2026 10:51:59 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -15126,7 +15120,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-05-08T07:12:22.627Z",
+    "updatedAt": "2026-05-08T13:04:01.506Z",
     "players": [
       {
         "id": "3374",
