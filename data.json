@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-10T07:52:37.592Z",
+  "updatedAt": "2026-05-10T12:47:55.632Z",
   "players": [
     {
       "id": 11,
@@ -136,7 +136,7 @@
     {
       "id": 163,
       "slug": "g-rodriguez",
-      "name": "Guido Rodr��guez",
+      "name": "Guido Rodríguez",
       "position": 3,
       "price": 5490000,
       "points": 63,
@@ -13667,12 +13667,12 @@
           "tla": "VIL",
           "crest": "https://crests.football-data.org/94.png"
         },
-        "playedGames": 34,
+        "playedGames": 35,
         "form": null,
         "won": 21,
-        "draw": 5,
+        "draw": 6,
         "lost": 8,
-        "points": 68,
+        "points": 69,
         "goalsFor": 64,
         "goalsAgainst": 39,
         "goalDifference": 25
@@ -13870,6 +13870,25 @@
       {
         "position": 14,
         "team": {
+          "id": 89,
+          "name": "RCD Mallorca",
+          "shortName": "Mallorca",
+          "tla": "MAL",
+          "crest": "https://crests.football-data.org/89.png"
+        },
+        "playedGames": 35,
+        "form": null,
+        "won": 10,
+        "draw": 9,
+        "lost": 16,
+        "points": 39,
+        "goalsFor": 42,
+        "goalsAgainst": 51,
+        "goalDifference": -9
+      },
+      {
+        "position": 15,
+        "team": {
           "id": 95,
           "name": "Valencia CF",
           "shortName": "Valencia",
@@ -13887,7 +13906,7 @@
         "goalDifference": -13
       },
       {
-        "position": 15,
+        "position": 16,
         "team": {
           "id": 80,
           "name": "RCD Espanyol de Barcelona",
@@ -13904,25 +13923,6 @@
         "goalsFor": 38,
         "goalsAgainst": 53,
         "goalDifference": -15
-      },
-      {
-        "position": 16,
-        "team": {
-          "id": 89,
-          "name": "RCD Mallorca",
-          "shortName": "Mallorca",
-          "tla": "MAL",
-          "crest": "https://crests.football-data.org/89.png"
-        },
-        "playedGames": 34,
-        "form": null,
-        "won": 10,
-        "draw": 8,
-        "lost": 16,
-        "points": 38,
-        "goalsFor": 42,
-        "goalsAgainst": 51,
-        "goalDifference": -9
       },
       {
         "position": 17,
@@ -14265,23 +14265,6 @@
     },
     "nextMatches": [
       {
-        "id": 544555,
-        "matchday": 35,
-        "date": "2026-05-10T12:00:00Z",
-        "home": {
-          "id": 89,
-          "name": "RCD Mallorca",
-          "short": "Mallorca",
-          "crest": "https://crests.football-data.org/89.png"
-        },
-        "away": {
-          "id": 94,
-          "name": "Villarreal CF",
-          "short": "Villarreal",
-          "crest": "https://crests.football-data.org/94.png"
-        }
-      },
-      {
         "id": 544551,
         "matchday": 35,
         "date": "2026-05-10T14:15:00Z",
@@ -14518,6 +14501,23 @@
           "short": "Real Oviedo",
           "crest": "https://crests.football-data.org/1048.png"
         }
+      },
+      {
+        "id": 544555,
+        "matchday": 35,
+        "date": "2026-05-10T12:00:00Z",
+        "home": {
+          "id": 89,
+          "name": "RCD Mallorca",
+          "short": "Mallorca",
+          "crest": "https://crests.football-data.org/89.png"
+        },
+        "away": {
+          "id": 94,
+          "name": "Villarreal CF",
+          "short": "Villarreal",
+          "crest": "https://crests.football-data.org/94.png"
+        }
       }
     ],
     "recentResults": [
@@ -14679,9 +14679,9 @@
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Athletic Bilbao": {
-      "winProb": 0.5220090293453725,
-      "drawProb": 0.2483069977426636,
-      "loseProb": 0.22968397291196388,
+      "winProb": 0.5277990397327953,
+      "drawProb": 0.24820819706353073,
+      "loseProb": 0.22399276320367412,
       "over25Prob": 0.5050505050505051,
       "isHome": true,
       "opponent": "Celta Vigo",
@@ -14697,9 +14697,9 @@
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Oviedo": {
-      "winProb": 0.308411214953271,
-      "drawProb": 0.2803738317757009,
-      "loseProb": 0.41121495327102797,
+      "winProb": 0.295163290615957,
+      "drawProb": 0.2691194708557255,
+      "loseProb": 0.43571723852831745,
       "over25Prob": 0.46511627906976744,
       "isHome": true,
       "opponent": "Alavés",
@@ -14751,9 +14751,9 @@
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Celta Vigo": {
-      "winProb": 0.22968397291196388,
-      "drawProb": 0.2483069977426636,
-      "loseProb": 0.5220090293453725,
+      "winProb": 0.22399276320367412,
+      "drawProb": 0.24820819706353073,
+      "loseProb": 0.5277990397327953,
       "over25Prob": 0.5050505050505051,
       "isHome": false,
       "opponent": "Athletic Bilbao",
@@ -14787,9 +14787,9 @@
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "CA Osasuna": {
-      "winProb": 0.4731292202386459,
-      "drawProb": 0.27166774581444825,
-      "loseProb": 0.25520303394690597,
+      "winProb": 0.4779969650986343,
+      "drawProb": 0.26707132018209406,
+      "loseProb": 0.2549317147192716,
       "over25Prob": 0.5235602094240838,
       "isHome": true,
       "opponent": "Espanyol",
@@ -14805,9 +14805,9 @@
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Espanyol": {
-      "winProb": 0.25520303394690597,
-      "drawProb": 0.27166774581444825,
-      "loseProb": 0.4731292202386459,
+      "winProb": 0.2549317147192716,
+      "drawProb": 0.26707132018209406,
+      "loseProb": 0.4779969650986343,
       "over25Prob": 0.5235602094240838,
       "isHome": false,
       "opponent": "CA Osasuna",
@@ -14823,9 +14823,9 @@
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Alavés": {
-      "winProb": 0.41121495327102797,
-      "drawProb": 0.2803738317757009,
-      "loseProb": 0.308411214953271,
+      "winProb": 0.43571723852831745,
+      "drawProb": 0.2691194708557255,
+      "loseProb": 0.295163290615957,
       "over25Prob": 0.46511627906976744,
       "isHome": false,
       "opponent": "Oviedo",
@@ -14843,18 +14843,50 @@
   },
   "news": [
     {
-      "title": "Promoción MARCAapuestas Barcelona vs Real Madrid: ¡Apuesta 20€ y te dan 5€ tanto si aciertas como si fallas!",
-      "link": "https://www.jornadaperfecta.com/blog/marcaapuestas-barcelona-vs-real-madrid/",
-      "date": "Sun, 10 May 2026 07:00:11 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/05/MARCAapuestas-Barcelona-vs-Real-Madrid-El-Clasico.webp",
+      "title": "Míchel anuncia una recuperación y habla de la permanencia",
+      "link": "https://www.jornadaperfecta.com/blog/michel-previa-rayo-girona-j35/",
+      "date": "Sun, 10 May 2026 11:55:58 +0000",
+      "img": "https://cdn.biwenger.com/i/t/289.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Natan sufre una lesión en el calentamiento, entra Ricardo",
+      "title": "Víctor Muñoz sigue ausente y apunta a baja una jornada más",
+      "link": "https://www.jornadaperfecta.com/blog/victor-munoz-estado-j36-25-26/",
+      "date": "Sun, 10 May 2026 10:38:12 +0000",
+      "img": "https://cdn.biwenger.com/i/t/93.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Giuliano y Julián Álvarez siguen fuera en el entreno del Atleti",
+      "link": "https://www.jornadaperfecta.com/blog/giuliano-julian-alvarez-estado-j35-25-26/",
+      "date": "Sun, 10 May 2026 10:09:07 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Mbappé se cae de la convocatoria para El Clásico",
+      "link": "https://www.jornadaperfecta.com/blog/mbappe-estado-real-madrid-j35/",
+      "date": "Sun, 10 May 2026 09:50:15 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Natan, Ricardo Rodríguez y Diego Llorente salen tocados de Anoeta",
       "link": "https://www.jornadaperfecta.com/blog/natan-lesion-real-betis/",
-      "date": "Sat, 09 May 2026 19:21:48 +0000",
+      "date": "Sun, 10 May 2026 09:30:48 +0000",
       "img": "https://cdn.biwenger.com/i/t/87.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Promoción MARCAapuestas Barcelona vs Real Madrid: ¡Apuesta 20€ y te dan 5€ tanto si aciertas como si fallas!",
+      "link": "https://www.jornadaperfecta.com/blog/marcaapuestas-barcelona-vs-real-madrid/",
+      "date": "Sun, 10 May 2026 07:00:11 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/05/MARCAapuestas-Barcelona-vs-Real-Madrid-El-Clasico.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
@@ -14889,45 +14921,13 @@
       "img": "https://cdn.biwenger.com/i/t/91.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Promoción DAZN Bet Barcelona vs Real Madrid: ¡gana 5€ por cada gol!",
-      "link": "https://www.jornadaperfecta.com/blog/dazn-bet-barcelona-vs-real-madrid/",
-      "date": "Sat, 09 May 2026 13:00:54 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/05/DAZN-Bet-El-Clasico-Barcelona-vs-Real-Madrid.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Arbeloa dice que ve un vestuario «sano» y confirma a Tchouameni",
-      "link": "https://www.jornadaperfecta.com/blog/arbeloa-previa-barcelona-real-madrid-j35/",
-      "date": "Sat, 09 May 2026 12:56:41 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Corberán da de alta a Agirrezabala y Beltrán sigue de baja",
-      "link": "https://www.jornadaperfecta.com/blog/corberan-previa-athletic-valencia-j35/",
-      "date": "Sat, 09 May 2026 12:18:27 +0000",
-      "img": "https://cdn.biwenger.com/i/t/18.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Valverde habla del rendimiento de Nico Williams",
-      "link": "https://www.jornadaperfecta.com/blog/valverde-previa-athletic-valencia-j35/",
-      "date": "Sat, 09 May 2026 12:09:37 +0000",
-      "img": "https://cdn.biwenger.com/i/t/1.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-05-10T07:52:35.988Z",
+    "updatedAt": "2026-05-10T12:47:54.655Z",
     "players": [
       {
         "id": "3374",
@@ -14947,11 +14947,11 @@
         "team": "RCD Mallorca",
         "position": "",
         "nationality": "Kosovo",
-        "appearances": 33,
+        "appearances": 34,
         "goals": 21,
         "assists": 1,
         "penalties": 5,
-        "minutesPerGoal": 141
+        "minutesPerGoal": 146
       },
       {
         "id": "2237",
@@ -15079,11 +15079,11 @@
         "team": "Villarreal CF",
         "position": "",
         "nationality": "Georgia",
-        "appearances": 30,
+        "appearances": 31,
         "goals": 11,
         "assists": 5,
         "penalties": 0,
-        "minutesPerGoal": 245
+        "minutesPerGoal": 254
       },
       {
         "id": "11113",
@@ -15139,11 +15139,11 @@
         "team": "Villarreal CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 34,
+        "appearances": 35,
         "goals": 10,
         "assists": 4,
         "penalties": 0,
-        "minutesPerGoal": 306
+        "minutesPerGoal": 315
       },
       {
         "id": "32762",
@@ -15211,11 +15211,11 @@
         "team": "Villarreal CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 21,
+        "appearances": 22,
         "goals": 9,
         "assists": 0,
         "penalties": 3,
-        "minutesPerGoal": 210
+        "minutesPerGoal": 220
       },
       {
         "id": "81565",
@@ -15271,11 +15271,11 @@
         "team": "Villarreal CF",
         "position": "",
         "nationality": "Ivory Coast",
-        "appearances": 34,
+        "appearances": 35,
         "goals": 8,
         "assists": 6,
         "penalties": 1,
-        "minutesPerGoal": 383
+        "minutesPerGoal": 394
       },
       {
         "id": "97085",
@@ -15343,11 +15343,11 @@
         "team": "Villarreal CF",
         "position": "",
         "nationality": "Canada",
-        "appearances": 32,
+        "appearances": 33,
         "goals": 7,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 411
+        "minutesPerGoal": 424
       },
       {
         "id": "33117",
@@ -15403,11 +15403,11 @@
         "team": "RCD Mallorca",
         "position": "",
         "nationality": "Portugal",
-        "appearances": 31,
+        "appearances": 32,
         "goals": 7,
         "assists": 2,
         "penalties": 0,
-        "minutesPerGoal": 399
+        "minutesPerGoal": 411
       },
       {
         "id": "3331",
@@ -15691,11 +15691,11 @@
         "team": "Villarreal CF",
         "position": "",
         "nationality": "Senegal",
-        "appearances": 29,
+        "appearances": 30,
         "goals": 4,
         "assists": 2,
         "penalties": 1,
-        "minutesPerGoal": 653
+        "minutesPerGoal": 675
       },
       {
         "id": "33045",
@@ -16051,11 +16051,23 @@
         "team": "Villarreal CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 32,
+        "appearances": 33,
         "goals": 3,
         "assists": 6,
         "penalties": 0,
-        "minutesPerGoal": 960
+        "minutesPerGoal": 990
+      },
+      {
+        "id": "7936",
+        "name": "Ayoze Pérez",
+        "team": "Villarreal CF",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 24,
+        "goals": 3,
+        "assists": 3,
+        "penalties": 1,
+        "minutesPerGoal": 720
       },
       {
         "id": "126913",
@@ -16087,11 +16099,11 @@
         "team": "RCD Mallorca",
         "position": "",
         "nationality": "Spain",
-        "appearances": 34,
+        "appearances": 35,
         "goals": 3,
         "assists": 3,
         "penalties": 0,
-        "minutesPerGoal": 1020
+        "minutesPerGoal": 1050
       },
       {
         "id": "82516",
@@ -16116,18 +16128,6 @@
         "assists": 1,
         "penalties": 0,
         "minutesPerGoal": 750
-      },
-      {
-        "id": "7672",
-        "name": "Umar Sadiq",
-        "team": "Valencia CF",
-        "position": "",
-        "nationality": "Nigeria",
-        "appearances": 27,
-        "goals": 3,
-        "assists": 2,
-        "penalties": 0,
-        "minutesPerGoal": 810
       }
     ]
   }
