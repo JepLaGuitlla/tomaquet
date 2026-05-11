@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-11T14:17:25.859Z",
+  "updatedAt": "2026-05-11T19:23:47.854Z",
   "players": [
     {
       "id": 11,
@@ -13653,7 +13653,7 @@
     }
   ],
   "laliga": {
-    "matchday": 35,
+    "matchday": 36,
     "table": [
       {
         "position": 1,
@@ -13829,6 +13829,25 @@
       {
         "position": 10,
         "team": {
+          "id": 87,
+          "name": "Rayo Vallecano de Madrid",
+          "shortName": "Rayo Vallecano",
+          "tla": "RAY",
+          "crest": "https://crests.football-data.org/87.png"
+        },
+        "playedGames": 35,
+        "form": null,
+        "won": 10,
+        "draw": 13,
+        "lost": 12,
+        "points": 43,
+        "goalsFor": 35,
+        "goalsAgainst": 41,
+        "goalDifference": -6
+      },
+      {
+        "position": 11,
+        "team": {
           "id": 79,
           "name": "CA Osasuna",
           "shortName": "Osasuna",
@@ -13844,25 +13863,6 @@
         "goalsFor": 42,
         "goalsAgainst": 45,
         "goalDifference": -3
-      },
-      {
-        "position": 11,
-        "team": {
-          "id": 87,
-          "name": "Rayo Vallecano de Madrid",
-          "shortName": "Rayo Vallecano",
-          "tla": "RAY",
-          "crest": "https://crests.football-data.org/87.png"
-        },
-        "playedGames": 34,
-        "form": null,
-        "won": 10,
-        "draw": 12,
-        "lost": 12,
-        "points": 42,
-        "goalsFor": 35,
-        "goalsAgainst": 41,
-        "goalDifference": -6
       },
       {
         "position": 12,
@@ -13968,12 +13968,12 @@
           "tla": "GIR",
           "crest": "https://crests.football-data.org/298.png"
         },
-        "playedGames": 34,
+        "playedGames": 35,
         "form": null,
         "won": 9,
-        "draw": 11,
+        "draw": 12,
         "lost": 14,
-        "points": 38,
+        "points": 39,
         "goalsFor": 36,
         "goalsAgainst": 51,
         "goalDifference": -15
@@ -14300,23 +14300,6 @@
     },
     "nextMatches": [
       {
-        "id": 544560,
-        "matchday": 35,
-        "date": "2026-05-11T19:00:00Z",
-        "home": {
-          "id": 87,
-          "name": "Rayo Vallecano de Madrid",
-          "short": "Rayo Vallecano",
-          "crest": "https://crests.football-data.org/87.png"
-        },
-        "away": {
-          "id": 298,
-          "name": "Girona FC",
-          "short": "Girona",
-          "crest": "https://crests.football-data.org/298.png"
-        }
-      },
-      {
         "id": 544563,
         "matchday": 36,
         "date": "2026-05-12T17:00:00Z",
@@ -14485,6 +14468,23 @@
           "short": "Real Oviedo",
           "crest": "https://crests.football-data.org/1048.png"
         }
+      },
+      {
+        "id": 544560,
+        "matchday": 35,
+        "date": "2026-05-11T19:00:00Z",
+        "home": {
+          "id": 87,
+          "name": "Rayo Vallecano de Madrid",
+          "short": "Rayo Vallecano",
+          "crest": "https://crests.football-data.org/87.png"
+        },
+        "away": {
+          "id": 298,
+          "name": "Girona FC",
+          "short": "Girona",
+          "crest": "https://crests.football-data.org/298.png"
+        }
       }
     ],
     "recentResults": [
@@ -14646,9 +14646,9 @@
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Celta Vigo": {
-      "winProb": 0.25914238699061076,
-      "drawProb": 0.26665376052657047,
-      "loseProb": 0.47420385248281866,
+      "winProb": 0.2552011095700416,
+      "drawProb": 0.26629680998613037,
+      "loseProb": 0.478502080443828,
       "over25Prob": 0.49504950495049505,
       "isHome": false,
       "opponent": "Athletic Bilbao",
@@ -14664,27 +14664,27 @@
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Real Betis": {
-      "winProb": 0.15984584327399523,
-      "drawProb": 0.17214167737199484,
-      "loseProb": 0.6680124793540099,
+      "winProb": 0.16308514345452435,
+      "drawProb": 0.17249390173074688,
+      "loseProb": 0.6644209548147287,
       "over25Prob": 0.7518796992481203,
       "isHome": false,
       "opponent": "Barcelona",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Elche CF": {
-      "winProb": 0.39272243177279786,
-      "drawProb": 0.30619037053472375,
-      "loseProb": 0.3010871976924783,
+      "winProb": 0.40184554542458534,
+      "drawProb": 0.30649236515434475,
+      "loseProb": 0.29166208942106997,
       "over25Prob": 0.42016806722689076,
       "isHome": true,
       "opponent": "Getafe",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "CA Osasuna": {
-      "winProb": 0.4702602230483271,
-      "drawProb": 0.2707558859975217,
-      "loseProb": 0.2589838909541512,
+      "winProb": 0.46765249537892795,
+      "drawProb": 0.2720887245841035,
+      "loseProb": 0.26025878003696856,
       "over25Prob": 0.5,
       "isHome": true,
       "opponent": "Espanyol",
@@ -14700,18 +14700,18 @@
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Espanyol": {
-      "winProb": 0.2589838909541512,
-      "drawProb": 0.2707558859975217,
-      "loseProb": 0.4702602230483271,
+      "winProb": 0.26025878003696856,
+      "drawProb": 0.2720887245841035,
+      "loseProb": 0.46765249537892795,
       "over25Prob": 0.5,
       "isHome": false,
       "opponent": "CA Osasuna",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Athletic Bilbao": {
-      "winProb": 0.47420385248281866,
-      "drawProb": 0.26665376052657047,
-      "loseProb": 0.25914238699061076,
+      "winProb": 0.478502080443828,
+      "drawProb": 0.26629680998613037,
+      "loseProb": 0.2552011095700416,
       "over25Prob": 0.49504950495049505,
       "isHome": true,
       "opponent": "Celta Vigo",
@@ -14745,18 +14745,18 @@
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.6680124793540099,
-      "drawProb": 0.17214167737199484,
-      "loseProb": 0.15984584327399523,
+      "winProb": 0.6644209548147287,
+      "drawProb": 0.17249390173074688,
+      "loseProb": 0.16308514345452435,
       "over25Prob": 0.7518796992481203,
       "isHome": true,
       "opponent": "Real Betis",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Getafe": {
-      "winProb": 0.3010871976924783,
-      "drawProb": 0.30619037053472375,
-      "loseProb": 0.39272243177279786,
+      "winProb": 0.29166208942106997,
+      "drawProb": 0.30649236515434475,
+      "loseProb": 0.40184554542458534,
       "over25Prob": 0.42016806722689076,
       "isHome": false,
       "opponent": "Elche CF",
@@ -14810,82 +14810,82 @@
   },
   "news": [
     {
-      "title": "Lucas Beltrán sigue con el grupo y podría ir convocado",
-      "link": "https://www.jornadaperfecta.com/blog/lucas-beltran-estado-valencia-j36/",
-      "date": "Mon, 11 May 2026 14:15:51 +0000",
-      "img": "https://cdn.biwenger.com/i/t/18.png",
+      "title": "BigUp: Gana dinero real con tus pronósticos del Real Betis &#8211; Elche",
+      "link": "https://www.jornadaperfecta.com/blog/bigup-betis-elche-pronosticos/",
+      "date": "Mon, 11 May 2026 18:28:24 +0000",
+      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2705.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
       "title": "Carlos Romero no entrena con el grupo, posible baja",
       "link": "https://www.jornadaperfecta.com/blog/carlos-romero-lesion-espanyol/",
-      "date": "Mon, 11 May 2026 14:05:57 +0000",
+      "date": "Mon, 11 May 2026 18:05:57 +0000",
       "img": "https://cdn.biwenger.com/i/t/7.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "El posible once del Celta para la jornada 36, ¿Aspas titular?",
-      "link": "https://www.jornadaperfecta.com/blog/aspas-alinear-j36-fantasy/",
-      "date": "Mon, 11 May 2026 14:00:10 +0000",
-      "img": "https://cdn.biwenger.com/i/t/5.png",
+      "title": "El All In de Victorius para la Jornada 36 de La Liga",
+      "link": "https://www.jornadaperfecta.com/blog/all-in-victorius-j36-25-26/",
+      "date": "Mon, 11 May 2026 18:00:55 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/05/Vinicius-Jr-Real-Madrid-fantasy.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Chollos Fantasy que Tienes que Fichar YA para la J36 de Biwenger",
+      "link": "https://www.jornadaperfecta.com/blog/chollos-fantasy-biwenger-j36-laliga/",
+      "date": "Mon, 11 May 2026 17:07:44 +0000",
+      "img": "https://cdn.biwenger.com/i/t/17.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
       "title": "Mbappé entrena en el gym en el día libre, ¿llega a la j36?",
       "link": "https://www.jornadaperfecta.com/blog/mbappe-recuperacion-lesion-26/",
-      "date": "Mon, 11 May 2026 13:15:59 +0000",
+      "date": "Mon, 11 May 2026 17:03:59 +0000",
       "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Giráldez anuncia dos dudas, una baja y habla del centro del campo",
-      "link": "https://www.jornadaperfecta.com/blog/giraldez-previa-celta-levante-j36-25-26/",
-      "date": "Mon, 11 May 2026 13:09:16 +0000",
-      "img": "https://cdn.biwenger.com/i/t/5.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
       "title": "Podcast: Alineaciones Probables Jornada 36 2025/26",
       "link": "https://www.jornadaperfecta.com/blog/podcast-alineaciones-probables-j36-25-26/",
-      "date": "Mon, 11 May 2026 13:00:17 +0000",
+      "date": "Mon, 11 May 2026 17:02:17 +0000",
       "img": "https://i.ytimg.com/vi/Min55t6lQro/mqdefault.jpg",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Parte médico de Nico Williams. ¿Llega al Mundial?",
-      "link": "https://www.jornadaperfecta.com/blog/nico-williams-lesion-muscular-26/",
-      "date": "Mon, 11 May 2026 12:50:08 +0000",
-      "img": "https://cdn.biwenger.com/i/t/1.png",
+      "title": "Johnny Cardoso pasará por quirófano: Parte médico actualizado",
+      "link": "https://www.jornadaperfecta.com/blog/johnny-cardoso-parte-medico-atleti/",
+      "date": "Mon, 11 May 2026 17:01:45 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Sancet, ¿baja solo en la jornada 36? Parte médico y tiempo de baja",
-      "link": "https://www.jornadaperfecta.com/blog/sancet-lesion-isquiosural/",
-      "date": "Mon, 11 May 2026 12:47:51 +0000",
-      "img": "https://cdn.biwenger.com/i/t/1.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Iván Romero, convocado, y el Levante podría tener rotaciones",
-      "link": "https://www.jornadaperfecta.com/blog/ivan-romero-entrena-y-el-levante-podria-tener-rotaciones/",
-      "date": "Mon, 11 May 2026 12:37:08 +0000",
+      "title": "Los Mejores Capitanes Fantasy para la jornada 36 de LaLiga",
+      "link": "https://www.jornadaperfecta.com/blog/capitanes-fantasy-j36-25-26/",
+      "date": "Mon, 11 May 2026 17:00:48 +0000",
       "img": "https://cdn.biwenger.com/i/t/10.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Sarabia deja en duda a Rafa Mir y habla del Betis",
-      "link": "https://www.jornadaperfecta.com/blog/sarabia-previa-betis-elche-j36-25-26/",
-      "date": "Mon, 11 May 2026 12:16:35 +0000",
-      "img": "https://cdn.biwenger.com/i/t/75.png",
+      "title": "Lisci, sobre el estado y fecha de vuelta de Víctor Muñoz",
+      "link": "https://www.jornadaperfecta.com/blog/lisci-previa-osasuna-atleti-j36/",
+      "date": "Mon, 11 May 2026 14:39:01 +0000",
+      "img": "https://cdn.biwenger.com/i/t/93.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Lucas Beltrán sigue con el grupo y podría ir convocado",
+      "link": "https://www.jornadaperfecta.com/blog/lucas-beltran-estado-valencia-j36/",
+      "date": "Mon, 11 May 2026 14:15:51 +0000",
+      "img": "https://cdn.biwenger.com/i/t/18.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -14894,7 +14894,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-05-11T14:17:25.859Z",
+    "updatedAt": "2026-05-11T19:23:45.958Z",
     "players": [
       {
         "id": "3374",
@@ -15070,11 +15070,11 @@
         "team": "Rayo Vallecano de Madrid",
         "position": "",
         "nationality": "Spain",
-        "appearances": 32,
+        "appearances": 33,
         "goals": 10,
         "assists": 1,
         "penalties": 1,
-        "minutesPerGoal": 288
+        "minutesPerGoal": 297
       },
       {
         "id": "1760",
@@ -15502,11 +15502,11 @@
         "team": "Girona FC",
         "position": "",
         "nationality": "Ukraine",
-        "appearances": 28,
+        "appearances": 29,
         "goals": 6,
         "assists": 4,
         "penalties": 0,
-        "minutesPerGoal": 420
+        "minutesPerGoal": 435
       },
       {
         "id": "146126",
@@ -15586,11 +15586,11 @@
         "team": "Girona FC",
         "position": "",
         "nationality": "Morocco",
-        "appearances": 20,
+        "appearances": 21,
         "goals": 5,
         "assists": 2,
         "penalties": 1,
-        "minutesPerGoal": 360
+        "minutesPerGoal": 378
       },
       {
         "id": "16275",
@@ -15646,11 +15646,11 @@
         "team": "Rayo Vallecano de Madrid",
         "position": "",
         "nationality": "Spain",
-        "appearances": 30,
+        "appearances": 31,
         "goals": 4,
         "assists": 5,
         "penalties": 0,
-        "minutesPerGoal": 675
+        "minutesPerGoal": 698
       },
       {
         "id": "633",
@@ -15874,11 +15874,11 @@
         "team": "Girona FC",
         "position": "",
         "nationality": "Spain",
-        "appearances": 30,
+        "appearances": 31,
         "goals": 3,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 900
+        "minutesPerGoal": 930
       },
       {
         "id": "180061",
@@ -16018,11 +16018,11 @@
         "team": "Girona FC",
         "position": "",
         "nationality": "Uruguay",
-        "appearances": 22,
+        "appearances": 23,
         "goals": 3,
         "assists": 0,
         "penalties": 3,
-        "minutesPerGoal": 660
+        "minutesPerGoal": 690
       },
       {
         "id": "213263",
