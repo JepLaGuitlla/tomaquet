@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-11T08:53:23.268Z",
+  "updatedAt": "2026-05-11T14:17:25.859Z",
   "players": [
     {
       "id": 11,
@@ -12099,9 +12099,9 @@
           4,
           7
         ],
-        "teamSize": 16,
-        "teamValue": 93720000,
-        "teamValueInc": 610000,
+        "teamSize": 15,
+        "teamValue": 92190000,
+        "teamValueInc": 630000,
         "lastTrophy": {
           "type": "league",
           "position": 3,
@@ -12339,8 +12339,8 @@
       "name": "CA CABA JUNIORS",
       "manager": "CA CABA JUNIORS",
       "points": 1654,
-      "value": 93720000,
-      "trend": 610000,
+      "value": 92190000,
+      "trend": 630000,
       "players": []
     },
     {
@@ -12441,14 +12441,14 @@
     "balance": -1744242,
     "lineup": {
       "type": "3-5-2",
-      "date": 1778262992,
+      "date": 1778506165,
       "playersID": [
-        14630,
-        37495,
+        38405,
+        5220,
         1908,
         26276,
-        17057,
-        11686,
+        30123,
+        1523,
         35615,
         25127,
         27591,
@@ -12457,9 +12457,9 @@
       ],
       "reservesID": [
         17021,
-        5220,
-        30123,
-        1523
+        32460,
+        32338,
+        9966
       ]
     },
     "players": [
@@ -12625,9 +12625,37 @@
         "buyDate": 1777179786
       }
     ],
-    "market": []
+    "market": [
+      {
+        "playerID": 17057,
+        "price": 4840000,
+        "type": "sale",
+        "until": 1778678892
+      },
+      {
+        "playerID": 37495,
+        "price": 5980030,
+        "type": "sale",
+        "until": 1778666730
+      }
+    ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1778503990,
+      "content": [
+        {
+          "player": 35901,
+          "from": {
+            "id": 8070044,
+            "name": "CA CABA JUNIORS",
+            "icon": "i/u/8070044.png?v=63"
+          },
+          "amount": 1471200
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1778476675,
@@ -14618,9 +14646,9 @@
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Celta Vigo": {
-      "winProb": 0.2522761760242792,
-      "drawProb": 0.2630880121396055,
-      "loseProb": 0.4846358118361153,
+      "winProb": 0.25914238699061076,
+      "drawProb": 0.26665376052657047,
+      "loseProb": 0.47420385248281866,
       "over25Prob": 0.49504950495049505,
       "isHome": false,
       "opponent": "Athletic Bilbao",
@@ -14636,28 +14664,28 @@
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Real Betis": {
-      "winProb": 0.1572033898305085,
-      "drawProb": 0.16906779661016955,
-      "loseProb": 0.6737288135593221,
+      "winProb": 0.15984584327399523,
+      "drawProb": 0.17214167737199484,
+      "loseProb": 0.6680124793540099,
       "over25Prob": 0.7518796992481203,
       "isHome": false,
       "opponent": "Barcelona",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Elche CF": {
-      "winProb": 0.394471259324265,
-      "drawProb": 0.3128565160157964,
-      "loseProb": 0.29267222465993853,
+      "winProb": 0.39272243177279786,
+      "drawProb": 0.30619037053472375,
+      "loseProb": 0.3010871976924783,
       "over25Prob": 0.42016806722689076,
       "isHome": true,
       "opponent": "Getafe",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "CA Osasuna": {
-      "winProb": 0.47464453028684145,
-      "drawProb": 0.27040355058765514,
-      "loseProb": 0.2549519191255034,
-      "over25Prob": 0.5235602094240838,
+      "winProb": 0.4702602230483271,
+      "drawProb": 0.2707558859975217,
+      "loseProb": 0.2589838909541512,
+      "over25Prob": 0.5,
       "isHome": true,
       "opponent": "Espanyol",
       "matchDate": "2026-05-17T17:00:00Z"
@@ -14672,18 +14700,18 @@
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Espanyol": {
-      "winProb": 0.2549519191255034,
-      "drawProb": 0.27040355058765514,
-      "loseProb": 0.47464453028684145,
-      "over25Prob": 0.5235602094240838,
+      "winProb": 0.2589838909541512,
+      "drawProb": 0.2707558859975217,
+      "loseProb": 0.4702602230483271,
+      "over25Prob": 0.5,
       "isHome": false,
       "opponent": "CA Osasuna",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Athletic Bilbao": {
-      "winProb": 0.4846358118361153,
-      "drawProb": 0.2630880121396055,
-      "loseProb": 0.2522761760242792,
+      "winProb": 0.47420385248281866,
+      "drawProb": 0.26665376052657047,
+      "loseProb": 0.25914238699061076,
       "over25Prob": 0.49504950495049505,
       "isHome": true,
       "opponent": "Celta Vigo",
@@ -14699,36 +14727,36 @@
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Sevilla": {
-      "winProb": 0.298184784825617,
-      "drawProb": 0.2718743626351214,
-      "loseProb": 0.4299408525392617,
+      "winProb": 0.289178724271449,
+      "drawProb": 0.28041573262685965,
+      "loseProb": 0.4304055431016915,
       "over25Prob": 0.5714285714285714,
       "isHome": true,
       "opponent": "Real Madrid",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Alavés": {
-      "winProb": 0.43571723852831745,
-      "drawProb": 0.2691194708557255,
-      "loseProb": 0.295163290615957,
+      "winProb": 0.4752700397953383,
+      "drawProb": 0.2808413871517908,
+      "loseProb": 0.24388857305287093,
       "over25Prob": 0.46511627906976744,
       "isHome": false,
       "opponent": "Oviedo",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.6737288135593221,
-      "drawProb": 0.16906779661016955,
-      "loseProb": 0.1572033898305085,
+      "winProb": 0.6680124793540099,
+      "drawProb": 0.17214167737199484,
+      "loseProb": 0.15984584327399523,
       "over25Prob": 0.7518796992481203,
       "isHome": true,
       "opponent": "Real Betis",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Getafe": {
-      "winProb": 0.29267222465993853,
-      "drawProb": 0.3128565160157964,
-      "loseProb": 0.394471259324265,
+      "winProb": 0.3010871976924783,
+      "drawProb": 0.30619037053472375,
+      "loseProb": 0.39272243177279786,
       "over25Prob": 0.42016806722689076,
       "isHome": false,
       "opponent": "Elche CF",
@@ -14762,18 +14790,18 @@
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Real Madrid": {
-      "winProb": 0.4299408525392617,
-      "drawProb": 0.2718743626351214,
-      "loseProb": 0.298184784825617,
+      "winProb": 0.4304055431016915,
+      "drawProb": 0.28041573262685965,
+      "loseProb": 0.289178724271449,
       "over25Prob": 0.5714285714285714,
       "isHome": false,
       "opponent": "Sevilla",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Oviedo": {
-      "winProb": 0.295163290615957,
-      "drawProb": 0.2691194708557255,
-      "loseProb": 0.43571723852831745,
+      "winProb": 0.24388857305287093,
+      "drawProb": 0.2808413871517908,
+      "loseProb": 0.4752700397953383,
       "over25Prob": 0.46511627906976744,
       "isHome": true,
       "opponent": "Alavés",
@@ -14782,82 +14810,82 @@
   },
   "news": [
     {
-      "title": "Lesionados que podrían llegar a la jornada 36 y descartados",
-      "link": "https://www.jornadaperfecta.com/blog/lesionados-j36-25-26/",
-      "date": "Mon, 11 May 2026 08:00:36 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/10/Lamine-Yamal-FC-Barcelona-fantasy.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Las claves fantasy del Real Madrid &#8211; Real Oviedo: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-real-madrid-real-oviedo-j36-25-26/",
-      "date": "Mon, 11 May 2026 06:45:23 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Las claves fantasy del Girona FC &#8211; Real Sociedad: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-girona-real-sociedad-j36-25-26/",
-      "date": "Mon, 11 May 2026 06:40:56 +0000",
-      "img": "https://cdn.biwenger.com/i/t/289.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Las claves fantasy del Valencia CF &#8211; Rayo Vallecano: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-valencia-rayo-vallecano-j36-25-26/",
-      "date": "Mon, 11 May 2026 06:35:48 +0000",
+      "title": "Lucas Beltrán sigue con el grupo y podría ir convocado",
+      "link": "https://www.jornadaperfecta.com/blog/lucas-beltran-estado-valencia-j36/",
+      "date": "Mon, 11 May 2026 14:15:51 +0000",
       "img": "https://cdn.biwenger.com/i/t/18.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Las claves fantasy del Deportivo Alavés &#8211; FC Barcelona: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-alaves-barcelona-j36-25-26/",
-      "date": "Mon, 11 May 2026 06:30:26 +0000",
-      "img": "https://cdn.biwenger.com/i/t/91.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Las claves fantasy del Getafe CF &#8211; RCD Mallorca: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-getafe-mallorca-j36-25-26/",
-      "date": "Mon, 11 May 2026 06:25:21 +0000",
-      "img": "https://cdn.biwenger.com/i/t/465.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Las claves fantasy del RCD Espanyol &#8211; Athletic Club: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-espanyol-athletic-j36-25-26/",
-      "date": "Mon, 11 May 2026 06:20:36 +0000",
+      "title": "Carlos Romero no entrena con el grupo, posible baja",
+      "link": "https://www.jornadaperfecta.com/blog/carlos-romero-lesion-espanyol/",
+      "date": "Mon, 11 May 2026 14:05:57 +0000",
       "img": "https://cdn.biwenger.com/i/t/7.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Las claves fantasy del Villarreal CF &#8211; Sevilla FC: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-villarreal-sevilla-j36-25-26/",
-      "date": "Mon, 11 May 2026 06:15:51 +0000",
-      "img": "https://cdn.biwenger.com/i/t/19.png",
+      "title": "El posible once del Celta para la jornada 36, ¿Aspas titular?",
+      "link": "https://www.jornadaperfecta.com/blog/aspas-alinear-j36-fantasy/",
+      "date": "Mon, 11 May 2026 14:00:10 +0000",
+      "img": "https://cdn.biwenger.com/i/t/5.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Las claves fantasy del CA Osasuna &#8211; Atlético de Madrid: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-osasuna-atletico-j36-25-26/",
-      "date": "Mon, 11 May 2026 06:10:39 +0000",
-      "img": "https://cdn.biwenger.com/i/t/93.png",
+      "title": "Mbappé entrena en el gym en el día libre, ¿llega a la j36?",
+      "link": "https://www.jornadaperfecta.com/blog/mbappe-recuperacion-lesion-26/",
+      "date": "Mon, 11 May 2026 13:15:59 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Las claves fantasy del Real Betis &#8211; Elche CF: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-real-betis-elche-j36-25-26/",
-      "date": "Mon, 11 May 2026 06:05:31 +0000",
-      "img": "https://cdn.biwenger.com/i/t/87.png",
+      "title": "Giráldez anuncia dos dudas, una baja y habla del centro del campo",
+      "link": "https://www.jornadaperfecta.com/blog/giraldez-previa-celta-levante-j36-25-26/",
+      "date": "Mon, 11 May 2026 13:09:16 +0000",
+      "img": "https://cdn.biwenger.com/i/t/5.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Podcast: Alineaciones Probables Jornada 36 2025/26",
+      "link": "https://www.jornadaperfecta.com/blog/podcast-alineaciones-probables-j36-25-26/",
+      "date": "Mon, 11 May 2026 13:00:17 +0000",
+      "img": "https://i.ytimg.com/vi/Min55t6lQro/mqdefault.jpg",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Parte médico de Nico Williams. ¿Llega al Mundial?",
+      "link": "https://www.jornadaperfecta.com/blog/nico-williams-lesion-muscular-26/",
+      "date": "Mon, 11 May 2026 12:50:08 +0000",
+      "img": "https://cdn.biwenger.com/i/t/1.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Sancet, ¿baja solo en la jornada 36? Parte médico y tiempo de baja",
+      "link": "https://www.jornadaperfecta.com/blog/sancet-lesion-isquiosural/",
+      "date": "Mon, 11 May 2026 12:47:51 +0000",
+      "img": "https://cdn.biwenger.com/i/t/1.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Iván Romero, convocado, y el Levante podría tener rotaciones",
+      "link": "https://www.jornadaperfecta.com/blog/ivan-romero-entrena-y-el-levante-podria-tener-rotaciones/",
+      "date": "Mon, 11 May 2026 12:37:08 +0000",
+      "img": "https://cdn.biwenger.com/i/t/10.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Sarabia deja en duda a Rafa Mir y habla del Betis",
+      "link": "https://www.jornadaperfecta.com/blog/sarabia-previa-betis-elche-j36-25-26/",
+      "date": "Mon, 11 May 2026 12:16:35 +0000",
+      "img": "https://cdn.biwenger.com/i/t/75.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -14866,7 +14894,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-05-11T08:53:23.268Z",
+    "updatedAt": "2026-05-11T14:17:25.859Z",
     "players": [
       {
         "id": "3374",
