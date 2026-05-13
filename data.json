@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-13T08:29:44.369Z",
+  "updatedAt": "2026-05-13T13:59:54.055Z",
   "players": [
     {
       "id": 11,
@@ -9595,7 +9595,7 @@
     {
       "id": 37711,
       "slug": "carlos-espi",
-      "name": "Espí",
+      "name": "Esp��",
       "position": 4,
       "price": 12260000,
       "points": 126,
@@ -12498,13 +12498,6 @@
         "buyDate": 1778173624
       },
       {
-        "id": 14630,
-        "buyPrice": 5700000,
-        "clause": 8550000,
-        "invested": 0,
-        "buyDate": 1778055864
-      },
-      {
         "id": 1523,
         "buyPrice": 4785222,
         "clause": 7177833,
@@ -12531,6 +12524,13 @@
         "clause": 14460000,
         "invested": 1000000,
         "buyDate": 1776704393
+      },
+      {
+        "id": 14630,
+        "buyPrice": 5700000,
+        "clause": 8550000,
+        "invested": 0,
+        "buyDate": 1778055864
       },
       {
         "id": 17021,
@@ -14805,13 +14805,13 @@
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.6739469578783152,
-      "drawProb": 0.16599063962558502,
-      "loseProb": 0.16006240249609985,
+      "winProb": 0.6774960380348654,
+      "drawProb": 0.16561014263074486,
+      "loseProb": 0.15689381933438987,
       "over25Prob": 0.7692307692307692,
       "isHome": true,
       "opponent": "Real Betis",
-      "matchDate": "2026-05-17T17:00:00Z"
+      "matchDate": "2026-05-17T19:15:00Z"
     },
     "Getafe": {
       "winProb": 0.26185007308415115,
@@ -14823,19 +14823,19 @@
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Mallorca": {
-      "winProb": 0.2836615844884008,
-      "drawProb": 0.27494572574713705,
-      "loseProb": 0.4413926897644622,
+      "winProb": 0.2814798005942462,
+      "drawProb": 0.2767357590111971,
+      "loseProb": 0.44178444039455683,
       "over25Prob": 0.5181347150259068,
       "isHome": false,
       "opponent": "Levante",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Valencia": {
-      "winProb": 0.27401597919768494,
-      "drawProb": 0.27554679472392896,
-      "loseProb": 0.4504372260783862,
-      "over25Prob": 0.5181347150259068,
+      "winProb": 0.27329974811083124,
+      "drawProb": 0.27329974811083124,
+      "loseProb": 0.4534005037783375,
+      "over25Prob": 0.5154639175257733,
       "isHome": false,
       "opponent": "Real Sociedad",
       "matchDate": "2026-05-17T17:00:00Z"
@@ -14850,19 +14850,19 @@
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Girona": {
-      "winProb": 0.22095488340151087,
-      "drawProb": 0.2463646949926846,
-      "loseProb": 0.5326804216058044,
+      "winProb": 0.21856272553287853,
+      "drawProb": 0.23983403702026326,
+      "loseProb": 0.5416032374468582,
       "over25Prob": 0.5681818181818182,
       "isHome": false,
       "opponent": "Atlético Madrid",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Real Sociedad": {
-      "winProb": 0.4504372260783862,
-      "drawProb": 0.27554679472392896,
-      "loseProb": 0.27401597919768494,
-      "over25Prob": 0.5181347150259068,
+      "winProb": 0.4534005037783375,
+      "drawProb": 0.27329974811083124,
+      "loseProb": 0.27329974811083124,
+      "over25Prob": 0.5154639175257733,
       "isHome": true,
       "opponent": "Valencia",
       "matchDate": "2026-05-17T17:00:00Z"
@@ -14895,21 +14895,12 @@
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.5326804216058044,
-      "drawProb": 0.2463646949926846,
-      "loseProb": 0.22095488340151087,
+      "winProb": 0.5416032374468582,
+      "drawProb": 0.23983403702026326,
+      "loseProb": 0.21856272553287853,
       "over25Prob": 0.5681818181818182,
       "isHome": true,
       "opponent": "Girona",
-      "matchDate": "2026-05-17T17:00:00Z"
-    },
-    "Real Betis": {
-      "winProb": 0.16006240249609985,
-      "drawProb": 0.16599063962558502,
-      "loseProb": 0.6739469578783152,
-      "over25Prob": 0.7692307692307692,
-      "isHome": false,
-      "opponent": "Barcelona",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "CA Osasuna": {
@@ -14931,16 +14922,73 @@
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Levante": {
-      "winProb": 0.4413926897644622,
-      "drawProb": 0.27494572574713705,
-      "loseProb": 0.2836615844884008,
+      "winProb": 0.44178444039455683,
+      "drawProb": 0.2767357590111971,
+      "loseProb": 0.2814798005942462,
       "over25Prob": 0.5181347150259068,
       "isHome": true,
       "opponent": "Mallorca",
       "matchDate": "2026-05-17T17:00:00Z"
+    },
+    "Real Betis": {
+      "winProb": 0.15689381933438987,
+      "drawProb": 0.16561014263074486,
+      "loseProb": 0.6774960380348654,
+      "over25Prob": 0.7692307692307692,
+      "isHome": false,
+      "opponent": "Barcelona",
+      "matchDate": "2026-05-17T19:15:00Z"
     }
   },
   "news": [
+    {
+      "title": "Matarazzo confirma la baja de Guedes y la vuelta de Zubeldia",
+      "link": "https://www.jornadaperfecta.com/blog/matarazzo-previa-girona-real-sociedad-j36/",
+      "date": "Wed, 13 May 2026 13:56:43 +0000",
+      "img": "https://cdn.biwenger.com/i/t/13.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Almada podría cambiar de portero, ¿Escandell suplente?",
+      "link": "https://www.jornadaperfecta.com/blog/almada-previa-real-madrid-oviedo-j36/",
+      "date": "Wed, 13 May 2026 13:42:50 +0000",
+      "img": "https://cdn.biwenger.com/i/t/779.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Mbappé suma un entrenamiento más con el grupo, ¿llega a la j36?",
+      "link": "https://www.jornadaperfecta.com/blog/mbappe-recuperacion-lesion-26/",
+      "date": "Wed, 13 May 2026 12:20:59 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Bellingham, Rüdiger y Huijsen vuelven a entrenar con el Madrid",
+      "link": "https://www.jornadaperfecta.com/blog/bellingham-rudiger-estado-j36-25-26/",
+      "date": "Wed, 13 May 2026 12:15:20 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Dos bajas importantes en la convocatoria del FC Barcelona",
+      "link": "https://www.jornadaperfecta.com/blog/fermin-de-jong-bajas-j36/",
+      "date": "Wed, 13 May 2026 11:59:43 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Arbeloa, sobre el posible regreso de Mbappé y Carvajal ante el Oviedo",
+      "link": "https://www.jornadaperfecta.com/blog/arbeloa-previa-real-madrid-oviedo-j36/",
+      "date": "Wed, 13 May 2026 08:54:07 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Raúl Moro pide el cambio por molestias musculares",
       "link": "https://www.jornadaperfecta.com/blog/raul-moro-lesion-osasuna/",
@@ -14972,61 +15020,13 @@
       "img": "https://cdn.biwenger.com/i/t/1.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Marcelino explica las ausencias de Pape Gueye",
-      "link": "https://www.jornadaperfecta.com/blog/marcelino-previa-villarreal-sevilla-j36/",
-      "date": "Tue, 12 May 2026 16:55:58 +0000",
-      "img": "https://cdn.biwenger.com/i/t/19.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Varias novedades en el once del Levante para la jornada 36",
-      "link": "https://www.jornadaperfecta.com/blog/once-levante-jornada-36/",
-      "date": "Tue, 12 May 2026 15:52:58 +0000",
-      "img": "https://cdn.biwenger.com/i/t/10.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "¡Once confirmado del Celta con varias sorpresas!",
-      "link": "https://www.jornadaperfecta.com/blog/once-celta-jornada-36/",
-      "date": "Tue, 12 May 2026 15:47:08 +0000",
-      "img": "https://cdn.biwenger.com/i/t/5.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Manolo González aclara el estado de Carlos Romero",
-      "link": "https://www.jornadaperfecta.com/blog/manolo-gonzalez-previa-espanyol-athletic-j36/",
-      "date": "Tue, 12 May 2026 15:01:32 +0000",
-      "img": "https://cdn.biwenger.com/i/t/7.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Valverde, sobre la fecha de vuelta de Nico Williams",
-      "link": "https://www.jornadaperfecta.com/blog/valverde-previa-espanyol-athletic-j36/",
-      "date": "Tue, 12 May 2026 13:58:58 +0000",
-      "img": "https://cdn.biwenger.com/i/t/1.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Mbappé se une a los entrenos con el grupo, ¿llega a la j36?",
-      "link": "https://www.jornadaperfecta.com/blog/mbappe-recuperacion-lesion-26/",
-      "date": "Tue, 12 May 2026 13:50:59 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-05-13T08:29:43.655Z",
+    "updatedAt": "2026-05-13T13:59:53.086Z",
     "players": [
       {
         "id": "3374",
