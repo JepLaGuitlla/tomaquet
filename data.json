@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-14T13:23:41.849Z",
+  "updatedAt": "2026-05-14T19:25:04.550Z",
   "players": [
     {
       "id": 11,
@@ -147,9 +147,9 @@
       "teamId": 18,
       "status": "ok",
       "jForm": [
+        null,
         4,
         4,
-        3,
         3,
         3
       ],
@@ -1533,10 +1533,10 @@
       "teamId": 70,
       "status": "ok",
       "jForm": [
+        null,
         2,
         5,
         5,
-        3,
         3
       ],
       "clausula": null
@@ -5932,10 +5932,10 @@
       "teamId": 18,
       "status": "ok",
       "jForm": [
+        null,
         2,
         2,
         13,
-        5,
         5
       ],
       "clausula": null
@@ -6661,8 +6661,8 @@
         null,
         null,
         null,
-        2,
-        null
+        null,
+        2
       ],
       "clausula": null
     },
@@ -9430,11 +9430,11 @@
       "teamId": 70,
       "status": "ok",
       "jForm": [
+        null,
         1,
         4,
         3,
-        null,
-        -2
+        null
       ],
       "clausula": null
     },
@@ -12638,7 +12638,14 @@
         "buyDate": 1777179786
       }
     ],
-    "market": []
+    "market": [
+      {
+        "playerID": 25127,
+        "price": 16020000,
+        "type": "sale",
+        "until": 1778948220
+      }
+    ]
   },
   "boardTomaquet": [
     {
@@ -13878,15 +13885,15 @@
           "tla": "RSO",
           "crest": "https://crests.football-data.org/92.png"
         },
-        "playedGames": 35,
+        "playedGames": 36,
         "form": null,
-        "won": 11,
+        "won": 12,
         "draw": 11,
         "lost": 13,
-        "points": 44,
-        "goalsFor": 54,
+        "points": 47,
+        "goalsFor": 55,
         "goalsAgainst": 55,
-        "goalDifference": -1
+        "goalDifference": 0
       },
       {
         "position": 9,
@@ -13910,6 +13917,44 @@
       {
         "position": 10,
         "team": {
+          "id": 87,
+          "name": "Rayo Vallecano de Madrid",
+          "shortName": "Rayo Vallecano",
+          "tla": "RAY",
+          "crest": "https://crests.football-data.org/87.png"
+        },
+        "playedGames": 36,
+        "form": null,
+        "won": 10,
+        "draw": 14,
+        "lost": 12,
+        "points": 44,
+        "goalsFor": 37,
+        "goalsAgainst": 43,
+        "goalDifference": -6
+      },
+      {
+        "position": 11,
+        "team": {
+          "id": 95,
+          "name": "Valencia CF",
+          "shortName": "Valencia",
+          "tla": "VAL",
+          "crest": "https://crests.football-data.org/95.png"
+        },
+        "playedGames": 36,
+        "form": null,
+        "won": 11,
+        "draw": 10,
+        "lost": 15,
+        "points": 43,
+        "goalsFor": 39,
+        "goalsAgainst": 51,
+        "goalDifference": -12
+      },
+      {
+        "position": 12,
+        "team": {
           "id": 559,
           "name": "Sevilla FC",
           "shortName": "Sevilla FC",
@@ -13927,26 +13972,7 @@
         "goalDifference": -12
       },
       {
-        "position": 11,
-        "team": {
-          "id": 87,
-          "name": "Rayo Vallecano de Madrid",
-          "shortName": "Rayo Vallecano",
-          "tla": "RAY",
-          "crest": "https://crests.football-data.org/87.png"
-        },
-        "playedGames": 35,
-        "form": null,
-        "won": 10,
-        "draw": 13,
-        "lost": 12,
-        "points": 43,
-        "goalsFor": 36,
-        "goalsAgainst": 42,
-        "goalDifference": -6
-      },
-      {
-        "position": 12,
+        "position": 13,
         "team": {
           "id": 79,
           "name": "CA Osasuna",
@@ -13963,25 +13989,6 @@
         "goalsFor": 43,
         "goalsAgainst": 47,
         "goalDifference": -4
-      },
-      {
-        "position": 13,
-        "team": {
-          "id": 95,
-          "name": "Valencia CF",
-          "shortName": "Valencia",
-          "tla": "VAL",
-          "crest": "https://crests.football-data.org/95.png"
-        },
-        "playedGames": 35,
-        "form": null,
-        "won": 11,
-        "draw": 9,
-        "lost": 15,
-        "points": 42,
-        "goalsFor": 38,
-        "goalsAgainst": 50,
-        "goalDifference": -12
       },
       {
         "position": 14,
@@ -14087,15 +14094,15 @@
           "tla": "GIR",
           "crest": "https://crests.football-data.org/298.png"
         },
-        "playedGames": 35,
+        "playedGames": 36,
         "form": null,
         "won": 9,
         "draw": 12,
-        "lost": 14,
+        "lost": 15,
         "points": 39,
         "goalsFor": 37,
-        "goalsAgainst": 52,
-        "goalDifference": -15
+        "goalsAgainst": 53,
+        "goalDifference": -16
       },
       {
         "position": 20,
@@ -14212,13 +14219,13 @@
       "87": {
         "results": [
           "D",
-          "W",
           "D",
           "W",
-          "L"
+          "D",
+          "W"
         ],
-        "gf": 7,
-        "ga": 7,
+        "gf": 8,
+        "ga": 5,
         "crest": "https://crests.football-data.org/87.png",
         "name": "Rayo Vallecano de Madrid"
       },
@@ -14289,13 +14296,13 @@
       },
       "95": {
         "results": [
+          "D",
           "W",
           "L",
           "W",
-          "D",
-          "L"
+          "D"
         ],
-        "gf": 4,
+        "gf": 5,
         "ga": 5,
         "crest": "https://crests.football-data.org/95.png",
         "name": "Valencia CF"
@@ -14380,40 +14387,6 @@
       }
     },
     "nextMatches": [
-      {
-        "id": 544568,
-        "matchday": 36,
-        "date": "2026-05-14T17:00:00Z",
-        "home": {
-          "id": 95,
-          "name": "Valencia CF",
-          "short": "Valencia",
-          "crest": "https://crests.football-data.org/95.png"
-        },
-        "away": {
-          "id": 87,
-          "name": "Rayo Vallecano de Madrid",
-          "short": "Rayo Vallecano",
-          "crest": "https://crests.football-data.org/87.png"
-        }
-      },
-      {
-        "id": 544565,
-        "matchday": 36,
-        "date": "2026-05-14T18:00:00Z",
-        "home": {
-          "id": 298,
-          "name": "Girona FC",
-          "short": "Girona",
-          "crest": "https://crests.football-data.org/298.png"
-        },
-        "away": {
-          "id": 92,
-          "name": "Real Sociedad de Fútbol",
-          "short": "Real Sociedad",
-          "crest": "https://crests.football-data.org/92.png"
-        }
-      },
       {
         "id": 544570,
         "matchday": 36,
@@ -14600,9 +14573,43 @@
           "short": "Real Madrid",
           "crest": "https://crests.football-data.org/86.png"
         }
+      },
+      {
+        "id": 544565,
+        "matchday": 36,
+        "date": "2026-05-14T18:00:00Z",
+        "home": {
+          "id": 298,
+          "name": "Girona FC",
+          "short": "Girona",
+          "crest": "https://crests.football-data.org/298.png"
+        },
+        "away": {
+          "id": 92,
+          "name": "Real Sociedad de Fútbol",
+          "short": "Real Sociedad",
+          "crest": "https://crests.football-data.org/92.png"
+        }
       }
     ],
     "recentResults": [
+      {
+        "date": "2026-05-14T17:00:00Z",
+        "home": {
+          "name": "Valencia CF",
+          "short": "Valencia",
+          "crest": "https://crests.football-data.org/95.png"
+        },
+        "away": {
+          "name": "Rayo Vallecano de Madrid",
+          "short": "Rayo Vallecano",
+          "crest": "https://crests.football-data.org/87.png"
+        },
+        "score": {
+          "home": 1,
+          "away": 1
+        }
+      },
       {
         "date": "2026-05-13T19:30:00Z",
         "home": {
@@ -14721,59 +14728,24 @@
           "home": 2,
           "away": 3
         }
-      },
-      {
-        "date": "2026-05-11T19:00:00Z",
-        "home": {
-          "name": "Rayo Vallecano de Madrid",
-          "short": "Rayo Vallecano",
-          "crest": "https://crests.football-data.org/87.png"
-        },
-        "away": {
-          "name": "Girona FC",
-          "short": "Girona",
-          "crest": "https://crests.football-data.org/298.png"
-        },
-        "score": {
-          "home": 1,
-          "away": 1
-        }
       }
     ]
   },
   "odds": {
-    "Valencia": {
-      "winProb": 0.27220081256054135,
-      "drawProb": 0.27371303929698876,
-      "loseProb": 0.45408614814246984,
-      "over25Prob": 0.5181347150259068,
-      "isHome": false,
-      "opponent": "Real Sociedad",
-      "matchDate": "2026-05-17T17:00:00Z"
-    },
-    "Rayo Vallecano": {
-      "winProb": 0.3908966389210832,
-      "drawProb": 0.26245917184701295,
-      "loseProb": 0.34664418923190393,
-      "over25Prob": 0.5780346820809249,
-      "isHome": true,
-      "opponent": "Villarreal",
-      "matchDate": "2026-05-17T17:00:00Z"
-    },
     "Girona": {
-      "winProb": 0.21566671981677704,
-      "drawProb": 0.23980460086682995,
-      "loseProb": 0.5445286793163929,
+      "winProb": 0.21567505720823799,
+      "drawProb": 0.2427672441974502,
+      "loseProb": 0.5415576985943118,
       "over25Prob": 0.5681818181818182,
       "isHome": false,
       "opponent": "Atlético Madrid",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Real Sociedad": {
-      "winProb": 0.45408614814246984,
-      "drawProb": 0.27371303929698876,
-      "loseProb": 0.27220081256054135,
-      "over25Prob": 0.5181347150259068,
+      "winProb": 0.4504372260783862,
+      "drawProb": 0.27554679472392896,
+      "loseProb": 0.27401597919768494,
+      "over25Prob": 0.5154639175257733,
       "isHome": true,
       "opponent": "Valencia",
       "matchDate": "2026-05-17T17:00:00Z"
@@ -14788,108 +14760,117 @@
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Oviedo": {
-      "winProb": 0.24693579219610928,
-      "drawProb": 0.25379511975711233,
-      "loseProb": 0.49926908804677833,
+      "winProb": 0.24436468054558505,
+      "drawProb": 0.25096913137114135,
+      "loseProb": 0.5046661880832735,
       "over25Prob": 0.5555555555555556,
       "isHome": true,
       "opponent": "Alavés",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Alavés": {
-      "winProb": 0.49926908804677833,
-      "drawProb": 0.25379511975711233,
-      "loseProb": 0.24693579219610928,
+      "winProb": 0.5046661880832735,
+      "drawProb": 0.25096913137114135,
+      "loseProb": 0.24436468054558505,
       "over25Prob": 0.5555555555555556,
       "isHome": false,
       "opponent": "Oviedo",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Athletic Bilbao": {
-      "winProb": 0.42660693822273155,
-      "drawProb": 0.2911761641837691,
-      "loseProb": 0.2822168975934993,
+      "winProb": 0.43415412222111455,
+      "drawProb": 0.28720965008473737,
+      "loseProb": 0.27863622769414814,
       "over25Prob": 0.4926108374384237,
       "isHome": true,
       "opponent": "Celta Vigo",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Celta Vigo": {
-      "winProb": 0.2822168975934993,
-      "drawProb": 0.2911761641837691,
-      "loseProb": 0.42660693822273155,
+      "winProb": 0.27863622769414814,
+      "drawProb": 0.28720965008473737,
+      "loseProb": 0.43415412222111455,
       "over25Prob": 0.4926108374384237,
       "isHome": false,
       "opponent": "Athletic Bilbao",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.5445286793163929,
-      "drawProb": 0.23980460086682995,
-      "loseProb": 0.21566671981677704,
+      "winProb": 0.5415576985943118,
+      "drawProb": 0.2427672441974502,
+      "loseProb": 0.21567505720823799,
       "over25Prob": 0.5681818181818182,
       "isHome": true,
       "opponent": "Girona",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "CA Osasuna": {
-      "winProb": 0.4747073354097305,
-      "drawProb": 0.2806358071098701,
-      "loseProb": 0.24465685748039956,
-      "over25Prob": 0.5128205128205129,
+      "winProb": 0.4663857150642131,
+      "drawProb": 0.29274672576338306,
+      "loseProb": 0.2408675591724037,
+      "over25Prob": 0.49751243781094534,
       "isHome": true,
       "opponent": "Espanyol",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Espanyol": {
-      "winProb": 0.24465685748039956,
-      "drawProb": 0.2806358071098701,
-      "loseProb": 0.4747073354097305,
-      "over25Prob": 0.5128205128205129,
+      "winProb": 0.2408675591724037,
+      "drawProb": 0.29274672576338306,
+      "loseProb": 0.4663857150642131,
+      "over25Prob": 0.49751243781094534,
       "isHome": false,
       "opponent": "CA Osasuna",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Elche CF": {
-      "winProb": 0.4165796617247859,
-      "drawProb": 0.3215702651910628,
-      "loseProb": 0.26185007308415115,
+      "winProb": 0.4196319018404907,
+      "drawProb": 0.3239263803680981,
+      "loseProb": 0.256441717791411,
       "over25Prob": 0.35714285714285715,
       "isHome": true,
       "opponent": "Getafe",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Getafe": {
-      "winProb": 0.26185007308415115,
-      "drawProb": 0.3215702651910628,
-      "loseProb": 0.4165796617247859,
+      "winProb": 0.256441717791411,
+      "drawProb": 0.3239263803680981,
+      "loseProb": 0.4196319018404907,
       "over25Prob": 0.35714285714285715,
       "isHome": false,
       "opponent": "Elche CF",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Levante": {
-      "winProb": 0.44707813410049596,
-      "drawProb": 0.28345011383893115,
-      "loseProb": 0.2694717520605729,
-      "over25Prob": 0.5208333333333334,
+      "winProb": 0.4424291223460609,
+      "drawProb": 0.28351061575624015,
+      "loseProb": 0.27406026189769883,
+      "over25Prob": 0.5181347150259068,
       "isHome": true,
       "opponent": "Mallorca",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Mallorca": {
-      "winProb": 0.2694717520605729,
-      "drawProb": 0.28345011383893115,
-      "loseProb": 0.44707813410049596,
-      "over25Prob": 0.5208333333333334,
+      "winProb": 0.27406026189769883,
+      "drawProb": 0.28351061575624015,
+      "loseProb": 0.4424291223460609,
+      "over25Prob": 0.5181347150259068,
       "isHome": false,
       "opponent": "Levante",
       "matchDate": "2026-05-17T17:00:00Z"
     },
+    "Rayo Vallecano": {
+      "winProb": 0.391304347826087,
+      "drawProb": 0.2608695652173913,
+      "loseProb": 0.3478260869565217,
+      "over25Prob": 0.5780346820809249,
+      "isHome": true,
+      "opponent": "Villarreal",
+      "matchDate": "2026-05-17T17:00:00Z"
+    },
     "Villarreal": {
-      "winProb": 0.34664418923190393,
-      "drawProb": 0.26245917184701295,
-      "loseProb": 0.3908966389210832,
+      "winProb": 0.3478260869565217,
+      "drawProb": 0.2608695652173913,
+      "loseProb": 0.391304347826087,
       "over25Prob": 0.5780346820809249,
       "isHome": false,
       "opponent": "Rayo Vallecano",
@@ -14904,19 +14885,28 @@
       "opponent": "Real Madrid",
       "matchDate": "2026-05-17T17:00:00Z"
     },
+    "Valencia": {
+      "winProb": 0.27401597919768494,
+      "drawProb": 0.27554679472392896,
+      "loseProb": 0.4504372260783862,
+      "over25Prob": 0.5154639175257733,
+      "isHome": false,
+      "opponent": "Real Sociedad",
+      "matchDate": "2026-05-17T17:00:00Z"
+    },
     "Barcelona": {
-      "winProb": 0.6940240726402478,
-      "drawProb": 0.16512986555923134,
-      "loseProb": 0.14084606180052087,
+      "winProb": 0.6899550659515873,
+      "drawProb": 0.17002464125235542,
+      "loseProb": 0.1400202927960574,
       "over25Prob": 0.7692307692307692,
       "isHome": true,
       "opponent": "Real Betis",
       "matchDate": "2026-05-17T19:15:00Z"
     },
     "Real Betis": {
-      "winProb": 0.14084606180052087,
-      "drawProb": 0.16512986555923134,
-      "loseProb": 0.6940240726402478,
+      "winProb": 0.1400202927960574,
+      "drawProb": 0.17002464125235542,
+      "loseProb": 0.6899550659515873,
       "over25Prob": 0.7692307692307692,
       "isHome": false,
       "opponent": "Barcelona",
@@ -14924,6 +14914,54 @@
     }
   },
   "news": [
+    {
+      "title": "Chollos Fantasy que Tienes que Fichar YA para la J37 de Biwenger",
+      "link": "https://www.jornadaperfecta.com/blog/chollos-fantasy-biwenger-j37-laliga/",
+      "date": "Thu, 14 May 2026 19:00:27 +0000",
+      "img": "https://cdn.biwenger.com/i/t/8.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "COMPRAS OBLIGADAS: 5 equipos que te van a DAR LA LIGA",
+      "link": "https://www.jornadaperfecta.com/blog/compras-fantasy-final-liga-25-26/",
+      "date": "Thu, 14 May 2026 18:45:01 +0000",
+      "img": "https://i.ytimg.com/vi/SkqgpbripBE/mqdefault.jpg",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Gayà, sustituido tras sufrir un pinchazo muscular",
+      "link": "https://www.jornadaperfecta.com/blog/gaya-estado-j37-25-26/",
+      "date": "Thu, 14 May 2026 18:42:36 +0000",
+      "img": "https://cdn.biwenger.com/i/t/18.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Renzo Saravia, sustituido con molestias en la primera parte",
+      "link": "https://www.jornadaperfecta.com/blog/renzo-saravia-estado-molestias-muslo-26/",
+      "date": "Thu, 14 May 2026 17:46:13 +0000",
+      "img": "https://cdn.biwenger.com/i/t/18.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "5 equipos a EVITAR en las 2 últimas jornadas &#8211; LaLiga Fantasy y Biwenger",
+      "link": "https://www.jornadaperfecta.com/blog/ventas-fantasy-final-liga-25-26/",
+      "date": "Thu, 14 May 2026 15:00:02 +0000",
+      "img": "https://i.ytimg.com/vi/SkqgpbripBE/mqdefault.jpg",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Mbappé se recupera y entra en la convocatoria",
+      "link": "https://www.jornadaperfecta.com/blog/mbappe-recuperacion-lesion-26/",
+      "date": "Thu, 14 May 2026 13:01:59 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Flick explica la suplencia de Joan García y aclara si volverá a jugar",
       "link": "https://www.jornadaperfecta.com/blog/joan-garcia-suplencia-szczesny/",
@@ -14955,61 +14993,13 @@
       "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/10/Lamine-Yamal-FC-Barcelona-fantasy.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Dani Vivian dice adiós a la temporada: parte médico oficial",
-      "link": "https://www.jornadaperfecta.com/blog/vivian-lesion-tobillo-athletic/",
-      "date": "Thu, 14 May 2026 10:55:41 +0000",
-      "img": "https://cdn.biwenger.com/i/t/1.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Rafa Mir sigue con el grupo y André Silva es baja por enfermedad",
-      "link": "https://www.jornadaperfecta.com/blog/rafa-mir-estado-elche-j37/",
-      "date": "Thu, 14 May 2026 10:45:32 +0000",
-      "img": "https://cdn.biwenger.com/i/t/75.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Actualizadas las Alineaciones Probables para la Jornada 37",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-probables-j37-laliga-25-26/",
-      "date": "Thu, 14 May 2026 09:00:42 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Luckia Barcelona vs Betis: apuesta con seguro de 10€ gratis si fallas",
-      "link": "https://www.jornadaperfecta.com/blog/luckia-barcelona-vs-betis-seguro/",
-      "date": "Thu, 14 May 2026 07:00:50 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/05/Luckia-Barcelona-vs-Betis-seguro.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Mbappé suma un entrenamiento más con el grupo, ¿llega a la j36?",
-      "link": "https://www.jornadaperfecta.com/blog/mbappe-recuperacion-lesion-26/",
-      "date": "Thu, 14 May 2026 06:20:59 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Djené queda en duda tras pedir el cambio por molestias",
-      "link": "https://www.jornadaperfecta.com/blog/djene-estado-getafe-j37/",
-      "date": "Wed, 13 May 2026 21:37:18 +0000",
-      "img": "https://cdn.biwenger.com/i/t/8.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-05-14T13:23:40.473Z",
+    "updatedAt": "2026-05-14T19:25:04.550Z",
     "players": [
       {
         "id": "3374",
@@ -15017,11 +15007,11 @@
         "team": "Real Madrid CF",
         "position": "",
         "nationality": "France",
-        "appearances": 28,
+        "appearances": 29,
         "goals": 24,
         "assists": 4,
         "penalties": 8,
-        "minutesPerGoal": 105
+        "minutesPerGoal": 109
       },
       {
         "id": "30059",
@@ -15077,11 +15067,11 @@
         "team": "Real Madrid CF",
         "position": "",
         "nationality": "Brazil",
-        "appearances": 33,
+        "appearances": 34,
         "goals": 15,
         "assists": 5,
         "penalties": 4,
-        "minutesPerGoal": 198
+        "minutesPerGoal": 204
       },
       {
         "id": "32056",
@@ -15101,11 +15091,11 @@
         "team": "Real Sociedad de Fútbol",
         "position": "",
         "nationality": "Spain",
-        "appearances": 32,
+        "appearances": 33,
         "goals": 15,
         "assists": 3,
         "penalties": 7,
-        "minutesPerGoal": 192
+        "minutesPerGoal": 198
       },
       {
         "id": "8167",
@@ -15197,11 +15187,11 @@
         "team": "Rayo Vallecano de Madrid",
         "position": "",
         "nationality": "Spain",
-        "appearances": 33,
+        "appearances": 34,
         "goals": 10,
         "assists": 1,
         "penalties": 1,
-        "minutesPerGoal": 297
+        "minutesPerGoal": 306
       },
       {
         "id": "1760",
@@ -15257,11 +15247,11 @@
         "team": "Valencia CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 34,
+        "appearances": 35,
         "goals": 9,
         "assists": 0,
         "penalties": 1,
-        "minutesPerGoal": 340
+        "minutesPerGoal": 350
       },
       {
         "id": "160819",
@@ -15293,11 +15283,11 @@
         "team": "Real Oviedo",
         "position": "",
         "nationality": "Uruguay",
-        "appearances": 31,
+        "appearances": 32,
         "goals": 9,
         "assists": 1,
         "penalties": 2,
-        "minutesPerGoal": 310
+        "minutesPerGoal": 320
       },
       {
         "id": "83406",
@@ -15617,11 +15607,11 @@
         "team": "Girona FC",
         "position": "",
         "nationality": "Ukraine",
-        "appearances": 29,
+        "appearances": 30,
         "goals": 6,
         "assists": 5,
         "penalties": 0,
-        "minutesPerGoal": 435
+        "minutesPerGoal": 450
       },
       {
         "id": "146126",
@@ -15629,11 +15619,11 @@
         "team": "Real Oviedo",
         "position": "",
         "nationality": "Morocco",
-        "appearances": 33,
+        "appearances": 34,
         "goals": 6,
         "assists": 2,
         "penalties": 0,
-        "minutesPerGoal": 495
+        "minutesPerGoal": 510
       },
       {
         "id": "136349",
@@ -15641,11 +15631,11 @@
         "team": "Valencia CF",
         "position": "",
         "nationality": "Belgium",
-        "appearances": 28,
+        "appearances": 29,
         "goals": 6,
         "assists": 1,
         "penalties": 3,
-        "minutesPerGoal": 420
+        "minutesPerGoal": 435
       },
       {
         "id": "152458",
@@ -15701,11 +15691,11 @@
         "team": "Real Sociedad de Fútbol",
         "position": "",
         "nationality": "Spain",
-        "appearances": 31,
+        "appearances": 32,
         "goals": 5,
         "assists": 2,
         "penalties": 1,
-        "minutesPerGoal": 558
+        "minutesPerGoal": 576
       },
       {
         "id": "122511",
@@ -15713,11 +15703,11 @@
         "team": "Girona FC",
         "position": "",
         "nationality": "Morocco",
-        "appearances": 21,
+        "appearances": 22,
         "goals": 5,
         "assists": 2,
         "penalties": 1,
-        "minutesPerGoal": 378
+        "minutesPerGoal": 396
       },
       {
         "id": "16275",
@@ -15790,6 +15780,18 @@
         "assists": 2,
         "penalties": 1,
         "minutesPerGoal": 675
+      },
+      {
+        "id": "180061",
+        "name": "Diego López",
+        "team": "Valencia CF",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 34,
+        "goals": 4,
+        "assists": 0,
+        "penalties": 0,
+        "minutesPerGoal": 765
       },
       {
         "id": "33045",
@@ -15905,11 +15907,11 @@
         "team": "Real Oviedo",
         "position": "",
         "nationality": "Spain",
-        "appearances": 34,
+        "appearances": 35,
         "goals": 4,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 765
+        "minutesPerGoal": 788
       },
       {
         "id": "33148",
@@ -15917,11 +15919,11 @@
         "team": "Real Sociedad de Fútbol",
         "position": "",
         "nationality": "Spain",
-        "appearances": 31,
+        "appearances": 32,
         "goals": 4,
         "assists": 3,
         "penalties": 0,
-        "minutesPerGoal": 698
+        "minutesPerGoal": 720
       },
       {
         "id": "3171",
@@ -15929,11 +15931,11 @@
         "team": "Girona FC",
         "position": "",
         "nationality": "Uruguay",
-        "appearances": 23,
+        "appearances": 24,
         "goals": 4,
         "assists": 0,
         "penalties": 3,
-        "minutesPerGoal": 518
+        "minutesPerGoal": 540
       },
       {
         "id": "125010",
@@ -15941,11 +15943,11 @@
         "team": "Real Madrid CF",
         "position": "",
         "nationality": "England",
-        "appearances": 24,
+        "appearances": 25,
         "goals": 4,
         "assists": 4,
         "penalties": 0,
-        "minutesPerGoal": 540
+        "minutesPerGoal": 563
       },
       {
         "id": "170438",
@@ -15965,11 +15967,11 @@
         "team": "Real Madrid CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 34,
+        "appearances": 35,
         "goals": 4,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 765
+        "minutesPerGoal": 788
       },
       {
         "id": "7672",
@@ -15977,11 +15979,11 @@
         "team": "Valencia CF",
         "position": "",
         "nationality": "Nigeria",
-        "appearances": 28,
+        "appearances": 29,
         "goals": 4,
         "assists": 2,
         "penalties": 0,
-        "minutesPerGoal": 630
+        "minutesPerGoal": 653
       },
       {
         "id": "33496",
@@ -16001,23 +16003,11 @@
         "team": "Girona FC",
         "position": "",
         "nationality": "Spain",
-        "appearances": 31,
+        "appearances": 32,
         "goals": 3,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 930
-      },
-      {
-        "id": "180061",
-        "name": "Diego López",
-        "team": "Valencia CF",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 33,
-        "goals": 3,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 990
+        "minutesPerGoal": 960
       },
       {
         "id": "249599",
@@ -16037,11 +16027,11 @@
         "team": "Real Sociedad de Fútbol",
         "position": "",
         "nationality": "Spain",
-        "appearances": 29,
+        "appearances": 30,
         "goals": 3,
         "assists": 5,
         "penalties": 0,
-        "minutesPerGoal": 870
+        "minutesPerGoal": 900
       },
       {
         "id": "9870",
@@ -16049,11 +16039,11 @@
         "team": "Valencia CF",
         "position": "",
         "nationality": "Netherlands",
-        "appearances": 34,
+        "appearances": 35,
         "goals": 3,
         "assists": 2,
         "penalties": 0,
-        "minutesPerGoal": 1020
+        "minutesPerGoal": 1050
       },
       {
         "id": "21583",
@@ -16157,11 +16147,11 @@
         "team": "Rayo Vallecano de Madrid",
         "position": "",
         "nationality": "Brazil",
-        "appearances": 28,
+        "appearances": 29,
         "goals": 3,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 840
+        "minutesPerGoal": 870
       },
       {
         "id": "7936",
