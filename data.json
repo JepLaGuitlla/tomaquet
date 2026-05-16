@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-16T12:52:43.844Z",
+  "updatedAt": "2026-05-16T18:44:55.491Z",
   "players": [
     {
       "id": 11,
@@ -14896,18 +14896,18 @@
   },
   "odds": {
     "Oviedo": {
-      "winProb": 0.24201013885827638,
-      "drawProb": 0.2554551465726251,
-      "loseProb": 0.5025347145690985,
+      "winProb": 0.23727714748784443,
+      "drawProb": 0.25705024311183144,
+      "loseProb": 0.5056726094003241,
       "over25Prob": 0.5464480874316939,
       "isHome": true,
       "opponent": "Alavés",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Alavés": {
-      "winProb": 0.5025347145690985,
-      "drawProb": 0.2554551465726251,
-      "loseProb": 0.24201013885827638,
+      "winProb": 0.5056726094003241,
+      "drawProb": 0.25705024311183144,
+      "loseProb": 0.23727714748784443,
       "over25Prob": 0.5464480874316939,
       "isHome": false,
       "opponent": "Oviedo",
@@ -14932,73 +14932,73 @@
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.5272612773855689,
-      "drawProb": 0.2541181929667562,
-      "loseProb": 0.21862052964767498,
-      "over25Prob": 0.5649717514124294,
+      "winProb": 0.5294177671068427,
+      "drawProb": 0.2551080432172869,
+      "loseProb": 0.21547418967587034,
+      "over25Prob": 0.5524861878453039,
       "isHome": true,
       "opponent": "Girona",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Girona": {
-      "winProb": 0.21862052964767498,
-      "drawProb": 0.2541181929667562,
-      "loseProb": 0.5272612773855689,
-      "over25Prob": 0.5649717514124294,
+      "winProb": 0.21547418967587034,
+      "drawProb": 0.2551080432172869,
+      "loseProb": 0.5294177671068427,
+      "over25Prob": 0.5524861878453039,
       "isHome": false,
       "opponent": "Atlético Madrid",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "CA Osasuna": {
-      "winProb": 0.4449635788389375,
-      "drawProb": 0.32278713854756824,
-      "loseProb": 0.23224928261349423,
-      "over25Prob": 0.4672897196261682,
+      "winProb": 0.44494776064879077,
+      "drawProb": 0.3283407613063491,
+      "loseProb": 0.22671147804486005,
+      "over25Prob": 0.4385964912280702,
       "isHome": true,
       "opponent": "Espanyol",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Espanyol": {
-      "winProb": 0.23224928261349423,
-      "drawProb": 0.32278713854756824,
-      "loseProb": 0.4449635788389375,
-      "over25Prob": 0.4672897196261682,
+      "winProb": 0.22671147804486005,
+      "drawProb": 0.3283407613063491,
+      "loseProb": 0.44494776064879077,
+      "over25Prob": 0.4385964912280702,
       "isHome": false,
       "opponent": "CA Osasuna",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Elche CF": {
-      "winProb": 0.42198868229587705,
-      "drawProb": 0.3201293451899757,
-      "loseProb": 0.2578819725141471,
+      "winProb": 0.42760597993037064,
+      "drawProb": 0.3170182265001024,
+      "loseProb": 0.25537579356952694,
       "over25Prob": 0.38167938931297707,
       "isHome": true,
       "opponent": "Getafe",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Getafe": {
-      "winProb": 0.2578819725141471,
-      "drawProb": 0.3201293451899757,
-      "loseProb": 0.42198868229587705,
+      "winProb": 0.25537579356952694,
+      "drawProb": 0.3170182265001024,
+      "loseProb": 0.42760597993037064,
       "over25Prob": 0.38167938931297707,
       "isHome": false,
       "opponent": "Elche CF",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Levante": {
-      "winProb": 0.4410848490674185,
-      "drawProb": 0.28183931616628743,
-      "loseProb": 0.2770758347662939,
-      "over25Prob": 0.5291005291005292,
+      "winProb": 0.44246850104525676,
+      "drawProb": 0.28191564495169213,
+      "loseProb": 0.275615854003051,
+      "over25Prob": 0.5263157894736842,
       "isHome": true,
       "opponent": "Mallorca",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Mallorca": {
-      "winProb": 0.2770758347662939,
-      "drawProb": 0.28183931616628743,
-      "loseProb": 0.4410848490674185,
-      "over25Prob": 0.5291005291005292,
+      "winProb": 0.275615854003051,
+      "drawProb": 0.28191564495169213,
+      "loseProb": 0.44246850104525676,
+      "over25Prob": 0.5263157894736842,
       "isHome": false,
       "opponent": "Levante",
       "matchDate": "2026-05-17T17:00:00Z"
@@ -15040,36 +15040,36 @@
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Real Sociedad": {
-      "winProb": 0.43633668728443975,
-      "drawProb": 0.2770002565345039,
-      "loseProb": 0.28666305618105636,
-      "over25Prob": 0.5208333333333334,
+      "winProb": 0.43810431800556376,
+      "drawProb": 0.27534489260126216,
+      "loseProb": 0.286550789393174,
+      "over25Prob": 0.5291005291005292,
       "isHome": true,
       "opponent": "Valencia",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Valencia": {
-      "winProb": 0.28666305618105636,
-      "drawProb": 0.2770002565345039,
-      "loseProb": 0.43633668728443975,
-      "over25Prob": 0.5208333333333334,
+      "winProb": 0.286550789393174,
+      "drawProb": 0.27534489260126216,
+      "loseProb": 0.43810431800556376,
+      "over25Prob": 0.5291005291005292,
       "isHome": false,
       "opponent": "Real Sociedad",
       "matchDate": "2026-05-17T17:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.7144647781398846,
-      "drawProb": 0.1595638004512409,
-      "loseProb": 0.1259714214088744,
+      "winProb": 0.7081573389651531,
+      "drawProb": 0.16360876451953538,
+      "loseProb": 0.1282338965153115,
       "over25Prob": 0.7692307692307692,
       "isHome": true,
       "opponent": "Real Betis",
       "matchDate": "2026-05-17T19:15:00Z"
     },
     "Real Betis": {
-      "winProb": 0.1259714214088744,
-      "drawProb": 0.1595638004512409,
-      "loseProb": 0.7144647781398846,
+      "winProb": 0.1282338965153115,
+      "drawProb": 0.16360876451953538,
+      "loseProb": 0.7081573389651531,
       "over25Prob": 0.7692307692307692,
       "isHome": false,
       "opponent": "Barcelona",
@@ -15077,6 +15077,54 @@
     }
   },
   "news": [
+    {
+      "title": "Parte médico de Gayà y Renzo Saravia: KO el resto de la temporada",
+      "link": "https://www.jornadaperfecta.com/blog/gaya-renzo-saravia-parte-medico-26/",
+      "date": "Sat, 16 May 2026 17:29:54 +0000",
+      "img": "https://cdn.biwenger.com/i/t/18.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Iñigo Pérez confirma a Trejo y habla del estado de Álvaro García",
+      "link": "https://www.jornadaperfecta.com/blog/inigo-perez-previa-rayo-villarreal-j37-25-26/",
+      "date": "Sat, 16 May 2026 17:21:05 +0000",
+      "img": "https://cdn.biwenger.com/i/t/70.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "BigUp: Gana dinero real con tus pronósticos del Levante &#8211; Mallorca",
+      "link": "https://www.jornadaperfecta.com/blog/bigup-levante-mallorca-j37-25-26/",
+      "date": "Sat, 16 May 2026 16:15:58 +0000",
+      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2705.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Valverde habla de su último partido en San Mamés, Vivian, Yuri y Lekue",
+      "link": "https://www.jornadaperfecta.com/blog/valverde-previa-athletic-celta-j37-25-26/",
+      "date": "Sat, 16 May 2026 16:09:37 +0000",
+      "img": "https://cdn.biwenger.com/i/t/1.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Guedes vuelve a una lista sin Gorrotxategi",
+      "link": "https://www.jornadaperfecta.com/blog/guedes-estado-j37-25-26/",
+      "date": "Sat, 16 May 2026 15:35:38 +0000",
+      "img": "https://cdn.biwenger.com/i/t/13.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Lewandowski, Cazorla, Griezmann&#8230; Jugadores que se despiden a alinear en la Jornada 37",
+      "link": "https://www.jornadaperfecta.com/blog/despedidas-fantasy-alinear-j37-25-26/",
+      "date": "Sat, 16 May 2026 13:01:06 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Giráldez, sobre Starfelt, Moriba, Vecino, Aspas y Marcos Alonso",
       "link": "https://www.jornadaperfecta.com/blog/giraldez-previa-athletic-celta-j37-25-26/",
@@ -15108,61 +15156,13 @@
       "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Flick confirma la baja de De Jong y duda con Rashford",
-      "link": "https://www.jornadaperfecta.com/blog/flick-previa-barcelona-betis-j37-25-26/",
-      "date": "Sat, 16 May 2026 12:01:37 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Lisci aclara el estado de Víctor Muñoz, ¿está para jugar?",
-      "link": "https://www.jornadaperfecta.com/blog/lisci-previa-osasuna-espanyol-j37-25-26/",
-      "date": "Sat, 16 May 2026 11:59:28 +0000",
-      "img": "https://cdn.biwenger.com/i/t/93.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Demichelis confirma a Raíllo para la final ante el Levante",
-      "link": "https://www.jornadaperfecta.com/blog/demichelis-previa-levante-mallorca-j37-25-26/",
-      "date": "Sat, 16 May 2026 11:57:46 +0000",
-      "img": "https://cdn.biwenger.com/i/t/465.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Míchel afronta una final: vuelve Van de Beek y Stuani se infiltrará",
-      "link": "https://www.jornadaperfecta.com/blog/michel-previa-atletico-girona-j37-25-26/",
-      "date": "Sat, 16 May 2026 11:45:56 +0000",
-      "img": "https://cdn.biwenger.com/i/t/289.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Pellegrini confirma la baja de Altimira y habla del Barça",
-      "link": "https://www.jornadaperfecta.com/blog/pellegrini-previa-barcelona-betis-j37-25-26/",
-      "date": "Sat, 16 May 2026 11:33:23 +0000",
-      "img": "https://cdn.biwenger.com/i/t/87.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Víctor Muñoz entra en convocatoria para la Jornada 37",
-      "link": "https://www.jornadaperfecta.com/blog/victor-munoz-estado-j37-25-26/",
-      "date": "Sat, 16 May 2026 11:10:05 +0000",
-      "img": "https://cdn.biwenger.com/i/t/93.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-05-16T12:52:43.709Z",
+    "updatedAt": "2026-05-16T18:44:54.558Z",
     "players": [
       {
         "id": "3374",
