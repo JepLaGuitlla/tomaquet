@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-19T14:28:42.707Z",
+  "updatedAt": "2026-05-19T19:40:26.267Z",
   "players": [
     {
       "id": 11,
@@ -12120,12 +12120,12 @@
           2
         ],
         "teamSize": 17,
-        "teamValue": 107430000,
-        "teamValueInc": 460000,
+        "teamValue": 109730000,
+        "teamValueInc": 670000,
         "lastTrophy": {
           "type": "league",
           "position": 2,
-          "season": "Temporada 2024/2025"
+          "season": "2024/2025 season"
         },
         "position": 2
       },
@@ -12159,13 +12159,13 @@
           2,
           8
         ],
-        "teamSize": 15,
-        "teamValue": 93050000,
-        "teamValueInc": 200000,
+        "teamSize": 14,
+        "teamValue": 88040000,
+        "teamValueInc": 130000,
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "Temporada 2024/2025"
+          "season": "2024/2025 season"
         },
         "position": 4,
         "role": ""
@@ -12225,7 +12225,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 1,
-          "season": "Temporada 2024/2025"
+          "season": "2024/2025 season"
         },
         "position": 7
       },
@@ -12283,7 +12283,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "Temporada 2023/2024"
+          "season": "2023/2024 season"
         },
         "position": 10,
         "positionInc": 1,
@@ -12379,8 +12379,8 @@
       "name": "LeMola Team",
       "manager": "LeMola Team",
       "points": 1995,
-      "value": 107430000,
-      "trend": 460000,
+      "value": 109730000,
+      "trend": 670000,
       "players": []
     },
     {
@@ -12397,8 +12397,8 @@
       "name": "CA CABA JUNIORS",
       "manager": "CA CABA JUNIORS",
       "points": 1818,
-      "value": 93050000,
-      "trend": 200000,
+      "value": 88040000,
+      "trend": 130000,
       "players": []
     },
     {
@@ -12704,6 +12704,42 @@
   "boardTomaquet": [
     {
       "type": "transfer",
+      "date": 1779210103,
+      "content": [
+        {
+          "player": 129,
+          "from": {
+            "id": 8070044,
+            "name": "CA CABA JUNIORS",
+            "icon": "i/u/8070044.png?v=63"
+          },
+          "to": {
+            "id": 6552586,
+            "name": "LeMola Team",
+            "icon": "i/u/6552586.png"
+          },
+          "amount": 9278010,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1779210059,
+      "content": [
+        {
+          "player": 1074,
+          "from": {
+            "id": 6552586,
+            "name": "LeMola Team",
+            "icon": "i/u/6552586.png"
+          },
+          "amount": 2618100
+        }
+      ]
+    },
+    {
+      "type": "transfer",
       "date": 1779186553,
       "content": [
         {
@@ -12846,55 +12882,6 @@
             "icon": "i/u/11757390.png"
           },
           "amount": 1896100
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1779170351,
-      "content": [
-        {
-          "player": 18174,
-          "from": {
-            "id": 8068427,
-            "name": "Albertini",
-            "icon": "i/u/8068427.png"
-          },
-          "amount": 10159300
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1779167264,
-      "content": [
-        {
-          "player": 17937,
-          "to": {
-            "id": 8070044,
-            "name": "CA CABA JUNIORS",
-            "icon": "i/u/8070044.png?v=63"
-          },
-          "amount": 4363000,
-          "bids": [
-            {
-              "user": {
-                "id": 11520975,
-                "name": "Morankus FC",
-                "icon": "i/u/11520975.png?v=81"
-              },
-              "amount": 4160000
-            }
-          ]
-        },
-        {
-          "player": 32020,
-          "to": {
-            "id": 12696599,
-            "name": "Trileros FC",
-            "icon": "i/u/12696599.png"
-          },
-          "amount": 4330000
         }
       ]
     }
@@ -13541,7 +13528,7 @@
       {
         "id": 19577,
         "buyPrice": 27230011,
-        "clause": 37815000,
+        "clause": 0,
         "invested": 0,
         "buyDate": 1761890506
       },
@@ -14802,18 +14789,18 @@
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Getafe": {
-      "winProb": 0.36717729348517253,
-      "drawProb": 0.3550725475461009,
-      "loseProb": 0.2777501589687265,
+      "winProb": 0.36688447101348537,
+      "drawProb": 0.3547893785624913,
+      "loseProb": 0.27832615042402337,
       "over25Prob": 0.3731343283582089,
       "isHome": true,
       "opponent": "CA Osasuna",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "CA Osasuna": {
-      "winProb": 0.2777501589687265,
-      "drawProb": 0.3550725475461009,
-      "loseProb": 0.36717729348517253,
+      "winProb": 0.27832615042402337,
+      "drawProb": 0.3547893785624913,
+      "loseProb": 0.36688447101348537,
       "over25Prob": 0.3731343283582089,
       "isHome": false,
       "opponent": "Getafe",
@@ -14874,37 +14861,37 @@
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Real Betis": {
-      "winProb": 0.4192840917991697,
-      "drawProb": 0.26106367979948303,
-      "loseProb": 0.3196522284013472,
-      "over25Prob": 0.6578947368421053,
+      "winProb": 0.4148171820659836,
+      "drawProb": 0.26193063257824983,
+      "loseProb": 0.3232521853557665,
+      "over25Prob": 0.6451612903225806,
       "isHome": true,
       "opponent": "Levante",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Levante": {
-      "winProb": 0.3196522284013472,
-      "drawProb": 0.26106367979948303,
-      "loseProb": 0.4192840917991697,
-      "over25Prob": 0.6578947368421053,
+      "winProb": 0.3232521853557665,
+      "drawProb": 0.26193063257824983,
+      "loseProb": 0.4148171820659836,
+      "over25Prob": 0.6451612903225806,
       "isHome": false,
       "opponent": "Real Betis",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Mallorca": {
-      "winProb": 0.6597346719254212,
-      "drawProb": 0.20939404804589462,
-      "loseProb": 0.13087128002868412,
-      "over25Prob": 0.5208333333333334,
+      "winProb": 0.6631003278234106,
+      "drawProb": 0.20766640936154324,
+      "loseProb": 0.12923326281504638,
+      "over25Prob": 0.5235602094240838,
       "isHome": true,
       "opponent": "Oviedo",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Oviedo": {
-      "winProb": 0.13087128002868412,
-      "drawProb": 0.20939404804589462,
-      "loseProb": 0.6597346719254212,
-      "over25Prob": 0.5208333333333334,
+      "winProb": 0.12923326281504638,
+      "drawProb": 0.20766640936154324,
+      "loseProb": 0.6631003278234106,
+      "over25Prob": 0.5235602094240838,
       "isHome": false,
       "opponent": "Mallorca",
       "matchDate": "2026-05-23T19:00:00Z"
@@ -14929,6 +14916,46 @@
     }
   },
   "news": [
+    {
+      "title": "Chollos LaLiga Fantasy: Fichajes Baratos y Rentables para la jornada 38",
+      "link": "https://www.jornadaperfecta.com/blog/chollos-laliga-fantasy-j38-25-26/",
+      "date": "Tue, 19 May 2026 19:00:46 +0000",
+      "img": "https://i.ytimg.com/vi/ppEHkzyv_7c/mqdefault.jpg",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "¡Alerta Fantasy!: Ventas que debes hacer tras la Jornada 37 de LaLiga",
+      "link": "https://www.jornadaperfecta.com/blog/ventas-fantasy-j38-25-26/",
+      "date": "Tue, 19 May 2026 17:14:26 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Toljan y Víctor García, al margen. ¿Llegan a la Jornada 38?",
+      "link": "https://www.jornadaperfecta.com/blog/toljan-victor-garcia-estado-j38/",
+      "date": "Tue, 19 May 2026 16:18:37 +0000",
+      "img": "https://cdn.biwenger.com/i/t/10.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Antony no va al Mundial y puede pasar por quirófano. ¿Estará en la Jornada 38?",
+      "link": "https://www.jornadaperfecta.com/blog/antony-estado-molestias-pubalgia-25-26/",
+      "date": "Tue, 19 May 2026 15:53:44 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "No hay lesión grave de Francés, pero queda en duda para la «final» ante el Elche",
+      "link": "https://www.jornadaperfecta.com/blog/frances-estado-j38-25-26/",
+      "date": "Tue, 19 May 2026 15:17:13 +0000",
+      "img": "https://cdn.biwenger.com/i/t/289.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "LeoVegas: ¡Gana hasta 200€ extra con la Final de la Europa League!",
       "link": "https://www.jornadaperfecta.com/blog/leovegas-final-europa-league-promocion/",
@@ -14968,53 +14995,13 @@
       "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "¡Crea tu liga del Mundial en Biwenger Fantasy y disfruta del Premium GRATIS!",
-      "link": "https://www.jornadaperfecta.com/blog/biwenger-fantasy-mundial-2026/",
-      "date": "Mon, 18 May 2026 19:11:04 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Promoción YoSports Final Europa League: ¡consigue 10€ en apuestas gratis!",
-      "link": "https://www.jornadaperfecta.com/blog/promocion-yosports-final-europa-league-2026/",
-      "date": "Mon, 18 May 2026 19:00:44 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/05/YoSports-Final-Europa-League.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Chollos Fantasy que Tienes que Fichar YA para la J38 de Biwenger",
-      "link": "https://www.jornadaperfecta.com/blog/chollos-fantasy-biwenger-j38-laliga/",
-      "date": "Mon, 18 May 2026 19:00:15 +0000",
-      "img": "https://cdn.biwenger.com/i/t/10.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Germán Valera sufre un golpe en el pie, ¿llega a la jornada 38?",
-      "link": "https://www.jornadaperfecta.com/blog/german-valera-estado-j38-elche/",
-      "date": "Mon, 18 May 2026 15:08:19 +0000",
-      "img": "https://cdn.biwenger.com/i/t/75.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Oficial: Hansi Flick renueva con el FC Barcelona hasta 2028",
-      "link": "https://www.jornadaperfecta.com/blog/hansi-flick-renovacion-fc-barcelona-2028/",
-      "date": "Mon, 18 May 2026 13:20:29 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-05-19T14:28:40.424Z",
+    "updatedAt": "2026-05-19T19:40:25.494Z",
     "players": [
       {
         "id": "3374",
