@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-18T19:20:18.954Z",
+  "updatedAt": "2026-05-19T01:59:39.736Z",
   "players": [
     {
       "id": 11,
@@ -12067,11 +12067,7 @@
       "teamId": 465,
       "status": "ok",
       "jForm": [
-        4,
-        null,
-        null,
-        null,
-        null
+        4
       ],
       "clausula": null
     }
@@ -12129,7 +12125,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 2,
-          "season": "Temporada 2024/2025"
+          "season": "2024/2025 season"
         },
         "position": 2
       },
@@ -12169,7 +12165,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "Temporada 2024/2025"
+          "season": "2024/2025 season"
         },
         "position": 4,
         "role": ""
@@ -12229,7 +12225,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 1,
-          "season": "Temporada 2024/2025"
+          "season": "2024/2025 season"
         },
         "position": 7
       },
@@ -12287,7 +12283,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "Temporada 2023/2024"
+          "season": "2023/2024 season"
         },
         "position": 10,
         "positionInc": 1,
@@ -12324,9 +12320,9 @@
           11,
           12
         ],
-        "teamSize": 18,
-        "teamValue": 46680000,
-        "teamValueInc": 850000,
+        "teamSize": 14,
+        "teamValue": 29040000,
+        "teamValueInc": 730000,
         "position": 12,
         "role": ""
       },
@@ -12473,8 +12469,8 @@
       "name": "Morankus FC",
       "manager": "Morankus FC",
       "points": 1492,
-      "value": 46680000,
-      "trend": 850000,
+      "value": 29040000,
+      "trend": 730000,
       "players": []
     },
     {
@@ -12713,6 +12709,48 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1779133956,
+      "content": [
+        {
+          "player": 18397,
+          "from": {
+            "id": 11520975,
+            "name": "Morankus FC",
+            "icon": "i/u/11520975.png?v=81"
+          },
+          "amount": 9714700
+        },
+        {
+          "player": 34221,
+          "from": {
+            "id": 11520975,
+            "name": "Morankus FC",
+            "icon": "i/u/11520975.png?v=81"
+          },
+          "amount": 1579700
+        },
+        {
+          "player": 23403,
+          "from": {
+            "id": 11520975,
+            "name": "Morankus FC",
+            "icon": "i/u/11520975.png?v=81"
+          },
+          "amount": 3335400
+        },
+        {
+          "player": 39876,
+          "from": {
+            "id": 11520975,
+            "name": "Morankus FC",
+            "icon": "i/u/11520975.png?v=81"
+          },
+          "amount": 2780800
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1779106613,
@@ -14585,91 +14623,91 @@
   },
   "odds": {
     "Alavés": {
-      "winProb": 0.4357172385283175,
-      "drawProb": 0.2691194708557256,
-      "loseProb": 0.29516329061595703,
+      "winProb": 0.42642767819924965,
+      "drawProb": 0.2778240933722384,
+      "loseProb": 0.29574822842851184,
       "over25Prob": 0.5208333333333334,
       "isHome": true,
       "opponent": "Rayo Vallecano",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Rayo Vallecano": {
-      "winProb": 0.29516329061595703,
-      "drawProb": 0.2691194708557256,
-      "loseProb": 0.4357172385283175,
+      "winProb": 0.29574822842851184,
+      "drawProb": 0.2778240933722384,
+      "loseProb": 0.42642767819924965,
       "over25Prob": 0.5208333333333334,
       "isHome": false,
       "opponent": "Alavés",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Real Madrid": {
-      "winProb": 0.6378999473642951,
-      "drawProb": 0.21358897113995498,
-      "loseProb": 0.14851108149574993,
+      "winProb": 0.6253125967561388,
+      "drawProb": 0.21358992068973726,
+      "loseProb": 0.16109748255412387,
       "over25Prob": 0.6711409395973155,
       "isHome": true,
       "opponent": "Athletic Bilbao",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Athletic Bilbao": {
-      "winProb": 0.14851108149574993,
-      "drawProb": 0.21358897113995498,
-      "loseProb": 0.6378999473642951,
+      "winProb": 0.16109748255412387,
+      "drawProb": 0.21358992068973726,
+      "loseProb": 0.6253125967561388,
       "over25Prob": 0.6711409395973155,
       "isHome": false,
       "opponent": "Real Madrid",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Valencia": {
-      "winProb": 0.2688716292870233,
-      "drawProb": 0.2416441225237804,
-      "loseProb": 0.48948424818919634,
+      "winProb": 0.26853980417198814,
+      "drawProb": 0.2297147722435079,
+      "loseProb": 0.5017454235845041,
       "over25Prob": 0.6944444444444444,
       "isHome": true,
       "opponent": "Barcelona",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.48948424818919634,
-      "drawProb": 0.2416441225237804,
-      "loseProb": 0.2688716292870233,
+      "winProb": 0.5017454235845041,
+      "drawProb": 0.2297147722435079,
+      "loseProb": 0.26853980417198814,
       "over25Prob": 0.6944444444444444,
       "isHome": false,
       "opponent": "Valencia",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Getafe": {
-      "winProb": 0.38729640912470914,
-      "drawProb": 0.31864520616949316,
-      "loseProb": 0.29405838470579765,
-      "over25Prob": 0.38759689922480617,
+      "winProb": 0.3477294148923315,
+      "drawProb": 0.3609009836382531,
+      "loseProb": 0.2913696014694154,
+      "over25Prob": 0.3731343283582089,
       "isHome": true,
       "opponent": "CA Osasuna",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "CA Osasuna": {
-      "winProb": 0.29405838470579765,
-      "drawProb": 0.31864520616949316,
-      "loseProb": 0.38729640912470914,
-      "over25Prob": 0.38759689922480617,
+      "winProb": 0.2913696014694154,
+      "drawProb": 0.3609009836382531,
+      "loseProb": 0.3477294148923315,
+      "over25Prob": 0.3731343283582089,
       "isHome": false,
       "opponent": "Getafe",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Celta Vigo": {
-      "winProb": 0.5316091954022989,
-      "drawProb": 0.25574712643678155,
-      "loseProb": 0.21264367816091953,
-      "over25Prob": 0.5263157894736842,
+      "winProb": 0.54191336865067,
+      "drawProb": 0.25631037706450605,
+      "loseProb": 0.20177625428482393,
+      "over25Prob": 0.5405405405405405,
       "isHome": true,
       "opponent": "Sevilla",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Sevilla": {
-      "winProb": 0.21264367816091953,
-      "drawProb": 0.25574712643678155,
-      "loseProb": 0.5316091954022989,
-      "over25Prob": 0.5263157894736842,
+      "winProb": 0.20177625428482393,
+      "drawProb": 0.25631037706450605,
+      "loseProb": 0.54191336865067,
+      "over25Prob": 0.5405405405405405,
       "isHome": false,
       "opponent": "Celta Vigo",
       "matchDate": "2026-05-23T19:00:00Z"
@@ -14711,37 +14749,37 @@
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Real Betis": {
-      "winProb": 0.43090636091679113,
-      "drawProb": 0.2609049472948242,
-      "loseProb": 0.30818869178838465,
+      "winProb": 0.4102795311091073,
+      "drawProb": 0.26149684400360684,
+      "loseProb": 0.32822362488728585,
       "over25Prob": 0.6578947368421053,
       "isHome": true,
       "opponent": "Levante",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Levante": {
-      "winProb": 0.30818869178838465,
-      "drawProb": 0.2609049472948242,
-      "loseProb": 0.43090636091679113,
+      "winProb": 0.32822362488728585,
+      "drawProb": 0.26149684400360684,
+      "loseProb": 0.4102795311091073,
       "over25Prob": 0.6578947368421053,
       "isHome": false,
       "opponent": "Real Betis",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Mallorca": {
-      "winProb": 0.6321515581418269,
-      "drawProb": 0.21899014716229567,
-      "loseProb": 0.1488582946958776,
-      "over25Prob": 0.5319148936170213,
+      "winProb": 0.6509269556399211,
+      "drawProb": 0.2106794834102423,
+      "loseProb": 0.13839356094983657,
+      "over25Prob": 0.5376344086021505,
       "isHome": true,
       "opponent": "Oviedo",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Oviedo": {
-      "winProb": 0.1488582946958776,
-      "drawProb": 0.21899014716229567,
-      "loseProb": 0.6321515581418269,
-      "over25Prob": 0.5319148936170213,
+      "winProb": 0.13839356094983657,
+      "drawProb": 0.2106794834102423,
+      "loseProb": 0.6509269556399211,
+      "over25Prob": 0.5376344086021505,
       "isHome": false,
       "opponent": "Mallorca",
       "matchDate": "2026-05-23T19:00:00Z"
@@ -14767,6 +14805,22 @@
   },
   "news": [
     {
+      "title": "Cinco noticias fantasy para antes de irte a dormir",
+      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-18-5-26/",
+      "date": "Mon, 18 May 2026 21:00:03 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "¡Crea tu liga del Mundial en Biwenger Fantasy y disfruta del Premium GRATIS!",
+      "link": "https://www.jornadaperfecta.com/blog/biwenger-fantasy-mundial-2026/",
+      "date": "Mon, 18 May 2026 19:11:04 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Promoción YoSports Final Europa League: ¡consigue 10€ en apuestas gratis!",
       "link": "https://www.jornadaperfecta.com/blog/promocion-yosports-final-europa-league-2026/",
       "date": "Mon, 18 May 2026 19:00:44 +0000",
@@ -14779,14 +14833,6 @@
       "link": "https://www.jornadaperfecta.com/blog/chollos-fantasy-biwenger-j38-laliga/",
       "date": "Mon, 18 May 2026 19:00:15 +0000",
       "img": "https://cdn.biwenger.com/i/t/10.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "¡Crea tu liga del Mundial en Biwenger Fantasy y disfruta del Premium GRATIS!",
-      "link": "https://www.jornadaperfecta.com/blog/biwenger-fantasy-mundial-2026/",
-      "date": "Mon, 18 May 2026 16:11:04 +0000",
-      "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
@@ -14837,21 +14883,13 @@
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Lesionados que podrían llegar a la jornada 38 y descartados",
-      "link": "https://www.jornadaperfecta.com/blog/lesionados-j38-25-26/",
-      "date": "Mon, 18 May 2026 07:00:17 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/10/Lamine-Yamal-FC-Barcelona-fantasy.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-05-18T19:20:18.954Z",
+    "updatedAt": "2026-05-19T01:59:39.161Z",
     "players": [
       {
         "id": "3374",
