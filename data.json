@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-19T08:54:07.397Z",
+  "updatedAt": "2026-05-19T14:28:42.707Z",
   "players": [
     {
       "id": 11,
@@ -12100,9 +12100,9 @@
           1,
           4
         ],
-        "teamSize": 15,
-        "teamValue": 125540000,
-        "teamValueInc": 370000,
+        "teamSize": 13,
+        "teamValue": 118270000,
+        "teamValueInc": 270000,
         "position": 1,
         "role": ""
       },
@@ -12125,7 +12125,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 2,
-          "season": "2024/2025 season"
+          "season": "Temporada 2024/2025"
         },
         "position": 2
       },
@@ -12142,9 +12142,9 @@
           5,
           11
         ],
-        "teamSize": 21,
-        "teamValue": 94490000,
-        "teamValueInc": 1360000,
+        "teamSize": 20,
+        "teamValue": 93280000,
+        "teamValueInc": 1110000,
         "position": 3
       },
       {
@@ -12160,12 +12160,12 @@
           8
         ],
         "teamSize": 15,
-        "teamValue": 94560000,
+        "teamValue": 93050000,
         "teamValueInc": 200000,
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "2024/2025 season"
+          "season": "Temporada 2024/2025"
         },
         "position": 4,
         "role": ""
@@ -12201,8 +12201,8 @@
           6
         ],
         "teamSize": 15,
-        "teamValue": 85830000,
-        "teamValueInc": -220000,
+        "teamValue": 72240000,
+        "teamValueInc": 370000,
         "position": 6,
         "role": ""
       },
@@ -12225,7 +12225,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 1,
-          "season": "2024/2025 season"
+          "season": "Temporada 2024/2025"
         },
         "position": 7
       },
@@ -12241,9 +12241,9 @@
           8,
           1
         ],
-        "teamSize": 14,
-        "teamValue": 64020000,
-        "teamValueInc": -120000,
+        "teamSize": 15,
+        "teamValue": 69630000,
+        "teamValueInc": -40000,
         "position": 8,
         "role": ""
       },
@@ -12283,7 +12283,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "2023/2024 season"
+          "season": "Temporada 2023/2024"
         },
         "position": 10,
         "positionInc": 1,
@@ -12320,9 +12320,9 @@
           11,
           12
         ],
-        "teamSize": 14,
-        "teamValue": 30050000,
-        "teamValueInc": 1010000,
+        "teamSize": 13,
+        "teamValue": 28280000,
+        "teamValueInc": 1100000,
         "position": 12,
         "role": ""
       },
@@ -12370,8 +12370,8 @@
       "name": "Albertini",
       "manager": "Albertini",
       "points": 2065,
-      "value": 125540000,
-      "trend": 370000,
+      "value": 118270000,
+      "trend": 270000,
       "players": []
     },
     {
@@ -12388,8 +12388,8 @@
       "name": "🦊",
       "manager": "🦊",
       "points": 1908,
-      "value": 94490000,
-      "trend": 1360000,
+      "value": 93280000,
+      "trend": 1110000,
       "players": []
     },
     {
@@ -12397,7 +12397,7 @@
       "name": "CA CABA JUNIORS",
       "manager": "CA CABA JUNIORS",
       "points": 1818,
-      "value": 94560000,
+      "value": 93050000,
       "trend": 200000,
       "players": []
     },
@@ -12415,8 +12415,8 @@
       "name": "INDOMABLE FC",
       "manager": "INDOMABLE FC",
       "points": 1757,
-      "value": 85830000,
-      "trend": -220000,
+      "value": 72240000,
+      "trend": 370000,
       "players": []
     },
     {
@@ -12433,8 +12433,8 @@
       "name": "CIGALERU",
       "manager": "CIGALERU",
       "points": 1608,
-      "value": 64020000,
-      "trend": -120000,
+      "value": 69630000,
+      "trend": -40000,
       "players": []
     },
     {
@@ -12469,8 +12469,8 @@
       "name": "Morankus FC",
       "manager": "Morankus FC",
       "points": 1492,
-      "value": 30050000,
-      "trend": 1010000,
+      "value": 28280000,
+      "trend": 1100000,
       "players": []
     },
     {
@@ -12496,7 +12496,7 @@
     "teamId": 6541195,
     "name": "🦊",
     "points": 1908,
-    "balance": 2572058,
+    "balance": 4387058,
     "lineup": {
       "type": "3-5-2",
       "date": 1779034364,
@@ -12510,7 +12510,7 @@
         35615,
         25127,
         4245,
-        9966,
+        null,
         26994
       ],
       "reservesID": [
@@ -12548,13 +12548,6 @@
         "clause": 3165000,
         "invested": 0,
         "buyDate": 1778173624
-      },
-      {
-        "id": 9966,
-        "buyPrice": 333422,
-        "clause": 1815000,
-        "invested": 0,
-        "buyDate": 1776315755
       },
       {
         "id": 11686,
@@ -12711,6 +12704,153 @@
   "boardTomaquet": [
     {
       "type": "transfer",
+      "date": 1779186553,
+      "content": [
+        {
+          "player": 26095,
+          "from": {
+            "id": 8068427,
+            "name": "Albertini",
+            "icon": "i/u/8068427.png"
+          },
+          "to": {
+            "id": 8070044,
+            "name": "CA CABA JUNIORS",
+            "icon": "i/u/8070044.png?v=63"
+          },
+          "amount": 5415000,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1779182598,
+      "content": [
+        {
+          "player": 9966,
+          "from": {
+            "id": 6541195,
+            "name": "🦊",
+            "icon": "i/u/6541195.png?v=17"
+          },
+          "to": {
+            "id": 11520975,
+            "name": "Morankus FC",
+            "icon": "i/u/11520975.png?v=81"
+          },
+          "amount": 1815000,
+          "type": "clause"
+        },
+        {
+          "player": 29908,
+          "from": {
+            "id": 8068427,
+            "name": "Albertini",
+            "icon": "i/u/8068427.png"
+          },
+          "to": {
+            "id": 12696899,
+            "name": "CIGALERU",
+            "icon": "i/u/12696899.png"
+          },
+          "amount": 5490000,
+          "type": "clause"
+        },
+        {
+          "player": 26697,
+          "from": {
+            "id": 8070044,
+            "name": "CA CABA JUNIORS",
+            "icon": "i/u/8070044.png?v=63"
+          },
+          "to": {
+            "id": 12696899,
+            "name": "CIGALERU",
+            "icon": "i/u/12696899.png"
+          },
+          "amount": 10147500,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1779181944,
+      "content": [
+        {
+          "player": 37456,
+          "from": {
+            "id": 11520975,
+            "name": "Morankus FC",
+            "icon": "i/u/11520975.png?v=81"
+          },
+          "amount": 513100
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1779181900,
+      "content": [
+        {
+          "player": 8747,
+          "from": {
+            "id": 12696899,
+            "name": "CIGALERU",
+            "icon": "i/u/12696899.png"
+          },
+          "to": {
+            "id": 12697101,
+            "name": "INDOMABLE FC",
+            "icon": "i/u/11757390.png"
+          },
+          "amount": 8021640,
+          "type": "clause"
+        },
+        {
+          "player": 12403,
+          "from": {
+            "id": 11520975,
+            "name": "Morankus FC",
+            "icon": "i/u/11520975.png?v=81"
+          },
+          "to": {
+            "id": 12697101,
+            "name": "INDOMABLE FC",
+            "icon": "i/u/11757390.png"
+          },
+          "amount": 3690000,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1779181670,
+      "content": [
+        {
+          "player": 31243,
+          "from": {
+            "id": 12697101,
+            "name": "INDOMABLE FC",
+            "icon": "i/u/11757390.png"
+          },
+          "amount": 16579600
+        },
+        {
+          "player": 38966,
+          "from": {
+            "id": 12697101,
+            "name": "INDOMABLE FC",
+            "icon": "i/u/11757390.png"
+          },
+          "amount": 1896100
+        }
+      ]
+    },
+    {
+      "type": "transfer",
       "date": 1779170351,
       "content": [
         {
@@ -12755,87 +12895,6 @@
             "icon": "i/u/12696599.png"
           },
           "amount": 4330000
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1779133956,
-      "content": [
-        {
-          "player": 18397,
-          "from": {
-            "id": 11520975,
-            "name": "Morankus FC",
-            "icon": "i/u/11520975.png?v=81"
-          },
-          "amount": 9714700
-        },
-        {
-          "player": 34221,
-          "from": {
-            "id": 11520975,
-            "name": "Morankus FC",
-            "icon": "i/u/11520975.png?v=81"
-          },
-          "amount": 1579700
-        },
-        {
-          "player": 23403,
-          "from": {
-            "id": 11520975,
-            "name": "Morankus FC",
-            "icon": "i/u/11520975.png?v=81"
-          },
-          "amount": 3335400
-        },
-        {
-          "player": 39876,
-          "from": {
-            "id": 11520975,
-            "name": "Morankus FC",
-            "icon": "i/u/11520975.png?v=81"
-          },
-          "amount": 2780800
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1779106613,
-      "content": [
-        {
-          "player": 34127,
-          "from": {
-            "id": 6541195,
-            "name": "🦊",
-            "icon": "i/u/6541195.png?v=17"
-          },
-          "amount": 429100
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1779083494,
-      "content": [
-        {
-          "player": 37451,
-          "from": {
-            "id": 148051,
-            "name": "Zaza Pachulia",
-            "icon": "i/u/148051.png?v=98"
-          },
-          "amount": 7911100
-        },
-        {
-          "player": 1992,
-          "from": {
-            "id": 148051,
-            "name": "Zaza Pachulia",
-            "icon": "i/u/148051.png?v=98"
-          },
-          "amount": 2137300
         }
       ]
     }
@@ -14689,19 +14748,19 @@
   },
   "odds": {
     "Alavés": {
-      "winProb": 0.42642767819924965,
-      "drawProb": 0.2778240933722384,
-      "loseProb": 0.29574822842851184,
-      "over25Prob": 0.5208333333333334,
+      "winProb": 0.40688775510204084,
+      "drawProb": 0.27742346938775514,
+      "loseProb": 0.31568877551020413,
+      "over25Prob": 0.5128205128205129,
       "isHome": true,
       "opponent": "Rayo Vallecano",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Rayo Vallecano": {
-      "winProb": 0.29574822842851184,
-      "drawProb": 0.2778240933722384,
-      "loseProb": 0.42642767819924965,
-      "over25Prob": 0.5208333333333334,
+      "winProb": 0.31568877551020413,
+      "drawProb": 0.27742346938775514,
+      "loseProb": 0.40688775510204084,
+      "over25Prob": 0.5128205128205129,
       "isHome": false,
       "opponent": "Alavés",
       "matchDate": "2026-05-23T19:00:00Z"
@@ -14743,19 +14802,19 @@
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Getafe": {
-      "winProb": 0.35691657866948256,
-      "drawProb": 0.35691657866948256,
-      "loseProb": 0.28616684266103487,
-      "over25Prob": 0.38759689922480617,
+      "winProb": 0.36717729348517253,
+      "drawProb": 0.3550725475461009,
+      "loseProb": 0.2777501589687265,
+      "over25Prob": 0.3731343283582089,
       "isHome": true,
       "opponent": "CA Osasuna",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "CA Osasuna": {
-      "winProb": 0.28616684266103487,
-      "drawProb": 0.35691657866948256,
-      "loseProb": 0.35691657866948256,
-      "over25Prob": 0.38759689922480617,
+      "winProb": 0.2777501589687265,
+      "drawProb": 0.3550725475461009,
+      "loseProb": 0.36717729348517253,
+      "over25Prob": 0.3731343283582089,
       "isHome": false,
       "opponent": "Getafe",
       "matchDate": "2026-05-23T19:00:00Z"
@@ -14815,37 +14874,37 @@
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Real Betis": {
-      "winProb": 0.415533632152884,
-      "drawProb": 0.25956926619737797,
-      "loseProb": 0.3248971016497382,
+      "winProb": 0.4192840917991697,
+      "drawProb": 0.26106367979948303,
+      "loseProb": 0.3196522284013472,
       "over25Prob": 0.6578947368421053,
       "isHome": true,
       "opponent": "Levante",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Levante": {
-      "winProb": 0.3248971016497382,
-      "drawProb": 0.25956926619737797,
-      "loseProb": 0.415533632152884,
+      "winProb": 0.3196522284013472,
+      "drawProb": 0.26106367979948303,
+      "loseProb": 0.4192840917991697,
       "over25Prob": 0.6578947368421053,
       "isHome": false,
       "opponent": "Real Betis",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Mallorca": {
-      "winProb": 0.6466084312888482,
-      "drawProb": 0.21315189438504065,
-      "loseProb": 0.14023967432611115,
-      "over25Prob": 0.5291005291005292,
+      "winProb": 0.6597346719254212,
+      "drawProb": 0.20939404804589462,
+      "loseProb": 0.13087128002868412,
+      "over25Prob": 0.5208333333333334,
       "isHome": true,
       "opponent": "Oviedo",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Oviedo": {
-      "winProb": 0.14023967432611115,
-      "drawProb": 0.21315189438504065,
-      "loseProb": 0.6466084312888482,
-      "over25Prob": 0.5291005291005292,
+      "winProb": 0.13087128002868412,
+      "drawProb": 0.20939404804589462,
+      "loseProb": 0.6597346719254212,
+      "over25Prob": 0.5208333333333334,
       "isHome": false,
       "opponent": "Mallorca",
       "matchDate": "2026-05-23T19:00:00Z"
@@ -14870,6 +14929,30 @@
     }
   },
   "news": [
+    {
+      "title": "LeoVegas: ¡Gana hasta 200€ extra con la Final de la Europa League!",
+      "link": "https://www.jornadaperfecta.com/blog/leovegas-final-europa-league-promocion/",
+      "date": "Tue, 19 May 2026 13:00:15 +0000",
+      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/1f680.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Víctor Muñoz podría perderse el último partido de LaLiga",
+      "link": "https://www.jornadaperfecta.com/blog/victor-munoz-estado-j38/",
+      "date": "Tue, 19 May 2026 12:58:45 +0000",
+      "img": "https://cdn.biwenger.com/i/t/93.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Grandes subidas y bajadas del mercado fantasy para la Jornada 38",
+      "link": "https://www.jornadaperfecta.com/blog/subidas-bajadas-j38-25-26/",
+      "date": "Tue, 19 May 2026 09:00:29 +0000",
+      "img": "https://cdn.biwenger.com/i/t/10.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Los sancionados de LaLiga para la jornada 38",
       "link": "https://www.jornadaperfecta.com/blog/sancionados-j38-25-26/",
@@ -14925,37 +15008,13 @@
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "¡Fermín dice adiós al Mundial! Parte médico oficial del FC Barcelona",
-      "link": "https://www.jornadaperfecta.com/blog/fermin-lesion-metatarsiano/",
-      "date": "Mon, 18 May 2026 12:10:21 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Dani Carvajal finaliza su etapa como jugador del Real Madrid",
-      "link": "https://www.jornadaperfecta.com/blog/dani-carvajal-adios-real-madrid/",
-      "date": "Mon, 18 May 2026 11:49:43 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "José Mourinho será nuevo entrenador del Real Madrid",
-      "link": "https://www.jornadaperfecta.com/blog/jose-mourinho-entrenador-real-madrid/",
-      "date": "Mon, 18 May 2026 10:07:26 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-05-19T08:54:05.053Z",
+    "updatedAt": "2026-05-19T14:28:40.424Z",
     "players": [
       {
         "id": "3374",
