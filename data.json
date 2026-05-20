@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-20T14:28:25.051Z",
+  "updatedAt": "2026-05-20T19:59:16.030Z",
   "players": [
     {
       "id": 11,
@@ -12496,28 +12496,28 @@
     "teamId": 6541195,
     "name": "🦊",
     "points": 1908,
-    "balance": 4387058,
+    "balance": 87058,
     "lineup": {
       "type": "3-5-2",
-      "date": 1779034364,
+      "date": 1779299684,
       "playersID": [
-        38405,
+        17021,
         37495,
         1908,
-        26276,
+        39360,
         38867,
         30123,
         35615,
         25127,
         4245,
-        null,
+        1523,
         26994
       ],
       "reservesID": [
-        17021,
-        39360,
+        38405,
+        32460,
         32338,
-        1523
+        null
       ]
     },
     "players": [
@@ -12538,8 +12538,8 @@
       {
         "id": 1908,
         "buyPrice": 2235666,
-        "clause": 7035000,
-        "invested": 1500000,
+        "clause": 8535000,
+        "invested": 2500000,
         "buyDate": 1773209088
       },
       {
@@ -12601,8 +12601,8 @@
       {
         "id": 30123,
         "buyPrice": 5952222,
-        "clause": 14178333,
-        "invested": 3500000,
+        "clause": 14628333,
+        "invested": 3800000,
         "buyDate": 1778043891
       },
       {
@@ -12643,8 +12643,8 @@
       {
         "id": 38867,
         "buyPrice": 10072222,
-        "clause": 33930000,
-        "invested": 10000000,
+        "clause": 38430000,
+        "invested": 13000000,
         "buyDate": 1769493971
       },
       {
@@ -12665,27 +12665,33 @@
     "market": [
       {
         "playerID": 11686,
-        "price": 5660000,
+        "price": 11340000,
         "type": "sale",
-        "until": 1779279433
+        "until": 1779472234
       },
       {
         "playerID": 24979,
-        "price": 1390000,
+        "price": 2740000,
         "type": "sale",
-        "until": 1779279424
+        "until": 1779472234
+      },
+      {
+        "playerID": 25127,
+        "price": 16520000,
+        "type": "sale",
+        "until": 1779472272
       },
       {
         "playerID": 26276,
-        "price": 7910000,
+        "price": 15900000,
         "type": "sale",
-        "until": 1779279453
+        "until": 1779472234
       },
       {
         "playerID": 35615,
-        "price": 3300000,
+        "price": 6500000,
         "type": "sale",
-        "until": 1779279462
+        "until": 1779472234
       }
     ]
   },
@@ -12830,21 +12836,6 @@
           },
           "amount": 9278010,
           "type": "clause"
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1779210059,
-      "content": [
-        {
-          "player": 1074,
-          "from": {
-            "id": 6552586,
-            "name": "LeMola Team",
-            "icon": "i/u/6552586.png"
-          },
-          "amount": 2618100
         }
       ]
     }
@@ -13436,18 +13427,18 @@
     "points": 1671,
     "balance": 7196502,
     "lineup": {
-      "type": "4-4-2",
-      "date": 1779045330,
+      "type": "3-4-3",
+      "date": 1779299731,
       "playersID": [
         14630,
-        32440,
-        37467,
-        39360,
         1908,
+        40010,
+        39360,
+        32338,
         1769,
         26048,
         29034,
-        38368,
+        19577,
         38962,
         35615
       ]
@@ -14681,19 +14672,19 @@
   },
   "odds": {
     "Alavés": {
-      "winProb": 0.40688775510204084,
-      "drawProb": 0.27742346938775514,
-      "loseProb": 0.31568877551020413,
-      "over25Prob": 0.5128205128205129,
+      "winProb": 0.40795705715187874,
+      "drawProb": 0.2699715819387433,
+      "loseProb": 0.32207136090937794,
+      "over25Prob": 0.5050505050505051,
       "isHome": true,
       "opponent": "Rayo Vallecano",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Rayo Vallecano": {
-      "winProb": 0.31568877551020413,
-      "drawProb": 0.27742346938775514,
-      "loseProb": 0.40688775510204084,
-      "over25Prob": 0.5128205128205129,
+      "winProb": 0.32207136090937794,
+      "drawProb": 0.2699715819387433,
+      "loseProb": 0.40795705715187874,
+      "over25Prob": 0.5050505050505051,
       "isHome": false,
       "opponent": "Alavés",
       "matchDate": "2026-05-23T19:00:00Z"
@@ -14702,7 +14693,7 @@
       "winProb": 0.6378999473642951,
       "drawProb": 0.21358897113995498,
       "loseProb": 0.14851108149574993,
-      "over25Prob": 0.6802721088435374,
+      "over25Prob": 0.6711409395973155,
       "isHome": true,
       "opponent": "Athletic Bilbao",
       "matchDate": "2026-05-23T19:00:00Z"
@@ -14711,61 +14702,61 @@
       "winProb": 0.14851108149574993,
       "drawProb": 0.21358897113995498,
       "loseProb": 0.6378999473642951,
-      "over25Prob": 0.6802721088435374,
+      "over25Prob": 0.6711409395973155,
       "isHome": false,
       "opponent": "Real Madrid",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Valencia": {
-      "winProb": 0.26853980417198814,
-      "drawProb": 0.2297147722435079,
-      "loseProb": 0.5017454235845041,
+      "winProb": 0.25696594427244585,
+      "drawProb": 0.22910216718266255,
+      "loseProb": 0.5139318885448917,
       "over25Prob": 0.6944444444444444,
       "isHome": true,
       "opponent": "Barcelona",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.5017454235845041,
-      "drawProb": 0.2297147722435079,
-      "loseProb": 0.26853980417198814,
+      "winProb": 0.5139318885448917,
+      "drawProb": 0.22910216718266255,
+      "loseProb": 0.25696594427244585,
       "over25Prob": 0.6944444444444444,
       "isHome": false,
       "opponent": "Valencia",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Getafe": {
-      "winProb": 0.38262754251417147,
-      "drawProb": 0.35853617872624205,
-      "loseProb": 0.2588362787595865,
+      "winProb": 0.3966311508682812,
+      "drawProb": 0.3571143941397071,
+      "loseProb": 0.24625445499201176,
       "over25Prob": 0.3731343283582089,
       "isHome": true,
       "opponent": "CA Osasuna",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "CA Osasuna": {
-      "winProb": 0.2588362787595865,
-      "drawProb": 0.35853617872624205,
-      "loseProb": 0.38262754251417147,
+      "winProb": 0.24625445499201176,
+      "drawProb": 0.3571143941397071,
+      "loseProb": 0.3966311508682812,
       "over25Prob": 0.3731343283582089,
       "isHome": false,
       "opponent": "Getafe",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Celta Vigo": {
-      "winProb": 0.54191336865067,
-      "drawProb": 0.25631037706450605,
-      "loseProb": 0.20177625428482393,
-      "over25Prob": 0.5263157894736842,
+      "winProb": 0.5316091954022989,
+      "drawProb": 0.25574712643678155,
+      "loseProb": 0.21264367816091953,
+      "over25Prob": 0.5128205128205129,
       "isHome": true,
       "opponent": "Sevilla",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Sevilla": {
-      "winProb": 0.20177625428482393,
-      "drawProb": 0.25631037706450605,
-      "loseProb": 0.54191336865067,
-      "over25Prob": 0.5263157894736842,
+      "winProb": 0.21264367816091953,
+      "drawProb": 0.25574712643678155,
+      "loseProb": 0.5316091954022989,
+      "over25Prob": 0.5128205128205129,
       "isHome": false,
       "opponent": "Celta Vigo",
       "matchDate": "2026-05-23T19:00:00Z"
@@ -14789,72 +14780,72 @@
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Espanyol": {
-      "winProb": 0.3848709976027153,
-      "drawProb": 0.2766608910303577,
-      "loseProb": 0.33846811136692695,
+      "winProb": 0.37794954271585973,
+      "drawProb": 0.2843083127295422,
+      "loseProb": 0.33774214455459806,
       "over25Prob": 0.5494505494505494,
       "isHome": true,
       "opponent": "Real Sociedad",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Real Sociedad": {
-      "winProb": 0.33846811136692695,
-      "drawProb": 0.2766608910303577,
-      "loseProb": 0.3848709976027153,
+      "winProb": 0.33774214455459806,
+      "drawProb": 0.2843083127295422,
+      "loseProb": 0.37794954271585973,
       "over25Prob": 0.5494505494505494,
       "isHome": false,
       "opponent": "Espanyol",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Real Betis": {
-      "winProb": 0.42639753059693414,
-      "drawProb": 0.30247574826720014,
-      "loseProb": 0.2711267211358657,
+      "winProb": 0.4266374097985672,
+      "drawProb": 0.30359464584412155,
+      "loseProb": 0.26976794435731133,
       "over25Prob": 0.6060606060606061,
       "isHome": true,
       "opponent": "Levante",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Levante": {
-      "winProb": 0.2711267211358657,
-      "drawProb": 0.30247574826720014,
-      "loseProb": 0.42639753059693414,
+      "winProb": 0.26976794435731133,
+      "drawProb": 0.30359464584412155,
+      "loseProb": 0.4266374097985672,
       "over25Prob": 0.6060606060606061,
       "isHome": false,
       "opponent": "Real Betis",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Mallorca": {
-      "winProb": 0.661099298033026,
-      "drawProb": 0.2084675972199175,
-      "loseProb": 0.13043310474705647,
-      "over25Prob": 0.5235602094240838,
+      "winProb": 0.6508411701539162,
+      "drawProb": 0.21310728580260974,
+      "loseProb": 0.13605154404347403,
+      "over25Prob": 0.5181347150259068,
       "isHome": true,
       "opponent": "Oviedo",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Oviedo": {
-      "winProb": 0.13043310474705647,
-      "drawProb": 0.2084675972199175,
-      "loseProb": 0.661099298033026,
-      "over25Prob": 0.5235602094240838,
+      "winProb": 0.13605154404347403,
+      "drawProb": 0.21310728580260974,
+      "loseProb": 0.6508411701539162,
+      "over25Prob": 0.5181347150259068,
       "isHome": false,
       "opponent": "Mallorca",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Villarreal": {
-      "winProb": 0.3899115901659198,
-      "drawProb": 0.25717572968390456,
-      "loseProb": 0.3529126801501756,
+      "winProb": 0.39041261402766875,
+      "drawProb": 0.2575061922310155,
+      "loseProb": 0.3520811937413158,
       "over25Prob": 0.684931506849315,
       "isHome": true,
       "opponent": "Atlético Madrid",
       "matchDate": "2026-05-24T19:00:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.3529126801501756,
-      "drawProb": 0.25717572968390456,
-      "loseProb": 0.3899115901659198,
+      "winProb": 0.3520811937413158,
+      "drawProb": 0.2575061922310155,
+      "loseProb": 0.39041261402766875,
       "over25Prob": 0.684931506849315,
       "isHome": false,
       "opponent": "Villarreal",
@@ -14947,7 +14938,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-05-20T14:28:23.871Z",
+    "updatedAt": "2026-05-20T19:59:14.371Z",
     "players": [
       {
         "id": "3374",
