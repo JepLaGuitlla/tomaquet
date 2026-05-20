@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-19T19:40:26.267Z",
+  "updatedAt": "2026-05-20T01:59:10.188Z",
   "players": [
     {
       "id": 11,
@@ -12119,13 +12119,13 @@
           4,
           2
         ],
-        "teamSize": 17,
-        "teamValue": 109730000,
-        "teamValueInc": 670000,
+        "teamSize": 16,
+        "teamValue": 108540000,
+        "teamValueInc": 560000,
         "lastTrophy": {
           "type": "league",
           "position": 2,
-          "season": "2024/2025 season"
+          "season": "Temporada 2024/2025"
         },
         "position": 2
       },
@@ -12159,13 +12159,13 @@
           2,
           8
         ],
-        "teamSize": 14,
-        "teamValue": 88040000,
-        "teamValueInc": 130000,
+        "teamSize": 17,
+        "teamValue": 95370000,
+        "teamValueInc": 690000,
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "2024/2025 season"
+          "season": "Temporada 2024/2025"
         },
         "position": 4,
         "role": ""
@@ -12200,9 +12200,9 @@
           3,
           6
         ],
-        "teamSize": 15,
-        "teamValue": 72240000,
-        "teamValueInc": 370000,
+        "teamSize": 14,
+        "teamValue": 69260000,
+        "teamValueInc": 150000,
         "position": 6,
         "role": ""
       },
@@ -12225,7 +12225,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 1,
-          "season": "2024/2025 season"
+          "season": "Temporada 2024/2025"
         },
         "position": 7
       },
@@ -12260,9 +12260,9 @@
           12,
           10
         ],
-        "teamSize": 16,
-        "teamValue": 66600000,
-        "teamValueInc": -110000,
+        "teamSize": 15,
+        "teamValue": 63440000,
+        "teamValueInc": -340000,
         "position": 9
       },
       {
@@ -12283,7 +12283,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "2023/2024 season"
+          "season": "Temporada 2023/2024"
         },
         "position": 10,
         "positionInc": 1,
@@ -12379,8 +12379,8 @@
       "name": "LeMola Team",
       "manager": "LeMola Team",
       "points": 1995,
-      "value": 109730000,
-      "trend": 670000,
+      "value": 108540000,
+      "trend": 560000,
       "players": []
     },
     {
@@ -12397,8 +12397,8 @@
       "name": "CA CABA JUNIORS",
       "manager": "CA CABA JUNIORS",
       "points": 1818,
-      "value": 88040000,
-      "trend": 130000,
+      "value": 95370000,
+      "trend": 690000,
       "players": []
     },
     {
@@ -12415,8 +12415,8 @@
       "name": "INDOMABLE FC",
       "manager": "INDOMABLE FC",
       "points": 1757,
-      "value": 72240000,
-      "trend": 370000,
+      "value": 69260000,
+      "trend": 150000,
       "players": []
     },
     {
@@ -12442,8 +12442,8 @@
       "name": "The Black Team",
       "manager": "The Black Team",
       "points": 1568,
-      "value": 66600000,
-      "trend": -110000,
+      "value": 63440000,
+      "trend": -340000,
       "players": []
     },
     {
@@ -12704,6 +12704,63 @@
   "boardTomaquet": [
     {
       "type": "transfer",
+      "date": 1779223880,
+      "content": [
+        {
+          "player": 2169,
+          "from": {
+            "id": 12697101,
+            "name": "INDOMABLE FC",
+            "icon": "i/u/11757390.png"
+          },
+          "to": {
+            "id": 8070044,
+            "name": "CA CABA JUNIORS",
+            "icon": "i/u/8070044.png?v=63"
+          },
+          "amount": 4718707,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1779221737,
+      "content": [
+        {
+          "player": 742,
+          "from": {
+            "id": 3928497,
+            "name": "The Black Team",
+            "icon": "i/u/3928497.png"
+          },
+          "to": {
+            "id": 8070044,
+            "name": "CA CABA JUNIORS",
+            "icon": "i/u/8070044.png?v=63"
+          },
+          "amount": 5670000,
+          "type": "clause"
+        },
+        {
+          "player": 15471,
+          "from": {
+            "id": 6552586,
+            "name": "LeMola Team",
+            "icon": "i/u/6552586.png"
+          },
+          "to": {
+            "id": 8070044,
+            "name": "CA CABA JUNIORS",
+            "icon": "i/u/8070044.png?v=63"
+          },
+          "amount": 3285000,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
       "date": 1779210103,
       "content": [
         {
@@ -12809,81 +12866,6 @@
           "type": "clause"
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1779181944,
-      "content": [
-        {
-          "player": 37456,
-          "from": {
-            "id": 11520975,
-            "name": "Morankus FC",
-            "icon": "i/u/11520975.png?v=81"
-          },
-          "amount": 513100
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1779181900,
-      "content": [
-        {
-          "player": 8747,
-          "from": {
-            "id": 12696899,
-            "name": "CIGALERU",
-            "icon": "i/u/12696899.png"
-          },
-          "to": {
-            "id": 12697101,
-            "name": "INDOMABLE FC",
-            "icon": "i/u/11757390.png"
-          },
-          "amount": 8021640,
-          "type": "clause"
-        },
-        {
-          "player": 12403,
-          "from": {
-            "id": 11520975,
-            "name": "Morankus FC",
-            "icon": "i/u/11520975.png?v=81"
-          },
-          "to": {
-            "id": 12697101,
-            "name": "INDOMABLE FC",
-            "icon": "i/u/11757390.png"
-          },
-          "amount": 3690000,
-          "type": "clause"
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1779181670,
-      "content": [
-        {
-          "player": 31243,
-          "from": {
-            "id": 12697101,
-            "name": "INDOMABLE FC",
-            "icon": "i/u/11757390.png"
-          },
-          "amount": 16579600
-        },
-        {
-          "player": 38966,
-          "from": {
-            "id": 12697101,
-            "name": "INDOMABLE FC",
-            "icon": "i/u/11757390.png"
-          },
-          "amount": 1896100
-        }
-      ]
     }
   ],
   "leagueEnBas": {
@@ -12914,9 +12896,9 @@
           4,
           1
         ],
-        "teamSize": 13,
-        "teamValue": 108550000,
-        "teamValueInc": -120000,
+        "teamSize": 12,
+        "teamValue": 100830000,
+        "teamValueInc": 240000,
         "position": 1,
         "role": ""
       },
@@ -13109,7 +13091,7 @@
       },
       {
         "id": 6580386,
-        "name": "Lamine i els 7 nans 👯��♀️",
+        "name": "Lamine i els 7 nans 👯‍♀️",
         "icon": "i/u/6580386.png?v=10",
         "points": 1424,
         "lastPositions": [
@@ -13291,8 +13273,8 @@
       "name": "The GOAT club",
       "manager": "The GOAT club",
       "points": 1836,
-      "value": 108550000,
-      "trend": -120000,
+      "value": 100830000,
+      "trend": 240000,
       "players": []
     },
     {
@@ -13387,8 +13369,8 @@
     },
     {
       "id": 6580386,
-      "name": "Lamine i els 7 nans 👯��♀️",
-      "manager": "Lamine i els 7 nans 👯��♀️",
+      "name": "Lamine i els 7 nans 👯‍♀️",
+      "manager": "Lamine i els 7 nans 👯‍♀️",
       "points": 1424,
       "value": 32220000,
       "trend": 280000,
@@ -13636,6 +13618,21 @@
   "boardEnBas": [
     {
       "type": "transfer",
+      "date": 1779228099,
+      "content": [
+        {
+          "player": 37451,
+          "from": {
+            "id": 6588130,
+            "name": "The GOAT club",
+            "icon": "i/u/6588130.png?v=12"
+          },
+          "amount": 7893500
+        }
+      ]
+    },
+    {
+      "type": "transfer",
       "date": 1779175269,
       "content": [
         {
@@ -13747,31 +13744,6 @@
             "icon": "i/u/6580386.png?v=10"
           },
           "amount": 4621200
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1779080707,
-      "content": [
-        {
-          "player": 40007,
-          "to": {
-            "id": 6579505,
-            "name": "Xevi borrat",
-            "icon": "i/u/6579505.png"
-          },
-          "amount": 1060000,
-          "bids": [
-            {
-              "user": {
-                "id": 6579280,
-                "name": "Sant Pere Atlètic",
-                "icon": "i/u/6579280.png?v=22"
-              },
-              "amount": 715050
-            }
-          ]
         }
       ]
     }
@@ -14753,18 +14725,18 @@
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Real Madrid": {
-      "winProb": 0.6253125967561388,
-      "drawProb": 0.21358992068973726,
-      "loseProb": 0.16109748255412387,
+      "winProb": 0.6378999473642951,
+      "drawProb": 0.21358897113995498,
+      "loseProb": 0.14851108149574993,
       "over25Prob": 0.6711409395973155,
       "isHome": true,
       "opponent": "Athletic Bilbao",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Athletic Bilbao": {
-      "winProb": 0.16109748255412387,
-      "drawProb": 0.21358992068973726,
-      "loseProb": 0.6253125967561388,
+      "winProb": 0.14851108149574993,
+      "drawProb": 0.21358897113995498,
+      "loseProb": 0.6378999473642951,
       "over25Prob": 0.6711409395973155,
       "isHome": false,
       "opponent": "Real Madrid",
@@ -14789,18 +14761,18 @@
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Getafe": {
-      "winProb": 0.36688447101348537,
-      "drawProb": 0.3547893785624913,
-      "loseProb": 0.27832615042402337,
+      "winProb": 0.3725178713264496,
+      "drawProb": 0.3613979348689436,
+      "loseProb": 0.26608419380460685,
       "over25Prob": 0.3731343283582089,
       "isHome": true,
       "opponent": "CA Osasuna",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "CA Osasuna": {
-      "winProb": 0.27832615042402337,
-      "drawProb": 0.3547893785624913,
-      "loseProb": 0.36688447101348537,
+      "winProb": 0.26608419380460685,
+      "drawProb": 0.3613979348689436,
+      "loseProb": 0.3725178713264496,
       "over25Prob": 0.3731343283582089,
       "isHome": false,
       "opponent": "Getafe",
@@ -14861,54 +14833,54 @@
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Real Betis": {
-      "winProb": 0.4148171820659836,
-      "drawProb": 0.26193063257824983,
-      "loseProb": 0.3232521853557665,
-      "over25Prob": 0.6451612903225806,
+      "winProb": 0.41677692511246367,
+      "drawProb": 0.30695951309870334,
+      "loseProb": 0.27626356178883305,
+      "over25Prob": 0.6060606060606061,
       "isHome": true,
       "opponent": "Levante",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Levante": {
-      "winProb": 0.3232521853557665,
-      "drawProb": 0.26193063257824983,
-      "loseProb": 0.4148171820659836,
-      "over25Prob": 0.6451612903225806,
+      "winProb": 0.27626356178883305,
+      "drawProb": 0.30695951309870334,
+      "loseProb": 0.41677692511246367,
+      "over25Prob": 0.6060606060606061,
       "isHome": false,
       "opponent": "Real Betis",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Mallorca": {
-      "winProb": 0.6631003278234106,
-      "drawProb": 0.20766640936154324,
-      "loseProb": 0.12923326281504638,
+      "winProb": 0.6640841173215273,
+      "drawProb": 0.2075262866629773,
+      "loseProb": 0.12838959601549527,
       "over25Prob": 0.5235602094240838,
       "isHome": true,
       "opponent": "Oviedo",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Oviedo": {
-      "winProb": 0.12923326281504638,
-      "drawProb": 0.20766640936154324,
-      "loseProb": 0.6631003278234106,
+      "winProb": 0.12838959601549527,
+      "drawProb": 0.2075262866629773,
+      "loseProb": 0.6640841173215273,
       "over25Prob": 0.5235602094240838,
       "isHome": false,
       "opponent": "Mallorca",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Villarreal": {
-      "winProb": 0.3907069490951503,
-      "drawProb": 0.25566048384062606,
-      "loseProb": 0.35363256706422364,
+      "winProb": 0.3899115901659198,
+      "drawProb": 0.25717572968390456,
+      "loseProb": 0.3529126801501756,
       "over25Prob": 0.684931506849315,
       "isHome": true,
       "opponent": "Atlético Madrid",
       "matchDate": "2026-05-24T19:00:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.35363256706422364,
-      "drawProb": 0.25566048384062606,
-      "loseProb": 0.3907069490951503,
+      "winProb": 0.3529126801501756,
+      "drawProb": 0.25717572968390456,
+      "loseProb": 0.3899115901659198,
       "over25Prob": 0.684931506849315,
       "isHome": false,
       "opponent": "Villarreal",
@@ -14916,6 +14888,14 @@
     }
   },
   "news": [
+    {
+      "title": "Cinco noticias fantasy para antes de irte a dormir",
+      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-19-5-26/",
+      "date": "Tue, 19 May 2026 21:00:57 +0000",
+      "img": "https://cdn.biwenger.com/i/t/10.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Chollos LaLiga Fantasy: Fichajes Baratos y Rentables para la jornada 38",
       "link": "https://www.jornadaperfecta.com/blog/chollos-laliga-fantasy-j38-25-26/",
@@ -14987,21 +14967,13 @@
       "img": "https://cdn.biwenger.com/i/t/2.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Cinco noticias fantasy para antes de irte a dormir",
-      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-18-5-26/",
-      "date": "Mon, 18 May 2026 21:00:03 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-05-19T19:40:25.494Z",
+    "updatedAt": "2026-05-20T01:59:09.111Z",
     "players": [
       {
         "id": "3374",
