@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-21T08:51:45.610Z",
+  "updatedAt": "2026-05-21T14:33:40.014Z",
   "players": [
     {
       "id": 11,
@@ -12054,6 +12054,25 @@
       "clausula": null
     },
     {
+      "id": 41021,
+      "slug": "damian-caceres",
+      "name": "Damián Cáceres",
+      "position": 3,
+      "price": 240000,
+      "points": 5,
+      "trend": 0,
+      "playedHome": 1,
+      "playedAway": 1,
+      "teamName": "Getafe",
+      "teamId": 8,
+      "status": "ok",
+      "jForm": [
+        3,
+        2
+      ],
+      "clausula": null
+    },
+    {
       "id": 41112,
       "slug": "olaizola",
       "name": "Olaizola",
@@ -12125,7 +12144,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 2,
-          "season": "2024/2025 season"
+          "season": "Temporada 2024/2025"
         },
         "position": 2
       },
@@ -12142,9 +12161,9 @@
           5,
           11
         ],
-        "teamSize": 20,
-        "teamValue": 95460000,
-        "teamValueInc": 1060000,
+        "teamSize": 19,
+        "teamValue": 94860000,
+        "teamValueInc": 1110000,
         "position": 3
       },
       {
@@ -12159,13 +12178,13 @@
           2,
           8
         ],
-        "teamSize": 16,
-        "teamValue": 93900000,
-        "teamValueInc": 820000,
+        "teamSize": 17,
+        "teamValue": 97470000,
+        "teamValueInc": 910000,
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "2024/2025 season"
+          "season": "Temporada 2024/2025"
         },
         "position": 4,
         "role": ""
@@ -12219,13 +12238,13 @@
           10,
           7
         ],
-        "teamSize": 15,
-        "teamValue": 90500000,
-        "teamValueInc": 630000,
+        "teamSize": 14,
+        "teamValue": 86170000,
+        "teamValueInc": 500000,
         "lastTrophy": {
           "type": "league",
           "position": 1,
-          "season": "2024/2025 season"
+          "season": "Temporada 2024/2025"
         },
         "position": 7
       },
@@ -12283,7 +12302,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "2023/2024 season"
+          "season": "Temporada 2023/2024"
         },
         "position": 10,
         "positionInc": 1,
@@ -12388,8 +12407,8 @@
       "name": "🦊",
       "manager": "🦊",
       "points": 1908,
-      "value": 95460000,
-      "trend": 1060000,
+      "value": 94860000,
+      "trend": 1110000,
       "players": []
     },
     {
@@ -12397,8 +12416,8 @@
       "name": "CA CABA JUNIORS",
       "manager": "CA CABA JUNIORS",
       "points": 1818,
-      "value": 93900000,
-      "trend": 820000,
+      "value": 97470000,
+      "trend": 910000,
       "players": []
     },
     {
@@ -12424,8 +12443,8 @@
       "name": "Zaza Pachulia",
       "manager": "Zaza Pachulia",
       "points": 1743,
-      "value": 90500000,
-      "trend": 630000,
+      "value": 86170000,
+      "trend": 500000,
       "players": []
     },
     {
@@ -12496,31 +12515,38 @@
     "teamId": 6541195,
     "name": "🦊",
     "points": 1908,
-    "balance": 87058,
+    "balance": 71741,
     "lineup": {
-      "type": "3-5-2",
-      "date": 1779299684,
+      "type": "5-4-1",
+      "date": 1779371795,
       "playersID": [
         17021,
         37495,
         1908,
-        39360,
-        38867,
-        30123,
+        37739,
+        5220,
+        32460,
         35615,
-        25127,
+        30123,
         4245,
-        1523,
+        38867,
         26994
       ],
       "reservesID": [
         38405,
-        32460,
-        32338,
+        null,
+        25127,
         null
       ]
     },
     "players": [
+      {
+        "id": 37739,
+        "buyPrice": 8336250,
+        "clause": 12504375,
+        "invested": 0,
+        "buyDate": 1779371688
+      },
       {
         "id": 4245,
         "buyPrice": 2910000,
@@ -12529,17 +12555,10 @@
         "buyDate": 1778864879
       },
       {
-        "id": 1523,
-        "buyPrice": 4785222,
-        "clause": 7177833,
-        "invested": 0,
-        "buyDate": 1778043891
-      },
-      {
         "id": 1908,
         "buyPrice": 2235666,
-        "clause": 8610000,
-        "invested": 2500000,
+        "clause": 9660000,
+        "invested": 3200000,
         "buyDate": 1773209088
       },
       {
@@ -12569,13 +12588,6 @@
         "clause": 6930000,
         "invested": 0,
         "buyDate": 1765470211
-      },
-      {
-        "id": 24979,
-        "buyPrice": 3892500,
-        "clause": 5838750,
-        "invested": 0,
-        "buyDate": 1775726660
       },
       {
         "id": 25127,
@@ -12670,12 +12682,6 @@
         "until": 1779472234
       },
       {
-        "playerID": 24979,
-        "price": 2740000,
-        "type": "sale",
-        "until": 1779472234
-      },
-      {
         "playerID": 25127,
         "price": 16520000,
         "type": "sale",
@@ -12692,10 +12698,73 @@
         "price": 6500000,
         "type": "sale",
         "until": 1779472234
+      },
+      {
+        "playerID": 37495,
+        "price": 6050000,
+        "type": "sale",
+        "until": 1779544153
+      },
+      {
+        "playerID": 38405,
+        "price": 2520000,
+        "type": "sale",
+        "until": 1779544113
       }
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1779371688,
+      "content": [
+        {
+          "player": 1523,
+          "from": {
+            "id": 6541195,
+            "name": "🦊",
+            "icon": "i/u/6541195.png?v=17"
+          },
+          "to": {
+            "id": 8070044,
+            "name": "CA CABA JUNIORS",
+            "icon": "i/u/8070044.png?v=63"
+          },
+          "amount": 8677833,
+          "type": "clause"
+        },
+        {
+          "player": 37739,
+          "from": {
+            "id": 148051,
+            "name": "Zaza Pachulia",
+            "icon": "i/u/148051.png?v=98"
+          },
+          "to": {
+            "id": 6541195,
+            "name": "🦊",
+            "icon": "i/u/6541195.png?v=17"
+          },
+          "amount": 8336250,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1779371339,
+      "content": [
+        {
+          "player": 24979,
+          "from": {
+            "id": 6541195,
+            "name": "🦊",
+            "icon": "i/u/6541195.png?v=17"
+          },
+          "amount": 1343100
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1779351656,
@@ -12747,71 +12816,6 @@
           },
           "amount": 19017604,
           "type": "clause"
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1779264492,
-      "content": [
-        {
-          "player": 10245,
-          "from": {
-            "id": 8070044,
-            "name": "CA CABA JUNIORS",
-            "icon": "i/u/8070044.png?v=63"
-          },
-          "amount": 3021400
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1779253477,
-      "content": [
-        {
-          "player": 17756,
-          "to": {
-            "id": 148051,
-            "name": "Zaza Pachulia",
-            "icon": "i/u/148051.png?v=98"
-          },
-          "amount": 11170216,
-          "bids": [
-            {
-              "user": {
-                "id": 12697101,
-                "name": "INDOMABLE FC",
-                "icon": "i/u/11757390.png"
-              },
-              "amount": 10000000
-            },
-            {
-              "user": {
-                "id": 11520975,
-                "name": "Morankus FC",
-                "icon": "i/u/11520975.png?v=81"
-              },
-              "amount": 4800000
-            },
-            {
-              "user": {
-                "id": 12713493,
-                "name": "Tata Martini",
-                "icon": "i/u/12713493.png"
-              },
-              "amount": 4430000
-            }
-          ]
-        },
-        {
-          "player": 20702,
-          "to": {
-            "id": 12713493,
-            "name": "Tata Martini",
-            "icon": "i/u/12713493.png"
-          },
-          "amount": 3030000
         }
       ]
     }
@@ -14717,19 +14721,19 @@
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Getafe": {
-      "winProb": 0.38400127734312633,
-      "drawProb": 0.35446271754750125,
-      "loseProb": 0.2615360051093725,
-      "over25Prob": 0.36363636363636365,
+      "winProb": 0.3859356331430523,
+      "drawProb": 0.35225397788693136,
+      "loseProb": 0.26181038897001646,
+      "over25Prob": 0.3676470588235294,
       "isHome": true,
       "opponent": "CA Osasuna",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "CA Osasuna": {
-      "winProb": 0.2615360051093725,
-      "drawProb": 0.35446271754750125,
-      "loseProb": 0.38400127734312633,
-      "over25Prob": 0.36363636363636365,
+      "winProb": 0.26181038897001646,
+      "drawProb": 0.35225397788693136,
+      "loseProb": 0.3859356331430523,
+      "over25Prob": 0.3676470588235294,
       "isHome": false,
       "opponent": "Getafe",
       "matchDate": "2026-05-23T19:00:00Z"
@@ -14807,37 +14811,37 @@
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Mallorca": {
-      "winProb": 0.6508411701539162,
-      "drawProb": 0.21310728580260974,
-      "loseProb": 0.13605154404347403,
+      "winProb": 0.6499775537689263,
+      "drawProb": 0.2147247275843774,
+      "loseProb": 0.13529771864669632,
       "over25Prob": 0.5181347150259068,
       "isHome": true,
       "opponent": "Oviedo",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Oviedo": {
-      "winProb": 0.13605154404347403,
-      "drawProb": 0.21310728580260974,
-      "loseProb": 0.6508411701539162,
+      "winProb": 0.13529771864669632,
+      "drawProb": 0.2147247275843774,
+      "loseProb": 0.6499775537689263,
       "over25Prob": 0.5181347150259068,
       "isHome": false,
       "opponent": "Mallorca",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Villarreal": {
-      "winProb": 0.3899115901659198,
-      "drawProb": 0.25717572968390456,
-      "loseProb": 0.3529126801501756,
-      "over25Prob": 0.684931506849315,
+      "winProb": 0.38860109526032355,
+      "drawProb": 0.26081313401568884,
+      "loseProb": 0.3505857707239876,
+      "over25Prob": 0.6802721088435374,
       "isHome": true,
       "opponent": "Atlético Madrid",
       "matchDate": "2026-05-24T19:00:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.3529126801501756,
-      "drawProb": 0.25717572968390456,
-      "loseProb": 0.3899115901659198,
-      "over25Prob": 0.684931506849315,
+      "winProb": 0.3505857707239876,
+      "drawProb": 0.26081313401568884,
+      "loseProb": 0.38860109526032355,
+      "over25Prob": 0.6802721088435374,
       "isHome": false,
       "opponent": "Villarreal",
       "matchDate": "2026-05-24T19:00:00Z"
@@ -14845,82 +14849,82 @@
   },
   "news": [
     {
-      "title": "Vinicius, Trent, Carvajal y Tchouameni no entrenan. ¿Llegan a la Jornada 38?",
-      "link": "https://www.jornadaperfecta.com/blog/vinicius-jr-estado-j38-25-26/",
-      "date": "Thu, 21 May 2026 08:39:14 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "title": "Sorare Pro Global Cup 2026: más de $150K en premios durante el Mundial",
+      "link": "https://www.jornadaperfecta.com/blog/sorare-global-cup-mundial-26/",
+      "date": "Thu, 21 May 2026 14:00:36 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/05/Sorare-Pro-Global-Cup-Mundial-2.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Víctor Muñoz tiene «muy difícil» llegar a la jornada 38",
-      "link": "https://www.jornadaperfecta.com/blog/victor-munoz-estado-j38/",
-      "date": "Thu, 21 May 2026 08:30:45 +0000",
-      "img": "https://cdn.biwenger.com/i/t/93.png",
+      "title": "Amrabat no entrena con el grupo, ¿llega a la jornada 38?",
+      "link": "https://www.jornadaperfecta.com/blog/amrabat-estado-betis-j38/",
+      "date": "Thu, 21 May 2026 13:58:37 +0000",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Toljan y Víctor García siguen sin entrenar. ¿Llegan a la Jornada 38?",
-      "link": "https://www.jornadaperfecta.com/blog/toljan-victor-garcia-estado-j38/",
-      "date": "Thu, 21 May 2026 08:18:37 +0000",
-      "img": "https://cdn.biwenger.com/i/t/10.png",
+      "title": "Podcast: Alineaciones Probables Jornada 38 2025/26",
+      "link": "https://www.jornadaperfecta.com/blog/podcast-alineaciones-probables-j38-25-26/",
+      "date": "Thu, 21 May 2026 13:30:05 +0000",
+      "img": "https://i.ytimg.com/vi/Ygr4zjwC1Vk/mqdefault.jpg",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Ferrán, Rashford y De Jong entrenan con el Barça",
-      "link": "https://www.jornadaperfecta.com/blog/ferran-rashford-frenkie-estado-j38/",
-      "date": "Thu, 21 May 2026 07:57:31 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "title": "Valverde se despide del Athletic y da suerte a Terzic",
+      "link": "https://www.jornadaperfecta.com/blog/valverde-previa-real-madrid-athletic-j38-25-26/",
+      "date": "Thu, 21 May 2026 12:57:01 +0000",
+      "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Las claves fantasy del Villarreal &#8211; Atlético: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-villarreal-atletico-j38-25-26/",
-      "date": "Thu, 21 May 2026 06:45:32 +0000",
-      "img": "https://cdn.biwenger.com/i/t/19.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Las claves fantasy del Girona FC &#8211; Elche CF: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-girona-elche-j38-25-26/",
-      "date": "Thu, 21 May 2026 06:40:25 +0000",
-      "img": "https://cdn.biwenger.com/i/t/289.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Las claves fantasy del Valencia CF &#8211; FC Barcelona: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-valencia-barcelona-j38-25-26/",
-      "date": "Thu, 21 May 2026 06:35:37 +0000",
+      "title": "Lucas Beltrán sigue sin entrenar. Danjuma repite con el grupo",
+      "link": "https://www.jornadaperfecta.com/blog/lucas-beltran-estado-valencia-j38/",
+      "date": "Thu, 21 May 2026 12:41:04 +0000",
       "img": "https://cdn.biwenger.com/i/t/18.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Las claves fantasy del Getafe CF &#8211; CA Osasuna: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-getafe-osasuna-j38-25-26/",
-      "date": "Thu, 21 May 2026 06:30:30 +0000",
-      "img": "https://cdn.biwenger.com/i/t/8.png",
+      "title": "Vinicius vuelve a ausentarse y podría perderse la Jornada 38",
+      "link": "https://www.jornadaperfecta.com/blog/vinicius-jr-estado-j38-25-26/",
+      "date": "Thu, 21 May 2026 12:40:14 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Las claves fantasy del Espanyol &#8211; Real Sociedad: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-espanyol-real-sociedad-j38-25-26/",
-      "date": "Thu, 21 May 2026 06:25:19 +0000",
-      "img": "https://cdn.biwenger.com/i/t/7.png",
+      "title": "Víctor Muñoz y Raúl Moro, entrenan de forma individual. ¿Llegan a la J38?",
+      "link": "https://www.jornadaperfecta.com/blog/victor-munoz-estado-j38/",
+      "date": "Thu, 21 May 2026 12:35:45 +0000",
+      "img": "https://cdn.biwenger.com/i/t/93.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Las claves fantasy del RCD Mallorca &#8211; Real Oviedo: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-mallorca-real-oviedo-j38-25-26/",
-      "date": "Thu, 21 May 2026 06:20:40 +0000",
-      "img": "https://cdn.biwenger.com/i/t/465.png",
+      "title": "Antony seguirá un tratamiento conservador y evita el quirófano. ¿Estará en la Jornada 38?",
+      "link": "https://www.jornadaperfecta.com/blog/antony-estado-molestias-pubalgia-25-26/",
+      "date": "Thu, 21 May 2026 12:33:44 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Tchouameni sufre molestias en la vuelta de Valverde. ¿Preocupa?",
+      "link": "https://www.jornadaperfecta.com/blog/tchouameni-estado-molestias-pierna-25-26/",
+      "date": "Thu, 21 May 2026 12:11:35 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Carvajal, Pedraza, Parejo&#8230; Jugadores que se despiden a alinear en la Jornada 38",
+      "link": "https://www.jornadaperfecta.com/blog/despedidas-fantasy-alinear-j38-25-26/",
+      "date": "Thu, 21 May 2026 10:41:17 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -14929,7 +14933,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-05-21T08:51:43.679Z",
+    "updatedAt": "2026-05-21T14:33:39.335Z",
     "players": [
       {
         "id": "3374",
