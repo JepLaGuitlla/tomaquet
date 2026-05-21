@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-21T14:33:40.014Z",
+  "updatedAt": "2026-05-21T19:40:24.523Z",
   "players": [
     {
       "id": 11,
@@ -12161,9 +12161,9 @@
           5,
           11
         ],
-        "teamSize": 19,
-        "teamValue": 94860000,
-        "teamValueInc": 1110000,
+        "teamSize": 18,
+        "teamValue": 92430000,
+        "teamValueInc": 940000,
         "position": 3
       },
       {
@@ -12238,9 +12238,9 @@
           10,
           7
         ],
-        "teamSize": 14,
-        "teamValue": 86170000,
-        "teamValueInc": 500000,
+        "teamSize": 15,
+        "teamValue": 87120000,
+        "teamValueInc": 820000,
         "lastTrophy": {
           "type": "league",
           "position": 1,
@@ -12296,9 +12296,9 @@
           6,
           9
         ],
-        "teamSize": 18,
-        "teamValue": 62910000,
-        "teamValueInc": 770000,
+        "teamSize": 17,
+        "teamValue": 60930000,
+        "teamValueInc": 540000,
         "lastTrophy": {
           "type": "league",
           "position": 3,
@@ -12339,9 +12339,9 @@
           11,
           12
         ],
-        "teamSize": 11,
-        "teamValue": 29720000,
-        "teamValueInc": 1100000,
+        "teamSize": 12,
+        "teamValue": 33180000,
+        "teamValueInc": 1180000,
         "position": 12,
         "role": ""
       },
@@ -12407,8 +12407,8 @@
       "name": "🦊",
       "manager": "🦊",
       "points": 1908,
-      "value": 94860000,
-      "trend": 1110000,
+      "value": 92430000,
+      "trend": 940000,
       "players": []
     },
     {
@@ -12443,8 +12443,8 @@
       "name": "Zaza Pachulia",
       "manager": "Zaza Pachulia",
       "points": 1743,
-      "value": 86170000,
-      "trend": 500000,
+      "value": 87120000,
+      "trend": 820000,
       "players": []
     },
     {
@@ -12470,8 +12470,8 @@
       "name": "Tata Martini",
       "manager": "Tata Martini",
       "points": 1528,
-      "value": 62910000,
-      "trend": 770000,
+      "value": 60930000,
+      "trend": 540000,
       "players": []
     },
     {
@@ -12488,8 +12488,8 @@
       "name": "Morankus FC",
       "manager": "Morankus FC",
       "points": 1492,
-      "value": 29720000,
-      "trend": 1100000,
+      "value": 33180000,
+      "trend": 1180000,
       "players": []
     },
     {
@@ -12515,16 +12515,16 @@
     "teamId": 6541195,
     "name": "🦊",
     "points": 1908,
-    "balance": 71741,
+    "balance": 716741,
     "lineup": {
       "type": "5-4-1",
-      "date": 1779371795,
+      "date": 1779374548,
       "playersID": [
         17021,
         37495,
         1908,
         37739,
-        5220,
+        39360,
         32460,
         35615,
         30123,
@@ -12560,13 +12560,6 @@
         "clause": 9660000,
         "invested": 3200000,
         "buyDate": 1773209088
-      },
-      {
-        "id": 5220,
-        "buyPrice": 1740000,
-        "clause": 3645000,
-        "invested": 0,
-        "buyDate": 1778173624
       },
       {
         "id": 11686,
@@ -12655,8 +12648,8 @@
       {
         "id": 38867,
         "buyPrice": 10072222,
-        "clause": 38640000,
-        "invested": 13000000,
+        "clause": 43140000,
+        "invested": 16000000,
         "buyDate": 1769493971
       },
       {
@@ -12716,6 +12709,57 @@
   "boardTomaquet": [
     {
       "type": "transfer",
+      "date": 1779374494,
+      "content": [
+        {
+          "player": 29661,
+          "from": {
+            "id": 148051,
+            "name": "Zaza Pachulia",
+            "icon": "i/u/148051.png?v=98"
+          },
+          "to": {
+            "id": 11520975,
+            "name": "Morankus FC",
+            "icon": "i/u/11520975.png?v=81"
+          },
+          "amount": 5600970,
+          "type": "clause"
+        },
+        {
+          "player": 2201,
+          "from": {
+            "id": 12713493,
+            "name": "Tata Martini",
+            "icon": "i/u/12713493.png"
+          },
+          "to": {
+            "id": 148051,
+            "name": "Zaza Pachulia",
+            "icon": "i/u/148051.png?v=98"
+          },
+          "amount": 5062500,
+          "type": "clause"
+        },
+        {
+          "player": 5220,
+          "from": {
+            "id": 6541195,
+            "name": "🦊",
+            "icon": "i/u/6541195.png?v=17"
+          },
+          "to": {
+            "id": 148051,
+            "name": "Zaza Pachulia",
+            "icon": "i/u/148051.png?v=98"
+          },
+          "amount": 3645000,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
       "date": 1779371688,
       "content": [
         {
@@ -12762,60 +12806,6 @@
             "icon": "i/u/6541195.png?v=17"
           },
           "amount": 1343100
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1779351656,
-      "content": [
-        {
-          "player": 24474,
-          "from": {
-            "id": 11520975,
-            "name": "Morankus FC",
-            "icon": "i/u/11520975.png?v=81"
-          },
-          "amount": 3209500
-        },
-        {
-          "player": 14800,
-          "from": {
-            "id": 11520975,
-            "name": "Morankus FC",
-            "icon": "i/u/11520975.png?v=81"
-          },
-          "amount": 1948800
-        },
-        {
-          "player": 1760,
-          "from": {
-            "id": 11520975,
-            "name": "Morankus FC",
-            "icon": "i/u/11520975.png?v=81"
-          },
-          "amount": 1765800
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1779313525,
-      "content": [
-        {
-          "player": 38369,
-          "from": {
-            "id": 12696899,
-            "name": "CIGALERU",
-            "icon": "i/u/12696899.png"
-          },
-          "to": {
-            "id": 11520975,
-            "name": "Morankus FC",
-            "icon": "i/u/11520975.png?v=81"
-          },
-          "amount": 19017604,
-          "type": "clause"
         }
       ]
     }
@@ -13648,62 +13638,6 @@
             "icon": "https://graph.facebook.com/10156583054878679/picture?height=300&width=300"
           },
           "amount": 10165700
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1779167258,
-      "content": [
-        {
-          "player": 37450,
-          "to": {
-            "id": 6578885,
-            "name": "Norimaki  FC",
-            "icon": "icons/41.png"
-          },
-          "amount": 17000000,
-          "bids": [
-            {
-              "user": {
-                "id": 6580386,
-                "name": "Lamine i els 7 nans 👯‍♀️",
-                "icon": "i/u/6580386.png?v=10"
-              },
-              "amount": 6501200
-            },
-            {
-              "user": {
-                "id": 6586257,
-                "name": "Aquest any he trepitjat merda !!",
-                "icon": "i/u/6586257.png"
-              },
-              "amount": 3940000
-            },
-            {
-              "user": {
-                "id": 6579330,
-                "name": "Mindundis",
-                "icon": "i/u/6579330.png?v=66"
-              },
-              "amount": 3840000
-            },
-            {
-              "user": {
-                "id": 9897660,
-                "name": "Eric Duran"
-              },
-              "amount": 2350000
-            },
-            {
-              "user": {
-                "id": 6579540,
-                "name": "Aiveen Teaam",
-                "icon": "i/u/6579540.png?v=63"
-              },
-              "amount": 1840000
-            }
-          ]
         }
       ]
     }
@@ -14667,18 +14601,18 @@
   },
   "odds": {
     "Alavés": {
-      "winProb": 0.40795705715187874,
-      "drawProb": 0.2699715819387433,
-      "loseProb": 0.32207136090937794,
+      "winProb": 0.41023507385063446,
+      "drawProb": 0.2714790929893905,
+      "loseProb": 0.31828583315997505,
       "over25Prob": 0.5050505050505051,
       "isHome": true,
       "opponent": "Rayo Vallecano",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Rayo Vallecano": {
-      "winProb": 0.32207136090937794,
-      "drawProb": 0.2699715819387433,
-      "loseProb": 0.40795705715187874,
+      "winProb": 0.31828583315997505,
+      "drawProb": 0.2714790929893905,
+      "loseProb": 0.41023507385063446,
       "over25Prob": 0.5050505050505051,
       "isHome": false,
       "opponent": "Alavés",
@@ -14703,55 +14637,55 @@
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Valencia": {
-      "winProb": 0.25696594427244585,
-      "drawProb": 0.22910216718266255,
-      "loseProb": 0.5139318885448917,
-      "over25Prob": 0.6944444444444444,
+      "winProb": 0.26853980417198814,
+      "drawProb": 0.2297147722435079,
+      "loseProb": 0.5017454235845041,
+      "over25Prob": 0.684931506849315,
       "isHome": true,
       "opponent": "Barcelona",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.5139318885448917,
-      "drawProb": 0.22910216718266255,
-      "loseProb": 0.25696594427244585,
-      "over25Prob": 0.6944444444444444,
+      "winProb": 0.5017454235845041,
+      "drawProb": 0.2297147722435079,
+      "loseProb": 0.26853980417198814,
+      "over25Prob": 0.684931506849315,
       "isHome": false,
       "opponent": "Valencia",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Getafe": {
-      "winProb": 0.3859356331430523,
-      "drawProb": 0.35225397788693136,
-      "loseProb": 0.26181038897001646,
+      "winProb": 0.384226007250838,
+      "drawProb": 0.3533757438949313,
+      "loseProb": 0.26239824885423085,
       "over25Prob": 0.3676470588235294,
       "isHome": true,
       "opponent": "CA Osasuna",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "CA Osasuna": {
-      "winProb": 0.26181038897001646,
-      "drawProb": 0.35225397788693136,
-      "loseProb": 0.3859356331430523,
+      "winProb": 0.26239824885423085,
+      "drawProb": 0.3533757438949313,
+      "loseProb": 0.384226007250838,
       "over25Prob": 0.3676470588235294,
       "isHome": false,
       "opponent": "Getafe",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Celta Vigo": {
-      "winProb": 0.5316091954022989,
-      "drawProb": 0.25574712643678155,
-      "loseProb": 0.21264367816091953,
-      "over25Prob": 0.5128205128205129,
+      "winProb": 0.54191336865067,
+      "drawProb": 0.25631037706450605,
+      "loseProb": 0.20177625428482393,
+      "over25Prob": 0.5263157894736842,
       "isHome": true,
       "opponent": "Sevilla",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Sevilla": {
-      "winProb": 0.21264367816091953,
-      "drawProb": 0.25574712643678155,
-      "loseProb": 0.5316091954022989,
-      "over25Prob": 0.5128205128205129,
+      "winProb": 0.20177625428482393,
+      "drawProb": 0.25631037706450605,
+      "loseProb": 0.54191336865067,
+      "over25Prob": 0.5263157894736842,
       "isHome": false,
       "opponent": "Celta Vigo",
       "matchDate": "2026-05-23T19:00:00Z"
@@ -14775,72 +14709,72 @@
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Espanyol": {
-      "winProb": 0.37794954271585973,
-      "drawProb": 0.2843083127295422,
-      "loseProb": 0.33774214455459806,
+      "winProb": 0.3848709976027153,
+      "drawProb": 0.2766608910303577,
+      "loseProb": 0.33846811136692695,
       "over25Prob": 0.5494505494505494,
       "isHome": true,
       "opponent": "Real Sociedad",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Real Sociedad": {
-      "winProb": 0.33774214455459806,
-      "drawProb": 0.2843083127295422,
-      "loseProb": 0.37794954271585973,
+      "winProb": 0.33846811136692695,
+      "drawProb": 0.2766608910303577,
+      "loseProb": 0.3848709976027153,
       "over25Prob": 0.5494505494505494,
       "isHome": false,
       "opponent": "Espanyol",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Real Betis": {
-      "winProb": 0.42434594983367796,
-      "drawProb": 0.30234648925649554,
-      "loseProb": 0.27330756090982644,
+      "winProb": 0.4206788696283097,
+      "drawProb": 0.30522441644956216,
+      "loseProb": 0.2740967139221281,
       "over25Prob": 0.5952380952380952,
       "isHome": true,
       "opponent": "Levante",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Levante": {
-      "winProb": 0.27330756090982644,
-      "drawProb": 0.30234648925649554,
-      "loseProb": 0.42434594983367796,
+      "winProb": 0.2740967139221281,
+      "drawProb": 0.30522441644956216,
+      "loseProb": 0.4206788696283097,
       "over25Prob": 0.5952380952380952,
       "isHome": false,
       "opponent": "Real Betis",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Mallorca": {
-      "winProb": 0.6499775537689263,
-      "drawProb": 0.2147247275843774,
-      "loseProb": 0.13529771864669632,
+      "winProb": 0.6550169581420018,
+      "drawProb": 0.21162086339972364,
+      "loseProb": 0.1333621784582746,
       "over25Prob": 0.5181347150259068,
       "isHome": true,
       "opponent": "Oviedo",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Oviedo": {
-      "winProb": 0.13529771864669632,
-      "drawProb": 0.2147247275843774,
-      "loseProb": 0.6499775537689263,
+      "winProb": 0.1333621784582746,
+      "drawProb": 0.21162086339972364,
+      "loseProb": 0.6550169581420018,
       "over25Prob": 0.5181347150259068,
       "isHome": false,
       "opponent": "Mallorca",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Villarreal": {
-      "winProb": 0.38860109526032355,
-      "drawProb": 0.26081313401568884,
-      "loseProb": 0.3505857707239876,
+      "winProb": 0.39344610000530245,
+      "drawProb": 0.2608833978471817,
+      "loseProb": 0.34567050214751577,
       "over25Prob": 0.6802721088435374,
       "isHome": true,
       "opponent": "Atlético Madrid",
       "matchDate": "2026-05-24T19:00:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.3505857707239876,
-      "drawProb": 0.26081313401568884,
-      "loseProb": 0.38860109526032355,
+      "winProb": 0.34567050214751577,
+      "drawProb": 0.2608833978471817,
+      "loseProb": 0.39344610000530245,
       "over25Prob": 0.6802721088435374,
       "isHome": false,
       "opponent": "Villarreal",
@@ -14848,6 +14782,22 @@
     }
   },
   "news": [
+    {
+      "title": "Parte médico de Jon Pacheco: operado del tobillo derecho",
+      "link": "https://www.jornadaperfecta.com/blog/jon-pacheco-operacion-tobillo-alaves/",
+      "date": "Thu, 21 May 2026 18:16:16 +0000",
+      "img": "https://cdn.biwenger.com/i/t/91.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Julián Alvarez, Molina, Nico y Giménez se marchan con sus selecciones antes de tiempo",
+      "link": "https://www.jornadaperfecta.com/blog/julian-alvarez-baja-j38-atleti/",
+      "date": "Thu, 21 May 2026 14:49:57 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Sorare Pro Global Cup 2026: más de $150K en premios durante el Mundial",
       "link": "https://www.jornadaperfecta.com/blog/sorare-global-cup-mundial-26/",
@@ -14911,29 +14861,13 @@
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Tchouameni sufre molestias en la vuelta de Valverde. ¿Preocupa?",
-      "link": "https://www.jornadaperfecta.com/blog/tchouameni-estado-molestias-pierna-25-26/",
-      "date": "Thu, 21 May 2026 12:11:35 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Carvajal, Pedraza, Parejo&#8230; Jugadores que se despiden a alinear en la Jornada 38",
-      "link": "https://www.jornadaperfecta.com/blog/despedidas-fantasy-alinear-j38-25-26/",
-      "date": "Thu, 21 May 2026 10:41:17 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-05-21T14:33:39.335Z",
+    "updatedAt": "2026-05-21T19:40:22.144Z",
     "players": [
       {
         "id": "3374",
