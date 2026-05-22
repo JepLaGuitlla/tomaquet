@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-22T08:45:18.548Z",
+  "updatedAt": "2026-05-22T14:09:54.513Z",
   "players": [
     {
       "id": 11,
@@ -12138,9 +12138,9 @@
           4,
           2
         ],
-        "teamSize": 16,
-        "teamValue": 111260000,
-        "teamValueInc": 1170000,
+        "teamSize": 15,
+        "teamValue": 106700000,
+        "teamValueInc": 1120000,
         "lastTrophy": {
           "type": "league",
           "position": 2,
@@ -12296,9 +12296,9 @@
           6,
           9
         ],
-        "teamSize": 17,
-        "teamValue": 61720000,
-        "teamValueInc": 790000,
+        "teamSize": 19,
+        "teamValue": 67410000,
+        "teamValueInc": 920000,
         "lastTrophy": {
           "type": "league",
           "position": 3,
@@ -12339,9 +12339,9 @@
           11,
           12
         ],
-        "teamSize": 12,
-        "teamValue": 34450000,
-        "teamValueInc": 1270000,
+        "teamSize": 11,
+        "teamValue": 33320000,
+        "teamValueInc": 1190000,
         "position": 12,
         "role": ""
       },
@@ -12398,8 +12398,8 @@
       "name": "LeMola Team",
       "manager": "LeMola Team",
       "points": 1995,
-      "value": 111260000,
-      "trend": 1170000,
+      "value": 106700000,
+      "trend": 1120000,
       "players": []
     },
     {
@@ -12470,8 +12470,8 @@
       "name": "Tata Martini",
       "manager": "Tata Martini",
       "points": 1528,
-      "value": 61720000,
-      "trend": 790000,
+      "value": 67410000,
+      "trend": 920000,
       "players": []
     },
     {
@@ -12488,8 +12488,8 @@
       "name": "Morankus FC",
       "manager": "Morankus FC",
       "points": 1492,
-      "value": 34450000,
-      "trend": 1270000,
+      "value": 33320000,
+      "trend": 1190000,
       "players": []
     },
     {
@@ -12708,6 +12708,84 @@
   },
   "boardTomaquet": [
     {
+      "type": "transfer",
+      "date": 1779450597,
+      "content": [
+        {
+          "player": 37450,
+          "from": {
+            "id": 12713493,
+            "name": "Tata Martini",
+            "icon": "i/u/12713493.png"
+          },
+          "to": {
+            "id": 11520975,
+            "name": "Morankus FC",
+            "icon": "i/u/11520975.png?v=81"
+          },
+          "amount": 4290000,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1779450482,
+      "content": [
+        {
+          "player": 19285,
+          "from": {
+            "id": 11520975,
+            "name": "Morankus FC",
+            "icon": "i/u/11520975.png?v=81"
+          },
+          "to": {
+            "id": 12713493,
+            "name": "Tata Martini",
+            "icon": "i/u/12713493.png"
+          },
+          "amount": 3795000,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1779450343,
+      "content": [
+        {
+          "player": 1683,
+          "from": {
+            "id": 11520975,
+            "name": "Morankus FC",
+            "icon": "i/u/11520975.png?v=81"
+          },
+          "to": {
+            "id": 12713493,
+            "name": "Tata Martini",
+            "icon": "i/u/12713493.png"
+          },
+          "amount": 3945000,
+          "type": "clause"
+        },
+        {
+          "player": 1612,
+          "from": {
+            "id": 6552586,
+            "name": "LeMola Team",
+            "icon": "i/u/6552586.png"
+          },
+          "to": {
+            "id": 12713493,
+            "name": "Tata Martini",
+            "icon": "i/u/12713493.png"
+          },
+          "amount": 12090000,
+          "type": "clause"
+        }
+      ]
+    },
+    {
       "type": "market",
       "date": 1779426451,
       "content": [
@@ -12737,93 +12815,6 @@
               "amount": 5982008
             }
           ]
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1779374494,
-      "content": [
-        {
-          "player": 29661,
-          "from": {
-            "id": 148051,
-            "name": "Zaza Pachulia",
-            "icon": "i/u/148051.png?v=98"
-          },
-          "to": {
-            "id": 11520975,
-            "name": "Morankus FC",
-            "icon": "i/u/11520975.png?v=81"
-          },
-          "amount": 5600970,
-          "type": "clause"
-        },
-        {
-          "player": 2201,
-          "from": {
-            "id": 12713493,
-            "name": "Tata Martini",
-            "icon": "i/u/12713493.png"
-          },
-          "to": {
-            "id": 148051,
-            "name": "Zaza Pachulia",
-            "icon": "i/u/148051.png?v=98"
-          },
-          "amount": 5062500,
-          "type": "clause"
-        },
-        {
-          "player": 5220,
-          "from": {
-            "id": 6541195,
-            "name": "🦊",
-            "icon": "i/u/6541195.png?v=17"
-          },
-          "to": {
-            "id": 148051,
-            "name": "Zaza Pachulia",
-            "icon": "i/u/148051.png?v=98"
-          },
-          "amount": 3645000,
-          "type": "clause"
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1779371688,
-      "content": [
-        {
-          "player": 1523,
-          "from": {
-            "id": 6541195,
-            "name": "🦊",
-            "icon": "i/u/6541195.png?v=17"
-          },
-          "to": {
-            "id": 8070044,
-            "name": "CA CABA JUNIORS",
-            "icon": "i/u/8070044.png?v=63"
-          },
-          "amount": 8677833,
-          "type": "clause"
-        },
-        {
-          "player": 37739,
-          "from": {
-            "id": 148051,
-            "name": "Zaza Pachulia",
-            "icon": "i/u/148051.png?v=98"
-          },
-          "to": {
-            "id": 6541195,
-            "name": "🦊",
-            "icon": "i/u/6541195.png?v=17"
-          },
-          "amount": 8336250,
-          "type": "clause"
         }
       ]
     }
@@ -14655,19 +14646,19 @@
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Real Madrid": {
-      "winProb": 0.6378999473642951,
-      "drawProb": 0.21358897113995498,
-      "loseProb": 0.14851108149574993,
-      "over25Prob": 0.6711409395973155,
+      "winProb": 0.6483177791667565,
+      "drawProb": 0.20277173093087916,
+      "loseProb": 0.14891048990236438,
+      "over25Prob": 0.6802721088435374,
       "isHome": true,
       "opponent": "Athletic Bilbao",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Athletic Bilbao": {
-      "winProb": 0.14851108149574993,
-      "drawProb": 0.21358897113995498,
-      "loseProb": 0.6378999473642951,
-      "over25Prob": 0.6711409395973155,
+      "winProb": 0.14891048990236438,
+      "drawProb": 0.20277173093087916,
+      "loseProb": 0.6483177791667565,
+      "over25Prob": 0.6802721088435374,
       "isHome": false,
       "opponent": "Real Madrid",
       "matchDate": "2026-05-23T19:00:00Z"
@@ -14691,18 +14682,18 @@
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Getafe": {
-      "winProb": 0.3853872723187595,
-      "drawProb": 0.3517534740073041,
-      "loseProb": 0.2628592536739365,
+      "winProb": 0.3706079671051615,
+      "drawProb": 0.35302437742498954,
+      "loseProb": 0.276367655469849,
       "over25Prob": 0.3448275862068966,
       "isHome": true,
       "opponent": "CA Osasuna",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "CA Osasuna": {
-      "winProb": 0.2628592536739365,
-      "drawProb": 0.3517534740073041,
-      "loseProb": 0.3853872723187595,
+      "winProb": 0.276367655469849,
+      "drawProb": 0.35302437742498954,
+      "loseProb": 0.3706079671051615,
       "over25Prob": 0.3448275862068966,
       "isHome": false,
       "opponent": "Getafe",
@@ -14712,7 +14703,7 @@
       "winProb": 0.54191336865067,
       "drawProb": 0.25631037706450605,
       "loseProb": 0.20177625428482393,
-      "over25Prob": 0.5102040816326531,
+      "over25Prob": 0.5263157894736842,
       "isHome": true,
       "opponent": "Sevilla",
       "matchDate": "2026-05-23T19:00:00Z"
@@ -14721,61 +14712,61 @@
       "winProb": 0.20177625428482393,
       "drawProb": 0.25631037706450605,
       "loseProb": 0.54191336865067,
-      "over25Prob": 0.5102040816326531,
+      "over25Prob": 0.5263157894736842,
       "isHome": false,
       "opponent": "Celta Vigo",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Girona": {
-      "winProb": 0.5363119671613514,
-      "drawProb": 0.24167982317650769,
-      "loseProb": 0.22200820966214083,
+      "winProb": 0.5207988342054712,
+      "drawProb": 0.25617672385242096,
+      "loseProb": 0.2230244419421077,
       "over25Prob": 0.5882352941176471,
       "isHome": true,
       "opponent": "Elche CF",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Elche CF": {
-      "winProb": 0.22200820966214083,
-      "drawProb": 0.24167982317650769,
-      "loseProb": 0.5363119671613514,
+      "winProb": 0.2230244419421077,
+      "drawProb": 0.25617672385242096,
+      "loseProb": 0.5207988342054712,
       "over25Prob": 0.5882352941176471,
       "isHome": false,
       "opponent": "Girona",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Espanyol": {
-      "winProb": 0.37794954271585973,
-      "drawProb": 0.2843083127295422,
-      "loseProb": 0.33774214455459806,
-      "over25Prob": 0.5494505494505494,
+      "winProb": 0.3992137779081103,
+      "drawProb": 0.27539964968733405,
+      "loseProb": 0.3253865724045556,
+      "over25Prob": 0.5617977528089888,
       "isHome": true,
       "opponent": "Real Sociedad",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Real Sociedad": {
-      "winProb": 0.33774214455459806,
-      "drawProb": 0.2843083127295422,
-      "loseProb": 0.37794954271585973,
-      "over25Prob": 0.5494505494505494,
+      "winProb": 0.3253865724045556,
+      "drawProb": 0.27539964968733405,
+      "loseProb": 0.3992137779081103,
+      "over25Prob": 0.5617977528089888,
       "isHome": false,
       "opponent": "Espanyol",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Real Betis": {
-      "winProb": 0.4211568611271557,
-      "drawProb": 0.30365541711362326,
-      "loseProb": 0.27518772175922107,
-      "over25Prob": 0.5952380952380952,
+      "winProb": 0.41512782205774174,
+      "drawProb": 0.30038752341445285,
+      "loseProb": 0.28448465452780536,
+      "over25Prob": 0.5882352941176471,
       "isHome": true,
       "opponent": "Levante",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Levante": {
-      "winProb": 0.27518772175922107,
-      "drawProb": 0.30365541711362326,
-      "loseProb": 0.4211568611271557,
-      "over25Prob": 0.5952380952380952,
+      "winProb": 0.28448465452780536,
+      "drawProb": 0.30038752341445285,
+      "loseProb": 0.41512782205774174,
+      "over25Prob": 0.5882352941176471,
       "isHome": false,
       "opponent": "Real Betis",
       "matchDate": "2026-05-23T19:00:00Z"
@@ -14799,18 +14790,18 @@
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Villarreal": {
-      "winProb": 0.3917777289499405,
-      "drawProb": 0.26013198669525617,
-      "loseProb": 0.3480902843548033,
+      "winProb": 0.3935090127392148,
+      "drawProb": 0.2595260512971765,
+      "loseProb": 0.3469649359636087,
       "over25Prob": 0.6802721088435374,
       "isHome": true,
       "opponent": "Atlético Madrid",
       "matchDate": "2026-05-24T19:00:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.3480902843548033,
-      "drawProb": 0.26013198669525617,
-      "loseProb": 0.3917777289499405,
+      "winProb": 0.3469649359636087,
+      "drawProb": 0.2595260512971765,
+      "loseProb": 0.3935090127392148,
       "over25Prob": 0.6802721088435374,
       "isHome": false,
       "opponent": "Villarreal",
@@ -14819,82 +14810,82 @@
   },
   "news": [
     {
-      "title": "Almada anuncia su marcha y niega problemas con Cazorla",
-      "link": "https://www.jornadaperfecta.com/blog/almada-previa-mallorca-real-oviedo-j38/",
-      "date": "Fri, 22 May 2026 08:32:53 +0000",
-      "img": "https://cdn.biwenger.com/i/t/779.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Los Mejores Capitanes Fantasy para la jornada 38 de LaLiga",
-      "link": "https://www.jornadaperfecta.com/blog/capitanes-fantasy-j38-25-26/",
-      "date": "Fri, 22 May 2026 07:00:21 +0000",
-      "img": "https://cdn.biwenger.com/i/t/7.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Cinco noticias fantasy para antes de irte a dormir",
-      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-21-5-26/",
-      "date": "Thu, 21 May 2026 21:00:25 +0000",
+      "title": "Arda Güler entrena con el grupo, ¿llega al último partido?",
+      "link": "https://www.jornadaperfecta.com/blog/arda-guler-estado-j38-real-madrid/",
+      "date": "Fri, 22 May 2026 13:44:11 +0000",
       "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Parte médico de Jon Pacheco: operado del tobillo derecho",
-      "link": "https://www.jornadaperfecta.com/blog/jon-pacheco-operacion-tobillo-alaves/",
-      "date": "Thu, 21 May 2026 18:16:16 +0000",
-      "img": "https://cdn.biwenger.com/i/t/91.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Julián Alvarez, Molina, Nico y Giménez se marchan con sus selecciones antes de tiempo",
-      "link": "https://www.jornadaperfecta.com/blog/julian-alvarez-baja-j38-atleti/",
-      "date": "Thu, 21 May 2026 14:49:57 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Sorare Pro Global Cup 2026: más de $150K en premios durante el Mundial",
-      "link": "https://www.jornadaperfecta.com/blog/sorare-global-cup-mundial-26/",
-      "date": "Thu, 21 May 2026 14:00:36 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/05/Sorare-Pro-Global-Cup-Mundial-2.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Amrabat no entrena con el grupo, ¿llega a la jornada 38?",
-      "link": "https://www.jornadaperfecta.com/blog/amrabat-estado-betis-j38/",
-      "date": "Thu, 21 May 2026 13:58:37 +0000",
-      "img": "https://cdn.biwenger.com/i/t/87.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Podcast: Alineaciones Probables Jornada 38 2025/26",
-      "link": "https://www.jornadaperfecta.com/blog/podcast-alineaciones-probables-j38-25-26/",
-      "date": "Thu, 21 May 2026 13:30:05 +0000",
-      "img": "https://i.ytimg.com/vi/Ygr4zjwC1Vk/mqdefault.jpg",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Valverde se despide del Athletic y da suerte a Terzic",
-      "link": "https://www.jornadaperfecta.com/blog/valverde-previa-real-madrid-athletic-j38-25-26/",
-      "date": "Thu, 21 May 2026 12:57:01 +0000",
+      "title": "Actualizadas las Alineaciones Probables para la Jornada 38",
+      "link": "https://www.jornadaperfecta.com/blog/alineaciones-probables-j38-laliga-25-26/",
+      "date": "Fri, 22 May 2026 13:00:12 +0000",
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Lucas Beltrán sigue sin entrenar. Danjuma repite con el grupo",
-      "link": "https://www.jornadaperfecta.com/blog/lucas-beltran-estado-valencia-j38/",
-      "date": "Thu, 21 May 2026 12:41:04 +0000",
-      "img": "https://cdn.biwenger.com/i/t/18.png",
+      "title": "Matarazzo, sobre las bajas de Guedes y Wesley y el rendimiento de Kubo",
+      "link": "https://www.jornadaperfecta.com/blog/matarazzo-previa-espanyol-real-sociedad-j38/",
+      "date": "Fri, 22 May 2026 12:53:11 +0000",
+      "img": "https://cdn.biwenger.com/i/t/13.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Quique descarta hacer rotaciones ante el Rayo",
+      "link": "https://www.jornadaperfecta.com/blog/quique-previa-alaves-rayo-j38/",
+      "date": "Fri, 22 May 2026 12:23:24 +0000",
+      "img": "https://cdn.biwenger.com/i/t/91.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Luis Castro confirma la baja de Víctor García y deja en duda a Toljan",
+      "link": "https://www.jornadaperfecta.com/blog/luis-castro-previa-betis-levante-j38/",
+      "date": "Fri, 22 May 2026 12:00:08 +0000",
+      "img": "https://cdn.biwenger.com/i/t/10.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Míchel confirma que Stuani, Francés y Blind podrían jugar infiltrados",
+      "link": "https://www.jornadaperfecta.com/blog/michel-previa-girona-elche-j38/",
+      "date": "Fri, 22 May 2026 11:46:19 +0000",
+      "img": "https://cdn.biwenger.com/i/t/289.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Demichelis, sobre las bajas, la salvación, y la situación de Kumbulla",
+      "link": "https://www.jornadaperfecta.com/blog/demichelis-previa-mallorca-real-oviedo-j38/",
+      "date": "Fri, 22 May 2026 11:39:28 +0000",
+      "img": "https://cdn.biwenger.com/i/t/465.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Flick confirma los problemas de Jules Koundé",
+      "link": "https://www.jornadaperfecta.com/blog/flick-previa-valencia-barcelona-j38/",
+      "date": "Fri, 22 May 2026 11:15:16 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Arbeloa confirma la titularidad de Carvajal y deja en duda a Vinicius",
+      "link": "https://www.jornadaperfecta.com/blog/arbeloa-previa-real-madrid-athletic-j38/",
+      "date": "Fri, 22 May 2026 11:11:47 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Pellegrini, sobre Adrián, Isco, Antony, Amrabat y Altimira",
+      "link": "https://www.jornadaperfecta.com/blog/pellegrini-previa-betis-levante-j38/",
+      "date": "Fri, 22 May 2026 11:04:41 +0000",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -14903,7 +14894,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-05-22T08:45:17.982Z",
+    "updatedAt": "2026-05-22T14:09:53.550Z",
     "players": [
       {
         "id": "3374",
