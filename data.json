@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-22T19:19:33.099Z",
+  "updatedAt": "2026-05-23T01:50:47.001Z",
   "players": [
     {
       "id": 11,
@@ -12138,13 +12138,13 @@
           4,
           2
         ],
-        "teamSize": 14,
-        "teamValue": 94500000,
-        "teamValueInc": 1010000,
+        "teamSize": 15,
+        "teamValue": 98450000,
+        "teamValueInc": 1050000,
         "lastTrophy": {
           "type": "league",
           "position": 2,
-          "season": "2024/2025 season"
+          "season": "Temporada 2024/2025"
         },
         "position": 2
       },
@@ -12184,7 +12184,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "2024/2025 season"
+          "season": "Temporada 2024/2025"
         },
         "position": 4,
         "role": ""
@@ -12244,7 +12244,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 1,
-          "season": "2024/2025 season"
+          "season": "Temporada 2024/2025"
         },
         "position": 7
       },
@@ -12302,7 +12302,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "2023/2024 season"
+          "season": "Temporada 2023/2024"
         },
         "position": 10,
         "positionInc": 1,
@@ -12320,9 +12320,9 @@
           14,
           3
         ],
-        "teamSize": 10,
-        "teamValue": 33010000,
-        "teamValueInc": 200000,
+        "teamSize": 9,
+        "teamValue": 29060000,
+        "teamValueInc": 160000,
         "position": 11,
         "positionInc": -1,
         "role": ""
@@ -12398,8 +12398,8 @@
       "name": "LeMola Team",
       "manager": "LeMola Team",
       "points": 1995,
-      "value": 94500000,
-      "trend": 1010000,
+      "value": 98450000,
+      "trend": 1050000,
       "players": []
     },
     {
@@ -12479,8 +12479,8 @@
       "name": "NACECH1",
       "manager": "NACECH1",
       "points": 1506,
-      "value": 33010000,
-      "trend": 200000,
+      "value": 29060000,
+      "trend": 160000,
       "players": []
     },
     {
@@ -12700,6 +12700,26 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1779478953,
+      "content": [
+        {
+          "player": 19299,
+          "from": {
+            "id": 12696491,
+            "name": "NACECH1",
+            "icon": "https://graph.facebook.com/10235185447969563/picture?height=300&width=300"
+          },
+          "to": {
+            "id": 6552586,
+            "name": "LeMola Team",
+            "icon": "i/u/6552586.png"
+          },
+          "amount": 15000000
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1779476397,
@@ -12976,39 +12996,6 @@
           },
           "amount": 12090000,
           "type": "clause"
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1779426451,
-      "content": [
-        {
-          "player": 37725,
-          "to": {
-            "id": 12696899,
-            "name": "CIGALERU",
-            "icon": "i/u/12696899.png"
-          },
-          "amount": 19405510,
-          "bids": [
-            {
-              "user": {
-                "id": 8068002,
-                "name": "Soulands Rangers",
-                "icon": "i/u/8068002.png?v=69"
-              },
-              "amount": 7180000
-            },
-            {
-              "user": {
-                "id": 8068427,
-                "name": "Albertini",
-                "icon": "i/u/8068427.png"
-              },
-              "amount": 5982008
-            }
-          ]
         }
       ]
     }
@@ -14510,178 +14497,7 @@
         "name": "Real Oviedo"
       }
     },
-    "nextMatches": [
-      {
-        "id": 544581,
-        "matchday": 38,
-        "date": "2026-05-23T19:00:00Z",
-        "home": {
-          "id": 263,
-          "name": "Deportivo Alavés",
-          "short": "Alavés",
-          "crest": "https://crests.football-data.org/263.png"
-        },
-        "away": {
-          "id": 87,
-          "name": "Rayo Vallecano de Madrid",
-          "short": "Rayo Vallecano",
-          "crest": "https://crests.football-data.org/87.png"
-        }
-      },
-      {
-        "id": 544582,
-        "matchday": 38,
-        "date": "2026-05-23T19:00:00Z",
-        "home": {
-          "id": 90,
-          "name": "Real Betis Balompié",
-          "short": "Real Betis",
-          "crest": "https://crests.football-data.org/90.png"
-        },
-        "away": {
-          "id": 88,
-          "name": "Levante UD",
-          "short": "Levante",
-          "crest": "https://crests.football-data.org/88.png"
-        }
-      },
-      {
-        "id": 544583,
-        "matchday": 38,
-        "date": "2026-05-23T19:00:00Z",
-        "home": {
-          "id": 558,
-          "name": "RC Celta de Vigo",
-          "short": "Celta",
-          "crest": "https://crests.football-data.org/558.png"
-        },
-        "away": {
-          "id": 559,
-          "name": "Sevilla FC",
-          "short": "Sevilla FC",
-          "crest": "https://crests.football-data.org/559.png"
-        }
-      },
-      {
-        "id": 544584,
-        "matchday": 38,
-        "date": "2026-05-23T19:00:00Z",
-        "home": {
-          "id": 80,
-          "name": "RCD Espanyol de Barcelona",
-          "short": "Espanyol",
-          "crest": "https://crests.football-data.org/80.png"
-        },
-        "away": {
-          "id": 92,
-          "name": "Real Sociedad de Fútbol",
-          "short": "Real Sociedad",
-          "crest": "https://crests.football-data.org/92.png"
-        }
-      },
-      {
-        "id": 544585,
-        "matchday": 38,
-        "date": "2026-05-23T19:00:00Z",
-        "home": {
-          "id": 82,
-          "name": "Getafe CF",
-          "short": "Getafe",
-          "crest": "https://crests.football-data.org/82.png"
-        },
-        "away": {
-          "id": 79,
-          "name": "CA Osasuna",
-          "short": "Osasuna",
-          "crest": "https://crests.football-data.org/79.png"
-        }
-      },
-      {
-        "id": 544586,
-        "matchday": 38,
-        "date": "2026-05-23T19:00:00Z",
-        "home": {
-          "id": 89,
-          "name": "RCD Mallorca",
-          "short": "Mallorca",
-          "crest": "https://crests.football-data.org/89.png"
-        },
-        "away": {
-          "id": 1048,
-          "name": "Real Oviedo",
-          "short": "Real Oviedo",
-          "crest": "https://crests.football-data.org/1048.png"
-        }
-      },
-      {
-        "id": 544587,
-        "matchday": 38,
-        "date": "2026-05-23T19:00:00Z",
-        "home": {
-          "id": 86,
-          "name": "Real Madrid CF",
-          "short": "Real Madrid",
-          "crest": "https://crests.football-data.org/86.png"
-        },
-        "away": {
-          "id": 77,
-          "name": "Athletic Club",
-          "short": "Athletic",
-          "crest": "https://crests.football-data.org/77.png"
-        }
-      },
-      {
-        "id": 544589,
-        "matchday": 38,
-        "date": "2026-05-23T19:00:00Z",
-        "home": {
-          "id": 95,
-          "name": "Valencia CF",
-          "short": "Valencia",
-          "crest": "https://crests.football-data.org/95.png"
-        },
-        "away": {
-          "id": 81,
-          "name": "FC Barcelona",
-          "short": "Barça",
-          "crest": "https://crests.football-data.org/81.png"
-        }
-      },
-      {
-        "id": 544590,
-        "matchday": 38,
-        "date": "2026-05-23T19:00:00Z",
-        "home": {
-          "id": 298,
-          "name": "Girona FC",
-          "short": "Girona",
-          "crest": "https://crests.football-data.org/298.png"
-        },
-        "away": {
-          "id": 285,
-          "name": "Elche CF",
-          "short": "Elche",
-          "crest": "https://crests.football-data.org/285.png"
-        }
-      },
-      {
-        "id": 544588,
-        "matchday": 38,
-        "date": "2026-05-24T19:00:00Z",
-        "home": {
-          "id": 94,
-          "name": "Villarreal CF",
-          "short": "Villarreal",
-          "crest": "https://crests.football-data.org/94.png"
-        },
-        "away": {
-          "id": 78,
-          "name": "Club Atlético de Madrid",
-          "short": "Atleti",
-          "crest": "https://crests.football-data.org/78.png"
-        }
-      }
-    ],
+    "nextMatches": [],
     "recentResults": [
       {
         "date": "2026-05-17T19:15:00Z",
@@ -14859,36 +14675,36 @@
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Valencia": {
-      "winProb": 0.26853980417198814,
-      "drawProb": 0.2297147722435079,
-      "loseProb": 0.5017454235845041,
+      "winProb": 0.2756187412442277,
+      "drawProb": 0.2291288330825507,
+      "loseProb": 0.49525242567322164,
       "over25Prob": 0.6944444444444444,
       "isHome": true,
       "opponent": "Barcelona",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.5017454235845041,
-      "drawProb": 0.2297147722435079,
-      "loseProb": 0.26853980417198814,
+      "winProb": 0.49525242567322164,
+      "drawProb": 0.2291288330825507,
+      "loseProb": 0.2756187412442277,
       "over25Prob": 0.6944444444444444,
       "isHome": false,
       "opponent": "Valencia",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Getafe": {
-      "winProb": 0.36133576832768066,
-      "drawProb": 0.34959561701017483,
-      "loseProb": 0.2890686146621445,
+      "winProb": 0.35330994060337556,
+      "drawProb": 0.3469782212377237,
+      "loseProb": 0.2997118381589007,
       "over25Prob": 0.3508771929824561,
       "isHome": true,
       "opponent": "CA Osasuna",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "CA Osasuna": {
-      "winProb": 0.2890686146621445,
-      "drawProb": 0.34959561701017483,
-      "loseProb": 0.36133576832768066,
+      "winProb": 0.2997118381589007,
+      "drawProb": 0.3469782212377237,
+      "loseProb": 0.35330994060337556,
       "over25Prob": 0.3508771929824561,
       "isHome": false,
       "opponent": "Getafe",
@@ -14913,73 +14729,73 @@
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Girona": {
-      "winProb": 0.5363119671613514,
-      "drawProb": 0.24167982317650769,
-      "loseProb": 0.22200820966214083,
-      "over25Prob": 0.5813953488372093,
+      "winProb": 0.5488595025838786,
+      "drawProb": 0.23899704922639772,
+      "loseProb": 0.21214344818972383,
+      "over25Prob": 0.5882352941176471,
       "isHome": true,
       "opponent": "Elche CF",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Elche CF": {
-      "winProb": 0.22200820966214083,
-      "drawProb": 0.24167982317650769,
-      "loseProb": 0.5363119671613514,
-      "over25Prob": 0.5813953488372093,
+      "winProb": 0.21214344818972383,
+      "drawProb": 0.23899704922639772,
+      "loseProb": 0.5488595025838786,
+      "over25Prob": 0.5882352941176471,
       "isHome": false,
       "opponent": "Girona",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Espanyol": {
-      "winProb": 0.4111766672108082,
-      "drawProb": 0.2687126388532606,
-      "loseProb": 0.3201106939359312,
-      "over25Prob": 0.5813953488372093,
+      "winProb": 0.42916354844280696,
+      "drawProb": 0.26837833170226244,
+      "loseProb": 0.30245811985493065,
+      "over25Prob": 0.5952380952380952,
       "isHome": true,
       "opponent": "Real Sociedad",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Real Sociedad": {
-      "winProb": 0.3201106939359312,
-      "drawProb": 0.2687126388532606,
-      "loseProb": 0.4111766672108082,
-      "over25Prob": 0.5813953488372093,
+      "winProb": 0.30245811985493065,
+      "drawProb": 0.26837833170226244,
+      "loseProb": 0.42916354844280696,
+      "over25Prob": 0.5952380952380952,
       "isHome": false,
       "opponent": "Espanyol",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Real Betis": {
-      "winProb": 0.41349819993620024,
-      "drawProb": 0.2968054563959229,
-      "loseProb": 0.28969634366787683,
+      "winProb": 0.4170655748250796,
+      "drawProb": 0.2941009524602385,
+      "loseProb": 0.28883347271468196,
       "over25Prob": 0.5813953488372093,
       "isHome": true,
       "opponent": "Levante",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Levante": {
-      "winProb": 0.28969634366787683,
-      "drawProb": 0.2968054563959229,
-      "loseProb": 0.41349819993620024,
+      "winProb": 0.28883347271468196,
+      "drawProb": 0.2941009524602385,
+      "loseProb": 0.4170655748250796,
       "over25Prob": 0.5813953488372093,
       "isHome": false,
       "opponent": "Real Betis",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Mallorca": {
-      "winProb": 0.6597346719254212,
-      "drawProb": 0.20939404804589462,
-      "loseProb": 0.13087128002868412,
-      "over25Prob": 0.5208333333333334,
+      "winProb": 0.6629850119199274,
+      "drawProb": 0.20763029530969648,
+      "loseProb": 0.12938469277037615,
+      "over25Prob": 0.5235602094240838,
       "isHome": true,
       "opponent": "Oviedo",
       "matchDate": "2026-05-23T19:00:00Z"
     },
     "Oviedo": {
-      "winProb": 0.13087128002868412,
-      "drawProb": 0.20939404804589462,
-      "loseProb": 0.6597346719254212,
-      "over25Prob": 0.5208333333333334,
+      "winProb": 0.12938469277037615,
+      "drawProb": 0.20763029530969648,
+      "loseProb": 0.6629850119199274,
+      "over25Prob": 0.5235602094240838,
       "isHome": false,
       "opponent": "Mallorca",
       "matchDate": "2026-05-23T19:00:00Z"
@@ -15004,6 +14820,38 @@
     }
   },
   "news": [
+    {
+      "title": "Cinco noticias fantasy para antes de irte a dormir",
+      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-22-5-26/",
+      "date": "Fri, 22 May 2026 21:00:25 +0000",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Promoción YoSports Real Madrid vs Athletic: ¡consigue hasta 15€ en apuestas gratis!",
+      "link": "https://www.jornadaperfecta.com/blog/promocion-yosports-real-madrid-vs-athletic/",
+      "date": "Fri, 22 May 2026 20:00:49 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/05/YoSports-Real-Madrid-vs-Athletic.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Arda Güler entrena con el grupo, ¿llega al último partido?",
+      "link": "https://www.jornadaperfecta.com/blog/arda-guler-estado-j38-real-madrid/",
+      "date": "Fri, 22 May 2026 19:44:11 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Berenguer, baja en la convocatoria del Athletic Club",
+      "link": "https://www.jornadaperfecta.com/blog/berenguer-baja-j38-athletic-club/",
+      "date": "Fri, 22 May 2026 19:36:19 +0000",
+      "img": "https://cdn.biwenger.com/i/t/1.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "El All In de Victorius para la Jornada 38 de La Liga",
       "link": "https://www.jornadaperfecta.com/blog/all-in-victorius-j38-25-26/",
@@ -15051,45 +14899,13 @@
       "img": "https://cdn.biwenger.com/i/t/70.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Corberán confirma la baja de Beltrán; Danjuma, disponible",
-      "link": "https://www.jornadaperfecta.com/blog/corberan-previa-valencia-barcelona-j38/",
-      "date": "Fri, 22 May 2026 15:11:19 +0000",
-      "img": "https://cdn.biwenger.com/i/t/18.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Giráldez confirma la baja de Manu Fernández y habla de Aspas",
-      "link": "https://www.jornadaperfecta.com/blog/giraldez-previa-celta-sevilla-j38/",
-      "date": "Fri, 22 May 2026 15:03:29 +0000",
-      "img": "https://cdn.biwenger.com/i/t/5.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Manolo González habla de Carlos Romero y su futuro",
-      "link": "https://www.jornadaperfecta.com/blog/manolo-gonzalez-previa-espanyol-real-sociedad-j38/",
-      "date": "Fri, 22 May 2026 14:53:27 +0000",
-      "img": "https://cdn.biwenger.com/i/t/7.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Actualizadas las Alineaciones Probables para la Jornada 38",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-probables-j38-laliga-25-26/",
-      "date": "Fri, 22 May 2026 14:40:12 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-05-22T19:19:33.099Z",
+    "updatedAt": "2026-05-23T01:50:46.388Z",
     "players": [
       {
         "id": "3374",
