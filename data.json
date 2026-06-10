@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-10T09:36:14.089Z",
+  "updatedAt": "2026-06-10T14:45:53.679Z",
   "players": [
     {
       "id": 11,
@@ -9712,8 +9712,8 @@
       "trend": 0,
       "playedHome": 10,
       "playedAway": 9,
-      "teamName": "Real Madrid",
-      "teamId": 15,
+      "teamName": "",
+      "teamId": null,
       "status": "ok",
       "jForm": [
         3,
@@ -10321,6 +10321,22 @@
       "playedAway": 0,
       "teamName": "",
       "teamId": null,
+      "status": "ok",
+      "jForm": [],
+      "clausula": null
+    },
+    {
+      "id": 41253,
+      "slug": "ramis-2",
+      "name": "Ramis",
+      "position": 5,
+      "price": 440000,
+      "points": 0,
+      "trend": 0,
+      "playedHome": 0,
+      "playedAway": 0,
+      "teamName": "Osasuna",
+      "teamId": 93,
       "status": "ok",
       "jForm": [],
       "clausula": null
@@ -12640,6 +12656,22 @@
   "odds": {},
   "news": [
     {
+      "title": "Oficial: Jon Guridi, nuevo jugador del Sevilla FC",
+      "link": "https://www.jornadaperfecta.com/blog/jon-guridi-sevilla-fc-anuncio/",
+      "date": "Wed, 10 Jun 2026 14:10:26 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "El Barça no pagará la cláusula de Marcus Rashford, que vuelve al United",
+      "link": "https://www.jornadaperfecta.com/blog/barca-no-clausula-rashford/",
+      "date": "Wed, 10 Jun 2026 12:07:04 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Ramis se convierte en el nuevo entrenador de CA Osasuna",
       "link": "https://www.jornadaperfecta.com/blog/ramis-nuevo-entrenador-osasuna/",
       "date": "Wed, 10 Jun 2026 09:35:39 +0000",
@@ -12702,29 +12734,13 @@
       "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/06/Jokerbet-Cashback-playoffs-laliga-2.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "La oferta de 150 millones del Real Madrid será por Michael Olise",
-      "link": "https://www.jornadaperfecta.com/blog/michael-olise-fichaje-real-madrid/",
-      "date": "Fri, 05 Jun 2026 21:31:38 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Klopp, el entrenador elegido por Riquelme si gana las elecciones del Real Madrid",
-      "link": "https://www.jornadaperfecta.com/blog/klopp-entrenador-real-madrid-riquelme/",
-      "date": "Fri, 05 Jun 2026 21:30:40 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-06-10T09:36:13.451Z",
+    "updatedAt": "2026-06-10T14:45:51.794Z",
     "players": [
       {
         "id": "3374",
