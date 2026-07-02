@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-02T08:37:40.965Z",
+  "updatedAt": "2026-07-02T13:24:33.152Z",
   "players": [
     {
       "id": 11,
@@ -15142,18 +15142,18 @@
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.4088604804937183,
-      "drawProb": 0.10513555212695613,
-      "loseProb": 0.48600396737932555,
+      "winProb": 0.40505973734285805,
+      "drawProb": 0.10581152322425678,
+      "loseProb": 0.4891287394328851,
       "over25Prob": 0.5813953488372093,
       "isHome": true,
       "opponent": "Málaga",
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Málaga": {
-      "winProb": 0.48600396737932555,
-      "drawProb": 0.10513555212695613,
-      "loseProb": 0.4088604804937183,
+      "winProb": 0.4891287394328851,
+      "drawProb": 0.10581152322425678,
+      "loseProb": 0.40505973734285805,
       "over25Prob": 0.5813953488372093,
       "isHome": false,
       "opponent": "Atlético Madrid",
@@ -15163,7 +15163,7 @@
       "winProb": 0.43715159144038834,
       "drawProb": 0.25714799496493435,
       "loseProb": 0.3057004135946772,
-      "over25Prob": 0.49504950495049505,
+      "over25Prob": 0.4854368932038835,
       "isHome": true,
       "opponent": "CA Osasuna",
       "matchDate": "2026-08-16T19:00:00Z"
@@ -15172,16 +15172,34 @@
       "winProb": 0.3057004135946772,
       "drawProb": 0.25714799496493435,
       "loseProb": 0.43715159144038834,
-      "over25Prob": 0.49504950495049505,
+      "over25Prob": 0.4854368932038835,
       "isHome": false,
       "opponent": "Celta Vigo",
+      "matchDate": "2026-08-16T19:00:00Z"
+    },
+    "Deportivo La Coruña": {
+      "winProb": 0.40019364208487984,
+      "drawProb": 0.3046635468775214,
+      "loseProb": 0.2951428110375989,
+      "over25Prob": 0.4716981132075471,
+      "isHome": true,
+      "opponent": "Elche CF",
+      "matchDate": "2026-08-16T19:00:00Z"
+    },
+    "Elche CF": {
+      "winProb": 0.2951428110375989,
+      "drawProb": 0.3046635468775214,
+      "loseProb": 0.40019364208487984,
+      "over25Prob": 0.4716981132075471,
+      "isHome": false,
+      "opponent": "Deportivo La Coruña",
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Espanyol": {
       "winProb": 0.2963282799206806,
       "drawProb": 0.17082453783662765,
       "loseProb": 0.5328471822426917,
-      "over25Prob": 0.49504950495049505,
+      "over25Prob": 0.5050505050505051,
       "isHome": true,
       "opponent": "Levante",
       "matchDate": "2026-08-16T19:00:00Z"
@@ -15190,7 +15208,7 @@
       "winProb": 0.5328471822426917,
       "drawProb": 0.17082453783662765,
       "loseProb": 0.2963282799206806,
-      "over25Prob": 0.49504950495049505,
+      "over25Prob": 0.5050505050505051,
       "isHome": false,
       "opponent": "Espanyol",
       "matchDate": "2026-08-16T19:00:00Z"
@@ -15199,7 +15217,7 @@
       "winProb": 0.3941841680129241,
       "drawProb": 0.3101777059773829,
       "loseProb": 0.2956381260096931,
-      "over25Prob": 0.4081632653061224,
+      "over25Prob": 0.4608294930875576,
       "isHome": true,
       "opponent": "Rayo Vallecano",
       "matchDate": "2026-08-16T19:00:00Z"
@@ -15208,7 +15226,7 @@
       "winProb": 0.2956381260096931,
       "drawProb": 0.3101777059773829,
       "loseProb": 0.3941841680129241,
-      "over25Prob": 0.4081632653061224,
+      "over25Prob": 0.4608294930875576,
       "isHome": false,
       "opponent": "Sevilla",
       "matchDate": "2026-08-16T19:00:00Z"
@@ -15217,7 +15235,7 @@
       "winProb": 0.3515765856003846,
       "drawProb": 0.2942425577947834,
       "loseProb": 0.35418085660483184,
-      "over25Prob": 0.5102040816326531,
+      "over25Prob": 0.5128205128205129,
       "isHome": true,
       "opponent": "Real Betis",
       "matchDate": "2026-08-16T19:00:00Z"
@@ -15226,7 +15244,7 @@
       "winProb": 0.35418085660483184,
       "drawProb": 0.2942425577947834,
       "loseProb": 0.3515765856003846,
-      "over25Prob": 0.5102040816326531,
+      "over25Prob": 0.5128205128205129,
       "isHome": false,
       "opponent": "Valencia",
       "matchDate": "2026-08-16T19:00:00Z"
@@ -15248,9 +15266,43 @@
       "isHome": false,
       "opponent": "Real Madrid",
       "matchDate": "2026-08-16T19:00:00Z"
+    },
+    "Real Racing Club de Santander": {
+      "winProb": 0.3063863908743673,
+      "drawProb": 0.25931833662410225,
+      "loseProb": 0.43429527250153044,
+      "over25Prob": 0.5319148936170213,
+      "isHome": true,
+      "opponent": "Villarreal",
+      "matchDate": "2026-08-16T19:00:00Z"
+    },
+    "Villarreal": {
+      "winProb": 0.43429527250153044,
+      "drawProb": 0.25931833662410225,
+      "loseProb": 0.3063863908743673,
+      "over25Prob": 0.5319148936170213,
+      "isHome": false,
+      "opponent": "Real Racing Club de Santander",
+      "matchDate": "2026-08-16T19:00:00Z"
     }
   },
   "news": [
+    {
+      "title": "La Maxicuota Codere del Portugal &#8211; Croacia: ¡Apuesta por Cristiano a 5.00 euros!",
+      "link": "https://www.jornadaperfecta.com/blog/codere-maxicuota-portugal-croacia-cristiano/",
+      "date": "Thu, 02 Jul 2026 09:00:01 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/07/supercuota-de-codere-portugal-vs-croacia.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "La maldición del Ranking FIFA: ¿puede el nº1 ganar el Mundial 2026?",
+      "link": "https://www.jornadaperfecta.com/blog/apuestas-mundial-2026-ranking-fifa/",
+      "date": "Thu, 02 Jul 2026 08:38:05 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Promoción MARCAapuestas España vs Austria: ¡Seguro del 25% hasta 10€ si fallas!",
       "link": "https://www.jornadaperfecta.com/blog/marcaapuestas-espana-vs-austria-seguro/",
@@ -15314,29 +15366,13 @@
       "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/06/jornada-1-laliga-2026-27.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Betfair mejora la cuota para el Mundial 2026: Inglaterra y Francia ganan con goles de Kane y Dembélé",
-      "link": "https://www.jornadaperfecta.com/blog/supercuota-betfair-inglaterra-francia-mundial/",
-      "date": "Tue, 30 Jun 2026 15:56:35 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/06/Betfair-Supercuota-Inglaterra-y-Francia-Mundial-2026.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Oficial: Grimaldo, nuevo fichaje del Atlético de Madrid",
-      "link": "https://www.jornadaperfecta.com/blog/grimaldo-fichaje-atletico-de-madrid/",
-      "date": "Tue, 30 Jun 2026 15:41:33 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-07-02T08:37:38.251Z",
+    "updatedAt": "2026-07-02T13:24:29.953Z",
     "players": []
   }
 }
