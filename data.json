@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-02T19:04:46.212Z",
+  "updatedAt": "2026-07-03T01:43:22.865Z",
   "players": [
     {
       "id": 11,
@@ -9141,28 +9141,6 @@
       "clausula": null
     },
     {
-      "id": 37473,
-      "slug": "victor-munoz",
-      "name": "Víctor Muñoz",
-      "position": 4,
-      "price": 7010000,
-      "points": 195,
-      "trend": 0,
-      "playedHome": 17,
-      "playedAway": 17,
-      "teamName": "",
-      "teamId": null,
-      "status": "ok",
-      "jForm": [
-        null,
-        12,
-        null,
-        null,
-        null
-      ],
-      "clausula": null
-    },
-    {
       "id": 37488,
       "slug": "dani-requena",
       "name": "Dani Requena",
@@ -15124,36 +15102,36 @@
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.5510305851063829,
-      "drawProb": 0.23986037234042554,
-      "loseProb": 0.20910904255319152,
+      "winProb": 0.5592251894476638,
+      "drawProb": 0.2366576164039389,
+      "loseProb": 0.2041171941483973,
       "over25Prob": 0.5,
       "isHome": true,
       "opponent": "Athletic Bilbao",
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Athletic Bilbao": {
-      "winProb": 0.20910904255319152,
-      "drawProb": 0.23986037234042554,
-      "loseProb": 0.5510305851063829,
+      "winProb": 0.2041171941483973,
+      "drawProb": 0.2366576164039389,
+      "loseProb": 0.5592251894476638,
       "over25Prob": 0.5,
       "isHome": false,
       "opponent": "Barcelona",
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.409067520439083,
-      "drawProb": 0.09696415299296782,
-      "loseProb": 0.49396832656794926,
+      "winProb": 0.40832049306625584,
+      "drawProb": 0.09861325115562405,
+      "loseProb": 0.4930662557781202,
       "over25Prob": 0.5813953488372093,
       "isHome": true,
       "opponent": "Málaga",
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Málaga": {
-      "winProb": 0.49396832656794926,
-      "drawProb": 0.09696415299296782,
-      "loseProb": 0.409067520439083,
+      "winProb": 0.4930662557781202,
+      "drawProb": 0.09861325115562405,
+      "loseProb": 0.40832049306625584,
       "over25Prob": 0.5813953488372093,
       "isHome": false,
       "opponent": "Atlético Madrid",
@@ -15178,18 +15156,18 @@
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Deportivo La Coruña": {
-      "winProb": 0.40223826129267704,
-      "drawProb": 0.30362501013705295,
-      "loseProb": 0.29413672857027007,
+      "winProb": 0.4055531690553365,
+      "drawProb": 0.30874370289374004,
+      "loseProb": 0.28570312805092357,
       "over25Prob": 0.4716981132075471,
       "isHome": true,
       "opponent": "Elche CF",
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Elche CF": {
-      "winProb": 0.29413672857027007,
-      "drawProb": 0.30362501013705295,
-      "loseProb": 0.40223826129267704,
+      "winProb": 0.28570312805092357,
+      "drawProb": 0.30874370289374004,
+      "loseProb": 0.4055531690553365,
       "over25Prob": 0.4716981132075471,
       "isHome": false,
       "opponent": "Deportivo La Coruña",
@@ -15288,6 +15266,14 @@
   },
   "news": [
     {
+      "title": "El Real Betis cierra un acuerdo por Facundo Bernal",
+      "link": "https://www.jornadaperfecta.com/blog/facundo-bernal-betis-acuerdo/",
+      "date": "Thu, 02 Jul 2026 21:50:07 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Supercuota Betfair España vs Austria: cuota mejorada a 2.0",
       "link": "https://www.jornadaperfecta.com/blog/supercuota-betfair-espana-vs-austria/",
       "date": "Thu, 02 Jul 2026 13:29:39 +0000",
@@ -15358,21 +15344,13 @@
       "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/07/maxicuota-codere-espana-austria.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Oficial: Javi Galán, nuevo jugador del RC Celta",
-      "link": "https://www.jornadaperfecta.com/blog/javi-galan-fichaje-celta/",
-      "date": "Tue, 30 Jun 2026 19:16:11 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-07-02T19:04:43.158Z",
+    "updatedAt": "2026-07-03T01:43:20.362Z",
     "players": []
   }
 }
