@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-03T18:57:23.324Z",
+  "updatedAt": "2026-07-04T01:30:25.910Z",
   "players": [
     {
       "id": 11,
@@ -1624,7 +1624,13 @@
       "teamName": "Málaga",
       "teamId": 65,
       "status": "ok",
-      "jForm": [],
+      "jForm": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
       "clausula": null
     },
     {
@@ -2044,28 +2050,6 @@
         3,
         3,
         1,
-        null,
-        null
-      ],
-      "clausula": null
-    },
-    {
-      "id": 8517,
-      "slug": "alejandro-primo",
-      "name": "Álex Primo",
-      "position": 1,
-      "price": 180000,
-      "points": 0,
-      "trend": 0,
-      "playedHome": 0,
-      "playedAway": 0,
-      "teamName": "",
-      "teamId": null,
-      "status": "ok",
-      "jForm": [
-        null,
-        null,
-        null,
         null,
         null
       ],
@@ -2774,8 +2758,8 @@
       "trend": 0,
       "playedHome": 16,
       "playedAway": 13,
-      "teamName": "",
-      "teamId": null,
+      "teamName": "Real Sociedad",
+      "teamId": 13,
       "status": "ok",
       "jForm": [
         null,
@@ -3133,6 +3117,28 @@
         0,
         3,
         3
+      ],
+      "clausula": null
+    },
+    {
+      "id": 14630,
+      "slug": "leo-roman",
+      "name": "Leo Román",
+      "position": 1,
+      "price": 3180000,
+      "points": 162,
+      "trend": 0,
+      "playedHome": 17,
+      "playedAway": 16,
+      "teamName": "Deportivo",
+      "teamId": 6,
+      "status": "ok",
+      "jForm": [
+        3,
+        6,
+        -2,
+        3,
+        10
       ],
       "clausula": null
     },
@@ -6426,28 +6432,6 @@
       "clausula": null
     },
     {
-      "id": 28187,
-      "slug": "pau-cabanes",
-      "name": "Pau Cabanes",
-      "position": 4,
-      "price": 160000,
-      "points": 2,
-      "trend": 0,
-      "playedHome": 1,
-      "playedAway": 0,
-      "teamName": "",
-      "teamId": null,
-      "status": "ok",
-      "jForm": [
-        2,
-        null,
-        null,
-        null,
-        null
-      ],
-      "clausula": null
-    },
-    {
       "id": 28309,
       "slug": "carlos-alvarez",
       "name": "Carlos Álvarez",
@@ -7314,28 +7298,6 @@
       "clausula": null
     },
     {
-      "id": 32017,
-      "slug": "alberto-dadie",
-      "name": "Alberto Dadie",
-      "position": 4,
-      "price": 170000,
-      "points": 0,
-      "trend": 0,
-      "playedHome": 0,
-      "playedAway": 0,
-      "teamName": "",
-      "teamId": null,
-      "status": "ok",
-      "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "clausula": null
-    },
-    {
       "id": 32020,
       "slug": "jon-aramburu",
       "name": "Aramburu",
@@ -8009,28 +7971,6 @@
       "teamId": 10,
       "status": "ok",
       "jForm": [],
-      "clausula": null
-    },
-    {
-      "id": 33921,
-      "slug": "ander-yoldi",
-      "name": "Ander Yoldi",
-      "position": 4,
-      "price": 190000,
-      "points": 0,
-      "trend": 0,
-      "playedHome": 0,
-      "playedAway": 0,
-      "teamName": "",
-      "teamId": null,
-      "status": "ok",
-      "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
       "clausula": null
     },
     {
@@ -9008,28 +8948,6 @@
       "teamId": 70,
       "status": "ok",
       "jForm": [
-        null,
-        null,
-        null
-      ],
-      "clausula": null
-    },
-    {
-      "id": 36556,
-      "slug": "mariezkurrena",
-      "name": "Mariezkurrena",
-      "position": 4,
-      "price": 180000,
-      "points": 0,
-      "trend": 0,
-      "playedHome": 0,
-      "playedAway": 1,
-      "teamName": "",
-      "teamId": null,
-      "status": "ok",
-      "jForm": [
-        null,
-        null,
         null,
         null,
         null
@@ -11617,7 +11535,13 @@
       "teamName": "Deportivo",
       "teamId": 6,
       "status": "ok",
-      "jForm": [],
+      "jForm": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
       "clausula": null
     },
     {
@@ -12501,7 +12425,13 @@
       "teamName": "Málaga",
       "teamId": 65,
       "status": "ok",
-      "jForm": [],
+      "jForm": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
       "clausula": null
     },
     {
@@ -12514,8 +12444,8 @@
       "trend": 0,
       "playedHome": 0,
       "playedAway": 0,
-      "teamName": "",
-      "teamId": null,
+      "teamName": "Málaga",
+      "teamId": 65,
       "status": "ok",
       "jForm": [],
       "clausula": null
@@ -15155,7 +15085,7 @@
       "winProb": 0.40832049306625584,
       "drawProb": 0.09861325115562405,
       "loseProb": 0.4930662557781202,
-      "over25Prob": 0.591715976331361,
+      "over25Prob": 0.5780346820809249,
       "isHome": true,
       "opponent": "Málaga",
       "matchDate": "2026-08-16T19:00:00Z"
@@ -15164,7 +15094,7 @@
       "winProb": 0.4930662557781202,
       "drawProb": 0.09861325115562405,
       "loseProb": 0.40832049306625584,
-      "over25Prob": 0.591715976331361,
+      "over25Prob": 0.5780346820809249,
       "isHome": false,
       "opponent": "Atlético Madrid",
       "matchDate": "2026-08-16T19:00:00Z"
@@ -15173,7 +15103,7 @@
       "winProb": 0.45945945945945943,
       "drawProb": 0.27027027027027023,
       "loseProb": 0.27027027027027023,
-      "over25Prob": 0.48309178743961356,
+      "over25Prob": 0.4926108374384237,
       "isHome": true,
       "opponent": "CA Osasuna",
       "matchDate": "2026-08-16T19:00:00Z"
@@ -15182,7 +15112,7 @@
       "winProb": 0.27027027027027023,
       "drawProb": 0.27027027027027023,
       "loseProb": 0.45945945945945943,
-      "over25Prob": 0.48309178743961356,
+      "over25Prob": 0.4926108374384237,
       "isHome": false,
       "opponent": "Celta Vigo",
       "matchDate": "2026-08-16T19:00:00Z"
@@ -15191,7 +15121,7 @@
       "winProb": 0.4089186825998251,
       "drawProb": 0.31372777615855435,
       "loseProb": 0.2773535412416205,
-      "over25Prob": 0.46511627906976744,
+      "over25Prob": 0.45454545454545453,
       "isHome": true,
       "opponent": "Elche CF",
       "matchDate": "2026-08-16T19:00:00Z"
@@ -15200,7 +15130,7 @@
       "winProb": 0.2773535412416205,
       "drawProb": 0.31372777615855435,
       "loseProb": 0.4089186825998251,
-      "over25Prob": 0.46511627906976744,
+      "over25Prob": 0.45454545454545453,
       "isHome": false,
       "opponent": "Deportivo La Coruña",
       "matchDate": "2026-08-16T19:00:00Z"
@@ -15209,7 +15139,7 @@
       "winProb": 0.2963282799206806,
       "drawProb": 0.17082453783662765,
       "loseProb": 0.5328471822426917,
-      "over25Prob": 0.5050505050505051,
+      "over25Prob": 0.49504950495049505,
       "isHome": true,
       "opponent": "Levante",
       "matchDate": "2026-08-16T19:00:00Z"
@@ -15218,7 +15148,7 @@
       "winProb": 0.5328471822426917,
       "drawProb": 0.17082453783662765,
       "loseProb": 0.2963282799206806,
-      "over25Prob": 0.5050505050505051,
+      "over25Prob": 0.49504950495049505,
       "isHome": false,
       "opponent": "Espanyol",
       "matchDate": "2026-08-16T19:00:00Z"
@@ -15278,25 +15208,33 @@
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Real Racing Club de Santander": {
-      "winProb": 0.2972085729221119,
-      "drawProb": 0.2627496079456351,
-      "loseProb": 0.440041819132253,
-      "over25Prob": 0.5319148936170213,
+      "winProb": 0.29970326409495546,
+      "drawProb": 0.40059347181008903,
+      "loseProb": 0.29970326409495546,
+      "over25Prob": 0.5208333333333334,
       "isHome": true,
       "opponent": "Villarreal",
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Villarreal": {
-      "winProb": 0.440041819132253,
-      "drawProb": 0.2627496079456351,
-      "loseProb": 0.2972085729221119,
-      "over25Prob": 0.5319148936170213,
+      "winProb": 0.29970326409495546,
+      "drawProb": 0.40059347181008903,
+      "loseProb": 0.29970326409495546,
+      "over25Prob": 0.5208333333333334,
       "isHome": false,
       "opponent": "Real Racing Club de Santander",
       "matchDate": "2026-08-16T19:00:00Z"
     }
   },
   "news": [
+    {
+      "title": "Betway te regala 5€ en Apuesta Gratis por apostar al España &#8211; Portugal",
+      "link": "https://www.jornadaperfecta.com/blog/apostar-espana-portugal-betway/",
+      "date": "Fri, 03 Jul 2026 19:00:19 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/07/freebet-betway-espana-portugal.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Mercado de fichajes de invierno de LaLiga 26/27: altas y bajas oficiales",
       "link": "https://www.jornadaperfecta.com/blog/mercado-fichajes-verano-26-27/",
@@ -15368,21 +15306,13 @@
       "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/06/MARCAapuestas-Espana-vs-Austria.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Oferta de bet365 al España &#8211; Austria: Consigue créditos de apuesta",
-      "link": "https://www.jornadaperfecta.com/blog/oferta-bet365-espana-austria-mundial-2026/",
-      "date": "Wed, 01 Jul 2026 19:00:59 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/07/oferta-espana-austria-bet365-300x161.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-07-03T18:57:20.444Z",
+    "updatedAt": "2026-07-04T01:30:22.737Z",
     "players": []
   }
 }
