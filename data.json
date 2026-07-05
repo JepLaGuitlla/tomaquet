@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-04T18:51:33.565Z",
+  "updatedAt": "2026-07-05T01:46:17.786Z",
   "players": [
     {
       "id": 11,
@@ -7616,28 +7616,6 @@
       "clausula": null
     },
     {
-      "id": 33243,
-      "slug": "risco",
-      "name": "Risco",
-      "position": 3,
-      "price": 170000,
-      "points": 0,
-      "trend": 0,
-      "playedHome": 0,
-      "playedAway": 0,
-      "teamName": "",
-      "teamId": null,
-      "status": "ok",
-      "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "clausula": null
-    },
-    {
       "id": 33447,
       "slug": "jon-martin",
       "name": "Jon Martín",
@@ -10617,8 +10595,8 @@
       "trend": 0,
       "playedHome": 0,
       "playedAway": 0,
-      "teamName": "Barcelona",
-      "teamId": 3,
+      "teamName": "",
+      "teamId": null,
       "status": "ok",
       "jForm": [
         null,
@@ -15193,7 +15171,7 @@
       "winProb": 0.2972085729221119,
       "drawProb": 0.2627496079456351,
       "loseProb": 0.440041819132253,
-      "over25Prob": 0.5405405405405405,
+      "over25Prob": 0.5319148936170213,
       "isHome": true,
       "opponent": "Villarreal",
       "matchDate": "2026-08-16T19:00:00Z"
@@ -15202,13 +15180,21 @@
       "winProb": 0.440041819132253,
       "drawProb": 0.2627496079456351,
       "loseProb": 0.2972085729221119,
-      "over25Prob": 0.5405405405405405,
+      "over25Prob": 0.5319148936170213,
       "isHome": false,
       "opponent": "Real Racing Club de Santander",
       "matchDate": "2026-08-16T19:00:00Z"
     }
   },
   "news": [
+    {
+      "title": "Supercuota YoSports Portugal vs España: apuesta mejorada a cuota 7.00",
+      "link": "https://www.jornadaperfecta.com/blog/yosports-superapuesta-portugal-vs-espana/",
+      "date": "Sat, 04 Jul 2026 19:00:34 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/07/YoSports-Portugal-vs-Espana.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Mercado de fichajes de invierno de LaLiga 26/27: altas y bajas oficiales",
       "link": "https://www.jornadaperfecta.com/blog/mercado-fichajes-verano-26-27/",
@@ -15280,21 +15266,13 @@
       "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/07/supercuota-de-codere-portugal-vs-croacia.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "La maldición del Ranking FIFA: ¿puede el nº1 ganar el Mundial 2026?",
-      "link": "https://www.jornadaperfecta.com/blog/apuestas-mundial-2026-ranking-fifa/",
-      "date": "Thu, 02 Jul 2026 08:38:05 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-07-04T18:51:30.959Z",
+    "updatedAt": "2026-07-05T01:46:15.072Z",
     "players": []
   }
 }
