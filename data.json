@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-05T08:36:20.833Z",
+  "updatedAt": "2026-07-05T13:01:49.474Z",
   "players": [
     {
       "id": 11,
@@ -15006,18 +15006,18 @@
   },
   "odds": {
     "Alavés": {
-      "winProb": 0.38983050847457623,
-      "drawProb": 0.33898305084745767,
-      "loseProb": 0.2711864406779661,
+      "winProb": 0.3867001254705144,
+      "drawProb": 0.3362609786700126,
+      "loseProb": 0.277038895859473,
       "over25Prob": 0.5,
       "isHome": true,
       "opponent": "Getafe",
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Getafe": {
-      "winProb": 0.2711864406779661,
-      "drawProb": 0.33898305084745767,
-      "loseProb": 0.38983050847457623,
+      "winProb": 0.277038895859473,
+      "drawProb": 0.3362609786700126,
+      "loseProb": 0.3867001254705144,
       "over25Prob": 0.5,
       "isHome": false,
       "opponent": "Alavés",
@@ -15042,18 +15042,18 @@
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.7412398921832885,
-      "drawProb": 0.1725067385444744,
-      "loseProb": 0.0862533692722372,
+      "winProb": 0.7470178339435456,
+      "drawProb": 0.17113499468524865,
+      "loseProb": 0.08184717137120587,
       "over25Prob": 0.5681818181818182,
       "isHome": true,
       "opponent": "Málaga",
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Málaga": {
-      "winProb": 0.0862533692722372,
-      "drawProb": 0.1725067385444744,
-      "loseProb": 0.7412398921832885,
+      "winProb": 0.08184717137120587,
+      "drawProb": 0.17113499468524865,
+      "loseProb": 0.7470178339435456,
       "over25Prob": 0.5681818181818182,
       "isHome": false,
       "opponent": "Atlético Madrid",
@@ -15096,18 +15096,18 @@
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Espanyol": {
-      "winProb": 0.2963282799206806,
-      "drawProb": 0.17082453783662765,
-      "loseProb": 0.5328471822426917,
+      "winProb": 0.2995546287090699,
+      "drawProb": 0.1700413039436779,
+      "loseProb": 0.5304040673472521,
       "over25Prob": 0.49504950495049505,
       "isHome": true,
       "opponent": "Levante",
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Levante": {
-      "winProb": 0.5328471822426917,
-      "drawProb": 0.17082453783662765,
-      "loseProb": 0.2963282799206806,
+      "winProb": 0.5304040673472521,
+      "drawProb": 0.1700413039436779,
+      "loseProb": 0.2995546287090699,
       "over25Prob": 0.49504950495049505,
       "isHome": false,
       "opponent": "Espanyol",
@@ -15188,18 +15188,34 @@
   },
   "news": [
     {
-      "title": "Supercuota YoSports Portugal vs España: apuesta mejorada a cuota 7.00",
-      "link": "https://www.jornadaperfecta.com/blog/yosports-superapuesta-portugal-vs-espana/",
-      "date": "Sat, 04 Jul 2026 19:00:34 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/07/YoSports-Portugal-vs-Espana.webp",
+      "title": "Promoción Sportium Portugal vs España: apuesta 5€ y recibe 25€ gratis",
+      "link": "https://www.jornadaperfecta.com/blog/sportium-portugal-vs-espana-promocion/",
+      "date": "Sun, 05 Jul 2026 11:09:59 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/07/Sportium-Portugal-vs-Espana.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Oficial: Denzel Dumfries, nuevo jugador del Real Madrid",
+      "link": "https://www.jornadaperfecta.com/blog/dumfries-real-madrid-anuncio/",
+      "date": "Sun, 05 Jul 2026 10:25:15 +0000",
+      "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
       "title": "Mercado de fichajes de invierno de LaLiga 26/27: altas y bajas oficiales",
       "link": "https://www.jornadaperfecta.com/blog/mercado-fichajes-verano-26-27/",
-      "date": "Sat, 04 Jul 2026 15:30:36 +0000",
+      "date": "Sun, 05 Jul 2026 10:00:36 +0000",
       "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Supercuota YoSports Portugal vs España: apuesta mejorada a cuota 7.00",
+      "link": "https://www.jornadaperfecta.com/blog/yosports-superapuesta-portugal-vs-espana/",
+      "date": "Sat, 04 Jul 2026 19:00:34 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/07/YoSports-Portugal-vs-Espana.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
@@ -15250,29 +15266,13 @@
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Supercuota Betfair España vs Austria: cuota mejorada a 2.0",
-      "link": "https://www.jornadaperfecta.com/blog/supercuota-betfair-espana-vs-austria/",
-      "date": "Thu, 02 Jul 2026 13:29:39 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/07/Betfair-Supercuota-Espana-vs-Austria.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "La Maxicuota Codere del Portugal &#8211; Croacia: ¡Apuesta por Cristiano a 5.00 euros!",
-      "link": "https://www.jornadaperfecta.com/blog/codere-maxicuota-portugal-croacia-cristiano/",
-      "date": "Thu, 02 Jul 2026 09:00:01 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/07/supercuota-de-codere-portugal-vs-croacia.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-07-05T08:36:18.098Z",
+    "updatedAt": "2026-07-05T13:01:46.256Z",
     "players": []
   }
 }
