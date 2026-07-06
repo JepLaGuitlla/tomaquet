@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-05T18:55:58.182Z",
+  "updatedAt": "2026-07-06T01:52:48.106Z",
   "players": [
     {
       "id": 11,
@@ -4112,8 +4112,8 @@
       "trend": 0,
       "playedHome": 0,
       "playedAway": 0,
-      "teamName": "Racing",
-      "teamId": 812,
+      "teamName": "",
+      "teamId": null,
       "status": "ok",
       "jForm": [],
       "clausula": null
@@ -12873,6 +12873,22 @@
       "status": "ok",
       "jForm": [],
       "clausula": null
+    },
+    {
+      "id": 42362,
+      "slug": "denzel-dumfries",
+      "name": "Dumfries",
+      "position": 2,
+      "price": 4070000,
+      "points": 0,
+      "trend": 0,
+      "playedHome": 0,
+      "playedAway": 0,
+      "teamName": "Real Madrid",
+      "teamId": 15,
+      "status": "ok",
+      "jForm": [],
+      "clausula": null
     }
   ],
   "league": {
@@ -15096,18 +15112,18 @@
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Espanyol": {
-      "winProb": 0.2963282799206806,
-      "drawProb": 0.17082453783662765,
-      "loseProb": 0.5328471822426917,
+      "winProb": 0.4887192067166499,
+      "drawProb": 0.2776491725114881,
+      "loseProb": 0.23363162077186195,
       "over25Prob": 0.49504950495049505,
       "isHome": true,
       "opponent": "Levante",
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Levante": {
-      "winProb": 0.5328471822426917,
-      "drawProb": 0.17082453783662765,
-      "loseProb": 0.2963282799206806,
+      "winProb": 0.23363162077186195,
+      "drawProb": 0.2776491725114881,
+      "loseProb": 0.4887192067166499,
       "over25Prob": 0.49504950495049505,
       "isHome": false,
       "opponent": "Espanyol",
@@ -15188,6 +15204,14 @@
   },
   "news": [
     {
+      "title": "Kang-in Lee, a un paso de firmar por el Atlético de Madrid",
+      "link": "https://www.jornadaperfecta.com/blog/kang-in-lee-atletico-fichaje/",
+      "date": "Sun, 05 Jul 2026 19:00:26 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Mercado de fichajes de invierno de LaLiga 26/27: altas y bajas oficiales",
       "link": "https://www.jornadaperfecta.com/blog/mercado-fichajes-verano-26-27/",
       "date": "Sun, 05 Jul 2026 18:30:36 +0000",
@@ -15258,21 +15282,13 @@
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "El Real Betis cierra un acuerdo por Facundo Bernal",
-      "link": "https://www.jornadaperfecta.com/blog/facundo-bernal-betis-acuerdo/",
-      "date": "Thu, 02 Jul 2026 21:50:07 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-07-05T18:55:55.185Z",
+    "updatedAt": "2026-07-06T01:52:45.149Z",
     "players": []
   }
 }
