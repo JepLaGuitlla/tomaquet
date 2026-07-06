@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-06T14:51:05.140Z",
+  "updatedAt": "2026-07-06T19:27:53.746Z",
   "players": [
     {
       "id": 11,
@@ -12253,7 +12253,7 @@
     {
       "id": 41275,
       "slug": "f-gonzalez",
-      "name": "Facundo Gonz��lez",
+      "name": "Facundo González",
       "position": 2,
       "price": 380000,
       "points": 0,
@@ -15025,7 +15025,7 @@
       "winProb": 0.39710685954269714,
       "drawProb": 0.3453103126458237,
       "loseProb": 0.2575828278114792,
-      "over25Prob": 0.5,
+      "over25Prob": 0.3278688524590164,
       "isHome": true,
       "opponent": "Getafe",
       "matchDate": "2026-08-16T19:00:00Z"
@@ -15034,7 +15034,7 @@
       "winProb": 0.2575828278114792,
       "drawProb": 0.3453103126458237,
       "loseProb": 0.39710685954269714,
-      "over25Prob": 0.5,
+      "over25Prob": 0.3278688524590164,
       "isHome": false,
       "opponent": "Alavés",
       "matchDate": "2026-08-16T19:00:00Z"
@@ -15043,7 +15043,7 @@
       "winProb": 0.6694720734506504,
       "drawProb": 0.19280795715378735,
       "loseProb": 0.13771996939556236,
-      "over25Prob": 0.5,
+      "over25Prob": 0.6578947368421053,
       "isHome": true,
       "opponent": "Athletic Bilbao",
       "matchDate": "2026-08-16T19:00:00Z"
@@ -15052,25 +15052,25 @@
       "winProb": 0.13771996939556236,
       "drawProb": 0.19280795715378735,
       "loseProb": 0.6694720734506504,
-      "over25Prob": 0.5,
+      "over25Prob": 0.6578947368421053,
       "isHome": false,
       "opponent": "Barcelona",
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.7565032737568571,
-      "drawProb": 0.17120863563970978,
-      "loseProb": 0.07228809060343301,
-      "over25Prob": 0.5524861878453039,
+      "winProb": 0.7536581065992831,
+      "drawProb": 0.1732091437973791,
+      "loseProb": 0.07313274960333783,
+      "over25Prob": 0.5434782608695652,
       "isHome": true,
       "opponent": "Málaga",
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Málaga": {
-      "winProb": 0.07228809060343301,
-      "drawProb": 0.17120863563970978,
-      "loseProb": 0.7565032737568571,
-      "over25Prob": 0.5524861878453039,
+      "winProb": 0.07313274960333783,
+      "drawProb": 0.1732091437973791,
+      "loseProb": 0.7536581065992831,
+      "over25Prob": 0.5434782608695652,
       "isHome": false,
       "opponent": "Atlético Madrid",
       "matchDate": "2026-08-16T19:00:00Z"
@@ -15097,7 +15097,7 @@
       "winProb": 0.410998385981093,
       "drawProb": 0.3102374913534702,
       "loseProb": 0.278764122665437,
-      "over25Prob": 0.45454545454545453,
+      "over25Prob": 0.4587155963302752,
       "isHome": true,
       "opponent": "Elche CF",
       "matchDate": "2026-08-16T19:00:00Z"
@@ -15106,7 +15106,7 @@
       "winProb": 0.278764122665437,
       "drawProb": 0.3102374913534702,
       "loseProb": 0.410998385981093,
-      "over25Prob": 0.45454545454545453,
+      "over25Prob": 0.4587155963302752,
       "isHome": false,
       "opponent": "Deportivo La Coruña",
       "matchDate": "2026-08-16T19:00:00Z"
@@ -15115,7 +15115,7 @@
       "winProb": 0.47686832740213525,
       "drawProb": 0.2846975088967971,
       "loseProb": 0.23843416370106763,
-      "over25Prob": 0.4854368932038835,
+      "over25Prob": 0.4807692307692307,
       "isHome": true,
       "opponent": "Levante",
       "matchDate": "2026-08-16T19:00:00Z"
@@ -15124,7 +15124,7 @@
       "winProb": 0.23843416370106763,
       "drawProb": 0.2846975088967971,
       "loseProb": 0.47686832740213525,
-      "over25Prob": 0.4854368932038835,
+      "over25Prob": 0.4807692307692307,
       "isHome": false,
       "opponent": "Espanyol",
       "matchDate": "2026-08-16T19:00:00Z"
@@ -15166,43 +15166,67 @@
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Real Madrid": {
-      "winProb": 0.670515924753213,
-      "drawProb": 0.19444961817843176,
-      "loseProb": 0.13503445706835537,
-      "over25Prob": 0.5,
+      "winProb": 0.66793893129771,
+      "drawProb": 0.1937022900763359,
+      "loseProb": 0.1383587786259542,
+      "over25Prob": 0.6578947368421053,
       "isHome": true,
       "opponent": "Real Sociedad",
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Real Sociedad": {
-      "winProb": 0.13503445706835537,
-      "drawProb": 0.19444961817843176,
-      "loseProb": 0.670515924753213,
-      "over25Prob": 0.5,
+      "winProb": 0.1383587786259542,
+      "drawProb": 0.1937022900763359,
+      "loseProb": 0.66793893129771,
+      "over25Prob": 0.6578947368421053,
       "isHome": false,
       "opponent": "Real Madrid",
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Real Racing Club de Santander": {
-      "winProb": 0.28583042973286876,
-      "drawProb": 0.27340301974448317,
-      "loseProb": 0.44076655052264807,
-      "over25Prob": 0.5319148936170213,
+      "winProb": 0.2913848541966959,
+      "drawProb": 0.26344384078057437,
+      "loseProb": 0.44517130502272984,
+      "over25Prob": 0.5235602094240838,
       "isHome": true,
       "opponent": "Villarreal",
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Villarreal": {
-      "winProb": 0.44076655052264807,
-      "drawProb": 0.27340301974448317,
-      "loseProb": 0.28583042973286876,
-      "over25Prob": 0.5319148936170213,
+      "winProb": 0.44517130502272984,
+      "drawProb": 0.26344384078057437,
+      "loseProb": 0.2913848541966959,
+      "over25Prob": 0.5235602094240838,
       "isHome": false,
       "opponent": "Real Racing Club de Santander",
       "matchDate": "2026-08-16T19:00:00Z"
     }
   },
   "news": [
+    {
+      "title": "Zaid Romero regresa al Getafe y firma hasta 2030",
+      "link": "https://www.jornadaperfecta.com/blog/zaid-romero-regreso-getafe-fichaje/",
+      "date": "Mon, 06 Jul 2026 18:35:35 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Mercado de fichajes de invierno de LaLiga 26/27: altas y bajas oficiales",
+      "link": "https://www.jornadaperfecta.com/blog/mercado-fichajes-verano-26-27/",
+      "date": "Mon, 06 Jul 2026 18:30:36 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Oficial: Facundo Bernal, nuevo jugador del Real Betis",
+      "link": "https://www.jornadaperfecta.com/blog/facundo-bernal-betis-anuncio-fichaje/",
+      "date": "Mon, 06 Jul 2026 18:22:59 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Promoción DAZN Bet Portugal vs España: 5€ gratis por cada victoria de La Roja",
       "link": "https://www.jornadaperfecta.com/blog/dazn-bet-portugal-vs-espana/",
@@ -15236,14 +15260,6 @@
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Mercado de fichajes de invierno de LaLiga 26/27: altas y bajas oficiales",
-      "link": "https://www.jornadaperfecta.com/blog/mercado-fichajes-verano-26-27/",
-      "date": "Sun, 05 Jul 2026 18:30:36 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
       "title": "Promoción Sportium Portugal vs España: apuesta 5€ y recibe 25€ gratis",
       "link": "https://www.jornadaperfecta.com/blog/sportium-portugal-vs-espana-promocion/",
       "date": "Sun, 05 Jul 2026 11:09:59 +0000",
@@ -15266,29 +15282,13 @@
       "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/07/YoSports-Portugal-vs-Espana.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Portugal vs España: mejores cuotas 888Sport para los Octavos del Mundial 2026",
-      "link": "https://www.jornadaperfecta.com/blog/888sport-portugal-vs-espana-cuotas/",
-      "date": "Sat, 04 Jul 2026 07:00:32 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/07/888Sport-Espana-vs-Portugal.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Betway te regala 5€ en Apuesta Gratis por apostar al España &#8211; Portugal",
-      "link": "https://www.jornadaperfecta.com/blog/apostar-espana-portugal-betway/",
-      "date": "Fri, 03 Jul 2026 19:00:19 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/07/freebet-betway-espana-portugal.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-07-06T14:51:02.388Z",
+    "updatedAt": "2026-07-06T19:27:50.561Z",
     "players": []
   }
 }
