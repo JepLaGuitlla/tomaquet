@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-07T14:01:07.002Z",
+  "updatedAt": "2026-07-07T19:29:31.252Z",
   "players": [
     {
       "id": 11,
@@ -2638,13 +2638,7 @@
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
-      "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "jForm": [],
       "clausula": null
     },
     {
@@ -2699,9 +2693,6 @@
       "teamId": 7,
       "status": "ok",
       "jForm": [
-        null,
-        null,
-        null,
         null,
         null
       ],
@@ -8693,9 +8684,6 @@
       "status": "ok",
       "jForm": [
         null,
-        null,
-        null,
-        null,
         null
       ],
       "clausula": null
@@ -9200,9 +9188,6 @@
       "teamId": 7,
       "status": "ok",
       "jForm": [
-        null,
-        null,
-        null,
         null,
         null
       ],
@@ -10535,7 +10520,7 @@
     {
       "id": 38964,
       "slug": "alexis-sanchez",
-      "name": "Alexis Sánchez",
+      "name": "Alexis S��nchez",
       "position": 4,
       "price": 1000000,
       "points": 105,
@@ -11686,13 +11671,7 @@
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
-      "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "jForm": [],
       "clausula": null
     },
     {
@@ -12894,13 +12873,7 @@
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
-      "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "jForm": [],
       "clausula": null
     },
     {
@@ -12980,13 +12953,7 @@
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
-      "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "jForm": [],
       "clausula": null
     }
   ],
@@ -15229,18 +15196,18 @@
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Sevilla": {
-      "winProb": 0.4113296921069167,
-      "drawProb": 0.31683503310938177,
-      "loseProb": 0.27183527478370145,
+      "winProb": 0.41521160106540395,
+      "drawProb": 0.3103876886652856,
+      "loseProb": 0.2744007102693104,
       "over25Prob": 0.4587155963302752,
       "isHome": true,
       "opponent": "Rayo Vallecano",
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Rayo Vallecano": {
-      "winProb": 0.27183527478370145,
-      "drawProb": 0.31683503310938177,
-      "loseProb": 0.4113296921069167,
+      "winProb": 0.2744007102693104,
+      "drawProb": 0.3103876886652856,
+      "loseProb": 0.41521160106540395,
       "over25Prob": 0.4587155963302752,
       "isHome": false,
       "opponent": "Sevilla",
@@ -15286,7 +15253,7 @@
       "winProb": 0.30108266025090225,
       "drawProb": 0.25983846021653206,
       "loseProb": 0.43907887953256575,
-      "over25Prob": 0.5235602094240838,
+      "over25Prob": 0.5291005291005292,
       "isHome": true,
       "opponent": "Villarreal",
       "matchDate": "2026-08-16T19:00:00Z"
@@ -15295,13 +15262,77 @@
       "winProb": 0.43907887953256575,
       "drawProb": 0.25983846021653206,
       "loseProb": 0.30108266025090225,
-      "over25Prob": 0.5235602094240838,
+      "over25Prob": 0.5291005291005292,
       "isHome": false,
       "opponent": "Real Racing Club de Santander",
       "matchDate": "2026-08-16T19:00:00Z"
     }
   },
   "news": [
+    {
+      "title": "Aliou Dieng, a punto de ser el cuarto fichaje del Valencia",
+      "link": "https://www.jornadaperfecta.com/blog/aliou-dieng-fichaje-valencia/",
+      "date": "Tue, 07 Jul 2026 17:12:30 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Mercado de fichajes de verano de LaLiga 26/27: altas y bajas oficiales",
+      "link": "https://www.jornadaperfecta.com/blog/mercado-fichajes-verano-26-27/",
+      "date": "Tue, 07 Jul 2026 16:38:36 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Joselu Mato estaría muy cerca de volver a LaLiga con el Deportivo de A Coruña",
+      "link": "https://www.jornadaperfecta.com/blog/joselu-deportivo-a-coruna-fichaje/",
+      "date": "Tue, 07 Jul 2026 15:40:18 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "El Atlético de Madrid aprieta por Morten Hjulmand",
+      "link": "https://www.jornadaperfecta.com/blog/atletico-fichaje-hjulmand-26-27/",
+      "date": "Tue, 07 Jul 2026 15:21:34 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "João Cancelo, cerca de volver al FC Barcelona en propiedad",
+      "link": "https://www.jornadaperfecta.com/blog/cancelo-vuelta-barcelona-26-27/",
+      "date": "Tue, 07 Jul 2026 14:58:57 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Oficial: Quilindschy Hartman, nuevo jugador del RCD Espanyol",
+      "link": "https://www.jornadaperfecta.com/blog/quilindschy-hartman-espanyol-fichaje-26/",
+      "date": "Tue, 07 Jul 2026 14:39:46 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Francia vs Marruecos: cuotas 888Sport para los Cuartos del Mundial 2026",
+      "link": "https://www.jornadaperfecta.com/blog/cuotas-888sport-francia-vs-marruecos/",
+      "date": "Tue, 07 Jul 2026 14:28:27 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/06/888Sport-bono-de-bienvenida-Mundial.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Oficial: Bright Ede, nuevo jugador del Deportivo de A Coruña",
+      "link": "https://www.jornadaperfecta.com/blog/bright-ede-depor-anuncio/",
+      "date": "Tue, 07 Jul 2026 14:20:48 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Getafe y Villarreal acuerdan la cesión de Jean Ives Valou",
       "link": "https://www.jornadaperfecta.com/blog/getafe-villarreal-cesion-jean-ives-valou/",
@@ -15317,77 +15348,13 @@
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Mercado de fichajes de invierno de LaLiga 26/27: altas y bajas oficiales",
-      "link": "https://www.jornadaperfecta.com/blog/mercado-fichajes-verano-26-27/",
-      "date": "Mon, 06 Jul 2026 18:40:36 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Zaid Romero regresa al Getafe y firma hasta 2030",
-      "link": "https://www.jornadaperfecta.com/blog/zaid-romero-regreso-getafe-fichaje/",
-      "date": "Mon, 06 Jul 2026 18:35:35 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Oficial: Facundo Bernal, nuevo jugador del Real Betis",
-      "link": "https://www.jornadaperfecta.com/blog/facundo-bernal-betis-anuncio-fichaje/",
-      "date": "Mon, 06 Jul 2026 18:22:59 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Promoción DAZN Bet Portugal vs España: 5€ gratis por cada victoria de La Roja",
-      "link": "https://www.jornadaperfecta.com/blog/dazn-bet-portugal-vs-espana/",
-      "date": "Mon, 06 Jul 2026 12:05:43 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/07/DAZN-Bet-gana-con-la-roja.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Kang-in Lee, nuevo futbolista del Atlético de Madrid, a falta de oficialidad",
-      "link": "https://www.jornadaperfecta.com/blog/kang-in-lee-atletico-fichaje/",
-      "date": "Mon, 06 Jul 2026 10:45:26 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Alfon González llega lesionado a Sevilla y se pierde el inicio de LaLiga",
-      "link": "https://www.jornadaperfecta.com/blog/alfon-gonzalez-lesionado-pretemporada/",
-      "date": "Mon, 06 Jul 2026 10:12:01 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Promoción Sportium Portugal vs España: apuesta 5€ y recibe 25€ gratis",
-      "link": "https://www.jornadaperfecta.com/blog/sportium-portugal-vs-espana-promocion/",
-      "date": "Sun, 05 Jul 2026 11:09:59 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/07/Sportium-Portugal-vs-Espana.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Oficial: Denzel Dumfries, nuevo jugador del Real Madrid",
-      "link": "https://www.jornadaperfecta.com/blog/dumfries-real-madrid-anuncio/",
-      "date": "Sun, 05 Jul 2026 10:25:15 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-07-07T14:01:04.128Z",
+    "updatedAt": "2026-07-07T19:29:28.372Z",
     "players": []
   }
 }
