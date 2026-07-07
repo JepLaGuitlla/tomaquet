@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-07T09:18:29.767Z",
+  "updatedAt": "2026-07-07T14:01:07.002Z",
   "players": [
     {
       "id": 11,
@@ -2638,7 +2638,13 @@
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
-      "jForm": [],
+      "jForm": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
       "clausula": null
     },
     {
@@ -2693,6 +2699,9 @@
       "teamId": 7,
       "status": "ok",
       "jForm": [
+        null,
+        null,
+        null,
         null,
         null
       ],
@@ -3073,7 +3082,13 @@
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
-      "jForm": [],
+      "jForm": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
       "clausula": null
     },
     {
@@ -3089,7 +3104,13 @@
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
-      "jForm": [],
+      "jForm": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
       "clausula": null
     },
     {
@@ -7840,7 +7861,13 @@
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
-      "jForm": [],
+      "jForm": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
       "clausula": null
     },
     {
@@ -8666,6 +8693,9 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
+        null,
+        null,
         null
       ],
       "clausula": null
@@ -9170,6 +9200,9 @@
       "teamId": 7,
       "status": "ok",
       "jForm": [
+        null,
+        null,
+        null,
         null,
         null
       ],
@@ -11653,7 +11686,13 @@
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
-      "jForm": [],
+      "jForm": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
       "clausula": null
     },
     {
@@ -12855,7 +12894,13 @@
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
-      "jForm": [],
+      "jForm": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
       "clausula": null
     },
     {
@@ -12904,6 +12949,44 @@
       "teamId": 87,
       "status": "ok",
       "jForm": [],
+      "clausula": null
+    },
+    {
+      "id": 42389,
+      "slug": "ryunosuke",
+      "name": "Ryunosuke",
+      "position": 3,
+      "price": 390000,
+      "points": 0,
+      "trend": 0,
+      "playedHome": 0,
+      "playedAway": 0,
+      "teamName": "Valencia",
+      "teamId": 18,
+      "status": "ok",
+      "jForm": [],
+      "clausula": null
+    },
+    {
+      "id": 42390,
+      "slug": "q-hartman",
+      "name": "Hartman",
+      "position": 2,
+      "price": 1450000,
+      "points": 0,
+      "trend": 0,
+      "playedHome": 0,
+      "playedAway": 0,
+      "teamName": "Espanyol",
+      "teamId": 7,
+      "status": "ok",
+      "jForm": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
       "clausula": null
     }
   ],
@@ -15220,6 +15303,22 @@
   },
   "news": [
     {
+      "title": "Getafe y Villarreal acuerdan la cesión de Jean Ives Valou",
+      "link": "https://www.jornadaperfecta.com/blog/getafe-villarreal-cesion-jean-ives-valou/",
+      "date": "Tue, 07 Jul 2026 12:35:44 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Ryunosuke Sato llega a Valencia para ser el tercer fichaje",
+      "link": "https://www.jornadaperfecta.com/blog/ryunosuke-sato-fichaje-valencia/",
+      "date": "Tue, 07 Jul 2026 10:02:36 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Mercado de fichajes de invierno de LaLiga 26/27: altas y bajas oficiales",
       "link": "https://www.jornadaperfecta.com/blog/mercado-fichajes-verano-26-27/",
       "date": "Mon, 06 Jul 2026 18:40:36 +0000",
@@ -15248,14 +15347,6 @@
       "link": "https://www.jornadaperfecta.com/blog/dazn-bet-portugal-vs-espana/",
       "date": "Mon, 06 Jul 2026 12:05:43 +0000",
       "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/07/DAZN-Bet-gana-con-la-roja.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Ryunosuke Sato llega a Valencia para ser el tercer fichaje",
-      "link": "https://www.jornadaperfecta.com/blog/ryunosuke-sato-fichaje-valencia/",
-      "date": "Mon, 06 Jul 2026 12:02:36 +0000",
-      "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
@@ -15290,21 +15381,13 @@
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Supercuota YoSports Portugal vs España: apuesta mejorada a cuota 7.00",
-      "link": "https://www.jornadaperfecta.com/blog/yosports-superapuesta-portugal-vs-espana/",
-      "date": "Sat, 04 Jul 2026 19:00:34 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/07/YoSports-Portugal-vs-Espana.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-07-07T09:18:27.183Z",
+    "updatedAt": "2026-07-07T14:01:04.128Z",
     "players": []
   }
 }
