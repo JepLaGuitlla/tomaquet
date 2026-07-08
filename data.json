@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-08T08:03:17.674Z",
+  "updatedAt": "2026-07-08T13:23:24.924Z",
   "players": [
     {
       "id": 11,
@@ -1532,7 +1532,7 @@
     {
       "id": 3159,
       "slug": "jutgla",
-      "name": "Jutglà",
+      "name": "Jutgl��",
       "position": 4,
       "price": 4360000,
       "points": 146,
@@ -15245,18 +15245,18 @@
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Sevilla": {
-      "winProb": 0.41521160106540395,
-      "drawProb": 0.3103876886652856,
-      "loseProb": 0.2744007102693104,
+      "winProb": 0.41730071403488245,
+      "drawProb": 0.306917944515978,
+      "loseProb": 0.2757813414491397,
       "over25Prob": 0.4587155963302752,
       "isHome": true,
       "opponent": "Rayo Vallecano",
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Rayo Vallecano": {
-      "winProb": 0.2744007102693104,
-      "drawProb": 0.3103876886652856,
-      "loseProb": 0.41521160106540395,
+      "winProb": 0.2757813414491397,
+      "drawProb": 0.306917944515978,
+      "loseProb": 0.41730071403488245,
       "over25Prob": 0.4587155963302752,
       "isHome": false,
       "opponent": "Sevilla",
@@ -15299,18 +15299,18 @@
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Real Racing Club de Santander": {
-      "winProb": 0.30108266025090225,
-      "drawProb": 0.25983846021653206,
-      "loseProb": 0.43907887953256575,
+      "winProb": 0.28525942542875754,
+      "drawProb": 0.2657211086185686,
+      "loseProb": 0.44901946595267384,
       "over25Prob": 0.5291005291005292,
       "isHome": true,
       "opponent": "Villarreal",
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Villarreal": {
-      "winProb": 0.43907887953256575,
-      "drawProb": 0.25983846021653206,
-      "loseProb": 0.30108266025090225,
+      "winProb": 0.44901946595267384,
+      "drawProb": 0.2657211086185686,
+      "loseProb": 0.28525942542875754,
       "over25Prob": 0.5291005291005292,
       "isHome": false,
       "opponent": "Real Racing Club de Santander",
@@ -15318,6 +15318,14 @@
     }
   },
   "news": [
+    {
+      "title": "El Betis cierra el fichaje de Fran García con el Real Madrid",
+      "link": "https://www.jornadaperfecta.com/blog/betis-fichaje-fran-garcia/",
+      "date": "Wed, 08 Jul 2026 11:14:48 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Apúntate a la Liga LEF 2026/27&#8230; ¡la mayor competición fantasy!",
       "link": "https://www.jornadaperfecta.com/blog/liga-lef-26-27/",
@@ -15389,21 +15397,13 @@
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Francia vs Marruecos: cuotas 888Sport para los Cuartos del Mundial 2026",
-      "link": "https://www.jornadaperfecta.com/blog/cuotas-888sport-francia-vs-marruecos/",
-      "date": "Tue, 07 Jul 2026 14:28:27 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/06/888Sport-bono-de-bienvenida-Mundial.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-07-08T08:03:14.865Z",
+    "updatedAt": "2026-07-08T13:23:21.753Z",
     "players": []
   }
 }
