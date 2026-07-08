@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-07T19:29:31.252Z",
+  "updatedAt": "2026-07-08T01:21:24.394Z",
   "players": [
     {
       "id": 11,
@@ -3073,13 +3073,7 @@
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
-      "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "jForm": [],
       "clausula": null
     },
     {
@@ -3095,13 +3089,7 @@
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
-      "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "jForm": [],
       "clausula": null
     },
     {
@@ -7852,13 +7840,7 @@
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
-      "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "jForm": [],
       "clausula": null
     },
     {
@@ -15160,18 +15142,18 @@
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Deportivo La Coruña": {
-      "winProb": 0.410998385981093,
-      "drawProb": 0.3102374913534702,
-      "loseProb": 0.278764122665437,
+      "winProb": 0.41264166730052493,
+      "drawProb": 0.31147790370426715,
+      "loseProb": 0.27588042899520804,
       "over25Prob": 0.4587155963302752,
       "isHome": true,
       "opponent": "Elche CF",
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Elche CF": {
-      "winProb": 0.278764122665437,
-      "drawProb": 0.3102374913534702,
-      "loseProb": 0.410998385981093,
+      "winProb": 0.27588042899520804,
+      "drawProb": 0.31147790370426715,
+      "loseProb": 0.41264166730052493,
       "over25Prob": 0.4587155963302752,
       "isHome": false,
       "opponent": "Deportivo La Coruña",
@@ -15270,6 +15252,22 @@
   },
   "news": [
     {
+      "title": "Las cinco claves del mercado de fichajes del 7 de julio",
+      "link": "https://www.jornadaperfecta.com/blog/claves-mercado-7-7-26/",
+      "date": "Tue, 07 Jul 2026 22:12:52 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Oficial: Aliou Dieng, nuevo jugador del Valencia CF",
+      "link": "https://www.jornadaperfecta.com/blog/aliou-dieng-valencia-anuncio-fichaje/",
+      "date": "Tue, 07 Jul 2026 19:30:17 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Aliou Dieng, a punto de ser el cuarto fichaje del Valencia",
       "link": "https://www.jornadaperfecta.com/blog/aliou-dieng-fichaje-valencia/",
       "date": "Tue, 07 Jul 2026 17:12:30 +0000",
@@ -15332,29 +15330,13 @@
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Getafe y Villarreal acuerdan la cesión de Jean Ives Valou",
-      "link": "https://www.jornadaperfecta.com/blog/getafe-villarreal-cesion-jean-ives-valou/",
-      "date": "Tue, 07 Jul 2026 12:35:44 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Ryunosuke Sato llega a Valencia para ser el tercer fichaje",
-      "link": "https://www.jornadaperfecta.com/blog/ryunosuke-sato-fichaje-valencia/",
-      "date": "Tue, 07 Jul 2026 10:02:36 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-07-07T19:29:28.372Z",
+    "updatedAt": "2026-07-08T01:21:21.211Z",
     "players": []
   }
 }
