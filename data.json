@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-08T19:01:41.478Z",
+  "updatedAt": "2026-07-09T01:29:28.414Z",
   "players": [
     {
       "id": 11,
@@ -13896,8 +13896,8 @@
       },
       {
         "id": 6580386,
-        "name": "Lamine i els 7 nans 👯‍♀️",
-        "icon": "i/u/6580386.png?v=10",
+        "name": "Academia Control Orientado FC",
+        "icon": "i/u/6580386.png?v=69",
         "points": 1473,
         "lastPositions": [
           8,
@@ -14166,8 +14166,8 @@
     },
     {
       "id": 6580386,
-      "name": "Lamine i els 7 nans 👯‍♀️",
-      "manager": "Lamine i els 7 nans 👯‍♀️",
+      "name": "Academia Control Orientado FC",
+      "manager": "Academia Control Orientado FC",
       "points": 1473,
       "value": 26860000,
       "trend": 250000,
@@ -15245,18 +15245,18 @@
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Sevilla": {
-      "winProb": 0.41730071403488245,
-      "drawProb": 0.306917944515978,
-      "loseProb": 0.2757813414491397,
+      "winProb": 0.41944466232645705,
+      "drawProb": 0.3057886893089654,
+      "loseProb": 0.27476664836457765,
       "over25Prob": 0.4587155963302752,
       "isHome": true,
       "opponent": "Rayo Vallecano",
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Rayo Vallecano": {
-      "winProb": 0.2757813414491397,
-      "drawProb": 0.306917944515978,
-      "loseProb": 0.41730071403488245,
+      "winProb": 0.27476664836457765,
+      "drawProb": 0.3057886893089654,
+      "loseProb": 0.41944466232645705,
       "over25Prob": 0.4587155963302752,
       "isHome": false,
       "opponent": "Sevilla",
@@ -15318,6 +15318,22 @@
     }
   },
   "news": [
+    {
+      "title": "Las cinco claves del mercado de fichajes del 8 de julio",
+      "link": "https://www.jornadaperfecta.com/blog/claves-mercado-8-7-26/",
+      "date": "Wed, 08 Jul 2026 21:02:52 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Oficial: Fran García, nuevo jugador del Real Betis",
+      "link": "https://www.jornadaperfecta.com/blog/fran-garcia-betis-fichaje-anuncio-26/",
+      "date": "Wed, 08 Jul 2026 19:06:14 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Mercado de fichajes de verano de LaLiga 26/27: altas y bajas oficiales",
       "link": "https://www.jornadaperfecta.com/blog/mercado-fichajes-verano-26-27/",
@@ -15381,29 +15397,13 @@
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Aliou Dieng, a punto de ser el cuarto fichaje del Valencia",
-      "link": "https://www.jornadaperfecta.com/blog/aliou-dieng-fichaje-valencia/",
-      "date": "Tue, 07 Jul 2026 17:12:30 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Joselu Mato estaría muy cerca de volver a LaLiga con el Deportivo de A Coruña",
-      "link": "https://www.jornadaperfecta.com/blog/joselu-deportivo-a-coruna-fichaje/",
-      "date": "Tue, 07 Jul 2026 15:40:18 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-07-08T19:01:38.430Z",
+    "updatedAt": "2026-07-09T01:29:25.457Z",
     "players": []
   }
 }
