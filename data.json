@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-10T13:50:43.480Z",
+  "updatedAt": "2026-07-10T19:12:01.401Z",
   "players": [
     {
       "id": 11,
@@ -3212,8 +3212,8 @@
       "trend": -10000,
       "playedHome": 0,
       "playedAway": 0,
-      "teamName": "Deportivo",
-      "teamId": 6,
+      "teamName": "",
+      "teamId": null,
       "status": "ok",
       "jForm": [],
       "clausula": null
@@ -12231,8 +12231,8 @@
       "trend": 0,
       "playedHome": 0,
       "playedAway": 0,
-      "teamName": "Racing",
-      "teamId": 812,
+      "teamName": "",
+      "teamId": null,
       "status": "ok",
       "jForm": [],
       "clausula": null
@@ -15316,7 +15316,7 @@
       "winProb": 0.66793893129771,
       "drawProb": 0.1937022900763359,
       "loseProb": 0.1383587786259542,
-      "over25Prob": 0.6666666666666666,
+      "over25Prob": 0.6578947368421053,
       "isHome": true,
       "opponent": "Real Sociedad",
       "matchDate": "2026-08-16T19:00:00Z"
@@ -15325,7 +15325,7 @@
       "winProb": 0.1383587786259542,
       "drawProb": 0.1937022900763359,
       "loseProb": 0.66793893129771,
-      "over25Prob": 0.6666666666666666,
+      "over25Prob": 0.6578947368421053,
       "isHome": false,
       "opponent": "Real Madrid",
       "matchDate": "2026-08-16T19:00:00Z"
@@ -15351,6 +15351,14 @@
   },
   "news": [
     {
+      "title": "Acuerdo Barcelona &#8211; Borussia Dortmund por Karim Adeyemi",
+      "link": "https://www.jornadaperfecta.com/blog/barca-negocia-fichaje-adeyemi/",
+      "date": "Fri, 10 Jul 2026 16:15:23 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Apuesta al España vs Bélgica con seguro del 25% en MARCAapuestas",
       "link": "https://www.jornadaperfecta.com/blog/marcaapuestas-seguro-espana-vs-belgica/",
       "date": "Fri, 10 Jul 2026 07:00:17 +0000",
@@ -15371,14 +15379,6 @@
       "link": "https://www.jornadaperfecta.com/blog/codere-maxicuotas-espana-belgica/",
       "date": "Thu, 09 Jul 2026 20:00:50 +0000",
       "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/07/maxicuotas-codere-espana-belgica-1024x286.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "El Borussia Dortmund rechaza la primera oferta por Adeyemi",
-      "link": "https://www.jornadaperfecta.com/blog/barca-negocia-fichaje-adeyemi/",
-      "date": "Thu, 09 Jul 2026 17:40:23 +0000",
-      "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
@@ -15435,7 +15435,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-07-10T13:50:40.682Z",
+    "updatedAt": "2026-07-10T19:11:58.180Z",
     "players": []
   }
 }
