@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-10T08:55:37.550Z",
+  "updatedAt": "2026-07-10T13:50:43.480Z",
   "players": [
     {
       "id": 11,
@@ -379,8 +379,8 @@
       "trend": -130000,
       "playedHome": 18,
       "playedAway": 16,
-      "teamName": "Atlético",
-      "teamId": 2,
+      "teamName": "",
+      "teamId": null,
       "status": "ok",
       "jForm": [
         5,
@@ -504,7 +504,7 @@
     {
       "id": 1602,
       "slug": "ruben-garcia",
-      "name": "Rubén Garc��a",
+      "name": "Rubén García",
       "position": 3,
       "price": 2040000,
       "points": 137,
@@ -2752,8 +2752,8 @@
       "trend": 0,
       "playedHome": 16,
       "playedAway": 13,
-      "teamName": "Real Sociedad",
-      "teamId": 13,
+      "teamName": "",
+      "teamId": null,
       "status": "ok",
       "jForm": [
         null,
@@ -15241,36 +15241,36 @@
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Deportivo La Coruña": {
-      "winProb": 0.4147236449812706,
-      "drawProb": 0.31037382463114443,
-      "loseProb": 0.27490253038758505,
+      "winProb": 0.410998385981093,
+      "drawProb": 0.3102374913534702,
+      "loseProb": 0.278764122665437,
       "over25Prob": 0.4587155963302752,
       "isHome": true,
       "opponent": "Elche CF",
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Elche CF": {
-      "winProb": 0.27490253038758505,
-      "drawProb": 0.31037382463114443,
-      "loseProb": 0.4147236449812706,
+      "winProb": 0.278764122665437,
+      "drawProb": 0.3102374913534702,
+      "loseProb": 0.410998385981093,
       "over25Prob": 0.4587155963302752,
       "isHome": false,
       "opponent": "Deportivo La Coruña",
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Espanyol": {
-      "winProb": 0.48234487487144323,
-      "drawProb": 0.2879670894754885,
-      "loseProb": 0.2296880356530682,
+      "winProb": 0.479860850584905,
+      "drawProb": 0.28934893080045015,
+      "loseProb": 0.23079021861464477,
       "over25Prob": 0.4807692307692307,
       "isHome": true,
       "opponent": "Levante",
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Levante": {
-      "winProb": 0.2296880356530682,
-      "drawProb": 0.2879670894754885,
-      "loseProb": 0.48234487487144323,
+      "winProb": 0.23079021861464477,
+      "drawProb": 0.28934893080045015,
+      "loseProb": 0.479860850584905,
       "over25Prob": 0.4807692307692307,
       "isHome": false,
       "opponent": "Espanyol",
@@ -15316,7 +15316,7 @@
       "winProb": 0.66793893129771,
       "drawProb": 0.1937022900763359,
       "loseProb": 0.1383587786259542,
-      "over25Prob": 0.6578947368421053,
+      "over25Prob": 0.6666666666666666,
       "isHome": true,
       "opponent": "Real Sociedad",
       "matchDate": "2026-08-16T19:00:00Z"
@@ -15325,7 +15325,7 @@
       "winProb": 0.1383587786259542,
       "drawProb": 0.1937022900763359,
       "loseProb": 0.66793893129771,
-      "over25Prob": 0.6578947368421053,
+      "over25Prob": 0.6666666666666666,
       "isHome": false,
       "opponent": "Real Madrid",
       "matchDate": "2026-08-16T19:00:00Z"
@@ -15435,7 +15435,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-07-10T08:55:34.365Z",
+    "updatedAt": "2026-07-10T13:50:40.682Z",
     "players": []
   }
 }
