@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-13T19:07:33.785Z",
+  "updatedAt": "2026-07-14T01:12:59.145Z",
   "players": [
     {
       "id": 11,
@@ -10069,8 +10069,8 @@
       "trend": 0,
       "playedHome": 8,
       "playedAway": 11,
-      "teamName": "Valencia",
-      "teamId": 18,
+      "teamName": "",
+      "teamId": null,
       "status": "ok",
       "jForm": [
         null,
@@ -13052,6 +13052,22 @@
       "status": "ok",
       "jForm": [],
       "clausula": null
+    },
+    {
+      "id": 42459,
+      "slug": "asp-jensen",
+      "name": "Jensen",
+      "position": 3,
+      "price": 630000,
+      "points": 0,
+      "trend": 0,
+      "playedHome": 0,
+      "playedAway": 0,
+      "teamName": "Deportivo",
+      "teamId": 6,
+      "status": "ok",
+      "jForm": [],
+      "clausula": null
     }
   ],
   "league": {
@@ -15203,18 +15219,18 @@
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.6652318528663668,
-      "drawProb": 0.19291723733124636,
-      "loseProb": 0.14185090980238702,
+      "winProb": 0.6667712582365862,
+      "drawProb": 0.19203012237213685,
+      "loseProb": 0.1411986193912771,
       "over25Prob": 0.6666666666666666,
       "isHome": true,
       "opponent": "Athletic Bilbao",
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Athletic Bilbao": {
-      "winProb": 0.14185090980238702,
-      "drawProb": 0.19291723733124636,
-      "loseProb": 0.6652318528663668,
+      "winProb": 0.1411986193912771,
+      "drawProb": 0.19203012237213685,
+      "loseProb": 0.6667712582365862,
       "over25Prob": 0.6666666666666666,
       "isHome": false,
       "opponent": "Barcelona",
@@ -15257,36 +15273,36 @@
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Deportivo La Coruña": {
-      "winProb": 0.4089186825998251,
-      "drawProb": 0.31372777615855435,
-      "loseProb": 0.2773535412416205,
+      "winProb": 0.41264166730052493,
+      "drawProb": 0.31147790370426715,
+      "loseProb": 0.27588042899520804,
       "over25Prob": 0.4587155963302752,
       "isHome": true,
       "opponent": "Elche CF",
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Elche CF": {
-      "winProb": 0.2773535412416205,
-      "drawProb": 0.31372777615855435,
-      "loseProb": 0.4089186825998251,
+      "winProb": 0.27588042899520804,
+      "drawProb": 0.31147790370426715,
+      "loseProb": 0.41264166730052493,
       "over25Prob": 0.4587155963302752,
       "isHome": false,
       "opponent": "Deportivo La Coruña",
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Espanyol": {
-      "winProb": 0.4763906403250665,
-      "drawProb": 0.2830320863107748,
-      "loseProb": 0.2405772733641586,
+      "winProb": 0.479860850584905,
+      "drawProb": 0.28934893080045015,
+      "loseProb": 0.23079021861464477,
       "over25Prob": 0.47846889952153115,
       "isHome": true,
       "opponent": "Levante",
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Levante": {
-      "winProb": 0.2405772733641586,
-      "drawProb": 0.2830320863107748,
-      "loseProb": 0.4763906403250665,
+      "winProb": 0.23079021861464477,
+      "drawProb": 0.28934893080045015,
+      "loseProb": 0.479860850584905,
       "over25Prob": 0.47846889952153115,
       "isHome": false,
       "opponent": "Espanyol",
@@ -15367,6 +15383,30 @@
   },
   "news": [
     {
+      "title": "Fernando Calero estaría a un paso del Málaga CF",
+      "link": "https://www.jornadaperfecta.com/blog/fernando-calero-acuerdo-malaga/",
+      "date": "Mon, 13 Jul 2026 22:24:15 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Las cinco claves del mercado de fichajes del 13 de julio",
+      "link": "https://www.jornadaperfecta.com/blog/claves-mercado-13-7-26/",
+      "date": "Mon, 13 Jul 2026 21:00:33 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Supercuota YoSports para el Francia vs España: cuota 6.50",
+      "link": "https://www.jornadaperfecta.com/blog/supercuota-yosports-francia-vs-espana/",
+      "date": "Mon, 13 Jul 2026 21:00:20 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/06/YoSports-bono-de-bienvenida-mundial.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Rayo Vallecano y Chelsea, en negociaciones por Pep Chavarría",
       "link": "https://www.jornadaperfecta.com/blog/pep-chavarria-salida-rayo-vallecano-26/",
       "date": "Mon, 13 Jul 2026 18:54:32 +0000",
@@ -15421,37 +15461,13 @@
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Mercado de fichajes de verano de LaLiga 26/27: altas y bajas oficiales",
-      "link": "https://www.jornadaperfecta.com/blog/mercado-fichajes-verano-26-27/",
-      "date": "Mon, 13 Jul 2026 17:00:36 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Supercuota Betfair Mundial: Mbappé, Kane y Messi anotan a cuota mejorada de 16.0",
-      "link": "https://www.jornadaperfecta.com/blog/supercuota-betfair-semifinales-mundial-2026-goleadores/",
-      "date": "Mon, 13 Jul 2026 16:30:19 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/07/Betfair-semifinales-Mundial-goleadores-Mbappe-Messi-Kane.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Promoción MARCAapuestas Francia vs España: recupera un 25% en Freebet",
-      "link": "https://www.jornadaperfecta.com/blog/marcaapuestas-seguro-francia-vs-espana/",
-      "date": "Mon, 13 Jul 2026 15:00:26 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/07/MARCAapuestas-Francia-vs-Espana.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-07-13T19:07:30.943Z",
+    "updatedAt": "2026-07-14T01:12:56.382Z",
     "players": []
   }
 }
