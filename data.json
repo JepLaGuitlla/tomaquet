@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-14T13:00:09.902Z",
+  "updatedAt": "2026-07-14T18:57:30.312Z",
   "players": [
     {
       "id": 11,
@@ -5894,7 +5894,7 @@
     {
       "id": 32440,
       "slug": "pau-cubarsi",
-      "name": "Cubars��",
+      "name": "Cubarsí",
       "position": 2,
       "price": 9040000,
       "points": 0,
@@ -12378,36 +12378,36 @@
       "matchDate": "2026-08-15T19:30:00Z"
     },
     "Real Racing Club de Santander": {
-      "winProb": 0.2822922820774478,
-      "drawProb": 0.2668242118266287,
-      "loseProb": 0.4508835060959235,
+      "winProb": 0.28346484743770156,
+      "drawProb": 0.26793252703015624,
+      "loseProb": 0.4486026255321423,
       "over25Prob": 0.53475935828877,
       "isHome": true,
       "opponent": "Villarreal",
       "matchDate": "2026-08-16T15:00:00Z"
     },
     "Villarreal": {
-      "winProb": 0.4508835060959235,
-      "drawProb": 0.2668242118266287,
-      "loseProb": 0.2822922820774478,
+      "winProb": 0.4486026255321423,
+      "drawProb": 0.26793252703015624,
+      "loseProb": 0.28346484743770156,
       "over25Prob": 0.53475935828877,
       "isHome": false,
       "opponent": "Real Racing Club de Santander",
       "matchDate": "2026-08-16T15:00:00Z"
     },
     "Espanyol": {
-      "winProb": 0.47717481934408007,
-      "drawProb": 0.2877292940522512,
-      "loseProb": 0.23509588660366873,
+      "winProb": 0.46999981779421673,
+      "drawProb": 0.28340287520725904,
+      "loseProb": 0.24659730699852409,
       "over25Prob": 0.47846889952153115,
       "isHome": true,
       "opponent": "Levante",
       "matchDate": "2026-08-16T17:00:00Z"
     },
     "Levante": {
-      "winProb": 0.23509588660366873,
-      "drawProb": 0.2877292940522512,
-      "loseProb": 0.47717481934408007,
+      "winProb": 0.24659730699852409,
+      "drawProb": 0.28340287520725904,
+      "loseProb": 0.46999981779421673,
       "over25Prob": 0.47846889952153115,
       "isHome": false,
       "opponent": "Espanyol",
@@ -12486,18 +12486,18 @@
       "matchDate": "2026-08-26T19:00:00Z"
     },
     "Celta Vigo": {
-      "winProb": 0.4743866605303218,
-      "drawProb": 0.28604807590186565,
-      "loseProb": 0.23956526356781252,
+      "winProb": 0.4514456060111075,
+      "drawProb": 0.27221496243057824,
+      "loseProb": 0.2763394315583143,
       "over25Prob": 0.4926108374384237,
       "isHome": true,
       "opponent": "CA Osasuna",
       "matchDate": "2026-08-16T19:30:00Z"
     },
     "CA Osasuna": {
-      "winProb": 0.23956526356781252,
-      "drawProb": 0.28604807590186565,
-      "loseProb": 0.4743866605303218,
+      "winProb": 0.2763394315583143,
+      "drawProb": 0.27221496243057824,
+      "loseProb": 0.4514456060111075,
       "over25Prob": 0.4926108374384237,
       "isHome": false,
       "opponent": "Celta Vigo",
@@ -12523,6 +12523,46 @@
     }
   },
   "news": [
+    {
+      "title": "Juanlu sufre una pequeña lesión en mitad de rumores",
+      "link": "https://www.jornadaperfecta.com/blog/juanlu-molestias-pretemporada-sevilla/",
+      "date": "Tue, 14 Jul 2026 16:54:01 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Álvaro Rodríguez se marcha y el Elche busca delanteros",
+      "link": "https://www.jornadaperfecta.com/blog/elche-delanteros-mercado/",
+      "date": "Tue, 14 Jul 2026 16:25:21 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Contratiempo en la pretemporada de la Real Sociedad",
+      "link": "https://www.jornadaperfecta.com/blog/pablo-marin-lesion-real-j1/",
+      "date": "Tue, 14 Jul 2026 14:39:15 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Cardoso acelera en su recuperación",
+      "link": "https://www.jornadaperfecta.com/blog/cardoso-recuperacion-atleti-laliga/",
+      "date": "Tue, 14 Jul 2026 14:25:29 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "¡Alarma De Jong! Posible lesión de varios meses",
+      "link": "https://www.jornadaperfecta.com/blog/de-jong-lesion-rodilla-barca/",
+      "date": "Tue, 14 Jul 2026 14:14:33 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Oficial: Fernando Calero, nuevo jugador del Málaga CF",
       "link": "https://www.jornadaperfecta.com/blog/fernando-calero-malaga-fichaje-26/",
@@ -12562,53 +12602,13 @@
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Aprende a interpretar el valor de mercado de un futbolista en los Fantasy de LaLiga",
-      "link": "https://www.jornadaperfecta.com/blog/interpretar-valor-mercado-fantasy/",
-      "date": "Tue, 14 Jul 2026 09:27:40 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "OFICIAL: La Jornada 1 de LaLiga EA Sports será fragmentada",
-      "link": "https://www.jornadaperfecta.com/blog/jornada-1-laliga-aplazamiento-26/",
-      "date": "Tue, 14 Jul 2026 09:20:06 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Kang-in Lee pasa reconocimiento médico en Corea para fichar por el Atlético de Madrid",
-      "link": "https://www.jornadaperfecta.com/blog/kang-in-lee-atletico-fichaje/",
-      "date": "Tue, 14 Jul 2026 09:10:26 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Mercado de fichajes de verano de LaLiga 26/27: altas y bajas oficiales",
-      "link": "https://www.jornadaperfecta.com/blog/mercado-fichajes-verano-26-27/",
-      "date": "Tue, 14 Jul 2026 08:25:36 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "RETAbet Golmanía Francia vs España: hasta 20€ en Freebets por los goles",
-      "link": "https://www.jornadaperfecta.com/blog/retabet-golmania-francia-vs-espana/",
-      "date": "Tue, 14 Jul 2026 07:00:58 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/07/RETAbet-Golmania-La-Roja-Espana.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-07-14T13:00:06.700Z",
+    "updatedAt": "2026-07-14T18:57:27.540Z",
     "players": []
   }
 }
