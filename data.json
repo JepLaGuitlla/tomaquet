@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-14T07:42:48.168Z",
+  "updatedAt": "2026-07-14T13:00:09.902Z",
   "players": [
     {
       "id": 11,
@@ -5894,7 +5894,7 @@
     {
       "id": 32440,
       "slug": "pau-cubarsi",
-      "name": "Cubarsí",
+      "name": "Cubars��",
       "position": 2,
       "price": 9040000,
       "points": 0,
@@ -10672,109 +10672,44 @@
     "tournaments": [],
     "standings": [
       {
-        "id": 8068427,
-        "name": "Albertini",
-        "icon": "i/u/8068427.png",
-        "points": 2117,
-        "lastPositions": [
-          7,
-          3,
-          4,
-          6,
-          1
-        ],
-        "teamSize": 16,
-        "teamValue": 74260000,
-        "teamValueInc": 150000,
-        "lastTrophy": {
-          "type": "league",
-          "position": 1,
-          "season": "Temporada 2025/2026"
-        },
+        "id": 12696899,
+        "name": "CIGALERU",
+        "icon": "i/u/12696899.png",
+        "points": 0,
+        "lastPositions": [],
+        "teamSize": 15,
+        "teamValue": 14920000,
+        "teamValueInc": 20000,
         "position": 1,
         "role": ""
-      },
-      {
-        "id": 6552586,
-        "name": "LeMola Team",
-        "icon": "i/u/6552586.png",
-        "role": "manager",
-        "points": 2059,
-        "lastPositions": [
-          3,
-          2,
-          3,
-          1,
-          4
-        ],
-        "teamSize": 15,
-        "teamValue": 70810000,
-        "teamValueInc": -30000,
-        "lastTrophy": {
-          "type": "league",
-          "position": 2,
-          "season": "Temporada 2025/2026"
-        },
-        "position": 2
       },
       {
         "id": 6541195,
         "name": "🦊",
         "icon": "i/u/6541195.png?v=17",
         "role": "manager",
-        "points": 1967,
-        "lastPositions": [
-          4,
-          1,
-          2,
-          5,
-          5
-        ],
-        "teamSize": 17,
-        "teamValue": 66470000,
-        "teamValueInc": 260000,
+        "points": 0,
+        "lastPositions": [],
+        "teamSize": 15,
+        "teamValue": 14910000,
+        "teamValueInc": 190000,
         "lastTrophy": {
           "type": "league",
           "position": 3,
           "season": "Temporada 2025/2026"
         },
-        "position": 3
+        "position": 2
       },
       {
-        "id": 8070044,
-        "name": "CA CABA JUNIORS",
-        "icon": "i/u/8070044.png?v=63",
-        "points": 1875,
-        "lastPositions": [
-          5,
-          12,
-          1,
-          2,
-          2
-        ],
-        "teamSize": 17,
-        "teamValue": 72310000,
-        "teamValueInc": 270000,
-        "position": 4,
-        "role": ""
-      },
-      {
-        "id": 12697101,
-        "name": "INDOMABLE FC",
-        "icon": "i/u/11757390.png",
-        "points": 1832,
-        "lastPositions": [
-          1,
-          4,
-          9,
-          11,
-          3
-        ],
+        "id": 12713493,
+        "name": "Tata Martini",
+        "icon": "i/u/12713493.png",
+        "points": 0,
+        "lastPositions": [],
         "teamSize": 15,
-        "teamValue": 47680000,
-        "teamValueInc": 250000,
-        "position": 5,
-        "positionInc": 1,
+        "teamValue": 14910000,
+        "teamValueInc": 40000,
+        "position": 3,
         "role": ""
       },
       {
@@ -10782,55 +10717,134 @@
         "name": "Zaza Pachulia",
         "icon": "i/u/148051.png?v=98",
         "role": "manager",
-        "points": 1809,
-        "lastPositions": [
-          2,
-          8,
-          6,
-          3,
-          10
-        ],
-        "teamSize": 11,
-        "teamValue": 57590000,
-        "teamValueInc": 270000,
-        "position": 6,
-        "positionInc": 1
+        "points": 0,
+        "lastPositions": [],
+        "teamSize": 15,
+        "teamValue": 14900000,
+        "teamValueInc": 240000,
+        "position": 4
+      },
+      {
+        "id": 12696491,
+        "name": "NACECH1",
+        "icon": "https://graph.facebook.com/10235185447969563/picture?height=300&width=300",
+        "points": 0,
+        "lastPositions": [],
+        "teamSize": 15,
+        "teamValue": 14900000,
+        "teamValueInc": 40000,
+        "position": 5,
+        "role": ""
+      },
+      {
+        "id": 6552586,
+        "name": "LeMola Team",
+        "icon": "i/u/6552586.png",
+        "role": "manager",
+        "points": 0,
+        "lastPositions": [],
+        "teamSize": 15,
+        "teamValue": 14890000,
+        "teamValueInc": 130000,
+        "lastTrophy": {
+          "type": "league",
+          "position": 2,
+          "season": "Temporada 2025/2026"
+        },
+        "position": 6
+      },
+      {
+        "id": 8068427,
+        "name": "Albertini",
+        "icon": "i/u/8068427.png",
+        "points": 0,
+        "lastPositions": [],
+        "teamSize": 15,
+        "teamValue": 14890000,
+        "teamValueInc": 70000,
+        "lastTrophy": {
+          "type": "league",
+          "position": 1,
+          "season": "Temporada 2025/2026"
+        },
+        "position": 7,
+        "role": ""
+      },
+      {
+        "id": 8070044,
+        "name": "CA CABA JUNIORS",
+        "icon": "i/u/8070044.png?v=63",
+        "points": 0,
+        "lastPositions": [],
+        "teamSize": 15,
+        "teamValue": 14890000,
+        "teamValueInc": 230000,
+        "position": 8,
+        "role": ""
+      },
+      {
+        "id": 11521196,
+        "name": "Hufflepuff 🍋",
+        "icon": "i/u/11521196.png?v=57",
+        "points": 0,
+        "lastPositions": [],
+        "teamSize": 15,
+        "teamValue": 14890000,
+        "teamValueInc": -50000,
+        "position": 9,
+        "role": ""
+      },
+      {
+        "id": 11520975,
+        "name": "Morankus FC",
+        "icon": "i/u/11520975.png?v=81",
+        "points": 0,
+        "lastPositions": [],
+        "teamSize": 15,
+        "teamValue": 14880000,
+        "teamValueInc": 240000,
+        "position": 10,
+        "role": ""
+      },
+      {
+        "id": 12697101,
+        "name": "INDOMABLE FC",
+        "icon": "i/u/11757390.png",
+        "points": 0,
+        "lastPositions": [],
+        "teamSize": 15,
+        "teamValue": 14880000,
+        "teamValueInc": -50000,
+        "position": 11,
+        "role": ""
       },
       {
         "id": 8068002,
         "name": "Soulands Rangers",
         "icon": "i/u/8068002.png?v=69",
-        "points": 1792,
-        "lastPositions": [
-          10,
-          11,
-          8,
-          4,
-          7
-        ],
-        "teamSize": 19,
-        "teamValue": 87220000,
-        "teamValueInc": 400000,
-        "position": 7,
-        "positionInc": -2,
+        "points": 0,
+        "lastPositions": [],
+        "teamSize": 15,
+        "teamValue": 14870000,
+        "teamValueInc": 280000,
+        "position": 12,
         "role": ""
       },
       {
-        "id": 12696899,
-        "name": "CIGALERU",
-        "icon": "i/u/12696899.png",
-        "points": 1654,
-        "lastPositions": [
-          8,
-          9,
-          7,
-          7,
-          8
-        ],
+        "id": 12696599,
+        "name": "Trileros FC",
+        "icon": "i/u/12696599.png",
+        "points": 0,
+        "lastPositions": [],
         "teamSize": 15,
-        "teamValue": 48680000,
-        "teamValueInc": -210000,
-        "position": 8,
+        "teamValue": 14870000,
+        "teamValueInc": 200000,
+        "lastTrophy": {
+          "type": "league",
+          "position": -1,
+          "season": "Temporada 2025/2026"
+        },
+        "position": 13,
         "role": ""
       },
       {
@@ -10838,481 +10852,281 @@
         "name": "The Black Team",
         "icon": "i/u/3928497.png",
         "role": "manager",
-        "points": 1593,
-        "lastPositions": [
-          11,
-          10,
-          10,
-          9,
-          12
-        ],
-        "teamSize": 14,
-        "teamValue": 44530000,
-        "teamValueInc": 750000,
-        "position": 9
-      },
-      {
-        "id": 11520975,
-        "name": "Morankus FC",
-        "icon": "i/u/11520975.png?v=81",
-        "points": 1528,
-        "lastPositions": [
-          9,
-          6,
-          11,
-          10,
-          11
-        ],
-        "teamSize": 13,
-        "teamValue": 27270000,
-        "teamValueInc": 40000,
-        "position": 10,
-        "positionInc": 1,
-        "role": ""
-      },
-      {
-        "id": 12713493,
-        "name": "Tata Martini",
-        "icon": "i/u/12713493.png",
-        "points": 1528,
-        "lastPositions": [
-          14,
-          5,
-          12,
-          12,
-          6
-        ],
-        "teamSize": 20,
-        "teamValue": 40590000,
-        "teamValueInc": 220000,
-        "position": 11,
-        "role": ""
-      },
-      {
-        "id": 11521196,
-        "name": "Hufflepuff 🍋",
-        "icon": "i/u/11521196.png?v=57",
-        "points": 1516,
-        "lastPositions": [
-          6,
-          7,
-          5,
-          8,
-          9
-        ],
-        "teamSize": 18,
-        "teamValue": 36140000,
-        "teamValueInc": 260000,
-        "position": 12,
-        "positionInc": 1,
-        "role": ""
-      },
-      {
-        "id": 12696491,
-        "name": "NACECH1",
-        "icon": "https://graph.facebook.com/10235185447969563/picture?height=300&width=300",
-        "points": 1498,
-        "lastPositions": [
-          13,
-          14,
-          14,
-          14,
-          14
-        ],
-        "teamSize": 9,
-        "teamValue": 19830000,
-        "teamValueInc": 310000,
-        "position": 13,
-        "positionInc": -2,
-        "role": ""
-      },
-      {
-        "id": 12696599,
-        "name": "Trileros FC",
-        "icon": "i/u/12696599.png",
-        "points": 1432,
-        "lastPositions": [
-          12,
-          13,
-          13,
-          13,
-          13
-        ],
-        "teamSize": 11,
-        "teamValue": 30840000,
-        "teamValueInc": 80000,
-        "lastTrophy": {
-          "type": "league",
-          "position": -1,
-          "season": "Temporada 2025/2026"
-        },
-        "position": 14,
-        "role": ""
+        "points": 0,
+        "lastPositions": [],
+        "teamSize": 15,
+        "teamValue": 14820000,
+        "teamValueInc": 240000,
+        "position": 14
       }
     ]
   },
   "allTeams": [
     {
-      "id": 8068427,
-      "name": "Albertini",
-      "manager": "Albertini",
-      "points": 2117,
-      "value": 74260000,
-      "trend": 150000,
-      "players": []
-    },
-    {
-      "id": 6552586,
-      "name": "LeMola Team",
-      "manager": "LeMola Team",
-      "points": 2059,
-      "value": 70810000,
-      "trend": -30000,
+      "id": 12696899,
+      "name": "CIGALERU",
+      "manager": "CIGALERU",
+      "points": 0,
+      "value": 14920000,
+      "trend": 20000,
       "players": []
     },
     {
       "id": 6541195,
       "name": "🦊",
       "manager": "🦊",
-      "points": 1967,
-      "value": 66470000,
-      "trend": 260000,
-      "players": []
-    },
-    {
-      "id": 8070044,
-      "name": "CA CABA JUNIORS",
-      "manager": "CA CABA JUNIORS",
-      "points": 1875,
-      "value": 72310000,
-      "trend": 270000,
-      "players": []
-    },
-    {
-      "id": 12697101,
-      "name": "INDOMABLE FC",
-      "manager": "INDOMABLE FC",
-      "points": 1832,
-      "value": 47680000,
-      "trend": 250000,
-      "players": []
-    },
-    {
-      "id": 148051,
-      "name": "Zaza Pachulia",
-      "manager": "Zaza Pachulia",
-      "points": 1809,
-      "value": 57590000,
-      "trend": 270000,
-      "players": []
-    },
-    {
-      "id": 8068002,
-      "name": "Soulands Rangers",
-      "manager": "Soulands Rangers",
-      "points": 1792,
-      "value": 87220000,
-      "trend": 400000,
-      "players": []
-    },
-    {
-      "id": 12696899,
-      "name": "CIGALERU",
-      "manager": "CIGALERU",
-      "points": 1654,
-      "value": 48680000,
-      "trend": -210000,
-      "players": []
-    },
-    {
-      "id": 3928497,
-      "name": "The Black Team",
-      "manager": "The Black Team",
-      "points": 1593,
-      "value": 44530000,
-      "trend": 750000,
-      "players": []
-    },
-    {
-      "id": 11520975,
-      "name": "Morankus FC",
-      "manager": "Morankus FC",
-      "points": 1528,
-      "value": 27270000,
-      "trend": 40000,
+      "points": 0,
+      "value": 14910000,
+      "trend": 190000,
       "players": []
     },
     {
       "id": 12713493,
       "name": "Tata Martini",
       "manager": "Tata Martini",
-      "points": 1528,
-      "value": 40590000,
-      "trend": 220000,
+      "points": 0,
+      "value": 14910000,
+      "trend": 40000,
       "players": []
     },
     {
-      "id": 11521196,
-      "name": "Hufflepuff 🍋",
-      "manager": "Hufflepuff 🍋",
-      "points": 1516,
-      "value": 36140000,
-      "trend": 260000,
+      "id": 148051,
+      "name": "Zaza Pachulia",
+      "manager": "Zaza Pachulia",
+      "points": 0,
+      "value": 14900000,
+      "trend": 240000,
       "players": []
     },
     {
       "id": 12696491,
       "name": "NACECH1",
       "manager": "NACECH1",
-      "points": 1498,
-      "value": 19830000,
-      "trend": 310000,
+      "points": 0,
+      "value": 14900000,
+      "trend": 40000,
+      "players": []
+    },
+    {
+      "id": 6552586,
+      "name": "LeMola Team",
+      "manager": "LeMola Team",
+      "points": 0,
+      "value": 14890000,
+      "trend": 130000,
+      "players": []
+    },
+    {
+      "id": 8068427,
+      "name": "Albertini",
+      "manager": "Albertini",
+      "points": 0,
+      "value": 14890000,
+      "trend": 70000,
+      "players": []
+    },
+    {
+      "id": 8070044,
+      "name": "CA CABA JUNIORS",
+      "manager": "CA CABA JUNIORS",
+      "points": 0,
+      "value": 14890000,
+      "trend": 230000,
+      "players": []
+    },
+    {
+      "id": 11521196,
+      "name": "Hufflepuff 🍋",
+      "manager": "Hufflepuff 🍋",
+      "points": 0,
+      "value": 14890000,
+      "trend": -50000,
+      "players": []
+    },
+    {
+      "id": 11520975,
+      "name": "Morankus FC",
+      "manager": "Morankus FC",
+      "points": 0,
+      "value": 14880000,
+      "trend": 240000,
+      "players": []
+    },
+    {
+      "id": 12697101,
+      "name": "INDOMABLE FC",
+      "manager": "INDOMABLE FC",
+      "points": 0,
+      "value": 14880000,
+      "trend": -50000,
+      "players": []
+    },
+    {
+      "id": 8068002,
+      "name": "Soulands Rangers",
+      "manager": "Soulands Rangers",
+      "points": 0,
+      "value": 14870000,
+      "trend": 280000,
       "players": []
     },
     {
       "id": 12696599,
       "name": "Trileros FC",
       "manager": "Trileros FC",
-      "points": 1432,
-      "value": 30840000,
-      "trend": 80000,
+      "points": 0,
+      "value": 14870000,
+      "trend": 200000,
+      "players": []
+    },
+    {
+      "id": 3928497,
+      "name": "The Black Team",
+      "manager": "The Black Team",
+      "points": 0,
+      "value": 14820000,
+      "trend": 240000,
       "players": []
     }
   ],
   "myTeam": {
     "teamId": 6541195,
     "name": "🦊",
-    "points": 1967,
-    "balance": 7466741,
+    "points": 0,
+    "balance": 20000000,
     "lineup": {
-      "type": "4-5-1",
-      "date": 1779560201,
+      "type": "4-4-2",
+      "date": 1784014973,
       "playersID": [
-        17021,
-        32460,
-        1908,
-        37739,
-        39360,
-        11686,
-        32338,
-        30123,
-        25127,
-        38867,
-        26994
+        15289,
+        32374,
+        38318,
+        15464,
+        28087,
+        16321,
+        26092,
+        38194,
+        27271,
+        18564,
+        41420
       ],
       "reservesID": [
-        38405,
-        26276,
-        40071,
+        null,
+        null,
+        null,
         null
       ]
     },
     "players": [
       {
-        "id": 1908,
-        "buyPrice": 2235666,
-        "clause": 0,
-        "invested": 3200000,
-        "buyDate": 1773209088
-      },
-      {
-        "id": 11686,
-        "buyPrice": 8640000,
-        "clause": 0,
-        "invested": 1000000,
-        "buyDate": 1776704393
-      },
-      {
-        "id": 14630,
-        "buyPrice": 5700000,
+        "id": 15289,
+        "buyPrice": 0,
         "clause": 0,
         "invested": 0,
-        "buyDate": 1778055864
+        "buyDate": 1784014973
       },
       {
-        "id": 17021,
-        "buyPrice": 4620000,
+        "id": 15464,
+        "buyPrice": 0,
         "clause": 0,
         "invested": 0,
-        "buyDate": 1765470211
+        "buyDate": 1784014973
       },
       {
-        "id": 25127,
-        "buyPrice": 18852333,
-        "clause": 0,
-        "invested": 4500000,
-        "buyDate": 1771480952
-      },
-      {
-        "id": 26276,
-        "buyPrice": 6600000,
-        "clause": 0,
-        "invested": 5000000,
-        "buyDate": 1765459975
-      },
-      {
-        "id": 26994,
-        "buyPrice": 5715000,
-        "clause": 0,
-        "invested": 5000000,
-        "buyDate": 1775649508
-      },
-      {
-        "id": 30123,
-        "buyPrice": 5952222,
-        "clause": 0,
-        "invested": 3800000,
-        "buyDate": 1778043891
-      },
-      {
-        "id": 32338,
-        "buyPrice": 3652222,
+        "id": 16321,
+        "buyPrice": 0,
         "clause": 0,
         "invested": 0,
-        "buyDate": 1778303071
+        "buyDate": 1784014973
       },
       {
-        "id": 32460,
-        "buyPrice": 1421333,
-        "clause": 0,
-        "invested": 3000000,
-        "buyDate": 1776056691
-      },
-      {
-        "id": 35615,
-        "buyPrice": 6335850,
+        "id": 18564,
+        "buyPrice": 0,
         "clause": 0,
         "invested": 0,
-        "buyDate": 1778174634
+        "buyDate": 1784014973
       },
       {
-        "id": 37495,
-        "buyPrice": 6685222,
+        "id": 23842,
+        "buyPrice": 0,
         "clause": 0,
         "invested": 0,
-        "buyDate": 1777179785
+        "buyDate": 1784014973
       },
       {
-        "id": 37739,
-        "buyPrice": 8336250,
+        "id": 26092,
+        "buyPrice": 0,
         "clause": 0,
         "invested": 0,
-        "buyDate": 1779371688
+        "buyDate": 1784014973
       },
       {
-        "id": 38405,
-        "buyPrice": 2010000,
+        "id": 26299,
+        "buyPrice": 0,
         "clause": 0,
         "invested": 0,
-        "buyDate": 1778043891
+        "buyDate": 1784014973
       },
       {
-        "id": 38867,
-        "buyPrice": 10072222,
-        "clause": 0,
-        "invested": 16000000,
-        "buyDate": 1769493971
-      },
-      {
-        "id": 39360,
-        "buyPrice": 3852222,
-        "clause": 0,
-        "invested": 1000000,
-        "buyDate": 1775451744
-      },
-      {
-        "id": 40071,
-        "buyPrice": 190000,
+        "id": 27271,
+        "buyPrice": 0,
         "clause": 0,
         "invested": 0,
-        "buyDate": 1777179786
+        "buyDate": 1784014973
+      },
+      {
+        "id": 28087,
+        "buyPrice": 0,
+        "clause": 0,
+        "invested": 0,
+        "buyDate": 1784014973
+      },
+      {
+        "id": 32374,
+        "buyPrice": 0,
+        "clause": 0,
+        "invested": 0,
+        "buyDate": 1784014973
+      },
+      {
+        "id": 38194,
+        "buyPrice": 0,
+        "clause": 0,
+        "invested": 0,
+        "buyDate": 1784014973
+      },
+      {
+        "id": 38318,
+        "buyPrice": 0,
+        "clause": 0,
+        "invested": 0,
+        "buyDate": 1784014973
+      },
+      {
+        "id": 41084,
+        "buyPrice": 0,
+        "clause": 0,
+        "invested": 0,
+        "buyDate": 1784014973
+      },
+      {
+        "id": 41097,
+        "buyPrice": 0,
+        "clause": 0,
+        "invested": 0,
+        "buyDate": 1784014973
+      },
+      {
+        "id": 41420,
+        "buyPrice": 0,
+        "clause": 0,
+        "invested": 0,
+        "buyDate": 1784014973
       }
     ],
     "market": []
   },
-  "boardTomaquet": [
-    {
-      "type": "transfer",
-      "date": 1781170009,
-      "content": [
-        {
-          "player": 163,
-          "from": {
-            "id": 148051,
-            "name": "Zaza Pachulia",
-            "icon": "i/u/148051.png?v=98"
-          },
-          "to": {
-            "id": 12713493,
-            "name": "Tata Martini",
-            "icon": "i/u/12713493.png"
-          },
-          "amount": 13522500,
-          "type": "clause"
-        },
-        {
-          "player": 38493,
-          "from": {
-            "id": 148051,
-            "name": "Zaza Pachulia",
-            "icon": "i/u/148051.png?v=98"
-          },
-          "to": {
-            "id": 12713493,
-            "name": "Tata Martini",
-            "icon": "i/u/12713493.png"
-          },
-          "amount": 5389172,
-          "type": "clause"
-        },
-        {
-          "player": 2247,
-          "from": {
-            "id": 148051,
-            "name": "Zaza Pachulia",
-            "icon": "i/u/148051.png?v=98"
-          },
-          "to": {
-            "id": 12713493,
-            "name": "Tata Martini",
-            "icon": "i/u/12713493.png"
-          },
-          "amount": 4965000,
-          "type": "clause"
-        },
-        {
-          "player": 33531,
-          "from": {
-            "id": 148051,
-            "name": "Zaza Pachulia",
-            "icon": "i/u/148051.png?v=98"
-          },
-          "to": {
-            "id": 12713493,
-            "name": "Tata Martini",
-            "icon": "i/u/12713493.png"
-          },
-          "amount": 3888735,
-          "type": "clause"
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1779859198,
-      "content": [
-        {
-          "player": 33921,
-          "to": {
-            "id": 12713493,
-            "name": "Tata Martini",
-            "icon": "i/u/12713493.png"
-          },
-          "amount": 150000
-        }
-      ]
-    }
-  ],
+  "boardTomaquet": [],
   "leagueEnBas": {
     "id": 1248640,
     "name": "Lliga Bas Promesas",
@@ -12528,166 +12342,40 @@
   },
   "odds": {
     "Alavés": {
-      "winProb": 0.39710685954269714,
-      "drawProb": 0.3453103126458237,
-      "loseProb": 0.2575828278114792,
-      "over25Prob": 0.3389830508474576,
+      "winProb": 0.4049281314168378,
+      "drawProb": 0.3211498973305955,
+      "loseProb": 0.27392197125256673,
+      "over25Prob": 0.5,
       "isHome": true,
       "opponent": "Getafe",
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Getafe": {
-      "winProb": 0.2575828278114792,
-      "drawProb": 0.3453103126458237,
-      "loseProb": 0.39710685954269714,
-      "over25Prob": 0.3389830508474576,
+      "winProb": 0.27392197125256673,
+      "drawProb": 0.3211498973305955,
+      "loseProb": 0.4049281314168378,
+      "over25Prob": 0.5,
       "isHome": false,
       "opponent": "Alavés",
       "matchDate": "2026-08-16T19:00:00Z"
     },
-    "Barcelona": {
-      "winProb": 0.6667712582365862,
-      "drawProb": 0.19203012237213685,
-      "loseProb": 0.1411986193912771,
-      "over25Prob": 0.6666666666666666,
-      "isHome": true,
-      "opponent": "Athletic Bilbao",
-      "matchDate": "2026-08-16T19:00:00Z"
-    },
-    "Athletic Bilbao": {
-      "winProb": 0.1411986193912771,
-      "drawProb": 0.19203012237213685,
-      "loseProb": 0.6667712582365862,
-      "over25Prob": 0.6666666666666666,
-      "isHome": false,
-      "opponent": "Barcelona",
-      "matchDate": "2026-08-16T19:00:00Z"
-    },
-    "Atlético Madrid": {
-      "winProb": 0.7468532929440643,
-      "drawProb": 0.17788687522849533,
-      "loseProb": 0.07525983182744034,
-      "over25Prob": 0.5319148936170213,
-      "isHome": true,
-      "opponent": "Málaga",
-      "matchDate": "2026-08-16T19:00:00Z"
-    },
-    "Málaga": {
-      "winProb": 0.07525983182744034,
-      "drawProb": 0.17788687522849533,
-      "loseProb": 0.7468532929440643,
-      "over25Prob": 0.5319148936170213,
-      "isHome": false,
-      "opponent": "Atlético Madrid",
-      "matchDate": "2026-08-16T19:00:00Z"
-    },
-    "Celta Vigo": {
-      "winProb": 0.47717481934408007,
-      "drawProb": 0.2877292940522512,
-      "loseProb": 0.23509588660366873,
-      "over25Prob": 0.4926108374384237,
-      "isHome": true,
-      "opponent": "CA Osasuna",
-      "matchDate": "2026-08-16T19:00:00Z"
-    },
-    "CA Osasuna": {
-      "winProb": 0.23509588660366873,
-      "drawProb": 0.2877292940522512,
-      "loseProb": 0.47717481934408007,
-      "over25Prob": 0.4926108374384237,
-      "isHome": false,
-      "opponent": "Celta Vigo",
-      "matchDate": "2026-08-16T19:00:00Z"
-    },
-    "Deportivo La Coruña": {
-      "winProb": 0.41264166730052493,
-      "drawProb": 0.31147790370426715,
-      "loseProb": 0.27588042899520804,
-      "over25Prob": 0.4587155963302752,
-      "isHome": true,
-      "opponent": "Elche CF",
-      "matchDate": "2026-08-16T19:00:00Z"
-    },
-    "Elche CF": {
-      "winProb": 0.27588042899520804,
-      "drawProb": 0.31147790370426715,
-      "loseProb": 0.41264166730052493,
-      "over25Prob": 0.4587155963302752,
-      "isHome": false,
-      "opponent": "Deportivo La Coruña",
-      "matchDate": "2026-08-16T19:00:00Z"
-    },
-    "Espanyol": {
-      "winProb": 0.479860850584905,
-      "drawProb": 0.28934893080045015,
-      "loseProb": 0.23079021861464477,
-      "over25Prob": 0.47846889952153115,
-      "isHome": true,
-      "opponent": "Levante",
-      "matchDate": "2026-08-16T19:00:00Z"
-    },
-    "Levante": {
-      "winProb": 0.23079021861464477,
-      "drawProb": 0.28934893080045015,
-      "loseProb": 0.479860850584905,
-      "over25Prob": 0.47846889952153115,
-      "isHome": false,
-      "opponent": "Espanyol",
-      "matchDate": "2026-08-16T19:00:00Z"
-    },
     "Sevilla": {
-      "winProb": 0.41944466232645705,
-      "drawProb": 0.3057886893089654,
-      "loseProb": 0.27476664836457765,
-      "over25Prob": 0.4608294930875576,
+      "winProb": 0.41307790351859724,
+      "drawProb": 0.3091421729558534,
+      "loseProb": 0.2777799235255494,
+      "over25Prob": 0.4566210045662101,
       "isHome": true,
       "opponent": "Rayo Vallecano",
-      "matchDate": "2026-08-16T19:00:00Z"
+      "matchDate": "2026-08-15T19:30:00Z"
     },
     "Rayo Vallecano": {
-      "winProb": 0.27476664836457765,
-      "drawProb": 0.3057886893089654,
-      "loseProb": 0.41944466232645705,
-      "over25Prob": 0.4608294930875576,
+      "winProb": 0.2777799235255494,
+      "drawProb": 0.3091421729558534,
+      "loseProb": 0.41307790351859724,
+      "over25Prob": 0.4566210045662101,
       "isHome": false,
       "opponent": "Sevilla",
-      "matchDate": "2026-08-16T19:00:00Z"
-    },
-    "Valencia": {
-      "winProb": 0.3515765856003846,
-      "drawProb": 0.2942425577947834,
-      "loseProb": 0.35418085660483184,
-      "over25Prob": 0.5128205128205129,
-      "isHome": true,
-      "opponent": "Real Betis",
-      "matchDate": "2026-08-16T19:00:00Z"
-    },
-    "Real Betis": {
-      "winProb": 0.35418085660483184,
-      "drawProb": 0.2942425577947834,
-      "loseProb": 0.3515765856003846,
-      "over25Prob": 0.5128205128205129,
-      "isHome": false,
-      "opponent": "Valencia",
-      "matchDate": "2026-08-16T19:00:00Z"
-    },
-    "Real Madrid": {
-      "winProb": 0.670515924753213,
-      "drawProb": 0.19444961817843176,
-      "loseProb": 0.13503445706835537,
-      "over25Prob": 0.6578947368421053,
-      "isHome": true,
-      "opponent": "Real Sociedad",
-      "matchDate": "2026-08-16T19:00:00Z"
-    },
-    "Real Sociedad": {
-      "winProb": 0.13503445706835537,
-      "drawProb": 0.19444961817843176,
-      "loseProb": 0.670515924753213,
-      "over25Prob": 0.6578947368421053,
-      "isHome": false,
-      "opponent": "Real Madrid",
-      "matchDate": "2026-08-16T19:00:00Z"
+      "matchDate": "2026-08-15T19:30:00Z"
     },
     "Real Racing Club de Santander": {
       "winProb": 0.2822922820774478,
@@ -12696,7 +12384,7 @@
       "over25Prob": 0.53475935828877,
       "isHome": true,
       "opponent": "Villarreal",
-      "matchDate": "2026-08-16T19:00:00Z"
+      "matchDate": "2026-08-16T15:00:00Z"
     },
     "Villarreal": {
       "winProb": 0.4508835060959235,
@@ -12705,87 +12393,213 @@
       "over25Prob": 0.53475935828877,
       "isHome": false,
       "opponent": "Real Racing Club de Santander",
-      "matchDate": "2026-08-16T19:00:00Z"
+      "matchDate": "2026-08-16T15:00:00Z"
+    },
+    "Espanyol": {
+      "winProb": 0.47717481934408007,
+      "drawProb": 0.2877292940522512,
+      "loseProb": 0.23509588660366873,
+      "over25Prob": 0.47846889952153115,
+      "isHome": true,
+      "opponent": "Levante",
+      "matchDate": "2026-08-16T17:00:00Z"
+    },
+    "Levante": {
+      "winProb": 0.23509588660366873,
+      "drawProb": 0.2877292940522512,
+      "loseProb": 0.47717481934408007,
+      "over25Prob": 0.47846889952153115,
+      "isHome": false,
+      "opponent": "Espanyol",
+      "matchDate": "2026-08-16T17:00:00Z"
+    },
+    "Barcelona": {
+      "winProb": 0.6775538568450311,
+      "drawProb": 0.18068102849200834,
+      "loseProb": 0.14176511466296038,
+      "over25Prob": 0.5,
+      "isHome": true,
+      "opponent": "Athletic Bilbao",
+      "matchDate": "2026-08-27T19:00:00Z"
+    },
+    "Athletic Bilbao": {
+      "winProb": 0.14176511466296038,
+      "drawProb": 0.18068102849200834,
+      "loseProb": 0.6775538568450311,
+      "over25Prob": 0.5,
+      "isHome": false,
+      "opponent": "Barcelona",
+      "matchDate": "2026-08-27T19:00:00Z"
+    },
+    "Atlético Madrid": {
+      "winProb": 0.7297297297297297,
+      "drawProb": 0.17297297297297295,
+      "loseProb": 0.0972972972972973,
+      "over25Prob": 0.5747126436781609,
+      "isHome": true,
+      "opponent": "Málaga",
+      "matchDate": "2026-08-19T19:00:00Z"
+    },
+    "Málaga": {
+      "winProb": 0.0972972972972973,
+      "drawProb": 0.17297297297297295,
+      "loseProb": 0.7297297297297297,
+      "over25Prob": 0.5747126436781609,
+      "isHome": false,
+      "opponent": "Atlético Madrid",
+      "matchDate": "2026-08-19T19:00:00Z"
+    },
+    "Valencia": {
+      "winProb": 0.3548387096774194,
+      "drawProb": 0.2903225806451613,
+      "loseProb": 0.3548387096774194,
+      "over25Prob": 0.5076142131979695,
+      "isHome": true,
+      "opponent": "Real Betis",
+      "matchDate": "2026-08-25T19:00:00Z"
+    },
+    "Real Betis": {
+      "winProb": 0.3548387096774194,
+      "drawProb": 0.2903225806451613,
+      "loseProb": 0.3548387096774194,
+      "over25Prob": 0.5076142131979695,
+      "isHome": false,
+      "opponent": "Valencia",
+      "matchDate": "2026-08-25T19:00:00Z"
+    },
+    "Real Madrid": {
+      "winProb": 0.6498725316510392,
+      "drawProb": 0.2018752970660675,
+      "loseProb": 0.14825217128289334,
+      "over25Prob": 0.5,
+      "isHome": true,
+      "opponent": "Real Sociedad",
+      "matchDate": "2026-08-26T19:00:00Z"
+    },
+    "Real Sociedad": {
+      "winProb": 0.14825217128289334,
+      "drawProb": 0.2018752970660675,
+      "loseProb": 0.6498725316510392,
+      "over25Prob": 0.5,
+      "isHome": false,
+      "opponent": "Real Madrid",
+      "matchDate": "2026-08-26T19:00:00Z"
+    },
+    "Celta Vigo": {
+      "winProb": 0.4743866605303218,
+      "drawProb": 0.28604807590186565,
+      "loseProb": 0.23956526356781252,
+      "over25Prob": 0.4926108374384237,
+      "isHome": true,
+      "opponent": "CA Osasuna",
+      "matchDate": "2026-08-16T19:30:00Z"
+    },
+    "CA Osasuna": {
+      "winProb": 0.23956526356781252,
+      "drawProb": 0.28604807590186565,
+      "loseProb": 0.4743866605303218,
+      "over25Prob": 0.4926108374384237,
+      "isHome": false,
+      "opponent": "Celta Vigo",
+      "matchDate": "2026-08-16T19:30:00Z"
+    },
+    "Deportivo La Coruña": {
+      "winProb": 0.4089186825998251,
+      "drawProb": 0.31372777615855435,
+      "loseProb": 0.2773535412416205,
+      "over25Prob": 0.45454545454545453,
+      "isHome": true,
+      "opponent": "Elche CF",
+      "matchDate": "2026-08-17T19:00:00Z"
+    },
+    "Elche CF": {
+      "winProb": 0.2773535412416205,
+      "drawProb": 0.31372777615855435,
+      "loseProb": 0.4089186825998251,
+      "over25Prob": 0.45454545454545453,
+      "isHome": false,
+      "opponent": "Deportivo La Coruña",
+      "matchDate": "2026-08-17T19:00:00Z"
     }
   },
   "news": [
+    {
+      "title": "Oficial: Fernando Calero, nuevo jugador del Málaga CF",
+      "link": "https://www.jornadaperfecta.com/blog/fernando-calero-malaga-fichaje-26/",
+      "date": "Tue, 14 Jul 2026 12:30:56 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "El fichaje de Patrick Mercado por el Sevilla sigue paralizado",
+      "link": "https://www.jornadaperfecta.com/blog/patrick-mercado-sevilla-fichaje-reconocimiento/",
+      "date": "Tue, 14 Jul 2026 11:44:37 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Thiago Almada saldrá este mercado del Atlético de Madrid",
+      "link": "https://www.jornadaperfecta.com/blog/thiago-almada-salida-atletico-26/",
+      "date": "Tue, 14 Jul 2026 11:17:51 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Andrés García, a un paso de ser nuevo jugador del Getafe",
+      "link": "https://www.jornadaperfecta.com/blog/andres-garcia-acuerdo-getafe-26/",
+      "date": "Tue, 14 Jul 2026 10:58:41 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Se cae la llegada de Thomas Meunier al Valencia",
+      "link": "https://www.jornadaperfecta.com/blog/thomas-meunier-valencia-fichaje/",
+      "date": "Tue, 14 Jul 2026 09:40:17 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Aprende a interpretar el valor de mercado de un futbolista en los Fantasy de LaLiga",
+      "link": "https://www.jornadaperfecta.com/blog/interpretar-valor-mercado-fantasy/",
+      "date": "Tue, 14 Jul 2026 09:27:40 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "OFICIAL: La Jornada 1 de LaLiga EA Sports será fragmentada",
+      "link": "https://www.jornadaperfecta.com/blog/jornada-1-laliga-aplazamiento-26/",
+      "date": "Tue, 14 Jul 2026 09:20:06 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Kang-in Lee pasa reconocimiento médico en Corea para fichar por el Atlético de Madrid",
+      "link": "https://www.jornadaperfecta.com/blog/kang-in-lee-atletico-fichaje/",
+      "date": "Tue, 14 Jul 2026 09:10:26 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Mercado de fichajes de verano de LaLiga 26/27: altas y bajas oficiales",
+      "link": "https://www.jornadaperfecta.com/blog/mercado-fichajes-verano-26-27/",
+      "date": "Tue, 14 Jul 2026 08:25:36 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "RETAbet Golmanía Francia vs España: hasta 20€ en Freebets por los goles",
       "link": "https://www.jornadaperfecta.com/blog/retabet-golmania-francia-vs-espana/",
       "date": "Tue, 14 Jul 2026 07:00:58 +0000",
       "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/07/RETAbet-Golmania-La-Roja-Espana.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Fernando Calero estaría a un paso del Málaga CF",
-      "link": "https://www.jornadaperfecta.com/blog/fernando-calero-acuerdo-malaga/",
-      "date": "Mon, 13 Jul 2026 22:24:15 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Las cinco claves del mercado de fichajes del 13 de julio",
-      "link": "https://www.jornadaperfecta.com/blog/claves-mercado-13-7-26/",
-      "date": "Mon, 13 Jul 2026 21:00:33 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Supercuota YoSports para el Francia vs España: cuota 6.50",
-      "link": "https://www.jornadaperfecta.com/blog/supercuota-yosports-francia-vs-espana/",
-      "date": "Mon, 13 Jul 2026 21:00:20 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/06/YoSports-bono-de-bienvenida-mundial.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Rayo Vallecano y Chelsea, en negociaciones por Pep Chavarría",
-      "link": "https://www.jornadaperfecta.com/blog/pep-chavarria-salida-rayo-vallecano-26/",
-      "date": "Mon, 13 Jul 2026 18:54:32 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "La salida de Julián Álvarez del Atleti podría ser a la Premier",
-      "link": "https://www.jornadaperfecta.com/blog/julian-alvarez-pide-salir-atleti/",
-      "date": "Mon, 13 Jul 2026 18:35:48 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "El Athletic Club actualiza la enfermería: Nico Williams, Gorosabel, Nico Serrano&#8230;",
-      "link": "https://www.jornadaperfecta.com/blog/athletic-club-lesionados-pretemporada-26/",
-      "date": "Mon, 13 Jul 2026 18:30:09 +0000",
-      "img": "https://cdn.biwenger.com/i/t/1.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Akor Adams entrena mientras cierra su salida y Nianzou está a un paso del Lille",
-      "link": "https://www.jornadaperfecta.com/blog/akor-adams-salida-sevilla-26/",
-      "date": "Mon, 13 Jul 2026 17:30:47 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "La Jornada 1 de LaLiga EA Sports apunta a ser fragmentada",
-      "link": "https://www.jornadaperfecta.com/blog/jornada-1-laliga-aplazamiento-26/",
-      "date": "Mon, 13 Jul 2026 17:25:06 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Courtois pasa pruebas en Valdebebas tras el Mundial. ¿Preocupa?",
-      "link": "https://www.jornadaperfecta.com/blog/courtois-estado-lesion-cuadriceps-26/",
-      "date": "Mon, 13 Jul 2026 17:15:07 +0000",
-      "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -12794,7 +12608,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-07-14T07:42:38.800Z",
+    "updatedAt": "2026-07-14T13:00:06.700Z",
     "players": []
   }
 }
