@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-16T18:52:02.364Z",
+  "updatedAt": "2026-07-17T01:22:30.830Z",
   "players": [
     {
       "id": 11,
@@ -803,6 +803,22 @@
       "playedAway": 0,
       "teamName": "Rayo Vallecano",
       "teamId": 70,
+      "status": "ok",
+      "jForm": [],
+      "clausula": null
+    },
+    {
+      "id": 2480,
+      "slug": "aissa-mandi",
+      "name": "Mandi",
+      "position": 2,
+      "price": 860000,
+      "points": 0,
+      "trend": 0,
+      "playedHome": 0,
+      "playedAway": 0,
+      "teamName": "Levante",
+      "teamId": 10,
       "status": "ok",
       "jForm": [],
       "clausula": null
@@ -1870,28 +1886,6 @@
       "clausula": null
     },
     {
-      "id": 13994,
-      "slug": "thierry-correia",
-      "name": "Correia",
-      "position": 2,
-      "price": 210000,
-      "points": 57,
-      "trend": 0,
-      "playedHome": 11,
-      "playedAway": 13,
-      "teamName": "",
-      "teamId": null,
-      "status": "ok",
-      "jForm": [
-        2,
-        4,
-        null,
-        null,
-        null
-      ],
-      "clausula": null
-    },
-    {
       "id": 14205,
       "slug": "jose-gragera",
       "name": "Gragera",
@@ -2769,28 +2763,6 @@
       "teamId": 3,
       "status": "ok",
       "jForm": [],
-      "clausula": null
-    },
-    {
-      "id": 19445,
-      "slug": "luis-milla",
-      "name": "Luis Milla",
-      "position": 3,
-      "price": 10480000,
-      "points": 207,
-      "trend": 0,
-      "playedHome": 18,
-      "playedAway": 19,
-      "teamName": "",
-      "teamId": null,
-      "status": "ok",
-      "jForm": [
-        13,
-        2,
-        9,
-        4,
-        6
-      ],
       "clausula": null
     },
     {
@@ -3748,6 +3720,22 @@
       "clausula": null
     },
     {
+      "id": 26131,
+      "slug": "andres-garcia",
+      "name": "Andrés García",
+      "position": 2,
+      "price": 390000,
+      "points": 0,
+      "trend": 0,
+      "playedHome": 0,
+      "playedAway": 0,
+      "teamName": "Getafe",
+      "teamId": 8,
+      "status": "ok",
+      "jForm": [],
+      "clausula": null
+    },
+    {
       "id": 26271,
       "slug": "lamine-yamal",
       "name": "Yamal",
@@ -3953,28 +3941,6 @@
       "teamId": 3,
       "status": "ok",
       "jForm": [],
-      "clausula": null
-    },
-    {
-      "id": 26945,
-      "slug": "lewandowski",
-      "name": "Lewandowski",
-      "position": 4,
-      "price": 6310000,
-      "points": 156,
-      "trend": 0,
-      "playedHome": 15,
-      "playedAway": 16,
-      "teamName": "",
-      "teamId": null,
-      "status": "ok",
-      "jForm": [
-        9,
-        6,
-        -1,
-        2,
-        11
-      ],
       "clausula": null
     },
     {
@@ -4613,6 +4579,22 @@
       "playedAway": 0,
       "teamName": "Real Madrid",
       "teamId": 15,
+      "status": "ok",
+      "jForm": [],
+      "clausula": null
+    },
+    {
+      "id": 31069,
+      "slug": "mikel-rodriguez",
+      "name": "Mikel Rodriguez",
+      "position": 3,
+      "price": 220000,
+      "points": 0,
+      "trend": 0,
+      "playedHome": 0,
+      "playedAway": 0,
+      "teamName": "Alavés",
+      "teamId": 91,
       "status": "ok",
       "jForm": [],
       "clausula": null
@@ -6572,28 +6554,6 @@
       "clausula": null
     },
     {
-      "id": 38189,
-      "slug": "leo-petrot",
-      "name": "Pétrot",
-      "position": 2,
-      "price": 280000,
-      "points": 80,
-      "trend": 0,
-      "playedHome": 16,
-      "playedAway": 16,
-      "teamName": "",
-      "teamId": null,
-      "status": "ok",
-      "jForm": [
-        2,
-        null,
-        -5,
-        null,
-        null
-      ],
-      "clausula": null
-    },
-    {
       "id": 38194,
       "slug": "gabriel-suazo",
       "name": "Gabriel Suazo",
@@ -7025,27 +6985,6 @@
       "teamId": 1,
       "status": "ok",
       "jForm": [],
-      "clausula": null
-    },
-    {
-      "id": 39350,
-      "slug": "miguel-sierra",
-      "name": "Miguel Sierra",
-      "position": 4,
-      "price": 260000,
-      "points": 10,
-      "trend": 0,
-      "playedHome": 3,
-      "playedAway": 1,
-      "teamName": "",
-      "teamId": null,
-      "status": "ok",
-      "jForm": [
-        2,
-        2,
-        3,
-        3
-      ],
       "clausula": null
     },
     {
@@ -10876,6 +10815,14 @@
   },
   "news": [
     {
+      "title": "Las cinco claves del mercado de fichajes del 16 de julio",
+      "link": "https://www.jornadaperfecta.com/blog/claves-mercado-16-7-26/",
+      "date": "Thu, 16 Jul 2026 21:00:19 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Juan Cruz despierta interés en un nuevo equipo de Primera",
       "link": "https://www.jornadaperfecta.com/blog/juan-cruz-malaga-fichaje/",
       "date": "Thu, 16 Jul 2026 18:27:09 +0000",
@@ -10946,21 +10893,13 @@
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Oficial: Mikel Rodríguez, nuevo jugador del Deportivo Alavés",
-      "link": "https://www.jornadaperfecta.com/blog/mikel-rodriguez-alaves-fichaje-anuncio-26/",
-      "date": "Thu, 16 Jul 2026 09:37:07 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-07-16T18:51:59.102Z",
+    "updatedAt": "2026-07-17T01:22:27.640Z",
     "players": []
   }
 }
