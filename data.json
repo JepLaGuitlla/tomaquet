@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-18T18:41:53.084Z",
+  "updatedAt": "2026-07-19T01:20:25.645Z",
   "players": [
     {
       "id": 11,
@@ -3624,6 +3624,22 @@
       "clausula": null
     },
     {
+      "id": 25769,
+      "slug": "aubameyang",
+      "name": "Aubameyang",
+      "position": 4,
+      "price": 3550000,
+      "points": 0,
+      "trend": 0,
+      "playedHome": 0,
+      "playedAway": 0,
+      "teamName": "Deportivo",
+      "teamId": 6,
+      "status": "ok",
+      "jForm": [],
+      "clausula": null
+    },
+    {
       "id": 25777,
       "slug": "luismi-cruz",
       "name": "Luismi Cruz",
@@ -4033,8 +4049,8 @@
       "trend": 0,
       "playedHome": 0,
       "playedAway": 0,
-      "teamName": "Sevilla",
-      "teamId": 17,
+      "teamName": "",
+      "teamId": null,
       "status": "ok",
       "jForm": [],
       "clausula": null
@@ -4049,8 +4065,8 @@
       "trend": 0,
       "playedHome": 0,
       "playedAway": 0,
-      "teamName": "Valencia",
-      "teamId": 18,
+      "teamName": "",
+      "teamId": null,
       "status": "ok",
       "jForm": [],
       "clausula": null
@@ -6950,28 +6966,6 @@
       "clausula": null
     },
     {
-      "id": 39301,
-      "slug": "kochen",
-      "name": "Kochen",
-      "position": 1,
-      "price": 180000,
-      "points": 0,
-      "trend": 0,
-      "playedHome": 0,
-      "playedAway": 0,
-      "teamName": "",
-      "teamId": null,
-      "status": "ok",
-      "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "clausula": null
-    },
-    {
       "id": 39327,
       "slug": "selton-sanchez",
       "name": "Selton Sánchez",
@@ -7111,6 +7105,22 @@
       "playedAway": 0,
       "teamName": "Villarreal",
       "teamId": 19,
+      "status": "ok",
+      "jForm": [],
+      "clausula": null
+    },
+    {
+      "id": 39673,
+      "slug": "julio-diaz",
+      "name": "Julio Díaz",
+      "position": 2,
+      "price": 160000,
+      "points": 0,
+      "trend": 0,
+      "playedHome": 0,
+      "playedAway": 0,
+      "teamName": "Atlético",
+      "teamId": 2,
       "status": "ok",
       "jForm": [],
       "clausula": null
@@ -10651,18 +10661,18 @@
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Sevilla": {
-      "winProb": 0.4306220095693779,
-      "drawProb": 0.30143540669856456,
-      "loseProb": 0.2679425837320574,
+      "winProb": 0.4328223624887286,
+      "drawProb": 0.30027051397655546,
+      "loseProb": 0.26690712353471596,
       "over25Prob": 0.4566210045662101,
       "isHome": true,
       "opponent": "Rayo Vallecano",
       "matchDate": "2026-08-15T19:30:00Z"
     },
     "Rayo Vallecano": {
-      "winProb": 0.2679425837320574,
-      "drawProb": 0.30143540669856456,
-      "loseProb": 0.4306220095693779,
+      "winProb": 0.26690712353471596,
+      "drawProb": 0.30027051397655546,
+      "loseProb": 0.4328223624887286,
       "over25Prob": 0.4566210045662101,
       "isHome": false,
       "opponent": "Sevilla",
@@ -10723,54 +10733,54 @@
       "matchDate": "2026-08-27T19:00:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.7497509568499975,
-      "drawProb": 0.17585067897027215,
-      "loseProb": 0.07439836417973053,
+      "winProb": 0.753271786547631,
+      "drawProb": 0.1753068885056305,
+      "loseProb": 0.07142132494673835,
       "over25Prob": 0.5434782608695652,
       "isHome": true,
       "opponent": "Málaga",
       "matchDate": "2026-08-19T19:00:00Z"
     },
     "Málaga": {
-      "winProb": 0.07439836417973053,
-      "drawProb": 0.17585067897027215,
-      "loseProb": 0.7497509568499975,
+      "winProb": 0.07142132494673835,
+      "drawProb": 0.1753068885056305,
+      "loseProb": 0.753271786547631,
       "over25Prob": 0.5434782608695652,
       "isHome": false,
       "opponent": "Atlético Madrid",
       "matchDate": "2026-08-19T19:00:00Z"
     },
     "Valencia": {
-      "winProb": 0.3532608695652174,
-      "drawProb": 0.29347826086956524,
-      "loseProb": 0.3532608695652174,
+      "winProb": 0.3548387096774194,
+      "drawProb": 0.2903225806451613,
+      "loseProb": 0.3548387096774194,
       "over25Prob": 0.5128205128205129,
       "isHome": true,
       "opponent": "Real Betis",
       "matchDate": "2026-08-25T19:00:00Z"
     },
     "Real Betis": {
-      "winProb": 0.3532608695652174,
-      "drawProb": 0.29347826086956524,
-      "loseProb": 0.3532608695652174,
+      "winProb": 0.3548387096774194,
+      "drawProb": 0.2903225806451613,
+      "loseProb": 0.3548387096774194,
       "over25Prob": 0.5128205128205129,
       "isHome": false,
       "opponent": "Valencia",
       "matchDate": "2026-08-25T19:00:00Z"
     },
     "Real Madrid": {
-      "winProb": 0.657125077784692,
-      "drawProb": 0.1985065339141257,
-      "loseProb": 0.14436838830118232,
+      "winProb": 0.6698715422807157,
+      "drawProb": 0.19024351800772324,
+      "loseProb": 0.13988493971156118,
       "over25Prob": 0.5,
       "isHome": true,
       "opponent": "Real Sociedad",
       "matchDate": "2026-08-26T19:00:00Z"
     },
     "Real Sociedad": {
-      "winProb": 0.14436838830118232,
-      "drawProb": 0.1985065339141257,
-      "loseProb": 0.657125077784692,
+      "winProb": 0.13988493971156118,
+      "drawProb": 0.19024351800772324,
+      "loseProb": 0.6698715422807157,
       "over25Prob": 0.5,
       "isHome": false,
       "opponent": "Real Madrid",
@@ -10795,25 +10805,33 @@
       "matchDate": "2026-08-16T19:30:00Z"
     },
     "Deportivo La Coruña": {
-      "winProb": 0.4089186825998251,
-      "drawProb": 0.31372777615855435,
-      "loseProb": 0.2773535412416205,
-      "over25Prob": 0.45454545454545453,
+      "winProb": 0.41264166730052493,
+      "drawProb": 0.31147790370426715,
+      "loseProb": 0.27588042899520804,
+      "over25Prob": 0.45248868778280543,
       "isHome": true,
       "opponent": "Elche CF",
       "matchDate": "2026-08-17T19:00:00Z"
     },
     "Elche CF": {
-      "winProb": 0.2773535412416205,
-      "drawProb": 0.31372777615855435,
-      "loseProb": 0.4089186825998251,
-      "over25Prob": 0.45454545454545453,
+      "winProb": 0.27588042899520804,
+      "drawProb": 0.31147790370426715,
+      "loseProb": 0.41264166730052493,
+      "over25Prob": 0.45248868778280543,
       "isHome": false,
       "opponent": "Deportivo La Coruña",
       "matchDate": "2026-08-17T19:00:00Z"
     }
   },
   "news": [
+    {
+      "title": "Consigue hasta 15€ en Apuestas Gratis con DAZN Bet en el España vs Argentina",
+      "link": "https://www.jornadaperfecta.com/blog/dazn-bet-espana-vs-argentina-final-mundial/",
+      "date": "Sat, 18 Jul 2026 19:00:32 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/07/DAZN-Bet-Espana-vs-Argentina-Final-Mundial.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Apuesta en el España vs Argentina con devolución en MARCAapuestas",
       "link": "https://www.jornadaperfecta.com/blog/marcaapuestas-espana-vs-argentina-final-mundial/",
@@ -10885,21 +10903,13 @@
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Nicolas Raskin, cerca de ser nuevo jugador del Villarreal",
-      "link": "https://www.jornadaperfecta.com/blog/nicolas-raskin-villarreal-negociacion/",
-      "date": "Fri, 17 Jul 2026 12:49:38 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-07-18T18:41:50.345Z",
+    "updatedAt": "2026-07-19T01:20:22.830Z",
     "players": []
   }
 }
