@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-19T12:45:06.880Z",
+  "updatedAt": "2026-07-19T18:44:29.439Z",
   "players": [
     {
       "id": 11,
@@ -4211,6 +4211,22 @@
       "playedAway": 0,
       "teamName": "Sevilla",
       "teamId": 17,
+      "status": "ok",
+      "jForm": [],
+      "clausula": null
+    },
+    {
+      "id": 28282,
+      "slug": "juan-cruz-2",
+      "name": "Juan Cruz Díaz",
+      "position": 4,
+      "price": 310000,
+      "points": 0,
+      "trend": 0,
+      "playedHome": 0,
+      "playedAway": 0,
+      "teamName": "Málaga",
+      "teamId": 65,
       "status": "ok",
       "jForm": [],
       "clausula": null
@@ -10697,18 +10713,18 @@
       "matchDate": "2026-08-16T15:00:00Z"
     },
     "Espanyol": {
-      "winProb": 0.47717481934408007,
-      "drawProb": 0.2877292940522512,
-      "loseProb": 0.23509588660366873,
+      "winProb": 0.475103588735164,
+      "drawProb": 0.29082098461970646,
+      "loseProb": 0.23407542664512962,
       "over25Prob": 0.47846889952153115,
       "isHome": true,
       "opponent": "Levante",
       "matchDate": "2026-08-16T17:00:00Z"
     },
     "Levante": {
-      "winProb": 0.23509588660366873,
-      "drawProb": 0.2877292940522512,
-      "loseProb": 0.47717481934408007,
+      "winProb": 0.23407542664512962,
+      "drawProb": 0.29082098461970646,
+      "loseProb": 0.475103588735164,
       "over25Prob": 0.47846889952153115,
       "isHome": false,
       "opponent": "Espanyol",
@@ -10909,7 +10925,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-07-19T12:45:02.532Z",
+    "updatedAt": "2026-07-19T18:44:26.561Z",
     "players": []
   }
 }
