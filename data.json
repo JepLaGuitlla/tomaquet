@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-20T08:33:14.946Z",
+  "updatedAt": "2026-07-20T13:42:19.343Z",
   "players": [
     {
       "id": 11,
@@ -10733,18 +10733,18 @@
       "matchDate": "2026-08-27T19:00:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.753271786547631,
-      "drawProb": 0.1753068885056305,
-      "loseProb": 0.07142132494673835,
+      "winProb": 0.7508342602892104,
+      "drawProb": 0.17797552836484987,
+      "loseProb": 0.07119021134593995,
       "over25Prob": 0.5434782608695652,
       "isHome": true,
       "opponent": "Málaga",
       "matchDate": "2026-08-19T19:00:00Z"
     },
     "Málaga": {
-      "winProb": 0.07142132494673835,
-      "drawProb": 0.1753068885056305,
-      "loseProb": 0.753271786547631,
+      "winProb": 0.07119021134593995,
+      "drawProb": 0.17797552836484987,
+      "loseProb": 0.7508342602892104,
       "over25Prob": 0.5434782608695652,
       "isHome": false,
       "opponent": "Atlético Madrid",
@@ -10787,18 +10787,18 @@
       "matchDate": "2026-08-26T19:00:00Z"
     },
     "Celta Vigo": {
-      "winProb": 0.4719306895823061,
-      "drawProb": 0.2873846587307177,
-      "loseProb": 0.24068465168697611,
+      "winProb": 0.45811618933419423,
+      "drawProb": 0.3105351350520377,
+      "loseProb": 0.2313486756137681,
       "over25Prob": 0.49019607843137253,
       "isHome": true,
       "opponent": "CA Osasuna",
       "matchDate": "2026-08-16T19:30:00Z"
     },
     "CA Osasuna": {
-      "winProb": 0.24068465168697611,
-      "drawProb": 0.2873846587307177,
-      "loseProb": 0.4719306895823061,
+      "winProb": 0.2313486756137681,
+      "drawProb": 0.3105351350520377,
+      "loseProb": 0.45811618933419423,
       "over25Prob": 0.49019607843137253,
       "isHome": false,
       "opponent": "Celta Vigo",
@@ -10824,6 +10824,22 @@
     }
   },
   "news": [
+    {
+      "title": "Oficial: Diego Conde, nuevo jugador del Real Betis",
+      "link": "https://www.jornadaperfecta.com/blog/diego-conde-betis-anuncio-fichaje-26/",
+      "date": "Mon, 20 Jul 2026 12:52:39 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Diego Conde ya está en Sevilla para cerrar su cesión al Betis",
+      "link": "https://www.jornadaperfecta.com/blog/diego-conde-fichaje-betis/",
+      "date": "Mon, 20 Jul 2026 10:24:53 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Mercado de fichajes de verano de LaLiga 26/27: altas y bajas oficiales",
       "link": "https://www.jornadaperfecta.com/blog/mercado-fichajes-verano-26-27/",
@@ -10887,29 +10903,13 @@
       "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/07/MARCAapuestas-Espana-vs-Argentina-Final-Mundial.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "MaxiCuota de España y Yamal para la Final: ¡9.00 euros en Codere!",
-      "link": "https://www.jornadaperfecta.com/blog/maxicuota-espana-argentina-final-mundial-codere/",
-      "date": "Sat, 18 Jul 2026 07:00:51 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/07/maxicuota-espana-gana-argentina-codere-1024x283.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Oficial: Pierre-Emerick Aubameyang, nuevo jugador del Deportivo de A Coruña",
-      "link": "https://www.jornadaperfecta.com/blog/aubameyang-deportivo-anuncio-fichaje-26/",
-      "date": "Fri, 17 Jul 2026 22:11:14 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-07-20T08:33:12.015Z",
+    "updatedAt": "2026-07-20T13:42:16.579Z",
     "players": []
   }
 }
