@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-21T08:03:01.884Z",
+  "updatedAt": "2026-07-21T18:59:37.851Z",
   "players": [
     {
       "id": 11,
@@ -7669,8 +7669,8 @@
       "trend": 0,
       "playedHome": 0,
       "playedAway": 0,
-      "teamName": "Espanyol",
-      "teamId": 7,
+      "teamName": "",
+      "teamId": null,
       "status": "ok",
       "jForm": [],
       "clausula": null
@@ -8629,8 +8629,8 @@
       "trend": 0,
       "playedHome": 0,
       "playedAway": 0,
-      "teamName": "Deportivo",
-      "teamId": 6,
+      "teamName": "",
+      "teamId": null,
       "status": "ok",
       "jForm": [],
       "clausula": null
@@ -10114,21 +10114,21 @@
       {
         "position": 13,
         "team": {
-          "id": 559,
-          "name": "Sevilla FC",
-          "shortName": "Sevilla FC",
-          "tla": "SEV",
-          "crest": "https://crests.football-data.org/559.png"
+          "id": 285,
+          "name": "Elche CF",
+          "shortName": "Elche",
+          "tla": "ELC",
+          "crest": "https://crests.football-data.org/285.png"
         },
         "playedGames": 38,
         "form": null,
-        "won": 12,
-        "draw": 7,
-        "lost": 19,
+        "won": 10,
+        "draw": 13,
+        "lost": 15,
         "points": 43,
-        "goalsFor": 46,
-        "goalsAgainst": 60,
-        "goalDifference": -14
+        "goalsFor": 49,
+        "goalsAgainst": 57,
+        "goalDifference": -8
       },
       {
         "position": 14,
@@ -10152,43 +10152,24 @@
       {
         "position": 15,
         "team": {
-          "id": 285,
-          "name": "Elche CF",
-          "shortName": "Elche",
-          "tla": "ELC",
-          "crest": "https://crests.football-data.org/285.png"
+          "id": 559,
+          "name": "Sevilla FC",
+          "shortName": "Sevilla FC",
+          "tla": "SEV",
+          "crest": "https://crests.football-data.org/559.png"
         },
         "playedGames": 38,
         "form": null,
-        "won": 10,
-        "draw": 13,
-        "lost": 15,
+        "won": 12,
+        "draw": 7,
+        "lost": 19,
         "points": 43,
-        "goalsFor": 49,
-        "goalsAgainst": 57,
-        "goalDifference": -8
-      },
-      {
-        "position": 16,
-        "team": {
-          "id": 88,
-          "name": "Levante UD",
-          "shortName": "Levante",
-          "tla": "LEV",
-          "crest": "https://crests.football-data.org/88.png"
-        },
-        "playedGames": 38,
-        "form": null,
-        "won": 11,
-        "draw": 9,
-        "lost": 18,
-        "points": 42,
-        "goalsFor": 47,
-        "goalsAgainst": 61,
+        "goalsFor": 46,
+        "goalsAgainst": 60,
         "goalDifference": -14
       },
       {
-        "position": 17,
+        "position": 16,
         "team": {
           "id": 79,
           "name": "CA Osasuna",
@@ -10207,7 +10188,7 @@
         "goalDifference": -6
       },
       {
-        "position": 18,
+        "position": 17,
         "team": {
           "id": 89,
           "name": "RCD Mallorca",
@@ -10224,6 +10205,25 @@
         "goalsFor": 47,
         "goalsAgainst": 57,
         "goalDifference": -10
+      },
+      {
+        "position": 18,
+        "team": {
+          "id": 88,
+          "name": "Levante UD",
+          "shortName": "Levante",
+          "tla": "LEV",
+          "crest": "https://crests.football-data.org/88.png"
+        },
+        "playedGames": 38,
+        "form": null,
+        "won": 11,
+        "draw": 9,
+        "lost": 18,
+        "points": 42,
+        "goalsFor": 47,
+        "goalsAgainst": 61,
+        "goalDifference": -14
       },
       {
         "position": 19,
@@ -10267,23 +10267,6 @@
     "forms": {},
     "nextMatches": [
       {
-        "id": 564628,
-        "matchday": 1,
-        "date": "2026-08-16T15:00:00Z",
-        "home": {
-          "id": 78,
-          "name": "Club Atlético de Madrid",
-          "short": "Atleti",
-          "crest": "https://crests.football-data.org/78.png"
-        },
-        "away": {
-          "id": 84,
-          "name": "Málaga CF",
-          "short": "Málaga",
-          "crest": "https://crests.football-data.org/84.png"
-        }
-      },
-      {
         "id": 564629,
         "matchday": 1,
         "date": "2026-08-16T15:00:00Z",
@@ -10301,278 +10284,6 @@
         }
       },
       {
-        "id": 564630,
-        "matchday": 1,
-        "date": "2026-08-16T15:00:00Z",
-        "home": {
-          "id": 81,
-          "name": "FC Barcelona",
-          "short": "Barça",
-          "crest": "https://crests.football-data.org/81.png"
-        },
-        "away": {
-          "id": 77,
-          "name": "Athletic Club",
-          "short": "Athletic",
-          "crest": "https://crests.football-data.org/77.png"
-        }
-      },
-      {
-        "id": 564631,
-        "matchday": 1,
-        "date": "2026-08-16T15:00:00Z",
-        "home": {
-          "id": 86,
-          "name": "Real Madrid CF",
-          "short": "Real Madrid",
-          "crest": "https://crests.football-data.org/86.png"
-        },
-        "away": {
-          "id": 92,
-          "name": "Real Sociedad de Fútbol",
-          "short": "Real Sociedad",
-          "crest": "https://crests.football-data.org/92.png"
-        }
-      },
-      {
-        "id": 564632,
-        "matchday": 1,
-        "date": "2026-08-16T15:00:00Z",
-        "home": {
-          "id": 80,
-          "name": "RCD Espanyol de Barcelona",
-          "short": "Espanyol",
-          "crest": "https://crests.football-data.org/80.png"
-        },
-        "away": {
-          "id": 88,
-          "name": "Levante UD",
-          "short": "Levante",
-          "crest": "https://crests.football-data.org/88.png"
-        }
-      },
-      {
-        "id": 564633,
-        "matchday": 1,
-        "date": "2026-08-16T15:00:00Z",
-        "home": {
-          "id": 559,
-          "name": "Sevilla FC",
-          "short": "Sevilla FC",
-          "crest": "https://crests.football-data.org/559.png"
-        },
-        "away": {
-          "id": 87,
-          "name": "Rayo Vallecano de Madrid",
-          "short": "Rayo Vallecano",
-          "crest": "https://crests.football-data.org/87.png"
-        }
-      },
-      {
-        "id": 564634,
-        "matchday": 1,
-        "date": "2026-08-16T15:00:00Z",
-        "home": {
-          "id": 263,
-          "name": "Deportivo Alavés",
-          "short": "Alavés",
-          "crest": "https://crests.football-data.org/263.png"
-        },
-        "away": {
-          "id": 82,
-          "name": "Getafe CF",
-          "short": "Getafe",
-          "crest": "https://crests.football-data.org/82.png"
-        }
-      },
-      {
-        "id": 564635,
-        "matchday": 1,
-        "date": "2026-08-16T15:00:00Z",
-        "home": {
-          "id": 560,
-          "name": "RC Deportivo La Coruña",
-          "short": "Deportivo",
-          "crest": "https://crests.football-data.org/560.png"
-        },
-        "away": {
-          "id": 285,
-          "name": "Elche CF",
-          "short": "Elche",
-          "crest": "https://crests.football-data.org/285.png"
-        }
-      },
-      {
-        "id": 564636,
-        "matchday": 1,
-        "date": "2026-08-16T15:00:00Z",
-        "home": {
-          "id": 558,
-          "name": "RC Celta de Vigo",
-          "short": "Celta",
-          "crest": "https://crests.football-data.org/558.png"
-        },
-        "away": {
-          "id": 79,
-          "name": "CA Osasuna",
-          "short": "Osasuna",
-          "crest": "https://crests.football-data.org/79.png"
-        }
-      },
-      {
-        "id": 564637,
-        "matchday": 1,
-        "date": "2026-08-16T15:00:00Z",
-        "home": {
-          "id": 95,
-          "name": "Valencia CF",
-          "short": "Valencia",
-          "crest": "https://crests.football-data.org/95.png"
-        },
-        "away": {
-          "id": 90,
-          "name": "Real Betis Balompié",
-          "short": "Real Betis",
-          "crest": "https://crests.football-data.org/90.png"
-        }
-      },
-      {
-        "id": 564638,
-        "matchday": 2,
-        "date": "2026-08-23T15:00:00Z",
-        "home": {
-          "id": 87,
-          "name": "Rayo Vallecano de Madrid",
-          "short": "Rayo Vallecano",
-          "crest": "https://crests.football-data.org/87.png"
-        },
-        "away": {
-          "id": 263,
-          "name": "Deportivo Alavés",
-          "short": "Alavés",
-          "crest": "https://crests.football-data.org/263.png"
-        }
-      },
-      {
-        "id": 564639,
-        "matchday": 2,
-        "date": "2026-08-23T15:00:00Z",
-        "home": {
-          "id": 79,
-          "name": "CA Osasuna",
-          "short": "Osasuna",
-          "crest": "https://crests.football-data.org/79.png"
-        },
-        "away": {
-          "id": 88,
-          "name": "Levante UD",
-          "short": "Levante",
-          "crest": "https://crests.football-data.org/88.png"
-        }
-      },
-      {
-        "id": 564640,
-        "matchday": 2,
-        "date": "2026-08-23T15:00:00Z",
-        "home": {
-          "id": 84,
-          "name": "Málaga CF",
-          "short": "Málaga",
-          "crest": "https://crests.football-data.org/84.png"
-        },
-        "away": {
-          "id": 560,
-          "name": "RC Deportivo La Coruña",
-          "short": "Deportivo",
-          "crest": "https://crests.football-data.org/560.png"
-        }
-      },
-      {
-        "id": 564641,
-        "matchday": 2,
-        "date": "2026-08-23T15:00:00Z",
-        "home": {
-          "id": 77,
-          "name": "Athletic Club",
-          "short": "Athletic",
-          "crest": "https://crests.football-data.org/77.png"
-        },
-        "away": {
-          "id": 559,
-          "name": "Sevilla FC",
-          "short": "Sevilla FC",
-          "crest": "https://crests.football-data.org/559.png"
-        }
-      },
-      {
-        "id": 564642,
-        "matchday": 2,
-        "date": "2026-08-23T15:00:00Z",
-        "home": {
-          "id": 285,
-          "name": "Elche CF",
-          "short": "Elche",
-          "crest": "https://crests.football-data.org/285.png"
-        },
-        "away": {
-          "id": 81,
-          "name": "FC Barcelona",
-          "short": "Barça",
-          "crest": "https://crests.football-data.org/81.png"
-        }
-      },
-      {
-        "id": 564643,
-        "matchday": 2,
-        "date": "2026-08-23T15:00:00Z",
-        "home": {
-          "id": 95,
-          "name": "Valencia CF",
-          "short": "Valencia",
-          "crest": "https://crests.football-data.org/95.png"
-        },
-        "away": {
-          "id": 558,
-          "name": "RC Celta de Vigo",
-          "short": "Celta",
-          "crest": "https://crests.football-data.org/558.png"
-        }
-      },
-      {
-        "id": 564644,
-        "matchday": 2,
-        "date": "2026-08-23T15:00:00Z",
-        "home": {
-          "id": 82,
-          "name": "Getafe CF",
-          "short": "Getafe",
-          "crest": "https://crests.football-data.org/82.png"
-        },
-        "away": {
-          "id": 5335,
-          "name": "Real Racing Club de Santander",
-          "short": "Santander",
-          "crest": "https://crests.football-data.org/5335.png"
-        }
-      },
-      {
-        "id": 564645,
-        "matchday": 2,
-        "date": "2026-08-23T15:00:00Z",
-        "home": {
-          "id": 80,
-          "name": "RCD Espanyol de Barcelona",
-          "short": "Espanyol",
-          "crest": "https://crests.football-data.org/80.png"
-        },
-        "away": {
-          "id": 86,
-          "name": "Real Madrid CF",
-          "short": "Real Madrid",
-          "crest": "https://crests.football-data.org/86.png"
-        }
-      },
-      {
         "id": 564646,
         "matchday": 2,
         "date": "2026-08-23T15:00:00Z",
@@ -10587,23 +10298,6 @@
           "name": "Villarreal CF",
           "short": "Villarreal",
           "crest": "https://crests.football-data.org/94.png"
-        }
-      },
-      {
-        "id": 564647,
-        "matchday": 2,
-        "date": "2026-08-23T15:00:00Z",
-        "home": {
-          "id": 90,
-          "name": "Real Betis Balompié",
-          "short": "Real Betis",
-          "crest": "https://crests.football-data.org/90.png"
-        },
-        "away": {
-          "id": 92,
-          "name": "Real Sociedad de Fútbol",
-          "short": "Real Sociedad",
-          "crest": "https://crests.football-data.org/92.png"
         }
       }
     ],
@@ -10629,72 +10323,72 @@
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Sevilla": {
-      "winProb": 0.4328223624887286,
-      "drawProb": 0.30027051397655546,
-      "loseProb": 0.26690712353471596,
+      "winProb": 0.4344106817421058,
+      "drawProb": 0.3013724104585859,
+      "loseProb": 0.2642169077993082,
       "over25Prob": 0.4566210045662101,
       "isHome": true,
       "opponent": "Rayo Vallecano",
       "matchDate": "2026-08-15T19:30:00Z"
     },
     "Rayo Vallecano": {
-      "winProb": 0.26690712353471596,
-      "drawProb": 0.30027051397655546,
-      "loseProb": 0.4328223624887286,
+      "winProb": 0.2642169077993082,
+      "drawProb": 0.3013724104585859,
+      "loseProb": 0.4344106817421058,
       "over25Prob": 0.4566210045662101,
       "isHome": false,
       "opponent": "Sevilla",
       "matchDate": "2026-08-15T19:30:00Z"
     },
     "Real Racing Club de Santander": {
-      "winProb": 0.29454728858834744,
-      "drawProb": 0.2622681336745559,
-      "loseProb": 0.44318457773709674,
+      "winProb": 0.28525942542875754,
+      "drawProb": 0.2657211086185686,
+      "loseProb": 0.44901946595267384,
       "over25Prob": 0.53475935828877,
       "isHome": true,
       "opponent": "Villarreal",
       "matchDate": "2026-08-16T15:00:00Z"
     },
     "Villarreal": {
-      "winProb": 0.44318457773709674,
-      "drawProb": 0.2622681336745559,
-      "loseProb": 0.29454728858834744,
+      "winProb": 0.44901946595267384,
+      "drawProb": 0.2657211086185686,
+      "loseProb": 0.28525942542875754,
       "over25Prob": 0.53475935828877,
       "isHome": false,
       "opponent": "Real Racing Club de Santander",
       "matchDate": "2026-08-16T15:00:00Z"
     },
     "Espanyol": {
-      "winProb": 0.47264724376441,
-      "drawProb": 0.292181932508908,
-      "loseProb": 0.23517082372668208,
+      "winProb": 0.47021616737332317,
+      "drawProb": 0.2935288802391048,
+      "loseProb": 0.23625495238757216,
       "over25Prob": 0.47619047619047616,
       "isHome": true,
       "opponent": "Levante",
       "matchDate": "2026-08-16T17:00:00Z"
     },
     "Levante": {
-      "winProb": 0.23517082372668208,
-      "drawProb": 0.292181932508908,
-      "loseProb": 0.47264724376441,
+      "winProb": 0.23625495238757216,
+      "drawProb": 0.2935288802391048,
+      "loseProb": 0.47021616737332317,
       "over25Prob": 0.47619047619047616,
       "isHome": false,
       "opponent": "Espanyol",
       "matchDate": "2026-08-16T17:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.6760692294890996,
-      "drawProb": 0.1768181061740722,
-      "loseProb": 0.1471126643368281,
+      "winProb": 0.6775538568450311,
+      "drawProb": 0.18068102849200834,
+      "loseProb": 0.14176511466296038,
       "over25Prob": 0.5,
       "isHome": true,
       "opponent": "Athletic Bilbao",
       "matchDate": "2026-08-27T19:00:00Z"
     },
     "Athletic Bilbao": {
-      "winProb": 0.1471126643368281,
-      "drawProb": 0.1768181061740722,
-      "loseProb": 0.6760692294890996,
+      "winProb": 0.14176511466296038,
+      "drawProb": 0.18068102849200834,
+      "loseProb": 0.6775538568450311,
       "over25Prob": 0.5,
       "isHome": false,
       "opponent": "Barcelona",
@@ -10755,18 +10449,18 @@
       "matchDate": "2026-08-26T19:00:00Z"
     },
     "Celta Vigo": {
-      "winProb": 0.45811618933419423,
-      "drawProb": 0.3105351350520377,
-      "loseProb": 0.2313486756137681,
+      "winProb": 0.4695000175186574,
+      "drawProb": 0.2887074734592341,
+      "loseProb": 0.24179250902210855,
       "over25Prob": 0.49019607843137253,
       "isHome": true,
       "opponent": "CA Osasuna",
       "matchDate": "2026-08-16T19:30:00Z"
     },
     "CA Osasuna": {
-      "winProb": 0.2313486756137681,
-      "drawProb": 0.3105351350520377,
-      "loseProb": 0.45811618933419423,
+      "winProb": 0.24179250902210855,
+      "drawProb": 0.2887074734592341,
+      "loseProb": 0.4695000175186574,
       "over25Prob": 0.49019607843137253,
       "isHome": false,
       "opponent": "Celta Vigo",
@@ -10793,81 +10487,81 @@
   },
   "news": [
     {
-      "title": "Apúntate a la Liga LEF 2026/27&#8230; ¡la mayor competición fantasy!",
-      "link": "https://www.jornadaperfecta.com/blog/liga-lef-26-27/",
-      "date": "Tue, 21 Jul 2026 05:00:54 +0000",
+      "title": "El Real Madrid se plantea el fichaje de Rodri, aún sin el OK de Florentino",
+      "link": "https://www.jornadaperfecta.com/blog/rodri-real-madrid-posible-fichaje-26/",
+      "date": "Tue, 21 Jul 2026 17:38:17 +0000",
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Las cinco claves del mercado de fichajes del 20 de julio",
-      "link": "https://www.jornadaperfecta.com/blog/claves-mercado-20-7-26/",
-      "date": "Mon, 20 Jul 2026 21:00:02 +0000",
-      "img": "https://cdn.biwenger.com/i/t/17.png",
+      "title": "Juan Iglesias cambia Getafe por Sevilla. ¿Será una pieza clave?",
+      "link": "https://www.jornadaperfecta.com/blog/juan-iglesias-analisis-fantasy-fichaje-sevilla/",
+      "date": "Tue, 21 Jul 2026 17:00:04 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/10/MINIS-JUEGGING-1.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Acuerdo cerrado para la salida de Akor Adams",
-      "link": "https://www.jornadaperfecta.com/blog/akor-adams-salida-sevilla-26/",
-      "date": "Mon, 20 Jul 2026 19:20:47 +0000",
+      "title": "El Barça se plantea la opción Laporte para repetir la pareja de la Selección",
+      "link": "https://www.jornadaperfecta.com/blog/laporte-barcelona-posible-fichaje-26/",
+      "date": "Tue, 21 Jul 2026 16:50:27 +0000",
+      "img": "https://cdn.biwenger.com/i/t/1.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Osasuna se mueve por Dubasin, que aprieta para llegar a El Sadar",
+      "link": "https://www.jornadaperfecta.com/blog/dubasin-osasuna-posible-fichaje-26/",
+      "date": "Tue, 21 Jul 2026 16:29:09 +0000",
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Manu Sánchez, muy cerca de volver a jugar en el Levante UD",
-      "link": "https://www.jornadaperfecta.com/blog/manu-sanchez-vuelta-levante-26/",
-      "date": "Mon, 20 Jul 2026 19:16:46 +0000",
-      "img": "https://cdn.biwenger.com/i/t/5.png",
+      "title": "Gorrotxategi sigue ausente y aumenta la incertidumbre",
+      "link": "https://www.jornadaperfecta.com/blog/gorrotxategi-estado-real-sociedad-j1-2/",
+      "date": "Tue, 21 Jul 2026 16:00:37 +0000",
+      "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Promoción Betsson Champions League: apuesta 20€ y recibe 10€ en Freebet",
-      "link": "https://www.jornadaperfecta.com/blog/betsson-champions-league-clasificacion-promocion/",
-      "date": "Mon, 20 Jul 2026 18:56:08 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/07/Betsson-Champions-League-Clasificacion.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Carlos Dotor, muy cerca de volver al Málaga CF",
+      "title": "Oficial: Carlos Dotor vuelve a ser cedido al Málaga CF",
       "link": "https://www.jornadaperfecta.com/blog/carlos-dotor-regreso-malaga-26-27/",
-      "date": "Mon, 20 Jul 2026 15:23:56 +0000",
+      "date": "Tue, 21 Jul 2026 12:55:56 +0000",
       "img": "https://cdn.biwenger.com/i/t/5.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Oficial: Hugo Sotelo, nuevo jugador del Levante UD",
-      "link": "https://www.jornadaperfecta.com/blog/hugo-sotelo-levante-fichaje-26/",
-      "date": "Mon, 20 Jul 2026 14:24:28 +0000",
+      "title": "Oficial, Manu Sánchez regresa al Levante UD como cedido",
+      "link": "https://www.jornadaperfecta.com/blog/manu-sanchez-vuelta-levante-26/",
+      "date": "Tue, 21 Jul 2026 11:16:46 +0000",
+      "img": "https://cdn.biwenger.com/i/t/5.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Anthony Gordon, nuevo fichaje del Barça: ¿interesante en fantasy o muy caro?",
+      "link": "https://www.jornadaperfecta.com/blog/anthony-gordon-analisis-fantasy-barcelona/",
+      "date": "Tue, 21 Jul 2026 11:00:55 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/01/Raphinha-final-Supercopa-2026.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Promoción Flash en Movistar Plus+: ¡50% de Descuento durante 3 meses!",
+      "link": "https://www.jornadaperfecta.com/blog/movistar-plus-promocion-verano-26/",
+      "date": "Tue, 21 Jul 2026 10:54:09 +0000",
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Oficial: Diego Conde, nuevo jugador del Real Betis",
-      "link": "https://www.jornadaperfecta.com/blog/diego-conde-betis-anuncio-fichaje-26/",
-      "date": "Mon, 20 Jul 2026 12:52:39 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Diego Conde ya está en Sevilla para cerrar su cesión al Betis",
-      "link": "https://www.jornadaperfecta.com/blog/diego-conde-fichaje-betis/",
-      "date": "Mon, 20 Jul 2026 10:24:53 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Mercado de fichajes de verano de LaLiga 26/27: altas y bajas oficiales",
-      "link": "https://www.jornadaperfecta.com/blog/mercado-fichajes-verano-26-27/",
-      "date": "Mon, 20 Jul 2026 07:55:36 +0000",
+      "title": "Laporta confirma el día de la presentación de Karim Adeyemi",
+      "link": "https://www.jornadaperfecta.com/blog/barca-negocia-fichaje-adeyemi/",
+      "date": "Tue, 21 Jul 2026 10:00:23 +0000",
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
@@ -10877,7 +10571,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-07-21T08:02:58.535Z",
+    "updatedAt": "2026-07-21T18:59:35.065Z",
     "players": []
   }
 }
