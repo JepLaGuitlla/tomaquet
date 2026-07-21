@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-20T19:20:36.398Z",
+  "updatedAt": "2026-07-21T01:20:14.919Z",
   "players": [
     {
       "id": 11,
@@ -1767,8 +1767,8 @@
       "trend": 10000,
       "playedHome": 0,
       "playedAway": 0,
-      "teamName": "Villarreal",
-      "teamId": 19,
+      "teamName": "Betis",
+      "teamId": 87,
       "status": "ok",
       "jForm": [],
       "clausula": null
@@ -3569,8 +3569,8 @@
       "trend": 0,
       "playedHome": 0,
       "playedAway": 0,
-      "teamName": "Celta",
-      "teamId": 5,
+      "teamName": "Levante",
+      "teamId": 10,
       "status": "ok",
       "jForm": [],
       "clausula": null
@@ -8204,22 +8204,6 @@
       "clausula": null
     },
     {
-      "id": 41274,
-      "slug": "javi-castro",
-      "name": "Javi Castro",
-      "position": 2,
-      "price": 290000,
-      "points": 0,
-      "trend": 0,
-      "playedHome": 0,
-      "playedAway": 0,
-      "teamName": "",
-      "teamId": null,
-      "status": "ok",
-      "jForm": [],
-      "clausula": null
-    },
-    {
       "id": 41275,
       "slug": "f-gonzalez",
       "name": "Facundo González",
@@ -8517,8 +8501,8 @@
       "trend": 0,
       "playedHome": 0,
       "playedAway": 0,
-      "teamName": "Betis",
-      "teamId": 87,
+      "teamName": "",
+      "teamId": null,
       "status": "ok",
       "jForm": [],
       "clausula": null
@@ -8695,22 +8679,6 @@
       "playedAway": 0,
       "teamName": "Real Sociedad",
       "teamId": 13,
-      "status": "ok",
-      "jForm": [],
-      "clausula": null
-    },
-    {
-      "id": 42268,
-      "slug": "belal-ateya",
-      "name": "Ateya",
-      "position": 3,
-      "price": 150000,
-      "points": 0,
-      "trend": 0,
-      "playedHome": 0,
-      "playedAway": 0,
-      "teamName": "",
-      "teamId": null,
       "status": "ok",
       "jForm": [],
       "clausula": null
@@ -10661,36 +10629,36 @@
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Sevilla": {
-      "winProb": 0.4306220095693779,
-      "drawProb": 0.30143540669856456,
-      "loseProb": 0.2679425837320574,
+      "winProb": 0.4328223624887286,
+      "drawProb": 0.30027051397655546,
+      "loseProb": 0.26690712353471596,
       "over25Prob": 0.4566210045662101,
       "isHome": true,
       "opponent": "Rayo Vallecano",
       "matchDate": "2026-08-15T19:30:00Z"
     },
     "Rayo Vallecano": {
-      "winProb": 0.2679425837320574,
-      "drawProb": 0.30143540669856456,
-      "loseProb": 0.4306220095693779,
+      "winProb": 0.26690712353471596,
+      "drawProb": 0.30027051397655546,
+      "loseProb": 0.4328223624887286,
       "over25Prob": 0.4566210045662101,
       "isHome": false,
       "opponent": "Sevilla",
       "matchDate": "2026-08-15T19:30:00Z"
     },
     "Real Racing Club de Santander": {
-      "winProb": 0.28828960599689185,
-      "drawProb": 0.26459456988755825,
-      "loseProb": 0.4471158241155498,
+      "winProb": 0.29454728858834744,
+      "drawProb": 0.2622681336745559,
+      "loseProb": 0.44318457773709674,
       "over25Prob": 0.53475935828877,
       "isHome": true,
       "opponent": "Villarreal",
       "matchDate": "2026-08-16T15:00:00Z"
     },
     "Villarreal": {
-      "winProb": 0.4471158241155498,
-      "drawProb": 0.26459456988755825,
-      "loseProb": 0.28828960599689185,
+      "winProb": 0.44318457773709674,
+      "drawProb": 0.2622681336745559,
+      "loseProb": 0.29454728858834744,
       "over25Prob": 0.53475935828877,
       "isHome": false,
       "opponent": "Real Racing Club de Santander",
@@ -10805,18 +10773,18 @@
       "matchDate": "2026-08-16T19:30:00Z"
     },
     "Deportivo La Coruña": {
-      "winProb": 0.41264166730052493,
-      "drawProb": 0.31147790370426715,
-      "loseProb": 0.27588042899520804,
+      "winProb": 0.4147236449812706,
+      "drawProb": 0.31037382463114443,
+      "loseProb": 0.27490253038758505,
       "over25Prob": 0.45248868778280543,
       "isHome": true,
       "opponent": "Elche CF",
       "matchDate": "2026-08-17T19:00:00Z"
     },
     "Elche CF": {
-      "winProb": 0.27588042899520804,
-      "drawProb": 0.31147790370426715,
-      "loseProb": 0.41264166730052493,
+      "winProb": 0.27490253038758505,
+      "drawProb": 0.31037382463114443,
+      "loseProb": 0.4147236449812706,
       "over25Prob": 0.45248868778280543,
       "isHome": false,
       "opponent": "Deportivo La Coruña",
@@ -10825,10 +10793,26 @@
   },
   "news": [
     {
+      "title": "Las cinco claves del mercado de fichajes del 20 de julio",
+      "link": "https://www.jornadaperfecta.com/blog/claves-mercado-20-7-26/",
+      "date": "Mon, 20 Jul 2026 21:00:02 +0000",
+      "img": "https://cdn.biwenger.com/i/t/17.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Acuerdo cerrado para la salida de Akor Adams",
+      "link": "https://www.jornadaperfecta.com/blog/akor-adams-salida-sevilla-26/",
+      "date": "Mon, 20 Jul 2026 19:20:47 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Manu Sánchez, muy cerca de volver a jugar en el Levante UD",
       "link": "https://www.jornadaperfecta.com/blog/manu-sanchez-vuelta-levante-26/",
       "date": "Mon, 20 Jul 2026 19:16:46 +0000",
-      "img": "",
+      "img": "https://cdn.biwenger.com/i/t/5.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
@@ -10887,29 +10871,13 @@
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Comunicado del Atleti sobre Julián: «Ni por 100, ni por 150, ni por 200 millones»",
-      "link": "https://www.jornadaperfecta.com/blog/julian-alvarez-pide-salir-atleti/",
-      "date": "Sun, 19 Jul 2026 18:45:48 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Oficial: Juan Cruz, nuevo jugador del Málaga CF",
-      "link": "https://www.jornadaperfecta.com/blog/juan-cruz-malaga-anuncio-fichaje-26/",
-      "date": "Sun, 19 Jul 2026 11:24:21 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-07-20T19:20:33.100Z",
+    "updatedAt": "2026-07-21T01:20:11.814Z",
     "players": []
   }
 }
