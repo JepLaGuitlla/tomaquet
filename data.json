@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-22T08:03:47.075Z",
+  "updatedAt": "2026-07-22T13:15:34.405Z",
   "players": [
     {
       "id": 11,
@@ -4701,6 +4701,22 @@
       "name": "Toni Fernández",
       "position": 4,
       "price": 240000,
+      "points": 0,
+      "trend": 0,
+      "playedHome": 0,
+      "playedAway": 0,
+      "teamName": "Barcelona",
+      "teamId": 3,
+      "status": "ok",
+      "jForm": [],
+      "clausula": null
+    },
+    {
+      "id": 31465,
+      "slug": "torrents",
+      "name": "Torrents",
+      "position": 2,
+      "price": 170000,
       "points": 0,
       "trend": 0,
       "playedHome": 0,
@@ -10587,18 +10603,18 @@
       "matchDate": "2026-08-15T19:30:00Z"
     },
     "Real Racing Club de Santander": {
-      "winProb": 0.28525942542875754,
-      "drawProb": 0.2657211086185686,
-      "loseProb": 0.44901946595267384,
+      "winProb": 0.28406735280212386,
+      "drawProb": 0.26461068480197836,
+      "loseProb": 0.45132196239589767,
       "over25Prob": 0.53475935828877,
       "isHome": true,
       "opponent": "Villarreal",
       "matchDate": "2026-08-16T15:00:00Z"
     },
     "Villarreal": {
-      "winProb": 0.44901946595267384,
-      "drawProb": 0.2657211086185686,
-      "loseProb": 0.28525942542875754,
+      "winProb": 0.45132196239589767,
+      "drawProb": 0.26461068480197836,
+      "loseProb": 0.28406735280212386,
       "over25Prob": 0.53475935828877,
       "isHome": false,
       "opponent": "Real Racing Club de Santander",
@@ -10733,10 +10749,58 @@
   },
   "news": [
     {
+      "title": "Isco, Abde y Antony causan baja en el primer amistoso",
+      "link": "https://www.jornadaperfecta.com/blog/isco-abde-y-antony-bajas-amistoso/",
+      "date": "Wed, 22 Jul 2026 11:41:49 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Franco Mastantuono saldrá cedido&#8230; ¡Y apunta a LaLiga!",
+      "link": "https://www.jornadaperfecta.com/blog/mastantuono-saldra-real-madrid/",
+      "date": "Wed, 22 Jul 2026 11:07:18 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Facundo Bernal, refuerzo de lujo del Betis. ¿El nuevo Johnny Cardoso?",
+      "link": "https://www.jornadaperfecta.com/blog/facundo-bernal-analisis-betis/",
+      "date": "Wed, 22 Jul 2026 11:00:41 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/03/image-2026-03-17T190921.447.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "El rol de Bernardo Silva en el Real Madrid: ¿será un TOP fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/bernardo-silva-analisis-fantasy-real-madrid/",
+      "date": "Wed, 22 Jul 2026 09:00:15 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/05/Valverde-Tchouameni-Real-Madrid-pelea.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Apúntate a la Liga LEF 2026/27&#8230; ¡la mayor competición fantasy!",
+      "link": "https://www.jornadaperfecta.com/blog/liga-lef-26-27/",
+      "date": "Wed, 22 Jul 2026 08:00:54 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Gana un 50% extra apostando en bwin a los partidos del 22 de julio",
       "link": "https://www.jornadaperfecta.com/blog/bwin-apuestas-mejoradas-22-julio/",
       "date": "Wed, 22 Jul 2026 07:00:57 +0000",
       "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/07/crea-tus-7-bwin.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Mercado de fichajes de verano de LaLiga 26/27: altas y bajas oficiales",
+      "link": "https://www.jornadaperfecta.com/blog/mercado-fichajes-verano-26-27/",
+      "date": "Wed, 22 Jul 2026 07:00:36 +0000",
+      "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
@@ -10763,61 +10827,13 @@
       "img": "https://cdn.biwenger.com/i/t/65.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Sergio Canales vuelve a su casa, el Racing, ¿chollo fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/canales-analisis-fantasy-racing/",
-      "date": "Tue, 21 Jul 2026 19:00:15 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/06/Racing-Club-de-Santander-fantasy.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Juan Iglesias cambia Getafe por Sevilla. ¿Será una pieza clave?",
-      "link": "https://www.jornadaperfecta.com/blog/juan-iglesias-analisis-fantasy-fichaje-sevilla/",
-      "date": "Tue, 21 Jul 2026 17:00:04 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/10/MINIS-JUEGGING-1.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "El Barça se plantea la opción Laporte para repetir la pareja de la Selección",
-      "link": "https://www.jornadaperfecta.com/blog/laporte-barcelona-posible-fichaje-26/",
-      "date": "Tue, 21 Jul 2026 16:50:27 +0000",
-      "img": "https://cdn.biwenger.com/i/t/1.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Osasuna se mueve por Dubasin, que aprieta para llegar a El Sadar",
-      "link": "https://www.jornadaperfecta.com/blog/dubasin-osasuna-posible-fichaje-26/",
-      "date": "Tue, 21 Jul 2026 16:29:09 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Gorrotxategi sigue ausente y aumenta la incertidumbre",
-      "link": "https://www.jornadaperfecta.com/blog/gorrotxategi-estado-real-sociedad-j1-2/",
-      "date": "Tue, 21 Jul 2026 16:00:37 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Oficial: Carlos Dotor vuelve a ser cedido al Málaga CF",
-      "link": "https://www.jornadaperfecta.com/blog/carlos-dotor-regreso-malaga-26-27/",
-      "date": "Tue, 21 Jul 2026 12:55:56 +0000",
-      "img": "https://cdn.biwenger.com/i/t/65.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-07-22T08:03:44.304Z",
+    "updatedAt": "2026-07-22T13:15:31.201Z",
     "players": []
   }
 }
