@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-21T18:59:37.851Z",
+  "updatedAt": "2026-07-22T01:18:51.871Z",
   "players": [
     {
       "id": 11,
@@ -3051,28 +3051,6 @@
       "teamId": 17,
       "status": "ok",
       "jForm": [],
-      "clausula": null
-    },
-    {
-      "id": 22061,
-      "slug": "josan",
-      "name": "Josan",
-      "position": 3,
-      "price": 180000,
-      "points": 63,
-      "trend": 0,
-      "playedHome": 12,
-      "playedAway": 7,
-      "teamName": "",
-      "teamId": null,
-      "status": "ok",
-      "jForm": [
-        null,
-        2,
-        null,
-        8,
-        3
-      ],
       "clausula": null
     },
     {
@@ -7366,28 +7344,6 @@
       "clausula": null
     },
     {
-      "id": 40045,
-      "slug": "cestero",
-      "name": "Cestero",
-      "position": 3,
-      "price": 190000,
-      "points": 2,
-      "trend": 0,
-      "playedHome": 1,
-      "playedAway": 1,
-      "teamName": "",
-      "teamId": null,
-      "status": "ok",
-      "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "clausula": null
-    },
-    {
       "id": 40046,
       "slug": "hugo-lopez",
       "name": "Hugo Lopez",
@@ -8599,22 +8555,6 @@
       "playedAway": 0,
       "teamName": "Deportivo",
       "teamId": 6,
-      "status": "ok",
-      "jForm": [],
-      "clausula": null
-    },
-    {
-      "id": 41569,
-      "slug": "luis-chacon",
-      "name": "Luis Chacón",
-      "position": 4,
-      "price": 260000,
-      "points": 0,
-      "trend": 0,
-      "playedHome": 0,
-      "playedAway": 0,
-      "teamName": "",
-      "teamId": null,
       "status": "ok",
       "jForm": [],
       "clausula": null
@@ -10323,18 +10263,18 @@
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Sevilla": {
-      "winProb": 0.4344106817421058,
-      "drawProb": 0.3013724104585859,
-      "loseProb": 0.2642169077993082,
+      "winProb": 0.4328223624887286,
+      "drawProb": 0.30027051397655546,
+      "loseProb": 0.26690712353471596,
       "over25Prob": 0.4566210045662101,
       "isHome": true,
       "opponent": "Rayo Vallecano",
       "matchDate": "2026-08-15T19:30:00Z"
     },
     "Rayo Vallecano": {
-      "winProb": 0.2642169077993082,
-      "drawProb": 0.3013724104585859,
-      "loseProb": 0.4344106817421058,
+      "winProb": 0.26690712353471596,
+      "drawProb": 0.30027051397655546,
+      "loseProb": 0.4328223624887286,
       "over25Prob": 0.4566210045662101,
       "isHome": false,
       "opponent": "Sevilla",
@@ -10359,18 +10299,18 @@
       "matchDate": "2026-08-16T15:00:00Z"
     },
     "Espanyol": {
-      "winProb": 0.47021616737332317,
-      "drawProb": 0.2935288802391048,
-      "loseProb": 0.23625495238757216,
+      "winProb": 0.47264724376441,
+      "drawProb": 0.292181932508908,
+      "loseProb": 0.23517082372668208,
       "over25Prob": 0.47619047619047616,
       "isHome": true,
       "opponent": "Levante",
       "matchDate": "2026-08-16T17:00:00Z"
     },
     "Levante": {
-      "winProb": 0.23625495238757216,
-      "drawProb": 0.2935288802391048,
-      "loseProb": 0.47021616737332317,
+      "winProb": 0.23517082372668208,
+      "drawProb": 0.292181932508908,
+      "loseProb": 0.47264724376441,
       "over25Prob": 0.47619047619047616,
       "isHome": false,
       "opponent": "Espanyol",
@@ -10395,18 +10335,18 @@
       "matchDate": "2026-08-27T19:00:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.7508342602892104,
-      "drawProb": 0.17797552836484987,
-      "loseProb": 0.07119021134593995,
+      "winProb": 0.753271786547631,
+      "drawProb": 0.1753068885056305,
+      "loseProb": 0.07142132494673835,
       "over25Prob": 0.5747126436781609,
       "isHome": true,
       "opponent": "Málaga",
       "matchDate": "2026-08-19T19:00:00Z"
     },
     "Málaga": {
-      "winProb": 0.07119021134593995,
-      "drawProb": 0.17797552836484987,
-      "loseProb": 0.7508342602892104,
+      "winProb": 0.07142132494673835,
+      "drawProb": 0.1753068885056305,
+      "loseProb": 0.753271786547631,
       "over25Prob": 0.5747126436781609,
       "isHome": false,
       "opponent": "Atlético Madrid",
@@ -10431,36 +10371,36 @@
       "matchDate": "2026-08-25T19:00:00Z"
     },
     "Real Madrid": {
-      "winProb": 0.6494980357922304,
-      "drawProb": 0.1975556525534701,
-      "loseProb": 0.15294631165429942,
+      "winProb": 0.6586826347305389,
+      "drawProb": 0.19760479041916168,
+      "loseProb": 0.1437125748502994,
       "over25Prob": 0.5,
       "isHome": true,
       "opponent": "Real Sociedad",
       "matchDate": "2026-08-26T19:00:00Z"
     },
     "Real Sociedad": {
-      "winProb": 0.15294631165429942,
-      "drawProb": 0.1975556525534701,
-      "loseProb": 0.6494980357922304,
+      "winProb": 0.1437125748502994,
+      "drawProb": 0.19760479041916168,
+      "loseProb": 0.6586826347305389,
       "over25Prob": 0.5,
       "isHome": false,
       "opponent": "Real Madrid",
       "matchDate": "2026-08-26T19:00:00Z"
     },
     "Celta Vigo": {
-      "winProb": 0.4695000175186574,
-      "drawProb": 0.2887074734592341,
-      "loseProb": 0.24179250902210855,
+      "winProb": 0.4719306895823061,
+      "drawProb": 0.2873846587307177,
+      "loseProb": 0.24068465168697611,
       "over25Prob": 0.49019607843137253,
       "isHome": true,
       "opponent": "CA Osasuna",
       "matchDate": "2026-08-16T19:30:00Z"
     },
     "CA Osasuna": {
-      "winProb": 0.24179250902210855,
-      "drawProb": 0.2887074734592341,
-      "loseProb": 0.4695000175186574,
+      "winProb": 0.24068465168697611,
+      "drawProb": 0.2873846587307177,
+      "loseProb": 0.4719306895823061,
       "over25Prob": 0.49019607843137253,
       "isHome": false,
       "opponent": "Celta Vigo",
@@ -10487,10 +10427,34 @@
   },
   "news": [
     {
-      "title": "El Real Madrid se plantea el fichaje de Rodri, aún sin el OK de Florentino",
-      "link": "https://www.jornadaperfecta.com/blog/rodri-real-madrid-posible-fichaje-26/",
-      "date": "Tue, 21 Jul 2026 17:38:17 +0000",
+      "title": "Promoción Flash en Movistar Plus+: ¡50% de Descuento durante 3 meses!",
+      "link": "https://www.jornadaperfecta.com/blog/movistar-plus-promocion-verano-26/",
+      "date": "Tue, 21 Jul 2026 22:20:09 +0000",
       "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "El Real Madrid se decide: ¡irá a por Rodri Hernández!",
+      "link": "https://www.jornadaperfecta.com/blog/rodri-real-madrid-posible-fichaje-26/",
+      "date": "Tue, 21 Jul 2026 22:15:17 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Las cinco claves del mercado de fichajes del 21 de julio",
+      "link": "https://www.jornadaperfecta.com/blog/claves-mercado-21-7-26/",
+      "date": "Tue, 21 Jul 2026 21:00:58 +0000",
+      "img": "https://cdn.biwenger.com/i/t/5.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Sergio Canales vuelve a su casa, el Racing, ¿chollo fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/canales-analisis-fantasy-racing/",
+      "date": "Tue, 21 Jul 2026 19:00:15 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/06/Racing-Club-de-Santander-fantasy.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
@@ -10541,37 +10505,13 @@
       "img": "https://cdn.biwenger.com/i/t/5.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Anthony Gordon, nuevo fichaje del Barça: ¿interesante en fantasy o muy caro?",
-      "link": "https://www.jornadaperfecta.com/blog/anthony-gordon-analisis-fantasy-barcelona/",
-      "date": "Tue, 21 Jul 2026 11:00:55 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/01/Raphinha-final-Supercopa-2026.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Promoción Flash en Movistar Plus+: ¡50% de Descuento durante 3 meses!",
-      "link": "https://www.jornadaperfecta.com/blog/movistar-plus-promocion-verano-26/",
-      "date": "Tue, 21 Jul 2026 10:54:09 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Laporta confirma el día de la presentación de Karim Adeyemi",
-      "link": "https://www.jornadaperfecta.com/blog/barca-negocia-fichaje-adeyemi/",
-      "date": "Tue, 21 Jul 2026 10:00:23 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-07-21T18:59:35.065Z",
+    "updatedAt": "2026-07-22T01:18:48.943Z",
     "players": []
   }
 }
