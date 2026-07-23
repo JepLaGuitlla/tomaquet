@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-23T08:06:09.052Z",
+  "updatedAt": "2026-07-23T13:18:31.997Z",
   "players": [
     {
       "id": 11,
@@ -8786,6 +8786,22 @@
       "status": "ok",
       "jForm": [],
       "clausula": null
+    },
+    {
+      "id": 42557,
+      "slug": "adeyemi",
+      "name": "Adeyemi",
+      "position": 4,
+      "price": 7220000,
+      "points": 0,
+      "trend": 0,
+      "playedHome": 0,
+      "playedAway": 0,
+      "teamName": "Barcelona",
+      "teamId": 3,
+      "status": "ok",
+      "jForm": [],
+      "clausula": null
     }
   ],
   "league": {
@@ -10529,18 +10545,18 @@
       "matchDate": "2026-08-16T15:00:00Z"
     },
     "Espanyol": {
-      "winProb": 0.47264724376441,
-      "drawProb": 0.292181932508908,
-      "loseProb": 0.23517082372668208,
+      "winProb": 0.47717481934408007,
+      "drawProb": 0.2877292940522512,
+      "loseProb": 0.23509588660366873,
       "over25Prob": 0.47619047619047616,
       "isHome": true,
       "opponent": "Levante",
       "matchDate": "2026-08-16T17:00:00Z"
     },
     "Levante": {
-      "winProb": 0.23517082372668208,
-      "drawProb": 0.292181932508908,
-      "loseProb": 0.47264724376441,
+      "winProb": 0.23509588660366873,
+      "drawProb": 0.2877292940522512,
+      "loseProb": 0.47717481934408007,
       "over25Prob": 0.47619047619047616,
       "isHome": false,
       "opponent": "Espanyol",
@@ -10565,18 +10581,18 @@
       "matchDate": "2026-08-27T19:00:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.7468532929440643,
-      "drawProb": 0.17788687522849533,
-      "loseProb": 0.07525983182744034,
+      "winProb": 0.7445488388583584,
+      "drawProb": 0.17417124623293745,
+      "loseProb": 0.08127991490870413,
       "over25Prob": 0.5747126436781609,
       "isHome": true,
       "opponent": "Málaga",
       "matchDate": "2026-08-19T19:00:00Z"
     },
     "Málaga": {
-      "winProb": 0.07525983182744034,
-      "drawProb": 0.17788687522849533,
-      "loseProb": 0.7468532929440643,
+      "winProb": 0.08127991490870413,
+      "drawProb": 0.17417124623293745,
+      "loseProb": 0.7445488388583584,
       "over25Prob": 0.5747126436781609,
       "isHome": false,
       "opponent": "Atlético Madrid",
@@ -10619,18 +10635,18 @@
       "matchDate": "2026-08-26T19:00:00Z"
     },
     "Celta Vigo": {
-      "winProb": 0.4719306895823061,
-      "drawProb": 0.2873846587307177,
-      "loseProb": 0.24068465168697611,
+      "winProb": 0.47393364928909953,
+      "drawProb": 0.28436018957345977,
+      "loseProb": 0.24170616113744078,
       "over25Prob": 0.49019607843137253,
       "isHome": true,
       "opponent": "CA Osasuna",
       "matchDate": "2026-08-16T19:30:00Z"
     },
     "CA Osasuna": {
-      "winProb": 0.24068465168697611,
-      "drawProb": 0.2873846587307177,
-      "loseProb": 0.4719306895823061,
+      "winProb": 0.24170616113744078,
+      "drawProb": 0.28436018957345977,
+      "loseProb": 0.47393364928909953,
       "over25Prob": 0.49019607843137253,
       "isHome": false,
       "opponent": "Celta Vigo",
@@ -10657,9 +10673,57 @@
   },
   "news": [
     {
+      "title": "Isco y Antony entrenan con normalidad, tras ser baja en el último amistoso",
+      "link": "https://www.jornadaperfecta.com/blog/isco-abde-y-antony-bajas-amistoso/",
+      "date": "Thu, 23 Jul 2026 11:41:49 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Oficial: Karim Adeyemi, nuevo jugador del FC Barcelona",
+      "link": "https://www.jornadaperfecta.com/blog/adeyemi-barcelona-fichaje-oficial/",
+      "date": "Thu, 23 Jul 2026 11:05:55 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Hartman refuerza la defensa del Espanyol. ¿Titular fijo y chollo fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/hartman-analisis-fantasy-fichaje-espanyol/",
+      "date": "Thu, 23 Jul 2026 11:02:03 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Fermín entrena con el grupo y podría estar en el inicio de LaLiga",
+      "link": "https://www.jornadaperfecta.com/blog/fermin-recuperacion-fractura-pie/",
+      "date": "Thu, 23 Jul 2026 09:01:15 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Edin Terzic: Beneficiados y perjudicados fantasy en el Athletic Club",
+      "link": "https://www.jornadaperfecta.com/blog/terzic-entrenador-analisis-athletic/",
+      "date": "Thu, 23 Jul 2026 09:00:20 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/05/Nico-Williams-Athletic-Club-fantasy-1024x682.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Principio de acuerdo entre Rodri y el Real Madrid hasta 2030",
       "link": "https://www.jornadaperfecta.com/blog/rodri-real-madrid-posible-fichaje-26/",
       "date": "Thu, 23 Jul 2026 07:30:17 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Promoción Flash en Movistar Plus+: ¡50% de Descuento durante 3 meses!",
+      "link": "https://www.jornadaperfecta.com/blog/movistar-plus-promocion-verano-26/",
+      "date": "Thu, 23 Jul 2026 07:20:09 +0000",
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
@@ -10687,61 +10751,13 @@
       "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/07/HJUxPFPXgAA5jeA-1.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Aleix Febas ficha por el Celta. ¿Volverá a ser un TOP fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/febas-analisis-fantasy-celta/",
-      "date": "Wed, 22 Jul 2026 17:00:24 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/02/image-2026-02-03T225457.668.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Siguen avanzando las negociaciones para la vuelta de João Cancelo",
-      "link": "https://www.jornadaperfecta.com/blog/cancelo-vuelta-barcelona-26-27/",
-      "date": "Wed, 22 Jul 2026 16:15:57 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Sergio Canales vuelve a su casa, el Racing, ¿chollo fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/canales-analisis-fantasy-racing/",
-      "date": "Wed, 22 Jul 2026 16:00:15 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/06/Racing-Club-de-Santander-fantasy.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Anthony Gordon, nuevo fichaje del Barça: ¿interesante en fantasy o muy caro?",
-      "link": "https://www.jornadaperfecta.com/blog/anthony-gordon-analisis-fantasy-barcelona/",
-      "date": "Wed, 22 Jul 2026 15:00:55 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/01/Raphinha-final-Supercopa-2026.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Cucurella vuelve a LaLiga con el Real Madrid: ¿El gran Chollo Fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/cucurella-real-madrid-analisis-fantasy-fichaje-26/",
-      "date": "Wed, 22 Jul 2026 14:00:41 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "El rol de Bernardo Silva en el Real Madrid: ¿será un TOP fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/bernardo-silva-analisis-fantasy-real-madrid/",
-      "date": "Wed, 22 Jul 2026 13:00:15 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/05/Valverde-Tchouameni-Real-Madrid-pelea.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-07-23T08:06:06.316Z",
+    "updatedAt": "2026-07-23T13:18:28.746Z",
     "players": []
   }
 }
