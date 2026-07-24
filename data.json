@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-23T18:55:33.499Z",
+  "updatedAt": "2026-07-24T01:21:56.674Z",
   "players": [
     {
       "id": 11,
@@ -5618,28 +5618,6 @@
       "clausula": null
     },
     {
-      "id": 35283,
-      "slug": "coba-gomes",
-      "name": "Coba Gomes",
-      "position": 4,
-      "price": 280000,
-      "points": 36,
-      "trend": 0,
-      "playedHome": 8,
-      "playedAway": 6,
-      "teamName": "",
-      "teamId": null,
-      "status": "ok",
-      "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "clausula": null
-    },
-    {
       "id": 35308,
       "slug": "iker-cordoba",
       "name": "Iker Cordoba",
@@ -8020,22 +7998,6 @@
       "clausula": null
     },
     {
-      "id": 41269,
-      "slug": "aritz-aldasoro",
-      "name": "Aldasoro",
-      "position": 3,
-      "price": 220000,
-      "points": 0,
-      "trend": 0,
-      "playedHome": 0,
-      "playedAway": 0,
-      "teamName": "",
-      "teamId": null,
-      "status": "ok",
-      "jForm": [],
-      "clausula": null
-    },
-    {
       "id": 41270,
       "slug": "jorge-salinas",
       "name": "Jorge Salinas",
@@ -9279,7 +9241,7 @@
   "leagueEnBas": {
     "id": 1248640,
     "name": "Lliga Bas Promesas",
-    "type": "normal",
+    "type": "premium",
     "mode": "league",
     "marketMode": "normal",
     "scoreID": 5,
@@ -9331,7 +9293,7 @@
       {
         "id": 6579330,
         "name": "Mindundis",
-        "icon": "i/u/6579330.png?v=66",
+        "icon": "i/u/6579330.png?v=35",
         "points": 0,
         "lastPositions": [],
         "teamSize": 0,
@@ -9750,6 +9712,12 @@
         null,
         null,
         null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "reservesID": [
         null,
         null,
         null,
@@ -10509,36 +10477,36 @@
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Sevilla": {
-      "winProb": 0.43385373870172556,
-      "drawProb": 0.2874281018898932,
-      "loseProb": 0.2787181594083813,
+      "winProb": 0.4328223624887286,
+      "drawProb": 0.30027051397655546,
+      "loseProb": 0.26690712353471596,
       "over25Prob": 0.45454545454545453,
       "isHome": true,
       "opponent": "Rayo Vallecano",
       "matchDate": "2026-08-15T19:30:00Z"
     },
     "Rayo Vallecano": {
-      "winProb": 0.2787181594083813,
-      "drawProb": 0.2874281018898932,
-      "loseProb": 0.43385373870172556,
+      "winProb": 0.26690712353471596,
+      "drawProb": 0.30027051397655546,
+      "loseProb": 0.4328223624887286,
       "over25Prob": 0.45454545454545453,
       "isHome": false,
       "opponent": "Sevilla",
       "matchDate": "2026-08-15T19:30:00Z"
     },
     "Real Racing Club de Santander": {
-      "winProb": 0.4131279161611309,
-      "drawProb": 0.1618555945507992,
-      "loseProb": 0.42501648928806995,
+      "winProb": 0.28110773217209795,
+      "drawProb": 0.26570456876540766,
+      "loseProb": 0.4531876990624944,
       "over25Prob": 0.53475935828877,
       "isHome": true,
       "opponent": "Villarreal",
       "matchDate": "2026-08-16T15:00:00Z"
     },
     "Villarreal": {
-      "winProb": 0.42501648928806995,
-      "drawProb": 0.1618555945507992,
-      "loseProb": 0.4131279161611309,
+      "winProb": 0.4531876990624944,
+      "drawProb": 0.26570456876540766,
+      "loseProb": 0.28110773217209795,
       "over25Prob": 0.53475935828877,
       "isHome": false,
       "opponent": "Real Racing Club de Santander",
@@ -10581,18 +10549,18 @@
       "matchDate": "2026-08-27T19:00:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.7358045258919895,
-      "drawProb": 0.18325697625989174,
-      "loseProb": 0.08093849784811885,
+      "winProb": 0.7332242619637659,
+      "drawProb": 0.1826143444890889,
+      "loseProb": 0.0841613935471453,
       "over25Prob": 0.5747126436781609,
       "isHome": true,
       "opponent": "Málaga",
       "matchDate": "2026-08-19T19:00:00Z"
     },
     "Málaga": {
-      "winProb": 0.08093849784811885,
-      "drawProb": 0.18325697625989174,
-      "loseProb": 0.7358045258919895,
+      "winProb": 0.0841613935471453,
+      "drawProb": 0.1826143444890889,
+      "loseProb": 0.7332242619637659,
       "over25Prob": 0.5747126436781609,
       "isHome": false,
       "opponent": "Atlético Madrid",
@@ -10635,18 +10603,18 @@
       "matchDate": "2026-08-26T19:00:00Z"
     },
     "Celta Vigo": {
-      "winProb": 0.4508748317631225,
-      "drawProb": 0.27456258411843876,
-      "loseProb": 0.27456258411843876,
+      "winProb": 0.4719306895823061,
+      "drawProb": 0.2873846587307177,
+      "loseProb": 0.24068465168697611,
       "over25Prob": 0.48780487804878053,
       "isHome": true,
       "opponent": "CA Osasuna",
       "matchDate": "2026-08-16T19:30:00Z"
     },
     "CA Osasuna": {
-      "winProb": 0.27456258411843876,
-      "drawProb": 0.27456258411843876,
-      "loseProb": 0.4508748317631225,
+      "winProb": 0.24068465168697611,
+      "drawProb": 0.2873846587307177,
+      "loseProb": 0.4719306895823061,
       "over25Prob": 0.48780487804878053,
       "isHome": false,
       "opponent": "Celta Vigo",
@@ -10672,6 +10640,14 @@
     }
   },
   "news": [
+    {
+      "title": "Fran García llega al Betis para volver a ser importante. ¿Chollo fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/fran-garcia-analisis-betis/",
+      "date": "Thu, 23 Jul 2026 19:00:52 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Consigue una Freebet de 5€ con la promoción de la Copa Sudamericana en Betsson",
       "link": "https://www.jornadaperfecta.com/blog/betsson-copa-sudamericana/",
@@ -10743,21 +10719,13 @@
       "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/05/Nico-Williams-Athletic-Club-fantasy-1024x682.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Principio de acuerdo entre Rodri y el Real Madrid hasta 2030",
-      "link": "https://www.jornadaperfecta.com/blog/rodri-real-madrid-posible-fichaje-26/",
-      "date": "Thu, 23 Jul 2026 07:30:17 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-07-23T18:55:30.617Z",
+    "updatedAt": "2026-07-24T01:21:53.899Z",
     "players": []
   }
 }
