@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-24T08:02:51.906Z",
+  "updatedAt": "2026-07-24T13:12:03.156Z",
   "players": [
     {
       "id": 11,
@@ -1466,7 +1466,7 @@
     {
       "id": 10157,
       "slug": "alena",
-      "name": "Aleñá",
+      "name": "Aleñ��",
       "position": 3,
       "price": 430000,
       "points": 0,
@@ -3803,8 +3803,8 @@
       "trend": 20000,
       "playedHome": 0,
       "playedAway": 0,
-      "teamName": "Athletic",
-      "teamId": 1,
+      "teamName": "",
+      "teamId": null,
       "status": "ok",
       "jForm": [],
       "clausula": null
@@ -8764,6 +8764,70 @@
       "status": "ok",
       "jForm": [],
       "clausula": null
+    },
+    {
+      "id": 42569,
+      "slug": "hidalgo",
+      "name": "Hidalgo",
+      "position": 5,
+      "price": 330000,
+      "points": 0,
+      "trend": 0,
+      "playedHome": 0,
+      "playedAway": 0,
+      "teamName": "Deportivo",
+      "teamId": 6,
+      "status": "ok",
+      "jForm": [],
+      "clausula": null
+    },
+    {
+      "id": 42570,
+      "slug": "jose-alberto-lopez",
+      "name": "José Alberto López",
+      "position": 5,
+      "price": 260000,
+      "points": 0,
+      "trend": 0,
+      "playedHome": 0,
+      "playedAway": 0,
+      "teamName": "Racing",
+      "teamId": 812,
+      "status": "ok",
+      "jForm": [],
+      "clausula": null
+    },
+    {
+      "id": 42571,
+      "slug": "funes",
+      "name": "Funes",
+      "position": 5,
+      "price": 410000,
+      "points": 0,
+      "trend": 0,
+      "playedHome": 0,
+      "playedAway": 0,
+      "teamName": "Málaga",
+      "teamId": 65,
+      "status": "ok",
+      "jForm": [],
+      "clausula": null
+    },
+    {
+      "id": 42572,
+      "slug": "terzic",
+      "name": "Terzić",
+      "position": 5,
+      "price": 730000,
+      "points": 0,
+      "trend": 0,
+      "playedHome": 0,
+      "playedAway": 0,
+      "teamName": "Athletic",
+      "teamId": 1,
+      "status": "ok",
+      "jForm": [],
+      "clausula": null
     }
   ],
   "league": {
@@ -10549,18 +10613,18 @@
       "matchDate": "2026-08-27T19:00:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.7381944599202193,
-      "drawProb": 0.18385220511220557,
-      "loseProb": 0.07795333496757516,
+      "winProb": 0.7358045258919895,
+      "drawProb": 0.18325697625989174,
+      "loseProb": 0.08093849784811885,
       "over25Prob": 0.5747126436781609,
       "isHome": true,
       "opponent": "Málaga",
       "matchDate": "2026-08-19T19:00:00Z"
     },
     "Málaga": {
-      "winProb": 0.07795333496757516,
-      "drawProb": 0.18385220511220557,
-      "loseProb": 0.7381944599202193,
+      "winProb": 0.08093849784811885,
+      "drawProb": 0.18325697625989174,
+      "loseProb": 0.7358045258919895,
       "over25Prob": 0.5747126436781609,
       "isHome": false,
       "opponent": "Atlético Madrid",
@@ -10641,6 +10705,54 @@
   },
   "news": [
     {
+      "title": "Karim Adeyemi llega al FC Barcelona. ¿Será un TOP fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/adeyemi-barcelona-analisis-fichaje/",
+      "date": "Fri, 24 Jul 2026 12:00:29 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/01/Raphinha-final-Supercopa-2026.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Fajardo tranquiliza con el estado de Isco: «No hay quye preocuparse»",
+      "link": "https://www.jornadaperfecta.com/blog/isco-molestias-tobillo/",
+      "date": "Fri, 24 Jul 2026 11:55:53 +0000",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Arouna Sangante, nuevo central para el Sevilla. ¿Titular y Chollo Fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/arouna-sangante-sevilla-analisis-fichaje/",
+      "date": "Fri, 24 Jul 2026 10:13:08 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/06/Arouna-Sangante-fichaje-sevilla-fantasy.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "El sorprendente elegido para la portería del Villarreal",
+      "link": "https://www.jornadaperfecta.com/blog/gulacsi-candidato-porteria-villarreal/",
+      "date": "Fri, 24 Jul 2026 09:21:26 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Take Kubo ya está en Zubieta, pero entrena en solitario. ¿Llega al inicio de LaLiga?",
+      "link": "https://www.jornadaperfecta.com/blog/take-kubo-evolucion-lesion-rodilla/",
+      "date": "Fri, 24 Jul 2026 08:11:28 +0000",
+      "img": "https://cdn.biwenger.com/i/t/13.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Últimas 50 plazas para jugar la Liga LEF 2026/27&#8230; ¡la mayor competición fantasy!",
+      "link": "https://www.jornadaperfecta.com/blog/liga-lef-26-27/",
+      "date": "Fri, 24 Jul 2026 08:00:54 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Promoción Codere Bono Despedida Mundial: regalos diarios para casino y deportes",
       "link": "https://www.jornadaperfecta.com/blog/promocion-codere-bono-despedida-mundial/",
       "date": "Fri, 24 Jul 2026 07:00:37 +0000",
@@ -10652,7 +10764,7 @@
       "title": "Fran García llega al Betis para volver a ser importante. ¿Chollo fantasy?",
       "link": "https://www.jornadaperfecta.com/blog/fran-garcia-analisis-betis/",
       "date": "Thu, 23 Jul 2026 19:00:52 +0000",
-      "img": "",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
@@ -10668,55 +10780,7 @@
       "title": "Frenkie de Jong estará varios meses de baja: Parte médico oficial",
       "link": "https://www.jornadaperfecta.com/blog/frenkie-de-jong-rotura-ligamento/",
       "date": "Thu, 23 Jul 2026 17:08:10 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Odysseas Vlachodimos jugará un año más en el Sevilla FC. ¿Seguirá siendo clave?",
-      "link": "https://www.jornadaperfecta.com/blog/odysseas-vlachodimos-analisis-vuelta-sevilla-26/",
-      "date": "Thu, 23 Jul 2026 17:00:55 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/05/2359794576da764cb4bb2894266816f0-1.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Kike Salas, baja en el Sevilla por molestias. ¿Preocupa?",
-      "link": "https://www.jornadaperfecta.com/blog/kike-salas-molestias-cuadriceps/",
-      "date": "Thu, 23 Jul 2026 16:38:21 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Isco y Antony entrenan con el grupo, a pesar de unas molestias del español",
-      "link": "https://www.jornadaperfecta.com/blog/isco-abde-y-antony-bajas-amistoso/",
-      "date": "Thu, 23 Jul 2026 15:30:49 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Oficial: Karim Adeyemi, nuevo jugador del FC Barcelona",
-      "link": "https://www.jornadaperfecta.com/blog/adeyemi-barcelona-fichaje-oficial/",
-      "date": "Thu, 23 Jul 2026 11:05:55 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Hartman refuerza la defensa del Espanyol. ¿Titular fijo y chollo fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/hartman-analisis-fantasy-fichaje-espanyol/",
-      "date": "Thu, 23 Jul 2026 11:02:03 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Fermín entrena con el grupo y podría estar en el inicio de LaLiga",
-      "link": "https://www.jornadaperfecta.com/blog/fermin-recuperacion-fractura-pie/",
-      "date": "Thu, 23 Jul 2026 09:01:15 +0000",
-      "img": "",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -10725,7 +10789,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-07-24T08:02:48.759Z",
+    "updatedAt": "2026-07-24T13:11:59.651Z",
     "players": []
   }
 }
