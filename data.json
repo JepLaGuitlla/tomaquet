@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-24T19:07:52.182Z",
+  "updatedAt": "2026-07-25T01:22:57.012Z",
   "players": [
     {
       "id": 11,
@@ -239,28 +239,6 @@
       "teamId": 87,
       "status": "ok",
       "jForm": [],
-      "clausula": null
-    },
-    {
-      "id": 1153,
-      "slug": "griezmann",
-      "name": "Griezmann",
-      "position": 4,
-      "price": 3750000,
-      "points": 157,
-      "trend": 0,
-      "playedHome": 18,
-      "playedAway": 16,
-      "teamName": "",
-      "teamId": null,
-      "status": "ok",
-      "jForm": [
-        5,
-        10,
-        5,
-        3,
-        5
-      ],
       "clausula": null
     },
     {
@@ -1656,28 +1634,6 @@
       "clausula": null
     },
     {
-      "id": 11610,
-      "slug": "brais-mendez",
-      "name": "Brais Méndez",
-      "position": 3,
-      "price": 2310000,
-      "points": 127,
-      "trend": 0,
-      "playedHome": 16,
-      "playedAway": 13,
-      "teamName": "",
-      "teamId": null,
-      "status": "ok",
-      "jForm": [
-        null,
-        4,
-        null,
-        null,
-        null
-      ],
-      "clausula": null
-    },
-    {
       "id": 11633,
       "slug": "raba",
       "name": "Raba",
@@ -1977,22 +1933,6 @@
       "playedAway": 0,
       "teamName": "Real Madrid",
       "teamId": 15,
-      "status": "ok",
-      "jForm": [],
-      "clausula": null
-    },
-    {
-      "id": 15395,
-      "slug": "alex-petxa",
-      "name": "Álex Petxa",
-      "position": 2,
-      "price": 210000,
-      "points": 0,
-      "trend": 0,
-      "playedHome": 0,
-      "playedAway": 0,
-      "teamName": "",
-      "teamId": null,
       "status": "ok",
       "jForm": [],
       "clausula": null
@@ -8030,22 +7970,6 @@
       "clausula": null
     },
     {
-      "id": 41272,
-      "slug": "mario-garcia",
-      "name": "Mario García",
-      "position": 2,
-      "price": 170000,
-      "points": 0,
-      "trend": 0,
-      "playedHome": 0,
-      "playedAway": 0,
-      "teamName": "",
-      "teamId": null,
-      "status": "ok",
-      "jForm": [],
-      "clausula": null
-    },
-    {
       "id": 41275,
       "slug": "f-gonzalez",
       "name": "Facundo González",
@@ -10562,18 +10486,18 @@
       "matchDate": "2026-08-16T19:00:00Z"
     },
     "Sevilla": {
-      "winProb": 0.4328223624887286,
-      "drawProb": 0.30027051397655546,
-      "loseProb": 0.26690712353471596,
+      "winProb": 0.4344106817421058,
+      "drawProb": 0.3013724104585859,
+      "loseProb": 0.2642169077993082,
       "over25Prob": 0.45454545454545453,
       "isHome": true,
       "opponent": "Rayo Vallecano",
       "matchDate": "2026-08-15T19:30:00Z"
     },
     "Rayo Vallecano": {
-      "winProb": 0.26690712353471596,
-      "drawProb": 0.30027051397655546,
-      "loseProb": 0.4328223624887286,
+      "winProb": 0.2642169077993082,
+      "drawProb": 0.3013724104585859,
+      "loseProb": 0.4344106817421058,
       "over25Prob": 0.45454545454545453,
       "isHome": false,
       "opponent": "Sevilla",
@@ -10726,6 +10650,14 @@
   },
   "news": [
     {
+      "title": "CuotaPlus Sportium: aumenta un 25% tus ganancias con Crear Apuesta",
+      "link": "https://www.jornadaperfecta.com/blog/cuotaplus-sportium-julio-26/",
+      "date": "Fri, 24 Jul 2026 22:01:08 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/07/CuotaPlus-Sportium.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Promoción Flash en Movistar Plus+: ¡50% de Descuento durante 3 meses!",
       "link": "https://www.jornadaperfecta.com/blog/movistar-plus-promocion-verano-26/",
       "date": "Fri, 24 Jul 2026 17:20:09 +0000",
@@ -10796,21 +10728,13 @@
       "img": "https://cdn.biwenger.com/i/t/13.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Últimas 50 plazas para jugar la Liga LEF 2026/27&#8230; ¡la mayor competición fantasy!",
-      "link": "https://www.jornadaperfecta.com/blog/liga-lef-26-27/",
-      "date": "Fri, 24 Jul 2026 08:00:54 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-07-24T19:07:48.995Z",
+    "updatedAt": "2026-07-25T01:22:53.618Z",
     "players": []
   }
 }
