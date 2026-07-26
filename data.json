@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-25T18:46:08.565Z",
+  "updatedAt": "2026-07-26T01:26:08.630Z",
   "players": [
     {
       "id": 11,
@@ -3410,26 +3410,6 @@
       "clausula": null
     },
     {
-      "id": 25394,
-      "slug": "peter-gonzalez",
-      "name": "Peter Federico",
-      "position": 4,
-      "price": 300000,
-      "points": 0,
-      "trend": 0,
-      "playedHome": 0,
-      "playedAway": 0,
-      "teamName": "",
-      "teamId": null,
-      "status": "ok",
-      "jForm": [
-        null,
-        null,
-        null
-      ],
-      "clausula": null
-    },
-    {
       "id": 25396,
       "slug": "juanlu-sanchez",
       "name": "Juanlu",
@@ -6211,28 +6191,6 @@
       "teamId": 10,
       "status": "ok",
       "jForm": [],
-      "clausula": null
-    },
-    {
-      "id": 37893,
-      "slug": "urko-izeta",
-      "name": "Urko Izeta",
-      "position": 4,
-      "price": 150000,
-      "points": 32,
-      "trend": 0,
-      "playedHome": 7,
-      "playedAway": 6,
-      "teamName": "",
-      "teamId": null,
-      "status": "ok",
-      "jForm": [
-        7,
-        2,
-        null,
-        null,
-        null
-      ],
       "clausula": null
     },
     {
@@ -10558,18 +10516,18 @@
       "matchDate": "2026-08-27T19:00:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.7332242619637659,
-      "drawProb": 0.1826143444890889,
-      "loseProb": 0.0841613935471453,
+      "winProb": 0.7358045258919895,
+      "drawProb": 0.18325697625989174,
+      "loseProb": 0.08093849784811885,
       "over25Prob": 0.5747126436781609,
       "isHome": true,
       "opponent": "Málaga",
       "matchDate": "2026-08-19T19:00:00Z"
     },
     "Málaga": {
-      "winProb": 0.0841613935471453,
-      "drawProb": 0.1826143444890889,
-      "loseProb": 0.7332242619637659,
+      "winProb": 0.08093849784811885,
+      "drawProb": 0.18325697625989174,
+      "loseProb": 0.7358045258919895,
       "over25Prob": 0.5747126436781609,
       "isHome": false,
       "opponent": "Atlético Madrid",
@@ -10630,18 +10588,18 @@
       "matchDate": "2026-08-16T19:30:00Z"
     },
     "Deportivo La Coruña": {
-      "winProb": 0.41264166730052493,
-      "drawProb": 0.31147790370426715,
-      "loseProb": 0.27588042899520804,
+      "winProb": 0.4147236449812706,
+      "drawProb": 0.31037382463114443,
+      "loseProb": 0.27490253038758505,
       "over25Prob": 0.45454545454545453,
       "isHome": true,
       "opponent": "Elche CF",
       "matchDate": "2026-08-17T19:00:00Z"
     },
     "Elche CF": {
-      "winProb": 0.27588042899520804,
-      "drawProb": 0.31147790370426715,
-      "loseProb": 0.41264166730052493,
+      "winProb": 0.27490253038758505,
+      "drawProb": 0.31037382463114443,
+      "loseProb": 0.4147236449812706,
       "over25Prob": 0.45454545454545453,
       "isHome": false,
       "opponent": "Deportivo La Coruña",
@@ -10734,7 +10692,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-07-25T18:46:05.594Z",
+    "updatedAt": "2026-07-26T01:26:05.504Z",
     "players": []
   }
 }
