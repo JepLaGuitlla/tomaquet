@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-27T09:21:49.897Z",
+  "updatedAt": "2026-07-27T14:05:22.556Z",
   "players": [
     {
       "id": 11,
@@ -948,7 +948,7 @@
     {
       "id": 4753,
       "slug": "andres-martin",
-      "name": "Andrés Martín",
+      "name": "Andrés Mart��n",
       "position": 4,
       "price": 4020000,
       "points": 0,
@@ -3714,6 +3714,22 @@
       "clausula": null
     },
     {
+      "id": 26360,
+      "slug": "j-dubasin",
+      "name": "Dubasin",
+      "position": 4,
+      "price": 2200000,
+      "points": 0,
+      "trend": 0,
+      "playedHome": 0,
+      "playedAway": 0,
+      "teamName": "Osasuna",
+      "teamId": 93,
+      "status": "ok",
+      "jForm": [],
+      "clausula": null
+    },
+    {
       "id": 26566,
       "slug": "carlos-romero",
       "name": "Carlos Romero",
@@ -4189,6 +4205,22 @@
       "playedAway": 0,
       "teamName": "Celta",
       "teamId": 5,
+      "status": "ok",
+      "jForm": [],
+      "clausula": null
+    },
+    {
+      "id": 29446,
+      "slug": "miguel-rodriguez-2",
+      "name": "Miguel Rodríguez",
+      "position": 4,
+      "price": 1620000,
+      "points": 0,
+      "trend": 0,
+      "playedHome": 0,
+      "playedAway": 0,
+      "teamName": "Alavés",
+      "teamId": 91,
       "status": "ok",
       "jForm": [],
       "clausula": null
@@ -10526,42 +10558,6 @@
       "opponent": "Barcelona",
       "matchDate": "2026-08-27T19:00:00Z"
     },
-    "Atlético Madrid": {
-      "winProb": 0.7358045258919895,
-      "drawProb": 0.18325697625989174,
-      "loseProb": 0.08093849784811885,
-      "over25Prob": 0.5747126436781609,
-      "isHome": true,
-      "opponent": "Málaga",
-      "matchDate": "2026-08-19T19:00:00Z"
-    },
-    "Málaga": {
-      "winProb": 0.08093849784811885,
-      "drawProb": 0.18325697625989174,
-      "loseProb": 0.7358045258919895,
-      "over25Prob": 0.5747126436781609,
-      "isHome": false,
-      "opponent": "Atlético Madrid",
-      "matchDate": "2026-08-19T19:00:00Z"
-    },
-    "Valencia": {
-      "winProb": 0.3548387096774194,
-      "drawProb": 0.2903225806451613,
-      "loseProb": 0.3548387096774194,
-      "over25Prob": 0.5154639175257733,
-      "isHome": true,
-      "opponent": "Real Betis",
-      "matchDate": "2026-08-25T19:00:00Z"
-    },
-    "Real Betis": {
-      "winProb": 0.3548387096774194,
-      "drawProb": 0.2903225806451613,
-      "loseProb": 0.3548387096774194,
-      "over25Prob": 0.5154639175257733,
-      "isHome": false,
-      "opponent": "Valencia",
-      "matchDate": "2026-08-25T19:00:00Z"
-    },
     "Real Madrid": {
       "winProb": 0.6552718458773873,
       "drawProb": 0.19524426428183375,
@@ -10599,25 +10595,101 @@
       "matchDate": "2026-08-16T19:30:00Z"
     },
     "Deportivo La Coruña": {
-      "winProb": 0.4189512703683682,
-      "drawProb": 0.30813190207738045,
-      "loseProb": 0.2729168275542513,
+      "winProb": 0.4205678908548936,
+      "drawProb": 0.3093209003706959,
+      "loseProb": 0.2701112087744105,
       "over25Prob": 0.45248868778280543,
       "isHome": true,
       "opponent": "Elche CF",
       "matchDate": "2026-08-17T19:00:00Z"
     },
     "Elche CF": {
-      "winProb": 0.2729168275542513,
-      "drawProb": 0.30813190207738045,
-      "loseProb": 0.4189512703683682,
+      "winProb": 0.2701112087744105,
+      "drawProb": 0.3093209003706959,
+      "loseProb": 0.4205678908548936,
       "over25Prob": 0.45248868778280543,
       "isHome": false,
       "opponent": "Deportivo La Coruña",
       "matchDate": "2026-08-17T19:00:00Z"
+    },
+    "Atlético Madrid": {
+      "winProb": 0.7332242619637659,
+      "drawProb": 0.1826143444890889,
+      "loseProb": 0.0841613935471453,
+      "over25Prob": 0.5747126436781609,
+      "isHome": true,
+      "opponent": "Málaga",
+      "matchDate": "2026-08-19T19:00:00Z"
+    },
+    "Málaga": {
+      "winProb": 0.0841613935471453,
+      "drawProb": 0.1826143444890889,
+      "loseProb": 0.7332242619637659,
+      "over25Prob": 0.5747126436781609,
+      "isHome": false,
+      "opponent": "Atlético Madrid",
+      "matchDate": "2026-08-19T19:00:00Z"
+    },
+    "Valencia": {
+      "winProb": 0.3548387096774194,
+      "drawProb": 0.2903225806451613,
+      "loseProb": 0.3548387096774194,
+      "over25Prob": 0.5154639175257733,
+      "isHome": true,
+      "opponent": "Real Betis",
+      "matchDate": "2026-08-25T19:00:00Z"
+    },
+    "Real Betis": {
+      "winProb": 0.3548387096774194,
+      "drawProb": 0.2903225806451613,
+      "loseProb": 0.3548387096774194,
+      "over25Prob": 0.5154639175257733,
+      "isHome": false,
+      "opponent": "Valencia",
+      "matchDate": "2026-08-25T19:00:00Z"
     }
   },
   "news": [
+    {
+      "title": "Jonathan Asp Jensen recala en el Dépor. ¿Fichaje de futuro o de presente?",
+      "link": "https://www.jornadaperfecta.com/blog/asp-jensen-deportivo-analisis-fichaje-26/",
+      "date": "Mon, 27 Jul 2026 11:00:53 +0000",
+      "img": "https://cdn.biwenger.com/i/t/6.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Diego Conde: parte médico oficial y tiempo de baja",
+      "link": "https://www.jornadaperfecta.com/blog/diego-conde-lesion-hombro-pretemporada-26/",
+      "date": "Mon, 27 Jul 2026 11:00:27 +0000",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Oficial: Jonathan Dubasin, nuevo jugador de Osasuna",
+      "link": "https://www.jornadaperfecta.com/blog/dubasin-osasuna-anuncio-fichaje-26/",
+      "date": "Mon, 27 Jul 2026 10:34:22 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "De Jong y Fermín viajan a Inglaterra con el Barça; Flick espera a Raphinha",
+      "link": "https://www.jornadaperfecta.com/blog/de-jong-fermin-raphinha-pretemporada-barca/",
+      "date": "Mon, 27 Jul 2026 10:19:04 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Thiago Pitarch, baja por una lesión en la rodilla",
+      "link": "https://www.jornadaperfecta.com/blog/thiago-pitarch-baja-lesion-real-madrid/",
+      "date": "Mon, 27 Jul 2026 09:32:48 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Gabriel Moscardo, joven talento para el Espanyol. ¿Titular fijo y chollo fantasy?",
       "link": "https://www.jornadaperfecta.com/blog/gabriel-moscardo-espanyol-analisis-fichaje-26/",
@@ -10651,50 +10723,10 @@
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Malas impresiones con la lesión de Diego Conde",
-      "link": "https://www.jornadaperfecta.com/blog/diego-conde-lesion-hombro-pretemporada-26/",
-      "date": "Sun, 26 Jul 2026 17:25:27 +0000",
-      "img": "https://cdn.biwenger.com/i/t/87.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
       "title": "Kang-in Lee, el nuevo &#8216;7&#8217; del Atleti. ¿Un futbolista clave para el Cholo?",
       "link": "https://www.jornadaperfecta.com/blog/kang-in-lee-atleti-analisis-fichaje-26/",
       "date": "Sun, 26 Jul 2026 17:11:30 +0000",
       "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/04/image-2026-04-19T202006.636.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Martín Satriano seguirá en el Getafe. ¿Seguirá siendo importante?",
-      "link": "https://www.jornadaperfecta.com/blog/satriano-getafe-analisis-fichaje-26-27/",
-      "date": "Sun, 26 Jul 2026 11:08:45 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/09/Borja-Mayoral-Getafe-CF-fantasy.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Osasuna cierra el fichaje de Jonathan Dubasin para la delantera",
-      "link": "https://www.jornadaperfecta.com/blog/dubasin-osasuna-posible-fichaje-26/",
-      "date": "Sun, 26 Jul 2026 10:45:09 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Carlos Espí estaría a un paso de salir del Levante UD",
-      "link": "https://www.jornadaperfecta.com/blog/espi-levante-salida-26/",
-      "date": "Sun, 26 Jul 2026 10:43:01 +0000",
-      "img": "https://cdn.biwenger.com/i/t/10.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Mercado de fichajes de verano de LaLiga 26/27: altas y bajas oficiales",
-      "link": "https://www.jornadaperfecta.com/blog/mercado-fichajes-verano-26-27/",
-      "date": "Sun, 26 Jul 2026 10:00:36 +0000",
-      "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -10703,7 +10735,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-07-27T09:21:46.842Z",
+    "updatedAt": "2026-07-27T14:05:19.414Z",
     "players": []
   }
 }
