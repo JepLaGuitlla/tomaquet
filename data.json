@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-26T18:51:03.603Z",
+  "updatedAt": "2026-07-27T01:30:10.378Z",
   "players": [
     {
       "id": 11,
@@ -10548,7 +10548,7 @@
       "winProb": 0.3548387096774194,
       "drawProb": 0.2903225806451613,
       "loseProb": 0.3548387096774194,
-      "over25Prob": 0.5128205128205129,
+      "over25Prob": 0.5154639175257733,
       "isHome": true,
       "opponent": "Real Betis",
       "matchDate": "2026-08-25T19:00:00Z"
@@ -10557,7 +10557,7 @@
       "winProb": 0.3548387096774194,
       "drawProb": 0.2903225806451613,
       "loseProb": 0.3548387096774194,
-      "over25Prob": 0.5128205128205129,
+      "over25Prob": 0.5154639175257733,
       "isHome": false,
       "opponent": "Valencia",
       "matchDate": "2026-08-25T19:00:00Z"
@@ -10599,18 +10599,18 @@
       "matchDate": "2026-08-16T19:30:00Z"
     },
     "Deportivo La Coruña": {
-      "winProb": 0.4168267383787937,
-      "drawProb": 0.3092585478294275,
-      "loseProb": 0.2739147137917787,
+      "winProb": 0.4189512703683682,
+      "drawProb": 0.30813190207738045,
+      "loseProb": 0.2729168275542513,
       "over25Prob": 0.45248868778280543,
       "isHome": true,
       "opponent": "Elche CF",
       "matchDate": "2026-08-17T19:00:00Z"
     },
     "Elche CF": {
-      "winProb": 0.2739147137917787,
-      "drawProb": 0.3092585478294275,
-      "loseProb": 0.4168267383787937,
+      "winProb": 0.2729168275542513,
+      "drawProb": 0.30813190207738045,
+      "loseProb": 0.4189512703683682,
       "over25Prob": 0.45248868778280543,
       "isHome": false,
       "opponent": "Deportivo La Coruña",
@@ -10618,6 +10618,14 @@
     }
   },
   "news": [
+    {
+      "title": "Yan Diomandé al Real Madrid. «Here we go!»",
+      "link": "https://www.jornadaperfecta.com/blog/yan-diomande-oferta-real-madrid/",
+      "date": "Sun, 26 Jul 2026 19:20:22 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Osasuna ojea el mercado ante una lesión de larga duración de Rosier",
       "link": "https://www.jornadaperfecta.com/blog/rosier-lesion-biceps-femoral-pretemporada-26/",
@@ -10639,14 +10647,6 @@
       "link": "https://www.jornadaperfecta.com/blog/kang-in-lee-atleti-analisis-fichaje-26/",
       "date": "Sun, 26 Jul 2026 17:11:30 +0000",
       "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/04/image-2026-04-19T202006.636.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Principio de acuerdo entre Real Madrid y Leizpig por Diomandé",
-      "link": "https://www.jornadaperfecta.com/blog/yan-diomande-oferta-real-madrid/",
-      "date": "Sun, 26 Jul 2026 15:55:22 +0000",
-      "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
@@ -10683,18 +10683,18 @@
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Álex Calatrava se hace con las llaves de la mediapunta del Espanyol. ¿Chollo fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/alex-calatrava-analisis-fantasy-espanyol/",
-      "date": "Sun, 26 Jul 2026 09:00:36 +0000",
-      "img": "https://cdn.biwenger.com/i/t/7.png",
+      "title": "El Arsenal intentará el fichaje de Vinicius Jr",
+      "link": "https://www.jornadaperfecta.com/blog/arsenal-fichaje-vinicius-jr/",
+      "date": "Sun, 26 Jul 2026 09:32:09 +0000",
+      "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Denzel Dumfries refuerza la defensa del Madrid, ¿será titular fijo?",
-      "link": "https://www.jornadaperfecta.com/blog/denzel-dumfries-analisis-fantasy-madrid/",
-      "date": "Sat, 25 Jul 2026 17:00:09 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/08/Trent-Alexander-Arnold-Real-Madrid.webp",
+      "title": "Álex Calatrava se hace con las llaves de la mediapunta del Espanyol. ¿Chollo fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/alex-calatrava-analisis-fantasy-espanyol/",
+      "date": "Sun, 26 Jul 2026 09:00:36 +0000",
+      "img": "https://cdn.biwenger.com/i/t/7.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -10703,7 +10703,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-07-26T18:51:00.492Z",
+    "updatedAt": "2026-07-27T01:30:05.862Z",
     "players": []
   }
 }
