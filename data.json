@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-28T08:09:38.219Z",
+  "updatedAt": "2026-07-28T13:25:03.639Z",
   "players": [
     {
       "id": 11,
@@ -6171,8 +6171,8 @@
       "trend": 10000,
       "playedHome": 0,
       "playedAway": 0,
-      "teamName": "Espanyol",
-      "teamId": 7,
+      "teamName": "Málaga",
+      "teamId": 65,
       "status": "ok",
       "jForm": [],
       "clausula": null
@@ -7762,6 +7762,22 @@
       "clausula": null
     },
     {
+      "id": 41157,
+      "slug": "alassane-diatta",
+      "name": "Alassane Diatta",
+      "position": 3,
+      "price": 240000,
+      "points": 0,
+      "trend": 0,
+      "playedHome": 0,
+      "playedAway": 0,
+      "teamName": "Villarreal",
+      "teamId": 19,
+      "status": "ok",
+      "jForm": [],
+      "clausula": null
+    },
+    {
       "id": 41200,
       "slug": "anthony-gordon",
       "name": "Gordon",
@@ -8749,6 +8765,38 @@
       "playedAway": 0,
       "teamName": "Athletic",
       "teamId": 1,
+      "status": "ok",
+      "jForm": [],
+      "clausula": null
+    },
+    {
+      "id": 42604,
+      "slug": "dylan-vanney",
+      "name": "Dylan Vanney",
+      "position": 4,
+      "price": 170000,
+      "points": 0,
+      "trend": 0,
+      "playedHome": 0,
+      "playedAway": 0,
+      "teamName": "Betis",
+      "teamId": 87,
+      "status": "ok",
+      "jForm": [],
+      "clausula": null
+    },
+    {
+      "id": 42605,
+      "slug": "wanjala",
+      "name": "Wanjala",
+      "position": 2,
+      "price": 180000,
+      "points": 0,
+      "trend": 0,
+      "playedHome": 0,
+      "playedAway": 0,
+      "teamName": "Valencia",
+      "teamId": 18,
       "status": "ok",
       "jForm": [],
       "clausula": null
@@ -11630,7 +11678,7 @@
       "winProb": 0.39872476089266745,
       "drawProb": 0.3275239107332625,
       "loseProb": 0.2737513283740701,
-      "over25Prob": 0.3278688524590164,
+      "over25Prob": 0.31746031746031744,
       "isHome": true,
       "opponent": "Getafe",
       "matchDate": "2026-08-15T17:30:00Z"
@@ -11639,133 +11687,133 @@
       "winProb": 0.2737513283740701,
       "drawProb": 0.3275239107332625,
       "loseProb": 0.39872476089266745,
-      "over25Prob": 0.3278688524590164,
+      "over25Prob": 0.31746031746031744,
       "isHome": false,
       "opponent": "Alavés",
       "matchDate": "2026-08-15T17:30:00Z"
     },
     "Sevilla": {
-      "winProb": 0.4317656129529684,
-      "drawProb": 0.2968388589051658,
-      "loseProb": 0.27139552814186585,
+      "winProb": 0.4381939304219097,
+      "drawProb": 0.30125832716506296,
+      "loseProb": 0.26054774241302736,
       "over25Prob": 0.45454545454545453,
       "isHome": true,
       "opponent": "Rayo Vallecano",
       "matchDate": "2026-08-15T19:30:00Z"
     },
     "Rayo Vallecano": {
-      "winProb": 0.27139552814186585,
-      "drawProb": 0.2968388589051658,
-      "loseProb": 0.4317656129529684,
+      "winProb": 0.26054774241302736,
+      "drawProb": 0.30125832716506296,
+      "loseProb": 0.4381939304219097,
       "over25Prob": 0.45454545454545453,
       "isHome": false,
       "opponent": "Sevilla",
       "matchDate": "2026-08-15T19:30:00Z"
     },
     "Real Racing Club de Santander": {
-      "winProb": 0.2799110130405687,
-      "drawProb": 0.26457342328492106,
-      "loseProb": 0.45551556367451035,
+      "winProb": 0.28110773217209795,
+      "drawProb": 0.26570456876540766,
+      "loseProb": 0.4531876990624944,
       "over25Prob": 0.53475935828877,
       "isHome": true,
       "opponent": "Villarreal",
       "matchDate": "2026-08-16T15:00:00Z"
     },
     "Villarreal": {
-      "winProb": 0.45551556367451035,
-      "drawProb": 0.26457342328492106,
-      "loseProb": 0.2799110130405687,
+      "winProb": 0.4531876990624944,
+      "drawProb": 0.26570456876540766,
+      "loseProb": 0.28110773217209795,
       "over25Prob": 0.53475935828877,
       "isHome": false,
       "opponent": "Real Racing Club de Santander",
       "matchDate": "2026-08-16T15:00:00Z"
     },
     "Espanyol": {
-      "winProb": 0.46296296296296297,
-      "drawProb": 0.29629629629629634,
-      "loseProb": 0.24074074074074078,
+      "winProb": 0.46988466467321655,
+      "drawProb": 0.290474156343443,
+      "loseProb": 0.23964117898334045,
       "over25Prob": 0.47846889952153115,
       "isHome": true,
       "opponent": "Levante",
       "matchDate": "2026-08-16T17:00:00Z"
     },
     "Levante": {
-      "winProb": 0.24074074074074078,
-      "drawProb": 0.29629629629629634,
-      "loseProb": 0.46296296296296297,
+      "winProb": 0.23964117898334045,
+      "drawProb": 0.290474156343443,
+      "loseProb": 0.46988466467321655,
       "over25Prob": 0.47846889952153115,
       "isHome": false,
       "opponent": "Espanyol",
       "matchDate": "2026-08-16T17:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.6775538568450311,
-      "drawProb": 0.18068102849200834,
-      "loseProb": 0.14176511466296038,
+      "winProb": 0.6721209501418044,
+      "drawProb": 0.1805501375871122,
+      "loseProb": 0.14732891227108352,
       "over25Prob": 0.5,
       "isHome": true,
       "opponent": "Athletic Bilbao",
       "matchDate": "2026-08-27T19:00:00Z"
     },
     "Athletic Bilbao": {
-      "winProb": 0.14176511466296038,
-      "drawProb": 0.18068102849200834,
-      "loseProb": 0.6775538568450311,
+      "winProb": 0.14732891227108352,
+      "drawProb": 0.1805501375871122,
+      "loseProb": 0.6721209501418044,
       "over25Prob": 0.5,
       "isHome": false,
       "opponent": "Barcelona",
       "matchDate": "2026-08-27T19:00:00Z"
     },
     "Real Madrid": {
-      "winProb": 0.6847611383422343,
-      "drawProb": 0.18304191967225103,
-      "loseProb": 0.13219694198551465,
+      "winProb": 0.6698715422807157,
+      "drawProb": 0.19024351800772324,
+      "loseProb": 0.13988493971156118,
       "over25Prob": 0.6535947712418301,
       "isHome": true,
       "opponent": "Real Sociedad",
       "matchDate": "2026-08-26T19:00:00Z"
     },
     "Real Sociedad": {
-      "winProb": 0.13219694198551465,
-      "drawProb": 0.18304191967225103,
-      "loseProb": 0.6847611383422343,
+      "winProb": 0.13988493971156118,
+      "drawProb": 0.19024351800772324,
+      "loseProb": 0.6698715422807157,
       "over25Prob": 0.6535947712418301,
       "isHome": false,
       "opponent": "Real Madrid",
       "matchDate": "2026-08-26T19:00:00Z"
     },
     "Celta Vigo": {
-      "winProb": 0.44889502762430933,
-      "drawProb": 0.26933701657458564,
-      "loseProb": 0.281767955801105,
+      "winProb": 0.472488038277512,
+      "drawProb": 0.28349282296650724,
+      "loseProb": 0.24401913875598086,
       "over25Prob": 0.48780487804878053,
       "isHome": true,
       "opponent": "CA Osasuna",
       "matchDate": "2026-08-16T19:30:00Z"
     },
     "CA Osasuna": {
-      "winProb": 0.281767955801105,
-      "drawProb": 0.26933701657458564,
-      "loseProb": 0.44889502762430933,
+      "winProb": 0.24401913875598086,
+      "drawProb": 0.28349282296650724,
+      "loseProb": 0.472488038277512,
       "over25Prob": 0.48780487804878053,
       "isHome": false,
       "opponent": "Celta Vigo",
       "matchDate": "2026-08-16T19:30:00Z"
     },
     "Deportivo La Coruña": {
-      "winProb": 0.4163356410547422,
-      "drawProb": 0.3115802216925812,
-      "loseProb": 0.27208413725267655,
-      "over25Prob": 0.45454545454545453,
+      "winProb": 0.4147236449812706,
+      "drawProb": 0.31037382463114443,
+      "loseProb": 0.27490253038758505,
+      "over25Prob": 0.45248868778280543,
       "isHome": true,
       "opponent": "Elche CF",
       "matchDate": "2026-08-17T19:00:00Z"
     },
     "Elche CF": {
-      "winProb": 0.27208413725267655,
-      "drawProb": 0.3115802216925812,
-      "loseProb": 0.4163356410547422,
-      "over25Prob": 0.45454545454545453,
+      "winProb": 0.27490253038758505,
+      "drawProb": 0.31037382463114443,
+      "loseProb": 0.4147236449812706,
+      "over25Prob": 0.45248868778280543,
       "isHome": false,
       "opponent": "Deportivo La Coruña",
       "matchDate": "2026-08-17T19:00:00Z"
@@ -11774,7 +11822,7 @@
       "winProb": 0.7381258023106547,
       "drawProb": 0.17715019255455713,
       "loseProb": 0.08472400513478819,
-      "over25Prob": 0.5376344086021505,
+      "over25Prob": 0.5747126436781609,
       "isHome": true,
       "opponent": "Málaga",
       "matchDate": "2026-08-19T19:00:00Z"
@@ -11783,24 +11831,24 @@
       "winProb": 0.08472400513478819,
       "drawProb": 0.17715019255455713,
       "loseProb": 0.7381258023106547,
-      "over25Prob": 0.5376344086021505,
+      "over25Prob": 0.5747126436781609,
       "isHome": false,
       "opponent": "Atlético Madrid",
       "matchDate": "2026-08-19T19:00:00Z"
     },
     "Valencia": {
-      "winProb": 0.3532608695652174,
-      "drawProb": 0.29347826086956524,
-      "loseProb": 0.3532608695652174,
+      "winProb": 0.3548387096774194,
+      "drawProb": 0.2903225806451613,
+      "loseProb": 0.3548387096774194,
       "over25Prob": 0.5128205128205129,
       "isHome": true,
       "opponent": "Real Betis",
       "matchDate": "2026-08-25T19:00:00Z"
     },
     "Real Betis": {
-      "winProb": 0.3532608695652174,
-      "drawProb": 0.29347826086956524,
-      "loseProb": 0.3532608695652174,
+      "winProb": 0.3548387096774194,
+      "drawProb": 0.2903225806451613,
+      "loseProb": 0.3548387096774194,
       "over25Prob": 0.5128205128205129,
       "isHome": false,
       "opponent": "Valencia",
@@ -11808,6 +11856,54 @@
     }
   },
   "news": [
+    {
+      "title": "Isco, Abde y Ruibal siguen sin entrenar con el grupo",
+      "link": "https://www.jornadaperfecta.com/blog/isco-abde-ruibal-entrenamiento-real-betis/",
+      "date": "Tue, 28 Jul 2026 11:59:32 +0000",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Juan Cruz vuelve a Primera con el Málaga. ¿Volverá a brillar?",
+      "link": "https://www.jornadaperfecta.com/blog/juan-cruz-malaga-analisis-fichaje-26/",
+      "date": "Tue, 28 Jul 2026 11:00:05 +0000",
+      "img": "https://cdn.biwenger.com/i/t/65.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Íñigo Vicente cae lesionado, ¿llega al inicio de LaLiga?",
+      "link": "https://www.jornadaperfecta.com/blog/inigo-vicente-lesion-racing-santander-laliga/",
+      "date": "Tue, 28 Jul 2026 09:26:26 +0000",
+      "img": "https://cdn.biwenger.com/i/t/812.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Hugo Sotelo llega al Levante. ¿El centrocampista perfecto para Luis Castro?",
+      "link": "https://www.jornadaperfecta.com/blog/hugo-sotelo-levante-analisis-fichaje-26/",
+      "date": "Tue, 28 Jul 2026 09:00:07 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/11/Kervin-Arriaga-Levante-UD.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Mercado de fichajes de verano de LaLiga 26/27: altas y bajas oficiales",
+      "link": "https://www.jornadaperfecta.com/blog/mercado-fichajes-verano-26-27/",
+      "date": "Tue, 28 Jul 2026 08:05:36 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Julio Díaz ya se encuentra en Sevilla para firmar por el conjunto de Nervión",
+      "link": "https://www.jornadaperfecta.com/blog/julio-diaz-acuerdo-sevilla-26/",
+      "date": "Tue, 28 Jul 2026 08:00:12 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Promoción Bwinmortales: acierta cada día y gana parte de un bote de 5.000 €",
       "link": "https://www.jornadaperfecta.com/blog/bwin-bwinmortales-promocion/",
@@ -11839,61 +11935,13 @@
       "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/11/fa9031b5e9936d5beb6606d9804a2fd6-1.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Oficial: José Salinas, nuevo jugador del Málaga CF",
-      "link": "https://www.jornadaperfecta.com/blog/jose-salinas-malaga-anuncio-fichaje-26/",
-      "date": "Mon, 27 Jul 2026 18:53:40 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Julio Díaz viajará y firmará ma��ana por el Sevilla",
-      "link": "https://www.jornadaperfecta.com/blog/julio-diaz-acuerdo-sevilla-26/",
-      "date": "Mon, 27 Jul 2026 18:49:12 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Informe pretemporada 2026: onces, claves y goleadores",
-      "link": "https://www.jornadaperfecta.com/blog/informe-pretemporada-2026/",
-      "date": "Mon, 27 Jul 2026 18:34:48 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Consigue una freebet de 10€ apostando a la Champions League con Betsson",
-      "link": "https://www.jornadaperfecta.com/blog/betsson-clasificacion-champions-league/",
-      "date": "Mon, 27 Jul 2026 17:17:05 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/07/Betsson-Champions-League-clasificacion-1.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Javi Galán vuelve al Celta: ¿fichaje recomendable?",
-      "link": "https://www.jornadaperfecta.com/blog/javi-galan-analisis-fantasy-celta-26-27/",
-      "date": "Mon, 27 Jul 2026 16:58:30 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/09/Sergio-Carreira-RC-Celta-fantasy.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Fer Niño será nuevo jugador del Elche CF",
-      "link": "https://www.jornadaperfecta.com/blog/fer-nino-elche-acuerdo-fichaje-26/",
-      "date": "Mon, 27 Jul 2026 15:49:51 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-07-28T08:09:35.314Z",
+    "updatedAt": "2026-07-28T13:25:00.000Z",
     "players": []
   }
 }
