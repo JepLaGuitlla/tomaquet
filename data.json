@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-27T19:06:45.782Z",
+  "updatedAt": "2026-07-28T01:17:39.970Z",
   "players": [
     {
       "id": 11,
@@ -6546,28 +6546,6 @@
       "clausula": null
     },
     {
-      "id": 38361,
-      "slug": "b-santamaria",
-      "name": "Santamaria",
-      "position": 3,
-      "price": 190000,
-      "points": 53,
-      "trend": 0,
-      "playedHome": 8,
-      "playedAway": 11,
-      "teamName": "",
-      "teamId": null,
-      "status": "ok",
-      "jForm": [
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "clausula": null
-    },
-    {
       "id": 38368,
       "slug": "filip-ugrinic",
       "name": "Filip Ugrinic",
@@ -10487,108 +10465,108 @@
       "matchDate": "2026-08-15T17:30:00Z"
     },
     "Sevilla": {
-      "winProb": 0.4344106817421058,
-      "drawProb": 0.3013724104585859,
-      "loseProb": 0.2642169077993082,
+      "winProb": 0.43627298223745714,
+      "drawProb": 0.2944842630102836,
+      "loseProb": 0.2692427547522593,
       "over25Prob": 0.45454545454545453,
       "isHome": true,
       "opponent": "Rayo Vallecano",
       "matchDate": "2026-08-15T19:30:00Z"
     },
     "Rayo Vallecano": {
-      "winProb": 0.2642169077993082,
-      "drawProb": 0.3013724104585859,
-      "loseProb": 0.4344106817421058,
+      "winProb": 0.2692427547522593,
+      "drawProb": 0.2944842630102836,
+      "loseProb": 0.43627298223745714,
       "over25Prob": 0.45454545454545453,
       "isHome": false,
       "opponent": "Sevilla",
       "matchDate": "2026-08-15T19:30:00Z"
     },
     "Real Racing Club de Santander": {
-      "winProb": 0.28110773217209795,
-      "drawProb": 0.26570456876540766,
-      "loseProb": 0.4531876990624944,
+      "winProb": 0.2828629916654482,
+      "drawProb": 0.2634888141541161,
+      "loseProb": 0.4536481941804357,
       "over25Prob": 0.53475935828877,
       "isHome": true,
       "opponent": "Villarreal",
       "matchDate": "2026-08-16T15:00:00Z"
     },
     "Villarreal": {
-      "winProb": 0.4531876990624944,
-      "drawProb": 0.26570456876540766,
-      "loseProb": 0.28110773217209795,
+      "winProb": 0.4536481941804357,
+      "drawProb": 0.2634888141541161,
+      "loseProb": 0.2828629916654482,
       "over25Prob": 0.53475935828877,
       "isHome": false,
       "opponent": "Real Racing Club de Santander",
       "matchDate": "2026-08-16T15:00:00Z"
     },
     "Espanyol": {
-      "winProb": 0.46988466467321655,
-      "drawProb": 0.290474156343443,
-      "loseProb": 0.23964117898334045,
+      "winProb": 0.45656685443225614,
+      "drawProb": 0.2967684553809665,
+      "loseProb": 0.24666469018677734,
       "over25Prob": 0.47846889952153115,
       "isHome": true,
       "opponent": "Levante",
       "matchDate": "2026-08-16T17:00:00Z"
     },
     "Levante": {
-      "winProb": 0.23964117898334045,
-      "drawProb": 0.290474156343443,
-      "loseProb": 0.46988466467321655,
+      "winProb": 0.24666469018677734,
+      "drawProb": 0.2967684553809665,
+      "loseProb": 0.45656685443225614,
       "over25Prob": 0.47846889952153115,
       "isHome": false,
       "opponent": "Espanyol",
       "matchDate": "2026-08-16T17:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.6623978803267829,
-      "drawProb": 0.18414661073084562,
-      "loseProb": 0.15345550894237134,
+      "winProb": 0.6978289765175012,
+      "drawProb": 0.17058041648205582,
+      "loseProb": 0.1315906070004431,
       "over25Prob": 0.5,
       "isHome": true,
       "opponent": "Athletic Bilbao",
       "matchDate": "2026-08-27T19:00:00Z"
     },
     "Athletic Bilbao": {
-      "winProb": 0.15345550894237134,
-      "drawProb": 0.18414661073084562,
-      "loseProb": 0.6623978803267829,
+      "winProb": 0.1315906070004431,
+      "drawProb": 0.17058041648205582,
+      "loseProb": 0.6978289765175012,
       "over25Prob": 0.5,
       "isHome": false,
       "opponent": "Barcelona",
       "matchDate": "2026-08-27T19:00:00Z"
     },
     "Real Madrid": {
-      "winProb": 0.6552718458773873,
-      "drawProb": 0.19524426428183375,
-      "loseProb": 0.14948388984077898,
+      "winProb": 0.6698715422807157,
+      "drawProb": 0.19024351800772324,
+      "loseProb": 0.13988493971156118,
       "over25Prob": 0.5,
       "isHome": true,
       "opponent": "Real Sociedad",
       "matchDate": "2026-08-26T19:00:00Z"
     },
     "Real Sociedad": {
-      "winProb": 0.14948388984077898,
-      "drawProb": 0.19524426428183375,
-      "loseProb": 0.6552718458773873,
+      "winProb": 0.13988493971156118,
+      "drawProb": 0.19024351800772324,
+      "loseProb": 0.6698715422807157,
       "over25Prob": 0.5,
       "isHome": false,
       "opponent": "Real Madrid",
       "matchDate": "2026-08-26T19:00:00Z"
     },
     "Celta Vigo": {
-      "winProb": 0.472488038277512,
-      "drawProb": 0.28349282296650724,
-      "loseProb": 0.24401913875598086,
+      "winProb": 0.4451457520139523,
+      "drawProb": 0.27107383107715305,
+      "loseProb": 0.2837804169088946,
       "over25Prob": 0.48780487804878053,
       "isHome": true,
       "opponent": "CA Osasuna",
       "matchDate": "2026-08-16T19:30:00Z"
     },
     "CA Osasuna": {
-      "winProb": 0.24401913875598086,
-      "drawProb": 0.28349282296650724,
-      "loseProb": 0.472488038277512,
+      "winProb": 0.2837804169088946,
+      "drawProb": 0.27107383107715305,
+      "loseProb": 0.4451457520139523,
       "over25Prob": 0.48780487804878053,
       "isHome": false,
       "opponent": "Celta Vigo",
@@ -10598,7 +10576,7 @@
       "winProb": 0.4205678908548936,
       "drawProb": 0.3093209003706959,
       "loseProb": 0.2701112087744105,
-      "over25Prob": 0.45248868778280543,
+      "over25Prob": 0.45454545454545453,
       "isHome": true,
       "opponent": "Elche CF",
       "matchDate": "2026-08-17T19:00:00Z"
@@ -10607,24 +10585,24 @@
       "winProb": 0.2701112087744105,
       "drawProb": 0.3093209003706959,
       "loseProb": 0.4205678908548936,
-      "over25Prob": 0.45248868778280543,
+      "over25Prob": 0.45454545454545453,
       "isHome": false,
       "opponent": "Deportivo La Coruña",
       "matchDate": "2026-08-17T19:00:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.7332242619637659,
-      "drawProb": 0.1826143444890889,
-      "loseProb": 0.0841613935471453,
+      "winProb": 0.7303631896952393,
+      "drawProb": 0.17395923245468428,
+      "loseProb": 0.09567757785007636,
       "over25Prob": 0.5747126436781609,
       "isHome": true,
       "opponent": "Málaga",
       "matchDate": "2026-08-19T19:00:00Z"
     },
     "Málaga": {
-      "winProb": 0.0841613935471453,
-      "drawProb": 0.1826143444890889,
-      "loseProb": 0.7332242619637659,
+      "winProb": 0.09567757785007636,
+      "drawProb": 0.17395923245468428,
+      "loseProb": 0.7303631896952393,
       "over25Prob": 0.5747126436781609,
       "isHome": false,
       "opponent": "Atlético Madrid",
@@ -10634,7 +10612,7 @@
       "winProb": 0.3548387096774194,
       "drawProb": 0.2903225806451613,
       "loseProb": 0.3548387096774194,
-      "over25Prob": 0.5154639175257733,
+      "over25Prob": 0.5181347150259068,
       "isHome": true,
       "opponent": "Real Betis",
       "matchDate": "2026-08-25T19:00:00Z"
@@ -10643,7 +10621,7 @@
       "winProb": 0.3548387096774194,
       "drawProb": 0.2903225806451613,
       "loseProb": 0.3548387096774194,
-      "over25Prob": 0.5154639175257733,
+      "over25Prob": 0.5181347150259068,
       "isHome": false,
       "opponent": "Valencia",
       "matchDate": "2026-08-25T19:00:00Z"
@@ -10651,7 +10629,15 @@
   },
   "news": [
     {
-      "title": "Fermín y Araújo vuelven al grupo, pendientes de Raphinha y De Jong",
+      "title": "Las cinco claves del mercado de fichajes del 27 de julio",
+      "link": "https://www.jornadaperfecta.com/blog/claves-mercado-27-7-26/",
+      "date": "Mon, 27 Jul 2026 21:00:41 +0000",
+      "img": "https://cdn.biwenger.com/i/t/7.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Fermín y Araújo vuelven a un grupo pendiente de Raphinha",
       "link": "https://www.jornadaperfecta.com/blog/de-jong-fermin-raphinha-pretemporada-barca/",
       "date": "Mon, 27 Jul 2026 19:00:04 +0000",
       "img": "https://cdn.biwenger.com/i/t/3.png",
@@ -10721,21 +10707,13 @@
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Thiago Almada, muy cerca de salir del Atlético de Madrid",
-      "link": "https://www.jornadaperfecta.com/blog/thiago-almada-salida-atletico-26/",
-      "date": "Mon, 27 Jul 2026 15:17:51 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-07-27T19:06:42.961Z",
+    "updatedAt": "2026-07-28T01:17:36.842Z",
     "players": []
   }
 }
