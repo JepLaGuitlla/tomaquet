@@ -478,9 +478,13 @@ async function fetchPlayerStats() {
 async function fetchBoard(token, liga) {
   console.log(`📋 Descargando tablón liga ${liga.id}...`);
 
+  // Antes se leía de /api/v2/home (solo trae ~5 eventos, el widget de
+  // inicio). Este endpoint es el tablón real, paginado (offset/limit) — se
+  // pide un lote más grande para que la acumulación en transacciones-liga.json
+  // avance más rápido cada 6h.
   const res = await requestJSON({
     hostname: 'biwenger.as.com',
-    path:     '/api/v2/home',
+    path:     `/api/v2/league/${liga.id}/board?offset=0&limit=30`,
     method:   'GET',
     headers:  { ...headersForLeague(liga), 'Authorization': `Bearer ${token}`, 'x-lang': 'es' }
   });
@@ -490,7 +494,7 @@ async function fetchBoard(token, liga) {
     return [];
   }
 
-  const board = res.body?.data?.league?.board || [];
+  const board = Array.isArray(res.body?.data) ? res.body.data : [];
   const events = board.filter(e => e.type === 'transfer' || e.type === 'market');
   console.log(`✅ Tablón liga ${liga.id}: ${events.length} eventos`);
 
@@ -647,6 +651,55 @@ async function writeManagersMirror(standingsOrder) {
   } catch (e) {
     console.warn('⚠️ No se pudo actualizar el espejo de managers:', e.message);
   }
+}
+
+// ─── HISTÓRICO DE TRANSACCIONES (solo liga TOMAQUET) ─────────────────────────
+// El tablón (board) solo trae las ~5 últimas transferencias de toda la liga
+// en el momento de la ejecución, sin histórico. Se acumulan aquí desde hoy;
+// lo anterior no se puede recuperar (Biwenger no lo ofrece por esta vía).
+
+const TRANSACCIONES_FILE = 'transacciones-liga.json';
+
+function transaccionId(t) {
+  return [t.date, t.player, t.from?.id, t.to?.id, t.amount].join('-');
+}
+
+function updateTransaccionesLiga(boardTomaquet) {
+  let transacciones = [];
+  try {
+    if (fs.existsSync(TRANSACCIONES_FILE)) {
+      transacciones = JSON.parse(fs.readFileSync(TRANSACCIONES_FILE, 'utf8'));
+    }
+  } catch (e) {
+    console.warn('⚠️ No se pudo leer transacciones-liga.json, iniciando desde cero');
+  }
+
+  const vistos = new Set(transacciones.map(transaccionId));
+  let nuevas = 0;
+
+  (boardTomaquet || [])
+    .filter(ev => ev.type === 'transfer' && Array.isArray(ev.content))
+    .forEach(ev => {
+      ev.content.forEach(t => {
+        const registro = {
+          date:   ev.date,
+          player: t.player,
+          from:   t.from ? { id: t.from.id, name: t.from.name } : null,
+          to:     t.to   ? { id: t.to.id,   name: t.to.name   } : null,
+          amount: t.amount,
+        };
+        const id = transaccionId(registro);
+        if (vistos.has(id)) return;
+        vistos.add(id);
+        transacciones.push(registro);
+        nuevas++;
+      });
+    });
+
+  transacciones.sort((a, b) => (b.date || 0) - (a.date || 0));
+
+  fs.writeFileSync(TRANSACCIONES_FILE, JSON.stringify(transacciones, null, 2), 'utf8');
+  console.log(`💾 ${TRANSACCIONES_FILE} — ${nuevas} nuevas · ${transacciones.length} total`);
 }
 
 // ─── HISTORY ─────────────────────────────────────────────────────────────────
@@ -1013,6 +1066,7 @@ async function main() {
     const leagueRound = await fetchLeagueRound(token, LEAGUE_TOMAQUET);
     updateJornadasLiga(leagueRound);
     if (leagueRound) await writeManagersMirror(leagueRound.standingsOrder);
+    updateTransaccionesLiga(boardTomaquet);
 
     updateHistory(myTeamTomaquet, myTeamEnBas, allTeamsTomaquet, allTeamsEnBas, leagueTomaquet, leagueEnBas);
     updatePlayerPrices(players);

@@ -1,0 +1,30 @@
+name: Recuperar historial de tablón (transacciones)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Ejecutar barrido del tablón
+        env:
+          BIWENGER_EMAIL: ${{ secrets.BIWENGER_EMAIL }}
+          BIWENGER_PASSWORD: ${{ secrets.BIWENGER_PASSWORD }}
+        run: node scripts/fetch-board-history.js
+
+      - name: Guardar transacciones-liga.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add transacciones-liga.json board-history-progress.json
+          git diff --staged --quiet || git commit -m "datos: barrido histórico de tablón $(date -u '+%Y-%m-%d %H:%M') UTC"
+          git push
