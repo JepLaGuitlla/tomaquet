@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-18T15:18:21.467Z",
+  "updatedAt": "2026-09-18T20:03:53.096Z",
   "players": [
     {
       "id": 11,
@@ -3056,7 +3056,7 @@
     {
       "id": 17121,
       "slug": "victor-garcia",
-      "name": "Víctor García",
+      "name": "V��ctor García",
       "position": 3,
       "price": 770000,
       "points": 14,
@@ -3320,7 +3320,7 @@
     {
       "id": 18128,
       "slug": "iker-munoz",
-      "name": "Iker Mu��oz",
+      "name": "Iker Muñoz",
       "position": 3,
       "price": 2300000,
       "points": 23,
@@ -11995,8 +11995,8 @@
           4,
           12
         ],
-        "teamSize": 10,
-        "teamValue": 35660000,
+        "teamSize": 11,
+        "teamValue": 35870000,
         "teamValueInc": 180000,
         "lastTrophy": {
           "type": "league",
@@ -12018,9 +12018,9 @@
           12,
           8
         ],
-        "teamSize": 15,
-        "teamValue": 41370000,
-        "teamValueInc": 550000,
+        "teamSize": 14,
+        "teamValue": 34390000,
+        "teamValueInc": 350000,
         "position": 3,
         "positionInc": 1,
         "role": ""
@@ -12037,8 +12037,8 @@
           13,
           4
         ],
-        "teamSize": 12,
-        "teamValue": 35270000,
+        "teamSize": 13,
+        "teamValue": 35460000,
         "teamValueInc": -20000,
         "position": 4,
         "positionInc": -1,
@@ -12095,8 +12095,8 @@
           7,
           9
         ],
-        "teamSize": 15,
-        "teamValue": 48030000,
+        "teamSize": 14,
+        "teamValue": 47820000,
         "teamValueInc": -420000,
         "lastTrophy": {
           "type": "league",
@@ -12156,9 +12156,9 @@
           10,
           2
         ],
-        "teamSize": 11,
-        "teamValue": 35830000,
-        "teamValueInc": -100000,
+        "teamSize": 12,
+        "teamValue": 42810000,
+        "teamValueInc": 100000,
         "position": 10,
         "positionInc": -5,
         "role": ""
@@ -12176,8 +12176,8 @@
           1,
           11
         ],
-        "teamSize": 16,
-        "teamValue": 31480000,
+        "teamSize": 15,
+        "teamValue": 31290000,
         "teamValueInc": 200000,
         "lastTrophy": {
           "type": "league",
@@ -12382,7 +12382,7 @@
       "name": "Trileros FC",
       "manager": "Trileros FC",
       "points": 246,
-      "value": 35660000,
+      "value": 35870000,
       "trend": 180000,
       "players": []
     },
@@ -12391,8 +12391,8 @@
       "name": "Soulands Rangers",
       "manager": "Soulands Rangers",
       "points": 244,
-      "value": 41370000,
-      "trend": 550000,
+      "value": 34390000,
+      "trend": 350000,
       "players": []
     },
     {
@@ -12400,7 +12400,7 @@
       "name": "INDOMABLE FC",
       "manager": "INDOMABLE FC",
       "points": 227,
-      "value": 35270000,
+      "value": 35460000,
       "trend": -20000,
       "players": []
     },
@@ -12427,7 +12427,7 @@
       "name": "🦊",
       "manager": "🦊",
       "points": 216,
-      "value": 48030000,
+      "value": 47820000,
       "trend": -420000,
       "players": []
     },
@@ -12454,8 +12454,8 @@
       "name": "TL*LI",
       "manager": "TL*LI",
       "points": 213,
-      "value": 35830000,
-      "trend": -100000,
+      "value": 42810000,
+      "trend": 100000,
       "players": []
     },
     {
@@ -12463,7 +12463,7 @@
       "name": "LeMola Team",
       "manager": "LeMola Team",
       "points": 213,
-      "value": 31480000,
+      "value": 31290000,
       "trend": 200000,
       "players": []
     },
@@ -12553,10 +12553,10 @@
     "teamId": 6541195,
     "name": "🦊",
     "points": 216,
-    "balance": 736532,
+    "balance": 1136532,
     "lineup": {
       "type": "4-4-2",
-      "date": 1789742493,
+      "date": 1789757708,
       "playersID": [
         9887,
         31321,
@@ -12572,8 +12572,8 @@
       ],
       "reservesID": [
         36566,
-        34080,
         23572,
+        null,
         null
       ]
     },
@@ -12649,13 +12649,6 @@
         "buyDate": 1789362160
       },
       {
-        "id": 41157,
-        "buyPrice": 895222,
-        "clause": 895222000000,
-        "invested": 0,
-        "buyDate": 1786425269
-      },
-      {
         "id": 41200,
         "buyPrice": 10523666,
         "clause": 17775000,
@@ -12708,16 +12701,130 @@
         "price": 530000,
         "type": "sale",
         "until": 1789811801
-      },
-      {
-        "playerID": 41157,
-        "price": 210000,
-        "type": "sale",
-        "until": 1789880896
       }
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1789758188,
+      "content": [
+        {
+          "player": 17756,
+          "from": {
+            "id": 8068002,
+            "name": "Soulands Rangers",
+            "icon": "i/u/8068002.png?v=69"
+          },
+          "to": {
+            "id": 14072078,
+            "name": "TL*LI",
+            "icon": "i/u/14072078.png"
+          },
+          "amount": 10470000,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1789752315,
+      "content": [
+        {
+          "player": 38875,
+          "from": {
+            "id": 6552586,
+            "name": "LeMola Team",
+            "icon": "i/u/6552586.png"
+          },
+          "to": {
+            "id": 12697101,
+            "name": "INDOMABLE FC",
+            "icon": "i/u/11757390.png"
+          },
+          "amount": 411186,
+          "type": "auction",
+          "bids": [
+            {
+              "user": {
+                "id": 14069874,
+                "name": "Pzaera",
+                "icon": "https://lh3.googleusercontent.com/a/AATXAJz2ePB0TU5NOTU2lUZ5nrRljJXEZjrTw8hYCiH1=s300-c"
+              },
+              "amount": 358177
+            },
+            {
+              "user": {
+                "id": 12713493,
+                "name": "Tata Martini",
+                "icon": "i/u/12713493.png?v=71"
+              },
+              "amount": 341120
+            },
+            {
+              "user": {
+                "id": 14065964,
+                "name": "JanBox",
+                "icon": "i/u/14065964.png?v=16"
+              },
+              "amount": 324876
+            },
+            {
+              "user": {
+                "id": 14075911,
+                "name": "Gapoles Balompié",
+                "icon": "i/u/11414918.png"
+              },
+              "amount": 309406
+            },
+            {
+              "user": {
+                "id": 14094028,
+                "name": "Estem caputs",
+                "icon": "i/u/12736123.png"
+              },
+              "amount": 275625
+            },
+            {
+              "user": {
+                "id": 14094189,
+                "name": "Burnigol FC",
+                "icon": "i/u/14094189.png"
+              },
+              "amount": 262500
+            },
+            {
+              "user": {
+                "id": 14094028,
+                "name": "Estem caputs",
+                "icon": "i/u/12736123.png"
+              },
+              "amount": 250000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1789745446,
+      "content": [
+        {
+          "player": 41157,
+          "from": {
+            "id": 6541195,
+            "name": "🦊",
+            "icon": "i/u/6541195.png?v=17"
+          },
+          "to": {
+            "id": 12696599,
+            "name": "Trileros FC",
+            "icon": "i/u/12696599.png"
+          },
+          "amount": 400000
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1789736402,
@@ -13637,97 +13744,6 @@
           "amount": 1700000
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1789592528,
-      "content": [
-        {
-          "player": 31027,
-          "from": {
-            "id": 14065964,
-            "name": "JanBox",
-            "icon": "i/u/14065964.png?v=16"
-          },
-          "to": {
-            "id": 8068002,
-            "name": "Soulands Rangers",
-            "icon": "i/u/8068002.png?v=69"
-          },
-          "amount": 14000000
-        },
-        {
-          "player": 17731,
-          "from": {
-            "id": 8068002,
-            "name": "Soulands Rangers",
-            "icon": "i/u/8068002.png?v=69"
-          },
-          "amount": 3537300
-        },
-        {
-          "player": 38308,
-          "from": {
-            "id": 8068002,
-            "name": "Soulands Rangers",
-            "icon": "i/u/8068002.png?v=69"
-          },
-          "amount": 2691300
-        },
-        {
-          "player": 42748,
-          "from": {
-            "id": 8068002,
-            "name": "Soulands Rangers",
-            "icon": "i/u/8068002.png?v=69"
-          },
-          "amount": 6308000
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1789585411,
-      "content": [
-        {
-          "player": 33531,
-          "from": {
-            "id": 12696599,
-            "name": "Trileros FC",
-            "icon": "i/u/12696599.png"
-          },
-          "amount": 3026200
-        },
-        {
-          "player": 7003,
-          "from": {
-            "id": 11521196,
-            "name": "Hufflepuff 🍋",
-            "icon": "i/u/11521196.png?v=57"
-          },
-          "amount": 5028500
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1789565251,
-      "content": [
-        {
-          "player": 17482,
-          "from": {
-            "id": 14074484,
-            "name": "wilamalel",
-            "icon": "https://lh3.googleusercontent.com/a/ACg8ocJGUZto0NCjv5HnKiftjGqQiwQNQWQjyPJpfYbDxfcaNvZWgg=s300-c"
-          },
-          "to": {
-            "id": 11521196,
-            "name": "Hufflepuff 🍋",
-            "icon": "i/u/11521196.png?v=57"
-          },
-          "amount": 3000000
-        }
-      ]
     }
   ],
   "leagueEnBas": {
@@ -13758,8 +13774,8 @@
           2,
           1
         ],
-        "teamSize": 14,
-        "teamValue": 39070000,
+        "teamSize": 13,
+        "teamValue": 38920000,
         "teamValueInc": 430000,
         "position": 1,
         "role": ""
@@ -13777,8 +13793,8 @@
           6
         ],
         "teamSize": 12,
-        "teamValue": 48010000,
-        "teamValueInc": 30000,
+        "teamValue": 49330000,
+        "teamValueInc": 20000,
         "position": 2,
         "positionInc": 1,
         "role": ""
@@ -13832,9 +13848,9 @@
           8,
           16
         ],
-        "teamSize": 16,
-        "teamValue": 34570000,
-        "teamValueInc": 260000,
+        "teamSize": 15,
+        "teamValue": 32920000,
+        "teamValueInc": 290000,
         "lastTrophy": {
           "type": "league",
           "position": 2,
@@ -13894,9 +13910,9 @@
           14,
           8
         ],
-        "teamSize": 10,
-        "teamValue": 40760000,
-        "teamValueInc": 90000,
+        "teamSize": 12,
+        "teamValue": 42560000,
+        "teamValueInc": 60000,
         "lastTrophy": {
           "type": "league",
           "position": 1,
@@ -13999,9 +14015,9 @@
           6,
           14
         ],
-        "teamSize": 16,
-        "teamValue": 34150000,
-        "teamValueInc": 100000,
+        "teamSize": 14,
+        "teamValue": 33790000,
+        "teamValueInc": 110000,
         "position": 13,
         "positionInc": -2,
         "role": ""
@@ -14036,9 +14052,9 @@
           12,
           17
         ],
-        "teamSize": 17,
-        "teamValue": 29120000,
-        "teamValueInc": -270000,
+        "teamSize": 16,
+        "teamValue": 26250000,
+        "teamValueInc": -220000,
         "position": 15,
         "positionInc": 2,
         "role": ""
@@ -14132,9 +14148,9 @@
           19,
           20
         ],
-        "teamSize": 14,
-        "teamValue": 33760000,
-        "teamValueInc": 280000,
+        "teamSize": 13,
+        "teamValue": 31910000,
+        "teamValueInc": 300000,
         "position": 20,
         "role": ""
       }
@@ -14146,7 +14162,7 @@
       "name": "Aquest any pago jo !!",
       "manager": "Aquest any pago jo !!",
       "points": 278,
-      "value": 39070000,
+      "value": 38920000,
       "trend": 430000,
       "players": []
     },
@@ -14155,8 +14171,8 @@
       "name": "Eric Duran",
       "manager": "Eric Duran",
       "points": 269,
-      "value": 48010000,
-      "trend": 30000,
+      "value": 49330000,
+      "trend": 20000,
       "players": []
     },
     {
@@ -14182,8 +14198,8 @@
       "name": "Xevi borrat",
       "manager": "Xevi borrat",
       "points": 245,
-      "value": 34570000,
-      "trend": 260000,
+      "value": 32920000,
+      "trend": 290000,
       "players": []
     },
     {
@@ -14209,8 +14225,8 @@
       "name": "The GOAT club",
       "manager": "The GOAT club",
       "points": 219,
-      "value": 40760000,
-      "trend": 90000,
+      "value": 42560000,
+      "trend": 60000,
       "players": []
     },
     {
@@ -14254,8 +14270,8 @@
       "name": "Txapi17",
       "manager": "Txapi17",
       "points": 183,
-      "value": 34150000,
-      "trend": 100000,
+      "value": 33790000,
+      "trend": 110000,
       "players": []
     },
     {
@@ -14272,8 +14288,8 @@
       "name": "Mindundis",
       "manager": "Mindundis",
       "points": 171,
-      "value": 29120000,
-      "trend": -270000,
+      "value": 26250000,
+      "trend": -220000,
       "players": []
     },
     {
@@ -14317,8 +14333,8 @@
       "name": "Janwandowski",
       "manager": "Janwandowski",
       "points": 113,
-      "value": 33760000,
-      "trend": 280000,
+      "value": 31910000,
+      "trend": 300000,
       "players": []
     }
   ],
@@ -14459,6 +14475,123 @@
     ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1789755274,
+      "content": [
+        {
+          "player": 41081,
+          "from": {
+            "id": 9897660,
+            "name": "Eric Duran",
+            "icon": "i/u/9897660.png"
+          },
+          "amount": 523700
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1789755265,
+      "content": [
+        {
+          "player": 26879,
+          "from": {
+            "id": 6593096,
+            "name": "Janwandowski",
+            "icon": "i/u/6593096.png"
+          },
+          "to": {
+            "id": 9897660,
+            "name": "Eric Duran",
+            "icon": "i/u/9897660.png"
+          },
+          "amount": 2090000,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1789755058,
+      "content": [
+        {
+          "player": 9480,
+          "from": {
+            "id": 6579330,
+            "name": "Mindundis",
+            "icon": "i/u/6579330.png?v=18"
+          },
+          "amount": 2915800
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1789753180,
+      "content": [
+        {
+          "player": 6871,
+          "from": {
+            "id": 6586257,
+            "name": "Aquest any pago jo !!",
+            "icon": "i/u/6586257.png"
+          },
+          "to": {
+            "id": 6588130,
+            "name": "The GOAT club",
+            "icon": "i/u/6588130.png?v=12"
+          },
+          "amount": 225000,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1789750838,
+      "content": [
+        {
+          "player": 18570,
+          "from": {
+            "id": 6579505,
+            "name": "Xevi borrat",
+            "icon": "i/u/6579505.png"
+          },
+          "to": {
+            "id": 6588130,
+            "name": "The GOAT club",
+            "icon": "i/u/6588130.png?v=12"
+          },
+          "amount": 2000000
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1789745642,
+      "content": [
+        {
+          "player": 25392,
+          "from": {
+            "id": 14001588,
+            "name": "Txapi17",
+            "icon": "i/u/11555657.png"
+          },
+          "amount": 185400
+        },
+        {
+          "player": 12424,
+          "from": {
+            "id": 14001588,
+            "name": "Txapi17",
+            "icon": "i/u/11555657.png"
+          },
+          "amount": 95000,
+          "type": "immediateSale"
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1789741497,
@@ -15276,95 +15409,6 @@
           "amount": 150000
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1789511421,
-      "content": [
-        {
-          "player": 41092,
-          "from": {
-            "id": 6588130,
-            "name": "The GOAT club",
-            "icon": "i/u/6588130.png?v=12"
-          },
-          "amount": 481400
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1789508284,
-      "content": [
-        {
-          "player": 9402,
-          "from": {
-            "id": 6579330,
-            "name": "Mindundis",
-            "icon": "i/u/6579330.png?v=18"
-          },
-          "amount": 11210200
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1789502416,
-      "content": [
-        {
-          "player": 8670,
-          "from": {
-            "id": 6586257,
-            "name": "Aquest any pago jo !!",
-            "icon": "i/u/6586257.png"
-          },
-          "to": {
-            "id": 6579280,
-            "name": "BSG Schreibmaschinenwerk Dresden",
-            "icon": "i/u/6579280.png?v=85"
-          },
-          "amount": 5250000
-        },
-        {
-          "player": 38962,
-          "from": {
-            "id": 6579280,
-            "name": "BSG Schreibmaschinenwerk Dresden",
-            "icon": "i/u/6579280.png?v=85"
-          },
-          "amount": 9381900
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1789481882,
-      "content": [
-        {
-          "player": 42747,
-          "from": {
-            "id": 6586257,
-            "name": "Aquest any pago jo !!",
-            "icon": "i/u/6586257.png"
-          },
-          "amount": 833400
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1789467330,
-      "content": [
-        {
-          "player": 41157,
-          "from": {
-            "id": 11504267,
-            "name": "🦊",
-            "icon": "i/u/11504267.png?v=23"
-          },
-          "amount": 210100
-        }
-      ]
     }
   ],
   "laliga": {
@@ -15506,25 +15550,6 @@
       {
         "position": 8,
         "team": {
-          "id": 80,
-          "name": "RCD Espanyol de Barcelona",
-          "shortName": "Espanyol",
-          "tla": "ESP",
-          "crest": "https://crests.football-data.org/80.png"
-        },
-        "playedGames": 6,
-        "form": null,
-        "won": 2,
-        "draw": 1,
-        "lost": 3,
-        "points": 7,
-        "goalsFor": 9,
-        "goalsAgainst": 7,
-        "goalDifference": 2
-      },
-      {
-        "position": 9,
-        "team": {
           "id": 77,
           "name": "Athletic Club",
           "shortName": "Athletic",
@@ -15540,6 +15565,25 @@
         "goalsFor": 7,
         "goalsAgainst": 6,
         "goalDifference": 1
+      },
+      {
+        "position": 9,
+        "team": {
+          "id": 80,
+          "name": "RCD Espanyol de Barcelona",
+          "shortName": "Espanyol",
+          "tla": "ESP",
+          "crest": "https://crests.football-data.org/80.png"
+        },
+        "playedGames": 7,
+        "form": null,
+        "won": 2,
+        "draw": 1,
+        "lost": 4,
+        "points": 7,
+        "goalsFor": 9,
+        "goalsAgainst": 9,
+        "goalDifference": 0
       },
       {
         "position": 10,
@@ -15677,6 +15721,25 @@
       {
         "position": 17,
         "team": {
+          "id": 285,
+          "name": "Elche CF",
+          "shortName": "Elche",
+          "tla": "ELC",
+          "crest": "https://crests.football-data.org/285.png"
+        },
+        "playedGames": 7,
+        "form": null,
+        "won": 1,
+        "draw": 2,
+        "lost": 4,
+        "points": 5,
+        "goalsFor": 10,
+        "goalsAgainst": 16,
+        "goalDifference": -6
+      },
+      {
+        "position": 18,
+        "team": {
           "id": 558,
           "name": "RC Celta de Vigo",
           "shortName": "Celta",
@@ -15694,7 +15757,7 @@
         "goalDifference": -3
       },
       {
-        "position": 18,
+        "position": 19,
         "team": {
           "id": 95,
           "name": "Valencia CF",
@@ -15713,7 +15776,7 @@
         "goalDifference": -8
       },
       {
-        "position": 19,
+        "position": 20,
         "team": {
           "id": 84,
           "name": "Málaga CF",
@@ -15729,25 +15792,6 @@
         "points": 3,
         "goalsFor": 3,
         "goalsAgainst": 11,
-        "goalDifference": -8
-      },
-      {
-        "position": 20,
-        "team": {
-          "id": 285,
-          "name": "Elche CF",
-          "shortName": "Elche",
-          "tla": "ELC",
-          "crest": "https://crests.football-data.org/285.png"
-        },
-        "playedGames": 6,
-        "form": null,
-        "won": 0,
-        "draw": 2,
-        "lost": 4,
-        "points": 2,
-        "goalsFor": 8,
-        "goalsAgainst": 16,
         "goalDifference": -8
       }
     ],
@@ -16014,23 +16058,6 @@
       }
     },
     "nextMatches": [
-      {
-        "id": 564692,
-        "matchday": 7,
-        "date": "2026-09-18T19:00:00Z",
-        "home": {
-          "id": 80,
-          "name": "RCD Espanyol de Barcelona",
-          "short": "Espanyol",
-          "crest": "https://crests.football-data.org/80.png"
-        },
-        "away": {
-          "id": 285,
-          "name": "Elche CF",
-          "short": "Elche",
-          "crest": "https://crests.football-data.org/285.png"
-        }
-      },
       {
         "id": 564693,
         "matchday": 7,
@@ -16353,6 +16380,23 @@
           "short": "Sevilla FC",
           "crest": "https://crests.football-data.org/559.png"
         }
+      },
+      {
+        "id": 564692,
+        "matchday": 7,
+        "date": "2026-09-18T19:00:00Z",
+        "home": {
+          "id": 80,
+          "name": "RCD Espanyol de Barcelona",
+          "short": "Espanyol",
+          "crest": "https://crests.football-data.org/80.png"
+        },
+        "away": {
+          "id": 285,
+          "name": "Elche CF",
+          "short": "Elche",
+          "crest": "https://crests.football-data.org/285.png"
+        }
       }
     ],
     "recentResults": [
@@ -16559,9 +16603,9 @@
       "matchDate": "2026-10-11T12:00:00Z"
     },
     "Real Racing Club de Santander": {
-      "winProb": 0.4988671925615583,
-      "drawProb": 0.2551349356243398,
-      "loseProb": 0.24599787181410177,
+      "winProb": 0.49637651175712577,
+      "drawProb": 0.2574863749748779,
+      "loseProb": 0.24613711326799625,
       "over25Prob": 0.5586592178770949,
       "isHome": true,
       "opponent": "Valencia",
@@ -16577,19 +16621,19 @@
       "matchDate": "2026-10-12T19:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.9038803156618428,
-      "drawProb": 0.057835120746187386,
-      "loseProb": 0.038284563591969946,
-      "over25Prob": 0.8333333333333334,
+      "winProb": 0.9060897259271787,
+      "drawProb": 0.056731914861272374,
+      "loseProb": 0.03717835921154896,
+      "over25Prob": 0.819672131147541,
       "isHome": true,
       "opponent": "Getafe",
       "matchDate": "2026-10-10T16:30:00Z"
     },
     "Getafe": {
-      "winProb": 0.038284563591969946,
-      "drawProb": 0.057835120746187386,
-      "loseProb": 0.9038803156618428,
-      "over25Prob": 0.8333333333333334,
+      "winProb": 0.03717835921154896,
+      "drawProb": 0.056731914861272374,
+      "loseProb": 0.9060897259271787,
+      "over25Prob": 0.819672131147541,
       "isHome": false,
       "opponent": "Barcelona",
       "matchDate": "2026-10-10T16:30:00Z"
@@ -16622,10 +16666,10 @@
       "matchDate": "2026-10-10T19:00:00Z"
     },
     "Deportivo La Coruña": {
-      "winProb": 0.25520440922671517,
-      "drawProb": 0.2893350900959415,
-      "loseProb": 0.4554605006773434,
-      "over25Prob": 0.5319148936170213,
+      "winProb": 0.2505012191817935,
+      "drawProb": 0.2759143863451639,
+      "loseProb": 0.47358439447304257,
+      "over25Prob": 0.5376344086021505,
       "isHome": false,
       "opponent": "Real Sociedad",
       "matchDate": "2026-10-11T14:15:00Z"
@@ -16658,19 +16702,19 @@
       "matchDate": "2026-10-12T19:00:00Z"
     },
     "Valencia": {
-      "winProb": 0.24599787181410177,
-      "drawProb": 0.2551349356243398,
-      "loseProb": 0.4988671925615583,
+      "winProb": 0.24613711326799625,
+      "drawProb": 0.2574863749748779,
+      "loseProb": 0.49637651175712577,
       "over25Prob": 0.5586592178770949,
       "isHome": false,
       "opponent": "Real Racing Club de Santander",
       "matchDate": "2026-10-11T19:00:00Z"
     },
     "Real Sociedad": {
-      "winProb": 0.4554605006773434,
-      "drawProb": 0.2893350900959415,
-      "loseProb": 0.25520440922671517,
-      "over25Prob": 0.5319148936170213,
+      "winProb": 0.47358439447304257,
+      "drawProb": 0.2759143863451639,
+      "loseProb": 0.2505012191817935,
+      "over25Prob": 0.5376344086021505,
       "isHome": true,
       "opponent": "Deportivo La Coruña",
       "matchDate": "2026-10-11T14:15:00Z"
@@ -16678,82 +16722,82 @@
   },
   "news": [
     {
-      "title": "Terrats debería llegar a la jornada 7, ¿lo alineamos?",
-      "link": "https://www.jornadaperfecta.com/blog/terrats-estado-getafe-j7/",
-      "date": "Fri, 18 Sep 2026 15:10:53 +0000",
-      "img": "https://cdn.biwenger.com/i/t/8.png",
+      "title": "Buba Sangaré, sustituido por una lesión muscular",
+      "link": "https://www.jornadaperfecta.com/blog/sangare-lesion-elche-cf/",
+      "date": "Fri, 18 Sep 2026 19:55:22 +0000",
+      "img": "https://cdn.biwenger.com/i/t/75.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Supercuota YoSports para el Atlético vs Real Madrid: cuota 6.00",
-      "link": "https://www.jornadaperfecta.com/blog/yosports-supercuota-atletico-vs-real-madrid/",
-      "date": "Fri, 18 Sep 2026 15:00:16 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/09/yosports-atletico-vs-real-madrid.webp",
+      "title": "Las 4 apuestas mejoradas de bwin en el Atlético vs Real Madrid: ¡Cuota 9.00!",
+      "link": "https://www.jornadaperfecta.com/blog/cuotas-mejoradas-bwin-atletico-real-madrid/",
+      "date": "Fri, 18 Sep 2026 19:00:16 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/09/bwin-superpartido-atletico-real-madrid-1024x285.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "¡5 mayores riesgos fantasy para la jornada 7 de LaLiga!",
-      "link": "https://www.jornadaperfecta.com/blog/5-riesgos-fantasy-j7-26-27/",
-      "date": "Fri, 18 Sep 2026 14:20:08 +0000",
-      "img": "https://cdn.biwenger.com/i/t/1.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Quique confirma rotaciones en San Mamés",
-      "link": "https://www.jornadaperfecta.com/blog/quique-previa-athletic-alaves-j7-26-27/",
-      "date": "Fri, 18 Sep 2026 13:08:50 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Lesionados que podrían llegar a la jornada 7 y descartados",
-      "link": "https://www.jornadaperfecta.com/blog/lesionados-j7-26-27/",
-      "date": "Fri, 18 Sep 2026 13:00:16 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/09/barrios-atleti.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Ramis sale en defensa de Sergio Herrera, pero no confirma el titular",
-      "link": "https://www.jornadaperfecta.com/blog/ramis-previa-osasuna-rayo-j7/",
-      "date": "Fri, 18 Sep 2026 12:52:42 +0000",
-      "img": "https://cdn.biwenger.com/i/t/93.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Javier Aguirre, el entrenador elegido por el Valencia CF",
-      "link": "https://www.jornadaperfecta.com/blog/javier-aguirre-entrenador-valencia/",
-      "date": "Fri, 18 Sep 2026 12:44:10 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Giráldez: «No creo que Borja esté para más de 45 minutos»",
-      "link": "https://www.jornadaperfecta.com/blog/giraldez-previa-celta-racing-j7-26-27/",
-      "date": "Fri, 18 Sep 2026 12:21:08 +0000",
+      "title": "Parte médico oficial del RC Celta sobre Jones El-Abdellaoui",
+      "link": "https://www.jornadaperfecta.com/blog/el-abdellaoui-parte-medico-celta/",
+      "date": "Fri, 18 Sep 2026 18:17:35 +0000",
       "img": "https://cdn.biwenger.com/i/t/5.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Flick confirma la baja de Joan y deja en duda su sustituto",
-      "link": "https://www.jornadaperfecta.com/blog/flick-previa-sevilla-barca-j7/",
-      "date": "Fri, 18 Sep 2026 11:58:53 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "title": "Sergio Herrera o Aitor Fernández: La duda en la portería de Osasuna",
+      "link": "https://www.jornadaperfecta.com/blog/sergio-herrera-aitor-fernandez-portero-osasuna-j7/",
+      "date": "Fri, 18 Sep 2026 18:08:08 +0000",
+      "img": "https://cdn.biwenger.com/i/t/93.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "José Alberto confirma a Pedro Felipe y Canales",
-      "link": "https://www.jornadaperfecta.com/blog/jose-alberto-previa-celta-racing-j7-26-27/",
-      "date": "Fri, 18 Sep 2026 11:37:51 +0000",
-      "img": "https://cdn.biwenger.com/i/t/812.png",
+      "title": "¡Varios cambios en el once titular del Elche CF!",
+      "link": "https://www.jornadaperfecta.com/blog/once-elche-j7-26-27/",
+      "date": "Fri, 18 Sep 2026 17:50:54 +0000",
+      "img": "https://cdn.biwenger.com/i/t/75.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "¡Once confirmado del RCD Espanyol de la jornada 7!",
+      "link": "https://www.jornadaperfecta.com/blog/once-espanyol-j7-26-27/",
+      "date": "Fri, 18 Sep 2026 17:50:22 +0000",
+      "img": "https://cdn.biwenger.com/i/t/7.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Posible rotación de Sergio Canales en el Racing, ¿alineamos?",
+      "link": "https://www.jornadaperfecta.com/blog/sergio-canales-alinear-j7-racing-fantasy/",
+      "date": "Fri, 18 Sep 2026 17:26:24 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "El Betis sube una foto de Diego Llorente entrenando, ¿disponible?",
+      "link": "https://www.jornadaperfecta.com/blog/diego-llorente-estado-betis-j7/",
+      "date": "Fri, 18 Sep 2026 17:10:19 +0000",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Buenas noticias: Kike Salas entra en la convocatoria del Sevilla FC",
+      "link": "https://www.jornadaperfecta.com/blog/kike-salas-convocatoria-sevilla-j7/",
+      "date": "Fri, 18 Sep 2026 16:21:58 +0000",
+      "img": "https://cdn.biwenger.com/i/t/17.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Aubameyang y Amatucci, al margen en el entrenamiento del Dépor",
+      "link": "https://www.jornadaperfecta.com/blog/aubameyang-amatucci-estado-deportivo-j7/",
+      "date": "Fri, 18 Sep 2026 15:22:22 +0000",
+      "img": "https://cdn.biwenger.com/i/t/6.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -16762,7 +16806,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-09-18T15:18:18.684Z",
+    "updatedAt": "2026-09-18T20:03:50.744Z",
     "players": [
       {
         "id": "37428",
@@ -16806,11 +16850,11 @@
         "team": "RCD Espanyol de Barcelona",
         "position": "",
         "nationality": "Spain",
-        "appearances": 6,
+        "appearances": 7,
         "goals": 6,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 90
+        "minutesPerGoal": 105
       },
       {
         "id": "115175",
@@ -16847,6 +16891,18 @@
         "assists": 2,
         "penalties": 0,
         "minutesPerGoal": 108
+      },
+      {
+        "id": "214497",
+        "name": "Fer Niño",
+        "team": "Elche CF",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 7,
+        "goals": 5,
+        "assists": 0,
+        "penalties": 0,
+        "minutesPerGoal": 126
       },
       {
         "id": "213278",
@@ -16929,18 +16985,6 @@
         "appearances": 6,
         "goals": 3,
         "assists": 2,
-        "penalties": 0,
-        "minutesPerGoal": 180
-      },
-      {
-        "id": "214497",
-        "name": "Fer Niño",
-        "team": "Elche CF",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 6,
-        "goals": 3,
-        "assists": 0,
         "penalties": 0,
         "minutesPerGoal": 180
       },
@@ -17190,11 +17234,11 @@
         "team": "RCD Espanyol de Barcelona",
         "position": "",
         "nationality": "England",
-        "appearances": 6,
+        "appearances": 7,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 540
+        "minutesPerGoal": 630
       },
       {
         "id": "159647",
@@ -17202,11 +17246,11 @@
         "team": "Elche CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 6,
+        "appearances": 7,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 540
+        "minutesPerGoal": 630
       },
       {
         "id": "244751",
@@ -17262,11 +17306,11 @@
         "team": "RCD Espanyol de Barcelona",
         "position": "",
         "nationality": "Spain",
-        "appearances": 6,
+        "appearances": 7,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 540
+        "minutesPerGoal": 630
       },
       {
         "id": "176745",
@@ -17358,11 +17402,11 @@
         "team": "Elche CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 6,
+        "appearances": 7,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 540
+        "minutesPerGoal": 630
       },
       {
         "id": "98741",
@@ -17610,11 +17654,11 @@
         "team": "RCD Espanyol de Barcelona",
         "position": "",
         "nationality": "Spain",
-        "appearances": 6,
+        "appearances": 7,
         "goals": 1,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 540
+        "minutesPerGoal": 630
       },
       {
         "id": "152458",
@@ -17670,11 +17714,11 @@
         "team": "Elche CF",
         "position": "",
         "nationality": "Guadeloupe",
-        "appearances": 3,
+        "appearances": 4,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 270
+        "minutesPerGoal": 360
       },
       {
         "id": "83351",
@@ -17706,11 +17750,11 @@
         "team": "Elche CF",
         "position": "",
         "nationality": "Argentina",
-        "appearances": 6,
+        "appearances": 7,
         "goals": 1,
         "assists": 0,
         "penalties": 1,
-        "minutesPerGoal": 540
+        "minutesPerGoal": 630
       },
       {
         "id": "32629",
@@ -17862,11 +17906,11 @@
         "team": "Elche CF",
         "position": "",
         "nationality": "Argentina",
-        "appearances": 4,
+        "appearances": 5,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 360
+        "minutesPerGoal": 450
       },
       {
         "id": "99791",
