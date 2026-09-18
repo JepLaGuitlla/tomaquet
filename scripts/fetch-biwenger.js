@@ -193,7 +193,7 @@ async function fetchAllTeams(token, liga) {
 
   const res = await requestJSON({
     hostname: 'biwenger.as.com',
-    path:     `/api/v2/league?include=all&fields=*,standings,tournaments,group,settings(description)`,
+    path:     `/api/v2/league?include=all&fields=*,standings(*,lineup),tournaments,group,settings(description)`,
     method:   'GET',
     headers:  { ...headersForLeague(liga), 'Authorization': `Bearer ${token}`, 'x-lang': 'es' }
   });
@@ -210,6 +210,9 @@ async function fetchAllTeams(token, liga) {
     points:  t.points     || 0,
     value:   t.teamValue  || 0,
     trend:   t.teamValueInc || 0,
+    // Puntos de la ronda actual (jornada en curso), si Biwenger los trae en
+    // standings(lineup). Puede venir null si esta llamada no lo soporta.
+    roundPoints: (t.lineup && typeof t.lineup.points === 'number') ? t.lineup.points : null,
     players: (t.players || []).map(p => ({
       id:       p.id,
       name:     p.name,
@@ -502,43 +505,28 @@ async function fetchBoard(token, liga) {
 }
 
 // ─── CAMPEONES DE JORNADA + ESPEJO DE MANAGERS (solo liga TOMAQUET) ─────────
-// NOTA (2026-09-18): rounds/league devuelve 401 con el token de login() aunque
-// lleve las mismas cabeceras (x-league, x-user, x-version) que una petición
-// real de navegador. No se ha diagnosticado más a fondo para no gastar
-// llamadas de prueba contra Biwenger. Se deja el código listo y él mismo
-// avisa y se salta si sigue fallando — no rompe el resto del script.
+// NOTA (2026-09-18): /api/v2/rounds/league devolvía 401 con el token de
+// login(), pese a llevar las mismas cabeceras que una petición real de
+// navegador (no diagnosticado más a fondo, para no gastar llamadas de
+// prueba). En vez de insistir con ese endpoint, se reaprovecha
+// fetchAllTeams() — que ya funciona y ya se llama en cada ejecución —
+// pidiéndole el campo `lineup` de más (cero peticiones nuevas). El número
+// de jornada se saca de fetchLaLiga() (football-data.org, sin relación con
+// Biwenger), no del id de ronda interno de Biwenger.
 
-async function fetchLeagueRound(token, liga) {
-  console.log('🏆 Descargando ronda de la liga privada...');
+function buildLeagueRoundSnapshot(allTeams, matchday) {
+  if (!Array.isArray(allTeams) || !allTeams.length || !matchday) return null;
 
-  const res = await requestJSON({
-    hostname: 'biwenger.as.com',
-    path:     '/api/v2/rounds/league',
-    method:   'GET',
-    headers:  { ...headersForLeague(liga), 'Authorization': `Bearer ${token}`, 'x-lang': 'es' }
-  });
-
-  if (res.status !== 200) {
-    console.warn('⚠️ No se pudo leer la ronda de la liga privada. Status:', res.status);
+  const conPuntos = allTeams.filter(t => typeof t.roundPoints === 'number');
+  if (!conPuntos.length) {
+    console.warn('⚠️ fetchAllTeams no trajo roundPoints (lineup) — Biwenger puede no soportar ese campo ahí');
     return null;
   }
-
-  const roundId   = res.body?.data?.round?.id;
-  const standings = res.body?.data?.league?.standings;
-  if (!roundId || !Array.isArray(standings) || !standings.length) {
-    console.warn('⚠️ Respuesta de ronda de liga sin datos utilizables');
-    return null;
-  }
-
-  console.log(`✅ Ronda ${roundId} — ${standings.length} managers`);
 
   return {
-    roundId,
-    standingsOrder: standings.map(s => s.name),
-    roundPoints: standings.map(s => ({
-      name:   s.name,
-      points: (s.lineup && typeof s.lineup.points === 'number') ? s.lineup.points : null,
-    })),
+    roundId: matchday,
+    standingsOrder: allTeams.map(t => t.manager),
+    roundPoints: allTeams.map(t => ({ name: t.manager, points: t.roundPoints })),
   };
 }
 
@@ -1010,7 +998,7 @@ async function main() {
     console.log('\n💾 data.json guardado correctamente');
 
     console.log('\n--- Campeones de jornada + espejo de managers (solo TOMAQUET) ---');
-    const leagueRound = await fetchLeagueRound(token, LEAGUE_TOMAQUET);
+    const leagueRound = buildLeagueRoundSnapshot(allTeamsTomaquet, laliga?.matchday);
     updateJornadasLiga(leagueRound);
     if (leagueRound) await writeManagersMirror(leagueRound.standingsOrder);
 
