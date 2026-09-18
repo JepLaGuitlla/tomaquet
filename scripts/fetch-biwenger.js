@@ -1,12 +1,19 @@
 // scripts/fetch-biwenger.js
-const https = require('https');
-const fs    = require('fs');
+const https  = require('https');
+const fs     = require('fs');
+const crypto = require('crypto');
+
+// Cuenta de servicio de Firebase, con permiso limitado a Realtime Database,
+// para escribir liga/2026-27/managers sin pasar por la app. Secret opcional:
+// si no está, ese paso se salta sin romper el resto.
+const FIREBASE_SERVICE_ACCOUNT_JSON = process.env.FIREBASE_SERVICE_ACCOUNT || '';
+const FIREBASE_DB_URL = 'https://tomaquet-56585-default-rtdb.europe-west1.firebasedatabase.app';
 
 const EMAIL          = process.env.BIWENGER_EMAIL;
 const PASSWORD       = process.env.BIWENGER_PASSWORD;
 const LEAGUE_TOMAQUET = { id: '44700',   userId: '6541195'  };
 const LEAGUE_ENBAS    = { id: '1248640', userId: '11504267' };
-const VERSION        = '630';
+const VERSION        = '631';
 const FD_TOKEN       = '00308a91cfc84b248611ecc22550c9de'; // football-data.org
 
 // Feeds RSS de noticias fantasy
@@ -101,10 +108,9 @@ async function login() {
 async function fetchPlayers() {
   console.log('📥 Descargando jugadores de LaLiga (Biwenger)...');
 
-  const cbName = 'jsonp_cb';
   const res = await request({
     hostname: 'cf.biwenger.com',
-    path:     `/api/v2/competitions/la-liga/data?lang=es&score=5&callback=${cbName}`,
+    path:     '/api/v2/competitions/la-liga/data?lang=es&score=5',
     method:   'GET',
     headers:  {
       'User-Agent':      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
@@ -116,10 +122,22 @@ async function fetchPlayers() {
 
   if (res.status !== 200) { console.error('❌ Error jugadores. Status:', res.status); process.exit(1); }
 
-  const match = res.raw.match(/^[^(]+\(([\s\S]*)\)\s*;?\s*$/);
-  if (!match) { console.error('❌ No se pudo parsear JSONP'); process.exit(1); }
+  // El endpoint devolvía JSONP (envuelto en un callback) y desde 2026-07 pasó
+  // a JSON plano. Se prueba JSON directo primero y solo si falla se intenta
+  // desenvolver JSONP, por si algún día vuelve a envolver la respuesta.
+  let parsed;
+  try {
+    parsed = JSON.parse(res.raw);
+  } catch (e) {
+    const match = res.raw.match(/^[^(]+\(([\s\S]*)\)\s*;?\s*$/);
+    if (!match) { console.error('❌ No se pudo parsear la respuesta de jugadores'); process.exit(1); }
+    try {
+      parsed = JSON.parse(match[1]);
+    } catch (e2) {
+      console.error('❌ No se pudo parsear JSONP'); process.exit(1);
+    }
+  }
 
-  const parsed     = JSON.parse(match[1]);
   const rawPlayers = parsed?.data?.players;
   const rawTeams   = parsed?.data?.teams || {};
   if (!rawPlayers) { console.error('❌ Sin jugadores en la respuesta'); process.exit(1); }
@@ -483,6 +501,154 @@ async function fetchBoard(token, liga) {
   }));
 }
 
+// ─── CAMPEONES DE JORNADA + ESPEJO DE MANAGERS (solo liga TOMAQUET) ─────────
+// NOTA (2026-09-18): rounds/league devuelve 401 con el token de login() aunque
+// lleve las mismas cabeceras (x-league, x-user, x-version) que una petición
+// real de navegador. No se ha diagnosticado más a fondo para no gastar
+// llamadas de prueba contra Biwenger. Se deja el código listo y él mismo
+// avisa y se salta si sigue fallando — no rompe el resto del script.
+
+async function fetchLeagueRound(token, liga) {
+  console.log('🏆 Descargando ronda de la liga privada...');
+
+  const res = await requestJSON({
+    hostname: 'biwenger.as.com',
+    path:     '/api/v2/rounds/league',
+    method:   'GET',
+    headers:  { ...headersForLeague(liga), 'Authorization': `Bearer ${token}`, 'x-lang': 'es' }
+  });
+
+  if (res.status !== 200) {
+    console.warn('⚠️ No se pudo leer la ronda de la liga privada. Status:', res.status);
+    return null;
+  }
+
+  const roundId   = res.body?.data?.round?.id;
+  const standings = res.body?.data?.league?.standings;
+  if (!roundId || !Array.isArray(standings) || !standings.length) {
+    console.warn('⚠️ Respuesta de ronda de liga sin datos utilizables');
+    return null;
+  }
+
+  console.log(`✅ Ronda ${roundId} — ${standings.length} managers`);
+
+  return {
+    roundId,
+    standingsOrder: standings.map(s => s.name),
+    roundPoints: standings.map(s => ({
+      name:   s.name,
+      points: (s.lineup && typeof s.lineup.points === 'number') ? s.lineup.points : null,
+    })),
+  };
+}
+
+const JORNADAS_LEAGUE_FILE = 'jornadas-liga.json';
+
+function updateJornadasLiga(snapshot) {
+  let state = { lastSeenRoundId: null, lastRoundPoints: null, processedRounds: [], tally: {} };
+  try {
+    if (fs.existsSync(JORNADAS_LEAGUE_FILE)) {
+      state = Object.assign(state, JSON.parse(fs.readFileSync(JORNADAS_LEAGUE_FILE, 'utf8')));
+    }
+  } catch (e) {
+    console.warn('⚠️ No se pudo leer jornadas-liga.json, iniciando desde cero');
+  }
+
+  if (!snapshot) {
+    fs.writeFileSync(JORNADAS_LEAGUE_FILE, JSON.stringify(state, null, 2), 'utf8');
+    return;
+  }
+
+  const roundChanged = state.lastSeenRoundId != null && state.lastSeenRoundId !== snapshot.roundId;
+  const alreadyDone  = state.processedRounds.includes(state.lastSeenRoundId);
+
+  if (roundChanged && !alreadyDone && state.lastRoundPoints) {
+    const top3 = state.lastRoundPoints
+      .filter(m => typeof m.points === 'number')
+      .sort((a, b) => b.points - a.points)
+      .slice(0, 3);
+
+    top3.forEach((m, i) => {
+      if (!state.tally[m.name]) state.tally[m.name] = [0, 0, 0];
+      state.tally[m.name][i]++;
+    });
+
+    state.processedRounds.push(state.lastSeenRoundId);
+    state.lastClosed = { roundId: state.lastSeenRoundId, top3, closedAt: new Date().toISOString() };
+    console.log(`🏅 Ronda ${state.lastSeenRoundId} cerrada — 1º ${top3[0]?.name || '—'} · 2º ${top3[1]?.name || '—'} · 3º ${top3[2]?.name || '—'}`);
+  }
+
+  state.lastSeenRoundId = snapshot.roundId;
+  state.lastRoundPoints = snapshot.roundPoints;
+  state.updatedAt       = new Date().toISOString();
+
+  fs.writeFileSync(JORNADAS_LEAGUE_FILE, JSON.stringify(state, null, 2), 'utf8');
+  console.log(`💾 ${JORNADAS_LEAGUE_FILE} guardado (ronda actual: ${snapshot.roundId})`);
+}
+
+function base64url(buf) {
+  return buf.toString('base64').replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+}
+
+async function getFirebaseAccessToken(serviceAccount) {
+  const header = { alg: 'RS256', typ: 'JWT' };
+  const now = Math.floor(Date.now() / 1000);
+  const claims = {
+    iss:   serviceAccount.client_email,
+    scope: 'https://www.googleapis.com/auth/firebase.database https://www.googleapis.com/auth/userinfo.email',
+    aud:   'https://oauth2.googleapis.com/token',
+    iat:   now,
+    exp:   now + 3600,
+  };
+  const unsigned = base64url(Buffer.from(JSON.stringify(header))) + '.' + base64url(Buffer.from(JSON.stringify(claims)));
+  const signature = crypto.createSign('RSA-SHA256').update(unsigned).sign(serviceAccount.private_key);
+  const jwt = unsigned + '.' + base64url(signature);
+
+  const body = 'grant_type=' + encodeURIComponent('urn:ietf:params:oauth:grant-type:jwt-bearer') + '&assertion=' + jwt;
+  const res = await requestJSON({
+    hostname: 'oauth2.googleapis.com',
+    path:     '/token',
+    method:   'POST',
+    headers:  { 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': Buffer.byteLength(body) },
+  }, body);
+
+  if (res.status !== 200 || !res.body?.access_token) {
+    throw new Error('No se pudo obtener token de Firebase: ' + JSON.stringify(res.body));
+  }
+  return res.body.access_token;
+}
+
+async function writeManagersMirror(standingsOrder) {
+  if (!FIREBASE_SERVICE_ACCOUNT_JSON) {
+    console.log('ℹ️ Sin FIREBASE_SERVICE_ACCOUNT — no se actualiza el espejo de managers');
+    return;
+  }
+  console.log('🪞 Actualizando espejo de managers en Firebase...');
+
+  try {
+    const serviceAccount = JSON.parse(FIREBASE_SERVICE_ACCOUNT_JSON);
+    const accessToken     = await getFirebaseAccessToken(serviceAccount);
+    const url             = new URL('/liga/2026-27/managers.json', FIREBASE_DB_URL);
+    const body            = JSON.stringify(standingsOrder);
+
+    const res = await requestJSON({
+      hostname: url.hostname,
+      path:     url.pathname,
+      method:   'PUT',
+      headers: {
+        'Authorization': `Bearer ${accessToken}`,
+        'Content-Type':  'application/json',
+        'Content-Length': Buffer.byteLength(body),
+      },
+    }, body);
+
+    if (res.status !== 200) throw new Error('PUT fallo: ' + res.status + ' ' + JSON.stringify(res.body));
+    console.log(`✅ Espejo actualizado — ${standingsOrder.length} managers`);
+  } catch (e) {
+    console.warn('⚠️ No se pudo actualizar el espejo de managers:', e.message);
+  }
+}
+
 // ─── HISTORY ─────────────────────────────────────────────────────────────────
 
 function updateHistory(myTeamTomaquet, myTeamEnBas, allTeamsTomaquet, allTeamsEnBas, leagueTomaquet, leagueEnBas) {
@@ -842,6 +1008,11 @@ async function main() {
 
     fs.writeFileSync('data.json', JSON.stringify(output, null, 2), 'utf8');
     console.log('\n💾 data.json guardado correctamente');
+
+    console.log('\n--- Campeones de jornada + espejo de managers (solo TOMAQUET) ---');
+    const leagueRound = await fetchLeagueRound(token, LEAGUE_TOMAQUET);
+    updateJornadasLiga(leagueRound);
+    if (leagueRound) await writeManagersMirror(leagueRound.standingsOrder);
 
     updateHistory(myTeamTomaquet, myTeamEnBas, allTeamsTomaquet, allTeamsEnBas, leagueTomaquet, leagueEnBas);
     updatePlayerPrices(players);
