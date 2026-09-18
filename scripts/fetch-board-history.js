@@ -14,7 +14,8 @@ const fs    = require('fs');
 
 const EMAIL     = process.env.BIWENGER_EMAIL;
 const PASSWORD  = process.env.BIWENGER_PASSWORD;
-const LEAGUE_ID = '44700';
+const LEAGUE_ID     = '44700';
+const LEAGUE_USER_ID = '6541195';
 
 const OUT_FILE      = 'transacciones-liga.json';
 const PROGRESS_FILE = 'board-history-progress.json';
@@ -93,6 +94,7 @@ async function fetchBoardPage(token, offset) {
       'Referer':         'https://biwenger.as.com/',
       'Authorization':   `Bearer ${token}`,
       'x-league':        LEAGUE_ID,
+      'x-user':          LEAGUE_USER_ID,
       'x-lang':          'es',
       'x-version':       '631',
     }
