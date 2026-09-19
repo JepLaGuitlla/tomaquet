@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-19T09:49:45.438Z",
+  "updatedAt": "2026-09-19T14:55:49.786Z",
   "players": [
     {
       "id": 11,
@@ -3420,10 +3420,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         2,
         -2,
-        7,
-        2
+        7
       ],
       "clausula": null
     },
@@ -4994,11 +4994,11 @@
       "teamId": 70,
       "status": "ok",
       "jForm": [
+        4,
         3,
         -2,
         12,
-        null,
-        2
+        null
       ],
       "clausula": null
     },
@@ -7018,11 +7018,11 @@
       "teamId": 70,
       "status": "ok",
       "jForm": [
+        2,
         5,
         4,
         4,
-        2,
-        null
+        2
       ],
       "clausula": null
     },
@@ -12709,7 +12709,7 @@
         "playerID": 34080,
         "price": 530000,
         "type": "sale",
-        "until": 1789811801
+        "until": 1789985310
       },
       {
         "playerID": 41200,
@@ -13868,21 +13868,6 @@
             "icon": "i/u/8068002.png?v=69"
           },
           "amount": 262000
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1789682541,
-      "content": [
-        {
-          "player": 31228,
-          "from": {
-            "id": 14074484,
-            "name": "wilamalel",
-            "icon": "https://lh3.googleusercontent.com/a/ACg8ocJGUZto0NCjv5HnKiftjGqQiwQNQWQjyPJpfYbDxfcaNvZWgg=s300-c"
-          },
-          "amount": 384300
         }
       ]
     }
@@ -15800,12 +15785,12 @@
           "tla": "ALA",
           "crest": "https://crests.football-data.org/263.png"
         },
-        "playedGames": 6,
+        "playedGames": 7,
         "form": null,
         "won": 3,
-        "draw": 1,
+        "draw": 2,
         "lost": 2,
-        "points": 10,
+        "points": 11,
         "goalsFor": 11,
         "goalsAgainst": 6,
         "goalDifference": 5
@@ -15838,18 +15823,56 @@
           "tla": "ATH",
           "crest": "https://crests.football-data.org/77.png"
         },
-        "playedGames": 5,
+        "playedGames": 6,
         "form": null,
         "won": 2,
-        "draw": 1,
+        "draw": 2,
         "lost": 2,
-        "points": 7,
+        "points": 8,
         "goalsFor": 7,
         "goalsAgainst": 6,
         "goalDifference": 1
       },
       {
         "position": 9,
+        "team": {
+          "id": 87,
+          "name": "Rayo Vallecano de Madrid",
+          "shortName": "Rayo Vallecano",
+          "tla": "RAY",
+          "crest": "https://crests.football-data.org/87.png"
+        },
+        "playedGames": 7,
+        "form": null,
+        "won": 2,
+        "draw": 2,
+        "lost": 3,
+        "points": 8,
+        "goalsFor": 11,
+        "goalsAgainst": 16,
+        "goalDifference": -5
+      },
+      {
+        "position": 10,
+        "team": {
+          "id": 79,
+          "name": "CA Osasuna",
+          "shortName": "Osasuna",
+          "tla": "OSA",
+          "crest": "https://crests.football-data.org/79.png"
+        },
+        "playedGames": 7,
+        "form": null,
+        "won": 2,
+        "draw": 2,
+        "lost": 3,
+        "points": 8,
+        "goalsFor": 6,
+        "goalsAgainst": 13,
+        "goalDifference": -7
+      },
+      {
+        "position": 11,
         "team": {
           "id": 80,
           "name": "RCD Espanyol de Barcelona",
@@ -15868,7 +15891,7 @@
         "goalDifference": 0
       },
       {
-        "position": 10,
+        "position": 12,
         "team": {
           "id": 5335,
           "name": "Real Racing Club de Santander",
@@ -15887,26 +15910,7 @@
         "goalDifference": -5
       },
       {
-        "position": 11,
-        "team": {
-          "id": 87,
-          "name": "Rayo Vallecano de Madrid",
-          "shortName": "Rayo Vallecano",
-          "tla": "RAY",
-          "crest": "https://crests.football-data.org/87.png"
-        },
-        "playedGames": 6,
-        "form": null,
-        "won": 2,
-        "draw": 1,
-        "lost": 3,
-        "points": 7,
-        "goalsFor": 10,
-        "goalsAgainst": 15,
-        "goalDifference": -5
-      },
-      {
-        "position": 12,
+        "position": 13,
         "team": {
           "id": 92,
           "name": "Real Sociedad de Fútbol",
@@ -15923,25 +15927,6 @@
         "goalsFor": 6,
         "goalsAgainst": 11,
         "goalDifference": -5
-      },
-      {
-        "position": 13,
-        "team": {
-          "id": 79,
-          "name": "CA Osasuna",
-          "shortName": "Osasuna",
-          "tla": "OSA",
-          "crest": "https://crests.football-data.org/79.png"
-        },
-        "playedGames": 6,
-        "form": null,
-        "won": 2,
-        "draw": 1,
-        "lost": 3,
-        "points": 7,
-        "goalsFor": 5,
-        "goalsAgainst": 12,
-        "goalDifference": -7
       },
       {
         "position": 14,
@@ -16106,13 +16091,13 @@
       },
       "79": {
         "results": [
+          "D",
           "L",
           "L",
           "L",
-          "W",
           "W"
         ],
-        "gf": 5,
+        "gf": 4,
         "ga": 12,
         "crest": "https://crests.football-data.org/79.png",
         "name": "CA Osasuna"
@@ -16184,11 +16169,11 @@
       },
       "87": {
         "results": [
+          "D",
           "W",
           "L",
           "W",
-          "L",
-          "D"
+          "L"
         ],
         "gf": 9,
         "ga": 13,
@@ -16341,40 +16326,6 @@
     },
     "nextMatches": [
       {
-        "id": 564693,
-        "matchday": 7,
-        "date": "2026-09-19T12:00:00Z",
-        "home": {
-          "id": 79,
-          "name": "CA Osasuna",
-          "short": "Osasuna",
-          "crest": "https://crests.football-data.org/79.png"
-        },
-        "away": {
-          "id": 87,
-          "name": "Rayo Vallecano de Madrid",
-          "short": "Rayo Vallecano",
-          "crest": "https://crests.football-data.org/87.png"
-        }
-      },
-      {
-        "id": 564691,
-        "matchday": 7,
-        "date": "2026-09-19T14:15:00Z",
-        "home": {
-          "id": 77,
-          "name": "Athletic Club",
-          "short": "Athletic",
-          "crest": "https://crests.football-data.org/77.png"
-        },
-        "away": {
-          "id": 263,
-          "name": "Deportivo Alavés",
-          "short": "Alavés",
-          "crest": "https://crests.football-data.org/263.png"
-        }
-      },
-      {
         "id": 564694,
         "matchday": 7,
         "date": "2026-09-19T16:30:00Z",
@@ -16509,9 +16460,43 @@
           "short": "Athletic",
           "crest": "https://crests.football-data.org/77.png"
         }
+      },
+      {
+        "id": 564691,
+        "matchday": 7,
+        "date": "2026-09-19T14:15:00Z",
+        "home": {
+          "id": 77,
+          "name": "Athletic Club",
+          "short": "Athletic",
+          "crest": "https://crests.football-data.org/77.png"
+        },
+        "away": {
+          "id": 263,
+          "name": "Deportivo Alavés",
+          "short": "Alavés",
+          "crest": "https://crests.football-data.org/263.png"
+        }
       }
     ],
     "recentResults": [
+      {
+        "date": "2026-09-19T12:00:00Z",
+        "home": {
+          "name": "CA Osasuna",
+          "short": "Osasuna",
+          "crest": "https://crests.football-data.org/79.png"
+        },
+        "away": {
+          "name": "Rayo Vallecano de Madrid",
+          "short": "Rayo Vallecano",
+          "crest": "https://crests.football-data.org/87.png"
+        },
+        "score": {
+          "home": 1,
+          "away": 1
+        }
+      },
       {
         "date": "2026-09-18T19:00:00Z",
         "home": {
@@ -16630,45 +16615,10 @@
           "home": 2,
           "away": 3
         }
-      },
-      {
-        "date": "2026-09-15T18:00:00Z",
-        "home": {
-          "name": "Deportivo Alavés",
-          "short": "Alavés",
-          "crest": "https://crests.football-data.org/263.png"
-        },
-        "away": {
-          "name": "Valencia CF",
-          "short": "Valencia",
-          "crest": "https://crests.football-data.org/95.png"
-        },
-        "score": {
-          "home": 0,
-          "away": 1
-        }
       }
     ]
   },
   "odds": {
-    "CA Osasuna": {
-      "winProb": 0.16919047229270692,
-      "drawProb": 0.22345911434885818,
-      "loseProb": 0.607350413358435,
-      "over25Prob": 0.5681818181818182,
-      "isHome": false,
-      "opponent": "Real Betis",
-      "matchDate": "2026-10-11T16:30:00Z"
-    },
-    "Rayo Vallecano": {
-      "winProb": 0.30290284822473657,
-      "drawProb": 0.2781037846273897,
-      "loseProb": 0.4189933671478735,
-      "over25Prob": 0.5319148936170213,
-      "isHome": true,
-      "opponent": "Athletic Bilbao",
-      "matchDate": "2026-10-10T12:00:00Z"
-    },
     "Athletic Bilbao": {
       "winProb": 0.4189933671478735,
       "drawProb": 0.2781037846273897,
@@ -16822,6 +16772,15 @@
       "opponent": "Málaga",
       "matchDate": "2026-10-09T19:00:00Z"
     },
+    "Rayo Vallecano": {
+      "winProb": 0.30290284822473657,
+      "drawProb": 0.2781037846273897,
+      "loseProb": 0.4189933671478735,
+      "over25Prob": 0.5319148936170213,
+      "isHome": true,
+      "opponent": "Athletic Bilbao",
+      "matchDate": "2026-10-10T12:00:00Z"
+    },
     "Elche CF": {
       "winProb": 0.32639126118776146,
       "drawProb": 0.29690420020818176,
@@ -16830,86 +16789,95 @@
       "isHome": true,
       "opponent": "Celta Vigo",
       "matchDate": "2026-10-11T12:00:00Z"
+    },
+    "CA Osasuna": {
+      "winProb": 0.16919047229270692,
+      "drawProb": 0.22345911434885818,
+      "loseProb": 0.607350413358435,
+      "over25Prob": 0.5681818181818182,
+      "isHome": false,
+      "opponent": "Real Betis",
+      "matchDate": "2026-10-11T16:30:00Z"
     }
   },
   "news": [
     {
-      "title": "Guruzeta se cae de una convocatoria a la que vuelve Peio Canales",
-      "link": "https://www.jornadaperfecta.com/blog/guruzeta-canales-vivian-regreso/",
-      "date": "Sat, 19 Sep 2026 09:39:54 +0000",
-      "img": "https://cdn.biwenger.com/i/t/1.png",
+      "title": "Mourinho, antes del derbi: «No sé si conseguiré que el equipo salga al 100%»",
+      "link": "https://www.jornadaperfecta.com/blog/mourinho-previa-atletico-real-madrid-j7-26-27/",
+      "date": "Sat, 19 Sep 2026 14:03:13 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Hidalgo deja varias dudas en el once por un virus",
-      "link": "https://www.jornadaperfecta.com/blog/hidalgo-previa-deportivo-betis-j7-26-27/",
-      "date": "Sat, 19 Sep 2026 09:16:53 +0000",
-      "img": "https://cdn.biwenger.com/i/t/6.png",
+      "title": "Supercuota Codere Atl��tico vs Real Madrid: Vinicius marca y gana el Madrid",
+      "link": "https://www.jornadaperfecta.com/blog/supercuota-codere-atletico-vs-real-madrid/",
+      "date": "Sat, 19 Sep 2026 14:00:29 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/09/codere-atletico-vs-real-madrid.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "RETAbet Doblete para Atlético vs Real Madrid: consigue el doble si tu goleador marca 2 goles",
-      "link": "https://www.jornadaperfecta.com/blog/retabet-doblete-atletico-vs-real-madrid/",
-      "date": "Sat, 19 Sep 2026 06:00:00 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/09/retabet-doblete-atletico-vs-real-madrid.webp",
+      "title": "Zubeldia vuelve a quedarse fuera de la convocatoria",
+      "link": "https://www.jornadaperfecta.com/blog/zubeldia-recuperacion-real-sociedad-2/",
+      "date": "Sat, 19 Sep 2026 12:28:51 +0000",
+      "img": "https://cdn.biwenger.com/i/t/13.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Buba Sangaré, sustituido por una lesión muscular",
-      "link": "https://www.jornadaperfecta.com/blog/sangare-lesion-elche-cf/",
-      "date": "Fri, 18 Sep 2026 19:55:22 +0000",
-      "img": "https://cdn.biwenger.com/i/t/75.png",
+      "title": "Funes confirma la baja de Calero y habla de un cambio de esquema",
+      "link": "https://www.jornadaperfecta.com/blog/funes-previa-getafe-malaga-j7-26-27/",
+      "date": "Sat, 19 Sep 2026 12:20:04 +0000",
+      "img": "https://cdn.biwenger.com/i/t/65.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Las 4 apuestas mejoradas de bwin en el Atlético vs Real Madrid: ¡Cuota 9.00!",
-      "link": "https://www.jornadaperfecta.com/blog/cuotas-mejoradas-bwin-atletico-real-madrid/",
-      "date": "Fri, 18 Sep 2026 19:00:16 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/09/bwin-superpartido-atletico-real-madrid-1024x285.webp",
+      "title": "Matarazzo da el aviso con Zakharyan",
+      "link": "https://www.jornadaperfecta.com/blog/matarazzo-previa-valencia-real-sociedad-j7-26-27/",
+      "date": "Sat, 19 Sep 2026 12:01:13 +0000",
+      "img": "https://cdn.biwenger.com/i/t/13.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Parte médico oficial del RC Celta sobre Jones El-Abdellaoui",
-      "link": "https://www.jornadaperfecta.com/blog/el-abdellaoui-parte-medico-celta/",
-      "date": "Fri, 18 Sep 2026 18:17:35 +0000",
-      "img": "https://cdn.biwenger.com/i/t/5.png",
+      "title": "Óscar Sánchez da la sorpresa: Luis Rioja está disponible",
+      "link": "https://www.jornadaperfecta.com/blog/oscar-sanchez-previa-valencia-real-sociedad-j7-26-27/",
+      "date": "Sat, 19 Sep 2026 11:43:11 +0000",
+      "img": "https://cdn.biwenger.com/i/t/18.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Sergio Herrera o Aitor Fernández: La duda en la portería de Osasuna",
-      "link": "https://www.jornadaperfecta.com/blog/sergio-herrera-aitor-fernandez-portero-osasuna-j7/",
-      "date": "Fri, 18 Sep 2026 18:08:08 +0000",
-      "img": "https://cdn.biwenger.com/i/t/93.png",
+      "title": "Pellegrini, sobre Antony, Abde y Deossa",
+      "link": "https://www.jornadaperfecta.com/blog/pellegrini-previa-deportivo-betis-j7-26-27/",
+      "date": "Sat, 19 Sep 2026 11:20:49 +0000",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "¡Varios cambios en el once titular del Elche CF!",
-      "link": "https://www.jornadaperfecta.com/blog/once-elche-j7-26-27/",
-      "date": "Fri, 18 Sep 2026 17:50:54 +0000",
-      "img": "https://cdn.biwenger.com/i/t/75.png",
+      "title": "Simeone deja abierta la titularidad de Julián Álvarez",
+      "link": "https://www.jornadaperfecta.com/blog/simeone-previa-atletico-real-madrid-j7-26-27/",
+      "date": "Sat, 19 Sep 2026 11:01:06 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "¡Once confirmado del RCD Espanyol de la jornada 7!",
-      "link": "https://www.jornadaperfecta.com/blog/once-espanyol-j7-26-27/",
-      "date": "Fri, 18 Sep 2026 17:50:22 +0000",
-      "img": "https://cdn.biwenger.com/i/t/7.png",
+      "title": "Luis Castro, sobre las bajas y el potencial de Ndukwe",
+      "link": "https://www.jornadaperfecta.com/blog/luis-castro-previa-villarreal-levante-j7-26-27/",
+      "date": "Sat, 19 Sep 2026 10:46:18 +0000",
+      "img": "https://cdn.biwenger.com/i/t/10.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Posible rotación de Sergio Canales en el Racing, ¿alineamos?",
-      "link": "https://www.jornadaperfecta.com/blog/sergio-canales-alinear-j7-racing-fantasy/",
-      "date": "Fri, 18 Sep 2026 17:26:24 +0000",
-      "img": "",
+      "title": "Bordalás deja en duda a Terrats y Mayoral",
+      "link": "https://www.jornadaperfecta.com/blog/bordalas-previa-getafe-malaga-j7-26-27/",
+      "date": "Sat, 19 Sep 2026 10:29:56 +0000",
+      "img": "https://cdn.biwenger.com/i/t/8.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -16918,7 +16886,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-09-19T09:49:42.887Z",
+    "updatedAt": "2026-09-19T14:55:47.535Z",
     "players": [
       {
         "id": "37428",
@@ -16931,6 +16899,18 @@
         "assists": 2,
         "penalties": 3,
         "minutesPerGoal": 60
+      },
+      {
+        "id": "115175",
+        "name": "Sergio Camello",
+        "team": "Rayo Vallecano de Madrid",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 7,
+        "goals": 7,
+        "assists": 1,
+        "penalties": 0,
+        "minutesPerGoal": 90
       },
       {
         "id": "3374",
@@ -16969,18 +16949,6 @@
         "minutesPerGoal": 105
       },
       {
-        "id": "115175",
-        "name": "Sergio Camello",
-        "team": "Rayo Vallecano de Madrid",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 6,
-        "goals": 6,
-        "assists": 1,
-        "penalties": 0,
-        "minutesPerGoal": 90
-      },
-      {
         "id": "265516",
         "name": "Yassir Zabiri",
         "team": "Real Racing Club de Santander",
@@ -17003,6 +16971,18 @@
         "assists": 2,
         "penalties": 0,
         "minutesPerGoal": 108
+      },
+      {
+        "id": "2237",
+        "name": "Ante Budimir",
+        "team": "CA Osasuna",
+        "position": "",
+        "nationality": "Croatia",
+        "appearances": 7,
+        "goals": 5,
+        "assists": 0,
+        "penalties": 3,
+        "minutesPerGoal": 126
       },
       {
         "id": "214497",
@@ -17041,28 +17021,16 @@
         "minutesPerGoal": 135
       },
       {
-        "id": "2237",
-        "name": "Ante Budimir",
-        "team": "CA Osasuna",
-        "position": "",
-        "nationality": "Croatia",
-        "appearances": 6,
-        "goals": 4,
-        "assists": 0,
-        "penalties": 3,
-        "minutesPerGoal": 135
-      },
-      {
         "id": "11113",
         "name": "Lucas Boyé",
         "team": "Deportivo Alavés",
         "position": "",
         "nationality": "Argentina",
-        "appearances": 5,
+        "appearances": 6,
         "goals": 4,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 113
+        "minutesPerGoal": 135
       },
       {
         "id": "8474",
@@ -17070,11 +17038,11 @@
         "team": "Deportivo Alavés",
         "position": "",
         "nationality": "Dominican Republic",
-        "appearances": 6,
+        "appearances": 7,
         "goals": 3,
         "assists": 3,
         "penalties": 0,
-        "minutesPerGoal": 180
+        "minutesPerGoal": 210
       },
       {
         "id": "633",
@@ -17118,11 +17086,11 @@
         "team": "Rayo Vallecano de Madrid",
         "position": "",
         "nationality": "Spain",
-        "appearances": 6,
+        "appearances": 7,
         "goals": 2,
         "assists": 2,
         "penalties": 0,
-        "minutesPerGoal": 270
+        "minutesPerGoal": 315
       },
       {
         "id": "8412",
@@ -17250,11 +17218,11 @@
         "team": "Athletic Club",
         "position": "",
         "nationality": "Spain",
-        "appearances": 6,
+        "appearances": 7,
         "goals": 2,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 270
+        "minutesPerGoal": 315
       },
       {
         "id": "8924",
@@ -17274,11 +17242,11 @@
         "team": "Deportivo Alavés",
         "position": "",
         "nationality": "Argentina",
-        "appearances": 6,
+        "appearances": 7,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 540
+        "minutesPerGoal": 630
       },
       {
         "id": "290184",
@@ -17406,11 +17374,11 @@
         "team": "Athletic Club",
         "position": "",
         "nationality": "Spain",
-        "appearances": 6,
+        "appearances": 7,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 540
+        "minutesPerGoal": 630
       },
       {
         "id": "220538",
@@ -17502,11 +17470,11 @@
         "team": "CA Osasuna",
         "position": "",
         "nationality": "Spain",
-        "appearances": 6,
+        "appearances": 7,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 540
+        "minutesPerGoal": 630
       },
       {
         "id": "244544",
@@ -17634,11 +17602,11 @@
         "team": "Athletic Club",
         "position": "",
         "nationality": "Spain",
-        "appearances": 6,
+        "appearances": 7,
         "goals": 1,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 540
+        "minutesPerGoal": 630
       },
       {
         "id": "131041",
@@ -17658,11 +17626,11 @@
         "team": "Athletic Club",
         "position": "",
         "nationality": "Spain",
-        "appearances": 6,
+        "appearances": 7,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 540
+        "minutesPerGoal": 630
       },
       {
         "id": "126878",
@@ -17670,11 +17638,11 @@
         "team": "Athletic Club",
         "position": "",
         "nationality": "Spain",
-        "appearances": 6,
+        "appearances": 7,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 540
+        "minutesPerGoal": 630
       },
       {
         "id": "25",
@@ -17694,11 +17662,11 @@
         "team": "Rayo Vallecano de Madrid",
         "position": "",
         "nationality": "Romania",
-        "appearances": 6,
+        "appearances": 7,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 540
+        "minutesPerGoal": 630
       },
       {
         "id": "176255",
@@ -17742,11 +17710,11 @@
         "team": "Deportivo Alavés",
         "position": "",
         "nationality": "Spain",
-        "appearances": 6,
+        "appearances": 7,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 540
+        "minutesPerGoal": 630
       },
       {
         "id": "188897",
@@ -17850,11 +17818,11 @@
         "team": "Deportivo Alavés",
         "position": "",
         "nationality": "Finland",
-        "appearances": 6,
+        "appearances": 7,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 540
+        "minutesPerGoal": 630
       },
       {
         "id": "184273",
@@ -17874,11 +17842,11 @@
         "team": "Athletic Club",
         "position": "",
         "nationality": "Ghana",
-        "appearances": 6,
+        "appearances": 7,
         "goals": 1,
         "assists": 2,
         "penalties": 0,
-        "minutesPerGoal": 540
+        "minutesPerGoal": 630
       },
       {
         "id": "182020",
@@ -17994,11 +17962,11 @@
         "team": "Rayo Vallecano de Madrid",
         "position": "",
         "nationality": "Spain",
-        "appearances": 4,
+        "appearances": 5,
         "goals": 1,
-        "assists": 0,
+        "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 360
+        "minutesPerGoal": 450
       },
       {
         "id": "50907",
