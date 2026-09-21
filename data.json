@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-21T17:16:38.011Z",
+  "updatedAt": "2026-09-21T21:17:42.933Z",
   "players": [
     {
       "id": 11,
@@ -12112,9 +12112,9 @@
           12,
           13
         ],
-        "teamSize": 15,
-        "teamValue": 36840000,
-        "teamValueInc": 240000,
+        "teamSize": 13,
+        "teamValue": 27430000,
+        "teamValueInc": 300000,
         "position": 5,
         "positionInc": -1,
         "role": ""
@@ -12464,8 +12464,8 @@
       "name": "INDOMABLE FC",
       "manager": "INDOMABLE FC",
       "points": 273,
-      "value": 36840000,
-      "trend": 240000,
+      "value": 27430000,
+      "trend": 300000,
       "players": []
     },
     {
@@ -12721,6 +12721,30 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1790015842,
+      "content": [
+        {
+          "player": 40075,
+          "from": {
+            "id": 12697101,
+            "name": "INDOMABLE FC",
+            "icon": "i/u/11757390.png"
+          },
+          "amount": 5644300
+        },
+        {
+          "player": 10745,
+          "from": {
+            "id": 12697101,
+            "name": "INDOMABLE FC",
+            "icon": "i/u/11757390.png"
+          },
+          "amount": 4035500
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1790002003,
@@ -13614,30 +13638,6 @@
           "type": "clause"
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1789857882,
-      "content": [
-        {
-          "player": 41566,
-          "from": {
-            "id": 8068002,
-            "name": "Soulands Rangers",
-            "icon": "i/u/8068002.png?v=69"
-          },
-          "amount": 3360900
-        },
-        {
-          "player": 1995,
-          "from": {
-            "id": 11521196,
-            "name": "Hufflepuff 🍋",
-            "icon": "i/u/11521196.png?v=57"
-          },
-          "amount": 3554000
-        }
-      ]
     }
   ],
   "leagueEnBas": {
@@ -13844,9 +13844,9 @@
           15,
           3
         ],
-        "teamSize": 15,
-        "teamValue": 34110000,
-        "teamValueInc": -170000,
+        "teamSize": 14,
+        "teamValue": 29680000,
+        "teamValueInc": -50000,
         "lastTrophy": {
           "type": "league",
           "position": -1,
@@ -14136,8 +14136,8 @@
       "name": "Tots som Olost",
       "manager": "Tots som Olost",
       "points": 235,
-      "value": 34110000,
-      "trend": -170000,
+      "value": 29680000,
+      "trend": -50000,
       "players": []
     },
     {
@@ -14367,6 +14367,21 @@
     ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1790018954,
+      "content": [
+        {
+          "player": 34077,
+          "from": {
+            "id": 6585052,
+            "name": "Tots som Olost",
+            "icon": "i/u/6585052.png?v=69"
+          },
+          "amount": 4747200
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1790008397,
@@ -15535,27 +15550,6 @@
           "amount": 523700
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1789755265,
-      "content": [
-        {
-          "player": 26879,
-          "from": {
-            "id": 6593096,
-            "name": "Janwandowski",
-            "icon": "i/u/6593096.png"
-          },
-          "to": {
-            "id": 9897660,
-            "name": "Eric Duran",
-            "icon": "i/u/9897660.png"
-          },
-          "amount": 2090000,
-          "type": "clause"
-        }
-      ]
     }
   ],
   "laliga": {
@@ -16382,9 +16376,9 @@
       "matchDate": "2026-10-17T12:00:00Z"
     },
     "Rayo Vallecano": {
-      "winProb": 0.2973016533920729,
-      "drawProb": 0.31607859992209847,
-      "loseProb": 0.38661974668582866,
+      "winProb": 0.2968830471394552,
+      "drawProb": 0.31653732552150965,
+      "loseProb": 0.3865796273390352,
       "over25Prob": 0.40322580645161293,
       "isHome": false,
       "opponent": "Getafe",
@@ -16427,9 +16421,9 @@
       "matchDate": "2026-10-17T16:30:00Z"
     },
     "Getafe": {
-      "winProb": 0.38661974668582866,
-      "drawProb": 0.31607859992209847,
-      "loseProb": 0.2973016533920729,
+      "winProb": 0.3865796273390352,
+      "drawProb": 0.31653732552150965,
+      "loseProb": 0.2968830471394552,
       "over25Prob": 0.40322580645161293,
       "isHome": true,
       "opponent": "Rayo Vallecano",
@@ -16502,7 +16496,7 @@
       "winProb": 0.5004353800731982,
       "drawProb": 0.28048000653070104,
       "loseProb": 0.2190846133961006,
-      "over25Prob": 0.5714285714285714,
+      "over25Prob": 0.5813953488372093,
       "isHome": true,
       "opponent": "Real Racing Club de Santander",
       "matchDate": "2026-10-18T12:00:00Z"
@@ -16511,7 +16505,7 @@
       "winProb": 0.2190846133961006,
       "drawProb": 0.28048000653070104,
       "loseProb": 0.5004353800731982,
-      "over25Prob": 0.5714285714285714,
+      "over25Prob": 0.5813953488372093,
       "isHome": false,
       "opponent": "CA Osasuna",
       "matchDate": "2026-10-18T12:00:00Z"
@@ -16545,6 +16539,22 @@
     }
   },
   "news": [
+    {
+      "title": "Cinco noticias fantasy para antes de irte a dormir",
+      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-21-9-26/",
+      "date": "Mon, 21 Sep 2026 21:00:39 +0000",
+      "img": "https://cdn.biwenger.com/i/t/6.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Chollos Fantasy que no puedes dejar escapar durante el parón de selecciones",
+      "link": "https://www.jornadaperfecta.com/blog/chollos-fantasy-biwenger-paron-septiembre-26/",
+      "date": "Mon, 21 Sep 2026 18:00:37 +0000",
+      "img": "https://cdn.biwenger.com/i/t/70.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Debut interesante de Aimar Blázquez con el Valencia CF",
       "link": "https://www.jornadaperfecta.com/blog/aimar-blazquez-debut-valencia-cf/",
@@ -16608,29 +16618,13 @@
       "img": "https://cdn.biwenger.com/i/t/1.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Fer Niño ve puerta con facilidad: ¿chollo fantasy en el Elche?",
-      "link": "https://www.jornadaperfecta.com/blog/fer-nino-chollo-fantasy-elche/",
-      "date": "Mon, 21 Sep 2026 13:00:05 +0000",
-      "img": "https://cdn.biwenger.com/i/t/75.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "El Depor confirma que Marc Casadó ha sido operado: Parte médico y Tiempo de baja",
-      "link": "https://www.jornadaperfecta.com/blog/marc-casado-lesion-hombro-deportivo/",
-      "date": "Mon, 21 Sep 2026 11:02:54 +0000",
-      "img": "https://cdn.biwenger.com/i/t/6.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-09-21T17:16:35.260Z",
+    "updatedAt": "2026-09-21T21:17:40.158Z",
     "players": [
       {
         "id": "37428",
