@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-21T21:17:42.933Z",
+  "updatedAt": "2026-09-22T02:05:11.881Z",
   "players": [
     {
       "id": 11,
@@ -12230,9 +12230,9 @@
           19,
           10
         ],
-        "teamSize": 10,
-        "teamValue": 41610000,
-        "teamValueInc": 60000,
+        "teamSize": 9,
+        "teamValue": 37600000,
+        "teamValueInc": 190000,
         "position": 11,
         "positionInc": -1,
         "role": ""
@@ -12250,9 +12250,9 @@
           10,
           1
         ],
-        "teamSize": 15,
-        "teamValue": 31450000,
-        "teamValueInc": -50000,
+        "teamSize": 13,
+        "teamValue": 25800000,
+        "teamValueInc": 60000,
         "lastTrophy": {
           "type": "league",
           "position": 2,
@@ -12273,9 +12273,9 @@
           17,
           3
         ],
-        "teamSize": 13,
-        "teamValue": 35470000,
-        "teamValueInc": -80000,
+        "teamSize": 12,
+        "teamValue": 32310000,
+        "teamValueInc": -10000,
         "position": 13,
         "positionInc": 4,
         "role": ""
@@ -12518,8 +12518,8 @@
       "name": "TL*LI",
       "manager": "TL*LI",
       "points": 235,
-      "value": 41610000,
-      "trend": 60000,
+      "value": 37600000,
+      "trend": 190000,
       "players": []
     },
     {
@@ -12527,8 +12527,8 @@
       "name": "LeMola Team",
       "manager": "LeMola Team",
       "points": 233,
-      "value": 31450000,
-      "trend": -50000,
+      "value": 25800000,
+      "trend": 60000,
       "players": []
     },
     {
@@ -12536,8 +12536,8 @@
       "name": "Hufflepuff 🍋",
       "manager": "Hufflepuff 🍋",
       "points": 230,
-      "value": 35470000,
-      "trend": -80000,
+      "value": 32310000,
+      "trend": -10000,
       "players": []
     },
     {
@@ -12721,6 +12721,60 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1790031129,
+      "content": [
+        {
+          "player": 897,
+          "from": {
+            "id": 6552586,
+            "name": "LeMola Team",
+            "icon": "i/u/6552586.png"
+          },
+          "amount": 3432700
+        },
+        {
+          "player": 35055,
+          "from": {
+            "id": 6552586,
+            "name": "LeMola Team",
+            "icon": "i/u/6552586.png"
+          },
+          "amount": 2284000
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1790028221,
+      "content": [
+        {
+          "player": 8670,
+          "from": {
+            "id": 14072078,
+            "name": "TL*LI",
+            "icon": "i/u/14072078.png"
+          },
+          "amount": 3998200
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1790025867,
+      "content": [
+        {
+          "player": 43282,
+          "from": {
+            "id": 11521196,
+            "name": "Hufflepuff 🍋",
+            "icon": "i/u/11521196.png?v=57"
+          },
+          "amount": 3348400
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1790015842,
@@ -13351,293 +13405,6 @@
           "amount": 235300
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1789880880,
-      "content": [
-        {
-          "player": 42173,
-          "from": {
-            "id": 12697101,
-            "name": "INDOMABLE FC",
-            "icon": "i/u/11757390.png"
-          },
-          "amount": 2227400
-        },
-        {
-          "player": 14466,
-          "from": {
-            "id": 14074484,
-            "name": "wilamalel",
-            "icon": "https://lh3.googleusercontent.com/a/ACg8ocJGUZto0NCjv5HnKiftjGqQiwQNQWQjyPJpfYbDxfcaNvZWgg=s300-c"
-          },
-          "amount": 2024400
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1789880603,
-      "content": [
-        {
-          "player": 24956,
-          "to": {
-            "id": 12697101,
-            "name": "INDOMABLE FC",
-            "icon": "i/u/11757390.png"
-          },
-          "amount": 155001,
-          "bids": [
-            {
-              "user": {
-                "id": 14072078,
-                "name": "TL*LI",
-                "icon": "i/u/14072078.png"
-              },
-              "amount": 150000
-            },
-            {
-              "user": {
-                "id": 14074484,
-                "name": "wilamalel",
-                "icon": "https://lh3.googleusercontent.com/a/ACg8ocJGUZto0NCjv5HnKiftjGqQiwQNQWQjyPJpfYbDxfcaNvZWgg=s300-c"
-              },
-              "amount": 150000
-            }
-          ]
-        },
-        {
-          "player": 37488,
-          "to": {
-            "id": 14094189,
-            "name": "Burnigol FC",
-            "icon": "i/u/14094189.png"
-          },
-          "amount": 750000,
-          "bids": [
-            {
-              "user": {
-                "id": 148051,
-                "name": "Zaza Pachulia",
-                "icon": "i/u/148051.png?v=98"
-              },
-              "amount": 543460
-            },
-            {
-              "user": {
-                "id": 8068002,
-                "name": "Soulands Rangers",
-                "icon": "i/u/8068002.png?v=69"
-              },
-              "amount": 512020
-            },
-            {
-              "user": {
-                "id": 12697101,
-                "name": "INDOMABLE FC",
-                "icon": "i/u/11757390.png"
-              },
-              "amount": 465280
-            },
-            {
-              "user": {
-                "id": 14094028,
-                "name": "Estem caputs",
-                "icon": "i/u/12736123.png"
-              },
-              "amount": 457000
-            },
-            {
-              "user": {
-                "id": 8070044,
-                "name": "CA CABA JUNIORS",
-                "icon": "i/u/8070044.png?v=6"
-              },
-              "amount": 379000
-            },
-            {
-              "user": {
-                "id": 11521196,
-                "name": "Hufflepuff 🍋",
-                "icon": "i/u/11521196.png?v=57"
-              },
-              "amount": 355009
-            },
-            {
-              "user": {
-                "id": 11520975,
-                "name": "Morankus FC",
-                "icon": "i/u/11520975.png?v=81"
-              },
-              "amount": 350000
-            },
-            {
-              "user": {
-                "id": 12713493,
-                "name": "Tata Martini",
-                "icon": "i/u/12713493.png?v=71"
-              },
-              "amount": 350000
-            }
-          ]
-        },
-        {
-          "player": 40911,
-          "to": {
-            "id": 12697101,
-            "name": "INDOMABLE FC",
-            "icon": "i/u/11757390.png"
-          },
-          "amount": 4007723,
-          "bids": [
-            {
-              "user": {
-                "id": 11521196,
-                "name": "Hufflepuff 🍋",
-                "icon": "i/u/11521196.png?v=57"
-              },
-              "amount": 3820009
-            },
-            {
-              "user": {
-                "id": 8068002,
-                "name": "Soulands Rangers",
-                "icon": "i/u/8068002.png?v=69"
-              },
-              "amount": 3775000
-            },
-            {
-              "user": {
-                "id": 14094189,
-                "name": "Burnigol FC",
-                "icon": "i/u/14094189.png"
-              },
-              "amount": 3460000
-            },
-            {
-              "user": {
-                "id": 8070044,
-                "name": "CA CABA JUNIORS",
-                "icon": "i/u/8070044.png?v=6"
-              },
-              "amount": 3460000
-            }
-          ]
-        },
-        {
-          "player": 43271,
-          "to": {
-            "id": 148051,
-            "name": "Zaza Pachulia",
-            "icon": "i/u/148051.png?v=98"
-          },
-          "amount": 682980
-        },
-        {
-          "player": 15430,
-          "to": {
-            "id": 11520975,
-            "name": "Morankus FC",
-            "icon": "i/u/11520975.png?v=81"
-          },
-          "amount": 8520000
-        },
-        {
-          "player": 17731,
-          "to": {
-            "id": 8068427,
-            "name": "Albertini",
-            "icon": "i/u/8068427.png"
-          },
-          "amount": 3250000
-        },
-        {
-          "player": 41267,
-          "to": {
-            "id": 14094189,
-            "name": "Burnigol FC",
-            "icon": "i/u/14094189.png"
-          },
-          "amount": 1960000,
-          "date": 1789826220,
-          "bids": [
-            {
-              "user": {
-                "id": 14072078,
-                "name": "TL*LI",
-                "icon": "i/u/14072078.png"
-              },
-              "amount": 1960000,
-              "date": 1789856546
-            },
-            {
-              "user": {
-                "id": 8070044,
-                "name": "CA CABA JUNIORS",
-                "icon": "i/u/8070044.png?v=6"
-              },
-              "amount": 1715000
-            },
-            {
-              "user": {
-                "id": 11521196,
-                "name": "Hufflepuff 🍋",
-                "icon": "i/u/11521196.png?v=57"
-              },
-              "amount": 1665009
-            },
-            {
-              "user": {
-                "id": 11520975,
-                "name": "Morankus FC",
-                "icon": "i/u/11520975.png?v=81"
-              },
-              "amount": 1660000
-            }
-          ]
-        },
-        {
-          "player": 40010,
-          "to": {
-            "id": 8068002,
-            "name": "Soulands Rangers",
-            "icon": "i/u/8068002.png?v=69"
-          },
-          "amount": 1600000,
-          "bids": [
-            {
-              "user": {
-                "id": 12696899,
-                "name": "CIGALERU",
-                "icon": "i/u/12696899.png"
-              },
-              "amount": 1595670
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1789880431,
-      "content": [
-        {
-          "player": 39874,
-          "from": {
-            "id": 12696599,
-            "name": "Trileros FC",
-            "icon": "i/u/12696599.png"
-          },
-          "to": {
-            "id": 14074484,
-            "name": "wilamalel",
-            "icon": "https://lh3.googleusercontent.com/a/ACg8ocJGUZto0NCjv5HnKiftjGqQiwQNQWQjyPJpfYbDxfcaNvZWgg=s300-c"
-          },
-          "amount": 1635000,
-          "type": "clause"
-        }
-      ]
     }
   ],
   "leagueEnBas": {
@@ -13710,9 +13477,9 @@
           5,
           4
         ],
-        "teamSize": 14,
-        "teamValue": 41600000,
-        "teamValueInc": 50000,
+        "teamSize": 13,
+        "teamValue": 39510000,
+        "teamValueInc": 190000,
         "position": 3,
         "positionInc": 1,
         "role": ""
@@ -14041,9 +13808,9 @@
           4,
           19
         ],
-        "teamSize": 14,
-        "teamValue": 32790000,
-        "teamValueInc": 140000,
+        "teamSize": 13,
+        "teamValue": 31270000,
+        "teamValueInc": 240000,
         "position": 20,
         "role": ""
       }
@@ -14073,8 +13840,8 @@
       "name": "Valors FC",
       "manager": "Valors FC",
       "points": 301,
-      "value": 41600000,
-      "trend": 50000,
+      "value": 39510000,
+      "trend": 190000,
       "players": []
     },
     {
@@ -14226,8 +13993,8 @@
       "name": "Janwandowski",
       "manager": "Janwandowski",
       "points": 141,
-      "value": 32790000,
-      "trend": 140000,
+      "value": 31270000,
+      "trend": 240000,
       "players": []
     }
   ],
@@ -14367,6 +14134,30 @@
     ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1790031250,
+      "content": [
+        {
+          "player": 18128,
+          "from": {
+            "id": 6579402,
+            "name": "Valors FC",
+            "icon": "icons/7.png"
+          },
+          "amount": 2301400
+        },
+        {
+          "player": 5771,
+          "from": {
+            "id": 6593096,
+            "name": "Janwandowski",
+            "icon": "i/u/6593096.png"
+          },
+          "amount": 1648300
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1790018954,
@@ -15535,21 +15326,6 @@
           "amount": 5840000
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1789755274,
-      "content": [
-        {
-          "player": 41081,
-          "from": {
-            "id": 9897660,
-            "name": "Eric Duran",
-            "icon": "i/u/9897660.png"
-          },
-          "amount": 523700
-        }
-      ]
     }
   ],
   "laliga": {
@@ -16624,7 +16400,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-09-21T21:17:40.158Z",
+    "updatedAt": "2026-09-22T02:05:09.542Z",
     "players": [
       {
         "id": "37428",
