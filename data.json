@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-22T15:50:06.881Z",
+  "updatedAt": "2026-09-22T20:33:51.699Z",
   "players": [
     {
       "id": 11,
@@ -12034,9 +12034,9 @@
           11,
           2
         ],
-        "teamSize": 9,
-        "teamValue": 32610000,
-        "teamValueInc": -90000,
+        "teamSize": 8,
+        "teamValue": 30250000,
+        "teamValueInc": -170000,
         "position": 1,
         "role": ""
       },
@@ -12093,9 +12093,9 @@
           3,
           9
         ],
-        "teamSize": 14,
-        "teamValue": 38700000,
-        "teamValueInc": 350000,
+        "teamSize": 12,
+        "teamValue": 35950000,
+        "teamValueInc": 280000,
         "position": 4,
         "positionInc": 1,
         "role": ""
@@ -12155,9 +12155,9 @@
           8,
           8
         ],
-        "teamSize": 10,
-        "teamValue": 19470000,
-        "teamValueInc": 240000,
+        "teamSize": 12,
+        "teamValue": 23840000,
+        "teamValueInc": 400000,
         "position": 7,
         "positionInc": -1,
         "role": ""
@@ -12428,8 +12428,8 @@
       "name": "Gapoles Balompié",
       "manager": "Gapoles Balompié",
       "points": 313,
-      "value": 32610000,
-      "trend": -90000,
+      "value": 30250000,
+      "trend": -170000,
       "players": []
     },
     {
@@ -12455,8 +12455,8 @@
       "name": "CA CABA JUNIORS",
       "manager": "CA CABA JUNIORS",
       "points": 273,
-      "value": 38700000,
-      "trend": 350000,
+      "value": 35950000,
+      "trend": 280000,
       "players": []
     },
     {
@@ -12482,8 +12482,8 @@
       "name": "Burnigol FC",
       "manager": "Burnigol FC",
       "points": 264,
-      "value": 19470000,
-      "trend": 240000,
+      "value": 23840000,
+      "trend": 400000,
       "players": []
     },
     {
@@ -12611,10 +12611,10 @@
     "balance": 25672166,
     "lineup": {
       "type": "4-4-2",
-      "date": 1790008336,
+      "date": 1790105016,
       "playersID": [
         9887,
-        42757,
+        42390,
         38493,
         41264,
         20969,
@@ -12627,7 +12627,7 @@
       ],
       "reservesID": [
         36566,
-        42390,
+        42757,
         null,
         null
       ]
@@ -12716,11 +12716,62 @@
         "playerID": 41264,
         "price": 1160000,
         "type": "sale",
-        "until": 1790161392
+        "until": 1790277793
       }
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1790102668,
+      "content": [
+        {
+          "player": 33474,
+          "from": {
+            "id": 8070044,
+            "name": "CA CABA JUNIORS",
+            "icon": "i/u/8070044.png?v=6"
+          },
+          "to": {
+            "id": 14094189,
+            "name": "Burnigol FC",
+            "icon": "i/u/14094189.png"
+          },
+          "amount": 3645000,
+          "type": "clause"
+        },
+        {
+          "player": 38194,
+          "from": {
+            "id": 14075911,
+            "name": "Gapoles Balompié",
+            "icon": "i/u/11414918.png"
+          },
+          "to": {
+            "id": 14094189,
+            "name": "Burnigol FC",
+            "icon": "i/u/14094189.png"
+          },
+          "amount": 3884475,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1790093525,
+      "content": [
+        {
+          "player": 42395,
+          "from": {
+            "id": 8070044,
+            "name": "CA CABA JUNIORS",
+            "icon": "i/u/8070044.png?v=6"
+          },
+          "amount": 726200
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1790084598,
@@ -13877,42 +13928,6 @@
           "amount": 156400
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1789939288,
-      "content": [
-        {
-          "player": 16889,
-          "from": {
-            "id": 12713493,
-            "name": "Tata Martini",
-            "icon": "i/u/12713493.png?v=71"
-          },
-          "to": {
-            "id": 14074484,
-            "name": "wilamalel",
-            "icon": "https://lh3.googleusercontent.com/a/ACg8ocJGUZto0NCjv5HnKiftjGqQiwQNQWQjyPJpfYbDxfcaNvZWgg=s300-c"
-          },
-          "amount": 2685015,
-          "type": "clause"
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1789939082,
-      "content": [
-        {
-          "player": 2603,
-          "from": {
-            "id": 6541195,
-            "name": "🦊",
-            "icon": "i/u/6541195.png?v=17"
-          },
-          "amount": 10268000
-        }
-      ]
     }
   ],
   "leagueEnBas": {
@@ -14625,7 +14640,7 @@
         "playerID": 26048,
         "price": 7440000,
         "type": "sale",
-        "until": 1790144048
+        "until": 1790277995
       },
       {
         "playerID": 30477,
@@ -16855,6 +16870,22 @@
   },
   "news": [
     {
+      "title": "TOP Porteros que debes fichar en este parón de selecciones",
+      "link": "https://www.jornadaperfecta.com/blog/chollos-fantasy-porteros-paron-septiembre-26/",
+      "date": "Tue, 22 Sep 2026 18:26:14 +0000",
+      "img": "https://cdn.biwenger.com/i/t/91.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Chollos LaLiga Fantasy: Fichajes Baratos y Rentables para el parón",
+      "link": "https://www.jornadaperfecta.com/blog/chollos-laliga-fantasy-paron-septiembre-26/",
+      "date": "Tue, 22 Sep 2026 17:00:53 +0000",
+      "img": "https://i.ytimg.com/vi/HP5mbKIymDQ/mqdefault.jpg",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Xavi Espart se desinfla en fantasy, ¿vender o mantener?",
       "link": "https://www.jornadaperfecta.com/blog/xavi-espart-decision-fantasy-barcelona/",
       "date": "Tue, 22 Sep 2026 14:42:48 +0000",
@@ -16881,7 +16912,7 @@
     {
       "title": "Kike Salas trabaja al margen y Vargas reaparece sobre el césped",
       "link": "https://www.jornadaperfecta.com/blog/kike-salas-vargas-vuelta-paron/",
-      "date": "Tue, 22 Sep 2026 11:39:21 +0000",
+      "date": "Tue, 22 Sep 2026 11:42:21 +0000",
       "img": "https://cdn.biwenger.com/i/t/17.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
@@ -16917,29 +16948,13 @@
       "img": "https://cdn.biwenger.com/i/t/2.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "¡50 compras fantasy para el &#8216;megaparón&#8217; de selecciones!",
-      "link": "https://www.jornadaperfecta.com/blog/compras-fantasy-paron-selecciones-sept-26/",
-      "date": "Tue, 22 Sep 2026 07:00:39 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Sportium Doble Ruleta Nations League: premios diarios",
-      "link": "https://www.jornadaperfecta.com/blog/sportium-giros-gratis-nations-league/",
-      "date": "Tue, 22 Sep 2026 06:00:19 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/09/Sportium-Nations-League-Doble-Ruleta-Giros-Gratis.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-09-22T15:50:03.473Z",
+    "updatedAt": "2026-09-22T20:33:48.933Z",
     "players": [
       {
         "id": "37428",
