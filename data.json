@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-22T10:26:42.113Z",
+  "updatedAt": "2026-09-22T15:50:06.881Z",
   "players": [
     {
       "id": 11,
@@ -12230,8 +12230,8 @@
           19,
           10
         ],
-        "teamSize": 9,
-        "teamValue": 37670000,
+        "teamSize": 8,
+        "teamValue": 37480000,
         "teamValueInc": 70000,
         "position": 11,
         "positionInc": -1,
@@ -12518,7 +12518,7 @@
       "name": "TL*LI",
       "manager": "TL*LI",
       "points": 235,
-      "value": 37670000,
+      "value": 37480000,
       "trend": 70000,
       "players": []
     },
@@ -12721,6 +12721,21 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1790084598,
+      "content": [
+        {
+          "player": 12424,
+          "from": {
+            "id": 14072078,
+            "name": "TL*LI",
+            "icon": "i/u/14072078.png"
+          },
+          "amount": 197600
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1790060139,
@@ -13898,39 +13913,6 @@
           "amount": 10268000
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1789937785,
-      "content": [
-        {
-          "player": 43185,
-          "from": {
-            "id": 148051,
-            "name": "Zaza Pachulia",
-            "icon": "i/u/148051.png?v=98"
-          },
-          "amount": 2429200
-        },
-        {
-          "player": 26678,
-          "from": {
-            "id": 14072078,
-            "name": "TL*LI",
-            "icon": "i/u/14072078.png"
-          },
-          "amount": 1283600
-        },
-        {
-          "player": 34717,
-          "from": {
-            "id": 14072078,
-            "name": "TL*LI",
-            "icon": "i/u/14072078.png"
-          },
-          "amount": 235700
-        }
-      ]
     }
   ],
   "leagueEnBas": {
@@ -13961,8 +13943,8 @@
           13,
           2
         ],
-        "teamSize": 10,
-        "teamValue": 31760000,
+        "teamSize": 9,
+        "teamValue": 31410000,
         "teamValueInc": 480000,
         "position": 1,
         "role": ""
@@ -14137,9 +14119,9 @@
           15,
           3
         ],
-        "teamSize": 14,
-        "teamValue": 29690000,
-        "teamValueInc": 10000,
+        "teamSize": 13,
+        "teamValue": 25310000,
+        "teamValueInc": 90000,
         "lastTrophy": {
           "type": "league",
           "position": -1,
@@ -14236,9 +14218,9 @@
           10,
           16
         ],
-        "teamSize": 13,
-        "teamValue": 40320000,
-        "teamValueInc": -130000,
+        "teamSize": 12,
+        "teamValue": 36710000,
+        "teamValueInc": -40000,
         "position": 15,
         "positionInc": 1,
         "role": ""
@@ -14348,7 +14330,7 @@
       "name": "Aquest any pago jo !!",
       "manager": "Aquest any pago jo !!",
       "points": 324,
-      "value": 31760000,
+      "value": 31410000,
       "trend": 480000,
       "players": []
     },
@@ -14429,8 +14411,8 @@
       "name": "Tots som Olost",
       "manager": "Tots som Olost",
       "points": 235,
-      "value": 29690000,
-      "trend": 10000,
+      "value": 25310000,
+      "trend": 90000,
       "players": []
     },
     {
@@ -14474,8 +14456,8 @@
       "name": "Petraques",
       "manager": "Petraques",
       "points": 195,
-      "value": 40320000,
-      "trend": -130000,
+      "value": 36710000,
+      "trend": -40000,
       "players": []
     },
     {
@@ -14531,7 +14513,7 @@
     "balance": -72706,
     "lineup": {
       "type": "3-5-2",
-      "date": 1790069343,
+      "date": 1790076329,
       "playersID": [
         43282,
         37739,
@@ -14626,7 +14608,7 @@
       {
         "id": 42610,
         "buyPrice": 3652588,
-        "clause": 0,
+        "clause": 8025000,
         "invested": 0,
         "buyDate": 1788238931
       },
@@ -14652,6 +14634,12 @@
         "until": 1790242071
       },
       {
+        "playerID": 42610,
+        "price": 8025000,
+        "type": "sale",
+        "until": 1790259966
+      },
+      {
         "playerID": 43282,
         "price": 4635000,
         "type": "sale",
@@ -14660,6 +14648,51 @@
     ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1790092072,
+      "content": [
+        {
+          "player": 1125,
+          "from": {
+            "id": 6585052,
+            "name": "Tots som Olost",
+            "icon": "i/u/6585052.png?v=69"
+          },
+          "amount": 4516400
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1790077417,
+      "content": [
+        {
+          "player": 25322,
+          "from": {
+            "id": 7817228,
+            "name": "Petraques",
+            "icon": "i/u/7817228.png"
+          },
+          "amount": 3821400
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1790075654,
+      "content": [
+        {
+          "player": 31228,
+          "from": {
+            "id": 6586257,
+            "name": "Aquest any pago jo !!",
+            "icon": "i/u/6586257.png"
+          },
+          "amount": 360000
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1790058187,
@@ -15832,75 +15865,6 @@
           "amount": 3210000
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1789860381,
-      "content": [
-        {
-          "player": 9090,
-          "from": {
-            "id": 6579280,
-            "name": "BSG Schreibmaschinenwerk Dresden",
-            "icon": "i/u/6579280.png?v=85"
-          },
-          "amount": 4739800
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1789853816,
-      "content": [
-        {
-          "player": 42813,
-          "from": {
-            "id": 14001588,
-            "name": "Txapi17",
-            "icon": "i/u/11555657.png"
-          },
-          "amount": 1076400
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1789806073,
-      "content": [
-        {
-          "player": 15642,
-          "from": {
-            "id": 6586257,
-            "name": "Aquest any pago jo !!",
-            "icon": "i/u/6586257.png"
-          },
-          "amount": 156200
-        },
-        {
-          "player": 5534,
-          "from": {
-            "id": 6579280,
-            "name": "BSG Schreibmaschinenwerk Dresden",
-            "icon": "i/u/6579280.png?v=85"
-          },
-          "amount": 381200
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1789798363,
-      "content": [
-        {
-          "player": 42412,
-          "from": {
-            "id": 6580386,
-            "name": "Academia Control Orientado FC",
-            "icon": "i/u/6580386.png?v=69"
-          },
-          "amount": 748600
-        }
-      ]
     }
   ],
   "laliga": {
@@ -16727,9 +16691,9 @@
       "matchDate": "2026-10-17T12:00:00Z"
     },
     "Rayo Vallecano": {
-      "winProb": 0.2968830471394552,
-      "drawProb": 0.31653732552150965,
-      "loseProb": 0.3865796273390352,
+      "winProb": 0.31413543663553534,
+      "drawProb": 0.29285529415377326,
+      "loseProb": 0.3930092692106914,
       "over25Prob": 0.40322580645161293,
       "isHome": false,
       "opponent": "Getafe",
@@ -16763,18 +16727,18 @@
       "matchDate": "2026-10-17T12:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.6259305937017691,
-      "drawProb": 0.19890683310967325,
-      "loseProb": 0.17516257318855763,
+      "winProb": 0.6391528925619834,
+      "drawProb": 0.19452479338842973,
+      "loseProb": 0.16632231404958678,
       "over25Prob": 0.7751937984496123,
       "isHome": false,
       "opponent": "Real Betis",
       "matchDate": "2026-10-17T16:30:00Z"
     },
     "Getafe": {
-      "winProb": 0.3865796273390352,
-      "drawProb": 0.31653732552150965,
-      "loseProb": 0.2968830471394552,
+      "winProb": 0.3930092692106914,
+      "drawProb": 0.29285529415377326,
+      "loseProb": 0.31413543663553534,
       "over25Prob": 0.40322580645161293,
       "isHome": true,
       "opponent": "Rayo Vallecano",
@@ -16835,9 +16799,9 @@
       "matchDate": "2026-10-16T19:00:00Z"
     },
     "Real Betis": {
-      "winProb": 0.17516257318855763,
-      "drawProb": 0.19890683310967325,
-      "loseProb": 0.6259305937017691,
+      "winProb": 0.16632231404958678,
+      "drawProb": 0.19452479338842973,
+      "loseProb": 0.6391528925619834,
       "over25Prob": 0.7751937984496123,
       "isHome": true,
       "opponent": "Barcelona",
@@ -16891,6 +16855,54 @@
   },
   "news": [
     {
+      "title": "Xavi Espart se desinfla en fantasy, ¿vender o mantener?",
+      "link": "https://www.jornadaperfecta.com/blog/xavi-espart-decision-fantasy-barcelona/",
+      "date": "Tue, 22 Sep 2026 14:42:48 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Marc Bartra no sufre rotura y queda en duda para la jornada 8",
+      "link": "https://www.jornadaperfecta.com/blog/bartra-lesion-betis/",
+      "date": "Tue, 22 Sep 2026 14:01:59 +0000",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Ventas Fantasy urgentes en el parón de selecciones",
+      "link": "https://www.jornadaperfecta.com/blog/ventas-fantasy-paron-septiembre-26/",
+      "date": "Tue, 22 Sep 2026 13:03:32 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Kike Salas trabaja al margen y Vargas reaparece sobre el césped",
+      "link": "https://www.jornadaperfecta.com/blog/kike-salas-vargas-vuelta-paron/",
+      "date": "Tue, 22 Sep 2026 11:39:21 +0000",
+      "img": "https://cdn.biwenger.com/i/t/17.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Yuri y Guruzeta siguen sin entrenar con el Athletic en este parón",
+      "link": "https://www.jornadaperfecta.com/blog/yuri-y-guruzeta-estado-paron/",
+      "date": "Tue, 22 Sep 2026 11:12:02 +0000",
+      "img": "https://cdn.biwenger.com/i/t/1.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "El Real Madrid aumenta la gravedad de la lesión de Fede Valverde",
+      "link": "https://www.jornadaperfecta.com/blog/fede-valverde-esguince-grado-iii/",
+      "date": "Tue, 22 Sep 2026 10:38:00 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Lista de jugadores internacionales de cada equipo de LaLiga",
       "link": "https://www.jornadaperfecta.com/blog/lista-jugadores-internacionales-laliga/",
       "date": "Tue, 22 Sep 2026 09:34:06 +0000",
@@ -16921,61 +16933,13 @@
       "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/09/Sportium-Nations-League-Doble-Ruleta-Giros-Gratis.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Cinco noticias fantasy para antes de irte a dormir",
-      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-21-9-26/",
-      "date": "Mon, 21 Sep 2026 21:00:39 +0000",
-      "img": "https://cdn.biwenger.com/i/t/6.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Chollos Fantasy que no puedes dejar escapar durante el parón de selecciones",
-      "link": "https://www.jornadaperfecta.com/blog/chollos-fantasy-biwenger-paron-septiembre-26/",
-      "date": "Mon, 21 Sep 2026 18:00:37 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Debut interesante de Aimar Blázquez con el Valencia CF",
-      "link": "https://www.jornadaperfecta.com/blog/aimar-blazquez-debut-valencia-cf/",
-      "date": "Mon, 21 Sep 2026 16:36:23 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Aarón Mayol gana importancia en el Valencia CF: ¿chollo fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/mayol-chollo-fantasy-valencia-cf/",
-      "date": "Mon, 21 Sep 2026 16:25:45 +0000",
-      "img": "https://cdn.biwenger.com/i/t/18.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Anthony Gordon genera dudas fantasy: ¿vender o mantener?",
-      "link": "https://www.jornadaperfecta.com/blog/gordon-dudas-fantasy-barcelona/",
-      "date": "Mon, 21 Sep 2026 16:07:18 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Huijsen, expulsado en el derbi: ¿vender o mantener en fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/huijsen-decision-fantasy-real-madrid-2/",
-      "date": "Mon, 21 Sep 2026 15:20:07 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-09-22T10:26:39.279Z",
+    "updatedAt": "2026-09-22T15:50:03.473Z",
     "players": [
       {
         "id": "37428",
