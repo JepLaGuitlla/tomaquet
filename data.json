@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-22T20:33:51.699Z",
+  "updatedAt": "2026-09-23T02:03:58.549Z",
   "players": [
     {
       "id": 11,
@@ -14019,9 +14019,9 @@
           1,
           5
         ],
-        "teamSize": 12,
-        "teamValue": 48800000,
-        "teamValueInc": -330000,
+        "teamSize": 10,
+        "teamValue": 42170000,
+        "teamValueInc": -170000,
         "position": 4,
         "positionInc": -2,
         "role": ""
@@ -14372,8 +14372,8 @@
       "name": "Eric Duran",
       "manager": "Eric Duran",
       "points": 298,
-      "value": 48800000,
-      "trend": -330000,
+      "value": 42170000,
+      "trend": -170000,
       "players": []
     },
     {
@@ -14663,6 +14663,30 @@
     ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1790113200,
+      "content": [
+        {
+          "player": 4070,
+          "from": {
+            "id": 9897660,
+            "name": "Eric Duran",
+            "icon": "i/u/9897660.png"
+          },
+          "amount": 1224900
+        },
+        {
+          "player": 40075,
+          "from": {
+            "id": 9897660,
+            "name": "Eric Duran",
+            "icon": "i/u/9897660.png"
+          },
+          "amount": 5419200
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1790092072,
@@ -15740,146 +15764,6 @@
           "amount": 2408300
         }
       ]
-    },
-    {
-      "type": "market",
-      "date": 1789880511,
-      "content": [
-        {
-          "player": 41565,
-          "to": {
-            "id": 6586225,
-            "name": "Adeyemi FC",
-            "icon": "icons/30.png"
-          },
-          "amount": 2097280,
-          "bids": [
-            {
-              "user": {
-                "id": 6580386,
-                "name": "Academia Control Orientado FC",
-                "icon": "i/u/6580386.png?v=69"
-              },
-              "amount": 1850000
-            },
-            {
-              "user": {
-                "id": 6585052,
-                "name": "Tots som Olost",
-                "icon": "i/u/6585052.png?v=69"
-              },
-              "amount": 1575000
-            },
-            {
-              "user": {
-                "id": 6593096,
-                "name": "Janwandowski",
-                "icon": "i/u/6593096.png"
-              },
-              "amount": 1490000
-            },
-            {
-              "user": {
-                "id": 6579540,
-                "name": "Aiveen Teaam",
-                "icon": "i/u/6579540.png?v=63"
-              },
-              "amount": 1334410
-            },
-            {
-              "user": {
-                "id": 6579402,
-                "name": "Valors FC",
-                "icon": "icons/7.png"
-              },
-              "amount": 1222222
-            },
-            {
-              "user": {
-                "id": 6579505,
-                "name": "Xevi borrat",
-                "icon": "i/u/6579505.png"
-              },
-              "amount": 1110000
-            },
-            {
-              "user": {
-                "id": 9890540,
-                "name": "UE Trincadors"
-              },
-              "amount": 1090000
-            },
-            {
-              "user": {
-                "id": 7817228,
-                "name": "Petraques",
-                "icon": "i/u/7817228.png"
-              },
-              "amount": 1089000
-            },
-            {
-              "user": {
-                "id": 6588130,
-                "name": "The GOAT club",
-                "icon": "i/u/6588130.png?v=12"
-              },
-              "amount": 1000000
-            },
-            {
-              "user": {
-                "id": 14001588,
-                "name": "Txapi17",
-                "icon": "i/u/11555657.png"
-              },
-              "amount": 983160
-            }
-          ]
-        },
-        {
-          "player": 39804,
-          "to": {
-            "id": 6586225,
-            "name": "Adeyemi FC",
-            "icon": "icons/30.png"
-          },
-          "amount": 2952180,
-          "bids": [
-            {
-              "user": {
-                "id": 11504267,
-                "name": "🦊",
-                "icon": "i/u/11504267.png?v=23"
-              },
-              "amount": 2804696
-            },
-            {
-              "user": {
-                "id": 6579505,
-                "name": "Xevi borrat",
-                "icon": "i/u/6579505.png"
-              },
-              "amount": 2681000
-            },
-            {
-              "user": {
-                "id": 6579402,
-                "name": "Valors FC",
-                "icon": "icons/7.png"
-              },
-              "amount": 2626000
-            }
-          ]
-        },
-        {
-          "player": 10245,
-          "to": {
-            "id": 11504267,
-            "name": "🦊",
-            "icon": "i/u/11504267.png?v=23"
-          },
-          "amount": 3210000
-        }
-      ]
     }
   ],
   "laliga": {
@@ -16870,6 +16754,14 @@
   },
   "news": [
     {
+      "title": "Cinco noticias fantasy para antes de irte a dormir",
+      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-22-9-26/",
+      "date": "Tue, 22 Sep 2026 21:00:09 +0000",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "TOP Porteros que debes fichar en este parón de selecciones",
       "link": "https://www.jornadaperfecta.com/blog/chollos-fantasy-porteros-paron-septiembre-26/",
       "date": "Tue, 22 Sep 2026 18:26:14 +0000",
@@ -16940,21 +16832,13 @@
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Jonathan David cae de pie en el Atleti, ¿nuevo delantero top fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/jonathan-david-recomendacion-fantasy-atleti/",
-      "date": "Tue, 22 Sep 2026 09:00:50 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-09-22T20:33:48.933Z",
+    "updatedAt": "2026-09-23T02:03:55.783Z",
     "players": [
       {
         "id": "37428",
