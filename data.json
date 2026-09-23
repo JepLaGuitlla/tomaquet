@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-23T15:39:38.260Z",
+  "updatedAt": "2026-09-23T20:45:25.731Z",
   "players": [
     {
       "id": 11,
@@ -126,9 +126,9 @@
       "status": "ok",
       "jForm": [
         4,
+        null,
+        null,
         4,
-        null,
-        null,
         null
       ],
       "clausula": null
@@ -632,8 +632,8 @@
       "status": "ok",
       "jForm": [
         2,
-        4,
         3,
+        4,
         4,
         null
       ],
@@ -1489,8 +1489,8 @@
       "jForm": [
         3,
         3,
-        3,
         2,
+        3,
         2
       ],
       "clausula": null
@@ -1928,9 +1928,9 @@
       "status": "ok",
       "jForm": [
         2,
-        3,
         -1,
         -2,
+        3,
         null
       ],
       "clausula": null
@@ -2302,8 +2302,8 @@
       "status": "ok",
       "jForm": [
         2,
-        7,
         3,
+        7,
         7,
         4
       ],
@@ -2390,9 +2390,9 @@
       "status": "ok",
       "jForm": [
         2,
-        5,
         2,
         -1,
+        5,
         3
       ],
       "clausula": null
@@ -2808,8 +2808,8 @@
       "jForm": [
         null,
         null,
-        null,
         -1,
+        null,
         1
       ],
       "clausula": null
@@ -3181,9 +3181,9 @@
       "status": "ok",
       "jForm": [
         3,
+        null,
+        null,
         10,
-        null,
-        null,
         1
       ],
       "clausula": null
@@ -4259,7 +4259,10 @@
       "status": "ok",
       "jForm": [
         11,
-        5
+        null,
+        null,
+        5,
+        null
       ],
       "clausula": null
     },
@@ -4453,9 +4456,9 @@
       "status": "ok",
       "jForm": [
         6,
+        4,
+        4,
         5,
-        4,
-        4,
         4
       ],
       "clausula": null
@@ -4519,9 +4522,9 @@
       "status": "ok",
       "jForm": [
         3,
-        2,
         3,
         0,
+        2,
         -1
       ],
       "clausula": null
@@ -4876,6 +4879,22 @@
       "clausula": null
     },
     {
+      "id": 25892,
+      "slug": "javier-aguirre",
+      "name": "Javier Aguirre",
+      "position": 5,
+      "price": 330000,
+      "points": 0,
+      "trend": 0,
+      "playedHome": 0,
+      "playedAway": 0,
+      "teamName": "Valencia",
+      "teamId": 18,
+      "status": "ok",
+      "jForm": [],
+      "clausula": null
+    },
+    {
       "id": 26048,
       "slug": "tchouameni",
       "name": "Tchouameni",
@@ -4957,8 +4976,8 @@
       "jForm": [
         null,
         3,
-        3,
         1,
+        3,
         2
       ],
       "clausula": null
@@ -5132,9 +5151,9 @@
       "status": "ok",
       "jForm": [
         null,
-        null,
         3,
         -1,
+        null,
         -2
       ],
       "clausula": null
@@ -5682,9 +5701,9 @@
       "status": "ok",
       "jForm": [
         3,
-        7,
         5,
         -1,
+        7,
         -1
       ],
       "clausula": null
@@ -7113,8 +7132,8 @@
       "jForm": [
         8,
         3,
-        3,
         2,
+        3,
         3
       ],
       "clausula": null
@@ -7333,8 +7352,8 @@
       "jForm": [
         null,
         3,
-        3,
         0,
+        3,
         null
       ],
       "clausula": null
@@ -8475,9 +8494,9 @@
       "status": "ok",
       "jForm": [
         0,
-        4,
         3,
         1,
+        4,
         3
       ],
       "clausula": null
@@ -10845,9 +10864,9 @@
       "status": "ok",
       "jForm": [
         6,
+        null,
+        null,
         4,
-        null,
-        null,
         null
       ],
       "clausula": null
@@ -10977,9 +10996,9 @@
       "status": "ok",
       "jForm": [
         null,
-        null,
         1,
         2,
+        null,
         1
       ],
       "clausula": null
@@ -11065,9 +11084,9 @@
       "status": "ok",
       "jForm": [
         null,
+        4,
+        4,
         null,
-        4,
-        4,
         3
       ],
       "clausula": null
@@ -11655,9 +11674,10 @@
       "status": "ok",
       "jForm": [
         2,
-        null,
         2,
-        3
+        3,
+        null,
+        null
       ],
       "clausula": null
     },
@@ -11985,8 +12005,8 @@
       "trend": -20000,
       "playedHome": 1,
       "playedAway": 1,
-      "teamName": "Valencia",
-      "teamId": 18,
+      "teamName": "",
+      "teamId": null,
       "status": "ok",
       "jForm": [
         0,
@@ -12396,9 +12416,9 @@
           18,
           14
         ],
-        "teamSize": 13,
-        "teamValue": 36640000,
-        "teamValueInc": 0,
+        "teamSize": 12,
+        "teamValue": 33690000,
+        "teamValueInc": 80000,
         "position": 19,
         "role": ""
       },
@@ -12590,8 +12610,8 @@
       "name": "Morankus FC",
       "manager": "Morankus FC",
       "points": 189,
-      "value": 36640000,
-      "trend": 0,
+      "value": 33690000,
+      "trend": 80000,
       "players": []
     },
     {
@@ -12611,7 +12631,7 @@
     "balance": 23063644,
     "lineup": {
       "type": "4-5-1",
-      "date": 1790151493,
+      "date": 1790181076,
       "playersID": [
         9887,
         42390,
@@ -12724,10 +12744,31 @@
         "price": 1160000,
         "type": "sale",
         "until": 1790277793
+      },
+      {
+        "playerID": 42390,
+        "price": 980000,
+        "type": "sale",
+        "until": 1790354204
       }
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1790183967,
+      "content": [
+        {
+          "player": 18251,
+          "from": {
+            "id": 11520975,
+            "name": "Morankus FC",
+            "icon": "i/u/11520975.png?v=81"
+          },
+          "amount": 3015600
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1790144583,
@@ -13850,308 +13891,6 @@
           "amount": 3482700
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1789968059,
-      "content": [
-        {
-          "player": 41385,
-          "from": {
-            "id": 14065964,
-            "name": "JanBox",
-            "icon": "i/u/14065964.png?v=16"
-          },
-          "amount": 2309700
-        },
-        {
-          "player": 11686,
-          "from": {
-            "id": 14094189,
-            "name": "Burnigol FC",
-            "icon": "i/u/14094189.png"
-          },
-          "amount": 2804500
-        },
-        {
-          "player": 41082,
-          "from": {
-            "id": 14074484,
-            "name": "wilamalel",
-            "icon": "https://lh3.googleusercontent.com/a/ACg8ocJGUZto0NCjv5HnKiftjGqQiwQNQWQjyPJpfYbDxfcaNvZWgg=s300-c"
-          },
-          "amount": 5801800
-        },
-        {
-          "player": 41807,
-          "from": {
-            "id": 14074484,
-            "name": "wilamalel",
-            "icon": "https://lh3.googleusercontent.com/a/ACg8ocJGUZto0NCjv5HnKiftjGqQiwQNQWQjyPJpfYbDxfcaNvZWgg=s300-c"
-          },
-          "amount": 2833100
-        },
-        {
-          "player": 18570,
-          "from": {
-            "id": 14074484,
-            "name": "wilamalel",
-            "icon": "https://lh3.googleusercontent.com/a/ACg8ocJGUZto0NCjv5HnKiftjGqQiwQNQWQjyPJpfYbDxfcaNvZWgg=s300-c"
-          },
-          "amount": 1599100
-        },
-        {
-          "player": 24732,
-          "from": {
-            "id": 8068427,
-            "name": "Albertini",
-            "icon": "i/u/8068427.png"
-          },
-          "amount": 2364400
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1789967278,
-      "content": [
-        {
-          "player": 10158,
-          "to": {
-            "id": 8068427,
-            "name": "Albertini",
-            "icon": "i/u/8068427.png"
-          },
-          "amount": 2370010,
-          "bids": [
-            {
-              "user": {
-                "id": 8068002,
-                "name": "Soulands Rangers",
-                "icon": "i/u/8068002.png?v=69"
-              },
-              "amount": 2370000
-            }
-          ]
-        },
-        {
-          "player": 42395,
-          "to": {
-            "id": 8070044,
-            "name": "CA CABA JUNIORS",
-            "icon": "i/u/8070044.png?v=6"
-          },
-          "amount": 789000,
-          "bids": [
-            {
-              "user": {
-                "id": 148051,
-                "name": "Zaza Pachulia",
-                "icon": "i/u/148051.png?v=98"
-              },
-              "amount": 779380
-            },
-            {
-              "user": {
-                "id": 14072078,
-                "name": "TL*LI",
-                "icon": "i/u/14072078.png"
-              },
-              "amount": 760000
-            }
-          ]
-        },
-        {
-          "player": 17056,
-          "to": {
-            "id": 8068002,
-            "name": "Soulands Rangers",
-            "icon": "i/u/8068002.png?v=69"
-          },
-          "amount": 2188000,
-          "bids": [
-            {
-              "user": {
-                "id": 14074484,
-                "name": "wilamalel",
-                "icon": "https://lh3.googleusercontent.com/a/ACg8ocJGUZto0NCjv5HnKiftjGqQiwQNQWQjyPJpfYbDxfcaNvZWgg=s300-c"
-              },
-              "amount": 2140000
-            },
-            {
-              "user": {
-                "id": 6541195,
-                "name": "🦊",
-                "icon": "i/u/6541195.png?v=17"
-              },
-              "amount": 2102000
-            }
-          ]
-        },
-        {
-          "player": 1952,
-          "to": {
-            "id": 14065964,
-            "name": "JanBox",
-            "icon": "i/u/14065964.png?v=16"
-          },
-          "amount": 6298215,
-          "bids": [
-            {
-              "user": {
-                "id": 6541195,
-                "name": "🦊",
-                "icon": "i/u/6541195.png?v=17"
-              },
-              "amount": 6081255
-            },
-            {
-              "user": {
-                "id": 14069874,
-                "name": "Pzaera",
-                "icon": "https://lh3.googleusercontent.com/a/AATXAJz2ePB0TU5NOTU2lUZ5nrRljJXEZjrTw8hYCiH1=s300-c"
-              },
-              "amount": 5920000
-            },
-            {
-              "user": {
-                "id": 11521196,
-                "name": "Hufflepuff 🍋",
-                "icon": "i/u/11521196.png?v=57"
-              },
-              "amount": 5896009
-            },
-            {
-              "user": {
-                "id": 8070044,
-                "name": "CA CABA JUNIORS",
-                "icon": "i/u/8070044.png?v=6"
-              },
-              "amount": 5890000
-            },
-            {
-              "user": {
-                "id": 14094028,
-                "name": "Estem caputs",
-                "icon": "i/u/12736123.png"
-              },
-              "amount": 5850300
-            },
-            {
-              "user": {
-                "id": 8068002,
-                "name": "Soulands Rangers",
-                "icon": "i/u/8068002.png?v=69"
-              },
-              "amount": 5780000
-            },
-            {
-              "user": {
-                "id": 8068427,
-                "name": "Albertini",
-                "icon": "i/u/8068427.png"
-              },
-              "amount": 5620000
-            },
-            {
-              "user": {
-                "id": 12697101,
-                "name": "INDOMABLE FC",
-                "icon": "i/u/11757390.png"
-              },
-              "amount": 5620000
-            }
-          ]
-        },
-        {
-          "player": 42390,
-          "to": {
-            "id": 6541195,
-            "name": "🦊",
-            "icon": "i/u/6541195.png?v=17"
-          },
-          "amount": 1012000,
-          "bids": [
-            {
-              "user": {
-                "id": 14072078,
-                "name": "TL*LI",
-                "icon": "i/u/14072078.png"
-              },
-              "amount": 1010000
-            }
-          ]
-        },
-        {
-          "player": 30123,
-          "to": {
-            "id": 14065964,
-            "name": "JanBox",
-            "icon": "i/u/14065964.png?v=16"
-          },
-          "amount": 3898215,
-          "bids": [
-            {
-              "user": {
-                "id": 14075911,
-                "name": "Gapoles Balompié",
-                "icon": "i/u/11414918.png"
-              },
-              "amount": 3789898
-            },
-            {
-              "user": {
-                "id": 8068002,
-                "name": "Soulands Rangers",
-                "icon": "i/u/8068002.png?v=69"
-              },
-              "amount": 3666000
-            },
-            {
-              "user": {
-                "id": 11521196,
-                "name": "Hufflepuff 🍋",
-                "icon": "i/u/11521196.png?v=57"
-              },
-              "amount": 3595090
-            },
-            {
-              "user": {
-                "id": 8070044,
-                "name": "CA CABA JUNIORS",
-                "icon": "i/u/8070044.png?v=6"
-              },
-              "amount": 3459000
-            },
-            {
-              "user": {
-                "id": 12697101,
-                "name": "INDOMABLE FC",
-                "icon": "i/u/11757390.png"
-              },
-              "amount": 3320000
-            }
-          ]
-        },
-        {
-          "player": 30802,
-          "to": {
-            "id": 12697101,
-            "name": "INDOMABLE FC",
-            "icon": "i/u/11757390.png"
-          },
-          "amount": 490000
-        },
-        {
-          "player": 15464,
-          "to": {
-            "id": 8068002,
-            "name": "Soulands Rangers",
-            "icon": "i/u/8068002.png?v=69"
-          },
-          "amount": 630000
-        }
-      ]
     }
   ],
   "leagueEnBas": {
@@ -14854,7 +14593,7 @@
       {
         "id": 43282,
         "buyPrice": 3801255,
-        "clause": 0,
+        "clause": 4560000,
         "invested": 0,
         "buyDate": 1789707812
       }
@@ -14888,7 +14627,7 @@
         "playerID": 43282,
         "price": 4560000,
         "type": "sale",
-        "until": 1790148117
+        "until": 1790354143
       }
     ]
   },
@@ -16057,21 +15796,6 @@
           "amount": 2784600
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1789884246,
-      "content": [
-        {
-          "player": 30502,
-          "from": {
-            "id": 14001588,
-            "name": "Txapi17",
-            "icon": "i/u/11555657.png"
-          },
-          "amount": 3510900
-        }
-      ]
     }
   ],
   "laliga": {
@@ -16934,9 +16658,9 @@
       "matchDate": "2026-10-17T12:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.5847609690049037,
-      "drawProb": 0.1617873928711578,
-      "loseProb": 0.2534516381239384,
+      "winProb": 0.5912065272103668,
+      "drawProb": 0.161916021866623,
+      "loseProb": 0.24687745092301028,
       "over25Prob": 0.7751937984496123,
       "isHome": false,
       "opponent": "Real Betis",
@@ -17006,9 +16730,9 @@
       "matchDate": "2026-10-16T19:00:00Z"
     },
     "Real Betis": {
-      "winProb": 0.2534516381239384,
-      "drawProb": 0.1617873928711578,
-      "loseProb": 0.5847609690049037,
+      "winProb": 0.24687745092301028,
+      "drawProb": 0.161916021866623,
+      "loseProb": 0.5912065272103668,
       "over25Prob": 0.7751937984496123,
       "isHome": true,
       "opponent": "Barcelona",
@@ -17062,6 +16786,70 @@
   },
   "news": [
     {
+      "title": "TOP Defensas que debes fichar en este parón de selecciones",
+      "link": "https://www.jornadaperfecta.com/blog/chollos-defensas-paron-septiembre-26/",
+      "date": "Wed, 23 Sep 2026 19:00:38 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Abde Rebbach entrena en la vuelta al trabajo del Alavés",
+      "link": "https://www.jornadaperfecta.com/blog/abde-rebbach-estado-alaves-j8/",
+      "date": "Wed, 23 Sep 2026 18:34:58 +0000",
+      "img": "https://cdn.biwenger.com/i/t/91.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Amatucci, duda para la jornada 8 por molestias en el aductor",
+      "link": "https://www.jornadaperfecta.com/blog/amatucci-estado-deportivo-j8/",
+      "date": "Wed, 23 Sep 2026 17:18:49 +0000",
+      "img": "https://cdn.biwenger.com/i/t/6.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Aubameyang sufre una lesión en el menisco y pasará por quirófano: Tiempo de baja",
+      "link": "https://www.jornadaperfecta.com/blog/aubameyang-lesion-menisco-deportivo/",
+      "date": "Wed, 23 Sep 2026 16:48:48 +0000",
+      "img": "https://cdn.biwenger.com/i/t/6.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Barrios y Sorloth, ausentes en el primer entrenamiento del Atleti",
+      "link": "https://www.jornadaperfecta.com/blog/barrios-sorloth-entrenamiento-atleti/",
+      "date": "Wed, 23 Sep 2026 16:33:16 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Luka Sucic rinde bien con la Real Sociedad, ¿fichar?",
+      "link": "https://www.jornadaperfecta.com/blog/luka-sucic-real-sociedad-fantasy/",
+      "date": "Wed, 23 Sep 2026 16:00:26 +0000",
+      "img": "https://cdn.biwenger.com/i/t/13.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Codere revienta el mercado con una Maxicuota a 6.00 para el Inglaterra vs España &#8211; Apuesta 10€ y gana 60€",
+      "link": "https://www.jornadaperfecta.com/blog/codere-maxicuota-inglaterra-vs-espana/",
+      "date": "Wed, 23 Sep 2026 16:00:06 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/09/codere-maxicuota-inglaterra-vs-espana-300x100.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Amatucci, de nuevo al margen en el entrenamiento",
+      "link": "https://www.jornadaperfecta.com/blog/aubameyang-amatucci-estado-deportivo-j8/",
+      "date": "Wed, 23 Sep 2026 15:46:33 +0000",
+      "img": "https://cdn.biwenger.com/i/t/6.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Calero sigue con el grupo, ¿será titular tras el parón?",
       "link": "https://www.jornadaperfecta.com/blog/calero-vuelta-lesion-costillas-malaga/",
       "date": "Wed, 23 Sep 2026 15:06:11 +0000",
@@ -17076,77 +16864,13 @@
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Marc Pubill no acaba el entrenamiento de España, ¿preocupa?",
-      "link": "https://www.jornadaperfecta.com/blog/marc-pubill-entrenamiento-espana/",
-      "date": "Wed, 23 Sep 2026 14:38:49 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "El Valencia CF tiene dos fichas libres y podría fichar",
-      "link": "https://www.jornadaperfecta.com/blog/valencia-fichajes-agentes-libres-braulio/",
-      "date": "Wed, 23 Sep 2026 14:20:08 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Vinicius, la gran decepción del Real Madrid: ¿venta fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/vinicius-analisis-venta-fantasy-real-madrid/",
-      "date": "Wed, 23 Sep 2026 14:00:57 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Isi Palazón vuelve de lesión: ¿lo fichamos en fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/isi-palazon-vuelta-fantasy-rayo/",
-      "date": "Wed, 23 Sep 2026 13:00:46 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Andrés Martín y Eriksson entrenan con el Racing, ¿llegan a la jornada 8?",
-      "link": "https://www.jornadaperfecta.com/blog/andres-martin-y-eriksson-estado-j8/",
-      "date": "Wed, 23 Sep 2026 12:43:22 +0000",
-      "img": "https://cdn.biwenger.com/i/t/812.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Lobete, operado del ligamento cruzado. El Málaga intentará fichar un sustituto",
-      "link": "https://www.jornadaperfecta.com/blog/lobete-operado-ligamento-cruzado/",
-      "date": "Wed, 23 Sep 2026 12:00:44 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Javier Aguirre: Beneficiados y perjudicados fantasy en el Valencia",
-      "link": "https://www.jornadaperfecta.com/blog/javier-aguirre-analisis-fantasy-valencia/",
-      "date": "Wed, 23 Sep 2026 11:30:05 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/09/aguirre-valencia.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Ilias Akhomach pide paso en el Villarreal, ¿chollo fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/ilias-akhomach-chollo-fantasy-villarreal-cf/",
-      "date": "Wed, 23 Sep 2026 11:00:14 +0000",
-      "img": "https://cdn.biwenger.com/i/t/19.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-09-23T15:39:35.646Z",
+    "updatedAt": "2026-09-23T20:45:23.158Z",
     "players": [
       {
         "id": "37428",
