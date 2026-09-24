@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-24T10:37:32.491Z",
+  "updatedAt": "2026-09-24T16:00:25.149Z",
   "players": [
     {
       "id": 11,
@@ -14834,7 +14834,7 @@
       {
         "id": 42610,
         "buyPrice": 3652588,
-        "clause": 8025000,
+        "clause": 0,
         "invested": 0,
         "buyDate": 1788238931
       },
@@ -17031,9 +17031,9 @@
       "matchDate": "2026-10-17T12:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.6221040638055451,
-      "drawProb": 0.20508925180402585,
-      "loseProb": 0.17280668439042918,
+      "winProb": 0.6238013277600197,
+      "drawProb": 0.21760511433489063,
+      "loseProb": 0.15859355790508978,
       "over25Prob": 0.7751937984496123,
       "isHome": false,
       "opponent": "Real Betis",
@@ -17052,7 +17052,7 @@
       "winProb": 0.7154720838124441,
       "drawProb": 0.19526425620714621,
       "loseProb": 0.0892636599804097,
-      "over25Prob": 0.7092198581560284,
+      "over25Prob": 0.7194244604316548,
       "isHome": true,
       "opponent": "Sevilla",
       "matchDate": "2026-10-18T19:00:00Z"
@@ -17103,27 +17103,27 @@
       "matchDate": "2026-10-16T19:00:00Z"
     },
     "Real Betis": {
-      "winProb": 0.17280668439042918,
-      "drawProb": 0.20508925180402585,
-      "loseProb": 0.6221040638055451,
+      "winProb": 0.15859355790508978,
+      "drawProb": 0.21760511433489063,
+      "loseProb": 0.6238013277600197,
       "over25Prob": 0.7751937984496123,
       "isHome": true,
       "opponent": "Barcelona",
       "matchDate": "2026-10-17T16:30:00Z"
     },
     "CA Osasuna": {
-      "winProb": 0.5004353800731982,
-      "drawProb": 0.28048000653070104,
-      "loseProb": 0.2190846133961006,
+      "winProb": 0.5181352247351283,
+      "drawProb": 0.2748369452942855,
+      "loseProb": 0.20702782997058622,
       "over25Prob": 0.5813953488372093,
       "isHome": true,
       "opponent": "Real Racing Club de Santander",
       "matchDate": "2026-10-18T12:00:00Z"
     },
     "Real Racing Club de Santander": {
-      "winProb": 0.2190846133961006,
-      "drawProb": 0.28048000653070104,
-      "loseProb": 0.5004353800731982,
+      "winProb": 0.20702782997058622,
+      "drawProb": 0.2748369452942855,
+      "loseProb": 0.5181352247351283,
       "over25Prob": 0.5813953488372093,
       "isHome": false,
       "opponent": "CA Osasuna",
@@ -17151,7 +17151,7 @@
       "winProb": 0.0892636599804097,
       "drawProb": 0.19526425620714621,
       "loseProb": 0.7154720838124441,
-      "over25Prob": 0.7092198581560284,
+      "over25Prob": 0.7194244604316548,
       "isHome": false,
       "opponent": "Real Madrid",
       "matchDate": "2026-10-18T19:00:00Z"
@@ -17159,10 +17159,66 @@
   },
   "news": [
     {
+      "title": "Otra baja en el Dépor: Zakaria también deberá pasar por quirófano",
+      "link": "https://www.jornadaperfecta.com/blog/zakaria-eddahchouri-lesion-deportivo/",
+      "date": "Thu, 24 Sep 2026 15:02:29 +0000",
+      "img": "https://cdn.biwenger.com/i/t/6.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Aitor Fernández se gana la titularidad en la portería de Osasuna: ¿chollo fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/aitor-fernandez-chollo-fantasy-portero-osasuna/",
+      "date": "Thu, 24 Sep 2026 15:00:46 +0000",
+      "img": "https://cdn.biwenger.com/i/t/93.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Yeremay, ¿principal beneficiado fantasy de la lesión de Aubameyang?",
+      "link": "https://www.jornadaperfecta.com/blog/yeremay-recomendacion-fantasy-deportivo/",
+      "date": "Thu, 24 Sep 2026 13:00:54 +0000",
+      "img": "https://cdn.biwenger.com/i/t/6.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Aubameyang, operado con éxito del menisco: Tiempo de baja",
+      "link": "https://www.jornadaperfecta.com/blog/aubameyang-lesion-menisco-deportivo/",
+      "date": "Thu, 24 Sep 2026 12:15:48 +0000",
+      "img": "https://cdn.biwenger.com/i/t/6.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Eder Militao ya tiene fecha de vuelta, ¿fichamos ya en fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/eder-militao-fecha-de-vuelta/",
+      "date": "Thu, 24 Sep 2026 12:00:15 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Argentina deja fuera a Juan Foyth durante el parón, ¿nueva lesión?",
+      "link": "https://www.jornadaperfecta.com/blog/juan-foyth-baja-argentina/",
+      "date": "Thu, 24 Sep 2026 11:04:55 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Andrés Martín y Eriksson no entrenan con el Racing, ¿llegan a la jornada 8?",
       "link": "https://www.jornadaperfecta.com/blog/andres-martin-y-eriksson-estado-j8/",
       "date": "Thu, 24 Sep 2026 10:10:22 +0000",
       "img": "https://cdn.biwenger.com/i/t/812.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Konaté abandona la concentración de Francia por un esguince de rodilla",
+      "link": "https://www.jornadaperfecta.com/blog/konate-esguince-rodilla-paron/",
+      "date": "Thu, 24 Sep 2026 09:50:52 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
@@ -17181,69 +17237,13 @@
       "img": "https://cdn.biwenger.com/i/t/87.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Lista de jugadores internacionales de cada equipo de LaLiga",
-      "link": "https://www.jornadaperfecta.com/blog/lista-jugadores-internacionales-laliga/",
-      "date": "Thu, 24 Sep 2026 09:20:06 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Las 10 decepciones fantasy de LaLiga hasta el parón",
-      "link": "https://www.jornadaperfecta.com/blog/decepciones-fantasy-paron-septiembre-26/",
-      "date": "Thu, 24 Sep 2026 09:00:43 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Konaté abandona la concentración de Francia por un esguince de rodilla",
-      "link": "https://www.jornadaperfecta.com/blog/konate-esguince-rodilla-paron/",
-      "date": "Thu, 24 Sep 2026 08:50:52 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Javier Aguirre: Beneficiados y perjudicados fantasy en el Valencia",
-      "link": "https://www.jornadaperfecta.com/blog/javier-aguirre-analisis-fantasy-valencia/",
-      "date": "Thu, 24 Sep 2026 08:30:05 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/09/aguirre-valencia.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Once Ideal fantasy de las primeras jornadas de LaLiga",
-      "link": "https://www.jornadaperfecta.com/blog/once-ideal-fantasy-paron-septiembre-26/",
-      "date": "Thu, 24 Sep 2026 07:00:18 +0000",
-      "img": "https://cdn.biwenger.com/i/t/91.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "YoSports revienta el mercado con una Superapuesta TOP a cuota 5.00 a que España vence a Inglaterra",
-      "link": "https://www.jornadaperfecta.com/blog/superapuesta-top-yosports-inglaterra-espana/",
-      "date": "Thu, 24 Sep 2026 06:00:47 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/09/superapuesta-yosports-5.00.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Cinco noticias fantasy para antes de irte a dormir",
-      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-23-9-26/",
-      "date": "Wed, 23 Sep 2026 21:00:28 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-09-24T10:37:30.008Z",
+    "updatedAt": "2026-09-24T16:00:25.149Z",
     "players": [
       {
         "id": "37428",
