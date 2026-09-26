@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-25T20:49:02.350Z",
+  "updatedAt": "2026-09-26T02:14:39.049Z",
   "players": [
     {
       "id": 11,
@@ -12246,8 +12246,8 @@
           19,
           10
         ],
-        "teamSize": 11,
-        "teamValue": 39520000,
+        "teamSize": 10,
+        "teamValue": 39260000,
         "teamValueInc": 160000,
         "position": 11,
         "positionInc": -1,
@@ -12534,7 +12534,7 @@
       "name": "TL*LI",
       "manager": "TL*LI",
       "points": 235,
-      "value": 39520000,
+      "value": 39260000,
       "trend": 160000,
       "players": []
     },
@@ -12751,6 +12751,21 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1790372977,
+      "content": [
+        {
+          "player": 41262,
+          "from": {
+            "id": 14072078,
+            "name": "TL*LI",
+            "icon": "i/u/14072078.png"
+          },
+          "amount": 266500
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1790317169,
@@ -17063,6 +17078,14 @@
   },
   "news": [
     {
+      "title": "Francia confirma la lesión de Mbappé, que vuelve a Madrid: parte médico",
+      "link": "https://www.jornadaperfecta.com/blog/mbappe-lesion-rodilla-francia/",
+      "date": "Fri, 25 Sep 2026 21:55:35 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "TOP Delanteros que debes fichar en este parón de selecciones",
       "link": "https://www.jornadaperfecta.com/blog/chollos-delanteros-paron-septiembre-26/",
       "date": "Fri, 25 Sep 2026 18:00:39 +0000",
@@ -17133,21 +17156,13 @@
       "img": "https://cdn.biwenger.com/i/t/91.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Análisis fantasy Atlético de Madrid: once ideal, estrella, revelación y recomendables",
-      "link": "https://www.jornadaperfecta.com/blog/analisis-fantasy-atletico-de-madrid-26-27/",
-      "date": "Fri, 25 Sep 2026 11:27:12 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-09-25T20:49:00.005Z",
+    "updatedAt": "2026-09-26T02:14:36.233Z",
     "players": [
       {
         "id": "37428",
