@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-27T15:53:32.339Z",
+  "updatedAt": "2026-09-27T20:31:09.127Z",
   "players": [
     {
       "id": 11,
@@ -12741,7 +12741,14 @@
         "buyDate": 1790226152
       }
     ],
-    "market": []
+    "market": [
+      {
+        "playerID": 43316,
+        "price": 1190000,
+        "type": "sale",
+        "until": 1790709235
+      }
+    ]
   },
   "boardTomaquet": [
     {
@@ -14611,7 +14618,7 @@
       {
         "id": 30477,
         "buyPrice": 18253666,
-        "clause": 28740000,
+        "clause": 28830000,
         "invested": 0,
         "buyDate": 1788671091
       },
@@ -14661,9 +14668,9 @@
     "market": [
       {
         "playerID": 30477,
-        "price": 28740000,
+        "price": 28830000,
         "type": "sale",
-        "until": 1790579421
+        "until": 1790711211
       },
       {
         "playerID": 42610,
@@ -17018,6 +17025,30 @@
   },
   "news": [
     {
+      "title": "Análisis fantasy Getafe: once ideal, estrella, revelación y recomendables",
+      "link": "https://www.jornadaperfecta.com/blog/analisis-fantasy-getafe-26-27/",
+      "date": "Sun, 27 Sep 2026 18:15:46 +0000",
+      "img": "https://cdn.biwenger.com/i/t/8.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Análisis fantasy Athletic: once ideal, estrella, revelación y recomendables",
+      "link": "https://www.jornadaperfecta.com/blog/analisis-fantasy-athletic-26-27/",
+      "date": "Sun, 27 Sep 2026 17:00:13 +0000",
+      "img": "https://cdn.biwenger.com/i/t/1.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Eric García abandona la concentración de España",
+      "link": "https://www.jornadaperfecta.com/blog/eric-garcia-baja-inglaterra-espana/",
+      "date": "Sun, 27 Sep 2026 16:40:47 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Análisis fantasy Villarreal: once ideal, estrella, revelación y recomendables",
       "link": "https://www.jornadaperfecta.com/blog/analisis-fantasy-villarreal-26-27/",
       "date": "Sun, 27 Sep 2026 14:30:43 +0000",
@@ -17030,6 +17061,14 @@
       "link": "https://www.jornadaperfecta.com/blog/sivera-paron-zamora-fantasy-alaves/",
       "date": "Sun, 27 Sep 2026 13:00:39 +0000",
       "img": "https://cdn.biwenger.com/i/t/91.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Se confirma la lesión de Kylian Mbappé: parte médico y tiempo de baja",
+      "link": "https://www.jornadaperfecta.com/blog/mbappe-hiperextension-rodilla/",
+      "date": "Sun, 27 Sep 2026 11:22:24 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
@@ -17064,45 +17103,13 @@
       "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Luis de la Fuente aclara el estado de Eric García",
-      "link": "https://www.jornadaperfecta.com/blog/eric-garcia-baja-inglaterra-espana/",
-      "date": "Sun, 27 Sep 2026 09:04:47 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Se confirma la lesión de Kylian Mbappé: parte médico y tiempo de baja",
-      "link": "https://www.jornadaperfecta.com/blog/mbappe-hiperextension-rodilla/",
-      "date": "Sat, 26 Sep 2026 17:22:24 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Mal momento de Calatrava en el Espanyol, ¿venta fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/calatrava-rcd-espanyol-venta-fantasy/",
-      "date": "Sat, 26 Sep 2026 17:00:51 +0000",
-      "img": "https://cdn.biwenger.com/i/t/7.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Javi Hernández abandona la concentración de España Sub-21 por molestias",
-      "link": "https://www.jornadaperfecta.com/blog/javi-hernandez-baja-sub-21-paron/",
-      "date": "Sat, 26 Sep 2026 16:15:20 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-09-27T15:53:30.153Z",
+    "updatedAt": "2026-09-27T20:31:07.380Z",
     "players": [
       {
         "id": "37428",
