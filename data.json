@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-28T12:09:44.448Z",
+  "updatedAt": "2026-09-28T22:40:56.357Z",
   "players": [
     {
       "id": 11,
@@ -7356,28 +7356,6 @@
       "clausula": null
     },
     {
-      "id": 35316,
-      "slug": "corberan",
-      "name": "Corberán",
-      "position": 5,
-      "price": 420000,
-      "points": 1,
-      "trend": 0,
-      "playedHome": 3,
-      "playedAway": 2,
-      "teamName": "",
-      "teamId": null,
-      "status": "ok",
-      "jForm": [
-        0,
-        0,
-        0,
-        0,
-        1
-      ],
-      "clausula": null
-    },
-    {
       "id": 35344,
       "slug": "tajon-buchanan",
       "name": "Buchanan",
@@ -12266,9 +12244,9 @@
           10,
           1
         ],
-        "teamSize": 17,
-        "teamValue": 30580000,
-        "teamValueInc": -180000,
+        "teamSize": 18,
+        "teamValue": 31670000,
+        "teamValueInc": -190000,
         "lastTrophy": {
           "type": "league",
           "position": 2,
@@ -12289,9 +12267,9 @@
           17,
           3
         ],
-        "teamSize": 11,
-        "teamValue": 27890000,
-        "teamValueInc": 30000,
+        "teamSize": 10,
+        "teamValue": 24610000,
+        "teamValueInc": 80000,
         "position": 13,
         "positionInc": 4,
         "role": ""
@@ -12370,9 +12348,9 @@
           4,
           5
         ],
-        "teamSize": 12,
-        "teamValue": 49930000,
-        "teamValueInc": 440000,
+        "teamSize": 11,
+        "teamValue": 48840000,
+        "teamValueInc": 450000,
         "position": 17,
         "positionInc": -3,
         "role": ""
@@ -12543,8 +12521,8 @@
       "name": "LeMola Team",
       "manager": "LeMola Team",
       "points": 233,
-      "value": 30580000,
-      "trend": -180000,
+      "value": 31670000,
+      "trend": -190000,
       "players": []
     },
     {
@@ -12552,8 +12530,8 @@
       "name": "Hufflepuff 🍋",
       "manager": "Hufflepuff 🍋",
       "points": 230,
-      "value": 27890000,
-      "trend": 30000,
+      "value": 24610000,
+      "trend": 80000,
       "players": []
     },
     {
@@ -12588,8 +12566,8 @@
       "name": "JanBox",
       "manager": "JanBox",
       "points": 210,
-      "value": 49930000,
-      "trend": 440000,
+      "value": 48840000,
+      "trend": 450000,
       "players": []
     },
     {
@@ -12770,6 +12748,41 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1790632675,
+      "content": [
+        {
+          "player": 29661,
+          "from": {
+            "id": 11521196,
+            "name": "Hufflepuff 🍋",
+            "icon": "i/u/11521196.png?v=57"
+          },
+          "amount": 3490200
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1790614092,
+      "content": [
+        {
+          "player": 18382,
+          "from": {
+            "id": 14065964,
+            "name": "JanBox",
+            "icon": "i/u/14065964.png?v=16"
+          },
+          "to": {
+            "id": 6552586,
+            "name": "LeMola Team",
+            "icon": "i/u/6552586.png"
+          },
+          "amount": 1403000
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1790582138,
@@ -14013,27 +14026,6 @@
           "amount": 14290600
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1790230758,
-      "content": [
-        {
-          "player": 41419,
-          "from": {
-            "id": 8070044,
-            "name": "CA CABA JUNIORS",
-            "icon": "i/u/8070044.png?v=6"
-          },
-          "to": {
-            "id": 14072078,
-            "name": "TL*LI",
-            "icon": "i/u/14072078.png"
-          },
-          "amount": 1500000,
-          "type": "clause"
-        }
-      ]
     }
   ],
   "leagueEnBas": {
@@ -14634,7 +14626,7 @@
     "balance": -5488650,
     "lineup": {
       "type": "3-5-2",
-      "date": 1790593677,
+      "date": 1790627547,
       "playersID": [
         43282,
         37739,
@@ -17025,9 +17017,9 @@
       "matchDate": "2026-10-19T19:00:00Z"
     },
     "Athletic Bilbao": {
-      "winProb": 0.4552278600434801,
-      "drawProb": 0.27901062389761677,
-      "loseProb": 0.26576151605890314,
+      "winProb": 0.4574638844301766,
+      "drawProb": 0.2782236490101659,
+      "loseProb": 0.2643124665596576,
       "over25Prob": 0.4926108374384237,
       "isHome": false,
       "opponent": "Valencia",
@@ -17133,27 +17125,27 @@
       "matchDate": "2026-10-17T16:30:00Z"
     },
     "CA Osasuna": {
-      "winProb": 0.5181352247351283,
-      "drawProb": 0.2748369452942855,
-      "loseProb": 0.20702782997058622,
+      "winProb": 0.5181788598645091,
+      "drawProb": 0.27249060734254354,
+      "loseProb": 0.20933053279294736,
       "over25Prob": 0.5813953488372093,
       "isHome": true,
       "opponent": "Real Racing Club de Santander",
       "matchDate": "2026-10-18T12:00:00Z"
     },
     "Real Racing Club de Santander": {
-      "winProb": 0.20702782997058622,
-      "drawProb": 0.2748369452942855,
-      "loseProb": 0.5181352247351283,
+      "winProb": 0.20933053279294736,
+      "drawProb": 0.27249060734254354,
+      "loseProb": 0.5181788598645091,
       "over25Prob": 0.5813953488372093,
       "isHome": false,
       "opponent": "CA Osasuna",
       "matchDate": "2026-10-18T12:00:00Z"
     },
     "Valencia": {
-      "winProb": 0.26576151605890314,
-      "drawProb": 0.27901062389761677,
-      "loseProb": 0.4552278600434801,
+      "winProb": 0.2643124665596576,
+      "drawProb": 0.2782236490101659,
+      "loseProb": 0.4574638844301766,
       "over25Prob": 0.4926108374384237,
       "isHome": true,
       "opponent": "Athletic Bilbao",
@@ -17180,82 +17172,82 @@
   },
   "news": [
     {
-      "title": "Eder Militao da un paso más y entrena con el grupo, ¿fichamos en fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/eder-militao-fecha-de-vuelta/",
-      "date": "Mon, 28 Sep 2026 12:00:15 +0000",
+      "title": "Cinco noticias fantasy para antes de irte a dormir",
+      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-28-9-26/",
+      "date": "Mon, 28 Sep 2026 21:00:15 +0000",
       "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "España vs Croacia: cuotas y favoritos en 888Sport",
-      "link": "https://www.jornadaperfecta.com/blog/888sport-espana-croacia-cuotas/",
-      "date": "Mon, 28 Sep 2026 11:45:07 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/09/888sport-espana-vs-croacia.webp",
+      "title": "Tres novedades en el entrenamiento de Osasuna",
+      "link": "https://www.jornadaperfecta.com/blog/rosier-aimar-moi-gomez-recuperacion-osasuna/",
+      "date": "Mon, 28 Sep 2026 19:00:50 +0000",
+      "img": "https://cdn.biwenger.com/i/t/93.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Los sancionados de LaLiga para la jornada 8",
-      "link": "https://www.jornadaperfecta.com/blog/sancionados-laliga-j8-26-27/",
-      "date": "Mon, 28 Sep 2026 10:30:07 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "title": "TOP Porteros que debes fichar en este parón de selecciones",
+      "link": "https://www.jornadaperfecta.com/blog/chollos-fantasy-porteros-paron-septiembre-26/",
+      "date": "Mon, 28 Sep 2026 18:09:14 +0000",
+      "img": "https://cdn.biwenger.com/i/t/91.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Aarón Mayol seguirá siendo importante en el Valencia: ¿chollo fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/mayol-chollo-fantasy-valencia-cf/",
-      "date": "Mon, 28 Sep 2026 09:10:45 +0000",
-      "img": "https://cdn.biwenger.com/i/t/18.png",
+      "title": "Hasta 10€ de devolución en Freebet con MARCAapuestas para el España vs Croacia",
+      "link": "https://www.jornadaperfecta.com/blog/marcaapuestas-espana-vs-croacia-seguro/",
+      "date": "Mon, 28 Sep 2026 18:00:29 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/09/marcaapuestas-espana-vs-croacia.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Nelson Deossa, ¿bomba fantasy o pompa de jabón?",
-      "link": "https://www.jornadaperfecta.com/blog/nelson-deossa-analisis-fantasy-26-27/",
-      "date": "Mon, 28 Sep 2026 09:00:04 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/09/isco-real-betis-fantasy.webp",
+      "title": "Análisis fantasy Osasuna: once ideal, estrella, revelación y recomendables",
+      "link": "https://www.jornadaperfecta.com/blog/analisis-fantasy-osasuna-26-27/",
+      "date": "Mon, 28 Sep 2026 17:30:33 +0000",
+      "img": "https://cdn.biwenger.com/i/t/93.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Nteka y Balliu vuelven a Madrid por molestias, ¿qué tienen?",
-      "link": "https://www.jornadaperfecta.com/blog/nteka-y-balliu-estado-j8/",
-      "date": "Mon, 28 Sep 2026 08:50:06 +0000",
+      "title": "Análisis fantasy Rayo Vallecano: once ideal, estrella, revelación y recomendables",
+      "link": "https://www.jornadaperfecta.com/blog/analisis-fantasy-rayo-vallecano-26-27/",
+      "date": "Mon, 28 Sep 2026 16:15:09 +0000",
       "img": "https://cdn.biwenger.com/i/t/70.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Análisis fantasy Getafe: once ideal, estrella, revelación y recomendables",
-      "link": "https://www.jornadaperfecta.com/blog/analisis-fantasy-getafe-26-27/",
-      "date": "Sun, 27 Sep 2026 18:15:46 +0000",
-      "img": "https://cdn.biwenger.com/i/t/8.png",
+      "title": "Eder Militao da un paso más y entrena con el grupo, ¿fichamos en fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/eder-militao-fecha-de-vuelta/",
+      "date": "Mon, 28 Sep 2026 15:22:15 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Análisis fantasy Athletic: once ideal, estrella, revelación y recomendables",
-      "link": "https://www.jornadaperfecta.com/blog/analisis-fantasy-athletic-26-27/",
-      "date": "Sun, 27 Sep 2026 17:00:13 +0000",
-      "img": "https://cdn.biwenger.com/i/t/1.png",
+      "title": "Javier Aguirre, en su presentación: »No se le puede decir que no al Valencia»",
+      "link": "https://www.jornadaperfecta.com/blog/javier-aguirre-rueda-de-prensa-presentacion-valencia/",
+      "date": "Mon, 28 Sep 2026 15:19:44 +0000",
+      "img": "https://cdn.biwenger.com/i/t/18.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Eric García abandona la concentración de España",
-      "link": "https://www.jornadaperfecta.com/blog/eric-garcia-baja-inglaterra-espana/",
-      "date": "Sun, 27 Sep 2026 16:40:47 +0000",
-      "img": "",
+      "title": "Supercuota YoSports a 5.00 para España vs Croacia",
+      "link": "https://www.jornadaperfecta.com/blog/supercuota-yosports-espana-vs-croacia/",
+      "date": "Mon, 28 Sep 2026 15:09:46 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/09/yosports-espana-vs-croacia.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Análisis fantasy Villarreal: once ideal, estrella, revelación y recomendables",
-      "link": "https://www.jornadaperfecta.com/blog/analisis-fantasy-villarreal-26-27/",
-      "date": "Sun, 27 Sep 2026 14:30:43 +0000",
-      "img": "https://cdn.biwenger.com/i/t/19.png",
+      "title": "Rodrygo y Mendy empiezan a tocar balón, ¿cuándo vuelven?",
+      "link": "https://www.jornadaperfecta.com/blog/rodrygo-mendy-recuperacion-real-madrid/",
+      "date": "Mon, 28 Sep 2026 14:47:58 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -17264,7 +17256,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-09-28T12:09:41.708Z",
+    "updatedAt": "2026-09-28T22:40:53.997Z",
     "players": [
       {
         "id": "37428",
