@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-29T11:41:06.557Z",
+  "updatedAt": "2026-09-29T17:07:38.376Z",
   "players": [
     {
       "id": 11,
@@ -12052,7 +12052,7 @@
         "lastTrophy": {
           "type": "league",
           "position": -1,
-          "season": "Temporada 2025/2026"
+          "season": "2025/2026 season"
         },
         "position": 2,
         "role": ""
@@ -12132,7 +12132,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "Temporada 2025/2026"
+          "season": "2025/2026 season"
         },
         "position": 6,
         "positionInc": 1
@@ -12250,7 +12250,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 2,
-          "season": "Temporada 2025/2026"
+          "season": "2025/2026 season"
         },
         "position": 12,
         "positionInc": -1
@@ -12311,7 +12311,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 1,
-          "season": "Temporada 2025/2026"
+          "season": "2025/2026 season"
         },
         "position": 15,
         "positionInc": 1,
@@ -12373,7 +12373,7 @@
         "lastTrophy": {
           "type": "league",
           "position": -1,
-          "season": "Temporada 2023/2024"
+          "season": "2023/2024 season"
         },
         "position": 18,
         "role": ""
@@ -12390,9 +12390,9 @@
           18,
           14
         ],
-        "teamSize": 16,
-        "teamValue": 28040000,
-        "teamValueInc": -90000,
+        "teamSize": 14,
+        "teamValue": 26780000,
+        "teamValueInc": -80000,
         "position": 19,
         "role": ""
       },
@@ -12584,8 +12584,8 @@
       "name": "Morankus FC",
       "manager": "Morankus FC",
       "points": 189,
-      "value": 28040000,
-      "trend": -90000,
+      "value": 26780000,
+      "trend": -80000,
       "players": []
     },
     {
@@ -12605,7 +12605,7 @@
     "balance": 17031721,
     "lineup": {
       "type": "4-5-1",
-      "date": 1790660632,
+      "date": 1790693220,
       "playersID": [
         9887,
         36538,
@@ -12755,6 +12755,30 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1790690316,
+      "content": [
+        {
+          "player": 2169,
+          "from": {
+            "id": 11520975,
+            "name": "Morankus FC",
+            "icon": "i/u/11520975.png?v=81"
+          },
+          "amount": 1137800
+        },
+        {
+          "player": 41421,
+          "from": {
+            "id": 11520975,
+            "name": "Morankus FC",
+            "icon": "i/u/11520975.png?v=81"
+          },
+          "amount": 175400
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1790680922,
@@ -14066,21 +14090,6 @@
             "icon": "i/u/8068002.png?v=69"
           },
           "amount": 161200
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1790313198,
-      "content": [
-        {
-          "player": 41087,
-          "from": {
-            "id": 14074484,
-            "name": "wilamalel",
-            "icon": "https://lh3.googleusercontent.com/a/ACg8ocJGUZto0NCjv5HnKiftjGqQiwQNQWQjyPJpfYbDxfcaNvZWgg=s300-c"
-          },
-          "amount": 5039000
         }
       ]
     }
@@ -17320,82 +17329,82 @@
   },
   "news": [
     {
-      "title": "Ceballos, baja en el entrenamiento del Betis, junto a Bartra y Ruibal",
-      "link": "https://www.jornadaperfecta.com/blog/ceballos-estado-j8/",
-      "date": "Tue, 29 Sep 2026 10:23:24 +0000",
-      "img": "https://cdn.biwenger.com/i/t/87.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Diakhaby sigue haciendo parte con el grupo; Tárrega y Copete pisan césped",
-      "link": "https://www.jornadaperfecta.com/blog/diakhaby-recuperacion-paron-valencia/",
-      "date": "Tue, 29 Sep 2026 10:20:44 +0000",
-      "img": "https://cdn.biwenger.com/i/t/18.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Foyth entrena con el Villarreal, que sigue a la espera de Comesaña",
-      "link": "https://www.jornadaperfecta.com/blog/foyth-recuperacion-j8/",
-      "date": "Tue, 29 Sep 2026 09:44:54 +0000",
-      "img": "https://cdn.biwenger.com/i/t/19.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Sorloth ya tiene fecha de vuelta con el grupo, ¿llega a la J8?",
-      "link": "https://www.jornadaperfecta.com/blog/sorloth-vuelta-j8-laliga/",
-      "date": "Tue, 29 Sep 2026 09:20:52 +0000",
+      "title": "Pablo Barrios entrena con el grupo, ¿listo para la Jornada 8?",
+      "link": "https://www.jornadaperfecta.com/blog/pablo-barrios-recuperacion-estado-j8-atleti/",
+      "date": "Tue, 29 Sep 2026 17:03:16 +0000",
       "img": "https://cdn.biwenger.com/i/t/2.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Javi Hernández evita una grave lesión, tras ser baja con la Sub-21",
-      "link": "https://www.jornadaperfecta.com/blog/javi-hernandez-baja-sub-21-paron/",
-      "date": "Tue, 29 Sep 2026 09:10:20 +0000",
-      "img": "https://cdn.biwenger.com/i/t/7.png",
+      "title": "Análisis fantasy Celta: once ideal, estrella, revelación y recomendables",
+      "link": "https://www.jornadaperfecta.com/blog/analisis-fantasy-celta-26-27/",
+      "date": "Tue, 29 Sep 2026 16:33:07 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/08/once-celta-guia-equipos-1.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Las 10 decepciones fantasy de LaLiga hasta el parón",
-      "link": "https://www.jornadaperfecta.com/blog/decepciones-fantasy-paron-septiembre-26/",
-      "date": "Tue, 29 Sep 2026 09:00:43 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "title": "Parte médico del Celta: Miguel Román pasará por quirófano",
+      "link": "https://www.jornadaperfecta.com/blog/miguel-roman-lesion-celta-de-vigo/",
+      "date": "Tue, 29 Sep 2026 16:16:23 +0000",
+      "img": "https://cdn.biwenger.com/i/t/5.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Lista de jugadores internacionales de cada equipo de LaLiga",
-      "link": "https://www.jornadaperfecta.com/blog/lista-jugadores-internacionales-laliga/",
-      "date": "Tue, 29 Sep 2026 08:50:06 +0000",
+      "title": "Kike Salas y Rubén Vargas vuelven a entrenar con el grupo",
+      "link": "https://www.jornadaperfecta.com/blog/kike-salas-vargas-vuelta-paron/",
+      "date": "Tue, 29 Sep 2026 16:00:21 +0000",
+      "img": "https://cdn.biwenger.com/i/t/17.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Luis Rioja es baja en los entrenamientos, ¿llega a la Jornada 8?",
+      "link": "https://www.jornadaperfecta.com/blog/luis-rioja-recuperacion-estado-paron-valencia/",
+      "date": "Tue, 29 Sep 2026 15:20:41 +0000",
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Once Ideal fantasy de las primeras jornadas de LaLiga",
-      "link": "https://www.jornadaperfecta.com/blog/once-ideal-fantasy-paron-septiembre-26/",
-      "date": "Tue, 29 Sep 2026 07:30:18 +0000",
-      "img": "https://cdn.biwenger.com/i/t/91.png",
+      "title": "Yuri y Guruzeta vuelven a entrenar con el Athletic",
+      "link": "https://www.jornadaperfecta.com/blog/yuri-y-guruzeta-estado-paron/",
+      "date": "Tue, 29 Sep 2026 14:30:02 +0000",
+      "img": "https://cdn.biwenger.com/i/t/1.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "España vs Croacia: Luckia ofrece un 30% extra en la cuota",
-      "link": "https://www.jornadaperfecta.com/blog/luckia-espana-vs-croacia-nations/",
-      "date": "Tue, 29 Sep 2026 06:00:08 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/09/luckia-espana-vs-croacia.webp",
+      "title": "Sebastián Cáceres regresa a Vigo con problemas musculares",
+      "link": "https://www.jornadaperfecta.com/blog/sebastian-caceres-tiron-muscular-paron-celta/",
+      "date": "Tue, 29 Sep 2026 14:13:41 +0000",
+      "img": "https://cdn.biwenger.com/i/t/5.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Cinco noticias fantasy para antes de irte a dormir",
-      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-28-9-26/",
-      "date": "Mon, 28 Sep 2026 21:00:15 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "title": "Aimar y Moi siguen con el grupo, mientras Rosier lo hace parcialmente",
+      "link": "https://www.jornadaperfecta.com/blog/rosier-aimar-moi-gomez-recuperacion-osasuna/",
+      "date": "Tue, 29 Sep 2026 12:30:50 +0000",
+      "img": "https://cdn.biwenger.com/i/t/93.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "¡Raphinha sustituido al descanso por molestias musculares!",
+      "link": "https://www.jornadaperfecta.com/blog/raphinha-lesion-muslo-brasil/",
+      "date": "Tue, 29 Sep 2026 12:02:37 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Abde vuelve a brillar, ¿cuánto pagamos en fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/abde-recomendacion-fantasy-real-betis/",
+      "date": "Tue, 29 Sep 2026 11:00:00 +0000",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -17404,7 +17413,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-09-29T11:41:04.575Z",
+    "updatedAt": "2026-09-29T17:07:36.044Z",
     "players": [
       {
         "id": "37428",
