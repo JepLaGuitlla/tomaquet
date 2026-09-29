@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-29T17:07:38.376Z",
+  "updatedAt": "2026-09-29T21:34:44.327Z",
   "players": [
     {
       "id": 11,
@@ -4346,7 +4346,8 @@
         null,
         null,
         null,
-        1
+        1,
+        null
       ],
       "clausula": null
     },
@@ -9027,6 +9028,28 @@
       "clausula": null
     },
     {
+      "id": 39813,
+      "slug": "hugo-burcio",
+      "name": "Hugo Burcio",
+      "position": 3,
+      "price": 870000,
+      "points": 7,
+      "trend": 0,
+      "playedHome": 2,
+      "playedAway": 0,
+      "teamName": "Celta",
+      "teamId": 5,
+      "status": "ok",
+      "jForm": [
+        2,
+        5,
+        null,
+        null,
+        null
+      ],
+      "clausula": null
+    },
+    {
       "id": 39874,
       "slug": "lucas-cepeda",
       "name": "Cepeda",
@@ -11798,6 +11821,7 @@
         4,
         4,
         null,
+        null,
         null
       ],
       "clausula": null
@@ -13012,7 +13036,7 @@
           "player": 1676,
           "to": {
             "id": 11521196,
-            "name": "Hufflepuff 🍋",
+            "name": "Hufflepuff ��",
             "icon": "i/u/11521196.png?v=57"
           },
           "amount": 4180009,
@@ -14077,21 +14101,6 @@
           "type": "clause"
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1790314083,
-      "content": [
-        {
-          "player": 10650,
-          "from": {
-            "id": 8068002,
-            "name": "Soulands Rangers",
-            "icon": "i/u/8068002.png?v=69"
-          },
-          "amount": 161200
-        }
-      ]
     }
   ],
   "leagueEnBas": {
@@ -14397,9 +14406,9 @@
           10,
           16
         ],
-        "teamSize": 15,
-        "teamValue": 46620000,
-        "teamValueInc": -60000,
+        "teamSize": 14,
+        "teamValue": 45460000,
+        "teamValueInc": -40000,
         "position": 15,
         "positionInc": 1,
         "role": ""
@@ -14635,8 +14644,8 @@
       "name": "Petraques",
       "manager": "Petraques",
       "points": 195,
-      "value": 46620000,
-      "trend": -60000,
+      "value": 45460000,
+      "trend": -40000,
       "players": []
     },
     {
@@ -14815,6 +14824,21 @@
     ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1790703243,
+      "content": [
+        {
+          "player": 24979,
+          "from": {
+            "id": 7817228,
+            "name": "Petraques",
+            "icon": "i/u/7817228.png"
+          },
+          "amount": 1223200
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1790668775,
@@ -16300,45 +16324,6 @@
           "type": "clause"
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1789995921,
-      "content": [
-        {
-          "player": 20102,
-          "from": {
-            "id": 6586257,
-            "name": "Aquest any pago jo !!",
-            "icon": "i/u/6586257.png"
-          },
-          "amount": 3955500
-        },
-        {
-          "player": 42444,
-          "from": {
-            "id": 6586257,
-            "name": "Aquest any pago jo !!",
-            "icon": "i/u/6586257.png"
-          },
-          "amount": 4890500
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1789986522,
-      "content": [
-        {
-          "player": 32629,
-          "from": {
-            "id": 6579280,
-            "name": "BSG Schreibmaschinenwerk Dresden",
-            "icon": "i/u/6579280.png?v=85"
-          },
-          "amount": 3515500
-        }
-      ]
     }
   ],
   "laliga": {
@@ -17329,6 +17314,38 @@
   },
   "news": [
     {
+      "title": "Cinco noticias fantasy para antes de irte a dormir",
+      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-29-9-26/",
+      "date": "Tue, 29 Sep 2026 21:00:31 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Raphinha tranquiliza con su estado, tras ser sustituido por molestias",
+      "link": "https://www.jornadaperfecta.com/blog/raphinha-lesion-muslo-brasil/",
+      "date": "Tue, 29 Sep 2026 19:02:37 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Jornada Perfecta se une a Fantasy Clan: así vamos a jugar (y competir) todos juntos",
+      "link": "https://www.jornadaperfecta.com/blog/fantasy-clan/",
+      "date": "Tue, 29 Sep 2026 19:00:59 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/09/Instagram-1080x1080-Cards.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "TOP Defensas que debes fichar en este parón de selecciones",
+      "link": "https://www.jornadaperfecta.com/blog/chollos-defensas-paron-septiembre-26/",
+      "date": "Tue, 29 Sep 2026 17:35:38 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Pablo Barrios entrena con el grupo, ¿listo para la Jornada 8?",
       "link": "https://www.jornadaperfecta.com/blog/pablo-barrios-recuperacion-estado-j8-atleti/",
       "date": "Tue, 29 Sep 2026 17:03:16 +0000",
@@ -17375,45 +17392,13 @@
       "img": "https://cdn.biwenger.com/i/t/1.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Sebastián Cáceres regresa a Vigo con problemas musculares",
-      "link": "https://www.jornadaperfecta.com/blog/sebastian-caceres-tiron-muscular-paron-celta/",
-      "date": "Tue, 29 Sep 2026 14:13:41 +0000",
-      "img": "https://cdn.biwenger.com/i/t/5.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Aimar y Moi siguen con el grupo, mientras Rosier lo hace parcialmente",
-      "link": "https://www.jornadaperfecta.com/blog/rosier-aimar-moi-gomez-recuperacion-osasuna/",
-      "date": "Tue, 29 Sep 2026 12:30:50 +0000",
-      "img": "https://cdn.biwenger.com/i/t/93.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "¡Raphinha sustituido al descanso por molestias musculares!",
-      "link": "https://www.jornadaperfecta.com/blog/raphinha-lesion-muslo-brasil/",
-      "date": "Tue, 29 Sep 2026 12:02:37 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Abde vuelve a brillar, ¿cuánto pagamos en fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/abde-recomendacion-fantasy-real-betis/",
-      "date": "Tue, 29 Sep 2026 11:00:00 +0000",
-      "img": "https://cdn.biwenger.com/i/t/87.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-09-29T17:07:36.044Z",
+    "updatedAt": "2026-09-29T21:34:42.016Z",
     "players": [
       {
         "id": "37428",
