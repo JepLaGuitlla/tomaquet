@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-30T11:27:43.357Z",
+  "updatedAt": "2026-09-30T17:05:36.580Z",
   "players": [
     {
       "id": 11,
@@ -6324,7 +6324,7 @@
     {
       "id": 32135,
       "slug": "hugo-alvarez",
-      "name": "Hugo ��lvarez",
+      "name": "Hugo Álvarez",
       "position": 3,
       "price": 1270000,
       "points": 21,
@@ -12106,9 +12106,9 @@
           3,
           9
         ],
-        "teamSize": 14,
-        "teamValue": 41250000,
-        "teamValueInc": 190000,
+        "teamSize": 13,
+        "teamValue": 40680000,
+        "teamValueInc": 210000,
         "position": 4,
         "positionInc": 1,
         "role": ""
@@ -12243,9 +12243,9 @@
           19,
           10
         ],
-        "teamSize": 14,
-        "teamValue": 40030000,
-        "teamValueInc": 10000,
+        "teamSize": 16,
+        "teamValue": 41680000,
+        "teamValueInc": 0,
         "position": 11,
         "positionInc": -1,
         "role": ""
@@ -12386,9 +12386,9 @@
           14,
           19
         ],
-        "teamSize": 15,
-        "teamValue": 29200000,
-        "teamValueInc": -90000,
+        "teamSize": 14,
+        "teamValue": 28120000,
+        "teamValueInc": -100000,
         "lastTrophy": {
           "type": "league",
           "position": -1,
@@ -12468,8 +12468,8 @@
       "name": "CA CABA JUNIORS",
       "manager": "CA CABA JUNIORS",
       "points": 273,
-      "value": 41250000,
-      "trend": 190000,
+      "value": 40680000,
+      "trend": 210000,
       "players": []
     },
     {
@@ -12531,8 +12531,8 @@
       "name": "TL*LI",
       "manager": "TL*LI",
       "points": 235,
-      "value": 40030000,
-      "trend": 10000,
+      "value": 41680000,
+      "trend": 0,
       "players": []
     },
     {
@@ -12594,8 +12594,8 @@
       "name": "Pzaera",
       "manager": "Pzaera",
       "points": 201,
-      "value": 29200000,
-      "trend": -90000,
+      "value": 28120000,
+      "trend": -100000,
       "players": []
     },
     {
@@ -12774,19 +12774,74 @@
       },
       {
         "playerID": 42390,
-        "price": 930000,
-        "type": "sale",
-        "until": 1790757862
+        "price": 1000000,
+        "type": "auction",
+        "until": 1790799616
       },
       {
         "playerID": 42757,
         "price": 230000,
         "type": "sale",
-        "until": 1790757871
+        "until": 1790941540
       }
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1790773138,
+      "content": [
+        {
+          "player": 38143,
+          "from": {
+            "id": 14069874,
+            "name": "Pzaera",
+            "icon": "https://lh3.googleusercontent.com/a/AATXAJz2ePB0TU5NOTU2lUZ5nrRljJXEZjrTw8hYCiH1=s300-c"
+          },
+          "to": {
+            "id": 8070044,
+            "name": "CA CABA JUNIORS",
+            "icon": "i/u/8070044.png?v=6"
+          },
+          "amount": 1860150,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1790773120,
+      "content": [
+        {
+          "player": 15719,
+          "from": {
+            "id": 8070044,
+            "name": "CA CABA JUNIORS",
+            "icon": "i/u/8070044.png?v=6"
+          },
+          "to": {
+            "id": 14072078,
+            "name": "TL*LI",
+            "icon": "i/u/14072078.png"
+          },
+          "amount": 1820000
+        },
+        {
+          "player": 12596,
+          "from": {
+            "id": 8070044,
+            "name": "CA CABA JUNIORS",
+            "icon": "i/u/8070044.png?v=6"
+          },
+          "to": {
+            "id": 14072078,
+            "name": "TL*LI",
+            "icon": "i/u/14072078.png"
+          },
+          "amount": 330000
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1790754247,
@@ -14217,21 +14272,6 @@
             "icon": "i/u/14065964.png?v=16"
           },
           "amount": 3382400
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1790402756,
-      "content": [
-        {
-          "player": 4070,
-          "from": {
-            "id": 14072078,
-            "name": "TL*LI",
-            "icon": "i/u/14072078.png"
-          },
-          "amount": 1104400
         }
       ]
     }
@@ -17598,18 +17638,18 @@
       "matchDate": "2026-10-17T16:30:00Z"
     },
     "CA Osasuna": {
-      "winProb": 0.5181788598645091,
-      "drawProb": 0.27249060734254354,
-      "loseProb": 0.20933053279294736,
+      "winProb": 0.5002388100436681,
+      "drawProb": 0.2787254366812227,
+      "loseProb": 0.22103575327510916,
       "over25Prob": 0.5813953488372093,
       "isHome": true,
       "opponent": "Real Racing Club de Santander",
       "matchDate": "2026-10-18T12:00:00Z"
     },
     "Real Racing Club de Santander": {
-      "winProb": 0.20933053279294736,
-      "drawProb": 0.27249060734254354,
-      "loseProb": 0.5181788598645091,
+      "winProb": 0.22103575327510916,
+      "drawProb": 0.2787254366812227,
+      "loseProb": 0.5002388100436681,
       "over25Prob": 0.5813953488372093,
       "isHome": false,
       "opponent": "CA Osasuna",
@@ -17645,65 +17685,65 @@
   },
   "news": [
     {
-      "title": "Ruibal comienza a entrenar con el grupo, ¿cuándo vuelve?",
-      "link": "https://www.jornadaperfecta.com/blog/ruibal-vuelta-lesion-rodilla/",
-      "date": "Wed, 30 Sep 2026 10:00:04 +0000",
-      "img": "https://cdn.biwenger.com/i/t/87.png",
+      "title": "Yuri y Guruzeta entrenan en una sesión con varias bajas",
+      "link": "https://www.jornadaperfecta.com/blog/yuri-y-guruzeta-estado-paron/",
+      "date": "Wed, 30 Sep 2026 15:20:02 +0000",
+      "img": "https://cdn.biwenger.com/i/t/1.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Pablo Barrios repite con el grupo, ¿listo para la Jornada 8?",
-      "link": "https://www.jornadaperfecta.com/blog/pablo-barrios-recuperacion-estado-j8-atleti/",
-      "date": "Wed, 30 Sep 2026 09:50:16 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "title": "Pablo Ramón y Arana, bajas en el entreno del Racing",
+      "link": "https://www.jornadaperfecta.com/blog/pablo-ramon-arana-estado-entreno-racing/",
+      "date": "Wed, 30 Sep 2026 15:11:28 +0000",
+      "img": "https://cdn.biwenger.com/i/t/812.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Luis Rioja empezará un nuevo tratamiento, ¿llega a la Jornada 8?",
-      "link": "https://www.jornadaperfecta.com/blog/luis-rioja-recuperacion-estado-paron-valencia/",
-      "date": "Wed, 30 Sep 2026 09:40:41 +0000",
+      "title": "Jornada Perfecta se une a Fantasy Clan: así vamos a jugar (y competir) todos juntos",
+      "link": "https://www.jornadaperfecta.com/blog/fantasy-clan/",
+      "date": "Wed, 30 Sep 2026 14:58:59 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/09/Instagram-1080x1080-Cards.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Cuatro ausencias importantes en el entrenamiento del Deportivo",
+      "link": "https://www.jornadaperfecta.com/blog/amatucci-luismi-cruz-altimira-riki-estado-deportivo/",
+      "date": "Wed, 30 Sep 2026 14:55:14 +0000",
+      "img": "https://cdn.biwenger.com/i/t/6.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Asencio vuelve a caer: Parte médico oficial",
+      "link": "https://www.jornadaperfecta.com/blog/asencio-parte-medico-tiempo-de-baja-real-madrid/",
+      "date": "Wed, 30 Sep 2026 14:26:20 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Luis García Plaza no garantiza que Rubén Vargas siga en enero",
+      "link": "https://www.jornadaperfecta.com/blog/ruben-vargas-enero-sevilla/",
+      "date": "Wed, 30 Sep 2026 12:45:09 +0000",
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Ceballos entrena con normalidad, tras gestionar cargas",
-      "link": "https://www.jornadaperfecta.com/blog/ceballos-estado-j8/",
-      "date": "Wed, 30 Sep 2026 09:23:24 +0000",
-      "img": "https://cdn.biwenger.com/i/t/87.png",
+      "title": "Rosier completa el entrenamiento grupal, junto a Aimar y Moi",
+      "link": "https://www.jornadaperfecta.com/blog/rosier-aimar-moi-gomez-recuperacion-osasuna/",
+      "date": "Wed, 30 Sep 2026 12:20:50 +0000",
+      "img": "https://cdn.biwenger.com/i/t/93.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Diakhaby completa el entrenamiento con el grupo, ¿llega a la jornada 8?",
-      "link": "https://www.jornadaperfecta.com/blog/diakhaby-recuperacion-paron-valencia/",
-      "date": "Wed, 30 Sep 2026 09:20:44 +0000",
-      "img": "https://cdn.biwenger.com/i/t/18.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Grandes subidas y bajadas del mercado fantasy para la Jornada 8",
-      "link": "https://www.jornadaperfecta.com/blog/mercado-fantasy-j8-26-27/",
-      "date": "Wed, 30 Sep 2026 09:00:01 +0000",
-      "img": "https://cdn.biwenger.com/i/t/19.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "De la Fuente desvela unas molestias de Grimaldo durante un rondo",
+      "title": "Grimaldo regresa con el Atleti: parte médico y tiempo de baja",
       "link": "https://www.jornadaperfecta.com/blog/grimaldo-molestias-espana/",
-      "date": "Wed, 30 Sep 2026 08:07:01 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "El calendario Champions y su impacto en La Liga",
-      "link": "https://www.jornadaperfecta.com/blog/champions-impacto-alineaciones-laliga/",
-      "date": "Wed, 30 Sep 2026 07:53:27 +0000",
+      "date": "Wed, 30 Sep 2026 12:00:01 +0000",
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
@@ -17711,16 +17751,16 @@
     {
       "title": "Raphinha regresa a Barcelona por un edema muscular, ¿llega a la jornada 8?",
       "link": "https://www.jornadaperfecta.com/blog/raphinha-lesion-muslo-brasil/",
-      "date": "Wed, 30 Sep 2026 07:20:37 +0000",
+      "date": "Wed, 30 Sep 2026 11:50:37 +0000",
       "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Diez parches ideales para completar vuestro once fantasy",
-      "link": "https://www.jornadaperfecta.com/blog/parches-fantasy-recomendacion-laliga/",
-      "date": "Wed, 30 Sep 2026 07:00:21 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/09/roy-revivo-cabrera.webp",
+      "title": "Foyth repite entrenamiento con el grupo y Comesaña sigue al margen",
+      "link": "https://www.jornadaperfecta.com/blog/foyth-recuperacion-j8/",
+      "date": "Wed, 30 Sep 2026 11:10:54 +0000",
+      "img": "https://cdn.biwenger.com/i/t/19.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -17729,7 +17769,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-09-30T11:27:41.057Z",
+    "updatedAt": "2026-09-30T17:05:33.105Z",
     "players": [
       {
         "id": "37428",
