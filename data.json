@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-30T17:05:36.580Z",
+  "updatedAt": "2026-09-30T21:35:10.221Z",
   "players": [
     {
       "id": 11,
@@ -12088,9 +12088,9 @@
           5,
           12
         ],
-        "teamSize": 17,
-        "teamValue": 48740000,
-        "teamValueInc": 180000,
+        "teamSize": 16,
+        "teamValue": 47420000,
+        "teamValueInc": 200000,
         "position": 3,
         "role": ""
       },
@@ -12168,9 +12168,9 @@
           8,
           8
         ],
-        "teamSize": 13,
-        "teamValue": 50650000,
-        "teamValueInc": 220000,
+        "teamSize": 12,
+        "teamValue": 39820000,
+        "teamValueInc": 130000,
         "position": 7,
         "positionInc": -1,
         "role": ""
@@ -12243,8 +12243,8 @@
           19,
           10
         ],
-        "teamSize": 16,
-        "teamValue": 41680000,
+        "teamSize": 15,
+        "teamValue": 36520000,
         "teamValueInc": 0,
         "position": 11,
         "positionInc": -1,
@@ -12286,8 +12286,8 @@
           17,
           3
         ],
-        "teamSize": 11,
-        "teamValue": 28190000,
+        "teamSize": 12,
+        "teamValue": 33350000,
         "teamValueInc": 50000,
         "position": 13,
         "positionInc": 4,
@@ -12367,9 +12367,9 @@
           4,
           5
         ],
-        "teamSize": 10,
-        "teamValue": 33110000,
-        "teamValueInc": 170000,
+        "teamSize": 11,
+        "teamValue": 43940000,
+        "teamValueInc": 260000,
         "position": 17,
         "positionInc": -3,
         "role": ""
@@ -12459,8 +12459,8 @@
       "name": "Soulands Rangers",
       "manager": "Soulands Rangers",
       "points": 278,
-      "value": 48740000,
-      "trend": 180000,
+      "value": 47420000,
+      "trend": 200000,
       "players": []
     },
     {
@@ -12495,8 +12495,8 @@
       "name": "Burnigol FC",
       "manager": "Burnigol FC",
       "points": 264,
-      "value": 50650000,
-      "trend": 220000,
+      "value": 39820000,
+      "trend": 130000,
       "players": []
     },
     {
@@ -12531,7 +12531,7 @@
       "name": "TL*LI",
       "manager": "TL*LI",
       "points": 235,
-      "value": 41680000,
+      "value": 36520000,
       "trend": 0,
       "players": []
     },
@@ -12549,7 +12549,7 @@
       "name": "Hufflepuff 🍋",
       "manager": "Hufflepuff 🍋",
       "points": 230,
-      "value": 28190000,
+      "value": 33350000,
       "trend": 50000,
       "players": []
     },
@@ -12585,8 +12585,8 @@
       "name": "JanBox",
       "manager": "JanBox",
       "points": 210,
-      "value": 33110000,
-      "trend": 170000,
+      "value": 43940000,
+      "trend": 260000,
       "players": []
     },
     {
@@ -12773,12 +12773,6 @@
         "until": 1790919376
       },
       {
-        "playerID": 42390,
-        "price": 1000000,
-        "type": "auction",
-        "until": 1790799616
-      },
-      {
         "playerID": 42757,
         "price": 230000,
         "type": "sale",
@@ -12787,6 +12781,73 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1790799364,
+      "content": [
+        {
+          "player": 8555,
+          "from": {
+            "id": 14094189,
+            "name": "Burnigol FC",
+            "icon": "i/u/14094189.png"
+          },
+          "to": {
+            "id": 14065964,
+            "name": "JanBox",
+            "icon": "i/u/14065964.png?v=16"
+          },
+          "amount": 12400000,
+          "type": "auction"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1790798177,
+      "content": [
+        {
+          "player": 34111,
+          "from": {
+            "id": 14072078,
+            "name": "TL*LI",
+            "icon": "i/u/14072078.png"
+          },
+          "to": {
+            "id": 11521196,
+            "name": "Hufflepuff 🍋",
+            "icon": "i/u/11521196.png?v=57"
+          },
+          "amount": 5799099,
+          "type": "auction",
+          "bids": [
+            {
+              "user": {
+                "id": 6541195,
+                "name": "🦊",
+                "icon": "i/u/6541195.png?v=17"
+              },
+              "amount": 5460000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1790795253,
+      "content": [
+        {
+          "player": 40010,
+          "from": {
+            "id": 8068002,
+            "name": "Soulands Rangers",
+            "icon": "i/u/8068002.png?v=69"
+          },
+          "amount": 1387700
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1790773138,
@@ -14236,42 +14297,6 @@
             "icon": "i/u/8068002.png?v=69"
           },
           "amount": 1380900
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1790412697,
-      "content": [
-        {
-          "player": 43261,
-          "from": {
-            "id": 8070044,
-            "name": "CA CABA JUNIORS",
-            "icon": "i/u/8070044.png?v=6"
-          },
-          "to": {
-            "id": 14065964,
-            "name": "JanBox",
-            "icon": "i/u/14065964.png?v=16"
-          },
-          "amount": 4309873,
-          "type": "clause"
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1790410870,
-      "content": [
-        {
-          "player": 30123,
-          "from": {
-            "id": 14065964,
-            "name": "JanBox",
-            "icon": "i/u/14065964.png?v=16"
-          },
-          "amount": 3382400
         }
       ]
     }
@@ -17685,6 +17710,38 @@
   },
   "news": [
     {
+      "title": "Cinco noticias fantasy para antes de irte a dormir",
+      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-30-9-26/",
+      "date": "Wed, 30 Sep 2026 21:00:41 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Jornada Perfecta se une a Fantasy Clan: así vamos a jugar (y competir) todos juntos",
+      "link": "https://www.jornadaperfecta.com/blog/fantasy-clan/",
+      "date": "Wed, 30 Sep 2026 18:31:59 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/09/Instagram-1080x1080-Cards.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "TOP Centrocampistas que debes fichar en este parón de selecciones",
+      "link": "https://www.jornadaperfecta.com/blog/chollos-centrocampistas-paron-septiembre-26/",
+      "date": "Wed, 30 Sep 2026 18:30:15 +0000",
+      "img": "https://cdn.biwenger.com/i/t/19.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Análisis Fantasy Espanyol: once ideal, estrella, revelación y recomendables",
+      "link": "https://www.jornadaperfecta.com/blog/analisis-fantasy-espanyol-26-27/",
+      "date": "Wed, 30 Sep 2026 17:05:16 +0000",
+      "img": "https://cdn.biwenger.com/i/t/7.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Yuri y Guruzeta entrenan en una sesión con varias bajas",
       "link": "https://www.jornadaperfecta.com/blog/yuri-y-guruzeta-estado-paron/",
       "date": "Wed, 30 Sep 2026 15:20:02 +0000",
@@ -17697,14 +17754,6 @@
       "link": "https://www.jornadaperfecta.com/blog/pablo-ramon-arana-estado-entreno-racing/",
       "date": "Wed, 30 Sep 2026 15:11:28 +0000",
       "img": "https://cdn.biwenger.com/i/t/812.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Jornada Perfecta se une a Fantasy Clan: así vamos a jugar (y competir) todos juntos",
-      "link": "https://www.jornadaperfecta.com/blog/fantasy-clan/",
-      "date": "Wed, 30 Sep 2026 14:58:59 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/09/Instagram-1080x1080-Cards.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
@@ -17739,37 +17788,13 @@
       "img": "https://cdn.biwenger.com/i/t/93.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Grimaldo regresa con el Atleti: parte médico y tiempo de baja",
-      "link": "https://www.jornadaperfecta.com/blog/grimaldo-molestias-espana/",
-      "date": "Wed, 30 Sep 2026 12:00:01 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Raphinha regresa a Barcelona por un edema muscular, ¿llega a la jornada 8?",
-      "link": "https://www.jornadaperfecta.com/blog/raphinha-lesion-muslo-brasil/",
-      "date": "Wed, 30 Sep 2026 11:50:37 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Foyth repite entrenamiento con el grupo y Comesaña sigue al margen",
-      "link": "https://www.jornadaperfecta.com/blog/foyth-recuperacion-j8/",
-      "date": "Wed, 30 Sep 2026 11:10:54 +0000",
-      "img": "https://cdn.biwenger.com/i/t/19.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-09-30T17:05:33.105Z",
+    "updatedAt": "2026-09-30T21:35:10.006Z",
     "players": [
       {
         "id": "37428",
