@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-01T17:39:52.104Z",
+  "updatedAt": "2026-10-01T22:03:59.773Z",
   "players": [
     {
       "id": 11,
@@ -12146,8 +12146,8 @@
           8,
           8
         ],
-        "teamSize": 13,
-        "teamValue": 48120000,
+        "teamSize": 12,
+        "teamValue": 31950000,
         "teamValueInc": 90000,
         "position": 7,
         "positionInc": -1,
@@ -12283,9 +12283,9 @@
           9,
           18
         ],
-        "teamSize": 14,
-        "teamValue": 37590000,
-        "teamValueInc": 80000,
+        "teamSize": 13,
+        "teamValue": 33200000,
+        "teamValueInc": 130000,
         "position": 14,
         "positionInc": -2,
         "role": ""
@@ -12473,7 +12473,7 @@
       "name": "Burnigol FC",
       "manager": "Burnigol FC",
       "points": 264,
-      "value": 48120000,
+      "value": 31950000,
       "trend": 90000,
       "players": []
     },
@@ -12536,8 +12536,8 @@
       "name": "Tata Martini",
       "manager": "Tata Martini",
       "points": 229,
-      "value": 37590000,
-      "trend": 80000,
+      "value": 33200000,
+      "trend": 130000,
       "players": []
     },
     {
@@ -12746,6 +12746,36 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1790886859,
+      "content": [
+        {
+          "player": 5220,
+          "from": {
+            "id": 12713493,
+            "name": "Tata Martini",
+            "icon": "i/u/12713493.png?v=71"
+          },
+          "amount": 4635700
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1790879820,
+      "content": [
+        {
+          "player": 19441,
+          "from": {
+            "id": 14094189,
+            "name": "Burnigol FC",
+            "icon": "i/u/14094189.png"
+          },
+          "amount": 16853100
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1790853999,
@@ -13799,45 +13829,6 @@
             "icon": "i/u/6552586.png"
           },
           "amount": 1403000
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1790582138,
-      "content": [
-        {
-          "player": 43316,
-          "from": {
-            "id": 6541195,
-            "name": "🦊",
-            "icon": "i/u/6541195.png?v=17"
-          },
-          "amount": 1171100
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1790574246,
-      "content": [
-        {
-          "player": 38449,
-          "from": {
-            "id": 14072078,
-            "name": "TL*LI",
-            "icon": "i/u/14072078.png"
-          },
-          "amount": 241100
-        },
-        {
-          "player": 37715,
-          "from": {
-            "id": 14072078,
-            "name": "TL*LI",
-            "icon": "i/u/14072078.png"
-          },
-          "amount": 154400
         }
       ]
     }
@@ -17085,6 +17076,46 @@
   },
   "news": [
     {
+      "title": "Cinco noticias fantasy para antes de irte a dormir",
+      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-1-10-26/",
+      "date": "Thu, 01 Oct 2026 21:00:54 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Frenkie de Jong ya tiene fecha de vuelta, según Mundo Deportivo",
+      "link": "https://www.jornadaperfecta.com/blog/frenkie-de-jong-regreso-recuperacion-barcelona/",
+      "date": "Thu, 01 Oct 2026 20:01:37 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "David Otorbi se somete a pruebas por problemas en el pubis",
+      "link": "https://www.jornadaperfecta.com/blog/david-otorbi-pubis-valencia-cf/",
+      "date": "Thu, 01 Oct 2026 18:51:15 +0000",
+      "img": "https://cdn.biwenger.com/i/t/18.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Jornada Perfecta se une a Fantasy Clan: así vamos a jugar (y competir) todos juntos",
+      "link": "https://www.jornadaperfecta.com/blog/fantasy-clan/",
+      "date": "Thu, 01 Oct 2026 18:04:59 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/09/Instagram-1080x1080-Cards.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "TOP Delanteros que debes fichar en este parón de selecciones",
+      "link": "https://www.jornadaperfecta.com/blog/chollos-delanteros-paron-septiembre-26/",
+      "date": "Thu, 01 Oct 2026 18:00:39 +0000",
+      "img": "https://cdn.biwenger.com/i/t/19.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Kike Salas y Rubén Vargas, no convocados para el Trofeo Antonio Puerta",
       "link": "https://www.jornadaperfecta.com/blog/kike-salas-baja-trofeo-antonio-puerta/",
       "date": "Thu, 01 Oct 2026 17:29:28 +0000",
@@ -17123,53 +17154,13 @@
       "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Mbappé tiene complicado jugar ante el Villarreal, según Diario As",
-      "link": "https://www.jornadaperfecta.com/blog/mbappe-estado-real-madrid-j8/",
-      "date": "Thu, 01 Oct 2026 14:26:35 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Javi Puado recibe el alta médica, el fichaje fantasy más esperado del RCD Espanyol",
-      "link": "https://www.jornadaperfecta.com/blog/javi-puado-vuelta-fantasy-espanyol/",
-      "date": "Thu, 01 Oct 2026 14:20:57 +0000",
-      "img": "https://cdn.biwenger.com/i/t/7.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Jornada Perfecta se une a Fantasy Clan: así vamos a jugar (y competir) todos juntos",
-      "link": "https://www.jornadaperfecta.com/blog/fantasy-clan/",
-      "date": "Thu, 01 Oct 2026 14:15:59 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/09/Instagram-1080x1080-Cards.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Xavi Espart se desinfla en fantasy, ¿vender o mantener?",
-      "link": "https://www.jornadaperfecta.com/blog/xavi-espart-decision-fantasy-barcelona/",
-      "date": "Thu, 01 Oct 2026 14:10:48 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Cáceres sufre una pubalgia: Parte médico oficial del Celta",
-      "link": "https://www.jornadaperfecta.com/blog/caceres-pubalgia-celta/",
-      "date": "Thu, 01 Oct 2026 14:05:23 +0000",
-      "img": "https://cdn.biwenger.com/i/t/5.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-10-01T17:39:49.434Z",
+    "updatedAt": "2026-10-01T22:03:57.115Z",
     "players": [
       {
         "id": "37428",
