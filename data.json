@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-30T21:35:10.221Z",
+  "updatedAt": "2026-10-01T02:44:18.136Z",
   "players": [
     {
       "id": 11,
@@ -2619,7 +2619,7 @@
     {
       "id": 14615,
       "slug": "claudio-giraldez",
-      "name": "Claudio Giráldez",
+      "name": "Claudio Gir��ldez",
       "position": 5,
       "price": 900000,
       "points": 7,
@@ -9661,28 +9661,6 @@
       "clausula": null
     },
     {
-      "id": 41090,
-      "slug": "gijselhart",
-      "name": "Gijselhart",
-      "position": 3,
-      "price": 670000,
-      "points": 2,
-      "trend": 0,
-      "playedHome": 1,
-      "playedAway": 0,
-      "teamName": "",
-      "teamId": null,
-      "status": "ok",
-      "jForm": [
-        null,
-        null,
-        2,
-        null,
-        null
-      ],
-      "clausula": null
-    },
-    {
       "id": 41091,
       "slug": "carlos-lopez",
       "name": "Carlos López",
@@ -14959,7 +14937,7 @@
       {
         "id": 29184,
         "buyPrice": 7000122,
-        "clause": 7500000,
+        "clause": 9720000,
         "invested": 0,
         "buyDate": 1790571818
       },
@@ -15001,7 +14979,7 @@
       {
         "id": 42610,
         "buyPrice": 3652588,
-        "clause": 0,
+        "clause": 9060000,
         "invested": 0,
         "buyDate": 1788238931
       },
@@ -15022,15 +15000,21 @@
       },
       {
         "playerID": 29184,
-        "price": 7500000,
+        "price": 9720000,
         "type": "sale",
-        "until": 1790921852
+        "until": 1790979643
       },
       {
         "playerID": 30477,
         "price": 29025000,
         "type": "sale",
         "until": 1790919487
+      },
+      {
+        "playerID": 42610,
+        "price": 9060000,
+        "type": "sale",
+        "until": 1790979615
       }
     ]
   },
@@ -17794,7 +17778,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-09-30T21:35:10.006Z",
+    "updatedAt": "2026-10-01T02:44:15.782Z",
     "players": [
       {
         "id": "37428",
