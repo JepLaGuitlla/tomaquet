@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-02T11:27:29.726Z",
+  "updatedAt": "2026-10-02T16:54:51.165Z",
   "players": [
     {
       "id": 11,
@@ -12406,9 +12406,9 @@
           20,
           17
         ],
-        "teamSize": 18,
-        "teamValue": 36190000,
-        "teamValueInc": 0,
+        "teamSize": 16,
+        "teamValue": 35100000,
+        "teamValueInc": 30000,
         "position": 20
       }
     ]
@@ -12590,8 +12590,8 @@
       "name": "The Black Team",
       "manager": "The Black Team",
       "points": 160,
-      "value": 36190000,
-      "trend": 0,
+      "value": 35100000,
+      "trend": 30000,
       "players": []
     }
   ],
@@ -12753,6 +12753,30 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1790950348,
+      "content": [
+        {
+          "player": 38960,
+          "from": {
+            "id": 3928497,
+            "name": "The Black Team",
+            "icon": "i/u/3928497.png"
+          },
+          "amount": 706800
+        },
+        {
+          "player": 15289,
+          "from": {
+            "id": 3928497,
+            "name": "The Black Team",
+            "icon": "i/u/3928497.png"
+          },
+          "amount": 398300
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1790933832,
@@ -13685,30 +13709,6 @@
             "icon": "i/u/148051.png?v=98"
           },
           "amount": 549700
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1790666731,
-      "content": [
-        {
-          "player": 30141,
-          "from": {
-            "id": 8068002,
-            "name": "Soulands Rangers",
-            "icon": "i/u/8068002.png?v=69"
-          },
-          "amount": 311900
-        },
-        {
-          "player": 1871,
-          "from": {
-            "id": 8068002,
-            "name": "Soulands Rangers",
-            "icon": "i/u/8068002.png?v=69"
-          },
-          "amount": 150700
         }
       ]
     }
@@ -17075,82 +17075,82 @@
   },
   "news": [
     {
-      "title": "Radu, apartado de Rumanía, tras jugar dos partidos lesionado",
-      "link": "https://www.jornadaperfecta.com/blog/radu-lesion-hombro/",
-      "date": "Fri, 02 Oct 2026 11:16:43 +0000",
-      "img": "https://cdn.biwenger.com/i/t/5.png",
+      "title": "Héctor Fort, baja en el amistoso de la Real Sociedad por molestias",
+      "link": "https://www.jornadaperfecta.com/blog/hector-fort-baja-amistoso-real-sociedad/",
+      "date": "Fri, 02 Oct 2026 16:31:21 +0000",
+      "img": "https://cdn.biwenger.com/i/t/13.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Buy Low: Jugadores a bajo precio que pueden explotar en Fantasy",
-      "link": "https://www.jornadaperfecta.com/blog/buy-low-fantasy-jugadores-bajo-precio/",
-      "date": "Fri, 02 Oct 2026 11:00:47 +0000",
+      "title": "Yeremay Hernández, titular en el amistoso del Deportivo",
+      "link": "https://www.jornadaperfecta.com/blog/yeremay-titular-amistoso-deportivo/",
+      "date": "Fri, 02 Oct 2026 16:17:37 +0000",
       "img": "https://cdn.biwenger.com/i/t/6.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Cancelo, en su mejor momento: ¿recomendable en fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/cancelo-recomendacion-fantasy-barcelona/",
-      "date": "Fri, 02 Oct 2026 09:00:10 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "El Rayo Vallecano recupera a tres lesionados en el parón",
-      "link": "https://www.jornadaperfecta.com/blog/isi-recuperados-rayo-vallecano/",
-      "date": "Fri, 02 Oct 2026 08:57:11 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "10€ en Freebets con Kirolbet por el España vs República Checa",
-      "link": "https://www.jornadaperfecta.com/blog/kirolbet-espana-vs-republica-checa/",
-      "date": "Fri, 02 Oct 2026 07:00:50 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/10/kirolbet-espana-vs-republica-checa.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Cinco noticias fantasy para antes de irte a dormir",
-      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-1-10-26/",
-      "date": "Thu, 01 Oct 2026 21:00:54 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Frenkie de Jong ya tiene fecha de vuelta, según Mundo Deportivo",
-      "link": "https://www.jornadaperfecta.com/blog/frenkie-de-jong-regreso-recuperacion-barcelona/",
-      "date": "Thu, 01 Oct 2026 20:01:37 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "David Otorbi se somete a pruebas por problemas en el pubis",
-      "link": "https://www.jornadaperfecta.com/blog/david-otorbi-pubis-valencia-cf/",
-      "date": "Thu, 01 Oct 2026 18:51:15 +0000",
+      "title": "Diego López volverá a pasar por quirófano: malas noticias para el Valencia",
+      "link": "https://www.jornadaperfecta.com/blog/diego-lopez-quirofano-lesion-rodilla-valencia/",
+      "date": "Fri, 02 Oct 2026 15:53:35 +0000",
       "img": "https://cdn.biwenger.com/i/t/18.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "TOP Delanteros que debes fichar en este parón de selecciones",
-      "link": "https://www.jornadaperfecta.com/blog/chollos-delanteros-paron-septiembre-26/",
-      "date": "Thu, 01 Oct 2026 18:00:39 +0000",
-      "img": "https://cdn.biwenger.com/i/t/19.png",
+      "title": "Gorosabel debuta con el Espanyol en un amistoso: ¿lo fichamos?",
+      "link": "https://www.jornadaperfecta.com/blog/gorosabel-debut-amistoso-espanyol/",
+      "date": "Fri, 02 Oct 2026 15:41:16 +0000",
+      "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Kike Salas y Rubén Vargas, no convocados para el Trofeo Antonio Puerta",
-      "link": "https://www.jornadaperfecta.com/blog/kike-salas-baja-trofeo-antonio-puerta/",
-      "date": "Thu, 01 Oct 2026 17:29:28 +0000",
-      "img": "https://cdn.biwenger.com/i/t/17.png",
+      "title": "Raúl García trabaja al margen del grupo en CA Osasuna",
+      "link": "https://www.jornadaperfecta.com/blog/raul-garcia-resfriado-osasuna/",
+      "date": "Fri, 02 Oct 2026 15:23:53 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Aprovecha las cuotas mejoradas de bwin para el Croacia &#8211; Inglaterra",
+      "link": "https://www.jornadaperfecta.com/blog/cuotas-mejoradas-croacia-inglaterra-bwin/",
+      "date": "Fri, 02 Oct 2026 15:00:16 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/10/superpartido-croacia-inglaterra-bwin.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Carlos Espí, convocado por la absoluta por la lesión de Ferran",
+      "link": "https://www.jornadaperfecta.com/blog/carlos-espi-convocatoria-seleccion-absoluta/",
+      "date": "Fri, 02 Oct 2026 14:23:09 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Junior Firpo sufre una lesión con la República Dominicana",
+      "link": "https://www.jornadaperfecta.com/blog/junior-firpo-lesion-betis/",
+      "date": "Fri, 02 Oct 2026 14:09:40 +0000",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "David Otorbi entrena pese a los problemas en el pubis",
+      "link": "https://www.jornadaperfecta.com/blog/david-otorbi-pubis-valencia-cf/",
+      "date": "Fri, 02 Oct 2026 14:02:15 +0000",
+      "img": "https://cdn.biwenger.com/i/t/18.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Revivo abandona la concentración de Israel por molestias",
+      "link": "https://www.jornadaperfecta.com/blog/revivo-lesion-elche-cf/",
+      "date": "Fri, 02 Oct 2026 13:59:02 +0000",
+      "img": "https://cdn.biwenger.com/i/t/75.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -17159,7 +17159,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-10-02T11:27:27.393Z",
+    "updatedAt": "2026-10-02T16:54:48.384Z",
     "players": [
       {
         "id": "37428",
