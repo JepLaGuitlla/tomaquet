@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-01T22:03:59.773Z",
+  "updatedAt": "2026-10-02T02:48:06.991Z",
   "players": [
     {
       "id": 11,
@@ -5422,7 +5422,7 @@
     {
       "id": 27995,
       "slug": "francisco-perez",
-      "name": "Fran Pérez",
+      "name": "Fran P��rez",
       "position": 4,
       "price": 340000,
       "points": 8,
@@ -12183,9 +12183,9 @@
           13,
           20
         ],
-        "teamSize": 13,
-        "teamValue": 34790000,
-        "teamValueInc": 0,
+        "teamSize": 12,
+        "teamValue": 32290000,
+        "teamValueInc": 30000,
         "position": 9,
         "positionInc": 4,
         "role": ""
@@ -12491,8 +12491,8 @@
       "name": "CIGALERU",
       "manager": "CIGALERU",
       "points": 248,
-      "value": 34790000,
-      "trend": 0,
+      "value": 32290000,
+      "trend": 30000,
       "players": []
     },
     {
@@ -12746,6 +12746,21 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1790893193,
+      "content": [
+        {
+          "player": 2480,
+          "from": {
+            "id": 12696899,
+            "name": "CIGALERU",
+            "icon": "i/u/12696899.png"
+          },
+          "amount": 2616900
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1790886859,
@@ -13809,26 +13824,6 @@
             "icon": "i/u/11521196.png?v=57"
           },
           "amount": 3490200
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1790614092,
-      "content": [
-        {
-          "player": 18382,
-          "from": {
-            "id": 14065964,
-            "name": "JanBox",
-            "icon": "i/u/14065964.png?v=16"
-          },
-          "to": {
-            "id": 6552586,
-            "name": "LeMola Team",
-            "icon": "i/u/6552586.png"
-          },
-          "amount": 1403000
         }
       ]
     }
@@ -17011,10 +17006,10 @@
       "matchDate": "2026-10-18T16:30:00Z"
     },
     "Deportivo La Coruña": {
-      "winProb": 0.4553700244930827,
-      "drawProb": 0.27348372160647777,
-      "loseProb": 0.27114625390043956,
-      "over25Prob": 0.5235602094240838,
+      "winProb": 0.4576089863599893,
+      "drawProb": 0.2735134171347063,
+      "loseProb": 0.26887759650530446,
+      "over25Prob": 0.5208333333333334,
       "isHome": true,
       "opponent": "Levante",
       "matchDate": "2026-10-16T19:00:00Z"
@@ -17056,10 +17051,10 @@
       "matchDate": "2026-10-17T19:00:00Z"
     },
     "Levante": {
-      "winProb": 0.27114625390043956,
-      "drawProb": 0.27348372160647777,
-      "loseProb": 0.4553700244930827,
-      "over25Prob": 0.5235602094240838,
+      "winProb": 0.26887759650530446,
+      "drawProb": 0.2735134171347063,
+      "loseProb": 0.4576089863599893,
+      "over25Prob": 0.5208333333333334,
       "isHome": false,
       "opponent": "Deportivo La Coruña",
       "matchDate": "2026-10-16T19:00:00Z"
@@ -17160,7 +17155,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-10-01T22:03:57.115Z",
+    "updatedAt": "2026-10-02T02:48:04.865Z",
     "players": [
       {
         "id": "37428",
