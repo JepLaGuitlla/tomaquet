@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-02T21:29:36.458Z",
+  "updatedAt": "2026-10-03T02:34:22.223Z",
   "players": [
     {
       "id": 11,
@@ -12283,9 +12283,9 @@
           9,
           18
         ],
-        "teamSize": 14,
-        "teamValue": 40230000,
-        "teamValueInc": 50000,
+        "teamSize": 13,
+        "teamValue": 38570000,
+        "teamValueInc": 60000,
         "position": 14,
         "positionInc": -2,
         "role": ""
@@ -12536,8 +12536,8 @@
       "name": "Tata Martini",
       "manager": "Tata Martini",
       "points": 229,
-      "value": 40230000,
-      "trend": 50000,
+      "value": 38570000,
+      "trend": 60000,
       "players": []
     },
     {
@@ -12753,6 +12753,21 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1790983272,
+      "content": [
+        {
+          "player": 1844,
+          "from": {
+            "id": 12713493,
+            "name": "Tata Martini",
+            "icon": "i/u/12713493.png?v=71"
+          },
+          "amount": 1717700
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1790950348,
@@ -13696,21 +13711,6 @@
           ]
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1790677788,
-      "content": [
-        {
-          "player": 43271,
-          "from": {
-            "id": 148051,
-            "name": "Zaza Pachulia",
-            "icon": "i/u/148051.png?v=98"
-          },
-          "amount": 549700
-        }
-      ]
     }
   ],
   "leagueEnBas": {
@@ -14371,7 +14371,7 @@
       {
         "id": 29184,
         "buyPrice": 7000122,
-        "clause": 9720000,
+        "clause": 0,
         "invested": 0,
         "buyDate": 1790571818
       },
@@ -14413,7 +14413,7 @@
       {
         "id": 42610,
         "buyPrice": 3652588,
-        "clause": 9060000,
+        "clause": 0,
         "invested": 0,
         "buyDate": 1788238931
       },
@@ -17159,7 +17159,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-10-02T21:29:34.230Z",
+    "updatedAt": "2026-10-03T02:34:19.778Z",
     "players": [
       {
         "id": "37428",
