@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-03T10:43:36.415Z",
+  "updatedAt": "2026-10-03T15:18:26.679Z",
   "players": [
     {
       "id": 11,
@@ -12123,9 +12123,9 @@
           1,
           7
         ],
-        "teamSize": 16,
-        "teamValue": 37390000,
-        "teamValueInc": -190000,
+        "teamSize": 17,
+        "teamValue": 45560000,
+        "teamValueInc": -230000,
         "lastTrophy": {
           "type": "league",
           "position": 3,
@@ -12146,9 +12146,9 @@
           8,
           8
         ],
-        "teamSize": 14,
-        "teamValue": 44720000,
-        "teamValueInc": 140000,
+        "teamSize": 13,
+        "teamValue": 36550000,
+        "teamValueInc": 180000,
         "position": 7,
         "positionInc": -1,
         "role": ""
@@ -12464,8 +12464,8 @@
       "name": "🦊",
       "manager": "🦊",
       "points": 264,
-      "value": 37390000,
-      "trend": -190000,
+      "value": 45560000,
+      "trend": -230000,
       "players": []
     },
     {
@@ -12473,8 +12473,8 @@
       "name": "Burnigol FC",
       "manager": "Burnigol FC",
       "points": 264,
-      "value": 44720000,
-      "trend": 140000,
+      "value": 36550000,
+      "trend": 180000,
       "players": []
     },
     {
@@ -12599,7 +12599,7 @@
     "teamId": 6541195,
     "name": "🦊",
     "points": 264,
-    "balance": 11132278,
+    "balance": 2962278,
     "lineup": {
       "type": "4-5-1",
       "date": 1790921068,
@@ -12630,6 +12630,13 @@
         "clause": 6301999,
         "invested": 0,
         "buyDate": 1789448651
+      },
+      {
+        "id": 1249,
+        "buyPrice": 8170000,
+        "clause": 12255000,
+        "invested": 0,
+        "buyDate": 1791030138
       },
       {
         "id": 2044,
@@ -12739,6 +12746,18 @@
     ],
     "market": [
       {
+        "playerID": 1249,
+        "price": 8170000,
+        "type": "sale",
+        "until": 1791211924
+      },
+      {
+        "playerID": 2044,
+        "price": 3940000,
+        "type": "sale",
+        "until": 1791197254
+      },
+      {
         "playerID": 42390,
         "price": 890000,
         "type": "sale",
@@ -12747,6 +12766,27 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1791030139,
+      "content": [
+        {
+          "player": 1249,
+          "from": {
+            "id": 14094189,
+            "name": "Burnigol FC",
+            "icon": "i/u/14094189.png"
+          },
+          "to": {
+            "id": 6541195,
+            "name": "🦊",
+            "icon": "i/u/6541195.png?v=17"
+          },
+          "amount": 8170000,
+          "type": "auction"
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1791011402,
@@ -13537,21 +13577,6 @@
           },
           "amount": 2700000,
           "type": "clause"
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1790746561,
-      "content": [
-        {
-          "player": 41264,
-          "from": {
-            "id": 6541195,
-            "name": "🦊",
-            "icon": "i/u/6541195.png?v=17"
-          },
-          "amount": 1086400
         }
       ]
     }
@@ -16943,10 +16968,66 @@
   },
   "news": [
     {
+      "title": "¿Qué jugadores de LaLiga disputan la Copa Asia 2027? Perjudicados y beneficiados en fantasy",
+      "link": "https://www.jornadaperfecta.com/blog/copa-asia-2027/",
+      "date": "Sat, 03 Oct 2026 14:45:40 +0000",
+      "img": "https://cdn.biwenger.com/i/t/13.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Guido Rodríguez no entrena con el Valencia CF, ¿motivo?",
+      "link": "https://www.jornadaperfecta.com/blog/guido-rodriguez-motivo-ausencia-entrenamiento-valencia/",
+      "date": "Sat, 03 Oct 2026 14:11:56 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Manolo media un cambio en la portería del Espanyol, según La Grada",
+      "link": "https://www.jornadaperfecta.com/blog/porteria-espanyol-cambio-fortuno-dmitrovic-j8/",
+      "date": "Sat, 03 Oct 2026 13:58:43 +0000",
+      "img": "https://cdn.biwenger.com/i/t/7.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "José Copete vuelve a entrenar con el grupo tras 7 meses lesionado",
+      "link": "https://www.jornadaperfecta.com/blog/copete-vuelta-lesion-valencia-cf/",
+      "date": "Sat, 03 Oct 2026 12:05:03 +0000",
+      "img": "https://cdn.biwenger.com/i/t/18.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Rubén Vargas y Kike Salas entrenan con el grupo, ¿disponibles?",
+      "link": "https://www.jornadaperfecta.com/blog/ruben-vargas-estado-sevilla-j8/",
+      "date": "Sat, 03 Oct 2026 11:52:36 +0000",
+      "img": "https://cdn.biwenger.com/i/t/17.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Isi Palazón y Nteka, convocados para el amistoso; Pedrosa es baja",
+      "link": "https://www.jornadaperfecta.com/blog/isi-palazon-recuperacion-rayo-vallecano-amistoso/",
+      "date": "Sat, 03 Oct 2026 11:19:34 +0000",
+      "img": "https://cdn.biwenger.com/i/t/70.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Troy Parrott la rompe con Irlanda en el parón: ¿lo fichamos en fantasy?",
       "link": "https://www.jornadaperfecta.com/blog/troy-parrott-recomendacion-fantasy-betis/",
       "date": "Sat, 03 Oct 2026 10:38:54 +0000",
       "img": "https://cdn.biwenger.com/i/t/87.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Las opciones de Kylian Mbappé de jugar ante el Villarreal",
+      "link": "https://www.jornadaperfecta.com/blog/mbappe-estado-real-madrid-j8/",
+      "date": "Sat, 03 Oct 2026 10:21:35 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
@@ -16965,69 +17046,13 @@
       "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Las pruebas descartan una lesión de Raphinha, ¿rotará en la jornada 8?",
-      "link": "https://www.jornadaperfecta.com/blog/raphinha-estado-barcelona-j8/",
-      "date": "Sat, 03 Oct 2026 08:50:20 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Joan García y Eric, disponibles para la jornada 8",
-      "link": "https://www.jornadaperfecta.com/blog/joan-garcia-eric-estado-barcelona-j8/",
-      "date": "Sat, 03 Oct 2026 08:45:41 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Carlos Espí, descartado para el encuentro ante República Checa",
-      "link": "https://www.jornadaperfecta.com/blog/carlos-espi-convocatoria-seleccion-absoluta/",
-      "date": "Sat, 03 Oct 2026 08:31:09 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Análisis fantasy Málaga: once ideal, estrella, revelación y recomendables",
-      "link": "https://www.jornadaperfecta.com/blog/analisis-fantasy-malaga-26-27/",
-      "date": "Sat, 03 Oct 2026 08:30:11 +0000",
-      "img": "https://cdn.biwenger.com/i/t/65.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Análisis fantasy Elche CF: once ideal, estrella, revelación y recomendables",
-      "link": "https://www.jornadaperfecta.com/blog/analisis-fantasy-elche-26-27/",
-      "date": "Sat, 03 Oct 2026 08:00:28 +0000",
-      "img": "https://cdn.biwenger.com/i/t/75.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "La enésima lesión muscular que sufre Marcao",
-      "link": "https://www.jornadaperfecta.com/blog/marcao-lesion-muscular-sevilla-fc/",
-      "date": "Sat, 03 Oct 2026 07:40:35 +0000",
-      "img": "https://cdn.biwenger.com/i/t/17.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Análisis fantasy Valencia CF : once ideal, estrella, revelación y recomendables",
-      "link": "https://www.jornadaperfecta.com/blog/analisis-fantasy-valencia-26-27/",
-      "date": "Sat, 03 Oct 2026 07:00:47 +0000",
-      "img": "https://cdn.biwenger.com/i/t/18.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-10-03T10:43:33.844Z",
+    "updatedAt": "2026-10-03T15:18:24.070Z",
     "players": [
       {
         "id": "37428",
