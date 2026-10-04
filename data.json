@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-04T16:03:14.220Z",
+  "updatedAt": "2026-10-04T20:33:33.700Z",
   "players": [
     {
       "id": 11,
@@ -12327,9 +12327,9 @@
           16,
           11
         ],
-        "teamSize": 11,
-        "teamValue": 28560000,
-        "teamValueInc": 20000,
+        "teamSize": 10,
+        "teamValue": 27100000,
+        "teamValueInc": 40000,
         "position": 16,
         "positionInc": -1
       },
@@ -12406,9 +12406,9 @@
           20,
           17
         ],
-        "teamSize": 16,
-        "teamValue": 35160000,
-        "teamValueInc": 40000,
+        "teamSize": 15,
+        "teamValue": 34490000,
+        "teamValueInc": 50000,
         "position": 20
       }
     ]
@@ -12554,8 +12554,8 @@
       "name": "Zaza Pachulia",
       "manager": "Zaza Pachulia",
       "points": 211,
-      "value": 28560000,
-      "trend": 20000,
+      "value": 27100000,
+      "trend": 40000,
       "players": []
     },
     {
@@ -12590,8 +12590,8 @@
       "name": "The Black Team",
       "manager": "The Black Team",
       "points": 160,
-      "value": 35160000,
-      "trend": 40000,
+      "value": 34490000,
+      "trend": 50000,
       "players": []
     }
   ],
@@ -12766,6 +12766,36 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1791139610,
+      "content": [
+        {
+          "player": 26095,
+          "from": {
+            "id": 148051,
+            "name": "Zaza Pachulia",
+            "icon": "i/u/148051.png?v=98"
+          },
+          "amount": 1491700
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1791133706,
+      "content": [
+        {
+          "player": 21063,
+          "from": {
+            "id": 3928497,
+            "name": "The Black Team",
+            "icon": "i/u/3928497.png"
+          },
+          "amount": 707300
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1791111166,
@@ -13534,153 +13564,6 @@
           "amount": 150800
         }
       ]
-    },
-    {
-      "type": "market",
-      "date": 1790830945,
-      "content": [
-        {
-          "player": 16606,
-          "to": {
-            "id": 3928497,
-            "name": "The Black Team",
-            "icon": "i/u/3928497.png"
-          },
-          "amount": 2288888,
-          "bids": [
-            {
-              "user": {
-                "id": 14094028,
-                "name": "Estem caputs",
-                "icon": "i/u/12736123.png"
-              },
-              "amount": 2176100
-            },
-            {
-              "user": {
-                "id": 14074484,
-                "name": "wilamalel",
-                "icon": "https://lh3.googleusercontent.com/a/ACg8ocJGUZto0NCjv5HnKiftjGqQiwQNQWQjyPJpfYbDxfcaNvZWgg=s300-c"
-              },
-              "amount": 1670000
-            },
-            {
-              "user": {
-                "id": 14094189,
-                "name": "Burnigol FC",
-                "icon": "i/u/14094189.png"
-              },
-              "amount": 1588000
-            },
-            {
-              "user": {
-                "id": 6541195,
-                "name": "🦊",
-                "icon": "i/u/6541195.png?v=17"
-              },
-              "amount": 1430000
-            }
-          ]
-        },
-        {
-          "player": 6259,
-          "to": {
-            "id": 3928497,
-            "name": "The Black Team",
-            "icon": "i/u/3928497.png"
-          },
-          "amount": 1844000,
-          "bids": [
-            {
-              "user": {
-                "id": 8070044,
-                "name": "CA CABA JUNIORS",
-                "icon": "i/u/8070044.png?v=6"
-              },
-              "amount": 1758000
-            }
-          ]
-        },
-        {
-          "player": 42260,
-          "to": {
-            "id": 14072078,
-            "name": "TL*LI",
-            "icon": "i/u/14072078.png"
-          },
-          "amount": 150000
-        },
-        {
-          "player": 41262,
-          "to": {
-            "id": 14072078,
-            "name": "TL*LI",
-            "icon": "i/u/14072078.png"
-          },
-          "amount": 260000
-        },
-        {
-          "player": 40960,
-          "to": {
-            "id": 14072078,
-            "name": "TL*LI",
-            "icon": "i/u/14072078.png"
-          },
-          "amount": 150000
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1790799364,
-      "content": [
-        {
-          "player": 8555,
-          "from": {
-            "id": 14094189,
-            "name": "Burnigol FC",
-            "icon": "i/u/14094189.png"
-          },
-          "to": {
-            "id": 14065964,
-            "name": "JanBox",
-            "icon": "i/u/14065964.png?v=16"
-          },
-          "amount": 12400000,
-          "type": "auction"
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1790798177,
-      "content": [
-        {
-          "player": 34111,
-          "from": {
-            "id": 14072078,
-            "name": "TL*LI",
-            "icon": "i/u/14072078.png"
-          },
-          "to": {
-            "id": 11521196,
-            "name": "Hufflepuff 🍋",
-            "icon": "i/u/11521196.png?v=57"
-          },
-          "amount": 5799099,
-          "type": "auction",
-          "bids": [
-            {
-              "user": {
-                "id": 6541195,
-                "name": "🦊",
-                "icon": "i/u/6541195.png?v=17"
-              },
-              "amount": 5460000
-            }
-          ]
-        }
-      ]
     }
   ],
   "leagueEnBas": {
@@ -13869,8 +13752,8 @@
           6,
           11
         ],
-        "teamSize": 11,
-        "teamValue": 33820000,
+        "teamSize": 12,
+        "teamValue": 33970000,
         "teamValueInc": 80000,
         "position": 9,
         "role": ""
@@ -13930,8 +13813,8 @@
           18,
           17
         ],
-        "teamSize": 11,
-        "teamValue": 33820000,
+        "teamSize": 10,
+        "teamValue": 33670000,
         "teamValueInc": -210000,
         "position": 12,
         "role": ""
@@ -13967,9 +13850,9 @@
           19,
           6
         ],
-        "teamSize": 14,
-        "teamValue": 33890000,
-        "teamValueInc": 50000,
+        "teamSize": 13,
+        "teamValue": 32810000,
+        "teamValueInc": 60000,
         "position": 14,
         "positionInc": -1,
         "role": ""
@@ -14170,7 +14053,7 @@
       "name": "Academia Control Orientado FC",
       "manager": "Academia Control Orientado FC",
       "points": 255,
-      "value": 33820000,
+      "value": 33970000,
       "trend": 80000,
       "players": []
     },
@@ -14197,7 +14080,7 @@
       "name": "Adeyemi FC",
       "manager": "Adeyemi FC",
       "points": 217,
-      "value": 33820000,
+      "value": 33670000,
       "trend": -210000,
       "players": []
     },
@@ -14215,8 +14098,8 @@
       "name": "Txapi17",
       "manager": "Txapi17",
       "points": 210,
-      "value": 33890000,
-      "trend": 50000,
+      "value": 32810000,
+      "trend": 60000,
       "players": []
     },
     {
@@ -14411,6 +14294,42 @@
     ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1791139198,
+      "content": [
+        {
+          "player": 31475,
+          "from": {
+            "id": 6586225,
+            "name": "Adeyemi FC",
+            "icon": "icons/30.png"
+          },
+          "to": {
+            "id": 6580386,
+            "name": "Academia Control Orientado FC",
+            "icon": "i/u/6580386.png?v=69"
+          },
+          "amount": 225000,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1791137102,
+      "content": [
+        {
+          "player": 39431,
+          "from": {
+            "id": 14001588,
+            "name": "Txapi17",
+            "icon": "i/u/11555657.png"
+          },
+          "amount": 1103700
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1791104536,
@@ -15652,145 +15571,6 @@
           "amount": 1320189
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1790402294,
-      "content": [
-        {
-          "player": 32440,
-          "from": {
-            "id": 14001588,
-            "name": "Txapi17",
-            "icon": "i/u/11555657.png"
-          },
-          "amount": 9318600
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1790399016,
-      "content": [
-        {
-          "player": 24326,
-          "to": {
-            "id": 6585052,
-            "name": "Tots som Olost",
-            "icon": "i/u/6585052.png?v=69"
-          },
-          "amount": 3358000,
-          "bids": [
-            {
-              "user": {
-                "id": 7817228,
-                "name": "Petraques",
-                "icon": "i/u/7817228.png"
-              },
-              "amount": 3299000
-            },
-            {
-              "user": {
-                "id": 6579505,
-                "name": "Xevi borrat",
-                "icon": "i/u/6579505.png"
-              },
-              "amount": 3281000
-            },
-            {
-              "user": {
-                "id": 6586225,
-                "name": "Adeyemi FC",
-                "icon": "icons/30.png"
-              },
-              "amount": 3100010
-            }
-          ]
-        },
-        {
-          "player": 21008,
-          "to": {
-            "id": 6585052,
-            "name": "Tots som Olost",
-            "icon": "i/u/6585052.png?v=69"
-          },
-          "amount": 9768000,
-          "bids": [
-            {
-              "user": {
-                "id": 7817228,
-                "name": "Petraques",
-                "icon": "i/u/7817228.png"
-              },
-              "amount": 9499000
-            },
-            {
-              "user": {
-                "id": 6579283,
-                "name": "Fiorenzola",
-                "icon": "i/u/6579283.png?v=33"
-              },
-              "amount": 9489655
-            },
-            {
-              "user": {
-                "id": 6580386,
-                "name": "Academia Control Orientado FC",
-                "icon": "i/u/6580386.png?v=69"
-              },
-              "amount": 9410000
-            },
-            {
-              "user": {
-                "id": 6579505,
-                "name": "Xevi borrat",
-                "icon": "i/u/6579505.png"
-              },
-              "amount": 9237200
-            },
-            {
-              "user": {
-                "id": 6586225,
-                "name": "Adeyemi FC",
-                "icon": "icons/30.png"
-              },
-              "amount": 9234420
-            },
-            {
-              "user": {
-                "id": 6579402,
-                "name": "Valors FC",
-                "icon": "icons/7.png"
-              },
-              "amount": 9222000
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1790319654,
-      "content": [
-        {
-          "player": 41932,
-          "from": {
-            "id": 11504267,
-            "name": "🦊",
-            "icon": "i/u/11504267.png?v=23"
-          },
-          "amount": 367300
-        },
-        {
-          "player": 25769,
-          "from": {
-            "id": 6588130,
-            "name": "The GOAT club",
-            "icon": "i/u/6588130.png?v=12"
-          },
-          "amount": 14132500
-        }
-      ]
     }
   ],
   "laliga": {
@@ -16653,9 +16433,9 @@
       "matchDate": "2026-10-17T12:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.6426822633297062,
-      "drawProb": 0.18117519042437433,
-      "loseProb": 0.1761425462459195,
+      "winProb": 0.6458005877127041,
+      "drawProb": 0.17959406820200915,
+      "loseProb": 0.17460534408528666,
       "over25Prob": 0.7874015748031495,
       "isHome": false,
       "opponent": "Real Betis",
@@ -16725,9 +16505,9 @@
       "matchDate": "2026-10-16T19:00:00Z"
     },
     "Real Betis": {
-      "winProb": 0.1761425462459195,
-      "drawProb": 0.18117519042437433,
-      "loseProb": 0.6426822633297062,
+      "winProb": 0.17460534408528666,
+      "drawProb": 0.17959406820200915,
+      "loseProb": 0.6458005877127041,
       "over25Prob": 0.7874015748031495,
       "isHome": true,
       "opponent": "Barcelona",
@@ -16865,7 +16645,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-10-04T16:03:11.573Z",
+    "updatedAt": "2026-10-04T20:33:31.430Z",
     "players": [
       {
         "id": "37428",
