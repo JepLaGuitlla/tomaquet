@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-03T20:16:56.973Z",
+  "updatedAt": "2026-10-04T03:05:56.557Z",
   "players": [
     {
       "id": 11,
@@ -12202,8 +12202,8 @@
           15,
           6
         ],
-        "teamSize": 19,
-        "teamValue": 40560000,
+        "teamSize": 18,
+        "teamValue": 40410000,
         "teamValueInc": 0,
         "position": 10,
         "positionInc": -1,
@@ -12500,7 +12500,7 @@
       "name": "wilamalel",
       "manager": "wilamalel",
       "points": 247,
-      "value": 40560000,
+      "value": 40410000,
       "trend": 0,
       "players": []
     },
@@ -12602,7 +12602,7 @@
     "balance": 2962278,
     "lineup": {
       "type": "4-5-1",
-      "date": 1790921068,
+      "date": 1791071243,
       "playersID": [
         9887,
         33447,
@@ -12612,7 +12612,7 @@
         26048,
         163,
         2044,
-        43172,
+        1249,
         35171,
         null
       ],
@@ -12766,6 +12766,21 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1791059388,
+      "content": [
+        {
+          "player": 21033,
+          "from": {
+            "id": 14074484,
+            "name": "wilamalel",
+            "icon": "https://lh3.googleusercontent.com/a/ACg8ocJGUZto0NCjv5HnKiftjGqQiwQNQWQjyPJpfYbDxfcaNvZWgg=s300-c"
+          },
+          "amount": 153500
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1791054109,
@@ -13844,8 +13859,8 @@
           10,
           16
         ],
-        "teamSize": 14,
-        "teamValue": 45030000,
+        "teamSize": 12,
+        "teamValue": 38960000,
         "teamValueInc": -150000,
         "position": 15,
         "positionInc": 1,
@@ -14082,7 +14097,7 @@
       "name": "Petraques",
       "manager": "Petraques",
       "points": 195,
-      "value": 45030000,
+      "value": 38960000,
       "trend": -150000,
       "players": []
     },
@@ -14199,7 +14214,7 @@
       {
         "id": 29184,
         "buyPrice": 7000122,
-        "clause": 0,
+        "clause": 8000000,
         "invested": 0,
         "buyDate": 1790571818
       },
@@ -14255,6 +14270,12 @@
     ],
     "market": [
       {
+        "playerID": 29184,
+        "price": 8000000,
+        "type": "sale",
+        "until": 1791244723
+      },
+      {
         "playerID": 30477,
         "price": 29085000,
         "type": "sale",
@@ -14263,6 +14284,30 @@
     ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1791066749,
+      "content": [
+        {
+          "player": 2600,
+          "from": {
+            "id": 7817228,
+            "name": "Petraques",
+            "icon": "i/u/7817228.png"
+          },
+          "amount": 6103600
+        },
+        {
+          "player": 41157,
+          "from": {
+            "id": 7817228,
+            "name": "Petraques",
+            "icon": "i/u/7817228.png"
+          },
+          "amount": 209000
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1791017166,
@@ -15914,30 +15959,6 @@
           "amount": 6340010
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1790223945,
-      "content": [
-        {
-          "player": 1679,
-          "from": {
-            "id": 6579505,
-            "name": "Xevi borrat",
-            "icon": "i/u/6579505.png"
-          },
-          "amount": 1509800
-        },
-        {
-          "player": 9480,
-          "from": {
-            "id": 6579505,
-            "name": "Xevi borrat",
-            "icon": "i/u/6579505.png"
-          },
-          "amount": 2453500
-        }
-      ]
     }
   ],
   "laliga": {
@@ -17012,7 +17033,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-10-03T20:16:54.781Z",
+    "updatedAt": "2026-10-04T03:05:54.184Z",
     "players": [
       {
         "id": "37428",
