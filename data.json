@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-06T12:18:37.577Z",
+  "updatedAt": "2026-10-06T21:56:38.950Z",
   "players": [
     {
       "id": 11,
@@ -12202,8 +12202,8 @@
           15,
           6
         ],
-        "teamSize": 18,
-        "teamValue": 40980000,
+        "teamSize": 17,
+        "teamValue": 40710000,
         "teamValueInc": 50000,
         "position": 10,
         "positionInc": -1,
@@ -12500,7 +12500,7 @@
       "name": "wilamalel",
       "manager": "wilamalel",
       "points": 247,
-      "value": 40980000,
+      "value": 40710000,
       "trend": 50000,
       "players": []
     },
@@ -12754,6 +12754,21 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1791313629,
+      "content": [
+        {
+          "player": 10182,
+          "from": {
+            "id": 14074484,
+            "name": "wilamalel",
+            "icon": "https://lh3.googleusercontent.com/a/ACg8ocJGUZto0NCjv5HnKiftjGqQiwQNQWQjyPJpfYbDxfcaNvZWgg=s300-c"
+          },
+          "amount": 278100
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1791269380,
@@ -13771,21 +13786,6 @@
           "amount": 9500000
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1790916799,
-      "content": [
-        {
-          "player": 897,
-          "from": {
-            "id": 12713493,
-            "name": "Tata Martini",
-            "icon": "i/u/12713493.png?v=71"
-          },
-          "amount": 3010400
-        }
-      ]
     }
   ],
   "leagueEnBas": {
@@ -14091,9 +14091,9 @@
           10,
           16
         ],
-        "teamSize": 12,
-        "teamValue": 38090000,
-        "teamValueInc": -330000,
+        "teamSize": 11,
+        "teamValue": 22530000,
+        "teamValueInc": -100000,
         "position": 15,
         "positionInc": 1,
         "role": ""
@@ -14329,8 +14329,8 @@
       "name": "Petraques",
       "manager": "Petraques",
       "points": 195,
-      "value": 38090000,
-      "trend": -330000,
+      "value": 22530000,
+      "trend": -100000,
       "players": []
     },
     {
@@ -14386,7 +14386,7 @@
     "balance": -3102833,
     "lineup": {
       "type": "3-5-2",
-      "date": 1791283932,
+      "date": 1791302624,
       "playersID": [
         43282,
         37739,
@@ -14528,6 +14528,21 @@
     ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1791318933,
+      "content": [
+        {
+          "player": 19441,
+          "from": {
+            "id": 7817228,
+            "name": "Petraques",
+            "icon": "i/u/7817228.png"
+          },
+          "amount": 16216500
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1791266316,
@@ -15429,21 +15444,6 @@
             "icon": "i/u/11504267.png?v=23"
           },
           "amount": 25946700
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1790831799,
-      "content": [
-        {
-          "player": 35249,
-          "from": {
-            "id": 6579330,
-            "name": "Mindundis",
-            "icon": "i/u/6579330.png?v=18"
-          },
-          "amount": 352500
         }
       ]
     }
@@ -16436,82 +16436,82 @@
   },
   "news": [
     {
-      "title": "Zubeldia sigue con el grupo y Héctor Fort continúa al margen",
-      "link": "https://www.jornadaperfecta.com/blog/zubeldia-estado-real-sociedad-j8/",
-      "date": "Tue, 06 Oct 2026 12:11:28 +0000",
-      "img": "https://cdn.biwenger.com/i/t/13.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Las pruebas médicas descartan lesión de Satriano, pero queda como duda",
-      "link": "https://www.jornadaperfecta.com/blog/satriano-inflamacion-rodilla-getafe/",
-      "date": "Tue, 06 Oct 2026 12:00:27 +0000",
-      "img": "https://cdn.biwenger.com/i/t/8.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Santi Comesaña y Foyth repiten entrenamiento con el grupo",
-      "link": "https://www.jornadaperfecta.com/blog/santi-comesana-estado-villarreal-j8/",
-      "date": "Tue, 06 Oct 2026 11:50:33 +0000",
-      "img": "https://cdn.biwenger.com/i/t/19.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Frenkie de Jong hace parte del entrenamiento con el grupo",
-      "link": "https://www.jornadaperfecta.com/blog/de-jong-vuelta-grupo-barcelona/",
-      "date": "Tue, 06 Oct 2026 11:40:29 +0000",
+      "title": "Cinco noticias fantasy para antes de irte a dormir",
+      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-6-10-26/",
+      "date": "Tue, 06 Oct 2026 21:00:50 +0000",
       "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Bernardo Silva tampoco es protagonista con Portugal, ¿vender o mantener en fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/bernardo-silva-recomendacion-fantasy-real-madrid/",
-      "date": "Tue, 06 Oct 2026 11:00:36 +0000",
+      "title": "Javi Hernández sigue el margen y es duda para la jornada 8",
+      "link": "https://www.jornadaperfecta.com/blog/javi-hernandez-estado-espanyol-j8/",
+      "date": "Tue, 06 Oct 2026 19:05:47 +0000",
+      "img": "https://cdn.biwenger.com/i/t/7.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "El plan de Hansi Flick para Raphinha",
+      "link": "https://www.jornadaperfecta.com/blog/raphinha-regreso-rotacion-barcelona/",
+      "date": "Tue, 06 Oct 2026 19:02:14 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Mbappé entrena en el gimnasio, ¿llega a la Jornada 8?",
+      "link": "https://www.jornadaperfecta.com/blog/mbappe-recuperacion-rodilla-real-madrid/",
+      "date": "Tue, 06 Oct 2026 19:01:32 +0000",
       "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Dani Carvajal, posible fichaje bomba del Getafe CF",
-      "link": "https://www.jornadaperfecta.com/blog/dani-carvajal-fichaje-getafe/",
-      "date": "Tue, 06 Oct 2026 10:25:57 +0000",
-      "img": "",
+      "title": "Chollos LaLiga Fantasy: Fichajes Baratos y Rentables para la jornada 8",
+      "link": "https://www.jornadaperfecta.com/blog/chollos-laliga-fantasy-j8-26-27/",
+      "date": "Tue, 06 Oct 2026 19:00:48 +0000",
+      "img": "https://i.ytimg.com/vi/Ia5NGh28CsE/mqdefault.jpg",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "De Haas, al margen en una sesión con Tárrega, Diakhaby y Copete",
-      "link": "https://www.jornadaperfecta.com/blog/de-haas-estado-j8/",
-      "date": "Tue, 06 Oct 2026 09:59:02 +0000",
+      "title": "Buenas noticias: Amatucci vuelve a entrenar con el grupo",
+      "link": "https://www.jornadaperfecta.com/blog/amatucci-entrenamiento-deportivo-j8/",
+      "date": "Tue, 06 Oct 2026 18:13:45 +0000",
+      "img": "https://cdn.biwenger.com/i/t/6.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "🚨 ÚLTIMA OPORTUNIDAD FANTASY: ¿AGUANTAMOS O VENDEMOS a estos 10 JUGADORES?",
+      "link": "https://www.jornadaperfecta.com/blog/ultima-oportunidad-fantasy-j8-laliga/",
+      "date": "Tue, 06 Oct 2026 16:58:31 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Grimaldo trabaja en su recuperación, ¿llega a la jornada 8?",
+      "link": "https://www.jornadaperfecta.com/blog/grimaldo-regreso-j8-atleti-laliga/",
+      "date": "Tue, 06 Oct 2026 16:56:27 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Danjuma no entrena por unas molestias y es duda ante el Racing",
+      "link": "https://www.jornadaperfecta.com/blog/danjuma-estado-valencia-j8/",
+      "date": "Tue, 06 Oct 2026 15:55:56 +0000",
       "img": "https://cdn.biwenger.com/i/t/18.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Posible fecha de vuelta de Nico Williams, ¿cuántos partidos se pierde?",
-      "link": "https://www.jornadaperfecta.com/blog/fecha-vuelta-nico-williams/",
-      "date": "Tue, 06 Oct 2026 09:22:56 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Lejeune, ¿oportunidad fantasy en el Rayo Vallecano tras el parón?",
-      "link": "https://www.jornadaperfecta.com/blog/lejeune-recomendacion-fantasy-rayo-vallecano/",
-      "date": "Tue, 06 Oct 2026 09:00:16 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Los sancionados de LaLiga para la jornada 8",
-      "link": "https://www.jornadaperfecta.com/blog/sancionados-laliga-j8-26-27/",
-      "date": "Tue, 06 Oct 2026 07:00:07 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "title": "Dani Carvajal, cerca de ser el fichaje bomba del Getafe CF",
+      "link": "https://www.jornadaperfecta.com/blog/dani-carvajal-fichaje-getafe/",
+      "date": "Tue, 06 Oct 2026 15:50:57 +0000",
+      "img": "https://cdn.biwenger.com/i/t/8.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -16520,7 +16520,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-10-06T12:18:35.572Z",
+    "updatedAt": "2026-10-06T21:56:36.380Z",
     "players": [
       {
         "id": "37428",
