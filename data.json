@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-05T23:24:32.508Z",
+  "updatedAt": "2026-10-06T03:31:58.468Z",
   "players": [
     {
       "id": 11,
@@ -14290,14 +14290,14 @@
       {
         "id": 25159,
         "buyPrice": 3865222,
-        "clause": 0,
+        "clause": 5235000,
         "invested": 0,
         "buyDate": 1790312592
       },
       {
         "id": 29184,
         "buyPrice": 7000122,
-        "clause": 8000000,
+        "clause": 9900000,
         "invested": 0,
         "buyDate": 1790571818
       },
@@ -14346,10 +14346,16 @@
     ],
     "market": [
       {
-        "playerID": 29184,
-        "price": 8000000,
+        "playerID": 25159,
+        "price": 5235000,
         "type": "sale",
-        "until": 1791244723
+        "until": 1791428062
+      },
+      {
+        "playerID": 29184,
+        "price": 9900000,
+        "type": "sale",
+        "until": 1791426655
       },
       {
         "playerID": 37416,
@@ -16350,9 +16356,9 @@
       "matchDate": "2026-10-17T12:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.6646033555953739,
-      "drawProb": 0.1966118260302981,
-      "loseProb": 0.13878481837432807,
+      "winProb": 0.6716417910447762,
+      "drawProb": 0.1791044776119403,
+      "loseProb": 0.14925373134328357,
       "over25Prob": 0.7874015748031495,
       "isHome": false,
       "opponent": "Real Betis",
@@ -16422,9 +16428,9 @@
       "matchDate": "2026-10-16T19:00:00Z"
     },
     "Real Betis": {
-      "winProb": 0.13878481837432807,
-      "drawProb": 0.1966118260302981,
-      "loseProb": 0.6646033555953739,
+      "winProb": 0.14925373134328357,
+      "drawProb": 0.1791044776119403,
+      "loseProb": 0.6716417910447762,
       "over25Prob": 0.7874015748031495,
       "isHome": true,
       "opponent": "Barcelona",
@@ -16562,7 +16568,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-10-05T23:24:29.868Z",
+    "updatedAt": "2026-10-06T03:31:56.163Z",
     "players": [
       {
         "id": "37428",
