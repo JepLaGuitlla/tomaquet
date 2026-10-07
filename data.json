@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-06T21:56:38.950Z",
+  "updatedAt": "2026-10-07T02:57:12.199Z",
   "players": [
     {
       "id": 11,
@@ -12221,9 +12221,9 @@
           19,
           10
         ],
-        "teamSize": 14,
-        "teamValue": 36400000,
-        "teamValueInc": 10000,
+        "teamSize": 13,
+        "teamValue": 36200000,
+        "teamValueInc": 20000,
         "position": 11,
         "positionInc": -1,
         "role": ""
@@ -12509,8 +12509,8 @@
       "name": "TL*LI",
       "manager": "TL*LI",
       "points": 235,
-      "value": 36400000,
-      "trend": 10000,
+      "value": 36200000,
+      "trend": 20000,
       "players": []
     },
     {
@@ -12754,6 +12754,21 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1791330919,
+      "content": [
+        {
+          "player": 12596,
+          "from": {
+            "id": 14072078,
+            "name": "TL*LI",
+            "icon": "i/u/14072078.png"
+          },
+          "amount": 199900
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1791313629,
@@ -13679,111 +13694,6 @@
             "icon": "i/u/14094189.png"
           },
           "amount": 3600000
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1790917477,
-      "content": [
-        {
-          "player": 26276,
-          "to": {
-            "id": 6541195,
-            "name": "🦊",
-            "icon": "i/u/6541195.png?v=17"
-          },
-          "amount": 3952688,
-          "bids": [
-            {
-              "user": {
-                "id": 8070044,
-                "name": "CA CABA JUNIORS",
-                "icon": "i/u/8070044.png?v=6"
-              },
-              "amount": 3812009
-            },
-            {
-              "user": {
-                "id": 12713493,
-                "name": "Tata Martini",
-                "icon": "i/u/12713493.png?v=71"
-              },
-              "amount": 3771000
-            }
-          ]
-        },
-        {
-          "player": 43354,
-          "to": {
-            "id": 14072078,
-            "name": "TL*LI",
-            "icon": "i/u/14072078.png"
-          },
-          "amount": 150000
-        },
-        {
-          "player": 38072,
-          "to": {
-            "id": 14069874,
-            "name": "Pzaera",
-            "icon": "https://lh3.googleusercontent.com/a/AATXAJz2ePB0TU5NOTU2lUZ5nrRljJXEZjrTw8hYCiH1=s300-c"
-          },
-          "amount": 2000000
-        },
-        {
-          "player": 12403,
-          "to": {
-            "id": 14069874,
-            "name": "Pzaera",
-            "icon": "https://lh3.googleusercontent.com/a/AATXAJz2ePB0TU5NOTU2lUZ5nrRljJXEZjrTw8hYCiH1=s300-c"
-          },
-          "amount": 2820001
-        },
-        {
-          "player": 41086,
-          "to": {
-            "id": 14065964,
-            "name": "JanBox",
-            "icon": "i/u/14065964.png?v=16"
-          },
-          "amount": 5910000
-        },
-        {
-          "player": 26299,
-          "to": {
-            "id": 14072078,
-            "name": "TL*LI",
-            "icon": "i/u/14072078.png"
-          },
-          "amount": 330000
-        },
-        {
-          "player": 33871,
-          "to": {
-            "id": 12713493,
-            "name": "Tata Martini",
-            "icon": "i/u/12713493.png?v=71"
-          },
-          "amount": 360000
-        },
-        {
-          "player": 8517,
-          "to": {
-            "id": 14072078,
-            "name": "TL*LI",
-            "icon": "i/u/14072078.png"
-          },
-          "amount": 150000
-        },
-        {
-          "player": 35770,
-          "to": {
-            "id": 12713493,
-            "name": "Tata Martini",
-            "icon": "i/u/12713493.png?v=71"
-          },
-          "amount": 9500000
         }
       ]
     }
@@ -16335,18 +16245,18 @@
       "matchDate": "2026-10-18T19:00:00Z"
     },
     "Villarreal": {
-      "winProb": 0.6476686928606633,
-      "drawProb": 0.1957756297259976,
-      "loseProb": 0.15655567741333917,
+      "winProb": 0.647930777687152,
+      "drawProb": 0.19545019326926488,
+      "loseProb": 0.15661902904358313,
       "over25Prob": 0.6711409395973155,
       "isHome": true,
       "opponent": "Elche CF",
       "matchDate": "2026-10-17T14:15:00Z"
     },
     "Elche CF": {
-      "winProb": 0.15655567741333917,
-      "drawProb": 0.1957756297259976,
-      "loseProb": 0.6476686928606633,
+      "winProb": 0.15661902904358313,
+      "drawProb": 0.19545019326926488,
+      "loseProb": 0.647930777687152,
       "over25Prob": 0.6711409395973155,
       "isHome": false,
       "opponent": "Villarreal",
@@ -16520,7 +16430,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-10-06T21:56:36.380Z",
+    "updatedAt": "2026-10-07T02:57:09.697Z",
     "players": [
       {
         "id": "37428",
