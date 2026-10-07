@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-07T12:10:00.985Z",
+  "updatedAt": "2026-10-07T22:20:52.365Z",
   "players": [
     {
       "id": 11,
@@ -11981,25 +11981,6 @@
         3
       ],
       "clausula": null
-    },
-    {
-      "id": 43436,
-      "slug": "oscar-sanchez",
-      "name": "Óscar Sánchez",
-      "position": 5,
-      "price": 330000,
-      "points": 3,
-      "trend": 0,
-      "playedHome": 1,
-      "playedAway": 1,
-      "teamName": "",
-      "teamId": null,
-      "status": "ok",
-      "jForm": [
-        0,
-        3
-      ],
-      "clausula": null
     }
   ],
   "league": {
@@ -12237,8 +12218,8 @@
           19,
           10
         ],
-        "teamSize": 14,
-        "teamValue": 36350000,
+        "teamSize": 13,
+        "teamValue": 36200000,
         "teamValueInc": -60000,
         "position": 11,
         "positionInc": -1,
@@ -12525,7 +12506,7 @@
       "name": "TL*LI",
       "manager": "TL*LI",
       "points": 235,
-      "value": 36350000,
+      "value": 36200000,
       "trend": -60000,
       "players": []
     },
@@ -12770,6 +12751,21 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1791409503,
+      "content": [
+        {
+          "player": 26344,
+          "from": {
+            "id": 14072078,
+            "name": "TL*LI",
+            "icon": "i/u/14072078.png"
+          },
+          "amount": 153500
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1791352286,
@@ -13860,45 +13856,6 @@
           "type": "auction"
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1790933086,
-      "content": [
-        {
-          "player": 21008,
-          "from": {
-            "id": 12697101,
-            "name": "INDOMABLE FC",
-            "icon": "i/u/11757390.png"
-          },
-          "amount": 9334000
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1790923382,
-      "content": [
-        {
-          "player": 40960,
-          "from": {
-            "id": 14072078,
-            "name": "TL*LI",
-            "icon": "i/u/14072078.png"
-          },
-          "amount": 155900
-        },
-        {
-          "player": 42260,
-          "from": {
-            "id": 14072078,
-            "name": "TL*LI",
-            "icon": "i/u/14072078.png"
-          },
-          "amount": 156600
-        }
-      ]
     }
   ],
   "leagueEnBas": {
@@ -14009,9 +13966,9 @@
           9,
           1
         ],
-        "teamSize": 13,
-        "teamValue": 60070000,
-        "teamValueInc": 20000,
+        "teamSize": 12,
+        "teamValue": 56850000,
+        "teamValueInc": 10000,
         "position": 5,
         "positionInc": -2,
         "role": ""
@@ -14352,8 +14309,8 @@
       "name": "🦊",
       "manager": "🦊",
       "points": 288,
-      "value": 60070000,
-      "trend": 20000,
+      "value": 56850000,
+      "trend": 10000,
       "players": []
     },
     {
@@ -14496,7 +14453,7 @@
     "teamId": 11504267,
     "name": "🦊",
     "points": 288,
-    "balance": -3102833,
+    "balance": 242567,
     "lineup": {
       "type": "3-5-2",
       "date": 1791302624,
@@ -14516,7 +14473,7 @@
       "reservesID": [
         null,
         null,
-        37416,
+        null,
         4753
       ]
     },
@@ -14585,13 +14542,6 @@
         "buyDate": 1788584560
       },
       {
-        "id": 37416,
-        "buyPrice": 3856666,
-        "clause": 4000000,
-        "invested": 0,
-        "buyDate": 1789967265
-      },
-      {
         "id": 37739,
         "buyPrice": 3401255,
         "clause": 0,
@@ -14633,12 +14583,6 @@
         "until": 1791438717
       },
       {
-        "playerID": 37416,
-        "price": 4000000,
-        "type": "sale",
-        "until": 1791444974
-      },
-      {
         "playerID": 42610,
         "price": 9870000,
         "type": "sale",
@@ -14647,6 +14591,21 @@
     ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1791408840,
+      "content": [
+        {
+          "player": 37416,
+          "from": {
+            "id": 11504267,
+            "name": "🦊",
+            "icon": "i/u/11504267.png?v=23"
+          },
+          "amount": 3345400
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1791350428,
@@ -15656,36 +15615,6 @@
           "amount": 2820000
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1790916211,
-      "content": [
-        {
-          "player": 41421,
-          "from": {
-            "id": 6580386,
-            "name": "Academia Control Orientado FC",
-            "icon": "i/u/6580386.png?v=69"
-          },
-          "amount": 175600
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1790837937,
-      "content": [
-        {
-          "player": 38144,
-          "from": {
-            "id": 6586257,
-            "name": "Aquest any pago jo !!",
-            "icon": "i/u/6586257.png"
-          },
-          "amount": 156800
-        }
-      ]
     }
   ],
   "laliga": {
@@ -16676,82 +16605,82 @@
   },
   "news": [
     {
-      "title": "Raphinha sigue al margen, mientras Joan García hace parte con el grupo",
-      "link": "https://www.jornadaperfecta.com/blog/raphinha-regreso-rotacion-barcelona/",
-      "date": "Wed, 07 Oct 2026 11:05:14 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "title": "Cinco noticias fantasy para antes de irte a dormir",
+      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-7-10-26/",
+      "date": "Wed, 07 Oct 2026 21:00:49 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Maffeo, ¿oportunidad fantasy en el Valencia CF tras el parón?",
-      "link": "https://www.jornadaperfecta.com/blog/maffeo-oportunidad-fantasy-valencia-cf/",
-      "date": "Wed, 07 Oct 2026 11:00:08 +0000",
+      "title": "Podcast: Alineaciones Probables Jornada 8 2026/27",
+      "link": "https://www.jornadaperfecta.com/blog/podcast-alineaciones-probables-jornada-8-2026-27/",
+      "date": "Wed, 07 Oct 2026 17:48:50 +0000",
+      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/26bd.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "De la Fuente, ¿la gran revelación fantasy en defensa?",
+      "link": "https://www.jornadaperfecta.com/blog/de-la-fuente-analisis-recomendacion-fantasy-levante/",
+      "date": "Wed, 07 Oct 2026 17:25:50 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/10/aissa-mandi-levante.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Mbappé entrena con el grupo, ¿llega a la Jornada 8?",
+      "link": "https://www.jornadaperfecta.com/blog/mbappe-recuperacion-rodilla-real-madrid/",
+      "date": "Wed, 07 Oct 2026 15:40:32 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Diego López volverá a pasar por quirófano: malas noticias para el Valencia",
+      "link": "https://www.jornadaperfecta.com/blog/diego-lopez-quirofano-lesion-rodilla-valencia/",
+      "date": "Wed, 07 Oct 2026 15:23:35 +0000",
       "img": "https://cdn.biwenger.com/i/t/18.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Alexander Sorloth sigue entrenando con el grupo, ¿debut en la J8?",
-      "link": "https://www.jornadaperfecta.com/blog/alexander-sorloth-recuperacion-lesion-atleti/",
-      "date": "Wed, 07 Oct 2026 10:50:26 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "title": "Yuri y Sancet causan baja en otra sesión sin Nico Williams",
+      "link": "https://www.jornadaperfecta.com/blog/yuri-sancet-entrenamiento-j8-athletic/",
+      "date": "Wed, 07 Oct 2026 15:18:27 +0000",
+      "img": "https://cdn.biwenger.com/i/t/1.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Javi Hernández vuelve a entrenar con el grupo y se apunta a la jornada 8",
-      "link": "https://www.jornadaperfecta.com/blog/javi-hernandez-estado-espanyol-j8/",
-      "date": "Wed, 07 Oct 2026 10:45:47 +0000",
-      "img": "https://cdn.biwenger.com/i/t/7.png",
+      "title": "Cáceres no completa la sesión con el grupo, ¿llega a la jornada 8?",
+      "link": "https://www.jornadaperfecta.com/blog/caceres-pubalgia-celta/",
+      "date": "Wed, 07 Oct 2026 14:40:23 +0000",
+      "img": "https://cdn.biwenger.com/i/t/5.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Danjuma y Rioja, ausencias en el entreno del Valencia",
+      "link": "https://www.jornadaperfecta.com/blog/danjuma-estado-valencia-j8/",
+      "date": "Wed, 07 Oct 2026 14:35:56 +0000",
+      "img": "https://cdn.biwenger.com/i/t/18.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Iago Aspas entrena con el grupo, ¿llega a la jornada 8?",
+      "link": "https://www.jornadaperfecta.com/blog/iago-aspas-estado-celta-j8/",
+      "date": "Wed, 07 Oct 2026 14:25:11 +0000",
+      "img": "https://cdn.biwenger.com/i/t/5.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
       "title": "Qué es Fantasy Clan y cómo funciona: guía para empezar de cero",
       "link": "https://www.jornadaperfecta.com/blog/fantasy-clan-guia-completa/",
-      "date": "Wed, 07 Oct 2026 10:00:08 +0000",
+      "date": "Wed, 07 Oct 2026 13:30:08 +0000",
       "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/10/alineacion-fantasy-clan.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Rubén Vargas sigue sumando entrenanamientos, ¿vuelve en la J8?",
-      "link": "https://www.jornadaperfecta.com/blog/ruben-vargas-estado-sevilla-j8/",
-      "date": "Wed, 07 Oct 2026 09:52:36 +0000",
-      "img": "https://cdn.biwenger.com/i/t/17.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Marc Bartra completa el entrenamiento con el grupo",
-      "link": "https://www.jornadaperfecta.com/blog/marc-bartra-estado-betis-j8/",
-      "date": "Wed, 07 Oct 2026 09:50:11 +0000",
-      "img": "https://cdn.biwenger.com/i/t/87.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Grandes subidas y bajadas del mercado fantasy para la Jornada 8",
-      "link": "https://www.jornadaperfecta.com/blog/mercado-fantasy-j8-26-27/",
-      "date": "Wed, 07 Oct 2026 09:00:01 +0000",
-      "img": "https://cdn.biwenger.com/i/t/19.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Las claves fantasy del Levante &#8211; Sevilla: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-levante-sevilla-j8-26-27/",
-      "date": "Wed, 07 Oct 2026 06:45:30 +0000",
-      "img": "https://cdn.biwenger.com/i/t/10.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Las claves fantasy del Racing &#8211; Valencia: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-racing-valencia-j8-26-27/",
-      "date": "Wed, 07 Oct 2026 06:40:21 +0000",
-      "img": "https://cdn.biwenger.com/i/t/812.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -16760,7 +16689,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-10-07T12:09:58.344Z",
+    "updatedAt": "2026-10-07T22:20:49.806Z",
     "players": [
       {
         "id": "37428",
