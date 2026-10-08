@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-07T22:20:52.365Z",
+  "updatedAt": "2026-10-08T03:14:08.040Z",
   "players": [
     {
       "id": 11,
@@ -12238,9 +12238,9 @@
           10,
           1
         ],
-        "teamSize": 18,
-        "teamValue": 28880000,
-        "teamValueInc": -350000,
+        "teamSize": 17,
+        "teamValue": 26160000,
+        "teamValueInc": -260000,
         "lastTrophy": {
           "type": "league",
           "position": 2,
@@ -12261,9 +12261,9 @@
           17,
           3
         ],
-        "teamSize": 13,
-        "teamValue": 39260000,
-        "teamValueInc": -50000,
+        "teamSize": 12,
+        "teamValue": 37550000,
+        "teamValueInc": -30000,
         "position": 13,
         "positionInc": 4,
         "role": ""
@@ -12515,8 +12515,8 @@
       "name": "LeMola Team",
       "manager": "LeMola Team",
       "points": 233,
-      "value": 28880000,
-      "trend": -350000,
+      "value": 26160000,
+      "trend": -260000,
       "players": []
     },
     {
@@ -12524,8 +12524,8 @@
       "name": "Hufflepuff 🍋",
       "manager": "Hufflepuff 🍋",
       "points": 230,
-      "value": 39260000,
-      "trend": -50000,
+      "value": 37550000,
+      "trend": -30000,
       "players": []
     },
     {
@@ -12751,6 +12751,36 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1791417360,
+      "content": [
+        {
+          "player": 35344,
+          "from": {
+            "id": 6552586,
+            "name": "LeMola Team",
+            "icon": "i/u/6552586.png"
+          },
+          "amount": 2889800
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1791412282,
+      "content": [
+        {
+          "player": 17645,
+          "from": {
+            "id": 11521196,
+            "name": "Hufflepuff 🍋",
+            "icon": "i/u/11521196.png?v=57"
+          },
+          "amount": 1735600
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1791409503,
@@ -13811,51 +13841,6 @@
           "amount": 1717700
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1790950348,
-      "content": [
-        {
-          "player": 38960,
-          "from": {
-            "id": 3928497,
-            "name": "The Black Team",
-            "icon": "i/u/3928497.png"
-          },
-          "amount": 706800
-        },
-        {
-          "player": 15289,
-          "from": {
-            "id": 3928497,
-            "name": "The Black Team",
-            "icon": "i/u/3928497.png"
-          },
-          "amount": 398300
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1790933832,
-      "content": [
-        {
-          "player": 25127,
-          "from": {
-            "id": 14065964,
-            "name": "JanBox",
-            "icon": "i/u/14065964.png?v=16"
-          },
-          "to": {
-            "id": 14094189,
-            "name": "Burnigol FC",
-            "icon": "i/u/14094189.png"
-          },
-          "amount": 10750000,
-          "type": "auction"
-        }
-      ]
     }
   ],
   "leagueEnBas": {
@@ -14259,9 +14244,9 @@
           4,
           19
         ],
-        "teamSize": 17,
-        "teamValue": 42470000,
-        "teamValueInc": -60000,
+        "teamSize": 15,
+        "teamValue": 40250000,
+        "teamValueInc": -30000,
         "position": 20,
         "role": ""
       }
@@ -14444,8 +14429,8 @@
       "name": "Janwandowski",
       "manager": "Janwandowski",
       "points": 141,
-      "value": 42470000,
-      "trend": -60000,
+      "value": 40250000,
+      "trend": -30000,
       "players": []
     }
   ],
@@ -14516,7 +14501,7 @@
       {
         "id": 29184,
         "buyPrice": 7000122,
-        "clause": 9900000,
+        "clause": 0,
         "invested": 0,
         "buyDate": 1790571818
       },
@@ -14591,6 +14576,30 @@
     ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1791417284,
+      "content": [
+        {
+          "player": 38875,
+          "from": {
+            "id": 6593096,
+            "name": "Janwandowski",
+            "icon": "i/u/6593096.png"
+          },
+          "amount": 199500
+        },
+        {
+          "player": 33531,
+          "from": {
+            "id": 6593096,
+            "name": "Janwandowski",
+            "icon": "i/u/6593096.png"
+          },
+          "amount": 2086800
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1791408840,
@@ -15480,139 +15489,6 @@
             "icon": "i/u/6580386.png?v=69"
           },
           "amount": 2912400
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1790917424,
-      "content": [
-        {
-          "player": 23840,
-          "to": {
-            "id": 6579283,
-            "name": "Fiorenzola",
-            "icon": "i/u/6579283.png?v=33"
-          },
-          "amount": 3765000,
-          "bids": [
-            {
-              "user": {
-                "id": 6580386,
-                "name": "Academia Control Orientado FC",
-                "icon": "i/u/6580386.png?v=69"
-              },
-              "amount": 3655000
-            },
-            {
-              "user": {
-                "id": 6588130,
-                "name": "The GOAT club",
-                "icon": "i/u/6588130.png?v=12"
-              },
-              "amount": 3600000
-            }
-          ]
-        },
-        {
-          "player": 15289,
-          "to": {
-            "id": 6579330,
-            "name": "Mindundis",
-            "icon": "i/u/6579330.png?v=18"
-          },
-          "amount": 410000
-        },
-        {
-          "player": 4753,
-          "to": {
-            "id": 11504267,
-            "name": "🦊",
-            "icon": "i/u/11504267.png?v=23"
-          },
-          "amount": 3200006,
-          "bids": [
-            {
-              "user": {
-                "id": 6588130,
-                "name": "The GOAT club",
-                "icon": "i/u/6588130.png?v=12"
-              },
-              "amount": 3099000
-            },
-            {
-              "user": {
-                "id": 6579505,
-                "name": "Xevi borrat",
-                "icon": "i/u/6579505.png"
-              },
-              "amount": 3050000
-            }
-          ]
-        },
-        {
-          "player": 9090,
-          "to": {
-            "id": 9897660,
-            "name": "Eric Duran",
-            "icon": "i/u/9897660.png"
-          },
-          "amount": 4250000,
-          "bids": [
-            {
-              "user": {
-                "id": 6579505,
-                "name": "Xevi borrat",
-                "icon": "i/u/6579505.png"
-              },
-              "amount": 3950000
-            }
-          ]
-        },
-        {
-          "player": 1995,
-          "to": {
-            "id": 14001588,
-            "name": "Txapi17",
-            "icon": "i/u/11555657.png"
-          },
-          "amount": 3042070
-        },
-        {
-          "player": 41608,
-          "to": {
-            "id": 6586257,
-            "name": "Aquest any pago jo !!",
-            "icon": "i/u/6586257.png"
-          },
-          "amount": 1160000
-        },
-        {
-          "player": 32435,
-          "to": {
-            "id": 6588130,
-            "name": "The GOAT club",
-            "icon": "i/u/6588130.png?v=12"
-          },
-          "amount": 1610000
-        },
-        {
-          "player": 32460,
-          "to": {
-            "id": 6588130,
-            "name": "The GOAT club",
-            "icon": "i/u/6588130.png?v=12"
-          },
-          "amount": 1530000
-        },
-        {
-          "player": 30502,
-          "to": {
-            "id": 6588130,
-            "name": "The GOAT club",
-            "icon": "i/u/6588130.png?v=12"
-          },
-          "amount": 2820000
         }
       ]
     }
@@ -16689,7 +16565,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-10-07T22:20:49.806Z",
+    "updatedAt": "2026-10-08T03:14:05.918Z",
     "players": [
       {
         "id": "37428",
