@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-08T12:20:31.468Z",
+  "updatedAt": "2026-10-08T22:33:14.331Z",
   "players": [
     {
       "id": 11,
@@ -12120,9 +12120,9 @@
           1,
           7
         ],
-        "teamSize": 18,
-        "teamValue": 42640000,
-        "teamValueInc": 0,
+        "teamSize": 17,
+        "teamValue": 42240000,
+        "teamValueInc": -10000,
         "lastTrophy": {
           "type": "league",
           "position": 3,
@@ -12143,9 +12143,9 @@
           8,
           8
         ],
-        "teamSize": 15,
-        "teamValue": 47880000,
-        "teamValueInc": 180000,
+        "teamSize": 14,
+        "teamValue": 45360000,
+        "teamValueInc": 190000,
         "position": 7,
         "positionInc": -1,
         "role": ""
@@ -12162,9 +12162,9 @@
           2,
           15
         ],
-        "teamSize": 11,
-        "teamValue": 43110000,
-        "teamValueInc": 50000,
+        "teamSize": 12,
+        "teamValue": 43510000,
+        "teamValueInc": 60000,
         "position": 8,
         "role": ""
       },
@@ -12324,8 +12324,8 @@
           16,
           11
         ],
-        "teamSize": 13,
-        "teamValue": 37020000,
+        "teamSize": 12,
+        "teamValue": 36740000,
         "teamValueInc": 10000,
         "position": 16,
         "positionInc": -1
@@ -12342,9 +12342,9 @@
           4,
           5
         ],
-        "teamSize": 13,
-        "teamValue": 38820000,
-        "teamValueInc": 120000,
+        "teamSize": 14,
+        "teamValue": 41340000,
+        "teamValueInc": 110000,
         "position": 17,
         "positionInc": -3,
         "role": ""
@@ -12461,8 +12461,8 @@
       "name": "🦊",
       "manager": "🦊",
       "points": 264,
-      "value": 42640000,
-      "trend": 0,
+      "value": 42240000,
+      "trend": -10000,
       "players": []
     },
     {
@@ -12470,8 +12470,8 @@
       "name": "Burnigol FC",
       "manager": "Burnigol FC",
       "points": 264,
-      "value": 47880000,
-      "trend": 180000,
+      "value": 45360000,
+      "trend": 190000,
       "players": []
     },
     {
@@ -12479,8 +12479,8 @@
       "name": "Estem caputs",
       "manager": "Estem caputs",
       "points": 262,
-      "value": 43110000,
-      "trend": 50000,
+      "value": 43510000,
+      "trend": 60000,
       "players": []
     },
     {
@@ -12551,7 +12551,7 @@
       "name": "Zaza Pachulia",
       "manager": "Zaza Pachulia",
       "points": 211,
-      "value": 37020000,
+      "value": 36740000,
       "trend": 10000,
       "players": []
     },
@@ -12560,8 +12560,8 @@
       "name": "JanBox",
       "manager": "JanBox",
       "points": 210,
-      "value": 38820000,
-      "trend": 120000,
+      "value": 41340000,
+      "trend": 110000,
       "players": []
     },
     {
@@ -12596,28 +12596,28 @@
     "teamId": 6541195,
     "name": "🦊",
     "points": 264,
-    "balance": 5292512,
+    "balance": 6163574,
     "lineup": {
       "type": "4-5-1",
-      "date": 1791439005,
+      "date": 1791490518,
       "playersID": [
         9887,
         33447,
         38493,
         26276,
-        42390,
+        20969,
         26048,
         163,
         2044,
         30123,
         35171,
-        20969
+        24576
       ],
       "reservesID": [
         36566,
         23572,
         43172,
-        24576
+        11633
       ]
     },
     "players": [
@@ -12706,13 +12706,6 @@
         "buyDate": 1790140506
       },
       {
-        "id": 36538,
-        "buyPrice": 752888,
-        "clause": 752888000000,
-        "invested": 0,
-        "buyDate": 1790571779
-      },
-      {
         "id": 36566,
         "buyPrice": 150000,
         "clause": 150000000000,
@@ -12751,6 +12744,112 @@
     "market": []
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1791490622,
+      "content": [
+        {
+          "player": 36538,
+          "from": {
+            "id": 6541195,
+            "name": "🦊",
+            "icon": "i/u/6541195.png?v=17"
+          },
+          "to": {
+            "id": 14094028,
+            "name": "Estem caputs",
+            "icon": "i/u/12736123.png"
+          },
+          "amount": 871062,
+          "type": "auction",
+          "bids": [
+            {
+              "user": {
+                "id": 14065964,
+                "name": "JanBox",
+                "icon": "i/u/14065964.png?v=16"
+              },
+              "amount": 829583
+            },
+            {
+              "user": {
+                "id": 14094028,
+                "name": "Estem caputs",
+                "icon": "i/u/12736123.png"
+              },
+              "amount": 790079
+            },
+            {
+              "user": {
+                "id": 14065964,
+                "name": "JanBox",
+                "icon": "i/u/14065964.png?v=16"
+              },
+              "amount": 752456
+            },
+            {
+              "user": {
+                "id": 14094028,
+                "name": "Estem caputs",
+                "icon": "i/u/12736123.png"
+              },
+              "amount": 716625
+            },
+            {
+              "user": {
+                "id": 14094189,
+                "name": "Burnigol FC",
+                "icon": "i/u/14094189.png"
+              },
+              "amount": 682500
+            },
+            {
+              "user": {
+                "id": 12713493,
+                "name": "Tata Martini",
+                "icon": "i/u/12713493.png?v=71"
+              },
+              "amount": 650000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1791473798,
+      "content": [
+        {
+          "player": 1969,
+          "from": {
+            "id": 14094189,
+            "name": "Burnigol FC",
+            "icon": "i/u/14094189.png"
+          },
+          "to": {
+            "id": 14065964,
+            "name": "JanBox",
+            "icon": "i/u/14065964.png?v=16"
+          },
+          "amount": 2620000
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1791464634,
+      "content": [
+        {
+          "player": 42627,
+          "from": {
+            "id": 148051,
+            "name": "Zaza Pachulia",
+            "icon": "i/u/148051.png?v=98"
+          },
+          "amount": 290100
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1791448236,
@@ -13781,75 +13880,6 @@
           "amount": 2973700
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1791030139,
-      "content": [
-        {
-          "player": 1249,
-          "from": {
-            "id": 14094189,
-            "name": "Burnigol FC",
-            "icon": "i/u/14094189.png"
-          },
-          "to": {
-            "id": 6541195,
-            "name": "🦊",
-            "icon": "i/u/6541195.png?v=17"
-          },
-          "amount": 8170000,
-          "type": "auction"
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1791011402,
-      "content": [
-        {
-          "player": 41086,
-          "from": {
-            "id": 14065964,
-            "name": "JanBox",
-            "icon": "i/u/14065964.png?v=16"
-          },
-          "amount": 6001200
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1791005225,
-      "content": [
-        {
-          "player": 43354,
-          "from": {
-            "id": 14072078,
-            "name": "TL*LI",
-            "icon": "i/u/14072078.png"
-          },
-          "amount": 155000
-        },
-        {
-          "player": 8517,
-          "from": {
-            "id": 14072078,
-            "name": "TL*LI",
-            "icon": "i/u/14072078.png"
-          },
-          "amount": 154100
-        },
-        {
-          "player": 41262,
-          "from": {
-            "id": 14072078,
-            "name": "TL*LI",
-            "icon": "i/u/14072078.png"
-          },
-          "amount": 266700
-        }
-      ]
     }
   ],
   "leagueEnBas": {
@@ -14211,9 +14241,9 @@
           17,
           18
         ],
-        "teamSize": 12,
-        "teamValue": 28110000,
-        "teamValueInc": -260000,
+        "teamSize": 13,
+        "teamValue": 29060000,
+        "teamValueInc": -240000,
         "lastTrophy": {
           "type": "league",
           "position": 3,
@@ -14253,9 +14283,9 @@
           4,
           19
         ],
-        "teamSize": 15,
-        "teamValue": 40190000,
-        "teamValueInc": -60000,
+        "teamSize": 14,
+        "teamValue": 39240000,
+        "teamValueInc": -80000,
         "position": 20,
         "role": ""
       }
@@ -14420,8 +14450,8 @@
       "name": "MarK Lenders",
       "manager": "MarK Lenders",
       "points": 185,
-      "value": 28110000,
-      "trend": -260000,
+      "value": 29060000,
+      "trend": -240000,
       "players": []
     },
     {
@@ -14438,8 +14468,8 @@
       "name": "Janwandowski",
       "manager": "Janwandowski",
       "points": 141,
-      "value": 40190000,
-      "trend": -60000,
+      "value": 39240000,
+      "trend": -80000,
       "players": []
     }
   ],
@@ -14579,6 +14609,27 @@
     ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1791475999,
+      "content": [
+        {
+          "player": 38318,
+          "from": {
+            "id": 6593096,
+            "name": "Janwandowski",
+            "icon": "i/u/6593096.png"
+          },
+          "to": {
+            "id": 9890450,
+            "name": "MarK Lenders",
+            "icon": "icons/34.png"
+          },
+          "amount": 1395000,
+          "type": "clause"
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1791452236,
@@ -15436,21 +15487,6 @@
             "icon": "icons/30.png"
           },
           "amount": 353900
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1791005004,
-      "content": [
-        {
-          "player": 21008,
-          "from": {
-            "id": 6585052,
-            "name": "Tots som Olost",
-            "icon": "i/u/6585052.png?v=69"
-          },
-          "amount": 9144400
         }
       ]
     }
@@ -16443,82 +16479,82 @@
   },
   "news": [
     {
-      "title": "Manolo González habla del regreso de Javi Puado",
-      "link": "https://www.jornadaperfecta.com/blog/manolo-gonzalez-previa-malaga-espanyol-j8/",
-      "date": "Thu, 08 Oct 2026 12:11:01 +0000",
-      "img": "",
+      "title": "Cinco noticias fantasy para antes de irte a dormir",
+      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-8-10-26/",
+      "date": "Thu, 08 Oct 2026 21:00:12 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Anselmi confirma el regreso de Sangaré y que Cepeda aún no está",
-      "link": "https://www.jornadaperfecta.com/blog/anselmi-previa-elche-celta-j8/",
-      "date": "Thu, 08 Oct 2026 12:02:12 +0000",
-      "img": "https://cdn.biwenger.com/i/t/75.png",
+      "title": "La Previa de las Picas: Todo sobre los Cronistas de la Jornada 8",
+      "link": "https://www.jornadaperfecta.com/blog/previa-picas-cronistas-j8-26-27/",
+      "date": "Thu, 08 Oct 2026 19:00:44 +0000",
+      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2660.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Actualizadas las Alineaciones Probables para la Jornada 8",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-probables-j8-laliga-26-27/",
-      "date": "Thu, 08 Oct 2026 12:00:38 +0000",
-      "img": "",
+      "title": "Oficial: El FC Barcelona renueva a Xavi Espart hasta 2030",
+      "link": "https://www.jornadaperfecta.com/blog/xavi-espart-renovacion-barcelona-2030/",
+      "date": "Thu, 08 Oct 2026 18:38:57 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Funes confirma las recuperaciones de Calero y Aznou",
-      "link": "https://www.jornadaperfecta.com/blog/funes-previa-malaga-espanyol-j8-26-27/",
-      "date": "Thu, 08 Oct 2026 11:42:35 +0000",
-      "img": "https://cdn.biwenger.com/i/t/65.png",
+      "title": "Super Apuesta de YoSports: Madrid gana a Villarreal y Vinicius marca, ¡a cuota 6.00!",
+      "link": "https://www.jornadaperfecta.com/blog/super-apuesta-yosports-real-madrid-vs-villarreal/",
+      "date": "Thu, 08 Oct 2026 17:17:25 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/10/super-apuesta-top-madrid-vs-villarreal-yosports.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Beñat San José deja en duda a Pedrosa",
-      "link": "https://www.jornadaperfecta.com/blog/benat-san-jose-previa-rayo-athletic-j8-26-27/",
-      "date": "Thu, 08 Oct 2026 11:18:01 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
+      "title": "El All In de Victorius para la Jornada 8 de LaLiga",
+      "link": "https://www.jornadaperfecta.com/blog/all-in-victorius-j8-26-27/",
+      "date": "Thu, 08 Oct 2026 17:00:56 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/09/alvaro-valles-real-betis-fantasy.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Del Castillo sufre una lesión leve en el aductor del muslo izquierdo",
+      "link": "https://www.jornadaperfecta.com/blog/del-castillo-parte-medico-osasuna/",
+      "date": "Thu, 08 Oct 2026 16:02:20 +0000",
+      "img": "https://cdn.biwenger.com/i/t/93.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Grimaldo entrena con el grupo, ¿llega a la jornada 8?",
+      "link": "https://www.jornadaperfecta.com/blog/grimaldo-regreso-j8-atleti-laliga/",
+      "date": "Thu, 08 Oct 2026 15:30:27 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
       "title": "Mbappé repite entrenamiento con el grupo",
       "link": "https://www.jornadaperfecta.com/blog/mbappe-recuperacion-rodilla-real-madrid/",
-      "date": "Thu, 08 Oct 2026 10:50:32 +0000",
+      "date": "Thu, 08 Oct 2026 15:18:32 +0000",
       "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Yuri vuelve a los entrenamientos; Laporte, al margen",
-      "link": "https://www.jornadaperfecta.com/blog/yuri-sancet-entrenamiento-j8-athletic/",
-      "date": "Thu, 08 Oct 2026 10:37:27 +0000",
-      "img": "https://cdn.biwenger.com/i/t/1.png",
+      "title": "Guido Rodríguez ya está de vuelta y entrena con el grupo",
+      "link": "https://www.jornadaperfecta.com/blog/guido-rodriguez-motivo-ausencia-entrenamiento-valencia/",
+      "date": "Thu, 08 Oct 2026 15:15:56 +0000",
+      "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Stassin ya pisa césped, ¿llega a la jornada 8?",
-      "link": "https://www.jornadaperfecta.com/blog/stassin-recuperacion-estado-j8-sevilla/",
-      "date": "Thu, 08 Oct 2026 10:23:15 +0000",
-      "img": "https://cdn.biwenger.com/i/t/17.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Raphinha sigue al margen, ¿baja en la jornada 8?",
-      "link": "https://www.jornadaperfecta.com/blog/raphinha-regreso-rotacion-barcelona/",
-      "date": "Thu, 08 Oct 2026 09:59:14 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Buchanan no entrena y será baja en el Villarreal",
-      "link": "https://www.jornadaperfecta.com/blog/buchanan-lesion-villarreal-cf/",
-      "date": "Thu, 08 Oct 2026 09:50:34 +0000",
-      "img": "https://cdn.biwenger.com/i/t/19.png",
+      "title": "Javi Puado regresa a la convocatoria, el fichaje fantasy más esperado del RCD Espanyol",
+      "link": "https://www.jornadaperfecta.com/blog/javi-puado-vuelta-fantasy-espanyol/",
+      "date": "Thu, 08 Oct 2026 15:05:57 +0000",
+      "img": "https://cdn.biwenger.com/i/t/7.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -16527,7 +16563,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-10-08T12:20:28.892Z",
+    "updatedAt": "2026-10-08T22:33:11.861Z",
     "players": [
       {
         "id": "37428",
