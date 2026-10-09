@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T12:10:38.490Z",
+  "updatedAt": "2026-10-09T21:55:51.348Z",
   "players": [
     {
       "id": 11,
@@ -1203,7 +1203,7 @@
       "status": "ok",
       "jForm": [
         null,
-        1,
+        null,
         3,
         4,
         1
@@ -1216,16 +1216,16 @@
       "name": "Pablo Martínez",
       "position": 3,
       "price": 930000,
-      "points": 10,
+      "points": 13,
       "trend": 0,
-      "playedHome": 2,
+      "playedHome": 3,
       "playedAway": 3,
       "teamName": "Málaga",
       "teamId": 65,
       "status": "ok",
       "jForm": [
         3,
-        0,
+        3,
         4,
         3,
         0
@@ -1743,19 +1743,19 @@
       "name": "Pere Milla",
       "position": 4,
       "price": 1190000,
-      "points": 11,
+      "points": 14,
       "trend": -10000,
       "playedHome": 3,
-      "playedAway": 2,
+      "playedAway": 3,
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
       "jForm": [
+        3,
         2,
-        null,
         3,
         null,
-        2
+        null
       ],
       "clausula": null
     },
@@ -1795,11 +1795,11 @@
       "teamId": 7,
       "status": "ok",
       "jForm": [
+        null,
         -3,
-        2,
         8,
         3,
-        8
+        2
       ],
       "clausula": null
     },
@@ -1993,11 +1993,11 @@
       "teamId": 7,
       "status": "ok",
       "jForm": [
+        null,
         3,
         null,
-        null,
         1,
-        4
+        null
       ],
       "clausula": null
     },
@@ -2214,10 +2214,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         -1,
         null,
-        null,
-        2
+        null
       ],
       "clausula": null
     },
@@ -2227,15 +2227,15 @@
       "name": "Calero",
       "position": 2,
       "price": 800000,
-      "points": 0,
+      "points": 3,
       "trend": -10000,
-      "playedHome": 0,
+      "playedHome": 1,
       "playedAway": 0,
       "teamName": "Málaga",
       "teamId": 65,
       "status": "ok",
       "jForm": [
-        null,
+        3,
         null,
         null,
         null,
@@ -2337,19 +2337,19 @@
       "name": "Cabrera",
       "position": 2,
       "price": 2160000,
-      "points": 9,
+      "points": 17,
       "trend": -10000,
       "playedHome": 2,
-      "playedAway": 2,
+      "playedAway": 3,
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
       "jForm": [
-        1,
+        8,
         1,
         4,
         3,
-        null
+        1
       ],
       "clausula": null
     },
@@ -2455,8 +2455,8 @@
       "teamId": 65,
       "status": "ok",
       "jForm": [
-        3,
         null,
+        3,
         2,
         null,
         null
@@ -2579,19 +2579,19 @@
       "name": "Hinojo",
       "position": 2,
       "price": 1450000,
-      "points": 19,
+      "points": 20,
       "trend": -20000,
       "playedHome": 4,
-      "playedAway": 3,
+      "playedAway": 4,
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
       "jForm": [
+        1,
         -1,
-        2,
         3,
         2,
-        5
+        2
       ],
       "clausula": null
     },
@@ -3084,19 +3084,19 @@
       "name": "Pol Lozano",
       "position": 3,
       "price": 500000,
-      "points": 6,
+      "points": 8,
       "trend": 0,
       "playedHome": 2,
-      "playedAway": 1,
+      "playedAway": 2,
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
       "jForm": [
+        2,
         null,
-        1,
         null,
         null,
-        null
+        1
       ],
       "clausula": null
     },
@@ -3546,19 +3546,19 @@
       "name": "Joaquín Muñoz",
       "position": 4,
       "price": 1240000,
-      "points": 16,
+      "points": 19,
       "trend": -10000,
-      "playedHome": 3,
+      "playedHome": 4,
       "playedAway": 4,
       "teamName": "Málaga",
       "teamId": 65,
       "status": "ok",
       "jForm": [
+        3,
         2,
-        0,
         2,
         3,
-        2
+        0
       ],
       "clausula": null
     },
@@ -3920,19 +3920,19 @@
       "name": "Expósito",
       "position": 3,
       "price": 4960000,
-      "points": 35,
+      "points": 39,
       "trend": -10000,
       "playedHome": 4,
-      "playedAway": 3,
+      "playedAway": 4,
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
       "jForm": [
-        6,
-        3,
         4,
         6,
-        5
+        4,
+        6,
+        3
       ],
       "clausula": null
     },
@@ -4162,19 +4162,19 @@
       "name": "Urko",
       "position": 3,
       "price": 1410000,
-      "points": 15,
+      "points": 17,
       "trend": -10000,
       "playedHome": 4,
-      "playedAway": 3,
+      "playedAway": 4,
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
       "jForm": [
-        0,
+        2,
         0,
         3,
         3,
-        2
+        0
       ],
       "clausula": null
     },
@@ -4642,16 +4642,16 @@
       "name": "Javi Hernández",
       "position": 3,
       "price": 2770000,
-      "points": 28,
+      "points": 32,
       "trend": -10000,
       "playedHome": 4,
-      "playedAway": 3,
+      "playedAway": 4,
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
       "jForm": [
-        2,
         4,
+        2,
         3,
         2,
         4
@@ -4717,7 +4717,7 @@
         null,
         null,
         null,
-        2
+        null
       ],
       "clausula": null
     },
@@ -5491,19 +5491,19 @@
       "name": "El Hilali",
       "position": 2,
       "price": 2760000,
-      "points": 23,
+      "points": 29,
       "trend": -10000,
       "playedHome": 3,
-      "playedAway": 3,
+      "playedAway": 4,
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
       "jForm": [
+        6,
         null,
-        -2,
         9,
         5,
-        5
+        -2
       ],
       "clausula": null
     },
@@ -5543,11 +5543,11 @@
       "teamId": 65,
       "status": "ok",
       "jForm": [
+        null,
         2,
         4,
-        4,
         3,
-        2
+        4
       ],
       "clausula": null
     },
@@ -5755,15 +5755,15 @@
       "name": "Fortuño",
       "position": 1,
       "price": 150000,
-      "points": 0,
+      "points": 5,
       "trend": 0,
       "playedHome": 0,
-      "playedAway": 0,
+      "playedAway": 1,
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
       "jForm": [
-        null,
+        5,
         null,
         null,
         null,
@@ -5865,19 +5865,19 @@
       "name": "Bryan Zaragoza",
       "position": 4,
       "price": 2620000,
-      "points": 11,
+      "points": 23,
       "trend": -20000,
       "playedHome": 2,
-      "playedAway": 2,
+      "playedAway": 3,
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
       "jForm": [
+        12,
         1,
         3,
-        3,
         4,
-        null
+        3
       ],
       "clausula": null
     },
@@ -6063,19 +6063,19 @@
       "name": "Dotor",
       "position": 3,
       "price": 2130000,
-      "points": 26,
+      "points": 28,
       "trend": 0,
-      "playedHome": 3,
+      "playedHome": 4,
       "playedAway": 3,
       "teamName": "Málaga",
       "teamId": 65,
       "status": "ok",
       "jForm": [
+        2,
         3,
-        8,
         null,
         2,
-        3
+        8
       ],
       "clausula": null
     },
@@ -6695,15 +6695,15 @@
       "name": "Manolo González",
       "position": 5,
       "price": 630000,
-      "points": 7,
+      "points": 8,
       "trend": -10000,
       "playedHome": 4,
-      "playedAway": 3,
+      "playedAway": 4,
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
       "jForm": [
-        0,
+        1,
         0,
         3,
         1,
@@ -7487,16 +7487,16 @@
       "name": "Roberto Fernández",
       "position": 4,
       "price": 9070000,
-      "points": 59,
+      "points": 62,
       "trend": 50000,
       "playedHome": 4,
-      "playedAway": 3,
+      "playedAway": 4,
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
       "jForm": [
+        3,
         2,
-        10,
         14,
         3,
         10
@@ -7509,19 +7509,19 @@
       "name": "Adrián Niño",
       "position": 4,
       "price": 800000,
-      "points": 13,
+      "points": 21,
       "trend": -10000,
-      "playedHome": 1,
+      "playedHome": 2,
       "playedAway": 2,
       "teamName": "Málaga",
       "teamId": 65,
       "status": "ok",
       "jForm": [
+        8,
         2,
-        1,
         10,
         null,
-        null
+        1
       ],
       "clausula": null
     },
@@ -7597,14 +7597,15 @@
       "name": "Aznou",
       "position": 2,
       "price": 280000,
-      "points": 0,
+      "points": 2,
       "trend": 0,
-      "playedHome": 0,
+      "playedHome": 1,
       "playedAway": 0,
       "teamName": "Málaga",
       "teamId": 65,
       "status": "ok",
       "jForm": [
+        2,
         null,
         null,
         null,
@@ -7838,19 +7839,19 @@
       "name": "Marcos Fernández",
       "position": 4,
       "price": 2360000,
-      "points": 28,
+      "points": 30,
       "trend": -20000,
       "playedHome": 3,
-      "playedAway": 3,
+      "playedAway": 4,
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
       "jForm": [
-        5,
+        2,
         5,
         6,
         9,
-        2
+        5
       ],
       "clausula": null
     },
@@ -8022,11 +8023,11 @@
       "teamId": 65,
       "status": "ok",
       "jForm": [
+        null,
         3,
-        -1,
         2,
         6,
-        2
+        -1
       ],
       "clausula": null
     },
@@ -8410,19 +8411,19 @@
       "name": "Dolan",
       "position": 4,
       "price": 1750000,
-      "points": 18,
+      "points": 23,
       "trend": -10000,
       "playedHome": 4,
-      "playedAway": 2,
+      "playedAway": 3,
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
       "jForm": [
+        5,
         1,
-        null,
         2,
         4,
-        2
+        null
       ],
       "clausula": null
     },
@@ -8652,19 +8653,19 @@
       "name": "Riedel",
       "position": 2,
       "price": 920000,
-      "points": 15,
+      "points": 19,
       "trend": -10000,
       "playedHome": 4,
-      "playedAway": 2,
+      "playedAway": 3,
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
       "jForm": [
+        4,
         1,
-        2,
         3,
         3,
-        null
+        2
       ],
       "clausula": null
     },
@@ -9704,19 +9705,19 @@
       "name": "Rafa Rodríguez",
       "position": 3,
       "price": 390000,
-      "points": 12,
+      "points": 15,
       "trend": 0,
-      "playedHome": 1,
+      "playedHome": 2,
       "playedAway": 3,
       "teamName": "Málaga",
       "teamId": 65,
       "status": "ok",
       "jForm": [
+        3,
         5,
         null,
         null,
-        null,
-        2
+        null
       ],
       "clausula": null
     },
@@ -9726,19 +9727,19 @@
       "name": "Rafita",
       "position": 2,
       "price": 2660000,
-      "points": 30,
+      "points": 36,
       "trend": 20000,
-      "playedHome": 3,
+      "playedHome": 4,
       "playedAway": 4,
       "teamName": "Málaga",
       "teamId": 65,
       "status": "ok",
       "jForm": [
-        5,
         6,
+        5,
         3,
         5,
-        1
+        6
       ],
       "clausula": null
     },
@@ -9756,8 +9757,8 @@
       "teamId": 65,
       "status": "ok",
       "jForm": [
-        2,
         null,
+        2,
         null,
         null,
         null
@@ -9792,19 +9793,19 @@
       "name": "Izan Merino",
       "position": 3,
       "price": 1230000,
-      "points": 13,
+      "points": 16,
       "trend": -10000,
-      "playedHome": 3,
+      "playedHome": 4,
       "playedAway": 3,
       "teamName": "Málaga",
       "teamId": 65,
       "status": "ok",
       "jForm": [
+        3,
         null,
-        0,
         2,
         3,
-        2
+        0
       ],
       "clausula": null
     },
@@ -9836,19 +9837,19 @@
       "name": "Alfonso Herrero",
       "position": 1,
       "price": 3990000,
-      "points": 42,
+      "points": 45,
       "trend": -10000,
-      "playedHome": 3,
+      "playedHome": 4,
       "playedAway": 4,
       "teamName": "Málaga",
       "teamId": 65,
       "status": "ok",
       "jForm": [
+        3,
         7,
-        2,
         8,
         8,
-        4
+        2
       ],
       "clausula": null
     },
@@ -10240,8 +10241,8 @@
       "teamId": 65,
       "status": "ok",
       "jForm": [
+        null,
         3,
-        0,
         4,
         3,
         0
@@ -10254,15 +10255,15 @@
       "name": "Larrubia",
       "position": 4,
       "price": 3760000,
-      "points": 27,
+      "points": 34,
       "trend": -20000,
-      "playedHome": 3,
+      "playedHome": 4,
       "playedAway": 4,
       "teamName": "Málaga",
       "teamId": 65,
       "status": "ok",
       "jForm": [
-        4,
+        7,
         4,
         5,
         4,
@@ -10298,19 +10299,19 @@
       "name": "Puga",
       "position": 2,
       "price": 1480000,
-      "points": 22,
+      "points": 27,
       "trend": -10000,
-      "playedHome": 3,
+      "playedHome": 4,
       "playedAway": 3,
       "teamName": "Málaga",
       "teamId": 65,
       "status": "ok",
       "jForm": [
+        5,
         null,
-        3,
         4,
         4,
-        2
+        3
       ],
       "clausula": null
     },
@@ -10320,19 +10321,19 @@
       "name": "Dani Lorenzo",
       "position": 3,
       "price": 2340000,
-      "points": 24,
+      "points": 29,
       "trend": -10000,
-      "playedHome": 3,
+      "playedHome": 4,
       "playedAway": 3,
       "teamName": "Málaga",
       "teamId": 65,
       "status": "ok",
       "jForm": [
+        5,
         6,
-        3,
         -1,
         4,
-        null
+        3
       ],
       "clausula": null
     },
@@ -10342,19 +10343,19 @@
       "name": "Recio",
       "position": 2,
       "price": 1080000,
-      "points": 18,
+      "points": 25,
       "trend": 0,
-      "playedHome": 3,
+      "playedHome": 4,
       "playedAway": 4,
       "teamName": "Málaga",
       "teamId": 65,
       "status": "ok",
       "jForm": [
+        7,
+        2,
         2,
         6,
-        2,
-        6,
-        -1
+        6
       ],
       "clausula": null
     },
@@ -10364,16 +10365,16 @@
       "name": "Chupe",
       "position": 4,
       "price": 2790000,
-      "points": 10,
+      "points": 12,
       "trend": -20000,
-      "playedHome": 3,
+      "playedHome": 4,
       "playedAway": 4,
       "teamName": "Málaga",
       "teamId": 65,
       "status": "ok",
       "jForm": [
         2,
-        1,
+        2,
         -1,
         0,
         1
@@ -10386,19 +10387,19 @@
       "name": "Haitam",
       "position": 4,
       "price": 170000,
-      "points": 7,
+      "points": 9,
       "trend": 0,
-      "playedHome": 1,
+      "playedHome": 2,
       "playedAway": 1,
       "teamName": "Málaga",
       "teamId": 65,
       "status": "ok",
       "jForm": [
+        2,
         null,
         null,
         null,
-        null,
-        2
+        null
       ],
       "clausula": null
     },
@@ -10658,7 +10659,11 @@
       "teamId": 7,
       "status": "ok",
       "jForm": [
-        1
+        null,
+        1,
+        null,
+        null,
+        null
       ],
       "clausula": null
     },
@@ -10768,7 +10773,7 @@
         null,
         1,
         null,
-        3
+        null
       ],
       "clausula": null
     },
@@ -10887,16 +10892,16 @@
       "name": "Calatrava",
       "position": 3,
       "price": 2700000,
-      "points": 25,
+      "points": 28,
       "trend": -20000,
       "playedHome": 4,
-      "playedAway": 3,
+      "playedAway": 4,
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
       "jForm": [
+        3,
         0,
-        2,
         2,
         5,
         2
@@ -10997,19 +11002,19 @@
       "name": "Hartman",
       "position": 2,
       "price": 870000,
-      "points": 9,
+      "points": 14,
       "trend": 0,
       "playedHome": 2,
-      "playedAway": 1,
+      "playedAway": 2,
       "teamName": "Espanyol",
       "teamId": 7,
       "status": "ok",
       "jForm": [
+        5,
         2,
-        4,
         null,
         3,
-        null
+        4
       ],
       "clausula": null
     },
@@ -11094,10 +11099,10 @@
       "status": "ok",
       "jForm": [
         null,
-        -2,
+        null,
         3,
         5,
-        3
+        -2
       ],
       "clausula": null
     },
@@ -11260,15 +11265,15 @@
       "name": "Funes",
       "position": 5,
       "price": 380000,
-      "points": 3,
+      "points": 4,
       "trend": 0,
-      "playedHome": 3,
+      "playedHome": 4,
       "playedAway": 4,
       "teamName": "Málaga",
       "teamId": 65,
       "status": "ok",
       "jForm": [
-        0,
+        1,
         0,
         1,
         1,
@@ -11852,7 +11857,8 @@
         null,
         null,
         null,
-        3
+        3,
+        null
       ],
       "clausula": null
     },
@@ -12081,8 +12087,8 @@
           3,
           9
         ],
-        "teamSize": 15,
-        "teamValue": 44810000,
+        "teamSize": 13,
+        "teamValue": 44440000,
         "teamValueInc": -20000,
         "position": 4,
         "positionInc": 1,
@@ -12100,9 +12106,9 @@
           12,
           13
         ],
-        "teamSize": 18,
-        "teamValue": 35010000,
-        "teamValueInc": -280000,
+        "teamSize": 17,
+        "teamValue": 32190000,
+        "teamValueInc": -100000,
         "position": 5,
         "positionInc": -1,
         "role": ""
@@ -12143,9 +12149,9 @@
           8,
           8
         ],
-        "teamSize": 14,
-        "teamValue": 45420000,
-        "teamValueInc": 60000,
+        "teamSize": 11,
+        "teamValue": 35810000,
+        "teamValueInc": 80000,
         "position": 7,
         "positionInc": -1,
         "role": ""
@@ -12443,7 +12449,7 @@
       "name": "CA CABA JUNIORS",
       "manager": "CA CABA JUNIORS",
       "points": 273,
-      "value": 44810000,
+      "value": 44440000,
       "trend": -20000,
       "players": []
     },
@@ -12452,8 +12458,8 @@
       "name": "INDOMABLE FC",
       "manager": "INDOMABLE FC",
       "points": 273,
-      "value": 35010000,
-      "trend": -280000,
+      "value": 32190000,
+      "trend": -100000,
       "players": []
     },
     {
@@ -12470,8 +12476,8 @@
       "name": "Burnigol FC",
       "manager": "Burnigol FC",
       "points": 264,
-      "value": 45420000,
-      "trend": 60000,
+      "value": 35810000,
+      "trend": 80000,
       "players": []
     },
     {
@@ -12741,9 +12747,88 @@
         "buyDate": 1788239015
       }
     ],
-    "market": []
+    "market": [
+      {
+        "playerID": 163,
+        "price": 3360000,
+        "type": "sale",
+        "until": 1791755742
+      },
+      {
+        "playerID": 2044,
+        "price": 3650000,
+        "type": "sale",
+        "until": 1791755733
+      }
+    ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1791569675,
+      "content": [
+        {
+          "player": 32020,
+          "from": {
+            "id": 12697101,
+            "name": "INDOMABLE FC",
+            "icon": "i/u/11757390.png"
+          },
+          "amount": 3146800
+        },
+        {
+          "player": 12404,
+          "from": {
+            "id": 8070044,
+            "name": "CA CABA JUNIORS",
+            "icon": "i/u/8070044.png?v=6"
+          },
+          "amount": 220500
+        },
+        {
+          "player": 35308,
+          "from": {
+            "id": 8070044,
+            "name": "CA CABA JUNIORS",
+            "icon": "i/u/8070044.png?v=6"
+          },
+          "amount": 155900
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1791550078,
+      "content": [
+        {
+          "player": 38194,
+          "from": {
+            "id": 14094189,
+            "name": "Burnigol FC",
+            "icon": "i/u/14094189.png"
+          },
+          "amount": 3159300
+        },
+        {
+          "player": 32338,
+          "from": {
+            "id": 14094189,
+            "name": "Burnigol FC",
+            "icon": "i/u/14094189.png"
+          },
+          "amount": 3580400
+        },
+        {
+          "player": 25403,
+          "from": {
+            "id": 14094189,
+            "name": "Burnigol FC",
+            "icon": "i/u/14094189.png"
+          },
+          "amount": 3082400
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1791547309,
@@ -13763,51 +13848,6 @@
           "amount": 160000
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1791148618,
-      "content": [
-        {
-          "player": 9983,
-          "from": {
-            "id": 8070044,
-            "name": "CA CABA JUNIORS",
-            "icon": "i/u/8070044.png?v=6"
-          },
-          "amount": 1586400
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1791139610,
-      "content": [
-        {
-          "player": 26095,
-          "from": {
-            "id": 148051,
-            "name": "Zaza Pachulia",
-            "icon": "i/u/148051.png?v=98"
-          },
-          "amount": 1491700
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1791133706,
-      "content": [
-        {
-          "player": 21063,
-          "from": {
-            "id": 3928497,
-            "name": "The Black Team",
-            "icon": "i/u/3928497.png"
-          },
-          "amount": 707300
-        }
-      ]
     }
   ],
   "leagueEnBas": {
@@ -13838,8 +13878,8 @@
           13,
           2
         ],
-        "teamSize": 18,
-        "teamValue": 51690000,
+        "teamSize": 17,
+        "teamValue": 51490000,
         "teamValueInc": 20000,
         "position": 1,
         "role": ""
@@ -14075,9 +14115,9 @@
           14,
           10
         ],
-        "teamSize": 17,
-        "teamValue": 53960000,
-        "teamValueInc": -260000,
+        "teamSize": 13,
+        "teamValue": 35400000,
+        "teamValueInc": -200000,
         "position": 13,
         "positionInc": -3,
         "role": ""
@@ -14170,8 +14210,8 @@
           18
         ],
         "teamSize": 12,
-        "teamValue": 25880000,
-        "teamValueInc": -180000,
+        "teamValue": 23510000,
+        "teamValueInc": -100000,
         "lastTrophy": {
           "type": "league",
           "position": 3,
@@ -14211,9 +14251,9 @@
           4,
           19
         ],
-        "teamSize": 13,
-        "teamValue": 36210000,
-        "teamValueInc": -100000,
+        "teamSize": 12,
+        "teamValue": 33700000,
+        "teamValueInc": 30000,
         "position": 20,
         "role": ""
       }
@@ -14225,7 +14265,7 @@
       "name": "Aquest any pago jo !!",
       "manager": "Aquest any pago jo !!",
       "points": 324,
-      "value": 51690000,
+      "value": 51490000,
       "trend": 20000,
       "players": []
     },
@@ -14333,8 +14373,8 @@
       "name": "FC Borça",
       "manager": "FC Borça",
       "points": 216,
-      "value": 53960000,
-      "trend": -260000,
+      "value": 35400000,
+      "trend": -200000,
       "players": []
     },
     {
@@ -14378,8 +14418,8 @@
       "name": "MarK Lenders",
       "manager": "MarK Lenders",
       "points": 185,
-      "value": 25880000,
-      "trend": -180000,
+      "value": 23510000,
+      "trend": -100000,
       "players": []
     },
     {
@@ -14396,8 +14436,8 @@
       "name": "Janwandowski",
       "manager": "Janwandowski",
       "points": 141,
-      "value": 36210000,
-      "trend": -100000,
+      "value": 33700000,
+      "trend": 30000,
       "players": []
     }
   ],
@@ -14532,11 +14572,104 @@
         "playerID": 42610,
         "price": 9990000,
         "type": "sale",
-        "until": 1791703902
+        "until": 1791755698
       }
     ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1791567773,
+      "content": [
+        {
+          "player": 34717,
+          "from": {
+            "id": 6586257,
+            "name": "Aquest any pago jo !!",
+            "icon": "i/u/6586257.png"
+          },
+          "to": {
+            "id": 9890450,
+            "name": "MarK Lenders",
+            "icon": "icons/34.png"
+          },
+          "amount": 300000,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1791567759,
+      "content": [
+        {
+          "player": 35344,
+          "from": {
+            "id": 9890450,
+            "name": "MarK Lenders",
+            "icon": "icons/34.png"
+          },
+          "amount": 2660900
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1791564257,
+      "content": [
+        {
+          "player": 31027,
+          "from": {
+            "id": 6580423,
+            "name": "FC Borça",
+            "icon": "i/t/3.png"
+          },
+          "amount": 14395600
+        },
+        {
+          "player": 17056,
+          "from": {
+            "id": 6580423,
+            "name": "FC Borça",
+            "icon": "i/t/3.png"
+          },
+          "amount": 1744900
+        },
+        {
+          "player": 31707,
+          "from": {
+            "id": 6580423,
+            "name": "FC Borça",
+            "icon": "i/t/3.png"
+          },
+          "amount": 1097500
+        },
+        {
+          "player": 37723,
+          "from": {
+            "id": 6580423,
+            "name": "FC Borça",
+            "icon": "i/t/3.png"
+          },
+          "amount": 711500
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1791562791,
+      "content": [
+        {
+          "player": 24509,
+          "from": {
+            "id": 6593096,
+            "name": "Janwandowski",
+            "icon": "i/u/6593096.png"
+          },
+          "amount": 2756200
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1791532102,
@@ -15352,102 +15485,6 @@
           "amount": 20167900
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1791152368,
-      "content": [
-        {
-          "player": 32363,
-          "from": {
-            "id": 6593096,
-            "name": "Janwandowski",
-            "icon": "i/u/6593096.png"
-          },
-          "amount": 1863100
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1791139198,
-      "content": [
-        {
-          "player": 31475,
-          "from": {
-            "id": 6586225,
-            "name": "Adeyemi FC",
-            "icon": "icons/30.png"
-          },
-          "to": {
-            "id": 6580386,
-            "name": "Academia Control Orientado FC",
-            "icon": "i/u/6580386.png?v=69"
-          },
-          "amount": 225000,
-          "type": "clause"
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1791137102,
-      "content": [
-        {
-          "player": 39431,
-          "from": {
-            "id": 14001588,
-            "name": "Txapi17",
-            "icon": "i/u/11555657.png"
-          },
-          "amount": 1103700
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1791104536,
-      "content": [
-        {
-          "player": 26813,
-          "from": {
-            "id": 6586257,
-            "name": "Aquest any pago jo !!",
-            "icon": "i/u/6586257.png"
-          },
-          "amount": 153900
-        },
-        {
-          "player": 40960,
-          "from": {
-            "id": 6586257,
-            "name": "Aquest any pago jo !!",
-            "icon": "i/u/6586257.png"
-          },
-          "amount": 156600
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1791098095,
-      "content": [
-        {
-          "player": 17200,
-          "from": {
-            "id": 6579402,
-            "name": "Valors FC",
-            "icon": "icons/7.png"
-          },
-          "to": {
-            "id": 6579283,
-            "name": "Fiorenzola",
-            "icon": "i/u/6579283.png?v=33"
-          },
-          "amount": 330000,
-          "type": "clause"
-        }
-      ]
     }
   ],
   "laliga": {
@@ -15646,6 +15683,25 @@
       {
         "position": 11,
         "team": {
+          "id": 80,
+          "name": "RCD Espanyol de Barcelona",
+          "shortName": "Espanyol",
+          "tla": "ESP",
+          "crest": "https://crests.football-data.org/80.png"
+        },
+        "playedGames": 8,
+        "form": null,
+        "won": 2,
+        "draw": 2,
+        "lost": 4,
+        "points": 8,
+        "goalsFor": 11,
+        "goalsAgainst": 11,
+        "goalDifference": 0
+      },
+      {
+        "position": 12,
+        "team": {
           "id": 82,
           "name": "Getafe CF",
           "shortName": "Getafe",
@@ -15663,7 +15719,7 @@
         "goalDifference": -3
       },
       {
-        "position": 12,
+        "position": 13,
         "team": {
           "id": 87,
           "name": "Rayo Vallecano de Madrid",
@@ -15682,7 +15738,7 @@
         "goalDifference": -5
       },
       {
-        "position": 13,
+        "position": 14,
         "team": {
           "id": 79,
           "name": "CA Osasuna",
@@ -15701,7 +15757,7 @@
         "goalDifference": -7
       },
       {
-        "position": 14,
+        "position": 15,
         "team": {
           "id": 558,
           "name": "RC Celta de Vigo",
@@ -15718,25 +15774,6 @@
         "goalsFor": 8,
         "goalsAgainst": 6,
         "goalDifference": 2
-      },
-      {
-        "position": 15,
-        "team": {
-          "id": 80,
-          "name": "RCD Espanyol de Barcelona",
-          "shortName": "Espanyol",
-          "tla": "ESP",
-          "crest": "https://crests.football-data.org/80.png"
-        },
-        "playedGames": 7,
-        "form": null,
-        "won": 2,
-        "draw": 1,
-        "lost": 4,
-        "points": 7,
-        "goalsFor": 10,
-        "goalsAgainst": 10,
-        "goalDifference": 0
       },
       {
         "position": 16,
@@ -15798,6 +15835,25 @@
       {
         "position": 19,
         "team": {
+          "id": 84,
+          "name": "Málaga CF",
+          "shortName": "Málaga",
+          "tla": "MAL",
+          "crest": "https://crests.football-data.org/84.png"
+        },
+        "playedGames": 8,
+        "form": null,
+        "won": 0,
+        "draw": 4,
+        "lost": 4,
+        "points": 4,
+        "goalsFor": 4,
+        "goalsAgainst": 13,
+        "goalDifference": -9
+      },
+      {
+        "position": 19,
+        "team": {
           "id": 95,
           "name": "Valencia CF",
           "shortName": "Valencia",
@@ -15812,25 +15868,6 @@
         "points": 4,
         "goalsFor": 4,
         "goalsAgainst": 13,
-        "goalDifference": -9
-      },
-      {
-        "position": 20,
-        "team": {
-          "id": 84,
-          "name": "Málaga CF",
-          "shortName": "Málaga",
-          "tla": "MAL",
-          "crest": "https://crests.football-data.org/84.png"
-        },
-        "playedGames": 7,
-        "form": null,
-        "won": 0,
-        "draw": 3,
-        "lost": 4,
-        "points": 3,
-        "goalsFor": 3,
-        "goalsAgainst": 12,
         "goalDifference": -9
       }
     ],
@@ -15876,14 +15913,14 @@
       },
       "80": {
         "results": [
+          "D",
           "L",
           "L",
           "W",
-          "D",
-          "L"
+          "D"
         ],
         "gf": 6,
-        "ga": 8,
+        "ga": 7,
         "crest": "https://crests.football-data.org/80.png",
         "name": "RCD Espanyol de Barcelona"
       },
@@ -15915,14 +15952,14 @@
       },
       "84": {
         "results": [
+          "D",
           "L",
           "L",
           "D",
-          "D",
-          "L"
+          "D"
         ],
-        "gf": 2,
-        "ga": 9,
+        "gf": 3,
+        "ga": 6,
         "crest": "https://crests.football-data.org/84.png",
         "name": "Málaga CF"
       },
@@ -16117,6 +16154,23 @@
     ],
     "recentResults": [
       {
+        "date": "2026-10-09T19:00:00Z",
+        "home": {
+          "name": "Málaga CF",
+          "short": "Málaga",
+          "crest": "https://crests.football-data.org/84.png"
+        },
+        "away": {
+          "name": "RCD Espanyol de Barcelona",
+          "short": "Espanyol",
+          "crest": "https://crests.football-data.org/80.png"
+        },
+        "score": {
+          "home": 1,
+          "away": 1
+        }
+      },
+      {
         "date": "2026-09-20T19:00:00Z",
         "home": {
           "name": "Valencia CF",
@@ -16234,45 +16288,10 @@
           "home": 5,
           "away": 0
         }
-      },
-      {
-        "date": "2026-09-19T14:15:00Z",
-        "home": {
-          "name": "Athletic Club",
-          "short": "Athletic",
-          "crest": "https://crests.football-data.org/77.png"
-        },
-        "away": {
-          "name": "Deportivo Alavés",
-          "short": "Alavés",
-          "crest": "https://crests.football-data.org/263.png"
-        },
-        "score": {
-          "home": 0,
-          "away": 0
-        }
       }
     ]
   },
   "odds": {
-    "Málaga": {
-      "winProb": 0.294665095733535,
-      "drawProb": 0.2727129682576842,
-      "loseProb": 0.43262193600878085,
-      "over25Prob": 0.5714285714285714,
-      "isHome": true,
-      "opponent": "Real Sociedad",
-      "matchDate": "2026-10-18T16:30:00Z"
-    },
-    "Espanyol": {
-      "winProb": 0.2240464497781523,
-      "drawProb": 0.2539991837057127,
-      "loseProb": 0.521954366516135,
-      "over25Prob": 0.5494505494505494,
-      "isHome": true,
-      "opponent": "Atlético Madrid",
-      "matchDate": "2026-10-17T12:00:00Z"
-    },
     "Rayo Vallecano": {
       "winProb": 0.37209776147829243,
       "drawProb": 0.29287694774420436,
@@ -16292,9 +16311,9 @@
       "matchDate": "2026-10-17T19:00:00Z"
     },
     "Alavés": {
-      "winProb": 0.24550509062026132,
-      "drawProb": 0.2794425590295328,
-      "loseProb": 0.4750523503502057,
+      "winProb": 0.247049254405784,
+      "drawProb": 0.2797469498418437,
+      "loseProb": 0.4732037957523725,
       "over25Prob": 0.49504950495049505,
       "isHome": false,
       "opponent": "Celta Vigo",
@@ -16313,7 +16332,7 @@
       "winProb": 0.674353318628434,
       "drawProb": 0.1656306396631241,
       "loseProb": 0.16001604170844194,
-      "over25Prob": 0.7874015748031495,
+      "over25Prob": 0.8,
       "isHome": false,
       "opponent": "Real Betis",
       "matchDate": "2026-10-17T16:30:00Z"
@@ -16328,10 +16347,10 @@
       "matchDate": "2026-10-19T19:00:00Z"
     },
     "Real Madrid": {
-      "winProb": 0.7409793814432989,
-      "drawProb": 0.17783505154639173,
-      "loseProb": 0.08118556701030928,
-      "over25Prob": 0.7194244604316548,
+      "winProb": 0.7441808415398389,
+      "drawProb": 0.16580871381677112,
+      "loseProb": 0.09001044464339003,
+      "over25Prob": 0.7299270072992701,
       "isHome": true,
       "opponent": "Sevilla",
       "matchDate": "2026-10-18T19:00:00Z"
@@ -16355,18 +16374,18 @@
       "matchDate": "2026-10-17T14:15:00Z"
     },
     "Celta Vigo": {
-      "winProb": 0.4750523503502057,
-      "drawProb": 0.2794425590295328,
-      "loseProb": 0.24550509062026132,
+      "winProb": 0.4732037957523725,
+      "drawProb": 0.2797469498418437,
+      "loseProb": 0.247049254405784,
       "over25Prob": 0.49504950495049505,
       "isHome": true,
       "opponent": "Alavés",
       "matchDate": "2026-10-18T14:15:00Z"
     },
     "Real Sociedad": {
-      "winProb": 0.43262193600878085,
-      "drawProb": 0.2727129682576842,
-      "loseProb": 0.294665095733535,
+      "winProb": 0.4352569580078125,
+      "drawProb": 0.2723464965820312,
+      "loseProb": 0.29239654541015625,
       "over25Prob": 0.5714285714285714,
       "isHome": false,
       "opponent": "Málaga",
@@ -16385,7 +16404,7 @@
       "winProb": 0.16001604170844194,
       "drawProb": 0.1656306396631241,
       "loseProb": 0.674353318628434,
-      "over25Prob": 0.7874015748031495,
+      "over25Prob": 0.8,
       "isHome": true,
       "opponent": "Barcelona",
       "matchDate": "2026-10-17T16:30:00Z"
@@ -16427,93 +16446,111 @@
       "matchDate": "2026-10-16T19:00:00Z"
     },
     "Sevilla": {
-      "winProb": 0.08118556701030928,
-      "drawProb": 0.17783505154639173,
-      "loseProb": 0.7409793814432989,
-      "over25Prob": 0.7194244604316548,
+      "winProb": 0.09001044464339003,
+      "drawProb": 0.16580871381677112,
+      "loseProb": 0.7441808415398389,
+      "over25Prob": 0.7299270072992701,
       "isHome": false,
       "opponent": "Real Madrid",
       "matchDate": "2026-10-18T19:00:00Z"
+    },
+    "Espanyol": {
+      "winProb": 0.2240464497781523,
+      "drawProb": 0.2539991837057127,
+      "loseProb": 0.521954366516135,
+      "over25Prob": 0.5494505494505494,
+      "isHome": true,
+      "opponent": "Atlético Madrid",
+      "matchDate": "2026-10-17T12:00:00Z"
+    },
+    "Málaga": {
+      "winProb": 0.29239654541015625,
+      "drawProb": 0.2723464965820312,
+      "loseProb": 0.4352569580078125,
+      "over25Prob": 0.5714285714285714,
+      "isHome": true,
+      "opponent": "Real Sociedad",
+      "matchDate": "2026-10-18T16:30:00Z"
     }
   },
   "news": [
     {
-      "title": "José Alberto deja dos dudas importantes en el once",
-      "link": "https://www.jornadaperfecta.com/blog/jose-alberto-previa-racing-valencia-j8-26-27/",
-      "date": "Fri, 09 Oct 2026 11:52:11 +0000",
-      "img": "https://cdn.biwenger.com/i/t/812.png",
+      "title": "Adrián Niño marca de nuevo, ¿chollo fantasy en el Málaga CF?",
+      "link": "https://www.jornadaperfecta.com/blog/adrian-nino-recomendacion-fantasy-malaga/",
+      "date": "Fri, 09 Oct 2026 20:45:58 +0000",
+      "img": "https://cdn.biwenger.com/i/t/65.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Flick confirma la baja de Raphinha y la titularidad de Joan García",
-      "link": "https://www.jornadaperfecta.com/blog/flick-previa-barcelona-getafe-j8-26-27/",
-      "date": "Fri, 09 Oct 2026 11:31:56 +0000",
+      "title": "Manolo explica el motivo de la suplencia de Dmitrovic",
+      "link": "https://www.jornadaperfecta.com/blog/dmitrovic-motivo-suplencia-porteria-espanyol-j8/",
+      "date": "Fri, 09 Oct 2026 19:16:06 +0000",
+      "img": "https://cdn.biwenger.com/i/t/7.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Apuestas en LaLiga con criptomonedas: ventajas y consejos prácticos",
+      "link": "https://www.jornadaperfecta.com/blog/ventajas-apostar-laliga-criptomonedas/",
+      "date": "Fri, 09 Oct 2026 18:31:47 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "La gran oportunidad de Gabriel Jesus en el Barça",
+      "link": "https://www.jornadaperfecta.com/blog/gabriel-jesus-alinear-j8-fantasy-barcelona/",
+      "date": "Fri, 09 Oct 2026 18:07:16 +0000",
       "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "¡Locura en bwin esta semana con las cuotas para el SuperPartido Real Madrid vs Villarreal!",
-      "link": "https://www.jornadaperfecta.com/blog/superpartido-bwin-real-madrid-villarreal/",
-      "date": "Fri, 09 Oct 2026 11:10:33 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/10/superpartido-bwin-espana-vs-croacia.png",
+      "title": "Sorpresa: Ville Koski completa el entrenamiento con el grupo",
+      "link": "https://www.jornadaperfecta.com/blog/ville-koski-estado-alaves-j8/",
+      "date": "Fri, 09 Oct 2026 18:02:37 +0000",
+      "img": "https://cdn.biwenger.com/i/t/91.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Simeone confirma minutos para Sorloth y Pablo Barrios",
-      "link": "https://www.jornadaperfecta.com/blog/simeone-previa-alaves-atleti-j8-26-27/",
-      "date": "Fri, 09 Oct 2026 11:09:49 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "title": "¡Varios cambios en el once del Málaga CF de la jornada 8!",
+      "link": "https://www.jornadaperfecta.com/blog/once-malaga-j8-26-27/",
+      "date": "Fri, 09 Oct 2026 18:01:48 +0000",
+      "img": "https://cdn.biwenger.com/i/t/65.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "¡5 mayores riesgos fantasy para la jornada 8 de LaLiga!",
-      "link": "https://www.jornadaperfecta.com/blog/5-riesgos-fantasy-j8-26-27/",
-      "date": "Fri, 09 Oct 2026 11:00:34 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
+      "title": "Betfair sube la cuota a 3.20 para las victorias de Real Madrid, Barcelona y Atlético",
+      "link": "https://www.jornadaperfecta.com/blog/supercuota-betfair-laliga-j8/",
+      "date": "Fri, 09 Oct 2026 18:00:23 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/10/betfair-supercuota-laliga-j8.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Pellegrini da de baja a Aitor Ruibal y habla de Ceballos y Lo Celso",
-      "link": "https://www.jornadaperfecta.com/blog/pellegrini-previa-betis-osasuna-j8-26-27/",
-      "date": "Fri, 09 Oct 2026 10:42:03 +0000",
-      "img": "https://cdn.biwenger.com/i/t/87.png",
+      "title": "¡Once titular del RCD Espanyol y Gorosabel fuera de la convocatoria!",
+      "link": "https://www.jornadaperfecta.com/blog/once-espanyol-j8-26-27/",
+      "date": "Fri, 09 Oct 2026 17:50:41 +0000",
+      "img": "https://cdn.biwenger.com/i/t/7.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Terzic habla sobre las bajas de Nico Williams y Sancet",
-      "link": "https://www.jornadaperfecta.com/blog/terzic-previa-rayo-athletic-j8-26-27/",
-      "date": "Fri, 09 Oct 2026 10:24:15 +0000",
-      "img": "https://cdn.biwenger.com/i/t/1.png",
+      "title": "Héctor Fort vuelve al grupo y Oyarzabal gestiona cargas",
+      "link": "https://www.jornadaperfecta.com/blog/hector-fort-estado-real-sociedad-j8/",
+      "date": "Fri, 09 Oct 2026 17:44:49 +0000",
+      "img": "https://cdn.biwenger.com/i/t/13.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Radu entrena con normalidad, tras jugar con molestias con Rumanía",
-      "link": "https://www.jornadaperfecta.com/blog/radu-lesion-hombro/",
-      "date": "Fri, 09 Oct 2026 10:16:43 +0000",
-      "img": "https://cdn.biwenger.com/i/t/5.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Raphinha no entrena y será baja en la jornada 8",
-      "link": "https://www.jornadaperfecta.com/blog/raphinha-regreso-rotacion-barcelona/",
-      "date": "Fri, 09 Oct 2026 09:59:14 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Fede Valverde vuelve a entrenar con el grupo, ¿llega a la jornada 8?",
-      "link": "https://www.jornadaperfecta.com/blog/fede-valverde-estado-j8/",
-      "date": "Fri, 09 Oct 2026 09:54:38 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "title": "Fede Valverde entra en la convocatoria: ¿alinear en fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/fede-valverde-alinear-j8-real-madrid-fantasy/",
+      "date": "Fri, 09 Oct 2026 16:05:26 +0000",
+      "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -16522,7 +16559,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-10-09T12:10:35.883Z",
+    "updatedAt": "2026-10-09T21:55:48.615Z",
     "players": [
       {
         "id": "37428",
@@ -16578,11 +16615,11 @@
         "team": "RCD Espanyol de Barcelona",
         "position": "",
         "nationality": "Spain",
-        "appearances": 7,
+        "appearances": 8,
         "goals": 6,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 105
+        "minutesPerGoal": 120
       },
       {
         "id": "265516",
@@ -16897,6 +16934,18 @@
         "minutesPerGoal": 315
       },
       {
+        "id": "221308",
+        "name": "Adrián",
+        "team": "Málaga CF",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 4,
+        "goals": 2,
+        "assists": 0,
+        "penalties": 0,
+        "minutesPerGoal": 180
+      },
+      {
         "id": "156746",
         "name": "Iván Romero",
         "team": "Levante UD",
@@ -17034,11 +17083,11 @@
         "team": "RCD Espanyol de Barcelona",
         "position": "",
         "nationality": "England",
-        "appearances": 7,
+        "appearances": 8,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 630
+        "minutesPerGoal": 720
       },
       {
         "id": "159647",
@@ -17106,11 +17155,11 @@
         "team": "RCD Espanyol de Barcelona",
         "position": "",
         "nationality": "Spain",
-        "appearances": 7,
+        "appearances": 8,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 630
+        "minutesPerGoal": 720
       },
       {
         "id": "176745",
@@ -17142,11 +17191,11 @@
         "team": "Málaga CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 7,
+        "appearances": 8,
         "goals": 1,
         "assists": 0,
         "penalties": 1,
-        "minutesPerGoal": 630
+        "minutesPerGoal": 720
       },
       {
         "id": "1556",
@@ -17430,11 +17479,11 @@
         "team": "RCD Espanyol de Barcelona",
         "position": "",
         "nationality": "Spain",
-        "appearances": 7,
+        "appearances": 8,
         "goals": 1,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 630
+        "minutesPerGoal": 720
       },
       {
         "id": "152458",
@@ -17567,18 +17616,6 @@
         "assists": 0,
         "penalties": 0,
         "minutesPerGoal": 630
-      },
-      {
-        "id": "221308",
-        "name": "Adrián",
-        "team": "Málaga CF",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 3,
-        "goals": 1,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 270
       },
       {
         "id": "287848",
@@ -17718,11 +17755,11 @@
         "team": "Málaga CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 6,
+        "appearances": 7,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 540
+        "minutesPerGoal": 630
       }
     ]
   }
