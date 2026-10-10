@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T11:28:12.520Z",
+  "updatedAt": "2026-10-10T16:27:54.278Z",
   "players": [
     {
       "id": 11,
@@ -13961,9 +13961,9 @@
           9,
           1
         ],
-        "teamSize": 13,
-        "teamValue": 61300000,
-        "teamValueInc": 40000,
+        "teamSize": 12,
+        "teamValue": 47360000,
+        "teamValueInc": 140000,
         "position": 5,
         "positionInc": -2,
         "role": ""
@@ -14304,8 +14304,8 @@
       "name": "🦊",
       "manager": "🦊",
       "points": 288,
-      "value": 61300000,
-      "trend": 40000,
+      "value": 47360000,
+      "trend": 140000,
       "players": []
     },
     {
@@ -14448,7 +14448,7 @@
     "teamId": 11504267,
     "name": "🦊",
     "points": 288,
-    "balance": -4369988,
+    "balance": 10193912,
     "lineup": {
       "type": "3-5-2",
       "date": 1791624607,
@@ -14458,7 +14458,7 @@
         33447,
         39885,
         29184,
-        31243,
+        null,
         12734,
         35171,
         25127,
@@ -14516,13 +14516,6 @@
         "buyDate": 1790571818
       },
       {
-        "id": 31243,
-        "buyPrice": 14750000,
-        "clause": 20910000,
-        "invested": 0,
-        "buyDate": 1791263205
-      },
-      {
         "id": 33447,
         "buyPrice": 3482555,
         "clause": 0,
@@ -14573,12 +14566,6 @@
         "until": 1791801498
       },
       {
-        "playerID": 31243,
-        "price": 20910000,
-        "type": "sale",
-        "until": 1791801494
-      },
-      {
         "playerID": 42610,
         "price": 9990000,
         "type": "sale",
@@ -14587,6 +14574,21 @@
     ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1791646227,
+      "content": [
+        {
+          "player": 31243,
+          "from": {
+            "id": 11504267,
+            "name": "🦊",
+            "icon": "i/u/11504267.png?v=23"
+          },
+          "amount": 14563900
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1791614633,
@@ -15566,21 +15568,6 @@
           "amount": 154700
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1791177506,
-      "content": [
-        {
-          "player": 15289,
-          "from": {
-            "id": 6579330,
-            "name": "Mindundis",
-            "icon": "i/u/6579330.png?v=18"
-          },
-          "amount": 426200
-        }
-      ]
     }
   ],
   "laliga": {
@@ -15614,15 +15601,15 @@
           "tla": "ATL",
           "crest": "https://crests.football-data.org/78.png"
         },
-        "playedGames": 7,
+        "playedGames": 8,
         "form": null,
-        "won": 5,
+        "won": 6,
         "draw": 1,
         "lost": 1,
-        "points": 16,
-        "goalsFor": 16,
-        "goalsAgainst": 7,
-        "goalDifference": 9
+        "points": 19,
+        "goalsFor": 18,
+        "goalsAgainst": 8,
+        "goalDifference": 10
       },
       {
         "position": 3,
@@ -15690,15 +15677,15 @@
           "tla": "ALA",
           "crest": "https://crests.football-data.org/263.png"
         },
-        "playedGames": 7,
+        "playedGames": 8,
         "form": null,
         "won": 3,
         "draw": 2,
-        "lost": 2,
+        "lost": 3,
         "points": 11,
-        "goalsFor": 11,
-        "goalsAgainst": 6,
-        "goalDifference": 5
+        "goalsFor": 12,
+        "goalsAgainst": 8,
+        "goalDifference": 4
       },
       {
         "position": 7,
@@ -15986,10 +15973,10 @@
           "W",
           "W",
           "W",
-          "L",
-          "W"
+          "W",
+          "L"
         ],
-        "gf": 12,
+        "gf": 11,
         "ga": 5,
         "crest": "https://crests.football-data.org/78.png",
         "name": "Club Atlético de Madrid"
@@ -16152,14 +16139,14 @@
       },
       "263": {
         "results": [
+          "L",
           "D",
           "L",
           "L",
-          "W",
           "W"
         ],
         "gf": 7,
-        "ga": 5,
+        "ga": 7,
         "crest": "https://crests.football-data.org/263.png",
         "name": "Deportivo Alavés"
       },
@@ -16249,6 +16236,23 @@
       }
     ],
     "recentResults": [
+      {
+        "date": "2026-10-10T14:15:00Z",
+        "home": {
+          "name": "Deportivo Alavés",
+          "short": "Alavés",
+          "crest": "https://crests.football-data.org/263.png"
+        },
+        "away": {
+          "name": "Club Atlético de Madrid",
+          "short": "Atleti",
+          "crest": "https://crests.football-data.org/78.png"
+        },
+        "score": {
+          "home": 1,
+          "away": 2
+        }
+      },
       {
         "date": "2026-10-09T19:00:00Z",
         "home": {
@@ -16367,50 +16371,15 @@
           "home": 1,
           "away": 3
         }
-      },
-      {
-        "date": "2026-09-19T16:30:00Z",
-        "home": {
-          "name": "RC Celta de Vigo",
-          "short": "Celta",
-          "crest": "https://crests.football-data.org/558.png"
-        },
-        "away": {
-          "name": "Real Racing Club de Santander",
-          "short": "Santander",
-          "crest": "https://crests.football-data.org/5335.png"
-        },
-        "score": {
-          "home": 5,
-          "away": 0
-        }
       }
     ]
   },
   "odds": {
-    "Rayo Vallecano": {
-      "winProb": 0.37209776147829243,
-      "drawProb": 0.29287694774420436,
-      "loseProb": 0.33502529077750315,
-      "over25Prob": 0.40322580645161293,
-      "isHome": false,
-      "opponent": "Getafe",
-      "matchDate": "2026-10-19T19:00:00Z"
-    },
-    "Athletic Bilbao": {
-      "winProb": 0.46665984116072606,
-      "drawProb": 0.2767401383627562,
-      "loseProb": 0.2566000204765178,
-      "over25Prob": 0.49504950495049505,
-      "isHome": false,
-      "opponent": "Valencia",
-      "matchDate": "2026-10-17T19:00:00Z"
-    },
     "Alavés": {
       "winProb": 0.247049254405784,
       "drawProb": 0.2797469498418437,
       "loseProb": 0.4732037957523725,
-      "over25Prob": 0.48780487804878053,
+      "over25Prob": 0.4807692307692307,
       "isHome": false,
       "opponent": "Celta Vigo",
       "matchDate": "2026-10-18T14:15:00Z"
@@ -16419,16 +16388,16 @@
       "winProb": 0.521954366516135,
       "drawProb": 0.2539991837057127,
       "loseProb": 0.2240464497781523,
-      "over25Prob": 0.5555555555555556,
+      "over25Prob": 0.5714285714285714,
       "isHome": false,
       "opponent": "Espanyol",
       "matchDate": "2026-10-17T12:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.669775718712607,
-      "drawProb": 0.17015923664590557,
-      "loseProb": 0.1600650446414874,
-      "over25Prob": 0.8064516129032259,
+      "winProb": 0.676443849466018,
+      "drawProb": 0.1694156668032009,
+      "loseProb": 0.15414048373078115,
+      "over25Prob": 0.8,
       "isHome": false,
       "opponent": "Real Betis",
       "matchDate": "2026-10-17T16:30:00Z"
@@ -16437,16 +16406,16 @@
       "winProb": 0.33502529077750315,
       "drawProb": 0.29287694774420436,
       "loseProb": 0.37209776147829243,
-      "over25Prob": 0.40322580645161293,
+      "over25Prob": 0.4081632653061224,
       "isHome": true,
       "opponent": "Rayo Vallecano",
       "matchDate": "2026-10-19T19:00:00Z"
     },
     "Real Madrid": {
-      "winProb": 0.7450231005539295,
-      "drawProb": 0.16896059601848046,
-      "loseProb": 0.08601630342759005,
-      "over25Prob": 0.7352941176470588,
+      "winProb": 0.7438907741703576,
+      "drawProb": 0.17022365462997377,
+      "loseProb": 0.08588557119966857,
+      "over25Prob": 0.7246376811594204,
       "isHome": true,
       "opponent": "Sevilla",
       "matchDate": "2026-10-18T19:00:00Z"
@@ -16473,7 +16442,7 @@
       "winProb": 0.4732037957523725,
       "drawProb": 0.2797469498418437,
       "loseProb": 0.247049254405784,
-      "over25Prob": 0.48780487804878053,
+      "over25Prob": 0.4807692307692307,
       "isHome": true,
       "opponent": "Alavés",
       "matchDate": "2026-10-18T14:15:00Z"
@@ -16497,10 +16466,10 @@
       "matchDate": "2026-10-16T19:00:00Z"
     },
     "Real Betis": {
-      "winProb": 0.1600650446414874,
-      "drawProb": 0.17015923664590557,
-      "loseProb": 0.669775718712607,
-      "over25Prob": 0.8064516129032259,
+      "winProb": 0.15414048373078115,
+      "drawProb": 0.1694156668032009,
+      "loseProb": 0.676443849466018,
+      "over25Prob": 0.8,
       "isHome": true,
       "opponent": "Barcelona",
       "matchDate": "2026-10-17T16:30:00Z"
@@ -16542,10 +16511,10 @@
       "matchDate": "2026-10-16T19:00:00Z"
     },
     "Sevilla": {
-      "winProb": 0.08601630342759005,
-      "drawProb": 0.16896059601848046,
-      "loseProb": 0.7450231005539295,
-      "over25Prob": 0.7352941176470588,
+      "winProb": 0.08588557119966857,
+      "drawProb": 0.17022365462997377,
+      "loseProb": 0.7438907741703576,
+      "over25Prob": 0.7246376811594204,
       "isHome": false,
       "opponent": "Real Madrid",
       "matchDate": "2026-10-18T19:00:00Z"
@@ -16554,10 +16523,19 @@
       "winProb": 0.2240464497781523,
       "drawProb": 0.2539991837057127,
       "loseProb": 0.521954366516135,
-      "over25Prob": 0.5555555555555556,
+      "over25Prob": 0.5714285714285714,
       "isHome": true,
       "opponent": "Atlético Madrid",
       "matchDate": "2026-10-17T12:00:00Z"
+    },
+    "Athletic Bilbao": {
+      "winProb": 0.46665984116072606,
+      "drawProb": 0.2767401383627562,
+      "loseProb": 0.2566000204765178,
+      "over25Prob": 0.49504950495049505,
+      "isHome": false,
+      "opponent": "Valencia",
+      "matchDate": "2026-10-17T19:00:00Z"
     },
     "Málaga": {
       "winProb": 0.29239654541015625,
@@ -16567,9 +16545,58 @@
       "isHome": true,
       "opponent": "Real Sociedad",
       "matchDate": "2026-10-18T16:30:00Z"
+    },
+    "Rayo Vallecano": {
+      "winProb": 0.37209776147829243,
+      "drawProb": 0.29287694774420436,
+      "loseProb": 0.33502529077750315,
+      "over25Prob": 0.4081632653061224,
+      "isHome": false,
+      "opponent": "Getafe",
+      "matchDate": "2026-10-19T19:00:00Z"
     }
   },
   "news": [
+    {
+      "title": "Ángel Torres presenta un aval personal para poder fichar a Carvajal",
+      "link": "https://www.jornadaperfecta.com/blog/dani-carvajal-fichaje-getafe/",
+      "date": "Sat, 10 Oct 2026 15:15:57 +0000",
+      "img": "https://cdn.biwenger.com/i/t/8.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Suspendido el Rayo Vallecano &#8211; Athletic por lanzamiento de objetos",
+      "link": "https://www.jornadaperfecta.com/blog/rayo-vallecano-athletic-suspension-j8/",
+      "date": "Sat, 10 Oct 2026 12:57:46 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Matarazzo, sobre Aramburu, Héctor Fort, Zubeldia y Marchal",
+      "link": "https://www.jornadaperfecta.com/blog/matarazzo-previa-real-sociedad-deportivo-j8-26-27/",
+      "date": "Sat, 10 Oct 2026 12:40:15 +0000",
+      "img": "https://cdn.biwenger.com/i/t/13.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Giráldez, sobre Aspas, Febas, Miguel Román y Antañón",
+      "link": "https://www.jornadaperfecta.com/blog/giraldez-previa-elche-celta-j8-26-27/",
+      "date": "Sat, 10 Oct 2026 12:19:02 +0000",
+      "img": "https://cdn.biwenger.com/i/t/5.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Ramis, sobre la recuperación de Aimar Oroz y Moi Gómez",
+      "link": "https://www.jornadaperfecta.com/blog/ramis-previa-betis-osasuna-j8-26-27/",
+      "date": "Sat, 10 Oct 2026 11:51:21 +0000",
+      "img": "https://cdn.biwenger.com/i/t/93.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Aguirre confirma la recuperación de Danjuma y la baja de Rioja",
       "link": "https://www.jornadaperfecta.com/blog/aguirre-previa-racing-valencia-j8-26-27/",
@@ -16609,53 +16636,13 @@
       "img": "https://cdn.biwenger.com/i/t/8.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Ratiu, fuera de la convocatoria del Rayo Vallecano",
-      "link": "https://www.jornadaperfecta.com/blog/ratiu-baja-convocatoria-rayo-vallecano-j8/",
-      "date": "Sat, 10 Oct 2026 09:43:46 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Danjuma entrena con el grupo; Rioja sigue siendo baja",
-      "link": "https://www.jornadaperfecta.com/blog/danjuma-estado-valencia-j8/",
-      "date": "Sat, 10 Oct 2026 09:30:56 +0000",
-      "img": "https://cdn.biwenger.com/i/t/18.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Boyé finalmente entra en la convocatoria del Alavés",
-      "link": "https://www.jornadaperfecta.com/blog/boye-estado-alaves-j8/",
-      "date": "Sat, 10 Oct 2026 09:01:21 +0000",
-      "img": "https://cdn.biwenger.com/i/t/91.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Sorpresa: Ville Koski completa el entrenamiento y va convocado",
-      "link": "https://www.jornadaperfecta.com/blog/ville-koski-estado-alaves-j8/",
-      "date": "Sat, 10 Oct 2026 08:59:37 +0000",
-      "img": "https://cdn.biwenger.com/i/t/91.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Bryan Zaragoza acabó con hielo y cojeando, ¿preocupa?",
-      "link": "https://www.jornadaperfecta.com/blog/bryan-zaragoza-golpe-espanyol/",
-      "date": "Sat, 10 Oct 2026 08:36:56 +0000",
-      "img": "https://cdn.biwenger.com/i/t/7.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-10-10T11:28:10.316Z",
+    "updatedAt": "2026-10-10T16:27:51.716Z",
     "players": [
       {
         "id": "37428",
@@ -16699,11 +16686,11 @@
         "team": "FC Barcelona",
         "position": "",
         "nationality": "Spain",
-        "appearances": 7,
+        "appearances": 8,
         "goals": 7,
         "assists": 4,
         "penalties": 1,
-        "minutesPerGoal": 90
+        "minutesPerGoal": 103
       },
       {
         "id": "180218",
@@ -16766,16 +16753,28 @@
         "minutesPerGoal": 126
       },
       {
+        "id": "11113",
+        "name": "Lucas Boyé",
+        "team": "Deportivo Alavés",
+        "position": "",
+        "nationality": "Argentina",
+        "appearances": 7,
+        "goals": 5,
+        "assists": 0,
+        "penalties": 1,
+        "minutesPerGoal": 126
+      },
+      {
         "id": "213278",
         "name": "Álex Baena",
         "team": "Club Atlético de Madrid",
         "position": "",
         "nationality": "Spain",
-        "appearances": 7,
+        "appearances": 8,
         "goals": 4,
-        "assists": 1,
+        "assists": 2,
         "penalties": 0,
-        "minutesPerGoal": 158
+        "minutesPerGoal": 180
       },
       {
         "id": "214533",
@@ -16783,23 +16782,11 @@
         "team": "FC Barcelona",
         "position": "",
         "nationality": "Spain",
-        "appearances": 7,
+        "appearances": 8,
         "goals": 4,
         "assists": 2,
         "penalties": 0,
-        "minutesPerGoal": 158
-      },
-      {
-        "id": "11113",
-        "name": "Lucas Boyé",
-        "team": "Deportivo Alavés",
-        "position": "",
-        "nationality": "Argentina",
-        "appearances": 6,
-        "goals": 4,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 135
+        "minutesPerGoal": 180
       },
       {
         "id": "8474",
@@ -16807,11 +16794,11 @@
         "team": "Deportivo Alavés",
         "position": "",
         "nationality": "Dominican Republic",
-        "appearances": 7,
+        "appearances": 8,
         "goals": 3,
         "assists": 3,
         "penalties": 0,
-        "minutesPerGoal": 210
+        "minutesPerGoal": 240
       },
       {
         "id": "633",
@@ -16862,16 +16849,28 @@
         "minutesPerGoal": 180
       },
       {
+        "id": "16739",
+        "name": "Alejandro Grimaldo",
+        "team": "Club Atlético de Madrid",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 8,
+        "goals": 3,
+        "assists": 1,
+        "penalties": 2,
+        "minutesPerGoal": 240
+      },
+      {
         "id": "8924",
         "name": "Jonathan David",
         "team": "Club Atlético de Madrid",
         "position": "",
         "nationality": "Canada",
-        "appearances": 4,
+        "appearances": 5,
         "goals": 3,
-        "assists": 1,
+        "assists": 2,
         "penalties": 0,
-        "minutesPerGoal": 120
+        "minutesPerGoal": 150
       },
       {
         "id": "32312",
@@ -16903,11 +16902,11 @@
         "team": "Club Atlético de Madrid",
         "position": "",
         "nationality": "South Korea",
-        "appearances": 7,
+        "appearances": 8,
         "goals": 2,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 315
+        "minutesPerGoal": 360
       },
       {
         "id": "128731",
@@ -16963,11 +16962,11 @@
         "team": "Club Atlético de Madrid",
         "position": "",
         "nationality": "Argentina",
-        "appearances": 7,
+        "appearances": 8,
         "goals": 2,
         "assists": 2,
         "penalties": 0,
-        "minutesPerGoal": 315
+        "minutesPerGoal": 360
       },
       {
         "id": "82515",
@@ -16975,11 +16974,11 @@
         "team": "FC Barcelona",
         "position": "",
         "nationality": "Germany",
-        "appearances": 7,
+        "appearances": 8,
         "goals": 2,
         "assists": 2,
         "penalties": 0,
-        "minutesPerGoal": 315
+        "minutesPerGoal": 360
       },
       {
         "id": "274546",
@@ -17054,18 +17053,6 @@
         "minutesPerGoal": 315
       },
       {
-        "id": "16739",
-        "name": "Alejandro Grimaldo",
-        "team": "Club Atlético de Madrid",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 7,
-        "goals": 2,
-        "assists": 1,
-        "penalties": 2,
-        "minutesPerGoal": 315
-      },
-      {
         "id": "32415",
         "name": "Cucho Hernández",
         "team": "Real Betis Balompié",
@@ -17107,11 +17094,11 @@
         "team": "Deportivo Alavés",
         "position": "",
         "nationality": "Argentina",
-        "appearances": 7,
+        "appearances": 8,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 630
+        "minutesPerGoal": 720
       },
       {
         "id": "290184",
@@ -17263,11 +17250,11 @@
         "team": "Club Atlético de Madrid",
         "position": "",
         "nationality": "Spain",
-        "appearances": 7,
+        "appearances": 8,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 630
+        "minutesPerGoal": 720
       },
       {
         "id": "33132",
@@ -17407,11 +17394,11 @@
         "team": "Club Atlético de Madrid",
         "position": "",
         "nationality": "England",
-        "appearances": 7,
+        "appearances": 8,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 630
+        "minutesPerGoal": 720
       },
       {
         "id": "169162",
@@ -17539,11 +17526,11 @@
         "team": "FC Barcelona",
         "position": "",
         "nationality": "Spain",
-        "appearances": 7,
+        "appearances": 8,
         "goals": 1,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 630
+        "minutesPerGoal": 720
       },
       {
         "id": "173617",
@@ -17551,11 +17538,11 @@
         "team": "Deportivo Alavés",
         "position": "",
         "nationality": "Spain",
-        "appearances": 7,
+        "appearances": 8,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 630
+        "minutesPerGoal": 720
       },
       {
         "id": "188897",
@@ -17587,11 +17574,11 @@
         "team": "Getafe CF",
         "position": "",
         "nationality": "Uruguay",
-        "appearances": 7,
+        "appearances": 8,
         "goals": 1,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 630
+        "minutesPerGoal": 720
       },
       {
         "id": "31019",
@@ -17659,11 +17646,11 @@
         "team": "Deportivo Alavés",
         "position": "",
         "nationality": "Finland",
-        "appearances": 7,
+        "appearances": 8,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 630
+        "minutesPerGoal": 720
       },
       {
         "id": "184273",
@@ -17719,11 +17706,11 @@
         "team": "FC Barcelona",
         "position": "",
         "nationality": "Spain",
-        "appearances": 7,
+        "appearances": 8,
         "goals": 1,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 630
+        "minutesPerGoal": 720
       },
       {
         "id": "154000",
@@ -17731,11 +17718,11 @@
         "team": "Getafe CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 6,
+        "appearances": 7,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 540
+        "minutesPerGoal": 630
       },
       {
         "id": "138031",
@@ -17791,11 +17778,11 @@
         "team": "Club Atlético de Madrid",
         "position": "",
         "nationality": "France",
-        "appearances": 6,
+        "appearances": 7,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 540
+        "minutesPerGoal": 630
       },
       {
         "id": "2000",
@@ -17803,11 +17790,11 @@
         "team": "FC Barcelona",
         "position": "",
         "nationality": "Portugal",
-        "appearances": 7,
+        "appearances": 8,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 630
+        "minutesPerGoal": 720
       },
       {
         "id": "183154",
@@ -17827,11 +17814,11 @@
         "team": "FC Barcelona",
         "position": "",
         "nationality": "Brazil",
-        "appearances": 4,
+        "appearances": 5,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 360
+        "minutesPerGoal": 450
       },
       {
         "id": "175941",
