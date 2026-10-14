@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-13T22:01:04.826Z",
+  "updatedAt": "2026-10-14T02:23:14.816Z",
   "players": [
     {
       "id": 11,
@@ -12407,9 +12407,9 @@
           9,
           18
         ],
-        "teamSize": 17,
-        "teamValue": 41590000,
-        "teamValueInc": -210000,
+        "teamSize": 16,
+        "teamValue": 39060000,
+        "teamValueInc": -60000,
         "position": 16,
         "positionInc": -2,
         "role": ""
@@ -12636,8 +12636,8 @@
       "name": "Tata Martini",
       "manager": "Tata Martini",
       "points": 242,
-      "value": 41590000,
-      "trend": -210000,
+      "value": 39060000,
+      "trend": -60000,
       "players": []
     },
     {
@@ -12847,6 +12847,21 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1791929732,
+      "content": [
+        {
+          "player": 31468,
+          "from": {
+            "id": 12713493,
+            "name": "Tata Martini",
+            "icon": "i/u/12713493.png?v=71"
+          },
+          "amount": 2673300
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1791924424,
@@ -13921,9 +13936,9 @@
           11,
           14
         ],
-        "teamSize": 18,
-        "teamValue": 44880000,
-        "teamValueInc": 120000,
+        "teamSize": 17,
+        "teamValue": 41540000,
+        "teamValueInc": 140000,
         "lastTrophy": {
           "type": "league",
           "position": 1,
@@ -14235,8 +14250,8 @@
       "name": "The GOAT club",
       "manager": "The GOAT club",
       "points": 295,
-      "value": 44880000,
-      "trend": 120000,
+      "value": 41540000,
+      "trend": 140000,
       "players": []
     },
     {
@@ -14471,6 +14486,21 @@
     ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1791930176,
+      "content": [
+        {
+          "player": 26566,
+          "from": {
+            "id": 6588130,
+            "name": "The GOAT club",
+            "icon": "i/u/6588130.png?v=12"
+          },
+          "amount": 3451000
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1791925815,
@@ -15312,21 +15342,6 @@
             "icon": "icons/34.png"
           },
           "amount": 2949300
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1791522159,
-      "content": [
-        {
-          "player": 41265,
-          "from": {
-            "id": 6580386,
-            "name": "Academia Control Orientado FC",
-            "icon": "i/u/6580386.png?v=69"
-          },
-          "amount": 147200
         }
       ]
     }
@@ -16191,9 +16206,9 @@
       "matchDate": "2026-10-24T12:00:00Z"
     },
     "Real Betis": {
-      "winProb": 0.3755310110450297,
-      "drawProb": 0.2706032285471538,
-      "loseProb": 0.3538657604078164,
+      "winProb": 0.3803786574870912,
+      "drawProb": 0.26850258175559377,
+      "loseProb": 0.3511187607573149,
       "over25Prob": 0.5649717514124294,
       "isHome": false,
       "opponent": "Celta Vigo",
@@ -16245,9 +16260,9 @@
       "matchDate": "2026-10-24T14:15:00Z"
     },
     "Celta Vigo": {
-      "winProb": 0.3538657604078164,
-      "drawProb": 0.2706032285471538,
-      "loseProb": 0.3755310110450297,
+      "winProb": 0.3511187607573149,
+      "drawProb": 0.26850258175559377,
+      "loseProb": 0.3803786574870912,
       "over25Prob": 0.5649717514124294,
       "isHome": true,
       "opponent": "Real Betis",
@@ -16317,12 +16332,93 @@
       "matchDate": "2026-10-24T12:00:00Z"
     }
   },
-  "news": [],
+  "news": [
+    {
+      "title": "Cinco noticias fantasy para antes de irte a dormir",
+      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-13-10-26/",
+      "date": "Tue, 13 Oct 2026 21:00:57 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Pedri pide el cambio en Champions League, ¿preocupa?",
+      "link": "https://www.jornadaperfecta.com/blog/pedri-fatiga-muscular-fc-barcelona/",
+      "date": "Tue, 13 Oct 2026 20:43:59 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Chollos LaLiga Fantasy: Fichajes Baratos y Rentables para la jornada 9",
+      "link": "https://www.jornadaperfecta.com/blog/chollos-laliga-fantasy-j9-26-27/",
+      "date": "Tue, 13 Oct 2026 19:00:51 +0000",
+      "img": "https://i.ytimg.com/vi/NUfdk5BhiDI/mqdefault.jpg",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Hasta 10€ de devolución en Freebet con MARCAapuestas para el Roma vs Real Madrid",
+      "link": "https://www.jornadaperfecta.com/blog/marcaapuestas-roma-vs-real-madrid-champions/",
+      "date": "Tue, 13 Oct 2026 18:00:04 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/10/marcaapuestas-roma-vs-real-madrid.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Péter Gulácsi, baja en Champions por un robo a mano armada",
+      "link": "https://www.jornadaperfecta.com/blog/peter-gulacsi-baja-champions-robo-villarreal/",
+      "date": "Tue, 13 Oct 2026 17:21:20 +0000",
+      "img": "https://cdn.biwenger.com/i/t/19.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Andrés García ya entrena con normalidad y está disponible",
+      "link": "https://www.jornadaperfecta.com/blog/andres-garcia-lesion-getafe-cf/",
+      "date": "Tue, 13 Oct 2026 17:01:23 +0000",
+      "img": "https://cdn.biwenger.com/i/t/8.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Mourinho, sobre si Fede Valverde jugará de lateral derecho",
+      "link": "https://www.jornadaperfecta.com/blog/mourinho-previa-roma-real-madrid-champions-j2/",
+      "date": "Tue, 13 Oct 2026 16:56:15 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Ventas Fantasy urgentes tras la Jornada 8: jugadores que debes sacar de tu plantilla",
+      "link": "https://www.jornadaperfecta.com/blog/ventas-fantasy-j8-laliga-26-27/",
+      "date": "Tue, 13 Oct 2026 16:46:28 +0000",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Real Betis, alineación probable contra el Porto y dónde ver en TV",
+      "link": "https://www.jornadaperfecta.com/blog/real-betis-alineacion-probable-porto-champions-j2/",
+      "date": "Tue, 13 Oct 2026 16:21:36 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Lucas Stassin está de vuelta con el grupo en el Sevilla FC",
+      "link": "https://www.jornadaperfecta.com/blog/lucas-stassin-estado-sevilla-j9/",
+      "date": "Tue, 13 Oct 2026 16:12:03 +0000",
+      "img": "https://cdn.biwenger.com/i/t/17.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    }
+  ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-10-13T22:01:02.806Z",
+    "updatedAt": "2026-10-14T02:23:12.258Z",
     "players": [
       {
         "id": "37428",
