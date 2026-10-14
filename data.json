@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-14T10:44:03.897Z",
+  "updatedAt": "2026-10-14T16:02:59.544Z",
   "players": [
     {
       "id": 11,
@@ -1354,8 +1354,8 @@
         null,
         null,
         null,
-        2,
-        null
+        null,
+        2
       ],
       "clausula": null
     },
@@ -3794,9 +3794,9 @@
       "jForm": [
         0,
         3,
+        0,
         1,
-        1,
-        0
+        1
       ],
       "clausula": null
     },
@@ -5254,9 +5254,9 @@
       "jForm": [
         0,
         3,
+        3,
         0,
-        0,
-        3
+        0
       ],
       "clausula": null
     },
@@ -5870,9 +5870,9 @@
       "jForm": [
         2,
         3,
+        4,
         null,
-        -2,
-        4
+        -2
       ],
       "clausula": null
     },
@@ -6768,9 +6768,9 @@
       "jForm": [
         null,
         null,
+        1,
         null,
-        null,
-        1
+        null
       ],
       "clausula": null
     },
@@ -8348,9 +8348,9 @@
       "jForm": [
         -1,
         0,
+        1,
         2,
-        null,
-        1
+        null
       ],
       "clausula": null
     },
@@ -10261,8 +10261,8 @@
         3,
         0,
         3,
-        0,
-        3
+        3,
+        0
       ],
       "clausula": null
     },
@@ -10282,8 +10282,8 @@
       "jForm": [
         1,
         3,
-        1,
         0,
+        1,
         0
       ],
       "clausula": null
@@ -10502,9 +10502,9 @@
       "jForm": [
         3,
         4,
+        11,
         2,
-        1,
-        11
+        1
       ],
       "clausula": null
     },
@@ -11861,9 +11861,9 @@
       "jForm": [
         4,
         7,
+        1,
         3,
-        2,
-        1
+        2
       ],
       "clausula": null
     },
@@ -12121,9 +12121,9 @@
           12,
           13
         ],
-        "teamSize": 18,
-        "teamValue": 42230000,
-        "teamValueInc": 70000,
+        "teamSize": 17,
+        "teamValue": 41420000,
+        "teamValueInc": 90000,
         "position": 2,
         "positionInc": 3,
         "role": ""
@@ -12159,9 +12159,9 @@
           6,
           4
         ],
-        "teamSize": 12,
-        "teamValue": 41830000,
-        "teamValueInc": -200000,
+        "teamSize": 13,
+        "teamValue": 42640000,
+        "teamValueInc": -220000,
         "lastTrophy": {
           "type": "league",
           "position": -1,
@@ -12185,8 +12185,8 @@
           7
         ],
         "teamSize": 16,
-        "teamValue": 42080000,
-        "teamValueInc": 260000,
+        "teamValue": 43160000,
+        "teamValueInc": 310000,
         "lastTrophy": {
           "type": "league",
           "position": 3,
@@ -12245,9 +12245,9 @@
           8,
           8
         ],
-        "teamSize": 12,
-        "teamValue": 39390000,
-        "teamValueInc": 130000,
+        "teamSize": 13,
+        "teamValue": 41980000,
+        "teamValueInc": 150000,
         "position": 8,
         "positionInc": -1,
         "role": ""
@@ -12407,9 +12407,9 @@
           9,
           18
         ],
-        "teamSize": 16,
-        "teamValue": 38900000,
-        "teamValueInc": -160000,
+        "teamSize": 15,
+        "teamValue": 36310000,
+        "teamValueInc": -180000,
         "position": 16,
         "positionInc": -2,
         "role": ""
@@ -12426,9 +12426,9 @@
           4,
           5
         ],
-        "teamSize": 14,
-        "teamValue": 40700000,
-        "teamValueInc": 100000,
+        "teamSize": 13,
+        "teamValue": 38920000,
+        "teamValueInc": 60000,
         "position": 17,
         "role": ""
       },
@@ -12444,9 +12444,9 @@
           18,
           14
         ],
-        "teamSize": 15,
-        "teamValue": 28240000,
-        "teamValueInc": -20000,
+        "teamSize": 16,
+        "teamValue": 28940000,
+        "teamValueInc": -30000,
         "position": 18,
         "positionInc": 1,
         "role": ""
@@ -12510,8 +12510,8 @@
       "name": "INDOMABLE FC",
       "manager": "INDOMABLE FC",
       "points": 325,
-      "value": 42230000,
-      "trend": 70000,
+      "value": 41420000,
+      "trend": 90000,
       "players": []
     },
     {
@@ -12528,8 +12528,8 @@
       "name": "Trileros FC",
       "manager": "Trileros FC",
       "points": 321,
-      "value": 41830000,
-      "trend": -200000,
+      "value": 42640000,
+      "trend": -220000,
       "players": []
     },
     {
@@ -12537,8 +12537,8 @@
       "name": "🦊",
       "manager": "🦊",
       "points": 320,
-      "value": 42080000,
-      "trend": 260000,
+      "value": 43160000,
+      "trend": 310000,
       "players": []
     },
     {
@@ -12564,8 +12564,8 @@
       "name": "Burnigol FC",
       "manager": "Burnigol FC",
       "points": 293,
-      "value": 39390000,
-      "trend": 130000,
+      "value": 41980000,
+      "trend": 150000,
       "players": []
     },
     {
@@ -12636,8 +12636,8 @@
       "name": "Tata Martini",
       "manager": "Tata Martini",
       "points": 242,
-      "value": 38900000,
-      "trend": -160000,
+      "value": 36310000,
+      "trend": -180000,
       "players": []
     },
     {
@@ -12645,8 +12645,8 @@
       "name": "JanBox",
       "manager": "JanBox",
       "points": 238,
-      "value": 40700000,
-      "trend": 100000,
+      "value": 38920000,
+      "trend": 60000,
       "players": []
     },
     {
@@ -12654,8 +12654,8 @@
       "name": "Morankus FC",
       "manager": "Morankus FC",
       "points": 230,
-      "value": 28240000,
-      "trend": -20000,
+      "value": 28940000,
+      "trend": -30000,
       "players": []
     },
     {
@@ -12681,7 +12681,7 @@
     "teamId": 6541195,
     "name": "🦊",
     "points": 320,
-    "balance": 8739564,
+    "balance": 7444564,
     "lineup": {
       "type": "4-5-1",
       "date": 1791973885,
@@ -12733,6 +12733,13 @@
         "clause": 610000000000,
         "invested": 0,
         "buyDate": 1790658181
+      },
+      {
+        "id": 18174,
+        "buyPrice": 2095000,
+        "clause": 3142500,
+        "invested": 0,
+        "buyDate": 1791991210
       },
       {
         "id": 20969,
@@ -12810,13 +12817,6 @@
         "clause": 565888000000,
         "invested": 0,
         "buyDate": 1787893388
-      },
-      {
-        "id": 43172,
-        "buyPrice": 501256,
-        "clause": 700000300000,
-        "invested": 200000,
-        "buyDate": 1788239015
       }
     ],
     "market": [
@@ -12834,19 +12834,96 @@
       },
       {
         "playerID": 26276,
-        "price": 3550020,
+        "price": 3550040,
         "type": "sale",
-        "until": 1791974058
-      },
-      {
-        "playerID": 43172,
-        "price": 710000,
-        "type": "sale",
-        "until": 1792061264
+        "until": 1792164730
       }
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1791991853,
+      "content": [
+        {
+          "player": 43172,
+          "from": {
+            "id": 6541195,
+            "name": "🦊",
+            "icon": "i/u/6541195.png?v=17"
+          },
+          "to": {
+            "id": 11520975,
+            "name": "Morankus FC",
+            "icon": "i/u/11520975.png?v=81"
+          },
+          "amount": 800000
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1791991210,
+      "content": [
+        {
+          "player": 18174,
+          "from": {
+            "id": 14065964,
+            "name": "JanBox",
+            "icon": "i/u/14065964.png?v=16"
+          },
+          "to": {
+            "id": 6541195,
+            "name": "🦊",
+            "icon": "i/u/6541195.png?v=17"
+          },
+          "amount": 2095000,
+          "type": "auction"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1791983894,
+      "content": [
+        {
+          "player": 37525,
+          "from": {
+            "id": 12697101,
+            "name": "INDOMABLE FC",
+            "icon": "i/u/11757390.png"
+          },
+          "to": {
+            "id": 12696599,
+            "name": "Trileros FC",
+            "icon": "i/u/12696599.png"
+          },
+          "amount": 870000,
+          "type": "auction"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1791975252,
+      "content": [
+        {
+          "player": 28087,
+          "from": {
+            "id": 12713493,
+            "name": "Tata Martini",
+            "icon": "i/u/12713493.png?v=71"
+          },
+          "to": {
+            "id": 14094189,
+            "name": "Burnigol FC",
+            "icon": "i/u/14094189.png"
+          },
+          "amount": 2870000,
+          "type": "auction"
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1791965692,
@@ -13477,202 +13554,6 @@
           "amount": 347200
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1791791722,
-      "content": [
-        {
-          "player": 39804,
-          "from": {
-            "id": 6541195,
-            "name": "🦊",
-            "icon": "i/u/6541195.png?v=17"
-          },
-          "amount": 2676200
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1791786950,
-      "content": [
-        {
-          "player": 1952,
-          "from": {
-            "id": 14065964,
-            "name": "JanBox",
-            "icon": "i/u/14065964.png?v=16"
-          },
-          "amount": 5084100
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1791781357,
-      "content": [
-        {
-          "player": 41412,
-          "to": {
-            "id": 148051,
-            "name": "Zaza Pachulia",
-            "icon": "i/u/148051.png?v=98"
-          },
-          "amount": 3999710,
-          "bids": [
-            {
-              "user": {
-                "id": 11521196,
-                "name": "Hufflepuff 🍋",
-                "icon": "i/u/11521196.png?v=57"
-              },
-              "amount": 3980009
-            },
-            {
-              "user": {
-                "id": 11520975,
-                "name": "Morankus FC",
-                "icon": "i/u/11520975.png?v=81"
-              },
-              "amount": 3750000
-            },
-            {
-              "user": {
-                "id": 12713493,
-                "name": "Tata Martini",
-                "icon": "i/u/12713493.png?v=71"
-              },
-              "amount": 3750000
-            },
-            {
-              "user": {
-                "id": 14074484,
-                "name": "wilamalel",
-                "icon": "https://lh3.googleusercontent.com/a/ACg8ocJGUZto0NCjv5HnKiftjGqQiwQNQWQjyPJpfYbDxfcaNvZWgg=s300-c"
-              },
-              "amount": 3750000
-            }
-          ]
-        },
-        {
-          "player": 43267,
-          "to": {
-            "id": 12697101,
-            "name": "INDOMABLE FC",
-            "icon": "i/u/11757390.png"
-          },
-          "amount": 1348230,
-          "bids": [
-            {
-              "user": {
-                "id": 11520975,
-                "name": "Morankus FC",
-                "icon": "i/u/11520975.png?v=81"
-              },
-              "amount": 956990
-            },
-            {
-              "user": {
-                "id": 8070044,
-                "name": "CA CABA JUNIORS",
-                "icon": "i/u/8070044.png?v=6"
-              },
-              "amount": 940000
-            }
-          ]
-        },
-        {
-          "player": 33971,
-          "to": {
-            "id": 12696899,
-            "name": "CIGALERU",
-            "icon": "i/u/12696899.png"
-          },
-          "amount": 1152540
-        },
-        {
-          "player": 26592,
-          "to": {
-            "id": 8068427,
-            "name": "Albertini",
-            "icon": "i/u/8068427.png"
-          },
-          "amount": 1050000
-        },
-        {
-          "player": 41098,
-          "to": {
-            "id": 11520975,
-            "name": "Morankus FC",
-            "icon": "i/u/11520975.png?v=81"
-          },
-          "amount": 1200000
-        },
-        {
-          "player": 37717,
-          "to": {
-            "id": 11521196,
-            "name": "Hufflepuff 🍋",
-            "icon": "i/u/11521196.png?v=57"
-          },
-          "amount": 1399009
-        },
-        {
-          "player": 29661,
-          "to": {
-            "id": 14074484,
-            "name": "wilamalel",
-            "icon": "https://lh3.googleusercontent.com/a/ACg8ocJGUZto0NCjv5HnKiftjGqQiwQNQWQjyPJpfYbDxfcaNvZWgg=s300-c"
-          },
-          "amount": 2910000
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1791759353,
-      "content": [
-        {
-          "player": 41416,
-          "from": {
-            "id": 14074484,
-            "name": "wilamalel",
-            "icon": "https://lh3.googleusercontent.com/a/ACg8ocJGUZto0NCjv5HnKiftjGqQiwQNQWQjyPJpfYbDxfcaNvZWgg=s300-c"
-          },
-          "amount": 1472700
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1791734326,
-      "content": [
-        {
-          "player": 41606,
-          "from": {
-            "id": 14094028,
-            "name": "Estem caputs",
-            "icon": "i/u/12736123.png"
-          },
-          "amount": 1803000
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1791706642,
-      "content": [
-        {
-          "player": 34805,
-          "from": {
-            "id": 14074484,
-            "name": "wilamalel",
-            "icon": "https://lh3.googleusercontent.com/a/ACg8ocJGUZto0NCjv5HnKiftjGqQiwQNQWQjyPJpfYbDxfcaNvZWgg=s300-c"
-          },
-          "amount": 325400
-        }
-      ]
     }
   ],
   "leagueEnBas": {
@@ -13942,9 +13823,9 @@
           14,
           10
         ],
-        "teamSize": 13,
-        "teamValue": 28850000,
-        "teamValueInc": -40000,
+        "teamSize": 12,
+        "teamValue": 25840000,
+        "teamValueInc": -10000,
         "position": 13,
         "role": ""
       },
@@ -14035,9 +13916,9 @@
           17,
           18
         ],
-        "teamSize": 12,
-        "teamValue": 22520000,
-        "teamValueInc": -260000,
+        "teamSize": 13,
+        "teamValue": 25530000,
+        "teamValueInc": -290000,
         "lastTrophy": {
           "type": "league",
           "position": 3,
@@ -14198,8 +14079,8 @@
       "name": "FC Borça",
       "manager": "FC Borça",
       "points": 248,
-      "value": 28850000,
-      "trend": -40000,
+      "value": 25840000,
+      "trend": -10000,
       "players": []
     },
     {
@@ -14243,8 +14124,8 @@
       "name": "MarK Lenders",
       "manager": "MarK Lenders",
       "points": 209,
-      "value": 22520000,
-      "trend": -260000,
+      "value": 25530000,
+      "trend": -290000,
       "players": []
     },
     {
@@ -14273,12 +14154,12 @@
     "balance": 4863779,
     "lineup": {
       "type": "3-5-2",
-      "date": 1791973927,
+      "date": 1791981882,
       "playersID": [
         43282,
         37739,
         33447,
-        12404,
+        12734,
         29184,
         4753,
         25159,
@@ -14289,8 +14170,8 @@
       ],
       "reservesID": [
         null,
+        12404,
         null,
-        12734,
         null
       ]
     },
@@ -14396,6 +14277,26 @@
     ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1791982549,
+      "content": [
+        {
+          "player": 38405,
+          "from": {
+            "id": 6580423,
+            "name": "FC Borça",
+            "icon": "i/t/3.png"
+          },
+          "to": {
+            "id": 9890450,
+            "name": "MarK Lenders",
+            "icon": "icons/34.png"
+          },
+          "amount": 3260000
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1791963213,
@@ -15248,42 +15149,6 @@
           ]
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1791567773,
-      "content": [
-        {
-          "player": 34717,
-          "from": {
-            "id": 6586257,
-            "name": "Aquest any pago jo !!",
-            "icon": "i/u/6586257.png"
-          },
-          "to": {
-            "id": 9890450,
-            "name": "MarK Lenders",
-            "icon": "icons/34.png"
-          },
-          "amount": 300000,
-          "type": "clause"
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1791567759,
-      "content": [
-        {
-          "player": 35344,
-          "from": {
-            "id": 9890450,
-            "name": "MarK Lenders",
-            "icon": "icons/34.png"
-          },
-          "amount": 2660900
-        }
-      ]
     }
   ],
   "laliga": {
@@ -16092,9 +15957,9 @@
   },
   "odds": {
     "Deportivo La Coruña": {
-      "winProb": 0.09642048895547127,
-      "drawProb": 0.14655914321231633,
-      "loseProb": 0.7570203678322125,
+      "winProb": 0.08788052843193567,
+      "drawProb": 0.13670304422745547,
+      "loseProb": 0.7754164273406089,
       "over25Prob": 0.6535947712418301,
       "isHome": false,
       "opponent": "Atlético Madrid",
@@ -16119,9 +15984,9 @@
       "matchDate": "2026-10-24T14:15:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.7570203678322125,
-      "drawProb": 0.14655914321231633,
-      "loseProb": 0.09642048895547127,
+      "winProb": 0.7754164273406089,
+      "drawProb": 0.13670304422745547,
+      "loseProb": 0.08788052843193567,
       "over25Prob": 0.6535947712418301,
       "isHome": true,
       "opponent": "Deportivo La Coruña",
@@ -16146,9 +16011,9 @@
       "matchDate": "2026-10-24T12:00:00Z"
     },
     "Real Betis": {
-      "winProb": 0.3803786574870912,
-      "drawProb": 0.26850258175559377,
-      "loseProb": 0.3511187607573149,
+      "winProb": 0.3755310110450297,
+      "drawProb": 0.2706032285471538,
+      "loseProb": 0.3538657604078164,
       "over25Prob": 0.5649717514124294,
       "isHome": false,
       "opponent": "Celta Vigo",
@@ -16173,9 +16038,9 @@
       "matchDate": "2026-10-24T16:30:00Z"
     },
     "Athletic Bilbao": {
-      "winProb": 0.5764425936942297,
-      "drawProb": 0.2427126710291493,
-      "loseProb": 0.1808447352766211,
+      "winProb": 0.5743651753325273,
+      "drawProb": 0.2418379685610641,
+      "loseProb": 0.18379685610640872,
       "over25Prob": 0.45454545454545453,
       "isHome": true,
       "opponent": "Getafe",
@@ -16200,9 +16065,9 @@
       "matchDate": "2026-10-24T14:15:00Z"
     },
     "Celta Vigo": {
-      "winProb": 0.3511187607573149,
-      "drawProb": 0.26850258175559377,
-      "loseProb": 0.3803786574870912,
+      "winProb": 0.3538657604078164,
+      "drawProb": 0.2706032285471538,
+      "loseProb": 0.3755310110450297,
       "over25Prob": 0.5649717514124294,
       "isHome": true,
       "opponent": "Real Betis",
@@ -16212,7 +16077,7 @@
       "winProb": 0.5119514805565465,
       "drawProb": 0.2632893328576525,
       "loseProb": 0.22475918658580094,
-      "over25Prob": 0.5,
+      "over25Prob": 0.48780487804878053,
       "isHome": true,
       "opponent": "Málaga",
       "matchDate": "2026-10-23T19:00:00Z"
@@ -16221,7 +16086,7 @@
       "winProb": 0.22475918658580094,
       "drawProb": 0.2632893328576525,
       "loseProb": 0.5119514805565465,
-      "over25Prob": 0.5,
+      "over25Prob": 0.48780487804878053,
       "isHome": false,
       "opponent": "Alavés",
       "matchDate": "2026-10-23T19:00:00Z"
@@ -16254,9 +16119,9 @@
       "matchDate": "2026-10-26T20:00:00Z"
     },
     "Getafe": {
-      "winProb": 0.1808447352766211,
-      "drawProb": 0.2427126710291493,
-      "loseProb": 0.5764425936942297,
+      "winProb": 0.18379685610640872,
+      "drawProb": 0.2418379685610641,
+      "loseProb": 0.5743651753325273,
       "over25Prob": 0.45454545454545453,
       "isHome": false,
       "opponent": "Athletic Bilbao",
@@ -16273,6 +16138,54 @@
     }
   },
   "news": [
+    {
+      "title": "Nueva lesión muscular de Aimar Oroz: Parte médico de Osasuna",
+      "link": "https://www.jornadaperfecta.com/blog/aimar-oroz-lesion-osasuna-2/",
+      "date": "Wed, 14 Oct 2026 14:38:59 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Borja Iglesias y Pablo Durán, bajas ante la Juventus: parte médico oficial",
+      "link": "https://www.jornadaperfecta.com/blog/borja-iglesias-lesion-triceps-sural/",
+      "date": "Wed, 14 Oct 2026 13:05:44 +0000",
+      "img": "https://cdn.biwenger.com/i/t/5.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "El Getafe viaja sin Ünal, Mangala, Zaid Romero e Iván Azón, pero recupera a Andrés García",
+      "link": "https://www.jornadaperfecta.com/blog/zaid-unal-mangala-azon-bajas/",
+      "date": "Wed, 14 Oct 2026 12:44:30 +0000",
+      "img": "https://cdn.biwenger.com/i/t/8.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Fermín López baja el ritmo: ¿qué hacer con él en fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/fermin-decision-fantasy-fc-barcelona/",
+      "date": "Wed, 14 Oct 2026 11:00:15 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Buba Sangaré repite con el grupo, ¿titular en la jornada 9?",
+      "link": "https://www.jornadaperfecta.com/blog/buba-sangare-estado-elche-j9/",
+      "date": "Wed, 14 Oct 2026 10:52:07 +0000",
+      "img": "https://cdn.biwenger.com/i/t/75.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Nico Williams ya trabaja sobre el césped, ¿llega a la jornada 9?",
+      "link": "https://www.jornadaperfecta.com/blog/nico-williams-regreso-athletic/",
+      "date": "Wed, 14 Oct 2026 10:44:55 +0000",
+      "img": "https://cdn.biwenger.com/i/t/1.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Parte médico de Guridi: lesión en el aductor y tiempo de baja",
       "link": "https://www.jornadaperfecta.com/blog/guridi-lesion-aductor-largo/",
@@ -16304,61 +16217,13 @@
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Las claves fantasy del Getafe &#8211; Rayo: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-getafe-rayo-j9-26-27/",
-      "date": "Wed, 14 Oct 2026 06:45:22 +0000",
-      "img": "https://cdn.biwenger.com/i/t/8.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Las claves fantasy del Real Madrid &#8211; Sevilla: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-real-madrid-sevilla-j9-26-27/",
-      "date": "Wed, 14 Oct 2026 06:40:42 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Las claves fantasy del Málaga &#8211; Real Sociedad: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-malaga-real-sociedad-j9-26-27/",
-      "date": "Wed, 14 Oct 2026 06:35:21 +0000",
-      "img": "https://cdn.biwenger.com/i/t/65.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Las claves fantasy del Celta &#8211; Alavés: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-celta-alaves-j9-26-27/",
-      "date": "Wed, 14 Oct 2026 06:30:19 +0000",
-      "img": "https://cdn.biwenger.com/i/t/5.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Las claves fantasy del Osasuna &#8211; Racing: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-osasuna-racing-j9-26-27/",
-      "date": "Wed, 14 Oct 2026 06:25:00 +0000",
-      "img": "https://cdn.biwenger.com/i/t/93.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Las claves fantasy del Valencia &#8211; Athletic: Onces, Lesiones y Apuestas",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-valencia-athletic-j9-26-27/",
-      "date": "Wed, 14 Oct 2026 06:20:02 +0000",
-      "img": "https://cdn.biwenger.com/i/t/18.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-10-14T10:44:03.410Z",
+    "updatedAt": "2026-10-14T16:02:57.393Z",
     "players": [
       {
         "id": "37428",
