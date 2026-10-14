@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-14T16:02:59.544Z",
+  "updatedAt": "2026-10-14T21:02:06.852Z",
   "players": [
     {
       "id": 11,
@@ -12121,9 +12121,9 @@
           12,
           13
         ],
-        "teamSize": 17,
-        "teamValue": 41420000,
-        "teamValueInc": 90000,
+        "teamSize": 15,
+        "teamValue": 39010000,
+        "teamValueInc": 120000,
         "position": 2,
         "positionInc": 3,
         "role": ""
@@ -12165,7 +12165,7 @@
         "lastTrophy": {
           "type": "league",
           "position": -1,
-          "season": "Temporada 2025/2026"
+          "season": "2025/2026 season"
         },
         "position": 4,
         "positionInc": -2,
@@ -12190,7 +12190,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "Temporada 2025/2026"
+          "season": "2025/2026 season"
         },
         "position": 5,
         "positionInc": 1
@@ -12290,7 +12290,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 2,
-          "season": "Temporada 2025/2026"
+          "season": "2025/2026 season"
         },
         "position": 10,
         "positionInc": 2
@@ -12351,7 +12351,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 1,
-          "season": "Temporada 2025/2026"
+          "season": "2025/2026 season"
         },
         "position": 13,
         "positionInc": 2,
@@ -12444,9 +12444,9 @@
           18,
           14
         ],
-        "teamSize": 16,
-        "teamValue": 28940000,
-        "teamValueInc": -30000,
+        "teamSize": 15,
+        "teamValue": 27090000,
+        "teamValueInc": 30000,
         "position": 18,
         "positionInc": 1,
         "role": ""
@@ -12469,7 +12469,7 @@
         "lastTrophy": {
           "type": "league",
           "position": -1,
-          "season": "Temporada 2023/2024"
+          "season": "2023/2024 season"
         },
         "position": 19,
         "positionInc": -1,
@@ -12510,8 +12510,8 @@
       "name": "INDOMABLE FC",
       "manager": "INDOMABLE FC",
       "points": 325,
-      "value": 41420000,
-      "trend": 90000,
+      "value": 39010000,
+      "trend": 120000,
       "players": []
     },
     {
@@ -12654,8 +12654,8 @@
       "name": "Morankus FC",
       "manager": "Morankus FC",
       "points": 230,
-      "value": 28940000,
-      "trend": -30000,
+      "value": 27090000,
+      "trend": 30000,
       "players": []
     },
     {
@@ -12841,6 +12841,45 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1791996667,
+      "content": [
+        {
+          "player": 33531,
+          "from": {
+            "id": 11520975,
+            "name": "Morankus FC",
+            "icon": "i/u/11520975.png?v=81"
+          },
+          "amount": 1889700
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1791995033,
+      "content": [
+        {
+          "player": 18570,
+          "from": {
+            "id": 12697101,
+            "name": "INDOMABLE FC",
+            "icon": "i/u/11757390.png"
+          },
+          "amount": 1219000
+        },
+        {
+          "player": 26360,
+          "from": {
+            "id": 12697101,
+            "name": "INDOMABLE FC",
+            "icon": "i/u/11757390.png"
+          },
+          "amount": 1268100
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1791991853,
@@ -13509,51 +13548,6 @@
           "amount": 1102400
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1791801374,
-      "content": [
-        {
-          "player": 10030,
-          "from": {
-            "id": 6552586,
-            "name": "LeMola Team",
-            "icon": "i/u/6552586.png"
-          },
-          "amount": 1417000
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1791795467,
-      "content": [
-        {
-          "player": 18178,
-          "from": {
-            "id": 14074484,
-            "name": "wilamalel",
-            "icon": "https://lh3.googleusercontent.com/a/ACg8ocJGUZto0NCjv5HnKiftjGqQiwQNQWQjyPJpfYbDxfcaNvZWgg=s300-c"
-          },
-          "amount": 585600
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1791793529,
-      "content": [
-        {
-          "player": 29034,
-          "from": {
-            "id": 11520975,
-            "name": "Morankus FC",
-            "icon": "i/u/11520975.png?v=81"
-          },
-          "amount": 347200
-        }
-      ]
     }
   ],
   "leagueEnBas": {
@@ -13608,9 +13602,9 @@
           13,
           2
         ],
-        "teamSize": 12,
-        "teamValue": 46200000,
-        "teamValueInc": 230000,
+        "teamSize": 13,
+        "teamValue": 48060000,
+        "teamValueInc": 210000,
         "position": 2,
         "positionInc": -1,
         "role": ""
@@ -13684,9 +13678,9 @@
           8,
           9
         ],
-        "teamSize": 12,
-        "teamValue": 41440000,
-        "teamValueInc": 10000,
+        "teamSize": 11,
+        "teamValue": 39580000,
+        "teamValueInc": 30000,
         "position": 6,
         "role": ""
       },
@@ -13980,8 +13974,8 @@
       "name": "Aquest any pago jo !!",
       "manager": "Aquest any pago jo !!",
       "points": 351,
-      "value": 46200000,
-      "trend": 230000,
+      "value": 48060000,
+      "trend": 210000,
       "players": []
     },
     {
@@ -14016,8 +14010,8 @@
       "name": "Fiorenzola",
       "manager": "Fiorenzola",
       "points": 314,
-      "value": 41440000,
-      "trend": 10000,
+      "value": 39580000,
+      "trend": 30000,
       "players": []
     },
     {
@@ -14154,7 +14148,7 @@
     "balance": 4863779,
     "lineup": {
       "type": "3-5-2",
-      "date": 1791981882,
+      "date": 1791996609,
       "playersID": [
         43282,
         37739,
@@ -14214,7 +14208,7 @@
       {
         "id": 29184,
         "buyPrice": 7000122,
-        "clause": 9855000,
+        "clause": 0,
         "invested": 0,
         "buyDate": 1790571818
       },
@@ -14277,6 +14271,26 @@
     ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1792008057,
+      "content": [
+        {
+          "player": 1523,
+          "from": {
+            "id": 6579283,
+            "name": "Fiorenzola",
+            "icon": "i/u/6579283.png?v=33"
+          },
+          "to": {
+            "id": 6586257,
+            "name": "Aquest any pago jo !!",
+            "icon": "i/u/6586257.png"
+          },
+          "amount": 2300000
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1791982549,
@@ -14981,172 +14995,6 @@
             "icon": "i/u/6586257.png"
           },
           "amount": 151500
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1791608515,
-      "content": [
-        {
-          "player": 42459,
-          "to": {
-            "id": 6579540,
-            "name": "Aiveen Teaam",
-            "icon": "i/u/6579540.png?v=63"
-          },
-          "amount": 830000
-        },
-        {
-          "player": 8695,
-          "to": {
-            "id": 6579280,
-            "name": "BSG Schreibmaschinenwerk Dresden",
-            "icon": "i/u/6579280.png?v=85"
-          },
-          "amount": 2790080,
-          "bids": [
-            {
-              "user": {
-                "id": 6585052,
-                "name": "Tots som Olost",
-                "icon": "i/u/6585052.png?v=69"
-              },
-              "amount": 2558000
-            },
-            {
-              "user": {
-                "id": 9890540,
-                "name": "UE Trincadors"
-              },
-              "amount": 2470000
-            }
-          ]
-        },
-        {
-          "player": 39901,
-          "to": {
-            "id": 6580386,
-            "name": "Academia Control Orientado FC",
-            "icon": "i/u/6580386.png?v=69"
-          },
-          "amount": 1675000,
-          "bids": [
-            {
-              "user": {
-                "id": 9890540,
-                "name": "UE Trincadors"
-              },
-              "amount": 1650010
-            }
-          ]
-        },
-        {
-          "player": 41412,
-          "to": {
-            "id": 6579505,
-            "name": "Xevi borrat",
-            "icon": "i/u/6579505.png"
-          },
-          "amount": 3760000
-        },
-        {
-          "player": 32120,
-          "to": {
-            "id": 6593096,
-            "name": "Janwandowski",
-            "icon": "i/u/6593096.png"
-          },
-          "amount": 2950010
-        },
-        {
-          "player": 43259,
-          "to": {
-            "id": 9890540,
-            "name": "UE Trincadors"
-          },
-          "amount": 1170010
-        },
-        {
-          "player": 21084,
-          "to": {
-            "id": 6586225,
-            "name": "Adeyemi FC",
-            "icon": "icons/30.png"
-          },
-          "amount": 3453860,
-          "bids": [
-            {
-              "user": {
-                "id": 6580386,
-                "name": "Academia Control Orientado FC",
-                "icon": "i/u/6580386.png?v=69"
-              },
-              "amount": 3450000
-            },
-            {
-              "user": {
-                "id": 6588130,
-                "name": "The GOAT club",
-                "icon": "i/u/6588130.png?v=12"
-              },
-              "amount": 3444000
-            },
-            {
-              "user": {
-                "id": 7817228,
-                "name": "Petraques",
-                "icon": "i/u/7817228.png"
-              },
-              "amount": 3399000
-            }
-          ]
-        },
-        {
-          "player": 39885,
-          "to": {
-            "id": 11504267,
-            "name": "🦊",
-            "icon": "i/u/11504267.png?v=23"
-          },
-          "amount": 4612555,
-          "bids": [
-            {
-              "user": {
-                "id": 6579505,
-                "name": "Xevi borrat",
-                "icon": "i/u/6579505.png"
-              },
-              "amount": 4420000
-            }
-          ]
-        },
-        {
-          "player": 39941,
-          "to": {
-            "id": 6593096,
-            "name": "Janwandowski",
-            "icon": "i/u/6593096.png"
-          },
-          "amount": 4980000,
-          "bids": [
-            {
-              "user": {
-                "id": 7817228,
-                "name": "Petraques",
-                "icon": "i/u/7817228.png"
-              },
-              "amount": 4899000
-            },
-            {
-              "user": {
-                "id": 11504267,
-                "name": "🦊",
-                "icon": "i/u/11504267.png?v=23"
-              },
-              "amount": 4782222
-            }
-          ]
         }
       ]
     }
@@ -15957,9 +15805,9 @@
   },
   "odds": {
     "Deportivo La Coruña": {
-      "winProb": 0.08788052843193567,
-      "drawProb": 0.13670304422745547,
-      "loseProb": 0.7754164273406089,
+      "winProb": 0.08730680697139098,
+      "drawProb": 0.13581058862216375,
+      "loseProb": 0.7768826044064453,
       "over25Prob": 0.6535947712418301,
       "isHome": false,
       "opponent": "Atlético Madrid",
@@ -15984,9 +15832,9 @@
       "matchDate": "2026-10-24T14:15:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.7754164273406089,
-      "drawProb": 0.13670304422745547,
-      "loseProb": 0.08788052843193567,
+      "winProb": 0.7768826044064453,
+      "drawProb": 0.13581058862216375,
+      "loseProb": 0.08730680697139098,
       "over25Prob": 0.6535947712418301,
       "isHome": true,
       "opponent": "Deportivo La Coruña",
@@ -16020,9 +15868,9 @@
       "matchDate": "2026-10-25T15:15:00Z"
     },
     "Barcelona": {
-      "winProb": 0.6108703187941525,
-      "drawProb": 0.19552708017069295,
-      "loseProb": 0.19360260103515464,
+      "winProb": 0.6269944833916793,
+      "drawProb": 0.1900350075144665,
+      "loseProb": 0.18297050909385437,
       "over25Prob": 0.8,
       "isHome": true,
       "opponent": "Real Madrid",
@@ -16101,9 +15949,9 @@
       "matchDate": "2026-10-25T17:30:00Z"
     },
     "Real Madrid": {
-      "winProb": 0.19360260103515464,
-      "drawProb": 0.19552708017069295,
-      "loseProb": 0.6108703187941525,
+      "winProb": 0.18297050909385437,
+      "drawProb": 0.1900350075144665,
+      "loseProb": 0.6269944833916793,
       "over25Prob": 0.8,
       "isHome": false,
       "opponent": "Barcelona",
@@ -16139,6 +15987,54 @@
   },
   "news": [
     {
+      "title": "Dani Carvajal ficha por el Getafe: ¿titular asegurado y chollo fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/dani-carvajal-analisis-fantasy-getafe/",
+      "date": "Wed, 14 Oct 2026 20:05:12 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2025/09/Dani-Carvajal-Real-Madrid-fantasy.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Getafe, alineación probable contra el Craiova y dónde ver en TV",
+      "link": "https://www.jornadaperfecta.com/blog/getafe-alineacion-probable-craiova-conference/",
+      "date": "Wed, 14 Oct 2026 19:08:26 +0000",
+      "img": "https://cdn.biwenger.com/i/t/8.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Matarazzo, sobre Héctor Fort y las rotaciones",
+      "link": "https://www.jornadaperfecta.com/blog/matarazzo-previa-real-sociedad-europa-j2/",
+      "date": "Wed, 14 Oct 2026 18:41:59 +0000",
+      "img": "https://cdn.biwenger.com/i/t/13.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Podcast Fantasy Jornada 9 de LaLiga: alineaciones, dudas y chollos para Biwenger y LaLiga Fantasy",
+      "link": "https://www.jornadaperfecta.com/blog/podcast-fantasy-jornada-9-2026-27/",
+      "date": "Wed, 14 Oct 2026 18:13:09 +0000",
+      "img": "https://i.ytimg.com/vi/e1_aQOC_1W8/mqdefault.jpg",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Ya conocemos la sanción a Vinicius: ¿venta fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/vinicius-sancion-real-madrid-fantasy/",
+      "date": "Wed, 14 Oct 2026 17:44:09 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "RC Celta, alineación probable contra la Juve y dónde ver en TV",
+      "link": "https://www.jornadaperfecta.com/blog/celta-alineacion-probable-juventus-j2-europa/",
+      "date": "Wed, 14 Oct 2026 17:13:11 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Nueva lesión muscular de Aimar Oroz: Parte médico de Osasuna",
       "link": "https://www.jornadaperfecta.com/blog/aimar-oroz-lesion-osasuna-2/",
       "date": "Wed, 14 Oct 2026 14:38:59 +0000",
@@ -16169,61 +16065,13 @@
       "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Buba Sangaré repite con el grupo, ¿titular en la jornada 9?",
-      "link": "https://www.jornadaperfecta.com/blog/buba-sangare-estado-elche-j9/",
-      "date": "Wed, 14 Oct 2026 10:52:07 +0000",
-      "img": "https://cdn.biwenger.com/i/t/75.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Nico Williams ya trabaja sobre el césped, ¿llega a la jornada 9?",
-      "link": "https://www.jornadaperfecta.com/blog/nico-williams-regreso-athletic/",
-      "date": "Wed, 14 Oct 2026 10:44:55 +0000",
-      "img": "https://cdn.biwenger.com/i/t/1.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Parte médico de Guridi: lesión en el aductor y tiempo de baja",
-      "link": "https://www.jornadaperfecta.com/blog/guridi-lesion-aductor-largo/",
-      "date": "Wed, 14 Oct 2026 10:00:55 +0000",
-      "img": "https://cdn.biwenger.com/i/t/17.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Rioja, Copete y Foulquier empiezan la sesión con el grupo",
-      "link": "https://www.jornadaperfecta.com/blog/rioja-estado-j9/",
-      "date": "Wed, 14 Oct 2026 09:30:49 +0000",
-      "img": "https://cdn.biwenger.com/i/t/18.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Lucas Stassin está de vuelta con el grupo en el Sevilla FC",
-      "link": "https://www.jornadaperfecta.com/blog/lucas-stassin-estado-sevilla-j9/",
-      "date": "Wed, 14 Oct 2026 09:12:03 +0000",
-      "img": "https://cdn.biwenger.com/i/t/17.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Real Madrid, alineación probable contra la Roma y dónde ver en TV",
-      "link": "https://www.jornadaperfecta.com/blog/real-madrid-alineacion-probable-roma-j2-champions/",
-      "date": "Wed, 14 Oct 2026 08:07:01 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-10-14T16:02:57.393Z",
+    "updatedAt": "2026-10-14T21:02:05.256Z",
     "players": [
       {
         "id": "37428",
