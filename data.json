@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T15:51:25.208Z",
+  "updatedAt": "2026-10-15T20:36:41.735Z",
   "players": [
     {
       "id": 11,
@@ -6555,6 +6555,27 @@
       "clausula": null
     },
     {
+      "id": 33243,
+      "slug": "risco",
+      "name": "Risco",
+      "position": 3,
+      "price": 250000,
+      "points": 5,
+      "trend": 0,
+      "playedHome": 1,
+      "playedAway": 3,
+      "teamName": "Getafe",
+      "teamId": 8,
+      "status": "ok",
+      "jForm": [
+        1,
+        2,
+        0,
+        2
+      ],
+      "clausula": null
+    },
+    {
       "id": 33447,
       "slug": "jon-martin",
       "name": "Jon Martín",
@@ -12184,9 +12205,9 @@
           1,
           7
         ],
-        "teamSize": 16,
-        "teamValue": 43620000,
-        "teamValueInc": 460000,
+        "teamSize": 15,
+        "teamValue": 42800000,
+        "teamValueInc": 400000,
         "lastTrophy": {
           "type": "league",
           "position": 3,
@@ -12207,8 +12228,8 @@
           5,
           12
         ],
-        "teamSize": 16,
-        "teamValue": 49130000,
+        "teamSize": 15,
+        "teamValue": 48860000,
         "teamValueInc": 120000,
         "position": 6,
         "positionInc": -3,
@@ -12226,9 +12247,9 @@
           2,
           15
         ],
-        "teamSize": 11,
-        "teamValue": 42360000,
-        "teamValueInc": 110000,
+        "teamSize": 12,
+        "teamValue": 43180000,
+        "teamValueInc": 170000,
         "position": 7,
         "positionInc": 1,
         "role": ""
@@ -12284,8 +12305,8 @@
           10,
           1
         ],
-        "teamSize": 16,
-        "teamValue": 26580000,
+        "teamSize": 17,
+        "teamValue": 26850000,
         "teamValueInc": 160000,
         "lastTrophy": {
           "type": "league",
@@ -12537,8 +12558,8 @@
       "name": "🦊",
       "manager": "🦊",
       "points": 320,
-      "value": 43620000,
-      "trend": 460000,
+      "value": 42800000,
+      "trend": 400000,
       "players": []
     },
     {
@@ -12546,7 +12567,7 @@
       "name": "Soulands Rangers",
       "manager": "Soulands Rangers",
       "points": 309,
-      "value": 49130000,
+      "value": 48860000,
       "trend": 120000,
       "players": []
     },
@@ -12555,8 +12576,8 @@
       "name": "Estem caputs",
       "manager": "Estem caputs",
       "points": 297,
-      "value": 42360000,
-      "trend": 110000,
+      "value": 43180000,
+      "trend": 170000,
       "players": []
     },
     {
@@ -12582,7 +12603,7 @@
       "name": "LeMola Team",
       "manager": "LeMola Team",
       "points": 289,
-      "value": 26580000,
+      "value": 26850000,
       "trend": 160000,
       "players": []
     },
@@ -12681,10 +12702,10 @@
     "teamId": 6541195,
     "name": "🦊",
     "points": 320,
-    "balance": 7444564,
+    "balance": 9144564,
     "lineup": {
       "type": "4-5-1",
-      "date": 1792045660,
+      "date": 1792094428,
       "playersID": [
         9887,
         33447,
@@ -12701,7 +12722,7 @@
       "reservesID": [
         36566,
         42757,
-        23572,
+        18174,
         24576
       ]
     },
@@ -12747,13 +12768,6 @@
         "clause": 8384499,
         "invested": 0,
         "buyDate": 1789794196
-      },
-      {
-        "id": 23572,
-        "buyPrice": 464522,
-        "clause": 820000000000,
-        "invested": 0,
-        "buyDate": 1786683840
       },
       {
         "id": 24576,
@@ -12840,9 +12854,9 @@
       },
       {
         "playerID": 24576,
-        "price": 2730000,
+        "price": 2784880,
         "type": "sale",
-        "until": 1792083626
+        "until": 1792262877
       },
       {
         "playerID": 26276,
@@ -12853,6 +12867,46 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1792093533,
+      "content": [
+        {
+          "player": 23572,
+          "from": {
+            "id": 6541195,
+            "name": "🦊",
+            "icon": "i/u/6541195.png?v=17"
+          },
+          "to": {
+            "id": 14094028,
+            "name": "Estem caputs",
+            "icon": "i/u/12736123.png"
+          },
+          "amount": 1700000
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1792082207,
+      "content": [
+        {
+          "player": 38854,
+          "from": {
+            "id": 8068002,
+            "name": "Soulands Rangers",
+            "icon": "i/u/8068002.png?v=69"
+          },
+          "to": {
+            "id": 6552586,
+            "name": "LeMola Team",
+            "icon": "i/u/6552586.png"
+          },
+          "amount": 500000
+        }
+      ]
+    },
     {
       "type": "market",
       "date": 1792040851,
@@ -13688,36 +13742,6 @@
           ]
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1791845420,
-      "content": [
-        {
-          "player": 42627,
-          "from": {
-            "id": 14072078,
-            "name": "TL*LI",
-            "icon": "i/u/14072078.png"
-          },
-          "amount": 275500
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1791843990,
-      "content": [
-        {
-          "player": 35770,
-          "from": {
-            "id": 12713493,
-            "name": "Tata Martini",
-            "icon": "i/u/12713493.png?v=71"
-          },
-          "amount": 9219300
-        }
-      ]
     }
   ],
   "leagueEnBas": {
@@ -13748,9 +13772,9 @@
           2,
           8
         ],
-        "teamSize": 17,
-        "teamValue": 40710000,
-        "teamValueInc": 330000,
+        "teamSize": 16,
+        "teamValue": 38820000,
+        "teamValueInc": 340000,
         "lastTrophy": {
           "type": "league",
           "position": 2,
@@ -14080,9 +14104,9 @@
           17,
           18
         ],
-        "teamSize": 13,
-        "teamValue": 25430000,
-        "teamValueInc": -100000,
+        "teamSize": 12,
+        "teamValue": 24640000,
+        "teamValueInc": -90000,
         "lastTrophy": {
           "type": "league",
           "position": 3,
@@ -14135,8 +14159,8 @@
       "name": "Xevi borrat",
       "manager": "Xevi borrat",
       "points": 355,
-      "value": 40710000,
-      "trend": 330000,
+      "value": 38820000,
+      "trend": 340000,
       "players": []
     },
     {
@@ -14288,8 +14312,8 @@
       "name": "MarK Lenders",
       "manager": "MarK Lenders",
       "points": 209,
-      "value": 25430000,
-      "trend": -100000,
+      "value": 24640000,
+      "trend": -90000,
       "players": []
     },
     {
@@ -14318,7 +14342,7 @@
     "balance": 4863779,
     "lineup": {
       "type": "3-5-2",
-      "date": 1792055599,
+      "date": 1792084285,
       "playersID": [
         43282,
         37739,
@@ -14435,6 +14459,36 @@
     ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1792090691,
+      "content": [
+        {
+          "player": 37499,
+          "from": {
+            "id": 6579505,
+            "name": "Xevi borrat",
+            "icon": "i/u/6579505.png"
+          },
+          "amount": 1993900
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1792088842,
+      "content": [
+        {
+          "player": 22975,
+          "from": {
+            "id": 9890450,
+            "name": "MarK Lenders",
+            "icon": "icons/34.png"
+          },
+          "amount": 766800
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1792071958,
@@ -15060,63 +15114,6 @@
             "icon": "icons/30.png"
           },
           "amount": 4859800
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1791791798,
-      "content": [
-        {
-          "player": 39885,
-          "from": {
-            "id": 11504267,
-            "name": "🦊",
-            "icon": "i/u/11504267.png?v=23"
-          },
-          "amount": 4323200
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1791790955,
-      "content": [
-        {
-          "player": 34077,
-          "from": {
-            "id": 7817228,
-            "name": "Petraques",
-            "icon": "i/u/7817228.png"
-          },
-          "amount": 3593200
-        },
-        {
-          "player": 37644,
-          "from": {
-            "id": 6579280,
-            "name": "BSG Schreibmaschinenwerk Dresden",
-            "icon": "i/u/6579280.png?v=85"
-          },
-          "amount": 2212100
-        },
-        {
-          "player": 28282,
-          "from": {
-            "id": 7817228,
-            "name": "Petraques",
-            "icon": "i/u/7817228.png"
-          },
-          "amount": 1232900
-        },
-        {
-          "player": 29034,
-          "from": {
-            "id": 6579402,
-            "name": "Valors FC",
-            "icon": "icons/7.png"
-          },
-          "amount": 340700
         }
       ]
     }
@@ -16109,6 +16106,30 @@
   },
   "news": [
     {
+      "title": "La Previa de las Picas: Todo sobre los Cronistas de la Jornada 9",
+      "link": "https://www.jornadaperfecta.com/blog/previa-picas-cronistas-j9-26-27/",
+      "date": "Thu, 15 Oct 2026 19:00:50 +0000",
+      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2660.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Terrats, sustituido en Conference con molestias en el hombro",
+      "link": "https://www.jornadaperfecta.com/blog/terrats-lesion-hombro-getafe/",
+      "date": "Thu, 15 Oct 2026 19:00:18 +0000",
+      "img": "https://cdn.biwenger.com/i/t/8.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "El All In de Victorius para la Jornada 9 de LaLiga",
+      "link": "https://www.jornadaperfecta.com/blog/all-in-victorius-j9-26-27/",
+      "date": "Thu, 15 Oct 2026 17:00:16 +0000",
+      "img": "https://cdn.biwenger.com/i/t/19.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Barrios vuelve de lesión a un gran nivel, ¿chollo fantasy?",
       "link": "https://www.jornadaperfecta.com/blog/barrios-recomendacion-fantasy-atleti/",
       "date": "Thu, 15 Oct 2026 15:00:24 +0000",
@@ -16163,37 +16184,13 @@
       "img": "https://cdn.biwenger.com/i/t/75.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Luis Castro confirma tres bajas y habla de Ndukwe, Dela y Bardeli",
-      "link": "https://www.jornadaperfecta.com/blog/luis-castro-previa-deportivo-levante-j9-26-27/",
-      "date": "Thu, 15 Oct 2026 11:01:19 +0000",
-      "img": "https://cdn.biwenger.com/i/t/10.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Raphinha y De Jong completan la sesión con buenas sensaciones",
-      "link": "https://www.jornadaperfecta.com/blog/raphinha-estado-barcelona-j9/",
-      "date": "Thu, 15 Oct 2026 10:45:33 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Endrick da un golpe sobre la mesa ante la Roma y reclama minutos",
-      "link": "https://www.jornadaperfecta.com/blog/endrick-mvp-roma-real-madrid/",
-      "date": "Thu, 15 Oct 2026 10:40:58 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-10-15T15:51:23.094Z",
+    "updatedAt": "2026-10-15T20:36:39.353Z",
     "players": [
       {
         "id": "37428",
