@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-14T21:02:06.852Z",
+  "updatedAt": "2026-10-15T02:04:06.280Z",
   "players": [
     {
       "id": 11,
@@ -12121,9 +12121,9 @@
           12,
           13
         ],
-        "teamSize": 15,
-        "teamValue": 39010000,
-        "teamValueInc": 120000,
+        "teamSize": 14,
+        "teamValue": 36280000,
+        "teamValueInc": 150000,
         "position": 2,
         "positionInc": 3,
         "role": ""
@@ -12140,9 +12140,9 @@
           3,
           9
         ],
-        "teamSize": 14,
-        "teamValue": 44790000,
-        "teamValueInc": -40000,
+        "teamSize": 15,
+        "teamValue": 47520000,
+        "teamValueInc": -70000,
         "position": 3,
         "positionInc": 1,
         "role": ""
@@ -12165,7 +12165,7 @@
         "lastTrophy": {
           "type": "league",
           "position": -1,
-          "season": "2025/2026 season"
+          "season": "Temporada 2025/2026"
         },
         "position": 4,
         "positionInc": -2,
@@ -12190,7 +12190,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "2025/2026 season"
+          "season": "Temporada 2025/2026"
         },
         "position": 5,
         "positionInc": 1
@@ -12290,7 +12290,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 2,
-          "season": "2025/2026 season"
+          "season": "Temporada 2025/2026"
         },
         "position": 10,
         "positionInc": 2
@@ -12307,9 +12307,9 @@
           17,
           3
         ],
-        "teamSize": 13,
-        "teamValue": 40100000,
-        "teamValueInc": -50000,
+        "teamSize": 12,
+        "teamValue": 39250000,
+        "teamValueInc": 20000,
         "position": 11,
         "positionInc": 2,
         "role": ""
@@ -12351,7 +12351,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 1,
-          "season": "2025/2026 season"
+          "season": "Temporada 2025/2026"
         },
         "position": 13,
         "positionInc": 2,
@@ -12469,7 +12469,7 @@
         "lastTrophy": {
           "type": "league",
           "position": -1,
-          "season": "2023/2024 season"
+          "season": "Temporada 2023/2024"
         },
         "position": 19,
         "positionInc": -1,
@@ -12510,8 +12510,8 @@
       "name": "INDOMABLE FC",
       "manager": "INDOMABLE FC",
       "points": 325,
-      "value": 39010000,
-      "trend": 120000,
+      "value": 36280000,
+      "trend": 150000,
       "players": []
     },
     {
@@ -12519,8 +12519,8 @@
       "name": "CA CABA JUNIORS",
       "manager": "CA CABA JUNIORS",
       "points": 322,
-      "value": 44790000,
-      "trend": -40000,
+      "value": 47520000,
+      "trend": -70000,
       "players": []
     },
     {
@@ -12591,8 +12591,8 @@
       "name": "Hufflepuff 🍋",
       "manager": "Hufflepuff 🍋",
       "points": 282,
-      "value": 40100000,
-      "trend": -50000,
+      "value": 39250000,
+      "trend": 20000,
       "players": []
     },
     {
@@ -12841,6 +12841,41 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1792015598,
+      "content": [
+        {
+          "player": 38318,
+          "from": {
+            "id": 11521196,
+            "name": "Hufflepuff 🍋",
+            "icon": "i/u/11521196.png?v=57"
+          },
+          "amount": 951400
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1792014499,
+      "content": [
+        {
+          "player": 1995,
+          "from": {
+            "id": 12697101,
+            "name": "INDOMABLE FC",
+            "icon": "i/u/11757390.png"
+          },
+          "to": {
+            "id": 8070044,
+            "name": "CA CABA JUNIORS",
+            "icon": "i/u/8070044.png?v=6"
+          },
+          "amount": 2900000
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1791996667,
@@ -13659,9 +13694,9 @@
           1,
           5
         ],
-        "teamSize": 12,
-        "teamValue": 45520000,
-        "teamValueInc": -470000,
+        "teamSize": 11,
+        "teamValue": 40550000,
+        "teamValueInc": -220000,
         "position": 5,
         "positionInc": -1,
         "role": ""
@@ -14001,8 +14036,8 @@
       "name": "Eric Duran",
       "manager": "Eric Duran",
       "points": 343,
-      "value": 45520000,
-      "trend": -470000,
+      "value": 40550000,
+      "trend": -220000,
       "players": []
     },
     {
@@ -14273,6 +14308,21 @@
   "boardEnBas": [
     {
       "type": "transfer",
+      "date": 1792022865,
+      "content": [
+        {
+          "player": 39350,
+          "from": {
+            "id": 9897660,
+            "name": "Eric Duran",
+            "icon": "i/u/9897660.png"
+          },
+          "amount": 5207400
+        }
+      ]
+    },
+    {
+      "type": "transfer",
       "date": 1792008057,
       "content": [
         {
@@ -14437,7 +14487,7 @@
             {
               "user": {
                 "id": 11504267,
-                "name": "🦊",
+                "name": "����",
                 "icon": "i/u/11504267.png?v=23"
               },
               "amount": 1090000
@@ -14953,48 +15003,6 @@
             "icon": "i/u/11504267.png?v=23"
           },
           "amount": 14563900
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1791614633,
-      "content": [
-        {
-          "player": 17057,
-          "from": {
-            "id": 6586257,
-            "name": "Aquest any pago jo !!",
-            "icon": "i/u/6586257.png"
-          },
-          "amount": 5017400
-        },
-        {
-          "player": 10117,
-          "from": {
-            "id": 6586257,
-            "name": "Aquest any pago jo !!",
-            "icon": "i/u/6586257.png"
-          },
-          "amount": 157200
-        },
-        {
-          "player": 41560,
-          "from": {
-            "id": 6586257,
-            "name": "Aquest any pago jo !!",
-            "icon": "i/u/6586257.png"
-          },
-          "amount": 151800
-        },
-        {
-          "player": 41091,
-          "from": {
-            "id": 6586257,
-            "name": "Aquest any pago jo !!",
-            "icon": "i/u/6586257.png"
-          },
-          "amount": 151500
         }
       ]
     }
@@ -15886,18 +15894,18 @@
       "matchDate": "2026-10-24T16:30:00Z"
     },
     "Athletic Bilbao": {
-      "winProb": 0.5743651753325273,
-      "drawProb": 0.2418379685610641,
-      "loseProb": 0.18379685610640872,
+      "winProb": 0.5722188076213891,
+      "drawProb": 0.24093423478795328,
+      "loseProb": 0.18684695759065764,
       "over25Prob": 0.45454545454545453,
       "isHome": true,
       "opponent": "Getafe",
       "matchDate": "2026-10-25T13:00:00Z"
     },
     "CA Osasuna": {
-      "winProb": 0.23263327948303716,
-      "drawProb": 0.27625201938610666,
-      "loseProb": 0.49111470113085626,
+      "winProb": 0.23934278824539174,
+      "drawProb": 0.27674009890873424,
+      "loseProb": 0.4839171128458741,
       "over25Prob": 0.4566210045662101,
       "isHome": false,
       "opponent": "Sevilla",
@@ -15958,18 +15966,18 @@
       "matchDate": "2026-10-25T20:00:00Z"
     },
     "Sevilla": {
-      "winProb": 0.49111470113085626,
-      "drawProb": 0.27625201938610666,
-      "loseProb": 0.23263327948303716,
+      "winProb": 0.4839171128458741,
+      "drawProb": 0.27674009890873424,
+      "loseProb": 0.23934278824539174,
       "over25Prob": 0.4566210045662101,
       "isHome": true,
       "opponent": "CA Osasuna",
       "matchDate": "2026-10-26T20:00:00Z"
     },
     "Getafe": {
-      "winProb": 0.18379685610640872,
-      "drawProb": 0.2418379685610641,
-      "loseProb": 0.5743651753325273,
+      "winProb": 0.18684695759065764,
+      "drawProb": 0.24093423478795328,
+      "loseProb": 0.5722188076213891,
       "over25Prob": 0.45454545454545453,
       "isHome": false,
       "opponent": "Athletic Bilbao",
@@ -16071,7 +16079,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-10-14T21:02:05.256Z",
+    "updatedAt": "2026-10-15T02:04:04.725Z",
     "players": [
       {
         "id": "37428",
