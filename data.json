@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T10:26:50.154Z",
+  "updatedAt": "2026-10-15T15:51:25.208Z",
   "players": [
     {
       "id": 11,
@@ -12821,10 +12821,16 @@
     ],
     "market": [
       {
+        "playerID": 163,
+        "price": 3330000,
+        "type": "sale",
+        "until": 1792235211
+      },
+      {
         "playerID": 2044,
         "price": 3540000,
         "type": "sale",
-        "until": 1792061355
+        "until": 1792235205
       },
       {
         "playerID": 18174,
@@ -13962,9 +13968,9 @@
           19,
           6
         ],
-        "teamSize": 13,
-        "teamValue": 34830000,
-        "teamValueInc": 190000,
+        "teamSize": 12,
+        "teamValue": 32910000,
+        "teamValueInc": 240000,
         "position": 12,
         "positionInc": 2,
         "role": ""
@@ -13999,8 +14005,8 @@
           10,
           16
         ],
-        "teamSize": 14,
-        "teamValue": 38890000,
+        "teamSize": 13,
+        "teamValue": 38400000,
         "teamValueInc": 160000,
         "position": 14,
         "positionInc": 1,
@@ -14055,8 +14061,8 @@
           3,
           13
         ],
-        "teamSize": 14,
-        "teamValue": 43340000,
+        "teamSize": 15,
+        "teamValue": 43830000,
         "teamValueInc": 40000,
         "position": 17,
         "positionInc": -1,
@@ -14228,8 +14234,8 @@
       "name": "Txapi17",
       "manager": "Txapi17",
       "points": 256,
-      "value": 34830000,
-      "trend": 190000,
+      "value": 32910000,
+      "trend": 240000,
       "players": []
     },
     {
@@ -14246,7 +14252,7 @@
       "name": "Petraques",
       "manager": "Petraques",
       "points": 246,
-      "value": 38890000,
+      "value": 38400000,
       "trend": 160000,
       "players": []
     },
@@ -14273,7 +14279,7 @@
       "name": "UE Trincadors",
       "manager": "UE Trincadors",
       "points": 210,
-      "value": 43340000,
+      "value": 43830000,
       "trend": 40000,
       "players": []
     },
@@ -14429,6 +14435,41 @@
     ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1792071958,
+      "content": [
+        {
+          "player": 38422,
+          "from": {
+            "id": 7817228,
+            "name": "Petraques",
+            "icon": "i/u/7817228.png"
+          },
+          "to": {
+            "id": 9890540,
+            "name": "UE Trincadors"
+          },
+          "amount": 735000,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1792065012,
+      "content": [
+        {
+          "player": 27591,
+          "from": {
+            "id": 14001588,
+            "name": "Txapi17",
+            "icon": "i/u/11555657.png"
+          },
+          "amount": 1870800
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1792043315,
@@ -15076,131 +15117,6 @@
             "icon": "icons/7.png"
           },
           "amount": 340700
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1791781360,
-      "content": [
-        {
-          "player": 38962,
-          "to": {
-            "id": 7817228,
-            "name": "Petraques",
-            "icon": "i/u/7817228.png"
-          },
-          "amount": 7487000,
-          "bids": [
-            {
-              "user": {
-                "id": 11504267,
-                "name": "🦊",
-                "icon": "i/u/11504267.png?v=23"
-              },
-              "amount": 7410000
-            }
-          ]
-        },
-        {
-          "player": 43263,
-          "to": {
-            "id": 6588130,
-            "name": "The GOAT club",
-            "icon": "i/u/6588130.png?v=12"
-          },
-          "amount": 11666000,
-          "bids": [
-            {
-              "user": {
-                "id": 6586225,
-                "name": "Adeyemi FC",
-                "icon": "icons/30.png"
-              },
-              "amount": 11467710
-            },
-            {
-              "user": {
-                "id": 14001588,
-                "name": "Txapi17",
-                "icon": "i/u/11555657.png"
-              },
-              "amount": 11367180
-            },
-            {
-              "user": {
-                "id": 11504267,
-                "name": "🦊",
-                "icon": "i/u/11504267.png?v=23"
-              },
-              "amount": 11195222
-            },
-            {
-              "user": {
-                "id": 6580386,
-                "name": "Academia Control Orientado FC",
-                "icon": "i/u/6580386.png?v=69"
-              },
-              "amount": 11185000
-            },
-            {
-              "user": {
-                "id": 6579540,
-                "name": "Aiveen Teaam",
-                "icon": "i/u/6579540.png?v=63"
-              },
-              "amount": 11178660
-            },
-            {
-              "user": {
-                "id": 6579505,
-                "name": "Xevi borrat",
-                "icon": "i/u/6579505.png"
-              },
-              "amount": 11151000
-            },
-            {
-              "user": {
-                "id": 7817228,
-                "name": "Petraques",
-                "icon": "i/u/7817228.png"
-              },
-              "amount": 11099000
-            }
-          ]
-        },
-        {
-          "player": 2600,
-          "to": {
-            "id": 6579540,
-            "name": "Aiveen Teaam",
-            "icon": "i/u/6579540.png?v=63"
-          },
-          "amount": 5690000
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1791695311,
-      "content": [
-        {
-          "player": 10292,
-          "from": {
-            "id": 6580386,
-            "name": "Academia Control Orientado FC",
-            "icon": "i/u/6580386.png?v=69"
-          },
-          "amount": 1567000
-        },
-        {
-          "player": 856,
-          "from": {
-            "id": 6580386,
-            "name": "Academia Control Orientado FC",
-            "icon": "i/u/6580386.png?v=69"
-          },
-          "amount": 658200
         }
       ]
     }
@@ -16193,82 +16109,82 @@
   },
   "news": [
     {
-      "title": "Kochorashvili se ejercita al margen del grupo, ¿preocupa?",
-      "link": "https://www.jornadaperfecta.com/blog/kochorashvili-estado-sevilla-j9/",
-      "date": "Thu, 15 Oct 2026 10:18:31 +0000",
-      "img": "https://cdn.biwenger.com/i/t/17.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Raphinha entrenará hoy con el grupo, ¿llega a la jornada 9?",
-      "link": "https://www.jornadaperfecta.com/blog/raphinha-estado-barcelona-j9/",
-      "date": "Thu, 15 Oct 2026 09:44:33 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Félix Correia entrena con el grupo y está disponible",
-      "link": "https://www.jornadaperfecta.com/blog/felix-correia-lesion-sevilla-fc/",
-      "date": "Thu, 15 Oct 2026 09:30:15 +0000",
-      "img": "https://cdn.biwenger.com/i/t/17.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Koke y Johnny Cardoso, al margen en el entrenamiento del Atleti",
-      "link": "https://www.jornadaperfecta.com/blog/koke-johnny-cardoso-entrenamiento-atleti/",
-      "date": "Thu, 15 Oct 2026 09:27:20 +0000",
+      "title": "Barrios vuelve de lesión a un gran nivel, ¿chollo fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/barrios-recomendacion-fantasy-atleti/",
+      "date": "Thu, 15 Oct 2026 15:00:24 +0000",
       "img": "https://cdn.biwenger.com/i/t/2.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Rioja y Copete, con el grupo; Sadiq y Foulquier, al margen",
-      "link": "https://www.jornadaperfecta.com/blog/rioja-estado-valencia-j9/",
-      "date": "Thu, 15 Oct 2026 09:12:14 +0000",
-      "img": "https://cdn.biwenger.com/i/t/18.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Laporte y Nico Williams siguen sin entrenar con el grupo",
-      "link": "https://www.jornadaperfecta.com/blog/laporte-estado-j9-athletic/",
-      "date": "Thu, 15 Oct 2026 09:06:42 +0000",
+      "title": "Laporte se une al grupo, ¿será titular en la jornada 9?",
+      "link": "https://www.jornadaperfecta.com/blog/laporte-titularidad-athletic-j9/",
+      "date": "Thu, 15 Oct 2026 13:04:14 +0000",
       "img": "https://cdn.biwenger.com/i/t/1.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Hidalgo, contento con la recuperación de Aubameyang, ¿cuándo vuelve?",
-      "link": "https://www.jornadaperfecta.com/blog/hidalgo-previa-deportivo-levante-j9-26-27/",
-      "date": "Thu, 15 Oct 2026 08:57:43 +0000",
-      "img": "https://cdn.biwenger.com/i/t/6.png",
+      "title": "Fofana brilla en el Sevilla FC, ¿lo fichamos en el fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/fofana-recomendacion-fantasy-sevilla-fc/",
+      "date": "Thu, 15 Oct 2026 12:12:33 +0000",
+      "img": "https://cdn.biwenger.com/i/t/17.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Jadon Sancho, otro posible bombazo en el Getafe CF",
-      "link": "https://www.jornadaperfecta.com/blog/jadon-sancho-fichaje-getafe-cf/",
-      "date": "Thu, 15 Oct 2026 08:41:03 +0000",
+      "title": "Actualizadas las Alineaciones Probables para la Jornada 9",
+      "link": "https://www.jornadaperfecta.com/blog/alineaciones-probables-j9-laliga-26-27/",
+      "date": "Thu, 15 Oct 2026 12:00:27 +0000",
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Real Sociedad, alineación probable contra el USG y dónde ver en TV",
-      "link": "https://www.jornadaperfecta.com/blog/real-sociedad-alineacion-probable-saint-gilloise-j2-europa/",
-      "date": "Thu, 15 Oct 2026 07:30:04 +0000",
+      "title": "Gulácsi vuelve al grupo tras ser baja en Champions por un robo a mano armada",
+      "link": "https://www.jornadaperfecta.com/blog/peter-gulacsi-baja-champions-robo-villarreal/",
+      "date": "Thu, 15 Oct 2026 11:58:20 +0000",
+      "img": "https://cdn.biwenger.com/i/t/19.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Riki Rodríguez podría ser titular junto a Villares en la jornada 9",
+      "link": "https://www.jornadaperfecta.com/blog/riki-rodriguez-titular-j9-deportivo/",
+      "date": "Thu, 15 Oct 2026 11:54:03 +0000",
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "RC Celta, alineación probable contra la Juve y dónde ver en TV",
-      "link": "https://www.jornadaperfecta.com/blog/celta-alineacion-probable-juventus-j2-europa/",
-      "date": "Thu, 15 Oct 2026 07:13:11 +0000",
-      "img": "",
+      "title": "Yago Santiago vuelve al grupo seis meses después",
+      "link": "https://www.jornadaperfecta.com/blog/yago-santiago-recuperacion-lesion-elche/",
+      "date": "Thu, 15 Oct 2026 11:29:44 +0000",
+      "img": "https://cdn.biwenger.com/i/t/75.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Luis Castro confirma tres bajas y habla de Ndukwe, Dela y Bardeli",
+      "link": "https://www.jornadaperfecta.com/blog/luis-castro-previa-deportivo-levante-j9-26-27/",
+      "date": "Thu, 15 Oct 2026 11:01:19 +0000",
+      "img": "https://cdn.biwenger.com/i/t/10.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Raphinha y De Jong completan la sesión con buenas sensaciones",
+      "link": "https://www.jornadaperfecta.com/blog/raphinha-estado-barcelona-j9/",
+      "date": "Thu, 15 Oct 2026 10:45:33 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Endrick da un golpe sobre la mesa ante la Roma y reclama minutos",
+      "link": "https://www.jornadaperfecta.com/blog/endrick-mvp-roma-real-madrid/",
+      "date": "Thu, 15 Oct 2026 10:40:58 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -16277,7 +16193,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-10-15T10:26:47.872Z",
+    "updatedAt": "2026-10-15T15:51:23.094Z",
     "players": [
       {
         "id": "37428",
