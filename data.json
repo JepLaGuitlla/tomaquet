@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T20:36:41.735Z",
+  "updatedAt": "2026-10-16T01:54:13.627Z",
   "players": [
     {
       "id": 11,
@@ -12161,9 +12161,9 @@
           3,
           9
         ],
-        "teamSize": 15,
-        "teamValue": 47620000,
-        "teamValueInc": 100000,
+        "teamSize": 14,
+        "teamValue": 46570000,
+        "teamValueInc": 120000,
         "position": 3,
         "positionInc": 1,
         "role": ""
@@ -12285,8 +12285,8 @@
           15,
           6
         ],
-        "teamSize": 17,
-        "teamValue": 47210000,
+        "teamSize": 16,
+        "teamValue": 40500000,
         "teamValueInc": 160000,
         "position": 9,
         "positionInc": 1,
@@ -12540,8 +12540,8 @@
       "name": "CA CABA JUNIORS",
       "manager": "CA CABA JUNIORS",
       "points": 322,
-      "value": 47620000,
-      "trend": 100000,
+      "value": 46570000,
+      "trend": 120000,
       "players": []
     },
     {
@@ -12594,7 +12594,7 @@
       "name": "wilamalel",
       "manager": "wilamalel",
       "points": 290,
-      "value": 47210000,
+      "value": 40500000,
       "trend": 160000,
       "players": []
     },
@@ -12705,7 +12705,7 @@
     "balance": 9144564,
     "lineup": {
       "type": "4-5-1",
-      "date": 1792094428,
+      "date": 1792099554,
       "playersID": [
         9887,
         33447,
@@ -12850,7 +12850,7 @@
         "playerID": 18174,
         "price": 1800000,
         "type": "sale",
-        "until": 1792225518
+        "until": 1792271009
       },
       {
         "playerID": 24576,
@@ -12863,10 +12863,46 @@
         "price": 3550040,
         "type": "sale",
         "until": 1792164730
+      },
+      {
+        "playerID": 30123,
+        "price": 3110000,
+        "type": "sale",
+        "until": 1792270931
       }
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1792100393,
+      "content": [
+        {
+          "player": 29185,
+          "from": {
+            "id": 8070044,
+            "name": "CA CABA JUNIORS",
+            "icon": "i/u/8070044.png?v=6"
+          },
+          "amount": 1092800
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1792098529,
+      "content": [
+        {
+          "player": 21008,
+          "from": {
+            "id": 14074484,
+            "name": "wilamalel",
+            "icon": "https://lh3.googleusercontent.com/a/ACg8ocJGUZto0NCjv5HnKiftjGqQiwQNQWQjyPJpfYbDxfcaNvZWgg=s300-c"
+          },
+          "amount": 6936000
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1792093533,
@@ -13527,221 +13563,6 @@
           "amount": 248400
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1791872990,
-      "content": [
-        {
-          "player": 37897,
-          "from": {
-            "id": 148051,
-            "name": "Zaza Pachulia",
-            "icon": "i/u/148051.png?v=98"
-          },
-          "amount": 992900
-        },
-        {
-          "player": 42425,
-          "from": {
-            "id": 6552586,
-            "name": "LeMola Team",
-            "icon": "i/u/6552586.png"
-          },
-          "amount": 3733100
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1791867755,
-      "content": [
-        {
-          "player": 42517,
-          "to": {
-            "id": 8068002,
-            "name": "Soulands Rangers",
-            "icon": "i/u/8068002.png?v=69"
-          },
-          "amount": 5780000,
-          "bids": [
-            {
-              "user": {
-                "id": 14094189,
-                "name": "Burnigol FC",
-                "icon": "i/u/14094189.png"
-              },
-              "amount": 5000020
-            },
-            {
-              "user": {
-                "id": 11521196,
-                "name": "Hufflepuff 🍋",
-                "icon": "i/u/11521196.png?v=57"
-              },
-              "amount": 4940009
-            },
-            {
-              "user": {
-                "id": 12697101,
-                "name": "INDOMABLE FC",
-                "icon": "i/u/11757390.png"
-              },
-              "amount": 4912000
-            },
-            {
-              "user": {
-                "id": 14069874,
-                "name": "Pzaera",
-                "icon": "https://lh3.googleusercontent.com/a/AATXAJz2ePB0TU5NOTU2lUZ5nrRljJXEZjrTw8hYCiH1=s300-c"
-              },
-              "amount": 4900000
-            },
-            {
-              "user": {
-                "id": 8070044,
-                "name": "CA CABA JUNIORS",
-                "icon": "i/u/8070044.png?v=6"
-              },
-              "amount": 4730000
-            },
-            {
-              "user": {
-                "id": 6552586,
-                "name": "LeMola Team",
-                "icon": "i/u/6552586.png"
-              },
-              "amount": 4730000
-            }
-          ]
-        },
-        {
-          "player": 10182,
-          "to": {
-            "id": 8070044,
-            "name": "CA CABA JUNIORS",
-            "icon": "i/u/8070044.png?v=6"
-          },
-          "amount": 270000
-        },
-        {
-          "player": 15464,
-          "to": {
-            "id": 14072078,
-            "name": "TL*LI",
-            "icon": "i/u/14072078.png"
-          },
-          "amount": 690099,
-          "bids": [
-            {
-              "user": {
-                "id": 8070044,
-                "name": "CA CABA JUNIORS",
-                "icon": "i/u/8070044.png?v=6"
-              },
-              "amount": 668656
-            },
-            {
-              "user": {
-                "id": 14094189,
-                "name": "Burnigol FC",
-                "icon": "i/u/14094189.png"
-              },
-              "amount": 630000
-            },
-            {
-              "user": {
-                "id": 11520975,
-                "name": "Morankus FC",
-                "icon": "i/u/11520975.png?v=81"
-              },
-              "amount": 580000
-            }
-          ]
-        },
-        {
-          "player": 6792,
-          "to": {
-            "id": 11520975,
-            "name": "Morankus FC",
-            "icon": "i/u/11520975.png?v=81"
-          },
-          "amount": 1110000
-        },
-        {
-          "player": 21008,
-          "to": {
-            "id": 14074484,
-            "name": "wilamalel",
-            "icon": "https://lh3.googleusercontent.com/a/ACg8ocJGUZto0NCjv5HnKiftjGqQiwQNQWQjyPJpfYbDxfcaNvZWgg=s300-c"
-          },
-          "amount": 6750000,
-          "bids": [
-            {
-              "user": {
-                "id": 12713493,
-                "name": "Tata Martini",
-                "icon": "i/u/12713493.png?v=71"
-              },
-              "amount": 6740020
-            }
-          ]
-        },
-        {
-          "player": 24326,
-          "to": {
-            "id": 6552586,
-            "name": "LeMola Team",
-            "icon": "i/u/6552586.png"
-          },
-          "amount": 3103000,
-          "bids": [
-            {
-              "user": {
-                "id": 14065964,
-                "name": "JanBox",
-                "icon": "i/u/14065964.png?v=16"
-              },
-              "amount": 2928251
-            },
-            {
-              "user": {
-                "id": 12713493,
-                "name": "Tata Martini",
-                "icon": "i/u/12713493.png?v=71"
-              },
-              "amount": 2850000
-            },
-            {
-              "user": {
-                "id": 8070044,
-                "name": "CA CABA JUNIORS",
-                "icon": "i/u/8070044.png?v=6"
-              },
-              "amount": 2806096
-            }
-          ]
-        },
-        {
-          "player": 2597,
-          "to": {
-            "id": 12713493,
-            "name": "Tata Martini",
-            "icon": "i/u/12713493.png?v=71"
-          },
-          "amount": 5680000,
-          "bids": [
-            {
-              "user": {
-                "id": 14074484,
-                "name": "wilamalel",
-                "icon": "https://lh3.googleusercontent.com/a/ACg8ocJGUZto0NCjv5HnKiftjGqQiwQNQWQjyPJpfYbDxfcaNvZWgg=s300-c"
-              },
-              "amount": 5640000
-            }
-          ]
-        }
-      ]
     }
   ],
   "leagueEnBas": {
@@ -13908,8 +13729,8 @@
           11,
           14
         ],
-        "teamSize": 17,
-        "teamValue": 41590000,
+        "teamSize": 16,
+        "teamValue": 40270000,
         "teamValueInc": 80000,
         "lastTrophy": {
           "type": "league",
@@ -14222,7 +14043,7 @@
       "name": "The GOAT club",
       "manager": "The GOAT club",
       "points": 295,
-      "value": 41590000,
+      "value": 40270000,
       "trend": 80000,
       "players": []
     },
@@ -14459,6 +14280,21 @@
     ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1792097473,
+      "content": [
+        {
+          "player": 32460,
+          "from": {
+            "id": 6588130,
+            "name": "The GOAT club",
+            "icon": "i/u/6588130.png?v=12"
+          },
+          "amount": 1332200
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1792090691,
@@ -15101,21 +14937,6 @@
           "amount": 9197500
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1791810505,
-      "content": [
-        {
-          "player": 41086,
-          "from": {
-            "id": 6586225,
-            "name": "Adeyemi FC",
-            "icon": "icons/30.png"
-          },
-          "amount": 4859800
-        }
-      ]
     }
   ],
   "laliga": {
@@ -15531,14 +15352,14 @@
       },
       "79": {
         "results": [
-          "L",
           "D",
           "L",
           "L",
-          "L"
+          "L",
+          "W"
         ],
-        "gf": 5,
-        "ga": 17,
+        "gf": 4,
+        "ga": 12,
         "crest": "https://crests.football-data.org/79.png",
         "name": "CA Osasuna"
       },
@@ -15622,40 +15443,40 @@
       },
       "88": {
         "results": [
-          "D",
           "L",
           "L",
           "D",
-          "W"
+          "W",
+          "D"
         ],
-        "gf": 11,
-        "ga": 12,
+        "gf": 8,
+        "ga": 9,
         "crest": "https://crests.football-data.org/88.png",
         "name": "Levante UD"
       },
       "90": {
         "results": [
-          "W",
           "D",
           "W",
           "W",
-          "W"
+          "W",
+          "L"
         ],
-        "gf": 10,
-        "ga": 4,
+        "gf": 7,
+        "ga": 7,
         "crest": "https://crests.football-data.org/90.png",
         "name": "Real Betis Balompié"
       },
       "92": {
         "results": [
           "W",
-          "W",
           "L",
           "W",
-          "D"
+          "D",
+          "W"
         ],
-        "gf": 9,
-        "ga": 9,
+        "gf": 8,
+        "ga": 8,
         "crest": "https://crests.football-data.org/92.png",
         "name": "Real Sociedad de Fútbol"
       },
@@ -15674,14 +15495,14 @@
       },
       "95": {
         "results": [
-          "D",
           "L",
           "W",
           "L",
+          "L",
           "L"
         ],
-        "gf": 5,
-        "ga": 11,
+        "gf": 4,
+        "ga": 12,
         "crest": "https://crests.football-data.org/95.png",
         "name": "Valencia CF"
       },
@@ -15700,65 +15521,65 @@
       },
       "285": {
         "results": [
-          "D",
           "W",
           "L",
           "D",
+          "L",
           "L"
         ],
-        "gf": 8,
-        "ga": 8,
+        "gf": 10,
+        "ga": 11,
         "crest": "https://crests.football-data.org/285.png",
         "name": "Elche CF"
       },
       "558": {
         "results": [
-          "D",
           "W",
           "D",
           "D",
-          "D"
+          "D",
+          "L"
         ],
         "gf": 7,
-        "ga": 2,
+        "ga": 4,
         "crest": "https://crests.football-data.org/558.png",
         "name": "RC Celta de Vigo"
       },
       "559": {
         "results": [
-          "D",
           "L",
           "W",
           "W",
-          "D"
+          "D",
+          "L"
         ],
-        "gf": 7,
+        "gf": 5,
         "ga": 7,
         "crest": "https://crests.football-data.org/559.png",
         "name": "Sevilla FC"
       },
       "560": {
         "results": [
-          "L",
           "D",
           "L",
           "D",
+          "W",
           "W"
         ],
-        "gf": 7,
-        "ga": 8,
+        "gf": 8,
+        "ga": 6,
         "crest": "https://crests.football-data.org/560.png",
         "name": "RC Deportivo La Coruña"
       },
       "5335": {
         "results": [
-          "D",
           "L",
           "L",
           "W",
-          "L"
+          "L",
+          "W"
         ],
-        "gf": 8,
+        "gf": 9,
         "ga": 18,
         "crest": "https://crests.football-data.org/5335.png",
         "name": "Real Racing Club de Santander"
@@ -15784,91 +15605,6 @@
       }
     ],
     "recentResults": [
-      {
-        "date": "2026-10-12T19:00:00Z",
-        "home": {
-          "name": "Levante UD",
-          "short": "Levante",
-          "crest": "https://crests.football-data.org/88.png"
-        },
-        "away": {
-          "name": "Sevilla FC",
-          "short": "Sevilla FC",
-          "crest": "https://crests.football-data.org/559.png"
-        },
-        "score": {
-          "home": 3,
-          "away": 3
-        }
-      },
-      {
-        "date": "2026-10-11T19:00:00Z",
-        "home": {
-          "name": "Real Racing Club de Santander",
-          "short": "Santander",
-          "crest": "https://crests.football-data.org/5335.png"
-        },
-        "away": {
-          "name": "Valencia CF",
-          "short": "Valencia",
-          "crest": "https://crests.football-data.org/95.png"
-        },
-        "score": {
-          "home": 2,
-          "away": 2
-        }
-      },
-      {
-        "date": "2026-10-11T16:30:00Z",
-        "home": {
-          "name": "Real Betis Balompié",
-          "short": "Real Betis",
-          "crest": "https://crests.football-data.org/90.png"
-        },
-        "away": {
-          "name": "CA Osasuna",
-          "short": "Osasuna",
-          "crest": "https://crests.football-data.org/79.png"
-        },
-        "score": {
-          "home": 5,
-          "away": 2
-        }
-      },
-      {
-        "date": "2026-10-11T14:15:00Z",
-        "home": {
-          "name": "Real Sociedad de Fútbol",
-          "short": "Real Sociedad",
-          "crest": "https://crests.football-data.org/92.png"
-        },
-        "away": {
-          "name": "RC Deportivo La Coruña",
-          "short": "Deportivo",
-          "crest": "https://crests.football-data.org/560.png"
-        },
-        "score": {
-          "home": 3,
-          "away": 2
-        }
-      },
-      {
-        "date": "2026-10-11T12:00:00Z",
-        "home": {
-          "name": "Elche CF",
-          "short": "Elche",
-          "crest": "https://crests.football-data.org/285.png"
-        },
-        "away": {
-          "name": "RC Celta de Vigo",
-          "short": "Celta",
-          "crest": "https://crests.football-data.org/558.png"
-        },
-        "score": {
-          "home": 0,
-          "away": 0
-        }
-      },
       {
         "date": "2026-10-10T19:00:00Z",
         "home": {
@@ -15919,6 +15655,91 @@
           "home": 1,
           "away": 2
         }
+      },
+      {
+        "date": "2026-10-09T19:00:00Z",
+        "home": {
+          "name": "Málaga CF",
+          "short": "Málaga",
+          "crest": "https://crests.football-data.org/84.png"
+        },
+        "away": {
+          "name": "RCD Espanyol de Barcelona",
+          "short": "Espanyol",
+          "crest": "https://crests.football-data.org/80.png"
+        },
+        "score": {
+          "home": 1,
+          "away": 1
+        }
+      },
+      {
+        "date": "2026-09-20T19:00:00Z",
+        "home": {
+          "name": "Valencia CF",
+          "short": "Valencia",
+          "crest": "https://crests.football-data.org/95.png"
+        },
+        "away": {
+          "name": "Real Sociedad de Fútbol",
+          "short": "Real Sociedad",
+          "crest": "https://crests.football-data.org/92.png"
+        },
+        "score": {
+          "home": 2,
+          "away": 3
+        }
+      },
+      {
+        "date": "2026-09-20T16:30:00Z",
+        "home": {
+          "name": "RC Deportivo La Coruña",
+          "short": "Deportivo",
+          "crest": "https://crests.football-data.org/560.png"
+        },
+        "away": {
+          "name": "Real Betis Balompié",
+          "short": "Real Betis",
+          "crest": "https://crests.football-data.org/90.png"
+        },
+        "score": {
+          "home": 1,
+          "away": 1
+        }
+      },
+      {
+        "date": "2026-09-20T16:30:00Z",
+        "home": {
+          "name": "Villarreal CF",
+          "short": "Villarreal",
+          "crest": "https://crests.football-data.org/94.png"
+        },
+        "away": {
+          "name": "Levante UD",
+          "short": "Levante",
+          "crest": "https://crests.football-data.org/88.png"
+        },
+        "score": {
+          "home": 3,
+          "away": 1
+        }
+      },
+      {
+        "date": "2026-09-20T14:15:00Z",
+        "home": {
+          "name": "Club Atlético de Madrid",
+          "short": "Atleti",
+          "crest": "https://crests.football-data.org/78.png"
+        },
+        "away": {
+          "name": "Real Madrid CF",
+          "short": "Real Madrid",
+          "crest": "https://crests.football-data.org/86.png"
+        },
+        "score": {
+          "home": 2,
+          "away": 1
+        }
       }
     ]
   },
@@ -15960,9 +15781,9 @@
       "matchDate": "2026-10-24T19:00:00Z"
     },
     "Villarreal": {
-      "winProb": 0.4482827877083752,
-      "drawProb": 0.2552721430006025,
-      "loseProb": 0.29644506929102227,
+      "winProb": 0.446114779075673,
+      "drawProb": 0.25403758252920267,
+      "loseProb": 0.29984763839512446,
       "over25Prob": 0.5714285714285714,
       "isHome": false,
       "opponent": "Valencia",
@@ -15978,9 +15799,9 @@
       "matchDate": "2026-10-24T12:00:00Z"
     },
     "Real Betis": {
-      "winProb": 0.3755310110450297,
-      "drawProb": 0.2706032285471538,
-      "loseProb": 0.3538657604078164,
+      "winProb": 0.3818646232439336,
+      "drawProb": 0.2656449553001277,
+      "loseProb": 0.3524904214559387,
       "over25Prob": 0.5649717514124294,
       "isHome": false,
       "opponent": "Celta Vigo",
@@ -15996,9 +15817,9 @@
       "matchDate": "2026-10-25T20:00:00Z"
     },
     "Valencia": {
-      "winProb": 0.29644506929102227,
-      "drawProb": 0.2552721430006025,
-      "loseProb": 0.4482827877083752,
+      "winProb": 0.29984763839512446,
+      "drawProb": 0.25403758252920267,
+      "loseProb": 0.446114779075673,
       "over25Prob": 0.5714285714285714,
       "isHome": true,
       "opponent": "Villarreal",
@@ -16032,9 +15853,9 @@
       "matchDate": "2026-10-24T14:15:00Z"
     },
     "Celta Vigo": {
-      "winProb": 0.3538657604078164,
-      "drawProb": 0.2706032285471538,
-      "loseProb": 0.3755310110450297,
+      "winProb": 0.3524904214559387,
+      "drawProb": 0.2656449553001277,
+      "loseProb": 0.3818646232439336,
       "over25Prob": 0.5649717514124294,
       "isHome": true,
       "opponent": "Real Betis",
@@ -16106,6 +15927,22 @@
   },
   "news": [
     {
+      "title": "Sportium lanza Conecta 5 para el Betis vs Barcelona: consigue hasta 5€ en freebets",
+      "link": "https://www.jornadaperfecta.com/blog/sportium-conecta-5-betis-vs-barcelona/",
+      "date": "Thu, 15 Oct 2026 21:59:47 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/10/sportium-conecta-5-betis-vs-barcelona.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Cinco noticias fantasy para antes de irte a dormir",
+      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-15-10-26/",
+      "date": "Thu, 15 Oct 2026 21:00:15 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "La Previa de las Picas: Todo sobre los Cronistas de la Jornada 9",
       "link": "https://www.jornadaperfecta.com/blog/previa-picas-cronistas-j9-26-27/",
       "date": "Thu, 15 Oct 2026 19:00:50 +0000",
@@ -16168,29 +16005,13 @@
       "img": "https://cdn.biwenger.com/i/t/19.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Riki Rodríguez podría ser titular junto a Villares en la jornada 9",
-      "link": "https://www.jornadaperfecta.com/blog/riki-rodriguez-titular-j9-deportivo/",
-      "date": "Thu, 15 Oct 2026 11:54:03 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Yago Santiago vuelve al grupo seis meses después",
-      "link": "https://www.jornadaperfecta.com/blog/yago-santiago-recuperacion-lesion-elche/",
-      "date": "Thu, 15 Oct 2026 11:29:44 +0000",
-      "img": "https://cdn.biwenger.com/i/t/75.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-10-15T20:36:39.353Z",
+    "updatedAt": "2026-10-16T01:54:11.376Z",
     "players": [
       {
         "id": "37428",
