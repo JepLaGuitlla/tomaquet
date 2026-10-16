@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-16T10:14:00.588Z",
+  "updatedAt": "2026-10-16T15:39:23.468Z",
   "players": [
     {
       "id": 11,
@@ -12186,7 +12186,7 @@
         "lastTrophy": {
           "type": "league",
           "position": -1,
-          "season": "Temporada 2025/2026"
+          "season": "2025/2026 season"
         },
         "position": 4,
         "positionInc": -2,
@@ -12211,7 +12211,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "Temporada 2025/2026"
+          "season": "2025/2026 season"
         },
         "position": 5,
         "positionInc": 1
@@ -12311,7 +12311,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 2,
-          "season": "Temporada 2025/2026"
+          "season": "2025/2026 season"
         },
         "position": 10,
         "positionInc": 2
@@ -12372,7 +12372,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 1,
-          "season": "Temporada 2025/2026"
+          "season": "2025/2026 season"
         },
         "position": 13,
         "positionInc": 2,
@@ -12465,8 +12465,8 @@
           18,
           14
         ],
-        "teamSize": 14,
-        "teamValue": 27730000,
+        "teamSize": 13,
+        "teamValue": 27580000,
         "teamValueInc": 80000,
         "position": 18,
         "positionInc": 1,
@@ -12490,7 +12490,7 @@
         "lastTrophy": {
           "type": "league",
           "position": -1,
-          "season": "Temporada 2023/2024"
+          "season": "2023/2024 season"
         },
         "position": 19,
         "positionInc": -1,
@@ -12675,7 +12675,7 @@
       "name": "Morankus FC",
       "manager": "Morankus FC",
       "points": 230,
-      "value": 27730000,
+      "value": 27580000,
       "trend": 80000,
       "players": []
     },
@@ -12705,7 +12705,7 @@
     "balance": -1485468,
     "lineup": {
       "type": "3-5-2",
-      "date": 1792144599,
+      "date": 1792146043,
       "playersID": [
         9887,
         38493,
@@ -12875,6 +12875,21 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1792155894,
+      "content": [
+        {
+          "player": 26676,
+          "from": {
+            "id": 11520975,
+            "name": "Morankus FC",
+            "icon": "i/u/11520975.png?v=81"
+          },
+          "amount": 146300
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1792143084,
@@ -13685,21 +13700,6 @@
           "type": "auction"
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1791910314,
-      "content": [
-        {
-          "player": 24734,
-          "from": {
-            "id": 148051,
-            "name": "Zaza Pachulia",
-            "icon": "i/u/148051.png?v=98"
-          },
-          "amount": 682600
-        }
-      ]
     }
   ],
   "leagueEnBas": {
@@ -13773,9 +13773,9 @@
           9,
           1
         ],
-        "teamSize": 12,
-        "teamValue": 53950000,
-        "teamValueInc": 270000,
+        "teamSize": 13,
+        "teamValue": 54570000,
+        "teamValueInc": 260000,
         "position": 3,
         "positionInc": 2,
         "role": ""
@@ -13969,8 +13969,8 @@
           14,
           10
         ],
-        "teamSize": 12,
-        "teamValue": 25870000,
+        "teamSize": 13,
+        "teamValue": 26040000,
         "teamValueInc": -20000,
         "position": 13,
         "role": ""
@@ -14025,8 +14025,8 @@
           7,
           12
         ],
-        "teamSize": 18,
-        "teamValue": 27730000,
+        "teamSize": 17,
+        "teamValue": 27560000,
         "teamValueInc": 50000,
         "position": 16,
         "positionInc": 1,
@@ -14103,9 +14103,9 @@
           4,
           19
         ],
-        "teamSize": 14,
-        "teamValue": 37980000,
-        "teamValueInc": 90000,
+        "teamSize": 13,
+        "teamValue": 37360000,
+        "teamValueInc": 100000,
         "position": 20,
         "role": ""
       }
@@ -14135,8 +14135,8 @@
       "name": "🦊",
       "manager": "🦊",
       "points": 348,
-      "value": 53950000,
-      "trend": 270000,
+      "value": 54570000,
+      "trend": 260000,
       "players": []
     },
     {
@@ -14225,7 +14225,7 @@
       "name": "FC Borça",
       "manager": "FC Borça",
       "points": 248,
-      "value": 25870000,
+      "value": 26040000,
       "trend": -20000,
       "players": []
     },
@@ -14252,7 +14252,7 @@
       "name": "Mindundis",
       "manager": "Mindundis",
       "points": 230,
-      "value": 27730000,
+      "value": 27560000,
       "trend": 50000,
       "players": []
     },
@@ -14288,8 +14288,8 @@
       "name": "Janwandowski",
       "manager": "Janwandowski",
       "points": 185,
-      "value": 37980000,
-      "trend": 90000,
+      "value": 37360000,
+      "trend": 100000,
       "players": []
     }
   ],
@@ -14297,17 +14297,17 @@
     "teamId": 11504267,
     "name": "🦊",
     "points": 348,
-    "balance": 4863779,
+    "balance": 3933779,
     "lineup": {
       "type": "3-5-2",
-      "date": 1792137293,
+      "date": 1792150161,
       "playersID": [
         43282,
         37739,
         33447,
         12734,
         29184,
-        4753,
+        39813,
         35171,
         25127,
         25159,
@@ -14317,11 +14317,18 @@
       "reservesID": [
         null,
         12404,
-        null,
+        4753,
         null
       ]
     },
     "players": [
+      {
+        "id": 39813,
+        "buyPrice": 930000,
+        "clause": 0,
+        "invested": 0,
+        "buyDate": 1792147082
+      },
       {
         "id": 4753,
         "buyPrice": 3200006,
@@ -14417,6 +14424,48 @@
     ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1792162946,
+      "content": [
+        {
+          "player": 23842,
+          "from": {
+            "id": 6579330,
+            "name": "Mindundis",
+            "icon": "i/u/6579330.png?v=18"
+          },
+          "to": {
+            "id": 6580423,
+            "name": "FC Borça",
+            "icon": "i/t/3.png"
+          },
+          "amount": 255000,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1792147082,
+      "content": [
+        {
+          "player": 39813,
+          "from": {
+            "id": 6593096,
+            "name": "Janwandowski",
+            "icon": "i/u/6593096.png"
+          },
+          "to": {
+            "id": 11504267,
+            "name": "🦊",
+            "icon": "i/u/11504267.png?v=23"
+          },
+          "amount": 930000,
+          "type": "clause"
+        }
+      ]
+    },
     {
       "type": "market",
       "date": 1792127080,
@@ -15153,21 +15202,6 @@
             "icon": "i/u/6586257.png"
           },
           "amount": 3882000
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1791831845,
-      "content": [
-        {
-          "player": 15568,
-          "from": {
-            "id": 6580423,
-            "name": "FC Borça",
-            "icon": "i/t/3.png"
-          },
-          "amount": 12960100
         }
       ]
     }
@@ -16059,9 +16093,9 @@
       "matchDate": "2026-10-24T16:30:00Z"
     },
     "Athletic Bilbao": {
-      "winProb": 0.5673397554649869,
-      "drawProb": 0.2450907743608744,
-      "loseProb": 0.18756947017413855,
+      "winProb": 0.5722188076213891,
+      "drawProb": 0.24093423478795328,
+      "loseProb": 0.18684695759065764,
       "over25Prob": 0.45454545454545453,
       "isHome": true,
       "opponent": "Getafe",
@@ -16140,9 +16174,9 @@
       "matchDate": "2026-10-26T20:00:00Z"
     },
     "Getafe": {
-      "winProb": 0.18756947017413855,
-      "drawProb": 0.2450907743608744,
-      "loseProb": 0.5673397554649869,
+      "winProb": 0.18684695759065764,
+      "drawProb": 0.24093423478795328,
+      "loseProb": 0.5722188076213891,
       "over25Prob": 0.45454545454545453,
       "isHome": false,
       "opponent": "Athletic Bilbao",
@@ -16160,82 +16194,82 @@
   },
   "news": [
     {
-      "title": "Simeone confirma las bajas de Koke y Johnny Cardoso",
-      "link": "https://www.jornadaperfecta.com/blog/simeone-previa-espanyol-atleti-j9-26-27/",
-      "date": "Fri, 16 Oct 2026 10:11:05 +0000",
+      "title": "Luiz Felipe se despide de la temporada: Parte médico oficial",
+      "link": "https://www.jornadaperfecta.com/blog/luiz-felipe-lesion-rayo-vallecano-3/",
+      "date": "Fri, 16 Oct 2026 15:32:10 +0000",
+      "img": "https://cdn.biwenger.com/i/t/70.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Iñigo Pérez habla de Gulacsi y los minutos de Veiga",
+      "link": "https://www.jornadaperfecta.com/blog/inigo-perez-previa-villarreal-elche-j9/",
+      "date": "Fri, 16 Oct 2026 15:18:04 +0000",
+      "img": "https://cdn.biwenger.com/i/t/19.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Lesionados que podrían llegar a la jornada 9 y descartados",
+      "link": "https://www.jornadaperfecta.com/blog/lesionados-j9-26-27/",
+      "date": "Fri, 16 Oct 2026 14:00:25 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/08/image-2026-08-24T132254.250.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Funes recupera a Cajuste y confirma la recaída de Juan Cruz",
+      "link": "https://www.jornadaperfecta.com/blog/funes-previa-malaga-real-sociedad-j9-26-27/",
+      "date": "Fri, 16 Oct 2026 13:29:01 +0000",
+      "img": "https://cdn.biwenger.com/i/t/65.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Raúl Moro y Kike Barja entrenan con el grupo, ¿disponibles?",
+      "link": "https://www.jornadaperfecta.com/blog/kike-barja-raul-moro-estado-osasuna-j9/",
+      "date": "Fri, 16 Oct 2026 13:18:48 +0000",
+      "img": "https://cdn.biwenger.com/i/t/93.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "El Comité mantiene la sanción a Vinicius: ¿venta fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/vinicius-sancion-real-madrid-fantasy/",
+      "date": "Fri, 16 Oct 2026 13:08:09 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Lesión de Koke: Parte médico oficial y tiempo de baja",
+      "link": "https://www.jornadaperfecta.com/blog/koke-parte-medico-atleti/",
+      "date": "Fri, 16 Oct 2026 13:04:36 +0000",
       "img": "https://cdn.biwenger.com/i/t/2.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Pablo García podría jugar por dentro y Canales repetir en banda",
-      "link": "https://www.jornadaperfecta.com/blog/pablo-garcia-once-racing-j9/",
-      "date": "Fri, 16 Oct 2026 09:51:56 +0000",
+      "title": "Quique, sobre el sustituto de Ángel Pérez y el caso Antonio Blanco",
+      "link": "https://www.jornadaperfecta.com/blog/quique-previa-celta-alaves-j9/",
+      "date": "Fri, 16 Oct 2026 13:04:34 +0000",
+      "img": "https://cdn.biwenger.com/i/t/91.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Terzic, sobre el estado de Laporte, Nico Williams y Sancet",
+      "link": "https://www.jornadaperfecta.com/blog/terzic-previa-valencia-athletic-j9-26-27/",
+      "date": "Fri, 16 Oct 2026 12:49:38 +0000",
+      "img": "https://cdn.biwenger.com/i/t/1.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "José Alberto, sobre el estado de Pablo Ramón y Andrés Martín",
+      "link": "https://www.jornadaperfecta.com/blog/jose-alberto-previa-osasuna-racing-j9-26-27/",
+      "date": "Fri, 16 Oct 2026 12:34:08 +0000",
       "img": "https://cdn.biwenger.com/i/t/812.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Nuevas molestias de Andrés García, ¿oportunidad para Carvajal?",
-      "link": "https://www.jornadaperfecta.com/blog/andres-garcia-molestias-getafe-cf/",
-      "date": "Fri, 16 Oct 2026 09:12:45 +0000",
-      "img": "https://cdn.biwenger.com/i/t/8.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Rioja, Copete y Foulquier entrenan con el grupo este viernes",
-      "link": "https://www.jornadaperfecta.com/blog/rioja-estado-valencia-j9/",
-      "date": "Fri, 16 Oct 2026 09:12:14 +0000",
-      "img": "https://cdn.biwenger.com/i/t/18.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Rotaciones por Europa: ¡jugadores en riesgo para la jornada 9!",
-      "link": "https://www.jornadaperfecta.com/blog/rotaciones-europa-fantasy-j9/",
-      "date": "Fri, 16 Oct 2026 09:00:05 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Adama Traoré busca su oportunidad de inicio, ¿será titular?",
-      "link": "https://www.jornadaperfecta.com/blog/adama-traore-titular-j9-laliga/",
-      "date": "Fri, 16 Oct 2026 08:57:52 +0000",
-      "img": "https://cdn.biwenger.com/i/t/6.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Kochorashvili vuelve a entrenar al margen del grupo, ¿preocupa?",
-      "link": "https://www.jornadaperfecta.com/blog/kochorashvili-estado-sevilla-j9/",
-      "date": "Fri, 16 Oct 2026 08:45:31 +0000",
-      "img": "https://cdn.biwenger.com/i/t/17.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Onces en prensa del Depor &#8211; Levante",
-      "link": "https://www.jornadaperfecta.com/blog/onces-prensa-depor-levante/",
-      "date": "Fri, 16 Oct 2026 08:42:11 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/10/previa-fantasy-deportivo-levante-jornada-9-26-27.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "YoSports regala 5€ en Apuestas Gratis con el Betis vs Barcelona",
-      "link": "https://www.jornadaperfecta.com/blog/yosports-yopartidazo-betis-vs-barcelona/",
-      "date": "Fri, 16 Oct 2026 08:00:50 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/10/YoSports-YoPartidazo-Betis-vs-Barcelona.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Ángel Torres confirma una última oferta por Jadon Sancho",
-      "link": "https://www.jornadaperfecta.com/blog/jadon-sancho-fichaje-getafe-cf/",
-      "date": "Fri, 16 Oct 2026 07:30:03 +0000",
-      "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -16244,7 +16278,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-10-16T10:13:58.136Z",
+    "updatedAt": "2026-10-16T15:39:21.205Z",
     "players": [
       {
         "id": "37428",
