@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-17T19:45:34.009Z",
+  "updatedAt": "2026-10-18T01:47:12.809Z",
   "players": [
     {
       "id": 11,
@@ -40,8 +40,8 @@
         11,
         8,
         1,
-        3,
-        2
+        5,
+        3
       ],
       "clausula": null
     },
@@ -117,18 +117,18 @@
       "name": "Guido Rodríguez",
       "position": 3,
       "price": 3350000,
-      "points": 25,
+      "points": 29,
       "trend": 10000,
-      "playedHome": 3,
+      "playedHome": 4,
       "playedAway": 2,
       "teamName": "Valencia",
       "teamId": 18,
       "status": "ok",
       "jForm": [
+        4,
         5,
         4,
         4,
-        null,
         null
       ],
       "clausula": null
@@ -150,7 +150,7 @@
         13,
         10,
         11,
-        8,
+        9,
         8
       ],
       "clausula": null
@@ -227,19 +227,19 @@
       "name": "Berenguer",
       "position": 4,
       "price": 2780000,
-      "points": 30,
+      "points": 36,
       "trend": -40000,
       "playedHome": 4,
-      "playedAway": 2,
+      "playedAway": 3,
       "teamName": "Athletic",
       "teamId": 1,
       "status": "ok",
       "jForm": [
+        6,
         3,
         5,
         2,
-        14,
-        4
+        14
       ],
       "clausula": null
     },
@@ -279,11 +279,11 @@
       "teamId": 1,
       "status": "ok",
       "jForm": [
+        null,
         7,
         4,
         4,
-        6,
-        null
+        6
       ],
       "clausula": null
     },
@@ -326,8 +326,8 @@
         null,
         null,
         3,
-        5,
-        8
+        null,
+        5
       ],
       "clausula": null
     },
@@ -348,7 +348,7 @@
         null,
         18,
         3,
-        5,
+        6,
         5
       ],
       "clausula": null
@@ -469,19 +469,19 @@
       "name": "Laporte",
       "position": 2,
       "price": 5380000,
-      "points": 27,
+      "points": 31,
       "trend": -40000,
       "playedHome": 4,
-      "playedAway": 2,
+      "playedAway": 3,
       "teamName": "Athletic",
       "teamId": 1,
       "status": "ok",
       "jForm": [
+        4,
         6,
         4,
         6,
-        6,
-        0
+        6
       ],
       "clausula": null
     },
@@ -525,7 +525,7 @@
         9,
         null,
         null,
-        3
+        null
       ],
       "clausula": null
     },
@@ -639,19 +639,19 @@
       "name": "Gayà",
       "position": 2,
       "price": 1670000,
-      "points": 20,
+      "points": 23,
       "trend": 10000,
-      "playedHome": 3,
+      "playedHome": 4,
       "playedAway": 3,
       "teamName": "Valencia",
       "teamId": 18,
       "status": "ok",
       "jForm": [
+        3,
         4,
         2,
         4,
-        3,
-        4
+        3
       ],
       "clausula": null
     },
@@ -760,8 +760,8 @@
         null,
         null,
         2,
-        3,
-        null
+        14,
+        3
       ],
       "clausula": null
     },
@@ -793,19 +793,19 @@
       "name": "Iñaki Williams",
       "position": 4,
       "price": 2700000,
-      "points": 18,
+      "points": 20,
       "trend": -20000,
       "playedHome": 4,
-      "playedAway": 2,
+      "playedAway": 3,
       "teamName": "Athletic",
       "teamId": 1,
       "status": "ok",
       "jForm": [
         2,
+        2,
         4,
         4,
-        3,
-        2
+        3
       ],
       "clausula": null
     },
@@ -870,8 +870,8 @@
         1,
         4,
         3,
-        6,
-        null
+        4,
+        6
       ],
       "clausula": null
     },
@@ -881,19 +881,19 @@
       "name": "De Galarreta",
       "position": 3,
       "price": 2640000,
-      "points": 23,
+      "points": 26,
       "trend": -20000,
       "playedHome": 4,
-      "playedAway": 1,
+      "playedAway": 2,
       "teamName": "Athletic",
       "teamId": 1,
       "status": "ok",
       "jForm": [
+        3,
         5,
         4,
         3,
-        9,
-        null
+        9
       ],
       "clausula": null
     },
@@ -937,7 +937,7 @@
         null,
         4,
         null,
-        null
+        -1
       ],
       "clausula": null
     },
@@ -980,8 +980,8 @@
         3,
         4,
         2,
-        6,
-        5
+        5,
+        6
       ],
       "clausula": null
     },
@@ -1090,8 +1090,8 @@
         5,
         6,
         4,
-        5,
-        4
+        null,
+        5
       ],
       "clausula": null
     },
@@ -1310,7 +1310,7 @@
         1,
         5,
         4,
-        5,
+        null,
         5
       ],
       "clausula": null
@@ -1440,10 +1440,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         3,
         4,
-        null,
-        2
+        null
       ],
       "clausula": null
     },
@@ -1464,8 +1464,8 @@
         null,
         5,
         5,
-        7,
-        4
+        null,
+        7
       ],
       "clausula": null
     },
@@ -1499,17 +1499,17 @@
       "price": 1560000,
       "points": 18,
       "trend": -10000,
-      "playedHome": 4,
+      "playedHome": 5,
       "playedAway": 4,
       "teamName": "Valencia",
       "teamId": 18,
       "status": "ok",
       "jForm": [
+        0,
         1,
         3,
         3,
-        3,
-        2
+        3
       ],
       "clausula": null
     },
@@ -1684,8 +1684,8 @@
         2,
         5,
         -1,
-        2,
-        1
+        3,
+        2
       ],
       "clausula": null
     },
@@ -1695,19 +1695,19 @@
       "name": "Areso",
       "position": 2,
       "price": 2550000,
-      "points": 16,
+      "points": 19,
       "trend": -20000,
       "playedHome": 4,
-      "playedAway": 1,
+      "playedAway": 2,
       "teamName": "Athletic",
       "teamId": 1,
       "status": "ok",
       "jForm": [
+        3,
         6,
         -2,
         6,
-        6,
-        null
+        6
       ],
       "clausula": null
     },
@@ -1871,7 +1871,7 @@
       "name": "Comesaña",
       "position": 3,
       "price": 2150000,
-      "points": 17,
+      "points": 18,
       "trend": -10000,
       "playedHome": 3,
       "playedAway": 5,
@@ -1879,7 +1879,7 @@
       "teamId": 19,
       "status": "ok",
       "jForm": [
-        2,
+        3,
         3,
         null,
         4,
@@ -1937,19 +1937,19 @@
       "name": "Maffeo",
       "position": 2,
       "price": 1280000,
-      "points": 10,
+      "points": 17,
       "trend": -20000,
-      "playedHome": 4,
+      "playedHome": 5,
       "playedAway": 3,
       "teamName": "Valencia",
       "teamId": 18,
       "status": "ok",
       "jForm": [
+        7,
         1,
         2,
         3,
-        -1,
-        -2
+        -1
       ],
       "clausula": null
     },
@@ -1970,7 +1970,7 @@
         null,
         null,
         null,
-        null,
+        6,
         null
       ],
       "clausula": null
@@ -2124,8 +2124,8 @@
         5,
         6,
         10,
-        10,
-        2
+        2,
+        10
       ],
       "clausula": null
     },
@@ -2278,8 +2278,8 @@
         8,
         6,
         6,
-        6,
-        2
+        2,
+        12
       ],
       "clausula": null
     },
@@ -2289,16 +2289,16 @@
       "name": "Raba",
       "position": 4,
       "price": 1280000,
-      "points": 12,
+      "points": 15,
       "trend": 180000,
-      "playedHome": 0,
+      "playedHome": 1,
       "playedAway": 2,
       "teamName": "Valencia",
       "teamId": 18,
       "status": "ok",
       "jForm": [
+        3,
         9,
-        null,
         null,
         null,
         null
@@ -2311,19 +2311,19 @@
       "name": "Dimitrievski",
       "position": 1,
       "price": 2850000,
-      "points": 36,
+      "points": 40,
       "trend": 10000,
-      "playedHome": 4,
+      "playedHome": 5,
       "playedAway": 4,
       "teamName": "Valencia",
       "teamId": 18,
       "status": "ok",
       "jForm": [
+        4,
         7,
         2,
         7,
-        3,
-        7
+        3
       ],
       "clausula": null
     },
@@ -2344,8 +2344,8 @@
         5,
         null,
         null,
-        2,
-        null
+        null,
+        2
       ],
       "clausula": null
     },
@@ -2399,19 +2399,19 @@
       "name": "Pepelu",
       "position": 3,
       "price": 2290000,
-      "points": 24,
+      "points": 31,
       "trend": 10000,
-      "playedHome": 4,
+      "playedHome": 5,
       "playedAway": 4,
       "teamName": "Valencia",
       "teamId": 18,
       "status": "ok",
       "jForm": [
+        7,
         4,
         2,
         5,
-        2,
-        -1
+        2
       ],
       "clausula": null
     },
@@ -2542,7 +2542,7 @@
         null,
         null,
         null,
-        null,
+        5,
         null
       ],
       "clausula": null
@@ -2564,8 +2564,8 @@
         3,
         3,
         5,
-        null,
-        3
+        3,
+        2
       ],
       "clausula": null
     },
@@ -2783,8 +2783,8 @@
         5,
         5,
         null,
-        6,
-        10
+        2,
+        6
       ],
       "clausula": null
     },
@@ -2824,11 +2824,11 @@
       "teamId": 18,
       "status": "ok",
       "jForm": [
+        null,
         3,
         null,
         null,
-        null,
-        -1
+        null
       ],
       "clausula": null
     },
@@ -3014,19 +3014,19 @@
       "name": "Unai Simón",
       "position": 1,
       "price": 4260000,
-      "points": 30,
+      "points": 37,
       "trend": -40000,
       "playedHome": 4,
-      "playedAway": 2,
+      "playedAway": 3,
       "teamName": "Athletic",
       "teamId": 1,
       "status": "ok",
       "jForm": [
+        7,
         3,
         3,
         9,
-        7,
-        12
+        7
       ],
       "clausula": null
     },
@@ -3039,14 +3039,14 @@
       "points": 9,
       "trend": -20000,
       "playedHome": 2,
-      "playedAway": 2,
+      "playedAway": 3,
       "teamName": "Athletic",
       "teamId": 1,
       "status": "ok",
       "jForm": [
+        0,
         null,
         null,
-        2,
         2,
         2
       ],
@@ -3066,11 +3066,11 @@
       "teamId": 1,
       "status": "ok",
       "jForm": [
+        null,
         -1,
         4,
         14,
-        4,
-        3
+        4
       ],
       "clausula": null
     },
@@ -3190,18 +3190,18 @@
       "name": "Rioja",
       "position": 4,
       "price": 1470000,
-      "points": 19,
+      "points": 22,
       "trend": -10000,
-      "playedHome": 2,
+      "playedHome": 3,
       "playedAway": 2,
       "teamName": "Valencia",
       "teamId": 18,
       "status": "ok",
       "jForm": [
+        3,
         null,
         3,
         10,
-        null,
         null
       ],
       "clausula": null
@@ -3620,7 +3620,7 @@
         13,
         null,
         null,
-        7
+        null
       ],
       "clausula": null
     },
@@ -3729,8 +3729,8 @@
         6,
         6,
         5,
-        3,
-        15
+        6,
+        3
       ],
       "clausula": null
     },
@@ -3899,8 +3899,8 @@
         null,
         5,
         7,
-        13,
-        7
+        7,
+        13
       ],
       "clausula": null
     },
@@ -4028,10 +4028,10 @@
       "teamId": 1,
       "status": "ok",
       "jForm": [
+        null,
         6,
         9,
         12,
-        2,
         2
       ],
       "clausula": null
@@ -4163,8 +4163,8 @@
         null,
         null,
         null,
-        2,
-        null
+        null,
+        3
       ],
       "clausula": null
     },
@@ -4292,6 +4292,7 @@
       "teamId": 18,
       "status": "ok",
       "jForm": [
+        null,
         null,
         11,
         5
@@ -4458,19 +4459,19 @@
       "name": "Robert Navarro",
       "position": 4,
       "price": 5120000,
-      "points": 35,
+      "points": 41,
       "trend": 10000,
       "playedHome": 3,
-      "playedAway": 2,
+      "playedAway": 3,
       "teamName": "Athletic",
       "teamId": 1,
       "status": "ok",
       "jForm": [
         6,
+        6,
         4,
         12,
-        11,
-        2
+        11
       ],
       "clausula": null
     },
@@ -4480,18 +4481,18 @@
       "name": "Danjuma",
       "position": 4,
       "price": 2460000,
-      "points": 33,
+      "points": 37,
       "trend": 10000,
-      "playedHome": 4,
+      "playedHome": 5,
       "playedAway": 4,
       "teamName": "Valencia",
       "teamId": 18,
       "status": "ok",
       "jForm": [
         4,
+        4,
         6,
         5,
-        4,
         4
       ],
       "clausula": null
@@ -4535,7 +4536,7 @@
         3,
         3,
         null,
-        null,
+        3,
         null
       ],
       "clausula": null
@@ -4546,19 +4547,19 @@
       "name": "Jesús Vázquez",
       "position": 2,
       "price": 590000,
-      "points": 13,
+      "points": 15,
       "trend": -10000,
-      "playedHome": 4,
+      "playedHome": 5,
       "playedAway": 3,
       "teamName": "Valencia",
       "teamId": 18,
       "status": "ok",
       "jForm": [
+        2,
         null,
         3,
         2,
-        3,
-        0
+        3
       ],
       "clausula": null
     },
@@ -4576,8 +4577,8 @@
       "teamId": 1,
       "status": "ok",
       "jForm": [
-        4,
         null,
+        4,
         null,
         null,
         null
@@ -4645,8 +4646,8 @@
         11,
         9,
         6,
-        8,
-        null
+        11,
+        8
       ],
       "clausula": null
     },
@@ -4667,8 +4668,8 @@
         4,
         5,
         11,
-        6,
-        null
+        null,
+        0
       ],
       "clausula": null
     },
@@ -4918,14 +4919,15 @@
       "name": "Javier Aguirre",
       "position": 5,
       "price": 600000,
-      "points": 1,
+      "points": 2,
       "trend": -10000,
-      "playedHome": 0,
+      "playedHome": 1,
       "playedAway": 1,
       "teamName": "Valencia",
       "teamId": 18,
       "status": "ok",
       "jForm": [
+        1,
         1
       ],
       "clausula": null
@@ -5010,11 +5012,11 @@
       "teamId": 18,
       "status": "ok",
       "jForm": [
+        null,
         2,
         null,
         3,
-        3,
-        1
+        3
       ],
       "clausula": null
     },
@@ -5057,7 +5059,7 @@
         15,
         6,
         12,
-        17,
+        14,
         17
       ],
       "clausula": null
@@ -5167,8 +5169,8 @@
         null,
         4,
         null,
-        4,
-        1
+        1,
+        null
       ],
       "clausula": null
     },
@@ -5178,19 +5180,19 @@
       "name": "Tárrega",
       "position": 2,
       "price": 940000,
-      "points": 10,
+      "points": 17,
       "trend": -10000,
-      "playedHome": 3,
+      "playedHome": 4,
       "playedAway": 2,
       "teamName": "Valencia",
       "teamId": 18,
       "status": "ok",
       "jForm": [
+        7,
         null,
         null,
         null,
-        3,
-        -1
+        3
       ],
       "clausula": null
     },
@@ -5233,8 +5235,8 @@
         null,
         null,
         4,
-        2,
-        4
+        -1,
+        2
       ],
       "clausula": null
     },
@@ -5255,7 +5257,7 @@
         1,
         0,
         3,
-        3,
+        0,
         0
       ],
       "clausula": null
@@ -5321,8 +5323,8 @@
         5,
         null,
         21,
-        10,
-        11
+        21,
+        10
       ],
       "clausula": null
     },
@@ -5486,19 +5488,19 @@
       "name": "Paredes",
       "position": 2,
       "price": 2400000,
-      "points": 30,
+      "points": 35,
       "trend": -30000,
       "playedHome": 3,
-      "playedAway": 1,
+      "playedAway": 2,
       "teamName": "Athletic",
       "teamId": 1,
       "status": "ok",
       "jForm": [
+        5,
         8,
         null,
         4,
-        6,
-        null
+        6
       ],
       "clausula": null
     },
@@ -5728,19 +5730,19 @@
       "name": "Javi Guerra",
       "position": 3,
       "price": 3160000,
-      "points": 29,
+      "points": 34,
       "trend": 20000,
-      "playedHome": 4,
+      "playedHome": 5,
       "playedAway": 4,
       "teamName": "Valencia",
       "teamId": 18,
       "status": "ok",
       "jForm": [
+        5,
         7,
         3,
         7,
-        5,
-        -1
+        5
       ],
       "clausula": null
     },
@@ -5772,17 +5774,17 @@
       "name": "Jauregizar",
       "position": 3,
       "price": 1670000,
-      "points": 17,
+      "points": 19,
       "trend": -20000,
       "playedHome": 3,
-      "playedAway": 2,
+      "playedAway": 3,
       "teamName": "Athletic",
       "teamId": 1,
       "status": "ok",
       "jForm": [
+        2,
         4,
         4,
-        3,
         3,
         3
       ],
@@ -5849,7 +5851,7 @@
         5,
         3,
         9,
-        12,
+        9,
         12
       ],
       "clausula": null
@@ -5860,7 +5862,7 @@
       "name": "Sergi Cardona",
       "position": 2,
       "price": 920000,
-      "points": 15,
+      "points": 14,
       "trend": 10000,
       "playedHome": 3,
       "playedAway": 2,
@@ -5868,7 +5870,7 @@
       "teamId": 19,
       "status": "ok",
       "jForm": [
-        8,
+        7,
         2,
         3,
         4,
@@ -6157,8 +6159,8 @@
         7,
         5,
         4,
-        3,
-        16
+        null,
+        3
       ],
       "clausula": null
     },
@@ -6483,7 +6485,7 @@
         10,
         null,
         4,
-        7,
+        null,
         7
       ],
       "clausula": null
@@ -6703,7 +6705,7 @@
         null,
         null,
         null,
-        2
+        null
       ],
       "clausula": null
     },
@@ -6867,17 +6869,17 @@
       "name": "Sannadi",
       "position": 4,
       "price": 150000,
-      "points": 6,
+      "points": 9,
       "trend": 0,
       "playedHome": 3,
-      "playedAway": 0,
+      "playedAway": 1,
       "teamName": "Athletic",
       "teamId": 1,
       "status": "ok",
       "jForm": [
+        3,
         2,
         2,
-        null,
         null,
         null
       ],
@@ -6944,8 +6946,8 @@
         null,
         3,
         3,
-        1,
-        5
+        4,
+        1
       ],
       "clausula": null
     },
@@ -6988,8 +6990,8 @@
         2,
         8,
         7,
-        1,
-        4
+        3,
+        1
       ],
       "clausula": null
     },
@@ -7164,8 +7166,8 @@
         15,
         6,
         6,
-        2,
-        11
+        10,
+        2
       ],
       "clausula": null
     },
@@ -7197,19 +7199,19 @@
       "name": "David Otorbi",
       "position": 4,
       "price": 2080000,
-      "points": 34,
+      "points": 39,
       "trend": 140000,
-      "playedHome": 3,
+      "playedHome": 4,
       "playedAway": 4,
       "teamName": "Valencia",
       "teamId": 18,
       "status": "ok",
       "jForm": [
+        5,
         13,
         8,
         3,
-        3,
-        2
+        3
       ],
       "clausula": null
     },
@@ -7230,7 +7232,7 @@
         null,
         null,
         null,
-        null,
+        -2,
         null
       ],
       "clausula": null
@@ -7360,10 +7362,7 @@
       "status": "ok",
       "jForm": [
         null,
-        10,
-        null,
-        null,
-        null
+        10
       ],
       "clausula": null
     },
@@ -7385,7 +7384,7 @@
         5,
         3,
         5,
-        5
+        null
       ],
       "clausula": null
     },
@@ -7395,19 +7394,19 @@
       "name": "Peio Canales",
       "position": 3,
       "price": 1790000,
-      "points": 15,
+      "points": 16,
       "trend": -20000,
       "playedHome": 2,
-      "playedAway": 2,
+      "playedAway": 3,
       "teamName": "Athletic",
       "teamId": 1,
       "status": "ok",
       "jForm": [
+        1,
         3,
         null,
         null,
-        3,
-        4
+        3
       ],
       "clausula": null
     },
@@ -7449,9 +7448,9 @@
       "jForm": [
         null,
         null,
+        null,
         3,
-        3,
-        0
+        3
       ],
       "clausula": null
     },
@@ -7472,8 +7471,8 @@
         null,
         null,
         3,
-        6,
-        2
+        2,
+        3
       ],
       "clausula": null
     },
@@ -7648,7 +7647,7 @@
         2,
         null,
         null,
-        null,
+        3,
         null
       ],
       "clausula": null
@@ -7670,8 +7669,8 @@
         null,
         3,
         3,
-        4,
-        5
+        7,
+        4
       ],
       "clausula": null
     },
@@ -7759,7 +7758,7 @@
         3,
         5,
         6,
-        3
+        6
       ],
       "clausula": null
     },
@@ -8044,7 +8043,7 @@
         3,
         4,
         null,
-        2,
+        null,
         null
       ],
       "clausula": null
@@ -8297,19 +8296,19 @@
       "name": "Rincón",
       "position": 2,
       "price": 360000,
-      "points": 5,
+      "points": 10,
       "trend": -10000,
       "playedHome": 1,
-      "playedAway": 1,
+      "playedAway": 2,
       "teamName": "Athletic",
       "teamId": 1,
       "status": "ok",
       "jForm": [
+        5,
         null,
         null,
         null,
-        null,
-        2
+        null
       ],
       "clausula": null
     },
@@ -8528,7 +8527,7 @@
         10,
         null,
         5,
-        null,
+        5,
         null
       ],
       "clausula": null
@@ -8550,8 +8549,8 @@
         2,
         5,
         null,
-        -1,
-        3
+        3,
+        null
       ],
       "clausula": null
     },
@@ -8561,19 +8560,19 @@
       "name": "Ugrinic",
       "position": 3,
       "price": 1100000,
-      "points": 20,
+      "points": 22,
       "trend": -10000,
-      "playedHome": 4,
+      "playedHome": 5,
       "playedAway": 4,
       "teamName": "Valencia",
       "teamId": 18,
       "status": "ok",
       "jForm": [
+        2,
         3,
         0,
         4,
-        3,
-        1
+        3
       ],
       "clausula": null
     },
@@ -8660,8 +8659,8 @@
         4,
         6,
         2,
-        2,
-        12
+        12,
+        null
       ],
       "clausula": null
     },
@@ -8671,15 +8670,15 @@
       "name": "Rego",
       "position": 3,
       "price": 230000,
-      "points": 0,
+      "points": 3,
       "trend": 0,
       "playedHome": 0,
-      "playedAway": 0,
+      "playedAway": 1,
       "teamName": "Athletic",
       "teamId": 1,
       "status": "ok",
       "jForm": [
-        null,
+        3,
         null,
         null,
         null,
@@ -8726,8 +8725,8 @@
         null,
         5,
         8,
-        6,
-        8
+        8,
+        2
       ],
       "clausula": null
     },
@@ -8836,8 +8835,8 @@
         3,
         5,
         10,
-        4,
-        2
+        2,
+        3
       ],
       "clausula": null
     },
@@ -9153,7 +9152,7 @@
       "name": "Cepeda",
       "position": 4,
       "price": 1760000,
-      "points": 35,
+      "points": 34,
       "trend": 20000,
       "playedHome": 4,
       "playedAway": 5,
@@ -9161,11 +9160,11 @@
       "teamId": 75,
       "status": "ok",
       "jForm": [
+        1,
+        5,
+        5,
         2,
-        5,
-        5,
-        6,
-        2
+        7
       ],
       "clausula": null
     },
@@ -9274,8 +9273,8 @@
         3,
         null,
         null,
-        null,
-        3
+        0,
+        null
       ],
       "clausula": null
     },
@@ -9362,8 +9361,8 @@
         3,
         7,
         null,
-        11,
-        6
+        null,
+        11
       ],
       "clausula": null
     },
@@ -10000,8 +9999,8 @@
         4,
         13,
         1,
-        2,
-        5
+        null,
+        2
       ],
       "clausula": null
     },
@@ -10308,8 +10307,8 @@
         1,
         1,
         3,
-        0,
-        1
+        1,
+        0
       ],
       "clausula": null
     },
@@ -10539,19 +10538,19 @@
       "name": "Gerenabarrena",
       "position": 3,
       "price": 2010000,
-      "points": 21,
+      "points": 24,
       "trend": -30000,
       "playedHome": 3,
-      "playedAway": 2,
+      "playedAway": 3,
       "teamName": "Athletic",
       "teamId": 1,
       "status": "ok",
       "jForm": [
+        3,
         null,
         1,
         5,
-        8,
-        3
+        8
       ],
       "clausula": null
     },
@@ -10933,18 +10932,18 @@
       "name": "De Haas",
       "position": 2,
       "price": 1940000,
-      "points": 16,
+      "points": 19,
       "trend": -40000,
-      "playedHome": 2,
+      "playedHome": 3,
       "playedAway": 2,
       "teamName": "Valencia",
       "teamId": 18,
       "status": "ok",
       "jForm": [
         3,
+        3,
         6,
         4,
-        null,
         null
       ],
       "clausula": null
@@ -11054,8 +11053,8 @@
         -5,
         null,
         3,
-        1,
-        4
+        3,
+        1
       ],
       "clausula": null
     },
@@ -11076,8 +11075,8 @@
         null,
         null,
         null,
-        1,
-        2
+        null,
+        1
       ],
       "clausula": null
     },
@@ -11161,10 +11160,10 @@
       "teamId": 18,
       "status": "ok",
       "jForm": [
+        null,
         2,
         null,
         null,
-        4,
         4
       ],
       "clausula": null
@@ -11274,8 +11273,8 @@
         10,
         13,
         1,
-        null,
-        5
+        12,
+        null
       ],
       "clausula": null
     },
@@ -11296,8 +11295,8 @@
         5,
         4,
         5,
-        13,
-        5
+        11,
+        13
       ],
       "clausula": null
     },
@@ -11373,19 +11372,19 @@
       "name": "Terzić",
       "position": 5,
       "price": 990000,
-      "points": 8,
+      "points": 9,
       "trend": -10000,
       "playedHome": 4,
-      "playedAway": 2,
+      "playedAway": 3,
       "teamName": "Athletic",
       "teamId": 1,
       "status": "ok",
       "jForm": [
         1,
         1,
+        1,
         3,
-        3,
-        0
+        3
       ],
       "clausula": null
     },
@@ -11516,8 +11515,8 @@
         2,
         2,
         null,
-        null,
-        9
+        6,
+        null
       ],
       "clausula": null
     },
@@ -11637,19 +11636,19 @@
       "name": "Johaneko",
       "position": 2,
       "price": 710000,
-      "points": 14,
+      "points": 20,
       "trend": -10000,
       "playedHome": 3,
-      "playedAway": 2,
+      "playedAway": 3,
       "teamName": "Athletic",
       "teamId": 1,
       "status": "ok",
       "jForm": [
+        6,
         3,
         3,
         3,
-        1,
-        4
+        1
       ],
       "clausula": null
     },
@@ -11747,19 +11746,19 @@
       "name": "Elliott",
       "position": 3,
       "price": 1670000,
-      "points": 9,
+      "points": 12,
       "trend": -40000,
-      "playedHome": 2,
+      "playedHome": 3,
       "playedAway": 2,
       "teamName": "Valencia",
       "teamId": 18,
       "status": "ok",
       "jForm": [
+        3,
         2,
         2,
         null,
-        2,
-        3
+        2
       ],
       "clausula": null
     },
@@ -11878,7 +11877,7 @@
       "name": "Revivo",
       "position": 2,
       "price": 1460000,
-      "points": 24,
+      "points": 23,
       "trend": 0,
       "playedHome": 3,
       "playedAway": 3,
@@ -11886,7 +11885,7 @@
       "teamId": 75,
       "status": "ok",
       "jForm": [
-        7,
+        6,
         4,
         7,
         1,
@@ -12168,9 +12167,9 @@
           3,
           9
         ],
-        "teamSize": 14,
-        "teamValue": 45690000,
-        "teamValueInc": 60000,
+        "teamSize": 13,
+        "teamValue": 44590000,
+        "teamValueInc": 70000,
         "position": 3,
         "positionInc": 1,
         "role": ""
@@ -12236,8 +12235,8 @@
           12
         ],
         "teamSize": 16,
-        "teamValue": 53290000,
-        "teamValueInc": -90000,
+        "teamValue": 64690000,
+        "teamValueInc": -100000,
         "position": 6,
         "positionInc": -3,
         "role": ""
@@ -12292,9 +12291,9 @@
           15,
           6
         ],
-        "teamSize": 16,
-        "teamValue": 39270000,
-        "teamValueInc": 10000,
+        "teamSize": 15,
+        "teamValue": 38340000,
+        "teamValueInc": 30000,
         "position": 9,
         "positionInc": 1,
         "role": ""
@@ -12416,9 +12415,9 @@
           19,
           10
         ],
-        "teamSize": 11,
-        "teamValue": 45150000,
-        "teamValueInc": 80000,
+        "teamSize": 10,
+        "teamValue": 31990000,
+        "teamValueInc": 160000,
         "position": 15,
         "positionInc": -4,
         "role": ""
@@ -12547,8 +12546,8 @@
       "name": "CA CABA JUNIORS",
       "manager": "CA CABA JUNIORS",
       "points": 322,
-      "value": 45690000,
-      "trend": 60000,
+      "value": 44590000,
+      "trend": 70000,
       "players": []
     },
     {
@@ -12574,8 +12573,8 @@
       "name": "Soulands Rangers",
       "manager": "Soulands Rangers",
       "points": 309,
-      "value": 53290000,
-      "trend": -90000,
+      "value": 64690000,
+      "trend": -100000,
       "players": []
     },
     {
@@ -12601,8 +12600,8 @@
       "name": "wilamalel",
       "manager": "wilamalel",
       "points": 290,
-      "value": 39270000,
-      "trend": 10000,
+      "value": 38340000,
+      "trend": 30000,
       "players": []
     },
     {
@@ -12655,8 +12654,8 @@
       "name": "TL*LI",
       "manager": "TL*LI",
       "points": 249,
-      "value": 45150000,
-      "trend": 80000,
+      "value": 31990000,
+      "trend": 160000,
       "players": []
     },
     {
@@ -12875,6 +12874,66 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1792275136,
+      "content": [
+        {
+          "player": 27591,
+          "from": {
+            "id": 8068002,
+            "name": "Soulands Rangers",
+            "icon": "i/u/8068002.png?v=69"
+          },
+          "amount": 1845400
+        },
+        {
+          "player": 25400,
+          "from": {
+            "id": 14074484,
+            "name": "wilamalel",
+            "icon": "https://lh3.googleusercontent.com/a/ACg8ocJGUZto0NCjv5HnKiftjGqQiwQNQWQjyPJpfYbDxfcaNvZWgg=s300-c"
+          },
+          "amount": 971100
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1792273196,
+      "content": [
+        {
+          "player": 38368,
+          "from": {
+            "id": 8070044,
+            "name": "CA CABA JUNIORS",
+            "icon": "i/u/8070044.png?v=6"
+          },
+          "amount": 1113200
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1792272194,
+      "content": [
+        {
+          "player": 31243,
+          "from": {
+            "id": 14072078,
+            "name": "TL*LI",
+            "icon": "i/u/14072078.png"
+          },
+          "to": {
+            "id": 8068002,
+            "name": "Soulands Rangers",
+            "icon": "i/u/8068002.png?v=69"
+          },
+          "amount": 13950000,
+          "type": "auction"
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1792249520,
@@ -13420,194 +13479,6 @@
             "icon": "i/u/12736123.png"
           },
           "amount": 1700000
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1792082207,
-      "content": [
-        {
-          "player": 38854,
-          "from": {
-            "id": 8068002,
-            "name": "Soulands Rangers",
-            "icon": "i/u/8068002.png?v=69"
-          },
-          "to": {
-            "id": 6552586,
-            "name": "LeMola Team",
-            "icon": "i/u/6552586.png"
-          },
-          "amount": 500000
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1792040851,
-      "content": [
-        {
-          "player": 1844,
-          "to": {
-            "id": 14094189,
-            "name": "Burnigol FC",
-            "icon": "i/u/14094189.png"
-          },
-          "amount": 1800000,
-          "bids": [
-            {
-              "user": {
-                "id": 14094028,
-                "name": "Estem caputs",
-                "icon": "i/u/12736123.png"
-              },
-              "amount": 1780000
-            },
-            {
-              "user": {
-                "id": 11521196,
-                "name": "Hufflepuff 🍋",
-                "icon": "i/u/11521196.png?v=57"
-              },
-              "amount": 1690009
-            },
-            {
-              "user": {
-                "id": 8070044,
-                "name": "CA CABA JUNIORS",
-                "icon": "i/u/8070044.png?v=6"
-              },
-              "amount": 1652121
-            }
-          ]
-        },
-        {
-          "player": 10745,
-          "to": {
-            "id": 14065964,
-            "name": "JanBox",
-            "icon": "i/u/14065964.png?v=16"
-          },
-          "amount": 3985251,
-          "bids": [
-            {
-              "user": {
-                "id": 148051,
-                "name": "Zaza Pachulia",
-                "icon": "i/u/148051.png?v=98"
-              },
-              "amount": 3849133
-            },
-            {
-              "user": {
-                "id": 14074484,
-                "name": "wilamalel",
-                "icon": "https://lh3.googleusercontent.com/a/ACg8ocJGUZto0NCjv5HnKiftjGqQiwQNQWQjyPJpfYbDxfcaNvZWgg=s300-c"
-              },
-              "amount": 3820000
-            },
-            {
-              "user": {
-                "id": 14094189,
-                "name": "Burnigol FC",
-                "icon": "i/u/14094189.png"
-              },
-              "amount": 3700000
-            },
-            {
-              "user": {
-                "id": 11521196,
-                "name": "Hufflepuff 🍋",
-                "icon": "i/u/11521196.png?v=57"
-              },
-              "amount": 3689009
-            },
-            {
-              "user": {
-                "id": 8068002,
-                "name": "Soulands Rangers",
-                "icon": "i/u/8068002.png?v=69"
-              },
-              "amount": 3660000
-            },
-            {
-              "user": {
-                "id": 12697101,
-                "name": "INDOMABLE FC",
-                "icon": "i/u/11757390.png"
-              },
-              "amount": 3352010
-            },
-            {
-              "user": {
-                "id": 8070044,
-                "name": "CA CABA JUNIORS",
-                "icon": "i/u/8070044.png?v=6"
-              },
-              "amount": 3300000
-            },
-            {
-              "user": {
-                "id": 6552586,
-                "name": "LeMola Team",
-                "icon": "i/u/6552586.png"
-              },
-              "amount": 3300000
-            }
-          ]
-        },
-        {
-          "player": 25392,
-          "to": {
-            "id": 11521196,
-            "name": "Hufflepuff 🍋",
-            "icon": "i/u/11521196.png?v=57"
-          },
-          "amount": 170009
-        },
-        {
-          "player": 38457,
-          "to": {
-            "id": 11521196,
-            "name": "Hufflepuff 🍋",
-            "icon": "i/u/11521196.png?v=57"
-          },
-          "amount": 290009
-        },
-        {
-          "player": 26095,
-          "to": {
-            "id": 14069874,
-            "name": "Pzaera",
-            "icon": "https://lh3.googleusercontent.com/a/AATXAJz2ePB0TU5NOTU2lUZ5nrRljJXEZjrTw8hYCiH1=s300-c"
-          },
-          "amount": 1340000,
-          "bids": [
-            {
-              "user": {
-                "id": 11520975,
-                "name": "Morankus FC",
-                "icon": "i/u/11520975.png?v=81"
-              },
-              "amount": 1240000
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1792015598,
-      "content": [
-        {
-          "player": 38318,
-          "from": {
-            "id": 11521196,
-            "name": "Hufflepuff 🍋",
-            "icon": "i/u/11521196.png?v=57"
-          },
-          "amount": 951400
         }
       ]
     }
@@ -15470,12 +15341,12 @@
         "results": [
           "D",
           "D",
+          "D",
           "W",
-          "W",
-          "L"
+          "W"
         ],
         "gf": 6,
-        "ga": 3,
+        "ga": 1,
         "crest": "https://crests.football-data.org/77.png",
         "name": "Athletic Club"
       },
@@ -15638,13 +15509,13 @@
       "95": {
         "results": [
           "D",
+          "D",
           "L",
           "W",
-          "L",
           "L"
         ],
         "gf": 5,
-        "ga": 11,
+        "ga": 6,
         "crest": "https://crests.football-data.org/95.png",
         "name": "Valencia CF"
       },
@@ -15747,6 +15618,23 @@
       }
     ],
     "recentResults": [
+      {
+        "date": "2026-10-17T19:00:00Z",
+        "home": {
+          "name": "Valencia CF",
+          "short": "Valencia",
+          "crest": "https://crests.football-data.org/95.png"
+        },
+        "away": {
+          "name": "Athletic Club",
+          "short": "Athletic",
+          "crest": "https://crests.football-data.org/77.png"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        }
+      },
       {
         "date": "2026-10-17T16:30:00Z",
         "home": {
@@ -15865,45 +15753,10 @@
           "home": 5,
           "away": 2
         }
-      },
-      {
-        "date": "2026-10-11T14:15:00Z",
-        "home": {
-          "name": "Real Sociedad de Fútbol",
-          "short": "Real Sociedad",
-          "crest": "https://crests.football-data.org/92.png"
-        },
-        "away": {
-          "name": "RC Deportivo La Coruña",
-          "short": "Deportivo",
-          "crest": "https://crests.football-data.org/560.png"
-        },
-        "score": {
-          "home": 3,
-          "away": 2
-        }
       }
     ]
   },
   "odds": {
-    "Valencia": {
-      "winProb": 0.29984763839512446,
-      "drawProb": 0.25403758252920267,
-      "loseProb": 0.446114779075673,
-      "over25Prob": 0.5714285714285714,
-      "isHome": true,
-      "opponent": "Villarreal",
-      "matchDate": "2026-10-24T16:30:00Z"
-    },
-    "Athletic Bilbao": {
-      "winProb": 0.5743651753325273,
-      "drawProb": 0.2418379685610641,
-      "loseProb": 0.18379685610640872,
-      "over25Prob": 0.45454545454545453,
-      "isHome": true,
-      "opponent": "Getafe",
-      "matchDate": "2026-10-25T13:00:00Z"
-    },
     "CA Osasuna": {
       "winProb": 0.23514376996805111,
       "drawProb": 0.27923322683706076,
@@ -15923,10 +15776,10 @@
       "matchDate": "2026-10-24T14:15:00Z"
     },
     "Celta Vigo": {
-      "winProb": 0.3524904214559387,
-      "drawProb": 0.2656449553001277,
-      "loseProb": 0.3818646232439336,
-      "over25Prob": 0.5649717514124294,
+      "winProb": 0.34815515610217596,
+      "drawProb": 0.2674235257016714,
+      "loseProb": 0.3844213181961526,
+      "over25Prob": 0.5714285714285714,
       "isHome": true,
       "opponent": "Real Betis",
       "matchDate": "2026-10-25T15:15:00Z"
@@ -16003,6 +15856,15 @@
       "opponent": "Real Sociedad",
       "matchDate": "2026-10-25T17:30:00Z"
     },
+    "Athletic Bilbao": {
+      "winProb": 0.5743651753325273,
+      "drawProb": 0.2418379685610641,
+      "loseProb": 0.18379685610640872,
+      "over25Prob": 0.45454545454545453,
+      "isHome": true,
+      "opponent": "Getafe",
+      "matchDate": "2026-10-25T13:00:00Z"
+    },
     "Elche CF": {
       "winProb": 0.2247365158090515,
       "drawProb": 0.24571192395122962,
@@ -16020,6 +15882,15 @@
       "isHome": false,
       "opponent": "Real Racing Club de Santander",
       "matchDate": "2026-10-24T14:15:00Z"
+    },
+    "Valencia": {
+      "winProb": 0.29984763839512446,
+      "drawProb": 0.25403758252920267,
+      "loseProb": 0.446114779075673,
+      "over25Prob": 0.5714285714285714,
+      "isHome": true,
+      "opponent": "Villarreal",
+      "matchDate": "2026-10-24T16:30:00Z"
     },
     "Villarreal": {
       "winProb": 0.446114779075673,
@@ -16049,10 +15920,10 @@
       "matchDate": "2026-10-24T19:00:00Z"
     },
     "Real Betis": {
-      "winProb": 0.3818646232439336,
-      "drawProb": 0.2656449553001277,
-      "loseProb": 0.3524904214559387,
-      "over25Prob": 0.5649717514124294,
+      "winProb": 0.3844213181961526,
+      "drawProb": 0.2674235257016714,
+      "loseProb": 0.34815515610217596,
+      "over25Prob": 0.5714285714285714,
       "isHome": false,
       "opponent": "Celta Vigo",
       "matchDate": "2026-10-25T15:15:00Z"
@@ -16068,6 +15939,22 @@
     }
   },
   "news": [
+    {
+      "title": "De Haas también se marcha lesionado del Valencia &#8211; Athletic",
+      "link": "https://www.jornadaperfecta.com/blog/de-haas-lesion-valencia-cf/",
+      "date": "Sat, 17 Oct 2026 20:55:35 +0000",
+      "img": "https://cdn.biwenger.com/i/t/18.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Guruzeta sufre una lesión preocupante en la rodilla",
+      "link": "https://www.jornadaperfecta.com/blog/guruzeta-lesion-rodilla-athletic-club/",
+      "date": "Sat, 17 Oct 2026 20:44:05 +0000",
+      "img": "https://cdn.biwenger.com/i/t/1.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Gerard Martín fue sustituido en el descanso por precaución",
       "link": "https://www.jornadaperfecta.com/blog/gerard-martin-cambio-precaucion-barcelona/",
@@ -16131,29 +16018,13 @@
       "img": "https://cdn.biwenger.com/i/t/70.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Militao, recuperado y de vuelta en la convocatoria del Real Madrid: ¿lo fichamos en fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/militao-vuelta-fantasy-real-madrid-2/",
-      "date": "Sat, 17 Oct 2026 11:55:24 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Manolo explica la titularidad de Ángel Fortuño antes que Dmitrovic",
-      "link": "https://www.jornadaperfecta.com/blog/fortuno-titular-porteria-espanyol-j9/",
-      "date": "Sat, 17 Oct 2026 11:40:27 +0000",
-      "img": "https://cdn.biwenger.com/i/t/7.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-10-17T19:45:32.040Z",
+    "updatedAt": "2026-10-18T01:47:09.046Z",
     "players": [
       {
         "id": "37428",
