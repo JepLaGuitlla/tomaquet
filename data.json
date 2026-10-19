@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-19T11:23:31.171Z",
+  "updatedAt": "2026-10-19T17:50:58.922Z",
   "players": [
     {
       "id": 11,
@@ -12197,7 +12197,7 @@
         "lastTrophy": {
           "type": "league",
           "position": -1,
-          "season": "2025/2026 season"
+          "season": "Temporada 2025/2026"
         },
         "position": 4,
         "positionInc": -2,
@@ -12222,7 +12222,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 3,
-          "season": "2025/2026 season"
+          "season": "Temporada 2025/2026"
         },
         "position": 5,
         "positionInc": 1
@@ -12316,13 +12316,13 @@
           10,
           1
         ],
-        "teamSize": 16,
-        "teamValue": 25940000,
-        "teamValueInc": 90000,
+        "teamSize": 15,
+        "teamValue": 23170000,
+        "teamValueInc": 250000,
         "lastTrophy": {
           "type": "league",
           "position": 2,
-          "season": "2025/2026 season"
+          "season": "Temporada 2025/2026"
         },
         "position": 10,
         "positionInc": 2
@@ -12383,7 +12383,7 @@
         "lastTrophy": {
           "type": "league",
           "position": 1,
-          "season": "2025/2026 season"
+          "season": "Temporada 2025/2026"
         },
         "position": 13,
         "positionInc": 2,
@@ -12501,7 +12501,7 @@
         "lastTrophy": {
           "type": "league",
           "position": -1,
-          "season": "2023/2024 season"
+          "season": "Temporada 2023/2024"
         },
         "position": 19,
         "positionInc": -1,
@@ -12614,8 +12614,8 @@
       "name": "LeMola Team",
       "manager": "LeMola Team",
       "points": 289,
-      "value": 25940000,
-      "trend": 90000,
+      "value": 23170000,
+      "trend": 250000,
       "players": []
     },
     {
@@ -12716,7 +12716,7 @@
     "balance": 445977,
     "lineup": {
       "type": "4-5-1",
-      "date": 1792406736,
+      "date": 1792427042,
       "playersID": [
         9887,
         38493,
@@ -12854,9 +12854,9 @@
     "market": [
       {
         "playerID": 2044,
-        "price": 3682340,
+        "price": 3682350,
         "type": "sale",
-        "until": 1792419650
+        "until": 1792594223
       },
       {
         "playerID": 26276,
@@ -12873,6 +12873,21 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1792411382,
+      "content": [
+        {
+          "player": 9090,
+          "from": {
+            "id": 6552586,
+            "name": "LeMola Team",
+            "icon": "i/u/6552586.png"
+          },
+          "amount": 2791700
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1792395409,
@@ -13699,42 +13714,6 @@
           "type": "clause"
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1792184978,
-      "content": [
-        {
-          "player": 24956,
-          "from": {
-            "id": 12697101,
-            "name": "INDOMABLE FC",
-            "icon": "i/u/11757390.png"
-          },
-          "amount": 154300
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1792177260,
-      "content": [
-        {
-          "player": 33796,
-          "from": {
-            "id": 14072078,
-            "name": "TL*LI",
-            "icon": "i/u/14072078.png"
-          },
-          "to": {
-            "id": 14074484,
-            "name": "wilamalel",
-            "icon": "https://lh3.googleusercontent.com/a/ACg8ocJGUZto0NCjv5HnKiftjGqQiwQNQWQjyPJpfYbDxfcaNvZWgg=s300-c"
-          },
-          "amount": 2535148,
-          "type": "clause"
-        }
-      ]
     }
   ],
   "leagueEnBas": {
@@ -13924,9 +13903,9 @@
           6,
           11
         ],
-        "teamSize": 7,
-        "teamValue": 34140000,
-        "teamValueInc": 170000,
+        "teamSize": 8,
+        "teamValue": 34850000,
+        "teamValueInc": 150000,
         "position": 9,
         "role": ""
       },
@@ -13943,9 +13922,9 @@
           12,
           20
         ],
-        "teamSize": 14,
-        "teamValue": 31580000,
-        "teamValueInc": -110000,
+        "teamSize": 13,
+        "teamValue": 30870000,
+        "teamValueInc": -90000,
         "position": 10,
         "positionInc": 1
       },
@@ -14224,8 +14203,8 @@
       "name": "Academia Control Orientado FC",
       "manager": "Academia Control Orientado FC",
       "points": 289,
-      "value": 34140000,
-      "trend": 170000,
+      "value": 34850000,
+      "trend": 150000,
       "players": []
     },
     {
@@ -14233,8 +14212,8 @@
       "name": "Aiveen Teaam",
       "manager": "Aiveen Teaam",
       "points": 273,
-      "value": 31580000,
-      "trend": -110000,
+      "value": 30870000,
+      "trend": -90000,
       "players": []
     },
     {
@@ -14459,6 +14438,26 @@
     ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1792426409,
+      "content": [
+        {
+          "player": 42459,
+          "from": {
+            "id": 6579540,
+            "name": "Aiveen Teaam",
+            "icon": "i/u/6579540.png?v=63"
+          },
+          "to": {
+            "id": 6580386,
+            "name": "Academia Control Orientado FC",
+            "icon": "i/u/6580386.png?v=69"
+          },
+          "amount": 850000
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1792408822,
@@ -15434,26 +15433,6 @@
           "amount": 5207400
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1792008057,
-      "content": [
-        {
-          "player": 1523,
-          "from": {
-            "id": 6579283,
-            "name": "Fiorenzola",
-            "icon": "i/u/6579283.png?v=33"
-          },
-          "to": {
-            "id": 6586257,
-            "name": "Aquest any pago jo !!",
-            "icon": "i/u/6586257.png"
-          },
-          "amount": 2300000
-        }
-      ]
     }
   ],
   "laliga": {
@@ -16262,112 +16241,112 @@
   },
   "odds": {
     "Getafe": {
-      "winProb": 0.35078292553559487,
-      "drawProb": 0.3116712404584553,
-      "loseProb": 0.3375458340059498,
+      "winProb": 0.337809576224546,
+      "drawProb": 0.32074848651623555,
+      "loseProb": 0.3414419372592185,
       "over25Prob": 0.4,
       "isHome": true,
       "opponent": "Sevilla",
       "matchDate": "2026-11-01T13:00:00Z"
     },
     "Rayo Vallecano": {
-      "winProb": 0.5295515602397189,
-      "drawProb": 0.24571192395122962,
-      "loseProb": 0.2247365158090515,
-      "over25Prob": 0.5319148936170213,
+      "winProb": 0.43444727117844106,
+      "drawProb": 0.28571757473897474,
+      "loseProb": 0.2798351540825841,
+      "over25Prob": 0.47393364928909953,
       "isHome": true,
-      "opponent": "Elche CF",
-      "matchDate": "2026-10-24T12:00:00Z"
+      "opponent": "Celta Vigo",
+      "matchDate": "2026-10-31T15:15:00Z"
     },
     "Levante": {
-      "winProb": 0.20877701047003785,
-      "drawProb": 0.23132100690576965,
-      "loseProb": 0.5599019826241924,
-      "over25Prob": 0.5847953216374269,
-      "isHome": false,
-      "opponent": "Real Sociedad",
-      "matchDate": "2026-10-25T17:30:00Z"
+      "winProb": 0.16633023420146908,
+      "drawProb": 0.21509523468326344,
+      "loseProb": 0.6185745311152675,
+      "over25Prob": 0.5988023952095809,
+      "isHome": true,
+      "opponent": "Atlético Madrid",
+      "matchDate": "2026-10-31T13:00:00Z"
     },
     "Athletic Bilbao": {
-      "winProb": 0.4802259887005649,
-      "drawProb": 0.2598870056497175,
-      "loseProb": 0.2598870056497175,
-      "over25Prob": 0.5128205128205129,
+      "winProb": 0.4801956761874705,
+      "drawProb": 0.2655830834779864,
+      "loseProb": 0.25422124033454313,
+      "over25Prob": 0.5291005291005292,
       "isHome": true,
       "opponent": "Real Sociedad",
       "matchDate": "2026-11-01T20:00:00Z"
     },
     "Alavés": {
-      "winProb": 0.06498201888497855,
-      "drawProb": 0.11529067866689745,
-      "loseProb": 0.819727302448124,
+      "winProb": 0.04289988046677393,
+      "drawProb": 0.1408929109972769,
+      "loseProb": 0.8162072085359491,
       "over25Prob": 0.8,
       "isHome": false,
       "opponent": "Barcelona",
       "matchDate": "2026-10-31T20:00:00Z"
     },
     "Málaga": {
-      "winProb": 0.14326712058972485,
-      "drawProb": 0.18850936919700637,
-      "loseProb": 0.6682235102132689,
+      "winProb": 0.1393733600864331,
+      "drawProb": 0.18367031949374904,
+      "loseProb": 0.6769563204198179,
       "over25Prob": 0.6666666666666666,
       "isHome": false,
       "opponent": "Real Betis",
       "matchDate": "2026-10-31T17:30:00Z"
     },
     "Elche CF": {
-      "winProb": 0.39425051334702255,
-      "drawProb": 0.27720739219712526,
-      "loseProb": 0.32854209445585214,
-      "over25Prob": 0.49751243781094534,
+      "winProb": 0.38416651387482764,
+      "drawProb": 0.2827100754924547,
+      "loseProb": 0.33312341063271766,
+      "over25Prob": 0.5076142131979695,
       "isHome": true,
       "opponent": "Valencia",
       "matchDate": "2026-11-01T17:30:00Z"
     },
     "Real Racing Club de Santander": {
-      "winProb": 0.10486247544204323,
-      "drawProb": 0.14611984282907664,
-      "loseProb": 0.7490176817288803,
+      "winProb": 0.11284392866955371,
+      "drawProb": 0.13606688210589668,
+      "loseProb": 0.7510891892245496,
       "over25Prob": 0.8,
       "isHome": true,
       "opponent": "Real Madrid",
       "matchDate": "2026-11-01T15:15:00Z"
     },
     "Espanyol": {
-      "winProb": 0.35798159314503336,
-      "drawProb": 0.2535702951443986,
-      "loseProb": 0.3884481117105681,
-      "over25Prob": 0.5988023952095809,
+      "winProb": 0.16948392751009886,
+      "drawProb": 0.21641197151175093,
+      "loseProb": 0.6141041009781504,
+      "over25Prob": 0.6024096385542169,
       "isHome": false,
-      "opponent": "Real Racing Club de Santander",
-      "matchDate": "2026-10-24T14:15:00Z"
+      "opponent": "Villarreal",
+      "matchDate": "2026-10-30T20:00:00Z"
     },
     "Valencia": {
-      "winProb": 0.32854209445585214,
-      "drawProb": 0.27720739219712526,
-      "loseProb": 0.39425051334702255,
-      "over25Prob": 0.49751243781094534,
+      "winProb": 0.33312341063271766,
+      "drawProb": 0.2827100754924547,
+      "loseProb": 0.38416651387482764,
+      "over25Prob": 0.5076142131979695,
       "isHome": false,
       "opponent": "Elche CF",
       "matchDate": "2026-11-01T17:30:00Z"
     },
     "Villarreal": {
-      "winProb": 0.4363859864781807,
-      "drawProb": 0.2581438229870929,
-      "loseProb": 0.3054701905347265,
-      "over25Prob": 0.5714285714285714,
-      "isHome": false,
-      "opponent": "Valencia",
-      "matchDate": "2026-10-24T16:30:00Z"
+      "winProb": 0.6141041009781504,
+      "drawProb": 0.21641197151175093,
+      "loseProb": 0.16948392751009886,
+      "over25Prob": 0.6024096385542169,
+      "isHome": true,
+      "opponent": "Espanyol",
+      "matchDate": "2026-10-30T20:00:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.7453416149068324,
-      "drawProb": 0.15279503105590062,
-      "loseProb": 0.10186335403726708,
-      "over25Prob": 0.6944444444444444,
-      "isHome": true,
-      "opponent": "Deportivo La Coruña",
-      "matchDate": "2026-10-24T19:00:00Z"
+      "winProb": 0.6185745311152675,
+      "drawProb": 0.21509523468326344,
+      "loseProb": 0.16633023420146908,
+      "over25Prob": 0.5988023952095809,
+      "isHome": false,
+      "opponent": "Levante",
+      "matchDate": "2026-10-31T13:00:00Z"
     },
     "Deportivo La Coruña": {
       "winProb": 0.4258316510137804,
@@ -16379,54 +16358,54 @@
       "matchDate": "2026-11-02T20:00:00Z"
     },
     "Celta Vigo": {
-      "winProb": 0.34815515610217596,
-      "drawProb": 0.2674235257016714,
-      "loseProb": 0.3844213181961526,
-      "over25Prob": 0.5649717514124294,
-      "isHome": true,
-      "opponent": "Real Betis",
-      "matchDate": "2026-10-25T15:15:00Z"
+      "winProb": 0.2798351540825841,
+      "drawProb": 0.28571757473897474,
+      "loseProb": 0.43444727117844106,
+      "over25Prob": 0.47393364928909953,
+      "isHome": false,
+      "opponent": "Rayo Vallecano",
+      "matchDate": "2026-10-31T15:15:00Z"
     },
     "Real Betis": {
-      "winProb": 0.6682235102132689,
-      "drawProb": 0.18850936919700637,
-      "loseProb": 0.14326712058972485,
+      "winProb": 0.6769563204198179,
+      "drawProb": 0.18367031949374904,
+      "loseProb": 0.1393733600864331,
       "over25Prob": 0.6666666666666666,
       "isHome": true,
       "opponent": "Málaga",
       "matchDate": "2026-10-31T17:30:00Z"
     },
     "Real Sociedad": {
-      "winProb": 0.2598870056497175,
-      "drawProb": 0.2598870056497175,
-      "loseProb": 0.4802259887005649,
-      "over25Prob": 0.5128205128205129,
+      "winProb": 0.25422124033454313,
+      "drawProb": 0.2655830834779864,
+      "loseProb": 0.4801956761874705,
+      "over25Prob": 0.5291005291005292,
       "isHome": false,
       "opponent": "Athletic Bilbao",
       "matchDate": "2026-11-01T20:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.819727302448124,
-      "drawProb": 0.11529067866689745,
-      "loseProb": 0.06498201888497855,
+      "winProb": 0.8162072085359491,
+      "drawProb": 0.1408929109972769,
+      "loseProb": 0.04289988046677393,
       "over25Prob": 0.8,
       "isHome": true,
       "opponent": "Alavés",
       "matchDate": "2026-10-31T20:00:00Z"
     },
     "Real Madrid": {
-      "winProb": 0.7490176817288803,
-      "drawProb": 0.14611984282907664,
-      "loseProb": 0.10486247544204323,
+      "winProb": 0.7510891892245496,
+      "drawProb": 0.13606688210589668,
+      "loseProb": 0.11284392866955371,
       "over25Prob": 0.8,
       "isHome": false,
       "opponent": "Real Racing Club de Santander",
       "matchDate": "2026-11-01T15:15:00Z"
     },
     "Sevilla": {
-      "winProb": 0.3375458340059498,
-      "drawProb": 0.3116712404584553,
-      "loseProb": 0.35078292553559487,
+      "winProb": 0.3414419372592185,
+      "drawProb": 0.32074848651623555,
+      "loseProb": 0.337809576224546,
       "over25Prob": 0.4,
       "isHome": false,
       "opponent": "Getafe",
@@ -16444,82 +16423,82 @@
   },
   "news": [
     {
-      "title": "Primer gol de Nsongo en LaLiga: ¿chollo fantasy en el Dépor?",
-      "link": "https://www.jornadaperfecta.com/blog/nsongo-chollo-fantasy-deportivo/",
-      "date": "Mon, 19 Oct 2026 11:00:31 +0000",
-      "img": "https://cdn.biwenger.com/i/t/6.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "¡Locura en bwin con las cuotas mejoradas del SuperPartido PSG vs Barcelona!",
-      "link": "https://www.jornadaperfecta.com/blog/bwin-superpartido-psg-vs-barcelona/",
-      "date": "Mon, 19 Oct 2026 10:17:33 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/10/superpartido-bwin-psg-vs-barcelona.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "¡Cucho Hernández no entrena con el grupo por molestias!",
-      "link": "https://www.jornadaperfecta.com/blog/cucho-hernandez-estado-j10/",
-      "date": "Mon, 19 Oct 2026 09:55:36 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Nico Williams empieza a trabajar con el grupo, ¿llega ante el Levante?",
-      "link": "https://www.jornadaperfecta.com/blog/nico-williams-regreso-athletic/",
-      "date": "Mon, 19 Oct 2026 09:20:55 +0000",
-      "img": "https://cdn.biwenger.com/i/t/1.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Gerard Martín y Gabriel Jesús entran en la convocatoria ante el PSG",
-      "link": "https://www.jornadaperfecta.com/blog/gerard-martin-disponible-psg/",
-      "date": "Mon, 19 Oct 2026 09:01:34 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Actualizadas las Alineaciones Probables para la Jornada 10",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-probables-j10-laliga-26-27/",
-      "date": "Mon, 19 Oct 2026 09:00:01 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Johnny vuelve a la convocatoria del Atleti para Champions, sin Cuti ni Koke",
-      "link": "https://www.jornadaperfecta.com/blog/johnny-disponible-champions/",
-      "date": "Mon, 19 Oct 2026 08:39:13 +0000",
+      "title": "Simeone, sobre Cuti Romero, Oblak, Johnny y Hjulmand",
+      "link": "https://www.jornadaperfecta.com/blog/simeone-previa-stuttgart-atleti-j3-champions/",
+      "date": "Mon, 19 Oct 2026 16:44:37 +0000",
       "img": "https://cdn.biwenger.com/i/t/2.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Lesionados que podrían llegar a la jornada 10 y descartados",
-      "link": "https://www.jornadaperfecta.com/blog/lesionados-j10-26-27/",
-      "date": "Mon, 19 Oct 2026 07:00:00 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/10/eric-garcia-fc-barcelona-fantasy.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Parte médico de Eric García: tiempo de baja y recomendación fantasy",
-      "link": "https://www.jornadaperfecta.com/blog/eric-garcia-lesion-fc-barcelona/",
-      "date": "Sun, 18 Oct 2026 16:20:31 +0000",
+      "title": "Flick, sobre la titularidad de Raphinha y Frenkie de Jong de central",
+      "link": "https://www.jornadaperfecta.com/blog/flick-previa-psg-barcelona-j3-champions/",
+      "date": "Mon, 19 Oct 2026 16:20:16 +0000",
       "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Koundé, duda para el Clásico: Parte médico oficial",
-      "link": "https://www.jornadaperfecta.com/blog/kounde-molestias-cojera-barcelona/",
-      "date": "Sun, 18 Oct 2026 16:08:21 +0000",
+      "title": "Marc Aguado sufre un esguince de grado 2 en el tobillo: tiempo de baja",
+      "link": "https://www.jornadaperfecta.com/blog/marc-aguado-lesion-tobillo-elche/",
+      "date": "Mon, 19 Oct 2026 14:30:07 +0000",
+      "img": "https://cdn.biwenger.com/i/t/75.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Frenkie de Jong, ¿opción como central ante las bajas en defensa?",
+      "link": "https://www.jornadaperfecta.com/blog/frenkie-de-jong-defensa-central-barcelona/",
+      "date": "Mon, 19 Oct 2026 14:20:26 +0000",
       "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Terrats y Enes Ünal entran en la convocatoria del Getafe",
+      "link": "https://www.jornadaperfecta.com/blog/terrats-enes-unal-convocatoria-getafe-j9/",
+      "date": "Mon, 19 Oct 2026 14:14:22 +0000",
+      "img": "https://cdn.biwenger.com/i/t/8.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Buchanan vuelve a entrenar con el grupo; Pépé sigue al margen",
+      "link": "https://www.jornadaperfecta.com/blog/buchanan-estado-villarreal-j10/",
+      "date": "Mon, 19 Oct 2026 13:49:13 +0000",
+      "img": "https://cdn.biwenger.com/i/t/19.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Primeros minutos de Militao tras su lesión: ¿fichar en fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/militao-vuelta-fantasy-real-madrid-2/",
+      "date": "Mon, 19 Oct 2026 13:00:24 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Cucho Hernández, lesionado del sóleo: parte médico y tiempo de baja",
+      "link": "https://www.jornadaperfecta.com/blog/cucho-hernandez-lesion-soleo/",
+      "date": "Mon, 19 Oct 2026 12:51:03 +0000",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Guruzeta dice adiós a la temporada: parte médico oficial",
+      "link": "https://www.jornadaperfecta.com/blog/guruzeta-lesion-rodilla-athletic-club/",
+      "date": "Mon, 19 Oct 2026 12:40:05 +0000",
+      "img": "https://cdn.biwenger.com/i/t/1.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Primer gol de Nsongo en LaLiga: ¿chollo fantasy en el Dépor?",
+      "link": "https://www.jornadaperfecta.com/blog/nsongo-chollo-fantasy-deportivo/",
+      "date": "Mon, 19 Oct 2026 11:00:31 +0000",
+      "img": "https://cdn.biwenger.com/i/t/6.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -16528,7 +16507,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-10-19T11:23:29.039Z",
+    "updatedAt": "2026-10-19T17:50:57.008Z",
     "players": [
       {
         "id": "37428",
