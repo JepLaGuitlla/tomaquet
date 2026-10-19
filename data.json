@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-19T17:50:58.922Z",
+  "updatedAt": "2026-10-19T21:47:06.538Z",
   "players": [
     {
       "id": 11,
@@ -15,11 +15,11 @@
       "teamId": 8,
       "status": "ok",
       "jForm": [
+        5,
         1,
         7,
         11,
-        5,
-        6
+        5
       ],
       "clausula": null
     },
@@ -1021,11 +1021,11 @@
       "teamId": 8,
       "status": "ok",
       "jForm": [
+        2,
         -1,
         null,
         -2,
-        2,
-        3
+        2
       ],
       "clausula": null
     },
@@ -1923,11 +1923,11 @@
       "teamId": 8,
       "status": "ok",
       "jForm": [
+        -7,
         -1,
         4,
         3,
-        6,
-        2
+        6
       ],
       "clausula": null
     },
@@ -2099,11 +2099,11 @@
       "teamId": 8,
       "status": "ok",
       "jForm": [
+        3,
         2,
         5,
         3,
-        4,
-        3
+        4
       ],
       "clausula": null
     },
@@ -3507,10 +3507,10 @@
       "status": "ok",
       "jForm": [
         5,
+        5,
         null,
         null,
-        0,
-        2
+        0
       ],
       "clausula": null
     },
@@ -4426,10 +4426,10 @@
       "status": "ok",
       "jForm": [
         4,
+        4,
         8,
         3,
-        4,
-        1
+        4
       ],
       "clausula": null
     },
@@ -4451,7 +4451,7 @@
         null,
         null,
         null,
-        2
+        null
       ],
       "clausula": null
     },
@@ -5081,11 +5081,11 @@
       "teamId": 70,
       "status": "ok",
       "jForm": [
+        null,
         6,
         3,
         -2,
-        12,
-        null
+        12
       ],
       "clausula": null
     },
@@ -5939,8 +5939,8 @@
       "teamId": 8,
       "status": "ok",
       "jForm": [
+        3,
         2,
-        null,
         null,
         null,
         null
@@ -7145,11 +7145,11 @@
       "teamId": 70,
       "status": "ok",
       "jForm": [
+        2,
         3,
         5,
         4,
-        4,
-        2
+        4
       ],
       "clausula": null
     },
@@ -9101,10 +9101,10 @@
       "status": "ok",
       "jForm": [
         2,
+        2,
         null,
         3,
-        2,
-        0
+        2
       ],
       "clausula": null
     },
@@ -10662,10 +10662,10 @@
       "status": "ok",
       "jForm": [
         null,
+        null,
         3,
         4,
-        3,
-        2
+        3
       ],
       "clausula": null
     },
@@ -11781,11 +11781,11 @@
       "teamId": 8,
       "status": "ok",
       "jForm": [
+        null,
         -1,
         9,
         6,
-        6,
-        1
+        6
       ],
       "clausula": null
     },
@@ -12239,9 +12239,9 @@
           5,
           12
         ],
-        "teamSize": 17,
-        "teamValue": 66250000,
-        "teamValueInc": -160000,
+        "teamSize": 14,
+        "teamValue": 60080000,
+        "teamValueInc": 140000,
         "position": 6,
         "positionInc": -3,
         "role": ""
@@ -12258,9 +12258,9 @@
           2,
           15
         ],
-        "teamSize": 13,
-        "teamValue": 44250000,
-        "teamValueInc": 40000,
+        "teamSize": 12,
+        "teamValue": 43800000,
+        "teamValueInc": 50000,
         "position": 7,
         "positionInc": 1,
         "role": ""
@@ -12296,9 +12296,9 @@
           15,
           6
         ],
-        "teamSize": 15,
-        "teamValue": 38610000,
-        "teamValueInc": 80000,
+        "teamSize": 14,
+        "teamValue": 35260000,
+        "teamValueInc": 110000,
         "position": 9,
         "positionInc": 1,
         "role": ""
@@ -12495,9 +12495,9 @@
           14,
           19
         ],
-        "teamSize": 18,
-        "teamValue": 28930000,
-        "teamValueInc": -120000,
+        "teamSize": 16,
+        "teamValue": 26110000,
+        "teamValueInc": -50000,
         "lastTrophy": {
           "type": "league",
           "position": -1,
@@ -12578,8 +12578,8 @@
       "name": "Soulands Rangers",
       "manager": "Soulands Rangers",
       "points": 309,
-      "value": 66250000,
-      "trend": -160000,
+      "value": 60080000,
+      "trend": 140000,
       "players": []
     },
     {
@@ -12587,8 +12587,8 @@
       "name": "Estem caputs",
       "manager": "Estem caputs",
       "points": 297,
-      "value": 44250000,
-      "trend": 40000,
+      "value": 43800000,
+      "trend": 50000,
       "players": []
     },
     {
@@ -12605,8 +12605,8 @@
       "name": "wilamalel",
       "manager": "wilamalel",
       "points": 290,
-      "value": 38610000,
-      "trend": 80000,
+      "value": 35260000,
+      "trend": 110000,
       "players": []
     },
     {
@@ -12695,8 +12695,8 @@
       "name": "Pzaera",
       "manager": "Pzaera",
       "points": 227,
-      "value": 28930000,
-      "trend": -120000,
+      "value": 26110000,
+      "trend": -50000,
       "players": []
     },
     {
@@ -12873,6 +12873,93 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1792444945,
+      "content": [
+        {
+          "player": 26095,
+          "from": {
+            "id": 14069874,
+            "name": "Pzaera",
+            "icon": "https://lh3.googleusercontent.com/a/AATXAJz2ePB0TU5NOTU2lUZ5nrRljJXEZjrTw8hYCiH1=s300-c"
+          },
+          "amount": 1142400
+        },
+        {
+          "player": 38072,
+          "from": {
+            "id": 14069874,
+            "name": "Pzaera",
+            "icon": "https://lh3.googleusercontent.com/a/AATXAJz2ePB0TU5NOTU2lUZ5nrRljJXEZjrTw8hYCiH1=s300-c"
+          },
+          "amount": 1711700
+        },
+        {
+          "player": 4753,
+          "from": {
+            "id": 8068002,
+            "name": "Soulands Rangers",
+            "icon": "i/u/8068002.png?v=69"
+          },
+          "amount": 3171700
+        },
+        {
+          "player": 42271,
+          "from": {
+            "id": 8068002,
+            "name": "Soulands Rangers",
+            "icon": "i/u/8068002.png?v=69"
+          },
+          "amount": 1967100
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1792443620,
+      "content": [
+        {
+          "player": 17056,
+          "from": {
+            "id": 8068002,
+            "name": "Soulands Rangers",
+            "icon": "i/u/8068002.png?v=69"
+          },
+          "amount": 1591800
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1792441906,
+      "content": [
+        {
+          "player": 2253,
+          "from": {
+            "id": 14074484,
+            "name": "wilamalel",
+            "icon": "https://lh3.googleusercontent.com/a/ACg8ocJGUZto0NCjv5HnKiftjGqQiwQNQWQjyPJpfYbDxfcaNvZWgg=s300-c"
+          },
+          "amount": 3503800
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1792437382,
+      "content": [
+        {
+          "player": 5678,
+          "from": {
+            "id": 14094028,
+            "name": "Estem caputs",
+            "icon": "i/u/12736123.png"
+          },
+          "amount": 443400
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1792411382,
@@ -13535,185 +13622,6 @@
           "amount": 191300
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1792218580,
-      "content": [
-        {
-          "player": 26092,
-          "from": {
-            "id": 14075911,
-            "name": "Gapoles Balompié",
-            "icon": "i/u/11414918.png"
-          },
-          "amount": 4981800
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1792213338,
-      "content": [
-        {
-          "player": 25384,
-          "to": {
-            "id": 8068002,
-            "name": "Soulands Rangers",
-            "icon": "i/u/8068002.png?v=69"
-          },
-          "amount": 4841000,
-          "bids": [
-            {
-              "user": {
-                "id": 11521196,
-                "name": "Hufflepuff 🍋",
-                "icon": "i/u/11521196.png?v=57"
-              },
-              "amount": 4649009
-            },
-            {
-              "user": {
-                "id": 148051,
-                "name": "Zaza Pachulia",
-                "icon": "i/u/148051.png?v=98"
-              },
-              "amount": 4633000
-            }
-          ]
-        },
-        {
-          "player": 42802,
-          "to": {
-            "id": 12697101,
-            "name": "INDOMABLE FC",
-            "icon": "i/u/11757390.png"
-          },
-          "amount": 2846952,
-          "bids": [
-            {
-              "user": {
-                "id": 8068002,
-                "name": "Soulands Rangers",
-                "icon": "i/u/8068002.png?v=69"
-              },
-              "amount": 2720000
-            },
-            {
-              "user": {
-                "id": 8068427,
-                "name": "Albertini",
-                "icon": "i/u/8068427.png"
-              },
-              "amount": 2580000
-            },
-            {
-              "user": {
-                "id": 8070044,
-                "name": "CA CABA JUNIORS",
-                "icon": "i/u/8070044.png?v=6"
-              },
-              "amount": 2500005
-            }
-          ]
-        },
-        {
-          "player": 34527,
-          "to": {
-            "id": 14072078,
-            "name": "TL*LI",
-            "icon": "i/u/14072078.png"
-          },
-          "amount": 11200099,
-          "bids": [
-            {
-              "user": {
-                "id": 8068002,
-                "name": "Soulands Rangers",
-                "icon": "i/u/8068002.png?v=69"
-              },
-              "amount": 10512000
-            },
-            {
-              "user": {
-                "id": 14094189,
-                "name": "Burnigol FC",
-                "icon": "i/u/14094189.png"
-              },
-              "amount": 10500000
-            },
-            {
-              "user": {
-                "id": 6541195,
-                "name": "🦊",
-                "icon": "i/u/6541195.png?v=17"
-              },
-              "amount": 10402555
-            },
-            {
-              "user": {
-                "id": 12697101,
-                "name": "INDOMABLE FC",
-                "icon": "i/u/11757390.png"
-              },
-              "amount": 10382000
-            },
-            {
-              "user": {
-                "id": 8070044,
-                "name": "CA CABA JUNIORS",
-                "icon": "i/u/8070044.png?v=6"
-              },
-              "amount": 10200000
-            }
-          ]
-        },
-        {
-          "player": 31468,
-          "to": {
-            "id": 12713493,
-            "name": "Tata Martini",
-            "icon": "i/u/12713493.png?v=71"
-          },
-          "amount": 2230010
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1792188575,
-      "content": [
-        {
-          "player": 14630,
-          "from": {
-            "id": 12697101,
-            "name": "INDOMABLE FC",
-            "icon": "i/u/11757390.png"
-          },
-          "amount": 3832000
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1792186009,
-      "content": [
-        {
-          "player": 38433,
-          "from": {
-            "id": 14074484,
-            "name": "wilamalel",
-            "icon": "https://lh3.googleusercontent.com/a/ACg8ocJGUZto0NCjv5HnKiftjGqQiwQNQWQjyPJpfYbDxfcaNvZWgg=s300-c"
-          },
-          "to": {
-            "id": 12697101,
-            "name": "INDOMABLE FC",
-            "icon": "i/u/11757390.png"
-          },
-          "amount": 5324850,
-          "type": "clause"
-        }
-      ]
     }
   ],
   "leagueEnBas": {
@@ -13940,9 +13848,9 @@
           15,
           3
         ],
-        "teamSize": 18,
-        "teamValue": 39030000,
-        "teamValueInc": -30000,
+        "teamSize": 17,
+        "teamValue": 36810000,
+        "teamValueInc": 0,
         "lastTrophy": {
           "type": "league",
           "position": -1,
@@ -14221,8 +14129,8 @@
       "name": "Tots som Olost",
       "manager": "Tots som Olost",
       "points": 262,
-      "value": 39030000,
-      "trend": -30000,
+      "value": 36810000,
+      "trend": 0,
       "players": []
     },
     {
@@ -14438,6 +14346,21 @@
     ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1792434892,
+      "content": [
+        {
+          "player": 41418,
+          "from": {
+            "id": 6585052,
+            "name": "Tots som Olost",
+            "icon": "i/u/6585052.png?v=69"
+          },
+          "amount": 2295000
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1792426409,
@@ -15418,21 +15341,6 @@
           "amount": 150000
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1792022865,
-      "content": [
-        {
-          "player": 39350,
-          "from": {
-            "id": 9897660,
-            "name": "Eric Duran",
-            "icon": "i/u/9897660.png"
-          },
-          "amount": 5207400
-        }
-      ]
     }
   ],
   "laliga": {
@@ -15669,6 +15577,44 @@
       {
         "position": 13,
         "team": {
+          "id": 87,
+          "name": "Rayo Vallecano de Madrid",
+          "shortName": "Rayo Vallecano",
+          "tla": "RAY",
+          "crest": "https://crests.football-data.org/87.png"
+        },
+        "playedGames": 8,
+        "form": null,
+        "won": 2,
+        "draw": 3,
+        "lost": 3,
+        "points": 9,
+        "goalsFor": 12,
+        "goalsAgainst": 17,
+        "goalDifference": -5
+      },
+      {
+        "position": 14,
+        "team": {
+          "id": 82,
+          "name": "Getafe CF",
+          "shortName": "Getafe",
+          "tla": "GET",
+          "crest": "https://crests.football-data.org/82.png"
+        },
+        "playedGames": 9,
+        "form": null,
+        "won": 2,
+        "draw": 3,
+        "lost": 4,
+        "points": 9,
+        "goalsFor": 5,
+        "goalsAgainst": 11,
+        "goalDifference": -6
+      },
+      {
+        "position": 15,
+        "team": {
           "id": 80,
           "name": "RCD Espanyol de Barcelona",
           "shortName": "Espanyol",
@@ -15684,44 +15630,6 @@
         "goalsFor": 11,
         "goalsAgainst": 12,
         "goalDifference": -1
-      },
-      {
-        "position": 14,
-        "team": {
-          "id": 87,
-          "name": "Rayo Vallecano de Madrid",
-          "shortName": "Rayo Vallecano",
-          "tla": "RAY",
-          "crest": "https://crests.football-data.org/87.png"
-        },
-        "playedGames": 7,
-        "form": null,
-        "won": 2,
-        "draw": 2,
-        "lost": 3,
-        "points": 8,
-        "goalsFor": 11,
-        "goalsAgainst": 16,
-        "goalDifference": -5
-      },
-      {
-        "position": 15,
-        "team": {
-          "id": 82,
-          "name": "Getafe CF",
-          "shortName": "Getafe",
-          "tla": "GET",
-          "crest": "https://crests.football-data.org/82.png"
-        },
-        "playedGames": 8,
-        "form": null,
-        "won": 2,
-        "draw": 2,
-        "lost": 4,
-        "points": 8,
-        "goalsFor": 4,
-        "goalsAgainst": 10,
-        "goalDifference": -6
       },
       {
         "position": 16,
@@ -15887,10 +15795,10 @@
       },
       "82": {
         "results": [
+          "D",
           "L",
           "W",
           "L",
-          "D",
           "D"
         ],
         "gf": 3,
@@ -15927,13 +15835,13 @@
       "87": {
         "results": [
           "D",
+          "D",
           "W",
           "L",
-          "W",
-          "L"
+          "W"
         ],
-        "gf": 9,
-        "ga": 13,
+        "gf": 8,
+        "ga": 9,
         "crest": "https://crests.football-data.org/87.png",
         "name": "Rayo Vallecano de Madrid"
       },
@@ -16102,6 +16010,23 @@
     ],
     "recentResults": [
       {
+        "date": "2026-10-19T19:00:00Z",
+        "home": {
+          "name": "Getafe CF",
+          "short": "Getafe",
+          "crest": "https://crests.football-data.org/82.png"
+        },
+        "away": {
+          "name": "Rayo Vallecano de Madrid",
+          "short": "Rayo Vallecano",
+          "crest": "https://crests.football-data.org/87.png"
+        },
+        "score": {
+          "home": 1,
+          "away": 1
+        }
+      },
+      {
         "date": "2026-10-18T19:00:00Z",
         "home": {
           "name": "Real Madrid CF",
@@ -16219,67 +16144,32 @@
           "home": 0,
           "away": 0
         }
-      },
-      {
-        "date": "2026-10-17T12:00:00Z",
-        "home": {
-          "name": "RCD Espanyol de Barcelona",
-          "short": "Espanyol",
-          "crest": "https://crests.football-data.org/80.png"
-        },
-        "away": {
-          "name": "Club Atlético de Madrid",
-          "short": "Atleti",
-          "crest": "https://crests.football-data.org/78.png"
-        },
-        "score": {
-          "home": 0,
-          "away": 1
-        }
       }
     ]
   },
   "odds": {
-    "Getafe": {
-      "winProb": 0.337809576224546,
-      "drawProb": 0.32074848651623555,
-      "loseProb": 0.3414419372592185,
-      "over25Prob": 0.4,
-      "isHome": true,
-      "opponent": "Sevilla",
-      "matchDate": "2026-11-01T13:00:00Z"
-    },
-    "Rayo Vallecano": {
-      "winProb": 0.43444727117844106,
-      "drawProb": 0.28571757473897474,
-      "loseProb": 0.2798351540825841,
-      "over25Prob": 0.47393364928909953,
-      "isHome": true,
-      "opponent": "Celta Vigo",
-      "matchDate": "2026-10-31T15:15:00Z"
-    },
     "Levante": {
-      "winProb": 0.16633023420146908,
-      "drawProb": 0.21509523468326344,
-      "loseProb": 0.6185745311152675,
-      "over25Prob": 0.5988023952095809,
+      "winProb": 0.1531874535481253,
+      "drawProb": 0.20818647321408215,
+      "loseProb": 0.6386260732377925,
+      "over25Prob": 0.6060606060606061,
       "isHome": true,
       "opponent": "Atlético Madrid",
       "matchDate": "2026-10-31T13:00:00Z"
     },
     "Athletic Bilbao": {
-      "winProb": 0.4801956761874705,
-      "drawProb": 0.2655830834779864,
-      "loseProb": 0.25422124033454313,
+      "winProb": 0.47312472090009045,
+      "drawProb": 0.26489712785771075,
+      "loseProb": 0.2619781512421988,
       "over25Prob": 0.5291005291005292,
       "isHome": true,
       "opponent": "Real Sociedad",
       "matchDate": "2026-11-01T20:00:00Z"
     },
     "Alavés": {
-      "winProb": 0.04289988046677393,
-      "drawProb": 0.1408929109972769,
-      "loseProb": 0.8162072085359491,
+      "winProb": 0.04477081918392772,
+      "drawProb": 0.14514521318893567,
+      "loseProb": 0.8100839676271367,
       "over25Prob": 0.8,
       "isHome": false,
       "opponent": "Barcelona",
@@ -16294,6 +16184,15 @@
       "opponent": "Real Betis",
       "matchDate": "2026-10-31T17:30:00Z"
     },
+    "Rayo Vallecano": {
+      "winProb": 0.43444727117844106,
+      "drawProb": 0.28571757473897474,
+      "loseProb": 0.2798351540825841,
+      "over25Prob": 0.47393364928909953,
+      "isHome": true,
+      "opponent": "Celta Vigo",
+      "matchDate": "2026-10-31T15:15:00Z"
+    },
     "Elche CF": {
       "winProb": 0.38416651387482764,
       "drawProb": 0.2827100754924547,
@@ -16304,9 +16203,9 @@
       "matchDate": "2026-11-01T17:30:00Z"
     },
     "Real Racing Club de Santander": {
-      "winProb": 0.11284392866955371,
-      "drawProb": 0.13606688210589668,
-      "loseProb": 0.7510891892245496,
+      "winProb": 0.11168813140077108,
+      "drawProb": 0.13330010033001632,
+      "loseProb": 0.7550117682692126,
       "over25Prob": 0.8,
       "isHome": true,
       "opponent": "Real Madrid",
@@ -16340,10 +16239,10 @@
       "matchDate": "2026-10-30T20:00:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.6185745311152675,
-      "drawProb": 0.21509523468326344,
-      "loseProb": 0.16633023420146908,
-      "over25Prob": 0.5988023952095809,
+      "winProb": 0.6386260732377925,
+      "drawProb": 0.20818647321408215,
+      "loseProb": 0.1531874535481253,
+      "over25Prob": 0.6060606060606061,
       "isHome": false,
       "opponent": "Levante",
       "matchDate": "2026-10-31T13:00:00Z"
@@ -16356,6 +16255,15 @@
       "isHome": true,
       "opponent": "CA Osasuna",
       "matchDate": "2026-11-02T20:00:00Z"
+    },
+    "Getafe": {
+      "winProb": 0.337809576224546,
+      "drawProb": 0.32074848651623555,
+      "loseProb": 0.3414419372592185,
+      "over25Prob": 0.4,
+      "isHome": true,
+      "opponent": "Sevilla",
+      "matchDate": "2026-11-01T13:00:00Z"
     },
     "Celta Vigo": {
       "winProb": 0.2798351540825841,
@@ -16376,27 +16284,27 @@
       "matchDate": "2026-10-31T17:30:00Z"
     },
     "Real Sociedad": {
-      "winProb": 0.25422124033454313,
-      "drawProb": 0.2655830834779864,
-      "loseProb": 0.4801956761874705,
+      "winProb": 0.2619781512421988,
+      "drawProb": 0.26489712785771075,
+      "loseProb": 0.47312472090009045,
       "over25Prob": 0.5291005291005292,
       "isHome": false,
       "opponent": "Athletic Bilbao",
       "matchDate": "2026-11-01T20:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.8162072085359491,
-      "drawProb": 0.1408929109972769,
-      "loseProb": 0.04289988046677393,
+      "winProb": 0.8100839676271367,
+      "drawProb": 0.14514521318893567,
+      "loseProb": 0.04477081918392772,
       "over25Prob": 0.8,
       "isHome": true,
       "opponent": "Alavés",
       "matchDate": "2026-10-31T20:00:00Z"
     },
     "Real Madrid": {
-      "winProb": 0.7510891892245496,
-      "drawProb": 0.13606688210589668,
-      "loseProb": 0.11284392866955371,
+      "winProb": 0.7550117682692126,
+      "drawProb": 0.13330010033001632,
+      "loseProb": 0.11168813140077108,
       "over25Prob": 0.8,
       "isHome": false,
       "opponent": "Real Racing Club de Santander",
@@ -16423,82 +16331,82 @@
   },
   "news": [
     {
-      "title": "Simeone, sobre Cuti Romero, Oblak, Johnny y Hjulmand",
-      "link": "https://www.jornadaperfecta.com/blog/simeone-previa-stuttgart-atleti-j3-champions/",
-      "date": "Mon, 19 Oct 2026 16:44:37 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "title": "De Frutos pide el cambio por unas molestias, ¿preocupa?",
+      "link": "https://www.jornadaperfecta.com/blog/de-frutos-lesion-rayo-vallecano/",
+      "date": "Mon, 19 Oct 2026 21:13:34 +0000",
+      "img": "https://cdn.biwenger.com/i/t/70.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Flick, sobre la titularidad de Raphinha y Frenkie de Jong de central",
-      "link": "https://www.jornadaperfecta.com/blog/flick-previa-psg-barcelona-j3-champions/",
-      "date": "Mon, 19 Oct 2026 16:20:16 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Marc Aguado sufre un esguince de grado 2 en el tobillo: tiempo de baja",
-      "link": "https://www.jornadaperfecta.com/blog/marc-aguado-lesion-tobillo-elche/",
-      "date": "Mon, 19 Oct 2026 14:30:07 +0000",
-      "img": "https://cdn.biwenger.com/i/t/75.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Frenkie de Jong, ¿opción como central ante las bajas en defensa?",
-      "link": "https://www.jornadaperfecta.com/blog/frenkie-de-jong-defensa-central-barcelona/",
-      "date": "Mon, 19 Oct 2026 14:20:26 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Terrats y Enes Ünal entran en la convocatoria del Getafe",
-      "link": "https://www.jornadaperfecta.com/blog/terrats-enes-unal-convocatoria-getafe-j9/",
-      "date": "Mon, 19 Oct 2026 14:14:22 +0000",
-      "img": "https://cdn.biwenger.com/i/t/8.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Buchanan vuelve a entrenar con el grupo; Pépé sigue al margen",
-      "link": "https://www.jornadaperfecta.com/blog/buchanan-estado-villarreal-j10/",
-      "date": "Mon, 19 Oct 2026 13:49:13 +0000",
-      "img": "https://cdn.biwenger.com/i/t/19.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Primeros minutos de Militao tras su lesión: ¿fichar en fantasy?",
-      "link": "https://www.jornadaperfecta.com/blog/militao-vuelta-fantasy-real-madrid-2/",
-      "date": "Mon, 19 Oct 2026 13:00:24 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Cucho Hernández, lesionado del sóleo: parte médico y tiempo de baja",
-      "link": "https://www.jornadaperfecta.com/blog/cucho-hernandez-lesion-soleo/",
-      "date": "Mon, 19 Oct 2026 12:51:03 +0000",
+      "title": "Cinco noticias fantasy para antes de irte a dormir",
+      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-19-10-26/",
+      "date": "Mon, 19 Oct 2026 21:00:44 +0000",
       "img": "https://cdn.biwenger.com/i/t/87.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Guruzeta dice adiós a la temporada: parte médico oficial",
-      "link": "https://www.jornadaperfecta.com/blog/guruzeta-lesion-rodilla-athletic-club/",
-      "date": "Mon, 19 Oct 2026 12:40:05 +0000",
-      "img": "https://cdn.biwenger.com/i/t/1.png",
+      "title": "Villarreal, alineación probable contra el Liverpool y dónde ver en TV",
+      "link": "https://www.jornadaperfecta.com/blog/villarreal-alineacion-probable-liverpool-j3-champions/",
+      "date": "Mon, 19 Oct 2026 20:42:20 +0000",
+      "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Primer gol de Nsongo en LaLiga: ¿chollo fantasy en el Dépor?",
-      "link": "https://www.jornadaperfecta.com/blog/nsongo-chollo-fantasy-deportivo/",
-      "date": "Mon, 19 Oct 2026 11:00:31 +0000",
+      "title": "Iñigo Pérez, sobre los posibles cambios en el once y el Liverpool",
+      "link": "https://www.jornadaperfecta.com/blog/inigo-perez-previa-liverpool-villarreal-j3-champions/",
+      "date": "Mon, 19 Oct 2026 20:32:22 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Barcelona, alineación probable contra el PSG y dónde ver en TV",
+      "link": "https://www.jornadaperfecta.com/blog/barcelona-alineacion-probable-psg-champions-j3/",
+      "date": "Mon, 19 Oct 2026 20:19:46 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Atlético, alineación probable contra el Stuttgart y dónde ver en TV",
+      "link": "https://www.jornadaperfecta.com/blog/atletico-alineacion-probable-stuttgart-champions-j3/",
+      "date": "Mon, 19 Oct 2026 20:05:29 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Chollos Fantasy para la Jornada 10 de Biwenger: ¡Fíchalos Antes que Nadie!",
+      "link": "https://www.jornadaperfecta.com/blog/chollos-fantasy-biwenger-j10-laliga-26-27/",
+      "date": "Mon, 19 Oct 2026 19:00:28 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Nteka causa baja de última hora en el Rayo Vallecano",
+      "link": "https://www.jornadaperfecta.com/blog/nteka-baja-rayo-vallecano-j9/",
+      "date": "Mon, 19 Oct 2026 18:19:16 +0000",
+      "img": "https://cdn.biwenger.com/i/t/70.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Bright Ede sufre una lesión muscular en el bíceps femoral de la pierna derecha",
+      "link": "https://www.jornadaperfecta.com/blog/bright-ede-lesion-deportivo/",
+      "date": "Mon, 19 Oct 2026 17:01:54 +0000",
       "img": "https://cdn.biwenger.com/i/t/6.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Simeone, sobre Cuti Romero, Oblak, Johnny y Hjulmand",
+      "link": "https://www.jornadaperfecta.com/blog/simeone-previa-stuttgart-atleti-j3-champions/",
+      "date": "Mon, 19 Oct 2026 16:44:37 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -16507,7 +16415,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-10-19T17:50:57.008Z",
+    "updatedAt": "2026-10-19T21:47:04.663Z",
     "players": [
       {
         "id": "37428",
@@ -16551,11 +16459,11 @@
         "team": "Rayo Vallecano de Madrid",
         "position": "",
         "nationality": "Spain",
-        "appearances": 8,
+        "appearances": 9,
         "goals": 7,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 103
+        "minutesPerGoal": 116
       },
       {
         "id": "2237",
@@ -16662,6 +16570,18 @@
         "appearances": 9,
         "goals": 3,
         "assists": 4,
+        "penalties": 0,
+        "minutesPerGoal": 270
+      },
+      {
+        "id": "32312",
+        "name": "Álvaro García",
+        "team": "Rayo Vallecano de Madrid",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 9,
+        "goals": 3,
+        "assists": 2,
         "penalties": 0,
         "minutesPerGoal": 270
       },
@@ -16784,18 +16704,6 @@
         "assists": 0,
         "penalties": 0,
         "minutesPerGoal": 180
-      },
-      {
-        "id": "32312",
-        "name": "Álvaro García",
-        "team": "Rayo Vallecano de Madrid",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 8,
-        "goals": 2,
-        "assists": 2,
-        "penalties": 0,
-        "minutesPerGoal": 360
       },
       {
         "id": "8412",
@@ -16986,6 +16894,18 @@
         "appearances": 9,
         "goals": 2,
         "assists": 0,
+        "penalties": 0,
+        "minutesPerGoal": 405
+      },
+      {
+        "id": "152458",
+        "name": "Martin Satriano",
+        "team": "Getafe CF",
+        "position": "",
+        "nationality": "Uruguay",
+        "appearances": 9,
+        "goals": 2,
+        "assists": 1,
         "penalties": 0,
         "minutesPerGoal": 405
       },
@@ -17247,11 +17167,11 @@
         "team": "Getafe CF",
         "position": "",
         "nationality": "Turkey",
-        "appearances": 7,
+        "appearances": 8,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 630
+        "minutesPerGoal": 720
       },
       {
         "id": "264254",
@@ -17518,18 +17438,6 @@
         "minutesPerGoal": 810
       },
       {
-        "id": "152458",
-        "name": "Martin Satriano",
-        "team": "Getafe CF",
-        "position": "",
-        "nationality": "Uruguay",
-        "appearances": 8,
-        "goals": 1,
-        "assists": 1,
-        "penalties": 0,
-        "minutesPerGoal": 720
-      },
-      {
         "id": "31019",
         "name": "Carl Starfelt",
         "team": "RC Celta de Vigo",
@@ -17655,11 +17563,11 @@
         "team": "Getafe CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 7,
+        "appearances": 8,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 630
+        "minutesPerGoal": 720
       },
       {
         "id": "138031",
@@ -17679,11 +17587,11 @@
         "team": "Rayo Vallecano de Madrid",
         "position": "",
         "nationality": "Spain",
-        "appearances": 6,
+        "appearances": 7,
         "goals": 1,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 540
+        "minutesPerGoal": 630
       },
       {
         "id": "50907",
