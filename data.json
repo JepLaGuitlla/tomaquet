@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-21T10:42:59.443Z",
+  "updatedAt": "2026-10-21T16:11:46.413Z",
   "players": [
     {
       "id": 11,
@@ -12717,25 +12717,25 @@
     "balance": 1425977,
     "lineup": {
       "type": "4-5-1",
-      "date": 1792427042,
+      "date": 1792593226,
       "playersID": [
         9887,
-        38493,
         33447,
+        38493,
         39885,
         20969,
-        2044,
         26048,
-        42444,
-        35171,
+        2044,
         30123,
+        35171,
+        11633,
         42610
       ],
       "reservesID": [
         36566,
         42757,
         18174,
-        11633
+        null
       ]
     },
     "players": [
@@ -13474,9 +13474,9 @@
           3,
           2
         ],
-        "teamSize": 15,
-        "teamValue": 43640000,
-        "teamValueInc": 40000,
+        "teamSize": 14,
+        "teamValue": 37840000,
+        "teamValueInc": 310000,
         "position": 1,
         "positionInc": 3,
         "role": ""
@@ -13863,8 +13863,8 @@
       "name": "Valors FC",
       "manager": "Valors FC",
       "points": 424,
-      "value": 43640000,
-      "trend": 40000,
+      "value": 37840000,
+      "trend": 310000,
       "players": []
     },
     {
@@ -14156,6 +14156,21 @@
     "market": []
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1792596903,
+      "content": [
+        {
+          "player": 10276,
+          "from": {
+            "id": 6579402,
+            "name": "Valors FC",
+            "icon": "icons/7.png"
+          },
+          "amount": 6056900
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1792572896,
@@ -15244,117 +15259,6 @@
           "type": "clause"
         }
       ]
-    },
-    {
-      "type": "market",
-      "date": 1792127080,
-      "content": [
-        {
-          "player": 2602,
-          "to": {
-            "id": 6586257,
-            "name": "Aquest any pago jo !!",
-            "icon": "i/u/6586257.png"
-          },
-          "amount": 3920000
-        },
-        {
-          "player": 24336,
-          "to": {
-            "id": 9890450,
-            "name": "MarK Lenders",
-            "icon": "icons/34.png"
-          },
-          "amount": 478000,
-          "bids": [
-            {
-              "user": {
-                "id": 7817228,
-                "name": "Petraques",
-                "icon": "i/u/7817228.png"
-              },
-              "amount": 359000
-            },
-            {
-              "user": {
-                "id": 6588130,
-                "name": "The GOAT club",
-                "icon": "i/u/6588130.png?v=12"
-              },
-              "amount": 299000
-            },
-            {
-              "user": {
-                "id": 6586257,
-                "name": "Aquest any pago jo !!",
-                "icon": "i/u/6586257.png"
-              },
-              "amount": 270000
-            }
-          ]
-        },
-        {
-          "player": 42794,
-          "to": {
-            "id": 6579330,
-            "name": "Mindundis",
-            "icon": "i/u/6579330.png?v=18"
-          },
-          "amount": 230000
-        },
-        {
-          "player": 2086,
-          "to": {
-            "id": 6579505,
-            "name": "Xevi borrat",
-            "icon": "i/u/6579505.png"
-          },
-          "amount": 150000
-        },
-        {
-          "player": 10650,
-          "to": {
-            "id": 6579283,
-            "name": "Fiorenzola",
-            "icon": "i/u/6579283.png?v=33"
-          },
-          "amount": 163000
-        },
-        {
-          "player": 41077,
-          "to": {
-            "id": 9890450,
-            "name": "MarK Lenders",
-            "icon": "icons/34.png"
-          },
-          "amount": 890000,
-          "bids": [
-            {
-              "user": {
-                "id": 9890540,
-                "name": "UE Trincadors"
-              },
-              "amount": 840000
-            },
-            {
-              "user": {
-                "id": 6579505,
-                "name": "Xevi borrat",
-                "icon": "i/u/6579505.png"
-              },
-              "amount": 651000
-            },
-            {
-              "user": {
-                "id": 6586225,
-                "name": "Adeyemi FC",
-                "icon": "icons/30.png"
-              },
-              "amount": 640120
-            }
-          ]
-        }
-      ]
     }
   ],
   "laliga": {
@@ -16181,9 +16085,9 @@
       "matchDate": "2026-11-01T20:00:00Z"
     },
     "Alavés": {
-      "winProb": 0.0431887737088749,
-      "drawProb": 0.14729857036323898,
-      "loseProb": 0.809512655927886,
+      "winProb": 0.04338613486204566,
+      "drawProb": 0.14785181270956493,
+      "loseProb": 0.8087620524283895,
       "over25Prob": 0.8,
       "isHome": false,
       "opponent": "Barcelona",
@@ -16271,9 +16175,9 @@
       "matchDate": "2026-11-02T20:00:00Z"
     },
     "Getafe": {
-      "winProb": 0.32530428743740636,
-      "drawProb": 0.3177138540638669,
-      "loseProb": 0.3569818584987269,
+      "winProb": 0.3253919590031795,
+      "drawProb": 0.31886235447468764,
+      "loseProb": 0.35574568652213284,
       "over25Prob": 0.4,
       "isHome": true,
       "opponent": "Sevilla",
@@ -16307,9 +16211,9 @@
       "matchDate": "2026-11-01T20:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.809512655927886,
-      "drawProb": 0.14729857036323898,
-      "loseProb": 0.0431887737088749,
+      "winProb": 0.8087620524283895,
+      "drawProb": 0.14785181270956493,
+      "loseProb": 0.04338613486204566,
       "over25Prob": 0.8,
       "isHome": true,
       "opponent": "Alavés",
@@ -16325,9 +16229,9 @@
       "matchDate": "2026-11-01T15:15:00Z"
     },
     "Sevilla": {
-      "winProb": 0.3569818584987269,
-      "drawProb": 0.3177138540638669,
-      "loseProb": 0.32530428743740636,
+      "winProb": 0.35574568652213284,
+      "drawProb": 0.31886235447468764,
+      "loseProb": 0.3253919590031795,
       "over25Prob": 0.4,
       "isHome": false,
       "opponent": "Getafe",
@@ -16345,82 +16249,82 @@
   },
   "news": [
     {
-      "title": "Zaid Romero comienza a tocar balón e Iván Azón vuelve al grupo",
-      "link": "https://www.jornadaperfecta.com/blog/zaid-romero-ivan-azon-j10/",
-      "date": "Wed, 21 Oct 2026 09:54:41 +0000",
-      "img": "https://cdn.biwenger.com/i/t/8.png",
+      "title": "Carlos Romero y Saliba, en duda para el derbi valenciano",
+      "link": "https://www.jornadaperfecta.com/blog/carlos-romero-saliba-estado-j10-villarreal/",
+      "date": "Wed, 21 Oct 2026 16:07:03 +0000",
+      "img": "https://cdn.biwenger.com/i/t/19.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Copete y Foulquier repiten con el grupo, ¿llegan a la J10?",
-      "link": "https://www.jornadaperfecta.com/blog/copete-foulquier-estado-j10/",
-      "date": "Wed, 21 Oct 2026 09:30:16 +0000",
-      "img": "https://cdn.biwenger.com/i/t/18.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Parrott, oportunidad fantasy en el Betis tras la lesión del Cucho",
-      "link": "https://www.jornadaperfecta.com/blog/parrott-oportunidad-fantasy-betis-lesion-cucho/",
-      "date": "Wed, 21 Oct 2026 09:00:40 +0000",
-      "img": "https://cdn.biwenger.com/i/t/87.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "¡Nico Williams está de vuelta! Entra en la convocatoria ante el Levante",
-      "link": "https://www.jornadaperfecta.com/blog/nico-williams-regreso-athletic/",
-      "date": "Wed, 21 Oct 2026 08:20:55 +0000",
-      "img": "https://cdn.biwenger.com/i/t/1.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Codere mejora a todas las demás casas de apuestas gracias a sus maxicuotas para los partidos de Betis y Real Madrid de Champions!",
-      "link": "https://www.jornadaperfecta.com/blog/maxicuotas-codere-betis-real-madrid-champions/",
-      "date": "Wed, 21 Oct 2026 08:06:19 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/10/codere-maxicuotas.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Alineaciones probables y previa fantasy del Levante &#8211; Athletic (J6)",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-levante-athletic-j6-26-27/",
-      "date": "Wed, 21 Oct 2026 07:15:20 +0000",
-      "img": "https://cdn.biwenger.com/i/t/10.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Real Madrid vs Leipzig: DAZN Bet lanza su apuesta asegurada de 10€",
-      "link": "https://www.jornadaperfecta.com/blog/dazn-bet-real-madrid-vs-leipzig-seguro/",
-      "date": "Wed, 21 Oct 2026 07:00:06 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/10/dazn-bet-real-madrid-vs-leipzig.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Alineaciones probables y previa fantasy del Sevilla &#8211; Osasuna (J10)",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-sevilla-osasuna-j10-26-27/",
-      "date": "Wed, 21 Oct 2026 06:45:55 +0000",
-      "img": "https://cdn.biwenger.com/i/t/17.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Alineaciones probables y previa fantasy del Barcelona &#8211; Real Madrid (J10)",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-barcelona-real-madrid-j10-26-27/",
-      "date": "Wed, 21 Oct 2026 06:40:52 +0000",
+      "title": "Xavi Espart fue sustituido por molestias, ¿preocupa?",
+      "link": "https://www.jornadaperfecta.com/blog/xavi-espart-estado-j10-barcelona/",
+      "date": "Wed, 21 Oct 2026 15:41:11 +0000",
       "img": "https://cdn.biwenger.com/i/t/3.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Alineaciones probables y previa fantasy del Real Sociedad &#8211; Levante (J10)",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-real-sociedad-levante-j10-26-27/",
-      "date": "Wed, 21 Oct 2026 06:35:27 +0000",
-      "img": "https://cdn.biwenger.com/i/t/13.png",
+      "title": "Mangala, objetivo San Mamés",
+      "link": "https://www.jornadaperfecta.com/blog/mangala-recuperacion-getafe/",
+      "date": "Wed, 21 Oct 2026 15:19:06 +0000",
+      "img": "https://cdn.biwenger.com/i/t/8.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Koundé apunta a baja en El Clásico, ¿venta fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/kounde-molestias-cojera-barcelona/",
+      "date": "Wed, 21 Oct 2026 14:30:21 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Kang-In Lee no jugó en Champions por molestias, ¿preocupa?",
+      "link": "https://www.jornadaperfecta.com/blog/kang-in-lee-estado-atleti-j10/",
+      "date": "Wed, 21 Oct 2026 13:08:36 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Joaquín Muñoz sufre una lesión muscular: nueva baja en el Málaga",
+      "link": "https://www.jornadaperfecta.com/blog/joaquin-munoz-lesion-malaga-cf/",
+      "date": "Wed, 21 Oct 2026 12:46:50 +0000",
+      "img": "https://cdn.biwenger.com/i/t/65.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Dani Olmo estará unas cuatro semanas de baja: Parte médico",
+      "link": "https://www.jornadaperfecta.com/blog/dani-olmo-lesion-fc-barcelona/",
+      "date": "Wed, 21 Oct 2026 12:24:57 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Dela sufre unas molestias y se pierde el encuentro aplazado",
+      "link": "https://www.jornadaperfecta.com/blog/dela-baja-j6-levante/",
+      "date": "Wed, 21 Oct 2026 12:17:43 +0000",
+      "img": "https://cdn.biwenger.com/i/t/10.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Aubameyang avanza en su recuperación, ¿cuándo vuelve?",
+      "link": "https://www.jornadaperfecta.com/blog/aubameyang-fecha-vuelta-lesion-deportivo/",
+      "date": "Wed, 21 Oct 2026 12:01:12 +0000",
+      "img": "https://cdn.biwenger.com/i/t/6.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "El Comité retira la quinta amarilla a Pathé Ciss: disponible para la jornada 10",
+      "link": "https://www.jornadaperfecta.com/blog/pathe-ciss-retirada-quinta-amarilla-j10-rayo/",
+      "date": "Wed, 21 Oct 2026 11:44:28 +0000",
+      "img": "https://cdn.biwenger.com/i/t/70.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -16429,7 +16333,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-10-21T10:42:57.400Z",
+    "updatedAt": "2026-10-21T16:11:45.634Z",
     "players": [
       {
         "id": "37428",
