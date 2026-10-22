@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22T16:09:54.710Z",
+  "updatedAt": "2026-10-22T20:54:57.827Z",
   "players": [
     {
       "id": 11,
@@ -12160,8 +12160,8 @@
           5
         ],
         "teamSize": 15,
-        "teamValue": 46980000,
-        "teamValueInc": 150000,
+        "teamValue": 47640000,
+        "teamValueInc": 100000,
         "position": 2,
         "role": ""
       },
@@ -12177,9 +12177,9 @@
           4,
           14
         ],
-        "teamSize": 12,
-        "teamValue": 35720000,
-        "teamValueInc": -50000,
+        "teamSize": 11,
+        "teamValue": 33160000,
+        "teamValueInc": -80000,
         "lastTrophy": {
           "type": "league",
           "position": -1,
@@ -12259,9 +12259,9 @@
           17,
           7
         ],
-        "teamSize": 15,
-        "teamValue": 39930000,
-        "teamValueInc": 250000,
+        "teamSize": 16,
+        "teamValue": 43630000,
+        "teamValueInc": 200000,
         "position": 7,
         "positionInc": 4,
         "role": ""
@@ -12301,9 +12301,9 @@
           6,
           10
         ],
-        "teamSize": 11,
-        "teamValue": 39800000,
-        "teamValueInc": 320000,
+        "teamSize": 10,
+        "teamValue": 38900000,
+        "teamValueInc": 390000,
         "position": 9,
         "positionInc": -2,
         "role": ""
@@ -12358,8 +12358,8 @@
           12
         ],
         "teamSize": 13,
-        "teamValue": 32770000,
-        "teamValueInc": -240000,
+        "teamValue": 33530000,
+        "teamValueInc": -180000,
         "position": 12,
         "role": ""
       },
@@ -12399,9 +12399,9 @@
           10,
           8
         ],
-        "teamSize": 11,
-        "teamValue": 41330000,
-        "teamValueInc": 340000,
+        "teamSize": 10,
+        "teamValue": 37630000,
+        "teamValueInc": 390000,
         "position": 14
       },
       {
@@ -12473,9 +12473,9 @@
           19,
           3
         ],
-        "teamSize": 10,
-        "teamValue": 33200000,
-        "teamValueInc": 270000,
+        "teamSize": 11,
+        "teamValue": 34340000,
+        "teamValueInc": 290000,
         "position": 18,
         "positionInc": -1,
         "role": ""
@@ -12538,8 +12538,8 @@
       "name": "CA CABA JUNIORS",
       "manager": "CA CABA JUNIORS",
       "points": 375,
-      "value": 46980000,
-      "trend": 150000,
+      "value": 47640000,
+      "trend": 100000,
       "players": []
     },
     {
@@ -12547,8 +12547,8 @@
       "name": "Trileros FC",
       "manager": "Trileros FC",
       "points": 370,
-      "value": 35720000,
-      "trend": -50000,
+      "value": 33160000,
+      "trend": -80000,
       "players": []
     },
     {
@@ -12583,8 +12583,8 @@
       "name": "wilamalel",
       "manager": "wilamalel",
       "points": 348,
-      "value": 39930000,
-      "trend": 250000,
+      "value": 43630000,
+      "trend": 200000,
       "players": []
     },
     {
@@ -12601,8 +12601,8 @@
       "name": "Burnigol FC",
       "manager": "Burnigol FC",
       "points": 343,
-      "value": 39800000,
-      "trend": 320000,
+      "value": 38900000,
+      "trend": 390000,
       "players": []
     },
     {
@@ -12628,8 +12628,8 @@
       "name": "CIGALERU",
       "manager": "CIGALERU",
       "points": 311,
-      "value": 32770000,
-      "trend": -240000,
+      "value": 33530000,
+      "trend": -180000,
       "players": []
     },
     {
@@ -12646,8 +12646,8 @@
       "name": "Zaza Pachulia",
       "manager": "Zaza Pachulia",
       "points": 303,
-      "value": 41330000,
-      "trend": 340000,
+      "value": 37630000,
+      "trend": 390000,
       "players": []
     },
     {
@@ -12682,8 +12682,8 @@
       "name": "TL*LI",
       "manager": "TL*LI",
       "points": 271,
-      "value": 33200000,
-      "trend": 270000,
+      "value": 34340000,
+      "trend": 290000,
       "players": []
     },
     {
@@ -12869,6 +12869,105 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1792693944,
+      "content": [
+        {
+          "player": 24509,
+          "from": {
+            "id": 12696599,
+            "name": "Trileros FC",
+            "icon": "i/u/12696599.png"
+          },
+          "to": {
+            "id": 8070044,
+            "name": "CA CABA JUNIORS",
+            "icon": "i/u/8070044.png?v=6"
+          },
+          "amount": 3840000,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1792692030,
+      "content": [
+        {
+          "player": 1760,
+          "from": {
+            "id": 8070044,
+            "name": "CA CABA JUNIORS",
+            "icon": "i/u/8070044.png?v=6"
+          },
+          "to": {
+            "id": 12696899,
+            "name": "CIGALERU",
+            "icon": "i/u/12696899.png"
+          },
+          "amount": 3300000,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1792690097,
+      "content": [
+        {
+          "player": 33971,
+          "from": {
+            "id": 12696899,
+            "name": "CIGALERU",
+            "icon": "i/u/12696899.png"
+          },
+          "to": {
+            "id": 14072078,
+            "name": "TL*LI",
+            "icon": "i/u/14072078.png"
+          },
+          "amount": 1728810,
+          "type": "clause"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1792689505,
+      "content": [
+        {
+          "player": 37719,
+          "from": {
+            "id": 14094189,
+            "name": "Burnigol FC",
+            "icon": "i/u/14094189.png"
+          },
+          "amount": 897200
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1792686727,
+      "content": [
+        {
+          "player": 41412,
+          "from": {
+            "id": 148051,
+            "name": "Zaza Pachulia",
+            "icon": "i/u/148051.png?v=98"
+          },
+          "to": {
+            "id": 14074484,
+            "name": "wilamalel",
+            "icon": "https://lh3.googleusercontent.com/a/ACg8ocJGUZto0NCjv5HnKiftjGqQiwQNQWQjyPJpfYbDxfcaNvZWgg=s300-c"
+          },
+          "amount": 3750000,
+          "type": "auction"
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1792681103,
@@ -13605,35 +13704,6 @@
           "amount": 2651600
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1792533590,
-      "content": [
-        {
-          "player": 1074,
-          "from": {
-            "id": 12713493,
-            "name": "Luciano Spaghetti",
-            "icon": "i/u/12713493.png?v=77"
-          },
-          "amount": 2700000
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1792487882,
-      "content": [
-        {
-          "player": 40910,
-          "from": {
-            "id": 14094028,
-            "name": "Estem caputs"
-          },
-          "amount": 671900
-        }
-      ]
     }
   ],
   "leagueEnBas": {
@@ -14228,14 +14298,14 @@
     "balance": 4107157,
     "lineup": {
       "type": "3-5-2",
-      "date": 1792673183,
+      "date": 1792686536,
       "playersID": [
         43282,
         37739,
         33447,
         12734,
         29184,
-        32120,
+        39813,
         35171,
         25127,
         25159,
@@ -14245,7 +14315,7 @@
       "reservesID": [
         null,
         12404,
-        39813,
+        32120,
         null
       ]
     },
@@ -14295,7 +14365,7 @@
       {
         "id": 32120,
         "buyPrice": 3401222,
-        "clause": 0,
+        "clause": 3500000,
         "invested": 0,
         "buyDate": 1792645672
       },
@@ -14343,6 +14413,12 @@
       }
     ],
     "market": [
+      {
+        "playerID": 32120,
+        "price": 3500000,
+        "type": "sale",
+        "until": 1792859292
+      },
       {
         "playerID": 37739,
         "price": 8010000,
@@ -16586,9 +16662,9 @@
       "matchDate": "2026-11-01T17:30:00Z"
     },
     "Real Racing Club de Santander": {
-      "winProb": 0.11771761480466073,
-      "drawProb": 0.136737491432488,
-      "loseProb": 0.7455448937628513,
+      "winProb": 0.11896140696536962,
+      "drawProb": 0.1391690314868135,
+      "loseProb": 0.7418695615478168,
       "over25Prob": 0.819672131147541,
       "isHome": true,
       "opponent": "Real Madrid",
@@ -16703,9 +16779,9 @@
       "matchDate": "2026-10-31T20:00:00Z"
     },
     "Real Madrid": {
-      "winProb": 0.7455448937628513,
-      "drawProb": 0.136737491432488,
-      "loseProb": 0.11771761480466073,
+      "winProb": 0.7418695615478168,
+      "drawProb": 0.1391690314868135,
+      "loseProb": 0.11896140696536962,
       "over25Prob": 0.819672131147541,
       "isHome": false,
       "opponent": "Real Racing Club de Santander",
@@ -16730,12 +16806,93 @@
       "matchDate": "2026-11-02T20:00:00Z"
     }
   },
-  "news": [],
+  "news": [
+    {
+      "title": "La Previa de las Picas: Todo sobre los Cronistas de la Jornada 10",
+      "link": "https://www.jornadaperfecta.com/blog/previa-picas-cronistas-j10-26-27/",
+      "date": "Thu, 22 Oct 2026 19:06:03 +0000",
+      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2660.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Kang-In Lee gestiona cargas, ¿disponible en la J10?",
+      "link": "https://www.jornadaperfecta.com/blog/kang-in-lee-estado-atleti-j10/",
+      "date": "Thu, 22 Oct 2026 18:03:36 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "El All In de Victorius para la Jornada 10 de LaLiga",
+      "link": "https://www.jornadaperfecta.com/blog/all-in-victorius-j10-26-27/",
+      "date": "Thu, 22 Oct 2026 17:45:41 +0000",
+      "img": "https://cdn.biwenger.com/i/t/91.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Johnny vuelve a caer lesionado: Parte médico y tiempo de baja",
+      "link": "https://www.jornadaperfecta.com/blog/johnny-cardoso-lesion-parte-medico-atleti/",
+      "date": "Thu, 22 Oct 2026 16:58:48 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Quique, sobre la posibilidad de Ángel Pérez y Novoa en el once",
+      "link": "https://www.jornadaperfecta.com/blog/quique-previa-alaves-malaga-j10/",
+      "date": "Thu, 22 Oct 2026 15:40:09 +0000",
+      "img": "https://cdn.biwenger.com/i/t/91.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Fortuño convence, ¿chollo fantasy en la portería del Espanyol?",
+      "link": "https://www.jornadaperfecta.com/blog/angel-fortuno-chollo-fantasy-porteria-espanyol/",
+      "date": "Thu, 22 Oct 2026 15:00:21 +0000",
+      "img": "https://cdn.biwenger.com/i/t/7.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Funes, sobre Diego Murillo, Chupe, Larrubia, Cajuste y Rafita",
+      "link": "https://www.jornadaperfecta.com/blog/funes-previa-alaves-malaga-j10-26-27/",
+      "date": "Thu, 22 Oct 2026 13:07:05 +0000",
+      "img": "https://cdn.biwenger.com/i/t/65.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Dani Requena da un paso adelante en el Levante, ¿chollo fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/dani-requena-chollo-fantasy-levante/",
+      "date": "Thu, 22 Oct 2026 13:00:21 +0000",
+      "img": "https://cdn.biwenger.com/i/t/10.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Actualizadas las Alineaciones Probables para la Jornada 10",
+      "link": "https://www.jornadaperfecta.com/blog/alineaciones-probables-j10-laliga-26-27/",
+      "date": "Thu, 22 Oct 2026 12:00:01 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Beñat San José confirma que De Frutos está bien y habla de la posible suspensión del encuentro",
+      "link": "https://www.jornadaperfecta.com/blog/benat-san-jose-previa-rayo-elche-j10-26-27/",
+      "date": "Thu, 22 Oct 2026 11:44:57 +0000",
+      "img": "https://cdn.biwenger.com/i/t/70.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    }
+  ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-10-22T16:09:51.423Z",
+    "updatedAt": "2026-10-22T20:54:55.403Z",
     "players": [
       {
         "id": "37428",
