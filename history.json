@@ -1,15 +1,6 @@
 {
   "tomaquet": [
     {
-      "date": "2026-01-02",
-      "jornada": 21,
-      "pts": 70,
-      "ptsAcum": 1020,
-      "pos": 2,
-      "teamValue": null,
-      "trend": null
-    },
-    {
       "date": "2026-01-09",
       "jornada": 22,
       "pts": 55,
@@ -1275,6 +1266,13 @@
       "trend": 120000,
       "pts": 361,
       "pos": 4
+    },
+    {
+      "date": "2026-10-22",
+      "teamValue": 51200000,
+      "trend": 120000,
+      "pts": 361,
+      "pos": 4
     }
   ],
   "enbas": [
@@ -2486,6 +2484,13 @@
     },
     {
       "date": "2026-10-21",
+      "teamValue": 53350000,
+      "trend": 320000,
+      "pts": 408,
+      "pos": 2
+    },
+    {
+      "date": "2026-10-22",
       "teamValue": 53350000,
       "trend": 320000,
       "pts": 408,
