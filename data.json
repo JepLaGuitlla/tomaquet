@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-23T15:59:49.027Z",
+  "updatedAt": "2026-10-23T20:42:50.734Z",
   "players": [
     {
       "id": 11,
@@ -11774,7 +11774,7 @@
     {
       "id": 43261,
       "slug": "azon",
-      "name": "Azón",
+      "name": "Az��n",
       "position": 4,
       "price": 2070000,
       "points": 21,
@@ -12712,7 +12712,7 @@
     "balance": 1545977,
     "lineup": {
       "type": "3-5-2",
-      "date": 1792754478,
+      "date": 1792772446,
       "playersID": [
         9887,
         33447,
@@ -13848,21 +13848,6 @@
             "icon": "i/u/8068427.png"
           },
           "amount": 5306200
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1792578316,
-      "content": [
-        {
-          "player": 42395,
-          "from": {
-            "id": 12713493,
-            "name": "Luciano Spaghetti",
-            "icon": "i/u/12713493.png?v=77"
-          },
-          "amount": 524000
         }
       ]
     }
@@ -15591,21 +15576,6 @@
           "amount": 150000
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1792434892,
-      "content": [
-        {
-          "player": 41418,
-          "from": {
-            "id": 6585052,
-            "name": "Tots som Olost",
-            "icon": "i/u/6585052.png?v=69"
-          },
-          "amount": 2295000
-        }
-      ]
     }
   ],
   "laliga": {
@@ -15728,25 +15698,6 @@
       {
         "position": 7,
         "team": {
-          "id": 263,
-          "name": "Deportivo Alavés",
-          "shortName": "Alavés",
-          "tla": "ALA",
-          "crest": "https://crests.football-data.org/263.png"
-        },
-        "playedGames": 9,
-        "form": null,
-        "won": 3,
-        "draw": 2,
-        "lost": 4,
-        "points": 11,
-        "goalsFor": 13,
-        "goalsAgainst": 10,
-        "goalDifference": 3
-      },
-      {
-        "position": 8,
-        "team": {
           "id": 558,
           "name": "RC Celta de Vigo",
           "shortName": "Celta",
@@ -15762,6 +15713,25 @@
         "goalsFor": 10,
         "goalsAgainst": 7,
         "goalDifference": 3
+      },
+      {
+        "position": 8,
+        "team": {
+          "id": 263,
+          "name": "Deportivo Alavés",
+          "shortName": "Alavés",
+          "tla": "ALA",
+          "crest": "https://crests.football-data.org/263.png"
+        },
+        "playedGames": 10,
+        "form": null,
+        "won": 3,
+        "draw": 2,
+        "lost": 5,
+        "points": 11,
+        "goalsFor": 13,
+        "goalsAgainst": 11,
+        "goalDifference": 2
       },
       {
         "position": 9,
@@ -15956,6 +15926,25 @@
       {
         "position": 19,
         "team": {
+          "id": 84,
+          "name": "Málaga CF",
+          "shortName": "Málaga",
+          "tla": "MAL",
+          "crest": "https://crests.football-data.org/84.png"
+        },
+        "playedGames": 10,
+        "form": null,
+        "won": 1,
+        "draw": 4,
+        "lost": 5,
+        "points": 7,
+        "goalsFor": 7,
+        "goalsAgainst": 18,
+        "goalDifference": -11
+      },
+      {
+        "position": 20,
+        "team": {
           "id": 95,
           "name": "Valencia CF",
           "shortName": "Valencia",
@@ -15971,25 +15960,6 @@
         "goalsFor": 6,
         "goalsAgainst": 15,
         "goalDifference": -9
-      },
-      {
-        "position": 20,
-        "team": {
-          "id": 84,
-          "name": "Málaga CF",
-          "shortName": "Málaga",
-          "tla": "MAL",
-          "crest": "https://crests.football-data.org/84.png"
-        },
-        "playedGames": 9,
-        "form": null,
-        "won": 0,
-        "draw": 4,
-        "lost": 5,
-        "points": 4,
-        "goalsFor": 6,
-        "goalsAgainst": 18,
-        "goalDifference": -12
       }
     ],
     "forms": {
@@ -16255,23 +16225,6 @@
       }
     },
     "nextMatches": [
-      {
-        "id": 564719,
-        "matchday": 10,
-        "date": "2026-10-23T19:00:00Z",
-        "home": {
-          "id": 263,
-          "name": "Deportivo Alavés",
-          "short": "Alavés",
-          "crest": "https://crests.football-data.org/263.png"
-        },
-        "away": {
-          "id": 84,
-          "name": "Málaga CF",
-          "short": "Málaga",
-          "crest": "https://crests.football-data.org/84.png"
-        }
-      },
       {
         "id": 564718,
         "matchday": 10,
@@ -16594,6 +16547,23 @@
           "short": "Osasuna",
           "crest": "https://crests.football-data.org/79.png"
         }
+      },
+      {
+        "id": 564719,
+        "matchday": 10,
+        "date": "2026-10-23T19:00:00Z",
+        "home": {
+          "id": 263,
+          "name": "Deportivo Alavés",
+          "short": "Alavés",
+          "crest": "https://crests.football-data.org/263.png"
+        },
+        "away": {
+          "id": 84,
+          "name": "Málaga CF",
+          "short": "Málaga",
+          "crest": "https://crests.football-data.org/84.png"
+        }
       }
     ],
     "recentResults": [
@@ -16746,9 +16716,9 @@
       "matchDate": "2026-10-31T20:00:00Z"
     },
     "Málaga": {
-      "winProb": 0.13698341153225305,
-      "drawProb": 0.1790921642233821,
-      "loseProb": 0.6839244242443651,
+      "winProb": 0.1350164411978902,
+      "drawProb": 0.1781607927084942,
+      "loseProb": 0.6868227660936155,
       "over25Prob": 0.6666666666666666,
       "isHome": false,
       "opponent": "Real Betis",
@@ -16854,9 +16824,9 @@
       "matchDate": "2026-10-31T15:15:00Z"
     },
     "Real Betis": {
-      "winProb": 0.6839244242443651,
-      "drawProb": 0.1790921642233821,
-      "loseProb": 0.13698341153225305,
+      "winProb": 0.6868227660936155,
+      "drawProb": 0.1781607927084942,
+      "loseProb": 0.1350164411978902,
       "over25Prob": 0.6666666666666666,
       "isHome": true,
       "opponent": "Málaga",
@@ -16919,6 +16889,62 @@
   },
   "news": [
     {
+      "title": "Camavinga apunta a titular en El Clásico: El plan de Mourinho",
+      "link": "https://www.jornadaperfecta.com/blog/camavinga-titular-el-clasico-j10/",
+      "date": "Fri, 23 Oct 2026 18:53:53 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "¡Chupe y Calero, suplentes en el Málaga!",
+      "link": "https://www.jornadaperfecta.com/blog/once-malaga-j10-26-27/",
+      "date": "Fri, 23 Oct 2026 18:04:13 +0000",
+      "img": "https://cdn.biwenger.com/i/t/65.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "¡Mariano, titular en el Alavés!",
+      "link": "https://www.jornadaperfecta.com/blog/once-alaves-j10-26-27/",
+      "date": "Fri, 23 Oct 2026 18:01:09 +0000",
+      "img": "https://cdn.biwenger.com/i/t/91.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "&#8216;El Suvidón&#8217; de VERSUS: ¡Gana x10 veces más apostando a El Clásico!",
+      "link": "https://www.jornadaperfecta.com/blog/suvidon-versus-el-clasico/",
+      "date": "Fri, 23 Oct 2026 18:00:04 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/10/multiplicador-apuesta-versus-barcelona-madrid.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Yangel y Aramburu entrenan con el grupo, ¿llegan a la J10?",
+      "link": "https://www.jornadaperfecta.com/blog/yangel-aramburu-estado-j10-real-sociedad/",
+      "date": "Fri, 23 Oct 2026 17:45:38 +0000",
+      "img": "https://cdn.biwenger.com/i/t/13.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Huijsen, la gran duda blanca para El Clásico, ¿alineamos en fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/huijsen-alinear-fantasy-j10-real-madrid/",
+      "date": "Fri, 23 Oct 2026 16:36:02 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Abde y Fran García: ¿Rotación en la jornada 10 o titularidad?",
+      "link": "https://www.jornadaperfecta.com/blog/abde-fran-garcia-rotacion-j10/",
+      "date": "Fri, 23 Oct 2026 15:50:12 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Lesionados que podrían llegar a la jornada 10 y descartados",
       "link": "https://www.jornadaperfecta.com/blog/lesionados-j10-26-27/",
       "date": "Fri, 23 Oct 2026 14:45:00 +0000",
@@ -16941,69 +16967,13 @@
       "img": "https://cdn.biwenger.com/i/t/7.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Aguirre confirma las bajas de Copete y Foulquier y elogia a Elliott",
-      "link": "https://www.jornadaperfecta.com/blog/aguirre-previa-valencia-villarreal-j10-26-27/",
-      "date": "Fri, 23 Oct 2026 12:27:12 +0000",
-      "img": "https://cdn.biwenger.com/i/t/18.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Iñigo Pérez, sobre el estado de Pépé, Saliba y Carlos Romero",
-      "link": "https://www.jornadaperfecta.com/blog/inigo-perez-previa-valencia-villarreal-j10-26-27/",
-      "date": "Fri, 23 Oct 2026 12:26:57 +0000",
-      "img": "https://cdn.biwenger.com/i/t/19.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Promoción Winamax: ¡Barça y Madrid marcan en El Clásico, a 12.80 euros!",
-      "link": "https://www.jornadaperfecta.com/blog/winamax-boost-el-clasico/",
-      "date": "Fri, 23 Oct 2026 12:12:51 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/10/boost-winamax-el-clasico.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Bardeli sufre una lesión en los isquiotibiales: Parte médico oficial",
-      "link": "https://www.jornadaperfecta.com/blog/bardeli-parte-medico-levante/",
-      "date": "Fri, 23 Oct 2026 12:09:09 +0000",
-      "img": "https://cdn.biwenger.com/i/t/10.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Hidalgo no asegura la titularidad de Leo Román y habla de Aubameyang",
-      "link": "https://www.jornadaperfecta.com/blog/hidalgo-previa-atletico-deportivo-j10-26-27/",
-      "date": "Fri, 23 Oct 2026 11:52:59 +0000",
-      "img": "https://cdn.biwenger.com/i/t/6.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Anselmi, sobre Germán Valera, Revivo, Osorio y Fer Niño",
-      "link": "https://www.jornadaperfecta.com/blog/anselmi-previa-rayo-elche-j10-26-27/",
-      "date": "Fri, 23 Oct 2026 11:24:25 +0000",
-      "img": "https://cdn.biwenger.com/i/t/75.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Simeone, sobre Barrios, Pubill, Julián Alvarez y Jonathan David",
-      "link": "https://www.jornadaperfecta.com/blog/simeone-previa-atletico-deportivo-j10-26-27/",
-      "date": "Fri, 23 Oct 2026 11:07:58 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-10-23T15:59:48.125Z",
+    "updatedAt": "2026-10-23T20:42:48.871Z",
     "players": [
       {
         "id": "37428",
@@ -17131,11 +17101,11 @@
         "team": "Deportivo Alavés",
         "position": "",
         "nationality": "Argentina",
-        "appearances": 8,
+        "appearances": 9,
         "goals": 5,
         "assists": 0,
         "penalties": 1,
-        "minutesPerGoal": 144
+        "minutesPerGoal": 162
       },
       {
         "id": "180282",
@@ -17162,16 +17132,28 @@
         "minutesPerGoal": 203
       },
       {
+        "id": "221308",
+        "name": "Adrián",
+        "team": "Málaga CF",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 6,
+        "goals": 4,
+        "assists": 0,
+        "penalties": 0,
+        "minutesPerGoal": 135
+      },
+      {
         "id": "8474",
         "name": "Mariano Díaz",
         "team": "Deportivo Alavés",
         "position": "",
         "nationality": "Dominican Republic",
-        "appearances": 9,
+        "appearances": 10,
         "goals": 3,
         "assists": 4,
         "penalties": 0,
-        "minutesPerGoal": 270
+        "minutesPerGoal": 300
       },
       {
         "id": "32312",
@@ -17220,18 +17202,6 @@
         "assists": 0,
         "penalties": 0,
         "minutesPerGoal": 270
-      },
-      {
-        "id": "221308",
-        "name": "Adrián",
-        "team": "Málaga CF",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 5,
-        "goals": 3,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 150
       },
       {
         "id": "156746",
@@ -17611,11 +17581,11 @@
         "team": "Deportivo Alavés",
         "position": "",
         "nationality": "Argentina",
-        "appearances": 9,
+        "appearances": 10,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 810
+        "minutesPerGoal": 900
       },
       {
         "id": "290184",
@@ -17779,11 +17749,11 @@
         "team": "Málaga CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 9,
+        "appearances": 10,
         "goals": 1,
         "assists": 0,
         "penalties": 1,
-        "minutesPerGoal": 810
+        "minutesPerGoal": 900
       },
       {
         "id": "1556",
@@ -17995,11 +17965,11 @@
         "team": "Deportivo Alavés",
         "position": "",
         "nationality": "Spain",
-        "appearances": 9,
+        "appearances": 10,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 810
+        "minutesPerGoal": 900
       },
       {
         "id": "188897",
@@ -18091,11 +18061,11 @@
         "team": "Deportivo Alavés",
         "position": "",
         "nationality": "Finland",
-        "appearances": 9,
+        "appearances": 10,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 810
+        "minutesPerGoal": 900
       },
       {
         "id": "184273",
