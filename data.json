@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-23T10:36:06.438Z",
+  "updatedAt": "2026-10-23T15:59:49.027Z",
   "players": [
     {
       "id": 11,
@@ -12223,8 +12223,8 @@
           2,
           1
         ],
-        "teamSize": 14,
-        "teamValue": 51380000,
+        "teamSize": 13,
+        "teamValue": 49320000,
         "teamValueInc": 170000,
         "position": 5,
         "role": ""
@@ -12259,9 +12259,9 @@
           17,
           7
         ],
-        "teamSize": 18,
-        "teamValue": 45060000,
-        "teamValueInc": 180000,
+        "teamSize": 17,
+        "teamValue": 44700000,
+        "teamValueInc": 190000,
         "position": 7,
         "positionInc": 4,
         "role": ""
@@ -12301,9 +12301,9 @@
           6,
           10
         ],
-        "teamSize": 11,
-        "teamValue": 39520000,
-        "teamValueInc": 450000,
+        "teamSize": 13,
+        "teamValue": 40050000,
+        "teamValueInc": 440000,
         "position": 9,
         "positionInc": -2,
         "role": ""
@@ -12399,9 +12399,9 @@
           10,
           8
         ],
-        "teamSize": 11,
-        "teamValue": 38080000,
-        "teamValueInc": 300000,
+        "teamSize": 12,
+        "teamValue": 38970000,
+        "teamValueInc": 290000,
         "position": 14
       },
       {
@@ -12473,8 +12473,8 @@
           19,
           3
         ],
-        "teamSize": 12,
-        "teamValue": 35260000,
+        "teamSize": 11,
+        "teamValue": 35090000,
         "teamValueInc": 300000,
         "position": 18,
         "positionInc": -1,
@@ -12516,9 +12516,9 @@
           15,
           19
         ],
-        "teamSize": 16,
-        "teamValue": 35590000,
-        "teamValueInc": 140000,
+        "teamSize": 15,
+        "teamValue": 34700000,
+        "teamValueInc": 150000,
         "position": 20
       }
     ]
@@ -12565,7 +12565,7 @@
       "name": "Soulands Rangers",
       "manager": "Soulands Rangers",
       "points": 364,
-      "value": 51380000,
+      "value": 49320000,
       "trend": 170000,
       "players": []
     },
@@ -12583,8 +12583,8 @@
       "name": "wilamalel",
       "manager": "wilamalel",
       "points": 348,
-      "value": 45060000,
-      "trend": 180000,
+      "value": 44700000,
+      "trend": 190000,
       "players": []
     },
     {
@@ -12601,8 +12601,8 @@
       "name": "Burnigol FC",
       "manager": "Burnigol FC",
       "points": 343,
-      "value": 39520000,
-      "trend": 450000,
+      "value": 40050000,
+      "trend": 440000,
       "players": []
     },
     {
@@ -12646,8 +12646,8 @@
       "name": "Zaza Pachulia",
       "manager": "Zaza Pachulia",
       "points": 303,
-      "value": 38080000,
-      "trend": 300000,
+      "value": 38970000,
+      "trend": 290000,
       "players": []
     },
     {
@@ -12682,7 +12682,7 @@
       "name": "TL*LI",
       "manager": "TL*LI",
       "points": 271,
-      "value": 35260000,
+      "value": 35090000,
       "trend": 300000,
       "players": []
     },
@@ -12700,8 +12700,8 @@
       "name": "The Black Team",
       "manager": "The Black Team",
       "points": 234,
-      "value": 35590000,
-      "trend": 140000,
+      "value": 34700000,
+      "trend": 150000,
       "players": []
     }
   ],
@@ -12712,7 +12712,7 @@
     "balance": 1545977,
     "lineup": {
       "type": "3-5-2",
-      "date": 1792746646,
+      "date": 1792754478,
       "playersID": [
         9887,
         33447,
@@ -12864,11 +12864,80 @@
         "playerID": 42444,
         "price": 2750000,
         "type": "sale",
-        "until": 1792752054
+        "until": 1792927287
       }
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1792760452,
+      "content": [
+        {
+          "player": 9480,
+          "from": {
+            "id": 8068002,
+            "name": "Soulands Rangers",
+            "icon": "i/u/8068002.png?v=69"
+          },
+          "amount": 2135700
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1792758916,
+      "content": [
+        {
+          "player": 41261,
+          "from": {
+            "id": 14072078,
+            "name": "TL*LI",
+            "icon": "i/u/14072078.png"
+          },
+          "to": {
+            "id": 14094189,
+            "name": "Burnigol FC",
+            "icon": "i/u/14094189.png"
+          },
+          "amount": 180000
+        },
+        {
+          "player": 43259,
+          "from": {
+            "id": 3928497,
+            "name": "The Black Team",
+            "icon": "i/u/3928497.png"
+          },
+          "to": {
+            "id": 148051,
+            "name": "Zaza Pachulia",
+            "icon": "i/u/148051.png?v=98"
+          },
+          "amount": 1300000
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1792756103,
+      "content": [
+        {
+          "player": 43271,
+          "from": {
+            "id": 14074484,
+            "name": "wilamalel",
+            "icon": "https://lh3.googleusercontent.com/a/ACg8ocJGUZto0NCjv5HnKiftjGqQiwQNQWQjyPJpfYbDxfcaNvZWgg=s300-c"
+          },
+          "to": {
+            "id": 14094189,
+            "name": "Burnigol FC",
+            "icon": "i/u/14094189.png"
+          },
+          "amount": 500000
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1792750625,
@@ -13794,121 +13863,6 @@
             "icon": "i/u/12713493.png?v=77"
           },
           "amount": 524000
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1792576681,
-      "content": [
-        {
-          "player": 8555,
-          "from": {
-            "id": 14065964,
-            "name": "JanBox",
-            "icon": "i/u/14065964.png?v=16"
-          },
-          "to": {
-            "id": 14094189,
-            "name": "Burnigol FC",
-            "icon": "i/u/14094189.png"
-          },
-          "amount": 13950000,
-          "type": "auction"
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1792562525,
-      "content": [
-        {
-          "player": 15828,
-          "from": {
-            "id": 148051,
-            "name": "Zaza Pachulia",
-            "icon": "i/u/148051.png?v=98"
-          },
-          "amount": 7279300
-        },
-        {
-          "player": 31167,
-          "from": {
-            "id": 148051,
-            "name": "Zaza Pachulia",
-            "icon": "i/u/148051.png?v=98"
-          },
-          "amount": 1948100
-        },
-        {
-          "player": 33886,
-          "from": {
-            "id": 11521196,
-            "name": "Hufflepuff 🍋",
-            "icon": "i/u/11521196.png?v=57"
-          },
-          "amount": 154900
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1792559116,
-      "content": [
-        {
-          "player": 37644,
-          "to": {
-            "id": 14094028,
-            "name": "Estem caputs"
-          },
-          "amount": 1842000
-        },
-        {
-          "player": 19577,
-          "to": {
-            "id": 14065964,
-            "name": "JanBox",
-            "icon": "i/u/14065964.png?v=16"
-          },
-          "amount": 24668000,
-          "bids": [
-            {
-              "user": {
-                "id": 6541195,
-                "name": "🦊",
-                "icon": "i/u/6541195.png?v=17"
-              },
-              "amount": 24086999
-            }
-          ]
-        },
-        {
-          "player": 38368,
-          "to": {
-            "id": 8068002,
-            "name": "Soulands Rangers",
-            "icon": "i/u/8068002.png?v=69"
-          },
-          "amount": 1120000,
-          "bids": [
-            {
-              "user": {
-                "id": 12697101,
-                "name": "INDOMABLE FC",
-                "icon": "i/u/11757390.png"
-              },
-              "amount": 1075010
-            }
-          ]
-        },
-        {
-          "player": 14630,
-          "to": {
-            "id": 14074484,
-            "name": "wilamalel",
-            "icon": "https://lh3.googleusercontent.com/a/ACg8ocJGUZto0NCjv5HnKiftjGqQiwQNQWQjyPJpfYbDxfcaNvZWgg=s300-c"
-          },
-          "amount": 3470100
         }
       ]
     }
@@ -16965,82 +16919,82 @@
   },
   "news": [
     {
-      "title": "Koundé sigue al margen y apunta a baja en El Clásico; Xavi Espart, disponible",
-      "link": "https://www.jornadaperfecta.com/blog/kounde-estado-barcelona-j10/",
-      "date": "Fri, 23 Oct 2026 10:22:39 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "title": "Lesionados que podrían llegar a la jornada 10 y descartados",
+      "link": "https://www.jornadaperfecta.com/blog/lesionados-j10-26-27/",
+      "date": "Fri, 23 Oct 2026 14:45:00 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/10/eric-garcia-fc-barcelona-fantasy.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Kang-In Lee vuelve al grupo, ¿titular en la jornada 10?",
-      "link": "https://www.jornadaperfecta.com/blog/kang-in-lee-estado-atleti-j10/",
-      "date": "Fri, 23 Oct 2026 10:05:36 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "title": "José Alberto, sobre Andrés Martín y la posición de Canales y Pablo García",
+      "link": "https://www.jornadaperfecta.com/blog/jose-alberto-previa-racing-espanyol-j10-26-27/",
+      "date": "Fri, 23 Oct 2026 13:03:12 +0000",
+      "img": "https://cdn.biwenger.com/i/t/812.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Bellerín, principal ausencia en el entrenamiento del Betis",
-      "link": "https://www.jornadaperfecta.com/blog/bellerin-estado-betis-j10/",
-      "date": "Fri, 23 Oct 2026 09:58:42 +0000",
-      "img": "https://cdn.biwenger.com/i/t/87.png",
+      "title": "Manolo González, sobre Roberto, Puado y Bryan Zaragoza",
+      "link": "https://www.jornadaperfecta.com/blog/manolo-gonzalez-previa-racing-espanyol-j10-26-27/",
+      "date": "Fri, 23 Oct 2026 12:45:46 +0000",
+      "img": "https://cdn.biwenger.com/i/t/7.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Kochorashvili repite con el grupo; Stassin sigue al margen",
-      "link": "https://www.jornadaperfecta.com/blog/kochorashvili-estado-sevilla-j10/",
-      "date": "Fri, 23 Oct 2026 09:35:08 +0000",
-      "img": "https://cdn.biwenger.com/i/t/17.png",
+      "title": "Aguirre confirma las bajas de Copete y Foulquier y elogia a Elliott",
+      "link": "https://www.jornadaperfecta.com/blog/aguirre-previa-valencia-villarreal-j10-26-27/",
+      "date": "Fri, 23 Oct 2026 12:27:12 +0000",
+      "img": "https://cdn.biwenger.com/i/t/18.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Comunicado del Rayo Vallecano que baja el riesgo de alineación en fantasy",
-      "link": "https://www.jornadaperfecta.com/blog/rayo-vallecano-elche-alto-riesgo-fantasy/",
-      "date": "Fri, 23 Oct 2026 09:05:06 +0000",
-      "img": "",
+      "title": "Iñigo Pérez, sobre el estado de Pépé, Saliba y Carlos Romero",
+      "link": "https://www.jornadaperfecta.com/blog/inigo-perez-previa-valencia-villarreal-j10-26-27/",
+      "date": "Fri, 23 Oct 2026 12:26:57 +0000",
+      "img": "https://cdn.biwenger.com/i/t/19.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Camavinga apunta a titular en El Clásico: El plan de Mourinho",
-      "link": "https://www.jornadaperfecta.com/blog/camavinga-titular-el-clasico-j10/",
-      "date": "Fri, 23 Oct 2026 08:53:53 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "title": "Promoción Winamax: ¡Barça y Madrid marcan en El Clásico, a 12.80 euros!",
+      "link": "https://www.jornadaperfecta.com/blog/winamax-boost-el-clasico/",
+      "date": "Fri, 23 Oct 2026 12:12:51 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/10/boost-winamax-el-clasico.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Dela apunta a suplente en la jornada 10, según Plaza Deportiva",
-      "link": "https://www.jornadaperfecta.com/blog/dela-estado-levante-j10/",
-      "date": "Fri, 23 Oct 2026 08:52:07 +0000",
+      "title": "Bardeli sufre una lesión en los isquiotibiales: Parte médico oficial",
+      "link": "https://www.jornadaperfecta.com/blog/bardeli-parte-medico-levante/",
+      "date": "Fri, 23 Oct 2026 12:09:09 +0000",
       "img": "https://cdn.biwenger.com/i/t/10.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Pablo Martínez, baja de última hora ante el Alavés: este es el motivo",
-      "link": "https://www.jornadaperfecta.com/blog/pablo-martinez-fascitis-plantar/",
-      "date": "Fri, 23 Oct 2026 08:51:49 +0000",
-      "img": "https://cdn.biwenger.com/i/t/65.png",
+      "title": "Hidalgo no asegura la titularidad de Leo Román y habla de Aubameyang",
+      "link": "https://www.jornadaperfecta.com/blog/hidalgo-previa-atletico-deportivo-j10-26-27/",
+      "date": "Fri, 23 Oct 2026 11:52:59 +0000",
+      "img": "https://cdn.biwenger.com/i/t/6.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Abde y Fran García: ¿Rotación en la jornada 10 o titularidad?",
-      "link": "https://www.jornadaperfecta.com/blog/abde-fran-garcia-rotacion-j10/",
-      "date": "Fri, 23 Oct 2026 08:50:12 +0000",
-      "img": "",
+      "title": "Anselmi, sobre Germán Valera, Revivo, Osorio y Fer Niño",
+      "link": "https://www.jornadaperfecta.com/blog/anselmi-previa-rayo-elche-j10-26-27/",
+      "date": "Fri, 23 Oct 2026 11:24:25 +0000",
+      "img": "https://cdn.biwenger.com/i/t/75.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Rotaciones por Europa: ¡jugadores en riesgo para la jornada 10!",
-      "link": "https://www.jornadaperfecta.com/blog/rotaciones-europa-fantasy-j10/",
-      "date": "Fri, 23 Oct 2026 08:40:49 +0000",
-      "img": "https://cdn.biwenger.com/i/t/19.png",
+      "title": "Simeone, sobre Barrios, Pubill, Julián Alvarez y Jonathan David",
+      "link": "https://www.jornadaperfecta.com/blog/simeone-previa-atletico-deportivo-j10-26-27/",
+      "date": "Fri, 23 Oct 2026 11:07:58 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -17049,7 +17003,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-10-23T10:36:05.069Z",
+    "updatedAt": "2026-10-23T15:59:48.125Z",
     "players": [
       {
         "id": "37428",
