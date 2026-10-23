@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22T20:54:57.827Z",
+  "updatedAt": "2026-10-23T02:13:44.994Z",
   "players": [
     {
       "id": 11,
@@ -12159,8 +12159,8 @@
           7,
           5
         ],
-        "teamSize": 15,
-        "teamValue": 47640000,
+        "teamSize": 14,
+        "teamValue": 47470000,
         "teamValueInc": 100000,
         "position": 2,
         "role": ""
@@ -12223,9 +12223,9 @@
           2,
           1
         ],
-        "teamSize": 15,
-        "teamValue": 57140000,
-        "teamValueInc": 200000,
+        "teamSize": 14,
+        "teamValue": 53880000,
+        "teamValueInc": 170000,
         "position": 5,
         "role": ""
       },
@@ -12301,8 +12301,8 @@
           6,
           10
         ],
-        "teamSize": 10,
-        "teamValue": 38900000,
+        "teamSize": 11,
+        "teamValue": 39070000,
         "teamValueInc": 390000,
         "position": 9,
         "positionInc": -2,
@@ -12538,7 +12538,7 @@
       "name": "CA CABA JUNIORS",
       "manager": "CA CABA JUNIORS",
       "points": 375,
-      "value": 47640000,
+      "value": 47470000,
       "trend": 100000,
       "players": []
     },
@@ -12565,8 +12565,8 @@
       "name": "Soulands Rangers",
       "manager": "Soulands Rangers",
       "points": 364,
-      "value": 57140000,
-      "trend": 200000,
+      "value": 53880000,
+      "trend": 170000,
       "players": []
     },
     {
@@ -12601,7 +12601,7 @@
       "name": "Burnigol FC",
       "manager": "Burnigol FC",
       "points": 343,
-      "value": 38900000,
+      "value": 39070000,
       "trend": 390000,
       "players": []
     },
@@ -12869,6 +12869,35 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1792705367,
+      "content": [
+        {
+          "player": 41421,
+          "from": {
+            "id": 8070044,
+            "name": "CA CABA JUNIORS",
+            "icon": "i/u/8070044.png?v=6"
+          },
+          "to": {
+            "id": 14094189,
+            "name": "Burnigol FC",
+            "icon": "i/u/14094189.png"
+          },
+          "amount": 200000
+        },
+        {
+          "player": 32120,
+          "from": {
+            "id": 8068002,
+            "name": "Soulands Rangers",
+            "icon": "i/u/8068002.png?v=69"
+          },
+          "amount": 3332700
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1792693944,
@@ -13689,21 +13718,6 @@
           "amount": 415600
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1792534748,
-      "content": [
-        {
-          "player": 28087,
-          "from": {
-            "id": 14094189,
-            "name": "Burnigol FC",
-            "icon": "i/u/14094189.png"
-          },
-          "amount": 2651600
-        }
-      ]
     }
   ],
   "leagueEnBas": {
@@ -13983,9 +13997,9 @@
           19,
           12
         ],
-        "teamSize": 14,
-        "teamValue": 39530000,
-        "teamValueInc": -10000,
+        "teamSize": 13,
+        "teamValue": 33300000,
+        "teamValueInc": 120000,
         "position": 14,
         "positionInc": -2,
         "role": ""
@@ -14083,9 +14097,9 @@
           20,
           17
         ],
-        "teamSize": 17,
-        "teamValue": 35540000,
-        "teamValueInc": -100000,
+        "teamSize": 16,
+        "teamValue": 35270000,
+        "teamValueInc": -90000,
         "position": 19,
         "role": ""
       },
@@ -14232,8 +14246,8 @@
       "name": "Petraques",
       "manager": "Petraques",
       "points": 286,
-      "value": 39530000,
-      "trend": -10000,
+      "value": 33300000,
+      "trend": 120000,
       "players": []
     },
     {
@@ -14277,8 +14291,8 @@
       "name": "Janwandowski",
       "manager": "Janwandowski",
       "points": 237,
-      "value": 35540000,
-      "trend": -100000,
+      "value": 35270000,
+      "trend": -90000,
       "players": []
     },
     {
@@ -14428,6 +14442,36 @@
     ]
   },
   "boardEnBas": [
+    {
+      "type": "transfer",
+      "date": 1792721292,
+      "content": [
+        {
+          "player": 33871,
+          "from": {
+            "id": 6593096,
+            "name": "Janwandowski",
+            "icon": "i/u/6593096.png"
+          },
+          "amount": 280500
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "date": 1792704542,
+      "content": [
+        {
+          "player": 21132,
+          "from": {
+            "id": 7817228,
+            "name": "Petraques",
+            "icon": "i/u/7817228.png"
+          },
+          "amount": 6450000
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1792683256,
@@ -15234,265 +15278,6 @@
             "icon": "i/u/6579330.png?v=18"
           },
           "amount": 914000
-        }
-      ]
-    },
-    {
-      "type": "market",
-      "date": 1792386298,
-      "content": [
-        {
-          "player": 41560,
-          "to": {
-            "id": 6586257,
-            "name": "Aquest any pago jo !!",
-            "icon": "i/u/6586257.png"
-          },
-          "amount": 150000
-        },
-        {
-          "player": 20102,
-          "to": {
-            "id": 6585052,
-            "name": "Tots som Olost",
-            "icon": "i/u/6585052.png?v=69"
-          },
-          "amount": 3725000,
-          "bids": [
-            {
-              "user": {
-                "id": 6593096,
-                "name": "Janwandowski",
-                "icon": "i/u/6593096.png"
-              },
-              "amount": 3680000
-            },
-            {
-              "user": {
-                "id": 14001588,
-                "name": "Txapi17",
-                "icon": "i/u/11555657.png"
-              },
-              "amount": 3396740
-            },
-            {
-              "user": {
-                "id": 6579283,
-                "name": "Fiorenzola",
-                "icon": "i/u/6579283.png?v=33"
-              },
-              "amount": 3389655
-            },
-            {
-              "user": {
-                "id": 6579505,
-                "name": "Xevi borrat",
-                "icon": "i/u/6579505.png"
-              },
-              "amount": 3018000
-            },
-            {
-              "user": {
-                "id": 6588130,
-                "name": "The GOAT club",
-                "icon": "i/u/6588130.png?v=12"
-              },
-              "amount": 2888000
-            },
-            {
-              "user": {
-                "id": 9890450,
-                "name": "MarK Lenders",
-                "icon": "icons/34.png"
-              },
-              "amount": 2881000
-            },
-            {
-              "user": {
-                "id": 6580386,
-                "name": "Academia Control Orientado FC",
-                "icon": "i/u/6580386.png?v=69"
-              },
-              "amount": 2766000
-            },
-            {
-              "user": {
-                "id": 6579540,
-                "name": "Aiveen Teaam",
-                "icon": "i/u/6579540.png?v=63"
-              },
-              "amount": 2723850
-            },
-            {
-              "user": {
-                "id": 7817228,
-                "name": "Petraques",
-                "icon": "i/u/7817228.png"
-              },
-              "amount": 2699880
-            },
-            {
-              "user": {
-                "id": 6579402,
-                "name": "Valors FC",
-                "icon": "icons/7.png"
-              },
-              "amount": 2580040
-            }
-          ]
-        },
-        {
-          "player": 37416,
-          "to": {
-            "id": 6585052,
-            "name": "Tots som Olost",
-            "icon": "i/u/6585052.png?v=69"
-          },
-          "amount": 2988000,
-          "bids": [
-            {
-              "user": {
-                "id": 11504267,
-                "name": "🦊",
-                "icon": "i/u/11504267.png?v=23"
-              },
-              "amount": 2932555
-            },
-            {
-              "user": {
-                "id": 6580386,
-                "name": "Academia Control Orientado FC",
-                "icon": "i/u/6580386.png?v=69"
-              },
-              "amount": 2815000
-            }
-          ]
-        },
-        {
-          "player": 37709,
-          "to": {
-            "id": 6586257,
-            "name": "Aquest any pago jo !!",
-            "icon": "i/u/6586257.png"
-          },
-          "amount": 150000
-        },
-        {
-          "player": 41076,
-          "to": {
-            "id": 6579280,
-            "name": "BSG Schreibmaschinenwerk Dresden",
-            "icon": "i/u/6579280.png?v=85"
-          },
-          "amount": 1865080,
-          "bids": [
-            {
-              "user": {
-                "id": 6580386,
-                "name": "Academia Control Orientado FC",
-                "icon": "i/u/6580386.png?v=69"
-              },
-              "amount": 1825000
-            },
-            {
-              "user": {
-                "id": 7817228,
-                "name": "Petraques",
-                "icon": "i/u/7817228.png"
-              },
-              "amount": 1599000
-            },
-            {
-              "user": {
-                "id": 6585052,
-                "name": "Tots som Olost",
-                "icon": "i/u/6585052.png?v=69"
-              },
-              "amount": 1454000
-            },
-            {
-              "user": {
-                "id": 6588130,
-                "name": "The GOAT club",
-                "icon": "i/u/6588130.png?v=12"
-              },
-              "amount": 1444000
-            },
-            {
-              "user": {
-                "id": 6579505,
-                "name": "Xevi borrat",
-                "icon": "i/u/6579505.png"
-              },
-              "amount": 1410000
-            },
-            {
-              "user": {
-                "id": 6579283,
-                "name": "Fiorenzola",
-                "icon": "i/u/6579283.png?v=33"
-              },
-              "amount": 1289655
-            },
-            {
-              "user": {
-                "id": 6579330,
-                "name": "Mindundis",
-                "icon": "i/u/6579330.png?v=18"
-              },
-              "amount": 1126014
-            },
-            {
-              "user": {
-                "id": 6579540,
-                "name": "Aiveen Teaam",
-                "icon": "i/u/6579540.png?v=63"
-              },
-              "amount": 1060890
-            }
-          ]
-        },
-        {
-          "player": 26344,
-          "to": {
-            "id": 6586257,
-            "name": "Aquest any pago jo !!",
-            "icon": "i/u/6586257.png"
-          },
-          "amount": 150000
-        },
-        {
-          "player": 41421,
-          "to": {
-            "id": 6593096,
-            "name": "Janwandowski",
-            "icon": "i/u/6593096.png"
-          },
-          "amount": 193000,
-          "bids": [
-            {
-              "user": {
-                "id": 9890540,
-                "name": "UE Trincadors"
-              },
-              "amount": 180000
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1792360430,
-      "content": [
-        {
-          "player": 37733,
-          "from": {
-            "id": 6579280,
-            "name": "BSG Schreibmaschinenwerk Dresden",
-            "icon": "i/u/6579280.png?v=85"
-          },
-          "amount": 1490800
         }
       ]
     }
@@ -16716,10 +16501,10 @@
       "matchDate": "2026-11-02T20:00:00Z"
     },
     "Athletic Bilbao": {
-      "winProb": 0.4874720096785491,
-      "drawProb": 0.2662662237739974,
-      "loseProb": 0.24626176654745355,
-      "over25Prob": 0.5376344086021505,
+      "winProb": 0.4823962165002627,
+      "drawProb": 0.2661962315141506,
+      "loseProb": 0.25140755198558673,
+      "over25Prob": 0.53475935828877,
       "isHome": true,
       "opponent": "Real Sociedad",
       "matchDate": "2026-11-01T20:00:00Z"
@@ -16752,10 +16537,10 @@
       "matchDate": "2026-10-31T17:30:00Z"
     },
     "Real Sociedad": {
-      "winProb": 0.24626176654745355,
-      "drawProb": 0.2662662237739974,
-      "loseProb": 0.4874720096785491,
-      "over25Prob": 0.5376344086021505,
+      "winProb": 0.25140755198558673,
+      "drawProb": 0.2661962315141506,
+      "loseProb": 0.4823962165002627,
+      "over25Prob": 0.53475935828877,
       "isHome": false,
       "opponent": "Athletic Bilbao",
       "matchDate": "2026-11-01T20:00:00Z"
@@ -16807,6 +16592,14 @@
     }
   },
   "news": [
+    {
+      "title": "Cinco noticias fantasy para antes de irte a dormir",
+      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-22-10-26/",
+      "date": "Thu, 22 Oct 2026 21:00:01 +0000",
+      "img": "https://cdn.biwenger.com/i/t/2.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "La Previa de las Picas: Todo sobre los Cronistas de la Jornada 10",
       "link": "https://www.jornadaperfecta.com/blog/previa-picas-cronistas-j10-26-27/",
@@ -16878,21 +16671,13 @@
       "img": "",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Beñat San José confirma que De Frutos está bien y habla de la posible suspensión del encuentro",
-      "link": "https://www.jornadaperfecta.com/blog/benat-san-jose-previa-rayo-elche-j10-26-27/",
-      "date": "Thu, 22 Oct 2026 11:44:57 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-10-22T20:54:55.403Z",
+    "updatedAt": "2026-10-23T02:13:42.736Z",
     "players": [
       {
         "id": "37428",
