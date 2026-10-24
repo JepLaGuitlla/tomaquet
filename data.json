@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-24T09:54:25.570Z",
+  "updatedAt": "2026-10-24T14:57:33.382Z",
   "players": [
     {
       "id": 11,
@@ -13897,36 +13897,6 @@
           "amount": 3842038
         }
       ]
-    },
-    {
-      "type": "transfer",
-      "date": 1792637202,
-      "content": [
-        {
-          "player": 25384,
-          "from": {
-            "id": 8068002,
-            "name": "Soulands Rangers",
-            "icon": "i/u/8068002.png?v=69"
-          },
-          "amount": 4804500
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1792618348,
-      "content": [
-        {
-          "player": 24336,
-          "from": {
-            "id": 14072078,
-            "name": "TL*LI",
-            "icon": "i/u/14072078.png"
-          },
-          "amount": 254700
-        }
-      ]
     }
   ],
   "leagueEnBas": {
@@ -15698,6 +15668,25 @@
       {
         "position": 12,
         "team": {
+          "id": 285,
+          "name": "Elche CF",
+          "shortName": "Elche",
+          "tla": "ELC",
+          "crest": "https://crests.football-data.org/285.png"
+        },
+        "playedGames": 10,
+        "form": null,
+        "won": 2,
+        "draw": 4,
+        "lost": 4,
+        "points": 10,
+        "goalsFor": 14,
+        "goalsAgainst": 17,
+        "goalDifference": -3
+      },
+      {
+        "position": 13,
+        "team": {
           "id": 94,
           "name": "Villarreal CF",
           "shortName": "Villarreal",
@@ -15715,7 +15704,26 @@
         "goalDifference": 0
       },
       {
-        "position": 13,
+        "position": 14,
+        "team": {
+          "id": 80,
+          "name": "RCD Espanyol de Barcelona",
+          "shortName": "Espanyol",
+          "tla": "ESP",
+          "crest": "https://crests.football-data.org/80.png"
+        },
+        "playedGames": 10,
+        "form": null,
+        "won": 2,
+        "draw": 3,
+        "lost": 5,
+        "points": 9,
+        "goalsFor": 11,
+        "goalsAgainst": 12,
+        "goalDifference": -1
+      },
+      {
+        "position": 15,
         "team": {
           "id": 77,
           "name": "Athletic Club",
@@ -15734,26 +15742,7 @@
         "goalDifference": -1
       },
       {
-        "position": 14,
-        "team": {
-          "id": 87,
-          "name": "Rayo Vallecano de Madrid",
-          "shortName": "Rayo Vallecano",
-          "tla": "RAY",
-          "crest": "https://crests.football-data.org/87.png"
-        },
-        "playedGames": 8,
-        "form": null,
-        "won": 2,
-        "draw": 3,
-        "lost": 3,
-        "points": 9,
-        "goalsFor": 12,
-        "goalsAgainst": 17,
-        "goalDifference": -5
-      },
-      {
-        "position": 15,
+        "position": 16,
         "team": {
           "id": 82,
           "name": "Getafe CF",
@@ -15772,26 +15761,26 @@
         "goalDifference": -6
       },
       {
-        "position": 16,
+        "position": 17,
         "team": {
-          "id": 80,
-          "name": "RCD Espanyol de Barcelona",
-          "shortName": "Espanyol",
-          "tla": "ESP",
-          "crest": "https://crests.football-data.org/80.png"
+          "id": 87,
+          "name": "Rayo Vallecano de Madrid",
+          "shortName": "Rayo Vallecano",
+          "tla": "RAY",
+          "crest": "https://crests.football-data.org/87.png"
         },
         "playedGames": 9,
         "form": null,
         "won": 2,
-        "draw": 2,
-        "lost": 5,
-        "points": 8,
-        "goalsFor": 11,
-        "goalsAgainst": 12,
-        "goalDifference": -1
+        "draw": 3,
+        "lost": 4,
+        "points": 9,
+        "goalsFor": 12,
+        "goalsAgainst": 20,
+        "goalDifference": -8
       },
       {
-        "position": 17,
+        "position": 18,
         "team": {
           "id": 5335,
           "name": "Real Racing Club de Santander",
@@ -15799,34 +15788,15 @@
           "tla": "SAN",
           "crest": "https://crests.football-data.org/5335.png"
         },
-        "playedGames": 9,
+        "playedGames": 10,
         "form": null,
         "won": 2,
-        "draw": 2,
+        "draw": 3,
         "lost": 5,
-        "points": 8,
+        "points": 9,
         "goalsFor": 13,
         "goalsAgainst": 25,
         "goalDifference": -12
-      },
-      {
-        "position": 18,
-        "team": {
-          "id": 285,
-          "name": "Elche CF",
-          "shortName": "Elche",
-          "tla": "ELC",
-          "crest": "https://crests.football-data.org/285.png"
-        },
-        "playedGames": 9,
-        "form": null,
-        "won": 1,
-        "draw": 4,
-        "lost": 4,
-        "points": 7,
-        "goalsFor": 11,
-        "goalsAgainst": 17,
-        "goalDifference": -6
       },
       {
         "position": 19,
@@ -16594,24 +16564,6 @@
     ]
   },
   "odds": {
-    "Rayo Vallecano": {
-      "winProb": 0.40565582737649447,
-      "drawProb": 0.2755176862239197,
-      "loseProb": 0.31882648639958594,
-      "over25Prob": 0.47393364928909953,
-      "isHome": true,
-      "opponent": "Celta Vigo",
-      "matchDate": "2026-10-31T15:15:00Z"
-    },
-    "Elche CF": {
-      "winProb": 0.38416651387482764,
-      "drawProb": 0.2827100754924547,
-      "loseProb": 0.33312341063271766,
-      "over25Prob": 0.5076142131979695,
-      "isHome": true,
-      "opponent": "Valencia",
-      "matchDate": "2026-11-01T17:30:00Z"
-    },
     "Real Racing Club de Santander": {
       "winProb": 0.1164878476023648,
       "drawProb": 0.13743522370629882,
@@ -16625,16 +16577,16 @@
       "winProb": 0.17499531513523645,
       "drawProb": 0.21925167093509904,
       "loseProb": 0.6057530139296645,
-      "over25Prob": 0.6024096385542169,
+      "over25Prob": 0.641025641025641,
       "isHome": false,
       "opponent": "Villarreal",
       "matchDate": "2026-10-30T20:00:00Z"
     },
     "Valencia": {
-      "winProb": 0.33312341063271766,
-      "drawProb": 0.2827100754924547,
-      "loseProb": 0.38416651387482764,
-      "over25Prob": 0.5076142131979695,
+      "winProb": 0.3501376386874583,
+      "drawProb": 0.27928867367445354,
+      "loseProb": 0.3705736876380882,
+      "over25Prob": 0.5102040816326531,
       "isHome": false,
       "opponent": "Elche CF",
       "matchDate": "2026-11-01T17:30:00Z"
@@ -16643,7 +16595,7 @@
       "winProb": 0.6057530139296645,
       "drawProb": 0.21925167093509904,
       "loseProb": 0.17499531513523645,
-      "over25Prob": 0.6024096385542169,
+      "over25Prob": 0.641025641025641,
       "isHome": true,
       "opponent": "Espanyol",
       "matchDate": "2026-10-30T20:00:00Z"
@@ -16688,7 +16640,7 @@
       "winProb": 0.31882648639958594,
       "drawProb": 0.2755176862239197,
       "loseProb": 0.40565582737649447,
-      "over25Prob": 0.47393364928909953,
+      "over25Prob": 0.5128205128205129,
       "isHome": false,
       "opponent": "Rayo Vallecano",
       "matchDate": "2026-10-31T15:15:00Z"
@@ -16721,9 +16673,9 @@
       "matchDate": "2026-10-31T13:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.8134316648360271,
-      "drawProb": 0.14561431037188138,
-      "loseProb": 0.04095402479209164,
+      "winProb": 0.8153369428269828,
+      "drawProb": 0.1441754350120884,
+      "loseProb": 0.04048762216092893,
       "over25Prob": 0.8,
       "isHome": true,
       "opponent": "Alavés",
@@ -16756,6 +16708,15 @@
       "opponent": "Deportivo La Coruña",
       "matchDate": "2026-11-02T20:00:00Z"
     },
+    "Rayo Vallecano": {
+      "winProb": 0.40565582737649447,
+      "drawProb": 0.2755176862239197,
+      "loseProb": 0.31882648639958594,
+      "over25Prob": 0.5128205128205129,
+      "isHome": true,
+      "opponent": "Celta Vigo",
+      "matchDate": "2026-10-31T15:15:00Z"
+    },
     "Málaga": {
       "winProb": 0.1350164411978902,
       "drawProb": 0.1781607927084942,
@@ -16766,93 +16727,102 @@
       "matchDate": "2026-10-31T17:30:00Z"
     },
     "Alavés": {
-      "winProb": 0.04095402479209164,
-      "drawProb": 0.14561431037188138,
-      "loseProb": 0.8134316648360271,
+      "winProb": 0.04048762216092893,
+      "drawProb": 0.1441754350120884,
+      "loseProb": 0.8153369428269828,
       "over25Prob": 0.8,
       "isHome": false,
       "opponent": "Barcelona",
       "matchDate": "2026-10-31T20:00:00Z"
+    },
+    "Elche CF": {
+      "winProb": 0.3705736876380882,
+      "drawProb": 0.27928867367445354,
+      "loseProb": 0.3501376386874583,
+      "over25Prob": 0.5102040816326531,
+      "isHome": true,
+      "opponent": "Valencia",
+      "matchDate": "2026-11-01T17:30:00Z"
     }
   },
   "news": [
     {
-      "title": "Koundé sigue al margen del grupo y será baja en El Clásico",
-      "link": "https://www.jornadaperfecta.com/blog/kounde-estado-barcelona-j10/",
-      "date": "Sat, 24 Oct 2026 09:42:39 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Bellerín vuelve al grupo en el entrenamiento del Betis",
-      "link": "https://www.jornadaperfecta.com/blog/bellerin-estado-betis-j10/",
-      "date": "Sat, 24 Oct 2026 09:40:42 +0000",
-      "img": "https://cdn.biwenger.com/i/t/87.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Ratiu y Nteka, fuera de la convocatoria del Rayo Vallecano",
-      "link": "https://www.jornadaperfecta.com/blog/ratiu-baja-convocatoria-rayo-vallecano-j10/",
-      "date": "Sat, 24 Oct 2026 09:13:57 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Stassin y Guridi vuelven a entrenar con el grupo en el Sevilla",
-      "link": "https://www.jornadaperfecta.com/blog/stassin-guridi-estado-sevilla-j10/",
-      "date": "Sat, 24 Oct 2026 09:03:40 +0000",
-      "img": "https://cdn.biwenger.com/i/t/17.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Mourinho, antes del Clásico: “El Madrid con Mourinho gana títulos”",
-      "link": "https://www.jornadaperfecta.com/blog/mourinho-previa-barcelona-real-madrid-j10-26-27/",
-      "date": "Sat, 24 Oct 2026 08:20:39 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Barcelona vs Real Madrid: 10€ en Freebets con Kirolbet",
-      "link": "https://www.jornadaperfecta.com/blog/kirolbet-barcelona-vs-real-madrid-j10/",
-      "date": "Sat, 24 Oct 2026 07:00:45 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/10/kirolbet-barcelona-vs-real-madrid.webp",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Camavinga apunta a titular en El Clásico: El plan de Mourinho",
-      "link": "https://www.jornadaperfecta.com/blog/camavinga-titular-el-clasico-j10/",
-      "date": "Fri, 23 Oct 2026 18:53:53 +0000",
+      "title": "Ferland Mendy, de nuevo fuera de la convocatoria del Real Madrid",
+      "link": "https://www.jornadaperfecta.com/blog/mendy-baja-convocatoria-real-madrid-j10/",
+      "date": "Sat, 24 Oct 2026 14:36:54 +0000",
       "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "¡Chupe y Calero, suplentes en el Málaga!",
-      "link": "https://www.jornadaperfecta.com/blog/once-malaga-j10-26-27/",
-      "date": "Fri, 23 Oct 2026 18:04:13 +0000",
-      "img": "https://cdn.biwenger.com/i/t/65.png",
+      "title": "Fer Niño, tuvo que pedir el cambio en el Rayo &#8211; Elche: ¿preocupa?",
+      "link": "https://www.jornadaperfecta.com/blog/fer-nino-molestias-lumbares-elche/",
+      "date": "Sat, 24 Oct 2026 14:17:36 +0000",
+      "img": "https://cdn.biwenger.com/i/t/75.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "¡Mariano, titular en el Alavés!",
-      "link": "https://www.jornadaperfecta.com/blog/once-alaves-j10-26-27/",
-      "date": "Fri, 23 Oct 2026 18:01:09 +0000",
-      "img": "https://cdn.biwenger.com/i/t/91.png",
+      "title": "Giráldez, sobre Hugo González y el buen momento de Javi Rodríguez",
+      "link": "https://www.jornadaperfecta.com/blog/giraldez-previa-celta-betis-j10-26-27/",
+      "date": "Sat, 24 Oct 2026 13:00:10 +0000",
+      "img": "https://cdn.biwenger.com/i/t/5.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "&#8216;El Suvidón&#8217; de VERSUS: ¡Gana x10 veces más apostando a El Clásico!",
-      "link": "https://www.jornadaperfecta.com/blog/suvidon-versus-el-clasico/",
-      "date": "Fri, 23 Oct 2026 18:00:04 +0000",
-      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/10/multiplicador-apuesta-versus-barcelona-madrid.webp",
+      "title": "Matarazzo recupera a Aramburu y Yangel Herrera",
+      "link": "https://www.jornadaperfecta.com/blog/matarazzo-previa-real-sociedad-levante-j10-26-27/",
+      "date": "Sat, 24 Oct 2026 12:49:00 +0000",
+      "img": "https://cdn.biwenger.com/i/t/13.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Terzic habla de Vivian y la fecha de vuelta de Sancet",
+      "link": "https://www.jornadaperfecta.com/blog/terzic-previa-athletic-getafe-j10-26-27/",
+      "date": "Sat, 24 Oct 2026 12:32:06 +0000",
+      "img": "https://cdn.biwenger.com/i/t/1.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Apuesta 10€ al Clásico y gana 100€ en Freebets con la Mega Cuota de Betway",
+      "link": "https://www.jornadaperfecta.com/blog/mega-cuota-betway-clasico/",
+      "date": "Sat, 24 Oct 2026 12:00:04 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/10/mega-cuota-betway-lamine-mbappe-gol.jpg",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Pellegrini confirma que Isco ya juega sin dolor: buenas noticias",
+      "link": "https://www.jornadaperfecta.com/blog/pellegrini-previa-celta-betis-j10-26-27/",
+      "date": "Sat, 24 Oct 2026 11:32:59 +0000",
+      "img": "https://cdn.biwenger.com/i/t/87.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Flick confirma la baja de Koundé y habla de Rodri y Xavi Espart",
+      "link": "https://www.jornadaperfecta.com/blog/flick-previa-barcelona-real-madrid-j10-26-27/",
+      "date": "Sat, 24 Oct 2026 11:18:27 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Bordalás cuenta con Enes Ünal; Zaid Romero y Mangala, bajas",
+      "link": "https://www.jornadaperfecta.com/blog/bordalas-previa-athletic-getafe-j10-26-27/",
+      "date": "Sat, 24 Oct 2026 10:45:20 +0000",
+      "img": "https://cdn.biwenger.com/i/t/8.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Luis Castro confirma la baja de Dela y minutos para Hugo Sotelo",
+      "link": "https://www.jornadaperfecta.com/blog/luis-castro-previa-real-sociedad-levante-j10-26-27/",
+      "date": "Sat, 24 Oct 2026 10:34:03 +0000",
+      "img": "https://cdn.biwenger.com/i/t/10.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -16861,7 +16831,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-10-24T09:54:23.526Z",
+    "updatedAt": "2026-10-24T14:57:31.267Z",
     "players": [
       {
         "id": "37428",
