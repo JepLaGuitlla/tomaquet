@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-25T10:16:07.412Z",
+  "updatedAt": "2026-10-25T15:08:09.177Z",
   "players": [
     {
       "id": 11,
@@ -213,9 +213,9 @@
       "teamId": 8,
       "status": "ok",
       "jForm": [
+        -2,
         2,
         -2,
-        null,
         null,
         null
       ],
@@ -279,10 +279,10 @@
       "teamId": 1,
       "status": "ok",
       "jForm": [
+        12,
         5,
         null,
         7,
-        4,
         4
       ],
       "clausula": null
@@ -477,11 +477,11 @@
       "teamId": 1,
       "status": "ok",
       "jForm": [
+        null,
         -1,
         4,
         6,
-        4,
-        6
+        4
       ],
       "clausula": null
     },
@@ -891,11 +891,11 @@
       "teamId": 1,
       "status": "ok",
       "jForm": [
+        4,
         3,
         3,
         5,
-        4,
-        3
+        4
       ],
       "clausula": null
     },
@@ -1023,11 +1023,11 @@
       "teamId": 8,
       "status": "ok",
       "jForm": [
+        -3,
         2,
         -1,
         null,
-        -2,
-        2
+        -2
       ],
       "clausula": null
     },
@@ -4998,11 +4998,11 @@
       "teamId": 8,
       "status": "ok",
       "jForm": [
+        3,
         2,
         3,
         9,
-        null,
-        12
+        null
       ],
       "clausula": null
     },
@@ -5801,7 +5801,7 @@
     {
       "id": 30334,
       "slug": "angel-fortuno",
-      "name": "Fortu��o",
+      "name": "Fortuño",
       "position": 1,
       "price": 1450000,
       "points": 24,
@@ -5944,9 +5944,9 @@
       "teamId": 8,
       "status": "ok",
       "jForm": [
+        null,
         3,
         2,
-        null,
         null,
         null
       ],
@@ -6535,11 +6535,11 @@
       "teamId": 8,
       "status": "ok",
       "jForm": [
+        1,
         null,
         1,
         2,
-        null,
-        2
+        null
       ],
       "clausula": null
     },
@@ -7412,10 +7412,10 @@
       "teamId": 1,
       "status": "ok",
       "jForm": [
+        4,
         3,
         1,
         3,
-        null,
         null
       ],
       "clausula": null
@@ -9084,10 +9084,10 @@
       "teamId": 8,
       "status": "ok",
       "jForm": [
+        2,
         13,
         0,
         7,
-        2,
         2
       ],
       "clausula": null
@@ -10557,11 +10557,11 @@
       "teamId": 1,
       "status": "ok",
       "jForm": [
+        4,
         null,
         3,
         null,
-        1,
-        5
+        1
       ],
       "clausula": null
     },
@@ -11480,11 +11480,11 @@
       "teamId": 8,
       "status": "ok",
       "jForm": [
+        3,
         6,
         2,
         5,
-        3,
-        2
+        3
       ],
       "clausula": null
     },
@@ -12438,9 +12438,9 @@
           13,
           18
         ],
-        "teamSize": 11,
-        "teamValue": 43560000,
-        "teamValueInc": 140000,
+        "teamSize": 10,
+        "teamValue": 41530000,
+        "teamValueInc": 150000,
         "position": 16,
         "positionInc": -1,
         "role": ""
@@ -12667,8 +12667,8 @@
       "name": "JanBox",
       "manager": "JanBox",
       "points": 285,
-      "value": 43560000,
-      "trend": 140000,
+      "value": 41530000,
+      "trend": 150000,
       "players": []
     },
     {
@@ -12872,6 +12872,21 @@
     ]
   },
   "boardTomaquet": [
+    {
+      "type": "transfer",
+      "date": 1792938781,
+      "content": [
+        {
+          "player": 43261,
+          "from": {
+            "id": 14065964,
+            "name": "JanBox",
+            "icon": "i/u/14065964.png?v=16"
+          },
+          "amount": 2047300
+        }
+      ]
+    },
     {
       "type": "transfer",
       "date": 1792920238,
@@ -13538,48 +13553,6 @@
             "icon": "i/u/8070044.png?v=6"
           },
           "amount": 3840000,
-          "type": "clause"
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1792692030,
-      "content": [
-        {
-          "player": 1760,
-          "from": {
-            "id": 8070044,
-            "name": "CA CABA JUNIORS",
-            "icon": "i/u/8070044.png?v=6"
-          },
-          "to": {
-            "id": 12696899,
-            "name": "CIGALERU",
-            "icon": "i/u/12696899.png"
-          },
-          "amount": 3300000,
-          "type": "clause"
-        }
-      ]
-    },
-    {
-      "type": "transfer",
-      "date": 1792690097,
-      "content": [
-        {
-          "player": 33971,
-          "from": {
-            "id": 12696899,
-            "name": "CIGALERU",
-            "icon": "i/u/12696899.png"
-          },
-          "to": {
-            "id": 14072078,
-            "name": "TL*LI",
-            "icon": "i/u/14072078.png"
-          },
-          "amount": 1728810,
           "type": "clause"
         }
       ]
@@ -15215,6 +15188,25 @@
       {
         "position": 8,
         "team": {
+          "id": 77,
+          "name": "Athletic Club",
+          "shortName": "Athletic",
+          "tla": "ATH",
+          "crest": "https://crests.football-data.org/77.png"
+        },
+        "playedGames": 9,
+        "form": null,
+        "won": 3,
+        "draw": 3,
+        "lost": 3,
+        "points": 12,
+        "goalsFor": 12,
+        "goalsAgainst": 9,
+        "goalDifference": 3
+      },
+      {
+        "position": 9,
+        "team": {
           "id": 94,
           "name": "Villarreal CF",
           "shortName": "Villarreal",
@@ -15232,7 +15224,7 @@
         "goalDifference": 1
       },
       {
-        "position": 9,
+        "position": 10,
         "team": {
           "id": 558,
           "name": "RC Celta de Vigo",
@@ -15251,7 +15243,7 @@
         "goalDifference": 3
       },
       {
-        "position": 10,
+        "position": 11,
         "team": {
           "id": 560,
           "name": "RC Deportivo La Coruña",
@@ -15270,7 +15262,7 @@
         "goalDifference": 0
       },
       {
-        "position": 11,
+        "position": 12,
         "team": {
           "id": 79,
           "name": "CA Osasuna",
@@ -15289,7 +15281,7 @@
         "goalDifference": -8
       },
       {
-        "position": 12,
+        "position": 13,
         "team": {
           "id": 5335,
           "name": "Real Racing Club de Santander",
@@ -15308,7 +15300,7 @@
         "goalDifference": -11
       },
       {
-        "position": 13,
+        "position": 14,
         "team": {
           "id": 88,
           "name": "Levante UD",
@@ -15327,7 +15319,7 @@
         "goalDifference": -2
       },
       {
-        "position": 14,
+        "position": 15,
         "team": {
           "id": 285,
           "name": "Elche CF",
@@ -15346,45 +15338,7 @@
         "goalDifference": -3
       },
       {
-        "position": 15,
-        "team": {
-          "id": 77,
-          "name": "Athletic Club",
-          "shortName": "Athletic",
-          "tla": "ATH",
-          "crest": "https://crests.football-data.org/77.png"
-        },
-        "playedGames": 8,
-        "form": null,
-        "won": 2,
-        "draw": 3,
-        "lost": 3,
-        "points": 9,
-        "goalsFor": 8,
-        "goalsAgainst": 9,
-        "goalDifference": -1
-      },
-      {
         "position": 16,
-        "team": {
-          "id": 82,
-          "name": "Getafe CF",
-          "shortName": "Getafe",
-          "tla": "GET",
-          "crest": "https://crests.football-data.org/82.png"
-        },
-        "playedGames": 9,
-        "form": null,
-        "won": 2,
-        "draw": 3,
-        "lost": 4,
-        "points": 9,
-        "goalsFor": 5,
-        "goalsAgainst": 11,
-        "goalDifference": -6
-      },
-      {
-        "position": 17,
         "team": {
           "id": 87,
           "name": "Rayo Vallecano de Madrid",
@@ -15401,6 +15355,25 @@
         "goalsFor": 12,
         "goalsAgainst": 20,
         "goalDifference": -8
+      },
+      {
+        "position": 17,
+        "team": {
+          "id": 82,
+          "name": "Getafe CF",
+          "shortName": "Getafe",
+          "tla": "GET",
+          "crest": "https://crests.football-data.org/82.png"
+        },
+        "playedGames": 10,
+        "form": null,
+        "won": 2,
+        "draw": 3,
+        "lost": 5,
+        "points": 9,
+        "goalsFor": 5,
+        "goalsAgainst": 15,
+        "goalDifference": -10
       },
       {
         "position": 18,
@@ -15463,13 +15436,13 @@
     "forms": {
       "77": {
         "results": [
+          "W",
           "L",
           "D",
           "D",
-          "D",
-          "W"
+          "D"
         ],
-        "gf": 5,
+        "gf": 6,
         "ga": 4,
         "crest": "https://crests.football-data.org/77.png",
         "name": "Athletic Club"
@@ -15482,7 +15455,7 @@
           "W",
           "W"
         ],
-        "gf": 12,
+        "gf": 10,
         "ga": 2,
         "crest": "https://crests.football-data.org/78.png",
         "name": "Club Atlético de Madrid"
@@ -15503,13 +15476,13 @@
       "80": {
         "results": [
           "L",
+          "L",
           "D",
           "L",
-          "L",
-          "W"
+          "L"
         ],
-        "gf": 5,
-        "ga": 7,
+        "gf": 4,
+        "ga": 9,
         "crest": "https://crests.football-data.org/80.png",
         "name": "RCD Espanyol de Barcelona"
       },
@@ -15528,14 +15501,14 @@
       },
       "82": {
         "results": [
+          "L",
           "D",
           "L",
           "W",
-          "L",
-          "D"
+          "L"
         ],
-        "gf": 3,
-        "ga": 6,
+        "gf": 2,
+        "ga": 9,
         "crest": "https://crests.football-data.org/82.png",
         "name": "Getafe CF"
       },
@@ -15567,14 +15540,14 @@
       },
       "87": {
         "results": [
+          "L",
           "D",
           "D",
           "W",
-          "L",
-          "W"
+          "L"
         ],
-        "gf": 8,
-        "ga": 9,
+        "gf": 5,
+        "ga": 10,
         "crest": "https://crests.football-data.org/87.png",
         "name": "Rayo Vallecano de Madrid"
       },
@@ -15619,27 +15592,27 @@
       },
       "94": {
         "results": [
+          "W",
           "D",
           "L",
           "W",
-          "W",
-          "L"
+          "W"
         ],
-        "gf": 7,
-        "ga": 5,
+        "gf": 8,
+        "ga": 4,
         "crest": "https://crests.football-data.org/94.png",
         "name": "Villarreal CF"
       },
       "95": {
         "results": [
+          "L",
           "D",
           "D",
           "L",
-          "W",
-          "L"
+          "W"
         ],
-        "gf": 5,
-        "ga": 6,
+        "gf": 6,
+        "ga": 7,
         "crest": "https://crests.football-data.org/95.png",
         "name": "Valencia CF"
       },
@@ -15658,14 +15631,14 @@
       },
       "285": {
         "results": [
+          "W",
           "D",
           "D",
           "W",
-          "L",
-          "D"
+          "L"
         ],
-        "gf": 6,
-        "ga": 5,
+        "gf": 8,
+        "ga": 4,
         "crest": "https://crests.football-data.org/285.png",
         "name": "Elche CF"
       },
@@ -15697,24 +15670,24 @@
       },
       "560": {
         "results": [
-          "D",
           "L",
           "D",
           "L",
-          "D"
+          "D",
+          "L"
         ],
-        "gf": 5,
+        "gf": 4,
         "ga": 7,
         "crest": "https://crests.football-data.org/560.png",
         "name": "RC Deportivo La Coruña"
       },
       "5335": {
         "results": [
+          "W",
           "L",
           "D",
           "L",
-          "L",
-          "W"
+          "L"
         ],
         "gf": 6,
         "ga": 17,
@@ -15723,74 +15696,6 @@
       }
     },
     "nextMatches": [
-      {
-        "id": 564727,
-        "matchday": 10,
-        "date": "2026-10-24T14:15:00Z",
-        "home": {
-          "id": 5335,
-          "name": "Real Racing Club de Santander",
-          "short": "Santander",
-          "crest": "https://crests.football-data.org/5335.png"
-        },
-        "away": {
-          "id": 80,
-          "name": "RCD Espanyol de Barcelona",
-          "short": "Espanyol",
-          "crest": "https://crests.football-data.org/80.png"
-        }
-      },
-      {
-        "id": 564722,
-        "matchday": 10,
-        "date": "2026-10-24T16:30:00Z",
-        "home": {
-          "id": 95,
-          "name": "Valencia CF",
-          "short": "Valencia",
-          "crest": "https://crests.football-data.org/95.png"
-        },
-        "away": {
-          "id": 94,
-          "name": "Villarreal CF",
-          "short": "Villarreal",
-          "crest": "https://crests.football-data.org/94.png"
-        }
-      },
-      {
-        "id": 564724,
-        "matchday": 10,
-        "date": "2026-10-24T19:00:00Z",
-        "home": {
-          "id": 78,
-          "name": "Club Atlético de Madrid",
-          "short": "Atleti",
-          "crest": "https://crests.football-data.org/78.png"
-        },
-        "away": {
-          "id": 560,
-          "name": "RC Deportivo La Coruña",
-          "short": "Deportivo",
-          "crest": "https://crests.football-data.org/560.png"
-        }
-      },
-      {
-        "id": 564720,
-        "matchday": 10,
-        "date": "2026-10-25T13:00:00Z",
-        "home": {
-          "id": 77,
-          "name": "Athletic Club",
-          "short": "Athletic",
-          "crest": "https://crests.football-data.org/77.png"
-        },
-        "away": {
-          "id": 82,
-          "name": "Getafe CF",
-          "short": "Getafe",
-          "crest": "https://crests.football-data.org/82.png"
-        }
-      },
       {
         "id": 564725,
         "matchday": 10,
@@ -16028,26 +15933,94 @@
           "short": "Osasuna",
           "crest": "https://crests.football-data.org/79.png"
         }
+      }
+    ],
+    "recentResults": [
+      {
+        "date": "2026-10-25T13:00:00Z",
+        "home": {
+          "name": "Athletic Club",
+          "short": "Athletic",
+          "crest": "https://crests.football-data.org/77.png"
+        },
+        "away": {
+          "name": "Getafe CF",
+          "short": "Getafe",
+          "crest": "https://crests.football-data.org/82.png"
+        },
+        "score": {
+          "home": 4,
+          "away": 0
+        }
       },
       {
-        "id": 564718,
-        "matchday": 10,
+        "date": "2026-10-24T19:00:00Z",
+        "home": {
+          "name": "Club Atlético de Madrid",
+          "short": "Atleti",
+          "crest": "https://crests.football-data.org/78.png"
+        },
+        "away": {
+          "name": "RC Deportivo La Coruña",
+          "short": "Deportivo",
+          "crest": "https://crests.football-data.org/560.png"
+        },
+        "score": {
+          "home": 1,
+          "away": 0
+        }
+      },
+      {
+        "date": "2026-10-24T16:30:00Z",
+        "home": {
+          "name": "Valencia CF",
+          "short": "Valencia",
+          "crest": "https://crests.football-data.org/95.png"
+        },
+        "away": {
+          "name": "Villarreal CF",
+          "short": "Villarreal",
+          "crest": "https://crests.football-data.org/94.png"
+        },
+        "score": {
+          "home": 1,
+          "away": 2
+        }
+      },
+      {
+        "date": "2026-10-24T14:15:00Z",
+        "home": {
+          "name": "Real Racing Club de Santander",
+          "short": "Santander",
+          "crest": "https://crests.football-data.org/5335.png"
+        },
+        "away": {
+          "name": "RCD Espanyol de Barcelona",
+          "short": "Espanyol",
+          "crest": "https://crests.football-data.org/80.png"
+        },
+        "score": {
+          "home": 2,
+          "away": 1
+        }
+      },
+      {
         "date": "2026-10-24T12:00:00Z",
         "home": {
-          "id": 87,
           "name": "Rayo Vallecano de Madrid",
           "short": "Rayo Vallecano",
           "crest": "https://crests.football-data.org/87.png"
         },
         "away": {
-          "id": 285,
           "name": "Elche CF",
           "short": "Elche",
           "crest": "https://crests.football-data.org/285.png"
+        },
+        "score": {
+          "home": 0,
+          "away": 3
         }
-      }
-    ],
-    "recentResults": [
+      },
       {
         "date": "2026-10-23T19:00:00Z",
         "home": {
@@ -16098,91 +16071,6 @@
           "home": 1,
           "away": 1
         }
-      },
-      {
-        "date": "2026-10-18T19:00:00Z",
-        "home": {
-          "name": "Real Madrid CF",
-          "short": "Real Madrid",
-          "crest": "https://crests.football-data.org/86.png"
-        },
-        "away": {
-          "name": "Sevilla FC",
-          "short": "Sevilla FC",
-          "crest": "https://crests.football-data.org/559.png"
-        },
-        "score": {
-          "home": 4,
-          "away": 1
-        }
-      },
-      {
-        "date": "2026-10-18T16:30:00Z",
-        "home": {
-          "name": "Málaga CF",
-          "short": "Málaga",
-          "crest": "https://crests.football-data.org/84.png"
-        },
-        "away": {
-          "name": "Real Sociedad de Fútbol",
-          "short": "Real Sociedad",
-          "crest": "https://crests.football-data.org/92.png"
-        },
-        "score": {
-          "home": 2,
-          "away": 5
-        }
-      },
-      {
-        "date": "2026-10-18T14:15:00Z",
-        "home": {
-          "name": "RC Celta de Vigo",
-          "short": "Celta",
-          "crest": "https://crests.football-data.org/558.png"
-        },
-        "away": {
-          "name": "Deportivo Alavés",
-          "short": "Alavés",
-          "crest": "https://crests.football-data.org/263.png"
-        },
-        "score": {
-          "home": 2,
-          "away": 1
-        }
-      },
-      {
-        "date": "2026-10-18T12:00:00Z",
-        "home": {
-          "name": "CA Osasuna",
-          "short": "Osasuna",
-          "crest": "https://crests.football-data.org/79.png"
-        },
-        "away": {
-          "name": "Real Racing Club de Santander",
-          "short": "Santander",
-          "crest": "https://crests.football-data.org/5335.png"
-        },
-        "score": {
-          "home": 2,
-          "away": 0
-        }
-      },
-      {
-        "date": "2026-10-17T19:00:00Z",
-        "home": {
-          "name": "Valencia CF",
-          "short": "Valencia",
-          "crest": "https://crests.football-data.org/95.png"
-        },
-        "away": {
-          "name": "Athletic Club",
-          "short": "Athletic",
-          "crest": "https://crests.football-data.org/77.png"
-        },
-        "score": {
-          "home": 0,
-          "away": 0
-        }
       }
     ]
   },
@@ -16197,9 +16085,9 @@
       "matchDate": "2026-11-01T20:00:00Z"
     },
     "Getafe": {
-      "winProb": 0.3185779342170893,
-      "drawProb": 0.3164611373119924,
-      "loseProb": 0.36496092847091843,
+      "winProb": 0.31480905673177484,
+      "drawProb": 0.3169008112615541,
+      "loseProb": 0.368290132006671,
       "over25Prob": 0.4,
       "isHome": true,
       "opponent": "Sevilla",
@@ -16260,18 +16148,18 @@
       "matchDate": "2026-11-01T15:15:00Z"
     },
     "Sevilla": {
-      "winProb": 0.36496092847091843,
-      "drawProb": 0.3164611373119924,
-      "loseProb": 0.3185779342170893,
+      "winProb": 0.368290132006671,
+      "drawProb": 0.3169008112615541,
+      "loseProb": 0.31480905673177484,
       "over25Prob": 0.4,
       "isHome": false,
       "opponent": "Getafe",
       "matchDate": "2026-11-01T13:00:00Z"
     },
     "CA Osasuna": {
-      "winProb": 0.2788167290037402,
-      "drawProb": 0.2927575654539272,
-      "loseProb": 0.4284257055423326,
+      "winProb": 0.281288903831999,
+      "drawProb": 0.2906031059456414,
+      "loseProb": 0.4281079902223595,
       "over25Prob": 0.4385964912280702,
       "isHome": false,
       "opponent": "Deportivo La Coruña",
@@ -16359,9 +16247,9 @@
       "matchDate": "2026-11-01T17:30:00Z"
     },
     "Deportivo La Coruña": {
-      "winProb": 0.4284257055423326,
-      "drawProb": 0.2927575654539272,
-      "loseProb": 0.2788167290037402,
+      "winProb": 0.4281079902223595,
+      "drawProb": 0.2906031059456414,
+      "loseProb": 0.281288903831999,
       "over25Prob": 0.4385964912280702,
       "isHome": true,
       "opponent": "CA Osasuna",
@@ -16369,6 +16257,46 @@
     }
   },
   "news": [
+    {
+      "title": "Ruiz de Galarreta, sustituido por lesión en San Mamés",
+      "link": "https://www.jornadaperfecta.com/blog/ruiz-de-galarreta-molestias-athletic-club/",
+      "date": "Sun, 25 Oct 2026 13:34:12 +0000",
+      "img": "https://cdn.biwenger.com/i/t/1.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "¡Courtois podría jugar El Clásico!",
+      "link": "https://www.jornadaperfecta.com/blog/courtois-baja-clasico-j10-real-madrid/",
+      "date": "Sun, 25 Oct 2026 12:35:18 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Última oportunidad para Manolo",
+      "link": "https://www.jornadaperfecta.com/blog/manolo-destitucion-espanyol/",
+      "date": "Sun, 25 Oct 2026 12:33:27 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/10/espanyol-26-27-e1792931141206.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Arrasate reabre el debate de la portería",
+      "link": "https://www.jornadaperfecta.com/blog/arrasate-previa-sevilla-osasuna-j10-26-27/",
+      "date": "Sun, 25 Oct 2026 12:15:19 +0000",
+      "img": "https://cdn.biwenger.com/i/t/93.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "García Plaza confirma tres altas para recibir a Osasuna",
+      "link": "https://www.jornadaperfecta.com/blog/garcia-plaza-previa-sevilla-osasuna-j10-26-27/",
+      "date": "Sun, 25 Oct 2026 11:41:39 +0000",
+      "img": "https://cdn.biwenger.com/i/t/17.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Promoción Betsson: multiplica tus ganancias en el Clásico",
       "link": "https://www.jornadaperfecta.com/blog/betsson-barcelona-vs-real-madrid-el-clasico/",
@@ -16408,53 +16336,13 @@
       "img": "https://cdn.biwenger.com/i/t/70.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Ferland Mendy, de nuevo fuera de la convocatoria del Real Madrid",
-      "link": "https://www.jornadaperfecta.com/blog/mendy-baja-convocatoria-real-madrid-j10/",
-      "date": "Sat, 24 Oct 2026 14:36:54 +0000",
-      "img": "https://cdn.biwenger.com/i/t/15.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Fer Niño, tuvo que pedir el cambio en el Rayo &#8211; Elche: ¿preocupa?",
-      "link": "https://www.jornadaperfecta.com/blog/fer-nino-molestias-lumbares-elche/",
-      "date": "Sat, 24 Oct 2026 14:17:36 +0000",
-      "img": "https://cdn.biwenger.com/i/t/75.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Giráldez, sobre Hugo González y el buen momento de Javi Rodríguez",
-      "link": "https://www.jornadaperfecta.com/blog/giraldez-previa-celta-betis-j10-26-27/",
-      "date": "Sat, 24 Oct 2026 13:00:10 +0000",
-      "img": "https://cdn.biwenger.com/i/t/5.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Matarazzo recupera a Aramburu y Yangel Herrera",
-      "link": "https://www.jornadaperfecta.com/blog/matarazzo-previa-real-sociedad-levante-j10-26-27/",
-      "date": "Sat, 24 Oct 2026 12:49:00 +0000",
-      "img": "https://cdn.biwenger.com/i/t/13.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Terzic habla de Vivian y la fecha de vuelta de Sancet",
-      "link": "https://www.jornadaperfecta.com/blog/terzic-previa-athletic-getafe-j10-26-27/",
-      "date": "Sat, 24 Oct 2026 12:32:06 +0000",
-      "img": "https://cdn.biwenger.com/i/t/1.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-10-25T10:16:06.176Z",
+    "updatedAt": "2026-10-25T15:08:07.469Z",
     "players": [
       {
         "id": "37428",
@@ -16697,6 +16585,18 @@
         "minutesPerGoal": 270
       },
       {
+        "id": "2294",
+        "name": "Álex Berenguer",
+        "team": "Athletic Club",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 10,
+        "goals": 3,
+        "assists": 4,
+        "penalties": 1,
+        "minutesPerGoal": 300
+      },
+      {
         "id": "156746",
         "name": "Iván Romero",
         "team": "Levante UD",
@@ -16750,11 +16650,11 @@
         "team": "Real Betis Balompié",
         "position": "",
         "nationality": "Morocco",
-        "appearances": 6,
+        "appearances": 7,
         "goals": 3,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 180
+        "minutesPerGoal": 210
       },
       {
         "id": "8412",
@@ -16786,11 +16686,11 @@
         "team": "Real Betis Balompié",
         "position": "",
         "nationality": "Spain",
-        "appearances": 9,
+        "appearances": 10,
         "goals": 2,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 405
+        "minutesPerGoal": 450
       },
       {
         "id": "213043",
@@ -16803,6 +16703,18 @@
         "assists": 1,
         "penalties": 0,
         "minutesPerGoal": 360
+      },
+      {
+        "id": "151439",
+        "name": "Aitor Paredes Casamichana",
+        "team": "Athletic Club",
+        "position": "",
+        "nationality": "Spain",
+        "appearances": 10,
+        "goals": 2,
+        "assists": 0,
+        "penalties": 0,
+        "minutesPerGoal": 450
       },
       {
         "id": "247061",
@@ -16925,28 +16837,16 @@
         "minutesPerGoal": 405
       },
       {
-        "id": "2294",
-        "name": "Álex Berenguer",
-        "team": "Athletic Club",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 9,
-        "goals": 2,
-        "assists": 1,
-        "penalties": 1,
-        "minutesPerGoal": 405
-      },
-      {
         "id": "101870",
         "name": "Roberto Navarro",
         "team": "Athletic Club",
         "position": "",
         "nationality": "Spain",
-        "appearances": 9,
+        "appearances": 10,
         "goals": 2,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 405
+        "minutesPerGoal": 450
       },
       {
         "id": "152458",
@@ -16954,11 +16854,23 @@
         "team": "Getafe CF",
         "position": "",
         "nationality": "Uruguay",
-        "appearances": 9,
+        "appearances": 10,
         "goals": 2,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 405
+        "minutesPerGoal": 450
+      },
+      {
+        "id": "32629",
+        "name": "Iñaki Williams",
+        "team": "Athletic Club",
+        "position": "",
+        "nationality": "Ghana",
+        "appearances": 10,
+        "goals": 2,
+        "assists": 2,
+        "penalties": 0,
+        "minutesPerGoal": 450
       },
       {
         "id": "83406",
@@ -16966,11 +16878,11 @@
         "team": "RC Celta de Vigo",
         "position": "",
         "nationality": "Spain",
-        "appearances": 9,
+        "appearances": 10,
         "goals": 2,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 405
+        "minutesPerGoal": 450
       },
       {
         "id": "32415",
@@ -17014,11 +16926,11 @@
         "team": "RC Celta de Vigo",
         "position": "",
         "nationality": "Spain",
-        "appearances": 8,
+        "appearances": 9,
         "goals": 2,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 360
+        "minutesPerGoal": 405
       },
       {
         "id": "277484",
@@ -17050,11 +16962,11 @@
         "team": "Real Betis Balompié",
         "position": "",
         "nationality": "Spain",
-        "appearances": 9,
+        "appearances": 10,
         "goals": 2,
         "assists": 0,
         "penalties": 1,
-        "minutesPerGoal": 405
+        "minutesPerGoal": 450
       },
       {
         "id": "180137",
@@ -17189,18 +17101,6 @@
         "minutesPerGoal": 810
       },
       {
-        "id": "151439",
-        "name": "Aitor Paredes Casamichana",
-        "team": "Athletic Club",
-        "position": "",
-        "nationality": "Spain",
-        "appearances": 9,
-        "goals": 1,
-        "assists": 0,
-        "penalties": 0,
-        "minutesPerGoal": 810
-      },
-      {
         "id": "220538",
         "name": "Álex Calatrava",
         "team": "RCD Espanyol de Barcelona",
@@ -17230,11 +17130,11 @@
         "team": "Getafe CF",
         "position": "",
         "nationality": "Turkey",
-        "appearances": 8,
+        "appearances": 9,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 720
+        "minutesPerGoal": 810
       },
       {
         "id": "264254",
@@ -17266,11 +17166,11 @@
         "team": "RC Celta de Vigo",
         "position": "",
         "nationality": "Spain",
-        "appearances": 8,
+        "appearances": 9,
         "goals": 1,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 720
+        "minutesPerGoal": 810
       },
       {
         "id": "32004",
@@ -17302,11 +17202,11 @@
         "team": "Real Betis Balompié",
         "position": "",
         "nationality": "Spain",
-        "appearances": 9,
+        "appearances": 10,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 810
+        "minutesPerGoal": 900
       },
       {
         "id": "177245",
@@ -17362,11 +17262,11 @@
         "team": "Real Betis Balompié",
         "position": "",
         "nationality": "Ireland",
-        "appearances": 8,
+        "appearances": 9,
         "goals": 1,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 720
+        "minutesPerGoal": 810
       },
       {
         "id": "157135",
@@ -17374,11 +17274,11 @@
         "team": "Athletic Club",
         "position": "",
         "nationality": "Spain",
-        "appearances": 7,
+        "appearances": 8,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 630
+        "minutesPerGoal": 720
       },
       {
         "id": "126878",
@@ -17573,18 +17473,6 @@
         "minutesPerGoal": 900
       },
       {
-        "id": "32629",
-        "name": "Iñaki Williams",
-        "team": "Athletic Club",
-        "position": "",
-        "nationality": "Ghana",
-        "appearances": 9,
-        "goals": 1,
-        "assists": 2,
-        "penalties": 0,
-        "minutesPerGoal": 810
-      },
-      {
         "id": "182020",
         "name": "Álvaro Carreras",
         "team": "Real Madrid CF",
@@ -17614,11 +17502,11 @@
         "team": "Getafe CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 8,
+        "appearances": 9,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 720
+        "minutesPerGoal": 810
       },
       {
         "id": "138031",
@@ -17626,11 +17514,11 @@
         "team": "Real Betis Balompié",
         "position": "",
         "nationality": "Brazil",
-        "appearances": 9,
+        "appearances": 10,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 810
+        "minutesPerGoal": 900
       },
       {
         "id": "213280",
