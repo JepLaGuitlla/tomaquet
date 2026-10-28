@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-28T17:30:02.143Z",
+  "updatedAt": "2026-10-28T21:56:46.027Z",
   "players": [
     {
       "id": 11,
@@ -3565,7 +3565,7 @@
     {
       "id": 18570,
       "slug": "joaquin-munoz",
-      "name": "Joaquín Muñoz",
+      "name": "Joaqu��n Muñoz",
       "position": 4,
       "price": 880000,
       "points": 23,
@@ -13343,9 +13343,9 @@
       "matchDate": "2026-11-07T13:00:00Z"
     },
     "Real Madrid": {
-      "winProb": 0.6579418732304848,
-      "drawProb": 0.17842491477436878,
-      "loseProb": 0.16363321199514647,
+      "winProb": 0.669138324646635,
+      "drawProb": 0.17439649496335588,
+      "loseProb": 0.15646518039000917,
       "over25Prob": 0.7142857142857143,
       "isHome": false,
       "opponent": "Valencia",
@@ -13361,9 +13361,9 @@
       "matchDate": "2026-11-08T13:00:00Z"
     },
     "Valencia": {
-      "winProb": 0.16363321199514647,
-      "drawProb": 0.17842491477436878,
-      "loseProb": 0.6579418732304848,
+      "winProb": 0.15646518039000917,
+      "drawProb": 0.17439649496335588,
+      "loseProb": 0.669138324646635,
       "over25Prob": 0.7142857142857143,
       "isHome": true,
       "opponent": "Real Madrid",
@@ -13408,6 +13408,38 @@
   },
   "news": [
     {
+      "title": "Atlético de Madrid: así es el calendario que queda en la Champions League 2026/27",
+      "link": "https://www.jornadaperfecta.com/blog/atletico-de-madrid-champions-league-2026-27/",
+      "date": "Wed, 28 Oct 2026 21:56:17 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Las pruebas descartan lesión de Valverde, ¿titular en El Sardinero?",
+      "link": "https://www.jornadaperfecta.com/blog/valverde-estado-j11-real-madrid/",
+      "date": "Wed, 28 Oct 2026 18:14:47 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Oficial: Eder Sarabia, nuevo entrenador del Espanyol",
+      "link": "https://www.jornadaperfecta.com/blog/eder-sarabia-entrenador-espanyol/",
+      "date": "Wed, 28 Oct 2026 17:48:21 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Oficial: nuevos horarios para los encuentros de Copa del Rey",
+      "link": "https://www.jornadaperfecta.com/blog/suspendida-jornada-copa-del-rey/",
+      "date": "Wed, 28 Oct 2026 17:20:06 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Carlos Romero y Saliba vuelven a entrenar con el Villarreal",
       "link": "https://www.jornadaperfecta.com/blog/carlos-romero-saliba-estado-j11-villarreal/",
       "date": "Wed, 28 Oct 2026 17:12:14 +0000",
@@ -13440,14 +13472,6 @@
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Oficial: Suspendida toda la jornada del miércoles de la Copa del Rey",
-      "link": "https://www.jornadaperfecta.com/blog/suspendida-jornada-copa-del-rey/",
-      "date": "Wed, 28 Oct 2026 12:10:06 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
       "title": "Koundé no entrena con el grupo, pero no está descartado ante el Alavés",
       "link": "https://www.jornadaperfecta.com/blog/kounde-estado-j11/",
       "date": "Wed, 28 Oct 2026 11:55:20 +0000",
@@ -13462,37 +13486,13 @@
       "img": "https://cdn.biwenger.com/i/t/2.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Hidalgo confirma que está cerca el regreso de Aubameyang",
-      "link": "https://www.jornadaperfecta.com/blog/aubameyang-fecha-vuelta-lesion-deportivo/",
-      "date": "Wed, 28 Oct 2026 11:00:12 +0000",
-      "img": "https://cdn.biwenger.com/i/t/6.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Antony, baja en Copa del Rey por un proceso vírico",
-      "link": "https://www.jornadaperfecta.com/blog/antony-virus-estado-j11/",
-      "date": "Wed, 28 Oct 2026 10:26:25 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "SuperPartido Liverpool vs Chelsea: cuota 7.00 mejorada en bwin",
-      "link": "https://www.jornadaperfecta.com/blog/superpartido-bwin-liverpool-vs-chelsea/",
-      "date": "Wed, 28 Oct 2026 08:00:52 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-10-28T17:29:59.653Z",
+    "updatedAt": "2026-10-28T21:56:44.311Z",
     "players": [
       {
         "id": "37428",
