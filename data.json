@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-30T17:19:51.915Z",
+  "updatedAt": "2026-10-30T21:44:06.806Z",
   "players": [
     {
       "id": 11,
@@ -12296,15 +12296,15 @@
           "tla": "VIL",
           "crest": "https://crests.football-data.org/94.png"
         },
-        "playedGames": 10,
+        "playedGames": 11,
         "form": null,
         "won": 3,
         "draw": 3,
-        "lost": 4,
+        "lost": 5,
         "points": 12,
         "goalsFor": 15,
-        "goalsAgainst": 14,
-        "goalDifference": 1
+        "goalsAgainst": 15,
+        "goalDifference": 0
       },
       {
         "position": 11,
@@ -12328,6 +12328,25 @@
       {
         "position": 12,
         "team": {
+          "id": 80,
+          "name": "RCD Espanyol de Barcelona",
+          "shortName": "Espanyol",
+          "tla": "ESP",
+          "crest": "https://crests.football-data.org/80.png"
+        },
+        "playedGames": 11,
+        "form": null,
+        "won": 3,
+        "draw": 2,
+        "lost": 6,
+        "points": 11,
+        "goalsFor": 13,
+        "goalsAgainst": 14,
+        "goalDifference": -1
+      },
+      {
+        "position": 13,
+        "team": {
           "id": 79,
           "name": "CA Osasuna",
           "shortName": "Osasuna",
@@ -12345,7 +12364,7 @@
         "goalDifference": -10
       },
       {
-        "position": 13,
+        "position": 14,
         "team": {
           "id": 5335,
           "name": "Real Racing Club de Santander",
@@ -12364,7 +12383,7 @@
         "goalDifference": -11
       },
       {
-        "position": 14,
+        "position": 15,
         "team": {
           "id": 88,
           "name": "Levante UD",
@@ -12383,7 +12402,7 @@
         "goalDifference": -3
       },
       {
-        "position": 15,
+        "position": 16,
         "team": {
           "id": 285,
           "name": "Elche CF",
@@ -12402,7 +12421,7 @@
         "goalDifference": -3
       },
       {
-        "position": 16,
+        "position": 17,
         "team": {
           "id": 87,
           "name": "Rayo Vallecano de Madrid",
@@ -12421,7 +12440,7 @@
         "goalDifference": -8
       },
       {
-        "position": 17,
+        "position": 18,
         "team": {
           "id": 82,
           "name": "Getafe CF",
@@ -12438,25 +12457,6 @@
         "goalsFor": 5,
         "goalsAgainst": 15,
         "goalDifference": -10
-      },
-      {
-        "position": 18,
-        "team": {
-          "id": 80,
-          "name": "RCD Espanyol de Barcelona",
-          "shortName": "Espanyol",
-          "tla": "ESP",
-          "crest": "https://crests.football-data.org/80.png"
-        },
-        "playedGames": 10,
-        "form": null,
-        "won": 2,
-        "draw": 2,
-        "lost": 6,
-        "points": 8,
-        "goalsFor": 12,
-        "goalsAgainst": 14,
-        "goalDifference": -2
       },
       {
         "position": 19,
@@ -12760,23 +12760,6 @@
       }
     },
     "nextMatches": [
-      {
-        "id": 564737,
-        "matchday": 11,
-        "date": "2026-10-30T20:00:00Z",
-        "home": {
-          "id": 94,
-          "name": "Villarreal CF",
-          "short": "Villarreal",
-          "crest": "https://crests.football-data.org/94.png"
-        },
-        "away": {
-          "id": 80,
-          "name": "RCD Espanyol de Barcelona",
-          "short": "Espanyol",
-          "crest": "https://crests.football-data.org/80.png"
-        }
-      },
       {
         "id": 564730,
         "matchday": 11,
@@ -13098,6 +13081,23 @@
           "name": "FC Barcelona",
           "short": "Barça",
           "crest": "https://crests.football-data.org/81.png"
+        }
+      },
+      {
+        "id": 564737,
+        "matchday": 11,
+        "date": "2026-10-30T20:00:00Z",
+        "home": {
+          "id": 94,
+          "name": "Villarreal CF",
+          "short": "Villarreal",
+          "crest": "https://crests.football-data.org/94.png"
+        },
+        "away": {
+          "id": 80,
+          "name": "RCD Espanyol de Barcelona",
+          "short": "Espanyol",
+          "crest": "https://crests.football-data.org/80.png"
         }
       }
     ],
@@ -13424,6 +13424,70 @@
   },
   "news": [
     {
+      "title": "Gerard Moreno sufre una nueva lesión muscular",
+      "link": "https://www.jornadaperfecta.com/blog/gerard-moreno-lesion-muscular-villarreal/",
+      "date": "Fri, 30 Oct 2026 20:38:30 +0000",
+      "img": "https://cdn.biwenger.com/i/t/19.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Brian Fariñas, el as en la manga de Flick, ¿chollo fantasy a la vista?",
+      "link": "https://www.jornadaperfecta.com/blog/brian-farinas-analisis-fichaje-fantasy-barca/",
+      "date": "Fri, 30 Oct 2026 19:52:16 +0000",
+      "img": "https://cdn.biwenger.com/i/t/3.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Foyth, baja de última hora en el Villarreal",
+      "link": "https://www.jornadaperfecta.com/blog/foyth-baja-lesion-villarreal-cf/",
+      "date": "Fri, 30 Oct 2026 19:12:40 +0000",
+      "img": "https://cdn.biwenger.com/i/t/19.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "bet365 mejora 6 Apuestas para el Barcelona &#8211; Alavés: ¡Aprovéchalas!",
+      "link": "https://www.jornadaperfecta.com/blog/bet365-apuestas-mejoradas-barcelona-alaves/",
+      "date": "Fri, 30 Oct 2026 19:00:12 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "¡Varios cambios en el primer once de Sergio García!",
+      "link": "https://www.jornadaperfecta.com/blog/once-espanyol-j11-26-27/",
+      "date": "Fri, 30 Oct 2026 18:50:05 +0000",
+      "img": "https://cdn.biwenger.com/i/t/19.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "¡Gerard Moreno, titular con el Villarreal!",
+      "link": "https://www.jornadaperfecta.com/blog/once-villarreal-j11-26-27/",
+      "date": "Fri, 30 Oct 2026 18:44:48 +0000",
+      "img": "https://cdn.biwenger.com/i/t/19.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Valverde, en duda para la J11, ¿alineamos en fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/valverde-estado-j11-real-madrid/",
+      "date": "Fri, 30 Oct 2026 18:00:47 +0000",
+      "img": "https://cdn.biwenger.com/i/t/15.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Lesionados que podrían llegar a la jornada 11 y descartados",
+      "link": "https://www.jornadaperfecta.com/blog/lesionados-j11-26-27/",
+      "date": "Fri, 30 Oct 2026 17:24:30 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/09/david-otorbi-valencia-cf-fantasy.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
       "title": "Dos bajas y una recuperación en la convocatoria del Atleti",
       "link": "https://www.jornadaperfecta.com/blog/cuti-romero-estado-j11-atleti/",
       "date": "Fri, 30 Oct 2026 17:05:36 +0000",
@@ -13438,77 +13502,13 @@
       "img": "https://cdn.biwenger.com/i/t/6.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Brian Fariñas, el as en la manga de Flick, ¿chollo fantasy a la vista?",
-      "link": "https://www.jornadaperfecta.com/blog/brian-farinas-analisis-fichaje-fantasy-barca/",
-      "date": "Fri, 30 Oct 2026 15:52:16 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Peio Canales no entrena: duda para el derbi vasco",
-      "link": "https://www.jornadaperfecta.com/blog/peio-canales-estado-athletic-j11/",
-      "date": "Fri, 30 Oct 2026 14:20:05 +0000",
-      "img": "https://cdn.biwenger.com/i/t/1.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Quique no descarta un cambio de sistema ante el Barça",
-      "link": "https://www.jornadaperfecta.com/blog/quique-previa-barcelona-alaves-j11-26-27/",
-      "date": "Fri, 30 Oct 2026 14:04:30 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Matarazzo confirma la baja de Zakharyan y habla de Aramburu",
-      "link": "https://www.jornadaperfecta.com/blog/matarazzo-previa-athletic-real-sociedad-j11-26-27/",
-      "date": "Fri, 30 Oct 2026 13:59:03 +0000",
-      "img": "https://cdn.biwenger.com/i/t/13.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Funes deja en duda a Recio y habla del estado de Diego Murillo",
-      "link": "https://www.jornadaperfecta.com/blog/funes-previa-betis-malaga-j11-26-27/",
-      "date": "Fri, 30 Oct 2026 13:41:44 +0000",
-      "img": "https://cdn.biwenger.com/i/t/65.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Giráldez adelanta el regreso de Borja y es paciente con Miguel Román",
-      "link": "https://www.jornadaperfecta.com/blog/giraldez-previa-rayo-celta-j11-26-27/",
-      "date": "Fri, 30 Oct 2026 13:32:24 +0000",
-      "img": "https://cdn.biwenger.com/i/t/5.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Flick podría optar por la titularidad de Fariñas y De Jong",
-      "link": "https://www.jornadaperfecta.com/blog/flick-previa-barcelona-alaves-j11-26-27/",
-      "date": "Fri, 30 Oct 2026 13:10:12 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "José Alberto deja en duda a Andrés Martín por unas molestias",
-      "link": "https://www.jornadaperfecta.com/blog/jose-alberto-previa-racing-real-madrid-j11-26-27/",
-      "date": "Fri, 30 Oct 2026 13:02:05 +0000",
-      "img": "https://cdn.biwenger.com/i/t/812.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-10-30T17:19:49.666Z",
+    "updatedAt": "2026-10-30T21:44:06.805Z",
     "players": [
       {
         "id": "37428",
@@ -13588,11 +13588,11 @@
         "team": "RCD Espanyol de Barcelona",
         "position": "",
         "nationality": "Spain",
-        "appearances": 10,
+        "appearances": 11,
         "goals": 6,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 150
+        "minutesPerGoal": 165
       },
       {
         "id": "214497",
@@ -13744,11 +13744,11 @@
         "team": "Villarreal CF",
         "position": "",
         "nationality": "Georgia",
-        "appearances": 10,
+        "appearances": 11,
         "goals": 3,
         "assists": 1,
         "penalties": 1,
-        "minutesPerGoal": 300
+        "minutesPerGoal": 330
       },
       {
         "id": "82516",
@@ -13852,11 +13852,11 @@
         "team": "Villarreal CF",
         "position": "",
         "nationality": "Ivory Coast",
-        "appearances": 7,
+        "appearances": 8,
         "goals": 2,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 315
+        "minutesPerGoal": 360
       },
       {
         "id": "213217",
@@ -13912,11 +13912,11 @@
         "team": "Villarreal CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 10,
+        "appearances": 11,
         "goals": 2,
         "assists": 0,
         "penalties": 1,
-        "minutesPerGoal": 450
+        "minutesPerGoal": 495
       },
       {
         "id": "171964",
@@ -14068,11 +14068,11 @@
         "team": "Villarreal CF",
         "position": "",
         "nationality": "Spain",
-        "appearances": 10,
+        "appearances": 11,
         "goals": 2,
         "assists": 4,
         "penalties": 0,
-        "minutesPerGoal": 450
+        "minutesPerGoal": 495
       },
       {
         "id": "137485",
@@ -14236,11 +14236,11 @@
         "team": "RCD Espanyol de Barcelona",
         "position": "",
         "nationality": "England",
-        "appearances": 10,
+        "appearances": 11,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 900
+        "minutesPerGoal": 990
       },
       {
         "id": "159647",
@@ -14560,11 +14560,11 @@
         "team": "RCD Espanyol de Barcelona",
         "position": "",
         "nationality": "Spain",
-        "appearances": 10,
+        "appearances": 11,
         "goals": 1,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 900
+        "minutesPerGoal": 990
       },
       {
         "id": "31019",
