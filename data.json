@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-05T13:36:20.693Z",
+  "updatedAt": "2026-11-05T22:57:44.375Z",
   "players": [
     {
       "id": 11,
@@ -2686,7 +2686,7 @@
     {
       "id": 14800,
       "slug": "pablo-ibanez",
-      "name": "Pablo Ibáñez",
+      "name": "Pablo Ibá��ez",
       "position": 3,
       "price": 2520000,
       "points": 46,
@@ -13268,18 +13268,18 @@
   },
   "odds": {
     "Sevilla": {
-      "winProb": 0.34239523439118486,
-      "drawProb": 0.266095460710698,
-      "loseProb": 0.39150930489811714,
+      "winProb": 0.324596907196492,
+      "drawProb": 0.26582587943111047,
+      "loseProb": 0.4095772133723976,
       "over25Prob": 0.5780346820809249,
       "isHome": true,
       "opponent": "Real Betis",
       "matchDate": "2026-11-21T17:30:00Z"
     },
     "Alavés": {
-      "winProb": 0.473994823870835,
-      "drawProb": 0.2698950696828267,
-      "loseProb": 0.25611010644633825,
+      "winProb": 0.4583012725658479,
+      "drawProb": 0.2739271973956792,
+      "loseProb": 0.267771530038473,
       "over25Prob": 0.4694835680751174,
       "isHome": true,
       "opponent": "Deportivo La Coruña",
@@ -13295,9 +13295,9 @@
       "matchDate": "2026-11-22T17:30:00Z"
     },
     "Real Racing Club de Santander": {
-      "winProb": 0.3200379304213833,
-      "drawProb": 0.23842825816393054,
-      "loseProb": 0.4415338114146861,
+      "winProb": 0.3028538147932441,
+      "drawProb": 0.23849737914967972,
+      "loseProb": 0.4586488060570763,
       "over25Prob": 0.6944444444444444,
       "isHome": true,
       "opponent": "Real Sociedad",
@@ -13313,9 +13313,9 @@
       "matchDate": "2026-11-20T20:00:00Z"
     },
     "Deportivo La Coruña": {
-      "winProb": 0.25611010644633825,
-      "drawProb": 0.2698950696828267,
-      "loseProb": 0.473994823870835,
+      "winProb": 0.267771530038473,
+      "drawProb": 0.2739271973956792,
+      "loseProb": 0.4583012725658479,
       "over25Prob": 0.4694835680751174,
       "isHome": false,
       "opponent": "Alavés",
@@ -13358,27 +13358,27 @@
       "matchDate": "2026-11-21T20:00:00Z"
     },
     "Elche CF": {
-      "winProb": 0.31704940115817476,
-      "drawProb": 0.24916937271177703,
-      "loseProb": 0.4337812261300482,
-      "over25Prob": 0.5586592178770949,
+      "winProb": 0.3198468013093144,
+      "drawProb": 0.23888307466209444,
+      "loseProb": 0.4412701240285911,
+      "over25Prob": 0.5882352941176471,
       "isHome": false,
       "opponent": "Levante",
       "matchDate": "2026-11-23T20:00:00Z"
     },
     "Real Betis": {
-      "winProb": 0.39150930489811714,
-      "drawProb": 0.266095460710698,
-      "loseProb": 0.34239523439118486,
+      "winProb": 0.4095772133723976,
+      "drawProb": 0.26582587943111047,
+      "loseProb": 0.324596907196492,
       "over25Prob": 0.5780346820809249,
       "isHome": false,
       "opponent": "Sevilla",
       "matchDate": "2026-11-21T17:30:00Z"
     },
     "Real Sociedad": {
-      "winProb": 0.4415338114146861,
-      "drawProb": 0.23842825816393054,
-      "loseProb": 0.3200379304213833,
+      "winProb": 0.4586488060570763,
+      "drawProb": 0.23849737914967972,
+      "loseProb": 0.3028538147932441,
       "over25Prob": 0.6944444444444444,
       "isHome": false,
       "opponent": "Real Racing Club de Santander",
@@ -13403,52 +13403,116 @@
       "matchDate": "2026-11-21T20:00:00Z"
     },
     "Levante": {
-      "winProb": 0.4337812261300482,
-      "drawProb": 0.24916937271177703,
-      "loseProb": 0.31704940115817476,
-      "over25Prob": 0.5586592178770949,
+      "winProb": 0.4412701240285911,
+      "drawProb": 0.23888307466209444,
+      "loseProb": 0.3198468013093144,
+      "over25Prob": 0.5882352941176471,
       "isHome": true,
       "opponent": "Elche CF",
       "matchDate": "2026-11-23T20:00:00Z"
     },
     "Villarreal": {
-      "winProb": 0.09457068753609595,
-      "drawProb": 0.1138964991365799,
-      "loseProb": 0.7915328133273242,
-      "over25Prob": 0.8403361344537815,
+      "winProb": 0.0957545518801381,
+      "drawProb": 0.11506834970772367,
+      "loseProb": 0.7891770984121382,
+      "over25Prob": 0.8474576271186441,
       "isHome": false,
       "opponent": "Barcelona",
       "matchDate": "2026-11-22T13:00:00Z"
     },
     "Getafe": {
-      "winProb": 0.1722125327876732,
-      "drawProb": 0.2506145542936402,
-      "loseProb": 0.5771729129186866,
-      "over25Prob": 0.47619047619047616,
+      "winProb": 0.16977558943281887,
+      "drawProb": 0.24694631190228197,
+      "loseProb": 0.5832780986648992,
+      "over25Prob": 0.47846889952153115,
       "isHome": true,
       "opponent": "Atlético Madrid",
       "matchDate": "2026-11-22T20:00:00Z"
     },
     "Atlético Madrid": {
-      "winProb": 0.5771729129186866,
-      "drawProb": 0.2506145542936402,
-      "loseProb": 0.1722125327876732,
-      "over25Prob": 0.47619047619047616,
+      "winProb": 0.5832780986648992,
+      "drawProb": 0.24694631190228197,
+      "loseProb": 0.16977558943281887,
+      "over25Prob": 0.47846889952153115,
       "isHome": false,
       "opponent": "Getafe",
       "matchDate": "2026-11-22T20:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.7915328133273242,
-      "drawProb": 0.1138964991365799,
-      "loseProb": 0.09457068753609595,
-      "over25Prob": 0.8403361344537815,
+      "winProb": 0.7891770984121382,
+      "drawProb": 0.11506834970772367,
+      "loseProb": 0.0957545518801381,
+      "over25Prob": 0.8474576271186441,
       "isHome": true,
       "opponent": "Villarreal",
       "matchDate": "2026-11-22T13:00:00Z"
     }
   },
   "news": [
+    {
+      "title": "Cinco noticias fantasy para antes de irte a dormir",
+      "link": "https://www.jornadaperfecta.com/blog/noticias-fantasy-5-11-26/",
+      "date": "Thu, 05 Nov 2026 22:00:34 +0000",
+      "img": "https://cdn.biwenger.com/i/t/13.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "La Previa de las Picas: Todo sobre los Cronistas de la Jornada 12",
+      "link": "https://www.jornadaperfecta.com/blog/previa-picas-cronistas-j12-26-27/",
+      "date": "Thu, 05 Nov 2026 20:36:08 +0000",
+      "img": "https://s.w.org/images/core/emoji/17.0.2/72x72/2660.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Cuti Romero continúa siendo baja, ¿toca venderlo en fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/cuti-romero-analisis-venta-fantasy-atleti/",
+      "date": "Thu, 05 Nov 2026 18:57:39 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/10/atletico-de-madrid-fantasy.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "El All In de Victorius para la Jornada 12 de LaLiga",
+      "link": "https://www.jornadaperfecta.com/blog/all-in-victorius-j12-26-27/",
+      "date": "Thu, 05 Nov 2026 18:00:15 +0000",
+      "img": "https://cdn.biwenger.com/i/t/17.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Carlos Soler, baja de última hora en Europa League",
+      "link": "https://www.jornadaperfecta.com/blog/carlos-soler-estado-j12-real-sociedad/",
+      "date": "Thu, 05 Nov 2026 17:01:29 +0000",
+      "img": "https://cdn.biwenger.com/i/t/13.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Oficial: la jornada 12 de LaLiga se disputará este fin de semana",
+      "link": "https://www.jornadaperfecta.com/blog/suspension-jornada-12-laliga/",
+      "date": "Thu, 05 Nov 2026 16:05:55 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Quique, sobre el mal momento y las bajas del Alavés",
+      "link": "https://www.jornadaperfecta.com/blog/quique-previa-sevilla-alaves-j12-26-27/",
+      "date": "Thu, 05 Nov 2026 16:03:32 +0000",
+      "img": "https://cdn.biwenger.com/i/t/17.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Alassane Diatta pasa por quirófano: parte médico y tiempo de baja",
+      "link": "https://www.jornadaperfecta.com/blog/alassane-diatta-lesion-parte-medico-villarreal/",
+      "date": "Thu, 05 Nov 2026 15:32:52 +0000",
+      "img": "https://cdn.biwenger.com/i/t/19.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
     {
       "title": "Tchouaméni, baja en el entrenamiento del Real Madrid",
       "link": "https://www.jornadaperfecta.com/blog/tchouameni-estado-real-madrid-j12/",
@@ -13464,77 +13528,13 @@
       "img": "https://cdn.biwenger.com/i/t/65.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Zaid Romero, baja en la convocatoria del Getafe de Conference",
-      "link": "https://www.jornadaperfecta.com/blog/zaid-romero-baja-convocatoria-getafe-conferemnce/",
-      "date": "Thu, 05 Nov 2026 12:57:44 +0000",
-      "img": "https://cdn.biwenger.com/i/t/8.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Anai Morales, el primer &#8216;fichaje&#8217; de CA Osasuna para enero",
-      "link": "https://www.jornadaperfecta.com/blog/anai-morales-osasuna-vuelta-cesion-enero/",
-      "date": "Thu, 05 Nov 2026 12:36:49 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Oficial: Raphinha renueva con el FC Barcelona hasta 2030",
-      "link": "https://www.jornadaperfecta.com/blog/raphinha-fc-barcelona-renovacion-2030/",
-      "date": "Thu, 05 Nov 2026 12:20:38 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "LaLiga solo suspenderá tres partidos en Segunda División",
-      "link": "https://www.jornadaperfecta.com/blog/suspension-jornada-12-laliga/",
-      "date": "Thu, 05 Nov 2026 12:10:55 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Actualizadas las Alineaciones Probables para la Jornada 12",
-      "link": "https://www.jornadaperfecta.com/blog/alineaciones-probables-j12-laliga-26-27/",
-      "date": "Thu, 05 Nov 2026 12:10:14 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Lesión de Rodri: Parte médico oficial y tiempo de baja",
-      "link": "https://www.jornadaperfecta.com/blog/rodri-parte-medico-fc-barcelona/",
-      "date": "Thu, 05 Nov 2026 12:05:13 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "García Plaza confirma la recuperación de Isaac Romero y Fofana",
-      "link": "https://www.jornadaperfecta.com/blog/garcia-plaza-previa-sevilla-alaves-j12-26-27/",
-      "date": "Thu, 05 Nov 2026 12:04:56 +0000",
-      "img": "https://cdn.biwenger.com/i/t/17.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Por fin un fantasy donde juegas CON tus amigos, no contra ellos",
-      "link": "https://www.jornadaperfecta.com/blog/fantasy-clan-jugar-con-tus-amigos/",
-      "date": "Thu, 05 Nov 2026 11:35:13 +0000",
-      "img": "",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
     }
   ],
   "playerStats": {
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-11-05T13:36:18.895Z",
+    "updatedAt": "2026-11-05T22:57:43.060Z",
     "players": [
       {
         "id": "37428",
