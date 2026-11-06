@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-06T13:19:43.578Z",
+  "updatedAt": "2026-11-06T22:27:52.495Z",
   "players": [
     {
       "id": 11,
@@ -12246,12 +12246,12 @@
           "tla": "SEV",
           "crest": "https://crests.football-data.org/559.png"
         },
-        "playedGames": 11,
+        "playedGames": 12,
         "form": null,
         "won": 5,
-        "draw": 2,
+        "draw": 3,
         "lost": 4,
-        "points": 17,
+        "points": 18,
         "goalsFor": 17,
         "goalsAgainst": 19,
         "goalDifference": -2
@@ -12297,6 +12297,25 @@
       {
         "position": 9,
         "team": {
+          "id": 263,
+          "name": "Deportivo Alavés",
+          "shortName": "Alavés",
+          "tla": "ALA",
+          "crest": "https://crests.football-data.org/263.png"
+        },
+        "playedGames": 12,
+        "form": null,
+        "won": 3,
+        "draw": 4,
+        "lost": 5,
+        "points": 13,
+        "goalsFor": 15,
+        "goalsAgainst": 17,
+        "goalDifference": -2
+      },
+      {
+        "position": 10,
+        "team": {
           "id": 94,
           "name": "Villarreal CF",
           "shortName": "Villarreal",
@@ -12314,7 +12333,7 @@
         "goalDifference": 0
       },
       {
-        "position": 10,
+        "position": 11,
         "team": {
           "id": 558,
           "name": "RC Celta de Vigo",
@@ -12331,25 +12350,6 @@
         "goalsFor": 10,
         "goalsAgainst": 10,
         "goalDifference": 0
-      },
-      {
-        "position": 11,
-        "team": {
-          "id": 263,
-          "name": "Deportivo Alavés",
-          "shortName": "Alavés",
-          "tla": "ALA",
-          "crest": "https://crests.football-data.org/263.png"
-        },
-        "playedGames": 11,
-        "form": null,
-        "won": 3,
-        "draw": 3,
-        "lost": 5,
-        "points": 12,
-        "goalsFor": 15,
-        "goalsAgainst": 17,
-        "goalDifference": -2
       },
       {
         "position": 12,
@@ -12708,11 +12708,11 @@
       },
       "263": {
         "results": [
+          "D",
           "L",
           "D",
           "L",
-          "L",
-          "D"
+          "L"
         ],
         "gf": 4,
         "ga": 11,
@@ -12747,14 +12747,14 @@
       },
       "559": {
         "results": [
+          "D",
           "L",
           "W",
           "L",
-          "D",
-          "L"
+          "D"
         ],
-        "gf": 8,
-        "ga": 13,
+        "gf": 7,
+        "ga": 10,
         "crest": "https://crests.football-data.org/559.png",
         "name": "Sevilla FC"
       },
@@ -12786,23 +12786,6 @@
       }
     },
     "nextMatches": [
-      {
-        "id": 564740,
-        "matchday": 12,
-        "date": "2026-11-06T20:00:00Z",
-        "home": {
-          "id": 559,
-          "name": "Sevilla FC",
-          "short": "Sevilla FC",
-          "crest": "https://crests.football-data.org/559.png"
-        },
-        "away": {
-          "id": 263,
-          "name": "Deportivo Alavés",
-          "short": "Alavés",
-          "crest": "https://crests.football-data.org/263.png"
-        }
-      },
       {
         "id": 564744,
         "matchday": 12,
@@ -13129,6 +13112,23 @@
     ],
     "recentResults": [
       {
+        "date": "2026-11-06T20:00:00Z",
+        "home": {
+          "name": "Sevilla FC",
+          "short": "Sevilla FC",
+          "crest": "https://crests.football-data.org/559.png"
+        },
+        "away": {
+          "name": "Deportivo Alavés",
+          "short": "Alavés",
+          "crest": "https://crests.football-data.org/263.png"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      {
         "date": "2026-11-02T20:00:00Z",
         "home": {
           "name": "RC Deportivo La Coruña",
@@ -13246,45 +13246,10 @@
           "home": 2,
           "away": 1
         }
-      },
-      {
-        "date": "2026-10-31T15:15:00Z",
-        "home": {
-          "name": "Rayo Vallecano de Madrid",
-          "short": "Rayo Vallecano",
-          "crest": "https://crests.football-data.org/87.png"
-        },
-        "away": {
-          "name": "RC Celta de Vigo",
-          "short": "Celta",
-          "crest": "https://crests.football-data.org/558.png"
-        },
-        "score": {
-          "home": 3,
-          "away": 0
-        }
       }
     ]
   },
   "odds": {
-    "Sevilla": {
-      "winProb": 0.324596907196492,
-      "drawProb": 0.26582587943111047,
-      "loseProb": 0.4095772133723976,
-      "over25Prob": 0.5780346820809249,
-      "isHome": true,
-      "opponent": "Real Betis",
-      "matchDate": "2026-11-21T17:30:00Z"
-    },
-    "Alavés": {
-      "winProb": 0.4583012725658479,
-      "drawProb": 0.2739271973956792,
-      "loseProb": 0.267771530038473,
-      "over25Prob": 0.4694835680751174,
-      "isHome": true,
-      "opponent": "Deportivo La Coruña",
-      "matchDate": "2026-11-21T13:00:00Z"
-    },
     "Málaga": {
       "winProb": 0.2031576503366613,
       "drawProb": 0.2535407476201533,
@@ -13316,7 +13281,7 @@
       "winProb": 0.267771530038473,
       "drawProb": 0.2739271973956792,
       "loseProb": 0.4583012725658479,
-      "over25Prob": 0.4694835680751174,
+      "over25Prob": 0.4587155963302752,
       "isHome": false,
       "opponent": "Alavés",
       "matchDate": "2026-11-21T13:00:00Z"
@@ -13412,9 +13377,9 @@
       "matchDate": "2026-11-23T20:00:00Z"
     },
     "Villarreal": {
-      "winProb": 0.0957545518801381,
-      "drawProb": 0.11506834970772367,
-      "loseProb": 0.7891770984121382,
+      "winProb": 0.09590309231986777,
+      "drawProb": 0.11529397334921981,
+      "loseProb": 0.7888029343309123,
       "over25Prob": 0.8474576271186441,
       "isHome": false,
       "opponent": "Barcelona",
@@ -13439,93 +13404,111 @@
       "matchDate": "2026-11-22T20:00:00Z"
     },
     "Barcelona": {
-      "winProb": 0.7891770984121382,
-      "drawProb": 0.11506834970772367,
-      "loseProb": 0.0957545518801381,
+      "winProb": 0.7888029343309123,
+      "drawProb": 0.11529397334921981,
+      "loseProb": 0.09590309231986777,
       "over25Prob": 0.8474576271186441,
       "isHome": true,
       "opponent": "Villarreal",
       "matchDate": "2026-11-22T13:00:00Z"
+    },
+    "Alavés": {
+      "winProb": 0.4583012725658479,
+      "drawProb": 0.2739271973956792,
+      "loseProb": 0.267771530038473,
+      "over25Prob": 0.4587155963302752,
+      "isHome": true,
+      "opponent": "Deportivo La Coruña",
+      "matchDate": "2026-11-21T13:00:00Z"
+    },
+    "Sevilla": {
+      "winProb": 0.324596907196492,
+      "drawProb": 0.26582587943111047,
+      "loseProb": 0.4095772133723976,
+      "over25Prob": 0.5780346820809249,
+      "isHome": true,
+      "opponent": "Real Betis",
+      "matchDate": "2026-11-21T17:30:00Z"
     }
   },
   "news": [
     {
-      "title": "Funes, sobre el estado de Pablo Martínez, Joaquín Muñoz y Puga",
-      "link": "https://www.jornadaperfecta.com/blog/funes-previa-malaga-racing-j12-26-27/",
-      "date": "Fri, 06 Nov 2026 13:17:54 +0000",
-      "img": "https://cdn.biwenger.com/i/t/65.png",
+      "title": "El Valencia &#8211; Real Madrid se paga más en bwin: estas son sus cuotas mejoradas",
+      "link": "https://www.jornadaperfecta.com/blog/cuotas-mejoradas-bwin-valencia-real-madrid/",
+      "date": "Fri, 06 Nov 2026 20:00:09 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/11/cuotas-mejoradas-atletico-barcelona-bwin.webp",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Beñat San José confirma las bajas de Óscar Valentín y Álvaro García",
-      "link": "https://www.jornadaperfecta.com/blog/benat-san-jose-previa-real-sociedad-rayo-j12-26-27/",
-      "date": "Fri, 06 Nov 2026 13:05:22 +0000",
-      "img": "https://cdn.biwenger.com/i/t/70.png",
+      "title": "¡Cuatro cambios en el once del Alavés!",
+      "link": "https://www.jornadaperfecta.com/blog/once-alaves-j12-26-27/",
+      "date": "Fri, 06 Nov 2026 18:59:46 +0000",
+      "img": "https://cdn.biwenger.com/i/t/91.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Aguirre repasa las opciones de Sadiq, Danjuma, Mayol y Duro",
-      "link": "https://www.jornadaperfecta.com/blog/aguirre-previa-valencia-real-madrid-j12-26-27/",
-      "date": "Fri, 06 Nov 2026 13:01:51 +0000",
-      "img": "https://cdn.biwenger.com/i/t/18.png",
+      "title": "¡Rubén Vargas vuelve al once del Sevilla!",
+      "link": "https://www.jornadaperfecta.com/blog/once-sevilla-j12-26-27/",
+      "date": "Fri, 06 Nov 2026 18:48:10 +0000",
+      "img": "https://cdn.biwenger.com/i/t/17.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "bet365 se luce con las mejores cuotas del mercado para el Valencia vs Real Madrid",
-      "link": "https://www.jornadaperfecta.com/blog/valencia-vs-real-madrid-bet365/",
-      "date": "Fri, 06 Nov 2026 12:49:20 +0000",
-      "img": "",
+      "title": "Eder Sarabia confirma la baja de Urko y reabre el debate de la portería",
+      "link": "https://www.jornadaperfecta.com/blog/eder-sarabia-previa-espanyol-deportivo-j12-26-27/",
+      "date": "Fri, 06 Nov 2026 18:33:58 +0000",
+      "img": "https://cdn.biwenger.com/i/t/7.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Anselmi, sobre el estado de Gonzalo Villar y Buba Sangaré",
-      "link": "https://www.jornadaperfecta.com/blog/anselmi-previa-elche-real-betis-j12-26-27/",
-      "date": "Fri, 06 Nov 2026 12:41:25 +0000",
-      "img": "https://cdn.biwenger.com/i/t/75.png",
+      "title": "¿Alineamos a Frenkie de Jong y Eric García en el Metropolitano?",
+      "link": "https://www.jornadaperfecta.com/blog/frenkie-de-jong-eric-garcia-alinear-fantasy-j12-barcelona/",
+      "date": "Fri, 06 Nov 2026 18:13:12 +0000",
+      "img": "https://cdn.biwenger.com/i/t/8.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "Eric García y Christensen entrenan: disponibles para la jornada 12",
-      "link": "https://www.jornadaperfecta.com/blog/eric-garcia-christensen-estado-barcelona-j12/",
-      "date": "Fri, 06 Nov 2026 12:17:15 +0000",
-      "img": "https://cdn.biwenger.com/i/t/3.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Arrasate, sobre la fecha de vuelta de Aimar, Herrando y Del Castillo",
-      "link": "https://www.jornadaperfecta.com/blog/arrasate-previa-osasuna-athletic-j12-26-27/",
-      "date": "Fri, 06 Nov 2026 12:14:24 +0000",
-      "img": "https://cdn.biwenger.com/i/t/93.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Simeone ensaya once con Koke como titular junto a Barrios",
-      "link": "https://www.jornadaperfecta.com/blog/oncd-atleti-j12-koke/",
-      "date": "Fri, 06 Nov 2026 12:05:12 +0000",
-      "img": "https://cdn.biwenger.com/i/t/2.png",
-      "srcId": "jp",
-      "srcLabel": "Jornada Perfecta"
-    },
-    {
-      "title": "Tchouaméni vuelve a entrenar con el grupo y está disponible",
-      "link": "https://www.jornadaperfecta.com/blog/tchouameni-estado-real-madrid-j12/",
-      "date": "Fri, 06 Nov 2026 12:02:02 +0000",
+      "title": "Tchouameni genera dudas con su físico, ¿alineamos en fantasy?",
+      "link": "https://www.jornadaperfecta.com/blog/tchouameni-alinear-fantasy-j12-real-madrid/",
+      "date": "Fri, 06 Nov 2026 17:11:57 +0000",
       "img": "https://cdn.biwenger.com/i/t/15.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     },
     {
-      "title": "¡5 mayores riesgos fantasy para la jornada 12 de LaLiga!",
-      "link": "https://www.jornadaperfecta.com/blog/5-riesgos-fantasy-j12-26-27/",
-      "date": "Fri, 06 Nov 2026 12:00:45 +0000",
+      "title": "Lesionados que podrían llegar a la jornada 12 y descartados",
+      "link": "https://www.jornadaperfecta.com/blog/lesionados-j12-26-27/",
+      "date": "Fri, 06 Nov 2026 15:28:41 +0000",
+      "img": "https://www.jornadaperfecta.com/blog/wp-content/uploads/2026/10/alvaro-garcia-rayo-vallecano-fantasy.webp",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Terzic confirma la vuelta de Galarreta y la baja de Paredes",
+      "link": "https://www.jornadaperfecta.com/blog/terzic-previa-osasuna-athletic-j12-26-27/",
+      "date": "Fri, 06 Nov 2026 13:34:25 +0000",
       "img": "https://cdn.biwenger.com/i/t/1.png",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Iñigo Pérez, sobre si habrá cambios tras la derrota ante el PSG",
+      "link": "https://www.jornadaperfecta.com/blog/inigo-perez-previa-villarreal-getafe-j12-26-27/",
+      "date": "Fri, 06 Nov 2026 13:31:37 +0000",
+      "img": "",
+      "srcId": "jp",
+      "srcLabel": "Jornada Perfecta"
+    },
+    {
+      "title": "Funes, sobre el estado de Pablo Martínez, Joaquín Muñoz y Puga",
+      "link": "https://www.jornadaperfecta.com/blog/funes-previa-malaga-racing-j12-26-27/",
+      "date": "Fri, 06 Nov 2026 13:17:54 +0000",
+      "img": "https://cdn.biwenger.com/i/t/65.png",
       "srcId": "jp",
       "srcLabel": "Jornada Perfecta"
     }
@@ -13534,7 +13517,7 @@
     "source": "football-data",
     "league": "LaLiga",
     "season": "2025/26",
-    "updatedAt": "2026-11-06T13:19:41.331Z",
+    "updatedAt": "2026-11-06T22:27:50.708Z",
     "players": [
       {
         "id": "37428",
@@ -13674,11 +13657,11 @@
         "team": "Deportivo Alavés",
         "position": "",
         "nationality": "Argentina",
-        "appearances": 10,
+        "appearances": 11,
         "goals": 5,
         "assists": 0,
         "penalties": 1,
-        "minutesPerGoal": 180
+        "minutesPerGoal": 198
       },
       {
         "id": "180282",
@@ -13710,11 +13693,11 @@
         "team": "Deportivo Alavés",
         "position": "",
         "nationality": "Dominican Republic",
-        "appearances": 11,
+        "appearances": 12,
         "goals": 4,
         "assists": 4,
         "penalties": 0,
-        "minutesPerGoal": 248
+        "minutesPerGoal": 270
       },
       {
         "id": "125010",
@@ -13794,11 +13777,11 @@
         "team": "Sevilla FC",
         "position": "",
         "nationality": "Spain",
-        "appearances": 10,
+        "appearances": 11,
         "goals": 3,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 300
+        "minutesPerGoal": 330
       },
       {
         "id": "136646",
@@ -14226,11 +14209,11 @@
         "team": "Sevilla FC",
         "position": "",
         "nationality": "Portugal",
-        "appearances": 8,
+        "appearances": 9,
         "goals": 2,
         "assists": 2,
         "penalties": 0,
-        "minutesPerGoal": 360
+        "minutesPerGoal": 405
       },
       {
         "id": "288836",
@@ -14274,11 +14257,11 @@
         "team": "Deportivo Alavés",
         "position": "",
         "nationality": "Argentina",
-        "appearances": 11,
+        "appearances": 12,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 990
+        "minutesPerGoal": 1080
       },
       {
         "id": "290184",
@@ -14298,11 +14281,11 @@
         "team": "Sevilla FC",
         "position": "",
         "nationality": "Spain",
-        "appearances": 10,
+        "appearances": 11,
         "goals": 1,
         "assists": 0,
         "penalties": 1,
-        "minutesPerGoal": 900
+        "minutesPerGoal": 990
       },
       {
         "id": "185105",
@@ -14382,11 +14365,11 @@
         "team": "Sevilla FC",
         "position": "",
         "nationality": "Nigeria",
-        "appearances": 11,
+        "appearances": 12,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 990
+        "minutesPerGoal": 1080
       },
       {
         "id": "220538",
@@ -14610,11 +14593,11 @@
         "team": "Deportivo Alavés",
         "position": "",
         "nationality": "Spain",
-        "appearances": 11,
+        "appearances": 12,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 990
+        "minutesPerGoal": 1080
       },
       {
         "id": "188897",
@@ -14622,11 +14605,11 @@
         "team": "Sevilla FC",
         "position": "",
         "nationality": "Belgium",
-        "appearances": 6,
+        "appearances": 7,
         "goals": 1,
         "assists": 1,
         "penalties": 0,
-        "minutesPerGoal": 540
+        "minutesPerGoal": 630
       },
       {
         "id": "278018",
@@ -14694,11 +14677,11 @@
         "team": "Sevilla FC",
         "position": "",
         "nationality": "Spain",
-        "appearances": 11,
+        "appearances": 12,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 990
+        "minutesPerGoal": 1080
       },
       {
         "id": "146969",
@@ -14706,11 +14689,11 @@
         "team": "Deportivo Alavés",
         "position": "",
         "nationality": "Finland",
-        "appearances": 11,
+        "appearances": 12,
         "goals": 1,
         "assists": 0,
         "penalties": 0,
-        "minutesPerGoal": 990
+        "minutesPerGoal": 1080
       },
       {
         "id": "184273",
